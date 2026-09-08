@@ -725,13 +725,16 @@ function renderProgress() {
 function renderSop() {
   const S = SOP;
   if (!S) return;
-  let html = `<p class="sop-lead">${esc(S.lead)}</p>`;
+  // 语料总数随 techs_* 文件增长而变化；用实时 TECHS.length 填充，避免正文数字写死后过期。
+  const _total = (typeof TECHS !== 'undefined' && TECHS) ? TECHS.length : 0;
+  const _fill = s => (s || '').replace(/\{\{TOTAL\}\}/g, _total);
+  let html = `<p class="sop-lead">${esc(_fill(S.lead))}</p>`;
 
   html += `<section class="sop-section"><h3 class="sop-h">一、目标与范围</h3><p>${esc(S.goal)}</p>`;
   const _stubDone = (S.target.stubs || 0) === 0;
   html += `<div class="sop-target${_stubDone ? ' done' : ''}">` + (_stubDone
-    ? `<b>✓ 已全部清零</b> 原 993 条模板占位升级完成。<span class="sop-sub">${esc(S.target.note)}</span>`
-    : `<b>${S.target.stubs}</b> 条模板占位待升级。<span class="sop-sub">${esc(S.target.note)}</span>`) + `</div>`;
+    ? `<b>✓ 已全部清零</b> 原 993 条模板占位升级完成。<span class="sop-sub">${esc(_fill(S.target.note))}</span>`
+    : `<b>${S.target.stubs}</b> 条模板占位待升级。<span class="sop-sub">${esc(_fill(S.target.note))}</span>`) + `</div>`;
   const eraEntries = Object.entries(S.target.byEra || {});
   html += `<div class="sop-erabar">` + eraEntries.map(([k, v]) => `<span class="eb" title="${esc(k)}"><i style="height:${Math.max(5, Math.round(v / 3))}px"></i><span class="eb-n">${v}</span></span>`).join("") + `</div>`;
   html += `</section>`;
