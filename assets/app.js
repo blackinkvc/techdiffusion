@@ -647,7 +647,7 @@ function renderProgress() {
   });
 
   const tierDesc = { good: "优秀·深度撰写", ok: "合格·偏薄", stub: "模板占位·待重写", missing: "未写" };
-  const evalText = `截至 2026-08-25，按《研发 SOP》分批完成的 993 条自动化模板占位已全部升级为非模板简介——套话、中英混排、过短摘要清零，中位 ${medLen} 字，全部达「合格」以上，内容实质性由「低」升至「中」。剩余两点：① 人物 / 地点仍仅 ${withPP} 条有记录（Tier B 待补，未编造）；② ${boilerAll} 条带人物 / 地点的手工锚点简介仍偏模板，可单独精修（不计入占位，因其已有归属）。下一步按 SOP 推进 Tier B 与依赖图精修。`;
+  const evalText = `截至 2026-09-08，原 993 条自动化模板占位已全部清零：套话、中英混排、过短摘要消除，中位 ${medLen} 字，全部达「合格」以上，内容实质性由「低」升至「中」。两点说明：① 人物 / 地点仍仅 ${withPP} 条有记录——Tier B 为候选回填 backlog（约 1915 条中仅地标性值得高精度补，已回填 29，按设计不编造）；② ${boilerAll} 条带归属的手工锚点简介仍偏模板，可单独精修（不计入占位，因其已有归属）。下一步常态维护：新增 / 回流条目按门禁复核；二阶枢纽污染（pendingQueue 待逐节点核验）按护栏处理。`;
 
   let html = `<p class="prog-lead">本页实时统计技术数据库的规模与「技术简介」撰写完成度，并对现有简介质量做自评。统计基于当前已入库的 ${total} 项技术，随数据更新自动刷新。</p>`;
 
@@ -728,7 +728,10 @@ function renderSop() {
   let html = `<p class="sop-lead">${esc(S.lead)}</p>`;
 
   html += `<section class="sop-section"><h3 class="sop-h">一、目标与范围</h3><p>${esc(S.goal)}</p>`;
-  html += `<div class="sop-target"><b>${S.target.stubs}</b> 条模板占位待升级。<span class="sop-sub">${esc(S.target.note)}</span></div>`;
+  const _stubDone = (S.target.stubs || 0) === 0;
+  html += `<div class="sop-target${_stubDone ? ' done' : ''}">` + (_stubDone
+    ? `<b>✓ 已全部清零</b> 原 993 条模板占位升级完成。<span class="sop-sub">${esc(S.target.note)}</span>`
+    : `<b>${S.target.stubs}</b> 条模板占位待升级。<span class="sop-sub">${esc(S.target.note)}</span>`) + `</div>`;
   const eraEntries = Object.entries(S.target.byEra || {});
   html += `<div class="sop-erabar">` + eraEntries.map(([k, v]) => `<span class="eb" title="${esc(k)}"><i style="height:${Math.max(5, Math.round(v / 3))}px"></i><span class="eb-n">${v}</span></span>`).join("") + `</div>`;
   html += `</section>`;
