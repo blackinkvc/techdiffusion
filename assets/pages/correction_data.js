@@ -12,7 +12,7 @@ window.CORRECTIONS = {
   meta: {
     title: "纠错总结",
     subtitle: "Correction Log · 依赖关系与前因后果的质量审计",
-    note: "本页专门记录「技术依赖关系、前因后果、发明者/地点归属」等被证明错误的修正事件。这类事件反映数据管道在「链接预测 / catalog 合并 / 文案生成」环节可能产生的系统性偏差，属重要质量事件，除在本页留档外，也会同步登记进《版本迭代》。每个记录附「自检方法」，便于横向复用到全库扫描。",
+    note: "本页专门记录「技术依赖关系、前因后果、发明者/地点归属」等被证明错误的修正事件。这类事件反映数据管道在「链接预测 / catalog 合并 / 文案生成」环节可能产生的系统性偏差，属重要质量事件，除在本页留档外，也会同步登记进《版本迭代》。每个记录附「自检方法」，便于横向复用到全库扫描。注：内置预览/自动化工具会在 HTML 标签注入 data-page-node-id 追踪属性，属工具噪声、非数据问题，请勿据此提交或修改文件。",
     maintainer: "WorkBuddy（自主构建 Agent）",
     method: [
       "步骤 1 · 抽样核验：对来龙去脉页中「直接上游」明显不合理的节点（如材料/制造范式被列作某具体技术的直接前因）做人工核验。",
@@ -109,6 +109,26 @@ window.CORRECTIONS = {
         "处置原则：逐节点区分真实下游 vs 模板污染边后再删，避免误删真实技术谱系边。"
       ],
       files: ["analysis-engine/data/graph.json", "assets/data_full.js"]
+    },
+    {
+      id: "CR-2026-0909-tierb",
+      date: "2026-09-09",
+      node: "tierB_gap.json 的 1915 条候选节点",
+      nodeName: "Tier B 剩余约 1915 gap（口径澄清）",
+      category: "meta",
+      severity: "低",
+      status: "已知（设计如此）",
+      problem: "tierB_gap.json 的「1915 gap」常被误解为「1915 条缺失、都要补发明者/地点」。实际定义：year≥1750 且 people 与 place 同时缺失的节点，共 1915 条，按 9 类分布：life296 / info245 / basic249 / build216 / transport209 / military202 / energy196 / material188 / manufact114。",
+      rootCause: "其中大量是程序化生成的「学科/子领域」节点（如 bx_math_*、it_alg_*、ml_uav_*），本就不应有单一发明人 → 按设计留空。所以 1915 不是「都要填」，而是「1915 个候选，仅地标性发明/理论值得高精度回填」。",
+      fix: "首批已回填 29 个地标节点（铅笔、青霉素、X 射线、ENIAC、万维网、高铁、微处理器等），gap 由 1944→1915；剩余 1915 为 backlog，按地标性优先、程序化子领域节点保持留空。",
+      badUpstream: [],
+      goodUpstream: [],
+      changes: [
+        "口径：tierB_gap.json = year≥1750 且 people&place 双缺；9 类合计 1915（life296/info245/basic249/build216/transport209/military202/energy196/material188/manufact114）。",
+        "性质：多为程序化「学科/子领域」节点，按设计留空；仅地标性发明/理论值得回填。",
+        "进度：首批 29 个地标已回填（graph.json people/place + 重建 data_full.js），gap 1944→1915。"
+      ],
+      files: ["analysis-engine/data/tierB_gap.json", "analysis-engine/data/graph.json", "assets/data_full.js"]
     }
   ]
 };

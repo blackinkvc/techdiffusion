@@ -311,6 +311,20 @@ window.CHANGELOG = {
         "运行 build_full_dataset.js 重建 assets/data_full.js，全库边数 8397→8275。"
       ],
       files: ["analysis-engine/data/graph.json", "assets/data_full.js", "assets/pages/correction_data.js"]
+    },
+    {
+      date: "2026-09-09",
+      version: "v0.9.12",
+      type: "docs",
+      title: "数据口径澄清：Tier B 1915 gap 与预览工具注入属性",
+      summary: "澄清 Tier B 1915 gap 的真实含义（候选而非必填），并记录「预览工具向 HTML 注入 data-page-node-id 属工具噪声、非数据问题」。",
+      changes: [
+        "Tier B 1915 gap 口径：tierB_gap.json 的 1915 条 = year≥1750 且 people/place 双缺的节点；按 9 类分布 life296/info245/basic249/build216/transport209/military202/energy196/material188/manufact114。",
+        "其中大量为程序化生成的「学科/子领域」节点（bx_math_*、it_alg_*、ml_uav_* 等），本就不应有单一发明人 → 按设计留空；仅「地标性发明/理论」值得高精度回填。",
+        "已首批回填 29 个地标节点（铅笔、青霉素、X 射线、ENIAC、万维网、高铁、微处理器等），gap 由 1944→1915，剩余 1915 为 backlog。",
+        "记录教训：内置预览/自动化工具会在 HTML 上注入 data-page-node-id=\"...\" 追踪属性，属工具噪声、非用户内容、非数据问题；此前一度被当作「未提交改动」处理，实为误报，今后勿据此提交或修改文件。"
+      ],
+      files: ["assets/pages/correction_data.js", "版本迭代日志.md"]
     }
   ]
 };
