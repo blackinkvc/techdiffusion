@@ -510,6 +510,8 @@ main{max-width:var(--maxw);margin:0 auto;padding:30px 24px 70px}
 .sop-target{font-size:15px;color:var(--ink);margin:12px 0 14px}
 .sop-target b{font-size:30px;font-weight:900;color:var(--accent);margin-right:8px;font-family:var(--mono)}
 .sop-sub{display:block;font-size:13px;color:var(--ink-soft);line-height:1.7;margin-top:6px;max-width:640px}
+.sop-target.done{color:#2e9e5b}
+.sop-target.done b{color:#2e9e5b}
 .sop-erabar{display:flex;gap:14px;align-items:flex-end;padding:10px 0 2px;border-top:1px solid var(--line-light)}
 .sop-erabar .eb{display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--ink-soft);font-size:11px}
 .sop-erabar .eb i{width:14px;background:var(--accent);opacity:.7;display:block}

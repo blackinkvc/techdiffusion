@@ -10,7 +10,7 @@ const EXTEND_TECHS = [
     "date": "约 10 万年前",
     "year": -100000,
     "dependsOn": [],
-    "summary": "早于语言的符号交流，以手势与体态协调群体狩猎与协作，是语言演化与抽象思维的前奏。"
+    "summary": "早于语言的符号交流，以手势与体态协调群体狩猎与协作，是语言演化与抽象思维的前奏，它约 约 10 万年前 出现于史前的科学基础与方法，填补了早期能力图谱的空白，为后续复杂技术的展开提供了前提。"
   },
   {
     "id": "symbolic_art",
@@ -20,8 +20,11 @@ const EXTEND_TECHS = [
     "era": "prehistoric",
     "date": "约 4 万年前",
     "year": -40000,
-    "dependsOn": ["language"],
-    "summary": "洞穴壁画与刻划符号把抽象概念外化为可共享的视觉符号，为文字与计数系统铺路。"
+    "dependsOn": [
+      "language",
+      "stone_tools"
+    ],
+    "summary": "洞穴壁画与刻划符号把抽象概念外化为可共享的视觉符号，为文字与计数系统铺路，它建立在语言、石器之上，约 约 4 万年前 出现于史前，把科学基础与方法的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "rope",
@@ -31,8 +34,10 @@ const EXTEND_TECHS = [
     "era": "prehistoric",
     "date": "约 2.8 万年前",
     "year": -28000,
-    "dependsOn": ["mfg_chisel"],
-    "summary": "搓捻植物纤维成股，是最早的复合材料之一，使负重、牵引、绑扎与升降得以实现。"
+    "dependsOn": [
+      "stone_tools"
+    ],
+    "summary": "搓捻植物纤维成股，是最早的复合材料之一，使负重、牵引、绑扎与升降得以实现，它建立在石器之上，约 约 2.8 万年前 成形于史前，把制造与工具中的关键能力落到实处，并直接支撑了木作、编织、人工取火等后续技术。"
   },
   {
     "id": "bone_tools",
@@ -42,8 +47,11 @@ const EXTEND_TECHS = [
     "era": "prehistoric",
     "date": "约 9 万年前",
     "year": -90000,
-    "dependsOn": ["mfg_knife","hearth_stove"],
-    "summary": "以兽骨磨制针、钩、锥，比石器更细巧，开启了缝纫、捕鱼与精细加工。"
+    "dependsOn": [
+      "stone_tools",
+      "fire"
+    ],
+    "summary": "以兽骨磨制针、钩、锥，比石器更细巧，开启了缝纫、捕鱼与精细加工，它建立在石器、用火之上，约 约 9 万年前 成形于史前，把制造与工具中的关键能力落到实处，并直接支撑了锤、斧、锤等后续技术。"
   },
   {
     "id": "woodworking",
@@ -53,8 +61,12 @@ const EXTEND_TECHS = [
     "era": "prehistoric",
     "date": "约 5 万年前",
     "year": -50000,
-    "dependsOn": ["hafting","bone_tools"],
-    "summary": "砍伐、刳削、拼接木材，把石器与纤维的成果转为结构骨架与日常器具。"
+    "dependsOn": [
+      "stone_tools",
+      "fire",
+      "rope"
+    ],
+    "summary": "砍伐、刳削、拼接木材，把石器与纤维的成果转为结构骨架与日常器具，它建立在石器、用火、绳索之上，约 约 5 万年前 成形于史前，把制造与工具中的关键能力落到实处，并直接支撑了木炭、独木舟、围栏与圈养等后续技术。"
   },
   {
     "id": "weaving",
@@ -64,8 +76,11 @@ const EXTEND_TECHS = [
     "era": "prehistoric",
     "date": "约 2.6 万年前",
     "year": -26000,
-    "dependsOn": ["rope"],
-    "summary": "经纬交错固定纤维，比绳更致密，是容器、衣物与一切后续纺织的起点。"
+    "dependsOn": [
+      "rope",
+      "stone_tools"
+    ],
+    "summary": "经纬交错固定纤维，比绳更致密，是容器、衣物与一切后续纺织的起点，依托绳索、石器，它在史前（约 2.6 万年前）把相关能力从经验推向方法，成为制造与工具中承上启下的一环，直接催生了篮篓编织、纺织、纺锤等发展。"
   },
   {
     "id": "basketry",
@@ -75,10 +90,26 @@ const EXTEND_TECHS = [
     "era": "prehistoric",
     "date": "约 1.8 万年前",
     "year": -18000,
-    "dependsOn": ["weaving"],
-    "summary": "以植物条编织容器，其涂泥耐火的雏形直接催生了陶器工艺。"
+    "dependsOn": [
+      "weaving"
+    ],
+    "summary": "以植物条编织容器，其涂泥耐火的雏形直接催生了陶器工艺，依托编织，它在史前（约 1.8 万年前）解决了制造与工具中的具体难题，使相应能力得以被反复复用。其成熟让制造与工具从零散尝试走向可复用的方法。"
   },
-  
+  {
+    "id": "canoe",
+    "name": "独木舟",
+    "en": "Dugout Canoe",
+    "category": "transport",
+    "era": "prehistoric",
+    "date": "约 1 万年前",
+    "year": -10000,
+    "dependsOn": [
+      "woodworking",
+      "fire",
+      "stone_tools"
+    ],
+    "summary": "刳木为舟，把水面从屏障变为通道，扩展了渔猎与迁徙的地理半径，它建立在木作、用火、石器之上，约 约 1 万年前 成形于史前，把交通运载中的关键能力落到实处，并直接支撑了航海术等后续技术。"
+  },
   {
     "id": "fire_making",
     "name": "人工取火",
@@ -87,8 +118,11 @@ const EXTEND_TECHS = [
     "era": "prehistoric",
     "date": "约 5 万年前",
     "year": -50000,
-    "dependsOn": ["fire_drill"],
-    "summary": "以钻木等摩擦法主动生火，摆脱对自然火的依赖，使热能随时可用。"
+    "dependsOn": [
+      "fire",
+      "rope"
+    ],
+    "summary": "以钻木等摩擦法主动生火，摆脱对自然火的依赖，使热能随时可用，它建立在用火、绳索之上，约 约 5 万年前 出现于史前，把科学基础与方法的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "hafting",
@@ -98,8 +132,12 @@ const EXTEND_TECHS = [
     "era": "prehistoric",
     "date": "约 6 万年前",
     "year": -60000,
-    "dependsOn": ["bone_tools"],
-    "summary": "把石刃绑固于木柄，复合工具放大了人力，是武器与农具的雏形。"
+    "dependsOn": [
+      "stone_tools",
+      "rope",
+      "woodworking"
+    ],
+    "summary": "把石刃绑固于木柄，复合工具放大了人力，是武器与农具的雏形，依托石器、绳索、木作，它在史前（约 6 万年前）把相关能力从经验推向方法，成为制造与工具中承上启下的一环，直接催生了锤、斧、锤等发展。"
   },
   {
     "id": "domestication",
@@ -109,8 +147,11 @@ const EXTEND_TECHS = [
     "era": "prehistoric",
     "date": "约 1.1 万年前",
     "year": -11000,
-    "dependsOn": ["language","pen_enclosure"],
-    "summary": "选择性培育动植物使其服务于人，是农业与畜牧的共同前提。"
+    "dependsOn": [
+      "fire",
+      "language"
+    ],
+    "summary": "选择性培育动植物使其服务于人，是农业与畜牧的共同前提，依托用火、语言，它在史前（约 1.1 万年前）把相关能力从经验推向方法，成为生命与医疗中承上启下的一环，直接催生了农业、畜力等发展。"
   },
   {
     "id": "animal_draft",
@@ -120,8 +161,10 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 4000 年",
     "year": -4000,
-    "dependsOn": ["domestication"],
-    "summary": "以牛马等役畜牵引，把生物肌力引入运输与耕作，突破人力上限。"
+    "dependsOn": [
+      "domestication"
+    ],
+    "summary": "以牛马等役畜牵引，把生物肌力引入运输与耕作，突破人力上限，它建立在驯化之上，约 约 前 4000 年 成形于上古，把交通运载中的关键能力落到实处，并直接支撑了车等后续技术。"
   },
   {
     "id": "cart",
@@ -131,8 +174,12 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 3500 年",
     "year": -3500,
-    "dependsOn": ["wheel","woodworking","animal_draft"],
-    "summary": "轮与畜力结合，使陆上重物的远程运输成为可能。"
+    "dependsOn": [
+      "wheel",
+      "woodworking",
+      "animal_draft"
+    ],
+    "summary": "轮与畜力结合，使陆上重物的远程运输成为可能，它建立在轮子、木作、畜力之上，约 约 前 3500 年 成形于上古，把交通运载中的关键能力落到实处，并直接支撑了水力利用、水力利用等后续技术。"
   },
   {
     "id": "kiln",
@@ -142,8 +189,11 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 6000 年",
     "year": -6000,
-    "dependsOn": ["mat_pottery"],
-    "summary": "可控高温的封闭炉膛，使陶、砖、石灰、玻璃等材料的烧成走向标准化。"
+    "dependsOn": [
+      "fire",
+      "mat_pottery"
+    ],
+    "summary": "可控高温的封闭炉膛，使陶、砖、石灰、玻璃等材料的烧成走向标准化，它建立在用火、陶器之上，约 约 前 6000 年 成形于上古，把制造与工具中的关键能力落到实处，并直接支撑了氮化硅陶瓷、木炭、锯等后续技术。"
   },
   {
     "id": "mortar",
@@ -153,8 +203,11 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 3000 年",
     "year": -3000,
-    "dependsOn": ["lime","kiln"],
-    "summary": "石灰与骨料调成的粘结剂，使块石得以咬合为整体承重结构。"
+    "dependsOn": [
+      "lime",
+      "kiln"
+    ],
+    "summary": "石灰与骨料调成的粘结剂，使块石得以咬合为整体承重结构，依托石灰、窑，它在上古（约 前 3000 年）把相关能力从经验推向方法，成为建筑建造中承上启下的一环，直接催生了砌筑、引水渠等发展。"
   },
   {
     "id": "masonry",
@@ -164,10 +217,27 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 5000 年",
     "year": -5000,
-    "dependsOn": ["brick"],
-    "summary": "以规整块材叠砌承重墙，是大型永久建筑的基础工艺。"
+    "dependsOn": [
+      "stone_tools",
+      "brick",
+      "mortar"
+    ],
+    "summary": "以规整块材叠砌承重墙，是大型永久建筑的基础工艺，依托石器、砖与砌筑、砂浆，它在上古（约 前 5000 年）把相关能力从经验推向方法，成为建筑建造中承上启下的一环，直接催生了穹顶、保温隔热、模块化建筑等发展。"
   },
-  
+  {
+    "id": "dome",
+    "name": "穹顶",
+    "en": "Dome",
+    "category": "build",
+    "era": "classical",
+    "date": "约 100 年",
+    "year": 100,
+    "dependsOn": [
+      "arch",
+      "masonry"
+    ],
+    "summary": "拱绕轴旋转成壳，覆盖圆形大空间，成就万神殿式殿堂，依托拱与穹顶、砌筑，它在古典（约 100 年）解决了建筑建造中的具体难题，使相应能力得以被反复复用。其成熟让建筑建造从零散尝试走向可复用的方法。"
+  },
   {
     "id": "bridge",
     "name": "桥梁",
@@ -176,8 +246,12 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 1000 年",
     "year": -1000,
-    "dependsOn": ["masonry"],
-    "summary": "跨越河谷沟壑，把道路连成网络，扩张了帝国的控制范围。"
+    "dependsOn": [
+      "masonry",
+      "arch",
+      "engineering"
+    ],
+    "summary": "跨越河谷沟壑，把道路连成网络，扩张了帝国的控制范围，依托砌筑、拱与穹顶、工程学，它在上古（约 前 1000 年）解决了建筑建造中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "aqueduct",
@@ -187,8 +261,13 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 700 年",
     "year": -700,
-    "dependsOn": ["masonry","mortar"],
-    "summary": "以重力坡降长距离输水入城，支撑城市卫生与人口聚集。"
+    "dependsOn": [
+      "masonry",
+      "mortar",
+      "arch",
+      "engineering"
+    ],
+    "summary": "以重力坡降长距离输水入城，支撑城市卫生与人口聚集，它建立在砌筑、砂浆、拱与穹顶之上，约 约 前 700 年 出现于上古，把建筑建造的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "engineering",
@@ -198,8 +277,11 @@ const EXTEND_TECHS = [
     "era": "classical",
     "date": "约 1500 年",
     "year": 1500,
-    "dependsOn": ["mathematics"],
-    "summary": "把数学与科学方法用于造物，使设计从经验试错走向可计算、可预测。"
+    "dependsOn": [
+      "mathematics",
+      "scientific_method"
+    ],
+    "summary": "把数学与科学方法用于造物，使设计从经验试错走向可计算、可预测，依托数学、科学方法，它在古典（约 1500 年）把相关能力从经验推向方法，成为科学基础与方法中承上启下的一环，直接催生了日心说、保温隔热、模块化建筑等发展。"
   },
   {
     "id": "architecture",
@@ -209,8 +291,12 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 3000 年",
     "year": -3000,
-    "dependsOn": ["masonry","mathematics"],
-    "summary": "统筹结构、空间与材料以满足人居，是建造活动的系统知识。"
+    "dependsOn": [
+      "masonry",
+      "engineering",
+      "mathematics"
+    ],
+    "summary": "统筹结构、空间与材料以满足人居，是建造活动的系统知识，依托砌筑、工程学、数学，它在上古（约 前 3000 年）把相关能力从经验推向方法，成为建筑建造中承上启下的一环，直接催生了保温隔热、模块化建筑、装配式建筑等发展。"
   },
   {
     "id": "gearing",
@@ -220,8 +306,11 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 300 年",
     "year": -300,
-    "dependsOn": ["wheel","bronze"],
-    "summary": "以啮合轮系变速换向，把旋转运动拆解为可控的机械语言。"
+    "dependsOn": [
+      "wheel",
+      "bronze"
+    ],
+    "summary": "以啮合轮系变速换向，把旋转运动拆解为可控的机械语言，依托轮子、青铜，它在上古（约 前 300 年）把相关能力从经验推向方法，成为制造与工具中承上启下的一环，直接催生了机械钟、水磨等发展。"
   },
   {
     "id": "clock",
@@ -231,8 +320,11 @@ const EXTEND_TECHS = [
     "era": "medieval",
     "date": "约 1300 年",
     "year": 1300,
-    "dependsOn": ["gearing","astronomy"],
-    "summary": "以擒纵机构稳定分割时间，催生了对机械精度的极致追求。"
+    "dependsOn": [
+      "gearing",
+      "astronomy"
+    ],
+    "summary": "以擒纵机构稳定分割时间，催生了对机械精度的极致追求，它建立在齿轮、天文学之上，约 约 1300 年 出现于中古，把制造与工具的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "watermill",
@@ -242,8 +334,11 @@ const EXTEND_TECHS = [
     "era": "medieval",
     "date": "约 1000 年",
     "year": 1000,
-    "dependsOn": ["waterwheel","gearing"],
-    "summary": "把水能转为研磨与锻打的动力，是工厂机械化的先声。"
+    "dependsOn": [
+      "waterwheel",
+      "gearing"
+    ],
+    "summary": "把水能转为研磨与锻打的动力，是工厂机械化的先声，依托水车、齿轮，它在中古（约 1000 年）解决了制造与工具中的具体难题，使相应能力得以被反复复用。其成熟让制造与工具从零散尝试走向可复用的方法。"
   },
   {
     "id": "metallurgy",
@@ -253,8 +348,13 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 5000 年",
     "year": -5000,
-    "dependsOn": ["mining","brick"],
-    "summary": "从矿石还原金属并调配合金，是材料文明的发动机。"
+    "dependsOn": [
+      "mining",
+      "fire",
+      "bellows",
+      "charcoal"
+    ],
+    "summary": "从矿石还原金属并调配合金，是材料文明的发动机，它建立在采矿、用火、风箱之上，约 约 前 5000 年 成形于上古，把材料体系中的关键能力落到实处，并直接支撑了金属基复合材料、陶瓷基复合材料、储氢合金等后续技术。"
   },
   {
     "id": "copper",
@@ -264,11 +364,43 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 5000 年",
     "year": -5000,
-    "dependsOn": ["metallurgy","mining"],
-    "summary": "最早被还原利用的金属，延展易锻，开启了金属时代。"
+    "dependsOn": [
+      "metallurgy",
+      "mining"
+    ],
+    "summary": "最早被还原利用的金属，延展易锻，开启了金属时代，依托冶金、采矿，它在上古（约 前 5000 年）解决了材料体系中的具体难题，使相应能力得以被反复复用。其成熟让材料体系从零散尝试走向可复用的方法。"
   },
-  
-  
+  {
+    "id": "charcoal",
+    "name": "木炭",
+    "en": "Charcoal",
+    "category": "energy",
+    "era": "ancient",
+    "date": "约 前 4000 年",
+    "year": -4000,
+    "dependsOn": [
+      "fire",
+      "woodworking",
+      "kiln"
+    ],
+    "summary": "隔绝空气闷烧木材得炭，提供远高于薪柴的还原温度，依托用火、木作、窑，它在上古（约 前 4000 年）把相关能力从经验推向方法，成为能量形式中承上启下的一环，直接催生了冶金、锻造等发展。"
+  },
+  {
+    "id": "smithing",
+    "name": "锻造",
+    "en": "Smithing",
+    "category": "manufact",
+    "era": "ancient",
+    "date": "约 前 3000 年",
+    "year": -3000,
+    "dependsOn": [
+      "iron",
+      "fire",
+      "bellows",
+      "charcoal"
+    ],
+    "summary": "趁热锤打金属成形，把材料性能转化为可用的器物与机件，依托铁器、用火、风箱，它在上古（约 前 3000 年）解决了制造与工具中的具体难题，使相应能力得以被反复复用。"
+  },
   {
     "id": "textile",
     "name": "纺织",
@@ -277,8 +409,11 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 4000 年",
     "year": -4000,
-    "dependsOn": ["weaving","spindle"],
-    "summary": "把纱线织成布，是御寒、身份标识与后来工业化的核心产业。"
+    "dependsOn": [
+      "weaving",
+      "spindle"
+    ],
+    "summary": "把纱线织成布，是御寒、身份标识与后来工业化的核心产业，依托编织、纺锤，它在上古（约 前 4000 年）把相关能力从经验推向方法，成为制造与工具中承上启下的一环，直接催生了织机等发展。"
   },
   {
     "id": "spindle",
@@ -288,8 +423,11 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 8000 年",
     "year": -8000,
-    "dependsOn": ["weaving","mfg_drill"],
-    "summary": "以旋转加重纺捻纤维成纱，使纱线得以批量生产。"
+    "dependsOn": [
+      "weaving",
+      "stone_tools"
+    ],
+    "summary": "以旋转加重纺捻纤维成纱，使纱线得以批量生产，依托编织、石器，它在上古（约 前 8000 年）把相关能力从经验推向方法，成为制造与工具中承上启下的一环，直接催生了纺织等发展。"
   },
   {
     "id": "loom",
@@ -299,8 +437,11 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 5000 年",
     "year": -5000,
-    "dependsOn": ["woodworking"],
-    "summary": "以框架固定经线、规律引纬，把织造从手作升级为半机械生产。"
+    "dependsOn": [
+      "textile",
+      "woodworking"
+    ],
+    "summary": "以框架固定经线、规律引纬，把织造从手作升级为半机械生产，依托纺织、木作，它在上古（约 前 5000 年）解决了制造与工具中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "navigation",
@@ -310,8 +451,12 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 3000 年",
     "year": -3000,
-    "dependsOn": ["tr_canoe","sail","astronomy"],
-    "summary": "以天体与海流定位航向，使跨海远航与全球贸易成为可能。"
+    "dependsOn": [
+      "canoe",
+      "sail",
+      "astronomy"
+    ],
+    "summary": "以天体与海流定位航向，使跨海远航与全球贸易成为可能，它建立在独木舟、帆船、天文学之上，约 约 前 3000 年 出现于上古，把交通运载的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "magnet",
@@ -322,7 +467,7 @@ const EXTEND_TECHS = [
     "date": "约 前 1000 年",
     "year": -1000,
     "dependsOn": [],
-    "summary": "天然磁铁矿的指向性被早期文明发现，是磁现象的第一笔记录。"
+    "summary": "天然磁铁矿的指向性被早期文明发现，是磁现象的第一笔记录，它约 约 前 1000 年 出现于上古的科学基础与方法，填补了早期能力图谱的空白，为后续复杂技术的展开提供了前提。"
   },
   {
     "id": "compass",
@@ -332,8 +477,10 @@ const EXTEND_TECHS = [
     "era": "medieval",
     "date": "约 1100 年",
     "year": 1100,
-    "dependsOn": ["magnet"],
-    "summary": "以磁针恒定指北，使坏天气下仍能定向航行。"
+    "dependsOn": [
+      "magnet"
+    ],
+    "summary": "以磁针恒定指北，使坏天气下仍能定向航行，它建立在天然磁石之上，约 约 1100 年 出现于中古，把交通运载的相关能力第一次稳定下来，是后来技术谱系的基础环节。其成熟让交通运载从零散尝试走向可复用的方法。"
   },
   {
     "id": "lime",
@@ -343,8 +490,11 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 4000 年",
     "year": -4000,
-    "dependsOn": ["kiln","mining"],
-    "summary": "煅烧石灰石得生石灰，遇水硬化，是砂浆与混凝土的关键组分。"
+    "dependsOn": [
+      "kiln",
+      "mining"
+    ],
+    "summary": "煅烧石灰石得生石灰，遇水硬化，是砂浆与混凝土的关键组分，依托窑、采矿，它在上古（约 前 4000 年）把相关能力从经验推向方法，成为材料体系中承上启下的一环，直接催生了砂浆等发展。"
   },
   {
     "id": "mining",
@@ -354,8 +504,11 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 5000 年",
     "year": -5000,
-    "dependsOn": ["brick"],
-    "summary": "以凿、掘、烧裂从地层取矿，是金属与燃料供给的起点。"
+    "dependsOn": [
+      "stone_tools",
+      "fire"
+    ],
+    "summary": "以凿、掘、烧裂从地层取矿，是金属与燃料供给的起点，它建立在石器、用火之上，约 约 前 5000 年 成形于上古，把材料体系中的关键能力落到实处，并直接支撑了煤炭开采与利用、冶金、红铜等后续技术。"
   },
   {
     "id": "drilling",
@@ -365,8 +518,11 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 3000 年",
     "year": -3000,
-    "dependsOn": ["bronze_casting","wheel"],
-    "summary": "以旋转或冲击向地下穿孔，用于取水、采盐与后世油气开采。"
+    "dependsOn": [
+      "stone_tools",
+      "wheel"
+    ],
+    "summary": "以旋转或冲击向地下穿孔，用于取水、采盐与后世油气开采，依托石器、轮子，它在上古（约 前 3000 年）把相关能力从经验推向方法，成为制造与工具中承上启下的一环，直接催生了石油工业等发展。"
   },
   {
     "id": "bellows",
@@ -376,8 +532,12 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 1500 年",
     "year": -1500,
-    "dependsOn": ["mfg_rivet","woodworking","rope"],
-    "summary": "鼓风增氧抬升炉温，使铁矿石还原与熔炼可行。"
+    "dependsOn": [
+      "fire",
+      "woodworking",
+      "rope"
+    ],
+    "summary": "鼓风增氧抬升炉温，使铁矿石还原与熔炼可行，它建立在用火、木作、绳索之上，约 约 前 1500 年 成形于上古，把制造与工具中的关键能力落到实处，并直接支撑了冶铁、冶金、锻造等后续技术。"
   },
   {
     "id": "plasma_phys",
@@ -387,8 +547,11 @@ const EXTEND_TECHS = [
     "era": "electrical",
     "date": "1920 年",
     "year": 1920,
-    "dependsOn": ["electromagnetism","thermodynamics"],
-    "summary": "研究电离气体的宏观行为，是受控核聚变与航天推进的理论基础。"
+    "dependsOn": [
+      "electromagnetism",
+      "thermodynamics"
+    ],
+    "summary": "研究电离气体的宏观行为，是受控核聚变与航天推进的理论基础，依托电磁学、热力学，它在电气时代（1920 年）把相关能力从经验推向方法，成为科学基础与方法中承上启下的一环，直接催生了核聚变、聚变发电、离子推进等发展。"
   },
   {
     "id": "electronics",
@@ -398,8 +561,10 @@ const EXTEND_TECHS = [
     "era": "electrical",
     "date": "1883 年",
     "year": 1883,
-    "dependsOn": ["electromagnetism"],
-    "summary": "以电子在真空与固体中的运动构造器件，是信息与控制的底层学科。"
+    "dependsOn": [
+      "electromagnetism"
+    ],
+    "summary": "以电子在真空与固体中的运动构造器件，是信息与控制的底层学科，依托电磁学，它在电气时代（1883 年）把相关能力从经验推向方法，成为信息通信中承上启下的一环，直接催生了超精密加工、微细加工、超声加工等发展。"
   },
   {
     "id": "biotech",
@@ -409,8 +574,11 @@ const EXTEND_TECHS = [
     "era": "electrical",
     "date": "1910 年",
     "year": 1910,
-    "dependsOn": ["microbiology","genetics"],
-    "summary": "以生物体或其组分进行生产与控制，是发酵、育种与基因工程的总括。"
+    "dependsOn": [
+      "microbiology",
+      "genetics"
+    ],
+    "summary": "以生物体或其组分进行生产与控制，是发酵、育种与基因工程的总括，它建立在微生物学、遗传学之上，约 1910 年 成形于电气时代，把生命与医疗中的关键能力落到实处，并直接支撑了组织工程、合成生物学、器官芯片等后续技术。"
   },
   {
     "id": "laser",
@@ -420,8 +588,11 @@ const EXTEND_TECHS = [
     "era": "electrical",
     "date": "1960 年",
     "year": 1960,
-    "dependsOn": ["optics","electromagnetism"],
-    "summary": "受激辐射产生相干单色光，是精密测量、通信、加工与医疗的通用工具。"
+    "dependsOn": [
+      "optics",
+      "electromagnetism"
+    ],
+    "summary": "受激辐射产生相干单色光，是精密测量、通信、加工与医疗的通用工具，依托光学、电磁学，它在电气时代（1960 年）把相关能力从经验推向方法，成为信息通信中承上启下的一环，直接催生了定向能武器、定向能武器、量子加密等发展。"
   },
   {
     "id": "semiconductor",
@@ -431,10 +602,27 @@ const EXTEND_TECHS = [
     "era": "electrical",
     "date": "1947 年",
     "year": 1947,
-    "dependsOn": ["chemistry","physics","materials"],
-    "summary": "导电性可控的材料，是晶体管、芯片与一切现代电子的基石。"
+    "dependsOn": [
+      "chemistry",
+      "physics",
+      "materials"
+    ],
+    "summary": "导电性可控的材料，是晶体管、芯片与一切现代电子的基石，依托化学、经典力学、材料科学，它在电气时代（1947 年）把相关能力从经验推向方法，成为材料体系中承上启下的一环，直接催生了集成电路、集成电路、显示技术等发展。"
   },
-  
+  {
+    "id": "chip",
+    "name": "集成电路",
+    "en": "Integrated Circuit",
+    "category": "info",
+    "era": "electrical",
+    "date": "1958 年",
+    "year": 1958,
+    "dependsOn": [
+      "semiconductor",
+      "electronics"
+    ],
+    "summary": "在单片半导体上集成大量器件，使计算与控制在掌中成为现实，它建立在半导体、电子学之上，约 1958 年 成形于电气时代，把信息通信中的关键能力落到实处，并直接支撑了神经形态计算等后续技术。"
+  },
   {
     "id": "sensor",
     "name": "传感器",
@@ -443,8 +631,11 @@ const EXTEND_TECHS = [
     "era": "electrical",
     "date": "约 1950 年",
     "year": 1950,
-    "dependsOn": ["electronics","materials"],
-    "summary": "把光、力、热、磁等物理量转为电信号，是机器感知世界的接口。"
+    "dependsOn": [
+      "electronics",
+      "materials"
+    ],
+    "summary": "把光、力、热、磁等物理量转为电信号，是机器感知世界的接口，它建立在电子学、材料科学之上，约 约 1950 年 成形于电气时代，把信息通信中的关键能力落到实处，并直接支撑了增强现实、虚拟现实、增强现实等后续技术。"
   },
   {
     "id": "display",
@@ -454,8 +645,11 @@ const EXTEND_TECHS = [
     "era": "electrical",
     "date": "约 1960 年",
     "year": 1960,
-    "dependsOn": ["semiconductor","optics"],
-    "summary": "把电信号还原为可见光图像，是人机交互的最终输出端。"
+    "dependsOn": [
+      "semiconductor",
+      "optics"
+    ],
+    "summary": "把电信号还原为可见光图像，是人机交互的最终输出端，它建立在半导体、光学之上，约 约 1960 年 成形于电气时代，把信息通信中的关键能力落到实处，并直接支撑了增强现实、虚拟现实、增强现实等后续技术。"
   },
   {
     "id": "materials",
@@ -465,8 +659,11 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "约 1900 年",
     "year": 1900,
-    "dependsOn": ["chemistry","physics","biochem","writing","mathematics"],
-    "summary": "以原子与结构解释性能，使材料从经验配比走向按需设计。"
+    "dependsOn": [
+      "chemistry",
+      "physics"
+    ],
+    "summary": "以原子与结构解释性能，使材料从经验配比走向按需设计，它建立在化学、经典力学之上，约 约 1900 年 成形于信息时代，把科学基础与方法中的关键能力落到实处，并直接支撑了DNA 双螺旋、氮化硅陶瓷、金属基复合材料等后续技术。"
   },
   {
     "id": "quantum",
@@ -476,8 +673,11 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "20 世纪后期",
     "year": 1980,
-    "dependsOn": ["relativity_qm","physics"],
-    "summary": "利用量子叠加与纠缠构造器件，是计算、通信与测量的新范式。"
+    "dependsOn": [
+      "relativity_qm",
+      "physics"
+    ],
+    "summary": "利用量子叠加与纠缠构造器件，是计算、通信与测量的新范式，依托相对论与量子力学、经典力学，它在信息时代（20 世纪后期）把相关能力从经验推向方法，成为科学基础与方法中承上启下的一环，直接催生了量子互联网、量子互联网、量子纠缠等发展。"
   },
   {
     "id": "nanotech",
@@ -487,8 +687,12 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "20 世纪后期",
     "year": 1980,
-    "dependsOn": ["materials","chemistry","physics"],
-    "summary": "在纳米尺度操纵物质，使性能由结构而非成分决定。"
+    "dependsOn": [
+      "materials",
+      "chemistry",
+      "physics"
+    ],
+    "summary": "在纳米尺度操纵物质，使性能由结构而非成分决定，它建立在材料科学、化学、经典力学之上，约 20 世纪后期 成形于信息时代，把材料体系中的关键能力落到实处，并直接支撑了mRNA 疫苗、mRNA 疫苗、mRNA 疫苗等后续技术。"
   },
   {
     "id": "spacecraft",
@@ -498,8 +702,11 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "1957 年",
     "year": 1957,
-    "dependsOn": ["rocket","satellite"],
-    "summary": "进入并工作于太空的载体，把活动疆域从地表扩展到轨道与深空。"
+    "dependsOn": [
+      "rocket",
+      "satellite"
+    ],
+    "summary": "进入并工作于太空的载体，把活动疆域从地表扩展到轨道与深空，它建立在火箭、人造卫星之上，约 1957 年 成形于信息时代，把交通运载中的关键能力落到实处，并直接支撑了离子推进、太空电梯、太空制造等后续技术。"
   },
   {
     "id": "life_support",
@@ -509,10 +716,27 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "约 1960 年",
     "year": 1960,
-    "dependsOn": ["engineering","chemistry","biotech"],
-    "summary": "在封闭环境中维持温、氧、水、食的循环，使人得以离开地球生存。"
+    "dependsOn": [
+      "engineering",
+      "chemistry",
+      "biotech"
+    ],
+    "summary": "在封闭环境中维持温、氧、水、食的循环，使人得以离开地球生存，它建立在工程学、化学、生物技术之上，约 约 1960 年 成形于信息时代，把生命与医疗中的关键能力落到实处，并直接支撑了居住舱、人造子宫、火星殖民等后续技术。"
   },
-  
+  {
+    "id": "pharmacology",
+    "name": "药理学",
+    "en": "Pharmacology",
+    "category": "life",
+    "era": "classical",
+    "date": "约 1800 年",
+    "year": 1800,
+    "dependsOn": [
+      "chemistry",
+      "microbiology"
+    ],
+    "summary": "研究药物与机体的相互作用，使治疗从经验方剂走向机理设计，它建立在化学、微生物学之上，约 约 1800 年 成形于古典，把生命与医疗中的关键能力落到实处，并直接支撑了纳米医药、衰老干预等后续技术。"
+  },
   {
     "id": "stem_cells",
     "name": "干细胞",
@@ -521,10 +745,27 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "1960 年",
     "year": 1960,
-    "dependsOn": ["genetics","biotech","chemistry","mathematics","bio_arthroplasty","bio_antiviral"],
-    "summary": "具自我更新与分化潜能的细胞，是再生医学与器官构建的种子。"
+    "dependsOn": [
+      "genetics",
+      "biotech"
+    ],
+    "summary": "具自我更新与分化潜能的细胞，是再生医学与器官构建的种子，依托遗传学、生物技术，它在信息时代（1960 年）把相关能力从经验推向方法，成为生命与医疗中承上启下的一环，直接催生了正电子成像、组织工程、电子病历等发展。"
   },
-  
+  {
+    "id": "tissue_engineering",
+    "name": "组织工程",
+    "en": "Tissue Engineering",
+    "category": "life",
+    "era": "info",
+    "date": "1990 年",
+    "year": 1990,
+    "dependsOn": [
+      "biotech",
+      "stem_cells",
+      "materials"
+    ],
+    "summary": "以支架与细胞在体外培育功能组织，弥补移植供体的短缺，依托生物技术、干细胞、材料科学，它在信息时代（1990 年）把相关能力从经验推向方法，成为生命与医疗中承上启下的一环，直接催生了干细胞治疗、人造子宫等发展。"
+  },
   {
     "id": "microfluidics",
     "name": "微流控",
@@ -533,8 +774,11 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "1990 年",
     "year": 1990,
-    "dependsOn": ["physics","materials"],
-    "summary": "在微米通道内操控微量流体，是便携诊断与单细胞质控的平台。"
+    "dependsOn": [
+      "physics",
+      "materials"
+    ],
+    "summary": "在微米通道内操控微量流体，是便携诊断与单细胞质控的平台，依托经典力学、材料科学，它在信息时代（1990 年）把相关能力从经验推向方法，成为生命与医疗中承上启下的一环，直接催生了器官芯片、器官芯片、器官芯片等发展。"
   },
   {
     "id": "propulsion",
@@ -544,8 +788,11 @@ const EXTEND_TECHS = [
     "era": "industrial",
     "date": "约 1900 年",
     "year": 1900,
-    "dependsOn": ["thermodynamics"],
-    "summary": "把能量转为定向推力，是航天与高速运载的核心能力。"
+    "dependsOn": [
+      "thermodynamics",
+      "rocket"
+    ],
+    "summary": "把能量转为定向推力，是航天与高速运载的核心能力，依托热力学、火箭，它在工业时代（约 1900 年）把相关能力从经验推向方法，成为交通运载中承上启下的一环，直接催生了核热推进、聚变火箭、恒星发动机等发展。"
   },
   {
     "id": "combustion",
@@ -555,8 +802,11 @@ const EXTEND_TECHS = [
     "era": "industrial",
     "date": "约 1800 年",
     "year": 1800,
-    "dependsOn": ["chemistry"],
-    "summary": "燃料与氧化剂的快速放热反应，是内燃、喷气与多数动力的来源。"
+    "dependsOn": [
+      "thermodynamics",
+      "chemistry"
+    ],
+    "summary": "燃料与氧化剂的快速放热反应，是内燃、喷气与多数动力的来源，依托热力学、化学，它在工业时代（约 1800 年）把相关能力从经验推向方法，成为能量形式中承上启下的一环，直接催生了燃料电池汽车、车路协同、燃料电池汽车等发展。"
   },
   {
     "id": "actuator",
@@ -566,8 +816,11 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "约 1950 年",
     "year": 1950,
-    "dependsOn": ["electronics","materials"],
-    "summary": "把电、液、气信号转为机械运动，是机器执行动作的肌肉。"
+    "dependsOn": [
+      "electronics",
+      "materials"
+    ],
+    "summary": "把电、液、气信号转为机械运动，是机器执行动作的肌肉，依托电子学、材料科学，它在信息时代（约 1950 年）把相关能力从经验推向方法，成为制造与工具中承上启下的一环，直接催生了人形机器人、软体机器人、动力外骨骼等发展。"
   },
   {
     "id": "cad",
@@ -577,8 +830,11 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "1960 年",
     "year": 1960,
-    "dependsOn": ["computer","mathematics"],
-    "summary": "以参数化模型代替图板，使设计、仿真与制造无缝衔接。"
+    "dependsOn": [
+      "computer",
+      "mathematics"
+    ],
+    "summary": "以参数化模型代替图板，使设计、仿真与制造无缝衔接，它建立在电子计算机、数学之上，约 1960 年 成形于信息时代，把信息通信中的关键能力落到实处，并直接支撑了数字孪生、数字孪生、数字孪生等后续技术。"
   },
   {
     "id": "simulation",
@@ -588,8 +844,11 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "约 1950 年",
     "year": 1950,
-    "dependsOn": ["computer","mathematics"],
-    "summary": "用数值模型复现系统行为，使工程在制造前先试飞、试爆、试错。"
+    "dependsOn": [
+      "computer",
+      "mathematics"
+    ],
+    "summary": "用数值模型复现系统行为，使工程在制造前先试飞、试爆、试错，依托电子计算机、数学，它在信息时代（约 1950 年）把相关能力从经验推向方法，成为信息通信中承上启下的一环，直接催生了数字孪生、数字孪生、数字孪生等发展。"
   },
   {
     "id": "iot",
@@ -599,8 +858,12 @@ const EXTEND_TECHS = [
     "era": "intelligent",
     "date": "2010 年",
     "year": 2010,
-    "dependsOn": ["internet","sensor","soc","mat_mof","ene_lipoly","mathematics","inf_uml"],
-    "summary": "把传感器与执行器联网，使物理世界可被软件实时感知与调度。"
+    "dependsOn": [
+      "internet",
+      "sensor",
+      "soc"
+    ],
+    "summary": "把传感器与执行器联网，使物理世界可被软件实时感知与调度，它建立在互联网、传感器、手机系统级芯片之上，约 2010 年 成形于智能时代，把信息通信中的关键能力落到实处，并直接支撑了边缘智能、边缘智能、边缘智能等后续技术。"
   },
   {
     "id": "big_data",
@@ -610,10 +873,26 @@ const EXTEND_TECHS = [
     "era": "intelligent",
     "date": "2005 年",
     "year": 2005,
-    "dependsOn": ["computer","internet","mat_selfheal","ene_borehole","mathematics","inf_cloud"],
-    "summary": "在海量异构数据上挖掘规律，是智能决策与模型训练的燃料。"
+    "dependsOn": [
+      "computer",
+      "internet"
+    ],
+    "summary": "在海量异构数据上挖掘规律，是智能决策与模型训练的燃料，依托电子计算机、互联网，它在智能时代（2005 年）把相关能力从经验推向方法，成为信息通信中承上启下的一环，直接催生了精准医疗、精准医疗、通用人工智能等发展。"
   },
-  
+  {
+    "id": "neural_network",
+    "name": "神经网络",
+    "en": "Neural Network",
+    "category": "info",
+    "era": "intelligent",
+    "date": "2010 年",
+    "year": 2010,
+    "dependsOn": [
+      "ai",
+      "mathematics"
+    ],
+    "summary": "以多层非线性变换拟合复杂映射，是当代人工智能的主干，它建立在人工智能、数学之上，约 2010 年 成形于智能时代，把信息通信中的关键能力落到实处，并直接支撑了通用人工智能等后续技术。"
+  },
   {
     "id": "microwave",
     "name": "微波",
@@ -622,8 +901,10 @@ const EXTEND_TECHS = [
     "era": "electrical",
     "date": "1940 年",
     "year": 1940,
-    "dependsOn": ["electromagnetism"],
-    "summary": "厘米波段的电磁波，用于加热、雷达与点对点通信。"
+    "dependsOn": [
+      "electromagnetism"
+    ],
+    "summary": "厘米波段的电磁波，用于加热、雷达与点对点通信，依托电磁学，它在电气时代（1940 年）把相关能力从经验推向方法，成为能量形式中承上启下的一环，直接催生了空间太阳能、空间太阳能、空间太阳能等发展。"
   },
   {
     "id": "cryogenics",
@@ -633,8 +914,11 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "约 1900 年",
     "year": 1900,
-    "dependsOn": ["thermodynamics","physics"],
-    "summary": "获得并维持极低温，是超导、液化与量子器件的前提。"
+    "dependsOn": [
+      "thermodynamics",
+      "physics"
+    ],
+    "summary": "获得并维持极低温，是超导、液化与量子器件的前提，它建立在热力学、经典力学之上，约 约 1900 年 成形于信息时代，把能量形式中的关键能力落到实处，并直接支撑了量子计算机、超导磁体等后续技术。"
   },
   {
     "id": "superconductor",
@@ -644,8 +928,11 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "1911 年",
     "year": 1911,
-    "dependsOn": ["physics","materials"],
-    "summary": "零电阻且排磁场的状态，是强磁体、无损耗输电与量子比特的载体。"
+    "dependsOn": [
+      "physics",
+      "materials"
+    ],
+    "summary": "零电阻且排磁场的状态，是强磁体、无损耗输电与量子比特的载体，它建立在经典力学、材料科学之上，约 1911 年 成形于信息时代，把材料体系中的关键能力落到实处，并直接支撑了电磁炮、量子计算机、聚变发电等后续技术。"
   },
   {
     "id": "particle_physics",
@@ -655,8 +942,11 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "1930 年",
     "year": 1930,
-    "dependsOn": ["physics","relativity_qm"],
-    "summary": "在最高能量下探究物质基本组分与力，是标准模型的实验场。"
+    "dependsOn": [
+      "physics",
+      "relativity_qm"
+    ],
+    "summary": "在最高能量下探究物质基本组分与力，是标准模型的实验场，它建立在经典力学、相对论与量子力学之上，约 1930 年 成形于信息时代，把科学基础与方法中的关键能力落到实处，并直接支撑了量子场论、粒子物理学、射电天文学等后续技术。"
   },
   {
     "id": "spacetime",
@@ -666,8 +956,11 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "1915 年",
     "year": 1915,
-    "dependsOn": ["relativity_qm","physics"],
-    "summary": "把时间与空间统一为可弯曲的几何，是引力与宇宙学的新框架。"
+    "dependsOn": [
+      "relativity_qm",
+      "physics"
+    ],
+    "summary": "把时间与空间统一为可弯曲的几何，是引力与宇宙学的新框架，依托相对论与量子力学、经典力学，它在信息时代（1915 年）把相关能力从经验推向方法，成为科学基础与方法中承上启下的一环，直接催生了曲速引擎、虫洞、超光速通讯等发展。"
   },
   {
     "id": "general_relativity",
@@ -677,10 +970,26 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "1915 年",
     "year": 1915,
-    "dependsOn": ["relativity_qm","physics","writing","mathematics","nuclear_phys"],
-    "summary": "以时空弯曲诠释引力，预言了黑洞、引力波与时间膨胀。"
+    "dependsOn": [
+      "relativity_qm",
+      "physics"
+    ],
+    "summary": "以时空弯曲诠释引力，预言了黑洞、引力波与时间膨胀，它建立在相对论与量子力学、经典力学之上，约 1915 年 成形于信息时代，把科学基础与方法中的关键能力落到实处，并直接支撑了宇宙学、宇宙学、黑洞等后续技术。"
   },
-  
+  {
+    "id": "quantum_field",
+    "name": "量子场论",
+    "en": "Quantum Field Theory",
+    "category": "basic",
+    "era": "info",
+    "date": "1950 年",
+    "year": 1950,
+    "dependsOn": [
+      "relativity_qm",
+      "particle_physics"
+    ],
+    "summary": "把粒子视为场的激发，统一了量子与狭义相对论，是现代物理的语法，它建立在相对论与量子力学、粒子物理之上，约 1950 年 成形于信息时代，把科学基础与方法中的关键能力落到实处，并直接支撑了奇异物质等后续技术。"
+  },
   {
     "id": "quantum_entanglement",
     "name": "量子纠缠",
@@ -689,8 +998,11 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "1935 年",
     "year": 1935,
-    "dependsOn": ["relativity_qm"],
-    "summary": "粒子态的强关联使测量瞬间相关，是量子信息与不可克隆的基础。"
+    "dependsOn": [
+      "relativity_qm",
+      "quantum"
+    ],
+    "summary": "粒子态的强关联使测量瞬间相关，是量子信息与不可克隆的基础，它建立在相对论与量子力学、量子科技之上，约 1935 年 成形于信息时代，把科学基础与方法中的关键能力落到实处，并直接支撑了λ演算、计算机科学、λ演算等后续技术。"
   },
   {
     "id": "quantum_info",
@@ -700,8 +1012,12 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "1990 年",
     "year": 1990,
-    "dependsOn": ["quantum","quantum_entanglement","computer"],
-    "summary": "以量子态编码与处理信息，突破经典计算的某些极限。"
+    "dependsOn": [
+      "quantum",
+      "quantum_entanglement",
+      "computer"
+    ],
+    "summary": "以量子态编码与处理信息，突破经典计算的某些极限，它建立在量子科技、量子纠缠、电子计算机之上，约 1990 年 成形于信息时代，把科学基础与方法中的关键能力落到实处，并直接支撑了蛋白质组学、蛋白质组学、量子计算机等后续技术。"
   },
   {
     "id": "black_hole",
@@ -711,8 +1027,11 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "1960 年",
     "year": 1960,
-    "dependsOn": ["general_relativity","physics"],
-    "summary": "引力坍缩到视界之内的天体，是检验极端物理的天然实验室。"
+    "dependsOn": [
+      "general_relativity",
+      "physics"
+    ],
+    "summary": "引力坍缩到视界之内的天体，是检验极端物理的天然实验室，它建立在广义相对论、经典力学之上，约 1960 年 成形于信息时代，把科学基础与方法中的关键能力落到实处，并直接支撑了黑洞计算等后续技术。"
   },
   {
     "id": "climate_science",
@@ -722,8 +1041,11 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "1950 年",
     "year": 1950,
-    "dependsOn": ["physics","chemistry"],
-    "summary": "研究地球能量与物质收支，是评估人为影响与预测变化的依据。"
+    "dependsOn": [
+      "physics",
+      "chemistry"
+    ],
+    "summary": "研究地球能量与物质收支，是评估人为影响与预测变化的依据，它建立在经典力学、化学之上，约 1950 年 成形于信息时代，把科学基础与方法中的关键能力落到实处，并直接支撑了气候工程等后续技术。"
   },
   {
     "id": "aerosol",
@@ -733,8 +1055,11 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "1950 年",
     "year": 1950,
-    "dependsOn": ["chemistry","physics"],
-    "summary": "悬浮于气体中的微粒，影响云、气候与大气光学，也是喷射药剂的载体。"
+    "dependsOn": [
+      "chemistry",
+      "physics"
+    ],
+    "summary": "悬浮于气体中的微粒，影响云、气候与大气光学，也是喷射药剂的载体，依托化学、经典力学，它在信息时代（1950 年）把相关能力从经验推向方法，成为材料体系中承上启下的一环，直接催生了气候工程等发展。"
   },
   {
     "id": "led",
@@ -744,8 +1069,11 @@ const EXTEND_TECHS = [
     "era": "electrical",
     "date": "1962 年",
     "year": 1962,
-    "dependsOn": ["semiconductor","optics"],
-    "summary": "半导体电致发光，以极低功耗重塑了照明与显示。"
+    "dependsOn": [
+      "semiconductor",
+      "optics"
+    ],
+    "summary": "半导体电致发光，以极低功耗重塑了照明与显示，依托半导体、光学，它在电气时代（1962 年）把相关能力从经验推向方法，成为信息通信中承上启下的一环，直接催生了垂直农业等发展。"
   },
   {
     "id": "automation",
@@ -755,8 +1083,11 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "1950 年",
     "year": 1950,
-    "dependsOn": ["computer","electronics"],
-    "summary": "以反馈与控制代替人工操作，是流水线、机器人与无人系统的灵魂。"
+    "dependsOn": [
+      "computer",
+      "electronics"
+    ],
+    "summary": "以反馈与控制代替人工操作，是流水线、机器人与无人系统的灵魂，依托电子计算机、电子学，它在信息时代（1950 年）把相关能力从经验推向方法，成为制造与工具中承上启下的一环，直接催生了超精密加工、微细加工、超声加工等发展。"
   },
   {
     "id": "ventilation",
@@ -766,8 +1097,10 @@ const EXTEND_TECHS = [
     "era": "industrial",
     "date": "约 1800 年",
     "year": 1800,
-    "dependsOn": ["engineering"],
-    "summary": "主动置换空气以维持温湿与洁净，是地下、密闭与洁净空间的前提。"
+    "dependsOn": [
+      "engineering"
+    ],
+    "summary": "主动置换空气以维持温湿与洁净，是地下、密闭与洁净空间的前提，依托工程学，它在工业时代（约 1800 年）把相关能力从经验推向方法，成为建筑建造中承上启下的一环，直接催生了地下城等发展。"
   },
   {
     "id": "habitat",
@@ -777,8 +1110,11 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "1970 年",
     "year": 1970,
-    "dependsOn": ["engineering","life_support"],
-    "summary": "可独立维持人居的封闭结构，是月球、火星与前哨基地的居所。"
+    "dependsOn": [
+      "engineering",
+      "life_support"
+    ],
+    "summary": "可独立维持人居的封闭结构，是月球、火星与前哨基地的居所，依托工程学、生命保障，它在信息时代（1970 年）把相关能力从经验推向方法，成为建筑建造中承上启下的一环，直接催生了月球基地等发展。"
   },
   {
     "id": "scramjet",
@@ -788,8 +1124,12 @@ const EXTEND_TECHS = [
     "era": "intelligent",
     "date": "2000 年",
     "year": 2000,
-    "dependsOn": ["combustion","aerodynamics","rocket"],
-    "summary": "在超声速气流中直接燃烧，无需旋转压气机即可推进，是高超声速动力。"
+    "dependsOn": [
+      "combustion",
+      "aerodynamics",
+      "rocket"
+    ],
+    "summary": "在超声速气流中直接燃烧，无需旋转压气机即可推进，是高超声速动力，依托燃烧、空气动力学、火箭，它在智能时代（2000 年）把相关能力从经验推向方法，成为交通运载中承上启下的一环，直接催生了高超声速飞行等发展。"
   },
   {
     "id": "hypersonic",
@@ -799,8 +1139,12 @@ const EXTEND_TECHS = [
     "era": "intelligent",
     "date": "2010 年",
     "year": 2010,
-    "dependsOn": ["aerodynamics","scramjet","materials","mfg_visionguide","ene_borehole","mat_selfheal","tr_charging"],
-    "summary": "以 5 马赫以上速度穿越大气，对材料、热管理与制导提出极限要求。"
+    "dependsOn": [
+      "aerodynamics",
+      "scramjet",
+      "materials"
+    ],
+    "summary": "以 5 马赫以上速度穿越大气，对材料、热管理与制导提出极限要求，它建立在空气动力学、超燃冲压发动机、材料科学之上，约 2010 年 成形于智能时代，把交通运载中的关键能力落到实处，并直接支撑了高超声速武器、轨道打击等后续技术。"
   },
   {
     "id": "railgun",
@@ -810,8 +1154,11 @@ const EXTEND_TECHS = [
     "era": "info",
     "date": "2000 年",
     "year": 2000,
-    "dependsOn": ["electromagnetism","superconductor"],
-    "summary": "以电磁力加速弹丸，免却发射药而获得极高初速与射程。"
+    "dependsOn": [
+      "electromagnetism",
+      "superconductor"
+    ],
+    "summary": "以电磁力加速弹丸，免却发射药而获得极高初速与射程，它建立在电磁学、超导体之上，约 2000 年 出现于信息时代，把军事技术的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "isru",
@@ -821,8 +1168,12 @@ const EXTEND_TECHS = [
     "era": "intelligent",
     "date": "2010 年",
     "year": 2010,
-    "dependsOn": ["mining","chemistry","automation"],
-    "summary": "在地外就地取材制取燃料、水与建材，是长期驻留的前提。"
+    "dependsOn": [
+      "mining",
+      "chemistry",
+      "automation"
+    ],
+    "summary": "在地外就地取材制取燃料、水与建材，是长期驻留的前提，依托采矿、化学、自动化，它在智能时代（2010 年）把相关能力从经验推向方法，成为交通运载中承上启下的一环，直接催生了月球基地、火星殖民、太空居住等发展。"
   },
   {
     "id": "agi",
@@ -833,8 +1184,12 @@ const EXTEND_TECHS = [
     "date": "约 2040 年（L2·目前技术可实现）",
     "year": 2040,
     "tier": "L2",
-    "dependsOn": ["ai","inf_nn","big_data"],
-    "summary": "在广泛任务上达到或超越人类水平的通用智能，是后续多数科幻设想的共同前提。",
+    "dependsOn": [
+      "ai",
+      "neural_network",
+      "big_data"
+    ],
+    "summary": "在广泛任务上达到或超越人类水平的通用智能，是后续多数科幻设想的共同前提，依托人工智能、神经网络、大数据，它在未来/科幻（约 2040 年（L2·目前技术可实现））把相关能力从经验推向方法，成为信息通信中承上启下的一环，直接催生了数字生命、冯·诺依曼探测器等发展。",
     "views": [
       {
         "period": "设想",
@@ -855,8 +1210,12 @@ const EXTEND_TECHS = [
     "date": "约 2030 年（L2·目前技术可实现）",
     "year": 2030,
     "tier": "L2",
-    "dependsOn": ["ai","ic","neuroscience"],
-    "summary": "以脉冲神经元仿脑结构布线，极低功耗下做感知与决策，是边缘智能的候选架构。"
+    "dependsOn": [
+      "ai",
+      "chip",
+      "neuroscience"
+    ],
+    "summary": "以脉冲神经元仿脑结构布线，极低功耗下做感知与决策，是边缘智能的候选架构，依托人工智能、集成电路、神经科学，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了信息通信中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "quantum_computer",
@@ -867,8 +1226,12 @@ const EXTEND_TECHS = [
     "date": "约 2035 年（L2·目前技术可实现）",
     "year": 2035,
     "tier": "L2",
-    "dependsOn": ["quantum_info","superconductor","cryogenics"],
-    "summary": "利用叠加与纠缠做特定问题指数加速，有望破解优化、化学模拟与密码。"
+    "dependsOn": [
+      "quantum_info",
+      "superconductor",
+      "cryogenics"
+    ],
+    "summary": "利用叠加与纠缠做特定问题指数加速，有望破解优化、化学模拟与密码，依托量子信息、超导体、低温工程，它在未来/科幻（约 2035 年（L2·目前技术可实现））解决了信息通信中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "quantum_crypto",
@@ -879,13 +1242,78 @@ const EXTEND_TECHS = [
     "date": "约 2030 年（L2·目前技术可实现）",
     "year": 2030,
     "tier": "L2",
-    "dependsOn": ["quantum_entanglement","laser","internet"],
-    "summary": "以不可克隆定理分发密钥，任何窃听都会留下痕迹，提供信息论级安全。"
+    "dependsOn": [
+      "quantum_entanglement",
+      "laser",
+      "internet"
+    ],
+    "summary": "以不可克隆定理分发密钥，任何窃听都会留下痕迹，提供信息论级安全，依托量子纠缠、激光、互联网，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了信息通信中的具体难题，使相应能力得以被反复复用。"
   },
-  
-  
-  
-  
+  {
+    "id": "edge_ai",
+    "name": "边缘智能",
+    "en": "Edge AI",
+    "category": "info",
+    "era": "future",
+    "date": "约 2030 年（L2·目前技术可实现）",
+    "year": 2030,
+    "tier": "L2",
+    "dependsOn": [
+      "ai",
+      "iot",
+      "soc"
+    ],
+    "summary": "把模型下沉到终端与网关，低时延、隐私友好地就地决策，是自主设备的大脑，它建立在人工智能、物联网、手机系统级芯片之上，约 约 2030 年（L2·目前技术可实现） 出现于未来/科幻，把信息通信的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
+  },
+  {
+    "id": "digital_twin",
+    "name": "数字孪生",
+    "en": "Digital Twin",
+    "category": "info",
+    "era": "future",
+    "date": "约 2030 年（L2·目前技术可实现）",
+    "year": 2030,
+    "tier": "L2",
+    "dependsOn": [
+      "simulation",
+      "iot",
+      "cad"
+    ],
+    "summary": "为实体建立实时同步的虚拟副本，在比特世界先试错再动真格，依托仿真、物联网、计算机辅助设计，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了信息通信中的具体难题，使相应能力得以被反复复用。"
+  },
+  {
+    "id": "ar",
+    "name": "增强现实",
+    "en": "Augmented Reality",
+    "category": "info",
+    "era": "future",
+    "date": "约 2030 年（L2·目前技术可实现）",
+    "year": 2030,
+    "tier": "L2",
+    "dependsOn": [
+      "display",
+      "camera",
+      "ai",
+      "sensor"
+    ],
+    "summary": "把数字信息叠加到真实视野，重塑维修、导航与协作的人机界面，依托显示技术、数码相机 / 图像传感器、人工智能，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了信息通信中的具体难题，使相应能力得以被反复复用。"
+  },
+  {
+    "id": "vr",
+    "name": "虚拟现实",
+    "en": "Virtual Reality",
+    "category": "info",
+    "era": "future",
+    "date": "约 2030 年（L2·目前技术可实现）",
+    "year": 2030,
+    "tier": "L2",
+    "dependsOn": [
+      "display",
+      "computer",
+      "sensor"
+    ],
+    "summary": "以头显构建沉浸式虚拟环境，是训练、社交与娱乐的新载体，它建立在显示技术、电子计算机、传感器之上，约 约 2030 年（L2·目前技术可实现） 成形于未来/科幻，把信息通信中的关键能力落到实处，并直接支撑了虚拟世界等后续技术。"
+  },
   {
     "id": "holography",
     "name": "全息显示",
@@ -895,8 +1323,12 @@ const EXTEND_TECHS = [
     "date": "约 2035 年（L2·目前技术可实现）",
     "year": 2035,
     "tier": "L2",
-    "dependsOn": ["laser","display","optics"],
-    "summary": "以干涉记录重建真三维光场，无需眼镜即可裸眼观看悬浮影像。"
+    "dependsOn": [
+      "laser",
+      "display",
+      "optics"
+    ],
+    "summary": "以干涉记录重建真三维光场，无需眼镜即可裸眼观看悬浮影像，依托激光、显示技术、光学，它在未来/科幻（约 2035 年（L2·目前技术可实现））解决了信息通信中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "self_driving",
@@ -907,8 +1339,13 @@ const EXTEND_TECHS = [
     "date": "约 2030 年（L2·目前技术可实现）",
     "year": 2030,
     "tier": "L2",
-    "dependsOn": ["ai","lidar","gps","automobile"],
-    "summary": "在复杂城市道路中由系统全程控车，把通勤时间转化为可自由支配的时间。"
+    "dependsOn": [
+      "ai",
+      "lidar",
+      "gps",
+      "automobile"
+    ],
+    "summary": "在复杂城市道路中由系统全程控车，把通勤时间转化为可自由支配的时间，它建立在人工智能、激光雷达、全球卫星定位 GNSS之上，约 约 2030 年（L2·目前技术可实现） 成形于未来/科幻，把交通运载中的关键能力落到实处，并直接支撑了飞行汽车等后续技术。"
   },
   {
     "id": "humanoid",
@@ -919,8 +1356,12 @@ const EXTEND_TECHS = [
     "date": "约 2032 年（L2·目前技术可实现）",
     "year": 2032,
     "tier": "L2",
-    "dependsOn": ["robot","ai","actuator"],
-    "summary": "以双足与多指适应为人类设计的环境，承接看护、服务等柔性任务。"
+    "dependsOn": [
+      "robot",
+      "ai",
+      "actuator"
+    ],
+    "summary": "以双足与多指适应为人类设计的环境，承接看护、服务等柔性任务，依托工业机器人、人工智能、作动器，它在未来/科幻（约 2032 年（L2·目前技术可实现））解决了制造与工具中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "soft_robot",
@@ -931,8 +1372,12 @@ const EXTEND_TECHS = [
     "date": "约 2030 年（L2·目前技术可实现）",
     "year": 2030,
     "tier": "L2",
-    "dependsOn": ["robot","materials","actuator"],
-    "summary": "以弹性体变形运动，能安全钻入缝隙、贴合人体，适合医疗与救援。"
+    "dependsOn": [
+      "robot",
+      "materials",
+      "actuator"
+    ],
+    "summary": "以弹性体变形运动，能安全钻入缝隙、贴合人体，适合医疗与救援，依托工业机器人、材料科学、作动器，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了制造与工具中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "swarm_robot",
@@ -943,8 +1388,12 @@ const EXTEND_TECHS = [
     "date": "约 2030 年（L2·目前技术可实现）",
     "year": 2030,
     "tier": "L2",
-    "dependsOn": ["robot","ai","iot"],
-    "summary": "大量简单单元以局部规则自组织，涌现侦查、搬运与建造等群体能力。"
+    "dependsOn": [
+      "robot",
+      "ai",
+      "iot"
+    ],
+    "summary": "大量简单单元以局部规则自组织，涌现侦查、搬运与建造等群体能力，依托工业机器人、人工智能、物联网，它在未来/科幻（约 2030 年（L2·目前技术可实现））把相关能力从经验推向方法，成为制造与工具中承上启下的一环，直接催生了纳米机器人等发展。"
   },
   {
     "id": "exoskeleton",
@@ -955,8 +1404,13 @@ const EXTEND_TECHS = [
     "date": "约 2030 年（L2·目前技术可实现）",
     "year": 2030,
     "tier": "L2",
-    "dependsOn": ["robot","battery","actuator","materials"],
-    "summary": "外穿戴式助力骨架，放大体力，用于负重、康复与单兵机动。"
+    "dependsOn": [
+      "robot",
+      "battery",
+      "actuator",
+      "materials"
+    ],
+    "summary": "外穿戴式助力骨架，放大体力，用于负重、康复与单兵机动，依托工业机器人、电池、作动器，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了制造与工具中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "robot_factory",
@@ -967,8 +1421,13 @@ const EXTEND_TECHS = [
     "date": "约 2030 年（L2·目前技术可实现）",
     "year": 2030,
     "tier": "L2",
-    "dependsOn": ["robot","ai","iot","mfg_3dp"],
-    "summary": "从投料到质检全由机器闭环，少人乃至无人即可连续生产。"
+    "dependsOn": [
+      "robot",
+      "ai",
+      "iot",
+      "mfg_3dp"
+    ],
+    "summary": "从投料到质检全由机器闭环，少人乃至无人即可连续生产，依托工业机器人、人工智能、物联网，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了制造与工具中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "crispr",
@@ -979,11 +1438,45 @@ const EXTEND_TECHS = [
     "date": "约 2025 年（L2·目前技术可实现）",
     "year": 2025,
     "tier": "L2",
-    "dependsOn": ["dna","genetics","recombinant_dna","chemistry","mathematics"],
-    "summary": "以分子剪刀定点改写基因组，使遗传疾病治疗与作物改良进入可编程时代。"
+    "dependsOn": [
+      "dna",
+      "genetics",
+      "recombinant_dna"
+    ],
+    "summary": "以分子剪刀定点改写基因组，使遗传疾病治疗与作物改良进入可编程时代，依托遗传学 / DNA、遗传学、重组DNA技术，它在未来/科幻（约 2025 年（L2·目前技术可实现））把相关能力从经验推向方法，成为生命与医疗中承上启下的一环，直接催生了基因治疗、基因电路等发展。"
   },
-  
-  
+  {
+    "id": "gene_therapy",
+    "name": "基因治疗",
+    "en": "Gene Therapy",
+    "category": "life",
+    "era": "future",
+    "date": "约 2030 年（L2·目前技术可实现）",
+    "year": 2030,
+    "tier": "L2",
+    "dependsOn": [
+      "crispr",
+      "genetics",
+      "immunology"
+    ],
+    "summary": "把正确基因递送进细胞以根治病因，而非仅缓解症状，已用于部分遗传病，依托基因编辑、遗传学、免疫学，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了生命与医疗中的具体难题，使相应能力得以被反复复用。"
+  },
+  {
+    "id": "synthetic_biology",
+    "name": "合成生物学",
+    "en": "Synthetic Biology",
+    "category": "life",
+    "era": "future",
+    "date": "约 2030 年（L2·目前技术可实现）",
+    "year": 2030,
+    "tier": "L2",
+    "dependsOn": [
+      "genetics",
+      "biotech",
+      "dna"
+    ],
+    "summary": "像搭电路一样设计规范生物部件，让细胞工厂生产药物、材料与燃料，依托遗传学、生物技术、遗传学 / DNA，它在未来/科幻（约 2030 年（L2·目前技术可实现））把相关能力从经验推向方法，成为生命与医疗中承上启下的一环，直接催生了基因电路等发展。"
+  },
   {
     "id": "stem_cell_therapy",
     "name": "干细胞治疗",
@@ -993,12 +1486,60 @@ const EXTEND_TECHS = [
     "date": "约 2035 年（L2·目前技术可实现）",
     "year": 2035,
     "tier": "L2",
-    "dependsOn": ["stem_cells","bio_tissueeng"],
-    "summary": "以干细胞替换受损组织，为帕金森、脊髓损伤等退行性疾病提供修复路径。"
+    "dependsOn": [
+      "stem_cells",
+      "tissue_engineering"
+    ],
+    "summary": "以干细胞替换受损组织，为帕金森、脊髓损伤等退行性疾病提供修复路径，它建立在干细胞、组织工程之上，约 约 2035 年（L2·目前技术可实现） 出现于未来/科幻，把生命与医疗的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
-  
-  
-  
+  {
+    "id": "organs_on_chip",
+    "name": "器官芯片",
+    "en": "Organs-on-Chip",
+    "category": "life",
+    "era": "future",
+    "date": "约 2030 年（L2·目前技术可实现）",
+    "year": 2030,
+    "tier": "L2",
+    "dependsOn": [
+      "microfluidics",
+      "stem_cells",
+      "biotech"
+    ],
+    "summary": "在微流控上复刻器官微环境，以人源模型替代动物试验、加速药筛，依托微流控、干细胞、生物技术，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了生命与医疗中的具体难题，使相应能力得以被反复复用。"
+  },
+  {
+    "id": "personalized_medicine",
+    "name": "精准医疗",
+    "en": "Personalized Medicine",
+    "category": "life",
+    "era": "future",
+    "date": "约 2030 年（L2·目前技术可实现）",
+    "year": 2030,
+    "tier": "L2",
+    "dependsOn": [
+      "genetics",
+      "ai",
+      "big_data"
+    ],
+    "summary": "按个体基因组与生活方式定制预防与用药，把统计医学转为针对个人的医学，依托遗传学、人工智能、大数据，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了生命与医疗中的具体难题，使相应能力得以被反复复用。"
+  },
+  {
+    "id": "mrna_vaccine",
+    "name": "mRNA 疫苗",
+    "en": "mRNA Vaccine",
+    "category": "life",
+    "era": "future",
+    "date": "约 2025 年（L2·目前技术可实现）",
+    "year": 2025,
+    "tier": "L2",
+    "dependsOn": [
+      "dna",
+      "nanotech",
+      "immunology"
+    ],
+    "summary": "以脂质纳米粒递送指令让细胞自产抗原，几周内即可迭代应对新病原，它建立在遗传学 / DNA、纳米技术、免疫学之上，约 约 2025 年（L2·目前技术可实现） 出现于未来/科幻，把生命与医疗的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
+  },
   {
     "id": "fusion_power",
     "name": "聚变发电",
@@ -1008,8 +1549,12 @@ const EXTEND_TECHS = [
     "date": "约 2050 年（L2·目前技术可实现）",
     "year": 2050,
     "tier": "L2",
-    "dependsOn": ["nuclear_fusion","plasma_phys","superconductor"],
-    "summary": "以托卡马克或激光约束等离子体持续点火，提供近乎无限的清洁能源。"
+    "dependsOn": [
+      "nuclear_fusion",
+      "plasma_phys",
+      "superconductor"
+    ],
+    "summary": "以托卡马克或激光约束等离子体持续点火，提供近乎无限的清洁能源，它建立在核聚变、等离子体物理、超导体之上，约 约 2050 年（L2·目前技术可实现） 成形于未来/科幻，把能量形式中的关键能力落到实处，并直接支撑了聚变火箭等后续技术。"
   },
   {
     "id": "superconducting_magnet",
@@ -1020,12 +1565,60 @@ const EXTEND_TECHS = [
     "date": "约 2030 年（L2·目前技术可实现）",
     "year": 2030,
     "tier": "L2",
-    "dependsOn": ["superconductor","cryogenics","electromagnetism"],
-    "summary": "以零电阻线圈产生强稳磁场，是聚变、磁悬浮与高能加速器的核心部件。"
+    "dependsOn": [
+      "superconductor",
+      "cryogenics",
+      "electromagnetism"
+    ],
+    "summary": "以零电阻线圈产生强稳磁场，是聚变、磁悬浮与高能加速器的核心部件，它建立在超导体、低温工程、电磁学之上，约 约 2030 年（L2·目前技术可实现） 出现于未来/科幻，把能量形式的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
-  
-  
-  
+  {
+    "id": "solid_state_battery",
+    "name": "固态电池",
+    "en": "Solid-state Battery",
+    "category": "energy",
+    "era": "future",
+    "date": "约 2030 年（L2·目前技术可实现）",
+    "year": 2030,
+    "tier": "L2",
+    "dependsOn": [
+      "battery",
+      "materials",
+      "chemistry"
+    ],
+    "summary": "以固体电解质替代易燃液体，兼顾高能量密度与本质安全，是电动车的下一站，依托电池、材料科学、化学，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了能量形式中的具体难题，使相应能力得以被反复复用。"
+  },
+  {
+    "id": "space_solar",
+    "name": "空间太阳能",
+    "en": "Space-based Solar Power",
+    "category": "energy",
+    "era": "future",
+    "date": "约 2045 年（L2·目前技术可实现）",
+    "year": 2045,
+    "tier": "L2",
+    "dependsOn": [
+      "solar",
+      "satellite",
+      "microwave"
+    ],
+    "summary": "在轨道收集阳光并以微波束传回地面，摆脱昼夜与天气的间歇，它建立在太阳能光伏、人造卫星、微波之上，约 约 2045 年（L2·目前技术可实现） 出现于未来/科幻，把能量形式的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
+  },
+  {
+    "id": "wireless_power",
+    "name": "无线输电",
+    "en": "Wireless Power Transmission",
+    "category": "energy",
+    "era": "future",
+    "date": "约 2035 年（L2·目前技术可实现）",
+    "year": 2035,
+    "tier": "L2",
+    "dependsOn": [
+      "electromagnetism",
+      "microwave"
+    ],
+    "summary": "以微波或谐振耦合远距离送电，为无人机、月面与偏远节点解除线缆束缚，它建立在电磁学、微波之上，约 约 2035 年（L2·目前技术可实现） 出现于未来/科幻，把能量形式的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
+  },
   {
     "id": "grid_storage",
     "name": "电网级储能",
@@ -1035,8 +1628,12 @@ const EXTEND_TECHS = [
     "date": "约 2030 年（L2·目前技术可实现）",
     "year": 2030,
     "tier": "L2",
-    "dependsOn": ["battery","electronics","solar"],
-    "summary": "以百兆瓦时级储能平抑风光波动，使高比例可再生电网稳定运行。"
+    "dependsOn": [
+      "battery",
+      "electronics",
+      "solar"
+    ],
+    "summary": "以百兆瓦时级储能平抑风光波动，使高比例可再生电网稳定运行，它建立在电池、电子学、太阳能光伏之上，约 约 2030 年（L2·目前技术可实现） 出现于未来/科幻，把能量形式的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "graphene",
@@ -1047,8 +1644,12 @@ const EXTEND_TECHS = [
     "date": "约 2035 年（L2·目前技术可实现）",
     "year": 2035,
     "tier": "L2",
-    "dependsOn": ["nanotech","materials","chemistry"],
-    "summary": "单层碳网的卷对卷制备，带来超强、超薄、高导的基准新材料。"
+    "dependsOn": [
+      "nanotech",
+      "materials",
+      "chemistry"
+    ],
+    "summary": "单层碳网的卷对卷制备，带来超强、超薄、高导的基准新材料，它建立在纳米技术、材料科学、化学之上，约 约 2035 年（L2·目前技术可实现） 出现于未来/科幻，把材料体系的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "carbon_nanotube",
@@ -1059,8 +1660,11 @@ const EXTEND_TECHS = [
     "date": "约 2035 年（L2·目前技术可实现）",
     "year": 2035,
     "tier": "L2",
-    "dependsOn": ["nanotech","materials"],
-    "summary": "强度逾钢百倍、导电胜铜的纳米管，是超强缆绳与高端器件的候选。"
+    "dependsOn": [
+      "nanotech",
+      "materials"
+    ],
+    "summary": "强度逾钢百倍、导电胜铜的纳米管，是超强缆绳与高端器件的候选，它建立在纳米技术、材料科学之上，约 约 2035 年（L2·目前技术可实现） 成形于未来/科幻，把材料体系中的关键能力落到实处，并直接支撑了太空电梯等后续技术。"
   },
   {
     "id": "metamaterial",
@@ -1071,8 +1675,12 @@ const EXTEND_TECHS = [
     "date": "约 2030 年（L2·目前技术可实现）",
     "year": 2030,
     "tier": "L2",
-    "dependsOn": ["materials","electromagnetism","optics"],
-    "summary": "以亚波长结构而非成分定制响应，可造负折射、隐身与超透镜。"
+    "dependsOn": [
+      "materials",
+      "electromagnetism",
+      "optics"
+    ],
+    "summary": "以亚波长结构而非成分定制响应，可造负折射、隐身与超透镜，它建立在材料科学、电磁学、光学之上，约 约 2030 年（L2·目前技术可实现） 成形于未来/科幻，把材料体系中的关键能力落到实处，并直接支撑了可编程物质等后续技术。"
   },
   {
     "id": "room_temp_superconductor",
@@ -1083,10 +1691,28 @@ const EXTEND_TECHS = [
     "date": "约 2040 年（L2·目前技术可实现）",
     "year": 2040,
     "tier": "L2",
-    "dependsOn": ["superconductor","materials","physics"],
-    "summary": "无需极低温即零电阻，将重塑输电、磁体与计算，若证实影响深远。"
+    "dependsOn": [
+      "superconductor",
+      "materials",
+      "physics"
+    ],
+    "summary": "无需极低温即零电阻，将重塑输电、磁体与计算，若证实影响深远，依托超导体、材料科学、经典力学，它在未来/科幻（约 2040 年（L2·目前技术可实现））解决了材料体系中的具体难题，使相应能力得以被反复复用。"
   },
-  
+  {
+    "id": "self_healing",
+    "name": "自修复材料",
+    "en": "Self-healing Material",
+    "category": "material",
+    "era": "future",
+    "date": "约 2035 年（L2·目前技术可实现）",
+    "year": 2035,
+    "tier": "L2",
+    "dependsOn": [
+      "materials",
+      "chemistry"
+    ],
+    "summary": "微胶囊或可逆键在损伤处自行愈合，延长结构寿命、降低维护，依托材料科学、化学，它在未来/科幻（约 2035 年（L2·目前技术可实现））解决了材料体系中的具体难题，使相应能力得以被反复复用。"
+  },
   {
     "id": "high_entropy_alloy",
     "name": "高熵合金",
@@ -1096,8 +1722,11 @@ const EXTEND_TECHS = [
     "date": "约 2030 年（L2·目前技术可实现）",
     "year": 2030,
     "tier": "L2",
-    "dependsOn": ["metallurgy","materials"],
-    "summary": "多种主元等摩尔固溶，以晶格畸变获得强度、耐蚀与高温稳定性的新组合。"
+    "dependsOn": [
+      "metallurgy",
+      "materials"
+    ],
+    "summary": "多种主元等摩尔固溶，以晶格畸变获得强度、耐蚀与高温稳定性的新组合，它建立在冶金、材料科学之上，约 约 2030 年（L2·目前技术可实现） 出现于未来/科幻，把材料体系的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "biofabrication",
@@ -1108,8 +1737,12 @@ const EXTEND_TECHS = [
     "date": "约 2035 年（L2·目前技术可实现）",
     "year": 2035,
     "tier": "L2",
-    "dependsOn": ["biotech","microbiology","materials"],
-    "summary": "以工程菌或细胞工厂发酵产出材料与化学品，绕过高能耗的化工业路线。"
+    "dependsOn": [
+      "biotech",
+      "microbiology",
+      "materials"
+    ],
+    "summary": "以工程菌或细胞工厂发酵产出材料与化学品，绕过高能耗的化工业路线，它建立在生物技术、微生物学、材料科学之上，约 约 2035 年（L2·目前技术可实现） 出现于未来/科幻，把材料体系的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "reusable_rocket",
@@ -1120,8 +1753,12 @@ const EXTEND_TECHS = [
     "date": "约 2025 年（L2·目前技术可实现）",
     "year": 2025,
     "tier": "L2",
-    "dependsOn": ["rocket","composites","materials"],
-    "summary": "垂直回收与翻新箭体，把单位质量入轨成本压低一个数量级。"
+    "dependsOn": [
+      "rocket",
+      "composites",
+      "materials"
+    ],
+    "summary": "垂直回收与翻新箭体，把单位质量入轨成本压低一个数量级，它建立在火箭、复合材料、材料科学之上，约 约 2025 年（L2·目前技术可实现） 成形于未来/科幻，把交通运载中的关键能力落到实处，并直接支撑了巨型火箭、月球基地等后续技术。"
   },
   {
     "id": "starship",
@@ -1132,8 +1769,12 @@ const EXTEND_TECHS = [
     "date": "约 2030 年（L2·目前技术可实现）",
     "year": 2030,
     "tier": "L2",
-    "dependsOn": ["reusable_rocket","rocket","composites"],
-    "summary": "百吨级近地运载，使大型星座、月面基地与深空载具的部署成为可能。"
+    "dependsOn": [
+      "reusable_rocket",
+      "rocket",
+      "composites"
+    ],
+    "summary": "百吨级近地运载，使大型星座、月面基地与深空载具的部署成为可能，它建立在可重复火箭、火箭、复合材料之上，约 约 2030 年（L2·目前技术可实现） 成形于未来/科幻，把交通运载中的关键能力落到实处，并直接支撑了火星殖民、戴森球、轨道打击等后续技术。"
   },
   {
     "id": "ion_drive",
@@ -1144,8 +1785,12 @@ const EXTEND_TECHS = [
     "date": "约 2030 年（L2·目前技术可实现）",
     "year": 2030,
     "tier": "L2",
-    "dependsOn": ["electromagnetism","plasma_phys","spacecraft"],
-    "summary": "以电场加速离子获得极高比冲，适合长期、深空与轨道维持任务。"
+    "dependsOn": [
+      "electromagnetism",
+      "plasma_phys",
+      "spacecraft"
+    ],
+    "summary": "以电场加速离子获得极高比冲，适合长期、深空与轨道维持任务，依托电磁学、等离子体物理、航天器，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了交通运载中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "electric_aircraft",
@@ -1156,8 +1801,12 @@ const EXTEND_TECHS = [
     "date": "约 2035 年（L2·目前技术可实现）",
     "year": 2035,
     "tier": "L2",
-    "dependsOn": ["battery","airplane","actuator"],
-    "summary": "以电机替代涡轮，实现低噪零排的短途通勤飞行，受限于电池能量密度。"
+    "dependsOn": [
+      "battery",
+      "airplane",
+      "actuator"
+    ],
+    "summary": "以电机替代涡轮，实现低噪零排的短途通勤飞行，受限于电池能量密度，它建立在电池、飞机、作动器之上，约 约 2035 年（L2·目前技术可实现） 出现于未来/科幻，把交通运载的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "maglev",
@@ -1168,8 +1817,12 @@ const EXTEND_TECHS = [
     "date": "约 2030 年（L2·目前技术可实现）",
     "year": 2030,
     "tier": "L2",
-    "dependsOn": ["superconductor","electromagnetism","actuator"],
-    "summary": "以磁力无接触悬浮与推进，突破轮轨黏着极限，实现超高速地面交通。"
+    "dependsOn": [
+      "superconductor",
+      "electromagnetism",
+      "actuator"
+    ],
+    "summary": "以磁力无接触悬浮与推进，突破轮轨黏着极限，实现超高速地面交通，它建立在超导体、电磁学、作动器之上，约 约 2030 年（L2·目前技术可实现） 出现于未来/科幻，把交通运载的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "hyperloop",
@@ -1180,8 +1833,11 @@ const EXTEND_TECHS = [
     "date": "约 2040 年（L2·目前技术可实现）",
     "year": 2040,
     "tier": "L2",
-    "dependsOn": ["shield_tbm","superconductor"],
-    "summary": "近真空管道内以磁悬浮载具巡航，把城市间通勤压缩到数十分钟。"
+    "dependsOn": [
+      "shield_tbm",
+      "superconductor"
+    ],
+    "summary": "近真空管道内以磁悬浮载具巡航，把城市间通勤压缩到数十分钟，它建立在盾构机、超导体之上，约 约 2040 年（L2·目前技术可实现） 出现于未来/科幻，把交通运载的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "autonomous_ship",
@@ -1192,8 +1848,12 @@ const EXTEND_TECHS = [
     "date": "约 2035 年（L2·目前技术可实现）",
     "year": 2035,
     "tier": "L2",
-    "dependsOn": ["satellite","ai","automation"],
-    "summary": "以自主导航与远程值守运行货轮，降低人力成本与人为事故。"
+    "dependsOn": [
+      "satellite",
+      "ai",
+      "automation"
+    ],
+    "summary": "以自主导航与远程值守运行货轮，降低人力成本与人为事故，依托人造卫星、人工智能、自动化，它在未来/科幻（约 2035 年（L2·目前技术可实现））解决了交通运载中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "lunar_base",
@@ -1204,8 +1864,12 @@ const EXTEND_TECHS = [
     "date": "约 2040 年（L2·目前技术可实现）",
     "year": 2040,
     "tier": "L2",
-    "dependsOn": ["reusable_rocket","isru","habitat"],
-    "summary": "在月面以原位资源建永久居所与发射前哨，作为深空的中转站。"
+    "dependsOn": [
+      "reusable_rocket",
+      "isru",
+      "habitat"
+    ],
+    "summary": "在月面以原位资源建永久居所与发射前哨，作为深空的中转站，它建立在可重复火箭、原位资源利用、居住舱之上，约 约 2040 年（L2·目前技术可实现） 成形于未来/科幻，把交通运载中的关键能力落到实处，并直接支撑了太空居住等后续技术。"
   },
   {
     "id": "additive_mass",
@@ -1216,8 +1880,12 @@ const EXTEND_TECHS = [
     "date": "约 2030 年（L2·目前技术可实现）",
     "year": 2030,
     "tier": "L2",
-    "dependsOn": ["mfg_3dp","materials","robot"],
-    "summary": "把打印从样件推向产线，按需、分布式地制造结构与器件。"
+    "dependsOn": [
+      "mfg_3dp",
+      "materials",
+      "robot"
+    ],
+    "summary": "把打印从样件推向产线，按需、分布式地制造结构与器件，依托3D 打印、材料科学、工业机器人，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了制造与工具中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "vertical_farm",
@@ -1228,10 +1896,29 @@ const EXTEND_TECHS = [
     "date": "约 2030 年（L2·目前技术可实现）",
     "year": 2030,
     "tier": "L2",
-    "dependsOn": ["automation","led","agriculture"],
-    "summary": "在层架与人工光下全年密集种植，把农田搬进城市、贴近消费端。"
+    "dependsOn": [
+      "automation",
+      "led",
+      "agriculture"
+    ],
+    "summary": "在层架与人工光下全年密集种植，把农田搬进城市、贴近消费端，依托自动化、发光二极管、农业，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了建筑建造中的具体难题，使相应能力得以被反复复用。"
   },
-  
+  {
+    "id": "directed_energy",
+    "name": "定向能武器",
+    "en": "Directed-energy Weapon",
+    "category": "military",
+    "era": "future",
+    "date": "约 2030 年（L2·目前技术可实现）",
+    "year": 2030,
+    "tier": "L2",
+    "dependsOn": [
+      "laser",
+      "battery",
+      "optics"
+    ],
+    "summary": "以高能激光或微波束在光速尺度毁伤目标，重塑防空与反导，依托激光、电池、光学，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了军事技术中的具体难题，使相应能力得以被反复复用。"
+  },
   {
     "id": "hypersonic_weapon",
     "name": "高超声速武器",
@@ -1241,8 +1928,12 @@ const EXTEND_TECHS = [
     "date": "约 2035 年（L2·目前技术可实现）",
     "year": 2035,
     "tier": "L2",
-    "dependsOn": ["hypersonic","gps","materials"],
-    "summary": "以 5 马赫以上机动滑翔突防，压缩防御方的预警与拦截窗口。"
+    "dependsOn": [
+      "hypersonic",
+      "gps",
+      "materials"
+    ],
+    "summary": "以 5 马赫以上机动滑翔突防，压缩防御方的预警与拦截窗口，依托高超声速飞行、全球卫星定位 GNSS、材料科学，它在未来/科幻（约 2035 年（L2·目前技术可实现））解决了军事技术中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "autonomous_weapon",
@@ -1253,8 +1944,12 @@ const EXTEND_TECHS = [
     "date": "约 2035 年（L2·目前技术可实现）",
     "year": 2035,
     "tier": "L2",
-    "dependsOn": ["ai","drone","sensor"],
-    "summary": "在有限监督下自行搜索、识别与接战，引发致命性决策的伦理争议。"
+    "dependsOn": [
+      "ai",
+      "drone",
+      "sensor"
+    ],
+    "summary": "在有限监督下自行搜索、识别与接战，引发致命性决策的伦理争议，依托人工智能、无人机、传感器，它在未来/科幻（约 2035 年（L2·目前技术可实现））解决了军事技术中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "quantum_teleportation",
@@ -1265,8 +1960,11 @@ const EXTEND_TECHS = [
     "date": "约 2035 年（L2·目前技术可实现）",
     "year": 2035,
     "tier": "L2",
-    "dependsOn": ["quantum_entanglement","quantum_info"],
-    "summary": "借助纠缠将未知量子态转移到远端，是量子中继与量子网的基本操作。"
+    "dependsOn": [
+      "quantum_entanglement",
+      "quantum_info"
+    ],
+    "summary": "借助纠缠将未知量子态转移到远端，是量子中继与量子网的基本操作，它建立在量子纠缠、量子信息之上，约 约 2035 年（L2·目前技术可实现） 成形于未来/科幻，把信息通信中的关键能力落到实处，并直接支撑了物质传送等后续技术。"
   },
   {
     "id": "artificial_photosynthesis",
@@ -1277,8 +1975,12 @@ const EXTEND_TECHS = [
     "date": "约 2040 年（L2·目前技术可实现）",
     "year": 2040,
     "tier": "L2",
-    "dependsOn": ["chemistry","solar","materials"],
-    "summary": "以催化系统把光、水与二氧化碳直接转为燃料或化学品，模拟并超越自然光合。"
+    "dependsOn": [
+      "chemistry",
+      "solar",
+      "materials"
+    ],
+    "summary": "以催化系统把光、水与二氧化碳直接转为燃料或化学品，模拟并超越自然光合，依托化学、太阳能光伏、材料科学，它在未来/科幻（约 2040 年（L2·目前技术可实现））解决了材料体系中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "synthetic_food",
@@ -1289,8 +1991,12 @@ const EXTEND_TECHS = [
     "date": "约 2035 年（L2·目前技术可实现）",
     "year": 2035,
     "tier": "L2",
-    "dependsOn": ["biotech","microbiology","agriculture"],
-    "summary": "以发酵与细胞培养产出肉、奶与蛋白，脱离传统养殖的土地与伦理负担。"
+    "dependsOn": [
+      "biotech",
+      "microbiology",
+      "agriculture"
+    ],
+    "summary": "以发酵与细胞培养产出肉、奶与蛋白，脱离传统养殖的土地与伦理负担，它建立在生物技术、微生物学、农业之上，约 约 2035 年（L2·目前技术可实现） 出现于未来/科幻，把生命与医疗的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "gene_circuit",
@@ -1301,8 +2007,11 @@ const EXTEND_TECHS = [
     "date": "约 2050 年（L3·未来可能实现）",
     "year": 2050,
     "tier": "L3",
-    "dependsOn": ["bio_synbio","crispr"],
-    "summary": "在活细胞内布设逻辑门与计数器，使细胞按环境自行决策、定时释药。"
+    "dependsOn": [
+      "synthetic_biology",
+      "crispr"
+    ],
+    "summary": "在活细胞内布设逻辑门与计数器，使细胞按环境自行决策、定时释药，依托合成生物学、基因编辑，它在未来/科幻（约 2050 年（L3·未来可能实现））解决了生命与医疗中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "organ_printing",
@@ -1313,8 +2022,12 @@ const EXTEND_TECHS = [
     "date": "约 2055 年（L3·未来可能实现）",
     "year": 2055,
     "tier": "L3",
-    "dependsOn": ["mfg_3dp","stem_cells","biotech"],
-    "summary": "以细胞为墨、逐层构建血管化器官，根本性缓解移植供体短缺。"
+    "dependsOn": [
+      "mfg_3dp",
+      "stem_cells",
+      "biotech"
+    ],
+    "summary": "以细胞为墨、逐层构建血管化器官，根本性缓解移植供体短缺，依托3D 打印、干细胞、生物技术，它在未来/科幻（约 2055 年（L3·未来可能实现））解决了生命与医疗中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "nanomedicine",
@@ -1325,8 +2038,12 @@ const EXTEND_TECHS = [
     "date": "约 2050 年（L3·未来可能实现）",
     "year": 2050,
     "tier": "L3",
-    "dependsOn": ["nanotech","bio_pharmacology","biotech"],
-    "summary": "以纳米颗粒精准递送、成像与治疗，在分子尺度区分敌我。"
+    "dependsOn": [
+      "nanotech",
+      "pharmacology",
+      "biotech"
+    ],
+    "summary": "以纳米颗粒精准递送、成像与治疗，在分子尺度区分敌我，它建立在纳米技术、药理学、生物技术之上，约 约 2050 年（L3·未来可能实现） 成形于未来/科幻，把生命与医疗中的关键能力落到实处，并直接支撑了纳米机器人等后续技术。"
   },
   {
     "id": "life_extension",
@@ -1337,8 +2054,12 @@ const EXTEND_TECHS = [
     "date": "约 2070 年（L3·未来可能实现）",
     "year": 2070,
     "tier": "L3",
-    "dependsOn": ["genetics","senolytics","stem_cells"],
-    "summary": "以清除衰老细胞、重编程与组织替换延缓退化，显著拉长健康寿命。"
+    "dependsOn": [
+      "genetics",
+      "senolytics",
+      "stem_cells"
+    ],
+    "summary": "以清除衰老细胞、重编程与组织替换延缓退化，显著拉长健康寿命，它建立在遗传学、衰老干预、干细胞之上，约 约 2070 年（L3·未来可能实现） 出现于未来/科幻，把生命与医疗的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "senolytics",
@@ -1349,8 +2070,11 @@ const EXTEND_TECHS = [
     "date": "约 2045 年（L3·未来可能实现）",
     "year": 2045,
     "tier": "L3",
-    "dependsOn": ["genetics","bio_pharmacology"],
-    "summary": "选择性清除功能失调的衰老细胞，延缓多种年龄相关疾病的发作。"
+    "dependsOn": [
+      "genetics",
+      "pharmacology"
+    ],
+    "summary": "选择性清除功能失调的衰老细胞，延缓多种年龄相关疾病的发作，依托遗传学、药理学，它在未来/科幻（约 2045 年（L3·未来可能实现））把相关能力从经验推向方法，成为生命与医疗中承上启下的一环，直接催生了寿命延长等发展。"
   },
   {
     "id": "artificial_womb",
@@ -1361,8 +2085,12 @@ const EXTEND_TECHS = [
     "date": "约 2055 年（L3·未来可能实现）",
     "year": 2055,
     "tier": "L3",
-    "dependsOn": ["stem_cells","life_support","bio_tissueeng"],
-    "summary": "以生物反应器模拟妊娠环境，为早产儿与生育选择提供新路径。"
+    "dependsOn": [
+      "stem_cells",
+      "life_support",
+      "tissue_engineering"
+    ],
+    "summary": "以生物反应器模拟妊娠环境，为早产儿与生育选择提供新路径，它建立在干细胞、生命保障、组织工程之上，约 约 2055 年（L3·未来可能实现） 出现于未来/科幻，把生命与医疗的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "virtual_world",
@@ -1373,10 +2101,29 @@ const EXTEND_TECHS = [
     "date": "约 2045 年（L3·未来可能实现）",
     "year": 2045,
     "tier": "L3",
-    "dependsOn": ["inf_vr","ai","simulation"],
-    "summary": "由智能体持续演化的沉浸式社会空间，模糊娱乐、工作与现实的边界。"
+    "dependsOn": [
+      "vr",
+      "ai",
+      "simulation"
+    ],
+    "summary": "由智能体持续演化的沉浸式社会空间，模糊娱乐、工作与现实的边界，它建立在虚拟现实、人工智能、仿真之上，约 约 2045 年（L3·未来可能实现） 成形于未来/科幻，把信息通信中的关键能力落到实处，并直接支撑了数字生命等后续技术。"
   },
-  
+  {
+    "id": "bci",
+    "name": "脑机接口",
+    "en": "Brain-Computer Interface",
+    "category": "info",
+    "era": "future",
+    "date": "约 2040 年（L3·未来可能实现）",
+    "year": 2040,
+    "tier": "L3",
+    "dependsOn": [
+      "neuroscience",
+      "electronics",
+      "ai"
+    ],
+    "summary": "在神经与机器间建立双向通道，恢复瘫痪者运动、并探索认知增强，它建立在神经科学、电子学、人工智能之上，约 约 2040 年（L3·未来可能实现） 成形于未来/科幻，把信息通信中的关键能力落到实处，并直接支撑了意识上传、记忆提取等后续技术。"
+  },
   {
     "id": "space_elevator",
     "name": "太空电梯",
@@ -1386,8 +2133,12 @@ const EXTEND_TECHS = [
     "date": "约 2070 年（L3·未来可能实现）",
     "year": 2070,
     "tier": "L3",
-    "dependsOn": ["carbon_nanotube","spacecraft","materials"],
-    "summary": "以同步轨道缆绳把地表与轨道直连，以电力而非火箭送载荷入轨。"
+    "dependsOn": [
+      "carbon_nanotube",
+      "spacecraft",
+      "materials"
+    ],
+    "summary": "以同步轨道缆绳把地表与轨道直连，以电力而非火箭送载荷入轨，依托碳纳米管、航天器、材料科学，它在未来/科幻（约 2070 年（L3·未来可能实现））把相关能力从经验推向方法，成为交通运载中承上启下的一环，直接催生了轨道环等发展。"
   },
   {
     "id": "nuclear_thermal",
@@ -1398,8 +2149,12 @@ const EXTEND_TECHS = [
     "date": "约 2050 年（L3·未来可能实现）",
     "year": 2050,
     "tier": "L3",
-    "dependsOn": ["nuclear_fission","rocket","propulsion"],
-    "summary": "以反应堆加热工质喷射，比冲数倍于化学火箭，大幅缩短火星航程。"
+    "dependsOn": [
+      "nuclear_fission",
+      "rocket",
+      "propulsion"
+    ],
+    "summary": "以反应堆加热工质喷射，比冲数倍于化学火箭，大幅缩短火星航程，它建立在核裂变、火箭、推进之上，约 约 2050 年（L3·未来可能实现） 出现于未来/科幻，把交通运载的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "mars_colony",
@@ -1410,8 +2165,12 @@ const EXTEND_TECHS = [
     "date": "约 2060 年（L3·未来可能实现）",
     "year": 2060,
     "tier": "L3",
-    "dependsOn": ["starship","isru","life_support"],
-    "summary": "以原位制氧、制水与建舱在火星建立自给聚落，成为跨行星物种。"
+    "dependsOn": [
+      "starship",
+      "isru",
+      "life_support"
+    ],
+    "summary": "以原位制氧、制水与建舱在火星建立自给聚落，成为跨行星物种，它建立在巨型火箭、原位资源利用、生命保障之上，约 约 2060 年（L3·未来可能实现） 出现于未来/科幻，把交通运载的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "space_mfg",
@@ -1422,8 +2181,12 @@ const EXTEND_TECHS = [
     "date": "约 2055 年（L3·未来可能实现）",
     "year": 2055,
     "tier": "L3",
-    "dependsOn": ["mfg_3dp","spacecraft","robot"],
-    "summary": "利用微重力与真空制造地面难做的晶体、纤维与器件，反向补给地球。"
+    "dependsOn": [
+      "mfg_3dp",
+      "spacecraft",
+      "robot"
+    ],
+    "summary": "利用微重力与真空制造地面难做的晶体、纤维与器件，反向补给地球，依托3D 打印、航天器、工业机器人，它在未来/科幻（约 2055 年（L3·未来可能实现））把相关能力从经验推向方法，成为制造与工具中承上启下的一环，直接催生了戴森球、冯·诺依曼探测器、恒星发动机等发展。"
   },
   {
     "id": "self_build",
@@ -1434,8 +2197,12 @@ const EXTEND_TECHS = [
     "date": "约 2060 年（L3·未来可能实现）",
     "year": 2060,
     "tier": "L3",
-    "dependsOn": ["robot","mfg_3dp","materials"],
-    "summary": "由机器人集群依图纸自主浇筑、拼装，把建造变为可远程下达的指令。"
+    "dependsOn": [
+      "robot",
+      "mfg_3dp",
+      "materials"
+    ],
+    "summary": "由机器人集群依图纸自主浇筑、拼装，把建造变为可远程下达的指令，依托工业机器人、3D 打印、材料科学，它在未来/科幻（约 2060 年（L3·未来可能实现））解决了建筑建造中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "space_habitat",
@@ -1446,8 +2213,12 @@ const EXTEND_TECHS = [
     "date": "约 2065 年（L3·未来可能实现）",
     "year": 2065,
     "tier": "L3",
-    "dependsOn": ["lunar_base","life_support","isru"],
-    "summary": "在轨或星表建旋转人居舱，以人工重力与闭环生态支撑长期生活。"
+    "dependsOn": [
+      "lunar_base",
+      "life_support",
+      "isru"
+    ],
+    "summary": "在轨或星表建旋转人居舱，以人工重力与闭环生态支撑长期生活，它建立在月球基地、生命保障、原位资源利用之上，约 约 2065 年（L3·未来可能实现） 出现于未来/科幻，把建筑建造的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "underground_city",
@@ -1458,8 +2229,12 @@ const EXTEND_TECHS = [
     "date": "约 2055 年（L3·未来可能实现）",
     "year": 2055,
     "tier": "L3",
-    "dependsOn": ["shield_tbm","ventilation","engineering"],
-    "summary": "以深层隧道构筑恒温、抗灾、节地的城市空间，应对地表拥挤与极端气候。"
+    "dependsOn": [
+      "shield_tbm",
+      "ventilation",
+      "engineering"
+    ],
+    "summary": "以深层隧道构筑恒温、抗灾、节地的城市空间，应对地表拥挤与极端气候，依托盾构机、通风、工程学，它在未来/科幻（约 2055 年（L3·未来可能实现））解决了建筑建造中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "nanobot_swarm",
@@ -1470,8 +2245,12 @@ const EXTEND_TECHS = [
     "date": "约 2060 年（L3·未来可能实现）",
     "year": 2060,
     "tier": "L3",
-    "dependsOn": ["nanotech","swarm_robot","nanomedicine"],
-    "summary": "数以亿计的分子机器在血中巡航，执行识别、清理与修复的群体任务。"
+    "dependsOn": [
+      "nanotech",
+      "swarm_robot",
+      "nanomedicine"
+    ],
+    "summary": "数以亿计的分子机器在血中巡航，执行识别、清理与修复的群体任务，它建立在纳米技术、集群机器人、纳米医药之上，约 约 2060 年（L3·未来可能实现） 出现于未来/科幻，把生命与医疗的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "climate_engineering",
@@ -1482,8 +2261,11 @@ const EXTEND_TECHS = [
     "date": "约 2050 年（L3·未来可能实现）",
     "year": 2050,
     "tier": "L3",
-    "dependsOn": ["climate_science","aerosol"],
-    "summary": "以平流层反射或碳移除主动调节地球能量收支，作为减排之外的备份手段。"
+    "dependsOn": [
+      "climate_science",
+      "aerosol"
+    ],
+    "summary": "以平流层反射或碳移除主动调节地球能量收支，作为减排之外的备份手段，依托气候科学、气溶胶，它在未来/科幻（约 2050 年（L3·未来可能实现））解决了科学基础与方法中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "cryosleep",
@@ -1494,8 +2276,11 @@ const EXTEND_TECHS = [
     "date": "约 2060 年（L3·未来可能实现）",
     "year": 2060,
     "tier": "L3",
-    "dependsOn": ["life_support","biotech"],
-    "summary": "以代谢抑制拉长任务耐受时间，为深空远征与危重救治争取窗口。"
+    "dependsOn": [
+      "life_support",
+      "biotech"
+    ],
+    "summary": "以代谢抑制拉长任务耐受时间，为深空远征与危重救治争取窗口，它建立在生命保障、生物技术之上，约 约 2060 年（L3·未来可能实现） 出现于未来/科幻，把生命与医疗的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "flying_car",
@@ -1506,8 +2291,13 @@ const EXTEND_TECHS = [
     "date": "约 2045 年（L3·未来可能实现）",
     "year": 2045,
     "tier": "L3",
-    "dependsOn": ["automobile","drone","self_driving","automation"],
-    "summary": "陆空一体、垂直起降的个人飞行器，受电池、空域与安全的共同约束。"
+    "dependsOn": [
+      "automobile",
+      "drone",
+      "self_driving",
+      "automation"
+    ],
+    "summary": "陆空一体、垂直起降的个人飞行器，受电池、空域与安全的共同约束，它建立在汽车、无人机、自动驾驶之上，约 约 2045 年（L3·未来可能实现） 出现于未来/科幻，把交通运载的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "brain_emulation",
@@ -1518,8 +2308,12 @@ const EXTEND_TECHS = [
     "date": "约 2080 年（L4·未来较难实现）",
     "year": 2080,
     "tier": "L4",
-    "dependsOn": ["neuroscience","simulation","sensor"],
-    "summary": "在算力上复现人脑的连接与动力学，是意识相关议题的物理前提之一。"
+    "dependsOn": [
+      "neuroscience",
+      "simulation",
+      "sensor"
+    ],
+    "summary": "在算力上复现人脑的连接与动力学，是意识相关议题的物理前提之一，依托神经科学、仿真、传感器，它在未来/科幻（约 2080 年（L4·未来较难实现））把相关能力从经验推向方法，成为信息通信中承上启下的一环，直接催生了意识上传、记忆提取等发展。"
   },
   {
     "id": "mind_upload",
@@ -1530,8 +2324,12 @@ const EXTEND_TECHS = [
     "date": "约 2090 年（L4·未来较难实现）",
     "year": 2090,
     "tier": "L4",
-    "dependsOn": ["brain_emulation","bio_bci","computer"],
-    "summary": "把心智的结构与状态转入载体，使人格脱离生物脑存续，伦理与同一性存疑。"
+    "dependsOn": [
+      "brain_emulation",
+      "bci",
+      "computer"
+    ],
+    "summary": "把心智的结构与状态转入载体，使人格脱离生物脑存续，伦理与同一性存疑，它建立在大脑仿真、脑机接口、电子计算机之上，约 约 2090 年（L4·未来较难实现） 成形于未来/科幻，把信息通信中的关键能力落到实处，并直接支撑了数字生命等后续技术。"
   },
   {
     "id": "digital_life",
@@ -1542,8 +2340,12 @@ const EXTEND_TECHS = [
     "date": "约 2095 年（L4·未来较难实现）",
     "year": 2095,
     "tier": "L4",
-    "dependsOn": ["agi","mind_upload","virtual_world"],
-    "summary": "在算力中自维持、繁衍与演化的智能体，构成脱离碳基的生态。"
+    "dependsOn": [
+      "agi",
+      "mind_upload",
+      "virtual_world"
+    ],
+    "summary": "在算力中自维持、繁衍与演化的智能体，构成脱离碳基的生态，依托通用人工智能、意识上传、虚拟世界，它在未来/科幻（约 2095 年（L4·未来较难实现））解决了信息通信中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "programmable_matter",
@@ -1554,8 +2356,12 @@ const EXTEND_TECHS = [
     "date": "约 2085 年（L4·未来较难实现）",
     "year": 2085,
     "tier": "L4",
-    "dependsOn": ["metamaterial","nanotech","ai"],
-    "summary": "物质按指令自重组形态与功能，使一件物体可变为任意所需之物。"
+    "dependsOn": [
+      "metamaterial",
+      "nanotech",
+      "ai"
+    ],
+    "summary": "物质按指令自重组形态与功能，使一件物体可变为任意所需之物，依托超材料、纳米技术、人工智能，它在未来/科幻（约 2085 年（L4·未来较难实现））解决了材料体系中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "atomic_manufacturing",
@@ -1566,8 +2372,12 @@ const EXTEND_TECHS = [
     "date": "约 2080 年（L4·未来较难实现）",
     "year": 2080,
     "tier": "L4",
-    "dependsOn": ["nanotech","materials","simulation"],
-    "summary": "逐个安放原子构筑器件，逼近物理极限的精度，但通量与误差控制极难。"
+    "dependsOn": [
+      "nanotech",
+      "materials",
+      "simulation"
+    ],
+    "summary": "逐个安放原子构筑器件，逼近物理极限的精度，但通量与误差控制极难，它建立在纳米技术、材料科学、仿真之上，约 约 2080 年（L4·未来较难实现） 成形于未来/科幻，把制造与工具中的关键能力落到实处，并直接支撑了分子装配等后续技术。"
   },
   {
     "id": "molecular_assembly",
@@ -1578,8 +2388,12 @@ const EXTEND_TECHS = [
     "date": "约 2085 年（L4·未来较难实现）",
     "year": 2085,
     "tier": "L4",
-    "dependsOn": ["nanotech","chemistry","atomic_manufacturing"],
-    "summary": "以可控的化学反应逐键搭建宏观物体，理论上可廉价造出任意结构。"
+    "dependsOn": [
+      "nanotech",
+      "chemistry",
+      "atomic_manufacturing"
+    ],
+    "summary": "以可控的化学反应逐键搭建宏观物体，理论上可廉价造出任意结构，依托纳米技术、化学、原子级制造，它在未来/科幻（约 2085 年（L4·未来较难实现））解决了制造与工具中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "self_replicating",
@@ -1590,8 +2404,12 @@ const EXTEND_TECHS = [
     "date": "约 2080 年（L4·未来较难实现）",
     "year": 2080,
     "tier": "L4",
-    "dependsOn": ["robot","ai","mfg_3dp"],
-    "summary": "能自行采集资源、复制自身的机器集群，是大规模太空作业的杠杆。"
+    "dependsOn": [
+      "robot",
+      "ai",
+      "mfg_3dp"
+    ],
+    "summary": "能自行采集资源、复制自身的机器集群，是大规模太空作业的杠杆，依托工业机器人、人工智能、3D 打印，它在未来/科幻（约 2080 年（L4·未来较难实现））把相关能力从经验推向方法，成为制造与工具中承上启下的一环，直接催生了冯·诺依曼探测器等发展。"
   },
   {
     "id": "fusion_rocket",
@@ -1602,8 +2420,12 @@ const EXTEND_TECHS = [
     "date": "约 2085 年（L4·未来较难实现）",
     "year": 2085,
     "tier": "L4",
-    "dependsOn": ["fusion_power","rocket","propulsion"],
-    "summary": "以聚变能高速排出工质，获得远超化学与核热的比冲，开启外行星时代。"
+    "dependsOn": [
+      "fusion_power",
+      "rocket",
+      "propulsion"
+    ],
+    "summary": "以聚变能高速排出工质，获得远超化学与核热的比冲，开启外行星时代，依托聚变发电、火箭、推进，它在未来/科幻（约 2085 年（L4·未来较难实现））解决了交通运载中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "orbital_ring",
@@ -1614,8 +2436,12 @@ const EXTEND_TECHS = [
     "date": "约 2090 年（L4·未来较难实现）",
     "year": 2090,
     "tier": "L4",
-    "dependsOn": ["space_elevator","spacecraft","materials"],
-    "summary": "以环绕地球的高速缆环借离心力悬浮，提供近乎无限的低成本入轨通道。"
+    "dependsOn": [
+      "space_elevator",
+      "spacecraft",
+      "materials"
+    ],
+    "summary": "以环绕地球的高速缆环借离心力悬浮，提供近乎无限的低成本入轨通道，它建立在太空电梯、航天器、材料科学之上，约 约 2090 年（L4·未来较难实现） 出现于未来/科幻，把交通运载的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "antimatter_energy",
@@ -1626,8 +2452,11 @@ const EXTEND_TECHS = [
     "date": "约 2090 年（L4·未来较难实现）",
     "year": 2090,
     "tier": "L4",
-    "dependsOn": ["particle_physics","superconductor"],
-    "summary": "正反物质湮灭释放质能，能量密度冠绝一切，但制备与封存成本高到离谱。"
+    "dependsOn": [
+      "particle_physics",
+      "superconductor"
+    ],
+    "summary": "正反物质湮灭释放质能，能量密度冠绝一切，但制备与封存成本高到离谱，它建立在粒子物理、超导体之上，约 约 2090 年（L4·未来较难实现） 出现于未来/科幻，把能量形式的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "dyson_sphere",
@@ -1638,8 +2467,12 @@ const EXTEND_TECHS = [
     "date": "约 2100 年（L4·未来较难实现）",
     "year": 2100,
     "tier": "L4",
-    "dependsOn": ["solar","space_mfg","starship"],
-    "summary": "以巨量结构包覆恒星收集其全部辐射，是文明能级跃升的标杆工程。"
+    "dependsOn": [
+      "solar",
+      "space_mfg",
+      "starship"
+    ],
+    "summary": "以巨量结构包覆恒星收集其全部辐射，是文明能级跃升的标杆工程，依托太阳能光伏、太空制造、巨型火箭，它在未来/科幻（约 2100 年（L4·未来较难实现））把相关能力从经验推向方法，成为能量形式中承上启下的一环，直接催生了恒星发动机等发展。"
   },
   {
     "id": "von_neumann",
@@ -1650,8 +2483,12 @@ const EXTEND_TECHS = [
     "date": "约 2090 年（L4·未来较难实现）",
     "year": 2090,
     "tier": "L4",
-    "dependsOn": ["self_replicating","agi","space_mfg"],
-    "summary": "能自我复制并扩散至恒星系的无人探测器，是星际探查的指数杠杆。"
+    "dependsOn": [
+      "self_replicating",
+      "agi",
+      "space_mfg"
+    ],
+    "summary": "能自我复制并扩散至恒星系的无人探测器，是星际探查的指数杠杆，它建立在自复制机器、通用人工智能、太空制造之上，约 约 2090 年（L4·未来较难实现） 出现于未来/科幻，把交通运载的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "memory_extract",
@@ -1662,8 +2499,12 @@ const EXTEND_TECHS = [
     "date": "约 2090 年（L4·未来较难实现）",
     "year": 2090,
     "tier": "L4",
-    "dependsOn": ["neuroscience","brain_emulation","bio_bci"],
-    "summary": "以高分辨读脑还原特定记忆片段，可用于取证、治疗，亦威胁内心私密。"
+    "dependsOn": [
+      "neuroscience",
+      "brain_emulation",
+      "bci"
+    ],
+    "summary": "以高分辨读脑还原特定记忆片段，可用于取证、治疗，亦威胁内心私密，依托神经科学、大脑仿真、脑机接口，它在未来/科幻（约 2090 年（L4·未来较难实现））解决了信息通信中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "orbital_strike",
@@ -1674,8 +2515,12 @@ const EXTEND_TECHS = [
     "date": "约 2080 年（L4·未来较难实现）",
     "year": 2080,
     "tier": "L4",
-    "dependsOn": ["starship","hypersonic","gps"],
-    "summary": "从轨道投送高速动能或定向能载荷，实现全球到达与瞬时打击。"
+    "dependsOn": [
+      "starship",
+      "hypersonic",
+      "gps"
+    ],
+    "summary": "从轨道投送高速动能或定向能载荷，实现全球到达与瞬时打击，它建立在巨型火箭、高超声速飞行、全球卫星定位 GNSS之上，约 约 2080 年（L4·未来较难实现） 出现于未来/科幻，把军事技术的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "exotic_matter",
@@ -1686,8 +2531,11 @@ const EXTEND_TECHS = [
     "date": "设想（L5·仅在该世界观）",
     "year": 2150,
     "tier": "L5",
-    "dependsOn": ["particle_physics","qft"],
-    "summary": "具负质量或负能量的理论物质，用以撑开曲速泡与虫洞，现实中尚未现身。"
+    "dependsOn": [
+      "particle_physics",
+      "quantum_field"
+    ],
+    "summary": "具负质量或负能量的理论物质，用以撑开曲速泡与虫洞，现实中尚未现身，它建立在粒子物理、量子场论之上，约 设想（L5·仅在该世界观） 成形于未来/科幻，把科学基础与方法中的关键能力落到实处，并直接支撑了曲速引擎、虫洞等后续技术。"
   },
   {
     "id": "warp_drive",
@@ -1698,8 +2546,12 @@ const EXTEND_TECHS = [
     "date": "设想（L5·仅在该世界观）",
     "year": 2150,
     "tier": "L5",
-    "dependsOn": ["spacetime","exotic_matter","general_relativity"],
-    "summary": "压缩前方、膨胀后方的时空泡，使表观超光速航行而不违背局域光速，需负能量支撑。"
+    "dependsOn": [
+      "spacetime",
+      "exotic_matter",
+      "general_relativity"
+    ],
+    "summary": "压缩前方、膨胀后方的时空泡，使表观超光速航行而不违背局域光速，需负能量支撑，依托时空、奇异物质、广义相对论，它在未来/科幻（设想（L5·仅在该世界观））把相关能力从经验推向方法，成为交通运载中承上启下的一环，直接催生了超光速通讯等发展。"
   },
   {
     "id": "wormhole",
@@ -1710,8 +2562,12 @@ const EXTEND_TECHS = [
     "date": "设想（L5·仅在该世界观）",
     "year": 2150,
     "tier": "L5",
-    "dependsOn": ["spacetime","exotic_matter","general_relativity"],
-    "summary": "连接两点的时空捷径，穿越它需以奇异物质维持喉部开放，属理论构造。"
+    "dependsOn": [
+      "spacetime",
+      "exotic_matter",
+      "general_relativity"
+    ],
+    "summary": "连接两点的时空捷径，穿越它需以奇异物质维持喉部开放，属理论构造，依托时空、奇异物质、广义相对论，它在未来/科幻（设想（L5·仅在该世界观））解决了科学基础与方法中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "ftl_comm",
@@ -1722,8 +2578,12 @@ const EXTEND_TECHS = [
     "date": "设想（L5·仅在该世界观）",
     "year": 2150,
     "tier": "L5",
-    "dependsOn": ["quantum_entanglement","spacetime","warp_drive"],
-    "summary": "借纠缠或非局域通道瞬时传递信息，绕开光速延迟，依赖该世界观的特殊规则。"
+    "dependsOn": [
+      "quantum_entanglement",
+      "spacetime",
+      "warp_drive"
+    ],
+    "summary": "借纠缠或非局域通道瞬时传递信息，绕开光速延迟，依赖该世界观的特殊规则，依托量子纠缠、时空、曲速引擎，它在未来/科幻（设想（L5·仅在该世界观））解决了信息通信中的具体难题，使相应能力得以被反复复用。"
   },
   {
     "id": "teleportation",
@@ -1734,8 +2594,12 @@ const EXTEND_TECHS = [
     "date": "设想（L5·仅在该世界观）",
     "year": 2150,
     "tier": "L5",
-    "dependsOn": ["quantum_teleportation","sensor","mfg_3dp"],
-    "summary": "扫描源物并以量子态在远端重建，需完美读取与重组，现实中受不可克隆与退相干限制。"
+    "dependsOn": [
+      "quantum_teleportation",
+      "sensor",
+      "mfg_3dp"
+    ],
+    "summary": "扫描源物并以量子态在远端重建，需完美读取与重组，现实中受不可克隆与退相干限制，它建立在量子隐形传态、传感器、3D 打印之上，约 设想（L5·仅在该世界观） 出现于未来/科幻，把信息通信的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "stellar_engine",
@@ -1746,8 +2610,12 @@ const EXTEND_TECHS = [
     "date": "设想（L5·仅在该世界观）",
     "year": 2160,
     "tier": "L5",
-    "dependsOn": ["dyson_sphere","space_mfg","propulsion"],
-    "summary": "以恒星级结构调动整颗恒星的位置与能量，是文明操纵银河尺度的终极工程。"
+    "dependsOn": [
+      "dyson_sphere",
+      "space_mfg",
+      "propulsion"
+    ],
+    "summary": "以恒星级结构调动整颗恒星的位置与能量，是文明操纵银河尺度的终极工程，它建立在戴森球、太空制造、推进之上，约 设想（L5·仅在该世界观） 出现于未来/科幻，把能量形式的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
     "id": "black_hole_comp",
@@ -1758,7 +2626,11 @@ const EXTEND_TECHS = [
     "date": "设想（L5·仅在该世界观）",
     "year": 2160,
     "tier": "L5",
-    "dependsOn": ["black_hole","physics","quantum_info"],
-    "summary": "以黑洞视界附近的物理做信息加工，借极致时空曲率逼近计算与熵的极限，纯属推想。"
+    "dependsOn": [
+      "black_hole",
+      "physics",
+      "quantum_info"
+    ],
+    "summary": "以黑洞视界附近的物理做信息加工，借极致时空曲率逼近计算与熵的极限，纯属推想，它建立在黑洞、经典力学、量子信息之上，约 设想（L5·仅在该世界观） 出现于未来/科幻，把科学基础与方法的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   }
 ];

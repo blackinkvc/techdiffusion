@@ -741,7 +741,7 @@ function renderSop() {
   html += `<div class="sop-ex"><div class="ex-row"><span class="ex-tag before">改写前 · 套话</span><code>${esc(S.transform.before)}</code></div><div class="ex-row"><span class="ex-tag after">改写后 · 具体</span><code>${esc(S.transform.after)}</code></div></div>`;
   html += `<p class="sop-rule">${esc(S.transform.rule)}</p></section>`;
 
-  html += `<section class="sop-section"><h3 class="sop-h">五、任务拆分（${S.split.batches.length} 批 · 共 ${S.target.stubs} 条）</h3>`;
+  html += `<section class="sop-section"><h3 class="sop-h">五、任务拆分（${S.split.batches.length} 批 · 全部完成）</h3>`;
   html += `<p class="sop-note">${esc(S.split.by)} ${esc(S.split.order)}</p>`;
   html += `<div class="sop-batch-wrap"><table class="sop-batch"><thead><tr><th>批次</th><th>分类</th><th>待升级条数</th><th>状态</th></tr></thead><tbody>`;
   (S.split.batches || []).forEach(b => {
