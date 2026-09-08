@@ -90,6 +90,25 @@ window.CORRECTIONS = {
         "与枢纽清理一并重建 assets/data_full.js。"
       ],
       files: ["analysis-engine/data/graph.json", "assets/data_full.js"]
+    },
+    {
+      id: "CR-2026-0909-hub2nd",
+      date: "2026-09-09",
+      node: "ene_liquidair 等约 24 个材料/能源/制造节点",
+      nodeName: "二阶枢纽污染（链接预测残留）",
+      category: "meta",
+      severity: "高",
+      status: "待修正",
+      problem: "Phase 3（链接预测 / catalog 合并）阶段把「通用技术名」过度泛化成万能前置，批量注入到 transport/build/info/military 等共享模板下游。一阶已修（v0.9.11，已修正）：删掉 4 个明显枢纽——二维材料 mat_2d、工业 4.0 mfg_industry40、摩擦纳米发电 ene_tribo、自修复材料 mat_selfheal 的 104 条误接下游边（保留 mat_graphene→mat_2d，语义正确）。二阶（本次遗留）：同因、更隐蔽的残留——还有约 24 个材料/能源/制造节点，下游数量异常大（15–50 条）且大多指向 transport/build/info/military 模板，疑似同类污染。",
+      rootCause: "与一阶同源：链接预测 / catalog 合并阶段对通用技术名做了过度泛化的前因推断，把它们当作万能前置注入一批共享模板下游，而非依据真实技术谱系。无人机测绘案例是可见症状；一阶清理暴露了 4 个显眼枢纽，二阶是同一机制在更多中频节点上的分散残留。",
+      fix: "要求逐节点人工核验、不能盲目批量删（要先区分真实下游与模板污染边后再修）。核验方法见 meta.method：抽样来龙去脉页 → 溯源 catalog 原始 deps → 比对合并缺口 → 修正 graph.json 入/出边 → 全库自检 → 重建 data_full.js。",
+      badUpstream: [],
+      goodUpstream: [],
+      changes: [
+        "待检清单（括号内=下游条数，合计约 622 条疑似污染边）：液态空气储能 ene_liquidair(31)、井式地热 ene_borehole(27)、余热回收 ene_wasteheat(50)、调峰电站 ene_peaker(41)、感应熔炼 mat_inductionmelt(46)、金属有机框架 mat_mof(39)、热处理炉 mfg_furnace(38)、激光熔覆 mat_laserclad(27)、渗硼 mat_boriding(27)、燃料电池汽车 ene_fuelcellcar(26)、泡沫金属 mat_foammetal(25)、盐差能 ene_salinity(25)、碟式斯特林 ene_dishstirling(25)、水热地热 ene_hydrothermal(24)、储氢合金 mat_hydrogenstorage(23)、可燃冰 ene_clathrate(23)、风力 ene_wind(22)、切削液 mfg_coolant(21)、放电等离子烧结 mat_sps(19)、电动机 electric_motor(17)、半导体材料 semiconductors(16)、碳纤维 mat_cf(15)、砂轮 mfg_grindingwheel(15)。",
+        "处置原则：逐节点区分真实下游 vs 模板污染边后再删，避免误删真实技术谱系边。"
+      ],
+      files: ["analysis-engine/data/graph.json", "assets/data_full.js"]
     }
   ]
 };
