@@ -1,0 +1,1389 @@
+{
+ "cat": "manufact",
+ "catName": "制造与工具",
+ "sub": "precision",
+ "subName": "精密与超精密制造",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "mathematics",
+  "physics",
+  "optics",
+  "chemistry",
+  "electricity",
+  "lasers",
+  "semiconductors",
+  "computer",
+  "ic",
+  "cnc",
+  "lathe",
+  "transistor"
+ ],
+ "families": [
+  {
+   "name": "精密机床与坐标加工装备",
+   "items": [
+    {
+     "id": "precision_honing_machine",
+     "name": "精密珩磨机",
+     "en": "Precision honing machine",
+     "year": 1925,
+     "note": "以低速旋转并往复的油石修整孔面，获得高圆度低粗糙度的缸孔。",
+     "deps": [
+      "lathe"
+     ]
+    },
+    {
+     "id": "coordinate_boring_machine",
+     "name": "坐标镗床",
+     "en": "Jig boring machine",
+     "year": 1925,
+     "note": "以精密坐标尺定位镗削孔系，保证孔距精度，是工装模具制造基石。",
+     "deps": [
+      "lathe"
+     ]
+    },
+    {
+     "id": "superfinishing_machine",
+     "name": "超精加工机床",
+     "en": "Superfinishing machine",
+     "year": 1934,
+     "note": "以低压力微幅振荡油石去除工件表面凸峰，获得极低粗糙度的光整面。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "coordinate_grinding_machine",
+     "name": "坐标磨床",
+     "en": "Jig grinding machine",
+     "year": 1940,
+     "note": "穆尔公司开发，按坐标定位磨削淬硬钢孔系，是精密模具的标准装备。",
+     "deps": [
+      "coordinate_boring_machine"
+     ]
+    },
+    {
+     "id": "optical_profile_grinder",
+     "name": "光学曲线磨床",
+     "en": "Optical profile grinder",
+     "year": 1945,
+     "note": "把放大样板影像与砂轮轮廓投影比对，精确磨削成形刀具与凸轮。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "precision_lapping_machine",
+     "name": "精密研磨机",
+     "en": "Precision lapping machine",
+     "year": 1948,
+     "note": "工件在涂有磨料的研磨盘间相对运动，去除极小余量获得平面度。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "precision_polishing_machine",
+     "name": "精密抛光机",
+     "en": "Precision polishing machine",
+     "year": 1955,
+     "note": "以抛光垫与抛光液对工件进行化学机械作用的镜面加工设备。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "diamond_turning_machine",
+     "name": "超精密金刚石车床",
+     "en": "Ultra-precision diamond turning machine",
+     "year": 1962,
+     "note": "高刚性气浮主轴配合金刚石刀具，直接车削光学级金属与晶体表面。",
+     "deps": [
+      "lathe",
+      "physics"
+     ]
+    },
+    {
+     "id": "ultra_precision_grinding_machine",
+     "name": "超精密磨床",
+     "en": "Ultra-precision grinding machine",
+     "year": 1980,
+     "note": "亚微米进给与在线修整的磨床，实现硬脆材料的高精度镜面磨削。",
+     "deps": [
+      "precision_lapping_machine"
+     ]
+    },
+    {
+     "id": "micro_edm_machine",
+     "name": "微细电火花加工机床",
+     "en": "Micro EDM machine",
+     "year": 1985,
+     "note": "微能量放电加工微小孔与微细型腔，不受材料硬度限制。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "precision_micro_milling_center",
+     "name": "精密微铣削中心",
+     "en": "Precision micro-milling center",
+     "year": 1995,
+     "note": "高速高刚性主轴配合微径铣刀，加工微模具与微结构零件。",
+     "deps": [
+      "cnc"
+     ]
+    },
+    {
+     "id": "micro_usm_machine",
+     "name": "微细超声加工机床",
+     "en": "Micro ultrasonic machining machine",
+     "year": 1998,
+     "note": "超声振动磨粒冲击去除材料，加工玻璃陶瓷等脆硬微细特征。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "five_axis_ultraprecision_machine",
+     "name": "五轴超精密加工机床",
+     "en": "Five-axis ultra-precision machine tool",
+     "year": 2005,
+     "note": "超精密回转轴与直线轴联动，一次装夹加工复杂自由曲面零件。",
+     "deps": [
+      "diamond_turning_machine",
+      "cnc"
+     ]
+    },
+    {
+     "id": "precision_roll_grinder",
+     "name": "精密轧辊磨床",
+     "en": "Precision roll grinder",
+     "year": 1965,
+     "note": "修磨轧辊与辊轴辊形并补偿中凸度，保证带材板形质量。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "precision_rotary_index_table",
+     "name": "精密回转工作台",
+     "en": "Precision rotary index table",
+     "year": 1965,
+     "note": "精密分度定位回转工作台，配合磨削与测量实现圆周分度加工。",
+     "deps": [
+      "cnc"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "超精密加工与微细切削工艺",
+   "items": [
+    {
+     "id": "diamond_turning_process",
+     "name": "单点金刚石车削工艺",
+     "en": "Single-point diamond turning",
+     "year": 1962,
+     "note": "天然单晶金刚石刀具以纳米级切深车削，直接得到镜面与光学面。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "diamond_fly_cutting",
+     "name": "金刚石飞切",
+     "en": "Diamond fly cutting",
+     "year": 1975,
+     "note": "刀具随主轴旋转扫掠加工大平面，用于激光陀螺反射镜等平面。",
+     "deps": [
+      "diamond_turning_process"
+     ]
+    },
+    {
+     "id": "deterministic_microgrinding",
+     "name": "确定性微磨削",
+     "en": "Deterministic microgrinding",
+     "year": 1987,
+     "note": "按已知去除函数控制磨削轨迹，数控成形非球面玻璃透镜。",
+     "deps": [
+      "ultra_precision_grinding_machine"
+     ]
+    },
+    {
+     "id": "elid_grinding",
+     "name": "电解在线修整磨削",
+     "en": "Electrolytic in-process dressing grinding",
+     "year": 1985,
+     "note": "电解作用在线修锐金属结合剂砂轮，稳定镜面磨削硬脆材料。",
+     "deps": [
+      "ultra_precision_grinding_machine",
+      "electricity"
+     ]
+    },
+    {
+     "id": "ductile_mode_machining",
+     "name": "延性域加工",
+     "en": "Ductile-mode machining",
+     "year": 1990,
+     "note": "控制切深小于脆性转变临界值，使硅与光学玻璃以延性方式去除。",
+     "deps": [
+      "diamond_turning_process",
+      "physics"
+     ]
+    },
+    {
+     "id": "hard_turning_machining",
+     "name": "硬车削",
+     "en": "Hard turning",
+     "year": 1995,
+     "note": "以CBN刀具精车淬硬钢代替磨削，柔性高且可干式加工。",
+     "deps": [
+      "cnc"
+     ]
+    },
+    {
+     "id": "ultrasonic_assisted_cutting",
+     "name": "超声振动辅助切削",
+     "en": "Ultrasonic vibration-assisted cutting",
+     "year": 1996,
+     "note": "刀具高频振动使切削周期断续，降低切削力，利于脆硬材料加工。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "fast_tool_servo",
+     "name": "快刀伺服加工",
+     "en": "Fast tool servo machining",
+     "year": 1998,
+     "note": "压电或音圈驱动刀具高频进给，随主轴相位车削自由曲面。",
+     "deps": [
+      "diamond_turning_process"
+     ]
+    },
+    {
+     "id": "slow_tool_servo",
+     "name": "慢刀伺服加工",
+     "en": "Slow tool servo machining",
+     "year": 2000,
+     "note": "直线轴与主轴联动伺服车削非回转对称光学面，行程大于快刀。",
+     "deps": [
+      "diamond_turning_process",
+      "cnc"
+     ]
+    },
+    {
+     "id": "diamond_tool_lapping",
+     "name": "金刚石刀具刃磨",
+     "en": "Diamond tool lapping",
+     "year": 1960,
+     "note": "在铸铁盘上以金刚石微粉研磨刃口，获得纳米级钝圆半径。",
+     "deps": [
+      "precision_lapping_machine"
+     ]
+    },
+    {
+     "id": "diamond_micro_chiseling",
+     "name": "金刚石微凿削",
+     "en": "Diamond micro chiseling",
+     "year": 2008,
+     "note": "以受控裂纹沿预定方向扩展成形微结构，属研究性脆性材料工艺。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "precision_flycutting_facet",
+     "name": "精密分度飞切",
+     "en": "Precision index fly cutting",
+     "year": 2010,
+     "note": "工件分度配合飞刀切削，成形微棱镜阵列与角锥阵列结构。",
+     "deps": [
+      "diamond_fly_cutting"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "精密光整与抛光工艺",
+   "items": [
+    {
+     "id": "precision_lapping_process",
+     "name": "精密研磨工艺",
+     "en": "Precision lapping",
+     "year": 1948,
+     "note": "散粒磨料在两平面间滚动切削，获得高平面度低损伤表面。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "precision_honing_process",
+     "name": "精密珩磨工艺",
+     "en": "Precision honing",
+     "year": 1950,
+     "note": "珩磨头随机修整孔形误差，形成交叉网纹，利于油膜保持。",
+     "deps": [
+      "precision_honing_machine"
+     ]
+    },
+    {
+     "id": "superfinishing_process",
+     "name": "超精研工艺",
+     "en": "Superfinishing",
+     "year": 1934,
+     "note": "低压微幅振荡油石逐步去除凸峰，获得镜面状承载表面。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "float_polishing",
+     "name": "浮法抛光",
+     "en": "Float polishing",
+     "year": 1975,
+     "note": "以高稀释抛光液使工件悬浮贴合抛光盘，原子级去除制光学面。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chemomechanical_polishing",
+     "name": "化学机械抛光",
+     "en": "Chemical mechanical polishing",
+     "year": 1986,
+     "note": "化学腐蚀与机械磨削协同平坦化晶圆表面，是集成电路多层布线基础。",
+     "deps": [
+      "semiconductors",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "ion_beam_figuring",
+     "name": "离子束修形",
+     "en": "Ion beam figuring",
+     "year": 1990,
+     "note": "以聚焦离子束按驻留时间去除材料，修正光学元件面形误差。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "magnetorheological_optics_finishing",
+     "name": "磁流变抛光",
+     "en": "Magnetorheological finishing",
+     "year": 1996,
+     "note": "磁流变液在磁场中形成柔性抛光带，确定性修形且无亚表面损伤。",
+     "deps": [
+      "magnets",
+      "physics"
+     ]
+    },
+    {
+     "id": "fluid_jet_polishing",
+     "name": "流体喷射抛光",
+     "en": "Fluid jet polishing",
+     "year": 1998,
+     "note": "高压磨料液射流局部修形，适合内曲面与复杂型面抛光。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "bonnet_polishing",
+     "name": "气囊抛光",
+     "en": "Bonnet polishing",
+     "year": 2003,
+     "note": "充气气囊以柔性接触数控抛光自由曲面，实现确定性去除。",
+     "deps": [
+      "cnc"
+     ]
+    },
+    {
+     "id": "plasma_assisted_polishing",
+     "name": "等离子体辅助抛光",
+     "en": "Plasma-assisted polishing",
+     "year": 2012,
+     "note": "等离子体辐照软化表面再以软磨料去除，实现单晶碳化硅原子级表面。",
+     "deps": [
+      "electricity",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "vibratory_micro_finishing",
+     "name": "精密振动光整",
+     "en": "Precision vibratory finishing",
+     "year": 1980,
+     "note": "磨块在振动槽内与工件摩擦去毛刺倒圆，精密件批量表面处理。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "tape_polishing",
+     "name": "砂带精抛",
+     "en": "Precision tape polishing",
+     "year": 1990,
+     "note": "以细粒度砂带恒压抛光辊面与导轮面，消除前道工序纹理。",
+     "deps": [
+      "steel"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "坐标测量与精密计量仪器",
+   "items": [
+    {
+     "id": "optical_autocollimator",
+     "name": "光学自准直仪",
+     "en": "Optical autocollimator",
+     "year": 1916,
+     "note": "以自准直原理测量微小角度，检定导轨直线度与转台分度。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "contour_projector",
+     "name": "光学投影仪",
+     "en": "Optical contour projector",
+     "year": 1930,
+     "note": "把工件轮廓放大投影与样板比对，快速检验成形件轮廓。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "toolmakers_microscope",
+     "name": "工具显微镜",
+     "en": "Toolmaker's microscope",
+     "year": 1935,
+     "note": "在显微镜视场内测量刀具与螺纹小件的二维尺寸与角度。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "surface_roughness_profiler",
+     "name": "触针表面粗糙度仪",
+     "en": "Stylus surface roughness tester",
+     "year": 1941,
+     "note": "金刚石触针沿表面滑行拾取轮廓，量化评定表面粗糙度参数。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "roundness_measuring_instrument",
+     "name": "圆度仪",
+     "en": "Roundness measuring instrument",
+     "year": 1948,
+     "note": "工件绕精密主轴回转，测头记录径向偏差并评定圆度与圆柱度。",
+     "deps": [
+      "lathe"
+     ]
+    },
+    {
+     "id": "cnc_coordinate_measuring_machine",
+     "name": "三坐标测量机",
+     "en": "Coordinate measuring machine",
+     "year": 1959,
+     "note": "探头沿三轴移动采点，计算机解算空间尺寸与形位误差，是现代测量基准。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "laser_interferometric_length_measurement",
+     "name": "激光干涉测长仪",
+     "en": "Laser interferometer for length metrology",
+     "year": 1970,
+     "note": "以激光波长作尺子测量位移，用于机床定位精度标定与量值溯源。",
+     "deps": [
+      "lasers"
+     ]
+    },
+    {
+     "id": "trigger_probe_cmm",
+     "name": "触发式坐标测量测头",
+     "en": "Touch-trigger probe",
+     "year": 1975,
+     "note": "测球接触工件瞬间触发采点，实现加工中心上的在线测量。",
+     "deps": [
+      "cnc_coordinate_measuring_machine",
+      "transistor"
+     ]
+    },
+    {
+     "id": "ballbar_tester",
+     "name": "球杆仪",
+     "en": "Ballbar tester",
+     "year": 1983,
+     "note": "以精密球杆连接主轴与工作台做圆弧运动，诊断数控机床误差。",
+     "deps": [
+      "cnc_coordinate_measuring_machine"
+     ]
+    },
+    {
+     "id": "vision_measurement_machine",
+     "name": "影像测量仪",
+     "en": "Vision measuring machine",
+     "year": 1984,
+     "note": "工业相机捕捉工件影像并自动边缘识别，非接触测量二维尺寸。",
+     "deps": [
+      "camera",
+      "computer"
+     ]
+    },
+    {
+     "id": "articulated_measuring_arm",
+     "name": "关节臂测量机",
+     "en": "Articulated measuring arm",
+     "year": 1986,
+     "note": "多关节臂配合角度编码器测量空间点，便携灵活用于现场测量。",
+     "deps": [
+      "cnc_coordinate_measuring_machine"
+     ]
+    },
+    {
+     "id": "laser_tracker",
+     "name": "激光跟踪仪",
+     "en": "Laser tracker",
+     "year": 1990,
+     "note": "跟踪反射靶球并测距测角，实现大尺寸工件的高精度现场测量。",
+     "deps": [
+      "lasers"
+     ]
+    },
+    {
+     "id": "scanning_cmm_probe",
+     "name": "连续扫描测量测头",
+     "en": "Scanning probe for CMM",
+     "year": 1993,
+     "note": "测头沿表面连续采样密集点云，快速评定复杂曲面轮廓。",
+     "deps": [
+      "trigger_probe_cmm"
+     ]
+    },
+    {
+     "id": "white_light_interferometer",
+     "name": "白光干涉表面测量仪",
+     "en": "White-light interferometer",
+     "year": 1993,
+     "note": "低相干干涉扫描重建微纳表面三维形貌，测量粗糙度与台阶。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "laser_scanning_3d_measurement",
+     "name": "激光三维扫描测量",
+     "en": "Laser 3D scanning measurement",
+     "year": 1995,
+     "note": "激光三角法或相位法扫描工件表面，生成点云用于逆向与检测。",
+     "deps": [
+      "lasers"
+     ]
+    },
+    {
+     "id": "capacitive_displacement_sensor",
+     "name": "电容位移传感器",
+     "en": "Capacitive displacement sensor",
+     "year": 1970,
+     "note": "以极板电容变化测微纳米位移，用于主轴跳动与微定位反馈。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "laser_doppler_vibrometer",
+     "name": "激光多普勒测振仪",
+     "en": "Laser Doppler vibrometer",
+     "year": 1964,
+     "note": "利用多普勒频移非接触测量振动速度，用于微结构与器件振动分析。",
+     "deps": [
+      "lasers"
+     ]
+    },
+    {
+     "id": "gear_measuring_instrument",
+     "name": "齿轮测量仪",
+     "en": "Gear measuring instrument",
+     "year": 1955,
+     "note": "测量渐开线齿廓与螺旋线偏差，控制齿轮加工精度。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "nano_measuring_machine",
+     "name": "纳米测量机",
+     "en": "Nanometer measuring machine",
+     "year": 2001,
+     "note": "激光干涉与实物基准结合实现纳米级坐标测量，属国家级基准装置。",
+     "deps": [
+      "laser_interferometric_length_measurement"
+     ]
+    },
+    {
+     "id": "interferometric_optical_flatness_tester",
+     "name": "平面干涉仪",
+     "en": "Interferometric flatness tester",
+     "year": 1955,
+     "note": "以等厚干涉条纹评定光学平面面形，是平面度测量基准仪器。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "ct_metrology_machine",
+     "name": "工业CT计量",
+     "en": "Industrial computed tomography metrology",
+     "year": 2005,
+     "note": "以X射线CT无损获取内部结构尺寸，测量内腔与隐蔽特征。",
+     "deps": [
+      "medical_imaging",
+      "computer"
+     ]
+    },
+    {
+     "id": "chromatic_confocal_sensor",
+     "name": "共聚焦色差位移传感器",
+     "en": "Chromatic confocal sensor",
+     "year": 2000,
+     "note": "利用色差聚焦不同波长测量距离，可测透明与高反表面厚度。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "circular_grating_angle_encoder",
+     "name": "圆光栅角度编码器",
+     "en": "Circular grating angle encoder",
+     "year": 1975,
+     "note": "以圆光栅莫尔条纹细分角度，用于转台与伺服电机位置反馈。",
+     "deps": [
+      "optics"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "半导体光刻与图形化制造",
+   "items": [
+    {
+     "id": "semiconductor_photolithography",
+     "name": "半导体光刻工艺",
+     "en": "Semiconductor photolithography",
+     "year": 1955,
+     "note": "通过掩模曝光在晶圆上转印电路图形，是集成电路制造的核心。",
+     "deps": [
+      "transistor",
+      "optics"
+     ]
+    },
+    {
+     "id": "contact_mask_aligner",
+     "name": "接触式光刻机",
+     "en": "Contact mask aligner",
+     "year": 1961,
+     "note": "掩模与晶圆紧密接触后紫外曝光，图形分辨率高但易损伤掩模。",
+     "deps": [
+      "semiconductor_photolithography"
+     ]
+    },
+    {
+     "id": "photomask_pattern_generator",
+     "name": "掩模图形发生器",
+     "en": "Photomask pattern generator",
+     "year": 1962,
+     "note": "按数据逐图形曝光制版，取代手工刻红膜制作掩模版。",
+     "deps": [
+      "semiconductor_photolithography"
+     ]
+    },
+    {
+     "id": "projection_lithography",
+     "name": "投影式光刻",
+     "en": "Projection lithography",
+     "year": 1973,
+     "note": "掩模图形经投影物镜成像到晶圆，实现1:1扫描曝光量产。",
+     "deps": [
+      "semiconductor_photolithography"
+     ]
+    },
+    {
+     "id": "wafer_stepper",
+     "name": "步进重复光刻机",
+     "en": "Wafer stepper",
+     "year": 1978,
+     "note": "逐视场步进曝光缩小掩模图形，显著提高套刻与分辨率。",
+     "deps": [
+      "projection_lithography"
+     ]
+    },
+    {
+     "id": "electron_beam_lithography",
+     "name": "电子束光刻",
+     "en": "Electron beam lithography",
+     "year": 1960,
+     "note": "聚焦电子束直写抗蚀剂图形，分辨率达纳米级，用于掩模与研究。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "e_beam_mask_writer",
+     "name": "电子束掩模写入机",
+     "en": "Electron beam mask writer",
+     "year": 1975,
+     "note": "以电子束按版图数据直接曝光掩模，是高端掩模制造的标配。",
+     "deps": [
+      "electron_beam_lithography"
+     ]
+    },
+    {
+     "id": "xray_lithography",
+     "name": "X射线光刻",
+     "en": "X-ray lithography",
+     "year": 1976,
+     "note": "以短波长X射线曝光获得高分辨率图形，曾作为下一代光刻研究。",
+     "deps": [
+      "semiconductor_photolithography"
+     ]
+    },
+    {
+     "id": "focused_ion_beam_fabrication",
+     "name": "聚焦离子束加工",
+     "en": "Focused ion beam fabrication",
+     "year": 1975,
+     "note": "镓离子束聚焦溅射去除材料，直接雕刻纳米结构与修补缺陷。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "phase_shift_mask_lithography",
+     "name": "相移掩模",
+     "en": "Phase-shift mask",
+     "year": 1989,
+     "note": "相邻透光区引入相位差提高成像对比度，突破同波长分辨率极限。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "off_axis_illumination",
+     "name": "离轴照明光刻",
+     "en": "Off-axis illumination",
+     "year": 1990,
+     "note": "环形或偶极光源照明提升密集图形分辨力，与光刻胶协同优化。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "step_and_scan_scanner",
+     "name": "步进扫描光刻机",
+     "en": "Step-and-scan lithography scanner",
+     "year": 1995,
+     "note": "狭缝扫描与步进结合成像，扩大曝光场并改善像差，成为主流机种。",
+     "deps": [
+      "wafer_stepper"
+     ]
+    },
+    {
+     "id": "duv_248nm_lithography",
+     "name": "248纳米深紫外光刻",
+     "en": "248 nm DUV lithography",
+     "year": 1997,
+     "note": "以氟化氪准分子激光为光源，支持0.25微米及以下工艺节点。",
+     "deps": [
+      "step_and_scan_scanner",
+      "lasers"
+     ]
+    },
+    {
+     "id": "optical_proximity_correction",
+     "name": "光学邻近效应修正",
+     "en": "Optical proximity correction",
+     "year": 1995,
+     "note": "预补偿图形失真，把掩模图形按规则与模型修正后再制造。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "nanoimprint_lithography",
+     "name": "纳米压印光刻",
+     "en": "Nanoimprint lithography",
+     "year": 1995,
+     "note": "模具直接压印抗蚀剂转移纳米图形，成本低且分辨率高。",
+     "deps": [
+      "semiconductor_photolithography"
+     ]
+    },
+    {
+     "id": "immersion_193nm_lithography",
+     "name": "193纳米浸没式光刻",
+     "en": "193 nm immersion lithography",
+     "year": 2004,
+     "note": "在镜头与晶圆间注入高折射率液体，等效增大数值孔径延伸工艺。",
+     "deps": [
+      "duv_248nm_lithography"
+     ]
+    },
+    {
+     "id": "double_patterning",
+     "name": "双重曝光图形化",
+     "en": "Double patterning",
+     "year": 2007,
+     "note": "把密集图形拆分为两次曝光组合，突破单次光刻密度极限。",
+     "deps": [
+      "immersion_193nm_lithography"
+     ]
+    },
+    {
+     "id": "self_aligned_double_patterning",
+     "name": "自对准双重图形化",
+     "en": "Self-aligned double patterning",
+     "year": 2008,
+     "note": "以侧墙沉积加厚图形实现间距倍增，无需二次对版。",
+     "deps": [
+      "double_patterning"
+     ]
+    },
+    {
+     "id": "euv_lithography",
+     "name": "极紫外光刻",
+     "en": "Extreme ultraviolet lithography",
+     "year": 2019,
+     "note": "13.5纳米波长反射式光刻进入量产，支撑七纳米以下先进制程。",
+     "deps": [
+      "immersion_193nm_lithography"
+     ]
+    },
+    {
+     "id": "computational_lithography",
+     "name": "计算光刻",
+     "en": "Computational lithography",
+     "year": 2010,
+     "note": "以逆向光学与全程仿真优化掩模与光源，联合提升工艺窗口。",
+     "deps": [
+      "computer",
+      "optical_proximity_correction"
+     ]
+    },
+    {
+     "id": "grayscale_lithography",
+     "name": "灰度光刻",
+     "en": "Grayscale lithography",
+     "year": 2001,
+     "note": "以可变透过率掩模控制曝光量，一次成形连续微光学曲面结构。",
+     "deps": [
+      "semiconductor_photolithography"
+     ]
+    },
+    {
+     "id": "maskless_lithography",
+     "name": "无掩模直写光刻",
+     "en": "Maskless lithography",
+     "year": 2005,
+     "note": "以数字微镜或激光直写替代掩模曝光，适合小批量与研发流片。",
+     "deps": [
+      "ic"
+     ]
+    },
+    {
+     "id": "mask_defect_inspection",
+     "name": "掩模缺陷检测",
+     "en": "Photomask defect inspection",
+     "year": 1990,
+     "note": "以光学与电子束比对检测掩模图形缺陷，保障光刻良率。",
+     "deps": [
+      "e_beam_mask_writer"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "微机电系统制造技术",
+   "items": [
+    {
+     "id": "silicon_anisotropic_wet_etching",
+     "name": "硅各向异性湿法刻蚀",
+     "en": "Anisotropic wet etching of silicon",
+     "year": 1967,
+     "note": "利用碱溶液对不同晶面刻蚀速率差异，成形V形槽与悬臂结构。",
+     "deps": [
+      "chemistry",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "resonant_gate_transistor",
+     "name": "谐振栅晶体管",
+     "en": "Resonant gate transistor",
+     "year": 1967,
+     "note": "以微加工悬臂梁作栅极谐振，被公认为首个表面微机械器件。",
+     "deps": [
+      "transistor"
+     ]
+    },
+    {
+     "id": "anodic_bonding",
+     "name": "阳极键合",
+     "en": "Anodic bonding",
+     "year": 1969,
+     "note": "电场下玻璃与硅形成牢固密封结合，用于微传感器封装。",
+     "deps": [
+      "electricity",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "diffused_silicon_pressure_sensor",
+     "name": "扩散硅压力传感器",
+     "en": "Diffused silicon pressure sensor",
+     "year": 1973,
+     "note": "硅膜片扩散电阻随压力变化输出信号，是最早量产的微传感器。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "thermal_bubble_inkjet_head",
+     "name": "热气泡喷墨头",
+     "en": "Thermal inkjet printhead",
+     "year": 1979,
+     "note": "微加热电阻使墨水瞬时汽化喷出液滴，由惠普率先实现。",
+     "deps": [
+      "ic",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "liga_process",
+     "name": "LIGA工艺",
+     "en": "LIGA process",
+     "year": 1982,
+     "note": "X射线深层光刻加电铸加注塑，制造高深宽比微金属结构。",
+     "deps": [
+      "xray_lithography"
+     ]
+    },
+    {
+     "id": "silicon_fusion_bonding",
+     "name": "硅熔融键合",
+     "en": "Silicon fusion bonding",
+     "year": 1986,
+     "note": "两片抛光硅片直接键合，无需中间层，用于SOI与多层结构。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "digital_micromirror_device",
+     "name": "数字微镜器件",
+     "en": "Digital micromirror device",
+     "year": 1987,
+     "note": "百万级微镜阵列受静电力翻转调制光，支撑DLP投影技术。",
+     "deps": [
+      "ic",
+      "electricity"
+     ]
+    },
+    {
+     "id": "surface_micromachining_polysilicon",
+     "name": "多晶硅表面微加工",
+     "en": "Polysilicon surface micromachining",
+     "year": 1988,
+     "note": "沉积多晶硅结构层并以牺牲层释放，制造平面微机械器件。",
+     "deps": [
+      "resonant_gate_transistor"
+     ]
+    },
+    {
+     "id": "capacitive_mems_accelerometer",
+     "name": "电容式微加速度计",
+     "en": "Capacitive MEMS accelerometer",
+     "year": 1991,
+     "note": "微质量块位移改变差分电容并集成读出，单芯片加速度计量产。",
+     "deps": [
+      "ic",
+      "surface_micromachining_polysilicon"
+     ]
+    },
+    {
+     "id": "mems_gyroscope",
+     "name": "微机械陀螺仪",
+     "en": "MEMS gyroscope",
+     "year": 1993,
+     "note": "微振动质量感知哥氏效应测量角速度，广泛用于手机与汽车。",
+     "deps": [
+      "capacitive_mems_accelerometer"
+     ]
+    },
+    {
+     "id": "deep_reactive_ion_etching",
+     "name": "深反应离子刻蚀",
+     "en": "Deep reactive ion etching",
+     "year": 1994,
+     "note": "博世工艺交替钝化与刻蚀，实现硅高深宽比垂直结构。",
+     "deps": [
+      "electricity",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "micro_electroforming",
+     "name": "微电铸成形",
+     "en": "Micro electroforming",
+     "year": 1984,
+     "note": "在导电母模上电沉积金属成形微结构，是LIGA后续复制核心。",
+     "deps": [
+      "liga_process"
+     ]
+    },
+    {
+     "id": "micro_hot_embossing",
+     "name": "聚合物微热压印",
+     "en": "Micro hot embossing",
+     "year": 1995,
+     "note": "加热加压把微模具图形压入聚合物片材，批量制造微流控芯片。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "scanning_probe_nanolithography",
+     "name": "扫描探针纳米加工",
+     "en": "Scanning probe nanolithography",
+     "year": 1996,
+     "note": "原子力探针刻划或氧化局域表面，实现纳米尺度的图形化研究。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "mems_microphone",
+     "name": "微机电麦克风",
+     "en": "MEMS microphone",
+     "year": 2002,
+     "note": "微振膜与背板构成电容拾音，小型化后主导消费电子市场。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "electrostatic_mems_mirror",
+     "name": "静电驱动微镜",
+     "en": "Electrostatic MEMS mirror",
+     "year": 2015,
+     "note": "静电梳齿驱动微镜摆动扫描光束，用于激光雷达与光通信。",
+     "deps": [
+      "deep_reactive_ion_etching",
+      "electricity"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "精密光学元件制造技术",
+   "items": [
+    {
+     "id": "classical_optical_grinding_polishing",
+     "name": "经典光学研磨抛光",
+     "en": "Classical optical grinding and polishing",
+     "year": 1600,
+     "note": "以研磨盘与磨料逐级减细加工透镜镜片，手工光学加工之祖。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "precision_glass_molding",
+     "name": "精密玻璃模压成形",
+     "en": "Precision glass molding",
+     "year": 1985,
+     "note": "高温软化玻璃在超精密模具中压制成非球面透镜，免研磨抛光。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "computer_controlled_optical_surfacing",
+     "name": "计算机控制光学表面成形",
+     "en": "Computer controlled optical surfacing",
+     "year": 1977,
+     "note": "小磨头按驻留时间函数数控抛光修形，用于大口径光学镜面。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "optical_lens_centering_edging",
+     "name": "光学镜片定心磨边",
+     "en": "Optical lens centering and edging",
+     "year": 1960,
+     "note": "以光轴定位磨削镜片外圆，保证光轴与机械轴重合。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "stressed_lap_polishing",
+     "name": "应力盘抛光",
+     "en": "Stressed-lap polishing",
+     "year": 1993,
+     "note": "主动变形抛光盘贴合大非球面镜，动态控制去除量。",
+     "deps": [
+      "computer_controlled_optical_surfacing"
+     ]
+    },
+    {
+     "id": "subaperture_stitching_interferometry",
+     "name": "子孔径拼接干涉测量",
+     "en": "Subaperture stitching interferometry",
+     "year": 1998,
+     "note": "多块小口径干涉图拼接重构大口径镜面面形，突破量程限制。",
+     "deps": [
+      "laser_interferometric_length_measurement"
+     ]
+    },
+    {
+     "id": "silicon_carbide_mirror_manufacturing",
+     "name": "碳化硅反射镜制造",
+     "en": "Silicon carbide mirror manufacturing",
+     "year": 2004,
+     "note": "反应烧结碳化硅轻量化镜坯经精密磨抛，用于空间光学载荷。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "diamond_turned_metal_optics",
+     "name": "车削金属反射镜",
+     "en": "Diamond turned metal mirrors",
+     "year": 1965,
+     "note": "铝合金与无电镍镀层经金刚石车削直接成镜面，广泛用于红外系统。",
+     "deps": [
+      "diamond_turning_process"
+     ]
+    },
+    {
+     "id": "freeform_optics_machining",
+     "name": "自由曲面光学制造",
+     "en": "Freeform optics manufacturing",
+     "year": 2010,
+     "note": "结合快慢刀伺服与磁流变修形，批量制造非对称自由曲面镜片。",
+     "deps": [
+      "fast_tool_servo",
+      "magnetorheological_optics_finishing"
+     ]
+    },
+    {
+     "id": "precision_prism_fabrication",
+     "name": "精密棱镜加工",
+     "en": "Precision prism fabrication",
+     "year": 1950,
+     "note": "研磨抛光多面体棱镜并保证角度与面形，用于光学系统转折光路。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "infrared_optics_single_point_turning",
+     "name": "红外晶体单点车削",
+     "en": "Single-point turning of infrared crystals",
+     "year": 1970,
+     "note": "车削锗硅等红外晶体透镜与窗口，替代昂贵研磨抛光。",
+     "deps": [
+      "diamond_turning_process"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "精密运动部件、驱动与超净环境技术",
+   "items": [
+    {
+     "id": "precision_ball_screw",
+     "name": "精密滚珠丝杠",
+     "en": "Precision ball screw",
+     "year": 1948,
+     "note": "滚珠在螺旋滚道间滚动传动，摩擦小精度高，是数控进给核心。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "harmonic_drive_reducer",
+     "name": "谐波减速器",
+     "en": "Harmonic drive reducer",
+     "year": 1955,
+     "note": "柔轮弹性变形实现大减速比精密传动，广泛用于机器人与转台。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "air_bearing_spindle",
+     "name": "气浮主轴",
+     "en": "Air bearing spindle",
+     "year": 1962,
+     "note": "压缩空气膜支撑主轴回转，无摩擦且回转精度达亚微米级。",
+     "deps": [
+      "lathe"
+     ]
+    },
+    {
+     "id": "voice_coil_actuator",
+     "name": "音圈电机驱动",
+     "en": "Voice coil actuator",
+     "year": 1960,
+     "note": "线圈在磁场中直线运动，行程可控，用于硬盘磁头与微定位。",
+     "deps": [
+      "electricity",
+      "magnets"
+     ]
+    },
+    {
+     "id": "hydrostatic_guideway",
+     "name": "静压导轨",
+     "en": "Hydrostatic guideway",
+     "year": 1965,
+     "note": "压力油膜承载滑动导轨，刚性好且无爬行，用于重型精密机床。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "piezoelectric_stack_actuator",
+     "name": "压电叠堆驱动器",
+     "en": "Piezoelectric stack actuator",
+     "year": 1975,
+     "note": "压电陶瓷叠片电致伸缩输出纳米级位移，驱动微进给与快刀。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "active_vibration_isolation",
+     "name": "主动隔振系统",
+     "en": "Active vibration isolation",
+     "year": 1985,
+     "note": "传感器与作动器闭环抵消地面振动，保障光刻与精密测量稳定。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "optical_linear_encoder",
+     "name": "光栅尺位移测量",
+     "en": "Optical linear encoder",
+     "year": 1970,
+     "note": "莫尔条纹细分计量直线位移，作为数控机床位置反馈元件。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "linear_motor_stage",
+     "name": "直线电机驱动平台",
+     "en": "Linear motor stage",
+     "year": 1995,
+     "note": "直线电机直接驱动工件台，高速高加速度且无反向间隙。",
+     "deps": [
+      "electricity",
+      "magnets"
+     ]
+    },
+    {
+     "id": "flexure_nanopositioning_stage",
+     "name": "柔性铰链纳米定位台",
+     "en": "Flexure nanopositioning stage",
+     "year": 1995,
+     "note": "压电驱动配合柔性铰链导向，实现无摩擦纳米级精密定位。",
+     "deps": [
+      "piezoelectric_stack_actuator"
+     ]
+    },
+    {
+     "id": "magnetic_levitation_stage",
+     "name": "磁悬浮工件台",
+     "en": "Magnetic levitation wafer stage",
+     "year": 2004,
+     "note": "磁力悬浮支撑晶圆台六自由度运动，消除摩擦与润滑污染。",
+     "deps": [
+      "magnets",
+      "electricity"
+     ]
+    },
+    {
+     "id": "cleanroom_technology",
+     "name": "洁净室技术",
+     "en": "Cleanroom technology",
+     "year": 1961,
+     "note": "高效过滤与层流控制实现受控空气洁净度，支撑微纳制造。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "precision_constant_temperature_workshop",
+     "name": "恒温精密车间",
+     "en": "Constant-temperature metrology workshop",
+     "year": 1955,
+     "note": "以恒温恒湿环境抑制热变形，保障精密加工与测量的一致性。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "electrostatic_chuck",
+     "name": "静电吸盘",
+     "en": "Electrostatic chuck",
+     "year": 1980,
+     "note": "静电力吸附固定晶圆，用于光刻与等离子工艺中的真空环境。",
+     "deps": [
+      "electricity",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "precision_air_gauging",
+     "name": "气动测微仪",
+     "en": "Pneumatic gauging",
+     "year": 1940,
+     "note": "以气流背压反映间隙变化，非接触测量孔径与厚度。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "precision_inductance_gauging",
+     "name": "电感测微仪",
+     "en": "Inductance micrometer",
+     "year": 1955,
+     "note": "差动电感检测测杆位移，输出稳定用于在线自动测量。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "precision_cross_roller_bearing",
+     "name": "交叉滚子轴承",
+     "en": "Crossed roller bearing",
+     "year": 1958,
+     "note": "圆柱滚子交叉排列承受双向载荷，转台与机器人关节高刚性支承。",
+     "deps": [
+      "steel"
+     ]
+    }
+   ]
+  }
+ ]
+}

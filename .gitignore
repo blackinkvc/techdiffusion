@@ -1,0 +1,18 @@
+# OS / 编辑器 / 环境垃圾
+.DS_Store
+.cloudstudio
+.codebuddy
+*.swp
+*.swo
+Thumbs.db
+
+# 可重新生成的大体积备份（非源码）
+analysis-engine/data/backup/
+
+# 开发过程备份（非发布内容）
+*.backup.js
+assets/*.before_disasm.js
+tools/backup_*/
+
+# 打包快照（发布时不需要）
+*.zip

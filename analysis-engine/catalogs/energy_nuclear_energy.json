@@ -1,0 +1,1355 @@
+{
+ "cat": "energy",
+ "catName": "能源",
+ "sub": "nuclear_energy",
+ "subName": "核能利用",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点（nuclear_fission/nuclear_fusion 已锚点，仅作 deps 引用）；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "nuclear_fission",
+  "nuclear_fusion",
+  "physics",
+  "chemistry",
+  "lasers",
+  "generator",
+  "electricity",
+  "steel",
+  "battery"
+ ],
+ "families": [
+  {
+   "name": "热中子反应堆堆型",
+   "items": [
+    {
+     "id": "cp1_reactor",
+     "name": "芝加哥一号反应堆",
+     "en": "Chicago Pile-1",
+     "year": 1942,
+     "note": "费米团队建成首座可控核链式反应堆，验证了受控核裂变释放能量的可能。",
+     "deps": [
+      "nuclear_fission"
+     ]
+    },
+    {
+     "id": "x10_graphite_reactor",
+     "name": "X-10石墨研究堆",
+     "en": "X-10 Graphite Reactor",
+     "year": 1943,
+     "note": "橡树岭首座正式运行的功率研究堆，为钚生产与后处理工艺提供原料。",
+     "deps": [
+      "cp1_reactor"
+     ]
+    },
+    {
+     "id": "hanford_b_reactor",
+     "name": "汉福特B反应堆",
+     "en": "Hanford B Reactor",
+     "year": 1944,
+     "note": "首座工业规模钚生产堆，采用石墨慢化水冷天然铀，标志核材料工业化生产。",
+     "deps": [
+      "x10_graphite_reactor"
+     ]
+    },
+    {
+     "id": "f1_reactor",
+     "name": "F-1反应堆",
+     "en": "F-1 reactor",
+     "year": 1946,
+     "note": "苏联首座反应堆，位于库尔恰托夫研究所，为欧洲大陆核能起步装置。",
+     "deps": [
+      "cp1_reactor"
+     ]
+    },
+    {
+     "id": "nrx_reactor",
+     "name": "NRX研究堆",
+     "en": "NRX reactor",
+     "year": 1947,
+     "note": "加拿大乔克河重水研究堆，战后高功率中子源，曾长期为世界最强研究堆。",
+     "deps": [
+      "x10_graphite_reactor"
+     ]
+    },
+    {
+     "id": "swimming_pool_reactor",
+     "name": "游泳池式研究堆",
+     "en": "Swimming pool reactor",
+     "year": 1950,
+     "note": "堆芯置于开放水池中的研究堆，便于观察与换料，广泛用于教学与试验。",
+     "deps": [
+      "x10_graphite_reactor"
+     ]
+    },
+    {
+     "id": "mtr_reactor",
+     "name": "材料试验堆",
+     "en": "Materials testing reactor",
+     "year": 1952,
+     "note": "高通量辐照材料与燃料的研究堆，为堆芯材料筛选提供实验条件。",
+     "deps": [
+      "x10_graphite_reactor"
+     ]
+    },
+    {
+     "id": "pressurized_water_reactor",
+     "name": "压水堆",
+     "en": "Pressurized water reactor",
+     "year": 1953,
+     "note": "以高压水兼作慢化与冷却的反应堆，配蒸汽发生器隔离放射性，现为世界主力堆型。",
+     "deps": [
+      "nuclear_fission"
+     ]
+    },
+    {
+     "id": "boiling_water_reactor",
+     "name": "沸水堆",
+     "en": "Boiling water reactor",
+     "year": 1956,
+     "note": "堆内直接沸腾产汽驱动汽轮机的轻水堆，系统简洁，为第二大商运堆型。",
+     "deps": [
+      "nuclear_fission"
+     ]
+    },
+    {
+     "id": "magnox_reactor",
+     "name": "镁诺克斯气冷堆",
+     "en": "Magnox reactor",
+     "year": 1956,
+     "note": "石墨慢化、二氧化碳冷却、镁合金包壳天然铀的反应堆，英国最早的商用堆。",
+     "deps": [
+      "nuclear_fission"
+     ]
+    },
+    {
+     "id": "triga_reactor",
+     "name": "TRIGA脉冲研究堆",
+     "en": "TRIGA reactor",
+     "year": 1958,
+     "note": "以铀氢锆燃料实现固有安全的脉冲研究堆，全球多国教学科研在用。",
+     "deps": [
+      "swimming_pool_reactor"
+     ]
+    },
+    {
+     "id": "critical_assembly",
+     "name": "零功率临界装置",
+     "en": "Critical assembly",
+     "year": 1960,
+     "note": "零功率下精确测量堆芯物理参数的反应堆实验装置，用于堆设计验证。",
+     "deps": [
+      "nuclear_fission"
+     ]
+    },
+    {
+     "id": "candu_reactor",
+     "name": "坎杜重水堆",
+     "en": "CANDU reactor",
+     "year": 1962,
+     "note": "以重水慢化的压力管式堆，可用天然铀燃料、不停堆换料，加拿大主力堆型。",
+     "deps": [
+      "nuclear_fission"
+     ]
+    },
+    {
+     "id": "vver_reactor",
+     "name": "VVER压水堆",
+     "en": "VVER reactor",
+     "year": 1964,
+     "note": "苏联系列压水堆，卧式蒸汽发生器与六角燃料组件为其结构特征。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    },
+    {
+     "id": "agr_reactor",
+     "name": "改进型气冷堆",
+     "en": "Advanced gas-cooled reactor",
+     "year": 1965,
+     "note": "以浓缩铀燃料与不锈钢包壳的气冷堆，蒸汽参数高，曾为英国主力堆型。",
+     "deps": [
+      "magnox_reactor"
+     ]
+    },
+    {
+     "id": "rbmk_reactor",
+     "name": "RBMK压力管式堆",
+     "en": "RBMK reactor",
+     "year": 1973,
+     "note": "石墨慢化、沸腾轻水冷却的压力管式反应堆，切尔诺贝利事故使其退出主流。",
+     "deps": [
+      "boiling_water_reactor"
+     ]
+    },
+    {
+     "id": "nuclear_heating_reactor",
+     "name": "低温核供热堆",
+     "en": "Nuclear heating reactor",
+     "year": 1989,
+     "note": "以反应堆低温供热为城市供暖的实验堆，中国于清华园建成演示。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "快中子与新型反应堆",
+   "items": [
+    {
+     "id": "ebr1_reactor",
+     "name": "EBR-I增殖实验堆",
+     "en": "EBR-I",
+     "year": 1951,
+     "note": "首座增殖堆并首次用核能发电，验证了快中子增殖与钠冷技术。",
+     "deps": [
+      "nuclear_fission"
+     ]
+    },
+    {
+     "id": "sodium_fast_reactor",
+     "name": "钠冷快堆",
+     "en": "Sodium-cooled fast reactor",
+     "year": 1951,
+     "note": "以液态钠冷却、无慢化剂的快中子堆，可增殖核燃料并嬗变长寿命锕系核素。",
+     "deps": [
+      "nuclear_fission"
+     ]
+    },
+    {
+     "id": "molten_salt_reactor",
+     "name": "熔盐反应堆",
+     "en": "Molten salt reactor",
+     "year": 1965,
+     "note": "以熔融氟盐为燃料兼冷却剂的反应堆，橡树岭实验堆验证其可行性与安全性。",
+     "deps": [
+      "nuclear_fission"
+     ]
+    },
+    {
+     "id": "space_reactor_snap",
+     "name": "空间核反应堆电源",
+     "en": "Space nuclear reactor",
+     "year": 1965,
+     "note": "SNAP-10A首次在轨道运行的空间反应堆电源，为空间核动力探路。",
+     "deps": [
+      "nuclear_fission"
+     ]
+    },
+    {
+     "id": "htgr_reactor",
+     "name": "高温气冷堆",
+     "en": "High-temperature gas reactor",
+     "year": 1966,
+     "note": "以氦气冷却、石墨慢化的堆型，出口温度高，可发电兼供工业高温热。",
+     "deps": [
+      "magnox_reactor"
+     ]
+    },
+    {
+     "id": "nerva_rocket",
+     "name": "NERVA核热火箭",
+     "en": "NERVA",
+     "year": 1968,
+     "note": "以反应堆加热氢工质产生推力的核热火箭发动机，曾进行地面试验。",
+     "deps": [
+      "nuclear_fission"
+     ]
+    },
+    {
+     "id": "bn350_reactor",
+     "name": "BN-350快堆",
+     "en": "BN-350 reactor",
+     "year": 1973,
+     "note": "哈萨克斯坦钠冷快堆，兼作发电与海水淡化示范。",
+     "deps": [
+      "sodium_fast_reactor"
+     ]
+    },
+    {
+     "id": "phenix_reactor",
+     "name": "凤凰快堆",
+     "en": "Phénix reactor",
+     "year": 1973,
+     "note": "法国钠冷快堆示范电站，验证快堆发电与增殖燃料运行。",
+     "deps": [
+      "sodium_fast_reactor"
+     ]
+    },
+    {
+     "id": "superphenix_reactor",
+     "name": "超凤凰快堆",
+     "en": "Superphénix",
+     "year": 1985,
+     "note": "世界最大钠冷快堆电站，因经济与政治因素停运，仍是快堆技术里程碑。",
+     "deps": [
+      "phenix_reactor"
+     ]
+    },
+    {
+     "id": "httr_reactor",
+     "name": "HTTR高温工程试验堆",
+     "en": "HTTR",
+     "year": 1998,
+     "note": "日本高温气冷试验堆，验证950摄氏度高温气冷堆技术。",
+     "deps": [
+      "htgr_reactor"
+     ]
+    },
+    {
+     "id": "htr_10_reactor",
+     "name": "HTR-10球床高温堆",
+     "en": "HTR-10",
+     "year": 2000,
+     "note": "中国建成模块式球床高温气冷实验堆，验证了固有安全与氦气透平潜力。",
+     "deps": [
+      "htgr_reactor"
+     ]
+    },
+    {
+     "id": "floating_nuclear_plant",
+     "name": "浮动核电站",
+     "en": "Floating nuclear power plant",
+     "year": 2019,
+     "note": "以破冰船平台搭载KLT-40反应堆的浮动电站，为极地与孤岛供电。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    },
+    {
+     "id": "htr_pm_plant",
+     "name": "石岛湾高温气冷堆工程",
+     "en": "HTR-PM plant",
+     "year": 2021,
+     "note": "中国球床模块高温气冷堆示范工程并网发电，为第四代堆型里程碑。",
+     "deps": [
+      "htr_10_reactor"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "反应堆结构与安全装备",
+   "items": [
+    {
+     "id": "nuclear_control_rod",
+     "name": "控制棒",
+     "en": "Control rod",
+     "year": 1942,
+     "note": "以硼、镉等强吸收材料制成的停堆与功率调节部件，插入堆芯即抑制链式反应。",
+     "deps": [
+      "nuclear_fission"
+     ]
+    },
+    {
+     "id": "heavy_water_production",
+     "name": "重水生产装置",
+     "en": "Heavy water production",
+     "year": 1943,
+     "note": "以电解或硫化氢交换法富集氘制取重水的工业装置，为重水堆提供慢化剂。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "scram_system",
+     "name": "紧急停堆系统",
+     "en": "SCRAM system",
+     "year": 1947,
+     "note": "快速插入全部控制棒使反应堆紧急停闭的保护系统，其名称源于首堆试验。",
+     "deps": [
+      "nuclear_control_rod"
+     ]
+    },
+    {
+     "id": "irradiation_test_loop",
+     "name": "辐照试验回路",
+     "en": "Irradiation test loop",
+     "year": 1950,
+     "note": "置于堆内模拟冷却剂工况辐照材料与燃料的试验装置。",
+     "deps": [
+      "x10_graphite_reactor"
+     ]
+    },
+    {
+     "id": "burnable_poison_rod",
+     "name": "可燃毒物棒",
+     "en": "Burnable poison rod",
+     "year": 1955,
+     "note": "以硼或钆等可燃毒物平衡堆芯反应性并展平功率分布的组件。",
+     "deps": [
+      "nuclear_control_rod"
+     ]
+    },
+    {
+     "id": "control_rod_drive",
+     "name": "控制棒驱动机构",
+     "en": "Control rod drive mechanism",
+     "year": 1955,
+     "note": "以磁力或机械方式升降控制棒的执行机构，需在高温高压下可靠动作。",
+     "deps": [
+      "nuclear_control_rod"
+     ]
+    },
+    {
+     "id": "nuclear_steam_generator",
+     "name": "核蒸汽发生器",
+     "en": "Nuclear steam generator",
+     "year": 1955,
+     "note": "把反应堆一回路热量传给二回路产生蒸汽的大型换热器，分隔放射性回路。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    },
+    {
+     "id": "pressurizer",
+     "name": "稳压器",
+     "en": "Pressurizer",
+     "year": 1955,
+     "note": "维持压水堆一回路压力稳定的电加热与喷淋装置，防止冷却剂沸腾。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    },
+    {
+     "id": "reactor_coolant_pump",
+     "name": "反应堆冷却剂泵",
+     "en": "Reactor coolant pump",
+     "year": 1955,
+     "note": "驱动高压冷却剂在反应堆与蒸汽发生器间循环的屏蔽主泵。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    },
+    {
+     "id": "reactor_core_instrumentation",
+     "name": "堆芯测量系统",
+     "en": "In-core instrumentation",
+     "year": 1955,
+     "note": "插入堆芯测量中子通量、温度与水位分布的探测系统，支撑功率运行监视。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    },
+    {
+     "id": "reactor_internals",
+     "name": "堆内构件",
+     "en": "Reactor internals",
+     "year": 1955,
+     "note": "支撑堆芯、引导冷却剂流道的压力容器内结构件，含吊篮与围板。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    },
+    {
+     "id": "reactor_pressure_relief",
+     "name": "反应堆卸压阀",
+     "en": "Reactor pressure relief valve",
+     "year": 1955,
+     "note": "事故时按指令开启释放一回路压力的安全阀组，防止压力边界超压。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    },
+    {
+     "id": "reactor_pressure_vessel",
+     "name": "反应堆压力容器",
+     "en": "Reactor pressure vessel",
+     "year": 1955,
+     "note": "容纳堆芯与冷却剂的高强度厚壁钢容器，是压水堆最关键的承压边界。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    },
+    {
+     "id": "containment_building",
+     "name": "反应堆安全壳",
+     "en": "Containment building",
+     "year": 1957,
+     "note": "包容放射性物质、抵御外部撞击的预应力混凝土密封厂房，是纵深防御末道屏障。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    },
+    {
+     "id": "reactor_refueling_machine",
+     "name": "反应堆换料机",
+     "en": "Refueling machine",
+     "year": 1962,
+     "note": "在停堆或带功率状态下更换燃料组件的专用设备，坎杜堆以此实现不停堆换料。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    },
+    {
+     "id": "emergency_core_cooling",
+     "name": "应急堆芯冷却系统",
+     "en": "Emergency core cooling system",
+     "year": 1965,
+     "note": "事故时向堆芯注入冷却水防止熔毁的系统，为核安全关键专设安全设施。",
+     "deps": [
+      "reactor_pressure_vessel"
+     ]
+    },
+    {
+     "id": "main_steam_isolation_valve",
+     "name": "主蒸汽隔离阀",
+     "en": "Main steam isolation valve",
+     "year": 1965,
+     "note": "事故时快速隔离蒸汽发生器的阀门，防止放射性蒸汽外泄。",
+     "deps": [
+      "nuclear_steam_generator"
+     ]
+    },
+    {
+     "id": "shutdown_cooling_system",
+     "name": "停堆冷却系统",
+     "en": "Shutdown cooling system",
+     "year": 1965,
+     "note": "反应堆停闭后导出堆芯余热的冷却回路，维持乏燃料安全。",
+     "deps": [
+      "reactor_coolant_pump"
+     ]
+    },
+    {
+     "id": "core_catcher",
+     "name": "堆芯熔融物捕集器",
+     "en": "Core catcher",
+     "year": 1995,
+     "note": "置于压力容器下方的堆芯熔融物收集冷却装置，缓解严重事故后果。",
+     "deps": [
+      "containment_building"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "核燃料循环与乏燃料管理",
+   "items": [
+    {
+     "id": "calutron",
+     "name": "电磁同位素分离器",
+     "en": "Calutron",
+     "year": 1942,
+     "note": "以大型质谱原理分离铀同位素的装置，曼哈顿工程早期浓缩铀手段。",
+     "deps": [
+      "nuclear_fission"
+     ]
+    },
+    {
+     "id": "depleted_uranium",
+     "name": "贫铀",
+     "en": "Depleted uranium",
+     "year": 1945,
+     "note": "浓缩后铀-235含量下降的尾料铀，用于屏蔽材料与穿甲弹配重。",
+     "deps": [
+      "calutron"
+     ]
+    },
+    {
+     "id": "gaseous_diffusion",
+     "name": "气体扩散法铀浓缩",
+     "en": "Gaseous diffusion enrichment",
+     "year": 1945,
+     "note": "利用铀同位素分子穿过多孔膜速率差异浓缩铀-235，曾为世界主流浓缩工艺。",
+     "deps": [
+      "calutron"
+     ]
+    },
+    {
+     "id": "low_enriched_uranium",
+     "name": "低浓缩铀燃料",
+     "en": "Low-enriched uranium",
+     "year": 1945,
+     "note": "铀-235丰度低于百分之二十的核燃料，为动力堆通用燃料形态。",
+     "deps": [
+      "calutron"
+     ]
+    },
+    {
+     "id": "uranium_mining_milling",
+     "name": "铀矿开采与选冶",
+     "en": "Uranium mining and milling",
+     "year": 1945,
+     "note": "从矿石开采并提炼铀化合物的工业，产出俗称黄饼的铀浓缩物。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "yellowcake",
+     "name": "黄饼",
+     "en": "Yellowcake",
+     "year": 1945,
+     "note": "铀矿石选冶产出的重铀酸盐粗产品，是铀转化与浓缩的上游原料。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "spent_fuel_pool",
+     "name": "乏燃料贮存水池",
+     "en": "Spent fuel pool",
+     "year": 1950,
+     "note": "以水冷却并屏蔽辐照的乏燃料暂存设施，卸出堆芯的燃料先在此冷却。",
+     "deps": [
+      "x10_graphite_reactor"
+     ]
+    },
+    {
+     "id": "uranium_conversion",
+     "name": "铀转化",
+     "en": "Uranium conversion",
+     "year": 1950,
+     "note": "把铀浓缩物转化为六氟化铀或二氧化铀等工艺形态的化学加工环节。",
+     "deps": [
+      "uranium_mining_milling"
+     ]
+    },
+    {
+     "id": "uranium_hexafluoride",
+     "name": "六氟化铀",
+     "en": "Uranium hexafluoride",
+     "year": 1950,
+     "note": "铀转化得到的气态铀化合物，是气体扩散与离心浓缩的标准进料。",
+     "deps": [
+      "uranium_mining_milling"
+     ]
+    },
+    {
+     "id": "purex_reprocessing",
+     "name": "PUREX乏燃料后处理",
+     "en": "PUREX reprocessing",
+     "year": 1954,
+     "note": "以磷酸三丁酯溶剂萃取分离乏燃料中铀与钚的流程，为工业化后处理主流工艺。",
+     "deps": [
+      "x10_graphite_reactor"
+     ]
+    },
+    {
+     "id": "fuel_assembly",
+     "name": "核燃料组件",
+     "en": "Nuclear fuel assembly",
+     "year": 1955,
+     "note": "由燃料棒、定位格架与控制棒导向管组成的方形组件，是堆芯基本装料单元。",
+     "deps": [
+      "uranium_conversion"
+     ]
+    },
+    {
+     "id": "uranium_dioxide_pellet",
+     "name": "二氧化铀燃料芯块",
+     "en": "Uranium dioxide pellet",
+     "year": 1955,
+     "note": "以烧结二氧化铀制成的柱状燃料芯块，装入包壳管构成燃料棒。",
+     "deps": [
+      "uranium_conversion"
+     ]
+    },
+    {
+     "id": "zircaloy_cladding",
+     "name": "锆合金燃料包壳",
+     "en": "Zircaloy cladding",
+     "year": 1955,
+     "note": "以锆合金管包覆核燃料芯块的包壳材料，透中子且耐蚀，为轻水堆标准选择。",
+     "deps": [
+      "nuclear_fission"
+     ]
+    },
+    {
+     "id": "zippe_centrifuge",
+     "name": "齐培离心机",
+     "en": "Zippe centrifuge",
+     "year": 1957,
+     "note": "齐培改进的超临界气体离心机，以极小能耗实现铀同位素分离。",
+     "deps": [
+      "gaseous_diffusion"
+     ]
+    },
+    {
+     "id": "spent_fuel_receiving",
+     "name": "乏燃料接收贮存设施",
+     "en": "Spent fuel receiving facility",
+     "year": 1960,
+     "note": "接收、冷却与暂存卸出乏燃料的厂内设施，含水下转运与检测。",
+     "deps": [
+      "spent_fuel_pool"
+     ]
+    },
+    {
+     "id": "thorium_fuel_cycle",
+     "name": "钍燃料循环",
+     "en": "Thorium fuel cycle",
+     "year": 1965,
+     "note": "以钍-232增殖铀-233的燃料循环，储量丰富，印度等国持续研究示范。",
+     "deps": [
+      "nuclear_fission"
+     ]
+    },
+    {
+     "id": "centrifuge_enrichment_plant",
+     "name": "离心浓缩工厂",
+     "en": "Centrifuge enrichment plant",
+     "year": 1970,
+     "note": "以数千台离心机级联运行生产浓缩铀的工业化设施。",
+     "deps": [
+      "zippe_centrifuge"
+     ]
+    },
+    {
+     "id": "in_situ_uranium_leaching",
+     "name": "地浸采铀",
+     "en": "In-situ uranium leaching",
+     "year": 1970,
+     "note": "向含铀砂岩注入溶浸液原地提取铀的采矿工艺，环境影响小。",
+     "deps": [
+      "uranium_mining_milling"
+     ]
+    },
+    {
+     "id": "mox_fuel",
+     "name": "钚铀混合氧化物燃料",
+     "en": "MOX fuel",
+     "year": 1970,
+     "note": "回收钚与贫铀混合烧结的燃料，在轻水堆中复用钚以处理军用与乏燃料钚。",
+     "deps": [
+      "uranium_dioxide_pellet"
+     ]
+    },
+    {
+     "id": "near_surface_disposal",
+     "name": "近地表处置",
+     "en": "Near-surface disposal",
+     "year": 1970,
+     "note": "把低中放废物封装后埋入浅层工程屏障的处置方式，广泛用于低放废物。",
+     "deps": [
+      "spent_fuel_pool"
+     ]
+    },
+    {
+     "id": "nuclear_vitrification",
+     "name": "高放废液玻璃固化",
+     "en": "Nuclear vitrification",
+     "year": 1978,
+     "note": "把高放射性废液与玻璃基料高温熔融固化的工艺，实现废物稳定减容。",
+     "deps": [
+      "purex_reprocessing"
+     ]
+    },
+    {
+     "id": "dry_cask_storage",
+     "name": "乏燃料干式贮存",
+     "en": "Dry cask storage",
+     "year": 1986,
+     "note": "以混凝土或金属容器在空气中冷却贮存乏燃料的方式，池满后长期暂存方案。",
+     "deps": [
+      "spent_fuel_pool"
+     ]
+    },
+    {
+     "id": "transmutation_technology",
+     "name": "锕系核素嬗变",
+     "en": "Transmutation",
+     "year": 1990,
+     "note": "在快堆或加速器中把长寿命锕系转变成短寿命核素的技术，降低废物毒性。",
+     "deps": [
+      "sodium_fast_reactor"
+     ]
+    },
+    {
+     "id": "geological_disposal",
+     "name": "深地质处置库",
+     "en": "Geological repository",
+     "year": 1999,
+     "note": "把高放废物埋入稳定深层地质体封存的处置方式，美国WIPP为率先投运者。",
+     "deps": [
+      "nuclear_vitrification"
+     ]
+    },
+    {
+     "id": "laser_enrichment",
+     "name": "激光铀浓缩",
+     "en": "Laser enrichment",
+     "year": 2012,
+     "note": "以激光选择性激发铀同位素实现分离的新工艺，SILEX进入工业示范。",
+     "deps": [
+      "zippe_centrifuge"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "核动力与同位素应用",
+   "items": [
+    {
+     "id": "research_reactor",
+     "name": "研究反应堆",
+     "en": "Research reactor",
+     "year": 1942,
+     "note": "以中子辐照与实验为主要用途的各类反应堆，支撑材料与核物理研究。",
+     "deps": [
+      "nuclear_fission"
+     ]
+    },
+    {
+     "id": "medical_isotope_production",
+     "name": "医用同位素生产堆",
+     "en": "Medical isotope reactor",
+     "year": 1950,
+     "note": "辐照靶件生产钼-99等医用同位素的研究堆，支撑核医学诊断。",
+     "deps": [
+      "research_reactor"
+     ]
+    },
+    {
+     "id": "nuclear_submarine_engine",
+     "name": "核潜艇动力装置",
+     "en": "Nuclear submarine propulsion",
+     "year": 1954,
+     "note": "以压水堆供汽驱动蒸汽轮机的潜艇动力装置，使潜艇可长期水下潜航。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    },
+    {
+     "id": "nuclear_icebreaker",
+     "name": "核动力破冰船",
+     "en": "Nuclear icebreaker",
+     "year": 1959,
+     "note": "列宁号率先采用的核动力推进，为北极航线破冰提供持续大功率。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    },
+    {
+     "id": "neutron_radiograph",
+     "name": "中子照相装置",
+     "en": "Neutron radiography",
+     "year": 1960,
+     "note": "以研究堆中子束对构件透视成像的无损检测技术。",
+     "deps": [
+      "research_reactor"
+     ]
+    },
+    {
+     "id": "nuclear_aircraft_carrier",
+     "name": "核动力航空母舰",
+     "en": "Nuclear aircraft carrier",
+     "year": 1961,
+     "note": "企业号率先采用核动力的航母，无限航程并释放甲板空间搭载航空燃油。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    },
+    {
+     "id": "radioisotope_thermoelectric_generator",
+     "name": "放射性同位素温差电池",
+     "en": "Radioisotope thermoelectric generator",
+     "year": 1961,
+     "note": "以放射性衰变热经热电偶发电的空间电源，为深空探测器供电数十年。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "nuclear_merchant_ship",
+     "name": "核动力商船",
+     "en": "Nuclear merchant ship",
+     "year": 1962,
+     "note": "萨凡纳号核动力货船验证民用核航运，后因经济性停航。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    },
+    {
+     "id": "cobalt60_irradiator",
+     "name": "钴-60辐照装置",
+     "en": "Cobalt-60 irradiator",
+     "year": 1963,
+     "note": "以反应堆产钴-60射线进行灭菌与材料改性的辐照设施。",
+     "deps": [
+      "research_reactor"
+     ]
+    },
+    {
+     "id": "snap27_rtg",
+     "name": "SNAP-27月面核电源",
+     "en": "SNAP-27",
+     "year": 1969,
+     "note": "为阿波罗月面实验站供电的钚-238温差电池。",
+     "deps": [
+      "radioisotope_thermoelectric_generator"
+     ]
+    },
+    {
+     "id": "nuclear_desalination",
+     "name": "核能海水淡化",
+     "en": "Nuclear desalination",
+     "year": 1970,
+     "note": "以核反应堆余热驱动蒸馏或多效蒸发淡化海水的应用示范。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    },
+    {
+     "id": "radioisotope_heater_unit",
+     "name": "放射性同位素加热单元",
+     "en": "Radioisotope heater unit",
+     "year": 1975,
+     "note": "以钚衰变热为深空探测器部件保温的小型热源装置。",
+     "deps": [
+      "radioisotope_thermoelectric_generator"
+     ]
+    },
+    {
+     "id": "nuclear_cogeneration",
+     "name": "核能热电联供",
+     "en": "Nuclear cogeneration",
+     "year": 1990,
+     "note": "核电厂同时供电与区域供暖或供热的综合利用方式，提高热效率。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "聚变研究装置",
+   "items": [
+    {
+     "id": "stellarator",
+     "name": "仿星器",
+     "en": "Stellarator",
+     "year": 1951,
+     "note": "以扭曲线圈构造闭合磁场约束等离子体的装置，斯皮策提出并于普林斯顿建成。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "mirror_machine",
+     "name": "磁镜聚变装置",
+     "en": "Magnetic mirror machine",
+     "year": 1952,
+     "note": "以两端强磁镜约束等离子体的开端装置，因端部泄漏退出主流。",
+     "deps": [
+      "nuclear_fusion"
+     ]
+    },
+    {
+     "id": "z_pinch_device",
+     "name": "Z箍缩装置",
+     "en": "Z-pinch device",
+     "year": 1952,
+     "note": "以轴向电流自磁场箍缩等离子体的聚变装置，ZETA等早期装置由此起步。",
+     "deps": [
+      "nuclear_fusion"
+     ]
+    },
+    {
+     "id": "theta_pinch",
+     "name": "角向箍缩装置",
+     "en": "Theta pinch",
+     "year": 1957,
+     "note": "以脉冲环形磁场的感生电流箍缩加热等离子体的早期聚变装置。",
+     "deps": [
+      "z_pinch_device"
+     ]
+    },
+    {
+     "id": "zeta_device",
+     "name": "ZETA装置",
+     "en": "ZETA",
+     "year": 1957,
+     "note": "英国早期环形磁约束实验装置，曾误报聚变中子引发学界警醒。",
+     "deps": [
+      "nuclear_fusion"
+     ]
+    },
+    {
+     "id": "tokamak",
+     "name": "托卡马克",
+     "en": "Tokamak",
+     "year": 1958,
+     "note": "苏联研制的环形磁约束装置，靠等离子体电流与环向场约束高温等离子体。",
+     "deps": [
+      "nuclear_fusion"
+     ]
+    },
+    {
+     "id": "fusor",
+     "name": "静电惯性聚变装置",
+     "en": "Fusor",
+     "year": 1965,
+     "note": "法恩斯沃斯发明的静电场加速离子实现聚变的小型装置，多用于教学。",
+     "deps": [
+      "nuclear_fusion"
+     ]
+    },
+    {
+     "id": "inertial_confinement",
+     "name": "惯性约束聚变",
+     "en": "Inertial confinement fusion",
+     "year": 1970,
+     "note": "以激光或粒子束瞬间压缩燃料靶丸实现聚变的路线，与磁约束并列。",
+     "deps": [
+      "nuclear_fusion"
+     ]
+    },
+    {
+     "id": "neutral_beam_heating",
+     "name": "中性束注入加热",
+     "en": "Neutral beam injection",
+     "year": 1970,
+     "note": "把高能中性粒子束注入等离子体加热的手段，为大型聚变装置标配。",
+     "deps": [
+      "tokamak"
+     ]
+    },
+    {
+     "id": "electron_cyclotron_heating",
+     "name": "电子回旋共振加热",
+     "en": "Electron cyclotron heating",
+     "year": 1975,
+     "note": "以微波在回旋共振频率加热等离子体电子的手段。",
+     "deps": [
+      "tokamak"
+     ]
+    },
+    {
+     "id": "tandem_mirror",
+     "name": "串列磁镜",
+     "en": "Tandem mirror",
+     "year": 1977,
+     "note": "在磁镜两端加装静电塞减少端部泄漏的改进磁镜装置。",
+     "deps": [
+      "mirror_machine"
+     ]
+    },
+    {
+     "id": "d3d_tokamak",
+     "name": "DIII-D托卡马克",
+     "en": "DIII-D",
+     "year": 1978,
+     "note": "美国大型托卡马克装置，专注于先进偏滤器与高约束运行研究。",
+     "deps": [
+      "tokamak"
+     ]
+    },
+    {
+     "id": "divertor",
+     "name": "偏滤器",
+     "en": "Divertor",
+     "year": 1980,
+     "note": "导出等离子体热量与杂质、实现边界控制的装置，是现代托卡马克核心部件。",
+     "deps": [
+      "tokamak"
+     ]
+    },
+    {
+     "id": "fusion_fuel_tritium",
+     "name": "氚燃料循环",
+     "en": "Tritium fuel cycle",
+     "year": 1980,
+     "note": "聚变堆中氚的增殖、提取与回收循环系统，保障聚变燃料自持。",
+     "deps": [
+      "nuclear_fusion"
+     ]
+    },
+    {
+     "id": "tfrt",
+     "name": "TFTR装置",
+     "en": "TFTR",
+     "year": 1982,
+     "note": "普林斯顿托卡马克聚变试验反应堆，以氘氚实验创造早期聚变功率纪录。",
+     "deps": [
+      "tokamak"
+     ]
+    },
+    {
+     "id": "jet_tokamak",
+     "name": "JET联合欧洲环",
+     "en": "JET",
+     "year": 1983,
+     "note": "欧洲联合托卡马克，曾实现兆瓦级聚变功率输出，为国际托卡马克实验平台。",
+     "deps": [
+      "tokamak"
+     ]
+    },
+    {
+     "id": "textor_tokamak",
+     "name": "TEXTOR托卡马克",
+     "en": "TEXTOR",
+     "year": 1983,
+     "note": "德国环形实验装置，聚焦器壁与等离子体相互作用研究。",
+     "deps": [
+      "tokamak"
+     ]
+    },
+    {
+     "id": "jt60_tokamak",
+     "name": "JT-60托卡马克",
+     "en": "JT-60",
+     "year": 1985,
+     "note": "日本大型托卡马克装置，重点研究高约束等离子体与稳态运行。",
+     "deps": [
+      "tokamak"
+     ]
+    },
+    {
+     "id": "z_machine",
+     "name": "Z机脉冲功率装置",
+     "en": "Z machine",
+     "year": 1985,
+     "note": "以巨大脉冲电流驱动Z箍缩研究高能量密度物理的装置，用于惯性聚变研究。",
+     "deps": [
+      "z_pinch_device"
+     ]
+    },
+    {
+     "id": "t15_reactor",
+     "name": "T-15托卡马克",
+     "en": "T-15",
+     "year": 1988,
+     "note": "苏联大型超导托卡马克，验证聚变装置超导磁体工程。",
+     "deps": [
+      "tokamak"
+     ]
+    },
+    {
+     "id": "tore_supra",
+     "name": "超导托卡马克Tore Supra",
+     "en": "Tore Supra",
+     "year": 1988,
+     "note": "法国长脉冲超导托卡马克，验证长时间等离子体放电。",
+     "deps": [
+      "tokamak"
+     ]
+    },
+    {
+     "id": "reversed_field_pinch",
+     "name": "反场箍缩装置",
+     "en": "Reversed field pinch",
+     "year": 1990,
+     "note": "以自发反转环向场维持约束的环形装置，研究高电流密度等离子体。",
+     "deps": [
+      "tokamak"
+     ]
+    },
+    {
+     "id": "asdex_upgrade",
+     "name": "ASDEX-U托卡马克",
+     "en": "ASDEX Upgrade",
+     "year": 1991,
+     "note": "德国实验装置，率先研究偏滤器位形与高约束模。",
+     "deps": [
+      "tokamak"
+     ]
+    },
+    {
+     "id": "spherical_tokamak",
+     "name": "球形托卡马克",
+     "en": "Spherical tokamak",
+     "year": 1991,
+     "note": "紧凑球形的托卡马克位形，以更低造价研究高比压等离子体。",
+     "deps": [
+      "tokamak"
+     ]
+    },
+    {
+     "id": "alcator_cmod",
+     "name": "Alcator C-Mod托卡马克",
+     "en": "Alcator C-Mod",
+     "year": 1993,
+     "note": "美国高磁场紧凑托卡马克，以高场强约束研究著称。",
+     "deps": [
+      "tokamak"
+     ]
+    },
+    {
+     "id": "omega_laser",
+     "name": "OMEGA激光装置",
+     "en": "OMEGA laser",
+     "year": 1995,
+     "note": "罗切斯特大学的直接驱动惯性约束聚变激光装置，供靶物理研究。",
+     "deps": [
+      "lasers"
+     ]
+    },
+    {
+     "id": "lhd_device",
+     "name": "大型螺旋装置LHD",
+     "en": "Large Helical Device",
+     "year": 1998,
+     "note": "日本大型超导仿星器装置，验证螺旋器路线稳态运行能力。",
+     "deps": [
+      "stellarator"
+     ]
+    },
+    {
+     "id": "east_tokamak",
+     "name": "东方超环EAST",
+     "en": "EAST",
+     "year": 2006,
+     "note": "中国全超导托卡马克，实现百秒级高约束等离子体运行。",
+     "deps": [
+      "tokamak"
+     ]
+    },
+    {
+     "id": "kstar_tokamak",
+     "name": "KSTAR托卡马克",
+     "en": "KSTAR",
+     "year": 2008,
+     "note": "韩国超导托卡马克，研究高性能稳态等离子体运行。",
+     "deps": [
+      "tokamak"
+     ]
+    },
+    {
+     "id": "nif_laser",
+     "name": "国家点火装置",
+     "en": "National Ignition Facility",
+     "year": 2009,
+     "note": "以192路激光驱动惯性约束聚变的美国大型装置，2022年实现点火增益。",
+     "deps": [
+      "lasers"
+     ]
+    },
+    {
+     "id": "wendelstein7x",
+     "name": "文德尔施泰因7-X",
+     "en": "Wendelstein 7-X",
+     "year": 2015,
+     "note": "德国大型超导仿星器，优化磁场结构验证仿星器作为聚变堆的可行性。",
+     "deps": [
+      "stellarator"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "核安全与退役技术",
+   "items": [
+    {
+     "id": "nuclear_dosimetry",
+     "name": "辐射剂量监测",
+     "en": "Radiation dosimetry",
+     "year": 1940,
+     "note": "以电离室与胶片计测量人员所受辐射剂量的防护监测技术。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "nuclear_radiation_shielding",
+     "name": "核辐射屏蔽",
+     "en": "Radiation shielding",
+     "year": 1943,
+     "note": "以铅、混凝土与含硼材料吸收中子和γ射线的防护结构，贯穿核设施。",
+     "deps": [
+      "nuclear_fission"
+     ]
+    },
+    {
+     "id": "borated_water_system",
+     "name": "含硼水化学控制系统",
+     "en": "Borated water system",
+     "year": 1955,
+     "note": "以硼酸浓度调节反应性的化学补偿系统，配合控制棒实现堆芯功率控制。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    },
+    {
+     "id": "high_air_purification",
+     "name": "核级空气净化系统",
+     "en": "Nuclear air filtration",
+     "year": 1955,
+     "note": "以高效过滤器与活性炭吸附去除气载放射性的通风净化系统。",
+     "deps": [
+      "pressurized_water_reactor"
+     ]
+    },
+    {
+     "id": "nuclear_decontamination",
+     "name": "放射性去污技术",
+     "en": "Decontamination",
+     "year": 1970,
+     "note": "以化学或机械方法清除设备与场地放射性污染的工艺，用于检修与退役。",
+     "deps": [
+      "nuclear_radiation_shielding"
+     ]
+    },
+    {
+     "id": "radioactive_waste_conditioning",
+     "name": "放射性废物整备",
+     "en": "Waste conditioning",
+     "year": 1970,
+     "note": "对各类放射性废物进行固化、压缩与包装减容的工艺过程。",
+     "deps": [
+      "spent_fuel_pool"
+     ]
+    },
+    {
+     "id": "spent_fuel_transport_cask",
+     "name": "乏燃料运输容器",
+     "en": "Spent fuel transport cask",
+     "year": 1970,
+     "note": "经撞击与火灾试验验证的厚壁屏蔽容器，用于乏燃料安全公路铁路运输。",
+     "deps": [
+      "spent_fuel_pool"
+     ]
+    },
+    {
+     "id": "radiation_monitoring_network",
+     "name": "环境辐射监测网",
+     "en": "Environmental radiation monitoring",
+     "year": 1980,
+     "note": "布设于核设施周边的连续剂量与气液排出监测体系。",
+     "deps": [
+      "nuclear_dosimetry"
+     ]
+    },
+    {
+     "id": "filtered_containment_vent",
+     "name": "安全壳过滤排放系统",
+     "en": "Filtered containment vent",
+     "year": 1990,
+     "note": "严重事故时经净化过滤后受控排放安全壳气体的缓解装置。",
+     "deps": [
+      "containment_building"
+     ]
+    },
+    {
+     "id": "nuclear_decommissioning",
+     "name": "核设施退役",
+     "en": "Nuclear decommissioning",
+     "year": 1990,
+     "note": "核设施停运后去污、拆除与场址释放的工程过程，恢复土地可用性。",
+     "deps": [
+      "nuclear_radiation_shielding"
+     ]
+    },
+    {
+     "id": "accident_tolerant_fuel",
+     "name": "事故容错核燃料",
+     "en": "Accident tolerant fuel",
+     "year": 2015,
+     "note": "耐高温抗氧化、可承受更长时间失冷的包壳与芯块材料体系。",
+     "deps": [
+      "zircaloy_cladding"
+     ]
+    },
+    {
+     "id": "passive_containment_cooling",
+     "name": "非能动安全壳冷却系统",
+     "en": "Passive containment cooling",
+     "year": 2018,
+     "note": "依靠自然循环与重力散热的非能动安全壳冷却，无需外部电源。",
+     "deps": [
+      "containment_building"
+     ]
+    }
+   ]
+  }
+ ]
+}

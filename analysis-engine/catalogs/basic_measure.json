@@ -1,0 +1,1090 @@
+{
+ "cat": "basic",
+ "catName": "科学基础与方法",
+ "sub": "measure",
+ "subName": "测量与计量",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "mathematics",
+  "astronomy",
+  "physics",
+  "chemistry",
+  "optics",
+  "electromagnetism",
+  "relativity_qm",
+  "battery",
+  "electricity",
+  "radio",
+  "atomic_clock",
+  "gps",
+  "lasers",
+  "telegraph",
+  "internet",
+  "semiconductors",
+  "steel",
+  "bronze",
+  "writing",
+  "interchangeable_parts"
+ ],
+ "families": [
+  {
+   "name": "度量衡与单位基准",
+   "items": [
+    {
+     "id": "royal_cubit",
+     "name": "皇家肘尺",
+     "en": "Royal cubit",
+     "year": -2600,
+     "note": "古埃及以法老前臂为长度基准并分28指，现存带刻度腕尺杆表明度量标准已实物化。"
+    },
+    {
+     "id": "shangyang_measure",
+     "name": "商鞅方升",
+     "en": "Shang Yang standard volume measure",
+     "year": -344,
+     "note": "战国秦孝公时监铸的标准铜量器，铭文规定容积并烙督造者名，是早期法制量器实证。",
+     "deps": ["bronze", "writing"]
+    },
+    {
+     "id": "qin_unification",
+     "name": "秦代统一度量衡",
+     "en": "Qin unification of weights and measures",
+     "year": -221,
+     "note": "秦始皇颁诏以官方标准器推行全国统一的度、量、衡，建立中央集权的计量制度。",
+     "deps": ["bronze", "writing"]
+    },
+    {
+     "id": "wangmang_capacity_standards",
+     "name": "新莽嘉量",
+     "en": "Wang Mang standard capacity measures",
+     "year": 9,
+     "note": "王莽以青铜铸造集斛斗升合龠于一体的标准量器群，铭刻十进制容量关系。",
+     "deps": ["bronze", "writing"]
+    },
+    {
+     "id": "metric_system",
+     "name": "米制",
+     "en": "Metric system",
+     "year": 1791,
+     "note": "法国科学院以地球子午线弧长为依据定义米，建立十进制化的自然单位制。",
+     "deps": ["mathematics", "physics"]
+    },
+    {
+     "id": "metre_archives",
+     "name": "档案米与档案千克原器",
+     "en": "Metre and kilogram des Archives",
+     "year": 1799,
+     "note": "按子午线测量铸成铂杆米原器与铂千克砝码，为米制确立首批实物基准。",
+     "deps": ["metric_system"]
+    },
+    {
+     "id": "cgs_system",
+     "name": "厘米-克-秒单位制",
+     "en": "CGS system",
+     "year": 1873,
+     "note": "英国科学促进会提出以厘米克秒为基础的力学单位制，电磁单位体系由此展开。",
+     "deps": ["metric_system"]
+    },
+    {
+     "id": "imperial_standards",
+     "name": "英国帝国码磅基准",
+     "en": "Imperial yard and pound standards",
+     "year": 1878,
+     "note": "英国《度量衡法》以青铜码棒与铂砝码确立码与磅的法定基准，规范殖民地度量。",
+     "deps": ["metric_system"]
+    },
+    {
+     "id": "international_prototype_metre",
+     "name": "国际米原器",
+     "en": "International prototype metre",
+     "year": 1889,
+     "note": "铂铱合金米原器经第一届国际计量大会批准，取代档案米成为国际长度基准。",
+     "deps": ["metre_archives"]
+    },
+    {
+     "id": "international_prototype_kilogram",
+     "name": "国际千克原器",
+     "en": "International prototype kilogram",
+     "year": 1889,
+     "note": "铂铱圆柱体千克原器作为质量单位基准使用逾百年，直至2019年被常数定义取代。",
+     "deps": ["metre_archives"]
+    },
+    {
+     "id": "mks_giorgi_system",
+     "name": "米千克秒实用单位制",
+     "en": "Giorgi MKS system",
+     "year": 1935,
+     "note": "吉奥尔吉提出以米千克秒加电学单位的连贯体系，后成为国际单位制的直接基础。",
+     "deps": ["metric_system"]
+    },
+    {
+     "id": "si_system",
+     "name": "国际单位制",
+     "en": "International System of Units (SI)",
+     "year": 1960,
+     "note": "国际计量大会确立七个基本单位构成的国际单位制，成为全球计量共同语言。",
+     "deps": ["mks_giorgi_system", "cgs_system"]
+    },
+    {
+     "id": "si_prefixes",
+     "name": "SI十进制词头",
+     "en": "SI prefixes",
+     "year": 1960,
+     "note": "以尧、拍、吉、千、毫、微等词头构成十进制倍数体系，扩展单位量程表述。"
+    },
+    {
+     "id": "krypton_metre_definition",
+     "name": "氪-86波长定义米",
+     "en": "Krypton-86 definition of the metre",
+     "year": 1960,
+     "note": "以氪-86橙色谱线波长取代米原器定义长度基准，实物杆首次让位于原子谱线。",
+     "deps": ["optics"]
+    },
+    {
+     "id": "speed_of_light_metre",
+     "name": "光速定义米",
+     "en": "Speed-of-light definition of the metre",
+     "year": 1983,
+     "note": "国际计量大会把米定义为光在真空中299792458分之一秒内传播的距离，基准依赖光速。",
+     "deps": ["si_system", "relativity_qm"]
+    },
+    {
+     "id": "kibble_balance",
+     "name": "基布尔天平",
+     "en": "Kibble balance",
+     "year": 1990,
+     "note": "以电功率补偿方式把质量溯源到普朗克常数与基本电荷，促成千克的常数化定义。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "si_2019_redefinition",
+     "name": "SI基本常数重新定义",
+     "en": "2019 SI redefinition",
+     "year": 2019,
+     "note": "七个基本单位全部由普朗克常数、玻尔兹曼常数等基本常数定义，计量基准脱离实物。",
+     "deps": ["kibble_balance"]
+    }
+   ]
+  },
+  {
+   "name": "计时技术与时间频率计量",
+   "items": [
+    {
+     "id": "sundial",
+     "name": "日晷",
+     "en": "Sundial",
+     "year": -1500,
+     "note": "利用太阳投影方位或影长计时，是早期文明使用最广的白天计时装置。",
+     "deps": ["astronomy"]
+    },
+    {
+     "id": "water_clock",
+     "name": "水钟与漏刻",
+     "en": "Water clock",
+     "year": -1500,
+     "note": "以水的均匀流动驱动浮箭或刻度指示时辰，古埃及与中国新王朝时期均已使用。"
+    },
+    {
+     "id": "escapement",
+     "name": "擒纵机构",
+     "en": "Escapement",
+     "year": 725,
+     "note": "一行水运浑天仪中的擒纵机构实现运动间歇释放，是机械计时器的核心部件雏形。",
+     "deps": ["water_clock"]
+    },
+    {
+     "id": "su_song_astronomical_clock",
+     "name": "水运仪象台",
+     "en": "Su Song astronomical clock tower",
+     "year": 1092,
+     "note": "苏颂建造集浑仪、浑象与报时于一体的水力天文钟，展现宋代机械计时与天文观测水平。",
+     "deps": ["escapement"]
+    },
+    {
+     "id": "mechanical_clock",
+     "name": "机械钟",
+     "en": "Mechanical clock",
+     "year": 1283,
+     "note": "欧洲修道院出现重锤驱动、擒纵调速的机械钟，计时不再依赖日晒与水流。",
+     "deps": ["escapement"]
+    },
+    {
+     "id": "hourglass",
+     "name": "沙漏",
+     "en": "Hourglass",
+     "year": 1300,
+     "note": "以定量细沙流空计量时段，结构简单可靠，中世纪航海与礼拜中广泛使用。",
+     "deps": ["mechanical_clock"]
+    },
+    {
+     "id": "spring_driven_clock",
+     "name": "发条钟",
+     "en": "Spring-driven clock",
+     "year": 1430,
+     "note": "以卷绕发条取代重锤提供动力，使钟表可小型化与便携化。",
+     "deps": ["mechanical_clock"]
+    },
+    {
+     "id": "pendulum_clock",
+     "name": "摆钟",
+     "en": "Pendulum clock",
+     "year": 1656,
+     "note": "惠更斯把单摆等时性用于计时，摆钟使日误差降到秒级，确立近代精密计时。",
+     "deps": ["mechanical_clock"]
+    },
+    {
+     "id": "balance_spring_watch",
+     "name": "游丝摆轮计时器",
+     "en": "Balance spring timekeeper",
+     "year": 1675,
+     "note": "惠更斯等以游丝摆轮系统作谐振器，便携表摆脱摆放位置对走时的影响。",
+     "deps": ["spring_driven_clock"]
+    },
+    {
+     "id": "marine_chronometer",
+     "name": "航海天文钟",
+     "en": "Marine chronometer",
+     "year": 1761,
+     "note": "哈里森H4型航海钟在远洋航行中保持精确走时，解决了经度测定的关键难题。",
+     "deps": ["balance_spring_watch"]
+    },
+    {
+     "id": "chronograph",
+     "name": "计时秒表",
+     "en": "Chronograph",
+     "year": 1821,
+     "note": "里塞克制成可起停计时的机械计时表，用于赛马等需测时段的事件。",
+     "deps": ["balance_spring_watch"]
+    },
+    {
+     "id": "time_ball",
+     "name": "报时球",
+     "en": "Time ball",
+     "year": 1833,
+     "note": "格林尼治天文台以定时下落的报时球向港内船只播报时间，是最早的公共授时信号。"
+    },
+    {
+     "id": "electric_clock",
+     "name": "电钟",
+     "en": "Electric clock",
+     "year": 1840,
+     "note": "贝恩以电磁摆驱动钟表并使多台钟同步，开启以电信号分配时间的历史。",
+     "deps": ["battery"]
+    },
+    {
+     "id": "time_zone_system",
+     "name": "国际时区制度",
+     "en": "Standard time zones",
+     "year": 1884,
+     "note": "国际子午线会议确定格林尼治本初子午线并划分24时区，统一全球时刻基准。",
+     "deps": ["telegraph"]
+    },
+    {
+     "id": "radio_time_signal",
+     "name": "无线电授时",
+     "en": "Radio time signal",
+     "year": 1910,
+     "note": "埃菲尔铁塔电台向巴黎及周边播发科学报时信号，使远距离时间同步成为日常。",
+     "deps": ["radio"]
+    },
+    {
+     "id": "quartz_clock",
+     "name": "石英钟",
+     "en": "Quartz clock",
+     "year": 1927,
+     "note": "贝尔实验室以石英晶体振荡器作频率基准制成钟，日稳定度远超机械摆钟。",
+     "deps": ["electric_clock"]
+    },
+    {
+     "id": "hydrogen_maser_clock",
+     "name": "氢原子钟",
+     "en": "Hydrogen maser atomic clock",
+     "year": 1960,
+     "note": "以氢原子受激辐射作频率参考的主动型原子钟，短期稳定度优异，用于守时与深空测控。",
+     "deps": ["atomic_clock"]
+    },
+    {
+     "id": "atomic_second_definition",
+     "name": "原子秒定义",
+     "en": "Atomic definition of the second",
+     "year": 1967,
+     "note": "国际计量大会以铯-133超精细跃迁辐射周期定义秒，时间单位进入原子基准时代。",
+     "deps": ["atomic_clock"]
+    },
+    {
+     "id": "international_atomic_time",
+     "name": "国际原子时",
+     "en": "International Atomic Time (TAI)",
+     "year": 1958,
+     "note": "由全球多台原子钟数据加权合成的均匀时间标度，为导航与授时提供时间基准。",
+     "deps": ["atomic_clock"]
+    },
+    {
+     "id": "coordinated_universal_time",
+     "name": "协调世界时",
+     "en": "Coordinated Universal Time (UTC)",
+     "year": 1972,
+     "note": "以原子时速率结合闰秒逼近地球自转，1972年确立为全球民用时间基准。",
+     "deps": ["international_atomic_time"]
+    },
+    {
+     "id": "network_time_protocol",
+     "name": "网络时间协议",
+     "en": "Network Time Protocol",
+     "year": 1985,
+     "note": "通过互联网分层服务器向海量设备同步UTC时间，使网络设备走时达毫秒级一致。",
+     "deps": ["internet", "atomic_clock"]
+    },
+    {
+     "id": "satellite_time_transfer",
+     "name": "卫星授时",
+     "en": "Satellite time transfer",
+     "year": 1995,
+     "note": "导航卫星广播星载原子钟时间，全球用户可经接收机同步到数十纳秒量级。",
+     "deps": ["gps"]
+    },
+    {
+     "id": "cesium_fountain_clock",
+     "name": "铯喷泉钟",
+     "en": "Cesium fountain clock",
+     "year": 1999,
+     "note": "用激光冷却并抛射铯原子形成的喷泉钟，不确定度进入10^-16量级，复现秒定义。",
+     "deps": ["atomic_clock", "lasers"]
+    },
+    {
+     "id": "optical_lattice_clock",
+     "name": "光晶格钟",
+     "en": "Optical lattice clock",
+     "year": 2010,
+     "note": "以光频跃迁作谐振的光学原子钟，频率不确定度已达10^-18量级，属新一代时间基准。",
+     "deps": ["cesium_fountain_clock", "lasers"]
+    }
+   ]
+  },
+  {
+   "name": "长度与几何量精密测量",
+   "items": [
+    {
+     "id": "wheel_odometer",
+     "name": "轮式里程计",
+     "en": "Wheel odometer",
+     "year": -27,
+     "note": "以齿轮累计车轮转数折算路程，维特鲁威在建筑书中记载了其构造原理。",
+     "deps": ["wheel"]
+    },
+    {
+     "id": "bronze_sliding_caliper",
+     "name": "铜滑动卡尺",
+     "en": "Bronze sliding caliper",
+     "year": 9,
+     "note": "王莽时期铸造带固定爪与活动爪的铜卡尺，是现存最早的机械滑动卡尺。",
+     "deps": ["bronze"]
+    },
+    {
+     "id": "vernier_caliper",
+     "name": "游标卡尺",
+     "en": "Vernier caliper",
+     "year": 1631,
+     "note": "韦尼埃发明游标细分原理，使卡尺读数精度提高到毫米以下的小数位。",
+     "deps": ["mathematics"]
+    },
+    {
+     "id": "steel_tape_measure",
+     "name": "钢卷尺",
+     "en": "Steel tape measure",
+     "year": 1829,
+     "note": "以刻度钢带收入卷盒的便携测长工具，其钢带经淬火定长，用于土木与测绘。",
+     "deps": ["steel"]
+    },
+    {
+     "id": "micrometer_screw_gauge",
+     "name": "螺旋千分尺",
+     "en": "Micrometer caliper",
+     "year": 1848,
+     "note": "帕尔默以精密丝杠与套筒刻度放大位移，实现微米量级的车间直接测量。",
+     "deps": ["vernier_caliper"]
+    },
+    {
+     "id": "michelson_interferometer",
+     "name": "迈克尔逊干涉仪",
+     "en": "Michelson interferometer",
+     "year": 1887,
+     "note": "以分光干涉把长度比较细化到光波长量级，1892年曾用于标定标准米原器长度。",
+     "deps": ["optics", "physics"]
+    },
+    {
+     "id": "gauge_blocks",
+     "name": "量块",
+     "en": "Gauge blocks",
+     "year": 1896,
+     "note": "约翰松制出可研合组合的标准量块，把车间尺寸测量溯源到端面基准。",
+     "deps": ["micrometer_screw_gauge"]
+    },
+    {
+     "id": "dial_indicator",
+     "name": "千分表",
+     "en": "Dial indicator",
+     "year": 1900,
+     "note": "经齿轮机构放大测杆位移并在表盘指示的测微量具，用于跳动与几何误差检测。",
+     "deps": ["micrometer_screw_gauge"]
+    },
+    {
+     "id": "limit_gauge",
+     "name": "极限量规",
+     "en": "Limit gauge",
+     "year": 1905,
+     "note": "以最大与最小极限尺寸制成通止规，快速判定批量工件是否在公差带内。",
+     "deps": ["interchangeable_parts"]
+    },
+    {
+     "id": "stylus_profilometer",
+     "name": "触针轮廓仪",
+     "en": "Stylus profilometer",
+     "year": 1935,
+     "note": "触针沿表面扫描并经杠杆放大记录轮廓，实现表面粗糙度参数化评定。",
+     "deps": ["micrometer_screw_gauge"]
+    },
+    {
+     "id": "coordinate_measuring_machine",
+     "name": "三坐标测量机",
+     "en": "Coordinate measuring machine",
+     "year": 1959,
+     "note": "探针在三轴数控定位下逐点采测，由计算机拟合出工件的三维几何尺寸与形位误差。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "linear_grating_scale",
+     "name": "光栅尺",
+     "en": "Linear grating scale",
+     "year": 1960,
+     "note": "以莫尔条纹细分位移的栅式线位移测量装置，为数控机床提供位置闭环反馈。",
+     "deps": ["cnc", "optics"]
+    },
+    {
+     "id": "laser_interferometer_measurement",
+     "name": "激光干涉测长仪",
+     "en": "Laser interferometric length measurement",
+     "year": 1969,
+     "note": "以稳频激光波长作尺度的干涉测长系统，成为大长度与机床精度校准的标准手段。",
+     "deps": ["lasers", "michelson_interferometer"]
+    },
+    {
+     "id": "scanning_tunneling_microscope",
+     "name": "扫描隧道显微镜",
+     "en": "Scanning tunneling microscope",
+     "year": 1981,
+     "note": "利用隧道电流对间距的指数敏感实现针尖扫描成像，首次在实空间分辨原子。",
+     "deps": ["relativity_qm"]
+    },
+    {
+     "id": "atomic_force_microscope",
+     "name": "原子力显微镜",
+     "en": "Atomic force microscope",
+     "year": 1986,
+     "note": "以微悬臂探针感受原子间力扫描成像，导体与绝缘体表面均可达到纳米级测量。",
+     "deps": ["scanning_tunneling_microscope"]
+    },
+    {
+     "id": "laser_tracker_measurement",
+     "name": "激光跟踪测量系统",
+     "en": "Laser tracker",
+     "year": 1995,
+     "note": "以跟踪干涉测距与测角实时测定大尺寸工件三维坐标，广泛用于飞机与重型装备装配。",
+     "deps": ["laser_interferometer_measurement"]
+    }
+   ]
+  },
+  {
+   "name": "角度测绘与定位测量",
+   "items": [
+    {
+     "id": "surveyors_knotted_rope",
+     "name": "测量绳",
+     "en": "Surveyor's knotted rope",
+     "year": -2700,
+     "note": "古埃及拉绳人以结绳划分田界并校核直角，是土地丈量与几何测量的早期工具。"
+    },
+    {
+     "id": "dioptra",
+     "name": "视准仪",
+     "en": "Dioptra",
+     "year": -150,
+     "note": "希腊化时代用于测量水平与垂直角的观测装置，希罗记载其用于引水隧道定线。",
+     "deps": ["mathematics"]
+    },
+    {
+     "id": "groma",
+     "name": "罗马十字测杆",
+     "en": "Groma",
+     "year": -100,
+     "note": "以铅垂对中、十字准线定直角的罗马测量工具，是营寨与城市街道放线的基本仪器。"
+    },
+    {
+     "id": "magnetic_compass",
+     "name": "磁罗盘",
+     "en": "Magnetic compass",
+     "year": 1040,
+     "note": "以磁针指向磁北测定方向，宋代已用于航海与堪舆，后成全球导航核心仪器。",
+     "deps": ["magnets"]
+    },
+    {
+     "id": "cross_staff",
+     "name": "十字测角仪",
+     "en": "Cross-staff",
+     "year": 1328,
+     "note": "利未·本·格尔森记载以横杆与视线丈量角距，为早期航海测星仪器。",
+     "deps": ["astronomy"]
+    },
+    {
+     "id": "theodolite",
+     "name": "经纬仪",
+     "en": "Theodolite",
+     "year": 1571,
+     "note": "迪格斯记载可同时测水平与垂直角的仪器，成为近代大地测量核心装备。"
+    },
+    {
+     "id": "triangulation_survey",
+     "name": "三角测量",
+     "en": "Triangulation survey",
+     "year": 1615,
+     "note": "斯涅耳以三角网推算地球子午线弧长，确立以测角为主的近代控制测量方法。",
+     "deps": ["theodolite", "mathematics"]
+    },
+    {
+     "id": "spirit_level",
+     "name": "气泡水准器",
+     "en": "Spirit level",
+     "year": 1661,
+     "note": "以封闭气泡玻璃管指示水平面的器件，后与望远镜结合构成测量水准仪。"
+    },
+    {
+     "id": "sextant",
+     "name": "六分仪",
+     "en": "Sextant",
+     "year": 1731,
+     "note": "哈德利制出以双镜反射量测天体高度角的航海仪器，可测至60度角距。",
+     "deps": ["optics", "astronomy"]
+    },
+    {
+     "id": "dividing_engine",
+     "name": "刻度机",
+     "en": "Dividing engine",
+     "year": 1770,
+     "note": "兰斯登以精密丝杠自动分度的刻度机，可高精度刻制经纬仪与六分仪的度盘。"
+    },
+    {
+     "id": "reflecting_goniometer",
+     "name": "晶体反射测角仪",
+     "en": "Reflecting goniometer",
+     "year": 1809,
+     "note": "沃拉斯顿借助晶面反射光测量晶面夹角，支撑了矿物结晶学的定量研究。",
+     "deps": ["optics"]
+    },
+    {
+     "id": "dumpy_level",
+     "name": "工程水准仪",
+     "en": "Dumpy level",
+     "year": 1832,
+     "note": "固定望远镜式水准仪配合视距丝，用于高差与标高测量，是土木测量常用仪器。",
+     "deps": ["spirit_level"]
+    },
+    {
+     "id": "electronic_distance_measurement",
+     "name": "电磁波测距仪",
+     "en": "Electronic distance measurement",
+     "year": 1948,
+     "note": "通过测量电磁波往返相位或时间解算距离，取代链尺实现千米级精密测距。",
+     "deps": ["radio"]
+    },
+    {
+     "id": "autocollimator",
+     "name": "自准直仪",
+     "en": "Autocollimator",
+     "year": 1950,
+     "note": "以自身准直像测微小角度偏转的光学仪器，用于直线度与精密角度标定。",
+     "deps": ["theodolite", "optics"]
+    },
+    {
+     "id": "laser_rangefinder_survey",
+     "name": "激光测距仪",
+     "en": "Laser rangefinder",
+     "year": 1965,
+     "note": "以激光脉冲或相位法测距的仪器，配合测角实现无反射棱镜的地形快速测量。",
+     "deps": ["lasers"]
+    },
+    {
+     "id": "total_station",
+     "name": "全站仪",
+     "en": "Total station",
+     "year": 1971,
+     "note": "集测角、测距与机载计算于一体的测量系统，自动记录并解算点位坐标。",
+     "deps": ["theodolite", "electronic_distance_measurement"]
+    },
+    {
+     "id": "rtk_positioning",
+     "name": "实时动态差分定位",
+     "en": "Real-time kinematic positioning",
+     "year": 1995,
+     "note": "基准站与流动站间载波相位差分，实现厘米级实时定位，革新工程放样与测量。",
+     "deps": ["gps"]
+    }
+   ]
+  },
+  {
+   "name": "质量力与流量计量",
+   "items": [
+    {
+     "id": "equal_arm_balance",
+     "name": "等臂天平",
+     "en": "Equal-arm balance",
+     "year": -3000,
+     "note": "以等臂杠杆与砝码比较质量的衡器，古埃及与两河流域用以称量贵金属与谷物。",
+     "deps": ["mathematics"]
+    },
+    {
+     "id": "steelyard_balance",
+     "name": "杆秤",
+     "en": "Steelyard balance",
+     "year": -200,
+     "note": "以移动秤砣在杆上平衡的称量器具，中国与罗马各自发展，便于集市交易。",
+     "deps": ["equal_arm_balance"]
+    },
+    {
+     "id": "anemometer",
+     "name": "风速计",
+     "en": "Anemometer",
+     "year": 1450,
+     "note": "阿尔贝蒂制出最早的机械风速计，以风压或转杯转速测量气流速度。"
+    },
+    {
+     "id": "mercury_barometer",
+     "name": "水银气压计",
+     "en": "Mercury barometer",
+     "year": 1643,
+     "note": "托里拆利以水银柱测大气压，第一次为气压这一气象量建立定量标尺。"
+    },
+    {
+     "id": "pitot_tube",
+     "name": "皮托管",
+     "en": "Pitot tube",
+     "year": 1732,
+     "note": "皮托以驻点与静压之差测流速，后与静压管合并广泛用于航空空速测量。",
+     "deps": ["physics"]
+    },
+    {
+     "id": "spring_scale",
+     "name": "弹簧秤",
+     "en": "Spring scale",
+     "year": 1770,
+     "note": "依据弹簧伸长与拉力成正比的秤具，比天平轻便，用于日常称量与测力。",
+     "deps": ["physics"]
+    },
+    {
+     "id": "prony_brake",
+     "name": "普朗尼测功器",
+     "en": "Prony brake",
+     "year": 1821,
+     "note": "以摩擦制动吸收动力输出并测扭矩转速求得功率，成为早期动力机械的标定工具。",
+     "deps": ["physics"]
+    },
+    {
+     "id": "aneroid_barometer",
+     "name": "无液气压计",
+     "en": "Aneroid barometer",
+     "year": 1844,
+     "note": "以抽空金属盒随气压变形驱动指针，无需水银即可便携测量气压。",
+     "deps": ["mercury_barometer"]
+    },
+    {
+     "id": "bourdon_pressure_gauge",
+     "name": "波登管压力表",
+     "en": "Bourdon tube pressure gauge",
+     "year": 1849,
+     "note": "波登以弯管受内压伸直变形指示压力，成为工业压力测量的通用仪表。",
+     "deps": ["physics"]
+    },
+    {
+     "id": "mcleod_vacuum_gauge",
+     "name": "麦克劳德真空计",
+     "en": "McLeod gauge",
+     "year": 1874,
+     "note": "把低压气体压缩至可测程度比较汞柱高度，用于绝对真空度的实验室标定。"
+    },
+    {
+     "id": "venturi_meter",
+     "name": "文丘里流量计",
+     "en": "Venturi meter",
+     "year": 1887,
+     "note": "赫谢尔以缩径段压差测管流流量，是依据伯努利原理的经典流量测量装置。",
+     "deps": ["physics"]
+    },
+    {
+     "id": "pirani_gauge",
+     "name": "皮拉尼真空计",
+     "en": "Pirani gauge",
+     "year": 1906,
+     "note": "以灯丝热耗散随气压变化测真空度，量程宽且响应快，用于中低真空测量。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "rotameter",
+     "name": "浮子流量计",
+     "en": "Rotameter",
+     "year": 1908,
+     "note": "浮子在锥形管中随流量升降指示刻度，结构简单直观，广泛用于小流量计量。"
+    },
+    {
+     "id": "resistance_strain_gauge",
+     "name": "电阻应变片",
+     "en": "Resistance strain gauge",
+     "year": 1938,
+     "note": "以金属栅或半导体随应变改变电阻的敏感元件，是实验应力分析的基础。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "load_cell",
+     "name": "称重传感器",
+     "en": "Load cell",
+     "year": 1946,
+     "note": "把应变片粘贴于弹性体测力并转成电信号的称重元件，促成电子衡器普及。",
+     "deps": ["resistance_strain_gauge"]
+    },
+    {
+     "id": "ultrasonic_flowmeter",
+     "name": "超声波流量计",
+     "en": "Ultrasonic flowmeter",
+     "year": 1960,
+     "note": "以超声波顺逆流传播时差测流速，不侵入管道即可在线计量，适应大口径管流。",
+     "deps": ["physics"]
+    },
+    {
+     "id": "coriolis_flowmeter",
+     "name": "科里奥利质量流量计",
+     "en": "Coriolis mass flowmeter",
+     "year": 1977,
+     "note": "利用振动管受科里奥利力产生的相位差直接测质量流量，精度高且无需温压修正。",
+     "deps": ["ultrasonic_flowmeter"]
+    }
+   ]
+  },
+  {
+   "name": "热学与湿度计量",
+   "items": [
+    {
+     "id": "thermoscope",
+     "name": "验温器",
+     "en": "Thermoscope",
+     "year": 1592,
+     "note": "伽利略以气体膨胀随温升降的气泡验温器，是温度计的早期雏形。"
+    },
+    {
+     "id": "liquid_glass_thermometer",
+     "name": "液体玻璃温度计",
+     "en": "Liquid-in-glass thermometer",
+     "year": 1714,
+     "note": "华伦海特以水银充注玻璃管并定标刻度，使温度测量具备可复现的数值体系。",
+     "deps": ["thermoscope"]
+    },
+    {
+     "id": "celsius_scale",
+     "name": "摄氏温标",
+     "en": "Celsius scale",
+     "year": 1742,
+     "note": "摄尔修斯以水的冰点与沸点划分百等分的温标，后成为日常测温通用标尺。",
+     "deps": ["liquid_glass_thermometer"]
+    },
+    {
+     "id": "calorimeter",
+     "name": "量热计",
+     "en": "Calorimeter",
+     "year": 1780,
+     "note": "拉瓦锡与拉普拉斯以冰量热计测量化学反应与物理过程的热量，奠定量热学方法。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "six_maximum_minimum_thermometer",
+     "name": "最高最低温度计",
+     "en": "Six's thermometer",
+     "year": 1782,
+     "note": "锡克斯制成记录时段内最高与最低温度的U形管温度计，广泛用于气象观测。",
+     "deps": ["liquid_glass_thermometer"]
+    },
+    {
+     "id": "hair_hygrometer",
+     "name": "毛发湿度计",
+     "en": "Hair hygrometer",
+     "year": 1783,
+     "note": "德索叙尔发现毛发长度随湿度变化，制成记录大气湿度的机械式湿度计。"
+    },
+    {
+     "id": "thermocouple",
+     "name": "热电偶",
+     "en": "Thermocouple",
+     "year": 1821,
+     "note": "塞贝克发现两种金属结点温差生热电势，热电偶由此成为宽量程测温元件。"
+    },
+    {
+     "id": "psychrometer",
+     "name": "干湿球湿度计",
+     "en": "Psychrometer",
+     "year": 1825,
+     "note": "奥古斯特以干湿两支温度计的差值推算相对湿度，成为气象观测标准器具。",
+     "deps": ["liquid_glass_thermometer"]
+    },
+    {
+     "id": "kelvin_thermodynamic_scale",
+     "name": "开尔文热力学温标",
+     "en": "Kelvin thermodynamic temperature scale",
+     "year": 1848,
+     "note": "开尔文提出与工质无关的绝对热力学温标，为温度单位奠定理论基础。",
+     "deps": ["thermocouple"]
+    },
+    {
+     "id": "platinum_resistance_thermometer",
+     "name": "铂电阻温度计",
+     "en": "Platinum resistance thermometer",
+     "year": 1871,
+     "note": "西门子发现铂电阻随温度稳定变化并制成温度计，成为精密测温基准仪器。",
+     "deps": ["thermocouple"]
+    },
+    {
+     "id": "optical_pyrometer",
+     "name": "光学高温计",
+     "en": "Optical pyrometer",
+     "year": 1901,
+     "note": "以灯丝隐灭法比对物体炽热亮度测温，可测上千摄氏度的高温炉温。",
+     "deps": ["platinum_resistance_thermometer", "optics"]
+    },
+    {
+     "id": "thermistor",
+     "name": "热敏电阻",
+     "en": "Thermistor",
+     "year": 1930,
+     "note": "以半导体材料电阻强烈随温度变化的测温元件，灵敏度高且可微型化。",
+     "deps": ["platinum_resistance_thermometer"]
+    },
+    {
+     "id": "its90",
+     "name": "国际温标ITS-90",
+     "en": "International Temperature Scale of 1990",
+     "year": 1990,
+     "note": "以固定点温度与标准内插仪器定义1990年国际实用温标，统一全球温度溯源。",
+     "deps": ["platinum_resistance_thermometer"]
+    }
+   ]
+  },
+  {
+   "name": "电学、辐射与声学计量",
+   "items": [
+    {
+     "id": "tuning_fork",
+     "name": "音叉",
+     "en": "Tuning fork",
+     "year": 1711,
+     "note": "肖尔制成可发出稳定音高的双股音叉，成为音乐定音与声频校准的标准源。"
+    },
+    {
+     "id": "gold_leaf_electroscope",
+     "name": "金箔验电器",
+     "en": "Gold-leaf electroscope",
+     "year": 1786,
+     "note": "以金箔受同号电荷斥力张角指示带电量的器具，是早期静电测量基本装置。"
+    },
+    {
+     "id": "galvanometer",
+     "name": "电流计",
+     "en": "Galvanometer",
+     "year": 1820,
+     "note": "施韦格以线圈倍增电流磁效应制成检流装置，成为电流测量的第一代仪表。",
+     "deps": ["battery"]
+    },
+    {
+     "id": "wheatstone_bridge",
+     "name": "惠斯通电桥",
+     "en": "Wheatstone bridge",
+     "year": 1833,
+     "note": "以四臂电阻平衡比较测量电阻值的线路，是精密电阻测量的经典电路。",
+     "deps": ["battery"]
+    },
+    {
+     "id": "poggendorff_potentiometer",
+     "name": "补偿式电位差计",
+     "en": "Potentiometer",
+     "year": 1841,
+     "note": "波根多夫以零电流补偿法精密测量电动势，长期作为电压计量标准方法。",
+     "deps": ["galvanometer"]
+    },
+    {
+     "id": "bolometer",
+     "name": "热辐射计",
+     "en": "Bolometer",
+     "year": 1880,
+     "note": "兰利以电阻片吸收辐射升温测红外功率，开辟热辐射定量测量。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "darsonval_meter",
+     "name": "动圈式仪表",
+     "en": "D'Arsonval moving-coil meter",
+     "year": 1882,
+     "note": "达松伐尔检流计以磁场中的动圈偏转测电流，是直流电表的基本结构。",
+     "deps": ["galvanometer", "magnets"]
+    },
+    {
+     "id": "electricity_meter",
+     "name": "交流电能表",
+     "en": "Induction watt-hour meter",
+     "year": 1889,
+     "note": "汤姆孙感应式电表以铝盘转数累计用电量，成为电网计费的计量仪表。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "weston_standard_cell",
+     "name": "韦斯顿标准电池",
+     "en": "Weston standard cell",
+     "year": 1893,
+     "note": "以镉汞齐与硫酸镉构成的电动势稳定电池，长期充当电压计量基准。",
+     "deps": ["battery"]
+    },
+    {
+     "id": "crt_oscilloscope",
+     "name": "示波器",
+     "en": "Oscilloscope",
+     "year": 1897,
+     "note": "布劳恩以阴极射线管显示电压波形，成为观测电信号随时间变化的通用仪器。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "multimeter",
+     "name": "万用表",
+     "en": "Multimeter",
+     "year": 1923,
+     "note": "集电压、电流、电阻测量于一体并共用表头的多用仪表，是电工与维修标配。",
+     "deps": ["darsonval_meter"]
+    },
+    {
+     "id": "geiger_counter",
+     "name": "盖革-米勒计数管",
+     "en": "Geiger-Müller counter",
+     "year": 1928,
+     "note": "盖革与米勒制成气体放电式计数管，探测电离辐射并量化放射性强弱。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "photomultiplier",
+     "name": "光电倍增管",
+     "en": "Photomultiplier tube",
+     "year": 1934,
+     "note": "以光阴极与多级倍增极放大微弱光信号，成为低光测量与闪烁探测的核心器件。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "sound_level_meter",
+     "name": "声级计",
+     "en": "Sound level meter",
+     "year": 1935,
+     "note": "以传声器与加权网络测量声压级，为噪声环境评价提供标准化计量。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "scintillation_counter",
+     "name": "闪烁计数器",
+     "en": "Scintillation counter",
+     "year": 1947,
+     "note": "以闪烁体发光经光电倍增管探测电离辐射，能量分辨与效率优于气体计数管。",
+     "deps": ["photomultiplier"]
+    },
+    {
+     "id": "digital_voltmeter",
+     "name": "数字电压表",
+     "en": "Digital voltmeter",
+     "year": 1952,
+     "note": "以模数转换直接给出数字读数的电压表，摆脱指针判读并实现自动化采集。",
+     "deps": ["transistor"]
+    },
+    {
+     "id": "electronic_frequency_counter",
+     "name": "电子频率计",
+     "en": "Electronic frequency counter",
+     "year": 1952,
+     "note": "以电子门控在标准时基内计数周期脉冲，实现高频信号频率的直接数字化测量。",
+     "deps": ["transistor"]
+    }
+   ]
+  },
+  {
+   "name": "计量体系与现代溯源",
+   "items": [
+    {
+     "id": "metre_convention_bipm",
+     "name": "米制公约与国际计量局",
+     "en": "Metre Convention and BIPM",
+     "year": 1875,
+     "note": "十七国签署米制公约并设立国际计量局，主持国际原器保存与计量科学合作。",
+     "deps": ["metric_system"]
+    },
+    {
+     "id": "national_physical_laboratory",
+     "name": "国家物理实验室",
+     "en": "National Physical Laboratory",
+     "year": 1900,
+     "note": "英国设立国家计量标准研究机构，负责电学、长度等基准的建立与维护。"
+    },
+    {
+     "id": "national_bureau_standards",
+     "name": "国家标准局",
+     "en": "National Bureau of Standards",
+     "year": 1901,
+     "note": "美国依国会法案设立的标准与计量研究机构，后发展为美国国家标准与技术研究院。",
+     "deps": ["metre_convention_bipm"]
+    },
+    {
+     "id": "standard_reference_materials",
+     "name": "标准参考物质",
+     "en": "Standard reference materials",
+     "year": 1906,
+     "note": "美国标准局发放定值标准钢样等，供实验室校准仪器并验证分析方法准确度。",
+     "deps": ["national_bureau_standards"]
+    },
+    {
+     "id": "oiml",
+     "name": "国际法制计量组织",
+     "en": "International Organization of Legal Metrology",
+     "year": 1955,
+     "note": "协调各国法制计量法规与计量器具管理，推动贸易计量要求的国际一致。",
+     "deps": ["metric_system"]
+    },
+    {
+     "id": "vim_vocabulary",
+     "name": "国际计量学词汇",
+     "en": "International Vocabulary of Metrology (VIM)",
+     "year": 1984,
+     "note": "国际计量组织发布计量学通用术语定义，统一校准、测量与不确定度概念。"
+    },
+    {
+     "id": "gum",
+     "name": "测量不确定度表示指南",
+     "en": "Guide to the Expression of Uncertainty in Measurement",
+     "year": 1993,
+     "note": "统一测量结果不确定度的评定与表述方法，成为全球计量与实验室认可准则。",
+     "deps": ["si_system"]
+    },
+    {
+     "id": "iso_iec_17025",
+     "name": "实验室认可准则",
+     "en": "ISO/IEC 17025",
+     "year": 1999,
+     "note": "规定检测与校准实验室能力、公正性与质量体系的国际要求，通行于合格评定。"
+    },
+    {
+     "id": "cipm_mra",
+     "name": "国际计量互认协议",
+     "en": "CIPM Mutual Recognition Arrangement",
+     "year": 1999,
+     "note": "国家计量院间对校准与测量能力的国际互认，免除重复检定促进全球贸易。",
+     "deps": ["metre_convention_bipm"]
+    }
+   ]
+  }
+ ]
+}

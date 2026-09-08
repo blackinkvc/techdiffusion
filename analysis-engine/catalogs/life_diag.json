@@ -1,0 +1,203 @@
+{
+ "cat": "life",
+ "catName": "生命与健康",
+ "sub": "diag",
+ "subName": "诊断技术",
+ "schemaNote": "life_diag 任务域真实技术目录。anchors 为可引用的全局上游锚点；families 覆盖诊断主要技术谱系；item.deps 仅引 _ANCHORS 或本文件更早条目。",
+ "anchors": [
+  "medical_imaging",
+  "dna",
+  "computer",
+  "ai",
+  "optics",
+  "lasers",
+  "semiconductors",
+  "scientific_method",
+  "internet",
+  "genetic_engineering"
+ ],
+ "families": [
+  {
+   "name": "体格检查",
+   "items": [
+    { "id": "diag_palpation", "name": "触诊叩诊", "en": "Palpation and percussion", "year": -2000, "note": "以手触叩身体察觉肿物与异常。", "deps": [] },
+    { "id": "diag_pulse", "name": "脉诊", "en": "Pulse diagnosis", "year": -2000, "note": "以脉搏节律强弱判断健康状态。", "deps": [] },
+    { "id": "diag_percussion", "name": "叩诊", "en": "Percussion", "year": 1761, "note": "奥恩布鲁格以叩击胸壁辨积液。", "deps": [] },
+    { "id": "diag_auscultation", "name": "听诊器", "en": "Stethoscope", "year": 1816, "note": "雷奈克发明听诊器听心肺音。", "deps": [] },
+    { "id": "diag_thermometer", "name": "体温计", "en": "Clinical thermometer", "year": 1867, "note": "水银体温计量化体温辅助诊断。", "deps": [] },
+    { "id": "diag_tongue_depressor", "name": "压舌板", "en": "Tongue depressor", "year": 1800, "note": "压舌观察咽喉的简易器械。", "deps": [] },
+    { "id": "diag_ophthalmoscope", "name": "检眼镜", "en": "Ophthalmoscope", "year": 1851, "note": "赫尔姆霍茨检眼镜观察眼底。", "deps": ["optics"] },
+    { "id": "diag_otoscope", "name": "耳镜", "en": "Otoscope", "year": 1838, "note": "照明放大观察外耳道与鼓膜。", "deps": [] },
+    { "id": "diag_reflex_hammer", "name": "叩诊锤", "en": "Reflex hammer", "year": 1870, "note": "叩击肌腱评估神经反射。", "deps": [] },
+    { "id": "diag_bp_cuff", "name": "袖带血压计", "en": "Cuff sphygmomanometer", "year": 1896, "note": "袖带加压听诊测动脉血压。", "deps": [] },
+    { "id": "diag_visual_acuity", "name": "视力表", "en": "Visual acuity chart", "year": 1862, "note": "标准视标量化视力水平。", "deps": [] },
+    { "id": "diag_growth_chart", "name": "生长发育图表", "en": "Growth chart", "year": 1900, "note": "以曲线评估儿童发育百分位。", "deps": [] },
+    { "id": "diag_ophthalmology_chart", "name": "眼底检查", "en": "Fundus examination", "year": 1850, "note": "观察视网膜血管诊断全身病。", "deps": ["optics"] },
+    { "id": "diag_neuro_exam", "name": "神经系统检查", "en": "Neurological examination", "year": 1850, "note": "系统评估颅神经与运动感觉。", "deps": [] }
+   ]
+  },
+  {
+   "name": "化验",
+   "items": [
+    { "id": "diag_urinalysis", "name": "尿分析", "en": "Urinalysis", "year": 1827, "note": "以理化与镜检分析尿液辅助肾病诊断。", "deps": [] },
+    { "id": "diag_blood_count", "name": "血常规", "en": "Blood count", "year": 1852, "note": "计数血细胞评估感染与贫血。", "deps": [] },
+    { "id": "diag_sedimentation", "name": "血沉", "en": "Erythrocyte sedimentation rate", "year": 1894, "note": "测红细胞沉降速率反映炎症。", "deps": [] },
+    { "id": "diag_coagulation", "name": "凝血功能", "en": "Coagulation test", "year": 1900, "note": "检测凝血 cascade 评估出血风险。", "deps": [] },
+    { "id": "diag_liver_function", "name": "肝功能", "en": "Liver function test", "year": 1900, "note": "酶与胆红素评估肝脏代谢。", "deps": [] },
+    { "id": "diag_electrophoresis", "name": "电泳", "en": "Electrophoresis", "year": 1937, "note": "电场分离血清蛋白组分。", "deps": [] },
+    { "id": "diag_immunoassay", "name": "免疫分析", "en": "Immunoassay", "year": 1960, "note": "抗原抗体反应定量标志物。", "deps": [] },
+    { "id": "diag_enzyme_assay", "name": "酶学检测", "en": "Enzyme assay", "year": 1950, "note": "测酶活力辅助脏器损伤诊断。", "deps": [] },
+    { "id": "diag_biochemistry", "name": "生化分析仪", "en": "Biochemistry analyzer", "year": 1950, "note": "自动测定血糖电解质等生化项。", "deps": [] },
+    { "id": "diag_auto_analyzer", "name": "自动生化分析仪", "en": "Autoanalyzer", "year": 1957, "note": "连续流自动分析多项目标本。", "deps": ["computer"] },
+    { "id": "diag_blood_gas", "name": "血气分析", "en": "Blood gas analysis", "year": 1950, "note": "测血氧二氧化碳与酸碱状态。", "deps": [] },
+    { "id": "diag_elisa", "name": "ELISA", "en": "Enzyme-linked immunosorbent assay", "year": 1971, "note": "酶标免疫吸附高灵敏检测抗原抗体。", "deps": [] },
+    { "id": "diag_clia", "name": "化学发光", "en": "Chemiluminescence immunoassay", "year": 1978, "note": "化学发光标记实现超微量检测。", "deps": [] },
+    { "id": "diag_mass_spec_clinical", "name": "临床质谱", "en": "Clinical mass spectrometry", "year": 1970, "note": "质谱技术精确定量代谢物与药物浓度。", "deps": [] },
+    { "id": "diag_tumor_marker", "name": "肿瘤标志物", "en": "Tumor markers", "year": 1965, "note": "以特异性蛋白辅助肿瘤筛查。", "deps": [] }
+   ]
+  },
+  {
+   "name": "微生物",
+   "items": [
+    { "id": "diag_microscope", "name": "显微镜检", "en": "Microscopy", "year": 1670, "note": "以显微镜观察微生物与细胞形态。", "deps": ["optics"] },
+    { "id": "diag_gram_stain", "name": "革兰染色", "en": "Gram stain", "year": 1884, "note": "革兰染色区分阴阳细菌指导用药。", "deps": [] },
+    { "id": "diag_ziehl_neelsen", "name": "抗酸染色", "en": "Acid-fast stain", "year": 1882, "note": "抗酸染色识别结核分枝杆菌。", "deps": [] },
+    { "id": "diag_culture", "name": "细菌培养", "en": "Bacterial culture", "year": 1880, "note": "柯赫以培养基分离纯化病原菌。", "deps": [] },
+    { "id": "diag_anaerobic_culture", "name": "厌氧培养", "en": "Anaerobic culture", "year": 1900, "note": "无氧条件培养厌氧菌。", "deps": [] },
+    { "id": "diag_disk_diffusion", "name": "纸片扩散法", "en": "Disk diffusion test", "year": 1940, "note": "以药敏纸片测细菌药物敏感性。", "deps": ["diag_culture"] },
+    { "id": "diag_serology", "name": "血清学检测", "en": "Serology", "year": 1900, "note": "以抗体反应诊断感染与免疫状态。", "deps": [] },
+    { "id": "diag_virus_isolation", "name": "病毒分离", "en": "Virus isolation", "year": 1930, "note": "以细胞培养分离增殖病毒。", "deps": [] },
+    { "id": "diag_automated_culture", "name": "自动化血培养", "en": "Automated blood culture", "year": 1970, "note": "连续监测瓶内微生物生长信号。", "deps": ["diag_culture"] },
+    { "id": "diag_antigen_rapid", "name": "抗原快检", "en": "Rapid antigen test", "year": 1980, "note": "免疫层析快速检出病原体抗原。", "deps": [] },
+    { "id": "diag_pcr", "name": "PCR核酸检测", "en": "PCR nucleic acid test", "year": 1983, "note": "聚合酶链扩增特异性核酸诊断感染。", "deps": ["dna"] },
+    { "id": "diag_molecular_typing", "name": "分子分型", "en": "Molecular typing", "year": 1990, "note": "以基因标志区分菌株溯源。", "deps": ["dna"] },
+    { "id": "diag_maldi_tof", "name": "MALDI-TOF质谱鉴定", "en": "MALDI-TOF MS identification", "year": 2000, "note": "质谱指纹快速鉴定微生物种类。", "deps": ["diag_mass_spec_clinical"] },
+    { "id": "diag_ngs_microbe", "name": "宏基因组测序", "en": "Metagenomic sequencing", "year": 2010, "note": "无培养直接测序鉴定病原体。", "deps": ["dna"] }
+   ]
+  },
+  {
+   "name": "影像",
+   "items": [
+    { "id": "diag_xray", "name": "医用X线", "en": "Medical X-ray", "year": 1895, "note": "伦琴X线用于骨骼与胸部成像。", "deps": ["medical_imaging"] },
+    { "id": "diag_fluoroscopy", "name": "荧光透视", "en": "Fluoroscopy", "year": 1896, "note": "实时X线观影像引导操作。", "deps": ["medical_imaging"] },
+    { "id": "diag_intraoral_x", "name": "口腔X线", "en": "Intraoral radiography", "year": 1910, "note": "牙片检查龋齿与牙周病变。", "deps": ["medical_imaging"] },
+    { "id": "diag_mammography", "name": "乳腺钼靶", "en": "Mammography", "year": 1969, "note": "低剂量X线筛查乳腺病变。", "deps": ["medical_imaging"] },
+    { "id": "diag_ultrasound", "name": "超声诊断", "en": "Diagnostic ultrasound", "year": 1956, "note": "以回波成像实时观察脏器。", "deps": ["semiconductors"] },
+    { "id": "diag_ct", "name": "CT", "en": "Computed tomography", "year": 1971, "note": "X线断层重建横断面图像。", "deps": ["medical_imaging", "computer"] },
+    { "id": "diag_mri", "name": "MRI", "en": "Magnetic resonance imaging", "year": 1973, "note": "以核磁共振高分辨软组织成像。", "deps": ["computer"] },
+    { "id": "diag_pet", "name": "正电子发射断层", "en": "PET", "year": 1974, "note": "示踪代谢显像定位活跃病灶。", "deps": ["computer"] },
+    { "id": "diag_dsa", "name": "数字减影血管造影", "en": "DSA", "year": 1980, "note": "数字减影凸显血管轮廓。", "deps": ["medical_imaging", "computer"] },
+    { "id": "diag_bone_density", "name": "骨密度仪", "en": "Bone densitometer", "year": 1980, "note": "双能X线定量评估骨质疏松。", "deps": ["medical_imaging"] },
+    { "id": "diag_contrast_ct", "name": "造影CT", "en": "Contrast CT", "year": 1971, "note": "对比剂增强显示血管与病灶。", "deps": [] },
+    { "id": "diag_functional_mri", "name": "功能磁共振", "en": "Functional MRI", "year": 1990, "note": "以血氧信号定位脑功能活动。", "deps": ["diag_mri"] },
+    { "id": "diag_pet_ct", "name": "PET-CT", "en": "PET-CT", "year": 2000, "note": "代谢与解剖融合精准分期。", "deps": ["diag_pet", "diag_ct"] },
+    { "id": "diag_cone_beam_ct", "name": "锥形束CT", "en": "Cone beam CT", "year": 1998, "note": "口腔颌面三维成像规划治疗。", "deps": ["diag_ct", "computer"] }
+   ]
+  },
+  {
+   "name": "内镜",
+   "items": [
+    { "id": "diag_laryngoscope", "name": "喉镜", "en": "Laryngoscope", "year": 1855, "note": "照明观察喉部结构与声带的镜。", "deps": [] },
+    { "id": "diag_cystoscope", "name": "膀胱镜", "en": "Cystoscope", "year": 1879, "note": "经尿道观察膀胱腔内病变。", "deps": [] },
+    { "id": "diag_gastroscope", "name": "胃镜", "en": "Gastroscope", "year": 1868, "note": "经口观察食管胃肠黏膜。", "deps": [] },
+    { "id": "diag_bronchoscope", "name": "支气管镜", "en": "Bronchoscope", "year": 1966, "note": "经气道检查肺部与取活检。", "deps": [] },
+    { "id": "diag_cholangioscopy", "name": "胆道镜", "en": "Cholangioscope", "year": 1970, "note": "术中经胆管观察取石。", "deps": [] },
+    { "id": "diag_arthroscope", "name": "关节镜检查", "en": "Arthroscope", "year": 1959, "note": "微创观察关节内结构。", "deps": [] },
+    { "id": "diag_colonoscope", "name": "结肠镜", "en": "Colonoscope", "year": 1969, "note": "经肛全结肠检查与息肉切除。", "deps": [] },
+    { "id": "diag_enteroscope", "name": "小肠镜", "en": "Enteroscope", "year": 1970, "note": "深入小肠诊断出血与病变。", "deps": [] },
+    { "id": "diag_endoscopic_ultrasound", "name": "内镜超声", "en": "Endoscopic ultrasound", "year": 1980, "note": "内镜结合超声评估管壁与周邻。", "deps": [] },
+    { "id": "diag_virtual_colon", "name": "虚拟结肠镜", "en": "Virtual colonoscopy", "year": 1994, "note": "CT重建肠腔无创筛查。", "deps": ["computer", "medical_imaging"] },
+    { "id": "diag_capsule_endoscopy", "name": "胶囊内镜", "en": "Capsule endoscopy", "year": 2000, "note": "可吞服胶囊拍摄全小肠。", "deps": [] }
+   ]
+  },
+  {
+   "name": "病理",
+   "items": [
+    { "id": "diag_autopsy", "name": "尸检", "en": "Autopsy", "year": 1500, "note": "系统解剖查明死因与病变。", "deps": [] },
+    { "id": "diag_histopathology", "name": "组织病理学", "en": "Histopathology", "year": 1850, "note": "切片染色观察组织病变。", "deps": [] },
+    { "id": "diag_cytology", "name": "细胞学", "en": "Cytology", "year": 1860, "note": "以细胞形态诊断良恶性。", "deps": [] },
+    { "id": "diag_biopsy", "name": "活检切片", "en": "Biopsy", "year": 1800, "note": "取活体组织镜检明确病变。", "deps": [] },
+    { "id": "diag_frozen_section", "name": "冰冻切片", "en": "Frozen section", "year": 1905, "note": "术中快速冰冻诊断切缘。", "deps": [] },
+    { "id": "diag_pap_smear", "name": "巴氏涂片", "en": "Pap smear", "year": 1928, "note": "宫颈细胞筛查癌前病变。", "deps": [] },
+    { "id": "diag_immunohistochem", "name": "免疫组化", "en": "Immunohistochemistry", "year": 1941, "note": "抗体标记定位组织抗原。", "deps": [] },
+    { "id": "diag_immunofluorescence", "name": "免疫荧光", "en": "Immunofluorescence", "year": 1940, "note": "荧光标记抗体检测抗原分布。", "deps": [] },
+    { "id": "diag_fluorescence_ihc", "name": "荧光原位杂交", "en": "FISH", "year": 1980, "note": "荧光探针检测基因扩增缺失。", "deps": ["dna"] },
+    { "id": "diag_liquid_based_cytology", "name": "液基细胞学", "en": "Liquid-based cytology", "year": 1996, "note": "液基制片提升细胞学质量。", "deps": [] },
+    { "id": "diag_grossing", "name": "标本取材", "en": "Specimen grossing", "year": 1900, "note": "规范取材保证病理代表。", "deps": [] },
+    { "id": "diag_digital_pathology", "name": "数字病理", "en": "Digital pathology", "year": 2000, "note": "切片扫描结合计算机判读。", "deps": ["computer", "semiconductors"] },
+    { "id": "diag_molecular_path", "name": "分子病理", "en": "Molecular pathology", "year": 2000, "note": "以基因检测指导靶向治疗。", "deps": ["dna"] },
+    { "id": "diag_flow_cytometry", "name": "流式细胞术", "en": "Flow cytometry", "year": 1968, "note": "悬浮细胞多参数快速分析。", "deps": [] }
+   ]
+  },
+  {
+   "name": "电生理",
+   "items": [
+    { "id": "diag_ecg", "name": "心电图", "en": "Electrocardiography", "year": 1903, "note": "记录心电活动诊断心律与缺血。", "deps": ["electricity"] },
+    { "id": "diag_stress_ecg", "name": "运动负荷心电图", "en": "Exercise stress ECG", "year": 1930, "note": "负荷诱发心肌缺血以助诊断。", "deps": ["diag_ecg"] },
+    { "id": "diag_eeg", "name": "脑电图", "en": "Electroencephalography", "year": 1924, "note": "记录脑电活动诊断癫痫等。", "deps": [] },
+    { "id": "diag_emg", "name": "肌电图", "en": "Electromyography", "year": 1960, "note": "评估神经肌肉电活动功能。", "deps": [] },
+    { "id": "diag_nerve_conduction", "name": "神经传导", "en": "Nerve conduction study", "year": 1960, "note": "测传导速度定位周围神经损伤。", "deps": [] },
+    { "id": "diag_holter", "name": "动态心电图", "en": "Holter monitor", "year": 1961, "note": "长时间随身记录捕捉阵发异常。", "deps": ["diag_ecg"] },
+    { "id": "diag_evoked_potential", "name": "诱发电位", "en": "Evoked potential", "year": 1960, "note": "刺激诱发脑或脊髓电反应。", "deps": [] },
+    { "id": "diag_vep", "name": "视觉诱发电位", "en": "Visual evoked potential", "year": 1970, "note": "以视觉刺激评估视通路功能。", "deps": [] },
+    { "id": "diag_ecg_monitor", "name": "床旁监护", "en": "Bedside monitoring", "year": 1960, "note": "连续监护心电血氧等生命体征。", "deps": ["diag_ecg"] },
+    { "id": "diag_eeg_video", "name": "视频脑电", "en": "Video EEG", "year": 1980, "note": "同步视频捕捉发作与脑电。", "deps": ["diag_eeg"] },
+    { "id": "diag_intraop_neuro", "name": "术中神经电生理", "en": "Intraoperative neurophysiology", "year": 1980, "note": "术中监护神经功能避免损伤。", "deps": [] },
+    { "id": "diag_high_density_eeg", "name": "高密度脑电", "en": "High-density EEG", "year": 2000, "note": "多通道脑电提升空间分辨率。", "deps": ["diag_eeg"] }
+   ]
+  },
+  {
+   "name": "分子",
+   "items": [
+    { "id": "diag_sanger_seq", "name": "桑格测序", "en": "Sanger sequencing", "year": 1977, "note": "双脱氧链终止法测定DNA序列。", "deps": ["dna"] },
+    { "id": "diag_southern_blot", "name": "Southern印迹", "en": "Southern blot", "year": 1975, "note": "转印鉴定特定DNA片段。", "deps": ["dna"] },
+    { "id": "diag_gene_chip", "name": "基因芯片", "en": "Gene chip", "year": 1995, "note": "高通量探针并行检测基因表达。", "deps": ["dna", "semiconductors"] },
+    { "id": "diag_qpcr", "name": "实时荧光定量PCR", "en": "qPCR", "year": 1992, "note": "实时定量核酸拷贝数。", "deps": ["dna"] },
+    { "id": "diag_microarray_cgh", "name": "比较基因组杂交", "en": "Comparative genomic hybridization", "year": 1992, "note": "全基因组扫描拷贝数变异。", "deps": ["dna"] },
+    { "id": "diag_methylation", "name": "甲基化检测", "en": "Methylation assay", "year": 1980, "note": "检测表观遗传修饰辅助诊断。", "deps": ["dna"] },
+    { "id": "diag_ngs", "name": "次世代测序", "en": "Next-generation sequencing", "year": 2005, "note": "高通量并行测序全基因组。", "deps": ["dna", "computer"] },
+    { "id": "diag_whole_exome", "name": "全外显子测序", "en": "Whole exome sequencing", "year": 2010, "note": "聚焦编码区高效找致病变异。", "deps": ["dna"] },
+    { "id": "diag_mrna_seq", "name": "转录组测序", "en": "Transcriptome sequencing", "year": 2008, "note": "测RNA表达谱描绘基因活动。", "deps": ["dna"] },
+    { "id": "diag_single_cell_seq", "name": "单细胞测序", "en": "Single-cell sequencing", "year": 2009, "note": "解析细胞异质性的转录组。", "deps": ["dna", "computer"] },
+    { "id": "diag_crispr_diag", "name": "CRISPR诊断", "en": "CRISPR diagnostics", "year": 2016, "note": "以Cas酶特异识别报告病原核酸。", "deps": ["dna", "genetic_engineering"] },
+    { "id": "diag_liquid_biopsy", "name": "液体活检", "en": "Liquid biopsy", "year": 2010, "note": "以血循环核酸无创监测肿瘤。", "deps": ["dna"] },
+    { "id": "diag_metagenomics", "name": "宏基因组分析", "en": "Metagenomics", "year": 2010, "note": "测序样本全部微生物基因。", "deps": ["dna"] },
+    { "id": "diag_proteomics", "name": "蛋白质组学", "en": "Proteomics", "year": 2000, "note": "系统分析蛋白表达与修饰。", "deps": ["dna"] }
+   ]
+  },
+  {
+   "name": "POCT",
+   "items": [
+    { "id": "diag_home_pregnancy", "name": "家用早孕试纸", "en": "Home pregnancy test", "year": 1970, "note": "尿HCG免疫层析居家自检。", "deps": [] },
+    { "id": "diag_glucometer", "name": "血糖仪", "en": "Blood glucose meter", "year": 1980, "note": "指尖血快速测血糖管理糖尿病。", "deps": ["semiconductors"] },
+    { "id": "diag_rapid_card", "name": "快速检测卡", "en": "Rapid test cassette", "year": 1980, "note": "免疫层析卡快速初筛感染。", "deps": [] },
+    { "id": "diag_poct_strep", "name": "快速链球菌检测", "en": "Rapid strep test", "year": 1980, "note": "咽拭子快检A族链球菌。", "deps": [] },
+    { "id": "diag_finger_pulse_ox", "name": "指夹血氧", "en": "Finger pulse oximeter", "year": 1980, "note": "无创测血氧饱和度。", "deps": [] },
+    { "id": "diag_poct_flu", "name": "流感快检", "en": "Rapid influenza test", "year": 1990, "note": "鼻咽拭子快速诊断流感。", "deps": [] },
+    { "id": "diag_poct_blood_gas", "name": "床旁血气", "en": "Point-of-care blood gas", "year": 1990, "note": "床旁即时测血气与电解质。", "deps": [] },
+    { "id": "diag_poct_cardiac", "name": "心肌标志物床旁", "en": "POCT cardiac markers", "year": 1990, "note": "床旁快测肌钙蛋白诊心梗。", "deps": [] },
+    { "id": "diag_poct_coag", "name": "床旁凝血", "en": "POCT coagulation", "year": 1990, "note": "即时测INR等凝血指标。", "deps": [] },
+    { "id": "diag_poct_lactate", "name": "床旁乳酸", "en": "POCT lactate", "year": 1990, "note": "即时乳酸评估灌注与休克。", "deps": [] },
+    { "id": "diag_poct_inr", "name": "床旁INR", "en": "POCT INR", "year": 1990, "note": "抗凝患者居家监测凝血。", "deps": [] },
+    { "id": "diag_smart_poct", "name": "智能POCT", "en": "Smart POCT", "year": 2010, "note": "联网便携设备自动上传结果。", "deps": ["computer", "semiconductors"] }
+   ]
+  },
+  {
+   "name": "远程与AI",
+   "items": [
+    { "id": "diag_teleradiology", "name": "远程放射", "en": "Teleradiology", "year": 1990, "note": "影像网络传输异地会诊。", "deps": ["computer", "internet"] },
+    { "id": "diag_teleconsult", "name": "远程会诊", "en": "Teleconsultation", "year": 1990, "note": "跨地域专家协同诊断。", "deps": ["internet"] },
+    { "id": "diag_ai_cad", "name": "影像辅助诊断", "en": "CAD (computer-aided diagnosis)", "year": 1998, "note": "算法标注可疑病灶辅助读片。", "deps": ["computer", "ai"] },
+    { "id": "diag_cloud_pacs", "name": "云影像存储", "en": "Cloud PACS", "year": 2000, "note": "云端归档调阅医学影像。", "deps": ["internet", "computer"] },
+    { "id": "diag_remote_monitoring", "name": "远程监护", "en": "Remote monitoring", "year": 2000, "note": "居家传输生命体征预警。", "deps": ["internet"] },
+    { "id": "diag_ai_ecg", "name": "AI心电", "en": "AI ECG", "year": 2010, "note": "深度学习自动判读心电图。", "deps": ["diag_ecg", "ai"] },
+    { "id": "diag_ai_dx_assist", "name": "辅助决策系统", "en": "Clinical decision support", "year": 2010, "note": "整合数据提示诊断与用药。", "deps": ["ai", "computer"] },
+    { "id": "diag_ai_pathology", "name": "AI病理", "en": "AI pathology", "year": 2015, "note": "深度学习辅助组织切片判读。", "deps": ["diag_digital_pathology", "ai"] },
+    { "id": "diag_ai_genomics", "name": "AI基因组解读", "en": "AI genomics interpretation", "year": 2015, "note": "算法注释致病变异与表型。", "deps": ["diag_ngs", "ai"] },
+    { "id": "diag_ai_lung", "name": "肺结节AI", "en": "AI lung nodule", "year": 2015, "note": "CT自动检出并随访肺结节。", "deps": ["diag_ai_cad"] },
+    { "id": "diag_tele_ultrasound", "name": "远程超声", "en": "Tele-ultrasound", "year": 2000, "note": "专家远程指导并判读超声。", "deps": ["internet", "diag_ultrasound"] },
+    { "id": "diag_digital_twins", "name": "数字孪生诊断", "en": "Digital twin diagnosis", "year": 2020, "note": "个体模型模拟推演病情。", "deps": ["computer", "ai"] }
+   ]
+  }
+ ]
+}

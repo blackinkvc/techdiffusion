@@ -1,0 +1,1109 @@
+{
+ "cat": "manufact",
+ "catName": "制造与工具",
+ "sub": "food_proc",
+ "subName": "食品加工与保藏",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "agriculture",
+  "fermentation",
+  "fire",
+  "steam_engine",
+  "electricity",
+  "chemistry",
+  "waterwheel",
+  "stone_tools"
+ ],
+ "families": [
+  {
+   "name": "谷物碾磨与粉粒加工",
+   "items": [
+    {
+     "id": "food_saddle_quern",
+     "name": "鞍形磨盘",
+     "en": "Saddle quern",
+     "year": -6000,
+     "note": "新石器时代以石盘往复碾碎谷物的工具，是最早的谷物制粉方式。",
+     "deps": [
+      "stone_tools"
+     ]
+    },
+    {
+     "id": "food_rotary_quern",
+     "name": "旋转手磨",
+     "en": "Rotary quern",
+     "year": -400,
+     "note": "上下两盘相对旋转碾磨谷物的手推磨，效率高于往复磨盘。"
+    },
+    {
+     "id": "food_watermill_flour",
+     "name": "水力磨坊",
+     "en": "Watermill",
+     "year": 200,
+     "note": "以水车驱动石磨连续磨粉，罗马巴尔贝加尔磨坊群为其规模化的代表。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "food_bolting_mill",
+     "name": "筛粉罗",
+     "en": "Bolting mill",
+     "year": 1500,
+     "note": "以细绢网筛分级面粉的设备，用于制取精细粉料。"
+    },
+    {
+     "id": "food_steam_flourmill",
+     "name": "蒸汽磨粉厂",
+     "en": "Steam-powered flour mill",
+     "year": 1785,
+     "note": "奥利弗·埃文斯设计自动化连续面粉厂，用斗式提升与螺旋输送贯通工序。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "food_roller_mill",
+     "name": "辊式磨粉机",
+     "en": "Roller mill",
+     "year": 1878,
+     "note": "匈牙利创制的金属辊磨逐步取代石磨，可精确分级研磨小麦制取精粉。"
+    },
+    {
+     "id": "food_middlings_purifier",
+     "name": "清粉机",
+     "en": "Middlings purifier",
+     "year": 1870,
+     "note": "以气流与筛网分离麦心与麸屑，是低灰分精制面粉的关键设备。"
+    },
+    {
+     "id": "food_plansifter",
+     "name": "高方平筛",
+     "en": "Plansifter",
+     "year": 1890,
+     "note": "多层筛格往复筛分磨下物，把粉粒按粒度分级，支撑连续制粉流程。"
+    },
+    {
+     "id": "food_rice_milling",
+     "name": "机械碾米",
+     "en": "Machine rice milling",
+     "year": 1890,
+     "note": "碾米机以摩擦或削刨去除稻壳与糠层，配套抛光产出精白米。"
+    },
+    {
+     "id": "food_rubber_roll_huller",
+     "name": "橡胶辊砻谷机",
+     "en": "Rubber-roll huller",
+     "year": 1940,
+     "note": "一对异速橡胶辊挤压脱壳，碎米少、整米率高，成为现代砻谷主流。"
+    },
+    {
+     "id": "food_parboiled_rice",
+     "name": "蒸谷米加工",
+     "en": "Parboiled rice",
+     "year": 1910,
+     "note": "稻谷浸泡蒸煮后干燥再碾，使维生素进入米粒内部并提高出米率。"
+    },
+    {
+     "id": "food_grain_color_sorter",
+     "name": "光电色选机",
+     "en": "Optical grain color sorter",
+     "year": 1970,
+     "note": "以相机识别并气吹剔除异色与霉变粮粒，广泛用于大米与豆类精选。"
+    },
+    {
+     "id": "food_corn_flakes",
+     "name": "玉米片早餐谷物",
+     "en": "Corn flakes",
+     "year": 1894,
+     "note": "凯洛格把熟玉米压片烘烤制成即食玉米片，开启早餐谷物工业。"
+    },
+    {
+     "id": "food_puffed_grain",
+     "name": "膨化谷物",
+     "en": "Puffed grain",
+     "year": 1904,
+     "note": "安德森发明膨化枪式工艺，把谷物瞬间降压膨化，用于谷物早餐。"
+    },
+    {
+     "id": "food_instant_noodles",
+     "name": "方便面",
+     "en": "Instant noodles",
+     "year": 1958,
+     "note": "安藤百福发明油炸脱水、冲泡即食的面饼工艺，成为全球性方便食品。"
+    },
+    {
+     "id": "food_grain_silo",
+     "name": "机械化粮仓",
+     "en": "Grain elevator and silo",
+     "year": 1843,
+     "note": "带斗提与溜管的立筒粮仓实现谷物大容量机械化收储与转运。"
+    },
+    {
+     "id": "food_pasta_drying",
+     "name": "挂面干燥",
+     "en": "Noodle drying",
+     "year": 1900,
+     "note": "以温湿可控的干燥间处理成型面条，防止酥条并稳定货架期。"
+    },
+    {
+     "id": "food_indented_cylinder_separator",
+     "name": "窝眼筒精选机",
+     "en": "Indented cylinder separator",
+     "year": 1900,
+     "note": "按籽粒长度以窝眼兜选分离野燕麦与杂草籽，用于谷物清选。"
+    },
+    {
+     "id": "food_magnetic_grain_cleaner",
+     "name": "谷物磁选机",
+     "en": "Magnetic separator for grain",
+     "year": 1910,
+     "note": "以磁辊吸附去除粮食中混入的铁屑，保护磨辊与后续设备。"
+    },
+    {
+     "id": "food_grain_dryer",
+     "name": "谷物烘干机",
+     "en": "Grain dryer",
+     "year": 1940,
+     "note": "热风连续烘干高水分稻谷与玉米，减少霉变损耗。"
+    },
+    {
+     "id": "food_destoner",
+     "name": "比重去石机",
+     "en": "Destoner",
+     "year": 1940,
+     "note": "以气流与振动按比重把并肩石从谷物中分离。"
+    },
+    {
+     "id": "food_hammer_mill",
+     "name": "锤式粉碎机",
+     "en": "Hammer mill",
+     "year": 1900,
+     "note": "锤片高速冲击粉碎谷物与油粕，广泛用于饲料与食品原料。"
+    },
+    {
+     "id": "food_instant_oatmeal",
+     "name": "速食燕麦片",
+     "en": "Instant oatmeal",
+     "year": 1966,
+     "note": "预蒸煮压片的速食燕麦工艺，冲泡即食，扩大谷物早餐市场。"
+    }
+   ]
+  },
+  {
+   "name": "油脂制取与烘焙糖品",
+   "items": [
+    {
+     "id": "food_cane_mill",
+     "name": "甘蔗压榨制糖",
+     "en": "Sugar cane milling",
+     "year": 1500,
+     "note": "以辊压机多次榨出蔗汁并熬煮结晶，奠定蔗糖工业基础。"
+    },
+    {
+     "id": "food_beet_sugar",
+     "name": "甜菜制糖",
+     "en": "Beet sugar process",
+     "year": 1802,
+     "note": "阿哈尔德建成首座甜菜糖厂，浸出提汁与结晶精制流程确立。"
+    },
+    {
+     "id": "food_hydraulic_oil_press",
+     "name": "液压榨油机",
+     "en": "Hydraulic oil press",
+     "year": 1795,
+     "note": "布拉默液压机用于榨取橄榄油与种子油，开启高压力榨油时代。"
+    },
+    {
+     "id": "food_screw_oil_press",
+     "name": "螺旋榨油机",
+     "en": "Screw press expeller",
+     "year": 1900,
+     "note": "安德森榨油机以螺旋连续压榨油料，可连续大规模生产植物油。"
+    },
+    {
+     "id": "food_solvent_extraction_oil",
+     "name": "浸出法制油",
+     "en": "Solvent oil extraction",
+     "year": 1910,
+     "note": "以己烷浸出饼粕中残油，出油率高于压榨，是大豆油生产主流。"
+    },
+    {
+     "id": "food_oil_refining",
+     "name": "油脂精炼",
+     "en": "Edible oil refining",
+     "year": 1900,
+     "note": "经脱胶、脱酸、脱色与脱臭除去毛油杂质，制得稳定食用油。"
+    },
+    {
+     "id": "food_oil_hydrogenation",
+     "name": "油脂氢化",
+     "en": "Oil hydrogenation",
+     "year": 1903,
+     "note": "诺曼实现植物油催化加氢硬化，用于制人造奶油与起酥油。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "food_margarine",
+     "name": "人造奶油",
+     "en": "Margarine",
+     "year": 1869,
+     "note": "梅热-穆里耶乳化牛脂与奶制成黄油替代品，普法战争后普及。"
+    },
+    {
+     "id": "food_cocoa_pressing",
+     "name": "可可压榨",
+     "en": "Cocoa pressing",
+     "year": 1828,
+     "note": "范豪滕压榨可可脂并碱化可可粉，为固体巧克力诞生奠定基础。"
+    },
+    {
+     "id": "food_chocolate_conching",
+     "name": "巧克力精炼",
+     "en": "Chocolate conching",
+     "year": 1879,
+     "note": "林特发明研拌缸长时间揉压巧克力浆，使口感细腻并发展风味。"
+    },
+    {
+     "id": "food_glucose_syrup",
+     "name": "淀粉糖浆",
+     "en": "Glucose syrup",
+     "year": 1811,
+     "note": "基尔霍夫酸水解淀粉制葡萄糖，后发展为糖果与饮料用糖浆。"
+    },
+    {
+     "id": "food_fructose_syrup",
+     "name": "果葡糖浆",
+     "en": "High-fructose corn syrup",
+     "year": 1957,
+     "note": "酶法异构化葡萄糖制高果糖浆，成为饮料工业主要甜味剂。"
+    },
+    {
+     "id": "food_wheat_starch_gluten",
+     "name": "小麦淀粉与面筋分离",
+     "en": "Wheat starch-gluten separation",
+     "year": 1835,
+     "note": "以水洗法分离淀粉与谷朊粉，支撑淀粉与面筋食品生产。"
+    },
+    {
+     "id": "food_fruit_jam",
+     "name": "果酱熬制",
+     "en": "Fruit jam making",
+     "year": 1800,
+     "note": "水果加糖熬煮浓缩至可保藏的果酱，结合果胶形成凝胶结构。"
+    },
+    {
+     "id": "food_dough_mixer",
+     "name": "和面机",
+     "en": "Dough mixer",
+     "year": 1900,
+     "note": "机械搅拌揉制面团的设备，配发酵房实现面包馒头工业化。"
+    },
+    {
+     "id": "food_industrial_baking_oven",
+     "name": "隧道式烤炉",
+     "en": "Tunnel baking oven",
+     "year": 1900,
+     "note": "面团随输送带穿过连续加热炉腔烘烤，实现面包糕点连续生产。"
+    },
+    {
+     "id": "food_oil_deodorization",
+     "name": "油脂真空脱臭",
+     "en": "Vacuum deodorization of oils",
+     "year": 1930,
+     "note": "高温真空汽提去除油脂异味与游离脂肪酸，制得无异味精炼油。"
+    },
+    {
+     "id": "food_palm_oil_fractionation",
+     "name": "油脂分提",
+     "en": "Oil fractionation",
+     "year": 1970,
+     "note": "按熔点分级结晶分离油脂组分，棕榈油经干法分提供煎炸与糖果用。"
+    }
+   ]
+  },
+  {
+   "name": "酿造与发酵食品",
+   "items": [
+    {
+     "id": "food_ancient_beer",
+     "name": "谷物发酵饮料",
+     "en": "Ancient fermented beverages",
+     "year": -7000,
+     "note": "河南贾湖遗址发现最早谷物-蜂蜜发酵饮品，为酿造技术之滥觞。",
+     "deps": [
+      "fermentation"
+     ]
+    },
+    {
+     "id": "food_wine_fermentation",
+     "name": "葡萄酒酿造",
+     "en": "Wine making",
+     "year": -6000,
+     "note": "高加索地区驯化葡萄后发展出发酵酿酒，地中海文明随之传播。",
+     "deps": [
+      "fermentation"
+     ]
+    },
+    {
+     "id": "food_beer_brewing",
+     "name": "啤酒酿制",
+     "en": "Beer brewing",
+     "year": -4000,
+     "note": "苏美尔人用麦芽与酵母酿制啤酒，早期伴随面包制作发展。"
+    },
+    {
+     "id": "food_koji_starters",
+     "name": "酒曲与制曲",
+     "en": "Koji starter cultivation",
+     "year": -1000,
+     "note": "中国以固态培养曲霉菌制曲酿酒，后传至日本形成清酒与酱醋发酵。"
+    },
+    {
+     "id": "food_vinegar_making",
+     "name": "食醋酿造",
+     "en": "Vinegar making",
+     "year": -2000,
+     "note": "以醋酸菌把酒精氧化为醋酸，古巴比伦已有椰枣醋酿造。"
+    },
+    {
+     "id": "food_quick_vinegar_process",
+     "name": "速酿醋发生器",
+     "en": "Quick vinegar generator",
+     "year": 1823,
+     "note": "舒岑巴赫以滴流填料塔通气速酿食醋，实现醋酸发酵工业化。"
+    },
+    {
+     "id": "food_cheese_making",
+     "name": "奶酪制作",
+     "en": "Cheese making",
+     "year": -5500,
+     "note": "以凝乳酶凝固乳蛋白并排乳清、熟成的工艺，波兰出土最早陶筛为证。",
+     "deps": [
+      "fermentation"
+     ]
+    },
+    {
+     "id": "food_cream_separator",
+     "name": "乳脂离心分离机",
+     "en": "Cream separator",
+     "year": 1878,
+     "note": "德·拉瓦尔碟片离心机连续分离奶油，使黄油与奶酪生产规模化。"
+    },
+    {
+     "id": "food_pure_culture_yogurt",
+     "name": "纯种发酵酸奶",
+     "en": "Starter culture yogurt",
+     "year": 1905,
+     "note": "梅契尼可夫研究乳酸菌后，以纯培养菌种实现酸奶工业化生产。"
+    },
+    {
+     "id": "food_bakers_yeast",
+     "name": "工业面包酵母",
+     "en": "Baker's yeast production",
+     "year": 1868,
+     "note": "弗莱施曼公司在美国量产压缩酵母，取代自培酵母的烘培方式。"
+    },
+    {
+     "id": "food_lager_brewing",
+     "name": "拉格啤酒酿造",
+     "en": "Lager brewing",
+     "year": 1842,
+     "note": "皮尔森首创下层发酵与低温熟成工艺，啤酒获得清澈爽口风格。"
+    },
+    {
+     "id": "food_soy_sauce",
+     "name": "酱油酿造",
+     "en": "Soy sauce brewing",
+     "year": 1000,
+     "note": "以大豆小麦制曲并经长期盐水发酵制酱油，中国宋代文献已记载。"
+    },
+    {
+     "id": "food_sake_brewing",
+     "name": "清酒酿造",
+     "en": "Sake brewing",
+     "year": 800,
+     "note": "日本以米曲并行发酵酿造清酒，形成独特的多菌种酿造工艺。"
+    },
+    {
+     "id": "food_pot_still_spirits",
+     "name": "蒸馏烈酒",
+     "en": "Pot-still spirits",
+     "year": 1150,
+     "note": "中世纪欧洲以蒸馏器浓缩酒精制白兰地与威士忌，烈酒工业肇始。"
+    },
+    {
+     "id": "food_msg_production",
+     "name": "味精生产",
+     "en": "Monosodium glutamate",
+     "year": 1909,
+     "note": "池田菊苗发现谷氨酸鲜味后，味之素以水解蛋白法量产味精。"
+    },
+    {
+     "id": "food_citric_acid_fermentation",
+     "name": "柠檬酸发酵",
+     "en": "Citric acid fermentation",
+     "year": 1917,
+     "note": "柯里以黑曲霉浅盘发酵制柠檬酸，为饮料食品提供酸味剂。"
+    },
+    {
+     "id": "food_malted_milk",
+     "name": "麦乳精",
+     "en": "Malted milk",
+     "year": 1883,
+     "note": "霍里克发明麦芽乳粉饮料，是早期营养强化固体饮料。"
+    },
+    {
+     "id": "food_fermented_sausage",
+     "name": "发酵干香肠",
+     "en": "Dry fermented sausage",
+     "year": 1700,
+     "note": "以乳酸菌与霉菌发酵风干的肉肠，地中海地区形成萨拉米传统。"
+    },
+    {
+     "id": "food_sourdough_bread",
+     "name": "酸面团发酵面包",
+     "en": "Sourdough leavened bread",
+     "year": -3000,
+     "note": "古埃及利用野生酵母与乳酸菌面团发酵烤制面包，奠定面包工业源头。",
+     "deps": [
+      "fermentation"
+     ]
+    },
+    {
+     "id": "food_fish_sauce",
+     "name": "鱼露发酵",
+     "en": "Fish sauce fermentation",
+     "year": 100,
+     "note": "以盐渍鱼长期酶解发酵取汁，古罗马garum与东南亚鱼露同源。"
+    },
+    {
+     "id": "food_industrial_enzymes",
+     "name": "食品工业用酶",
+     "en": "Industrial food enzymes",
+     "year": 1894,
+     "note": "高峰让吉以米曲霉制淀粉酶制剂，开启食品加工用商品化酶时代。"
+    },
+    {
+     "id": "food_bottle_sparkling",
+     "name": "瓶内二次发酵起泡酒",
+     "en": "Bottle-fermented sparkling wine",
+     "year": 1700,
+     "note": "基酒装瓶加糖酵母二次发酵产气，香槟工艺其后逐步标准化。"
+    }
+   ]
+  },
+  {
+   "name": "腌渍、烟熏与传统保藏",
+   "items": [
+    {
+     "id": "food_salting",
+     "name": "盐渍保藏",
+     "en": "Salting",
+     "year": -3000,
+     "note": "以食盐渗透脱水抑制微生物，是人类最古老的食品保藏方法之一。"
+    },
+    {
+     "id": "food_pickling",
+     "name": "腌渍泡菜",
+     "en": "Pickling",
+     "year": -2400,
+     "note": "美索不达米亚人以盐水腌黄瓜，乳酸发酵腌渍法此后遍布欧亚。"
+    },
+    {
+     "id": "food_smoking",
+     "name": "烟熏保藏",
+     "en": "Smoking",
+     "year": -2000,
+     "note": "以烟中酚类与醛类抑菌防腐并赋予风味，史前已有鱼肉熏制。"
+    },
+    {
+     "id": "food_brining_ham",
+     "name": "盐水火腿腌制",
+     "en": "Brined ham curing",
+     "year": 1500,
+     "note": "以盐卤注射或浸泡腌制腿肉，配糖与香料形成定型火腿工艺。"
+    },
+    {
+     "id": "food_dry_cured_ham",
+     "name": "干腌火腿",
+     "en": "Dry-cured ham",
+     "year": 1300,
+     "note": "整腿盐渍后长年低温风干熟成，形成帕尔玛等硬质火腿体系。"
+    },
+    {
+     "id": "food_nitrite_curing",
+     "name": "亚硝酸盐腌肉",
+     "en": "Nitrite curing",
+     "year": 1900,
+     "note": "以亚硝酸盐固定肉色并抑制肉毒杆菌，现代腌肉制品普遍使用。"
+    },
+    {
+     "id": "food_liquid_smoke",
+     "name": "烟熏液",
+     "en": "Liquid smoke",
+     "year": 1895,
+     "note": "干馏木材并冷凝制取烟熏香精，可喷涂或浸渍代替传统熏制。"
+    },
+    {
+     "id": "food_sausage_making",
+     "name": "香肠灌制",
+     "en": "Sausage making",
+     "year": 100,
+     "note": "把调味肉糜灌入肠衣并结扎，古罗马已有记载，是肉制品保存形式。"
+    },
+    {
+     "id": "food_emulsified_sausage",
+     "name": "乳化型香肠",
+     "en": "Emulsified sausage",
+     "year": 1852,
+     "note": "斩拌乳化肉糜制法兰克福香肠，配合烟熏蒸煮实现大规模生产。"
+    },
+    {
+     "id": "food_salted_egg",
+     "name": "咸蛋加工",
+     "en": "Salted egg",
+     "year": 1200,
+     "note": "以盐泥或盐水腌制禽蛋使蛋白凝固咸化，中国南宋文献已有记载。"
+    },
+    {
+     "id": "food_dried_fish_salting",
+     "name": "盐渍干鱼",
+     "en": "Salted and dried fish",
+     "year": -1500,
+     "note": "盐渍后再晾晒的鱼干加工，支撑远洋捕捞与长途贸易。"
+    },
+    {
+     "id": "food_meat_starter_culture",
+     "name": "肉品发酵剂",
+     "en": "Meat starter cultures",
+     "year": 1950,
+     "note": "接种乳酸菌等纯培养菌种发酵香肠，使风味与安全性可控。"
+    },
+    {
+     "id": "food_sugar_conserving",
+     "name": "糖渍蜜饯",
+     "en": "Sugar preserving",
+     "year": 1600,
+     "note": "高浓度糖渍与熬煮使果品长期保藏，欧洲与亚洲均有蜜饯传统。"
+    },
+    {
+     "id": "food_sauerkraut",
+     "name": "酸菜乳酸发酵",
+     "en": "Lactic fermented cabbage",
+     "year": 1600,
+     "note": "以盐渍促乳酸发酵保藏蔬菜，德国酸白菜与中国泡菜皆出此路。",
+     "deps": [
+      "fermentation"
+     ]
+    },
+    {
+     "id": "food_preserved_egg",
+     "name": "皮蛋碱性腌制",
+     "en": "Preserved egg processing",
+     "year": 1500,
+     "note": "以碱与盐腌制鲜蛋使蛋白凝胶变黑，中国明代已有皮蛋记载。"
+    }
+   ]
+  },
+  {
+   "name": "热杀菌与罐藏",
+   "items": [
+    {
+     "id": "food_appert_canning",
+     "name": "罐藏法",
+     "en": "Appert's canning",
+     "year": 1809,
+     "note": "阿佩尔以加热密封玻璃瓶保藏食物，获拿破仑奖金，食品保藏进入热力杀菌时代。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "food_tin_can",
+     "name": "镀锡铁皮罐头",
+     "en": "Tin can",
+     "year": 1810,
+     "note": "杜兰德用镀锡铁罐替代玻璃瓶，耐运耐存的军需罐头由此普及。"
+    },
+    {
+     "id": "food_mason_jar",
+     "name": "家用旋盖瓶",
+     "en": "Mason jar",
+     "year": 1858,
+     "note": "梅森发明螺纹口玻璃罐配密封盖，使家庭罐藏安全易行。"
+    },
+    {
+     "id": "food_pasteurization",
+     "name": "巴氏杀菌",
+     "en": "Pasteurization",
+     "year": 1862,
+     "note": "巴斯德以中温短时加热杀灭酒乳中有害微生物，奠定低温热杀菌基础。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "food_retort",
+     "name": "高压杀菌釜",
+     "en": "Retort",
+     "year": 1861,
+     "note": "加压蒸汽杀菌罐提升罐内温度，用于低酸食品的商业无菌处理。"
+    },
+    {
+     "id": "food_continuous_retort",
+     "name": "连续式杀菌机",
+     "en": "Continuous pressure sterilizer",
+     "year": 1920,
+     "note": "罐头在高压舱内连续滚动或转动通过杀菌区，提高罐装线产能。"
+    },
+    {
+     "id": "food_htst_pasteurization",
+     "name": "高温短时杀菌",
+     "en": "High-temperature short-time pasteurization",
+     "year": 1923,
+     "note": "以板式换热器对牛乳短时高温杀菌，兼顾杀菌效果与风味营养。"
+    },
+    {
+     "id": "food_aseptic_processing",
+     "name": "无菌加工灌装",
+     "en": "Aseptic processing",
+     "year": 1948,
+     "note": "物料单独超高温杀菌后冷却，在无菌环境灌装密封，无需整罐加热。"
+    },
+    {
+     "id": "food_uht_milk",
+     "name": "超高温灭菌乳",
+     "en": "UHT milk",
+     "year": 1961,
+     "note": "牛乳135度以上瞬时灭菌并无菌包装，可常温长期储存。"
+    },
+    {
+     "id": "food_aseptic_carton",
+     "name": "无菌纸盒包装",
+     "en": "Aseptic carton package",
+     "year": 1963,
+     "note": "纸铝塑多层卷材成型灌装的砖形盒，配合无菌系统实现常温饮品包装。"
+    },
+    {
+     "id": "food_retort_pouch",
+     "name": "蒸煮袋",
+     "en": "Retort pouch",
+     "year": 1968,
+     "note": "铝塑复合袋装食品经高温高压杀菌，薄而传热快，用于军用与软罐头。"
+    },
+    {
+     "id": "food_glass_jar_retort",
+     "name": "玻璃罐热杀菌",
+     "en": "Glass jar thermal processing",
+     "year": 1900,
+     "note": "针对玻璃罐传热与破裂特性的杀菌规程建立，果蔬罐头多用瓶装。"
+    },
+    {
+     "id": "food_boiling_water_bath",
+     "name": "沸水浴杀菌",
+     "en": "Boiling water bath",
+     "year": 1810,
+     "note": "以沸水常压杀菌高酸食品，为家庭与作坊罐藏的简便方法。"
+    },
+    {
+     "id": "food_milk_homogenization",
+     "name": "高压均质",
+     "en": "Milk homogenization",
+     "year": 1899,
+     "note": "高兰发明的均质机把乳脂肪球细化，防止奶油上浮分层。"
+    },
+    {
+     "id": "food_can_seamer",
+     "name": "双重卷封机",
+     "en": "Double seamer",
+     "year": 1900,
+     "note": "把罐盖与罐身滚压双重卷边密封的封罐设备，取代焊锡封罐。"
+    },
+    {
+     "id": "food_tunnel_pasteurizer",
+     "name": "隧道式喷淋杀菌机",
+     "en": "Tunnel pasteurizer",
+     "year": 1907,
+     "note": "瓶罐饮品随输送带经分段喷淋加热冷却，用于啤酒饮料巴氏杀菌。"
+    },
+    {
+     "id": "food_rotary_retort",
+     "name": "旋转式杀菌釜",
+     "en": "Rotary retort",
+     "year": 1920,
+     "note": "杀菌釜内回转翻搅罐内物料，强化传热以缩短杀菌时间。"
+    },
+    {
+     "id": "food_liquid_egg_pasteurization",
+     "name": "液蛋巴氏杀菌",
+     "en": "Liquid egg pasteurization",
+     "year": 1940,
+     "note": "对打蛋后的蛋液低温巴氏杀菌并灭菌，保障蛋制品安全。"
+    }
+   ]
+  },
+  {
+   "name": "冷藏冷冻与冷链",
+   "items": [
+    {
+     "id": "food_icehouse",
+     "name": "冰窖储鲜",
+     "en": "Icehouse",
+     "year": -1000,
+     "note": "冬季储冰于隔热窖内供夏季冷藏食品，中国周代已有冰窖制度。"
+    },
+    {
+     "id": "food_ice_harvest_trade",
+     "name": "天然冰采运",
+     "en": "Natural ice harvesting",
+     "year": 1800,
+     "note": "十九世纪北美大规模采运湖冰供城市冷藏，催生冰业贸易。"
+    },
+    {
+     "id": "food_mechanical_refrigeration",
+     "name": "氨压缩制冷机",
+     "en": "Ammonia vapor-compression refrigerator",
+     "year": 1876,
+     "note": "林德研制的氨压缩制冷机使人工制冰与冷库稳定运行。"
+    },
+    {
+     "id": "food_cold_storage_warehouse",
+     "name": "冷库",
+     "en": "Cold storage warehouse",
+     "year": 1880,
+     "note": "绝热库房配大型压缩制冷机组，实现肉类果蔬的长期低温储存。"
+    },
+    {
+     "id": "food_refrigerated_ship",
+     "name": "冷藏船",
+     "en": "Refrigerated cargo ship",
+     "year": 1876,
+     "note": "蒸汽压缩制冷船自南美与澳洲运冷冻肉至欧洲，改变跨洋食品贸易。"
+    },
+    {
+     "id": "food_refrigerated_railcar",
+     "name": "冷藏车厢",
+     "en": "Refrigerated railcar",
+     "year": 1867,
+     "note": "加冰车厢使芝加哥肉类运抵东岸，斯威夫特以此建立全国冷链。"
+    },
+    {
+     "id": "food_refrigerated_truck",
+     "name": "冷藏卡车",
+     "en": "Refrigerated truck",
+     "year": 1925,
+     "note": "机械制冷的厢式货车实现食品门到门冷链配送。"
+    },
+    {
+     "id": "food_quick_freezing",
+     "name": "速冻食品工艺",
+     "en": "Quick freezing",
+     "year": 1929,
+     "note": "白塞尔以双带速冻机快速冻结食品并零售，创立速冻食品工业。"
+    },
+    {
+     "id": "food_blast_freezer",
+     "name": "鼓风隧道速冻",
+     "en": "Blast freezer",
+     "year": 1935,
+     "note": "强冷风隧道使食品中心温度快速通过冰晶生成带，减少组织损伤。"
+    },
+    {
+     "id": "food_iqf_freezing",
+     "name": "单体速冻",
+     "en": "Individual quick freezing",
+     "year": 1960,
+     "note": "流化床把豌豆虾仁等逐个冻结而不粘连，便于按需取用。"
+    },
+    {
+     "id": "food_cryogenic_freezing",
+     "name": "液氮速冻",
+     "en": "Cryogenic freezing",
+     "year": 1965,
+     "note": "喷淋液氮实现极速冷冻，用于高价值食品保形保鲜。"
+    },
+    {
+     "id": "food_controlled_atmosphere",
+     "name": "气调贮藏",
+     "en": "Controlled atmosphere storage",
+     "year": 1929,
+     "note": "调节库内氧与二氧化碳浓度抑制果蔬呼吸，实现数月保鲜。"
+    },
+    {
+     "id": "food_vacuum_packaging",
+     "name": "真空包装",
+     "en": "Vacuum packaging",
+     "year": 1950,
+     "note": "抽除包装内空气减缓氧化与好氧菌生长，用于肉制品与熟食保藏。"
+    },
+    {
+     "id": "food_modified_atmosphere",
+     "name": "气调包装",
+     "en": "Modified atmosphere packaging",
+     "year": 1980,
+     "note": "以氮二氧化碳充填置换包装气体延长生鲜货架期，配阻隔膜使用。"
+    },
+    {
+     "id": "food_cold_chain_system",
+     "name": "全程冷链系统",
+     "en": "Cold chain logistics",
+     "year": 1950,
+     "note": "从产地到餐桌维持低温的储运网络，配套温控记录保障食品安全。"
+    },
+    {
+     "id": "food_reefer_container",
+     "name": "冷藏集装箱",
+     "en": "Reefer container",
+     "year": 1968,
+     "note": "自带制冷机组的标准集装箱，实现跨洋冷链多式联运。"
+    },
+    {
+     "id": "food_plate_freezer",
+     "name": "平板速冻机",
+     "en": "Contact plate freezer",
+     "year": 1935,
+     "note": "制冷平板夹压食品接触冻结，用于鱼块与汉堡肉饼。"
+    },
+    {
+     "id": "food_spiral_freezer",
+     "name": "螺旋速冻机",
+     "en": "Spiral freezer",
+     "year": 1965,
+     "note": "网状输送带螺旋上升使食品在紧凑空间内完成单体速冻。"
+    },
+    {
+     "id": "food_vacuum_precooling",
+     "name": "真空预冷",
+     "en": "Vacuum precooling",
+     "year": 1975,
+     "note": "减压使叶菜表面水分蒸发快速降温，用于生鲜蔬菜采后预冷。"
+    },
+    {
+     "id": "food_eutectic_plates",
+     "name": "蓄冷板运输",
+     "en": "Eutectic plate refrigeration",
+     "year": 1940,
+     "note": "预冻蓄冷板装于保温车厢内，无动力维持低温配送短途食品。"
+    }
+   ]
+  },
+  {
+   "name": "干燥脱水与新型保鲜加工",
+   "items": [
+    {
+     "id": "food_sun_drying",
+     "name": "日晒干燥",
+     "en": "Sun drying",
+     "year": -8000,
+     "note": "以太阳热与气流干燥果蔬谷物，是最原始的脱水保藏手段。"
+    },
+    {
+     "id": "food_air_drying",
+     "name": "风干脱水",
+     "en": "Air drying",
+     "year": -4000,
+     "note": "利用干燥气流自然风干肉鱼类食品，形成肉干鱼干传统。"
+    },
+    {
+     "id": "food_spray_drying",
+     "name": "喷雾干燥",
+     "en": "Spray drying",
+     "year": 1872,
+     "note": "珀西发明喷雾干燥法，把液态乳与蛋雾化热风干燥成粉末。"
+    },
+    {
+     "id": "food_benzoate_preservation",
+     "name": "苯甲酸钠防腐",
+     "en": "Benzoate preservative",
+     "year": 1875,
+     "note": "苯甲酸及其钠盐抑制酵母霉菌，是广泛使用的化学防腐剂。"
+    },
+    {
+     "id": "food_tunnel_dryer",
+     "name": "隧道式干燥机",
+     "en": "Tunnel dryer",
+     "year": 1880,
+     "note": "物料小车连续通过热风隧道干燥，用于果蔬脱水加工。"
+    },
+    {
+     "id": "food_dehydrated_soup",
+     "name": "脱水汤料",
+     "en": "Dehydrated soup mixes",
+     "year": 1900,
+     "note": "干制蔬菜肉粉配成复水汤料，供军需与便捷食品使用。"
+    },
+    {
+     "id": "food_ozone_sanitizing",
+     "name": "臭氧杀菌",
+     "en": "Ozone sanitizing",
+     "year": 1900,
+     "note": "臭氧氧化杀灭表面微生物，用于饮水、车间与果蔬清洗。"
+    },
+    {
+     "id": "food_milk_powder",
+     "name": "奶粉生产",
+     "en": "Milk powder production",
+     "year": 1901,
+     "note": "喷雾或滚筒干燥牛乳制乳粉，实现乳品耐储与远运。"
+    },
+    {
+     "id": "food_drum_drying",
+     "name": "滚筒干燥",
+     "en": "Drum drying",
+     "year": 1902,
+     "note": "贾斯特把料液涂布于加热滚筒刮下成片，用于谷物糊与薯泥干燥。"
+    },
+    {
+     "id": "food_freeze_drying",
+     "name": "冷冻干燥",
+     "en": "Freeze drying",
+     "year": 1906,
+     "note": "物料先冻结再在真空下升华除水，保留结构风味，用于咖啡与宇航食品。"
+    },
+    {
+     "id": "food_vacuum_concentration",
+     "name": "真空浓缩",
+     "en": "Vacuum concentration",
+     "year": 1910,
+     "note": "减压低温蒸发浓缩果汁与乳品，减少热敏成分损失。"
+    },
+    {
+     "id": "food_nisin",
+     "name": "乳酸链球菌素防腐",
+     "en": "Nisin preservative",
+     "year": 1928,
+     "note": "从乳酸菌分离的抗菌肽，作天然防腐剂用于乳品与罐头。"
+    },
+    {
+     "id": "food_edible_film",
+     "name": "可食涂膜保鲜",
+     "en": "Edible coatings",
+     "year": 1930,
+     "note": "蜡质与多糖涂膜阻隔水分气体，用于果蔬蛋品表面保鲜。"
+    },
+    {
+     "id": "food_hot_fill",
+     "name": "热灌装",
+     "en": "Hot filling",
+     "year": 1930,
+     "note": "趁热灌装高酸饮品利用余热灭菌瓶口，是饮料的简易无菌工艺。"
+    },
+    {
+     "id": "food_instant_coffee",
+     "name": "速溶咖啡",
+     "en": "Instant coffee",
+     "year": 1938,
+     "note": "喷雾干燥咖啡萃取液制速溶咖啡，成为大众化咖啡饮品。"
+    },
+    {
+     "id": "food_sorbate_preservation",
+     "name": "山梨酸钾防腐",
+     "en": "Potassium sorbate",
+     "year": 1945,
+     "note": "山梨酸及其盐类低毒广谱抑菌，成为现代食品防腐主流之一。"
+    },
+    {
+     "id": "food_fluidized_bed_drying",
+     "name": "流化床干燥食品",
+     "en": "Fluidized bed drying",
+     "year": 1950,
+     "note": "气流沸腾干燥颗粒状食品，常用于速溶颗粒与谷物早餐。"
+    },
+    {
+     "id": "food_product_metal_detector",
+     "name": "食品金属检测机",
+     "en": "Food metal detector",
+     "year": 1950,
+     "note": "在线检测剔除含金属异物的食品，是近代食品安全的标配设备。"
+    },
+    {
+     "id": "food_infrared_drying",
+     "name": "红外干燥",
+     "en": "Infrared drying",
+     "year": 1960,
+     "note": "以红外辐射加热快速干燥薄层食品，用于膨化与表面脱水。"
+    },
+    {
+     "id": "food_osmotic_dehydration",
+     "name": "渗透脱水",
+     "en": "Osmotic dehydration",
+     "year": 1960,
+     "note": "浸于高渗糖盐液中脱除部分水分，果蔬预处理后再行干燥。"
+    },
+    {
+     "id": "food_irradiation",
+     "name": "辐照保鲜",
+     "en": "Food irradiation",
+     "year": 1963,
+     "note": "以伽马射线或电子束照射杀灭微生物，美国批准辐照小麦面粉应用。"
+    },
+    {
+     "id": "food_microwave_drying",
+     "name": "微波干燥",
+     "en": "Microwave drying",
+     "year": 1970,
+     "note": "以微波体加热脱水，适合多孔与高含水物料，提高干燥均匀性。"
+    },
+    {
+     "id": "food_sous_vide",
+     "name": "低温真空烹制",
+     "en": "Sous vide cooking",
+     "year": 1974,
+     "note": "真空袋装食品在恒温水浴低温长时烹熟，餐饮工业化后广泛使用。"
+    },
+    {
+     "id": "food_ultrasonic_processing",
+     "name": "超声波辅助加工",
+     "en": "Ultrasonic food processing",
+     "year": 1980,
+     "note": "超声空化辅助提取、乳化与杀菌，用于果汁与油脂加工。"
+    },
+    {
+     "id": "food_membrane_concentration",
+     "name": "膜法浓缩澄清",
+     "en": "Membrane clarification and concentration",
+     "year": 1980,
+     "note": "超滤微滤澄清果汁与酒类并低温浓缩，减少热损伤。"
+    },
+    {
+     "id": "food_hpp",
+     "name": "超高压杀菌",
+     "en": "High pressure processing",
+     "year": 1990,
+     "note": "常温施加数百兆帕静压杀灭致病菌，果汁与即食肉制品实现商业化。"
+    },
+    {
+     "id": "food_pulsed_light",
+     "name": "脉冲强光杀菌",
+     "en": "Pulsed light",
+     "year": 1990,
+     "note": "宽谱强光脉冲瞬时杀菌，用于包装表面与水的非热消毒。"
+    },
+    {
+     "id": "food_xray_inspection",
+     "name": "食品X射线异物检测",
+     "en": "Food X-ray inspection",
+     "year": 1990,
+     "note": "以X射线透视检出玻璃、骨头与高密度异物，并可测填充量。"
+    },
+    {
+     "id": "food_pulsed_electric_field",
+     "name": "脉冲电场加工",
+     "en": "Pulsed electric field",
+     "year": 1995,
+     "note": "以微秒级高压脉冲破坏细胞膜实现冷杀菌，用于果汁与果蔬加工。"
+    },
+    {
+     "id": "food_ohmic_heating",
+     "name": "欧姆加热",
+     "en": "Ohmic heating",
+     "year": 1995,
+     "note": "让电流直接通过物料内加热，用于含颗粒食品的快速均匀杀菌。"
+    }
+   ]
+  }
+ ]
+}

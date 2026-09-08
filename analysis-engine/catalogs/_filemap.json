@@ -1,0 +1,372 @@
+{
+ "basic": {
+  "math": {
+   "name": "数学与逻辑",
+   "file": "basic_math.json"
+  },
+  "physics": {
+   "name": "物理探索",
+   "file": "basic_physics.json"
+  },
+  "chemistry": {
+   "name": "化学研究",
+   "file": "basic_chemistry.json"
+  },
+  "astronomy": {
+   "name": "天文与宇宙探索",
+   "file": "basic_astronomy.json"
+  },
+  "earthsci": {
+   "name": "地球科学",
+   "file": "basic_earthsci.json"
+  },
+  "biosci": {
+   "name": "生命科学研究",
+   "file": "basic_biosci.json"
+  },
+  "measure": {
+   "name": "测量与计量",
+   "file": "basic_measure.json"
+  },
+  "method": {
+   "name": "科研方法与工具",
+   "file": "basic_method.json"
+  }
+ },
+ "material": {
+  "natmaterial": {
+   "name": "天然材料利用",
+   "file": "material_natmaterial.json"
+  },
+  "metal_basic": {
+   "name": "金属冶炼与基础合金",
+   "file": "material_metal_basic.json"
+  },
+  "metal_adv": {
+   "name": "先进金属与特种合金",
+   "file": "material_metal_adv.json"
+  },
+  "ceramic_glass": {
+   "name": "陶瓷与玻璃",
+   "file": "material_ceramic_glass.json"
+  },
+  "polymer": {
+   "name": "高分子与塑料",
+   "file": "material_polymer.json"
+  },
+  "semimaterial": {
+   "name": "半导体与电子材料",
+   "file": "material_semimaterial.json"
+  },
+  "composite": {
+   "name": "复合材料",
+   "file": "material_composite.json"
+  },
+  "nanomaterial": {
+   "name": "纳米与微结构材料",
+   "file": "material_nanomaterial.json"
+  },
+  "buildmaterial": {
+   "name": "建筑与工程材料",
+   "file": "material_buildmaterial.json"
+  },
+  "funmaterial": {
+   "name": "功能材料",
+   "file": "material_funmaterial.json"
+  },
+  "textile": {
+   "name": "纤维纺织与印染",
+   "file": "material_textile.json"
+  }
+ },
+ "energy": {
+  "biomass": {
+   "name": "生物质与薪柴利用",
+   "file": "energy_biomass.json"
+  },
+  "animal_human": {
+   "name": "人力畜力利用",
+   "file": "energy_animal_human.json"
+  },
+  "hydropower": {
+   "name": "水能利用",
+   "file": "energy_hydropower.json"
+  },
+  "windpower": {
+   "name": "风能利用",
+   "file": "energy_windpower.json"
+  },
+  "fossil": {
+   "name": "化石能源开采利用",
+   "file": "energy_fossil.json"
+  },
+  "electric_gen": {
+   "name": "电力生产",
+   "file": "energy_electric_gen.json"
+  },
+  "solar": {
+   "name": "太阳能利用",
+   "file": "energy_solar.json"
+  },
+  "geo_ocean": {
+   "name": "地热与海洋能",
+   "file": "energy_geo_ocean.json"
+  },
+  "storage": {
+   "name": "储能技术",
+   "file": "energy_storage.json"
+  },
+  "grid": {
+   "name": "输配电与电网",
+   "file": "energy_grid.json"
+  },
+  "power_machine": {
+   "name": "动力机械",
+   "file": "energy_power_machine.json"
+  },
+  "light_heat": {
+   "name": "照明与热利用",
+   "file": "energy_light_heat.json"
+  },
+  "nuclear_energy": {
+   "name": "核能利用",
+   "file": "energy_nuclear_energy.json"
+  }
+ },
+ "manufact": {
+  "hand_tool": {
+   "name": "手工工具",
+   "file": "manufact_hand_tool.json"
+  },
+  "cutting": {
+   "name": "切削加工",
+   "file": "manufact_cutting.json"
+  },
+  "casting": {
+   "name": "铸造与锻压",
+   "file": "manufact_casting.json"
+  },
+  "joining": {
+   "name": "连接与焊接",
+   "file": "manufact_joining.json"
+  },
+  "molding": {
+   "name": "成型工艺",
+   "file": "manufact_molding.json"
+  },
+  "additive": {
+   "name": "增材制造",
+   "file": "manufact_additive.json"
+  },
+  "precision": {
+   "name": "精密与超精密制造",
+   "file": "manufact_precision.json"
+  },
+  "machinetool": {
+   "name": "工业母机与装备",
+   "file": "manufact_machinetool.json"
+  },
+  "automation": {
+   "name": "自动化与产线",
+   "file": "manufact_automation.json"
+  },
+  "chem_process": {
+   "name": "化工过程",
+   "file": "manufact_chem_process.json"
+  },
+  "food_proc": {
+   "name": "食品加工与保藏",
+   "file": "manufact_food_proc.json"
+  },
+  "assembly": {
+   "name": "装配与集成",
+   "file": "manufact_assembly.json"
+  }
+ },
+ "transport": {
+  "road": {
+   "name": "道路与陆路运输",
+   "file": "transport_road.json"
+  },
+  "rail": {
+   "name": "轨道运输",
+   "file": "transport_rail.json"
+  },
+  "water": {
+   "name": "水路运输",
+   "file": "transport_water.json"
+  },
+  "aviation": {
+   "name": "航空运输",
+   "file": "transport_aviation.json"
+  },
+  "space": {
+   "name": "航天运输",
+   "file": "transport_space.json"
+  },
+  "pipeline": {
+   "name": "管道运输",
+   "file": "transport_pipeline.json"
+  },
+  "urban": {
+   "name": "城市交通系统",
+   "file": "transport_urban.json"
+  },
+  "logistics": {
+   "name": "物流与仓储",
+   "file": "transport_logistics.json"
+  }
+ },
+ "info": {
+  "record": {
+   "name": "记录与复制",
+   "file": "info_record.json"
+  },
+  "telecom": {
+   "name": "电信与远程通信",
+   "file": "info_telecom.json"
+  },
+  "broadcast": {
+   "name": "广播与媒体",
+   "file": "info_broadcast.json"
+  },
+  "network": {
+   "name": "网络与互联网",
+   "file": "info_network.json"
+  },
+  "compute": {
+   "name": "计算设备",
+   "file": "info_compute.json"
+  },
+  "datastore": {
+   "name": "数据存储",
+   "file": "info_datastore.json"
+  },
+  "software": {
+   "name": "软件与算法",
+   "file": "info_software.json"
+  },
+  "ai": {
+   "name": "人工智能",
+   "file": "info_ai.json"
+  },
+  "interface": {
+   "name": "人机交互与显示",
+   "file": "info_interface.json"
+  },
+  "security": {
+   "name": "信息安全与密码",
+   "file": "info_security.json"
+  }
+ },
+ "life": {
+  "medicine": {
+   "name": "药物与治疗",
+   "file": "life_medicine.json"
+  },
+  "surgery": {
+   "name": "外科手术",
+   "file": "life_surgery.json"
+  },
+  "diag": {
+   "name": "诊断技术",
+   "file": "life_diag.json"
+  },
+  "publichealth": {
+   "name": "公共卫生与防疫",
+   "file": "life_publichealth.json"
+  },
+  "biotech": {
+   "name": "生物技术",
+   "file": "life_biotech.json"
+  },
+  "agriculture": {
+   "name": "农业与粮食",
+   "file": "life_agriculture.json"
+  },
+  "repro": {
+   "name": "生殖与妇幼",
+   "file": "life_repro.json"
+  },
+  "nutrition": {
+   "name": "营养与食品科学",
+   "file": "life_nutrition.json"
+  },
+  "rehab": {
+   "name": "康复与辅助",
+   "file": "life_rehab.json"
+  }
+ },
+ "build": {
+  "structure": {
+   "name": "结构工程",
+   "file": "build_structure.json"
+  },
+  "construction": {
+   "name": "施工技术",
+   "file": "build_construction.json"
+  },
+  "civil": {
+   "name": "土木与大型工程",
+   "file": "build_civil.json"
+  },
+  "waterworks": {
+   "name": "水利与给排水",
+   "file": "build_waterworks.json"
+  },
+  "building": {
+   "name": "建筑设计与营造",
+   "file": "build_building.json"
+  },
+  "facility": {
+   "name": "建筑设备系统",
+   "file": "build_facility.json"
+  },
+  "planning": {
+   "name": "城市规划与基础设施",
+   "file": "build_planning.json"
+  }
+ },
+ "military": {
+  "melee": {
+   "name": "冷兵器与单兵装备",
+   "file": "military_melee.json"
+  },
+  "firearm": {
+   "name": "火器与火炮",
+   "file": "military_firearm.json"
+  },
+  "armor_vehicle": {
+   "name": "装甲与地面载具",
+   "file": "military_armor_vehicle.json"
+  },
+  "navy": {
+   "name": "海军装备",
+   "file": "military_navy.json"
+  },
+  "airforce": {
+   "name": "空军装备",
+   "file": "military_airforce.json"
+  },
+  "missile": {
+   "name": "导弹与制导武器",
+   "file": "military_missile.json"
+  },
+  "nuclear_weapon": {
+   "name": "核武器与威慑",
+   "file": "military_nuclear_weapon.json"
+  },
+  "sensor": {
+   "name": "侦察与预警",
+   "file": "military_sensor.json"
+  },
+  "ew": {
+   "name": "电子战与网络战",
+   "file": "military_ew.json"
+  },
+  "logi": {
+   "name": "军事后勤与工程",
+   "file": "military_logi.json"
+  }
+ }
+}

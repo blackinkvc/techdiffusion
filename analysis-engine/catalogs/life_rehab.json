@@ -1,0 +1,1117 @@
+{
+ "cat": "life",
+ "catName": "生命与健康",
+ "sub": "rehab",
+ "subName": "康复与辅助",
+ "schemaNote": "catalog v1：康复与辅助域。覆盖假肢、矫形支具、轮椅移动辅具、感官辅助、康复治疗、功能评定、神经康复、心肺康复、智能辅具、中医康复。注意：内固定手术归 surgery 域；脑机接口通用技术归 info_interface，本域仅收细分'脑控假肢'。只收真实技术门类，禁科幻与未临床技术。",
+ "anchors": [
+  "plastics",
+  "composites",
+  "electric_motor",
+  "battery",
+  "semiconductors",
+  "computer",
+  "ai",
+  "surgery"
+ ],
+ "families": [
+  {
+   "name": "假肢",
+   "items": [
+    {
+     "id": "wooden_leg",
+     "name": "木制假腿",
+     "en": "Wooden peg leg",
+     "year": 1500,
+     "note": "以木杆与皮革绑带替代缺失下肢的早期截肢代偿装置。",
+     "deps": []
+    },
+    {
+     "id": "hook_prosthetic_hand",
+     "name": "钩形假手",
+     "en": "Hook prosthetic hand",
+     "year": 1500,
+     "note": "以金属钩替代缺失手掌的简易上肢假肢，用于抓握劳作。",
+     "deps": []
+    },
+    {
+     "id": "socket_prosthesis",
+     "name": "接受腔式假肢",
+     "en": "Socket prosthesis",
+     "year": 1860,
+     "note": "以石膏取型制作接受腔贴合残肢，是现代假肢装配的基础。",
+     "deps": []
+    },
+    {
+     "id": "prosthetics_suspension",
+     "name": "假肢悬吊系统",
+     "en": "Prosthetic suspension system",
+     "year": 1900,
+     "note": "以腰带、阀门或负压固定假肢于残肢，提升佩戴稳定。",
+     "deps": ["socket_prosthesis"]
+    },
+    {
+     "id": "silicone_prosthetic",
+     "name": "硅胶仿真假体",
+     "en": "Silicone cosmetic prosthesis",
+     "year": 1960,
+     "note": "以医用硅胶制作外形逼真的仿真假耳鼻指等外观代偿。",
+     "deps": ["plastics"]
+    },
+    {
+     "id": "pediatric_prosthesis",
+     "name": "儿童假肢",
+     "en": "Pediatric prosthesis",
+     "year": 1950,
+     "note": "按生长可调节的少年儿童假肢，兼顾活动与发育。",
+     "deps": ["socket_prosthesis"]
+    },
+    {
+     "id": "myoelectric_prosthesis",
+     "name": "肌电假肢",
+     "en": "Myoelectric prosthesis",
+     "year": 1960,
+     "note": "以残肢肌电控制电机驱动的假肢，实现意念化抓握。",
+     "deps": ["socket_prosthesis", "semiconductors"]
+    },
+    {
+     "id": "carbon_foot",
+     "name": "碳纤维储能脚",
+     "en": "Carbon fiber energy-storage foot",
+     "year": 1981,
+     "note": "以碳纤维板储存释放弹性能，提升截肢者步行的能效与速度。",
+     "deps": ["socket_prosthesis", "composites"]
+    },
+    {
+     "id": "osseointegration",
+     "name": "骨整合假肢",
+     "en": "Osseointegrated prosthesis",
+     "year": 1990,
+     "note": "以钛钉与骨融合直接固定假肢，免除接受腔改善本体感觉。",
+     "deps": ["socket_prosthesis", "surgery"]
+    },
+    {
+     "id": "prosthetic_knee",
+     "name": "智能控制膝关节",
+     "en": "Microprocessor-controlled knee",
+     "year": 1990,
+     "note": "以微处理器调节液压阻尼，依据步态实时稳定膝关节。",
+     "deps": ["myoelectric_prosthesis", "semiconductors"]
+    },
+    {
+     "id": "bionic_hand",
+     "name": "仿生多自由度假手",
+     "en": "Bionic multi-DOF hand",
+     "year": 2000,
+     "note": "多关节驱动拟人手，可完成精细抓捏并反馈触觉信息。",
+     "deps": ["myoelectric_prosthesis", "computer"]
+    },
+    {
+     "id": "printed_prosthesis",
+     "name": "3D打印假肢",
+     "en": "3D-printed prosthesis",
+     "year": 2010,
+     "note": "以增材制造低成本定制假肢接受腔与外壳，普及适配。",
+     "deps": ["silicone_prosthetic", "computer"]
+    },
+    {
+     "id": "targeted_reinnervation",
+     "name": "靶向肌肉神经再支配",
+     "en": "Targeted muscle reinnervation",
+     "year": 2004,
+     "note": "手术转位神经支配冗余肌肉，为假肢提供更丰富控制信号。",
+     "deps": ["myoelectric_prosthesis", "surgery"]
+    }
+   ]
+  },
+  {
+   "name": "矫形支具",
+   "items": [
+    {
+     "id": "scoliosis_brace",
+     "name": "脊柱侧弯支具",
+     "en": "Scoliosis brace",
+     "year": 1940,
+     "note": "Milwaukee 支具以三点力矫正青少年特发性脊柱侧弯。",
+     "deps": ["surgery"]
+    },
+    {
+     "id": "plaster_cast",
+     "name": "石膏固定",
+     "en": "Plaster cast immobilization",
+     "year": 1850,
+     "note": "Mathijsen 普及石膏绷带固定骨折，是骨科保守治疗基石。",
+     "deps": []
+    },
+    {
+     "id": "external_fixator",
+     "name": "骨折外固定架",
+     "en": "External fixation frame",
+     "year": 1938,
+     "note": "以皮外钢针骨架固定复杂骨折，便于创面处理与牵引。",
+     "deps": ["plaster_cast"]
+    },
+    {
+     "id": "spinal_orthosis",
+     "name": "脊柱矫形支具",
+     "en": "Spinal orthosis",
+     "year": 1930,
+     "note": "以刚性支具限制脊柱活动，用于术后保护与畸形矫正。",
+     "deps": []
+    },
+    {
+     "id": "foot_orthosis",
+     "name": "矫形鞋垫",
+     "en": "Foot orthosis",
+     "year": 1900,
+     "note": "以足弓支撑垫矫正力线，缓解足底与膝踝劳损。",
+     "deps": []
+    },
+    {
+     "id": "ankle_foot_orthosis",
+     "name": "踝足矫形器",
+     "en": "Ankle-foot orthosis",
+     "year": 1960,
+     "note": "以塑料踝足支具稳定踝关节、改善足下垂步态。",
+     "deps": ["scoliosis_brace"]
+    },
+    {
+     "id": "cervical_collar",
+     "name": "颈托",
+     "en": "Cervical collar",
+     "year": 1950,
+     "note": "以颈托限制颈椎活动，用于损伤保护与术后制动。",
+     "deps": ["spinal_orthosis"]
+    },
+    {
+     "id": "knee_orthosis",
+     "name": "膝关节支具",
+     "en": "Knee orthosis",
+     "year": 1950,
+     "note": "以铰链式支具稳定膝关节、限制异常活动保护韧带。",
+     "deps": ["spinal_orthosis"]
+    },
+    {
+     "id": "tlso_brace",
+     "name": "胸腰骶支具",
+     "en": "TLSO brace",
+     "year": 1950,
+     "note": "包裹胸腰骶的硬性支具，用于压缩骨折与术后固定。",
+     "deps": ["scoliosis_brace"]
+    },
+    {
+     "id": "soft_bracing",
+     "name": "弹性护具",
+     "en": "Elastic support brace",
+     "year": 1970,
+     "note": "以弹性织物提供加压保暖与轻度支撑，用于劳损防护。",
+     "deps": ["cervical_collar"]
+    },
+    {
+     "id": "custom_insoles",
+     "name": "定制矫形鞋垫",
+     "en": "Custom orthotic insole",
+     "year": 1980,
+     "note": "按足型取模定制鞋垫，精准矫正 biomechanics 异常。",
+     "deps": ["foot_orthosis"]
+    },
+    {
+     "id": "carbon_orthosis",
+     "name": "碳纤维支具",
+     "en": "Carbon fiber orthosis",
+     "year": 2000,
+     "note": "以碳纤维减重增刚，实现轻量高强度功能性支具。",
+     "deps": ["ankle_foot_orthosis", "composites"]
+    },
+    {
+     "id": "scoliosis_screening",
+     "name": "脊柱侧弯筛查",
+     "en": "Scoliosis screening",
+     "year": 1960,
+     "note": "以体前屈试验在校筛检侧弯，早期支具干预改善预后。",
+     "deps": ["scoliosis_brace"]
+    }
+   ]
+  },
+  {
+   "name": "轮椅与移动辅具",
+   "items": [
+    {
+     "id": "wooden_wheelchair",
+     "name": "木制轮椅",
+     "en": "Wooden wheelchair",
+     "year": 1783,
+     "note": "Bath 推出带轮木椅，是为行动障碍者最早的专业代步工具。",
+     "deps": []
+    },
+    {
+     "id": "self_propelled_wheelchair",
+     "name": "自推轮椅",
+     "en": "Self-propelled wheelchair",
+     "year": 1932,
+     "note": "大轮加手轮圈使患者自行驱动，是现代手动轮椅原型。",
+     "deps": ["wooden_wheelchair"]
+    },
+    {
+     "id": "manual_wheelchair",
+     "name": "手动轮椅",
+     "en": "Manual wheelchair",
+     "year": 1950,
+     "note": "轻量化管材手动轮椅，兼顾便携与日常独立出行。",
+     "deps": ["self_propelled_wheelchair"]
+    },
+    {
+     "id": "electric_wheelchair",
+     "name": "电动轮椅",
+     "en": "Powered wheelchair",
+     "year": 1953,
+     "note": "Klein 等以电机电池驱动轮椅，服务重度活动障碍者。",
+     "deps": ["self_propelled_wheelchair", "electric_motor", "battery"]
+    },
+    {
+     "id": "stair_climbing_wheelchair",
+     "name": "爬楼轮椅",
+     "en": "Stair-climbing wheelchair",
+     "year": 1960,
+     "note": "以履带或摆腿机构辅助上下楼梯，扩展室内可达性。",
+     "deps": ["electric_wheelchair"]
+    },
+    {
+     "id": "standing_wheelchair",
+     "name": "站立轮椅",
+     "en": "Standing wheelchair",
+     "year": 1970,
+     "note": "可变换至站立位的轮椅，改善循环与社交视线。",
+     "deps": ["electric_wheelchair"]
+    },
+    {
+     "id": "walker",
+     "name": "助行器",
+     "en": "Walker",
+     "year": 1950,
+     "note": "以四足框架支撑体重辅助步态，用于康复与老年行动。",
+     "deps": ["wooden_wheelchair"]
+    },
+    {
+     "id": "crutches",
+     "name": "拐杖",
+     "en": "Crutches",
+     "year": 1000,
+     "note": "以腋杖或前臂杖分担患肢负重，是古老而普及的助行工具。",
+     "deps": []
+    },
+    {
+     "id": "cane",
+     "name": "手杖",
+     "en": "Walking cane",
+     "year": 1000,
+     "note": "以单杖提供平衡支点与部分减负，辅助轻度行走困难。",
+     "deps": []
+    },
+    {
+     "id": "patient_lift",
+     "name": "移位机",
+     "en": "Patient lift",
+     "year": 1950,
+     "note": "以电机提升转运卧床者，降低照护者劳损与跌倒风险。",
+     "deps": ["electric_motor", "battery"]
+    },
+    {
+     "id": "mobility_scooter",
+     "name": "代步车",
+     "en": "Mobility scooter",
+     "year": 1960,
+     "note": "以电池驱动三轮代步车，服务社区中长距离户外出行。",
+     "deps": ["electric_wheelchair", "battery"]
+    },
+    {
+     "id": "lightweight_wheelchair",
+     "name": "轻量轮椅",
+     "en": "Lightweight wheelchair",
+     "year": 1980,
+     "note": "以铝钛与复合材料减重，提升推进效率与随身转运。",
+     "deps": ["manual_wheelchair", "composites"]
+    },
+    {
+     "id": "smart_wheelchair",
+     "name": "智能轮椅",
+     "en": "Smart wheelchair",
+     "year": 2000,
+     "note": "集成导航与避障的电动轮椅，提升自主移动与安全性。",
+     "deps": ["electric_wheelchair", "ai", "computer"]
+    }
+   ]
+  },
+  {
+   "name": "感官辅助",
+   "items": [
+    {
+     "id": "hearing_trumpet",
+     "name": "助听喇叭",
+     "en": "Ear trumpet",
+     "year": 1700,
+     "note": "以号角聚声放大入耳，是助听器出现前的声学助听取代。",
+     "deps": []
+    },
+    {
+     "id": "carbon_hearing_aid",
+     "name": "碳粉助听器",
+     "en": "Carbon hearing aid",
+     "year": 1899,
+     "note": "以碳粒传声器电学放大声音，首款便携式电子助听装置。",
+     "deps": ["hearing_trumpet"]
+    },
+    {
+     "id": "vacuum_tube_hearing_aid",
+     "name": "真空管助听器",
+     "en": "Vacuum tube hearing aid",
+     "year": 1920,
+     "note": "以真空管放大电路提升增益，体积仍较大的台式助听。",
+     "deps": ["carbon_hearing_aid"]
+    },
+    {
+     "id": "transistor_hearing_aid",
+     "name": "晶体管助听器",
+     "en": "Transistor hearing aid",
+     "year": 1952,
+     "note": "晶体管取代真空管，使助听器小型化可随身佩戴。",
+     "deps": ["vacuum_tube_hearing_aid", "transistor"]
+    },
+    {
+     "id": "cochlear_implant",
+     "name": "人工耳蜗",
+     "en": "Cochlear implant",
+     "year": 1977,
+     "note": "以电极阵列电刺激听神经，使重度聋者恢复言语感知。",
+     "deps": ["transistor_hearing_aid", "semiconductors"]
+    },
+    {
+     "id": "bone_anchored_hearing",
+     "name": "骨导助听器",
+     "en": "Bone-anchored hearing aid",
+     "year": 1980,
+     "note": "以钛钉传导振动经颅骨至内耳，用于传导性聋。",
+     "deps": ["cochlear_implant"]
+    },
+    {
+     "id": "retinal_prosthesis",
+     "name": "人工视网膜",
+     "en": "Retinal prosthesis",
+     "year": 2002,
+     "note": "以视网膜电极阵列刺激感光细胞，为视网膜色素变性者带来光感。",
+     "deps": ["cochlear_implant", "semiconductors"]
+    },
+    {
+     "id": "white_cane",
+     "name": "盲杖",
+     "en": "White cane",
+     "year": 1920,
+     "note": "以白色手杖探路与标识视障，是基础的独立出行辅具。",
+     "deps": []
+    },
+    {
+     "id": "braille",
+     "name": "盲文",
+     "en": "Braille",
+     "year": 1824,
+     "note": "点字触读系统使视障者读写，是信息无障碍的基石。",
+     "deps": []
+    },
+    {
+     "id": "sign_language",
+     "name": "手语系统",
+     "en": "Sign language",
+     "year": 1600,
+     "note": "以手势与表情构成的视觉语言，是聋人社群的自然语言。",
+     "deps": []
+    },
+    {
+     "id": "tactile_paving",
+     "name": "盲道",
+     "en": "Tactile paving",
+     "year": 1960,
+     "note": "以地面凸纹提示行进方向与危险，提升公共空间可达性。",
+     "deps": ["white_cane"]
+    },
+    {
+     "id": "closed_caption",
+     "name": "字幕系统",
+     "en": "Closed captioning",
+     "year": 1970,
+     "note": "为音视频提供文字字幕，使听障者获取听觉信息。",
+     "deps": ["sign_language"]
+    },
+    {
+     "id": "fm_assistive_listening",
+     "name": "助听调频系统",
+     "en": "FM assistive listening system",
+     "year": 1960,
+     "note": "以调频发射直达助听设备，改善课堂与会议聆听信噪比。",
+     "deps": ["transistor_hearing_aid"]
+    }
+   ]
+  },
+  {
+   "name": "康复治疗",
+   "items": [
+    {
+     "id": "physical_therapy",
+     "name": "运动疗法",
+     "en": "Physical therapy",
+     "year": 1900,
+     "note": "以运动训练改善功能，已形成规范化现代康复专业。",
+     "deps": ["surgery"]
+    },
+    {
+     "id": "occupational_therapy",
+     "name": "作业治疗",
+     "en": "Occupational therapy",
+     "year": 1917,
+     "note": "以有目的的活动训练日常生活与工作技能，促进回归社会。",
+     "deps": ["physical_therapy"]
+    },
+    {
+     "id": "speech_therapy",
+     "name": "言语吞咽治疗",
+     "en": "Speech and swallowing therapy",
+     "year": 1900,
+     "note": "以训练与代偿改善构音、失语与吞咽障碍的康复专业。",
+     "deps": ["surgery"]
+    },
+    {
+     "id": "electrotherapy",
+     "name": "物理因子电疗",
+     "en": "Electrotherapy",
+     "year": 1860,
+     "note": "以电流刺激镇痛与促愈，是物理因子治疗的重要组成。",
+     "deps": []
+    },
+    {
+     "id": "ultrasound_therapy",
+     "name": "超声治疗",
+     "en": "Therapeutic ultrasound",
+     "year": 1950,
+     "note": "以超声波深层加热软组织，用于消炎与松解粘连。",
+     "deps": ["electrotherapy"]
+    },
+    {
+     "id": "traction_therapy",
+     "name": "牵引治疗",
+     "en": "Traction therapy",
+     "year": 1910,
+     "note": "以机械力轴向牵伸脊柱或关节，缓解神经压迫与挛缩。",
+     "deps": ["physical_therapy"]
+    },
+    {
+     "id": "heat_cold_therapy",
+     "name": "冷热疗",
+     "en": "Thermo/cryotherapy",
+     "year": 1910,
+     "note": "以热或冷作用于组织，减轻疼痛水肿并改善循环。",
+     "deps": ["physical_therapy"]
+    },
+    {
+     "id": "sports_injury_rehab",
+     "name": "运动损伤康复",
+     "en": "Sports injury rehabilitation",
+     "year": 1950,
+     "note": "针对韧带肌肉损伤的分阶段康复，恢复运动功能。",
+     "deps": ["physical_therapy"]
+    },
+    {
+     "id": "manual_therapy",
+     "name": "手法治疗",
+     "en": "Manual therapy",
+     "year": 1950,
+     "note": "以关节松动与软组织手法改善活动度与疼痛。",
+     "deps": ["physical_therapy"]
+    },
+    {
+     "id": "hydrotherapy",
+     "name": "水疗",
+     "en": "Hydrotherapy",
+     "year": 1800,
+     "note": "以水中浮力与阻力进行低负荷运动与舒缓治疗。",
+     "deps": []
+    },
+    {
+     "id": "aquatic_therapy",
+     "name": "水中运动治疗",
+     "en": "Aquatic therapy",
+     "year": 1960,
+     "note": "在温水中进行步态与肌力训练，适合关节与神经康复。",
+     "deps": ["hydrotherapy"]
+    },
+    {
+     "id": "speech_swallow_rehab",
+     "name": "吞咽康复",
+     "en": "Dysphagia rehabilitation",
+     "year": 1980,
+     "note": "以代偿与训练改善吞咽安全，预防吸入性肺炎。",
+     "deps": ["speech_therapy"]
+    },
+    {
+     "id": "robotic_therapy",
+     "name": "机器人辅助康复",
+     "en": "Robot-assisted therapy",
+     "year": 2000,
+     "note": "以康复机器人提供重复高剂量训练，提升神经重塑效率。",
+     "deps": ["physical_therapy", "robot"]
+    },
+    {
+     "id": "tele_rehabilitation",
+     "name": "远程康复",
+     "en": "Tele-rehabilitation",
+     "year": 2010,
+     "note": "以网络指导居家康复训练与监测，扩大服务覆盖。",
+     "deps": ["occupational_therapy", "internet"]
+    }
+   ]
+  },
+  {
+   "name": "评定",
+   "items": [
+    {
+     "id": "rom_measurement",
+     "name": "关节活动度评定",
+     "en": "Range of motion measurement",
+     "year": 1900,
+     "note": "以量角器测定关节活动弧，量化挛缩与功能障碍。",
+     "deps": ["scientific_method"]
+    },
+    {
+     "id": "manual_muscle_test",
+     "name": "徒手肌力评定",
+     "en": "Manual muscle test",
+     "year": 1915,
+     "note": "Lovett 以抗阻分级评定肌力，是肌力评估经典方法。",
+     "deps": ["rom_measurement"]
+    },
+    {
+     "id": "gait_analysis",
+     "name": "步态分析",
+     "en": "Gait analysis",
+     "year": 1950,
+     "note": "以运动学参数描述步行周期，识别异常步态模式。",
+     "deps": ["rom_measurement"]
+    },
+    {
+     "id": "balance_assessment",
+     "name": "平衡评定",
+     "en": "Balance assessment",
+     "year": 1950,
+     "note": "以姿势摇摆与维持测试评估平衡功能，预测跌倒风险。",
+     "deps": ["manual_muscle_test"]
+    },
+    {
+     "id": "ashworth_scale",
+     "name": "痉挛评定",
+     "en": "Ashworth scale",
+     "year": 1964,
+     "note": "以被动屈伸阻力分级量化痉挛程度，指导抗痉挛治疗。",
+     "deps": ["manual_muscle_test"]
+    },
+    {
+     "id": "barthel_index",
+     "name": "日常生活能力评定",
+     "en": "Barthel index",
+     "year": 1965,
+     "note": "以进食如厕等活动评分量化基本生活自理能力。",
+     "deps": ["manual_muscle_test"]
+    },
+    {
+     "id": "force_plate",
+     "name": "测力台平衡评定",
+     "en": "Force plate balance assessment",
+     "year": 1970,
+     "note": "以测力台记录重心摆动，客观量化静态与动态平衡。",
+     "deps": ["balance_assessment"]
+    },
+    {
+     "id": "semg_assessment",
+     "name": "表面肌电评定",
+     "en": "Surface EMG assessment",
+     "year": 1960,
+     "note": "以表面电极记录肌电活动，评估肌肉激活与疲劳。",
+     "deps": ["manual_muscle_test", "semiconductors"]
+    },
+    {
+     "id": "functional_independence_measure",
+     "name": "功能独立性评定",
+     "en": "Functional independence measure",
+     "year": 1983,
+     "note": "FIM 以多维度评分统一衡量康复治疗的功能转归。",
+     "deps": ["manual_muscle_test"]
+    },
+    {
+     "id": "timed_up_and_go",
+     "name": "起立行走计时测试",
+     "en": "Timed Up and Go test",
+     "year": 1986,
+     "note": "以起身行走计时快速筛查 mobility 与跌倒风险。",
+     "deps": ["balance_assessment"]
+    },
+    {
+     "id": "berg_balance_scale",
+     "name": "伯格平衡量表",
+     "en": "Berg Balance Scale",
+     "year": 1989,
+     "note": "含14项任务的平衡量表，广泛用于老年与神经康复评估。",
+     "deps": ["balance_assessment"]
+    },
+    {
+     "id": "motion_capture_gait",
+     "name": "三维步态捕捉",
+     "en": "3D motion capture gait",
+     "year": 1980,
+     "note": "以多镜头与标记点重建三维步态，精准量化运动学。",
+     "deps": ["gait_analysis", "computer"]
+    },
+    {
+     "id": "outcome_measurement",
+     "name": "康复结局测量",
+     "en": "Rehabilitation outcome measurement",
+     "year": 1990,
+     "note": "以标准化量表系统评价疗效，支撑质量改进与循证。",
+     "deps": ["functional_independence_measure"]
+    }
+   ]
+  },
+  {
+   "name": "神经康复",
+   "items": [
+    {
+     "id": "bobath_ndt",
+     "name": "神经发育疗法",
+     "en": "Bobath/NDT",
+     "year": 1940,
+     "note": "Bobath 以抑制异常张力、促通正常运动模式治疗偏瘫。",
+     "deps": ["physical_therapy"]
+    },
+    {
+     "id": "pnf",
+     "name": "本体感觉神经肌肉促进",
+     "en": "Proprioceptive neuromuscular facilitation",
+     "year": 1940,
+     "note": "Kabat 以螺旋对角模式刺激本体感觉，促进神经肌肉控制。",
+     "deps": ["physical_therapy"]
+    },
+    {
+     "id": "functional_electrical_stimulation",
+     "name": "功能性电刺激",
+     "en": "Functional electrical stimulation",
+     "year": 1961,
+     "note": "Liberson 以电刺激腓总神经矫正足下垂，重建步行功能。",
+     "deps": ["electrotherapy"]
+    },
+    {
+     "id": "biofeedback",
+     "name": "生物反馈",
+     "en": "Biofeedback therapy",
+     "year": 1970,
+     "note": "以实时生理信号反馈训练患者主动控制肌电与放松。",
+     "deps": ["physical_therapy", "semiconductors"]
+    },
+    {
+     "id": "constraint_induced",
+     "name": "强制性运动疗法",
+     "en": "Constraint-induced movement therapy",
+     "year": 1980,
+     "note": "Taub 以限制健侧强制使用患侧，促进中枢功能重组。",
+     "deps": ["bobath_ndt"]
+    },
+    {
+     "id": "tms",
+     "name": "经颅磁刺激",
+     "en": "Transcranial magnetic stimulation",
+     "year": 1985,
+     "note": "Barker 以磁场无创刺激皮层，用于评估与促进神经可塑。",
+     "deps": ["semiconductors", "physical_therapy"]
+    },
+    {
+     "id": "mirror_therapy",
+     "name": "镜像疗法",
+     "en": "Mirror therapy",
+     "year": 1995,
+     "note": "Ramachandran 以镜面反射训练缓解幻肢痛与促进功能。",
+     "deps": ["constraint_induced"]
+    },
+    {
+     "id": "cognitive_rehab",
+     "name": "认知康复",
+     "en": "Cognitive rehabilitation",
+     "year": 1970,
+     "note": "以代偿与重建策略改善注意记忆执行等认知缺陷。",
+     "deps": ["occupational_therapy"]
+    },
+    {
+     "id": "neuroplasticity_rehab",
+     "name": "神经可塑性康复",
+     "en": "Neuroplasticity-based rehabilitation",
+     "year": 1990,
+     "note": "以任务导向重复训练驱动脑可塑性，成为康复理论核心。",
+     "deps": ["constraint_induced"]
+    },
+    {
+     "id": "tdcs",
+     "name": "经颅直流电刺激",
+     "en": "Transcranial direct current stimulation",
+     "year": 2000,
+     "note": "以弱直流电调节皮层兴奋性，辅助治疗与功能恢复。",
+     "deps": ["tms"]
+    },
+    {
+     "id": "virtual_reality_rehab",
+     "name": "VR神经康复",
+     "en": "VR neurorehabilitation",
+     "year": 2000,
+     "note": "以虚拟现实提供沉浸式任务训练，增强动机与重复量。",
+     "deps": ["biofeedback", "computer"]
+    },
+    {
+     "id": "brain_computer_rehab",
+     "name": "脑机接口神经康复",
+     "en": "BCI neurorehabilitation",
+     "year": 2000,
+     "note": "以脑电解码意图驱动反馈训练，辅助瘫痪肢体功能重建。",
+     "deps": ["biofeedback", "computer"]
+    },
+    {
+     "id": "robot_assisted_gait",
+     "name": "机器人步态训练",
+     "en": "Robot-assisted gait training",
+     "year": 2001,
+     "note": "以步态机器人重复引导步行，促进卒中后行走恢复。",
+     "deps": ["robot", "gait_analysis"]
+    }
+   ]
+  },
+  {
+   "name": "心肺康复",
+   "items": [
+    {
+     "id": "exercise_prescription",
+     "name": "运动处方",
+     "en": "Exercise prescription",
+     "year": 1950,
+     "note": "以频率强度时间类型个体化设计运动，用于慢病管理。",
+     "deps": ["physical_therapy"]
+    },
+    {
+     "id": "cardiopulmonary_exercise_test",
+     "name": "心肺运动试验",
+     "en": "Cardiopulmonary exercise test",
+     "year": 1950,
+     "note": "以渐进运动测摄氧与通气，评估心肺储备与运动风险。",
+     "deps": ["physical_therapy"]
+    },
+    {
+     "id": "chest_physiotherapy",
+     "name": "胸部物理治疗",
+     "en": "Chest physiotherapy",
+     "year": 1930,
+     "note": "以叩拍体位引流促进排痰，用于慢性呼吸道疾病。",
+     "deps": ["physical_therapy"]
+    },
+    {
+     "id": "cardiac_rehab",
+     "name": "心脏康复",
+     "en": "Cardiac rehabilitation",
+     "year": 1960,
+     "note": "以监护下运动与健康教育降低心梗后再发与死亡率。",
+     "deps": ["cardiopulmonary_exercise_test"]
+    },
+    {
+     "id": "ecg_monitored_exercise",
+     "name": "心电监护运动",
+     "en": "ECG-monitored exercise",
+     "year": 1965,
+     "note": "以遥测心电监护下训练，保障康复运动的安全性。",
+     "deps": ["cardiac_rehab", "semiconductors"]
+    },
+    {
+     "id": "phase_ii_cardiac",
+     "name": "二期心脏康复",
+     "en": "Outpatient cardiac rehab",
+     "year": 1970,
+     "note": "出院后门诊阶段性康复，巩固心功能与生活方式改善。",
+     "deps": ["cardiac_rehab"]
+    },
+    {
+     "id": "respiratory_training",
+     "name": "呼吸训练",
+     "en": "Breathing training",
+     "year": 1950,
+     "note": "以腹式与缩唇呼吸改善通气效率，用于慢阻肺等。",
+     "deps": ["physical_therapy"]
+    },
+    {
+     "id": "home_oxygen_therapy",
+     "name": "家庭氧疗",
+     "en": "Home oxygen therapy",
+     "year": 1970,
+     "note": "长期家庭吸氧改善慢性呼吸衰竭者的生存与活动耐量。",
+     "deps": ["respiratory_training"]
+    },
+    {
+     "id": "pulmonary_function_training",
+     "name": "肺功能训练",
+     "en": "Pulmonary function training",
+     "year": 1980,
+     "note": "以呼吸肌与排痰训练提升肺功能，减少急性加重。",
+     "deps": ["respiratory_training"]
+    },
+    {
+     "id": "inspiratory_muscle_training",
+     "name": "吸气肌训练",
+     "en": "Inspiratory muscle training",
+     "year": 1990,
+     "note": "以阻力装置训练吸气肌力量，改善运动耐量与气促。",
+     "deps": ["respiratory_training"]
+    },
+    {
+     "id": "pulmonary_rehab",
+     "name": "肺康复",
+     "en": "Pulmonary rehabilitation",
+     "year": 1990,
+     "note": "以运动与教育综合干预慢阻肺，提升生活质量与活动能力。",
+     "deps": ["respiratory_training"]
+    },
+    {
+     "id": "icu_early_mobilization",
+     "name": "ICU早期活动",
+     "en": "ICU early mobilization",
+     "year": 2000,
+     "note": "危重期即开展床上至下床活动，减少谵妄与肌萎缩。",
+     "deps": ["cardiac_rehab"]
+    },
+    {
+     "id": "tele_cardiac_rehab",
+     "name": "远程心脏康复",
+     "en": "Tele-cardiac rehabilitation",
+     "year": 2010,
+     "note": "以远程监测与指导开展居家心脏康复，扩大可及性。",
+     "deps": ["cardiac_rehab", "internet"]
+    }
+   ]
+  },
+  {
+   "name": "智能辅具",
+   "items": [
+    {
+     "id": "rehab_exoskeleton",
+     "name": "康复外骨骼",
+     "en": "Rehabilitation exoskeleton",
+     "year": 2010,
+     "note": "穿戴式动力外骨骼辅助步行训练与负重，用于脊髓损伤。",
+     "deps": ["robot", "battery"]
+    },
+    {
+     "id": "smart_prosthesis",
+     "name": "智能假肢",
+     "en": "Smart prosthesis",
+     "year": 2005,
+     "note": "以微处理器融合多传感器自适应调节假肢步态与抓握。",
+     "deps": ["myoelectric_prosthesis", "computer"]
+    },
+    {
+     "id": "brain_controlled_prosthesis",
+     "name": "脑控假肢",
+     "en": "Brain-controlled prosthesis",
+     "year": 2010,
+     "note": "以脑机接口解码运动意图直接驱动假肢，恢复截肢者控制。",
+     "deps": ["brain_computer_rehab", "myoelectric_prosthesis"]
+    },
+    {
+     "id": "aac_communication_board",
+     "name": "沟通板/AAC",
+     "en": "AAC communication board",
+     "year": 1950,
+     "note": "以图板与符号辅助语障者表达，是 augmentative 沟通起点。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "eye_gaze_communication",
+     "name": "眼动注视沟通",
+     "en": "Eye-gaze communication",
+     "year": 1980,
+     "note": "以眼球追踪选择字母与词句的电子沟通辅助装置。",
+     "deps": ["aac_communication_board", "computer"]
+    },
+    {
+     "id": "environmental_control_unit",
+     "name": "环境控制系统",
+     "en": "Environmental control unit",
+     "year": 1970,
+     "note": "以开关或语音控制灯光门窗电器，提升重度残疾者自理。",
+     "deps": ["computer", "electric_motor"]
+    },
+    {
+     "id": "smart_home_assistive",
+     "name": "智能家居辅助",
+     "en": "Smart home assistive technology",
+     "year": 2000,
+     "note": "以联网传感与自动控制营造无障碍居家环境，辅助生活。",
+     "deps": ["environmental_control_unit", "computer"]
+    },
+    {
+     "id": "vr_rehab_training",
+     "name": "VR康复训练",
+     "en": "VR rehab training",
+     "year": 2005,
+     "note": "以虚拟现实情景训练平衡、认知与上肢功能，趣味性强。",
+     "deps": ["virtual_reality_rehab", "computer"]
+    },
+    {
+     "id": "wearable_fall_detection",
+     "name": "可穿戴跌倒检测",
+     "en": "Wearable fall detection",
+     "year": 2010,
+     "note": "以惯性传感识别跌倒并自动报警，保护老年与平衡障碍者。",
+     "deps": ["computer", "semiconductors"]
+    },
+    {
+     "id": "exosuit",
+     "name": "软体外骨骼",
+     "en": "Soft exosuit",
+     "year": 2012,
+     "note": "以织物与缆绳柔性助力步态，轻便用于负重与康复。",
+     "deps": ["rehab_exoskeleton", "composites"]
+    },
+    {
+     "id": "ai_prosthesis_control",
+     "name": "AI假肢控制",
+     "en": "AI prosthesis control",
+     "year": 2015,
+     "note": "以机器学习解码意图与自适应调参，提升假肢自然度。",
+     "deps": ["smart_prosthesis", "ai"]
+    },
+    {
+     "id": "robotic_wheelchair_nav",
+     "name": "导航智能轮椅",
+     "en": "Autonomous wheelchair",
+     "year": 2010,
+     "note": "以感知与规划自主避障导航，减轻重度障碍者操作负担。",
+     "deps": ["smart_wheelchair", "ai"]
+    },
+    {
+     "id": "smart_cane",
+     "name": "智能盲杖",
+     "en": "Smart white cane",
+     "year": 2015,
+     "note": "以超声与振动或GPS提示障碍与方位，增强视障出行安全。",
+     "deps": ["white_cane", "computer"]
+    }
+   ]
+  },
+  {
+   "name": "中医康复",
+   "items": [
+    {
+     "id": "acupuncture",
+     "name": "针灸",
+     "en": "Acupuncture",
+     "year": 100,
+     "note": "以针刺激发经气调理脏腑，是历史悠久的中医康复疗法。",
+     "deps": []
+    },
+    {
+     "id": "tuina",
+     "name": "推拿",
+     "en": "Tui na",
+     "year": 200,
+     "note": "以手法推拿经络腧穴舒筋活络，用于筋骨劳损康复。",
+     "deps": []
+    },
+    {
+     "id": "cupping",
+     "name": "拔罐",
+     "en": "Cupping therapy",
+     "year": 1000,
+     "note": "以负压罐吸拔体表，祛风散寒、活血化瘀的传统疗法。",
+     "deps": []
+    },
+    {
+     "id": "moxibustion",
+     "name": "艾灸",
+     "en": "Moxibustion",
+     "year": 1000,
+     "note": "以艾绒灸灼温通经脉，常用于寒证与功能康复调理。",
+     "deps": ["acupuncture"]
+    },
+    {
+     "id": "tui_na_pediatric",
+     "name": "小儿推拿",
+     "en": "Pediatric tuina",
+     "year": 1600,
+     "note": "以特定手法调治小儿常见病，是中医儿科康复分支。",
+     "deps": ["tuina"]
+    },
+    {
+     "id": "acupuncture_analgesia",
+     "name": "针刺镇痛",
+     "en": "Acupuncture analgesia",
+     "year": 1950,
+     "note": "现代以针刺用于术后与慢性痛管理，拓展康复应用场景。",
+     "deps": ["acupuncture"]
+    },
+    {
+     "id": "electroacupuncture",
+     "name": "电针",
+     "en": "Electroacupuncture",
+     "year": 1950,
+     "note": "以微量电脉冲接于针柄增强刺激，规范镇痛与功能治疗。",
+     "deps": ["acupuncture", "electricity"]
+    },
+    {
+     "id": "scalp_acupuncture",
+     "name": "头针",
+     "en": "Scalp acupuncture",
+     "year": 1970,
+     "note": "以头皮区带对应大脑皮层，用于中风后遗症的康复。",
+     "deps": ["acupuncture_analgesia"]
+    },
+    {
+     "id": "acupotomy",
+     "name": "针刀",
+     "en": "Acupotomy",
+     "year": 1976,
+     "note": "以针刀松解粘连瘢痕，用于软组织损伤与关节功能障碍。",
+     "deps": ["acupuncture"]
+    },
+    {
+     "id": "ear_acupoint",
+     "name": "耳穴",
+     "en": "Auricular acupuncture",
+     "year": 1950,
+     "note": "以耳廓穴位压痛与贴压调理脏腑功能，用于慢病康复。",
+     "deps": ["acupuncture"]
+    },
+    {
+     "id": "tcm_rehab_theory",
+     "name": "中医康复理论",
+     "en": "TCM rehabilitation theory",
+     "year": 1980,
+     "note": "整合针灸推拿与养生形成现代中医康复学科框架。",
+     "deps": ["acupuncture", "tuina"]
+    },
+    {
+     "id": "tai_chi_rehab",
+     "name": "太极康复",
+     "en": "Tai Chi rehabilitation",
+     "year": 1990,
+     "note": "以太极缓慢动作训练平衡与柔韧，用于老年防跌康复。",
+     "deps": ["tcm_rehab_theory"]
+    },
+    {
+     "id": "qigong_therapy",
+     "name": "气功疗法",
+     "en": "Qigong therapy",
+     "year": 1990,
+     "note": "以调息导引改善呼吸与身心状态，作为康复辅助训练。",
+     "deps": ["tcm_rehab_theory"]
+    }
+   ]
+  }
+ ]
+}

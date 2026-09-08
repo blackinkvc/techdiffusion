@@ -1,0 +1,1117 @@
+{
+ "cat": "material",
+ "catName": "材料",
+ "sub": "metal_basic",
+ "subName": "金属冶炼与基础合金",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "fire",
+  "stone_tools",
+  "brick",
+  "waterwheel",
+  "bronze",
+  "bronze_casting",
+  "iron",
+  "iron_smelting",
+  "steel",
+  "coal_mining",
+  "optics",
+  "chemistry",
+  "thermodynamics",
+  "electricity",
+  "generator"
+ ],
+ "families": [
+  {
+   "name": "冶铜与铜器成形技术",
+   "items": [
+    {
+     "id": "native_copper_working",
+     "name": "天然铜锤锻加工",
+     "en": "Working of native copper",
+     "year": -7000,
+     "note": "以石锤冷锻天然铜块制成小件器具，属最早的无火金属加工实践。",
+     "deps": ["stone_tools"]
+    },
+    {
+     "id": "copper_oxide_smelting",
+     "name": "氧化铜矿还原熔炼",
+     "en": "Smelting of oxide copper ores",
+     "year": -5000,
+     "note": "木炭在火中还原孔雀石等氧化铜矿得金属铜，开启火法冶金的先河。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "crucible_smelting_copper",
+     "name": "坩埚熔铜",
+     "en": "Crucible melting of copper",
+     "year": -4000,
+     "note": "以耐火坩埚密闭熔炼铜料，可提高炉温并减少杂质混入。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "arsenical_copper_alloy",
+     "name": "砷铜合金",
+     "en": "Arsenical copper",
+     "year": -4000,
+     "note": "铜中掺砷提高强度与铸造性，是早于锡青铜的合金化路径。",
+     "deps": ["copper_oxide_smelting"]
+    },
+    {
+     "id": "open_mold_casting",
+     "name": "敞范浇铸",
+     "en": "Open-mold casting",
+     "year": -2600,
+     "note": "以单面敞口石范或泥范浇铸锭料与简单器件，是最早的金属铸造方式。",
+     "deps": ["bronze_casting"]
+    },
+    {
+     "id": "bivalve_mold_casting",
+     "name": "双合范铸造",
+     "en": "Bivalve mold casting",
+     "year": -2300,
+     "note": "两块范对合浇注扁平工具与兵器，兼顾厚度控制与纹饰成形。",
+     "deps": ["bronze_casting"]
+    },
+    {
+     "id": "lost_wax_casting",
+     "name": "失蜡铸造",
+     "en": "Lost-wax casting",
+     "year": -3000,
+     "note": "蜡模包泥加热烧失成空腔再浇注金属，能铸出镂空精细的器物。",
+     "deps": ["bronze_casting"]
+    },
+    {
+     "id": "shaft_furnace_copper",
+     "name": "竖炉炼铜",
+     "en": "Copper shaft furnace smelting",
+     "year": -1800,
+     "note": "青铜时代后期的竖炉可连续装料鼓风冶炼，产能高于坩埚法。",
+     "deps": ["copper_oxide_smelting"]
+    },
+    {
+     "id": "piece_mold_casting",
+     "name": "块范铸造",
+     "en": "Piece-mold casting",
+     "year": -1500,
+     "note": "多块陶范拼合一次浇注，是商周青铜礼器与兵器的核心成形工艺。",
+     "deps": ["bronze_casting"]
+    },
+    {
+     "id": "copper_sulfide_smelting",
+     "name": "硫化铜矿造锍熔炼",
+     "en": "Smelting of sulfide copper ores",
+     "year": -1200,
+     "note": "把硫化铜矿熔成冰铜再吹炼精炼，突破了古代铜料来源的限制。",
+     "deps": ["copper_oxide_smelting"]
+    },
+    {
+     "id": "cored_hollow_casting",
+     "name": "外范内芯铸造",
+     "en": "Cored casting of hollow ware",
+     "year": -1100,
+     "note": "用泥芯铸出中空腔体并配合外范，用于大容器与甬钟等器物。",
+     "deps": ["piece_mold_casting"]
+    },
+    {
+     "id": "poling_refined_copper",
+     "name": "插木精炼铜",
+     "en": "Poling of copper",
+     "year": -800,
+     "note": "熔铜鼓风氧化去杂后插入湿木还原脱氧，获得致密韧铜。",
+     "deps": ["copper_sulfide_smelting"]
+    },
+    {
+     "id": "hammer_forged_bronze",
+     "name": "青铜锤锻成形",
+     "en": "Hammer forging of bronze",
+     "year": -1800,
+     "note": "锤击青铜坯料成形兵器小件，并利用加工硬化提高强度。",
+     "deps": ["bronze_casting"]
+    },
+    {
+     "id": "chime_bell_bronze_casting",
+     "name": "铜钟合瓦铸制",
+     "en": "Casting of bronze bells",
+     "year": -600,
+     "note": "以合瓦形陶范精确铸造编钟，体现先秦范铸与调音工艺。",
+     "deps": ["piece_mold_casting"]
+    },
+    {
+     "id": "stacked_mold_casting",
+     "name": "叠铸法",
+     "en": "Stacked mold casting",
+     "year": -200,
+     "note": "层层叠置泥范一次浇出数百件钱币与小构件，古代批量铸造工艺。",
+     "deps": ["bronze_casting"]
+    }
+   ]
+  },
+  {
+   "name": "金、银、铅、锡、汞与半金属冶金",
+   "items": [
+    {
+     "id": "gold_native_working",
+     "name": "自然金淘采锤锻",
+     "en": "Working of native gold",
+     "year": -6000,
+     "note": "淘采砂金并锤锻成饰品，金是人类最早利用的贵金属。",
+     "deps": ["stone_tools"]
+    },
+    {
+     "id": "lead_smelting",
+     "name": "铅矿还原冶炼",
+     "en": "Lead smelting",
+     "year": -3000,
+     "note": "还原熔炼方铅矿制铅，供铸币、铅管并作为提银的载体。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "tin_smelting",
+     "name": "锡石还原炼锡",
+     "en": "Tin smelting",
+     "year": -2500,
+     "note": "木炭还原锡石制取金属锡，为锡青铜时代提供关键原料。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "gold_leaf_beating",
+     "name": "金箔锤制",
+     "en": "Gold-leaf beating",
+     "year": -2500,
+     "note": "把金反复锻打延展成极薄金箔，用于贴金与镶嵌装饰。",
+     "deps": ["gold_native_working"]
+    },
+    {
+     "id": "cupellation_silver",
+     "name": "灰吹法提银",
+     "en": "Cupellation of silver",
+     "year": -2000,
+     "note": "利用铅对金银的亲和力，在灰皿氧化分离贱金属以提纯金银。",
+     "deps": ["lead_smelting"]
+    },
+    {
+     "id": "mercury_distillation",
+     "name": "蒸馏法炼汞",
+     "en": "Distillation of mercury",
+     "year": -300,
+     "note": "加热蒸馏朱砂冷凝汞蒸气制汞，用于鎏金、药剂与混汞提金。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "amalgam_gilding",
+     "name": "汞齐鎏金",
+     "en": "Mercury amalgam gilding",
+     "year": -100,
+     "note": "把金汞齐涂于铜银器表并加热除汞成金层，古代重要装饰工艺。",
+     "deps": ["mercury_distillation"]
+    },
+    {
+     "id": "zinc_distillation",
+     "name": "蒸馏法炼锌",
+     "en": "Zinc distillation smelting",
+     "year": 1100,
+     "note": "印度以下延式蒸馏罐冷凝锌蒸气，首次实现金属锌的规模生产。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "nitric_acid_parting",
+     "name": "硝酸分金",
+     "en": "Nitric acid parting of gold",
+     "year": 1250,
+     "note": "用硝酸溶解分离金银合金，是铸币提纯与试金的古典手段。",
+     "deps": ["cupellation_silver"]
+    },
+    {
+     "id": "liquation_sn_pb",
+     "name": "熔析法分离锡铅",
+     "en": "Liquation of tin and lead",
+     "year": 1300,
+     "note": "利用低熔共晶先熔原理，把含铅粗锡分离提纯，中世纪锡冶金常用。",
+     "deps": ["tin_smelting"]
+    },
+    {
+     "id": "patio_process",
+     "name": "佩托拉混汞法",
+     "en": "Patio process",
+     "year": 1554,
+     "note": "墨西哥用汞与盐混采银矿石低温提银，曾支撑美洲白银产量。",
+     "deps": ["mercury_distillation"]
+    },
+    {
+     "id": "antimony_refining",
+     "name": "锑的金属冶炼",
+     "en": "Antimony metal production",
+     "year": 1604,
+     "note": "还原熔炼辉锑矿制取金属锑，用于活字合金与药剂。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "arsenic_isolation",
+     "name": "砷单质分离",
+     "en": "Isolation of arsenic",
+     "year": 1649,
+     "note": "加热砷矿物升华制得单质砷，供砷铜合金与化学药物之用。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "cobalt_isolation",
+     "name": "钴的分离与冶炼",
+     "en": "Isolation of cobalt",
+     "year": 1735,
+     "note": "布兰特从矿石中分离出金属钴，此后用于颜料与耐热合金。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "nickel_isolation",
+     "name": "镍的分离与冶炼",
+     "en": "Isolation of nickel",
+     "year": 1751,
+     "note": "克龙斯泰特由红砷镍矿制得金属镍，奠定近代镍冶金基础。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "bismuth_isolation",
+     "name": "铋的分离",
+     "en": "Isolation of bismuth",
+     "year": 1753,
+     "note": "以还原法从矿石制得金属铋，用于低熔点合金与医药。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "platinum_consolidation",
+     "name": "铂粉烧结锻造成形",
+     "en": "Early working of platinum",
+     "year": 1780,
+     "note": "铂熔点高难熔炼，以海绵铂烧结锤锻成形，是南美铂的传统加工法。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "cadmium_isolation",
+     "name": "镉的发现",
+     "en": "Discovery of cadmium",
+     "year": 1817,
+     "note": "斯特罗迈尔从锌矿副产物中分离出镉，后用于镀层与颜料。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "electrolytic_silver_refining",
+     "name": "电解精炼银",
+     "en": "Electrolytic refining of silver",
+     "year": 1884,
+     "note": "以硝酸银电解液精炼粗银，阴极沉积高纯银并回收金。",
+     "deps": ["generator"]
+    }
+   ]
+  },
+  {
+   "name": "铜基与锡铅基合金体系",
+   "items": [
+    {
+     "id": "tin_bronze_alloying",
+     "name": "锡青铜配炼",
+     "en": "Tin bronze alloying",
+     "year": -3000,
+     "note": "铜中按比例加锡降低熔点并提高强度，形成青铜时代核心合金。",
+     "deps": ["bronze"]
+    },
+    {
+     "id": "leaded_tin_bronze",
+     "name": "铅锡青铜",
+     "en": "Leaded tin bronze",
+     "year": -1500,
+     "note": "铜锡合金中加铅改善流动性与韧性，广泛用于容器与车马器。",
+     "deps": ["tin_bronze_alloying"]
+    },
+    {
+     "id": "high_tin_speculum_bronze",
+     "name": "高锡镜青铜",
+     "en": "High-tin speculum bronze",
+     "year": -700,
+     "note": "含锡约两成五的银白硬脆合金，专用于铜镜与打击乐器。",
+     "deps": ["tin_bronze_alloying"]
+    },
+    {
+     "id": "electrum_alloy",
+     "name": "琥珀金",
+     "en": "Electrum",
+     "year": -600,
+     "note": "金银天然合金，延展耐蚀，小亚细亚早期铸币的主要用材。",
+     "deps": ["gold_native_working"]
+    },
+    {
+     "id": "cupronickel_alloy",
+     "name": "白铜",
+     "en": "Cupronickel",
+     "year": -200,
+     "note": "以镍铜矿石熔炼得的耐蚀银白合金，中国古称白铜。",
+     "deps": ["bronze"]
+    },
+    {
+     "id": "brass_cementation",
+     "name": "菱锌矿渗炼黄铜",
+     "en": "Calamine brass",
+     "year": -100,
+     "note": "还原气氛下铜与菱锌矿作用制黄铜，罗马时期用于货币器皿。",
+     "deps": ["bronze"]
+    },
+    {
+     "id": "lead_tin_soft_solder",
+     "name": "铅锡软钎料",
+     "en": "Lead-tin soft solder",
+     "year": 100,
+     "note": "低熔点铅锡合金连接金属件，罗马人已用于水管与器物钎接。",
+     "deps": ["tin_smelting"]
+    },
+    {
+     "id": "niello_inlay",
+     "name": "乌银镶嵌",
+     "en": "Niello inlay",
+     "year": 100,
+     "note": "把银铜铅硫化物黑料填入刻纹烧成，形成金属表面的黑亮嵌饰。",
+     "deps": ["tin_smelting"]
+    },
+    {
+     "id": "pewter_alloy",
+     "name": "白镴",
+     "en": "Pewter",
+     "year": 300,
+     "note": "以锡为主的低熔点餐具合金，常加少量铅铜提高强度。",
+     "deps": ["tin_smelting"]
+    },
+    {
+     "id": "gunmetal_alloy",
+     "name": "炮铜",
+     "en": "Gunmetal",
+     "year": 1350,
+     "note": "含锡锌的耐蚀青铜，曾广泛用于铸造火炮与船用配件。",
+     "deps": ["tin_bronze_alloying"]
+    },
+    {
+     "id": "printer_type_metal",
+     "name": "活字合金",
+     "en": "Type metal",
+     "year": 1440,
+     "note": "铅锡锑配比的低熔点合金，凝固复现性好，用于浇铸活字。",
+     "deps": ["lead_smelting"]
+    },
+    {
+     "id": "spelter_brass",
+     "name": "锌铜合熔黄铜",
+     "en": "Spelter brass",
+     "year": 1740,
+     "note": "锌锭商品化后铜锌直接熔配黄铜，成分控制远胜渗炼法。",
+     "deps": ["zinc_distillation"]
+    },
+    {
+     "id": "german_silver",
+     "name": "镍银",
+     "en": "Nickel silver",
+     "year": 1823,
+     "note": "铜镍锌三元仿银合金，色泽白亮，用于餐具与乐器。",
+     "deps": ["cupronickel_alloy"]
+    },
+    {
+     "id": "muntz_metal",
+     "name": "蒙茨黄铜",
+     "en": "Muntz metal",
+     "year": 1832,
+     "note": "含锌约四成的热轧黄铜，广泛用作船舶防污包板。",
+     "deps": ["spelter_brass"]
+    },
+    {
+     "id": "babbitt_metal",
+     "name": "巴氏轴承合金",
+     "en": "Babbitt metal",
+     "year": 1839,
+     "note": "锡基白合金浇铸轴承衬瓦，巴比特确立锡基轴承合金体系。",
+     "deps": ["tin_smelting"]
+    },
+    {
+     "id": "phosphor_bronze",
+     "name": "磷青铜",
+     "en": "Phosphor bronze",
+     "year": 1871,
+     "note": "加磷脱氧并细化晶粒的铜锡合金，强度耐磨适于弹簧轴承。",
+     "deps": ["tin_bronze_alloying"]
+    },
+    {
+     "id": "aluminium_bronze",
+     "name": "铝青铜",
+     "en": "Aluminium bronze",
+     "year": 1872,
+     "note": "铜铝合金兼有高强度与耐蚀性，用于船用螺旋桨与耐蚀铸件。",
+     "deps": ["chemistry"]
+    }
+   ]
+  },
+  {
+   "name": "铁与钢：古代与近代冶炼工艺",
+   "items": [
+    {
+     "id": "bloomery_ironmaking",
+     "name": "块炼铁冶炼",
+     "en": "Bloomery ironmaking",
+     "year": -800,
+     "note": "低温固态还原铁矿石得海绵铁再锻实，是铁器时代主流炼铁法。",
+     "deps": ["iron"]
+    },
+    {
+     "id": "cast_iron_smelting",
+     "name": "生铁冶炼",
+     "en": "Smelting of cast iron",
+     "year": -600,
+     "note": "中国以高温竖炉强化鼓风炼出生铁，铁水可直接浇注成形。",
+     "deps": ["iron"]
+    },
+    {
+     "id": "pattern_welded_steel",
+     "name": "花纹锻焊",
+     "en": "Pattern welding",
+     "year": -300,
+     "note": "把不同含碳铁条锻焊绞合，制成强韧并带花纹的刃具。",
+     "deps": ["iron"]
+    },
+    {
+     "id": "iron_mold_coinage",
+     "name": "铁范铸造",
+     "en": "Iron mold casting",
+     "year": -100,
+     "note": "汉代以耐热铁范批量铸造钱币与铁农具，比陶范更耐久。",
+     "deps": ["cast_iron_smelting"]
+    },
+    {
+     "id": "water_power_bellows",
+     "name": "水力鼓风",
+     "en": "Water-powered bellows",
+     "year": 31,
+     "note": "东汉杜诗以水轮驱动皮囊鼓风，支撑冶铁炉连续作业。",
+     "deps": ["iron_smelting"]
+    },
+    {
+     "id": "chinese_fining_steel",
+     "name": "炒钢法",
+     "en": "Chinese fining of steel",
+     "year": 100,
+     "note": "半熔态生铁中反复搅拌氧化脱碳成钢，提高古代钢产量。",
+     "deps": ["cast_iron_smelting"]
+    },
+    {
+     "id": "wootz_steel",
+     "name": "乌兹钢",
+     "en": "Wootz steel",
+     "year": 300,
+     "note": "印度以坩埚熔渗工艺制取超高碳钢，为西亚大马士革刃原料。",
+     "deps": ["iron"]
+    },
+    {
+     "id": "cofusion_steel_guan",
+     "name": "灌钢法",
+     "en": "Co-fusion steelmaking",
+     "year": 500,
+     "note": "以生铁水淋浇熟铁使之渗碳成钢，唐宋时期主要炼钢方法。",
+     "deps": ["cast_iron_smelting"]
+    },
+    {
+     "id": "blast_furnace_ironmaking",
+     "name": "高炉炼铁",
+     "en": "Blast furnace ironmaking",
+     "year": 1250,
+     "note": "竖式高炉连续装料并强化鼓风，稳定大规模供应生铁。",
+     "deps": ["bloomery_ironmaking"]
+    },
+    {
+     "id": "finery_process",
+     "name": "精炼炉法",
+     "en": "Finery process",
+     "year": 1300,
+     "note": "在精炼炉再炼生铁脱碳成可锻熟铁，满足铁件加工需求。",
+     "deps": ["blast_furnace_ironmaking"]
+    },
+    {
+     "id": "cementation_steel",
+     "name": "渗碳法炼钢",
+     "en": "Cementation steel",
+     "year": 1650,
+     "note": "熟铁条埋入木炭长期渗碳成泡钢，是工业革命前的炼钢主流。",
+     "deps": ["iron"]
+    },
+    {
+     "id": "coke_ironmaking",
+     "name": "焦炭炼铁",
+     "en": "Coke smelting of iron",
+     "year": 1709,
+     "note": "达比以焦炭替代木炭作高炉燃料，摆脱对森林资源的依赖。",
+     "deps": ["coal_mining"]
+    },
+    {
+     "id": "crucible_steel",
+     "name": "坩埚钢",
+     "en": "Crucible steel",
+     "year": 1740,
+     "note": "亨茨曼重熔泡钢得成分均匀的铸钢，供优质刀具使用。",
+     "deps": ["cementation_steel"]
+    },
+    {
+     "id": "puddling_process",
+     "name": "搅炼炉法",
+     "en": "Puddling process",
+     "year": 1784,
+     "note": "科特以煤火反射搅炼炉搅拌生铁制熟铁，适应煤燃料批量生产。",
+     "deps": ["coke_ironmaking"]
+    },
+    {
+     "id": "cupola_furnace",
+     "name": "冲天炉",
+     "en": "Cupola furnace",
+     "year": 1790,
+     "note": "立式冲天炉快速重熔生铁供浇注，成为铸造车间常用设备。",
+     "deps": ["blast_furnace_ironmaking"]
+    },
+    {
+     "id": "hot_blast_stove",
+     "name": "热风炉",
+     "en": "Hot blast stove",
+     "year": 1828,
+     "note": "尼尔森以预热带风入炉显著节省焦炭，是现代热风炉始祖。",
+     "deps": ["blast_furnace_ironmaking"]
+    },
+    {
+     "id": "bessemer_converter",
+     "name": "贝塞麦转炉",
+     "en": "Bessemer process",
+     "year": 1856,
+     "note": "底吹空气快速脱碳炼钢，首次实现钢的大规模廉价生产。",
+     "deps": ["cast_iron_smelting"]
+    },
+    {
+     "id": "regenerative_furnace",
+     "name": "蓄热式炉",
+     "en": "Regenerative furnace",
+     "year": 1857,
+     "note": "西门子蓄热室回收烟气余热预热煤气空气，大幅降低燃料消耗。",
+     "deps": ["puddling_process"]
+    },
+    {
+     "id": "open_hearth_furnace",
+     "name": "平炉炼钢",
+     "en": "Open-hearth process",
+     "year": 1864,
+     "note": "马丁在蓄热式平炉中精炼铁水与废钢，长期是优质钢主力工艺。",
+     "deps": ["regenerative_furnace"]
+    },
+    {
+     "id": "thomas_converter",
+     "name": "托马斯转炉",
+     "en": "Thomas-Gilchrist process",
+     "year": 1878,
+     "note": "碱性炉衬吹炼高磷生铁，解决欧洲高磷矿炼钢难题。",
+     "deps": ["bessemer_converter"]
+    },
+    {
+     "id": "electric_arc_furnace",
+     "name": "电弧炉炼钢",
+     "en": "Electric arc furnace",
+     "year": 1899,
+     "note": "埃鲁电弧炉以电弧热熔炼废钢，后成特殊钢与短流程主力。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "induction_furnace_melting",
+     "name": "感应熔炼炉",
+     "en": "Induction melting furnace",
+     "year": 1900,
+     "note": "以感应电流在炉料内发热熔化金属，用于合金钢与特种合金。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "basic_oxygen_furnace",
+     "name": "氧气顶吹转炉",
+     "en": "Basic oxygen steelmaking",
+     "year": 1952,
+     "note": "林茨-多纳维茨顶吹氧炼钢，二十年后取代平炉成为主流炼钢法。",
+     "deps": ["bessemer_converter"]
+    },
+    {
+     "id": "electroslag_remelting",
+     "name": "电渣重熔",
+     "en": "Electroslag remelting",
+     "year": 1958,
+     "note": "电流经渣池产热精炼重熔金属，净化夹杂并改善凝固组织。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "argon_oxygen_decarburization",
+     "name": "氩氧脱碳精炼",
+     "en": "Argon oxygen decarburization",
+     "year": 1968,
+     "note": "以氩氧混合气精炼不锈钢，控碳保铬，简化不锈钢生产工艺。",
+     "deps": ["open_hearth_furnace"]
+    }
+   ]
+  },
+  {
+   "name": "现代钢铁工程：造块、精炼与连铸",
+   "items": [
+    {
+     "id": "iron_ore_sintering",
+     "name": "铁矿烧结造块",
+     "en": "Iron ore sintering",
+     "year": 1911,
+     "note": "带式烧结机把矿粉与熔剂烧成块，改善高炉料柱透气性。",
+     "deps": ["blast_furnace_ironmaking"]
+    },
+    {
+     "id": "hot_strip_mill",
+     "name": "宽带钢热连轧",
+     "en": "Hot strip mill",
+     "year": 1926,
+     "note": "连续轧机组把板坯轧成宽带钢，是汽车与制罐用钢的关键装备。",
+     "deps": ["steel"]
+    },
+    {
+     "id": "continuous_casting_steel",
+     "name": "钢水连铸",
+     "en": "Continuous casting of steel",
+     "year": 1952,
+     "note": "结晶器定形凝固后连续拉出板坯方坯，取代模铸提高成材率。",
+     "deps": ["steel"]
+    },
+    {
+     "id": "iron_ore_pelletizing",
+     "name": "铁精矿球团",
+     "en": "Iron ore pelletizing",
+     "year": 1955,
+     "note": "把细磨精矿造球焙烧成球团入炉，是贫矿利用的重要造块法。",
+     "deps": ["iron_ore_sintering"]
+    },
+    {
+     "id": "vacuum_degassing_steel",
+     "name": "钢水真空脱气",
+     "en": "Vacuum degassing of steel",
+     "year": 1956,
+     "note": "减压去除钢液中的氢氧等气体，消除白点与皮下气泡缺陷。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "rh_degassing",
+     "name": "真空循环脱气法",
+     "en": "RH process",
+     "year": 1957,
+     "note": "借助提升管循环钢水真空处理，是大批量脱气精炼的主流设备。",
+     "deps": ["vacuum_degassing_steel"]
+    },
+    {
+     "id": "sliding_gate_nozzle",
+     "name": "钢包滑动水口",
+     "en": "Sliding gate nozzle",
+     "year": 1960,
+     "note": "滑板开闭控制钢水流股，取代塞棒实现安全可靠的浇注。",
+     "deps": ["continuous_casting_steel"]
+    },
+    {
+     "id": "kr_hot_metal_desulfurization",
+     "name": "KR法铁水脱硫",
+     "en": "KR stirring desulphurization",
+     "year": 1965,
+     "note": "铁水包中插入搅拌头旋转并投入脱硫剂，处理效率高。",
+     "deps": ["basic_oxygen_furnace"]
+    },
+    {
+     "id": "direct_reduced_iron",
+     "name": "直接还原铁",
+     "en": "Direct reduced iron",
+     "year": 1969,
+     "note": "竖炉以还原气把铁矿石直接还原成海绵铁，供电弧炉炼钢。",
+     "deps": ["iron"]
+    },
+    {
+     "id": "ladle_furnace_refining",
+     "name": "钢包精炼炉",
+     "en": "Ladle furnace",
+     "year": 1970,
+     "note": "在钢包内电极加热并搅拌精炼，承担成分微调与温度补偿。",
+     "deps": ["rh_degassing"]
+    },
+    {
+     "id": "hot_metal_desulphurization",
+     "name": "铁水预处理脱硫",
+     "en": "Hot metal desulphurization",
+     "year": 1975,
+     "note": "铁水罐中喷吹镁粉或石灰脱硫，减轻高炉与转炉精炼负担。",
+     "deps": ["basic_oxygen_furnace"]
+    },
+    {
+     "id": "pulverized_coal_injection",
+     "name": "高炉喷吹煤粉",
+     "en": "Pulverized coal injection",
+     "year": 1975,
+     "note": "向高炉风口喷入煤粉部分替代焦炭，明显降低炼铁燃料成本。",
+     "deps": ["coke_ironmaking"]
+    },
+    {
+     "id": "electromagnetic_stirring_caster",
+     "name": "连铸电磁搅拌",
+     "en": "Electromagnetic stirring in continuous casting",
+     "year": 1975,
+     "note": "在结晶器与二冷区施加磁场搅动钢液，细化凝固组织。",
+     "deps": ["continuous_casting_steel"]
+    },
+    {
+     "id": "calcium_treatment_steel",
+     "name": "钢液钙处理",
+     "en": "Calcium treatment of steel",
+     "year": 1980,
+     "note": "喂入钙基包芯线改变硫化物形态，改善钢的各向异性。",
+     "deps": ["ladle_furnace_refining"]
+    },
+    {
+     "id": "combined_blowing_steelmaking",
+     "name": "顶底复合吹炼转炉",
+     "en": "Combined blowing converter",
+     "year": 1982,
+     "note": "顶吹氧、底吹搅拌气结合，改善渣钢反应与喷溅控制。",
+     "deps": ["basic_oxygen_furnace"]
+    },
+    {
+     "id": "thin_slab_casting_rolling",
+     "name": "薄板坯连铸连轧",
+     "en": "Compact strip production",
+     "year": 1989,
+     "note": "薄板坯直接进均热炉连轧成卷，开创钢铁生产短流程。",
+     "deps": ["continuous_casting_steel"]
+    }
+   ]
+  },
+  {
+   "name": "铸铁材料体系与钢铁热处理",
+   "items": [
+    {
+     "id": "quenching_steel",
+     "name": "淬火",
+     "en": "Quenching of steel",
+     "year": -500,
+     "note": "钢件加热后急冷生成马氏体硬化，战国时期已见于剑器制造。",
+     "deps": ["steel"]
+    },
+    {
+     "id": "grey_cast_iron",
+     "name": "灰口铸铁",
+     "en": "Grey cast iron",
+     "year": -200,
+     "note": "碳以片状石墨析出，减振易切削，是古代主要铸铁品种。",
+     "deps": ["cast_iron_smelting"]
+    },
+    {
+     "id": "white_cast_iron",
+     "name": "白口铸铁",
+     "en": "White cast iron",
+     "year": -200,
+     "note": "碳以渗碳体存在，硬脆耐磨，多用于犁铧等耐磨农具。",
+     "deps": ["cast_iron_smelting"]
+    },
+    {
+     "id": "tempering_steel",
+     "name": "回火",
+     "en": "Tempering of steel",
+     "year": -200,
+     "note": "淬火钢低温再加热以消除应力并调整硬度韧性，与淬火配套。",
+     "deps": ["quenching_steel"]
+    },
+    {
+     "id": "iron_annealing_decarburization",
+     "name": "铸铁退火脱碳",
+     "en": "Annealing decarburization of cast iron",
+     "year": -100,
+     "note": "汉代工匠退火白口铁使其脱碳韧化，属早期可锻化处理。",
+     "deps": ["white_cast_iron"]
+    },
+    {
+     "id": "whiteheart_malleable_iron",
+     "name": "白心可锻铸铁",
+     "en": "Whiteheart malleable iron",
+     "year": 1722,
+     "note": "雷奥米尔退火使白口铁脱碳石墨化，形成白心可锻铸铁工艺。",
+     "deps": ["iron_annealing_decarburization"]
+    },
+    {
+     "id": "blackheart_malleable_iron",
+     "name": "黑心可锻铸铁",
+     "en": "Blackheart malleable iron",
+     "year": 1826,
+     "note": "博伊登长时间退火使白口铁石墨化，得韧性黑心可锻铸铁。",
+     "deps": ["iron_annealing_decarburization"]
+    },
+    {
+     "id": "patenting_wire",
+     "name": "钢丝铅浴韧化",
+     "en": "Patenting of steel wire",
+     "year": 1850,
+     "note": "钢丝在铅浴等温冷却获得索氏体组织，保证拉丝后高强度。",
+     "deps": ["steel"]
+    },
+    {
+     "id": "chilled_iron_casting",
+     "name": "冷硬铸铁",
+     "en": "Chilled cast iron",
+     "year": 1870,
+     "note": "激冷面生成白口耐磨层、内部保持灰口的复合铸铁件工艺。",
+     "deps": ["grey_cast_iron"]
+    },
+    {
+     "id": "gas_carburizing",
+     "name": "气体渗碳",
+     "en": "Gas carburizing",
+     "year": 1920,
+     "note": "在渗碳气氛炉中加热低碳钢件，表层增碳后淬硬以耐磨。",
+     "deps": ["steel"]
+    },
+    {
+     "id": "inoculated_cast_iron",
+     "name": "孕育铸铁",
+     "en": "Inoculated cast iron",
+     "year": 1922,
+     "note": "浇注前加入硅铁孕育细化石墨，显著提高灰铸铁强度均匀性。",
+     "deps": ["grey_cast_iron"]
+    },
+    {
+     "id": "nitriding_steel",
+     "name": "气体渗氮",
+     "en": "Gas nitriding of steel",
+     "year": 1923,
+     "note": "氨气中加热使氮渗入钢表面，生成高硬度耐磨的渗氮层。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "alloy_cast_iron",
+     "name": "合金铸铁",
+     "en": "Alloy cast iron",
+     "year": 1927,
+     "note": "添加镍铬钼等改善铸铁耐磨耐热耐蚀性，如镍硬铸铁等。",
+     "deps": ["grey_cast_iron"]
+    },
+    {
+     "id": "flame_hardening",
+     "name": "火焰淬火",
+     "en": "Flame hardening",
+     "year": 1930,
+     "note": "用氧乙炔火焰快速加热工件表面再喷水急冷，实现局部硬化。",
+     "deps": ["quenching_steel"]
+    },
+    {
+     "id": "austempering",
+     "name": "等温淬火",
+     "en": "Austempering",
+     "year": 1932,
+     "note": "钢件淬入盐浴等温转变得下贝氏体，减少变形并提高韧性。",
+     "deps": ["quenching_steel"]
+    },
+    {
+     "id": "martempering",
+     "name": "分级淬火",
+     "en": "Martempering",
+     "year": 1935,
+     "note": "淬火时先在马氏体点上方盐浴均温再空冷，抑制畸变开裂。",
+     "deps": ["quenching_steel"]
+    },
+    {
+     "id": "induction_hardening",
+     "name": "感应淬火",
+     "en": "Induction hardening",
+     "year": 1935,
+     "note": "高频感应加热工件表层后急冷硬化，适合齿轮轴类局部处理。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "carbonitriding",
+     "name": "碳氮共渗",
+     "en": "Carbonitriding",
+     "year": 1945,
+     "note": "在含碳氮气氛中同时渗碳渗氮，降低处理温度并提高耐磨性。",
+     "deps": ["nitriding_steel"]
+    },
+    {
+     "id": "ductile_iron",
+     "name": "球墨铸铁",
+     "en": "Ductile cast iron",
+     "year": 1948,
+     "note": "铁水中加镁铈使石墨球化，兼具铸铁铸造性与钢的强度韧性。",
+     "deps": ["inoculated_cast_iron"]
+    },
+    {
+     "id": "vacuum_heat_treatment",
+     "name": "真空热处理",
+     "en": "Vacuum heat treatment",
+     "year": 1970,
+     "note": "在真空炉中加热淬火退火，无氧化脱碳，用于工模具钢。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "cryogenic_treatment",
+     "name": "深冷处理",
+     "en": "Cryogenic treatment",
+     "year": 1965,
+     "note": "把钢件冷至零下百余摄氏度分解残余奥氏体，提高尺寸稳定性。",
+     "deps": ["quenching_steel"]
+    },
+    {
+     "id": "compacted_graphite_iron",
+     "name": "蠕墨铸铁",
+     "en": "Compacted graphite iron",
+     "year": 1965,
+     "note": "石墨呈蠕虫状介于片状与球状之间，强度导热兼优的铸铁。",
+     "deps": ["ductile_iron"]
+    },
+    {
+     "id": "austempered_ductile_iron",
+     "name": "等温淬火球墨铸铁",
+     "en": "Austempered ductile iron",
+     "year": 1977,
+     "note": "球墨铸铁经等温淬火得奥铁体组织，用于齿轮与重载耐磨件。",
+     "deps": ["ductile_iron"]
+    }
+   ]
+  },
+  {
+   "name": "现代有色冶金、铁合金与稀土分离",
+   "items": [
+    {
+     "id": "parkes_desilverizing",
+     "name": "帕克斯法提银",
+     "en": "Parkes process",
+     "year": 1850,
+     "note": "向铅液中加锌使银富集于浮渣，规模化回收铅矿伴生银。",
+     "deps": ["lead_smelting"]
+    },
+    {
+     "id": "electrolytic_copper_refining",
+     "name": "电解精炼铜",
+     "en": "Electrolytic refining of copper",
+     "year": 1869,
+     "note": "以硫酸铜电解液沉积高纯阴极铜，可顺便回收阳极贵金属。",
+     "deps": ["generator"]
+    },
+    {
+     "id": "ferro_manganese",
+     "name": "锰铁合金",
+     "en": "Ferromanganese",
+     "year": 1875,
+     "note": "高碳锰铁作炼钢脱氧合金剂，可消除硫引起的热脆。",
+     "deps": ["iron"]
+    },
+    {
+     "id": "manhes_copper_converter",
+     "name": "转炉吹炼冰铜",
+     "en": "Manhès-David copper converter",
+     "year": 1880,
+     "note": "卧式转炉鼓风把冰铜吹成粗铜，实现铜的精炼规模化。",
+     "deps": ["copper_sulfide_smelting"]
+    },
+    {
+     "id": "cyanide_gold_extraction",
+     "name": "氰化提金",
+     "en": "Cyanide process for gold",
+     "year": 1887,
+     "note": "以稀氰化钠溶液浸出金矿石再置换沉淀，是现代提金主导工艺。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "mond_nickel_process",
+     "name": "蒙德羰基法炼镍",
+     "en": "Mond carbonyl process",
+     "year": 1889,
+     "note": "镍与一氧化碳生成羰基镍再加热分解，制取高纯镍丸。",
+     "deps": ["nickel_isolation"]
+    },
+    {
+     "id": "ferro_silicon",
+     "name": "硅铁合金",
+     "en": "Ferrosilicon",
+     "year": 1890,
+     "note": "电炉冶炼硅铁用作炼钢脱氧剂，也是铸铁常用孕育剂。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "mischmetal_smelting",
+     "name": "混合稀土金属冶炼",
+     "en": "Mischmetal production",
+     "year": 1903,
+     "note": "熔盐电解稀土氯化物制混合稀土，供打火石与发火合金使用。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "ferrovanadium",
+     "name": "钒铁合金",
+     "en": "Ferrovanadium",
+     "year": 1906,
+     "note": "铝热或电炉还原钒氧化物制钒铁，为结构钢常用微合金元素。",
+     "deps": ["iron"]
+    },
+    {
+     "id": "ferrochrome",
+     "name": "铬铁合金",
+     "en": "Ferrochrome",
+     "year": 1910,
+     "note": "碳还原铬矿制取铬铁，是不锈钢与耐热钢的主要合金原料。",
+     "deps": ["iron"]
+    },
+    {
+     "id": "zinc_electrowinning",
+     "name": "电解法炼锌",
+     "en": "Electrowinning of zinc",
+     "year": 1915,
+     "note": "硫酸浸出锌精矿电解沉积制取高纯锌，为现代锌冶炼主流。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "lithium_metal_smelting",
+     "name": "熔盐电解炼锂",
+     "en": "Electrolysis of lithium chloride",
+     "year": 1923,
+     "note": "熔融氯化锂电解制金属锂，开启锂的工业规模生产。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "flash_smelting",
+     "name": "闪速熔炼",
+     "en": "Outokumpu flash smelting",
+     "year": 1949,
+     "note": "干精矿悬浮自热熔炼铜镍硫化物，节能且二氧化硫易回收。",
+     "deps": ["manhes_copper_converter"]
+    },
+    {
+     "id": "imperial_smelting_furnace",
+     "name": "密闭鼓风炉炼铅锌",
+     "en": "Imperial smelting furnace",
+     "year": 1950,
+     "note": "英国帝国熔炼炉用锌雨冷凝回收铅锌蒸气，实现铅锌同炼。",
+     "deps": ["lead_smelting"]
+    },
+    {
+     "id": "rare_earth_ion_exchange",
+     "name": "稀土离子交换分离",
+     "en": "Ion-exchange separation of rare earths",
+     "year": 1955,
+     "note": "借助离子交换树脂分级淋洗，首次实现高纯单一稀土制备。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "rare_earth_solvent_extraction",
+     "name": "稀土溶剂萃取分离",
+     "en": "Solvent extraction of rare earths",
+     "year": 1965,
+     "note": "串级萃取槽连续分离性质相近的稀土，支撑单一稀土量产。",
+     "deps": ["rare_earth_ion_exchange"]
+    },
+    {
+     "id": "sx_ew_copper",
+     "name": "溶剂萃取-电积铜",
+     "en": "Solvent extraction and electrowinning of copper",
+     "year": 1968,
+     "note": "浸出液萃取富集后电积产阴极铜，用于处理低品位氧化铜矿。",
+     "deps": ["electrolytic_copper_refining"]
+    }
+   ]
+  }
+ ]
+}

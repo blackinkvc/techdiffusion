@@ -1,0 +1,1366 @@
+{
+ "cat": "info",
+ "catName": "信息与通信",
+ "sub": "ai",
+ "subName": "人工智能",
+ "schemaNote": "catalog v1：人工智能域真实技术目录。锚点 ai/llm/transformer_arch/computer_vision 不重复收录；蒙特卡洛方法、贝叶斯定理等数学域条目以近义不同名细分（如蒙特卡洛树搜索、贝叶斯网络）区分。",
+ "anchors": [
+  "mathematics",
+  "computer",
+  "ai",
+  "computer_vision",
+  "llm",
+  "transformer_arch"
+ ],
+ "families": [
+  {
+   "name": "符号主义与知识工程",
+   "items": [
+    {
+     "id": "ai_cybernetics",
+     "name": "控制论",
+     "en": "Cybernetics",
+     "year": 1948,
+     "note": "维纳创立的反馈控制与通信理论，将机器与生物的调节统一建模，为智能机器奠基。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "ai_turing_test",
+     "name": "图灵测试",
+     "en": "Turing test",
+     "year": 1950,
+     "note": "图灵以对话盲测界定机器智能的思想实验，成为人工智能的标志性判据。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_game_tree_search",
+     "name": "博弈树搜索",
+     "en": "Game tree search",
+     "year": 1950,
+     "note": "香农提出计算机下棋框架，塞缪尔的跳棋程序实现自学改进，开创博弈智能。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_machine_theorem_proving",
+     "name": "机器定理证明",
+     "en": "Automated theorem proving",
+     "year": 1956,
+     "note": "纽厄尔与西蒙的逻辑理论家程序证明数学定理，开启符号推理自动化的先河。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_general_problem_solver",
+     "name": "通用问题求解器",
+     "en": "General Problem Solver",
+     "year": 1957,
+     "note": "以手段目的分析模拟人类解题的通用程序，确立问题空间与算子的求解范式。",
+     "deps": [
+      "ai_machine_theorem_proving"
+     ]
+    },
+    {
+     "id": "ai_sat_solving",
+     "name": "布尔可满足性求解",
+     "en": "Boolean satisfiability solving",
+     "year": 1962,
+     "note": "DPLL 回溯算法求解逻辑公式，现代求解器支撑芯片验证与组合问题求解。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_semantic_network",
+     "name": "语义网络",
+     "en": "Semantic network",
+     "year": 1963,
+     "note": "奎利安以节点与连线表示概念关系，是知识图谱与语义表示的直系前身。",
+     "deps": [
+      "ai"
+     ]
+    },
+    {
+     "id": "ai_expert_system",
+     "name": "专家系统",
+     "en": "Expert system",
+     "year": 1965,
+     "note": "以规则库模拟专家推理的系统，DENDRAL 起步、MYCIN 医疗诊断成经典。",
+     "deps": [
+      "ai"
+     ]
+    },
+    {
+     "id": "ai_automated_planning",
+     "name": "自动规划系统",
+     "en": "Automated planning",
+     "year": 1971,
+     "note": "STRIPS 为机器人沙基设计的目标分解行动规划技术，是智能体自主行为的基础。",
+     "deps": [
+      "ai"
+     ]
+    },
+    {
+     "id": "ai_blackboard_arch",
+     "name": "黑板系统架构",
+     "en": "Blackboard architecture",
+     "year": 1973,
+     "note": "多个知识源经共享黑板协作求解的架构，源自语音理解系统 Hearsay-II。",
+     "deps": [
+      "ai"
+     ]
+    },
+    {
+     "id": "ai_frame_representation",
+     "name": "知识框架表示",
+     "en": "Frame representation",
+     "year": 1974,
+     "note": "明斯基提出的带槽位结构化知识表示法，用于常识情景理解与推理。",
+     "deps": [
+      "ai_semantic_network"
+     ]
+    },
+    {
+     "id": "ai_fuzzy_control",
+     "name": "模糊控制",
+     "en": "Fuzzy control",
+     "year": 1974,
+     "note": "马姆达尼以模糊规则实现无法精确建模对象的控制，用于家电与地铁自动驾驶。",
+     "deps": [
+      "ai"
+     ]
+    },
+    {
+     "id": "ai_constraint_solving",
+     "name": "约束满足求解",
+     "en": "Constraint satisfaction solving",
+     "year": 1977,
+     "note": "以约束传播与回溯搜索求解组合问题的技术，用于排产调度与资源配置。",
+     "deps": [
+      "ai"
+     ]
+    },
+    {
+     "id": "ai_expert_shell",
+     "name": "专家系统开发环境",
+     "en": "Expert system shell",
+     "year": 1980,
+     "note": "抽离领域知识的推理外壳，使专家系统可按领域快速配置开发。",
+     "deps": [
+      "ai_expert_system"
+     ]
+    },
+    {
+     "id": "ai_model_checking",
+     "name": "模型检测",
+     "en": "Model checking",
+     "year": 1981,
+     "note": "克拉克与爱默生提出的自动验证系统性质的技术，广泛用于协议与芯片验证。",
+     "deps": [
+      "ai_sat_solving"
+     ]
+    },
+    {
+     "id": "ai_commonsense_kb",
+     "name": "常识知识库工程",
+     "en": "Commonsense knowledge base",
+     "year": 1984,
+     "note": " Cyc 工程尝试手工构建大规模常识知识库，探索知识瓶颈问题的极限。",
+     "deps": [
+      "ai_frame_representation"
+     ]
+    },
+    {
+     "id": "ai_bdi_agent",
+     "name": "信念-愿望-意图智能体",
+     "en": "BDI agent architecture",
+     "year": 1987,
+     "note": "以心理状态建模理性智能体的架构，支撑分布式决策与软件代理系统。",
+     "deps": [
+      "ai_automated_planning"
+     ]
+    },
+    {
+     "id": "ai_ontology_engineering",
+     "name": "本体工程",
+     "en": "Ontology engineering",
+     "year": 1993,
+     "note": "格鲁伯确立共享概念化规范方法，为领域知识建模与语义互操作提供基础。",
+     "deps": [
+      "ai_semantic_network"
+     ]
+    },
+    {
+     "id": "ai_knowledge_graph",
+     "name": "知识图谱",
+     "en": "Knowledge graph",
+     "year": 2012,
+     "note": "以图结构组织实体关系并支撑推理检索的知识库形态，广泛用于搜索与问答。",
+     "deps": [
+      "ai_semantic_network"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "机器学习基础",
+   "items": [
+    {
+     "id": "ai_knn_algorithm",
+     "name": "k 近邻算法",
+     "en": "k-nearest neighbors",
+     "year": 1951,
+     "note": "以最相似样本投票分类的惰性学习方法，简单有效，是模式识别入门算法。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "ai_clustering_algorithm",
+     "name": "聚类算法",
+     "en": "Clustering algorithms",
+     "year": 1957,
+     "note": "以 k 均值等迭代方法将数据自动分组，用于客户细分与探索性数据分析。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "ai_perceptron_model",
+     "name": "感知机",
+     "en": "Perceptron",
+     "year": 1958,
+     "note": "罗森布拉特提出的可学习线性分类神经元模型，掀起了最早的神经网络热潮。",
+     "deps": [
+      "ai"
+     ]
+    },
+    {
+     "id": "ai_naive_bayes",
+     "name": "朴素贝叶斯分类",
+     "en": "Naive Bayes classifier",
+     "year": 1960,
+     "note": "以条件独立性假设计算后验概率的文本分类经典方法，垃圾邮件过滤功臣。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "ai_hidden_markov",
+     "name": "隐马尔可夫模型",
+     "en": "Hidden Markov model",
+     "year": 1966,
+     "note": "鲍姆等提出的双重随机序列模型，长期主导语音识别与生物序列分析。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "ai_genetic_algorithm",
+     "name": "遗传算法",
+     "en": "Genetic algorithm",
+     "year": 1975,
+     "note": "霍兰德模拟选择交叉变异的进化优化算法，用于复杂搜索空间的寻优。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_em_algorithm",
+     "name": "期望最大化算法",
+     "en": "Expectation-maximization algorithm",
+     "year": 1977,
+     "note": "登普斯特等提出的含隐变量参数极大似然估计算法，是统计学习的基石。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "ai_simulated_annealing",
+     "name": "模拟退火算法",
+     "en": "Simulated annealing",
+     "year": 1983,
+     "note": "借冶金退火思想以概率接受劣化解跳出局部最优，广泛用于组合优化。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_bayesian_network",
+     "name": "贝叶斯网络",
+     "en": "Bayesian network",
+     "year": 1985,
+     "note": "珀尔以有向无环图表示变量因果与概率依赖，支撑医疗诊断等不确定性推理。",
+     "deps": [
+      "ai"
+     ]
+    },
+    {
+     "id": "ai_decision_tree",
+     "name": "决策树学习",
+     "en": "Decision tree learning",
+     "year": 1986,
+     "note": "奎兰的 ID3 起以信息增益递归划分数据，可解释的分类回归主流方法。",
+     "deps": [
+      "ai"
+     ]
+    },
+    {
+     "id": "ai_genetic_programming",
+     "name": "遗传编程",
+     "en": "Genetic programming",
+     "year": 1989,
+     "note": "科扎将进化思想扩展到程序自动合成，按适应度演化出可执行的表达式树。",
+     "deps": [
+      "ai_genetic_algorithm"
+     ]
+    },
+    {
+     "id": "ai_ensemble_learning",
+     "name": "集成学习",
+     "en": "Ensemble learning",
+     "year": 1990,
+     "note": "组合多个弱学习器提升泛化的方法，bagging 与 boosting 为两大路线。",
+     "deps": [
+      "ai_decision_tree"
+     ]
+    },
+    {
+     "id": "ai_svm_model",
+     "name": "支持向量机",
+     "en": "Support vector machine",
+     "year": 1992,
+     "note": "以最大间隔与核技巧处理非线性分类的方法，在深度学习前统治机器学习。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "ai_collaborative_filtering",
+     "name": "协同过滤推荐",
+     "en": "Collaborative filtering",
+     "year": 1992,
+     "note": "利用群体行为相似性预测个人偏好的推荐技术，奠定电商与流媒体推荐。",
+     "deps": [
+      "ai_knn_algorithm"
+     ]
+    },
+    {
+     "id": "ai_association_rules",
+     "name": "关联规则挖掘",
+     "en": "Association rule mining",
+     "year": 1993,
+     "note": "阿格拉瓦从交易数据发现频繁项集与规则，经典的购物篮分析算法。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "ai_swarm_intelligence",
+     "name": "群体智能优化算法",
+     "en": "Swarm intelligence optimization",
+     "year": 1995,
+     "note": "蚁群与粒子群等模拟生物群体协作的优化算法，求解路径规划等问题。",
+     "deps": [
+      "ai_genetic_algorithm"
+     ]
+    },
+    {
+     "id": "ai_gaussian_process",
+     "name": "高斯过程回归",
+     "en": "Gaussian process regression",
+     "year": 1996,
+     "note": "以函数空间概率分布建模的不确定性回归方法，用于贝叶斯优化与地学插值。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "ai_manifold_learning",
+     "name": "流形学习",
+     "en": "Manifold learning",
+     "year": 2000,
+     "note": "发现高维数据内在低维结构的非线性降维方法，Isomap 为代表算法。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "ai_random_forest",
+     "name": "随机森林",
+     "en": "Random forest",
+     "year": 2001,
+     "note": "布雷曼以随机子空间集成决策树，稳健易用，长期占据表格数据任务前列。",
+     "deps": [
+      "ai_ensemble_learning",
+      "ai_decision_tree"
+     ]
+    },
+    {
+     "id": "ai_gradient_boosting",
+     "name": "梯度提升树",
+     "en": "Gradient boosting trees",
+     "year": 2001,
+     "note": "弗里德曼以梯度下降逐步加树，XGBoost 等实现成为结构化数据竞赛王者。",
+     "deps": [
+      "ai_ensemble_learning"
+     ]
+    },
+    {
+     "id": "ai_matrix_factorization",
+     "name": "矩阵分解推荐",
+     "en": "Matrix factorization recommendation",
+     "year": 2006,
+     "note": "将用户物品评分矩阵分解为隐因子向量，Netflix 大奖赛确立推荐新范式。",
+     "deps": [
+      "ai_collaborative_filtering"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "神经网络与深度学习",
+   "items": [
+    {
+     "id": "ai_mcp_neuron",
+     "name": "神经元数学模型",
+     "en": "McCulloch-Pitts neuron",
+     "year": 1943,
+     "note": "麦卡洛克与皮茨以阈值逻辑刻画神经元的计算模型，是人工神经网络的源头。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "ai_adaline_model",
+     "name": "自适应线性单元",
+     "en": "ADALINE",
+     "year": 1960,
+     "note": "维德罗与霍夫提出的最小均方学习规则网络，应用于自适应滤波与消噪。",
+     "deps": [
+      "ai_mcp_neuron"
+     ]
+    },
+    {
+     "id": "ai_neocognitron",
+     "name": "新认知机",
+     "en": "Neocognitron",
+     "year": 1979,
+     "note": "福岛邦彦受视皮层启发提出的层次化特征识别网络，卷积网络的生物学前身。",
+     "deps": [
+      "ai_perceptron_model"
+     ]
+    },
+    {
+     "id": "ai_hopfield_network",
+     "name": "Hopfield 网络",
+     "en": "Hopfield network",
+     "year": 1982,
+     "note": "霍普菲尔德提出的联想记忆网络，以能量函数刻画神经动力学，复兴连接主义。",
+     "deps": [
+      "ai_mcp_neuron"
+     ]
+    },
+    {
+     "id": "ai_boltzmann_machine",
+     "name": "玻尔兹曼机",
+     "en": "Boltzmann machine",
+     "year": 1985,
+     "note": "引入随机神经元的能量模型网络，其受限变体是早期深度学习的预训练主力。",
+     "deps": [
+      "ai_adaline_model"
+     ]
+    },
+    {
+     "id": "ai_backpropagation",
+     "name": "反向传播算法",
+     "en": "Backpropagation",
+     "year": 1986,
+     "note": "鲁梅尔哈特等推广的误差逐层回传算法，使多层网络训练成为可能。",
+     "deps": [
+      "ai_perceptron_model"
+     ]
+    },
+    {
+     "id": "ai_mlp_network",
+     "name": "多层感知机",
+     "en": "Multilayer perceptron",
+     "year": 1986,
+     "note": "以隐藏层与非线性激活逼近复杂函数的神经网络，深度学习的基本单元。",
+     "deps": [
+      "ai_perceptron_model"
+     ]
+    },
+    {
+     "id": "ai_autoencoder_network",
+     "name": "自编码器",
+     "en": "Autoencoder",
+     "year": 1986,
+     "note": "以编码解码结构学习数据压缩表示的网络，特征提取与生成的通用骨架。",
+     "deps": [
+      "ai_mcp_neuron"
+     ]
+    },
+    {
+     "id": "ai_rbf_network",
+     "name": "径向基函数网络",
+     "en": "Radial basis function network",
+     "year": 1988,
+     "note": "以径向基隐单元构成的三层网络，函数逼近与插值速度快且原理直观。",
+     "deps": [
+      "ai_mlp_network"
+     ]
+    },
+    {
+     "id": "ai_convolutional_nn",
+     "name": "卷积神经网络",
+     "en": "Convolutional neural network",
+     "year": 1989,
+     "note": "勒昆将局部连接与权值共享用于字符识别，LeNet 支撑支票邮编识别商用。",
+     "deps": [
+      "ai_backpropagation"
+     ]
+    },
+    {
+     "id": "ai_recurrent_nn",
+     "name": "循环神经网络",
+     "en": "Recurrent neural network",
+     "year": 1990,
+     "note": "带反馈连接的序列建模网络，埃尔曼网络使网络具备动态记忆能力。",
+     "deps": [
+      "ai_backpropagation"
+     ]
+    },
+    {
+     "id": "ai_moe_model",
+     "name": "混合专家模型",
+     "en": "Mixture of experts",
+     "year": 1991,
+     "note": "雅各布斯与乔丹提出的分而治之门控网络，现代稀疏大模型的扩容基础。",
+     "deps": [
+      "ai_mlp_network"
+     ]
+    },
+    {
+     "id": "ai_lstm_network",
+     "name": "长短期记忆网络",
+     "en": "Long short-term memory",
+     "year": 1997,
+     "note": "霍克莱特与施密德胡伯以门控机制解决梯度消失，长期主导序列学习任务。",
+     "deps": [
+      "ai_recurrent_nn"
+     ]
+    },
+    {
+     "id": "ai_spiking_nn",
+     "name": "脉冲神经网络",
+     "en": "Spiking neural network",
+     "year": 1997,
+     "note": "以离散脉冲与时间编码逼近生物神经元的第三代网络，适配神经形态芯片。",
+     "deps": [
+      "ai_mcp_neuron"
+     ]
+    },
+    {
+     "id": "ai_deep_belief_network",
+     "name": "深度信念网络",
+     "en": "Deep belief network",
+     "year": 2006,
+     "note": "辛顿以受限玻尔兹曼机逐层预训练深层网络，突破深层训练瓶颈开启深度学习。",
+     "deps": [
+      "ai_mlp_network"
+     ]
+    },
+    {
+     "id": "ai_graph_nn",
+     "name": "图神经网络",
+     "en": "Graph neural network",
+     "year": 2009,
+     "note": "在图结构上传播聚合消息的网络，图卷积网络兴起后广泛用于分子与推荐。",
+     "deps": [
+      "ai_mlp_network"
+     ]
+    },
+    {
+     "id": "ai_deep_cnn",
+     "name": "深度卷积网络",
+     "en": "Deep convolutional network",
+     "year": 2012,
+     "note": "AlexNet 以深度卷积与 GPU 训练赢得图像识别挑战，掀起深度学习浪潮。",
+     "deps": [
+      "ai_convolutional_nn"
+     ]
+    },
+    {
+     "id": "ai_attention_mechanism",
+     "name": "注意力机制",
+     "en": "Attention mechanism",
+     "year": 2014,
+     "note": "巴达瑙在神经翻译中让模型动态聚焦相关信息，成为序列建模的关键构件。",
+     "deps": [
+      "ai_recurrent_nn"
+     ]
+    },
+    {
+     "id": "ai_gru_network",
+     "name": "门控循环单元",
+     "en": "Gated recurrent unit",
+     "year": 2014,
+     "note": "赵京旭等提出的双门控简化循环单元，以更少参数获得与长短期记忆相当性能。",
+     "deps": [
+      "ai_lstm_network"
+     ]
+    },
+    {
+     "id": "ai_residual_network",
+     "name": "深度残差网络",
+     "en": "Residual network",
+     "year": 2015,
+     "note": "何恺明等以跳跃连接训练百层以上网络，使网络深度扩展成为常态。",
+     "deps": [
+      "ai_deep_cnn"
+     ]
+    },
+    {
+     "id": "ai_neural_arch_search",
+     "name": "神经架构搜索",
+     "en": "Neural architecture search",
+     "year": 2017,
+     "note": "以强化学习等方法自动设计网络结构，减少人工调参的架构工程负担。",
+     "deps": [
+      "ai_deep_cnn"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "计算机视觉",
+   "items": [
+    {
+     "id": "ai_edge_detection",
+     "name": "图像边缘检测",
+     "en": "Edge detection",
+     "year": 1965,
+     "note": "罗伯特斯算子起提取亮度突变轮廓的方法，是图像理解最基础的运算。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_morphological_ops",
+     "name": "数学形态学",
+     "en": "Mathematical morphology",
+     "year": 1968,
+     "note": "塞拉与马泰龙创立的集合形态算子体系，以腐蚀膨胀处理二值与灰度图像。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_hough_transform",
+     "name": "霍夫变换",
+     "en": "Hough transform",
+     "year": 1972,
+     "note": "将边缘点映射到参数空间检测直线圆弧的方法，工业检测中的应用经典。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_stereo_matching",
+     "name": "双目立体匹配",
+     "en": "Binocular stereo matching",
+     "year": 1976,
+     "note": "马尔与波焦建立计算理论，以双视图对应点差恢复深度，机器立体视觉基础。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_optical_flow",
+     "name": "光流法",
+     "en": "Optical flow",
+     "year": 1981,
+     "note": "霍恩-舒克与卢卡斯-卡纳德估计像素级表观运动，支撑视频分析与配准。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_camera_calibration",
+     "name": "相机标定技术",
+     "en": "Camera calibration",
+     "year": 1987,
+     "note": "建立图像坐标与三维世界几何关系的标定方法，是度量视觉的前提。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_active_contour",
+     "name": "主动轮廓模型",
+     "en": "Active contour model",
+     "year": 1988,
+     "note": "卡斯等提出的能量最小化蛇模型，以可变形曲线精确贴合目标边界。",
+     "deps": [
+      "ai_edge_detection"
+     ]
+    },
+    {
+     "id": "ai_face_recognition",
+     "name": "人脸识别技术",
+     "en": "Face recognition",
+     "year": 1991,
+     "note": "特征脸方法起步，维奥拉-琼斯实现实时检测，深度模型时代达支付级精度。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_structure_motion",
+     "name": "运动恢复结构",
+     "en": "Structure from motion",
+     "year": 1992,
+     "note": "从序列特征对应同时恢复相机位姿与场景三维结构，摄影测量与重建核心。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_image_segmentation",
+     "name": "图像分割",
+     "en": "Image segmentation",
+     "year": 1997,
+     "note": "归一化割等图论方法将图像划分为语义区域，U 型网络实现像素级精细分割。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_image_classification",
+     "name": "图像分类",
+     "en": "Image classification",
+     "year": 1998,
+     "note": "从手写数字识别起步，ImageNet 挑战推动卷积网络达到乃至超越人类水平。",
+     "deps": [
+      "ai_convolutional_nn"
+     ]
+    },
+    {
+     "id": "ai_scale_feature",
+     "name": "尺度不变特征变换",
+     "en": "Scale-invariant feature transform",
+     "year": 1999,
+     "note": "洛威提出的局部特征描述子，对旋转缩放稳健，是图像匹配时代标杆。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_object_detection",
+     "name": "目标检测技术",
+     "en": "Object detection",
+     "year": 2001,
+     "note": "维奥拉-琼斯实现实时目标检测，深度时代的单阶段多阶段检测器广泛部署。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_hog_feature",
+     "name": "方向梯度直方图特征",
+     "en": "Histogram of oriented gradients",
+     "year": 2005,
+     "note": "达尔与特里格斯为行人检测设计的局部形状特征，深度学习前的主流手工特征。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_image_stitching",
+     "name": "图像拼接与全景合成",
+     "en": "Image stitching",
+     "year": 2007,
+     "note": "基于特征匹配与捆绑调整自动拼接全景图，成为手机与相机的标配功能。",
+     "deps": [
+      "ai_scale_feature"
+     ]
+    },
+    {
+     "id": "ai_image_captioning",
+     "name": "图像描述生成",
+     "en": "Image captioning",
+     "year": 2014,
+     "note": "卷积网络编码图像后由语言模型解码生成描述，跨模态生成的早期代表。",
+     "deps": [
+      "ai_deep_cnn"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "自然语言处理与语音",
+   "items": [
+    {
+     "id": "ai_ngram_model",
+     "name": "n 元语法模型",
+     "en": "N-gram language model",
+     "year": 1948,
+     "note": "香农以词序列统计建模英语文本，奠定了统计语言处理的基石。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "ai_speech_recognition",
+     "name": "语音识别算法",
+     "en": "Speech recognition algorithms",
+     "year": 1952,
+     "note": "贝尔实验室 Audrey 识别数字起步，经隐马尔可夫到端到端深度模型走向普及。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_machine_translation",
+     "name": "机器翻译",
+     "en": "Machine translation",
+     "year": 1954,
+     "note": "乔治敦-IBM 实验翻译俄文句子，历经规则、统计到神经方法三次范式更替。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_text_summarization",
+     "name": "自动文摘",
+     "en": "Automatic summarization",
+     "year": 1958,
+     "note": "卢恩以词频统计抽取重要句子生成摘要，开创文本压缩自动化研究。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_speech_synthesis",
+     "name": "语音合成技术",
+     "en": "Speech synthesis",
+     "year": 1961,
+     "note": "计算机合成语音自贝尔实验室起步，共振峰到神经声码器逐步逼近自然语音。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_text_classification",
+     "name": "文本自动分类",
+     "en": "Automatic text classification",
+     "year": 1961,
+     "note": "马龙开创以统计模型为文档自动归类，垃圾邮件过滤与内容审核的基础技术。",
+     "deps": [
+      "ai_naive_bayes"
+     ]
+    },
+    {
+     "id": "ai_early_chatbot",
+     "name": "对话式代理",
+     "en": "Conversational agents",
+     "year": 1966,
+     "note": "伊丽莎以模式匹配模拟心理咨询对话，确立聊天机器人与人机对话研究。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_lexical_kb",
+     "name": "机器可用词汇知识库",
+     "en": "Machine-readable lexical knowledge base",
+     "year": 1985,
+     "note": "WordNet 以同义词集组织词义关系，为词义消歧与语言计算提供资源底座。",
+     "deps": [
+      "ai_semantic_network"
+     ]
+    },
+    {
+     "id": "ai_information_extraction",
+     "name": "信息抽取技术",
+     "en": "Information extraction",
+     "year": 1987,
+     "note": "从文本自动抽取实体关系事件，消息理解会议推动其评测体系化。",
+     "deps": [
+      "ai_ngram_model"
+     ]
+    },
+    {
+     "id": "ai_statistical_mt",
+     "name": "统计机器翻译",
+     "en": "Statistical machine translation",
+     "year": 1990,
+     "note": "布朗等以平行语料统计建模翻译概率，取代手工规则成为新范式。",
+     "deps": [
+      "ai_hidden_markov"
+     ]
+    },
+    {
+     "id": "ai_syntactic_treebank",
+     "name": "句法树库",
+     "en": "Syntactic treebank",
+     "year": 1993,
+     "note": "宾夕法尼亚树库以人工标注句法结构，支撑统计句法分析器训练。",
+     "deps": [
+      "ai_ngram_model"
+     ]
+    },
+    {
+     "id": "ai_named_entity",
+     "name": "命名实体识别",
+     "en": "Named entity recognition",
+     "year": 1996,
+     "note": "识别文本中人名地名机构等实体，是信息抽取与知识图谱构建的关键环节。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_sentiment_analysis",
+     "name": "情感分析",
+     "en": "Sentiment analysis",
+     "year": 2002,
+     "note": "潘与李将文本情感倾向作为分类问题，支撑舆情监测与评论洞察。",
+     "deps": [
+      "ai_ngram_model"
+     ]
+    },
+    {
+     "id": "ai_topic_model",
+     "name": "主题模型",
+     "en": "Topic modeling",
+     "year": 2003,
+     "note": "潜在狄利克雷分配将文档建模为主题混合，大规模文本语义结构发现工具。",
+     "deps": [
+      "ai_em_algorithm"
+     ]
+    },
+    {
+     "id": "ai_question_answering",
+     "name": "问答系统",
+     "en": "Question answering systems",
+     "year": 2011,
+     "note": "沃森系统在智力竞赛中击败人类冠军，统计问答与知识检索结合的代表。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_word_embedding",
+     "name": "词嵌入技术",
+     "en": "Word embeddings",
+     "year": 2013,
+     "note": "word2vec 将词映射为稠密向量，语义相似性可用向量运算刻画。",
+     "deps": [
+      "ai_mlp_network"
+     ]
+    },
+    {
+     "id": "ai_seq2seq",
+     "name": "序列到序列学习",
+     "en": "Sequence-to-sequence learning",
+     "year": 2014,
+     "note": "苏茨克维等以编码解码框架映射变长序列，机器翻译与对话的通用范式。",
+     "deps": [
+      "ai_lstm_network"
+     ]
+    },
+    {
+     "id": "ai_subword_tokenization",
+     "name": "子词切分技术",
+     "en": "Subword tokenization",
+     "year": 2016,
+     "note": "字节对编码等将词拆为子词单元，平衡词表规模与未登录词问题。",
+     "deps": [
+      "ai_seq2seq"
+     ]
+    },
+    {
+     "id": "ai_neural_mt",
+     "name": "神经机器翻译",
+     "en": "Neural machine translation",
+     "year": 2016,
+     "note": "端到端神经网络取代统计短语系统，谷歌上线后翻译质量大幅跃升。",
+     "deps": [
+      "ai_seq2seq"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "强化学习与机器人学习",
+   "items": [
+    {
+     "id": "ai_motion_planning",
+     "name": "机器人运动规划",
+     "en": "Motion planning",
+     "year": 1979,
+     "note": "洛萨诺-佩雷斯等建立路径与避障规划方法，机器人自主移动的算法基础。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_actor_critic",
+     "name": "演员-评论家算法",
+     "en": "Actor-critic algorithm",
+     "year": 1983,
+     "note": "巴托等将策略与价值估计分离又协作，构成现代强化学习算法的骨架。",
+     "deps": [
+      "ai"
+     ]
+    },
+    {
+     "id": "ai_potential_field",
+     "name": "人工势场法",
+     "en": "Artificial potential field",
+     "year": 1986,
+     "note": "哈蒂布以引力斥力场实时驱动机器人避障，计算轻量广泛用于移动机器人。",
+     "deps": [
+      "ai_motion_planning"
+     ]
+    },
+    {
+     "id": "ai_slam_technique",
+     "name": "同步定位与地图构建",
+     "en": "Simultaneous localization and mapping",
+     "year": 1986,
+     "note": "史密斯与奇斯曼提出的移动机器人同时建图定位框架，自主导航核心技术。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_temporal_difference",
+     "name": "时序差分学习",
+     "en": "Temporal difference learning",
+     "year": 1988,
+     "note": "萨顿提出用后续估计修正当前预测的方法，强化学习与神经预测的核心机制。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_q_learning",
+     "name": "Q 学习",
+     "en": "Q-learning",
+     "year": 1989,
+     "note": "沃特金斯提出的无模型离轨策略学习算法，值函数学习的经典代表。",
+     "deps": [
+      "ai_temporal_difference"
+     ]
+    },
+    {
+     "id": "ai_imitation_learning",
+     "name": "模仿学习与行为克隆",
+     "en": "Imitation learning",
+     "year": 1989,
+     "note": "从专家示范学习策略，ALVINN 神经网络示范了端到端驾驶的早期路线。",
+     "deps": [
+      "ai_mlp_network"
+     ]
+    },
+    {
+     "id": "ai_model_based_rl",
+     "name": "基于模型的强化学习",
+     "en": "Model-based reinforcement learning",
+     "year": 1990,
+     "note": "萨顿的 Dyna 框架同时学习环境模型并在想象中规划，提高样本效率。",
+     "deps": [
+      "ai_temporal_difference"
+     ]
+    },
+    {
+     "id": "ai_policy_gradient",
+     "name": "策略梯度方法",
+     "en": "Policy gradient methods",
+     "year": 1992,
+     "note": "威廉姆斯的 REINFORCE 直接对策略参数求梯度，支撑连续控制与机器人技能。",
+     "deps": [
+      "ai_q_learning"
+     ]
+    },
+    {
+     "id": "ai_rrt_planning",
+     "name": "快速探索随机树",
+     "en": "Rapidly-exploring random tree",
+     "year": 1998,
+     "note": "拉瓦勒提出的随机采样路径规划，高效解决高维空间的运动规划问题。",
+     "deps": [
+      "ai_motion_planning"
+     ]
+    },
+    {
+     "id": "ai_particle_localization",
+     "name": "粒子滤波定位",
+     "en": "Particle filter localization",
+     "year": 1999,
+     "note": "福克斯等以粒子群近似机器人位姿分布，移动机器人全局定位的标准方案。",
+     "deps": [
+      "ai_slam_technique"
+     ]
+    },
+    {
+     "id": "ai_inverse_rl",
+     "name": "逆强化学习",
+     "en": "Inverse reinforcement learning",
+     "year": 2000,
+     "note": "吴恩达与拉塞尔从示范行为反推奖励函数，模仿学习的理论深化。",
+     "deps": [
+      "ai_policy_gradient"
+     ]
+    },
+    {
+     "id": "ai_mcts_search",
+     "name": "蒙特卡洛树搜索",
+     "en": "Monte Carlo tree search",
+     "year": 2006,
+     "note": "库洛姆将随机模拟与树搜索结合，棋类与规划问题的通用强搜索技术。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "ai_curriculum_learning",
+     "name": "课程学习",
+     "en": "Curriculum learning",
+     "year": 2009,
+     "note": "本吉奥主张由易到难安排训练样本，提高困难任务的学习效率。",
+     "deps": [
+      "ai_temporal_difference"
+     ]
+    },
+    {
+     "id": "ai_deep_rl",
+     "name": "深度强化学习",
+     "en": "Deep reinforcement learning",
+     "year": 2013,
+     "note": "明达团队以深度网络近似值函数通关雅达利游戏，深度感知与决策合流。",
+     "deps": [
+      "ai_q_learning",
+      "ai_mlp_network"
+     ]
+    },
+    {
+     "id": "ai_go_ai",
+     "name": "围棋人工智能",
+     "en": "Go-playing AI",
+     "year": 2016,
+     "note": "AlphaGo 结合深度网络与树搜索战胜世界冠军，攻克最长被认为神秘的棋类。",
+     "deps": [
+      "ai_deep_rl",
+      "ai_mcts_search"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "生成式 AI 与工程化",
+   "items": [
+    {
+     "id": "ai_network_pruning",
+     "name": "神经网络剪枝",
+     "en": "Neural network pruning",
+     "year": 1989,
+     "note": "最优脑损伤算法删除不敏感权值，压缩网络规模而不损精度的早期技术。",
+     "deps": [
+      "ai_mlp_network"
+     ]
+    },
+    {
+     "id": "ai_distributed_training",
+     "name": "分布式模型训练",
+     "en": "Distributed model training",
+     "year": 2012,
+     "note": "以数据并行与参数服务器在多机多卡上训练大网络，支撑模型规模扩张。",
+     "deps": [
+      "ai_mlp_network"
+     ]
+    },
+    {
+     "id": "ai_variational_autoencoder",
+     "name": "变分自编码器",
+     "en": "Variational autoencoder",
+     "year": 2013,
+     "note": "金马与韦林以变分推断学习潜在分布，开创可采样生成的概率生成模型。",
+     "deps": [
+      "ai_mlp_network"
+     ]
+    },
+    {
+     "id": "ai_generative_adversarial",
+     "name": "生成对抗网络",
+     "en": "Generative adversarial network",
+     "year": 2014,
+     "note": "古德费洛以生成器判别器博弈训练，引领逼真图像生成的第一个黄金期。",
+     "deps": [
+      "ai_mlp_network"
+     ]
+    },
+    {
+     "id": "ai_style_transfer",
+     "name": "神经风格迁移",
+     "en": "Neural style transfer",
+     "year": 2015,
+     "note": "加蒂斯以卷积特征分离内容与风格，将名画质感迁移到照片的艺术化技术。",
+     "deps": [
+      "ai_convolutional_nn"
+     ]
+    },
+    {
+     "id": "ai_diffusion_model",
+     "name": "扩散模型",
+     "en": "Diffusion models",
+     "year": 2015,
+     "note": "以逐步去噪建模分布的生成范式，去噪扩散模型推动文生图质量飞跃。",
+     "deps": [
+      "ai_variational_autoencoder"
+     ]
+    },
+    {
+     "id": "ai_knowledge_distillation",
+     "name": "知识蒸馏",
+     "en": "Knowledge distillation",
+     "year": 2015,
+     "note": "辛顿提出以教师模型软标签训练小模型，大模型能力向端侧迁移的通道。",
+     "deps": [
+      "ai_mlp_network"
+     ]
+    },
+    {
+     "id": "ai_model_compression",
+     "name": "模型压缩与量化",
+     "en": "Model compression and quantization",
+     "year": 2015,
+     "note": "韩松等的深度压缩技术将权重量化编码，使神经网络部署到移动与嵌入式端。",
+     "deps": [
+      "ai_deep_cnn"
+     ]
+    },
+    {
+     "id": "ai_inference_engine",
+     "name": "神经网络推理引擎",
+     "en": "Neural network inference engine",
+     "year": 2016,
+     "note": "图优化与算子融合的部署运行时，将训练模型高效转换为生产服务。",
+     "deps": [
+      "ai_deep_cnn"
+     ]
+    },
+    {
+     "id": "ai_neural_audio_gen",
+     "name": "神经网络音频生成",
+     "en": "Neural audio generation",
+     "year": 2016,
+     "note": "波网络以自回归逐样本生成语音，语音合成与音乐生成进入神经时代。",
+     "deps": [
+      "ai_lstm_network"
+     ]
+    },
+    {
+     "id": "ai_rlhf_technique",
+     "name": "人类反馈强化学习",
+     "en": "Reinforcement learning from human feedback",
+     "year": 2017,
+     "note": "克里斯蒂亚诺等以人类偏好训练奖励模型，对齐生产行为的关键技术。",
+     "deps": [
+      "ai_deep_rl"
+     ]
+    },
+    {
+     "id": "ai_federated_learning",
+     "name": "联邦学习",
+     "en": "Federated learning",
+     "year": 2017,
+     "note": "终端本地训练仅上传模型更新的分布式学习框架，数据不出域即可联合建模。",
+     "deps": [
+      "ai_mlp_network"
+     ]
+    },
+    {
+     "id": "ai_vector_database",
+     "name": "向量数据库",
+     "en": "Vector database",
+     "year": 2019,
+     "note": "以近似最近邻索引存储检索嵌入向量的数据库，语义检索的底层设施。",
+     "deps": [
+      "ai_word_embedding"
+     ]
+    },
+    {
+     "id": "ai_neural_radiance_field",
+     "name": "神经辐射场渲染",
+     "en": "Neural radiance fields",
+     "year": 2020,
+     "note": "以坐标网络隐式表示三维场景并渲染新视角，三维重建与沉浸显示新范式。",
+     "deps": [
+      "ai_deep_cnn"
+     ]
+    },
+    {
+     "id": "ai_prompt_engineering",
+     "name": "提示工程",
+     "en": "Prompt engineering",
+     "year": 2020,
+     "note": "设计指令与示例引导大模型输出的应用技术，少样本提示激发模型能力。",
+     "deps": [
+      "llm"
+     ]
+    },
+    {
+     "id": "ai_rag_technique",
+     "name": "检索增强生成",
+     "en": "Retrieval-augmented generation",
+     "year": 2020,
+     "note": "将外部检索结果注入生成过程，缓解幻觉并让模型利用私域最新知识。",
+     "deps": [
+      "llm"
+     ]
+    },
+    {
+     "id": "ai_multimodal_model",
+     "name": "多模态预训练模型",
+     "en": "Multimodal pretraining",
+     "year": 2021,
+     "note": "以对比学习对齐图像与语言表示，支撑图文检索与开放词汇识别。",
+     "deps": [
+      "llm",
+      "ai_deep_cnn"
+     ]
+    },
+    {
+     "id": "ai_instruction_tuning",
+     "name": "指令微调",
+     "en": "Instruction tuning",
+     "year": 2022,
+     "note": "以指令跟随数据微调大模型，使通用模型按人类意图响应的适配技术。",
+     "deps": [
+      "llm"
+     ]
+    },
+    {
+     "id": "ai_text_to_3d",
+     "name": "文本生成三维模型",
+     "en": "Text-to-3D generation",
+     "year": 2022,
+     "note": "以扩散先验与梯度蒸馏从文字描述生成三维资产，内容创作的新管线。",
+     "deps": [
+      "ai_diffusion_model"
+     ]
+    }
+   ]
+  }
+ ]
+}

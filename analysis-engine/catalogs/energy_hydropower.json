@@ -1,0 +1,1504 @@
+{
+ "cat": "energy",
+ "catName": "能源",
+ "sub": "hydropower",
+ "subName": "水能利用",
+ "anchors": [
+  "waterwheel",
+  "irrigation",
+  "agriculture",
+  "iron",
+  "steel",
+  "cement",
+  "steam_engine",
+  "generator",
+  "electricity",
+  "power_grid",
+  "electric_motor",
+  "semiconductors",
+  "computer",
+  "physics"
+ ],
+ "families": [
+  {
+   "name": "古典水轮与水磨",
+   "items": [
+    {
+     "id": "horizontal_watermill",
+     "name": "卧式水磨",
+     "en": "Horizontal watermill",
+     "year": -200,
+     "note": "水平转轮直驱上磨盘的水磨，结构简单，分布于地中海与北欧。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "undershot_water_wheel",
+     "name": "下射式水轮",
+     "en": "Undershot water wheel",
+     "year": -30,
+     "note": "水流从底部冲击叶片驱动，维特鲁威在建筑十书中已有记载。"
+    },
+    {
+     "id": "water_powered_bellows",
+     "name": "水排鼓风",
+     "en": "Water-powered bellows",
+     "year": 31,
+     "note": "东汉杜诗造水排，以水轮驱动皮囊连续鼓风冶铸，是这一领域具有代表性的实现方式。"
+    },
+    {
+     "id": "overshot_water_wheel",
+     "name": "上射式水轮",
+     "en": "Overshot water wheel",
+     "year": 100,
+     "note": "水流自轮顶注入斗槽借重力驱动，效率高于下射式，在相应条件下长期使用。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "barbegal_mill_complex",
+     "name": "巴贝加尔磨坊群",
+     "en": "Barbegal mill complex",
+     "year": 150,
+     "note": "古罗马以两级水轮串联驱动十六台磨，供水磨规模空前。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "water_trip_hammer",
+     "name": "水碓",
+     "en": "Water-powered trip hammer",
+     "year": 200,
+     "note": "水轮拨动凸轮使锤杵反复起落，用于舂米与捣碎物料，服务特定的生产与生活需要。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "tide_mill",
+     "name": "潮汐磨坊",
+     "en": "Tide mill",
+     "year": 700,
+     "note": "利用涨潮蓄水、退潮放水驱动水轮的磨坊，建于港湾闸口。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "floating_watermill",
+     "name": "浮式水磨",
+     "en": "Floating watermill",
+     "year": 900,
+     "note": "水轮装在船或浮排上，可适应河流水位的涨落，构成相关作业体系的重要一环。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "water_lifting_noria",
+     "name": "筒车",
+     "en": "Water-lifting noria",
+     "year": 1100,
+     "note": "水流驱动轮周竹筒连续提水灌田，是灌溉用大型水轮，技术上持续沿用并有所改进。",
+     "deps": [
+      "waterwheel",
+      "irrigation"
+     ]
+    },
+    {
+     "id": "water_roller_mill",
+     "name": "水碾",
+     "en": "Water-driven roller mill",
+     "year": 1200,
+     "note": "水轮驱动石碾辊磨稻谷与面粉，用于东亚粮食加工，与同类装置共同构成完整谱系。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "multi_stone_watermill",
+     "name": "水转连磨",
+     "en": "Multi-stone watermill",
+     "year": 700,
+     "note": "一具水轮经齿轮联动多盘石磨，成倍提高磨粉产量，实际效果得到广泛验证。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "breastshot_water_wheel",
+     "name": "胸射式水轮",
+     "en": "Breastshot water wheel",
+     "year": 1750,
+     "note": "水流在轮中部进斗，兼用动能与重力，十八世纪流行于欧洲。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "pitchback_water_wheel",
+     "name": "背射式水轮",
+     "en": "Pitchback water wheel",
+     "year": 1800,
+     "note": "水流越过轮顶向背侧注入的改良水轮，低水头下效率较高。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "poncelet_wheel",
+     "name": "邦塞莱水轮",
+     "en": "Poncelet wheel",
+     "year": 1826,
+     "note": "法物理学家改进的下射水轮，以曲线叶片提高低水头利用效率。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "water_powered_crank",
+     "name": "水动曲柄机构",
+     "en": "Water-powered crankshaft",
+     "year": 1200,
+     "note": "把水轮转动转为往复运动，驱动锤、锯与泵类机械，属于该领域的成熟实用技术。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "waterwheel_grain_cleaning",
+     "name": "水力簸谷机",
+     "en": "Water-powered winnower",
+     "year": 600,
+     "note": "以水轮驱动风扇扬谷去糠，水磨坊配套的清选装置，其基本思路沿用至今。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "waterwheel_rice_huller",
+     "name": "水砻",
+     "en": "Water-powered rice huller",
+     "year": 900,
+     "note": "水轮带动木砻脱稻壳，为东亚稻区大宗加工设备，应用范围遍及多个地区。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "waterwheel_olive_press",
+     "name": "水力橄榄榨油机",
+     "en": "Water-powered olive press",
+     "year": 1100,
+     "note": "地中海地区以水轮驱动压榨橄榄取油，替代人力，是该技术门类的典型代表。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "waterwheel_salt_pump",
+     "name": "水力盐田提卤机",
+     "en": "Water-powered brine lift",
+     "year": 1300,
+     "note": "风车与水车驱动提卤，供盐场晒盐使用，为后续发展奠定了基础。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "waterwheel_paper_mill",
+     "name": "水力造纸坊",
+     "en": "Water-powered paper mill",
+     "year": 1400,
+     "note": "欧洲以水轮打浆造纸，中世纪造纸工场多设于河畔，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "waterwheel"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "水力驱动的工场机械",
+   "items": [
+    {
+     "id": "water_fulling_mill",
+     "name": "水力缩绒机",
+     "en": "Water-powered fulling mill",
+     "year": 1100,
+     "note": "以水轮驱动木槌捶打呢绒，取代人工踩洗，推动欧洲毛纺业。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "water_stamp_mill",
+     "name": "水力捣矿机",
+     "en": "Water-powered stamp mill",
+     "year": 1200,
+     "note": "水轮带动杵锤捣碎矿石，是早期选矿与冶金的重要动力。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "water_sawmill",
+     "name": "水力锯木机",
+     "en": "Water-powered sawmill",
+     "year": 1300,
+     "note": "水轮驱动锯条往复切割原木，中欧地区最先普及，在相应条件下长期使用。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "water_forge_hammer",
+     "name": "水力锻锤",
+     "en": "Water-powered forge hammer",
+     "year": 1350,
+     "note": "水轮提放重锤锻造铁件，提高锻打能力与节奏，服务特定的生产与生活需要。",
+     "deps": [
+      "water_trip_hammer"
+     ]
+    },
+    {
+     "id": "water_silk_throwing_mill",
+     "name": "水力缫丝厂",
+     "en": "Water-powered silk mill",
+     "year": 1718,
+     "note": "德比缫丝厂以水轮驱动整厂机器，是最早的工厂化生产。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "hydraulic_ram_pump",
+     "name": "水锤泵",
+     "en": "Hydraulic ram pump",
+     "year": 1796,
+     "note": "利用水锤压力自动把部分水流扬至高处，无需外部动力。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "water_turbine_direct_drive",
+     "name": "水轮机直驱传动",
+     "en": "Water turbine direct drive",
+     "year": 1850,
+     "note": "水轮机经皮带与轴系直接带动工厂机械，取代蒸汽传动。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "water_motor",
+     "name": "小型水马达",
+     "en": "Water motor",
+     "year": 1890,
+     "note": "接在水管上的微型涡轮驱动家用与作坊机械，十九世纪末流行。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "water_powered_lathe",
+     "name": "水动车床",
+     "en": "Water-powered lathe",
+     "year": 1500,
+     "note": "以水轮驱动工件或刀具旋转的车床，用于木工与金工加工。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "water_powered_pump",
+     "name": "水力排水泵",
+     "en": "Water-powered drainage pump",
+     "year": 1600,
+     "note": "水轮带动活塞或斗轮排水，用于矿井与圩田排水，构成相关作业体系的重要一环。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "water_powered_crusher",
+     "name": "水力榨压机",
+     "en": "Water-powered crusher",
+     "year": 1500,
+     "note": "水轮经凸轮与螺杆驱动压榨油料或制糖原料，技术上持续沿用并有所改进。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "water_power_hopper_feeder",
+     "name": "水力给料斗",
+     "en": "Water-powered hopper feeder",
+     "year": 1500,
+     "note": "由水轮带动料斗定量给料，实现磨坊连续作业，与同类装置共同构成完整谱系。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "water_power_hydraulic_saw",
+     "name": "水力液压锯机",
+     "en": "Water-powered hydraulic saw",
+     "year": 1800,
+     "note": "近代以水轮机驱动液压机构的锯木设备，实际效果得到广泛验证。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "water_power_laundry",
+     "name": "水力洗衣坊",
+     "en": "Water-powered laundry",
+     "year": 1850,
+     "note": "以水流驱动捣衣或搅拌的公共洗衣设施，属于该领域的成熟实用技术。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "water_power_mine_windlass",
+     "name": "水力矿井卷扬机",
+     "en": "Water-powered mine windlass",
+     "year": 1600,
+     "note": "以水轮提升矿井矿石与排水，是矿井动力早期形态，其基本思路沿用至今。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "water_turbine_hammer_mill",
+     "name": "水轮机锤磨机",
+     "en": "Turbine-driven hammer mill",
+     "year": 1880,
+     "note": "水轮机带动锤式粉碎机，供矿山与建材加工，应用范围遍及多个地区。",
+     "deps": [
+      "water_turbine_direct_drive"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "水轮机",
+   "items": [
+    {
+     "id": "fourneyron_turbine",
+     "name": "福尔内龙外流式水轮机",
+     "en": "Fourneyron outward-flow turbine",
+     "year": 1827,
+     "note": "第一台高效率水轮机，径向出流，标志水轮机时代开端。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "jonval_turbine",
+     "name": "容瓦尔轴流式水轮机",
+     "en": "Jonval axial turbine",
+     "year": 1843,
+     "note": "水流轴向穿过转轮的早期反击式水轮机，用于低水头，是该技术门类的典型代表。",
+     "deps": [
+      "fourneyron_turbine"
+     ]
+    },
+    {
+     "id": "francis_turbine",
+     "name": "混流式水轮机",
+     "en": "Francis turbine",
+     "year": 1849,
+     "note": "水流径向流入轴向流出，适用中高水头，为最普及机型。",
+     "deps": [
+      "fourneyron_turbine"
+     ]
+    },
+    {
+     "id": "pelton_turbine",
+     "name": "佩尔顿切击式水轮机",
+     "en": "Pelton turbine",
+     "year": 1879,
+     "note": "高压射流切击斗叶做功，适用于高水头小流量电站，为后续发展奠定了基础。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "propeller_turbine",
+     "name": "轴流定桨式水轮机",
+     "en": "Propeller turbine",
+     "year": 1913,
+     "note": "桨叶固定的轴流式水轮机，用于低水头大流量电站，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "francis_turbine"
+     ]
+    },
+    {
+     "id": "kaplan_turbine",
+     "name": "卡普兰转桨式水轮机",
+     "en": "Kaplan turbine",
+     "year": 1919,
+     "note": "转轮叶片可调，低水头下仍保持高效率，为低水头主力机型。",
+     "deps": [
+      "propeller_turbine"
+     ]
+    },
+    {
+     "id": "crossflow_turbine",
+     "name": "双击式水轮机",
+     "en": "Crossflow turbine",
+     "year": 1917,
+     "note": "水流两次穿过鼓形转轮，结构简单，适合小型与微水电站。",
+     "deps": [
+      "pelton_turbine"
+     ]
+    },
+    {
+     "id": "turgo_turbine",
+     "name": "图戈斜击式水轮机",
+     "en": "Turgo turbine",
+     "year": 1919,
+     "note": "射流斜向冲击叶轮，兼顾高水头与较高比转速，在相应条件下长期使用。",
+     "deps": [
+      "pelton_turbine"
+     ]
+    },
+    {
+     "id": "bulb_turbine",
+     "name": "灯泡贯流式水轮机",
+     "en": "Bulb turbine",
+     "year": 1936,
+     "note": "发电机密封于水流中的灯泡体内，适宜超低水头潮河段。",
+     "deps": [
+      "kaplan_turbine"
+     ]
+    },
+    {
+     "id": "shaft_tubular_turbine",
+     "name": "竖井贯流式水轮机",
+     "en": "Shaft tubular turbine",
+     "year": 1950,
+     "note": "主轴经竖井引出机外，检修方便，用于低水头贯流电站。",
+     "deps": [
+      "bulb_turbine"
+     ]
+    },
+    {
+     "id": "deriaz_turbine",
+     "name": "斜流式水轮机",
+     "en": "Deriaz turbine",
+     "year": 1956,
+     "note": "叶片斜置可调，兼顾水头变幅与效率，用于抽蓄与常规电站。",
+     "deps": [
+      "kaplan_turbine"
+     ]
+    },
+    {
+     "id": "pump_as_turbine",
+     "name": "水泵反转发电",
+     "en": "Pump running as turbine",
+     "year": 1950,
+     "note": "离心泵逆向通水即可发电，是微水电的低成本方案，服务特定的生产与生活需要。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "fish_friendly_turbine",
+     "name": "鱼类友好型水轮机",
+     "en": "Fish-friendly turbine",
+     "year": 2000,
+     "note": "加大过机间隙并降低剪切，减少鱼类通过转轮时的损伤。",
+     "deps": [
+      "kaplan_turbine"
+     ]
+    },
+    {
+     "id": "very_low_head_turbine",
+     "name": "超低水头水轮机",
+     "en": "Very low head turbine",
+     "year": 2007,
+     "note": "专为两三米水头设计的大口径转轮，用于河道闸坝增能。",
+     "deps": [
+      "bulb_turbine"
+     ]
+    },
+    {
+     "id": "multi_jet_pelton",
+     "name": "多喷嘴切击式水轮机",
+     "en": "Multi-jet Pelton turbine",
+     "year": 1910,
+     "note": "多个喷嘴同时冲击同一转轮，提升高水头电站单机容量。",
+     "deps": [
+      "pelton_turbine"
+     ]
+    },
+    {
+     "id": "open_flume_turbine",
+     "name": "敞流式水轮机",
+     "en": "Open-flume turbine",
+     "year": 1920,
+     "note": "无需蜗壳直接布置在明渠中的低水头机组，构成相关作业体系的重要一环。",
+     "deps": [
+      "kaplan_turbine"
+     ]
+    },
+    {
+     "id": "rim_generator_turbine",
+     "name": "永磁环形发电机水轮机",
+     "en": "Rim-driven water turbine",
+     "year": 2000,
+     "note": "发电机集成于转轮外圈，取消主轴，体积紧凑，技术上持续沿用并有所改进。"
+    },
+    {
+     "id": "ultra_low_head_archimedes",
+     "name": "阿基米德螺旋水轮机",
+     "en": "Archimedes screw hydro turbine",
+     "year": 2010,
+     "note": "螺旋体反向通水驱动发电，对鱼类伤害低，与同类装置共同构成完整谱系。",
+     "deps": [
+      "very_low_head_turbine"
+     ]
+    },
+    {
+     "id": "pico_pelton_set",
+     "name": "皮科佩尔顿机组",
+     "en": "Pico Pelton set",
+     "year": 2000,
+     "note": "单喷嘴小流量的佩尔顿机型，用于山区微型电站，实际效果得到广泛验证。",
+     "deps": [
+      "pelton_turbine"
+     ]
+    },
+    {
+     "id": "hydraulic_turbine_test_rig",
+     "name": "水轮机模型试验台",
+     "en": "Hydraulic turbine model test rig",
+     "year": 1960,
+     "note": "以几何相似的缩比模型复现真机工况，测量效率与空蚀性能以指导设计。",
+     "deps": [
+      "physics"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "水电站机电设备",
+   "items": [
+    {
+     "id": "hydroelectric_generator_unit",
+     "name": "水轮发电机组",
+     "en": "Hydroelectric generator unit",
+     "year": 1882,
+     "note": "水轮机直接耦合发电机，构成水电站的发电核心，其基本思路沿用至今。",
+     "deps": [
+      "electricity",
+      "generator"
+     ]
+    },
+    {
+     "id": "steel_penstock",
+     "name": "压力钢管",
+     "en": "Steel penstock",
+     "year": 1890,
+     "note": "把高压水从引水系统送往机组的钢管，是高水头电站关键部件。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "water_turbine_governor",
+     "name": "水轮机调速器",
+     "en": "Water turbine governor",
+     "year": 1900,
+     "note": "按转速自动调节导叶开度，维持机组频率稳定，应用范围遍及多个地区。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "surge_chamber",
+     "name": "调压井",
+     "en": "Surge chamber",
+     "year": 1900,
+     "note": "长引水道中的调压构筑物，缓解负荷突变引起的水锤压力。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "draft_tube",
+     "name": "尾水管",
+     "en": "Draft tube",
+     "year": 1900,
+     "note": "转轮后的渐扩管，回收出口动能并抬高有效水头，是该技术门类的典型代表。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "spiral_casing",
+     "name": "蜗壳",
+     "en": "Spiral casing",
+     "year": 1900,
+     "note": "螺旋形进水通道把水流均匀分配到导叶圆周，为后续发展奠定了基础。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "guide_vane_ring",
+     "name": "活动导叶",
+     "en": "Guide vane ring",
+     "year": 1900,
+     "note": "可调叶片控制进入转轮的水量，配合调速器运行，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "trash_rack",
+     "name": "拦污栅",
+     "en": "Trash rack",
+     "year": 1900,
+     "note": "进水口设置的栅条，拦挡漂浮物与泥沙进入机组，在相应条件下长期使用。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "hydro_thrust_bearing",
+     "name": "水轮发电机推力轴承",
+     "en": "Hydro thrust bearing",
+     "year": 1915,
+     "note": "承受水轮机组转子巨大轴向力的支撑轴承，服务特定的生产与生活需要。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "hydro_excitation_system",
+     "name": "同步励磁系统",
+     "en": "Hydro excitation system",
+     "year": 1920,
+     "note": "为发电机转子提供励磁电流，并参与电压调节，构成相关作业体系的重要一环。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "spherical_inlet_valve",
+     "name": "球阀进水阀",
+     "en": "Spherical inlet valve",
+     "year": 1950,
+     "note": "机组前的大口径球阀，检修隔离并快速截断水流，技术上持续沿用并有所改进。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "electronic_load_governor",
+     "name": "电子负荷控制器",
+     "en": "Electronic load governor",
+     "year": 1970,
+     "note": "微水电中用电子负载平衡发电与用电，保持频率稳定，与同类装置共同构成完整谱系。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "induction_generator_hydro",
+     "name": "异步感应发电机水电单元",
+     "en": "Induction generator hydro unit",
+     "year": 1980,
+     "note": "以感应电机并网发电的简易机组，用于小水电与井网改造。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "hydro_computer_control",
+     "name": "水电站计算机监控",
+     "en": "Hydro plant computer control",
+     "year": 1985,
+     "note": "以计算机监控机组启停与运行，实现无人值班或少人值守。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "hydro_speed_encoder",
+     "name": "转速与摆度在线监测",
+     "en": "Hydro unit condition monitoring",
+     "year": 2000,
+     "note": "在线监测机组振动摆度与轴心轨迹，用于状态检修，实际效果得到广泛验证。",
+     "deps": [
+      "semiconductors",
+      "computer"
+     ]
+    },
+    {
+     "id": "static_frequency_converter",
+     "name": "静止变频启动装置",
+     "en": "Static frequency converter",
+     "year": 1980,
+     "note": "以变频器启动大容量机组或实现变速运行，属于该领域的成熟实用技术。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "trash_rack_cleaner",
+     "name": "清污机",
+     "en": "Trash rack cleaning machine",
+     "year": 1980,
+     "note": "自动清除拦污栅前污物，保证进水通畅，其基本思路沿用至今。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "butterfly_inlet_valve",
+     "name": "进水蝶阀",
+     "en": "Butterfly inlet valve",
+     "year": 1930,
+     "note": "低水头机组常用的大口径截流阀门，应用范围遍及多个地区。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "automatic_voltage_regulator",
+     "name": "水轮发电机自动电压调节器",
+     "en": "Automatic voltage regulator",
+     "year": 1950,
+     "note": "调节励磁以维持机端电压与无功稳定，是该技术门类的典型代表。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "unit_cooling_water_system",
+     "name": "机组技术供水系统",
+     "en": "Unit cooling water system",
+     "year": 1950,
+     "note": "为主轴轴承、发电机与调速器提供冷却与润滑用水，为后续发展奠定了基础。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "hydro_governor_hydraulic_system",
+     "name": "调速器油压系统",
+     "en": "Governor hydraulic system",
+     "year": 1950,
+     "note": "为导叶接力器提供压力油，驱动开度调节，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "anti_cavitation_coating",
+     "name": "水轮机抗空蚀涂层",
+     "en": "Anti-cavitation coating",
+     "year": 1980,
+     "note": "在过流面喷涂抗蚀层，延长转轮检修周期，在相应条件下长期使用。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "plastic_thrust_pad",
+     "name": "弹性金属塑料瓦",
+     "en": "Elastic metal-plastic thrust pad",
+     "year": 1980,
+     "note": "以氟塑料瓦面替代巴氏合金瓦，改善轴承运行性能，服务特定的生产与生活需要。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "runner_welding_repair",
+     "name": "转轮现场补焊修复",
+     "en": "Runner welding repair",
+     "year": 1990,
+     "note": "对空蚀裂纹进行堆焊与消应力处理，恢复转轮性能，构成相关作业体系的重要一环。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "cfd_runner_design",
+     "name": "水轮机CFD辅助设计",
+     "en": "CFD-assisted runner design",
+     "year": 2000,
+     "note": "以计算流体力学优化叶片型线，提升效率，技术上持续沿用并有所改进。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "five_axis_runner_machining",
+     "name": "转轮五轴数控加工",
+     "en": "Five-axis runner machining",
+     "year": 2000,
+     "note": "以五轴数控铣削整体转轮叶片，保证曲面精度，与同类装置共同构成完整谱系。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "unit_uprating_retrofit",
+     "name": "机组增容改造",
+     "en": "Hydro unit uprating",
+     "year": 2000,
+     "note": "更换转轮与部件提升单机容量与效率，实际效果得到广泛验证。",
+     "deps": [
+      "hydroelectric_generator_unit"
+     ]
+    },
+    {
+     "id": "hydro_smart_operation",
+     "name": "水电站智能运行系统",
+     "en": "Smart hydro operation",
+     "year": 2015,
+     "note": "以数字孪生与智能算法优化电站运行与检修，属于该领域的成熟实用技术。",
+     "deps": [
+      "computer"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "水电站类型与开发方式",
+   "items": [
+    {
+     "id": "run_of_river_plant",
+     "name": "径流式水电站",
+     "en": "Run-of-river plant",
+     "year": 1882,
+     "note": "无大库调节、按天然来水发电的水电站，挡水低坝引水。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "diversion_power_plant",
+     "name": "引水式水电站",
+     "en": "Diversion hydropower plant",
+     "year": 1900,
+     "note": "以引水隧洞或渠道集中落差，实现高水头发电，其基本思路沿用至今。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "high_head_plant",
+     "name": "高水头水电站",
+     "en": "High-head hydropower plant",
+     "year": 1900,
+     "note": "水头数百米级的电站，多配冲击式或混流式机组，应用范围遍及多个地区。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "low_head_plant",
+     "name": "低水头水电站",
+     "en": "Low-head hydropower plant",
+     "year": 1930,
+     "note": "利用几米至十几米水头的电站，多采用贯流机组，是该技术门类的典型代表。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "dam_toe_power_plant",
+     "name": "坝后式水电站",
+     "en": "Dam-toe power plant",
+     "year": 1936,
+     "note": "厂房布置在挡水坝后，由坝身引水发电的常规布置，为后续发展奠定了基础。",
+     "deps": [
+      "electricity",
+      "cement"
+     ]
+    },
+    {
+     "id": "reservoir_power_plant",
+     "name": "蓄水调节式水电站",
+     "en": "Reservoir hydropower plant",
+     "year": 1936,
+     "note": "依靠水库蓄水调节径流，可提供调峰与跨季电力，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "riverbed_power_plant",
+     "name": "河床式水电站",
+     "en": "Riverbed power plant",
+     "year": 1960,
+     "note": "厂房兼作挡水建筑物，与闸坝一体，用于平原低水头河段。",
+     "deps": [
+      "low_head_plant"
+     ]
+    },
+    {
+     "id": "canal_drop_plant",
+     "name": "渠道跌水电站",
+     "en": "Canal drop hydropower station",
+     "year": 1900,
+     "note": "利用灌溉渠道落差建站发电，实现水能梯级回收，在相应条件下长期使用。",
+     "deps": [
+      "irrigation",
+      "electricity"
+     ]
+    },
+    {
+     "id": "mixed_hydro_development",
+     "name": "混合式水电站",
+     "en": "Mixed hydropower development",
+     "year": 1950,
+     "note": "坝与引水道结合取水发电流域开发，兼顾调节与落差，服务特定的生产与生活需要。",
+     "deps": [
+      "diversion_power_plant"
+     ]
+    },
+    {
+     "id": "cascade_hydro_development",
+     "name": "梯级水电站开发",
+     "en": "Cascade hydropower development",
+     "year": 1950,
+     "note": "沿河分段筑坝形成梯级水库，逐级利用全河落差，构成相关作业体系的重要一环。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "small_hydro",
+     "name": "小型水电站",
+     "en": "Small hydropower",
+     "year": 1900,
+     "note": "装机数万千瓦以下的小容量电站，服务县域与农村供电。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "micro_hydro",
+     "name": "微型水电站",
+     "en": "Micro hydropower",
+     "year": 1920,
+     "note": "几十千瓦级以下电站，为偏远山村提供离网电力，技术上持续沿用并有所改进。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "pico_hydro",
+     "name": "皮科水电",
+     "en": "Pico hydropower",
+     "year": 2000,
+     "note": "数千瓦级便携机组，供单户或小村落照明用电，与同类装置共同构成完整谱系。",
+     "deps": [
+      "micro_hydro"
+     ]
+    },
+    {
+     "id": "hydropower_long_distance",
+     "name": "水电远距离输电",
+     "en": "Hydro long-distance transmission",
+     "year": 1891,
+     "note": "劳芬水电站以三相交流远送法兰克福，开创水电外送先河。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "run_of_river_barrage",
+     "name": "河床闸坝式水电站",
+     "en": "Run-of-river barrage station",
+     "year": 1965,
+     "note": "闸坝壅水、厂房置于河床上的低水头电站，实际效果得到广泛验证。",
+     "deps": [
+      "riverbed_power_plant"
+     ]
+    },
+    {
+     "id": "aqueduct_hydro",
+     "name": "渠道引水式电站",
+     "en": "Canal-fed power station",
+     "year": 1920,
+     "note": "借引水渠集中落差的中小型电站，工程量小，属于该领域的成熟实用技术。",
+     "deps": [
+      "diversion_power_plant"
+     ]
+    },
+    {
+     "id": "hydro_small_modernization",
+     "name": "小水电增效扩容",
+     "en": "Small hydro modernization",
+     "year": 2000,
+     "note": "对老小水电机组改造增容，提高水能利用效率，其基本思路沿用至今。",
+     "deps": [
+      "small_hydro"
+     ]
+    },
+    {
+     "id": "village_hydro_system",
+     "name": "山村微水电系统",
+     "en": "Village micro-hydro system",
+     "year": 1950,
+     "note": "单村建微型电站直供照明与农产品加工，应用范围遍及多个地区。",
+     "deps": [
+      "micro_hydro"
+     ]
+    },
+    {
+     "id": "hydro_plant_with_fishway",
+     "name": "过鱼型水电站",
+     "en": "Hydropower with fishway",
+     "year": 1950,
+     "note": "电站设过鱼设施减少对洄游鱼类的阻隔，是该技术门类的典型代表。"
+    }
+   ]
+  },
+  {
+   "name": "水电站工程结构与设施",
+   "items": [
+    {
+     "id": "headrace_canal",
+     "name": "引水渠道",
+     "en": "Headrace canal",
+     "year": 1000,
+     "note": "把河水引向水轮或电站的渠系，是水能利用的输水通道。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "head_pond",
+     "name": "前池",
+     "en": "Forebay",
+     "year": 1900,
+     "note": "引水道末端的水池，稳定进水流态并向压力管分配水量。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "settling_basin",
+     "name": "沉砂池",
+     "en": "Settling basin",
+     "year": 1900,
+     "note": "降低流速沉淀推移质泥沙，保护水轮机免遭磨蚀，为后续发展奠定了基础。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "tailrace_channel",
+     "name": "尾水渠",
+     "en": "Tailrace channel",
+     "year": 1900,
+     "note": "把机组尾水送回河道的渠道，保证尾水顺畅排出，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "intake_gate",
+     "name": "进水闸门",
+     "en": "Intake gate",
+     "year": 1900,
+     "note": "控制进水口启闭与流量的闸门，供检修与紧急关断，在相应条件下长期使用。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "underground_powerhouse",
+     "name": "地下厂房",
+     "en": "Underground powerhouse",
+     "year": 1915,
+     "note": "把厂房设于山体洞室内，缩短压力水道并减少占地，服务特定的生产与生活需要。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "open_channel_powerhouse",
+     "name": "岸边式厂房",
+     "en": "Open-channel powerhouse",
+     "year": 1920,
+     "note": "布置于坝下游河岸的常规厂房形式，便于机组检修，构成相关作业体系的重要一环。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "water_turbine_pump",
+     "name": "水轮泵",
+     "en": "Water turbine pump",
+     "year": 1950,
+     "note": "水轮机直接带动水泵提水，无需电动机，用于农田灌溉。",
+     "deps": [
+      "water_turbine_direct_drive"
+     ]
+    },
+    {
+     "id": "inflatable_rubber_dam",
+     "name": "橡胶坝",
+     "en": "Inflatable rubber dam",
+     "year": 1957,
+     "note": "充气或充水的柔性坝袋，用于低水头壅水与小水电站，技术上持续沿用并有所改进。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "archimedes_hydro_turbine",
+     "name": "水动力螺旋输送机发电",
+     "en": "Archimedes screw turbine",
+     "year": 2010,
+     "note": "把阿基米德螺旋反向通水发电，适合低水头生态敏感河道。",
+     "deps": [
+      "very_low_head_turbine"
+     ]
+    },
+    {
+     "id": "powerhouse_inside_dam",
+     "name": "坝内式厂房",
+     "en": "Powerhouse within dam",
+     "year": 1960,
+     "note": "发电厂房与坝体结合布置，节省工程量并缩短引水，与同类装置共同构成完整谱系。",
+     "deps": [
+      "dam_toe_power_plant"
+     ]
+    },
+    {
+     "id": "overflow_powerhouse",
+     "name": "溢流式厂房",
+     "en": "Overflow powerhouse",
+     "year": 1940,
+     "note": "厂房顶可泄洪的布置，多用于雨洪水丰的坝式电站，实际效果得到广泛验证。",
+     "deps": [
+      "dam_toe_power_plant"
+     ]
+    },
+    {
+     "id": "pressure_tunnel",
+     "name": "压力隧洞",
+     "en": "Pressure tunnel",
+     "year": 1900,
+     "note": "承受内水压力的输水隧洞，引水式电站常用，属于该领域的成熟实用技术。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "steel_liner_tunnel",
+     "name": "钢板衬砌隧洞",
+     "en": "Steel-lined tunnel",
+     "year": 1930,
+     "note": "高压洞段以钢板衬砌防渗抗裂，保障高水头输水安全，其基本思路沿用至今。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "intake_tower",
+     "name": "进水塔",
+     "en": "Intake tower",
+     "year": 1920,
+     "note": "深水水库取水的塔式进水建筑物，分高程取水，应用范围遍及多个地区。",
+     "deps": [
+      "intake_gate"
+     ]
+    },
+    {
+     "id": "siphon_intake",
+     "name": "虹吸引水系统",
+     "en": "Siphon intake",
+     "year": 1900,
+     "note": "以虹吸方式跨堤引水，少建开敞进水口，是该技术门类的典型代表。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "sediment_outlet_tunnel",
+     "name": "排沙洞",
+     "en": "Sediment outlet tunnel",
+     "year": 1960,
+     "note": "水库低高程排沙通道，控制泥沙淤积，为后续发展奠定了基础。",
+     "deps": [
+      "intake_gate"
+     ]
+    },
+    {
+     "id": "hydraulic_gate_hoist",
+     "name": "闸门启闭机",
+     "en": "Gate hoist",
+     "year": 1920,
+     "note": "升降检修闸门与工作闸门的起重设备，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "powerhouse_ventilation",
+     "name": "厂房通风系统",
+     "en": "Powerhouse ventilation",
+     "year": 1960,
+     "note": "保证地下与封闭厂房散热与空气质量，在相应条件下长期使用。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "dam_inspection_rov",
+     "name": "水工巡检水下机器人",
+     "en": "Underwater dam inspection ROV",
+     "year": 2000,
+     "note": "遥控潜器检查坝面与水工结构缺陷，服务特定的生产与生活需要。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "dam_monitoring_system",
+     "name": "大坝安全监测系统",
+     "en": "Dam safety monitoring",
+     "year": 1960,
+     "note": "以传感器网监测坝体变形渗流，保障运行安全，构成相关作业体系的重要一环。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "hydro_turbine_testing_laboratory",
+     "name": "水电站模型试验室",
+     "en": "Hydro model test laboratory",
+     "year": 1950,
+     "note": "以水工模型试验验证引水流态与机组运行特性，是电站设计依托的试验设施。",
+     "deps": [
+      "physics"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "水电运行、生态与新型应用",
+   "items": [
+    {
+     "id": "hydro_peaking_operation",
+     "name": "水电调峰运行",
+     "en": "Hydro peaking operation",
+     "year": 1920,
+     "note": "利用水库蓄放快速调节出力，承担电网高峰负荷，与同类装置共同构成完整谱系。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "hydro_frequency_regulation",
+     "name": "水电频率调节",
+     "en": "Hydro frequency regulation",
+     "year": 1920,
+     "note": "水电机组响应速度快，长期承担电网一次与二次调频，实际效果得到广泛验证。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "hydro_black_start",
+     "name": "水电黑启动",
+     "en": "Hydro black start",
+     "year": 1960,
+     "note": "系统全停后水电机组自启送电，恢复电网供电，属于该领域的成熟实用技术。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "cascade_dispatch",
+     "name": "梯级联合调度",
+     "en": "Cascade joint dispatch",
+     "year": 1980,
+     "note": "上下游梯级水库统一调度，提高发电与防洪综合效益，其基本思路沿用至今。",
+     "deps": [
+      "cascade_hydro_development",
+      "computer"
+     ]
+    },
+    {
+     "id": "seasonal_reservoir_regulation",
+     "name": "水库季调节运行",
+     "en": "Seasonal reservoir regulation",
+     "year": 1950,
+     "note": "水库拦蓄汛期来水供枯季发电，平滑径流年际分配，应用范围遍及多个地区。",
+     "deps": [
+      "reservoir_power_plant"
+     ]
+    },
+    {
+     "id": "fish_ladder",
+     "name": "鱼梯",
+     "en": "Fish ladder",
+     "year": 1880,
+     "note": "阶梯式过鱼通道帮助鱼类翻越闸坝，是水电生态措施，是该技术门类的典型代表。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "fish_lift",
+     "name": "升鱼机",
+     "en": "Fish lift",
+     "year": 1950,
+     "note": "以水槽或提斗把鱼提升过坝的机械过鱼设施，为后续发展奠定了基础。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "sediment_flushing",
+     "name": "水库排沙运用",
+     "en": "Reservoir sediment flushing",
+     "year": 1960,
+     "note": "利用泄水时机排走入库泥沙，延长水库使用年限，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "intake_gate"
+     ]
+    },
+    {
+     "id": "ecological_flow_release",
+     "name": "生态流量泄放",
+     "en": "Ecological flow release",
+     "year": 2000,
+     "note": "电站按生态要求下泄最小流量，保障下游河道生境，在相应条件下长期使用。",
+     "deps": [
+      "run_of_river_plant"
+     ]
+    },
+    {
+     "id": "in_stream_hydro",
+     "name": "河道内小水电",
+     "en": "In-stream hydrokinetic power",
+     "year": 2010,
+     "note": "直接利用河道水流发电的装置，无需筑坝引水，服务特定的生产与生活需要。",
+     "deps": [
+      "generator"
+     ]
+    },
+    {
+     "id": "hydro_hybrid_diesel",
+     "name": "水柴互补系统",
+     "en": "Hydro-diesel hybrid system",
+     "year": 2000,
+     "note": "小水电与柴油发电互补供电，提高离网岛屿可靠性，构成相关作业体系的重要一环。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "hydroelectricity_cogeneration",
+     "name": "水电与新能源互补",
+     "en": "Hydro-renewable hybrid",
+     "year": 2010,
+     "note": "水电与光伏风电联合调度，弥补新能源波动，技术上持续沿用并有所改进。",
+     "deps": [
+      "power_grid",
+      "computer"
+     ]
+    },
+    {
+     "id": "hydro_agc",
+     "name": "水电站自动发电控制",
+     "en": "Hydro AGC",
+     "year": 1980,
+     "note": "按调度指令自动分配机组出力，维持系统平衡，与同类装置共同构成完整谱系。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "hydro_phase_modulation",
+     "name": "水电机组调相运行",
+     "en": "Hydro phase modulation",
+     "year": 1970,
+     "note": "机组作调相机运行，为电网提供无功支撑，实际效果得到广泛验证。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "reservoir_joint_operation",
+     "name": "防洪发电联合调度",
+     "en": "Flood-power joint operation",
+     "year": 1960,
+     "note": "兼顾防洪、发电与供水的水库统筹运用，属于该领域的成熟实用技术。",
+     "deps": [
+      "reservoir_power_plant"
+     ]
+    },
+    {
+     "id": "forecast_based_scheduling",
+     "name": "预报调度",
+     "en": "Forecast-based reservoir scheduling",
+     "year": 1980,
+     "note": "根据来水预报预泄预蓄，提高发电与防洪效益，其基本思路沿用至今。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "hydro_environmental_compliance",
+     "name": "生态流量监控",
+     "en": "Ecological flow monitoring",
+     "year": 2005,
+     "note": "在线监控下泄生态流量，保证河道不断流，应用范围遍及多个地区。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "hydro_offgrid_hydropower",
+     "name": "离网微水电供电系统",
+     "en": "Off-grid micro hydro supply",
+     "year": 1950,
+     "note": "不并网的独立水电系统，服务无电山区，是该技术门类的典型代表。",
+     "deps": [
+      "micro_hydro"
+     ]
+    },
+    {
+     "id": "hydro_green_hydrogen",
+     "name": "水电制氢",
+     "en": "Hydro-based green hydrogen",
+     "year": 2005,
+     "note": "水电电解水制氢，输出零碳氢源，为后续发展奠定了基础。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "hydropower_carbon_neutral",
+     "name": "水电碳减排核算",
+     "en": "Hydro carbon accounting",
+     "year": 2010,
+     "note": "量化水电替代火电的减排效益，服务碳市场，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "computer"
+     ]
+    }
+   ]
+  }
+ ]
+}

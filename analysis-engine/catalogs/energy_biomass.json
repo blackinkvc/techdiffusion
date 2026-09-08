@@ -1,0 +1,1369 @@
+{
+ "cat": "energy",
+ "catName": "能源",
+ "sub": "biomass",
+ "subName": "生物质与薪柴利用",
+ "anchors": [
+  "fire",
+  "agriculture",
+  "fermentation",
+  "chemistry",
+  "iron",
+  "steam_engine",
+  "electricity",
+  "generator",
+  "petroleum",
+  "internal_combustion",
+  "automobile",
+  "coal_mining"
+ ],
+ "families": [
+  {
+   "name": "薪柴与木炭",
+   "items": [
+    {
+     "id": "fuelwood_use",
+     "name": "薪柴利用",
+     "en": "Firewood use",
+     "year": -400000,
+     "note": "将木柴直接燃烧取暖炊煮，是人类沿用最久的热能来源，至今仍在乡村广泛使用。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "wood_charcoal_making",
+     "name": "木炭烧制",
+     "en": "Charcoal making",
+     "year": -3000,
+     "note": "木材缺氧加热炭化得高碳燃料，火力集中少烟，服务冶金、炊事与取暖。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "charcoal_pit_kiln",
+     "name": "坑式炭窑",
+     "en": "Pit charcoal kiln",
+     "year": -2000,
+     "note": "挖坑垒土闷烧成炭的古老窑法，无需窑体材料，长期是小规模制炭主流。",
+     "deps": [
+      "wood_charcoal_making"
+     ]
+    },
+    {
+     "id": "coppice_fuel_forest",
+     "name": "薪炭矮林作业",
+     "en": "Coppice firewood system",
+     "year": -1500,
+     "note": "以短轮伐反复萌发采收枝条，稳定供给炊薪与烧炭原料的林地经营方式。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "mound_charcoal_kiln",
+     "name": "堆式烧炭",
+     "en": "Mound charcoal kiln",
+     "year": -1500,
+     "note": "将薪材堆成覆土窑堆缓慢闷烧的制炭法，在欧洲长期沿用。",
+     "deps": [
+      "wood_charcoal_making"
+     ]
+    },
+    {
+     "id": "fuelwood_forestry",
+     "name": "薪炭林经营",
+     "en": "Fuelwood forestry",
+     "year": -800,
+     "note": "把林地划作薪炭来源并计划采伐，保障城乡燃料的持续供给。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "bamboo_charcoal",
+     "name": "竹炭",
+     "en": "Bamboo charcoal",
+     "year": 900,
+     "note": "以竹材炭化而成的多孔燃料，同时用于吸湿、净水与除味。",
+     "deps": [
+      "wood_charcoal_making"
+     ]
+    },
+    {
+     "id": "binchotan",
+     "name": "备长炭",
+     "en": "Binchotan white charcoal",
+     "year": 1700,
+     "note": "高温烧制并以湿法熄火的硬质白炭，火力稳定少烟，被视为优质炭。",
+     "deps": [
+      "wood_charcoal_making"
+     ]
+    },
+    {
+     "id": "retort_charcoal_kiln",
+     "name": "蒸馏制炭炉",
+     "en": "Charcoal retort",
+     "year": 1750,
+     "note": "密闭铁釜干馏木材连续制炭，同时回收木煤气与木焦油。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "wood_vinegar_collection",
+     "name": "木醋液回收",
+     "en": "Wood vinegar recovery",
+     "year": 1850,
+     "note": "木材干馏副产物的收集利用，主含乙酸等，供农业与防腐使用。",
+     "deps": [
+      "retort_charcoal_kiln"
+     ]
+    },
+    {
+     "id": "charcoal_briquette",
+     "name": "机制成型炭",
+     "en": "Charcoal briquette",
+     "year": 1920,
+     "note": "炭屑掺黏结剂压制成型，回收边角料，得清洁规整的民用炭。",
+     "deps": [
+      "wood_charcoal_making",
+      "iron"
+     ]
+    },
+    {
+     "id": "improved_cookstove",
+     "name": "高效省柴灶",
+     "en": "Improved cookstove",
+     "year": 1983,
+     "note": "提高热效率并减少烟尘的户用生物质炉灶，改善室内空气与用能。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "biochar",
+     "name": "生物炭",
+     "en": "Biochar",
+     "year": 2006,
+     "note": "生物质缺氧热解成的稳定炭质，还田可固碳并改善土壤性状。",
+     "deps": [
+      "agriculture",
+      "chemistry"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "秸秆与农林加工剩余物燃料",
+   "items": [
+    {
+     "id": "straw_fuel_use",
+     "name": "秸秆燃料",
+     "en": "Straw fuel",
+     "year": -3000,
+     "note": "作物收获后的秸秆直接燃烧供热，随农耕普及成为乡村重要燃料。",
+     "deps": [
+      "fire",
+      "agriculture"
+     ]
+    },
+    {
+     "id": "dung_cake_fuel",
+     "name": "畜粪饼燃料",
+     "en": "Dung-cake fuel",
+     "year": -2000,
+     "note": "牲畜粪便晒干成饼燃烧，是无林木草原地区沿用至今的燃料。",
+     "deps": [
+      "fire",
+      "agriculture"
+     ]
+    },
+    {
+     "id": "bagasse_fuel",
+     "name": "蔗渣燃料",
+     "en": "Bagasse fuel",
+     "year": 1600,
+     "note": "榨糖后的蔗渣充当锅炉燃料，使糖厂实现能源部分自给。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "corncob_fuel",
+     "name": "玉米芯燃料",
+     "en": "Corncob fuel",
+     "year": 1800,
+     "note": "玉米芯质地致密耐燃，常作灶火与烤烟等热加工用燃料。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "rice_husk_fuel",
+     "name": "稻壳燃料",
+     "en": "Rice husk fuel",
+     "year": 1870,
+     "note": "稻壳量大、热值稳定，常作碾米厂锅炉燃料，灰烬可综合利用。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "sawdust_fuel",
+     "name": "锯木屑燃料",
+     "en": "Sawdust fuel",
+     "year": 1880,
+     "note": "锯材加工产生的木屑直接燃烧供热，是林产工业的通用燃料。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "bagasse_cogeneration",
+     "name": "蔗渣热电联产",
+     "en": "Bagasse cogeneration",
+     "year": 1900,
+     "note": "蔗渣锅炉产汽驱动压榨并发电，形成现代糖厂的能源中心。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "black_liquor_recovery",
+     "name": "碱回收燃烧炉",
+     "en": "Black liquor recovery boiler",
+     "year": 1934,
+     "note": "纸浆黑液浓缩燃烧回收碱与热能，是制浆厂的能量与化学品枢纽。",
+     "deps": [
+      "steam_engine",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "cotton_stalk_fuel",
+     "name": "棉秆燃料",
+     "en": "Cotton stalk fuel",
+     "year": 1950,
+     "note": "棉秆收获后作民用与工业燃料，在产棉区大量替代柴煤。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "bark_fuel",
+     "name": "树皮燃料",
+     "en": "Bark fuel",
+     "year": 1970,
+     "note": "剥皮工序的树皮集中燃烧，是制材厂的低成本热源，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "rice_husk_power",
+     "name": "稻壳发电",
+     "en": "Rice husk power generation",
+     "year": 1975,
+     "note": "以稻壳为燃料的电站直接并网，多见于产稻区，在相应条件下长期使用。",
+     "deps": [
+      "electricity",
+      "generator"
+     ]
+    },
+    {
+     "id": "straw_bale_boiler",
+     "name": "草捆燃烧锅炉",
+     "en": "Straw bale boiler",
+     "year": 1980,
+     "note": "整捆秸秆直接入炉燃烧的专用锅炉，配有破捆与给料装置。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "forestry_residue_fuel",
+     "name": "采伐剩余物燃料",
+     "en": "Forestry residue fuel",
+     "year": 1985,
+     "note": "枝桠、梢头等采伐剩余物削片作燃料，减少林区废弃物堆积。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "palm_residue_fuel",
+     "name": "棕榈剩余物燃料",
+     "en": "Palm residue fuel",
+     "year": 1990,
+     "note": "棕榈油厂空果串与纤维壳燃烧供热发电，实现全厂能源循环。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "peanut_shell_fuel",
+     "name": "花生壳燃料",
+     "en": "Peanut shell fuel",
+     "year": 1993,
+     "note": "花生壳作锅炉燃料在榨油与食品加工厂回用，服务特定的生产与生活需要。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "coconut_husk_fuel",
+     "name": "椰壳燃料",
+     "en": "Coconut husk fuel",
+     "year": 1995,
+     "note": "椰壳与椰纤残渣燃烧供热，服务椰干与椰油加工，构成相关作业体系的重要一环。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "vinasse_concentration",
+     "name": "酒糟浓缩燃烧",
+     "en": "Vinasse concentration combustion",
+     "year": 1998,
+     "note": "糖蜜酒糟浓缩后入炉燃烧兼回收钾盐，为乙醇厂配套，技术上持续沿用并有所改进。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "olive_pomace_fuel",
+     "name": "橄榄渣燃料",
+     "en": "Olive pomace fuel",
+     "year": 2000,
+     "note": "橄榄榨油残渣作锅炉燃料，供油坊与社区供暖，与同类装置共同构成完整谱系。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "sunflower_husk_fuel",
+     "name": "葵花籽壳燃料",
+     "en": "Sunflower husk fuel",
+     "year": 2005,
+     "note": "葵花籽剥壳残渣用作锅炉燃料与颗粒燃料原料，实际效果得到广泛验证。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "green_waste_fuel",
+     "name": "园林废弃物燃料",
+     "en": "Green waste fuel",
+     "year": 2005,
+     "note": "行道树修剪与草坪残枝收集后粉碎作燃料，属于该领域的成熟实用技术。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "sugarcane_trash_fuel",
+     "name": "蔗叶梢燃料",
+     "en": "Sugarcane trash fuel",
+     "year": 2010,
+     "note": "蔗叶与梢头集中收集压块燃烧，用作生物质电站燃料，其基本思路沿用至今。",
+     "deps": [
+      "agriculture"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "生物质成型燃料与预处理",
+   "items": [
+    {
+     "id": "hammer_mill",
+     "name": "锤片式粉碎机",
+     "en": "Hammer mill",
+     "year": 1900,
+     "note": "高速锤片击碎秸秆木料，为成型与燃烧前处理的通用机械。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "hydrothermal_carbonization",
+     "name": "水热碳化",
+     "en": "Hydrothermal carbonization",
+     "year": 1913,
+     "note": "湿生物质在热水中加压炭化，得水热炭燃料并保留养分。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "screw_press_briquetting",
+     "name": "螺旋挤压成型机",
+     "en": "Screw-press briquetting",
+     "year": 1930,
+     "note": "螺杆挤压加热使木屑成型为棒状燃料，无需黏结剂，应用范围遍及多个地区。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "ring_die_pellet_mill",
+     "name": "环模制粒机",
+     "en": "Ring-die pellet mill",
+     "year": 1934,
+     "note": "压辊将粉料挤过环模孔成型，是现代颗粒燃料的核心设备。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "rotary_drum_dryer",
+     "name": "回转滚筒干燥机",
+     "en": "Rotary drum dryer",
+     "year": 1950,
+     "note": "旋转筒内热风烘干高水分生物质，保障成型与燃烧质量。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "wood_pellet_fuel",
+     "name": "木质颗粒燃料",
+     "en": "Wood pellet fuel",
+     "year": 1976,
+     "note": "木屑压制的标准颗粒燃料，便于储运与自动给料，是该技术门类的典型代表。",
+     "deps": [
+      "ring_die_pellet_mill"
+     ]
+    },
+    {
+     "id": "belt_dryer",
+     "name": "带式干燥机",
+     "en": "Belt dryer",
+     "year": 1980,
+     "note": "物料铺于网带逐级烘干，处理量大、热耗较低的干燥装置。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "straw_pellet_fuel",
+     "name": "秸秆颗粒燃料",
+     "en": "Straw pellet fuel",
+     "year": 1985,
+     "note": "秸秆粉碎制粒解决松散难储问题，供锅炉与颗粒炉使用。",
+     "deps": [
+      "wood_pellet_fuel"
+     ]
+    },
+    {
+     "id": "piston_briquetting",
+     "name": "活塞冲压成型机",
+     "en": "Piston press briquetting",
+     "year": 1986,
+     "note": "以活塞冲压将碎料压成高密度块状燃料，为后续发展奠定了基础。",
+     "deps": [
+      "screw_press_briquetting"
+     ]
+    },
+    {
+     "id": "pellet_stove",
+     "name": "颗粒燃料炉",
+     "en": "Pellet stove",
+     "year": 1988,
+     "note": "自动进料燃烧颗粒的取暖炉，多带储料仓与点火装置，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "wood_pellet_fuel"
+     ]
+    },
+    {
+     "id": "rice_husk_briquette",
+     "name": "稻壳成型燃料",
+     "en": "Rice husk briquette",
+     "year": 1990,
+     "note": "稻壳压缩成型提高堆积密度，便于运输与燃烧，在相应条件下长期使用。",
+     "deps": [
+      "ring_die_pellet_mill"
+     ]
+    },
+    {
+     "id": "biomass_cube_press",
+     "name": "生物质压块机",
+     "en": "Biomass cube press",
+     "year": 2000,
+     "note": "对辊或冲压成型大颗粒压块，用于大锅炉直燃，服务特定的生产与生活需要。",
+     "deps": [
+      "piston_briquetting"
+     ]
+    },
+    {
+     "id": "torrefaction",
+     "name": "烘焙预处理",
+     "en": "Torrefaction",
+     "year": 2005,
+     "note": "低温慢速热解使木质素焦化，提升燃料疏水性与热值，构成相关作业体系的重要一环。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "torrefied_pellet",
+     "name": "烘焙颗粒燃料",
+     "en": "Torrefied pellet",
+     "year": 2008,
+     "note": "烘焙料再制粒，得热值接近煤的高能固体燃料，技术上持续沿用并有所改进。",
+     "deps": [
+      "torrefaction"
+     ]
+    },
+    {
+     "id": "biochar_briquette",
+     "name": "生物炭成型燃料",
+     "en": "Biochar briquette",
+     "year": 2012,
+     "note": "生物炭掺混压制，作无烟炊事与取暖燃料，与同类装置共同构成完整谱系。",
+     "deps": [
+      "biochar",
+      "biomass_cube_press"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "厌氧消化与生物燃气",
+   "items": [
+    {
+     "id": "methane_identified",
+     "name": "沼气成因解析",
+     "en": "Marsh gas identification",
+     "year": 1776,
+     "note": "发现沼泽气泡为可燃甲烷，打开对厌氧产气的科学认识。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "anaerobic_digester",
+     "name": "厌氧消化池",
+     "en": "Anaerobic digester",
+     "year": 1859,
+     "note": "英国出现首座利用人粪产沼的消化池，开启沼气实用化。",
+     "deps": [
+      "fermentation"
+     ]
+    },
+    {
+     "id": "floating_drum_digester",
+     "name": "浮罩式沼气池",
+     "en": "Floating-drum digester",
+     "year": 1897,
+     "note": "以浮罩储存并稳压沼气，是早期城市与农场的主流池型。",
+     "deps": [
+      "anaerobic_digester"
+     ]
+    },
+    {
+     "id": "sewage_sludge_digestion",
+     "name": "污泥厌氧消化",
+     "en": "Sewage sludge digestion",
+     "year": 1906,
+     "note": "市政污泥加温消化产沼，实现减量稳定并回收能源，实际效果得到广泛验证。",
+     "deps": [
+      "fermentation"
+     ]
+    },
+    {
+     "id": "fixed_dome_digester",
+     "name": "水压式沼气池",
+     "en": "Fixed-dome digester",
+     "year": 1920,
+     "note": "拱形池体配合水压间储气调压，造价较低，户用广泛，属于该领域的成熟实用技术。",
+     "deps": [
+      "anaerobic_digester"
+     ]
+    },
+    {
+     "id": "plug_flow_digester",
+     "name": "推流式厌氧消化",
+     "en": "Plug-flow digester",
+     "year": 1960,
+     "note": "卧式长池内物料缓慢推移，适合高含固率粪污处理，其基本思路沿用至今。",
+     "deps": [
+      "sewage_sludge_digestion"
+     ]
+    },
+    {
+     "id": "household_biogas_plant",
+     "name": "农村户用沼气池",
+     "en": "Household biogas plant",
+     "year": 1970,
+     "note": "农户以粪草入池产沼炊事照明，中国曾大规模推广，应用范围遍及多个地区。",
+     "deps": [
+      "fixed_dome_digester"
+     ]
+    },
+    {
+     "id": "anaerobic_filter",
+     "name": "厌氧滤池",
+     "en": "Anaerobic filter",
+     "year": 1972,
+     "note": "填料表面附着生物膜，处理有机废水并产生甲烷，是该技术门类的典型代表。",
+     "deps": [
+      "fermentation"
+     ]
+    },
+    {
+     "id": "farm_biogas_engineering",
+     "name": "农场沼气工程",
+     "en": "Farm biogas engineering",
+     "year": 1975,
+     "note": "规模化养殖场集中发酵产沼，配套发电与粪污处理，为后续发展奠定了基础。",
+     "deps": [
+      "anaerobic_digester"
+     ]
+    },
+    {
+     "id": "landfill_gas_capture",
+     "name": "填埋气收集系统",
+     "en": "Landfill gas capture",
+     "year": 1975,
+     "note": "竖井与管网抽采垃圾填埋场厌氧产气，防爆并加以利用。",
+     "deps": [
+      "anaerobic_digester"
+     ]
+    },
+    {
+     "id": "uasb_reactor",
+     "name": "UASB厌氧反应器",
+     "en": "Upflow anaerobic sludge blanket reactor",
+     "year": 1976,
+     "note": "上流式污泥床高效处理高浓度有机废水并产沼气，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "fermentation"
+     ]
+    },
+    {
+     "id": "biogas_desulfurization",
+     "name": "沼气脱硫",
+     "en": "Biogas desulfurization",
+     "year": 1978,
+     "note": "生物或化学法脱除硫化氢，保护发动机与管道设备，在相应条件下长期使用。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "biogas_chp",
+     "name": "沼气热电联产",
+     "en": "Biogas combined heat and power",
+     "year": 1980,
+     "note": "沼气燃烧发电同时回收余热，综合能源利用效率明显提高。",
+     "deps": [
+      "generator"
+     ]
+    },
+    {
+     "id": "landfill_gas_power",
+     "name": "填埋气发电",
+     "en": "Landfill gas power generation",
+     "year": 1985,
+     "note": "以填埋气为燃料的燃气发电机组并网供电，服务特定的生产与生活需要。",
+     "deps": [
+      "generator"
+     ]
+    },
+    {
+     "id": "biomethane_upgrading",
+     "name": "沼气提纯",
+     "en": "Biomethane upgrading",
+     "year": 1986,
+     "note": "脱碳提纯甲烷至燃气品质，用于车用燃料与管网，构成相关作业体系的重要一环。",
+     "deps": [
+      "biogas_desulfurization"
+     ]
+    },
+    {
+     "id": "co_digestion",
+     "name": "协同厌氧发酵",
+     "en": "Co-digestion",
+     "year": 1990,
+     "note": "多种有机废物配伍发酵，可提高产气量与处理规模，技术上持续沿用并有所改进。",
+     "deps": [
+      "farm_biogas_engineering"
+     ]
+    },
+    {
+     "id": "egsb_reactor",
+     "name": "EGSB厌氧反应器",
+     "en": "Expanded granular sludge bed reactor",
+     "year": 1991,
+     "note": "膨胀颗粒污泥床提高上升流速，可处理低浓度废水，与同类装置共同构成完整谱系。",
+     "deps": [
+      "uasb_reactor"
+     ]
+    },
+    {
+     "id": "dry_fermentation",
+     "name": "干式厌氧发酵",
+     "en": "Dry anaerobic digestion",
+     "year": 2000,
+     "note": "高含固率物料喷淋渗滤产沼，节水并可处理绿化废物，实际效果得到广泛验证。",
+     "deps": [
+      "anaerobic_digester"
+     ]
+    },
+    {
+     "id": "digestate_separation",
+     "name": "沼渣液分离",
+     "en": "Digestate separation",
+     "year": 2002,
+     "note": "机械固液分离沼液沼渣，便于还田与后续处理，属于该领域的成熟实用技术。",
+     "deps": [
+      "farm_biogas_engineering"
+     ]
+    },
+    {
+     "id": "bio_cng",
+     "name": "生物压缩天然气",
+     "en": "Bio-CNG",
+     "year": 2005,
+     "note": "提纯压缩后的车用燃气，可替代柴油用于重卡与公交，其基本思路沿用至今。",
+     "deps": [
+      "biomethane_upgrading"
+     ]
+    },
+    {
+     "id": "biomethane_grid_injection",
+     "name": "生物天然气入网",
+     "en": "Biomethane grid injection",
+     "year": 2008,
+     "note": "提纯生物甲烷加压注入天然气管网，实现远距离利用，应用范围遍及多个地区。",
+     "deps": [
+      "biomethane_upgrading"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "热解、气化与合成转化",
+   "items": [
+    {
+     "id": "wood_distillation",
+     "name": "木材干馏",
+     "en": "Wood distillation",
+     "year": 1650,
+     "note": "窑或釜内干馏木材得炭、木焦油与木煤气，属最早的热解工业。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "updraft_gasifier",
+     "name": "上吸式气化炉",
+     "en": "Updraft gasifier",
+     "year": 1830,
+     "note": "燃料与气流逆向运动，结构简单但产气焦油较多，是该技术门类的典型代表。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "downdraft_gasifier",
+     "name": "下吸式气化炉",
+     "en": "Downdraft gasifier",
+     "year": 1920,
+     "note": "气流下行经高温喉口裂解焦油，产气适合内燃机燃料，为后续发展奠定了基础。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "imbert_wood_gasifier",
+     "name": "车载木煤气发生炉",
+     "en": "Imbert wood-gas generator",
+     "year": 1939,
+     "note": "缺油时期以木炭或木块气化驱动汽车，形成小型车载装置。",
+     "deps": [
+      "downdraft_gasifier"
+     ]
+    },
+    {
+     "id": "fluidized_bed_gasifier",
+     "name": "流化床气化炉",
+     "en": "Fluidized-bed gasifier",
+     "year": 1970,
+     "note": "床料流化强化传热传质，可气化多样原料，适合中等规模。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "hydrothermal_liquefaction",
+     "name": "水热液化",
+     "en": "Hydrothermal liquefaction",
+     "year": 1973,
+     "note": "高温高压水中将湿生物质直接转化为生物原油，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "circulating_fluidized_gasifier",
+     "name": "循环流化床气化",
+     "en": "Circulating fluidized-bed gasifier",
+     "year": 1976,
+     "note": "床料循环提升碳转化率，产气含尘较高但处理规模大，在相应条件下长期使用。",
+     "deps": [
+      "fluidized_bed_gasifier"
+     ]
+    },
+    {
+     "id": "fast_pyrolysis",
+     "name": "快速热解制油",
+     "en": "Fast pyrolysis",
+     "year": 1980,
+     "note": "秒级升温裂解生物质并快速冷凝，得液体生物油，服务特定的生产与生活需要。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "biomass_gasification_power",
+     "name": "生物质气化发电",
+     "en": "Biomass gasification power",
+     "year": 1990,
+     "note": "燃气净化后入内燃机或燃气轮发电，小规模分布式应用广泛。",
+     "deps": [
+      "downdraft_gasifier",
+      "generator"
+     ]
+    },
+    {
+     "id": "indirect_gasification",
+     "name": "双床间接气化",
+     "en": "Indirect gasification",
+     "year": 1995,
+     "note": "燃烧床与气化床分离供热，可产不含氮气的合成气，构成相关作业体系的重要一环。",
+     "deps": [
+      "fluidized_bed_gasifier"
+     ]
+    },
+    {
+     "id": "plasma_gasification",
+     "name": "等离子体气化",
+     "en": "Plasma gasification",
+     "year": 2000,
+     "note": "电弧等离子高温裂解物料，处理难燃废弃物并产合成气。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "auger_pyrolysis",
+     "name": "螺旋热解反应器",
+     "en": "Auger pyrolysis reactor",
+     "year": 2005,
+     "note": "螺杆输送控温热解，颗粒停留时间均匀，适合中小型装置。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "pyrolysis_polygen",
+     "name": "热解多联产",
+     "en": "Pyrolysis poly-generation",
+     "year": 2005,
+     "note": "炭、气、液联产分级利用，提高整厂热效率与经济性，技术上持续沿用并有所改进。",
+     "deps": [
+      "fast_pyrolysis"
+     ]
+    },
+    {
+     "id": "supercritical_water_gasification",
+     "name": "超临界水气化",
+     "en": "Supercritical water gasification",
+     "year": 2008,
+     "note": "水在超临界态直接气化湿物料，省去预干燥能耗，与同类装置共同构成完整谱系。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "biomass_ft_synthesis",
+     "name": "生物质费托合成",
+     "en": "Biomass-to-liquid Fischer-Tropsch",
+     "year": 2008,
+     "note": "生物质气化合成气经费托反应制烃类燃料，示范装置已投运。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "bio_oil_upgrading",
+     "name": "生物油加氢提质",
+     "en": "Bio-oil hydro-upgrading",
+     "year": 2010,
+     "note": "催化加氢脱氧提升生物油品质，向烃类燃料组分转化，实际效果得到广泛验证。",
+     "deps": [
+      "fast_pyrolysis"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "液体生物燃料",
+   "items": [
+    {
+     "id": "vegetable_oil_engine_demo",
+     "name": "植物油发动机演示",
+     "en": "Vegetable-oil engine trial",
+     "year": 1900,
+     "note": "柴油机以花生油试运行成功，证明植物油可作内燃机燃料。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "fuel_ethanol_car",
+     "name": "燃料乙醇汽车",
+     "en": "Fuel ethanol automobile",
+     "year": 1908,
+     "note": "福特T型车设计上可用乙醇驱动，推动醇类燃料进入交通。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "abe_fermentation",
+     "name": "丙酮丁醇发酵",
+     "en": "Acetone-butanol-ethanol fermentation",
+     "year": 1912,
+     "note": "细菌发酵制丙酮与丁醇，战时量产并为生物燃料奠基，属于该领域的成熟实用技术。",
+     "deps": [
+      "fermentation"
+     ]
+    },
+    {
+     "id": "ethanol_gasoline_blending",
+     "name": "乙醇汽油掺烧",
+     "en": "Ethanol-gasoline blending",
+     "year": 1931,
+     "note": "巴西等立法强制汽油掺乙醇，形成最早的醇油混烧体系。",
+     "deps": [
+      "petroleum"
+     ]
+    },
+    {
+     "id": "biodiesel_transesterification",
+     "name": "生物柴油酯交换",
+     "en": "Biodiesel transesterification",
+     "year": 1937,
+     "note": "以碱催化酯交换制脂肪酸甲酯并获专利，确立生物柴油工艺。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "proalcool_program",
+     "name": "巴西甘蔗燃料乙醇计划",
+     "en": "Proalcool program",
+     "year": 1975,
+     "note": "全国性蔗糖转乙醇计划，构建起甘蔗燃料乙醇产业链，其基本思路沿用至今。",
+     "deps": [
+      "fuel_ethanol_car"
+     ]
+    },
+    {
+     "id": "us_corn_ethanol",
+     "name": "玉米燃料乙醇工业",
+     "en": "US corn ethanol industry",
+     "year": 1978,
+     "note": "美国以玉米为原料量产燃料乙醇并进入汽油供应体系，应用范围遍及多个地区。",
+     "deps": [
+      "fuel_ethanol_car"
+     ]
+    },
+    {
+     "id": "e10_gasoline",
+     "name": "E10车用乙醇汽油",
+     "en": "E10 gasoline",
+     "year": 1979,
+     "note": "含约10%乙醇的车用汽油，成为美国最普遍的低掺混燃料。",
+     "deps": [
+      "ethanol_gasoline_blending"
+     ]
+    },
+    {
+     "id": "biodiesel_industry",
+     "name": "商品生物柴油产业",
+     "en": "Commercial biodiesel industry",
+     "year": 1985,
+     "note": "奥地利建成现代生物柴油厂，以菜籽油为原料进入柴油体系。",
+     "deps": [
+      "biodiesel_transesterification"
+     ]
+    },
+    {
+     "id": "biodiesel_winterization",
+     "name": "生物柴油冬化分提",
+     "en": "Biodiesel winterization",
+     "year": 1990,
+     "note": "低温结晶分离高熔点组分，改善生物柴油低温流动性能。",
+     "deps": [
+      "biodiesel_industry"
+     ]
+    },
+    {
+     "id": "e85_ethanol_fuel",
+     "name": "E85高比例乙醇燃料",
+     "en": "E85 ethanol fuel",
+     "year": 1994,
+     "note": "含85%乙醇的燃料供灵活燃料车使用，降低石油依赖，是该技术门类的典型代表。",
+     "deps": [
+      "e10_gasoline"
+     ]
+    },
+    {
+     "id": "b20_biodiesel_blend",
+     "name": "B20生物柴油调和油",
+     "en": "B20 biodiesel blend",
+     "year": 2000,
+     "note": "掺混20%生物柴油的车用燃料，适用于普通柴油机，为后续发展奠定了基础。",
+     "deps": [
+      "biodiesel_industry"
+     ]
+    },
+    {
+     "id": "biomethanol_fuel",
+     "name": "生物甲醇燃料",
+     "en": "Biomethanol fuel",
+     "year": 2000,
+     "note": "生物质气化制甲醇，可作内燃机与燃料电池燃料，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "flex_fuel_vehicle",
+     "name": "乙醇灵活燃料汽车",
+     "en": "Flexible-fuel vehicle",
+     "year": 2003,
+     "note": "电控识别乙醇掺比自动调节点火，可全比例燃烧乙醇汽油。",
+     "deps": [
+      "automobile"
+     ]
+    },
+    {
+     "id": "bio_dme_fuel",
+     "name": "生物二甲醚燃料",
+     "en": "Bio-DME fuel",
+     "year": 2005,
+     "note": "生物甲醇脱水制二甲醚，十六烷值高，可替代柴油，在相应条件下长期使用。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "waste_cooking_oil_biodiesel",
+     "name": "废弃油脂生物柴油",
+     "en": "Waste cooking oil biodiesel",
+     "year": 2005,
+     "note": "回收餐饮废油酯交换制生物柴油，兼顾减排与废油治理。",
+     "deps": [
+      "biodiesel_industry"
+     ]
+    },
+    {
+     "id": "enzymatic_biodiesel",
+     "name": "酶法生物柴油",
+     "en": "Enzymatic biodiesel",
+     "year": 2005,
+     "note": "以脂肪酶催化酯交换，反应条件温和且皂化副反应少，服务特定的生产与生活需要。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "straight_vegetable_oil",
+     "name": "纯植物油燃料",
+     "en": "Straight vegetable oil fuel",
+     "year": 2005,
+     "note": "经改装的柴油机直燃菜籽油等，是区域小规模替代方案。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "hvo_renewable_diesel",
+     "name": "加氢植物油",
+     "en": "Hydrotreated vegetable oil",
+     "year": 2007,
+     "note": "植物油加氢脱氧制链烷烃柴油，可与现有油品任意掺混。",
+     "deps": [
+      "biodiesel_industry",
+      "petroleum"
+     ]
+    },
+    {
+     "id": "cellulosic_ethanol",
+     "name": "纤维素乙醇",
+     "en": "Cellulosic ethanol",
+     "year": 2008,
+     "note": "秸秆等木质纤维素经预处理、酶解与发酵制乙醇，构成相关作业体系的重要一环。",
+     "deps": [
+      "fermentation"
+     ]
+    },
+    {
+     "id": "algae_biofuel",
+     "name": "微藻生物燃料",
+     "en": "Microalgae biofuel",
+     "year": 2008,
+     "note": "培养富油微藻再提取炼制生物燃料，已建成中试与示范装置，处于产业化前期。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "hefa_aviation_fuel",
+     "name": "HEFA航空燃料",
+     "en": "Hydroprocessed esters and fatty acids fuel",
+     "year": 2009,
+     "note": "油脂加氢异构得航空煤油组分，已获ASTM掺混标准。",
+     "deps": [
+      "hvo_renewable_diesel"
+     ]
+    },
+    {
+     "id": "biobutanol_fuel",
+     "name": "生物丁醇燃料",
+     "en": "Biobutanol fuel",
+     "year": 2010,
+     "note": "发酵法生物丁醇作汽油掺混组分，能量密度接近汽油，与同类装置共同构成完整谱系。",
+     "deps": [
+      "abe_fermentation"
+     ]
+    },
+    {
+     "id": "sustainable_aviation_fuel",
+     "name": "可持续航空燃料",
+     "en": "Sustainable aviation fuel",
+     "year": 2011,
+     "note": "经认证可掺混使用的低碳航空燃料总称，已获商业航班应用。",
+     "deps": [
+      "hefa_aviation_fuel"
+     ]
+    },
+    {
+     "id": "syngas_fermentation",
+     "name": "合成气发酵制乙醇",
+     "en": "Syngas fermentation to ethanol",
+     "year": 2012,
+     "note": "以废气合成气经微生物发酵制乙醇，实现工业碳利用，实际效果得到广泛验证。",
+     "deps": [
+      "fermentation"
+     ]
+    },
+    {
+     "id": "farnesane_jet_fuel",
+     "name": "发酵法法呢烷航空燃料",
+     "en": "Farnesane jet fuel",
+     "year": 2012,
+     "note": "酵母合成法呢烯再加氢为航空燃料组分，曾获试飞验证。",
+     "deps": [
+      "fermentation"
+     ]
+    },
+    {
+     "id": "renewable_lpg",
+     "name": "生物液化石油气",
+     "en": "Renewable LPG",
+     "year": 2015,
+     "note": "油脂加氢联产可再生丙烷，可替代瓶装液化气使用，属于该领域的成熟实用技术。",
+     "deps": [
+      "hvo_renewable_diesel"
+     ]
+    },
+    {
+     "id": "marine_biofuel",
+     "name": "船用生物燃料",
+     "en": "Marine biofuel",
+     "year": 2018,
+     "note": "低硫船用生物燃料油投入远洋试航，降低航运碳排放，其基本思路沿用至今。",
+     "deps": [
+      "hvo_renewable_diesel"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "生物质燃烧发电与热电联产",
+   "items": [
+    {
+     "id": "biomass_stoker_boiler",
+     "name": "层燃生物质锅炉",
+     "en": "Biomass stoker boiler",
+     "year": 1850,
+     "note": "燃料在炉排上成层燃烧的锅炉，是早期生物质蒸汽动力基础。",
+     "deps": [
+      "steam_engine",
+      "iron"
+     ]
+    },
+    {
+     "id": "traveling_grate_boiler",
+     "name": "链条炉排锅炉",
+     "en": "Traveling grate boiler",
+     "year": 1890,
+     "note": "炉排连续移动自动给排渣，适合批量燃烧秸秆木片，应用范围遍及多个地区。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "bubbling_fluidized_bed_boiler",
+     "name": "鼓泡流化床锅炉",
+     "en": "Bubbling fluidized-bed boiler",
+     "year": 1960,
+     "note": "床层流化燃烧，燃料适应性广且便于炉内脱硫，是该技术门类的典型代表。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "reciprocating_grate_boiler",
+     "name": "往复炉排锅炉",
+     "en": "Reciprocating grate boiler",
+     "year": 1965,
+     "note": "炉排往复运动拨火破渣，适配高灰分秸秆类燃料，为后续发展奠定了基础。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "vibrating_grate_boiler",
+     "name": "振动炉排锅炉",
+     "en": "Vibrating grate boiler",
+     "year": 1970,
+     "note": "炉排振动清灰推进燃料，结构简单、维护方便，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "reciprocating_grate_boiler"
+     ]
+    },
+    {
+     "id": "cfb_boiler",
+     "name": "循环流化床锅炉",
+     "en": "Circulating fluidized-bed boiler",
+     "year": 1979,
+     "note": "经高温分离器回料燃烧，燃烧效率高，宜烧低质生物质。",
+     "deps": [
+      "bubbling_fluidized_bed_boiler"
+     ]
+    },
+    {
+     "id": "pellet_boiler",
+     "name": "颗粒燃料锅炉",
+     "en": "Pellet boiler",
+     "year": 1985,
+     "note": "自动给料燃烧颗粒的热水锅炉，用于区域供暖与户用，在相应条件下长期使用。",
+     "deps": [
+      "wood_pellet_fuel"
+     ]
+    },
+    {
+     "id": "biomass_power_plant",
+     "name": "生物质直燃电站",
+     "en": "Biomass power plant",
+     "year": 1990,
+     "note": "以农林剩余物为燃料的专用电站，经蒸汽循环发电并网。",
+     "deps": [
+      "electricity",
+      "generator"
+     ]
+    },
+    {
+     "id": "biomass_cofiring",
+     "name": "燃煤掺烧生物质",
+     "en": "Biomass co-firing",
+     "year": 1990,
+     "note": "在燃煤电厂掺入木片或颗粒，可快速低成本消纳生物质。",
+     "deps": [
+      "coal_mining",
+      "electricity"
+     ]
+    },
+    {
+     "id": "biomass_chp",
+     "name": "生物质热电联产",
+     "en": "Biomass combined heat and power",
+     "year": 1995,
+     "note": "发电余热供城镇供暖，提高一次能源利用效率，服务特定的生产与生活需要。",
+     "deps": [
+      "biomass_power_plant"
+     ]
+    },
+    {
+     "id": "biomass_hot_air_furnace",
+     "name": "生物质热风炉",
+     "en": "Biomass hot-air furnace",
+     "year": 1995,
+     "note": "直燃或气化产生热风，用于谷物干燥与工业烘干，构成相关作业体系的重要一环。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "biomass_village_gas",
+     "name": "生物质气化集中供气",
+     "en": "Village biomass gas supply",
+     "year": 1996,
+     "note": "村域气化站产燃气管道入户，供居民炊事用气，技术上持续沿用并有所改进。",
+     "deps": [
+      "biomass_gasification_power"
+     ]
+    },
+    {
+     "id": "straw_power_plant",
+     "name": "秸秆直燃电站",
+     "en": "Straw-fired power plant",
+     "year": 1998,
+     "note": "以打包秸秆为燃料的中温中压电站，属专项农林生物质利用。",
+     "deps": [
+      "biomass_power_plant"
+     ]
+    },
+    {
+     "id": "orc_biomass_plant",
+     "name": "生物质有机朗肯循环发电",
+     "en": "ORC biomass power plant",
+     "year": 2000,
+     "note": "以低沸点工质回收中低温热发电，适配小规模供热站，与同类装置共同构成完整谱系。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "biomass_heat_supply_station",
+     "name": "生物质集中供热站",
+     "en": "Biomass heat supply station",
+     "year": 2000,
+     "note": "乡镇集中式生物质锅炉房替代散煤，热网入户供暖，实际效果得到广泛验证。",
+     "deps": [
+      "pellet_boiler"
+     ]
+    },
+    {
+     "id": "biomass_ccs",
+     "name": "生物质能碳捕集封存",
+     "en": "Bioenergy with carbon capture and storage",
+     "year": 2017,
+     "note": "生物质发电过程捕集二氧化碳并封存地下，实现净负碳排放的工程示范。",
+     "deps": [
+      "chemistry"
+     ]
+    }
+   ]
+  }
+ ]
+}

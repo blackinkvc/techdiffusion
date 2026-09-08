@@ -1,0 +1,1363 @@
+{
+ "cat": "material",
+ "catName": "材料",
+ "sub": "buildmaterial",
+ "subName": "建筑与工程材料",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "fire",
+  "brick",
+  "cement",
+  "steel",
+  "road",
+  "chemistry",
+  "petroleum",
+  "iron",
+  "plastics",
+  "arch",
+  "skyscraper",
+  "tunnel",
+  "paper"
+ ],
+ "families": [
+  {
+   "name": "胶凝材料与砂浆",
+   "items": [
+    {
+     "id": "lime_binder",
+     "name": "石灰",
+     "en": "Lime binder",
+     "year": -6000,
+     "note": "煅烧石灰石得生石灰，水化成熟石灰后用于砌筑抹灰，是使用最早的人工胶凝材料。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "lime_mortar",
+     "name": "石灰砂浆",
+     "en": "Lime mortar",
+     "year": -3000,
+     "note": "石灰与砂加水拌和而成的砌筑抹灰浆料，古埃及与古罗马建筑广泛使用。",
+     "deps": [
+      "lime_binder",
+      "brick"
+     ]
+    },
+    {
+     "id": "gypsum_plaster_binder",
+     "name": "烧石膏",
+     "en": "Plaster of Paris",
+     "year": -2500,
+     "note": "石膏石低温煅烧磨粉，加水快速凝结，古代用于内墙抹灰与雕塑。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "clay_earth_plaster",
+     "name": "草筋泥抹灰",
+     "en": "Straw-clay plaster",
+     "year": -4000,
+     "note": "黏土掺草筋抹面防止开裂，是史前以来最朴素的墙体饰面材料。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "portland_cement",
+     "name": "波特兰水泥",
+     "en": "Portland cement",
+     "year": 1824,
+     "note": "阿斯普丁以石灰石与黏土烧成的水硬性胶凝材料，是现代混凝土与水泥工业基石。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "cement_rotary_kiln",
+     "name": "水泥回转窑",
+     "en": "Rotary cement kiln",
+     "year": 1900,
+     "note": "倾斜回转筒体连续煅烧水泥熟料，取代立窑实现水泥大规模连续生产。",
+     "deps": [
+      "portland_cement"
+     ]
+    },
+    {
+     "id": "precalciner_dry_process",
+     "name": "窑外分解干法水泥工艺",
+     "en": "Precalciner dry process",
+     "year": 1971,
+     "note": "悬浮预热与窑外分解技术大幅提高单线产能并降低热耗，是现代新型干法水泥主线。",
+     "deps": [
+      "cement_rotary_kiln"
+     ]
+    },
+    {
+     "id": "blast_furnace_slag_cement",
+     "name": "矿渣硅酸盐水泥",
+     "en": "Blast-furnace slag cement",
+     "year": 1862,
+     "note": "高炉矿渣掺入水泥熟料磨制，水化热低且耐蚀，德国较早实现工业化。",
+     "deps": [
+      "portland_cement",
+      "iron"
+     ]
+    },
+    {
+     "id": "calcium_aluminate_cement",
+     "name": "铝酸盐水泥",
+     "en": "Calcium aluminate cement",
+     "year": 1908,
+     "note": "以铝矾土与石灰烧成的高铝水泥，早强耐高温耐硫酸盐，用于抢修与耐火工程。",
+     "deps": [
+      "portland_cement"
+     ]
+    },
+    {
+     "id": "white_cement",
+     "name": "白色硅酸盐水泥",
+     "en": "White Portland cement",
+     "year": 1900,
+     "note": "选用低铁原料烧成的白水泥，用于装饰砂浆与仿石建筑饰面。",
+     "deps": [
+      "portland_cement"
+     ]
+    },
+    {
+     "id": "fly_ash_supplementary",
+     "name": "粉煤灰掺合料",
+     "en": "Fly ash supplementary cementitious material",
+     "year": 1948,
+     "note": "电厂粉煤灰作混凝土活性掺合料，改善和易性并降低水化热，大坝工程大量采用。",
+     "deps": [
+      "coal_mining",
+      "portland_cement"
+     ]
+    },
+    {
+     "id": "silica_fume_supplementary",
+     "name": "硅灰掺合料",
+     "en": "Silica fume in concrete",
+     "year": 1970,
+     "note": "铁合金厂回收硅灰填充混凝土孔隙，显著提高强度与耐久性，用于高强混凝土。",
+     "deps": [
+      "portland_cement"
+     ]
+    },
+    {
+     "id": "masonry_cement_mortar",
+     "name": "水泥砂浆",
+     "en": "Cement mortar",
+     "year": 1850,
+     "note": "水泥与砂拌制的砌筑与抹面浆料，强度高，取代传统石灰砂浆成为主流。",
+     "deps": [
+      "portland_cement"
+     ]
+    },
+    {
+     "id": "dry_mixed_mortar",
+     "name": "预拌干混砂浆",
+     "en": "Dry-mix mortar",
+     "year": 1960,
+     "note": "工厂按配比烘干混匀的散装干砂浆，工地加水即用，质量稳定且施工高效。",
+     "deps": [
+      "masonry_cement_mortar"
+     ]
+    },
+    {
+     "id": "lignosulfonate_waterreducer",
+     "name": "木质素磺酸盐减水剂",
+     "en": "Lignosulfonate plasticizer",
+     "year": 1935,
+     "note": "造纸废液提取的木质素磺酸盐，是首个实用的混凝土减水剂。",
+     "deps": [
+      "chemistry",
+      "paper"
+     ]
+    },
+    {
+     "id": "naphthalene_superplasticizer",
+     "name": "萘系高效减水剂",
+     "en": "Naphthalene-based superplasticizer",
+     "year": 1963,
+     "note": "萘磺酸盐甲醛缩合物减水率显著高于普通减水剂，支撑高强与泵送混凝土发展。",
+     "deps": [
+      "lignosulfonate_waterreducer"
+     ]
+    },
+    {
+     "id": "polycarboxylate_superplasticizer",
+     "name": "聚羧酸高性能减水剂",
+     "en": "Polycarboxylate superplasticizer",
+     "year": 1981,
+     "note": "梳形聚合物减水剂掺量低、保坍好，是现代高性能与自密实混凝土的关键组分。",
+     "deps": [
+      "naphthalene_superplasticizer"
+     ]
+    },
+    {
+     "id": "air_entraining_agent",
+     "name": "混凝土引气剂",
+     "en": "Air-entraining admixture",
+     "year": 1938,
+     "note": "在混凝土中引入微小气泡，提高抗冻与抗渗性，美国道路与大坝工程率先应用。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "concrete_retarder",
+     "name": "混凝土缓凝剂",
+     "en": "Concrete set retarder",
+     "year": 1930,
+     "note": "延缓水泥水化凝结，解决大体积混凝土与高温季节浇筑的施工难题。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "concrete_accelerator",
+     "name": "混凝土速凝剂",
+     "en": "Concrete accelerator",
+     "year": 1920,
+     "note": "加速水泥凝结硬化，配合喷射混凝土用于隧道与边坡支护快速成型。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "expansive_admixture",
+     "name": "混凝土膨胀剂",
+     "en": "Expansive admixture",
+     "year": 1975,
+     "note": "生成钙矾石等产生微膨胀补偿收缩，用于后浇带与自防水混凝土工程。",
+     "deps": [
+      "chemistry"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "混凝土技术",
+   "items": [
+    {
+     "id": "reinforced_concrete",
+     "name": "钢筋混凝土",
+     "en": "Reinforced concrete",
+     "year": 1867,
+     "note": "莫尼埃以钢筋埋入混凝土协同受力，解决混凝土抗拉不足，成为现代结构主流。",
+     "deps": [
+      "cement",
+      "steel"
+     ]
+    },
+    {
+     "id": "deformed_steel_bar",
+     "name": "热轧带肋钢筋",
+     "en": "Deformed steel bar",
+     "year": 1910,
+     "note": "带肋表面提高钢筋与混凝土粘结力，是现代钢筋混凝土的主要配筋形式。",
+     "deps": [
+      "reinforced_concrete",
+      "steel"
+     ]
+    },
+    {
+     "id": "welded_wire_mesh",
+     "name": "焊接钢筋网",
+     "en": "Welded wire fabric",
+     "year": 1920,
+     "note": "工厂点焊成网的钢筋制品，铺放快、定位准，用于板与墙配筋。",
+     "deps": [
+      "reinforced_concrete"
+     ]
+    },
+    {
+     "id": "prestressed_concrete",
+     "name": "预应力混凝土",
+     "en": "Prestressed concrete",
+     "year": 1928,
+     "note": "弗雷西内以张拉钢筋对混凝土施加预压应力，大幅提高跨越能力并减少开裂。",
+     "deps": [
+      "reinforced_concrete"
+     ]
+    },
+    {
+     "id": "prestressing_strand",
+     "name": "预应力钢绞线",
+     "en": "Prestressing strand",
+     "year": 1940,
+     "note": "七丝捻制的低松弛钢绞线是预应力混凝土桥梁与构件的张拉主力筋材。",
+     "deps": [
+      "prestressed_concrete"
+     ]
+    },
+    {
+     "id": "shotcrete",
+     "name": "喷射混凝土",
+     "en": "Shotcrete",
+     "year": 1914,
+     "note": "压缩空气把混凝土高速喷射到岩面成型，隧道衬砌与边坡支护的核心工艺。"
+    },
+    {
+     "id": "autoclaved_aerated_concrete",
+     "name": "蒸压加气混凝土",
+     "en": "Autoclaved aerated concrete",
+     "year": 1924,
+     "note": "瑞典埃里克松发明含气混凝土经蒸压养护成多孔轻质砌块与板材。",
+     "deps": [
+      "portland_cement"
+     ]
+    },
+    {
+     "id": "lightweight_aggregate_concrete",
+     "name": "轻骨料混凝土",
+     "en": "Lightweight aggregate concrete",
+     "year": 1918,
+     "note": "以陶粒等轻骨料拌制的混凝土，自重小且保温好，用于高层与桥梁减载。",
+     "deps": [
+      "reinforced_concrete"
+     ]
+    },
+    {
+     "id": "foamed_concrete",
+     "name": "泡沫混凝土",
+     "en": "Foamed concrete",
+     "year": 1920,
+     "note": "水泥浆掺稳定泡沫形成的低密度混凝土，用于屋面保温与回填。",
+     "deps": [
+      "portland_cement"
+     ]
+    },
+    {
+     "id": "roller_compacted_concrete",
+     "name": "碾压混凝土",
+     "en": "Roller-compacted concrete",
+     "year": 1982,
+     "note": "干硬性混凝土以振动碾压实，大坝等工程可快速分层浇筑、节约水泥。",
+     "deps": [
+      "reinforced_concrete"
+     ]
+    },
+    {
+     "id": "steel_fiber_concrete",
+     "name": "钢纤维混凝土",
+     "en": "Steel fiber reinforced concrete",
+     "year": 1963,
+     "note": "乱向钢纤维抑制混凝土开裂，抗冲击抗弯强度高，用于地坪与隧道衬砌。",
+     "deps": [
+      "reinforced_concrete"
+     ]
+    },
+    {
+     "id": "glass_reinforced_concrete",
+     "name": "玻璃纤维增强水泥",
+     "en": "Glass fibre reinforced concrete",
+     "year": 1970,
+     "note": "耐碱玻璃纤维增强水泥基薄板，可制成轻质建筑幕墙与装饰构件。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "cfst_column",
+     "name": "钢管混凝土",
+     "en": "Concrete-filled steel tube",
+     "year": 1897,
+     "note": "钢管内灌混凝土的复合构件，套箍作用提高承载与延性，用于高层柱与拱桥。",
+     "deps": [
+      "steel",
+      "reinforced_concrete"
+     ]
+    },
+    {
+     "id": "mass_concrete_thermoregulation",
+     "name": "大体积混凝土温控",
+     "en": "Mass concrete temperature control",
+     "year": 1935,
+     "note": "埋管通水冷却等控温措施防止大坝等水化热开裂，胡佛坝建设树立工程典范。",
+     "deps": [
+      "reinforced_concrete"
+     ]
+    },
+    {
+     "id": "self_compacting_concrete",
+     "name": "自密实混凝土",
+     "en": "Self-compacting concrete",
+     "year": 1988,
+     "note": "冈村甫提出无需振捣靠自重流平密实的混凝土，解决密配筋浇筑难题。",
+     "deps": [
+      "polycarboxylate_superplasticizer"
+     ]
+    },
+    {
+     "id": "high_performance_concrete",
+     "name": "高性能混凝土",
+     "en": "High performance concrete",
+     "year": 1990,
+     "note": "以低水胶比加超塑化剂与矿物掺合料配制，兼具高强度与优异耐久性。",
+     "deps": [
+      "polycarboxylate_superplasticizer",
+      "silica_fume_supplementary"
+     ]
+    },
+    {
+     "id": "uhpc_reactive_powder",
+     "name": "超高性能混凝土",
+     "en": "Ultra-high performance concrete",
+     "year": 1993,
+     "note": "活性粉末混凝土强度超一百五十兆帕并掺钢纤维增韧，用于轻型桥梁与建筑节点。",
+     "deps": [
+      "high_performance_concrete"
+     ]
+    },
+    {
+     "id": "pervious_concrete",
+     "name": "透水混凝土",
+     "en": "Pervious concrete",
+     "year": 2000,
+     "note": "无细骨料开级配混凝土透水透气，用于海绵城市人行道与广场铺装。",
+     "deps": [
+      "reinforced_concrete"
+     ]
+    },
+    {
+     "id": "recycled_aggregate_concrete",
+     "name": "再生骨料混凝土",
+     "en": "Recycled aggregate concrete",
+     "year": 1990,
+     "note": "建筑拆除废弃混凝土破碎作骨料再配混凝土，实现建筑垃圾资源化利用。",
+     "deps": [
+      "reinforced_concrete"
+     ]
+    },
+    {
+     "id": "geopolymer_concrete",
+     "name": "地聚合物混凝土",
+     "en": "Geopolymer concrete",
+     "year": 1978,
+     "note": "碱激发铝硅酸盐矿物替代水泥熟料，碳排放低，用于预制构件示范工程。",
+     "deps": [
+      "chemistry",
+      "cement"
+     ]
+    },
+    {
+     "id": "underwater_concrete",
+     "name": "水下不分散混凝土",
+     "en": "Underwater concrete",
+     "year": 1980,
+     "note": "掺絮凝剂使混凝土水下浇筑不离析，用于桥墩基础与围堰封底。",
+     "deps": [
+      "reinforced_concrete"
+     ]
+    },
+    {
+     "id": "ready_mixed_concrete",
+     "name": "预拌混凝土",
+     "en": "Ready-mixed concrete",
+     "year": 1925,
+     "note": "搅拌站集中拌制混凝土由罐车运至工地，保证质量并加快施工进度。",
+     "deps": [
+      "reinforced_concrete"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "砌块、板材与围护体系",
+   "items": [
+    {
+     "id": "mud_adobe_wall",
+     "name": "土坯砌体",
+     "en": "Mudbrick masonry",
+     "year": -7000,
+     "note": "黏土模制晒干的土坯砖，两河流域与古埃及建造房屋的最主要墙体材料。",
+     "deps": [
+      "brick"
+     ]
+    },
+    {
+     "id": "rammed_earth",
+     "name": "夯土版筑",
+     "en": "Rammed earth",
+     "year": -5000,
+     "note": "分层夯实的生土墙体工艺，中国长城与各地民居大量使用，现仍用于生态建筑。"
+    },
+    {
+     "id": "cmu_concrete_block",
+     "name": "混凝土空心砌块",
+     "en": "Concrete masonry unit",
+     "year": 1900,
+     "note": "帕尔默发明空心砌块成型机，空心混凝土砌块自此成为墙体主流块材。",
+     "deps": [
+      "portland_cement"
+     ]
+    },
+    {
+     "id": "lightweight_aggregate_block",
+     "name": "轻集料混凝土砌块",
+     "en": "Lightweight aggregate block",
+     "year": 1950,
+     "note": "以陶粒、炉渣等轻集料制成砌块，自重轻且有保温性能，用于填充墙。",
+     "deps": [
+      "cmu_concrete_block"
+     ]
+    },
+    {
+     "id": "sandlime_brick",
+     "name": "蒸压灰砂砖",
+     "en": "Sand-lime brick",
+     "year": 1895,
+     "note": "石灰与石英砂经蒸压养护成砖，属免烧墙体材料，比利时率先建厂生产。",
+     "deps": [
+      "lime_binder"
+     ]
+    },
+    {
+     "id": "flyash_brick",
+     "name": "粉煤灰蒸压砖",
+     "en": "Fly ash brick",
+     "year": 1950,
+     "note": "粉煤灰与石灰蒸压成砖，消纳电厂固废，用于承重与非承重墙体。",
+     "deps": [
+      "fly_ash_supplementary"
+     ]
+    },
+    {
+     "id": "gypsum_block_wall",
+     "name": "石膏砌块",
+     "en": "Gypsum block",
+     "year": 1900,
+     "note": "以建筑石膏浇注的空心砌块，轻质隔声，用于非承重内隔墙干法施工。",
+     "deps": [
+      "gypsum_plaster_binder"
+     ]
+    },
+    {
+     "id": "drywall_gypsum_board",
+     "name": "纸面石膏板",
+     "en": "Gypsum wallboard",
+     "year": 1894,
+     "note": "石膏芯两面贴纸的墙板，配合轻钢龙骨构成干式隔墙吊顶体系。",
+     "deps": [
+      "gypsum_plaster_binder",
+      "paper"
+     ]
+    },
+    {
+     "id": "fiber_cement_board",
+     "name": "纤维水泥板",
+     "en": "Fibre cement board",
+     "year": 1894,
+     "note": "哈切克以圆网抄取法生产纤维水泥薄板，后发展为外墙与防火板材。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "perlite_board",
+     "name": "膨胀珍珠岩板",
+     "en": "Expanded perlite board",
+     "year": 1940,
+     "note": "珍珠岩高温膨胀后胶结成板，质轻保温耐火，用于屋面与管道保温。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "clay_roof_tile",
+     "name": "黏土瓦",
+     "en": "Clay roof tile",
+     "year": -700,
+     "note": "烧结黏土制瓦防水覆顶，中国先秦时期已用于宫室，是延续最久的屋面材料。",
+     "deps": [
+      "fire",
+      "brick"
+     ]
+    },
+    {
+     "id": "glazed_roof_tile",
+     "name": "琉璃瓦",
+     "en": "Glazed roof tile",
+     "year": 500,
+     "note": "施铅釉烧成的彩色屋面瓦，中国北朝隋唐起用于宫殿庙宇，装饰性强。",
+     "deps": [
+      "clay_roof_tile"
+     ]
+    },
+    {
+     "id": "concrete_roof_tile",
+     "name": "水泥瓦",
+     "en": "Concrete roof tile",
+     "year": 1850,
+     "note": "水泥砂浆模压成型的屋面瓦，耐久廉价，欧洲近代民居广泛采用。",
+     "deps": [
+      "portland_cement"
+     ]
+    },
+    {
+     "id": "insulated_metal_sandwich_panel",
+     "name": "金属面夹芯保温板",
+     "en": "Insulated metal sandwich panel",
+     "year": 1955,
+     "note": "彩钢板夹聚氨酯或岩棉芯材的复合板，工厂预制用于厂房墙体屋面快速建造。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "glass_curtain_wall",
+     "name": "玻璃幕墙",
+     "en": "Glass curtain wall",
+     "year": 1952,
+     "note": "利华大厦率先采用整面玻璃幕墙，玻璃悬挂于结构外成为现代高层建筑标志。",
+     "deps": [
+      "skyscraper"
+     ]
+    },
+    {
+     "id": "unitized_curtain_wall",
+     "name": "单元式幕墙",
+     "en": "Unitized curtain wall",
+     "year": 1970,
+     "note": "幕墙在工厂组拼成单元板块整体吊装，精度高、工期短，高层幕墙主流工艺。",
+     "deps": [
+      "glass_curtain_wall"
+     ]
+    },
+    {
+     "id": "terrazzo_floor",
+     "name": "水磨石",
+     "en": "Terrazzo",
+     "year": 1450,
+     "note": "碎石屑与水泥拌浆磨光成面的人造地面材料，15世纪威尼斯工匠创制并沿用至今。",
+     "deps": [
+      "brick"
+     ]
+    },
+    {
+     "id": "emulsion_wall_paint",
+     "name": "合成树脂乳液涂料",
+     "en": "Emulsion wall paint",
+     "year": 1950,
+     "note": "以丙烯酸乳液为基料的建筑乳胶漆，水性环保，是内外墙涂饰主流产品。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "intumescent_fire_coating",
+     "name": "膨胀型防火涂料",
+     "en": "Intumescent fire-retardant coating",
+     "year": 1960,
+     "note": "受火膨胀成碳层隔热，保护钢结构在火灾中保持承载能力。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "aluminum_curtain_panel",
+     "name": "铝板幕墙",
+     "en": "Aluminum curtain wall panel",
+     "year": 1965,
+     "note": "氟碳喷涂铝单板挂装成幕墙，质轻耐候，广泛用于高层建筑外装。",
+     "deps": [
+      "skyscraper"
+     ]
+    },
+    {
+     "id": "calcium_silicate_board",
+     "name": "硅酸钙板",
+     "en": "Calcium silicate board",
+     "year": 1970,
+     "note": "硅质钙质原料水热合成的无机板材，防火防潮，用于隔墙与吊顶。",
+     "deps": [
+      "fiber_cement_board"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "工程木与木基板材",
+   "items": [
+    {
+     "id": "sawn_timber_frame",
+     "name": "方木构架材",
+     "en": "Sawn timber",
+     "year": -2000,
+     "note": "锯解原木所得规格方材是木结构房屋与桥梁的基本受力构件。"
+    },
+    {
+     "id": "plywood_panel",
+     "name": "胶合板",
+     "en": "Plywood",
+     "year": 1905,
+     "note": "单板交叉胶压成板，各向强度均衡、变形小，美国二十世纪初实现工业化生产。"
+    },
+    {
+     "id": "glulam_timber",
+     "name": "胶合木",
+     "en": "Glued laminated timber",
+     "year": 1901,
+     "note": "赫策尔在德国申请叠层胶合木专利，小料层压成大跨结构材，开启现代木结构。"
+    },
+    {
+     "id": "particleboard",
+     "name": "刨花板",
+     "en": "Particleboard",
+     "year": 1941,
+     "note": "木材刨花施胶热压成板，利用小径材与加工剩余料，广泛用于家具基材。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "fiberboard_hard",
+     "name": "硬质纤维板",
+     "en": "Hardboard",
+     "year": 1930,
+     "note": "木质纤维热压成的高密度板，1920年代美国实现工业化，用于家具与门板。",
+     "deps": [
+      "paper"
+     ]
+    },
+    {
+     "id": "mdf_board",
+     "name": "中密度纤维板",
+     "en": "Medium-density fibreboard",
+     "year": 1966,
+     "note": "干法纤维板面密度均匀、易加工，成为定制家具与门业的常用基材。",
+     "deps": [
+      "fiberboard_hard"
+     ]
+    },
+    {
+     "id": "wood_i_joist",
+     "name": "木工字梁",
+     "en": "Wood I-joist",
+     "year": 1970,
+     "note": "OSB腹板与实木翼缘组合的工字形梁，轻质高强，用于楼盖与屋盖。",
+     "deps": [
+      "plywood_panel"
+     ]
+    },
+    {
+     "id": "lvl_lumber",
+     "name": "单板层积材",
+     "en": "Laminated veneer lumber",
+     "year": 1975,
+     "note": "顺纹叠压单板制成的工程材，强度高而缺陷少，用于大跨度梁与构件。",
+     "deps": [
+      "plywood_panel"
+     ]
+    },
+    {
+     "id": "osb_board",
+     "name": "定向刨花板",
+     "en": "Oriented strand board",
+     "year": 1982,
+     "note": "长刨花定向铺装热压成板，结构用板材可替代胶合板用于墙板与楼面。",
+     "deps": [
+      "particleboard"
+     ]
+    },
+    {
+     "id": "clt_panel",
+     "name": "交叉层压木材",
+     "en": "Cross-laminated timber",
+     "year": 1995,
+     "note": "木板正交叠层胶压的大幅面板，奥地利发展起来，使木结构迈向高层建筑。",
+     "deps": [
+      "glulam_timber"
+     ]
+    },
+    {
+     "id": "preservative_treated_timber",
+     "name": "加压防腐木材",
+     "en": "Pressure-treated timber",
+     "year": 1838,
+     "note": "贝塞尔发明满细胞加压注入法，使防腐剂深入木材，铁路枕木与桩木寿命大增。",
+     "deps": [
+      "railway"
+     ]
+    },
+    {
+     "id": "thermally_modified_wood",
+     "name": "热处理改性木材",
+     "en": "Thermally modified wood",
+     "year": 2000,
+     "note": "高温无氧热处理降低木材吸湿性提高尺寸稳定，芬兰ThermoWood工艺率先产业化。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "laminated_bamboo",
+     "name": "竹集成材",
+     "en": "Laminated bamboo",
+     "year": 1990,
+     "note": "竹条施胶组坯热压成板材，强度高且可大批量生产，用于地板与结构材。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "high_pressure_laminate",
+     "name": "酚醛装饰层压板",
+     "en": "High-pressure laminate",
+     "year": 1913,
+     "note": "表层装饰纸与酚醛底层纸高温高压成板，耐磨耐火，用于台面与墙面。",
+     "deps": [
+      "paper",
+      "plastics"
+     ]
+    },
+    {
+     "id": "finger_jointed_lumber",
+     "name": "指接材",
+     "en": "Finger-jointed lumber",
+     "year": 1965,
+     "note": "短料端部铣齿胶接成整材，提高小径材利用率，用于结构与非结构木件。",
+     "deps": [
+      "glulam_timber"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "沥青、防水与密封材料",
+   "items": [
+    {
+     "id": "natural_bitumen",
+     "name": "天然沥青",
+     "en": "Natural bitumen",
+     "year": -3000,
+     "note": "天然沥青用作胶粘与防水材料，两河流域以沥青砌筑粘贴与船体防水。"
+    },
+    {
+     "id": "petroleum_asphalt",
+     "name": "石油沥青",
+     "en": "Petroleum asphalt",
+     "year": 1870,
+     "note": "石油炼制残渣加工的道路沥青，1870年出现首个沥青铺装街道，奠定现代路面材料。",
+     "deps": [
+      "petroleum"
+     ]
+    },
+    {
+     "id": "asphalt_concrete",
+     "name": "沥青混凝土",
+     "en": "Asphalt concrete",
+     "year": 1900,
+     "note": "级配矿料与沥青拌和压实成路面，是高速公路与城市道路最普遍的铺面材料。",
+     "deps": [
+      "petroleum_asphalt",
+      "road"
+     ]
+    },
+    {
+     "id": "emulsified_asphalt",
+     "name": "乳化沥青",
+     "en": "Emulsified asphalt",
+     "year": 1922,
+     "note": "沥青分散于水中的乳液常温施工，用于透层粘层与稀浆封层。",
+     "deps": [
+      "petroleum_asphalt"
+     ]
+    },
+    {
+     "id": "polymer_modified_asphalt",
+     "name": "聚合物改性沥青",
+     "en": "Polymer modified bitumen",
+     "year": 1980,
+     "note": "SBS等聚合物改性沥青提高高温抗车辙与低温抗裂，用于重载与气候严酷路面。",
+     "deps": [
+      "petroleum_asphalt",
+      "plastics"
+     ]
+    },
+    {
+     "id": "stone_matrix_asphalt",
+     "name": "沥青玛蹄脂碎石路面",
+     "en": "Stone mastic asphalt",
+     "year": 1960,
+     "note": "粗骨料骨架嵌挤加玛蹄脂填充的路面结构，抗车辙耐久，德国首创并推广。",
+     "deps": [
+      "asphalt_concrete"
+     ]
+    },
+    {
+     "id": "porous_asphalt",
+     "name": "排水沥青路面",
+     "en": "Porous asphalt pavement",
+     "year": 1970,
+     "note": "大空隙沥青混合料迅速排水降噪，改善雨天行车安全，欧洲率先铺筑。",
+     "deps": [
+      "asphalt_concrete"
+     ]
+    },
+    {
+     "id": "warm_mix_asphalt",
+     "name": "温拌沥青技术",
+     "en": "Warm mix asphalt",
+     "year": 1996,
+     "note": "发泡或外加剂降低拌和施工温度数十度，减少能耗与烟气的绿色路面技术。",
+     "deps": [
+      "asphalt_concrete"
+     ]
+    },
+    {
+     "id": "asphalt_shingle",
+     "name": "沥青瓦",
+     "en": "Asphalt shingle",
+     "year": 1903,
+     "note": "玻纤或有机毡浸沥青并覆彩砂的坡屋面瓦，美国自二十世纪初广泛使用。",
+     "deps": [
+      "petroleum_asphalt"
+     ]
+    },
+    {
+     "id": "builtup_roofing",
+     "name": "沥青油毡叠层屋面",
+     "en": "Built-up roofing",
+     "year": 1840,
+     "note": "多层油毡与沥青交替铺贴的屋面防水系统，是早期平屋面的标准做法。",
+     "deps": [
+      "paper"
+     ]
+    },
+    {
+     "id": "modified_bitumen_membrane",
+     "name": "改性沥青防水卷材",
+     "en": "SBS/APP modified bitumen membrane",
+     "year": 1975,
+     "note": "SBS或APP改性沥青覆胎体与隔离膜的卷材，热熔铺贴成为建筑防水主流材料。",
+     "deps": [
+      "petroleum_asphalt"
+     ]
+    },
+    {
+     "id": "epdm_roof_membrane",
+     "name": "三元乙丙橡胶防水卷材",
+     "en": "EPDM roofing membrane",
+     "year": 1965,
+     "note": "乙丙橡胶单层卷材耐老化耐候，冷粘铺设用于屋面与水池防水。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "pvc_roof_membrane",
+     "name": "聚氯乙烯防水卷材",
+     "en": "PVC waterproofing membrane",
+     "year": 1955,
+     "note": "增塑PVC卷材热风焊接成整体，用于屋面与隧道防水，欧洲应用较早。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "tpo_roof_membrane",
+     "name": "热塑性聚烯烃防水卷材",
+     "en": "TPO roofing membrane",
+     "year": 1990,
+     "note": "无增塑TPO卷材可焊接且环保耐候，成为欧美平屋面单层防水主流选择。",
+     "deps": [
+      "pvc_roof_membrane"
+     ]
+    },
+    {
+     "id": "polyurethane_waterproof_coating",
+     "name": "聚氨酯防水涂料",
+     "en": "Polyurethane waterproof coating",
+     "year": 1970,
+     "note": "现场成膜的弹性防水涂料，用于卫生间、屋面与地下工程节点防水。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "polymer_cement_waterproof",
+     "name": "聚合物水泥防水涂料",
+     "en": "Polymer-modified cementitious coating",
+     "year": 1990,
+     "note": "丙烯酸乳液与水泥双组分的绿色防水涂料，用于厨卫与水池防水。",
+     "deps": [
+      "plastics",
+      "cement"
+     ]
+    },
+    {
+     "id": "silicon_sealant",
+     "name": "硅酮密封胶",
+     "en": "Silicone sealant",
+     "year": 1960,
+     "note": "耐候硅酮胶兼具粘接密封，玻璃幕墙结构胶与建筑接缝密封的关键材料。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "polysulfide_sealant",
+     "name": "聚硫密封胶",
+     "en": "Polysulfide sealant",
+     "year": 1943,
+     "note": "早期航空油箱密封剂转入建筑，用于中空玻璃与接缝气密。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "butyl_sealant_tape",
+     "name": "丁基密封胶带",
+     "en": "Butyl sealant tape",
+     "year": 1960,
+     "note": "丁基橡胶压敏胶带预制成型，用于金属屋面搭接与幕墙气密。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "self_adhesive_membrane",
+     "name": "自粘防水卷材",
+     "en": "Self-adhesive waterproofing membrane",
+     "year": 1990,
+     "note": "卷材底面涂自粘胶揭开即贴，冷施工安全环保，用于地下与屋面节点防水。",
+     "deps": [
+      "modified_bitumen_membrane"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "保温隔热与吸声材料",
+   "items": [
+    {
+     "id": "mineral_wool",
+     "name": "岩棉",
+     "en": "Rock wool",
+     "year": 1897,
+     "note": "玄武岩熔融喷吹成纤维并固结成毡板，是建筑防火保温的主流无机材料。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "glass_wool",
+     "name": "玻璃棉",
+     "en": "Glass wool",
+     "year": 1932,
+     "note": "玻璃熔体离心喷吹成纤维毡，导热系数低且吸声，用于墙体与空调保温。"
+    },
+    {
+     "id": "eps_board",
+     "name": "模塑聚苯乙烯泡沫板",
+     "en": "Expanded polystyrene board",
+     "year": 1950,
+     "note": "BASF发泡聚苯乙烯珠粒模压成板，质轻保温，外墙外保温系统的主要保温层。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "xps_board",
+     "name": "挤塑聚苯乙烯泡沫板",
+     "en": "Extruded polystyrene board",
+     "year": 1955,
+     "note": "挤出连续发泡的闭孔聚苯板，吸水率低强度高，用于屋面与地面保温。",
+     "deps": [
+      "eps_board"
+     ]
+    },
+    {
+     "id": "rigid_pu_foam",
+     "name": "硬质聚氨酯泡沫",
+     "en": "Rigid polyurethane foam",
+     "year": 1940,
+     "note": "异氰酸酯与多元醇发泡成闭孔硬泡，导热系数极低，用于冷库与管道保温。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "polyiso_board",
+     "name": "聚异氰脲酸酯保温板",
+     "en": "Polyisocyanurate board",
+     "year": 1970,
+     "note": "聚异氰脲酸酯硬泡板阻燃性优于聚氨酯，用于金属夹芯板与屋面保温。",
+     "deps": [
+      "rigid_pu_foam"
+     ]
+    },
+    {
+     "id": "cellular_glass_insulation",
+     "name": "泡沫玻璃",
+     "en": "Cellular glass insulation",
+     "year": 1935,
+     "note": "玻璃粉掺发泡剂烧结成的闭孔硬质保温块，防水耐压，用于冷库与屋面保温。"
+    },
+    {
+     "id": "phenolic_foam",
+     "name": "酚醛泡沫",
+     "en": "Phenolic foam",
+     "year": 1950,
+     "note": "酚醛树脂发泡的难燃保温材料，烟密度低，用于风管与防火保温。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "vacuum_insulation_panel",
+     "name": "真空绝热板",
+     "en": "Vacuum insulation panel",
+     "year": 1995,
+     "note": "芯材真空封装的高效绝热板，导热系数远低于常规保温，用于家电与建筑。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "expanded_perlite",
+     "name": "膨胀珍珠岩保温材料",
+     "en": "Expanded perlite insulation",
+     "year": 1940,
+     "note": "珍珠岩高温膨胀成多孔颗粒，拌浆料或压板用于屋面与管道保温。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "vermiculite_insulation",
+     "name": "膨胀蛭石保温材料",
+     "en": "Exfoliated vermiculite",
+     "year": 1920,
+     "note": "蛭石高温膨化制成松散或板材保温填充料，耐火性能优良。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "eifs_system",
+     "name": "外墙外保温系统",
+     "en": "External thermal insulation composite system",
+     "year": 1955,
+     "note": "保温板粘贴加耐碱网格布抹面构成外墙保温体系，源于欧洲并普及全球节能改造。",
+     "deps": [
+      "eps_board"
+     ]
+    },
+    {
+     "id": "thermal_insulation_mortar",
+     "name": "无机保温砂浆",
+     "en": "Inorganic thermal mortar",
+     "year": 1990,
+     "note": "玻化微珠或膨胀珍珠岩与无机胶料拌和的抹灰型保温层，用于外墙内保温。",
+     "deps": [
+      "expanded_perlite"
+     ]
+    },
+    {
+     "id": "acoustic_mineral_ceiling",
+     "name": "矿棉吸声板",
+     "en": "Mineral fiber acoustic ceiling tile",
+     "year": 1950,
+     "note": "矿棉纤维成型并饰面的吸声吊顶板，是办公与公共建筑的标准吊顶材料。",
+     "deps": [
+      "mineral_wool"
+     ]
+    },
+    {
+     "id": "sound_absorbing_foam",
+     "name": "聚氨酯吸声海绵",
+     "en": "Acoustic foam",
+     "year": 1950,
+     "note": "开孔聚氨酯泡沫吸声系数高，用于录音棚与演播厅声学处理。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "reflective_foil_insulation",
+     "name": "铝箔反射隔热卷材",
+     "en": "Reflective foil insulation",
+     "year": 1960,
+     "note": "铝箔加气泡垫复合卷材以低辐射率阻挡辐射传热，用于屋面与墙面隔热。",
+     "deps": [
+      "plastics"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "建筑金属与岩土工程材料",
+   "items": [
+    {
+     "id": "structural_steel_shape",
+     "name": "热轧型钢",
+     "en": "Hot-rolled structural steel section",
+     "year": 1850,
+     "note": "轧机批量轧制工字钢等型材，为钢框架结构与桥梁提供标准受力构件。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "galvanized_steel_sheet",
+     "name": "镀锌钢板",
+     "en": "Hot-dip galvanized steel sheet",
+     "year": 1837,
+     "note": "热浸镀锌防腐处理钢板，用于屋面、幕墙与通风管道等建筑部位。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "corrugated_metal_sheet",
+     "name": "波形钢板",
+     "en": "Corrugated galvanized iron",
+     "year": 1829,
+     "note": "波纹轧制增强刚度的薄钢板，是工厂与农业建筑的经典屋面围护材料。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "color_coated_steel",
+     "name": "彩涂钢板",
+     "en": "Pre-painted steel coil",
+     "year": 1935,
+     "note": "镀层钢板连续辊涂有机涂层的卷材，色彩丰富，是压型钢板与夹芯板的面层。",
+     "deps": [
+      "galvanized_steel_sheet",
+      "plastics"
+     ]
+    },
+    {
+     "id": "cold_formed_steel",
+     "name": "冷弯薄壁型钢",
+     "en": "Cold-formed steel section",
+     "year": 1930,
+     "note": "薄板冷弯成型的C型Z型截面，与石膏板组成轻钢龙骨隔墙体系。",
+     "deps": [
+      "galvanized_steel_sheet"
+     ]
+    },
+    {
+     "id": "high_strength_bolt_set",
+     "name": "高强螺栓连接副",
+     "en": "High-strength bolt assembly",
+     "year": 1960,
+     "note": "摩擦型高强螺栓连接钢结构节点，承载大且便于安装，是钢构安装主要方式。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "steel_floor_deck",
+     "name": "压型钢板组合楼板",
+     "en": "Steel deck composite floor",
+     "year": 1950,
+     "note": "压型钢板兼作浇筑模板与受拉配筋，与混凝土组合成楼板，加快钢结构施工。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "geotextile_geosynthetic",
+     "name": "土工织物",
+     "en": "Geotextile",
+     "year": 1960,
+     "note": "聚酯丙纶机织或非织造布用于路基隔离排水，是现代道路工程的合成材料。",
+     "deps": [
+      "plastics",
+      "road"
+     ]
+    },
+    {
+     "id": "geogrid_reinforcement",
+     "name": "土工格栅",
+     "en": "Geogrid",
+     "year": 1979,
+     "note": "聚合物格栅嵌入土体提供加筋，用于软基处理与加筋土挡墙。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "geomembrane_liner",
+     "name": "土工膜",
+     "en": "Geomembrane",
+     "year": 1970,
+     "note": "高密度聚乙烯膜防渗衬层，用于垃圾填埋场、人工湖与隧道防渗。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "geocell_geosynthetic",
+     "name": "土工格室",
+     "en": "Geocell",
+     "year": 1985,
+     "note": "三维蜂窝格室约束填料，用于边坡防护与荷载扩散工程。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "geosynthetic_clay_liner",
+     "name": "膨润土防水毯",
+     "en": "Geosynthetic clay liner",
+     "year": 1986,
+     "note": "钠基膨润土夹于土工织物间遇水膨胀防渗，用于垃圾填埋场衬层。",
+     "deps": [
+      "geotextile_geosynthetic"
+     ]
+    },
+    {
+     "id": "geotextile_tube",
+     "name": "土工管袋",
+     "en": "Geotextile tube",
+     "year": 1990,
+     "note": "高强土工织物缝制的大袋灌充泥浆脱水固结，用于围海造地与疏浚处置。",
+     "deps": [
+      "geotextile_geosynthetic"
+     ]
+    },
+    {
+     "id": "prefab_vertical_drain",
+     "name": "塑料排水板",
+     "en": "Prefabricated vertical drain",
+     "year": 1975,
+     "note": "插打板状排水通道加速软土地基固结沉降，是海相软基处理的常用手段。",
+     "deps": [
+      "geotextile_geosynthetic"
+     ]
+    },
+    {
+     "id": "crumb_rubber_pavement",
+     "name": "橡胶沥青",
+     "en": "Crumb rubber asphalt",
+     "year": 1960,
+     "note": "废轮胎胶粉掺入沥青改性，降噪且提高路面耐久，美国率先铺筑试验路。",
+     "deps": [
+      "petroleum_asphalt",
+      "automobile"
+     ]
+    },
+    {
+     "id": "asphalt_emulsion_microsurfacing",
+     "name": "稀浆封层",
+     "en": "Slurry seal",
+     "year": 1930,
+     "note": "乳化沥青与矿料稀浆摊铺薄层养护路面，是低成本的预防性养护技术。",
+     "deps": [
+      "emulsified_asphalt"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1383 @@
+{
+ "cat": "energy",
+ "catName": "能源",
+ "sub": "windpower",
+ "subName": "风能利用",
+ "anchors": [
+  "sail",
+  "physics",
+  "mathematics",
+  "steel",
+  "iron",
+  "electricity",
+  "generator",
+  "electric_motor",
+  "power_grid",
+  "composites",
+  "semiconductors",
+  "computer",
+  "solar",
+  "cement",
+  "magnets"
+ ],
+ "families": [
+  {
+   "name": "古典风车与风力机械",
+   "items": [
+    {
+     "id": "persian_panemone",
+     "name": "波斯风车",
+     "en": "Persian panemone windmill",
+     "year": 700,
+     "note": "垂直轴芦苇风轮驱动石磨，是最早的实用风车之一，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "sail"
+     ]
+    },
+    {
+     "id": "chinese_luffa_windmill",
+     "name": "中国立帆风车",
+     "en": "Chinese vertical windmill",
+     "year": 1000,
+     "note": "以立帆驱动垂直轴用于提水，见于中国东南沿海，在相应条件下长期使用。",
+     "deps": [
+      "sail"
+     ]
+    },
+    {
+     "id": "post_mill",
+     "name": "柱座风车",
+     "en": "Post mill",
+     "year": 1185,
+     "note": "整机绕立柱迎风旋转的欧洲早期风车，用于磨粉，服务特定的生产与生活需要。",
+     "deps": [
+      "sail"
+     ]
+    },
+    {
+     "id": "dutch_polder_windmill",
+     "name": "荷兰圩田排水风车",
+     "en": "Dutch polder windmill",
+     "year": 1400,
+     "note": "以风车驱动斗轮或阿基米德螺旋提水，围海造田用，构成相关作业体系的重要一环。",
+     "deps": [
+      "post_mill"
+     ]
+    },
+    {
+     "id": "tower_windmill",
+     "name": "塔式风车",
+     "en": "Tower mill",
+     "year": 1300,
+     "note": "仅风帽转动的高大风车，机身稳固，可驱动多台石磨，技术上持续沿用并有所改进。",
+     "deps": [
+      "post_mill"
+     ]
+    },
+    {
+     "id": "smock_windmill",
+     "name": "罩衫风车",
+     "en": "Smock mill",
+     "year": 1500,
+     "note": "木构锥形罩衫风车，中段以下固定，多见于英伦乡村，与同类装置共同构成完整谱系。",
+     "deps": [
+      "post_mill"
+     ]
+    },
+    {
+     "id": "windmill_sawmill",
+     "name": "风力锯木厂",
+     "en": "Wind-powered sawmill",
+     "year": 1592,
+     "note": "以风车驱动往复锯切割木料的锯木厂，出现于荷兰，实际效果得到广泛验证。",
+     "deps": [
+      "post_mill"
+     ]
+    },
+    {
+     "id": "windmill_crank_shaft",
+     "name": "风车曲轴传动",
+     "en": "Windmill crankshaft drive",
+     "year": 1600,
+     "note": "风轮经曲柄连杆把转动转为往复运动，扩展风车用途，属于该领域的成熟实用技术。",
+     "deps": [
+      "tower_windmill"
+     ]
+    },
+    {
+     "id": "windmill_fantail",
+     "name": "风车扇尾自动迎风",
+     "en": "Fantail windmill",
+     "year": 1745,
+     "note": "小风轮自动驱动风帽对准风向，实现风车自动迎风，其基本思路沿用至今。",
+     "deps": [
+      "tower_windmill"
+     ]
+    },
+    {
+     "id": "american_windpump",
+     "name": "美式风力提水机",
+     "en": "American windpump",
+     "year": 1854,
+     "note": "多叶金属风轮自动迎风提水，为牧场与铁路供水标配，应用范围遍及多个地区。",
+     "deps": [
+      "iron",
+      "steel"
+     ]
+    },
+    {
+     "id": "windpump_well",
+     "name": "风力水井泵",
+     "en": "Wind-powered well pump",
+     "year": 1900,
+     "note": "配摇臂往复泵的风力提水机，遍布干旱地区农牧场，是该技术门类的典型代表。",
+     "deps": [
+      "american_windpump"
+     ]
+    },
+    {
+     "id": "windpowered_grainmill",
+     "name": "风力谷物磨坊",
+     "en": "Wind grain mill",
+     "year": 1350,
+     "note": "把风轮动力传给磨盘的谷物加工风车，遍及欧洲乡村，为后续发展奠定了基础。",
+     "deps": [
+      "tower_windmill"
+     ]
+    },
+    {
+     "id": "windpowered_irrigation",
+     "name": "风力灌溉系统",
+     "en": "Wind-powered irrigation",
+     "year": 1900,
+     "note": "风车提水蓄池灌溉农田，在美国大平原广泛应用，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "american_windpump"
+     ]
+    },
+    {
+     "id": "wind_paper_mill",
+     "name": "风力造纸与榨油",
+     "en": "Wind-powered paper and oil mills",
+     "year": 1650,
+     "note": "荷兰风车驱动机器从事造纸、榨油与颜料研磨，在相应条件下长期使用。",
+     "deps": [
+      "tower_windmill"
+     ]
+    },
+    {
+     "id": "jib_sail_wheel",
+     "name": "纵帆帆翼风轮",
+     "en": "Jib-sail wind wheel",
+     "year": 1600,
+     "note": "以船帆形式张挂的桨叶，多用于古典风车，服务特定的生产与生活需要。",
+     "deps": [
+      "post_mill"
+     ]
+    },
+    {
+     "id": "windmill_brake",
+     "name": "风车制动装置",
+     "en": "Windmill brake",
+     "year": 1600,
+     "note": "木质闸带抱刹风轮主轴，供停机与调节使用，构成相关作业体系的重要一环。",
+     "deps": [
+      "tower_windmill"
+     ]
+    },
+    {
+     "id": "wind_barley_mill",
+     "name": "风力碾谷坊",
+     "en": "Wind-powered grist house",
+     "year": 1450,
+     "note": "以风车磨碾谷物的乡村加工作坊，技术上持续沿用并有所改进。",
+     "deps": [
+      "post_mill"
+     ]
+    },
+    {
+     "id": "wind_oil_press_mill",
+     "name": "风力榨油坊",
+     "en": "Wind-powered oil mill",
+     "year": 1500,
+     "note": "以风车驱动压榨油料的作坊，荷兰称油磨，与同类装置共同构成完整谱系。",
+     "deps": [
+      "post_mill"
+     ]
+    },
+    {
+     "id": "wind_dye_mill",
+     "name": "风力颜料磨坊",
+     "en": "Wind-powered dye mill",
+     "year": 1600,
+     "note": "风车研磨颜料与药材，供染坊与药铺使用，实际效果得到广泛验证。",
+     "deps": [
+      "tower_windmill"
+     ]
+    },
+    {
+     "id": "polder_wind_drainage_system",
+     "name": "圩田风车排水系统",
+     "en": "Polder wind drainage system",
+     "year": 1600,
+     "note": "多座风车接力提排圩田积水，构成低地排水体系，属于该领域的成熟实用技术。",
+     "deps": [
+      "dutch_polder_windmill"
+     ]
+    },
+    {
+     "id": "wind_brine_pump",
+     "name": "风力提卤机",
+     "en": "Wind-powered brine pump",
+     "year": 1880,
+     "note": "多叶风轮提卤晒盐，用于滨海盐场，其基本思路沿用至今。",
+     "deps": [
+      "american_windpump"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "风力发电探索与机型",
+   "items": [
+    {
+     "id": "blyth_wind_turbine",
+     "name": "布莱斯风力发电机",
+     "en": "Blyth wind turbine",
+     "year": 1887,
+     "note": "英国布莱斯建造的世界首台为家庭供电的风力发电机，应用范围遍及多个地区。",
+     "deps": [
+      "electricity",
+      "generator"
+     ]
+    },
+    {
+     "id": "brush_wind_turbine",
+     "name": "布什风力发电机",
+     "en": "Brush wind turbine",
+     "year": 1888,
+     "note": "美国克利夫兰的自动运行风电装置，为早期并网原型，是该技术门类的典型代表。",
+     "deps": [
+      "electricity",
+      "generator"
+     ]
+    },
+    {
+     "id": "la_cour_wind_turbine",
+     "name": "拉库尔风电装置",
+     "en": "La Cour wind turbine",
+     "year": 1891,
+     "note": "丹麦拉库尔研制并运行的发电风车，所发电力用于电解制氢与照明。",
+     "deps": [
+      "generator"
+     ]
+    },
+    {
+     "id": "smith_putnam_turbine",
+     "name": "史密斯-普特南风机",
+     "en": "Smith-Putnam wind turbine",
+     "year": 1941,
+     "note": "世界首台兆瓦级风电原型，投运于美国佛蒙特州，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "steel",
+      "generator"
+     ]
+    },
+    {
+     "id": "savonius_wind_turbine",
+     "name": "萨沃纽斯风轮",
+     "en": "Savonius wind turbine",
+     "year": 1922,
+     "note": "S形半筒叶片垂直轴风轮，启动力矩大，多用于提水，在相应条件下长期使用。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "darrieus_wind_turbine",
+     "name": "达里厄垂直轴风轮机",
+     "en": "Darrieus wind turbine",
+     "year": 1931,
+     "note": "曲线叶片垂直轴升力型风轮，是大型垂直轴机代表，服务特定的生产与生活需要。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "gedser_wind_turbine",
+     "name": "盖瑟风机",
+     "en": "Gedser wind turbine",
+     "year": 1957,
+     "note": "丹麦盖瑟200千瓦样机，奠定现代三叶片水平轴设计。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "h_rotor_wind_turbine",
+     "name": "H型垂直轴风机",
+     "en": "H-rotor wind turbine",
+     "year": 1980,
+     "note": "直叶片H构型垂直轴机组，简化结构、便于维护，构成相关作业体系的重要一环。",
+     "deps": [
+      "darrieus_wind_turbine"
+     ]
+    },
+    {
+     "id": "horizontal_axis_wind_turbine",
+     "name": "水平轴风电机组",
+     "en": "Horizontal-axis wind turbine",
+     "year": 1979,
+     "note": "主轴平行于风向的机型，成为当前并网风电主流，技术上持续沿用并有所改进。",
+     "deps": [
+      "gedser_wind_turbine"
+     ]
+    },
+    {
+     "id": "vertical_axis_wind_turbine",
+     "name": "垂直轴风电机组",
+     "en": "Vertical-axis wind turbine",
+     "year": 1970,
+     "note": "转轴垂直于地面的机型，无需偏航即可受风，与同类装置共同构成完整谱系。",
+     "deps": [
+      "darrieus_wind_turbine"
+     ]
+    },
+    {
+     "id": "upwind_rotor_turbine",
+     "name": "上风向风机",
+     "en": "Upwind turbine",
+     "year": 1980,
+     "note": "风轮置于塔架迎风侧的机型，主动偏航对风，实际效果得到广泛验证。",
+     "deps": [
+      "horizontal_axis_wind_turbine"
+     ]
+    },
+    {
+     "id": "downwind_rotor_turbine",
+     "name": "下风向风机",
+     "en": "Downwind turbine",
+     "year": 1980,
+     "note": "风轮在塔架背风侧自由对风，结构简单，属于该领域的成熟实用技术。",
+     "deps": [
+      "horizontal_axis_wind_turbine"
+     ]
+    },
+    {
+     "id": "two_blade_turbine",
+     "name": "双叶片风机",
+     "en": "Two-bladed turbine",
+     "year": 1980,
+     "note": "双叶片构型减轻轮毂与机舱质量，部分轻型与大型样机曾采用。",
+     "deps": [
+      "gedser_wind_turbine"
+     ]
+    },
+    {
+     "id": "diffuser_wind_turbine",
+     "name": "集风罩风机",
+     "en": "Diffuser-augmented wind turbine",
+     "year": 2000,
+     "note": "罩体加速气流的聚风机组，用于小容量低速场合，应用范围遍及多个地区。",
+     "deps": [
+      "horizontal_axis_wind_turbine"
+     ]
+    },
+    {
+     "id": "small_wind_charger",
+     "name": "小型风电充电机",
+     "en": "Small wind battery charger",
+     "year": 1930,
+     "note": "以小型风机为蓄电池充电，供离网农舍照明，是该技术门类的典型代表。",
+     "deps": [
+      "generator"
+     ]
+    },
+    {
+     "id": "cycloturbine_vawt",
+     "name": "循环翼垂直轴风机",
+     "en": "Cycloturbine",
+     "year": 1975,
+     "note": "叶片偏转相位可控的垂直轴机型，曾作实用开发，为后续发展奠定了基础。",
+     "deps": [
+      "darrieus_wind_turbine"
+     ]
+    },
+    {
+     "id": "micro_wind_turbine",
+     "name": "微型风力发电机",
+     "en": "Micro wind turbine",
+     "year": 1980,
+     "note": "数百瓦级小型机组，用于船舶与边远设施充电，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "savonius_wind_turbine"
+     ]
+    },
+    {
+     "id": "savonius_darrieus_hybrid",
+     "name": "组合式垂直轴风轮",
+     "en": "Savonius-Darrieus hybrid rotor",
+     "year": 1985,
+     "note": "升力与阻力叶片同轴组合，改善起动与效率，在相应条件下长期使用。",
+     "deps": [
+      "savonius_wind_turbine"
+     ]
+    },
+    {
+     "id": "rooftop_small_wind",
+     "name": "屋顶小型风机",
+     "en": "Rooftop small wind turbine",
+     "year": 2000,
+     "note": "安装在建筑顶部的并网小风机，就地发电，服务特定的生产与生活需要。",
+     "deps": [
+      "micro_wind_turbine"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "风轮空气动力与叶片",
+   "items": [
+    {
+     "id": "wind_turbine_aerofoil",
+     "name": "风机翼型",
+     "en": "Wind turbine airfoil",
+     "year": 1950,
+     "note": "专为风电优化的翼型族，提高升阻比与失速可控性，构成相关作业体系的重要一环。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "wind_rotor_blades",
+     "name": "玻璃钢风机叶片",
+     "en": "FRP wind turbine blade",
+     "year": 1970,
+     "note": "玻璃纤维复合材料叶片，轻质高强，取代木质与金属叶片。",
+     "deps": [
+      "composites"
+     ]
+    },
+    {
+     "id": "carbon_fiber_blade",
+     "name": "碳纤维叶片",
+     "en": "Carbon-fiber blade",
+     "year": 2000,
+     "note": "大叶片主梁引入碳纤维，减重并抑制挠度，技术上持续沿用并有所改进。",
+     "deps": [
+      "composites"
+     ]
+    },
+    {
+     "id": "blade_root_connection",
+     "name": "叶片根部连接",
+     "en": "Blade root connection",
+     "year": 1980,
+     "note": "以预埋螺套或双头螺栓连接叶片与轮毂，与同类装置共同构成完整谱系。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "blade_lightning_protection",
+     "name": "叶片防雷系统",
+     "en": "Blade lightning protection",
+     "year": 1990,
+     "note": "叶片内置接闪器与引下线，疏导雷电流入地，实际效果得到广泛验证。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "blade_deicing",
+     "name": "叶片除冰",
+     "en": "Blade de-icing",
+     "year": 2000,
+     "note": "以热风或电热膜加热叶片，防止结冰影响出力与安全，属于该领域的成熟实用技术。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "rotor_hub",
+     "name": "风轮轮毂",
+     "en": "Rotor hub",
+     "year": 1980,
+     "note": "连接叶片与主轴的球墨铸铁轮毂，承受交变载荷，其基本思路沿用至今。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "nose_cone",
+     "name": "导流罩",
+     "en": "Wind turbine spinner",
+     "year": 1980,
+     "note": "轮毂前部的整流罩，减少涡流并保护变桨机构，应用范围遍及多个地区。",
+     "deps": [
+      "composites"
+     ]
+    },
+    {
+     "id": "teetering_hub",
+     "name": "跷跷板轮毂",
+     "en": "Teetering hub",
+     "year": 1990,
+     "note": "允许风轮在垂直面小幅摆动的轮毂，用于双叶机组，是该技术门类的典型代表。",
+     "deps": [
+      "rotor_hub"
+     ]
+    },
+    {
+     "id": "wind_turbine_yaw_bearing",
+     "name": "偏航轴承",
+     "en": "Wind turbine yaw bearing",
+     "year": 1980,
+     "note": "机舱与塔架间的回转支承，供机舱对风转动，为后续发展奠定了基础。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "wind_turbine_nacelle",
+     "name": "风机机舱",
+     "en": "Wind turbine nacelle",
+     "year": 1980,
+     "note": "容纳传动与发电系统的流线罩体，位于塔顶，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "composites"
+     ]
+    },
+    {
+     "id": "tubular_steel_tower",
+     "name": "锥形钢塔筒",
+     "en": "Tubular steel tower",
+     "year": 1980,
+     "note": "分段法兰连接的锥形钢塔，是并网风机主流塔型，在相应条件下长期使用。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "lattice_tower",
+     "name": "桁架式塔架",
+     "en": "Lattice tower",
+     "year": 1980,
+     "note": "角钢焊接的桁架式塔架，材料用量较少，早期大型试验机组常采用。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "concrete_tower",
+     "name": "混凝土塔筒",
+     "en": "Concrete tower",
+     "year": 2000,
+     "note": "预制或现浇混凝土塔身，适应超高轮毂与运输限制，构成相关作业体系的重要一环。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "hybrid_tower",
+     "name": "混合塔筒",
+     "en": "Hybrid wind tower",
+     "year": 2005,
+     "note": "混凝土下部加钢上部组合，降低超高塔成本，技术上持续沿用并有所改进。",
+     "deps": [
+      "concrete_tower"
+     ]
+    },
+    {
+     "id": "blade_tip_brake",
+     "name": "叶尖气动刹车",
+     "en": "Blade tip brake",
+     "year": 1980,
+     "note": "甩出式叶尖阻流板，供超速保护与紧急停机，与同类装置共同构成完整谱系。",
+     "deps": [
+      "wind_rotor_blades"
+     ]
+    },
+    {
+     "id": "blade_winglet",
+     "name": "叶尖小翼",
+     "en": "Blade winglet",
+     "year": 2000,
+     "note": "叶尖弯折结构抑制翼尖涡，减少气动损失，实际效果得到广泛验证。",
+     "deps": [
+      "wind_rotor_blades"
+     ]
+    },
+    {
+     "id": "serrated_trailing_edge",
+     "name": "锯齿尾缘叶片",
+     "en": "Serrated trailing edge",
+     "year": 2010,
+     "note": "尾缘锯齿切割涡流，降低叶片气动噪声，属于该领域的成熟实用技术。",
+     "deps": [
+      "wind_rotor_blades"
+     ]
+    },
+    {
+     "id": "bend_twist_coupled_blade",
+     "name": "弯扭耦合叶片",
+     "en": "Bend-twist coupled blade",
+     "year": 2010,
+     "note": "载荷下叶片自动扭转变桨，实现被动降载，其基本思路沿用至今。",
+     "deps": [
+      "carbon_fiber_blade"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "风电机组传动与电气系统",
+   "items": [
+    {
+     "id": "wind_gearbox",
+     "name": "风电齿轮箱",
+     "en": "Wind turbine gearbox",
+     "year": 1980,
+     "note": "增速齿轮箱把风轮低转速提升至发电机所需转速，应用范围遍及多个地区。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "planetary_gearbox",
+     "name": "行星齿轮传动",
+     "en": "Planetary gear drive",
+     "year": 1985,
+     "note": "行星轮系结构紧凑、承载大，广泛用于风电增速，是该技术门类的典型代表。",
+     "deps": [
+      "wind_gearbox"
+     ]
+    },
+    {
+     "id": "main_shaft_bearing",
+     "name": "主轴轴承",
+     "en": "Wind main shaft bearing",
+     "year": 1980,
+     "note": "支撑风轮主轴的双列调心或球面滚子轴承，为后续发展奠定了基础。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "mechanical_brake",
+     "name": "风机机械制动",
+     "en": "Wind turbine mechanical brake",
+     "year": 1980,
+     "note": "高速轴或叶尖的制动装置，用于停机和锁止，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "stall_regulation",
+     "name": "失速调节",
+     "en": "Stall regulation",
+     "year": 1980,
+     "note": "大攻角自动失速限制功率的被动调节方式，在相应条件下长期使用。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "active_stall",
+     "name": "主动失速调节",
+     "en": "Active stall regulation",
+     "year": 1990,
+     "note": "叶尖变桨控制失速深度，兼顾效率与功率限制，服务特定的生产与生活需要。",
+     "deps": [
+      "stall_regulation"
+     ]
+    },
+    {
+     "id": "pitch_control",
+     "name": "变桨距调节",
+     "en": "Pitch control",
+     "year": 1990,
+     "note": "液压或电动驱动叶片变桨，精确控制转速与功率，构成相关作业体系的重要一环。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "yaw_drive",
+     "name": "偏航驱动系统",
+     "en": "Yaw drive system",
+     "year": 1980,
+     "note": "多台减速电机驱动机舱对风，配有偏航制动，技术上持续沿用并有所改进。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "fixed_speed_induction_generator",
+     "name": "定速感应发电机",
+     "en": "Fixed-speed induction generator",
+     "year": 1980,
+     "note": "直接并网的笼型异步发电机，结构简单但需吸收无功，与同类装置共同构成完整谱系。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "doubly_fed_induction_generator",
+     "name": "双馈感应发电机",
+     "en": "Doubly-fed induction generator",
+     "year": 1996,
+     "note": "转子经变流器励磁实现变速运行，是主流机型之一，实际效果得到广泛验证。",
+     "deps": [
+      "semiconductors",
+      "electricity"
+     ]
+    },
+    {
+     "id": "full_power_converter",
+     "name": "全功率变流器",
+     "en": "Full-power converter",
+     "year": 2000,
+     "note": "发电机与电网完全经变流器解耦，适应宽变速范围，属于该领域的成熟实用技术。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "pmsg_wind_generator",
+     "name": "永磁直驱发电机",
+     "en": "Permanent-magnet direct-drive generator",
+     "year": 2000,
+     "note": "无齿轮箱的低速永磁同步发电机，减少传动损耗，其基本思路沿用至今。",
+     "deps": [
+      "semiconductors",
+      "magnets"
+     ]
+    },
+    {
+     "id": "eesg_wind_generator",
+     "name": "电励磁直驱发电机",
+     "en": "Electrically-excited synchronous generator",
+     "year": 2005,
+     "note": "转子电励磁的直驱同步发电机，避免稀土依赖，应用范围遍及多个地区。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "medium_speed_drive",
+     "name": "中速永磁混合传动",
+     "en": "Medium-speed permanent-magnet drive",
+     "year": 2008,
+     "note": "小速比齿轮箱配永磁发电机，兼顾效率与体积，是该技术门类的典型代表。",
+     "deps": [
+      "pmsg_wind_generator"
+     ]
+    },
+    {
+     "id": "wind_power_capacitor_bank",
+     "name": "风机无功补偿",
+     "en": "Wind turbine reactive compensation",
+     "year": 1980,
+     "note": "以电容器组或变流器补偿风机无功，支撑电网电压，为后续发展奠定了基础。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "wind_scada",
+     "name": "风电场监控系统",
+     "en": "Wind farm SCADA",
+     "year": 1990,
+     "note": "集中监视控制风机运行，实现数据采集与调度，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "nacelle_main_frame",
+     "name": "机舱主框架",
+     "en": "Nacelle main frame",
+     "year": 1980,
+     "note": "承载传动与发电系统的机架底座，在相应条件下长期使用。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "slip_ring_system",
+     "name": "滑环系统",
+     "en": "Slip-ring system",
+     "year": 1997,
+     "note": "为旋转转子传输励磁功率的导电滑环装置，服务特定的生产与生活需要。",
+     "deps": [
+      "doubly_fed_induction_generator"
+     ]
+    },
+    {
+     "id": "pitch_bearing",
+     "name": "变桨轴承",
+     "en": "Pitch bearing",
+     "year": 1995,
+     "note": "连接叶片与轮毂的回转支承，承受变桨力矩，构成相关作业体系的重要一环。",
+     "deps": [
+      "pitch_control"
+     ]
+    },
+    {
+     "id": "main_controller",
+     "name": "风机主控制器",
+     "en": "Turbine main controller",
+     "year": 1990,
+     "note": "协调机组启停、变桨与偏航的中央控制单元，技术上持续沿用并有所改进。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "rotor_locking_device",
+     "name": "风轮锁定装置",
+     "en": "Rotor lock",
+     "year": 1990,
+     "note": "检修时将风轮机械锁止的安全装置，与同类装置共同构成完整谱系。",
+     "deps": [
+      "rotor_hub"
+     ]
+    },
+    {
+     "id": "unit_transformer",
+     "name": "机组升压变压器",
+     "en": "Wind unit transformer",
+     "year": 1990,
+     "note": "将机端电压升压送入集电线路的专用变压器，实际效果得到广泛验证。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "gearbox_lubrication_system",
+     "name": "齿轮箱润滑冷却系统",
+     "en": "Gearbox lubrication system",
+     "year": 1990,
+     "note": "对齿轮副循环供油润滑并带走热量，属于该领域的成熟实用技术。",
+     "deps": [
+      "wind_gearbox"
+     ]
+    },
+    {
+     "id": "emergency_feathering",
+     "name": "紧急顺桨停机",
+     "en": "Emergency feathering",
+     "year": 2000,
+     "note": "故障时叶片快速顺桨，保护机组安全，其基本思路沿用至今。",
+     "deps": [
+      "pitch_control"
+     ]
+    },
+    {
+     "id": "wind_generator_cooling",
+     "name": "发电机冷却系统",
+     "en": "Wind generator cooling",
+     "year": 2000,
+     "note": "空冷或液冷结构及时散出绕组热量，应用范围遍及多个地区。",
+     "deps": [
+      "electricity"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "风电场开发与资源评估",
+   "items": [
+    {
+     "id": "wind_resource_assessment",
+     "name": "风能资源评估",
+     "en": "Wind resource assessment",
+     "year": 1970,
+     "note": "以测风与统计估算场址发电量，决定风电项目可行，是该技术门类的典型代表。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "anemometer_mast",
+     "name": "测风塔",
+     "en": "Meteorological mast",
+     "year": 1980,
+     "note": "竖立风速风向仪的高塔，用于长期风况观测，为后续发展奠定了基础。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "sodar_wind_measurement",
+     "name": "声雷达测风",
+     "en": "Sodar wind measurement",
+     "year": 1990,
+     "note": "以声波遥测高空风廓线，补充测风塔数据，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "wind_lidar_remote",
+     "name": "激光雷达测风",
+     "en": "Wind lidar",
+     "year": 2006,
+     "note": "以激光多普勒遥测风场，精度高，用于评估与机舱测风。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "weibull_wind_distribution",
+     "name": "风速威布尔分布",
+     "en": "Weibull wind speed distribution",
+     "year": 1950,
+     "note": "以威布尔函数拟合风速频率，估算年发电量，在相应条件下长期使用。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "wind_atlas",
+     "name": "风图谱",
+     "en": "Wind atlas",
+     "year": 1989,
+     "note": "区域风能资源图谱，指导场址筛选与宏观选址，服务特定的生产与生活需要。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "mesoscale_wind_model",
+     "name": "中尺度风场模拟",
+     "en": "Mesoscale wind modeling",
+     "year": 2000,
+     "note": "以数值模式推算复杂地形的风资源分布，构成相关作业体系的重要一环。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "micrositing",
+     "name": "风机微观选址",
+     "en": "Wind turbine micrositing",
+     "year": 1990,
+     "note": "逐机位优化排布，降低尾流损失并提高整场出力，技术上持续沿用并有所改进。",
+     "deps": [
+      "mathematics",
+      "computer"
+     ]
+    },
+    {
+     "id": "wake_effect_model",
+     "name": "尾流效应模型",
+     "en": "Wake effect model",
+     "year": 1983,
+     "note": "描述风机尾流衰减的工程模型，用于机位间距设计，与同类装置共同构成完整谱系。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "wind_farm_grid_connection",
+     "name": "风电场并网接入",
+     "en": "Wind farm grid connection",
+     "year": 1990,
+     "note": "风电场经升压站与输电线路并入电网，实际效果得到广泛验证。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "wind_power_forecasting",
+     "name": "风电功率预测",
+     "en": "Wind power forecasting",
+     "year": 1990,
+     "note": "结合数值天气与统计方法预测出力，支持电网调度，属于该领域的成熟实用技术。",
+     "deps": [
+      "computer",
+      "mathematics"
+     ]
+    },
+    {
+     "id": "low_voltage_ride_through",
+     "name": "低电压穿越",
+     "en": "Low-voltage ride through",
+     "year": 2000,
+     "note": "电网电压跌落时风机保持并网运行，维持系统稳定，其基本思路沿用至今。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "wind_farm_active_power",
+     "name": "风电场有功控制",
+     "en": "Wind farm active power control",
+     "year": 2005,
+     "note": "接受调度限制风场出力，参与频率支撑，应用范围遍及多个地区。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "repowering_wind_farm",
+     "name": "风电场改造升级",
+     "en": "Wind farm repowering",
+     "year": 2000,
+     "note": "以小换大淘汰老旧机组，提升场址发电效率，是该技术门类的典型代表。",
+     "deps": [
+      "horizontal_axis_wind_turbine"
+     ]
+    },
+    {
+     "id": "distributed_wind",
+     "name": "分布式风电",
+     "en": "Distributed wind power",
+     "year": 2000,
+     "note": "用户侧就近安装的小型机组，自发自用或就地消纳，为后续发展奠定了基础。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "wind_diesel_hybrid",
+     "name": "风柴互补系统",
+     "en": "Wind-diesel hybrid system",
+     "year": 1980,
+     "note": "风机与柴油机组配合为离网社区供电，节油降本，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "wind_hydrogen",
+     "name": "风电制氢",
+     "en": "Wind power hydrogen production",
+     "year": 2005,
+     "note": "风电电解水制氢，用于储能与工业氢源，在相应条件下长期使用。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "spread_foundation",
+     "name": "扩展式风机基础",
+     "en": "Spread foundation",
+     "year": 1990,
+     "note": "大底面积混凝土扩展基础，靠自重与土体共同承载，服务特定的生产与生活需要。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "rock_anchored_foundation",
+     "name": "岩石锚杆基础",
+     "en": "Rock-anchored foundation",
+     "year": 1990,
+     "note": "以锚杆把基础锚固于岩体，节省混凝土，构成相关作业体系的重要一环。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "prestressed_conc_foundation",
+     "name": "预应力混凝土基础",
+     "en": "Prestressed concrete foundation",
+     "year": 2005,
+     "note": "施加预应力提高抗裂与抗疲劳性能的机舱基础，技术上持续沿用并有所改进。",
+     "deps": [
+      "concrete_tower"
+     ]
+    },
+    {
+     "id": "cold_climate_wind_turbine",
+     "name": "高寒型风机",
+     "en": "Cold-climate wind turbine",
+     "year": 2005,
+     "note": "为低温结冰环境加装加热与加强材料的风机，与同类装置共同构成完整谱系。",
+     "deps": [
+      "blade_deicing"
+     ]
+    },
+    {
+     "id": "high_altitude_wind_turbine",
+     "name": "高海拔风机",
+     "en": "High-altitude wind turbine",
+     "year": 2005,
+     "note": "针对空气稀薄与紫外线强的条件设计的机型，实际效果得到广泛验证。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "typhoon_resistant_turbine",
+     "name": "抗台风风机",
+     "en": "Typhoon-resistant turbine",
+     "year": 2005,
+     "note": "叶片可偏航顺桨卸荷，适应台风区运行，属于该领域的成熟实用技术。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "wind_solar_hybrid",
+     "name": "风光互补系统",
+     "en": "Wind-solar hybrid system",
+     "year": 2000,
+     "note": "风机与光伏互补供电，提高离网系统利用率，其基本思路沿用至今。",
+     "deps": [
+      "solar"
+     ]
+    },
+    {
+     "id": "aviation_obstruction_light",
+     "name": "航空障碍灯系统",
+     "en": "Aviation obstruction lighting",
+     "year": 1990,
+     "note": "塔身红灯警示飞行器，按规范同步闪烁，应用范围遍及多个地区。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "bird_radar_protection",
+     "name": "鸟类雷达预警系统",
+     "en": "Bird radar protection",
+     "year": 2015,
+     "note": "以雷达探测鸟群联动风机暂缓启动，降低撞击，是该技术门类的典型代表。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "digital_terrain_siting",
+     "name": "数字地形选址",
+     "en": "Digital terrain siting",
+     "year": 2000,
+     "note": "以数字高程与地表模型优化复杂地形机位，为后续发展奠定了基础。",
+     "deps": [
+      "computer"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "海上风电",
+   "items": [
+    {
+     "id": "offshore_wind_farm",
+     "name": "海上风电场",
+     "en": "Offshore wind farm",
+     "year": 1991,
+     "note": "丹麦温德比建成世界首座海上风电场，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "horizontal_axis_wind_turbine"
+     ]
+    },
+    {
+     "id": "monopile_foundation",
+     "name": "单桩基础",
+     "en": "Monopile foundation",
+     "year": 1990,
+     "note": "单根钢管打入海床，是近海风机最常用基础，在相应条件下长期使用。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "jacket_foundation",
+     "name": "导管架基础",
+     "en": "Jacket foundation",
+     "year": 2000,
+     "note": "空间桁架导管架固定于桩群，适合较深水域，服务特定的生产与生活需要。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "gravity_base_foundation",
+     "name": "重力式基础",
+     "en": "Gravity base foundation",
+     "year": 1990,
+     "note": "以混凝土重力保持稳定，浅水岩基海域适用，构成相关作业体系的重要一环。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "tripod_tripile_foundation",
+     "name": "三脚架基础",
+     "en": "Tripod and tripile foundations",
+     "year": 2000,
+     "note": "三支点钢构基础，分布载荷适应中等水深，技术上持续沿用并有所改进。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "floating_wind_turbine",
+     "name": "漂浮式风机",
+     "en": "Floating wind turbine",
+     "year": 2009,
+     "note": "浮体锚泊定位的风机，用于深远海域开发，与同类装置共同构成完整谱系。",
+     "deps": [
+      "horizontal_axis_wind_turbine"
+     ]
+    },
+    {
+     "id": "spar_floating_foundation",
+     "name": "立柱式浮式基础",
+     "en": "Spar floating foundation",
+     "year": 2010,
+     "note": "细长立柱重心压低的浮式基础，挪威海威风电采用，实际效果得到广泛验证。",
+     "deps": [
+      "floating_wind_turbine"
+     ]
+    },
+    {
+     "id": "semi_submersible_foundation",
+     "name": "半潜式浮式基础",
+     "en": "Semi-submersible floating foundation",
+     "year": 2010,
+     "note": "多柱半潜结构提供稳性，浅吃水便于拖航安装，属于该领域的成熟实用技术。",
+     "deps": [
+      "floating_wind_turbine"
+     ]
+    },
+    {
+     "id": "tension_leg_platform",
+     "name": "张力腿平台",
+     "en": "Tension-leg platform",
+     "year": 2010,
+     "note": "以张紧系泊限制垂荡的浮式基础构型，其基本思路沿用至今。",
+     "deps": [
+      "floating_wind_turbine"
+     ]
+    },
+    {
+     "id": "offshore_substation",
+     "name": "海上升压站",
+     "en": "Offshore substation",
+     "year": 2000,
+     "note": "海上平台汇集升压各回路电力，经海缆送出，应用范围遍及多个地区。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "hvdc_offshore_export",
+     "name": "海上风电高压直流送出",
+     "en": "HVDC offshore export",
+     "year": 2010,
+     "note": "远距离海上风场以直流海缆送出，降低损耗，是该技术门类的典型代表。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "offshore_cable_lay",
+     "name": "海底电缆敷设",
+     "en": "Submarine cable laying",
+     "year": 1990,
+     "note": "敷缆船埋设阵列与送出海缆，保障电力外送，为后续发展奠定了基础。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "jackup_installation_vessel",
+     "name": "自升式安装船",
+     "en": "Jack-up installation vessel",
+     "year": 2000,
+     "note": "可升降平台的专用船，吊装海上风机大型部件，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "wind_turbine_installation_vessel",
+     "name": "重型吊装船",
+     "en": "Heavy-lift wind installation vessel",
+     "year": 2005,
+     "note": "大起吊能力自航船，用于海上风机与基础安装，在相应条件下长期使用。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "offshore_wind_foundation_grout",
+     "name": "海上基础灌浆连接",
+     "en": "Offshore grouted connection",
+     "year": 2000,
+     "note": "以高强灌浆连接钢管桩与基础结构，形成可靠固定，服务特定的生产与生活需要。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "corrosion_protection_offshore",
+     "name": "海上风电防腐",
+     "en": "Offshore corrosion protection",
+     "year": 1990,
+     "note": "涂层加阴极保护联合防腐，延长海上钢结构寿命，构成相关作业体系的重要一环。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "crew_transfer_vessel",
+     "name": "海上风电运维船",
+     "en": "Crew transfer vessel",
+     "year": 2000,
+     "note": "高海况下接送运维人员的专用快艇，技术上持续沿用并有所改进。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "dynamic_subsea_cable",
+     "name": "动态海缆",
+     "en": "Dynamic subsea cable",
+     "year": 2010,
+     "note": "随浮体运动布置的柔性海缆，用于漂浮式机组，与同类装置共同构成完整谱系。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "mooring_anchor_system",
+     "name": "漂浮式系泊锚泊系统",
+     "en": "Mooring anchor system",
+     "year": 2010,
+     "note": "锚链系泊把漂浮机组固定于作业海域，实际效果得到广泛验证。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "offshore_wind_aquaculture",
+     "name": "海上风电与养殖融合",
+     "en": "Wind-aquaculture co-location",
+     "year": 2015,
+     "note": "风机基础水域兼作网箱养殖，复合利用海域，属于该领域的成熟实用技术。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "offshore_hydrogen_platform",
+     "name": "漂浮式海上风电制氢",
+     "en": "Floating offshore hydrogen",
+     "year": 2020,
+     "note": "浮式平台电解海水制氢并就地储运外送，处于深远海工程示范验证阶段。",
+     "deps": [
+      "electricity"
+     ]
+    }
+   ]
+  }
+ ]
+}

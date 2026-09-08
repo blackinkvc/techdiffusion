@@ -1,0 +1,1382 @@
+{
+ "cat": "basic",
+ "catName": "科学基础与方法",
+ "sub": "chemistry",
+ "subName": "化学研究",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实存在的人类化学发现/方法/工业过程；item.deps 仅写域内/族间额外依赖(可选)；year 均取真实关键时点。",
+ "anchors": [
+  "chemistry",
+  "physics",
+  "mathematics",
+  "scientific_method",
+  "battery",
+  "electricity",
+  "thermodynamics",
+  "nuclear_fission",
+  "plastics",
+  "fertilizer"
+ ],
+ "families": [
+  {
+   "name": "元素发现与化学基础定律",
+   "items": [
+    {
+     "id": "chem_phosphorus",
+     "name": "磷的发现",
+     "en": "Discovery of phosphorus",
+     "year": 1669,
+     "note": "布兰德蒸馏尿液首次分离出磷单质，是史上有明确记录的首个新元素发现。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_hydrogen",
+     "name": "氢气的发现",
+     "en": "Discovery of hydrogen",
+     "year": 1766,
+     "note": "卡文迪许制取并研究了可燃空气，后由拉瓦锡命名为氢。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_nitrogen",
+     "name": "氮气的发现",
+     "en": "Discovery of nitrogen",
+     "year": 1772,
+     "note": "卢瑟福等从空气中分离出不助燃的气体，氮元素由此被认识。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_oxygen",
+     "name": "氧气的发现",
+     "en": "Discovery of oxygen",
+     "year": 1774,
+     "note": "普里斯特利与舍勒分别制得氧气，拉瓦锡将其定名并阐明其化学角色。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_chlorine",
+     "name": "氯气的发现",
+     "en": "Discovery of chlorine",
+     "year": 1774,
+     "note": "舍勒用盐酸与二氧化锰反应制得氯气，后由戴维确认为元素。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_combustion_theory",
+     "name": "氧化燃烧理论",
+     "en": "Oxygen theory of combustion",
+     "year": 1777,
+     "note": "拉瓦锡以定量实验说明燃烧是物质与氧的结合，推翻燃素说。",
+     "deps": [
+      "chem_oxygen"
+     ]
+    },
+    {
+     "id": "chem_conservation_of_mass",
+     "name": "质量守恒定律",
+     "en": "Law of conservation of mass",
+     "year": 1789,
+     "note": "拉瓦锡以密闭容器称量实验确立化学反应前后质量守恒。",
+     "deps": [
+      "chem_combustion_theory"
+     ]
+    },
+    {
+     "id": "chem_uranium",
+     "name": "铀元素的发现",
+     "en": "Discovery of uranium",
+     "year": 1789,
+     "note": "克拉普罗特从沥青铀矿中分离出铀的氧化物并命名该元素。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_stoichiometry",
+     "name": "化学计量关系",
+     "en": "Stoichiometry",
+     "year": 1792,
+     "note": "里希特研究酸碱中和的定量关系，提出化学计量的初步观念。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_sodium_potassium",
+     "name": "钠与钾的电解制备",
+     "en": "Isolation of sodium and potassium",
+     "year": 1807,
+     "note": "戴维用伏打电池电解熔融碱，首次分离出金属钾与钠，电解法开辟元素发现新路。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "chem_dalton_atom",
+     "name": "化学原子论",
+     "en": "Dalton's atomic theory",
+     "year": 1808,
+     "note": "道尔顿以原子论解释定比与倍比定律，化学进入定量原子时代。",
+     "deps": [
+      "chem_stoichiometry"
+     ]
+    },
+    {
+     "id": "chem_avogadro",
+     "name": "阿伏伽德罗定律",
+     "en": "Avogadro's law",
+     "year": 1811,
+     "note": "阿伏伽德罗提出同温同压同体积气体含相同分子数，分子与原子概念由此区分。",
+     "deps": [
+      "chem_dalton_atom"
+     ]
+    },
+    {
+     "id": "chem_iodine",
+     "name": "碘的发现",
+     "en": "Discovery of iodine",
+     "year": 1811,
+     "note": "库尔图瓦从海藻灰提取液中偶然发现碘，碘元素由此进入化学视野。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_silicon",
+     "name": "硅的制备",
+     "en": "Preparation of silicon",
+     "year": 1824,
+     "note": "贝采利乌斯用钾还原四氟化硅制得无定形硅，硅元素得以确认。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_aluminum",
+     "name": "铝的分离",
+     "en": "Isolation of aluminium",
+     "year": 1825,
+     "note": "厄斯泰德与维勒先后用还原法得到金属铝，铝由化合物变为单质。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_bromine",
+     "name": "溴的发现",
+     "en": "Discovery of bromine",
+     "year": 1826,
+     "note": "巴拉尔从盐卤水中提取出新元素溴，卤素家族成员陆续补全。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_isomerism",
+     "name": "同分异构概念",
+     "en": "Concept of isomerism",
+     "year": 1830,
+     "note": "贝采利乌斯提出异构体概念，说明相同组成可对应不同性质的化合物。",
+     "deps": [
+      "chem_dalton_atom"
+     ]
+    },
+    {
+     "id": "chem_allotropy",
+     "name": "同素异形现象",
+     "en": "Allotropy",
+     "year": 1841,
+     "note": "贝采利乌斯命名同素异形体，如金刚石与石墨同为碳的不同形态。",
+     "deps": [
+      "chem_isomerism"
+     ]
+    },
+    {
+     "id": "chem_atomic_weight",
+     "name": "原子量的统一测定",
+     "en": "Unified atomic weights",
+     "year": 1858,
+     "note": "坎尼扎罗依据阿伏伽德罗定律统一原子量测定方法，1860年卡尔斯鲁厄会议确立其体系。",
+     "deps": [
+      "chem_avogadro"
+     ]
+    },
+    {
+     "id": "chem_helium",
+     "name": "氦的发现",
+     "en": "Discovery of helium",
+     "year": 1868,
+     "note": "让桑在日食光谱中发现太阳上的新谱线，拉姆齐1895年从矿物中分离出地球上的氦。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_periodic_table",
+     "name": "元素周期律",
+     "en": "Periodic law and table",
+     "year": 1869,
+     "note": "门捷列夫按原子量排布元素并预言未知元素，周期表成为化学的框架。",
+     "deps": [
+      "chem_atomic_weight"
+     ]
+    },
+    {
+     "id": "chem_fluorine",
+     "name": "氟的制备",
+     "en": "Isolation of fluorine",
+     "year": 1886,
+     "note": "莫瓦桑用电解氟化氢的方法首次制得氟单质，攻克最难分离元素之一。",
+     "deps": [
+      "chem_sodium_potassium"
+     ]
+    },
+    {
+     "id": "chem_argon",
+     "name": "氩与稀有气体的发现",
+     "en": "Discovery of argon and noble gases",
+     "year": 1894,
+     "note": "拉姆齐与瑞利发现氩，随后氖、氪、氙相继分离，稀有气体一族补齐周期表。",
+     "deps": [
+      "chem_periodic_table"
+     ]
+    },
+    {
+     "id": "chem_radium",
+     "name": "镭与钋的发现",
+     "en": "Discovery of radium and polonium",
+     "year": 1898,
+     "note": "居里夫妇从沥青铀矿中分离出钋与镭，开创放射化学元素研究。",
+     "deps": [
+      "chem_uranium"
+     ]
+    },
+    {
+     "id": "chem_atomic_number",
+     "name": "原子序数的确定",
+     "en": "Determination of atomic number",
+     "year": 1913,
+     "note": "莫塞莱以X射线谱确定元素原子序数，修正周期表按原子量的排序依据。",
+     "deps": [
+      "chem_periodic_table"
+     ]
+    },
+    {
+     "id": "chem_isotope",
+     "name": "同位素的发现",
+     "en": "Discovery of isotopes",
+     "year": 1913,
+     "note": "索迪提出同位素概念，汤姆孙与阿斯顿用质谱证实同一元素存在不同质量的原子。",
+     "deps": [
+      "chem_radium"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "化学键与结构化学",
+   "items": [
+    {
+     "id": "chem_chirality",
+     "name": "手性分子的发现",
+     "en": "Discovery of molecular chirality",
+     "year": 1848,
+     "note": "巴斯德手工拆分酒石酸两种对映体晶体，分子不对称性由此被发现。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_valence",
+     "name": "化合价概念",
+     "en": "Concept of valence",
+     "year": 1852,
+     "note": "弗兰克兰提出原子具有固定的化合能力，价键观念由此萌芽。",
+     "deps": [
+      "chem_isomerism"
+     ]
+    },
+    {
+     "id": "chem_structure_theory",
+     "name": "化学结构理论",
+     "en": "Theory of chemical structure",
+     "year": 1858,
+     "note": "凯库勒与库珀确立碳四价与原子成链观念，结构式表达成为有机化学语言。",
+     "deps": [
+      "chem_valence"
+     ]
+    },
+    {
+     "id": "chem_benzene_ring",
+     "name": "苯的环状结构",
+     "en": "Kekulé's benzene ring",
+     "year": 1865,
+     "note": "凯库勒以六元环描述苯结构，芳香族化学体系自此展开。",
+     "deps": [
+      "chem_structure_theory"
+     ]
+    },
+    {
+     "id": "chem_stereochemistry",
+     "name": "碳四面体与立体化学",
+     "en": "Tetrahedral carbon and stereochemistry",
+     "year": 1874,
+     "note": "范特霍夫与勒贝尔各自提出碳原子四面体取向，解释旋光异构的空间根源。",
+     "deps": [
+      "chem_chirality"
+     ]
+    },
+    {
+     "id": "chem_coordination",
+     "name": "配位化学",
+     "en": "Coordination chemistry",
+     "year": 1893,
+     "note": "维尔纳以配位数解释氨合物结构，配位键概念由此建立。",
+     "deps": [
+      "chem_valence"
+     ]
+    },
+    {
+     "id": "chem_lewis_bond",
+     "name": "电子对共价键理论",
+     "en": "Lewis theory of shared electron pairs",
+     "year": 1916,
+     "note": "路易斯提出原子以共享电子对成键并满足八隅律，共价键获得电子论解释。",
+     "deps": [
+      "chem_valence"
+     ]
+    },
+    {
+     "id": "chem_hydrogen_bond",
+     "name": "氢键概念",
+     "en": "Hydrogen bonding",
+     "year": 1920,
+     "note": "拉蒂默与罗德布什提出氢桥概念，解释水的反常性质与生物大分子结构。",
+     "deps": [
+      "chem_lewis_bond"
+     ]
+    },
+    {
+     "id": "chem_valence_bond",
+     "name": "价键理论",
+     "en": "Valence bond theory",
+     "year": 1927,
+     "note": "海特勒与伦敦用量子力学处理氢分子，化学键首次获得量子论解释。",
+     "deps": [
+      "chem_lewis_bond"
+     ]
+    },
+    {
+     "id": "chem_resonance",
+     "name": "共振论",
+     "en": "Resonance theory",
+     "year": 1931,
+     "note": "鲍林用结构共振描述介于多个路易斯式之间的分子，解释苯等共轭体系。",
+     "deps": [
+      "chem_valence_bond"
+     ]
+    },
+    {
+     "id": "chem_hybridization",
+     "name": "轨道杂化理论",
+     "en": "Orbital hybridization",
+     "year": 1931,
+     "note": "鲍林提出杂化轨道解释甲烷等分子几何，分子形状获得直观模型。",
+     "deps": [
+      "chem_valence_bond"
+     ]
+    },
+    {
+     "id": "chem_electronegativity",
+     "name": "电负性标度",
+     "en": "Electronegativity scale",
+     "year": 1932,
+     "note": "鲍林定义电负性并给出标度，用于判断键的极性与化合物性质。",
+     "deps": [
+      "chem_valence_bond"
+     ]
+    },
+    {
+     "id": "chem_molecular_orbital",
+     "name": "分子轨道理论",
+     "en": "Molecular orbital theory",
+     "year": 1932,
+     "note": "马利肯与洪特把电子纳入整个分子的轨道描述，成为现代量子化学核心方法。",
+     "deps": [
+      "chem_valence_bond"
+     ]
+    },
+    {
+     "id": "chem_vsepr",
+     "name": "价层电子对互斥理论",
+     "en": "VSEPR theory",
+     "year": 1957,
+     "note": "吉莱斯皮提出以价层电子对排斥预测分子形状，为几何构型提供简单规则。",
+     "deps": [
+      "chem_lewis_bond"
+     ]
+    },
+    {
+     "id": "chem_supramolecule",
+     "name": "超分子化学",
+     "en": "Supramolecular chemistry",
+     "year": 1967,
+     "note": "佩德森合成冠醚开启主客体化学，超分子体系研究随后发展成独立学科。",
+     "deps": [
+      "chem_coordination"
+     ]
+    },
+    {
+     "id": "chem_fullerene",
+     "name": "富勒烯的发现",
+     "en": "Discovery of fullerenes",
+     "year": 1985,
+     "note": "克罗托等发现由六十个碳原子构成的笼状分子C60，碳的第三种同素异形体问世。",
+     "deps": [
+      "chem_allotropy"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "无机化学与工业过程",
+   "items": [
+    {
+     "id": "chem_leblanc",
+     "name": "吕布兰制碱法",
+     "en": "Leblanc process",
+     "year": 1791,
+     "note": "吕布兰以食盐与硫酸、煤共热制取纯碱，开启近代化工生产。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_contact",
+     "name": "接触法制硫酸",
+     "en": "Contact process",
+     "year": 1831,
+     "note": "铂催化氧化二氧化硫制备硫酸的方法，至今仍是工业制硫酸的主流。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_ozone",
+     "name": "臭氧的发现",
+     "en": "Discovery of ozone",
+     "year": 1840,
+     "note": "舍恩拜因发现放电产生的特殊气味气体并命名为臭氧，同素异形现象得到实例。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_solvay",
+     "name": "索尔维制碱法",
+     "en": "Solvay process",
+     "year": 1863,
+     "note": "索尔维以氨盐水吸收二氧化碳循环制碱，取代高污染的吕布兰法。",
+     "deps": [
+      "chem_leblanc"
+     ]
+    },
+    {
+     "id": "chem_hall_heroult",
+     "name": "霍尔-埃鲁铝电解法",
+     "en": "Hall-Héroult process",
+     "year": 1886,
+     "note": "霍尔与埃鲁各自发明电解冰晶石-氧化铝熔体制铝，铝从此廉价可得。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "chem_chlor_alkali",
+     "name": "氯碱工业",
+     "en": "Chlor-alkali industry",
+     "year": 1890,
+     "note": "电解食盐水同时制取氯气与烧碱，成为基础化工的重要支柱。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "chem_thermite",
+     "name": "铝热法",
+     "en": "Thermite process",
+     "year": 1893,
+     "note": "戈尔德施密特发现铝粉还原金属氧化物放出大量热，用于冶炼与焊接。",
+     "deps": [
+      "chem_aluminum"
+     ]
+    },
+    {
+     "id": "chem_linde",
+     "name": "林德空气液化分离法",
+     "en": "Linde air separation",
+     "year": 1895,
+     "note": "林德以节流制冷液化空气并精馏分离氧氮，工业气体生产由此开始。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "chem_ostwald",
+     "name": "奥斯特瓦尔德制硝酸法",
+     "en": "Ostwald process",
+     "year": 1902,
+     "note": "奥斯特瓦尔德以铂网催化氧化氨制硝酸，合成氨工业的配套环节。",
+     "deps": [
+      "chem_contact"
+     ]
+    },
+    {
+     "id": "chem_haber_bosch",
+     "name": "哈伯-博施合成氨",
+     "en": "Haber-Bosch process",
+     "year": 1913,
+     "note": "哈伯实现高压催化固氮，博施完成工业化，化肥革命由此展开。",
+     "deps": [
+      "fertilizer"
+     ]
+    },
+    {
+     "id": "chem_freon",
+     "name": "氟氯烃制冷剂",
+     "en": "Chlorofluorocarbons",
+     "year": 1928,
+     "note": "米奇利研制安全无毒制冷剂氟利昂，其臭氧层破坏问题后推动含氟化合物替代。",
+     "deps": [
+      "chem_fluorine"
+     ]
+    },
+    {
+     "id": "chem_hou",
+     "name": "侯氏联合制碱法",
+     "en": "Hou's combined process",
+     "year": 1943,
+     "note": "侯德榜将合成氨与制碱联合，食盐利用率大幅提高并副产氯化铵。",
+     "deps": [
+      "chem_solvay",
+      "chem_haber_bosch"
+     ]
+    },
+    {
+     "id": "chem_noble_gas_compound",
+     "name": "稀有气体化合物的合成",
+     "en": "Compounds of noble gases",
+     "year": 1962,
+     "note": "巴特利特合成六氟合铂酸氙，打破惰性气体不能成键的传统观念。",
+     "deps": [
+      "chem_argon"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "有机化学与合成方法",
+   "items": [
+    {
+     "id": "chem_urea",
+     "name": "尿素的合成",
+     "en": "Synthesis of urea",
+     "year": 1828,
+     "note": "维勒加热氰酸铵得到尿素，首次从无机物合成有机物，冲击生命力论。",
+     "deps": [
+      "chem_dalton_atom"
+     ]
+    },
+    {
+     "id": "chem_radical_theory",
+     "name": "有机基团理论",
+     "en": "Radical theory in organic chemistry",
+     "year": 1832,
+     "note": "李比希与维勒提出苯甲酰基等不变基团概念，有机物的系统命名由此起步。",
+     "deps": [
+      "chem_urea"
+     ]
+    },
+    {
+     "id": "chem_mauveine",
+     "name": "苯胺紫染料",
+     "en": "Mauveine",
+     "year": 1856,
+     "note": "珀金氧化苯胺制得第一种合成染料苯胺紫，合成染料工业由此诞生。",
+     "deps": []
+    },
+    {
+     "id": "chem_diazonium",
+     "name": "重氮化合物反应",
+     "en": "Diazonium chemistry",
+     "year": 1858,
+     "note": "格里斯的偶联反应为偶氮染料与有机合成提供重要中间体方法。",
+     "deps": [
+      "chem_mauveine"
+     ]
+    },
+    {
+     "id": "chem_alizarin",
+     "name": "茜素的合成",
+     "en": "Synthesis of alizarin",
+     "year": 1868,
+     "note": "格雷贝与利伯曼以蒽醌合成茜素，天然染料首次实现工业替代。",
+     "deps": [
+      "chem_diazonium"
+     ]
+    },
+    {
+     "id": "chem_aldol",
+     "name": "羟醛缩合反应",
+     "en": "Aldol condensation",
+     "year": 1872,
+     "note": "武尔茨观察到醛自缩合生成羟醛，碳碳键形成的基本方法由此确立。",
+     "deps": [
+      "chem_structure_theory"
+     ]
+    },
+    {
+     "id": "chem_friedel_crafts",
+     "name": "弗里德尔-克拉夫茨反应",
+     "en": "Friedel-Crafts reaction",
+     "year": 1877,
+     "note": "弗里德尔与克拉夫茨以路易斯酸催化烷基化与酰基化，芳香烃官能化的常用手段。",
+     "deps": [
+      "chem_benzene_ring"
+     ]
+    },
+    {
+     "id": "chem_fischer_sugar",
+     "name": "糖与嘌呤化学",
+     "en": "Fischer's sugar and purine chemistry",
+     "year": 1884,
+     "note": "埃米尔·费歇尔阐明糖的立体化学并合成嘌呤类，开创天然产物结构研究。",
+     "deps": [
+      "chem_stereochemistry"
+     ]
+    },
+    {
+     "id": "chem_fischer_projection",
+     "name": "费歇尔投影式",
+     "en": "Fischer projection",
+     "year": 1891,
+     "note": "费歇尔以平面投影式表示糖类立体构型，成为立体化学的标准记法。",
+     "deps": [
+      "chem_fischer_sugar"
+     ]
+    },
+    {
+     "id": "chem_indigo",
+     "name": "靛蓝的工业合成",
+     "en": "Industrial synthesis of indigo",
+     "year": 1897,
+     "note": "拜耳奠定合成路线后，巴斯夫实现靛蓝工业化，传统种植染料被取代。",
+     "deps": [
+      "chem_friedel_crafts"
+     ]
+    },
+    {
+     "id": "chem_grignard",
+     "name": "格氏试剂",
+     "en": "Grignard reagents",
+     "year": 1900,
+     "note": "格利雅发明镁的有机卤化物试剂，广泛用于碳碳键构建与官能团转化。",
+     "deps": [
+      "chem_structure_theory"
+     ]
+    },
+    {
+     "id": "chem_huckel_rule",
+     "name": "休克尔规则",
+     "en": "Hückel's rule",
+     "year": 1931,
+     "note": "休克尔以分子轨道计算得出平面环状共轭体系芳香性判据，4n+2规则由此得名。",
+     "deps": [
+      "chem_benzene_ring"
+     ]
+    },
+    {
+     "id": "chem_reaction_mechanism",
+     "name": "有机反应机理分析",
+     "en": "Organic reaction mechanisms",
+     "year": 1934,
+     "note": "英戈尔德等以电子效应与反应中间体系统分析取代反应机理，有机理论走向电子论。",
+     "deps": [
+      "chem_resonance"
+     ]
+    },
+    {
+     "id": "chem_woodward",
+     "name": "天然产物的全合成",
+     "en": "Total synthesis of natural products",
+     "year": 1944,
+     "note": "伍德沃德合成奎宁后接连完成胆固醇、士的宁等复杂分子，全合成成为有机化学标杆。",
+     "deps": [
+      "chem_reaction_mechanism"
+     ]
+    },
+    {
+     "id": "chem_woodward_hoffmann",
+     "name": "伍德沃德-霍夫曼规则",
+     "en": "Woodward-Hoffmann rules",
+     "year": 1965,
+     "note": "伍德沃德与霍夫曼用轨道对称守恒解释周环反应选择性，获颁诺贝尔奖。",
+     "deps": [
+      "chem_molecular_orbital"
+     ]
+    },
+    {
+     "id": "chem_retrosynthesis",
+     "name": "逆合成分析",
+     "en": "Retrosynthetic analysis",
+     "year": 1967,
+     "note": "科里提出从目标分子反推合成路线的系统方法，使复杂分子设计理性化。",
+     "deps": [
+      "chem_woodward"
+     ]
+    },
+    {
+     "id": "chem_asymmetric_catalysis",
+     "name": "不对称催化氢化",
+     "en": "Asymmetric catalytic hydrogenation",
+     "year": 1968,
+     "note": "诺尔斯与野依良治以手性催化剂实现高对映选择性加氢，手性药物工业由此发展。",
+     "deps": [
+      "chem_chirality"
+     ]
+    },
+    {
+     "id": "chem_metathesis",
+     "name": "烯烃复分解催化",
+     "en": "Olefin metathesis catalysis",
+     "year": 1971,
+     "note": "肖万阐明复分解机理，施罗克与格拉布研制高效催化剂，获2005年诺贝尔奖。",
+     "deps": [
+      "chem_grignard"
+     ]
+    },
+    {
+     "id": "chem_pd_coupling",
+     "name": "钯催化交叉偶联",
+     "en": "Palladium-catalyzed cross-coupling",
+     "year": 1972,
+     "note": "赫克发展钯催化偶联，铃木与根岸扩展底物范围，2010年共同获奖。",
+     "deps": [
+      "chem_reaction_mechanism"
+     ]
+    },
+    {
+     "id": "chem_green_chemistry",
+     "name": "绿色化学",
+     "en": "Green chemistry",
+     "year": 1991,
+     "note": "阿纳斯塔斯提出十二项原则，从源头设计少污染高原子经济性的化学工艺。",
+     "deps": [
+      "chem_pd_coupling"
+     ]
+    },
+    {
+     "id": "chem_organocatalysis",
+     "name": "有机小分子催化",
+     "en": "Organocatalysis",
+     "year": 2000,
+     "note": "利斯特与麦克米伦报道脯氨酸等小分子催化不对称反应，获2021年诺贝尔奖。",
+     "deps": [
+      "chem_asymmetric_catalysis"
+     ]
+    },
+    {
+     "id": "chem_click_chemistry",
+     "name": "点击化学",
+     "en": "Click chemistry",
+     "year": 2001,
+     "note": "沙普利斯提出以叠氮-炔环加成为代表的高效模块化反应，获2022年诺贝尔奖。",
+     "deps": [
+      "chem_organocatalysis"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "物理化学与理论化学",
+   "items": [
+    {
+     "id": "chem_ideal_gas",
+     "name": "理想气体状态方程",
+     "en": "Ideal gas law",
+     "year": 1834,
+     "note": "克拉佩龙综合波义耳、查理与阿伏伽德罗定律得到统一气体方程。",
+     "deps": [
+      "chem_avogadro"
+     ]
+    },
+    {
+     "id": "chem_catalysis_concept",
+     "name": "催化概念",
+     "en": "Concept of catalysis",
+     "year": 1835,
+     "note": "贝采利乌斯命名催化现象，说明某些物质可加快反应而不被消耗。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_hess_law",
+     "name": "反应热加和定律",
+     "en": "Hess's law",
+     "year": 1840,
+     "note": "赫斯证明反应热只由始末状态决定，热化学计算由此可以分段进行。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_colloid",
+     "name": "胶体化学",
+     "en": "Colloid chemistry",
+     "year": 1861,
+     "note": "格雷厄姆以半透膜区分胶体与晶体，胶体科学由此建立。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_mass_action",
+     "name": "质量作用定律",
+     "en": "Law of mass action",
+     "year": 1864,
+     "note": "古德贝格与瓦格提出反应速率与平衡同浓度的定量关系，化学平衡理论由此建立。",
+     "deps": [
+      "chem_hess_law"
+     ]
+    },
+    {
+     "id": "chem_vanderwaals",
+     "name": "范德华方程",
+     "en": "Van der Waals equation",
+     "year": 1873,
+     "note": "范德华修正理想气体方程计入分子体积与引力，气体液化与临界现象获得解释。",
+     "deps": [
+      "chem_ideal_gas"
+     ]
+    },
+    {
+     "id": "chem_phase_rule",
+     "name": "相律",
+     "en": "Gibbs phase rule",
+     "year": 1876,
+     "note": "吉布斯导出相平衡中自由度与组分数、相数的关系，成为化工相图的依据。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_gibbs_energy",
+     "name": "吉布斯自由能",
+     "en": "Gibbs free energy",
+     "year": 1876,
+     "note": "吉布斯以自由能判断恒温恒压过程方向，化学热力学框架由此完整。",
+     "deps": [
+      "chem_mass_action"
+     ]
+    },
+    {
+     "id": "chem_lechatelier",
+     "name": "勒夏特列原理",
+     "en": "Le Chatelier's principle",
+     "year": 1884,
+     "note": "勒夏特列提出平衡会反抗外界条件改变的定性规则，化工工艺设计的重要依据。",
+     "deps": [
+      "chem_mass_action"
+     ]
+    },
+    {
+     "id": "chem_raoult",
+     "name": "拉乌尔定律",
+     "en": "Raoult's law",
+     "year": 1887,
+     "note": "拉乌尔给出溶剂蒸气压随溶质浓度的下降规律，成为溶液理论的基础。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_osmosis",
+     "name": "渗透压定律",
+     "en": "Law of osmotic pressure",
+     "year": 1887,
+     "note": "范特霍夫发现稀溶液渗透压遵循类似理想气体的规律，溶液理论获得突破。",
+     "deps": []
+    },
+    {
+     "id": "chem_electrolyte",
+     "name": "电解质电离理论",
+     "en": "Theory of electrolytic dissociation",
+     "year": 1887,
+     "note": "阿伦尼乌斯提出电解质在水中解离为离子的理论，酸碱与溶液导电研究由此展开。",
+     "deps": [
+      "chem_mass_action"
+     ]
+    },
+    {
+     "id": "chem_arrhenius_equation",
+     "name": "阿伦尼乌斯方程",
+     "en": "Arrhenius equation",
+     "year": 1889,
+     "note": "阿伦尼乌斯给出反应速率与温度、活化能的关系，化学动力学的基石方程。",
+     "deps": [
+      "chem_electrolyte"
+     ]
+    },
+    {
+     "id": "chem_photochemical_law",
+     "name": "光化当量定律",
+     "en": "Stark-Einstein law",
+     "year": 1912,
+     "note": "施塔克与爱因斯坦提出一个分子吸收一个光子发生初级过程，光化学获得定量基础。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "chem_langmuir",
+     "name": "朗缪尔吸附理论",
+     "en": "Langmuir adsorption theory",
+     "year": 1916,
+     "note": "朗缪尔以单分子层吸附模型描述表面过程，表面化学与多相催化由此奠基。",
+     "deps": [
+      "chem_catalysis_concept"
+     ]
+    },
+    {
+     "id": "chem_collision_theory",
+     "name": "反应碰撞理论",
+     "en": "Collision theory of reactions",
+     "year": 1918,
+     "note": "特劳茨等以分子碰撞与能量阈值解释基元反应速率，衔接动力学与分子图像。",
+     "deps": [
+      "chem_arrhenius_equation"
+     ]
+    },
+    {
+     "id": "chem_bronsted",
+     "name": "酸碱质子理论",
+     "en": "Brønsted-Lowry acid-base theory",
+     "year": 1923,
+     "note": "布伦斯泰德与劳里提出酸碱以质子传递定义，适用范围远大于水溶液。",
+     "deps": [
+      "chem_electrolyte"
+     ]
+    },
+    {
+     "id": "chem_lewis_acid",
+     "name": "路易斯酸碱理论",
+     "en": "Lewis acid-base theory",
+     "year": 1923,
+     "note": "路易斯以电子对接受体定义酸碱，把酸碱概念扩展到无质子体系。",
+     "deps": [
+      "chem_lewis_bond"
+     ]
+    },
+    {
+     "id": "chem_debye_huckel",
+     "name": "德拜-休克尔理论",
+     "en": "Debye-Hückel theory",
+     "year": 1923,
+     "note": "德拜与休克尔以离子氛模型计算强电解质活度系数，电解质溶液理论由此严格化。",
+     "deps": [
+      "chem_electrolyte"
+     ]
+    },
+    {
+     "id": "chem_hartree_fock",
+     "name": "哈特里-福克方法",
+     "en": "Hartree-Fock method",
+     "year": 1930,
+     "note": "福克完善自洽场近似求解多电子体系，成为量子化学计算的出发点。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "chem_transition_state",
+     "name": "过渡态理论",
+     "en": "Transition state theory",
+     "year": 1935,
+     "note": "艾林以活化络合物与势垒给出速率常数统计表达式，绝对反应速率理论建立。",
+     "deps": [
+      "chem_arrhenius_equation"
+     ]
+    },
+    {
+     "id": "chem_bet",
+     "name": "多分子层吸附理论",
+     "en": "BET theory",
+     "year": 1938,
+     "note": "布鲁诺尔、埃米特与特勒推广吸附模型到多分子层，比表面积测量由此标准化。",
+     "deps": [
+      "chem_langmuir"
+     ]
+    },
+    {
+     "id": "chem_dft",
+     "name": "密度泛函理论",
+     "en": "Density functional theory",
+     "year": 1964,
+     "note": "霍恩伯格与科恩证明以电子密度泛函求解基态，DFT成为材料与分子模拟主力工具。",
+     "deps": [
+      "chem_hartree_fock"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "分析化学与测量技术",
+   "items": [
+    {
+     "id": "chem_titration",
+     "name": "滴定分析法",
+     "en": "Titrimetric analysis",
+     "year": 1824,
+     "note": "盖-吕萨克以标准溶液测定氯与银含量，容量分析成为定量化学的成熟手段。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chem_liebig",
+     "name": "有机元素分析",
+     "en": "Elemental analysis of organics",
+     "year": 1831,
+     "note": "李比希设计燃烧吸收装置测定碳氢含量，有机化合物组成分析由此常规化。",
+     "deps": [
+      "chem_titration"
+     ]
+    },
+    {
+     "id": "chem_colorimetry",
+     "name": "比色分析法",
+     "en": "Colorimetric analysis",
+     "year": 1856,
+     "note": "内斯勒以显色反应比较溶液浓度，比色法成为早期灵敏的定量手段。",
+     "deps": [
+      "chem_titration"
+     ]
+    },
+    {
+     "id": "chem_spectroscopy",
+     "name": "光谱分析",
+     "en": "Spectrochemical analysis",
+     "year": 1859,
+     "note": "本生与基尔霍夫以焰色与谱线识别元素，光谱学揭开元素与天体成分分析之门。",
+     "deps": [
+      "chem_colorimetry"
+     ]
+    },
+    {
+     "id": "chem_column_chromatography",
+     "name": "色谱分离法",
+     "en": "Chromatography",
+     "year": 1906,
+     "note": "茨韦特用吸附柱分离植物色素并命名色谱法，分离分析技术由此发端。",
+     "deps": [
+      "chem_spectroscopy"
+     ]
+    },
+    {
+     "id": "chem_ph_scale",
+     "name": "pH标度",
+     "en": "pH scale",
+     "year": 1909,
+     "note": "泽伦森定义以负对数表示氢离子浓度，酸碱度测量获得统一标度。",
+     "deps": [
+      "chem_electrolyte"
+     ]
+    },
+    {
+     "id": "chem_microanalysis",
+     "name": "微量有机分析",
+     "en": "Microanalysis of organics",
+     "year": 1910,
+     "note": "普雷格尔把元素分析缩小到毫克级样品，微量化学由此开辟。",
+     "deps": [
+      "chem_liebig"
+     ]
+    },
+    {
+     "id": "chem_mass_spectrometry",
+     "name": "质谱法",
+     "en": "Mass spectrometry",
+     "year": 1912,
+     "note": "汤姆孙与阿斯顿按质荷比分离离子并发现同位素，质谱成为重要分析工具。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "chem_xrd",
+     "name": "晶体X射线衍射分析",
+     "en": "X-ray crystallography",
+     "year": 1912,
+     "note": "劳厄发现晶体衍射X射线，布拉格父子给出衍射方程，分子结构测定由此开始。",
+     "deps": [
+      "chem_spectroscopy"
+     ]
+    },
+    {
+     "id": "chem_polarography",
+     "name": "极谱分析法",
+     "en": "Polarography",
+     "year": 1922,
+     "note": "海罗夫斯基以滴汞电极记录电流-电压曲线，电分析化学获得灵敏方法。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "chem_raman",
+     "name": "拉曼光谱法",
+     "en": "Raman spectroscopy",
+     "year": 1928,
+     "note": "拉曼观测到分子对光的非弹性散射，振动结构信息由此可直接读取。",
+     "deps": [
+      "chem_spectroscopy"
+     ]
+    },
+    {
+     "id": "chem_ion_exchange",
+     "name": "离子交换分离",
+     "en": "Ion exchange",
+     "year": 1935,
+     "note": "亚当斯与霍姆斯合成离子交换树脂，水处理与稀土分离获得有力手段。",
+     "deps": [
+      "chem_column_chromatography"
+     ]
+    },
+    {
+     "id": "chem_electrophoresis",
+     "name": "电泳分离法",
+     "en": "Electrophoresis",
+     "year": 1937,
+     "note": "蒂塞留斯以移动界面电泳分离血清蛋白，生物大分子分析由此展开。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "chem_uv_vis",
+     "name": "紫外-可见分光光度法",
+     "en": "UV-visible spectrophotometry",
+     "year": 1941,
+     "note": "光电比色与分光光度仪器成熟，紫外可见光谱成为常规定量与结构分析手段。",
+     "deps": [
+      "chem_spectroscopy"
+     ]
+    },
+    {
+     "id": "chem_ir",
+     "name": "红外光谱法",
+     "en": "Infrared spectroscopy",
+     "year": 1943,
+     "note": "红外吸收反映分子振动基团特征，战后成为有机结构鉴定的常规工具。",
+     "deps": [
+      "chem_spectroscopy"
+     ]
+    },
+    {
+     "id": "chem_nmr",
+     "name": "核磁共振波谱",
+     "en": "Nuclear magnetic resonance spectroscopy",
+     "year": 1950,
+     "note": "布洛赫与珀塞尔发现核磁共振后，NMR发展为解析分子结构的核心波谱手段。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "chem_tlc",
+     "name": "薄层色谱",
+     "en": "Thin-layer chromatography",
+     "year": 1951,
+     "note": "基希纳把吸附剂铺成薄层进行快速分离，薄层色谱成为实验室常规方法。",
+     "deps": [
+      "chem_column_chromatography"
+     ]
+    },
+    {
+     "id": "chem_gc",
+     "name": "气相色谱法",
+     "en": "Gas chromatography",
+     "year": 1952,
+     "note": "马丁与詹姆斯以气体作流动相分离挥发性混合物，色谱进入高分辨时代。",
+     "deps": [
+      "chem_column_chromatography"
+     ]
+    },
+    {
+     "id": "chem_aas",
+     "name": "原子吸收光谱法",
+     "en": "Atomic absorption spectroscopy",
+     "year": 1955,
+     "note": "沃尔什建立火焰原子吸收测定的方法，痕量金属元素分析由此灵敏化。",
+     "deps": [
+      "chem_spectroscopy"
+     ]
+    },
+    {
+     "id": "chem_gcms",
+     "name": "色谱-质谱联用",
+     "en": "Gas chromatography-mass spectrometry",
+     "year": 1959,
+     "note": "气相色谱与质谱联机兼得分离与鉴定能力，成为复杂样品分析的标杆。",
+     "deps": [
+      "chem_gc",
+      "chem_mass_spectrometry"
+     ]
+    },
+    {
+     "id": "chem_hplc",
+     "name": "高效液相色谱",
+     "en": "High-performance liquid chromatography",
+     "year": 1967,
+     "note": "高压细颗粒填料使液相色谱分离效率大幅提高，药物与生化分析的主力工具。",
+     "deps": [
+      "chem_column_chromatography"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "电化学、放射与高分子化学",
+   "items": [
+    {
+     "id": "chem_faraday_law",
+     "name": "法拉第电解定律",
+     "en": "Faraday's laws of electrolysis",
+     "year": 1833,
+     "note": "法拉第给出电解量与原电量成正比的定量关系，电化学获得基本定律。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "chem_kolbe",
+     "name": "科尔贝电解反应",
+     "en": "Kolbe electrolysis",
+     "year": 1849,
+     "note": "科尔贝以羧酸盐电解实现碳链偶联，有机电化学合成由此开始。",
+     "deps": [
+      "chem_faraday_law"
+     ]
+    },
+    {
+     "id": "chem_nernst",
+     "name": "能斯特方程",
+     "en": "Nernst equation",
+     "year": 1889,
+     "note": "能斯特把电极电势与浓度、温度联系起来，电池与腐蚀分析有了定量工具。",
+     "deps": [
+      "chem_faraday_law"
+     ]
+    },
+    {
+     "id": "chem_macromolecule",
+     "name": "高分子概念",
+     "en": "Macromolecular hypothesis",
+     "year": 1920,
+     "note": "施陶丁格提出淀粉、橡胶等是分子量巨大的长链分子，高分子化学由此正名。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "chem_tracer",
+     "name": "放射性同位素示踪",
+     "en": "Radioactive tracer technique",
+     "year": 1923,
+     "note": "赫维西用放射性铅研究植物吸收与迁移，开创同位素示踪分析方法。",
+     "deps": [
+      "chem_radium"
+     ]
+    },
+    {
+     "id": "chem_carothers",
+     "name": "缩聚与加聚理论",
+     "en": "Condensation and addition polymerization",
+     "year": 1935,
+     "note": "卡罗瑟斯区分缩聚与加聚并据此制得尼龙，合成纤维工业由此兴起。",
+     "deps": [
+      "chem_macromolecule"
+     ]
+    },
+    {
+     "id": "chem_neutron_activation",
+     "name": "中子活化分析",
+     "en": "Neutron activation analysis",
+     "year": 1936,
+     "note": "赫维西用中子轰击使样品元素活化后测谱，实现极微量成分的无损测定。",
+     "deps": []
+    },
+    {
+     "id": "chem_radical_polymerization",
+     "name": "自由基聚合机理",
+     "en": "Free-radical polymerization mechanism",
+     "year": 1937,
+     "note": "自由基链引发增长终止机理被阐明，聚乙烯与丁苯橡胶等工业聚合获得理论指导。",
+     "deps": [
+      "chem_carothers"
+     ]
+    },
+    {
+     "id": "chem_ziigler_natta",
+     "name": "齐格勒-纳塔催化聚合",
+     "en": "Ziegler-Natta catalysis",
+     "year": 1953,
+     "note": "齐格勒与纳塔以有机金属催化剂实现乙烯低压聚合与立构规整聚合，获1963年诺贝尔奖。",
+     "deps": [
+      "chem_radical_polymerization"
+     ]
+    },
+    {
+     "id": "chem_living_polymer",
+     "name": "活性阴离子聚合",
+     "en": "Living anionic polymerization",
+     "year": 1956,
+     "note": "斯沃克发现无终止活性聚合，分子量与分布可精确控制，嵌段共聚物由此可制。",
+     "deps": [
+      "chem_ziigler_natta"
+     ]
+    },
+    {
+     "id": "chem_conductive_polymer",
+     "name": "导电高分子的发现",
+     "en": "Discovery of conducting polymers",
+     "year": 1977,
+     "note": "白川英树等发现掺杂聚乙炔导电，开启导电高分子研究并获2000年诺贝尔奖。",
+     "deps": [
+      "chem_ziigler_natta"
+     ]
+    },
+    {
+     "id": "chem_raft",
+     "name": "可逆加成-断裂链转移聚合",
+     "en": "RAFT polymerization",
+     "year": 1998,
+     "note": "澳大利亚研究团队以硫代碳酸酯调控自由基聚合，活性自由基聚合获得通用方法。",
+     "deps": [
+      "chem_living_polymer"
+     ]
+    }
+   ]
+  }
+ ]
+}

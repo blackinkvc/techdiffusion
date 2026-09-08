@@ -1,0 +1,1086 @@
+{
+ "cat": "basic",
+ "catName": "科学基础与方法",
+ "sub": "method",
+ "subName": "科研方法与工具",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "scientific_method",
+  "mathematics",
+  "physics",
+  "chemistry",
+  "optics",
+  "electromagnetism",
+  "electricity",
+  "battery",
+  "printing",
+  "writing",
+  "computer",
+  "internet",
+  "semiconductors"
+ ],
+ "families": [
+  {
+   "name": "实验方法与伦理规范",
+   "items": [
+    {
+     "id": "controlled_experiment",
+     "name": "对照实验",
+     "en": "Controlled experiment",
+     "year": 1747,
+     "note": "林德在坏血病试验中设立不同饮食组比较，成为有对照实验的早期范例。",
+     "deps": ["scientific_method"]
+    },
+    {
+     "id": "blind_test",
+     "name": "盲法检验",
+     "en": "Blind experiment",
+     "year": 1784,
+     "note": "富兰克林委员会蒙住受试者双眼检验动物磁气疗效，开创盲法评估。",
+     "deps": ["controlled_experiment"]
+    },
+    {
+     "id": "double_blind_trial",
+     "name": "双盲试验",
+     "en": "Double-blind trial",
+     "year": 1943,
+     "note": "英国医学界在感冒治疗试验中使医患均不知用药分组，确立双盲规范。",
+     "deps": ["blind_test"]
+    },
+    {
+     "id": "randomized_controlled_trial",
+     "name": "随机对照试验",
+     "en": "Randomized controlled trial",
+     "year": 1948,
+     "note": "链霉素治疗结核的里程碑试验采用随机分组，成为疗效评价的金标准。",
+     "deps": ["double_blind_trial"]
+    },
+    {
+     "id": "factorial_experiment_design",
+     "name": "析因实验设计",
+     "en": "Factorial experimental design",
+     "year": 1935,
+     "note": "费希尔系统阐述随机化、重复与区组原则，奠基近代试验设计学科。",
+     "deps": ["mathematics"]
+    },
+    {
+     "id": "isotope_tracer_method",
+     "name": "同位素示踪法",
+     "en": "Isotopic tracer technique",
+     "year": 1923,
+     "note": "赫维西用放射性同位素标记追踪物质迁移路径，开示踪研究先河。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "xray_diffraction_method",
+     "name": "X射线衍射分析法",
+     "en": "X-ray diffraction analysis",
+     "year": 1912,
+     "note": "劳厄发现晶体对X射线的衍射，催生测定晶体与分子结构的分析方法。"
+    },
+    {
+     "id": "radiocarbon_dating",
+     "name": "放射性碳测年法",
+     "en": "Radiocarbon dating",
+     "year": 1949,
+     "note": "利比利用碳-14衰变速率测定含碳样品年代，革新考古与地质断代。",
+     "deps": ["isotope_tracer_method"]
+    },
+    {
+     "id": "meta_analysis",
+     "name": "荟萃分析",
+     "en": "Meta-analysis",
+     "year": 1976,
+     "note": "格拉斯提出对多项独立研究结果做定量合并，提升证据综合评价效率。",
+     "deps": ["mathematics"]
+    },
+    {
+     "id": "three_rs_principle",
+     "name": "动物实验3R原则",
+     "en": "Three Rs principle",
+     "year": 1959,
+     "note": "拉塞尔提出替代、减少、优化三项原则，成为实验动物伦理的通行基准。"
+    },
+    {
+     "id": "helsinki_declaration",
+     "name": "人体研究伦理宣言",
+     "en": "Declaration of Helsinki",
+     "year": 1964,
+     "note": "世界医学会确立涉及人体受试者研究的伦理准则，规范知情同意与风险审查。"
+    },
+    {
+     "id": "institutional_review_board",
+     "name": "机构伦理审查委员会",
+     "en": "Institutional review board",
+     "year": 1966,
+     "note": "美国公共卫生署要求受资助人体研究须经委员会审查，确立伦理审查制度。",
+     "deps": ["helsinki_declaration"]
+    },
+    {
+     "id": "good_laboratory_practice",
+     "name": "良好实验室规范",
+     "en": "Good laboratory practice",
+     "year": 1978,
+     "note": "美国FDA颁布GLP规范，对非临床安全性研究的记录与质量控制提出要求。"
+    },
+    {
+     "id": "rothamsted_long_term_trials",
+     "name": "长期定位试验",
+     "en": "Long-term field trials",
+     "year": 1843,
+     "note": "洛桑试验站自1843年起持续进行小麦肥料试验，开创了农业长期定位研究。"
+    },
+    {
+     "id": "prospective_cohort_study",
+     "name": "前瞻性队列研究",
+     "en": "Prospective cohort study",
+     "year": 1948,
+     "note": "弗拉明汉心脏研究自1948年长期随访人群，确立观察性队列研究范式。",
+     "deps": ["mathematics"]
+    }
+   ]
+  },
+  {
+   "name": "显微观测与样品制备",
+   "items": [
+    {
+     "id": "optical_microscope",
+     "name": "光学显微镜",
+     "en": "Optical microscope",
+     "year": 1590,
+     "note": "詹森父子制成早期复式显微镜，经列文虎克改进后开启微生物观测。",
+     "deps": ["optics"]
+    },
+    {
+     "id": "microtome",
+     "name": "切片机",
+     "en": "Microtome",
+     "year": 1770,
+     "note": "以刀片把组织切为薄片的装置，经19世纪改良后成为组织学必备仪器。",
+     "deps": ["optical_microscope"]
+    },
+    {
+     "id": "gram_staining",
+     "name": "革兰氏染色法",
+     "en": "Gram staining",
+     "year": 1884,
+     "note": "革兰以结晶紫与碘液区分两类细菌，成为细菌分类的基础染色方法。",
+     "deps": ["optical_microscope"]
+    },
+    {
+     "id": "agar_plate_culture",
+     "name": "琼脂平板培养法",
+     "en": "Agar plate culture",
+     "year": 1881,
+     "note": "科赫实验室用琼脂固化培养基在平板培养皿上分离细菌纯种。",
+     "deps": ["optical_microscope"]
+    },
+    {
+     "id": "ultramicroscope",
+     "name": "超显微镜",
+     "en": "Ultramicroscope",
+     "year": 1903,
+     "note": "西登托夫与齐格蒙第利用暗场侧向照明观察胶体粒子，分辨亚显微颗粒。",
+     "deps": ["optical_microscope"]
+    },
+    {
+     "id": "ultraviolet_microscope",
+     "name": "紫外显微镜",
+     "en": "Ultraviolet microscope",
+     "year": 1904,
+     "note": "科勒以紫外光作照明并配石英光学系统，利用短波提高分辨本领。",
+     "deps": ["optical_microscope"]
+    },
+    {
+     "id": "fluorescence_microscope",
+     "name": "荧光显微镜",
+     "en": "Fluorescence microscope",
+     "year": 1911,
+     "note": "雷谢特制成首台商品荧光显微镜，用激发光观察样品自身或标记荧光。",
+     "deps": ["optical_microscope"]
+    },
+    {
+     "id": "electron_microscope",
+     "name": "电子显微镜",
+     "en": "Electron microscope",
+     "year": 1931,
+     "note": "鲁斯卡与克诺尔用电子束成像获得远高于光镜的放大率，开创亚细胞观测。",
+     "deps": ["optical_microscope"]
+    },
+    {
+     "id": "phase_contrast_microscope",
+     "name": "相差显微镜",
+     "en": "Phase-contrast microscope",
+     "year": 1932,
+     "note": "泽尼克利用相位差把透明样品转为明暗对比，免染色观察活细胞。",
+     "deps": ["optical_microscope"]
+    },
+    {
+     "id": "scanning_electron_microscope",
+     "name": "扫描电子显微镜",
+     "en": "Scanning electron microscope",
+     "year": 1938,
+     "note": "冯·阿登纳以细电子束逐点扫描样品表面，获得大景深立体形貌像。",
+     "deps": ["electron_microscope"]
+    },
+    {
+     "id": "field_ion_microscope",
+     "name": "场离子显微镜",
+     "en": "Field ion microscope",
+     "year": 1951,
+     "note": "穆勒以强电场电离成像气体，首次在原子尺度直接观察金属表面。",
+     "deps": ["electron_microscope"]
+    },
+    {
+     "id": "electron_probe_microanalyzer",
+     "name": "电子探针显微分析",
+     "en": "Electron probe microanalyzer",
+     "year": 1951,
+     "note": "卡斯坦以聚焦电子束激发样品特征X射线，实现微区元素成分分析。",
+     "deps": ["electron_microscope"]
+    },
+    {
+     "id": "confocal_laser_microscope",
+     "name": "激光共聚焦显微镜",
+     "en": "Confocal laser scanning microscope",
+     "year": 1957,
+     "note": "明斯基以共焦点针孔抑制焦外光，配合激光扫描获取清晰光学断层像。",
+     "deps": ["optical_microscope"]
+    },
+    {
+     "id": "sted_microscopy",
+     "name": "受激发射损耗显微术",
+     "en": "STED microscopy",
+     "year": 2000,
+     "note": "黑尔以受激发射损耗原理突破衍射极限，实现纳米级荧光成像。",
+     "deps": ["confocal_laser_microscope"]
+    },
+    {
+     "id": "immunofluorescence",
+     "name": "免疫荧光技术",
+     "en": "Immunofluorescence",
+     "year": 1941,
+     "note": "库恩斯以荧光标记抗体定位组织内抗原，使显微镜观察走向分子识别。",
+     "deps": ["fluorescence_microscope"]
+    },
+    {
+     "id": "nomarski_dic_microscopy",
+     "name": "微分干涉显微术",
+     "en": "Differential interference contrast microscopy",
+     "year": 1952,
+     "note": "诺马尔斯基利用偏振光干涉产生浮雕感图像，适合观察未染色活体细胞。",
+     "deps": ["phase_contrast_microscope"]
+    },
+    {
+     "id": "cryo_electron_microscopy",
+     "name": "冷冻电子显微术",
+     "en": "Cryo-electron microscopy",
+     "year": 1984,
+     "note": "杜博歇以玻璃态冰包埋生物样品并在低温电镜成像，可解析大分子结构。",
+     "deps": ["electron_microscope"]
+    },
+    {
+     "id": "scanning_near_field_optical_microscopy",
+     "name": "扫描近场光学显微镜",
+     "en": "Scanning near-field optical microscope",
+     "year": 1984,
+     "note": "波尔以纳米探针收集近场光突破衍射极限，实现超分辨光学观察。",
+     "deps": ["optical_microscope"]
+    },
+    {
+     "id": "two_photon_microscopy",
+     "name": "双光子显微术",
+     "en": "Two-photon microscopy",
+     "year": 1990,
+     "note": "登克利用双光子激发实现深层组织成像，减少光损伤并提高穿透深度。",
+     "deps": ["confocal_laser_microscope"]
+    },
+    {
+     "id": "scanning_acoustic_microscope",
+     "name": "扫描声学显微镜",
+     "en": "Scanning acoustic microscope",
+     "year": 1973,
+     "note": "利蒙斯与阔特以高频声束扫描样品内部，非破坏性观察亚表面结构。",
+     "deps": ["electron_microscope"]
+    }
+   ]
+  },
+  {
+   "name": "化学与物理分析仪器",
+   "items": [
+    {
+     "id": "polarimeter",
+     "name": "旋光仪",
+     "en": "Polarimeter",
+     "year": 1815,
+     "note": "比奥利用偏振光旋转测量糖溶液浓度，用于测定旋光性物质。",
+     "deps": ["optics"]
+    },
+    {
+     "id": "spectroscope",
+     "name": "分光镜",
+     "en": "Spectroscope",
+     "year": 1859,
+     "note": "本生与基尔霍夫以棱镜分光研究元素光谱，开辟光谱化学分析。",
+     "deps": ["optics"]
+    },
+    {
+     "id": "abbe_refractometer",
+     "name": "阿贝折射仪",
+     "en": "Abbe refractometer",
+     "year": 1869,
+     "note": "阿贝利用临界角原理测定液体折射率，广泛用于成分与纯度检验。",
+     "deps": ["optics"]
+    },
+    {
+     "id": "column_chromatography",
+     "name": "柱色谱法",
+     "en": "Column chromatography",
+     "year": 1906,
+     "note": "茨维特用吸附柱分离植物色素，奠定色谱分离技术。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "mass_spectrometer",
+     "name": "质谱仪",
+     "en": "Mass spectrometer",
+     "year": 1912,
+     "note": "汤姆孙按质荷比分离离子，用于元素同位素与分子质量测定。",
+     "deps": ["electromagnetism"]
+    },
+    {
+     "id": "polarograph",
+     "name": "极谱仪",
+     "en": "Polarograph",
+     "year": 1922,
+     "note": "海洛夫斯基以滴汞电极记录电流-电压曲线，实现电化学定量分析。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "ultracentrifuge",
+     "name": "超速离心机",
+     "en": "Ultracentrifuge",
+     "year": 1925,
+     "note": "斯韦德贝里以高速离心分离大分子并测定其分子量，推动生化研究。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "raman_spectroscopy",
+     "name": "拉曼光谱法",
+     "en": "Raman spectroscopy",
+     "year": 1928,
+     "note": "拉曼发现散射光的频率移动反映分子振动，提供非破坏性化学指纹。",
+     "deps": ["spectroscope"]
+    },
+    {
+     "id": "ph_meter",
+     "name": "pH计",
+     "en": "pH meter",
+     "year": 1934,
+     "note": "贝克曼以玻璃电极配合电子放大电路测量酸碱度，成为实验室常规仪表。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "moving_boundary_electrophoresis",
+     "name": "界面电泳",
+     "en": "Moving-boundary electrophoresis",
+     "year": 1937,
+     "note": "蒂塞留斯在U形管中观察蛋白迁移界面，首度分离血清蛋白组分。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "uv_visible_spectrophotometer",
+     "name": "紫外可见分光光度计",
+     "en": "UV-visible spectrophotometer",
+     "year": 1941,
+     "note": "贝克曼DU型光度计以光电检测定量测定吸光度，普及吸收光谱分析。",
+     "deps": ["spectroscope", "electricity"]
+    },
+    {
+     "id": "infrared_spectrometer",
+     "name": "红外分光光度计",
+     "en": "Infrared spectrometer",
+     "year": 1944,
+     "note": "红外光谱按官能团特征吸收鉴定有机化合物，成为结构分析常用手段。",
+     "deps": ["spectroscope"]
+    },
+    {
+     "id": "paper_chromatography",
+     "name": "纸色谱法",
+     "en": "Paper chromatography",
+     "year": 1944,
+     "note": "马丁与辛格以滤纸作固定相分离氨基酸，开创分配色谱。",
+     "deps": ["column_chromatography"]
+    },
+    {
+     "id": "xray_fluorescence_spectrometry",
+     "name": "X射线荧光光谱法",
+     "en": "X-ray fluorescence spectrometry",
+     "year": 1948,
+     "note": "以X射线激发样品特征荧光作元素分析，无需制样即可测主量元素。",
+     "deps": ["xray_diffraction_method"]
+    },
+    {
+     "id": "gas_chromatography",
+     "name": "气相色谱法",
+     "en": "Gas chromatography",
+     "year": 1952,
+     "note": "詹姆斯与马丁用惰性载气携带挥发性样品过色谱柱，分离定量有机物。",
+     "deps": ["paper_chromatography"]
+    },
+    {
+     "id": "atomic_absorption_spectrometer",
+     "name": "原子吸收光谱仪",
+     "en": "Atomic absorption spectrometer",
+     "year": 1955,
+     "note": "沃尔什以元素空心阴极灯测基态原子吸光，灵敏测定痕量金属元素。",
+     "deps": ["spectroscope"]
+    },
+    {
+     "id": "gel_electrophoresis",
+     "name": "凝胶电泳",
+     "en": "Gel electrophoresis",
+     "year": 1955,
+     "note": "史密斯以淀粉凝胶为介质按分子大小分离蛋白，后扩展到核酸分析。",
+     "deps": ["moving_boundary_electrophoresis"]
+    },
+    {
+     "id": "electron_spin_resonance_spectrometer",
+     "name": "电子自旋共振谱仪",
+     "en": "Electron spin resonance spectrometer",
+     "year": 1944,
+     "note": "扎沃伊斯基观测到未成对电子的磁共振吸收，用于自由基与顺磁物研究。",
+     "deps": ["electromagnetism"]
+    },
+    {
+     "id": "nmr_spectrometer",
+     "name": "核磁共振谱仪",
+     "en": "NMR spectrometer",
+     "year": 1945,
+     "note": "布洛赫与珀塞尔独立观测核磁共振，后发展为化学结构测定工具。",
+     "deps": ["electromagnetism"]
+    },
+    {
+     "id": "differential_thermal_analysis",
+     "name": "差热分析",
+     "en": "Differential thermal analysis",
+     "year": 1899,
+     "note": "罗伯茨-奥斯汀记录样品与参比物的温差曲线，研究材料相变与反应。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "thermogravimetric_analysis",
+     "name": "热重分析",
+     "en": "Thermogravimetric analysis",
+     "year": 1915,
+     "note": "本田太郎用热天平连续记录加热失重，定量研究分解与氧化过程。",
+     "deps": ["differential_thermal_analysis"]
+    },
+    {
+     "id": "high_performance_liquid_chromatography",
+     "name": "高效液相色谱法",
+     "en": "High-performance liquid chromatography",
+     "year": 1969,
+     "note": "以高压泵与细粒径填料提升液相色谱效率，适用于难挥发样品分析。",
+     "deps": ["gas_chromatography"]
+    },
+    {
+     "id": "icp_oes",
+     "name": "电感耦合等离子体发射光谱法",
+     "en": "ICP optical emission spectrometry",
+     "year": 1974,
+     "note": "以射频等离子体激发样品发射光谱，可同时测定多种元素。",
+     "deps": ["spectroscope"]
+    },
+    {
+     "id": "thin_layer_chromatography",
+     "name": "薄层色谱法",
+     "en": "Thin-layer chromatography",
+     "year": 1938,
+     "note": "以玻璃板上的吸附薄层分离样品，经斯坦尔标准化后成为快速分析工具。",
+     "deps": ["column_chromatography"]
+    },
+    {
+     "id": "gel_filtration_chromatography",
+     "name": "凝胶过滤色谱法",
+     "en": "Gel filtration chromatography",
+     "year": 1959,
+     "note": "波拉斯与弗洛丁以葡聚糖凝胶按分子大小分离蛋白，用于脱盐与分级。",
+     "deps": ["column_chromatography"]
+    },
+    {
+     "id": "gc_ms",
+     "name": "气相色谱-质谱联用",
+     "en": "Gas chromatography-mass spectrometry",
+     "year": 1959,
+     "note": "戈克与麦克拉弗蒂把气相色谱与质谱在线连接，兼顾分离与鉴定能力。",
+     "deps": ["gas_chromatography", "mass_spectrometer"]
+    },
+    {
+     "id": "ft_nmr_spectroscopy",
+     "name": "傅里叶变换核磁共振",
+     "en": "Fourier-transform NMR",
+     "year": 1966,
+     "note": "恩斯特以脉冲激发加傅里叶变换取代慢速扫频，大幅提升核磁灵敏度。",
+     "deps": ["nmr_spectrometer"]
+    },
+    {
+     "id": "icp_ms",
+     "name": "电感耦合等离子体质谱",
+     "en": "ICP mass spectrometry",
+     "year": 1983,
+     "note": "以等离子体离子源配质谱检测，可测定痕量与超痕量元素同位素。",
+     "deps": ["icp_oes"]
+    },
+    {
+     "id": "ion_chromatography",
+     "name": "离子色谱法",
+     "en": "Ion chromatography",
+     "year": 1975,
+     "note": "斯莫尔以抑制柱降低背景电导，灵敏分离测定水样中的阴阳离子。",
+     "deps": ["high_performance_liquid_chromatography"]
+    }
+   ]
+  },
+  {
+   "name": "实验室器皿与通用装置",
+   "items": [
+    {
+     "id": "burette",
+     "name": "滴定管",
+     "en": "Burette",
+     "year": 1786,
+     "note": "德克鲁瓦齐耶制出带刻度的滴加量具，用于容量分析中的精确加液。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "bunsen_burner",
+     "name": "本生灯",
+     "en": "Bunsen burner",
+     "year": 1855,
+     "note": "本生与德萨加设计预混空气的燃气灯，产生高温无光焰供加热与灼烧。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "erlenmeyer_flask",
+     "name": "锥形瓶",
+     "en": "Erlenmeyer flask",
+     "year": 1861,
+     "note": "埃尔伦迈耶设计锥形玻璃瓶，便于摇动混匀与加热，是实验室通用容器。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "autoclave",
+     "name": "高压蒸汽灭菌器",
+     "en": "Autoclave",
+     "year": 1879,
+     "note": "尚贝兰制成实验室高压灭菌釜，以高温蒸汽彻底杀灭微生物。",
+     "deps": ["bunsen_burner"]
+    },
+    {
+     "id": "soxhlet_extractor",
+     "name": "索氏提取器",
+     "en": "Soxhlet extractor",
+     "year": 1879,
+     "note": "索克斯莱特设计回流萃取玻璃装置，可反复提取固体样品中脂类成分。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "kjeldahl_apparatus",
+     "name": "凯氏定氮装置",
+     "en": "Kjeldahl apparatus",
+     "year": 1883,
+     "note": "凯耶达尔以硫酸消化样品测定含氮量，成为蛋白质定量标准方法。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "petri_dish",
+     "name": "培养皿",
+     "en": "Petri dish",
+     "year": 1887,
+     "note": "佩特里设计带盖平底玻璃皿，配合琼脂培养基广泛用于微生物培养。",
+     "deps": ["agar_plate_culture"]
+    },
+    {
+     "id": "freeze_dryer",
+     "name": "冷冻干燥机",
+     "en": "Freeze dryer",
+     "year": 1906,
+     "note": "在真空中使冻结水分升华的干燥装置，用于保存热敏生物样品。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "magnetic_stirrer",
+     "name": "磁力搅拌器",
+     "en": "Magnetic stirrer",
+     "year": 1917,
+     "note": "罗辛格以旋转磁场驱动包覆磁棒搅拌液体，实现密闭容器内无接触搅拌。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "gooch_crucible",
+     "name": "古氏坩埚",
+     "en": "Gooch crucible",
+     "year": 1878,
+     "note": "古奇设计带滤层底板的瓷坩埚，配合抽滤用于沉淀称量分析。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "buchner_funnel",
+     "name": "布氏漏斗",
+     "en": "Büchner funnel",
+     "year": 1888,
+     "note": "布赫纳以带孔瓷板承托滤纸的漏斗，在减压下快速过滤大量晶体沉淀。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "volumetric_flask",
+     "name": "容量瓶",
+     "en": "Volumetric flask",
+     "year": 1830,
+     "note": "细颈梨形瓶身刻有容量标线，19世纪随定量分析普及成为定容标准器皿。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "test_tube",
+     "name": "试管",
+     "en": "Test tube",
+     "year": 1820,
+     "note": "一端封闭的小型玻璃管，19世纪成为加热少量试剂与观察反应的通用器皿。",
+     "deps": ["chemistry"]
+    }
+   ]
+  },
+  {
+   "name": "学术出版与文献体系",
+   "items": [
+    {
+     "id": "scientific_journal",
+     "name": "科学期刊",
+     "en": "Scientific journal",
+     "year": 1665,
+     "note": "《皇家学会哲学汇刊》创刊并定期发表研究成果，确立学术期刊形态。",
+     "deps": ["printing"]
+    },
+    {
+     "id": "peer_review",
+     "name": "同行评议",
+     "en": "Peer review",
+     "year": 1752,
+     "note": "皇家学会成立论文评审委员会把关来稿，审稿制度逐步制度化。",
+     "deps": ["scientific_journal"]
+    },
+    {
+     "id": "abstract_journal",
+     "name": "文摘期刊",
+     "en": "Abstract journal",
+     "year": 1830,
+     "note": "以定期摘录方式汇聚各刊最新成果，成为科研人员检索文献的工具。",
+     "deps": ["scientific_journal"]
+    },
+    {
+     "id": "scientific_congress",
+     "name": "国际学术会议",
+     "en": "International scientific congress",
+     "year": 1860,
+     "note": "1860年卡尔斯鲁厄化学会议首开国际学科大会先河，促进成果交流与术语统一。",
+     "deps": ["scientific_journal"]
+    },
+    {
+     "id": "chemical_abstracts",
+     "name": "化学文摘",
+     "en": "Chemical Abstracts",
+     "year": 1907,
+     "note": "美国化学会创办的化学文献摘要库，长期是化学信息检索的权威工具。",
+     "deps": ["abstract_journal"]
+    },
+    {
+     "id": "science_citation_index",
+     "name": "科学引文索引",
+     "en": "Science Citation Index",
+     "year": 1961,
+     "note": "加菲尔德建立按引用关系检索文献的索引，催生引文分析与期刊评价。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "preprint_server",
+     "name": "预印本服务器",
+     "en": "Preprint server",
+     "year": 1991,
+     "note": "arXiv使论文在同行评议前公开供学界下载，加速物理等领域成果传播。",
+     "deps": ["internet"]
+    },
+    {
+     "id": "digital_object_identifier",
+     "name": "数字对象标识符",
+     "en": "Digital object identifier",
+     "year": 2000,
+     "note": "为网络文献分配永久唯一编号并解析到资源，保障学术链接稳定。",
+     "deps": ["internet"]
+    },
+    {
+     "id": "open_access_publishing",
+     "name": "开放获取出版",
+     "en": "Open access publishing",
+     "year": 2002,
+     "note": "布达佩斯宣言倡导读者免费获取研究成果，推动学术出版模式转型。",
+     "deps": ["internet"]
+    },
+    {
+     "id": "journal_impact_factor",
+     "name": "期刊影响因子",
+     "en": "Journal impact factor",
+     "year": 1975,
+     "note": "以期刊前两年论文的平均被引次数度量影响力，广泛用于期刊评价。",
+     "deps": ["science_citation_index"]
+    },
+    {
+     "id": "preregistration",
+     "name": "临床试验预注册",
+     "en": "Clinical trial preregistration",
+     "year": 2000,
+     "note": "美国临床试验注册库要求试验开始前登记方案，防止结果选择性报告。",
+     "deps": ["randomized_controlled_trial"]
+    },
+    {
+     "id": "replication_study",
+     "name": "重复验证研究",
+     "en": "Replication study",
+     "year": 2015,
+     "note": "大规模重复实验报告成功率偏低，推动科研可重复性运动兴起。",
+     "deps": ["preregistration"]
+    }
+   ]
+  },
+  {
+   "name": "科研组织与制度",
+   "items": [
+    {
+     "id": "accademia_dei_lincei",
+     "name": "猞猁科学院",
+     "en": "Accademia dei Lincei",
+     "year": 1603,
+     "note": "罗马成立的早期自然科学学会，伽利略为成员，是近代科学院的雏形。"
+    },
+    {
+     "id": "accademia_del_cimento",
+     "name": "实验科学院",
+     "en": "Accademia del Cimento",
+     "year": 1657,
+     "note": "佛罗伦萨以实验为宗旨的科学院，推动仪器发明与协作实验。",
+     "deps": ["scientific_method"]
+    },
+    {
+     "id": "royal_society",
+     "name": "英国皇家学会",
+     "en": "Royal Society",
+     "year": 1660,
+     "note": "伦敦成立的最早常设科学学会之一，以实验哲学为宗旨出版学术期刊。",
+     "deps": ["scientific_method"]
+    },
+    {
+     "id": "academie_des_sciences",
+     "name": "法兰西科学院",
+     "en": "Académie des sciences",
+     "year": 1666,
+     "note": "路易十四设立的国家科学院，汇聚职业科学家评议与推进研究。",
+     "deps": ["scientific_method"]
+    },
+    {
+     "id": "royal_institution",
+     "name": "英国皇家研究院",
+     "en": "Royal Institution",
+     "year": 1799,
+     "note": "伦敦的科研与科普机构，法拉第等在此完成电化学与电磁学实验。",
+     "deps": ["scientific_method"]
+    },
+    {
+     "id": "humboldt_university",
+     "name": "洪堡大学模式",
+     "en": "Humboldt University model",
+     "year": 1810,
+     "note": "柏林大学把教学与科研统一，教授建实验室指导博士生，确立现代研究型大学。"
+    },
+    {
+     "id": "british_association",
+     "name": "英国科学促进会",
+     "en": "British Association for the Advancement of Science",
+     "year": 1831,
+     "note": "推动科学公众传播与学科年会，促进了单位制定与学科规范化。"
+    },
+    {
+     "id": "smithsonian_institution",
+     "name": "史密森尼学会",
+     "en": "Smithsonian Institution",
+     "year": 1846,
+     "note": "美国联邦资助的博物馆与研究机构群，主持多项基础科学研究。"
+    },
+    {
+     "id": "eth_zurich",
+     "name": "苏黎世联邦理工学院",
+     "en": "ETH Zurich",
+     "year": 1855,
+     "note": "以理工教育与研究并重著称的欧洲高校，培养出众多物理化学家。",
+     "deps": ["humboldt_university"]
+    },
+    {
+     "id": "national_academy_of_sciences",
+     "name": "美国国家科学院",
+     "en": "U.S. National Academy of Sciences",
+     "year": 1863,
+     "note": "林肯签署法案成立的科学顾问机构，为政府提供科技政策咨询。"
+    },
+    {
+     "id": "cavendish_laboratory",
+     "name": "卡文迪许实验室",
+     "en": "Cavendish Laboratory",
+     "year": 1874,
+     "note": "剑桥大学建立的近代物理实验室，麦克斯韦为首任主任。",
+     "deps": ["humboldt_university"]
+    },
+    {
+     "id": "graduate_school",
+     "name": "研究生院制度",
+     "en": "Graduate school",
+     "year": 1876,
+     "note": "约翰斯·霍普金斯大学引入德国式博士培养，确立以研究为主的学位教育。",
+     "deps": ["humboldt_university"]
+    },
+    {
+     "id": "pasteur_institute",
+     "name": "巴斯德研究所",
+     "en": "Pasteur Institute",
+     "year": 1887,
+     "note": "以基础微生物学与疫苗研发为宗旨的独立研究机构，各国相继仿建。",
+     "deps": ["scientific_method"]
+    },
+    {
+     "id": "corporate_research_laboratory",
+     "name": "企业工业研究实验室",
+     "en": "Corporate research laboratory",
+     "year": 1900,
+     "note": "通用电气设立系统化工业研究实验室，企业开始大规模投入基础研究。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "kaiser_wilhelm_society",
+     "name": "威廉皇帝学会",
+     "en": "Kaiser Wilhelm Society",
+     "year": 1911,
+     "note": "德国设立的专业化基础研究机构群，二战后改组为马普学会。"
+    },
+    {
+     "id": "iupac",
+     "name": "国际纯粹与应用化学联合会",
+     "en": "IUPAC",
+     "year": 1919,
+     "note": "国际化学界组织，负责元素命名与化学术语的标准化。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "bell_labs",
+     "name": "贝尔实验室",
+     "en": "Bell Labs",
+     "year": 1925,
+     "note": "美国电话电报公司设立的大型工业研究机构，产出晶体管等重大成果。",
+     "deps": ["corporate_research_laboratory"]
+    },
+    {
+     "id": "icsu",
+     "name": "国际科学理事会",
+     "en": "International Council for Science",
+     "year": 1931,
+     "note": "协调国际学科联合会开展合作研究，组织国际地球物理年等计划。"
+    },
+    {
+     "id": "cnrs",
+     "name": "法国国家科研中心",
+     "en": "CNRS",
+     "year": 1939,
+     "note": "法国最大政府科研机构，以专职研究员制支撑多学科基础研究。"
+    },
+    {
+     "id": "national_laboratory_system",
+     "name": "国家实验室体系",
+     "en": "National laboratory system",
+     "year": 1946,
+     "note": "美国战后把战时实验室转为国家级多学科研究机构，隶属能源部门管理。",
+     "deps": ["corporate_research_laboratory"]
+    },
+    {
+     "id": "national_science_foundation",
+     "name": "美国国家科学基金会",
+     "en": "National Science Foundation",
+     "year": 1950,
+     "note": "以同行评议资助竞争性基础研究的联邦机构，塑造现代科研资助模式。"
+    },
+    {
+     "id": "cern",
+     "name": "欧洲核子研究中心",
+     "en": "CERN",
+     "year": 1954,
+     "note": "欧洲多国共建的高能物理实验室，运营大型粒子对撞机等国际大科学设施。"
+    },
+    {
+     "id": "nih_research",
+     "name": "国立卫生研究院",
+     "en": "National Institutes of Health",
+     "year": 1887,
+     "note": "美国联邦生物医学研究机构，由卫生实验室扩展为资助与研究的综合体。"
+    },
+    {
+     "id": "csiro",
+     "name": "联邦科学与工业研究组织",
+     "en": "CSIRO",
+     "year": 1916,
+     "note": "澳大利亚政府设立的工业与农业应用研究机构，促进国家科研产业化。"
+    },
+    {
+     "id": "marine_research_lab",
+     "name": "海洋生物实验室",
+     "en": "Marine Biological Laboratory",
+     "year": 1888,
+     "note": "伍兹霍尔海洋生物实验室以夏季研究课程闻名，推动实验生物学发展。"
+    }
+   ]
+  },
+  {
+   "name": "物理实验装置与研究设施",
+   "items": [
+    {
+     "id": "vacuum_pump",
+     "name": "真空泵",
+     "en": "Vacuum pump",
+     "year": 1650,
+     "note": "居里克制成活塞式抽气泵，马德堡半球实验证明真空与大气压存在。"
+    },
+    {
+     "id": "electrostatic_generator",
+     "name": "静电起电机",
+     "en": "Electrostatic generator",
+     "year": 1663,
+     "note": "居里克以硫磺球摩擦起电，其后圆盘与莱顿瓶结合用于静电实验。"
+    },
+    {
+     "id": "wind_tunnel",
+     "name": "风洞",
+     "en": "Wind tunnel",
+     "year": 1871,
+     "note": "韦纳姆建成首座风洞，在受控气流中研究翼型与物体气动特性。",
+     "deps": ["physics"]
+    },
+    {
+     "id": "cloud_chamber",
+     "name": "云室",
+     "en": "Cloud chamber",
+     "year": 1911,
+     "note": "威尔逊以过饱和蒸汽凝结显示带电粒子径迹，用于探测射线与基本粒子。",
+     "deps": ["physics"]
+    },
+    {
+     "id": "cyclotron",
+     "name": "回旋加速器",
+     "en": "Cyclotron",
+     "year": 1931,
+     "note": "劳伦斯以交变电场反复加速粒子，回旋加速器成为核物理研究基石。",
+     "deps": ["electromagnetism"]
+    },
+    {
+     "id": "synchrotron",
+     "name": "同步加速器",
+     "en": "Synchrotron",
+     "year": 1947,
+     "note": "以同步磁场与高频电场加速带电粒子至接近光速，用于高能物理实验。",
+     "deps": ["cyclotron"]
+    },
+    {
+     "id": "bubble_chamber",
+     "name": "气泡室",
+     "en": "Bubble chamber",
+     "year": 1952,
+     "note": "格拉泽以过热液体中的气泡显示粒子径迹，曾大量发现新粒子。",
+     "deps": ["cloud_chamber"]
+    }
+   ]
+  },
+  {
+   "name": "生物研究材料与生物资源库",
+   "items": [
+    {
+     "id": "inbred_mouse_strains",
+     "name": "近交系小鼠",
+     "en": "Inbred mouse strains",
+     "year": 1909,
+     "note": "利特尔培育出遗传一致的近交品系，使小鼠成为标准实验动物。"
+    },
+    {
+     "id": "drosophila_model",
+     "name": "果蝇模式生物",
+     "en": "Drosophila model organism",
+     "year": 1910,
+     "note": "摩尔根以果蝇研究连锁遗传，确立模式生物在遗传学中的核心地位。"
+    },
+    {
+     "id": "cell_culture",
+     "name": "细胞培养",
+     "en": "Cell culture",
+     "year": 1907,
+     "note": "哈里森体外培养神经细胞成功，开启动物细胞离体培养技术。"
+    },
+    {
+     "id": "culture_collection",
+     "name": "菌种保藏中心",
+     "en": "Microbial culture collection",
+     "year": 1925,
+     "note": "美国菌种保藏中心等机构系统收集保藏标准菌株，支撑科研与检验。",
+     "deps": ["agar_plate_culture"]
+    },
+    {
+     "id": "mouse_repository",
+     "name": "实验小鼠资源中心",
+     "en": "Mouse repository",
+     "year": 1929,
+     "note": "杰克逊实验室建立近交系小鼠资源库，集中保存与供应遗传标准品系。",
+     "deps": ["inbred_mouse_strains"]
+    },
+    {
+     "id": "botanical_garden",
+     "name": "植物园",
+     "en": "Botanical garden",
+     "year": 1545,
+     "note": "帕多瓦植物园作为最早的科学植物园，供药用植物分类与教学研究。"
+    },
+    {
+     "id": "natural_history_museum",
+     "name": "自然历史博物馆",
+     "en": "Natural history museum",
+     "year": 1683,
+     "note": "牛津阿什莫林博物馆开放收藏，标本馆藏成为分类学研究的基础资源。"
+    },
+    {
+     "id": "international_polar_year",
+     "name": "国际极年",
+     "en": "International Polar Year",
+     "year": 1882,
+     "note": "多国联合开展极地气象与地磁观测，是早期大规模国际科研合作。"
+    },
+    {
+     "id": "world_data_center",
+     "name": "世界数据中心",
+     "en": "World Data Center",
+     "year": 1957,
+     "note": "国际地球物理年期间设立的数据汇集机构，规范科学数据交换共享。",
+     "deps": ["icsu"]
+    },
+    {
+     "id": "cleanroom",
+     "name": "洁净室",
+     "en": "Cleanroom",
+     "year": 1961,
+     "note": "惠特菲尔德以层流过滤空气控制尘埃，为精密实验与制造提供超净环境。",
+     "deps": ["semiconductors"]
+    }
+   ]
+  }
+ ]
+}

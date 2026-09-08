@@ -1,0 +1,1382 @@
+{
+ "cat": "energy",
+ "catName": "能源",
+ "sub": "grid",
+ "subName": "输配电与电网",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "power_grid",
+  "electricity",
+  "electromagnetism",
+  "generator",
+  "semiconductors",
+  "computer",
+  "internet",
+  "steel_frame",
+  "plastics",
+  "optics"
+ ],
+ "families": [
+  {
+   "name": "架空线路与电力电缆",
+   "items": [
+    {
+     "id": "overhead_power_line",
+     "name": "架空输电线路",
+     "en": "Overhead power line",
+     "year": 1882,
+     "note": "以杆塔与绝缘子悬吊裸导线输送电能的线路型式，至今仍是长距离输电的主流通道。",
+     "deps": [
+      "electricity",
+      "power_grid"
+     ]
+    },
+    {
+     "id": "underground_power_cable",
+     "name": "地下电力电缆",
+     "en": "Underground power cable",
+     "year": 1882,
+     "note": "敷设于地下管道或直埋的绝缘电缆，用于城市街区、隧道与跨海输电场合。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "transmission_tower",
+     "name": "输电铁塔",
+     "en": "Transmission tower",
+     "year": 1891,
+     "note": "承载高压导线的格构式钢塔，将导线提升至安全高度并支撑张力。",
+     "deps": [
+      "overhead_power_line",
+      "steel_frame"
+     ]
+    },
+    {
+     "id": "pin_insulator",
+     "name": "针式绝缘子",
+     "en": "Pin insulator",
+     "year": 1892,
+     "note": "直立于横担上支承导线的瓷质绝缘子，广泛用于早期配电与低压线路。",
+     "deps": [
+      "overhead_power_line"
+     ]
+    },
+    {
+     "id": "aluminum_conductor",
+     "name": "铝导线",
+     "en": "Aluminium conductor",
+     "year": 1895,
+     "note": "以铝代铜作输电导线的尝试，减轻自重并降低成本，后成为架空线主流材料。",
+     "deps": [
+      "overhead_power_line"
+     ]
+    },
+    {
+     "id": "suspension_insulator",
+     "name": "悬式绝缘子",
+     "en": "Suspension insulator",
+     "year": 1900,
+     "note": "以盘形瓷件串联成串吊挂导线，片数随电压等级增加，适配超高压线路。",
+     "deps": [
+      "overhead_power_line"
+     ]
+    },
+    {
+     "id": "post_insulator",
+     "name": "支柱绝缘子",
+     "en": "Post insulator",
+     "year": 1905,
+     "note": "直立支承母线、隔离开关等设备的刚性绝缘件，用于变电站户内外配电装置。",
+     "deps": [
+      "overhead_power_line"
+     ]
+    },
+    {
+     "id": "acsr_conductor",
+     "name": "钢芯铝绞线",
+     "en": "ACSR conductor",
+     "year": 1908,
+     "note": "钢芯承受张力、铝绞导电的复合导线，兼顾强度与导电性，为架空线标准选择。",
+     "deps": [
+      "aluminum_conductor"
+     ]
+    },
+    {
+     "id": "overhead_ground_wire",
+     "name": "架空避雷线",
+     "en": "Overhead ground wire",
+     "year": 1910,
+     "note": "架设于导线之上的接地金属线，拦截直击雷并兼作短路电流泄放通路。",
+     "deps": [
+      "overhead_power_line"
+     ]
+    },
+    {
+     "id": "oil_filled_cable",
+     "name": "充油电缆",
+     "en": "Oil-filled cable",
+     "year": 1917,
+     "note": "以低粘度绝缘油填充并加压的纸绝缘电缆，曾长期承担超高压地下输电。",
+     "deps": [
+      "underground_power_cable"
+     ]
+    },
+    {
+     "id": "line_vibration_damper",
+     "name": "输电线防振锤",
+     "en": "Stockbridge vibration damper",
+     "year": 1925,
+     "note": "悬挂于导线上的配重阻尼器，抑制微风引起的周期性舞动疲劳断线。",
+     "deps": [
+      "acsr_conductor"
+     ]
+    },
+    {
+     "id": "bundled_conductor",
+     "name": "分裂导线",
+     "en": "Bundled conductor",
+     "year": 1952,
+     "note": "每相以多根子导线按间距排列，降低电晕损耗与感抗，支撑超高压输送容量。",
+     "deps": [
+      "acsr_conductor"
+     ]
+    },
+    {
+     "id": "submarine_power_cable",
+     "name": "海底输电电缆",
+     "en": "Submarine power cable",
+     "year": 1961,
+     "note": "铠装密封的跨海电缆，用于岛屿供电与海峡两岸电网互联。",
+     "deps": [
+      "underground_power_cable"
+     ]
+    },
+    {
+     "id": "xlpe_power_cable",
+     "name": "交联聚乙烯电力电缆",
+     "en": "XLPE power cable",
+     "year": 1969,
+     "note": "以交联聚乙烯为绝缘的干式电缆，制造简便，逐步取代充油电缆进入高压领域。",
+     "deps": [
+      "underground_power_cable",
+      "plastics"
+     ]
+    },
+    {
+     "id": "gas_insulated_line",
+     "name": "气体绝缘输电线路",
+     "en": "Gas-insulated line",
+     "year": 1975,
+     "note": "以六氟化硫气体绝缘的封闭管道输电，输送容量大，用于空间受限走廊。",
+     "deps": [
+      "underground_power_cable"
+     ]
+    },
+    {
+     "id": "composite_insulator",
+     "name": "复合绝缘子",
+     "en": "Composite insulator",
+     "year": 1980,
+     "note": "以硅橡胶伞裙包覆玻璃钢芯棒的绝缘子，防污闪性能好、质量轻。",
+     "deps": [
+      "suspension_insulator"
+     ]
+    },
+    {
+     "id": "optical_ground_wire",
+     "name": "光纤复合架空地线",
+     "en": "Optical ground wire (OPGW)",
+     "year": 1983,
+     "note": "把通信光缆嵌入避雷线中，实现电力线路光纤通信与防雷的一体化。",
+     "deps": [
+      "overhead_ground_wire",
+      "optics"
+     ]
+    },
+    {
+     "id": "hts_power_cable",
+     "name": "高温超导输电电缆",
+     "en": "High-temperature superconducting cable",
+     "year": 2006,
+     "note": "液氮温区超导材料承载电流的电缆，损耗低、占地小，已小范围接入城市电网。",
+     "deps": [
+      "underground_power_cable"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "变压器与变电站设备",
+   "items": [
+    {
+     "id": "power_transformer",
+     "name": "电力变压器",
+     "en": "Power transformer",
+     "year": 1885,
+     "note": "利用电磁感应改变交流电压等级，是交流输配电系统升压与降压的核心设备。",
+     "deps": [
+      "electricity",
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "substation",
+     "name": "变电站",
+     "en": "Electrical substation",
+     "year": 1886,
+     "note": "集中安装变压器、开关与母线以变换电压、汇集和分配电能的枢纽站。",
+     "deps": [
+      "power_transformer"
+     ]
+    },
+    {
+     "id": "distribution_transformer",
+     "name": "配电变压器",
+     "en": "Distribution transformer",
+     "year": 1890,
+     "note": "把中压配电电压降至用户低压的变压器，数量庞大、接近用电负荷。",
+     "deps": [
+      "power_transformer"
+     ]
+    },
+    {
+     "id": "three_phase_transformer",
+     "name": "三相变压器",
+     "en": "Three-phase transformer",
+     "year": 1891,
+     "note": "三相共用一个铁心的变压器，省材高效，成为交流电力系统的标准配置。",
+     "deps": [
+      "power_transformer"
+     ]
+    },
+    {
+     "id": "oil_immersed_transformer",
+     "name": "油浸式变压器",
+     "en": "Oil-immersed transformer",
+     "year": 1892,
+     "note": "以变压器油兼作绝缘与冷却介质的变压器结构，长期主导大容量输变电。",
+     "deps": [
+      "power_transformer"
+     ]
+    },
+    {
+     "id": "instrument_transformer",
+     "name": "互感器",
+     "en": "Instrument transformer",
+     "year": 1893,
+     "note": "按比例把高电压大电流变为仪表与继电器可用的低值，保证测量与保护安全。",
+     "deps": [
+      "power_transformer"
+     ]
+    },
+    {
+     "id": "station_busbar",
+     "name": "母线",
+     "en": "Busbar",
+     "year": 1895,
+     "note": "变电站内汇集与分配电流的导电排，各回进出线经开关接于其上。",
+     "deps": [
+      "substation"
+     ]
+    },
+    {
+     "id": "autotransformer",
+     "name": "自耦变压器",
+     "en": "Autotransformer",
+     "year": 1900,
+     "note": "高低压共用一个绕组的变压器，损耗低，适用于电压变化比不大的场合。",
+     "deps": [
+      "power_transformer"
+     ]
+    },
+    {
+     "id": "high_voltage_bushing",
+     "name": "高压套管",
+     "en": "High-voltage bushing",
+     "year": 1900,
+     "note": "引导导体穿过变压器外壳与墙体并保持绝缘的部件，是高压设备的关键外绝缘。",
+     "deps": [
+      "power_transformer"
+     ]
+    },
+    {
+     "id": "pole_mounted_transformer",
+     "name": "柱上变压器",
+     "en": "Pole-mounted transformer",
+     "year": 1900,
+     "note": "安装在电杆上的小型配电变压器，直接为街区和乡村低压用户供电。",
+     "deps": [
+      "distribution_transformer"
+     ]
+    },
+    {
+     "id": "on_load_tap_changer",
+     "name": "有载分接开关",
+     "en": "On-load tap changer",
+     "year": 1926,
+     "note": "变压器带负荷调节抽头的装置，用于维持电压水平而无须停电。",
+     "deps": [
+      "power_transformer"
+     ]
+    },
+    {
+     "id": "phase_shifting_transformer",
+     "name": "移相变压器",
+     "en": "Phase-shifting transformer",
+     "year": 1930,
+     "note": "通过改变电压相角控制环网潮流的特种变压器，可主动分配线路输送功率。",
+     "deps": [
+      "power_transformer"
+     ]
+    },
+    {
+     "id": "series_reactor",
+     "name": "串联电抗器",
+     "en": "Series reactor",
+     "year": 1940,
+     "note": "串联于电路中的铁芯电抗器，限制短路电流与电容器合闸涌流。",
+     "deps": [
+      "power_transformer"
+     ]
+    },
+    {
+     "id": "capacitor_voltage_transformer",
+     "name": "电容式电压互感器",
+     "en": "Capacitor voltage transformer",
+     "year": 1952,
+     "note": "经电容分压再降压的电压互感器，兼作电力线载波耦合通道，用于超高压站。",
+     "deps": [
+      "instrument_transformer"
+     ]
+    },
+    {
+     "id": "step_voltage_regulator",
+     "name": "线路自动调压器",
+     "en": "Step voltage regulator",
+     "year": 1935,
+     "note": "串联于配电线路的有载调压装置，自动补偿电压降以维持末端电压水平。",
+     "deps": [
+      "distribution_transformer"
+     ]
+    },
+    {
+     "id": "dry_type_transformer",
+     "name": "干式变压器",
+     "en": "Dry-type transformer",
+     "year": 1965,
+     "note": "以环氧树脂浇注或空气绝缘的无油变压器，安全难燃，用于户内与地铁配电。",
+     "deps": [
+      "power_transformer"
+     ]
+    },
+    {
+     "id": "amorphous_core_transformer",
+     "name": "非晶合金变压器",
+     "en": "Amorphous metal transformer",
+     "year": 1982,
+     "note": "以非晶合金带材作铁心的配电变压器，空载损耗大幅低于硅钢变压器。",
+     "deps": [
+      "power_transformer"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "高压开关、继电保护与无功补偿",
+   "items": [
+    {
+     "id": "power_fuse",
+     "name": "电力熔断器",
+     "en": "Power fuse",
+     "year": 1880,
+     "note": "以熔体过流熔化切断电路的简单保护电器，用于短路与过载防护。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "disconnector",
+     "name": "隔离开关",
+     "en": "Disconnecting switch",
+     "year": 1890,
+     "note": "无灭弧能力的隔离电器，在检修时形成明显断口以保证安全。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "oil_circuit_breaker",
+     "name": "油断路器",
+     "en": "Oil circuit breaker",
+     "year": 1900,
+     "note": "以变压器油熄灭电弧的高压断路器，开断容量大，曾长期主导高压电网。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "shunt_capacitor_bank",
+     "name": "并联电容器组",
+     "en": "Shunt capacitor bank",
+     "year": 1914,
+     "note": "成组并入电网的无功补偿设备，提高功率因数并支撑系统电压。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "drop_out_fuse",
+     "name": "跌落式熔断器",
+     "en": "Drop-out fuse",
+     "year": 1915,
+     "note": "熔断后载熔件自动跌落形成断口的户外保护电器，广泛用于配电变压器保护。",
+     "deps": [
+      "power_fuse"
+     ]
+    },
+    {
+     "id": "arc_suppression_coil",
+     "name": "消弧线圈",
+     "en": "Arc suppression coil",
+     "year": 1916,
+     "note": "接于变压器中性点的可调电感，补偿单相接地电容电流以自动熄弧。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "shunt_reactor",
+     "name": "并联电抗器",
+     "en": "Shunt reactor",
+     "year": 1920,
+     "note": "并联于线路或母线的电感，吸收长线充电无功，抑制工频过电压。",
+     "deps": [
+      "power_transformer"
+     ]
+    },
+    {
+     "id": "miniature_circuit_breaker",
+     "name": "微型断路器",
+     "en": "Miniature circuit breaker",
+     "year": 1924,
+     "note": "热磁脱扣的小型断路器，装于用户配电箱，兼供过载与短路保护。",
+     "deps": [
+      "power_fuse"
+     ]
+    },
+    {
+     "id": "valve_type_arrester",
+     "name": "阀式避雷器",
+     "en": "Valve-type arrester",
+     "year": 1928,
+     "note": "串联间隙与碳化硅阀片构成的过电压保护器，泄放雷电波后自行断弧。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "automatic_recloser",
+     "name": "自动重合闸装置",
+     "en": "Automatic reclosing",
+     "year": 1930,
+     "note": "线路跳闸后延时自动重合，以恢复多数瞬时性故障造成的停电。",
+     "deps": [
+      "oil_circuit_breaker"
+     ]
+    },
+    {
+     "id": "synchronous_condenser",
+     "name": "调相机",
+     "en": "Synchronous condenser",
+     "year": 1935,
+     "note": "不带原动机运行的同步电机，通过调节励磁向电网提供或吸收无功。",
+     "deps": [
+      "generator"
+     ]
+    },
+    {
+     "id": "air_blast_circuit_breaker",
+     "name": "压缩空气断路器",
+     "en": "Air-blast circuit breaker",
+     "year": 1940,
+     "note": "以高压空气吹弧的断路器，开断能力强，曾用于超高压电网。",
+     "deps": [
+      "oil_circuit_breaker"
+     ]
+    },
+    {
+     "id": "molded_case_circuit_breaker",
+     "name": "塑壳断路器",
+     "en": "Molded case circuit breaker",
+     "year": 1950,
+     "note": "热磁与电子脱扣集成的低压配电断路器，用于成套开关柜与馈线保护。",
+     "deps": [
+      "miniature_circuit_breaker"
+     ]
+    },
+    {
+     "id": "high_voltage_load_switch",
+     "name": "高压负荷开关",
+     "en": "High-voltage load switch",
+     "year": 1950,
+     "note": "能开断正常负荷电流但不能开断短路电流的开关，常与熔断器组合保护。",
+     "deps": [
+      "oil_circuit_breaker"
+     ]
+    },
+    {
+     "id": "sf6_circuit_breaker",
+     "name": "六氟化硫断路器",
+     "en": "SF6 circuit breaker",
+     "year": 1960,
+     "note": "以六氟化硫气体为灭弧与绝缘介质的断路器，灭弧能力强、结构紧凑。",
+     "deps": [
+      "air_blast_circuit_breaker"
+     ]
+    },
+    {
+     "id": "residual_current_device",
+     "name": "剩余电流保护器",
+     "en": "Residual current device",
+     "year": 1961,
+     "note": "检测漏电不平衡电流并在危险前跳闸的装置，显著降低触电伤亡。",
+     "deps": [
+      "power_fuse"
+     ]
+    },
+    {
+     "id": "vacuum_circuit_breaker",
+     "name": "真空断路器",
+     "en": "Vacuum circuit breaker",
+     "year": 1963,
+     "note": "在真空灭弧室内开断电流的中压断路器，寿命长、免维护，主导中压配电。",
+     "deps": [
+      "oil_circuit_breaker"
+     ]
+    },
+    {
+     "id": "generator_circuit_breaker",
+     "name": "发电机断路器",
+     "en": "Generator circuit breaker",
+     "year": 1965,
+     "note": "安装于大型发电机组出口的大容量断路器，开断短路电流与失步电流。",
+     "deps": [
+      "oil_circuit_breaker"
+     ]
+    },
+    {
+     "id": "gas_insulated_switchgear",
+     "name": "气体绝缘开关设备",
+     "en": "Gas-insulated switchgear",
+     "year": 1968,
+     "note": "把母线、隔离开关与断路器整体封入六氟化硫气室的组合电器，占地极小。",
+     "deps": [
+      "sf6_circuit_breaker"
+     ]
+    },
+    {
+     "id": "ring_main_unit",
+     "name": "环网柜",
+     "en": "Ring main unit",
+     "year": 1975,
+     "note": "用于环网供电的负荷开关柜组，支持电缆环网的分段与联络操作。",
+     "deps": [
+      "vacuum_circuit_breaker"
+     ]
+    },
+    {
+     "id": "zinc_oxide_arrester",
+     "name": "氧化锌避雷器",
+     "en": "Zinc oxide arrester",
+     "year": 1975,
+     "note": "无间隙氧化锌阀片构成的避雷器，残压低、响应快，全面替代阀式避雷器。",
+     "deps": [
+      "valve_type_arrester"
+     ]
+    },
+    {
+     "id": "protective_relaying",
+     "name": "继电保护装置",
+     "en": "Protective relay",
+     "year": 1901,
+     "note": "监测电气量变化并在故障时自动切除设备的成套装置，是电网安全第一道防线。",
+     "deps": [
+      "oil_circuit_breaker",
+      "electricity"
+     ]
+    },
+    {
+     "id": "overcurrent_protection",
+     "name": "过电流保护",
+     "en": "Overcurrent protection",
+     "year": 1910,
+     "note": "以电流增大为判据的时限保护，简单可靠，广泛用于配电网与设备后备保护。",
+     "deps": [
+      "protective_relaying"
+     ]
+    },
+    {
+     "id": "distance_protection",
+     "name": "距离保护",
+     "en": "Distance protection",
+     "year": 1923,
+     "note": "测量阻抗判断故障距离的线路保护，可在高压环网中实现选择性与速动性。",
+     "deps": [
+      "protective_relaying"
+     ]
+    },
+    {
+     "id": "differential_protection",
+     "name": "差动保护",
+     "en": "Differential protection",
+     "year": 1925,
+     "note": "比较设备两端电流差异的纵联保护，瞬时区分内部与外部故障，用于主设备。",
+     "deps": [
+      "protective_relaying"
+     ]
+    },
+    {
+     "id": "directional_pilot_protection",
+     "name": "方向纵联保护",
+     "en": "Directional pilot protection",
+     "year": 1950,
+     "note": "借助通信通道比较线路两端故障方向的保护，实现全线速动切除故障。",
+     "deps": [
+      "distance_protection"
+     ]
+    },
+    {
+     "id": "underfrequency_load_shedding",
+     "name": "低频减载装置",
+     "en": "Under-frequency load shedding",
+     "year": 1965,
+     "note": "系统频率跌落时按轮切除负荷的自动装置，防止功率缺额导致电网崩溃。",
+     "deps": [
+      "protective_relaying"
+     ]
+    },
+    {
+     "id": "busbar_differential_protection",
+     "name": "母线差动保护",
+     "en": "Busbar differential protection",
+     "year": 1970,
+     "note": "比较母线上各支路电流之和的保护，瞬时判别母线区内故障并快速跳闸。",
+     "deps": [
+      "differential_protection"
+     ]
+    },
+    {
+     "id": "fault_recorder",
+     "name": "故障录波装置",
+     "en": "Fault recorder",
+     "year": 1970,
+     "note": "记录故障前后电压电流波形的装置，用于事故分析与保护动作评价。",
+     "deps": [
+      "protective_relaying"
+     ]
+    },
+    {
+     "id": "microprocessor_based_protection",
+     "name": "微机继电保护",
+     "en": "Microprocessor-based protection",
+     "year": 1984,
+     "note": "以数字计算机实现采样、判据与自检的继电保护，精度高且便于联网。",
+     "deps": [
+      "protective_relaying",
+      "computer"
+     ]
+    },
+    {
+     "id": "traveling_wave_protection",
+     "name": "行波保护",
+     "en": "Traveling wave protection",
+     "year": 1990,
+     "note": "利用故障行波到达时间定位与判别故障的超高速保护，用于特高压长线路。",
+     "deps": [
+      "protective_relaying"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "直流输电与柔性交流输电装备",
+   "items": [
+    {
+     "id": "mercury_arc_valve",
+     "name": "汞弧阀",
+     "en": "Mercury arc valve",
+     "year": 1929,
+     "note": "拉姆研制的可控高压汞弧整流阀，为高压直流输电奠定了换流基础。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "series_capacitor_compensation",
+     "name": "串联电容补偿",
+     "en": "Series capacitor compensation",
+     "year": 1950,
+     "note": "在长线上串联电容器抵消部分感抗，缩短电气距离，提高输送能力与稳定裕度。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "hvdc_transmission",
+     "name": "高压直流输电",
+     "en": "HVDC transmission",
+     "year": 1954,
+     "note": "以直流实现大容量远距离输电与异步联网，瑞典哥特兰工程为其商业开端。",
+     "deps": [
+      "mercury_arc_valve"
+     ]
+    },
+    {
+     "id": "hvdc_smoothing_reactor",
+     "name": "平波电抗器",
+     "en": "HVDC smoothing reactor",
+     "year": 1955,
+     "note": "串联于直流回路的电感，滤除直流谐波、限制故障电流上升率。",
+     "deps": [
+      "hvdc_transmission"
+     ]
+    },
+    {
+     "id": "thyristor_converter_valve",
+     "name": "晶闸管换流阀",
+     "en": "Thyristor converter valve",
+     "year": 1972,
+     "note": "以高压晶闸管串联组成换流阀，取代汞弧阀成为直流输电的开关器件。",
+     "deps": [
+      "hvdc_transmission",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "static_var_compensator",
+     "name": "静止无功补偿装置",
+     "en": "Static var compensator",
+     "year": 1978,
+     "note": "晶闸管投切电容器与电抗器的动态无功补偿，快速调节电压与稳定系统。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "active_power_filter",
+     "name": "有源电力滤波器",
+     "en": "Active power filter",
+     "year": 1987,
+     "note": "以电力电子变换器主动注入补偿电流，动态抑制谐波与无功波动。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "multiterminal_hvdc",
+     "name": "多端直流输电",
+     "en": "Multi-terminal HVDC",
+     "year": 1990,
+     "note": "三个及以上换流站构成的直流输电网络，实现多点送受电与潮流互济。",
+     "deps": [
+      "hvdc_transmission"
+     ]
+    },
+    {
+     "id": "thyristor_controlled_series_cap",
+     "name": "晶闸管可控串联补偿",
+     "en": "TCSC",
+     "year": 1992,
+     "note": "以晶闸管旁路调节串补电抗的柔性输电装置，可连续控制线路潮流。",
+     "deps": [
+      "series_capacitor_compensation",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "statcom",
+     "name": "静止同步补偿器",
+     "en": "STATCOM",
+     "year": 1996,
+     "note": "以电压源换流器实现的无功补偿装置，调节范围大、动态响应快。",
+     "deps": [
+      "static_var_compensator",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "dynamic_voltage_restorer",
+     "name": "动态电压恢复器",
+     "en": "Dynamic voltage restorer",
+     "year": 1997,
+     "note": "串联注入补偿电压的装置，抑制电压跌落与暂升，保障敏感负荷电能质量。",
+     "deps": [
+      "static_var_compensator",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "upfc",
+     "name": "统一潮流控制器",
+     "en": "Unified power flow controller",
+     "year": 1998,
+     "note": "兼具串并联补偿的柔性输电装置，可独立控制线路电压、阻抗与相角。",
+     "deps": [
+      "statcom"
+     ]
+    },
+    {
+     "id": "vsc_hvdc",
+     "name": "柔性直流输电",
+     "en": "VSC-HVDC",
+     "year": 1999,
+     "note": "以电压源换流器为核心的直流输电，可独立控制有功无功，适合新能源接入。",
+     "deps": [
+      "hvdc_transmission",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "modular_multilevel_converter",
+     "name": "模块化多电平换流器",
+     "en": "Modular multilevel converter",
+     "year": 2003,
+     "note": "由大量子模块串联的换流拓扑，波形质量高、扩展性好，成为柔性直流主流。",
+     "deps": [
+      "vsc_hvdc"
+     ]
+    },
+    {
+     "id": "ultra_high_voltage_dc",
+     "name": "特高压直流输电",
+     "en": "UHVDC transmission",
+     "year": 2010,
+     "note": "±800千伏及以上直流输电，单回输送功率达千万千瓦级，用于远距离能源基地外送。",
+     "deps": [
+      "hvdc_transmission"
+     ]
+    },
+    {
+     "id": "hvdc_circuit_breaker",
+     "name": "高压直流断路器",
+     "en": "HVDC circuit breaker",
+     "year": 2020,
+     "note": "可在直流高压下快速开断故障电流的断路器，支撑多端直流电网构建。",
+     "deps": [
+      "vsc_hvdc"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "电网结构、通信与调度运行",
+   "items": [
+    {
+     "id": "three_phase_ac_transmission",
+     "name": "三相交流输电",
+     "en": "Three-phase AC transmission",
+     "year": 1891,
+     "note": "劳芬至法兰克福试验线路验证三相交流远距离输电，奠定现代电网的形态。",
+     "deps": [
+      "power_grid",
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "automatic_synchronizer",
+     "name": "自动并网同期装置",
+     "en": "Automatic synchronizer",
+     "year": 1910,
+     "note": "检测并自动匹配发电机电压、频率与相角，在适当时机合闸并网的装置。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "power_line_carrier",
+     "name": "电力线载波通信",
+     "en": "Power line carrier communication",
+     "year": 1922,
+     "note": "在高压线路上叠加高频信号传输调度电话、保护与远动信息的通信方式。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "coupling_capacitor",
+     "name": "耦合电容器",
+     "en": "Coupling capacitor",
+     "year": 1925,
+     "note": "把载波收发信机耦合到高压导线上的电容设备，兼作电压测量分压。",
+     "deps": [
+      "power_line_carrier"
+     ]
+    },
+    {
+     "id": "line_trap",
+     "name": "线路阻波器",
+     "en": "Line trap",
+     "year": 1925,
+     "note": "串联于线路与母线间阻止载波信号流失的谐振电感，保证通信质量。",
+     "deps": [
+      "power_line_carrier"
+     ]
+    },
+    {
+     "id": "grid_dispatch",
+     "name": "电网调度",
+     "en": "Power grid dispatching",
+     "year": 1927,
+     "note": "建立统一调度机构协调发电与用电、指挥运行操作，维持电力平衡与安全。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "automatic_generation_control",
+     "name": "自动发电控制",
+     "en": "Automatic generation control",
+     "year": 1957,
+     "note": "按频率与联络线偏差自动调节机组出力的控制，维持系统频率稳定。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "power_system_stabilizer",
+     "name": "电力系统稳定器",
+     "en": "Power system stabilizer",
+     "year": 1969,
+     "note": "在励磁调节上加阻尼信号抑制低频振荡的附加控制，提升动态稳定性。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "remote_terminal_unit",
+     "name": "远方终端装置",
+     "en": "Remote terminal unit",
+     "year": 1968,
+     "note": "设于变电站的远动采集与执行终端，把现场遥测遥信上送调度中心。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "grid_scada",
+     "name": "电网调度自动化系统",
+     "en": "Power grid SCADA",
+     "year": 1970,
+     "note": "以计算机与远动技术实时采集全网量测并遥控设备的调度监控系统。",
+     "deps": [
+      "remote_terminal_unit",
+      "computer"
+     ]
+    },
+    {
+     "id": "automatic_voltage_control",
+     "name": "自动电压控制",
+     "en": "Automatic voltage control",
+     "year": 1980,
+     "note": "基于全网无功优化协调调压设备与电容器投切的闭环控制系统。",
+     "deps": [
+      "grid_scada"
+     ]
+    },
+    {
+     "id": "phasor_measurement_unit",
+     "name": "同步相量测量装置",
+     "en": "Phasor measurement unit",
+     "year": 1988,
+     "note": "依托卫星授时同步采样电压电流相量的装置，为广域动态监测提供数据。",
+     "deps": [
+      "grid_scada",
+      "computer"
+     ]
+    },
+    {
+     "id": "rtds",
+     "name": "实时数字仿真系统",
+     "en": "Real-time digital simulator",
+     "year": 1994,
+     "note": "实时求解电力系统电磁暂态的数字仿真平台，用于保护与控制设备试验。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "wide_area_measurement_system",
+     "name": "广域测量系统",
+     "en": "Wide area measurement system",
+     "year": 2000,
+     "note": "汇集全网同步相量数据并在线评估动态安全的系统，可预警大停电。",
+     "deps": [
+      "phasor_measurement_unit"
+     ]
+    },
+    {
+     "id": "ultra_high_voltage_ac",
+     "name": "特高压交流输电",
+     "en": "UHV AC transmission",
+     "year": 2009,
+     "note": "1000千伏交流输电线路，减少送端损耗并大幅提升跨区输送能力。",
+     "deps": [
+      "three_phase_ac_transmission"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "电能计量与智能配用电",
+   "items": [
+    {
+     "id": "induction_watt_hour_meter",
+     "name": "感应式电能表",
+     "en": "Induction watt-hour meter",
+     "year": 1888,
+     "note": "以铝盘涡流转矩累计电能的机械式电度表，是交流计量的早期标准。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "electronic_energy_meter",
+     "name": "电子式电能表",
+     "en": "Electronic energy meter",
+     "year": 1978,
+     "note": "以乘法器与微处理器完成电能计量的固态电表，精度高且支持多费率。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "automatic_meter_reading",
+     "name": "自动抄表系统",
+     "en": "Automatic meter reading",
+     "year": 1990,
+     "note": "通过载波或无线信道自动读取电能表数据的系统，减少人工上门抄表。",
+     "deps": [
+      "electronic_energy_meter"
+     ]
+    },
+    {
+     "id": "distribution_automation",
+     "name": "配电自动化",
+     "en": "Distribution automation",
+     "year": 1990,
+     "note": "对配电网馈线开关与台区进行远方监视控制，实现故障定位隔离与快速复电。",
+     "deps": [
+      "computer",
+      "power_grid"
+     ]
+    },
+    {
+     "id": "time_of_use_meter",
+     "name": "分时费率电能表",
+     "en": "Time-of-use meter",
+     "year": 1995,
+     "note": "按时段分别累计电量的计量器具，支撑峰谷分时电价政策的实施。",
+     "deps": [
+      "electronic_energy_meter"
+     ]
+    },
+    {
+     "id": "smart_meter",
+     "name": "智能电表",
+     "en": "Smart meter",
+     "year": 2001,
+     "note": "具备双向通信与分时计量的数字化电表，支撑阶梯电价与需求侧管理。",
+     "deps": [
+      "electronic_energy_meter",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "virtual_power_plant",
+     "name": "虚拟电厂",
+     "en": "Virtual power plant",
+     "year": 2001,
+     "note": "以通信聚合分布式电源、储能与可控负荷统一参与电网调节的运营形态。",
+     "deps": [
+      "internet",
+      "power_grid"
+     ]
+    },
+    {
+     "id": "microgrid",
+     "name": "微电网",
+     "en": "Microgrid",
+     "year": 2003,
+     "note": "由分布式电源、储能与负荷组成可离网自治的小型电力系统，提高供电韧性。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "digital_substation",
+     "name": "数字化变电站",
+     "en": "Digital substation",
+     "year": 2004,
+     "note": "以光纤过程总线与智能电子装置取代传统二次回路的变电站自动化体系。",
+     "deps": [
+      "computer",
+      "power_grid"
+     ]
+    },
+    {
+     "id": "advanced_metering_infrastructure",
+     "name": "高级量测体系",
+     "en": "Advanced metering infrastructure",
+     "year": 2005,
+     "note": "智能电表、通信网络与计量管理系统的集成，支撑双向计量与精细服务。",
+     "deps": [
+      "smart_meter",
+      "internet"
+     ]
+    },
+    {
+     "id": "demand_response",
+     "name": "需求响应",
+     "en": "Demand response",
+     "year": 2005,
+     "note": "通过价格或激励引导用户调整用电行为，缓解高峰负荷并参与系统调节。",
+     "deps": [
+      "smart_meter",
+      "internet"
+     ]
+    },
+    {
+     "id": "smart_grid",
+     "name": "智能电网",
+     "en": "Smart grid",
+     "year": 2008,
+     "note": "将信息通信、传感与自动控制深度融入发输配用的新一代电力系统。",
+     "deps": [
+      "power_grid",
+      "internet",
+      "computer"
+     ]
+    },
+    {
+     "id": "active_distribution_network",
+     "name": "主动配电网",
+     "en": "Active distribution network",
+     "year": 2010,
+     "note": "可主动管理分布式电源与双向潮流的配电网，适应高比例新能源接入。",
+     "deps": [
+      "distribution_automation",
+      "power_grid"
+     ]
+    },
+    {
+     "id": "distribution_panel",
+     "name": "低压配电屏",
+     "en": "Distribution panel",
+     "year": 1890,
+     "note": "集中安装隔离开关、熔断器与母线的低压供电装置，是用户配电首端。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "contactor",
+     "name": "交流接触器",
+     "en": "Contactor",
+     "year": 1898,
+     "note": "以电磁铁吸合频繁通断电路的电器，广泛用于电机启动与自动控制回路。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "busbar_trunking",
+     "name": "母线槽",
+     "en": "Busbar trunking system",
+     "year": 1935,
+     "note": "金属外壳封闭的插接式母线输电装置，用于大电流竖向与水平配电干线。",
+     "deps": [
+      "station_busbar"
+     ]
+    },
+    {
+     "id": "motor_control_center",
+     "name": "电动机控制中心",
+     "en": "Motor control center",
+     "year": 1950,
+     "note": "把多组电机启动器、保护电器与仪表集约成柜的成套设备，用于工业配电。",
+     "deps": [
+      "contactor"
+     ]
+    },
+    {
+     "id": "box_type_substation",
+     "name": "箱式变电站",
+     "en": "Compact substation",
+     "year": 1977,
+     "note": "把变压器与高低压开关设备预装于金属箱体的紧凑变电站，施工快速。",
+     "deps": [
+      "substation"
+     ]
+    },
+    {
+     "id": "fault_indicator",
+     "name": "线路故障指示器",
+     "en": "Fault indicator",
+     "year": 1985,
+     "note": "安装在线路上的故障电流就地指示装置，帮助巡线人员快速找到故障点。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "sectionalizer",
+     "name": "线路分段器",
+     "en": "Sectionalizer",
+     "year": 1985,
+     "note": "配合重合器自动隔离永久故障区段的分段开关，用于馈线自动化。",
+     "deps": [
+      "automatic_recloser"
+     ]
+    },
+    {
+     "id": "distribution_terminal_unit",
+     "name": "配电自动化终端",
+     "en": "Distribution terminal unit",
+     "year": 2000,
+     "note": "安装于配电站房与柱上开关的监控终端，实现配电设备遥测遥控遥信。",
+     "deps": [
+      "distribution_automation"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "高压试验与电网安全技术",
+   "items": [
+    {
+     "id": "insulation_resistance_tester",
+     "name": "兆欧表",
+     "en": "Insulation resistance tester",
+     "year": 1889,
+     "note": "施加直流高压测量绝缘电阻的便携仪表，用于电气设备绝缘检查。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "grounding_system",
+     "name": "接地装置",
+     "en": "Grounding system",
+     "year": 1890,
+     "note": "由接地极与接地网构成的泄流通道，保证故障电流入地并限制接触电位。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "high_voltage_test_transformer",
+     "name": "高压试验变压器",
+     "en": "High-voltage test transformer",
+     "year": 1915,
+     "note": "专为绝缘试验产生工频高电压的变压器，用于设备出厂与交接耐压检验。",
+     "deps": [
+      "power_transformer"
+     ]
+    },
+    {
+     "id": "impulse_voltage_generator",
+     "name": "冲击电压发生器",
+     "en": "Impulse voltage generator",
+     "year": 1924,
+     "note": "马克思级联电容器放电产生标准雷电冲击波的装置，考核绝缘耐冲击能力。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "live_line_work",
+     "name": "输电线路带电作业",
+     "en": "Live-line work",
+     "year": 1925,
+     "note": "在不停电状态下以绝缘工具或等电位法进行检修的技术，保障连续供电。",
+     "deps": [
+      "overhead_power_line"
+     ]
+    },
+    {
+     "id": "neutral_grounding_resistor",
+     "name": "中性点接地电阻器",
+     "en": "Neutral grounding resistor",
+     "year": 1950,
+     "note": "接于变压器中性点与地之间的电阻，限制单相接地故障电流并便于保护。",
+     "deps": [
+      "grounding_system"
+     ]
+    },
+    {
+     "id": "partial_discharge_detection",
+     "name": "局部放电检测",
+     "en": "Partial discharge detection",
+     "year": 1960,
+     "note": "通过电脉冲或超声发现绝缘内部微小放电的检测技术，用于设备状态诊断。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "cable_fault_location",
+     "name": "电缆故障测距技术",
+     "en": "Cable fault location",
+     "year": 1965,
+     "note": "以脉冲反射或声磁同步法定位地下电缆故障点的检测技术，缩短抢修时间。",
+     "deps": [
+      "underground_power_cable"
+     ]
+    },
+    {
+     "id": "dissolved_gas_analysis",
+     "name": "变压器油中气体分析",
+     "en": "Dissolved gas analysis",
+     "year": 1970,
+     "note": "检测油中特征气体诊断变压器内部过热与放电故障的实验室方法。",
+     "deps": [
+      "oil_immersed_transformer"
+     ]
+    },
+    {
+     "id": "surge_protective_device",
+     "name": "电涌保护器",
+     "en": "Surge protective device",
+     "year": 1985,
+     "note": "装于电源与信号线路上的限压器件，泄放雷电与操作电涌保护终端设备。",
+     "deps": [
+      "zinc_oxide_arrester"
+     ]
+    },
+    {
+     "id": "resonant_test_device",
+     "name": "串联谐振耐压装置",
+     "en": "Resonant test system",
+     "year": 1985,
+     "note": "以可调电抗器与被试品串联谐振升压的试验装置，减小试验电源容量。",
+     "deps": [
+      "high_voltage_test_transformer",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "online_monitoring_equipment",
+     "name": "输变电设备在线监测",
+     "en": "Online monitoring of power equipment",
+     "year": 2000,
+     "note": "对变压器、套管与避雷器实时采集状态量的监测系统，支撑状态检修。",
+     "deps": [
+      "partial_discharge_detection",
+      "computer"
+     ]
+    }
+   ]
+  }
+ ]
+}

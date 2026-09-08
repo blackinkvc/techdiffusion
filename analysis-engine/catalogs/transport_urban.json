@@ -1,0 +1,1029 @@
+{
+ "cat": "transport",
+ "catName": "交通运输",
+ "sub": "urban",
+ "subName": "城市交通系统",
+ "anchors": [
+  "railway",
+  "automobile",
+  "internal_combustion",
+  "electric_motor",
+  "electricity",
+  "gps",
+  "computer",
+  "internet",
+  "autonomous_driving"
+ ],
+ "families": [
+  {
+   "name": "城市客运工具史",
+   "items": [
+    {
+     "id": "urb_hackney_carriage",
+     "name": "出租马车",
+     "en": "Hackney carriage",
+     "year": 1625,
+     "note": "伦敦等城市以执照马车按里程计费载客，是现代出租车的雏形。"
+    },
+    {
+     "id": "urb_omnibus",
+     "name": "公共马车",
+     "en": "Omnibus",
+     "year": 1826,
+     "note": "巴黎出现按固定线路与班次收费的公共马车，城市公交由此起步。"
+    },
+    {
+     "id": "urb_rickshaw",
+     "name": "城市人力车",
+     "en": "Rickshaw",
+     "year": 1869,
+     "note": "东京的人力车成为东亚城市重要客运工具，后传入各国都市。"
+    },
+    {
+     "id": "urb_motor_taxi",
+     "name": "出租汽车",
+     "en": "Motor taxi",
+     "year": 1897,
+     "note": "戴姆勒将汽车改为按程计费营运，现代出租汽车服务由此诞生。"
+    },
+    {
+     "id": "urb_taxi_meter",
+     "name": "出租汽车计价器",
+     "en": "Taximeter",
+     "year": 1891,
+     "note": "按里程与时间自动计费的装置，1891年装于出租马车与汽车。"
+    },
+    {
+     "id": "urb_taxi_radio_dispatch",
+     "name": "出租车无线电调度",
+     "en": "Taxi radio dispatch",
+     "year": 1928,
+     "note": "以无线调度中心匹配空车与客源，降低空驶率。"
+    },
+    {
+     "id": "urb_pedicab",
+     "name": "人力三轮车",
+     "en": "Pedicab",
+     "year": 1929,
+     "note": "脚踏三轮载客工具，亚洲城市短途接驳与旅游常用。"
+    },
+    {
+     "id": "urb_auto_rickshaw",
+     "name": "机动三轮出租",
+     "en": "Auto rickshaw",
+     "year": 1950,
+     "note": "以小型内燃机驱动的三轮载客机动车，南亚东南亚普及。"
+    },
+    {
+     "id": "urb_motorcycle_taxi",
+     "name": "摩托出租",
+     "en": "Motorcycle taxi",
+     "year": 1975,
+     "note": "以摩托车提供低价短途载客，拥堵城市的重要出行方式。"
+    },
+    {
+     "id": "urb_ferry_urban",
+     "name": "城市客渡",
+     "en": "Urban passenger ferry",
+     "year": 1830,
+     "note": "濒水城市以渡船连通两岸，是机动化之前的公交组成部分。"
+    },
+    {
+     "id": "urb_dial_a_ride",
+     "name": "电话约车",
+     "en": "Dial-a-ride",
+     "year": 1960,
+     "note": "以电话预约的合乘小巴，需求响应出行的早期形态。"
+    },
+    {
+     "id": "urb_paratransit",
+     "name": "合乘小巴",
+     "en": "Paratransit",
+     "year": 1972,
+     "note": "介于定线公交与出租之间的灵活合乘服务，补充公交覆盖。"
+    },
+    {
+     "id": "urb_airport_shuttle",
+     "name": "机场专线班车",
+     "en": "Airport shuttle bus",
+     "year": 1930,
+     "note": "往返机场与市区的定线客车，航空客运扩张下兴起。"
+    },
+    {
+     "id": "urb_shuttle_bus",
+     "name": "园区班车",
+     "en": "Shuttle bus",
+     "year": 1970,
+     "note": "厂区校园与园区内部循环的接驳班车，解决最后一公里。"
+    },
+    {
+     "id": "urb_school_bus",
+     "name": "校车",
+     "en": "School bus",
+     "year": 1927,
+     "note": "专为学生定时定点接送的客车，北美形成标准化体系。"
+    },
+    {
+     "id": "urb_demand_responsive",
+     "name": "需求响应公交",
+     "en": "Demand-responsive transit",
+     "year": 1980,
+     "note": "以计算机根据预约动态生成线路班次，提升稀疏客流效率。"
+    },
+    {
+     "id": "urb_water_taxi",
+     "name": "水上出租",
+     "en": "Water taxi",
+     "year": 1990,
+     "note": "按呼叫发船的城市内河小型客运船，水网城市补充公交。"
+    },
+    {
+     "id": "urb_sightseeing_bus",
+     "name": "观光巴士",
+     "en": "Sightseeing bus",
+     "year": 1950,
+     "note": "开放式上层观景的旅游客车，城市旅游交通的组成部分。"
+    },
+    {
+     "id": "urb_sedan_chair",
+     "name": "抬轿客运",
+     "en": "Sedan chair",
+     "year": 1500,
+     "note": "人力抬轿的城市代步工具，前近代都市的客运形态。"
+    },
+    {
+     "id": "urb_cab_rank",
+     "name": "出租马车候客点",
+     "en": "Cab rank",
+     "year": 1700,
+     "note": "固定排队候客的马车停靠点，现代出租扬招站的前身。"
+    },
+    {
+     "id": "urb_wartime_carpool",
+     "name": "战时拼车",
+     "en": "Wartime carpool",
+     "year": 1942,
+     "note": "二战燃料管制下鼓励多人合乘的运动，提升道路效率。"
+    },
+    {
+     "id": "urb_limousine_service",
+     "name": "礼宾租车",
+     "en": "Chauffeured car hire",
+     "year": 1910,
+     "note": "带司机的长期租车服务，商务与高端客运的组成部分。"
+    },
+    {
+     "id": "urb_charabanc",
+     "name": "观光敞篷客车",
+     "en": "Motor charabanc",
+     "year": 1900,
+     "note": "早期机动敞篷游览客车，团体出游与远足使用。"
+    },
+    {
+     "id": "urb_jitney",
+     "name": "廉价合乘小车",
+     "en": "Jitney",
+     "year": 1914,
+     "note": "低价的非正式合乘小车，二十世纪初城市客运的补充。"
+    }
+   ]
+  },
+  {
+   "name": "轨道公交系统",
+   "items": [
+    {
+     "id": "urb_trolleybus",
+     "name": "无轨电车",
+     "en": "Trolleybus",
+     "year": 1901,
+     "note": "以架空线供电的电动客车，无轨但沿固定线路运行。"
+    },
+    {
+     "id": "urb_commuter_rail",
+     "name": "市域铁路",
+     "en": "Commuter rail",
+     "year": 1882,
+     "note": "柏林等设通勤城铁连接郊县与市中心，市域通勤铁路开端。"
+    },
+    {
+     "id": "urb_afc_system",
+     "name": "自动售检票",
+     "en": "Automatic fare collection",
+     "year": 1970,
+     "note": "地铁以磁卡与闸机自动售检票，减少人工并提升吞吐。"
+    },
+    {
+     "id": "urb_metro_hvac",
+     "name": "地铁环控通风",
+     "en": "Metro environmental control",
+     "year": 1960,
+     "note": "地下车站与隧道的通风空调及防排烟系统，保障运营安全。"
+    },
+    {
+     "id": "urb_metro_ato",
+     "name": "地铁列车自动运行",
+     "en": "Automatic train operation",
+     "year": 1967,
+     "note": "东京地铁引入列车自动运行，驾驶自动化由此起步。"
+    },
+    {
+     "id": "urb_metro_depot",
+     "name": "地铁车辆段",
+     "en": "Metro depot",
+     "year": 1960,
+     "note": "地铁列车停放与检修的基地，含列检与定修功能。"
+    },
+    {
+     "id": "urb_metro_traction_power",
+     "name": "地铁牵引供电",
+     "en": "Metro traction power",
+     "year": 1960,
+     "note": "为地铁列车提供牵引电能的变电与馈电系统。"
+    },
+    {
+     "id": "urb_metro_fire_alarm",
+     "name": "地铁火灾报警",
+     "en": "Metro fire detection",
+     "year": 1970,
+     "note": "隧道与车站的感烟探测系统，联动排烟与疏散。"
+    },
+    {
+     "id": "urb_metro_escalator",
+     "name": "地铁自动扶梯",
+     "en": "Metro escalator",
+     "year": 1950,
+     "note": "深埋车站连接地面的自动扶梯，是大客流进出关键。"
+    },
+    {
+     "id": "urb_metro_emergency_evac",
+     "name": "地铁应急疏散",
+     "en": "Metro emergency evacuation",
+     "year": 1990,
+     "note": "事故下的导向标识、排烟与疏散预案，保障地下安全。"
+    },
+    {
+     "id": "urb_metro_info_display",
+     "name": "地铁到站信息显示",
+     "en": "Metro passenger information display",
+     "year": 1985,
+     "note": "站台与车内的电子屏显示到站与延误，提升信息服务。"
+    },
+    {
+     "id": "urb_commuter_park_ride",
+     "name": "停车换乘",
+     "en": "Park and ride",
+     "year": 1970,
+     "note": "市郊设停车场换乘轨道的出行方式，缓解中心区拥堵。"
+    },
+    {
+     "id": "urb_metro_noise_isolation",
+     "name": "地铁减振降噪",
+     "en": "Metro vibration isolation",
+     "year": 1980,
+     "note": "浮置板与弹性扣件降低地铁对沿线建筑的振动噪声。"
+    },
+    {
+     "id": "urb_metro_scada",
+     "name": "地铁电力监控",
+     "en": "Metro SCADA",
+     "year": 1985,
+     "note": "电力监控系统保障牵引与动力供电的可靠运行。"
+    },
+    {
+     "id": "urb_metro_tcms",
+     "name": "地铁列车网络控制",
+     "en": "Metro train control network",
+     "year": 1990,
+     "note": "以列车通信网络实现控制与诊断，提升运维效率。"
+    },
+    {
+     "id": "urb_metro_door_system",
+     "name": "地铁塞拉门",
+     "en": "Metro plug door",
+     "year": 1980,
+     "note": "电动塞拉门提升车门密封与隔音，现代地铁标配。"
+    },
+    {
+     "id": "urb_metro_pis",
+     "name": "地铁乘客信息系统",
+     "en": "Metro PIS",
+     "year": 1990,
+     "note": "整合广播与显示的乘客信息播报系统。"
+    },
+    {
+     "id": "urb_subway_noise_barrier",
+     "name": "地铁声屏障",
+     "en": "Metro noise barrier",
+     "year": 1995,
+     "note": "高架与地面的声屏障降低地铁对周边环境的噪声。"
+    },
+    {
+     "id": "urb_metro_fire_vent",
+     "name": "地铁防排烟",
+     "en": "Metro smoke extraction",
+     "year": 1975,
+     "note": "专用风机与风道在火灾时排烟，保障疏散路径安全。"
+    },
+    {
+     "id": "urb_commuter_rail_electrification",
+     "name": "市域铁路电气化",
+     "en": "Commuter rail electrification",
+     "year": 1903,
+     "note": "城铁电气化提升通勤运力，城市铁路干线改造方向。"
+    },
+    {
+     "id": "urb_commuter_rail_dmu",
+     "name": "通勤内燃动车组",
+     "en": "Commuter DMU",
+     "year": 1934,
+     "note": "通勤内燃动车组适应非电气化市郊线路的大密度客运。"
+    }
+   ]
+  },
+  {
+   "name": "城市道路交通",
+   "items": [
+    {
+     "id": "urb_motorbus",
+     "name": "公共汽车",
+     "en": "Motor bus",
+     "year": 1895,
+     "note": "以汽油或柴油客车按线路运营的公共交通，城市地面公交主体。"
+    },
+    {
+     "id": "urb_double_decker_bus",
+     "name": "城市双层客车",
+     "en": "Double-decker bus",
+     "year": 1911,
+     "note": "上下两层载客的客车，提高单车载客量，伦敦为典型。"
+    },
+    {
+     "id": "urb_articulated_bus",
+     "name": "铰接客车",
+     "en": "Articulated bus",
+     "year": 1925,
+     "note": "前后车厢以铰盘连接的客车，运量高于单机车型。"
+    },
+    {
+     "id": "urb_bus_lane",
+     "name": "公交专用道",
+     "en": "Bus lane",
+     "year": 1960,
+     "note": "划定仅供公交行驶的车道以提升准点率，公交优先核心措施。"
+    },
+    {
+     "id": "urb_brt",
+     "name": "快速公交系统",
+     "en": "Bus rapid transit",
+     "year": 1974,
+     "note": "库里蒂巴首创封闭式站台与专用道的快速公交系统。"
+    },
+    {
+     "id": "urb_urban_interchange",
+     "name": "城市立交",
+     "en": "Urban interchange",
+     "year": 1928,
+     "note": "立体交叉消除平交冲突，是城市快速路的节点形式。"
+    },
+    {
+     "id": "urb_pedestrian_overpass",
+     "name": "人行天桥",
+     "en": "Pedestrian overpass",
+     "year": 1960,
+     "note": "跨越车行道的步行桥，实现人车分离安全过街。"
+    },
+    {
+     "id": "urb_pedestrian_underpass",
+     "name": "过街通道",
+     "en": "Pedestrian underpass",
+     "year": 1960,
+     "note": "下穿车行道的人行隧道，雨雪天仍可用的过街设施。"
+    },
+    {
+     "id": "urb_zebra_crossing",
+     "name": "人行横道标线",
+     "en": "Zebra crossing",
+     "year": 1951,
+     "note": "黑白条纹标线提示车辆让行的过街设施，广泛采用。"
+    },
+    {
+     "id": "urb_road_marking",
+     "name": "道路交通标线",
+     "en": "Road marking",
+     "year": 1940,
+     "note": "以漆线标示车道与导向的路面设施，规范行车秩序。"
+    },
+    {
+     "id": "urb_traffic_sign",
+     "name": "道路交通标志",
+     "en": "Traffic sign",
+     "year": 1908,
+     "note": "图形标志统一指示禁令与警告，1908年巴黎公约规范。"
+    },
+    {
+     "id": "urb_bus_shelter",
+     "name": "公交候车亭",
+     "en": "Bus shelter",
+     "year": 1900,
+     "note": "沿线供候车与信息发布的小型站亭，改善候车条件。"
+    },
+    {
+     "id": "urb_bus_stop_announce",
+     "name": "公交报站",
+     "en": "Bus stop announcement",
+     "year": 1930,
+     "note": "报站器与电子屏播报到站，后期结合卫星定位。"
+    },
+    {
+     "id": "urb_minibus",
+     "name": "小型公共汽车",
+     "en": "Minibus",
+     "year": 1950,
+     "note": "中型客车灵活接驳社区与轨道站点，补充干线。"
+    },
+    {
+     "id": "urb_expressway_urban",
+     "name": "城市快速路",
+     "en": "Urban expressway",
+     "year": 1950,
+     "note": "全立交全封闭的城市高等级道路，承担中长距离出行。"
+    },
+    {
+     "id": "urb_roundabout",
+     "name": "环形交叉",
+     "en": "Roundabout",
+     "year": 1900,
+     "note": "环岛以让行组织合流，低速路口事故率较低。"
+    },
+    {
+     "id": "urb_road_tunnel",
+     "name": "城市道路隧道",
+     "en": "Urban road tunnel",
+     "year": 1960,
+     "note": "下穿建成区的道路隧道缓解地面交通拥堵。"
+    },
+    {
+     "id": "urb_offstreet_parking",
+     "name": "路外停车场",
+     "en": "Off-street parking",
+     "year": 1920,
+     "note": "室内外集中停车场，机械停车楼随之起步。"
+    },
+    {
+     "id": "urb_mechanical_parking",
+     "name": "机械式停车",
+     "en": "Mechanical parking",
+     "year": 1950,
+     "note": "升降横移式机械车库提高土地利用率，缓解停车难。"
+    },
+    {
+     "id": "urb_bus_priority_signal",
+     "name": "公交优先信号",
+     "en": "Bus priority signal",
+     "year": 1980,
+     "note": "公交接近时延长绿灯的信号优先策略，提升准点率。"
+    },
+    {
+     "id": "urb_central_barrier",
+     "name": "中央隔离栏",
+     "en": "Central barrier",
+     "year": 1950,
+     "note": "机非与对向分隔护栏，减少冲突与事故。"
+    },
+    {
+     "id": "urb_curb_cut",
+     "name": "无障碍坡道",
+     "en": "Curb cut",
+     "year": 1970,
+     "note": "人行道口缘坡化，便利轮椅与婴儿车通行。"
+    },
+    {
+     "id": "urb_traffic_calming",
+     "name": "交通稳静化",
+     "en": "Traffic calming",
+     "year": 1970,
+     "note": "减速丘与窄路等措施降低车速，改善居住区安全。"
+    },
+    {
+     "id": "urb_shared_space",
+     "name": "共享街道",
+     "en": "Shared space",
+     "year": 1990,
+     "note": "取消标线以车人协商通行，重塑街道公共性。"
+    },
+    {
+     "id": "urb_road_stud",
+     "name": "道路反光道钉",
+     "en": "Road stud",
+     "year": 1940,
+     "note": "夜间反光的路面导向设施，提升夜间可视性。"
+    },
+    {
+     "id": "urb_grade_separation",
+     "name": "立体分离",
+     "en": "Grade separation",
+     "year": 1930,
+     "note": "人车与机非立交互不干扰，保障慢行安全。"
+    },
+    {
+     "id": "urb_service_road",
+     "name": "辅路",
+     "en": "Service road",
+     "year": 1950,
+     "note": "沿快速路布置的服务性道路，接入周边地块。"
+    }
+   ]
+  },
+  {
+   "name": "城市交通管控",
+   "items": [
+    {
+     "id": "urb_traffic_signal",
+     "name": "城市交通信号灯",
+     "en": "Traffic signal",
+     "year": 1868,
+     "note": "伦敦以红绿煤气信号灯管制路口，现代信号控制起点。"
+    },
+    {
+     "id": "urb_three_phase_signal",
+     "name": "多相位信号",
+     "en": "Multi-phase signal",
+     "year": 1920,
+     "note": "黄灯与多向放行相位完善路口的冲突管理。"
+    },
+    {
+     "id": "urb_fixed_time_signal",
+     "name": "定时信号控制",
+     "en": "Fixed-time signal control",
+     "year": 1917,
+     "note": "按预设时段配时的信号机，适用于流量稳定路口。"
+    },
+    {
+     "id": "urb_actuated_signal",
+     "name": "感应信号控制",
+     "en": "Actuated signal control",
+     "year": 1929,
+     "note": "以车辆检测器触发放行的感应控制，按需配时。"
+    },
+    {
+     "id": "urb_green_wave",
+     "name": "干线绿波协调",
+     "en": "Green wave coordination",
+     "year": 1917,
+     "note": "干道连续路口相位差联动，形成不停车绿波带。"
+    },
+    {
+     "id": "urb_area_signal_control",
+     "name": "区域信号控制",
+     "en": "Area signal control",
+     "year": 1960,
+     "note": "中心计算机协调多路口配时，提升路网整体效率。"
+    },
+    {
+     "id": "urb_adaptive_signal",
+     "name": "自适应信号控制",
+     "en": "Adaptive signal control",
+     "year": 1980,
+     "note": "SCATS与SCOOT按实时流量自调配时，缓解拥堵。"
+    },
+    {
+     "id": "urb_traffic_enforcement_camera",
+     "name": "电子警察",
+     "en": "Traffic enforcement camera",
+     "year": 1965,
+     "note": "以地感与照相记录闯红灯等违法，自动取证执法。"
+    },
+    {
+     "id": "urb_etc",
+     "name": "城市电子不停车收费",
+     "en": "Electronic toll collection",
+     "year": 1989,
+     "note": "意大利首条ETC以微波自动扣费，免去停车收费。"
+    },
+    {
+     "id": "urb_parking_guidance",
+     "name": "停车诱导",
+     "en": "Parking guidance",
+     "year": 1995,
+     "note": "以屏显与传感引导车辆至空位，减少巡泊绕行。"
+    },
+    {
+     "id": "urb_congestion_pricing",
+     "name": "交通拥堵收费",
+     "en": "Congestion pricing",
+     "year": 2003,
+     "note": "伦敦以进城收费降低中心区小客车拥堵。"
+    },
+    {
+     "id": "urb_traffic_control_center",
+     "name": "交通控制中心",
+     "en": "Traffic control center",
+     "year": 1965,
+     "note": "集中监视与调度城市路网的指挥中心。"
+    },
+    {
+     "id": "urb_anpr",
+     "name": "号牌识别",
+     "en": "Automatic number-plate recognition",
+     "year": 1990,
+     "note": "以图像识别自动读取车牌，是执法与收费的基础。"
+    },
+    {
+     "id": "urb_variable_message_sign",
+     "name": "可变信息情报板",
+     "en": "Variable message sign",
+     "year": 1980,
+     "note": "路侧屏发布拥堵、施工与限速等信息。"
+    },
+    {
+     "id": "urb_traffic_detector",
+     "name": "交通流检测器",
+     "en": "Traffic detector",
+     "year": 1950,
+     "note": "电感线圈等检测流量与速度，为信号控制提供输入。"
+    },
+    {
+     "id": "urb_ramp_metering",
+     "name": "匝道控制",
+     "en": "Ramp metering",
+     "year": 1963,
+     "note": "控制快速路入口流量的匝道信号，稳定主线车流。"
+    },
+    {
+     "id": "urb_integrated_corridor",
+     "name": "交通集成管控",
+     "en": "Integrated corridor management",
+     "year": 1990,
+     "note": "多模式协同的区域交通管控平台，统一调度。"
+    },
+    {
+     "id": "urb_speed_limit_sign",
+     "name": "限速标志",
+     "en": "Speed limit sign",
+     "year": 1920,
+     "note": "标示法定车速上限的标志，规范道路行驶速度。"
+    },
+    {
+     "id": "urb_pedestrian_signal",
+     "name": "行人过街信号",
+     "en": "Pedestrian signal",
+     "year": 1930,
+     "note": "行人专用按钮与显示，保障过街安全。"
+    },
+    {
+     "id": "urb_countdown_signal",
+     "name": "信号倒计时",
+     "en": "Signal countdown",
+     "year": 1995,
+     "note": "绿灯或红灯倒计时显示，提升路口可预期性。"
+    },
+    {
+     "id": "urb_traffic_incident_detection",
+     "name": "交通事件检测",
+     "en": "Incident detection",
+     "year": 1980,
+     "note": "以视频与浮动车数据识别事故，快速响应清障。"
+    },
+    {
+     "id": "urb_dynamic_lane",
+     "name": "可变车道",
+     "en": "Dynamic lane",
+     "year": 1990,
+     "note": "按流向改行车道方向的潮汐车道，适应不均匀流量。"
+    },
+    {
+     "id": "urb_parking_meter",
+     "name": "停车收费咪表",
+     "en": "Parking meter",
+     "year": 1935,
+     "note": "路内停车计时收费表，规范临时占道。"
+    }
+   ]
+  },
+  {
+   "name": "慢行与共享出行",
+   "items": [
+    {
+     "id": "urb_public_bicycle",
+     "name": "公共自行车",
+     "en": "Public bicycle",
+     "year": 1965,
+     "note": "阿姆斯特丹免费白车开启公共自行车，固定桩租赁。"
+    },
+    {
+     "id": "urb_dockless_bike",
+     "name": "无桩共享单车",
+     "en": "Dockless bike share",
+     "year": 2010,
+     "note": "扫码解锁随取随还的共享单车，移动互联网时代普及。"
+    },
+    {
+     "id": "urb_bike_share_smartlock",
+     "name": "共享单车智能锁",
+     "en": "Smart bike lock",
+     "year": 2014,
+     "note": "以卫星定位与蜂窝通信的智控车锁，支撑无桩运营。"
+    },
+    {
+     "id": "urb_car_sharing",
+     "name": "汽车共享",
+     "en": "Car sharing",
+     "year": 1987,
+     "note": "会员按使用时长共享车辆，降低对私车的依赖。"
+    },
+    {
+     "id": "urb_free_floating_carshare",
+     "name": "分时租赁汽车",
+     "en": "Free-floating car sharing",
+     "year": 2012,
+     "note": "自由取还的分时租赁，手机端计费与结算。"
+    },
+    {
+     "id": "urb_ride_hailing",
+     "name": "网约车",
+     "en": "Ride-hailing",
+     "year": 2009,
+     "note": "以手机平台派单的出租汽车服务，2009年起兴起。"
+    },
+    {
+     "id": "urb_ride_hailing_dispatch",
+     "name": "网约车调度",
+     "en": "Ride-hailing dispatch",
+     "year": 2012,
+     "note": "以算法匹配供需的派单与动态定价系统。"
+    },
+    {
+     "id": "urb_e_bike",
+     "name": "城市电动自行车",
+     "en": "Electric bicycle",
+     "year": 1980,
+     "note": "电助力两轮车，短途通勤与末端配送的主力。"
+    },
+    {
+     "id": "urb_pedestrian_zone",
+     "name": "步行街",
+     "en": "Pedestrian zone",
+     "year": 1970,
+     "note": "禁车步行区复兴老城商业与慢行活动。"
+    },
+    {
+     "id": "urb_bike_lane",
+     "name": "自行车道",
+     "en": "Bike lane",
+     "year": 1960,
+     "note": "专用骑行道与机非隔离设施，保障骑行安全。"
+    },
+    {
+     "id": "urb_micro_mobility",
+     "name": "电动滑板车共享",
+     "en": "Shared e-scooter",
+     "year": 2017,
+     "note": "共享电动滑板车补足最后一公里出行。"
+    },
+    {
+     "id": "urb_pedestrian_network",
+     "name": "连续步行系统",
+     "en": "Pedestrian network",
+     "year": 1990,
+     "note": "连廊与地下街构成的连续步行网络，全天候通行。"
+    },
+    {
+     "id": "urb_car_pool",
+     "name": "拼车出行",
+     "en": "Carpool",
+     "year": 1970,
+     "note": "多人合乘分摊成本，与高承载车道配套。"
+    },
+    {
+     "id": "urb_hov_lane",
+     "name": "高承载车辆道",
+     "en": "High-occupancy vehicle lane",
+     "year": 1970,
+     "note": "仅供合乘与公交使用的多乘员车道，提升运能。"
+    },
+    {
+     "id": "urb_bike_sharing_dock",
+     "name": "有桩自行车",
+     "en": "Station-based bike share",
+     "year": 2010,
+     "note": "固定桩智能租赁的公共自行车升级形态。"
+    },
+    {
+     "id": "urb_mobility_as_service",
+     "name": "出行即服务",
+     "en": "Mobility as a service",
+     "year": 2014,
+     "note": "MaaS以统一平台整合多模式出行与支付。"
+    },
+    {
+     "id": "urb_neighborhood_ev",
+     "name": "低速电动车",
+     "en": "Neighborhood electric vehicle",
+     "year": 1990,
+     "note": "社区短途低速四轮电动车，补充微循环出行。"
+    },
+    {
+     "id": "urb_bike_highway",
+     "name": "自行车高速路",
+     "en": "Bicycle highway",
+     "year": 2010,
+     "note": "连续专用的城市骑行高速，提升通勤效率。"
+    },
+    {
+     "id": "urb_cargo_bike",
+     "name": "货运自行车",
+     "en": "Cargo bike",
+     "year": 1990,
+     "note": "加长载货自行车用于社区末端配送。"
+    },
+    {
+     "id": "urb_freight_tricycle",
+     "name": "快递三轮车",
+     "en": "Delivery tricycle",
+     "year": 2000,
+     "note": "三轮电动车承担快递与外卖的末端配送。"
+    }
+   ]
+  },
+  {
+   "name": "智能交通",
+   "items": [
+    {
+     "id": "urb_its",
+     "name": "智能交通系统",
+     "en": "Intelligent transport system",
+     "year": 1990,
+     "note": "集成检测、通信与控制改善路网运行的ITS体系。"
+    },
+    {
+     "id": "urb_traffic_simulation",
+     "name": "交通仿真",
+     "en": "Traffic simulation",
+     "year": 1963,
+     "note": "以计算机模型复现交通流的规划评估工具。"
+    },
+    {
+     "id": "urb_floating_car_gps",
+     "name": "浮动车GPS监测",
+     "en": "Floating car GPS survey",
+     "year": 1995,
+     "note": "出租车卫星定位回传实时路况，浮动车检测法。"
+    },
+    {
+     "id": "urb_cooperative_its",
+     "name": "车路协同",
+     "en": "Cooperative ITS",
+     "year": 2012,
+     "note": "车与路侧协同感知的V2X，提升安全与效率。"
+    },
+    {
+     "id": "urb_traffic_bigdata",
+     "name": "交通大数据平台",
+     "en": "Traffic big-data platform",
+     "year": 2010,
+     "note": "汇聚多源数据支撑调度与预测的平台。"
+    },
+    {
+     "id": "urb_bus_gps_dispatch",
+     "name": "公交智能调度",
+     "en": "Bus intelligent dispatch",
+     "year": 2000,
+     "note": "以卫星定位与调度系统优化发车与排班。"
+    },
+    {
+     "id": "urb_anpr_enforce",
+     "name": "非现场执法",
+     "en": "Non-contact enforcement",
+     "year": 2000,
+     "note": "以图像识别自动取证违法，减少现场执法。"
+    },
+    {
+     "id": "urb_urban_traffic_model",
+     "name": "城市交通模型",
+     "en": "Urban traffic model",
+     "year": 1955,
+     "note": "四阶段法建模出行生成与分布，是规划基础。"
+    },
+    {
+     "id": "urb_traffic_forecast",
+     "name": "交通预测",
+     "en": "Traffic forecasting",
+     "year": 1980,
+     "note": "基于历史与事件预测短时流量的方法。"
+    },
+    {
+     "id": "urb_emergency_traffic_management",
+     "name": "应急交通管控",
+     "en": "Emergency traffic management",
+     "year": 1990,
+     "note": "事件下信号优先与管制疏导，保障救援通道。"
+    },
+    {
+     "id": "urb_robotaxi",
+     "name": "自动驾驶出租车",
+     "en": "Robotaxi",
+     "year": 2016,
+     "note": "Waymo等试运营无人出租，自动驾驶落地场景。"
+    },
+    {
+     "id": "urb_connected_vehicle",
+     "name": "网联汽车",
+     "en": "Connected vehicle",
+     "year": 2015,
+     "note": "具备车联网通信能力的网联车辆。"
+    },
+    {
+     "id": "urb_digital_twin_transport",
+     "name": "交通数字孪生",
+     "en": "Traffic digital twin",
+     "year": 2018,
+     "note": "路网数字镜像支撑仿真与管控决策。"
+    },
+    {
+     "id": "urb_multimodal_nav",
+     "name": "多模式出行导航",
+     "en": "Multimodal navigation",
+     "year": 2008,
+     "note": "整合公交、驾车与步行的导航服务。"
+    },
+    {
+     "id": "urb_traffic_signal_priority_i2v",
+     "name": "车路协同信号",
+     "en": "I2V signal priority",
+     "year": 2016,
+     "note": "路口向车辆广播绿灯相位，提升通行效率。"
+    },
+    {
+     "id": "urb_parking_iot",
+     "name": "智慧停车",
+     "en": "Smart parking",
+     "year": 2015,
+     "note": "地磁与平台实现车位级诱导与无感支付。"
+    },
+    {
+     "id": "urb_urban_its_architecture",
+     "name": "城市ITS体系",
+     "en": "Urban ITS architecture",
+     "year": 1995,
+     "note": "分层架构整合检测、控制与信息服务子系统。"
+    },
+    {
+     "id": "urb_traffic_state_estimation",
+     "name": "交通状态估计",
+     "en": "Traffic state estimation",
+     "year": 2000,
+     "note": "融合多源数据估计路段实时路况。"
+    },
+    {
+     "id": "urb_incident_management_system",
+     "name": "交通事件管理",
+     "en": "Incident management system",
+     "year": 1995,
+     "note": "事件检测、响应与清障的闭环管理系统。"
+    },
+    {
+     "id": "urb_video_traffic_detection",
+     "name": "视频交通检测",
+     "en": "Video traffic detection",
+     "year": 1995,
+     "note": "以视频识别车流与事件，替代感应线圈。"
+    },
+    {
+     "id": "urb_auto_parking",
+     "name": "自动泊车",
+     "en": "Automated parking",
+     "year": 2015,
+     "note": "车辆自主完成泊车入位的辅助驾驶功能。"
+    },
+    {
+     "id": "urb_road_weather_info",
+     "name": "道路气象预警",
+     "en": "Road weather information",
+     "year": 1990,
+     "note": "路面结冰与能见度预警，指导限速与管制。"
+    },
+    {
+     "id": "urb_mobility_dashboard",
+     "name": "城市出行仪表盘",
+     "en": "Mobility dashboard",
+     "year": 2015,
+     "note": "对外发布实时路况与拥堵的公众看板。"
+    },
+    {
+     "id": "urb_intelligent_intersection",
+     "name": "智能路口",
+     "en": "Intelligent intersection",
+     "year": 2018,
+     "note": "全要素感知与协同控制的智能化路口。"
+    },
+    {
+     "id": "urb_traj_prediction",
+     "name": "轨迹预测",
+     "en": "Trajectory prediction",
+     "year": 2016,
+     "note": "以深度学习预测行人车辆轨迹，支撑安全决策。"
+    }
+   ]
+  }
+ ]
+}

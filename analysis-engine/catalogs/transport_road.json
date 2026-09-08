@@ -1,0 +1,1373 @@
+{
+ "cat": "transport",
+ "catName": "交通运载",
+ "sub": "road",
+ "subName": "道路与陆路运输",
+ "anchors": [
+  "road",
+  "wheel",
+  "horse_gear",
+  "automobile",
+  "internal_combustion",
+  "diesel_engine",
+  "steam_engine",
+  "electricity",
+  "electric_motor",
+  "battery",
+  "petroleum",
+  "steel",
+  "assembly_line",
+  "gps",
+  "autonomous_driving"
+ ],
+ "families": [
+  {
+   "name": "道路工程与路面技术",
+   "items": [
+    {
+     "id": "stone_paved_street",
+     "name": "石铺街道",
+     "en": "Stone-paved street",
+     "year": -4000,
+     "note": "美索不达米亚古城以石板铺筑街面，是迄今发现最早的铺装道路。"
+    },
+    {
+     "id": "brick_paved_road",
+     "name": "砖铺道路",
+     "en": "Brick-paved road",
+     "year": -2500,
+     "note": "印度河流域摩亨佐-达罗以烧砖铺路，城市街道系统由此成形。",
+     "deps": [
+      "brick"
+     ]
+    },
+    {
+     "id": "roman_road",
+     "name": "罗马大道",
+     "en": "Roman road",
+     "year": -312,
+     "note": "以多层砂石垫层加石板面层的分层筑路法，路网贯穿罗马帝国全境。"
+    },
+    {
+     "id": "macadam_road",
+     "name": "碎石路",
+     "en": "Macadam road",
+     "year": 1820,
+     "note": "麦克亚当提出碎石分层铺筑压实成路，是现代公路路面的雏形。",
+     "deps": [
+      "road"
+     ]
+    },
+    {
+     "id": "granite_sett_pavement",
+     "name": "条石铺装路面",
+     "en": "Granite sett pavement",
+     "year": 1850,
+     "note": "以花岗岩条石密排铺砌的路面，耐磨抗压，广泛用于港口与城市干道。",
+     "deps": [
+      "stone_paved_street"
+     ]
+    },
+    {
+     "id": "steam_road_roller",
+     "name": "蒸汽压路机",
+     "en": "Steam road roller",
+     "year": 1865,
+     "note": "以蒸汽机驱动钢轮往复压实路面的机械，19世纪后期道路施工主力。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "asphalt_concrete",
+     "name": "沥青混凝土路面",
+     "en": "Asphalt concrete pavement",
+     "year": 1870,
+     "note": "以沥青黏结矿料摊铺碾压成路面，美国纽瓦克率先铺筑，成为公路主流面层。",
+     "deps": [
+      "petroleum",
+      "road"
+     ]
+    },
+    {
+     "id": "cement_concrete_pavement",
+     "name": "水泥混凝土路面",
+     "en": "Cement concrete pavement",
+     "year": 1891,
+     "note": "以波特兰水泥浇筑的路面，俄亥俄州贝勒方丹建成首条，耐久性显著。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "tarmacadam_road",
+     "name": "焦油碎石路",
+     "en": "Tarmacadam",
+     "year": 1901,
+     "note": "以焦油黏结碎石形成耐磨封层，二十世纪初广泛用于道路与机场道面。",
+     "deps": [
+      "macadam_road"
+     ]
+    },
+    {
+     "id": "traffic_road_sign",
+     "name": "公路交通标志",
+     "en": "Traffic road sign",
+     "year": 1909,
+     "note": "国际公约统一了道路标志的图形与含义，为跨国公路出行提供规范引导。",
+     "deps": [
+      "automobile"
+     ]
+    },
+    {
+     "id": "lane_marking",
+     "name": "车道标线",
+     "en": "Lane marking",
+     "year": 1911,
+     "note": "美国密歇根州首绘道路中央分道白线，车道分隔自此成为道路标准做法。",
+     "deps": [
+      "automobile"
+     ]
+    },
+    {
+     "id": "electric_traffic_signal",
+     "name": "交通信号灯",
+     "en": "Electric traffic signal",
+     "year": 1914,
+     "note": "克利夫兰安装首套电动红绿灯，交叉口通行控制进入电气化时代。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "asphalt_emulsion",
+     "name": "乳化沥青",
+     "en": "Asphalt emulsion",
+     "year": 1920,
+     "note": "以乳化剂使沥青常温分散于水的胶体材料，用于透层、粘层与冷拌施工。",
+     "deps": [
+      "petroleum"
+     ]
+    },
+    {
+     "id": "cloverleaf_interchange",
+     "name": "苜蓿叶式立交",
+     "en": "Cloverleaf interchange",
+     "year": 1928,
+     "note": "新泽西伍德布里奇建成首座苜蓿叶互通，转向匝道消除平面交叉冲突。",
+     "deps": [
+      "automobile"
+     ]
+    },
+    {
+     "id": "highway_guardrail",
+     "name": "公路防撞护栏",
+     "en": "Highway guardrail",
+     "year": 1930,
+     "note": "以波形钢梁或钢缆吸收失控车辆冲击的防护设施，高速公路普遍安装。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "limited_access_motorway",
+     "name": "高速公路",
+     "en": "Limited-access motorway",
+     "year": 1932,
+     "note": "德国科隆至波恩公路开通，双向分行、全立交，开现代高速公路之先河。",
+     "deps": [
+      "automobile"
+     ]
+    },
+    {
+     "id": "catseye_marker",
+     "name": "反光道钉",
+     "en": "Cat's eye road marker",
+     "year": 1933,
+     "note": "英国肖发明嵌入路面的反光玻璃道钉，夜间车灯照射下标线清晰可辨。"
+    },
+    {
+     "id": "asphalt_paver",
+     "name": "沥青摊铺机",
+     "en": "Asphalt paver",
+     "year": 1934,
+     "note": "履带式摊铺机问世后，沥青路面摊铺实现机械化，平整度与效率大增。",
+     "deps": [
+      "internal_combustion",
+      "asphalt_concrete"
+     ]
+    },
+    {
+     "id": "zebra_crossing",
+     "name": "斑马线",
+     "en": "Zebra crossing",
+     "year": 1949,
+     "note": "英国斯劳市设首批斑马线，行人在其上横穿道路享有法定优先通行权。",
+     "deps": [
+      "lane_marking",
+      "automobile"
+     ]
+    },
+    {
+     "id": "modern_roundabout",
+     "name": "环岛",
+     "en": "Modern roundabout",
+     "year": 1966,
+     "note": "英国确立入环让行的现代环岛规则，较信号平交更安全且通行更顺畅。",
+     "deps": [
+      "automobile"
+     ]
+    },
+    {
+     "id": "geotextile_road",
+     "name": "道路土工织物",
+     "en": "Road geotextile",
+     "year": 1970,
+     "note": "以合成纤维织物铺于路基与基层之间，起隔离、加筋与排水作用。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "porous_asphalt",
+     "name": "排水沥青路面",
+     "en": "Porous asphalt pavement",
+     "year": 1975,
+     "note": "高孔隙率沥青混合料可快速排水降噪，多用于多雨地区高速公路面层。",
+     "deps": [
+      "asphalt_concrete"
+     ]
+    },
+    {
+     "id": "stone_mastic_asphalt",
+     "name": "沥青玛蹄脂碎石路面",
+     "en": "Stone mastic asphalt",
+     "year": 1980,
+     "note": "德国为抵御防滑钉磨损研制的骨架密实路面，抗车辙且耐久性能优异。",
+     "deps": [
+      "asphalt_concrete"
+     ]
+    },
+    {
+     "id": "asphalt_recycling",
+     "name": "沥青路面再生",
+     "en": "Asphalt pavement recycling",
+     "year": 1985,
+     "note": "铣刨旧路面料经再生利用重新铺筑，大幅降低养护成本与材料消耗。",
+     "deps": [
+      "asphalt_concrete"
+     ]
+    },
+    {
+     "id": "warm_mix_asphalt",
+     "name": "温拌沥青混合料",
+     "en": "Warm mix asphalt",
+     "year": 2000,
+     "note": "低温拌和摊铺的沥青混合料，节能减排并改善工人作业环境。",
+     "deps": [
+      "asphalt_concrete"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "畜力与人力陆路载具",
+   "items": [
+    {
+     "id": "war_chariot",
+     "name": "双轮马拉战车",
+     "en": "Chariot",
+     "year": -2000,
+     "note": "轻快双轮马车配挽马牵引，青铜时代起成为作战、狩猎与竞速的载具。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "wheelbarrow",
+     "name": "独轮手推车",
+     "en": "Wheelbarrow",
+     "year": 100,
+     "note": "汉代中国创制的单轮手推车，一人可推送数百斤货物，古代运输利器。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "sedan_chair",
+     "name": "轿子",
+     "en": "Sedan chair",
+     "year": 1000,
+     "note": "人抬行进的封闭乘具，唐宋以来盛行于东亚城市，供官员与富户代步。"
+    },
+    {
+     "id": "four_wheel_coach",
+     "name": "四轮厢式马车",
+     "en": "Coach",
+     "year": 1470,
+     "note": "匈牙利科奇创用带悬挂的四轮车厢，载客平稳舒适，此后风靡欧洲。",
+     "deps": [
+      "horse_gear"
+     ]
+    },
+    {
+     "id": "stagecoach",
+     "name": "驿路客车",
+     "en": "Stagecoach",
+     "year": 1650,
+     "note": "定点定时营运的长途客运马车，沿途驿站换马，是铁路时代前的干线客运。",
+     "deps": [
+      "road"
+     ]
+    },
+    {
+     "id": "covered_wagon",
+     "name": "篷车",
+     "en": "Covered wagon",
+     "year": 1750,
+     "note": "帆布篷四轮货运马车，十九世纪大规模移民与长途货运的主力载具。",
+     "deps": [
+      "road"
+     ]
+    },
+    {
+     "id": "horse_omnibus",
+     "name": "马拉公共马车",
+     "en": "Horse omnibus",
+     "year": 1826,
+     "note": "法国南特首先开行定线定时的公共马车，是现代公共交通的概念源头。",
+     "deps": [
+      "horse_gear"
+     ]
+    },
+    {
+     "id": "rickshaw",
+     "name": "人力车",
+     "en": "Rickshaw",
+     "year": 1869,
+     "note": "日本东京出现营运人力车，后遍及亚洲城市，成为重要短途客运工具。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "passenger_pedicab",
+     "name": "载客三轮车",
+     "en": "Pedicab",
+     "year": 1938,
+     "note": "人力脚踏的三轮载客车，在东南亚与南亚城市长期承担短途客运。",
+     "deps": [
+      "rickshaw"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "自行车技术谱系",
+   "items": [
+    {
+     "id": "draisine",
+     "name": "木马自行车",
+     "en": "Draisine",
+     "year": 1817,
+     "note": "德赖斯发明的双轮滑行器，靠双脚蹬地前行，是现代自行车的始祖。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "velocipede",
+     "name": "脚蹬曲柄自行车",
+     "en": "Velocipede",
+     "year": 1866,
+     "note": "米肖在前轮加装曲柄脚蹬，踏板驱动自此成为自行车的基本特征。",
+     "deps": [
+      "draisine"
+     ]
+    },
+    {
+     "id": "penny_farthing",
+     "name": "高轮自行车",
+     "en": "Penny-farthing",
+     "year": 1871,
+     "note": "大前轮直接驱动以获得更高速度，但重心高易摔，流行于一八七零年代。",
+     "deps": [
+      "velocipede"
+     ]
+    },
+    {
+     "id": "adult_tricycle",
+     "name": "三轮自行车",
+     "en": "Adult tricycle",
+     "year": 1876,
+     "note": "双后轮加前轮驱动的三轮车，稳定性好，长期用于代步与货物运送。",
+     "deps": [
+      "velocipede"
+     ]
+    },
+    {
+     "id": "safety_bicycle",
+     "name": "安全自行车",
+     "en": "Safety bicycle",
+     "year": 1885,
+     "note": "链条传动后轮、菱形车架的低重心自行车，确立了现代自行车的构型。",
+     "deps": [
+      "velocipede"
+     ]
+    },
+    {
+     "id": "bicycle_pneumatic_tyre",
+     "name": "自行车充气轮胎",
+     "en": "Pneumatic bicycle tyre",
+     "year": 1888,
+     "note": "邓禄普为自行车装上充气胎，骑行舒适性跃升，并催生汽车充气轮胎。",
+     "deps": [
+      "safety_bicycle"
+     ]
+    },
+    {
+     "id": "bicycle_freewheel",
+     "name": "自行车飞轮",
+     "en": "Bicycle freewheel",
+     "year": 1896,
+     "note": "后轮内装棘轮棘爪，滑行时脚蹬可停转，骑行更加省力安全。",
+     "deps": [
+      "safety_bicycle"
+     ]
+    },
+    {
+     "id": "bicycle_hub_gearing",
+     "name": "内变速花鼓",
+     "en": "Internal hub gearing",
+     "year": 1902,
+     "note": "行星齿轮藏在花鼓内换挡，无外露拨链器，耐候可靠、维护简单。",
+     "deps": [
+      "safety_bicycle"
+     ]
+    },
+    {
+     "id": "bicycle_derailleur",
+     "name": "拨链式变速器",
+     "en": "Bicycle derailleur",
+     "year": 1905,
+     "note": "拨链器把链条拨至不同链轮切换齿比，竞速与山地骑行由此获益。",
+     "deps": [
+      "safety_bicycle"
+     ]
+    },
+    {
+     "id": "recumbent_bicycle",
+     "name": "躺式自行车",
+     "en": "Recumbent bicycle",
+     "year": 1934,
+     "note": "低风阻卧姿骑行的自行车，竞速纪录突出，是特殊车种的代表。",
+     "deps": [
+      "safety_bicycle"
+     ]
+    },
+    {
+     "id": "folding_bicycle",
+     "name": "折叠自行车",
+     "en": "Folding bicycle",
+     "year": 1962,
+     "note": "小轮径可折叠车身问世，便于携带换乘公交，城市通勤广泛采用。",
+     "deps": [
+      "safety_bicycle"
+     ]
+    },
+    {
+     "id": "bmx_bicycle",
+     "name": "小轮越野自行车",
+     "en": "BMX bicycle",
+     "year": 1971,
+     "note": "二十世纪七十年代美国加州青少年模仿越野摩托的产物，后成奥运项目。",
+     "deps": [
+      "safety_bicycle"
+     ]
+    },
+    {
+     "id": "mountain_bicycle",
+     "name": "山地自行车",
+     "en": "Mountain bike",
+     "year": 1979,
+     "note": "为崎岖山路强化车架与避震的自行车，八十年代起成为大众运动车型。",
+     "deps": [
+      "safety_bicycle",
+      "bicycle_derailleur"
+     ]
+    },
+    {
+     "id": "electric_bicycle",
+     "name": "电动自行车",
+     "en": "Electric bicycle",
+     "year": 1995,
+     "note": "蓄电池配轮毂电机助力骑行，在中国城市普及为大众短途代步工具。",
+     "deps": [
+      "battery",
+      "electric_motor"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "摩托车技术谱系",
+   "items": [
+    {
+     "id": "motorized_bicycle",
+     "name": "摩托脚踏车",
+     "en": "Motorized bicycle",
+     "year": 1885,
+     "note": "戴姆勒以内燃机装于木架自行车，制成世界上第一辆机动两轮车。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "motorcycle_sidecar",
+     "name": "挎斗摩托车",
+     "en": "Motorcycle sidecar",
+     "year": 1893,
+     "note": "车侧加挂单轮斗厢以载人载货，曾大量用于军警与邮政运输。",
+     "deps": [
+      "motorized_bicycle"
+     ]
+    },
+    {
+     "id": "production_motorcycle",
+     "name": "量产摩托车",
+     "en": "Production motorcycle",
+     "year": 1894,
+     "note": "德国希尔德布兰与沃尔夫米勒公司首次批量生产商用摩托车，行业由此展开。",
+     "deps": [
+      "motorized_bicycle"
+     ]
+    },
+    {
+     "id": "motor_scooter",
+     "name": "踏板摩托车",
+     "en": "Motor scooter",
+     "year": 1915,
+     "note": "小轮径、低踏板、便于骑乘的轻型摩托，二战后在欧洲城市大行其道。",
+     "deps": [
+      "production_motorcycle"
+     ]
+    },
+    {
+     "id": "offroad_motorcycle",
+     "name": "越野摩托车",
+     "en": "Off-road motorcycle",
+     "year": 1950,
+     "note": "强化悬挂与越野轮胎的摩托车，适应非铺装路面，衍出场地越野赛事。",
+     "deps": [
+      "production_motorcycle"
+     ]
+    },
+    {
+     "id": "moped",
+     "name": "轻便助动车",
+     "en": "Moped",
+     "year": 1952,
+     "note": "带脚踏的小排量摩托车型，速度低、油耗省，是欧洲战后大众通勤车。",
+     "deps": [
+      "production_motorcycle"
+     ]
+    },
+    {
+     "id": "electric_motorcycle",
+     "name": "电动摩托车",
+     "en": "Electric motorcycle",
+     "year": 2007,
+     "note": "以驱动电机与电池动力的高性能两轮车，城市配送与通勤应用日广。",
+     "deps": [
+      "electric_motor",
+      "electric_bicycle"
+     ]
+    },
+    {
+     "id": "electric_kick_scooter",
+     "name": "电动滑板车",
+     "en": "Electric kick scooter",
+     "year": 2015,
+     "note": "站立骑行的电动代步车，2010年代末共享运营遍布大城市短途出行。",
+     "deps": [
+      "electric_bicycle"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "汽车整车技术与制造",
+   "items": [
+    {
+     "id": "steam_car",
+     "name": "蒸汽汽车",
+     "en": "Steam car",
+     "year": 1770,
+     "note": "居纽制成首台可自行行驶的蒸汽三轮牵引车，被视为汽车的最早雏形。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "automotive_differential",
+     "name": "差速器",
+     "en": "Differential",
+     "year": 1828,
+     "note": "允许两侧驱动轮以不同转速过弯的齿轮机构，汽车转向与驱动必备。"
+    },
+    {
+     "id": "early_electric_vehicle",
+     "name": "早期电动汽车",
+     "en": "Early electric vehicle",
+     "year": 1884,
+     "note": "十九世纪末以蓄电池驱动的实用电动车问世，一度占纽约出租车大半。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "carburetor",
+     "name": "化油器",
+     "en": "Carburetor",
+     "year": 1885,
+     "note": "利用气流负压将汽油雾化与空气混合的供油装置，早期内燃机汽车必备。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "automotive_clutch",
+     "name": "摩擦离合器",
+     "en": "Automotive clutch",
+     "year": 1893,
+     "note": "以摩擦盘暂时切断或接合发动机与变速器动力，配合换挡起步的装置。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "manual_gearbox",
+     "name": "手动齿轮变速器",
+     "en": "Manual gearbox",
+     "year": 1894,
+     "note": "滑动齿轮啮合换挡的变速箱，成为二十世纪初汽车传动的基本结构。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "automobile_pneumatic_tyre",
+     "name": "汽车充气轮胎",
+     "en": "Automobile pneumatic tyre",
+     "year": 1895,
+     "note": "充气橡胶轮胎装于汽车，舒适性与抓地力远超实心胎，随即普及。",
+     "deps": [
+      "bicycle_pneumatic_tyre"
+     ]
+    },
+    {
+     "id": "radiator_cooling",
+     "name": "水箱散热器",
+     "en": "Engine radiator",
+     "year": 1900,
+     "note": "以空气流经散热芯冷却发动机循环水，是汽车热管理的基本部件。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "four_wheel_drive",
+     "name": "四轮驱动",
+     "en": "Four-wheel drive",
+     "year": 1903,
+     "note": "动力同时传至四轮以提高通过性，二十世纪起用于越野与载重车辆。",
+     "deps": [
+      "automotive_differential"
+     ]
+    },
+    {
+     "id": "ladder_chassis_frame",
+     "name": "梯形车架",
+     "en": "Ladder chassis frame",
+     "year": 1905,
+     "note": "两条纵梁加横梁组成的梯形底盘，长期是货车与越野车的承载基础。",
+     "deps": [
+      "automobile"
+     ]
+    },
+    {
+     "id": "hydraulic_shock_absorber",
+     "name": "液压减振器",
+     "en": "Hydraulic shock absorber",
+     "year": 1908,
+     "note": "以油液阻尼吸收弹簧跳动能量，显著改善车辆的平顺与操控。",
+     "deps": [
+      "automobile"
+     ]
+    },
+    {
+     "id": "car_electric_headlamp",
+     "name": "汽车电前照灯",
+     "en": "Electric headlamp",
+     "year": 1912,
+     "note": "以电灯取代乙炔气灯照亮车前道路，夜间行车安全性大幅提升。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "electric_starter",
+     "name": "电动起动机",
+     "en": "Electric starter",
+     "year": 1912,
+     "note": "以电机自动盘转发动机取代手摇曲柄，启动变得安全便捷。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "all_steel_body",
+     "name": "全钢冲压车身",
+     "en": "All-steel body",
+     "year": 1914,
+     "note": "以钢板冲压焊接替代木骨架车身，强度与防火性俱佳，奠定车身工艺。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "monocoque_body",
+     "name": "承载式车身",
+     "en": "Monocoque body",
+     "year": 1922,
+     "note": "车身壳体兼作受力结构取代车架，重量轻、刚度好，成为轿车主流。",
+     "deps": [
+      "all_steel_body"
+     ]
+    },
+    {
+     "id": "synchromesh_gearbox",
+     "name": "同步器变速器",
+     "en": "Synchromesh gearbox",
+     "year": 1928,
+     "note": "换挡同步器使齿速匹配后啮合，手动换挡不再需要双离合技巧。",
+     "deps": [
+      "manual_gearbox"
+     ]
+    },
+    {
+     "id": "front_wheel_drive",
+     "name": "前置前驱布置",
+     "en": "Front-wheel drive",
+     "year": 1934,
+     "note": "发动机驱动前轮的总体布置，空间利用好、循迹稳，后成轿车主流构型。",
+     "deps": [
+      "automobile"
+     ]
+    },
+    {
+     "id": "car_air_conditioning",
+     "name": "汽车空调",
+     "en": "Automotive air conditioning",
+     "year": 1939,
+     "note": "机械压缩制冷空调装车，改善车内热环境，五十年代后逐渐普及。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "automatic_transmission",
+     "name": "自动变速器",
+     "en": "Automatic transmission",
+     "year": 1940,
+     "note": "液力耦合与行星齿轮自动换挡，1940年量产装车，驾驶由此简化。",
+     "deps": [
+      "manual_gearbox"
+     ]
+    },
+    {
+     "id": "car_radio",
+     "name": "车载收音机",
+     "en": "Car radio",
+     "year": 1946,
+     "note": "收音机装车后成为首项车载信息娱乐设备，推动车内电气与天线技术。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "glassfibre_car_body",
+     "name": "玻璃钢汽车车身",
+     "en": "Fibreglass car body",
+     "year": 1953,
+     "note": "玻璃纤维增强塑料模压成型的轻质车身，耐腐蚀、易成型，用于跑车与特种车。"
+    },
+    {
+     "id": "cvt_transmission",
+     "name": "无级变速器",
+     "en": "Continuously variable transmission",
+     "year": 1958,
+     "note": "荷兰达夫以橡胶带传动实现无级变速并量产装车，燃油经济性好。",
+     "deps": [
+      "manual_gearbox"
+     ]
+    },
+    {
+     "id": "car_body_electrocoat",
+     "name": "车身电泳涂装",
+     "en": "Electrocoating",
+     "year": 1963,
+     "note": "通电让漆粒均匀沉积到车身内外腔，防腐能力远超传统喷涂。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "automotive_fuel_injection",
+     "name": "汽油电控燃油喷射",
+     "en": "Electronic fuel injection",
+     "year": 1967,
+     "note": "以电子控制喷嘴定量喷油替代化油器，改善排放与燃油经济性。",
+     "deps": [
+      "internal_combustion",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "car_body_welding_robot",
+     "name": "车身焊接机器人",
+     "en": "Car body welding robot",
+     "year": 1969,
+     "note": "工业机器人投入车身点焊作业，焊点质量稳定，产线自动化由此深入。",
+     "deps": [
+      "robot"
+     ]
+    },
+    {
+     "id": "automotive_turbocharger",
+     "name": "汽车废气涡轮增压",
+     "en": "Automotive turbocharger",
+     "year": 1973,
+     "note": "以废气驱动涡轮压缩进气，小排量也能获得高功率，七十年代量产应用。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "catalytic_converter",
+     "name": "三元催化转化器",
+     "en": "Catalytic converter",
+     "year": 1975,
+     "note": "将尾气中一氧化碳、碳氢与氮氧化物转化为无害成分，随排放法规普及。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "all_aluminium_body",
+     "name": "全铝车身",
+     "en": "All-aluminium body",
+     "year": 1994,
+     "note": "以铝合金型材与板材铆焊成车身的轻量化技术，比钢车身减重显著。",
+     "deps": [
+      "all_steel_body"
+     ]
+    },
+    {
+     "id": "hybrid_vehicle",
+     "name": "混合动力汽车",
+     "en": "Hybrid electric vehicle",
+     "year": 1997,
+     "note": "内燃机与电动机协同驱动的车型，1997年实现量产，显著降低油耗。",
+     "deps": [
+      "internal_combustion",
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "dual_clutch_transmission",
+     "name": "双离合变速器",
+     "en": "Dual-clutch transmission",
+     "year": 2003,
+     "note": "双离合器预选下一挡，换挡无动力中断，2003年首度量产装车。",
+     "deps": [
+      "automatic_transmission"
+     ]
+    },
+    {
+     "id": "fuel_cell_vehicle",
+     "name": "氢燃料电池汽车",
+     "en": "Fuel cell vehicle",
+     "year": 2008,
+     "note": "以氢氧燃料电池发电驱动电机，加氢数分钟续航数百公里，示范运营中。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "mass_market_ev",
+     "name": "现代量产电动汽车",
+     "en": "Mass-market electric vehicle",
+     "year": 2010,
+     "note": "以锂离子电池与驱动电机为动力的量产乘用车，2010年起销量快速增长。",
+     "deps": [
+      "battery",
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "plug_in_hybrid",
+     "name": "插电式混合动力汽车",
+     "en": "Plug-in hybrid vehicle",
+     "year": 2010,
+     "note": "可外接充电、兼备电驱与油驱的混合动力车，兼顾短途零排放与长途。",
+     "deps": [
+      "hybrid_vehicle"
+     ]
+    },
+    {
+     "id": "automotive_modular_platform",
+     "name": "汽车模块化平台",
+     "en": "Automotive modular platform",
+     "year": 2012,
+     "note": "以统一平台与可调尺寸生产多车型的平台化策略，缩短开发并摊薄成本。",
+     "deps": [
+      "assembly_line"
+     ]
+    },
+    {
+     "id": "vehicle_ota_update",
+     "name": "整车软件空中升级",
+     "en": "Vehicle over-the-air update",
+     "year": 2012,
+     "note": "经无线网络远程更新车载软件与固件，车辆功能可像手机一样持续进化。",
+     "deps": [
+      "internet"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "汽车安全、操控与智能系统",
+   "items": [
+    {
+     "id": "steering_wheel",
+     "name": "汽车方向盘",
+     "en": "Steering wheel",
+     "year": 1894,
+     "note": "以圆轮取代舵柄控制转向轮，成为汽车百年不变的核心操控部件。",
+     "deps": [
+      "automobile"
+     ]
+    },
+    {
+     "id": "windshield_wiper",
+     "name": "挡风玻璃雨刮",
+     "en": "Windshield wiper",
+     "year": 1903,
+     "note": "手动刮片清除挡风雨水，经电气化改造后成为法定安全配置。",
+     "deps": [
+      "automobile"
+     ]
+    },
+    {
+     "id": "side_mirror",
+     "name": "车外后视镜",
+     "en": "Side-view mirror",
+     "year": 1911,
+     "note": "供驾驶员观察车后两侧视野的镜面装置，赛车率先采用，后成法定部件。",
+     "deps": [
+      "automobile"
+     ]
+    },
+    {
+     "id": "hydraulic_brake",
+     "name": "液压制动系统",
+     "en": "Hydraulic brake",
+     "year": 1924,
+     "note": "以制动液传递压力推动轮缸刹车，比机械拉索更均匀可靠，成为主流。",
+     "deps": [
+      "automobile"
+     ]
+    },
+    {
+     "id": "car_bumper",
+     "name": "汽车保险杠",
+     "en": "Car bumper",
+     "year": 1925,
+     "note": "车辆前后部的能量吸收防护梁，早期为钢制装饰件，后成法规部件。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "laminated_car_windshield",
+     "name": "夹层安全挡风玻璃",
+     "en": "Laminated windshield",
+     "year": 1927,
+     "note": "两层玻璃间夹塑料膜，破裂不飞溅伤人，汽车挡风玻璃普遍采用。",
+     "deps": [
+      "all_steel_body"
+     ]
+    },
+    {
+     "id": "car_turn_signal",
+     "name": "汽车转向灯",
+     "en": "Turn signal",
+     "year": 1938,
+     "note": "以闪烁灯光提示车辆转向意图的灯光信号装置，后为全球法规标配。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "power_steering",
+     "name": "动力转向",
+     "en": "Power steering",
+     "year": 1951,
+     "note": "借助液压助力减轻转向操作力，大型车与轿车驾驶由此轻松灵活。",
+     "deps": [
+      "steering_wheel"
+     ]
+    },
+    {
+     "id": "disc_brake",
+     "name": "盘式制动器",
+     "en": "Disc brake",
+     "year": 1953,
+     "note": "卡钳夹紧制动盘的刹车方式，抗热衰退性能好，现为乘用车标配。",
+     "deps": [
+      "hydraulic_brake"
+     ]
+    },
+    {
+     "id": "cruise_control",
+     "name": "定速巡航",
+     "en": "Cruise control",
+     "year": 1958,
+     "note": "自动维持设定车速行驶的装置，长途驾驶可免除持续踩油门。",
+     "deps": [
+      "automobile"
+     ]
+    },
+    {
+     "id": "three_point_seatbelt",
+     "name": "三点式安全带",
+     "en": "Three-point seatbelt",
+     "year": 1959,
+     "note": "波林设计的斜跨与腰带合一的安全带，沃尔沃无偿公开专利，救生无数。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "crumple_zone",
+     "name": "溃缩吸能区",
+     "en": "Crumple zone",
+     "year": 1959,
+     "note": "车身前后部设计为可控溃缩结构，碰撞时吸收能量保护乘员舱。",
+     "deps": [
+      "monocoque_body"
+     ]
+    },
+    {
+     "id": "child_safety_seat",
+     "name": "儿童安全座椅",
+     "en": "Child safety seat",
+     "year": 1962,
+     "note": "专为儿童体型设计的车内约束座椅，显著降低儿童碰撞伤亡风险。",
+     "deps": [
+      "three_point_seatbelt"
+     ]
+    },
+    {
+     "id": "airbag",
+     "name": "安全气囊",
+     "en": "Airbag",
+     "year": 1973,
+     "note": "碰撞时气体发生器迅速充胀气囊，缓冲乘员二次撞击，七十年代装车。",
+     "deps": [
+      "three_point_seatbelt"
+     ]
+    },
+    {
+     "id": "antilock_braking_system",
+     "name": "防抱死制动系统",
+     "en": "Antilock braking system",
+     "year": 1978,
+     "note": "电控调节制动力防止车轮抱死，紧急制动时仍保持转向能力。",
+     "deps": [
+      "disc_brake",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "tire_pressure_monitor",
+     "name": "胎压监测系统",
+     "en": "Tire pressure monitoring system",
+     "year": 1986,
+     "note": "轮内传感器实时监测气压，欠压即告警，后成多国法定配置。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "traction_control",
+     "name": "牵引力控制系统",
+     "en": "Traction control system",
+     "year": 1987,
+     "note": "检测驱动轮打滑并制动或降扭，湿滑路面起步加速更稳。",
+     "deps": [
+      "antilock_braking_system"
+     ]
+    },
+    {
+     "id": "automotive_hud",
+     "name": "汽车抬头显示",
+     "en": "Automotive head-up display",
+     "year": 1988,
+     "note": "把车速与导航信息投射到风挡前视域，减少驾驶员低头看仪表的视线转移。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "rear_view_camera",
+     "name": "倒车影像",
+     "en": "Rear-view camera",
+     "year": 1991,
+     "note": "车尾摄像头把后方画面传给车内显示屏，消除倒车盲区，后成法规配置。",
+     "deps": [
+      "camera"
+     ]
+    },
+    {
+     "id": "engine_immobilizer",
+     "name": "发动机防盗锁止",
+     "en": "Engine immobilizer",
+     "year": 1992,
+     "note": "以电子密钥校验控制发动机点火，未匹配钥匙无法起动，遏制盗车。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "car_navigation_system",
+     "name": "车载导航系统",
+     "en": "In-car navigation system",
+     "year": 1992,
+     "note": "结合卫星定位与电子地图实时引导行车路线，1990年代进入乘用车。",
+     "deps": [
+      "gps"
+     ]
+    },
+    {
+     "id": "electronic_stability_control",
+     "name": "电子车身稳定系统",
+     "en": "Electronic stability control",
+     "year": 1995,
+     "note": "监测车身姿态并对单轮制动以抑制侧滑，显著减少失控事故。",
+     "deps": [
+      "traction_control"
+     ]
+    },
+    {
+     "id": "adaptive_cruise_control",
+     "name": "自适应巡航",
+     "en": "Adaptive cruise control",
+     "year": 1997,
+     "note": "雷达测距自动调整车速跟随前车，是高级驾驶辅助的重要功能。",
+     "deps": [
+      "cruise_control",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "lane_departure_warning",
+     "name": "车道偏离预警",
+     "en": "Lane departure warning",
+     "year": 2003,
+     "note": "以视觉识别车道线，车辆偏出车道时报警提示，降低疲劳驾驶事故。",
+     "deps": [
+      "semiconductors",
+      "camera"
+     ]
+    },
+    {
+     "id": "blind_spot_detection",
+     "name": "盲点监测",
+     "en": "Blind spot detection",
+     "year": 2007,
+     "note": "雷达或摄像头监视后视镜盲区，变道危险时向驾驶员发出警示。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "automatic_emergency_braking",
+     "name": "自动紧急制动",
+     "en": "Automatic emergency braking",
+     "year": 2009,
+     "note": "感知前碰风险自动全力制动，是近年普及最快的主动安全功能。",
+     "deps": [
+      "autonomous_driving",
+      "camera"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "道路附属设施与收费运营",
+   "items": [
+    {
+     "id": "road_milestone",
+     "name": "道路里程碑",
+     "en": "Roman milestone",
+     "year": -250,
+     "note": "罗马沿大道竖立石柱标示里程与方位，是后世里程标与指路牌的远祖。",
+     "deps": [
+      "road"
+     ]
+    },
+    {
+     "id": "turnpike_road",
+     "name": "收费道路",
+     "en": "Turnpike",
+     "year": 1663,
+     "note": "英国以议会法案授权设卡收费修路养路，开近代收费公路制度先河。",
+     "deps": [
+      "road"
+     ]
+    },
+    {
+     "id": "license_plate",
+     "name": "机动车号牌",
+     "en": "Vehicle registration plate",
+     "year": 1893,
+     "note": "巴黎率先要求机动车登记悬挂号牌，车辆识别与交通管理由此有据。",
+     "deps": [
+      "automobile"
+     ]
+    },
+    {
+     "id": "tire_snow_chain",
+     "name": "轮胎防滑链",
+     "en": "Tire chain",
+     "year": 1904,
+     "note": "缠绕车轮外缘的金属链，冰雪路面显著提升轮胎抓地力。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "gasoline_station",
+     "name": "公路加油站",
+     "en": "Gasoline station",
+     "year": 1913,
+     "note": "专为汽车提供油品补给的公路设施，随汽车普及而遍布城乡路网。",
+     "deps": [
+      "petroleum"
+     ]
+    },
+    {
+     "id": "motor_snowplow",
+     "name": "机动除雪车",
+     "en": "Motor snowplow",
+     "year": 1913,
+     "note": "以发动机驱动铲刃清除路面积雪的养护机械，保障冬季道路畅通。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "parking_meter",
+     "name": "停车计时器",
+     "en": "Parking meter",
+     "year": 1935,
+     "note": "投币计时管理路边停车的装置，俄克拉荷马城首先安装，后遍及全球。",
+     "deps": [
+      "automobile"
+     ]
+    },
+    {
+     "id": "rumble_strip",
+     "name": "隆声带",
+     "en": "Rumble strip",
+     "year": 1952,
+     "note": "路面压出的凹凸纹带，车辆压过时振动轰鸣，警示驾驶员偏离车道。",
+     "deps": [
+      "automobile"
+     ]
+    },
+    {
+     "id": "speed_camera",
+     "name": "测速照相机",
+     "en": "Speed camera",
+     "year": 1958,
+     "note": "雷达测速联动相机抓拍超速车辆，是自动化交通执法的开端。"
+    },
+    {
+     "id": "highway_emergency_phone",
+     "name": "公路紧急救援电话",
+     "en": "Highway emergency telephone",
+     "year": 1960,
+     "note": "高速公路沿线间隔设置的固定呼救话机，可直连路政中心请求救援。",
+     "deps": [
+      "telephone"
+     ]
+    },
+    {
+     "id": "tactile_paving",
+     "name": "盲道砖",
+     "en": "Tactile paving",
+     "year": 1965,
+     "note": "表面带凸条的铺地砖，视障者经脚感与杖感辨识行走路线，日本首创。",
+     "deps": [
+      "road"
+     ]
+    },
+    {
+     "id": "congestion_pricing",
+     "name": "拥挤收费",
+     "en": "Congestion pricing",
+     "year": 1975,
+     "note": "高峰时段对驶入市中心车辆收费以调控流量，新加坡率先实施。",
+     "deps": [
+      "automobile"
+     ]
+    },
+    {
+     "id": "anpr",
+     "name": "车牌自动识别",
+     "en": "Automatic number-plate recognition",
+     "year": 1976,
+     "note": "光学字符识别自动读取车辆号牌，用于稽查、收费与卡口管理。",
+     "deps": [
+      "camera"
+     ]
+    },
+    {
+     "id": "electronic_toll_collection",
+     "name": "电子不停车收费",
+     "en": "Electronic toll collection",
+     "year": 1991,
+     "note": "车载标签与路侧设备无线通信自动扣费，车辆无须停车通过收费站。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "ev_charging_station",
+     "name": "电动汽车充电站",
+     "en": "Electric vehicle charging station",
+     "year": 2011,
+     "note": "为电动车提供交流慢充与直流快充的补能设施，随电动车推广普及。",
+     "deps": [
+      "battery",
+      "power_grid"
+     ]
+    }
+   ]
+  }
+ ]
+}

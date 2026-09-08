@@ -1,0 +1,1376 @@
+{
+ "cat": "manufact",
+ "catName": "制造与工具",
+ "sub": "molding",
+ "subName": "成型工艺",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "steel",
+  "iron",
+  "chemistry",
+  "plastics",
+  "composites",
+  "electricity",
+  "petroleum",
+  "semiconductors"
+ ],
+ "families": [
+  {
+   "name": "聚合物注塑成形技术",
+   "items": [
+    {
+     "id": "injection_molding",
+     "name": "注塑成型",
+     "en": "Injection molding",
+     "year": 1872,
+     "note": "把熔融塑料高压注入闭合模具冷却成形，是产量最大的塑料制品成形法，始于赛璐珞制品。",
+     "deps": [
+      "steel",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "plunger_injection_machine",
+     "name": "柱塞式注塑机",
+     "en": "Plunger injection molding machine",
+     "year": 1872,
+     "note": "海厄特以柱塞推动熔料入模并获得专利，是注塑装备的原始形态。",
+     "deps": [
+      "steel",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "screw_injection_machine",
+     "name": "螺杆式注塑机",
+     "en": "Reciprocating screw injection molding machine",
+     "year": 1946,
+     "note": "亨德里把螺杆塑化与注射合一，塑化均匀稳定，成为现代注塑机主流结构。",
+     "deps": [
+      "injection_molding",
+      "plastics"
+     ]
+    },
+    {
+     "id": "insert_injection_molding",
+     "name": "嵌件注塑",
+     "en": "Insert injection molding",
+     "year": 1955,
+     "note": "把金属等嵌件预置模内再注塑结合，免去后续装配工序。",
+     "deps": [
+      "injection_molding"
+     ]
+    },
+    {
+     "id": "hot_runner_system",
+     "name": "热流道系统",
+     "en": "Hot runner system",
+     "year": 1960,
+     "note": "流道与浇口全程加热保温，注塑免去料柄，省料并缩短成型周期。",
+     "deps": [
+      "screw_injection_machine"
+     ]
+    },
+    {
+     "id": "two_shot_injection_molding",
+     "name": "双色注塑",
+     "en": "Two-shot injection molding",
+     "year": 1961,
+     "note": "在同一模内先后注射两种颜色或两种材料，一次获得双色复合制品。",
+     "deps": [
+      "screw_injection_machine"
+     ]
+    },
+    {
+     "id": "structural_foam_injection",
+     "name": "结构发泡注塑",
+     "en": "Structural foam injection molding",
+     "year": 1962,
+     "note": "发泡剂使芯层发泡而表层致密，制品刚度高且显著省料。",
+     "deps": [
+      "injection_molding"
+     ]
+    },
+    {
+     "id": "thermoset_injection_molding",
+     "name": "热固性注塑",
+     "en": "Thermoset injection molding",
+     "year": 1965,
+     "note": "热固性树脂在螺杆中可控塑化后注入热模固化，用于电器与汽车件。",
+     "deps": [
+      "screw_injection_machine"
+     ]
+    },
+    {
+     "id": "reaction_injection_molding",
+     "name": "反应注射成形",
+     "en": "Reaction injection molding",
+     "year": 1967,
+     "note": "双组分聚氨酯等经高压对撞混合后注入模内反应成形，适合大型壳体件。",
+     "deps": [
+      "plastics",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "sandwich_injection_molding",
+     "name": "夹芯注塑",
+     "en": "Sandwich injection molding",
+     "year": 1974,
+     "note": "先注皮层再注芯层形成包覆结构，可作发泡芯或利用回收料。",
+     "deps": [
+      "injection_molding"
+     ]
+    },
+    {
+     "id": "in_mold_labeling",
+     "name": "模内贴标",
+     "en": "In-mold labeling",
+     "year": 1975,
+     "note": "标签预先置入模内与瓶体一体成形，省去后续贴标工序。",
+     "deps": [
+      "injection_molding"
+     ]
+    },
+    {
+     "id": "liquid_silicone_injection",
+     "name": "液态硅胶注塑",
+     "en": "Liquid silicone rubber injection molding",
+     "year": 1980,
+     "note": "双组分液态硅胶静态混合后注入热模加硫成形，多用于医用与婴童制品。",
+     "deps": [
+      "screw_injection_machine"
+     ]
+    },
+    {
+     "id": "multi_component_injection",
+     "name": "多组分共注塑",
+     "en": "Multi-component injection molding",
+     "year": 1982,
+     "note": "多种热塑性材料在同一模具多次注射，软硬胶一体成形以改善手感与密封。",
+     "deps": [
+      "two_shot_injection_molding"
+     ]
+    },
+    {
+     "id": "all_electric_injection_machine",
+     "name": "全电动注塑机",
+     "en": "All-electric injection molding machine",
+     "year": 1983,
+     "note": "以伺服电机直驱各动作机构，节能洁净、重复精度高，用于精密注塑。",
+     "deps": [
+      "screw_injection_machine"
+     ]
+    },
+    {
+     "id": "overmolding",
+     "name": "包胶注塑",
+     "en": "Overmolding",
+     "year": 1985,
+     "note": "把基材件放入模内二次注射包覆软胶，常用于手柄与密封件制造。",
+     "deps": [
+      "insert_injection_molding"
+     ]
+    },
+    {
+     "id": "gas_assist_injection",
+     "name": "气体辅助注塑",
+     "en": "Gas-assisted injection molding",
+     "year": 1985,
+     "note": "熔料注满后向型腔充入高压氮气，沿壁形成气道以减重防缩。",
+     "deps": [
+      "injection_molding"
+     ]
+    },
+    {
+     "id": "structural_rim",
+     "name": "结构反应注射成形",
+     "en": "Structural reaction injection molding",
+     "year": 1985,
+     "note": "模内预置玻纤毡等增强骨架再注射反应料，得到高强度结构泡沫件。",
+     "deps": [
+      "reaction_injection_molding"
+     ]
+    },
+    {
+     "id": "two_platen_injection_machine",
+     "name": "二板注塑机",
+     "en": "Two-platen injection molding machine",
+     "year": 1988,
+     "note": "取消肘杆合模机构的两模板结构，锁模力大且占地小，适合大型注塑。",
+     "deps": [
+      "screw_injection_machine"
+     ]
+    },
+    {
+     "id": "injection_compression_molding",
+     "name": "注射压缩成形",
+     "en": "Injection-compression molding",
+     "year": 1990,
+     "note": "注射与合模压缩相结合，制品内应力低、缩痕小，用于光学透镜。",
+     "deps": [
+      "injection_molding"
+     ]
+    },
+    {
+     "id": "in_mold_decoration",
+     "name": "模内装饰",
+     "en": "In-mold decoration",
+     "year": 1992,
+     "note": "印刷薄膜置入模内与塑件熔合，实现图案与壳体一次成形。",
+     "deps": [
+      "in_mold_labeling"
+     ]
+    },
+    {
+     "id": "micro_injection_molding",
+     "name": "微注塑成形",
+     "en": "Micro injection molding",
+     "year": 1995,
+     "note": "以微米级模具与精密螺杆成形微型零件，面向医疗与光通信器件。",
+     "deps": [
+      "injection_molding"
+     ]
+    },
+    {
+     "id": "low_pressure_injection_molding",
+     "name": "低压注塑",
+     "en": "Low-pressure injection molding",
+     "year": 1996,
+     "note": "低黏度热熔胶在低压下包封电子元件，防水抗振且损伤元件小。",
+     "deps": [
+      "screw_injection_machine",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "water_assist_injection",
+     "name": "水辅助注塑",
+     "en": "Water-assisted injection molding",
+     "year": 2000,
+     "note": "以高压水芯代替气芯成形大直径中空制品，内壁光滑且冷却快。",
+     "deps": [
+      "gas_assist_injection"
+     ]
+    },
+    {
+     "id": "microcellular_foam_molding",
+     "name": "超临界微发泡注塑",
+     "en": "Microcellular foam injection molding",
+     "year": 2000,
+     "note": "超临界二氧化碳或氮气形成均匀微孔，制品轻量化且尺寸稳定。",
+     "deps": [
+      "structural_foam_injection",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "thin_wall_injection_molding",
+     "name": "薄壁注塑",
+     "en": "Thin-wall injection molding",
+     "year": 2002,
+     "note": "高流动树脂高速高压充填薄壁型腔，用于包装与结构轻量化件。",
+     "deps": [
+      "injection_molding"
+     ]
+    },
+    {
+     "id": "rapid_heat_cycle_molding",
+     "name": "变模温注塑",
+     "en": "Rapid heat cycle molding",
+     "year": 2005,
+     "note": "模温快速升降消除熔接痕与流痕，获得高光免喷涂表面。",
+     "deps": [
+      "injection_molding"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "聚合物挤出与压延成形技术",
+   "items": [
+    {
+     "id": "calendering_process",
+     "name": "压延成形",
+     "en": "Calendering",
+     "year": 1880,
+     "note": "塑化物料通过多辊辊隙压成厚度均匀的膜片，橡胶与PVC膜片多用此法。",
+     "deps": [
+      "iron",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "wire_coating_extrusion",
+     "name": "线缆包覆挤出",
+     "en": "Wire and cable coating extrusion",
+     "year": 1932,
+     "note": "熔体连续包覆于牵引线芯上形成绝缘护套，PVC电缆由此大规模生产。",
+     "deps": [
+      "electricity",
+      "plastics"
+     ]
+    },
+    {
+     "id": "extrusion_process",
+     "name": "挤出成形",
+     "en": "Plastics extrusion",
+     "year": 1935,
+     "note": "熔融塑料在螺杆推动下连续通过口模成形，是管、膜、型材的主要成形方式。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "single_screw_extruder",
+     "name": "单螺杆挤出机",
+     "en": "Single-screw extruder",
+     "year": 1935,
+     "note": "特罗斯特制造首台热塑性塑料单螺杆挤出机，奠定现代挤出装备基础。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "blown_film_extrusion",
+     "name": "吹塑薄膜",
+     "en": "Blown film extrusion",
+     "year": 1938,
+     "note": "挤出管坯充气吹胀成膜泡，经冷却压平收卷，是包装薄膜主工艺。",
+     "deps": [
+      "extrusion_process"
+     ]
+    },
+    {
+     "id": "pipe_extrusion",
+     "name": "管材挤出",
+     "en": "Pipe extrusion",
+     "year": 1938,
+     "note": "熔体经环形口模连续成形并定径冷却，用于给排水与燃气管道。",
+     "deps": [
+      "extrusion_process"
+     ]
+    },
+    {
+     "id": "twin_screw_extruder",
+     "name": "双螺杆挤出机",
+     "en": "Twin-screw extruder",
+     "year": 1940,
+     "note": "科伦坡专利的同向啮合双螺杆，混炼塑化强，广泛用于配混与反应加工。",
+     "deps": [
+      "extrusion_process"
+     ]
+    },
+    {
+     "id": "foam_extrusion",
+     "name": "挤出发泡",
+     "en": "Foam extrusion",
+     "year": 1941,
+     "note": "把发泡剂注入熔体，在口模处降压发泡，制得连续泡沫保温板。",
+     "deps": [
+      "extrusion_process"
+     ]
+    },
+    {
+     "id": "monofilament_extrusion",
+     "name": "塑料单丝挤出",
+     "en": "Monofilament extrusion",
+     "year": 1945,
+     "note": "熔体经喷丝孔挤出并经拉伸定型成单丝，用于刷丝、渔线与绳索。",
+     "deps": [
+      "extrusion_process"
+     ]
+    },
+    {
+     "id": "cast_film_extrusion",
+     "name": "流延膜挤出",
+     "en": "Cast film extrusion",
+     "year": 1948,
+     "note": "熔体经平缝口模流延到冷辊上冷却定型，膜厚均匀、光学性能好。",
+     "deps": [
+      "extrusion_process"
+     ]
+    },
+    {
+     "id": "sheet_extrusion",
+     "name": "板材挤出",
+     "en": "Sheet extrusion",
+     "year": 1948,
+     "note": "宽幅平模挤出厚片后经三辊压光冷却，作为吸塑与板材的基材。",
+     "deps": [
+      "extrusion_process"
+     ]
+    },
+    {
+     "id": "extrusion_coating",
+     "name": "挤出涂覆",
+     "en": "Extrusion coating",
+     "year": 1948,
+     "note": "把树脂熔体薄层涂覆于纸、铝箔等基材表面，用于复合软包装。",
+     "deps": [
+      "extrusion_process"
+     ]
+    },
+    {
+     "id": "continuous_compounding_mixer",
+     "name": "连续混炼机",
+     "en": "Continuous compounding mixer",
+     "year": 1950,
+     "note": "法雷尔连续混炼机把间歇密炼转为连续混炼，与挤出成形相衔接。",
+     "deps": [
+      "twin_screw_extruder"
+     ]
+    },
+    {
+     "id": "meltblown_process",
+     "name": "熔喷成形",
+     "en": "Melt blowing",
+     "year": 1954,
+     "note": "熔体细流被高速热气流牵伸成超细纤维并直接成网，用于过滤防护。",
+     "deps": [
+      "extrusion_process"
+     ]
+    },
+    {
+     "id": "extrusion_pelletizing",
+     "name": "挤出造粒",
+     "en": "Extrusion pelletizing",
+     "year": 1955,
+     "note": "熔体经口模成条或水下切粒制成规整颗粒，是树脂商品化的形态。",
+     "deps": [
+      "extrusion_process"
+     ]
+    },
+    {
+     "id": "extrusion_lamination",
+     "name": "挤出复合",
+     "en": "Extrusion lamination",
+     "year": 1955,
+     "note": "以挤出的树脂膜作粘合层，把纸、铝箔等基材复合成多层材料。",
+     "deps": [
+      "extrusion_coating"
+     ]
+    },
+    {
+     "id": "coextrusion",
+     "name": "共挤出",
+     "en": "Coextrusion",
+     "year": 1958,
+     "note": "多台挤出机把不同熔体在口模内复合成多层结构，赋予阻隔等功能。",
+     "deps": [
+      "twin_screw_extruder"
+     ]
+    },
+    {
+     "id": "profile_extrusion",
+     "name": "型材挤出",
+     "en": "Profile extrusion",
+     "year": 1960,
+     "note": "异形口模挤出并定型的型材，广泛用于门窗框与密封条。",
+     "deps": [
+      "extrusion_process"
+     ]
+    },
+    {
+     "id": "vented_extruder",
+     "name": "排气式挤出机",
+     "en": "Vented extruder",
+     "year": 1965,
+     "note": "机筒中段开设排气口抽走水汽与挥发分，免去原料预干燥。",
+     "deps": [
+      "twin_screw_extruder"
+     ]
+    },
+    {
+     "id": "biaxially_oriented_film",
+     "name": "双向拉伸薄膜成形",
+     "en": "Biaxially oriented film forming",
+     "year": 1974,
+     "note": "挤出片材经纵横双向拉伸提高强度与透明性，BOPP膜由此而来。",
+     "deps": [
+      "cast_film_extrusion"
+     ]
+    },
+    {
+     "id": "melt_gear_pump",
+     "name": "熔体齿轮泵",
+     "en": "Melt gear pump",
+     "year": 1975,
+     "note": "螺杆出口串接计量齿轮泵，稳定输送并精确控制挤出量。",
+     "deps": [
+      "extrusion_process"
+     ]
+    },
+    {
+     "id": "corrugated_twinwall_pipe",
+     "name": "双壁波纹管成形",
+     "en": "Corrugated twin-wall pipe forming",
+     "year": 1977,
+     "note": "挤出熔体在成型模块内连续吹胀出环向波纹，形成高环刚度排水管。",
+     "deps": [
+      "pipe_extrusion"
+     ]
+    },
+    {
+     "id": "planetary_roller_extruder",
+     "name": "行星辊筒挤出机",
+     "en": "Planetary roller extruder",
+     "year": 1985,
+     "note": "螺杆外包多根行星辊同时捏合，比表面大、剪切温和，多用于PVC加工。",
+     "deps": [
+      "twin_screw_extruder"
+     ]
+    },
+    {
+     "id": "reactive_extrusion",
+     "name": "反应挤出",
+     "en": "Reactive extrusion",
+     "year": 1985,
+     "note": "在挤出机内完成聚合与接枝等反应，流程短且无需溶剂。",
+     "deps": [
+      "twin_screw_extruder"
+     ]
+    },
+    {
+     "id": "micro_tube_extrusion",
+     "name": "微细导管挤出",
+     "en": "Micro tubing extrusion",
+     "year": 1995,
+     "note": "精密模具配合在线测径控制，挤出医用级小直径细管。",
+     "deps": [
+      "extrusion_process"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "中空吹塑、热成形与旋转成形技术",
+   "items": [
+    {
+     "id": "dip_molding",
+     "name": "蘸塑成形",
+     "en": "Dip molding",
+     "year": 1930,
+     "note": "把热模浸入糊料或胶乳中蘸取涂层固化，成形手套与防护套。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "extrusion_blow_molding",
+     "name": "挤出吹塑成形",
+     "en": "Extrusion blow molding",
+     "year": 1938,
+     "note": "挤出管坯在模具内吹气贴模成形中空件，是塑料瓶桶的主要工艺。",
+     "deps": [
+      "extrusion_process"
+     ]
+    },
+    {
+     "id": "thermoforming_process",
+     "name": "热成形",
+     "en": "Thermoforming",
+     "year": 1940,
+     "note": "热塑性片材加热软化后在模具上成形，成本低，用于包装与内饰件。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "vacuum_forming",
+     "name": "真空吸塑",
+     "en": "Vacuum forming",
+     "year": 1942,
+     "note": "加热片材在真空吸附下贴模成形，吸塑包装与托盘的主要方法。",
+     "deps": [
+      "thermoforming_process"
+     ]
+    },
+    {
+     "id": "plug_assist_forming",
+     "name": "凸模辅助热成形",
+     "en": "Plug-assist thermoforming",
+     "year": 1945,
+     "note": "用预拉伸塞先把热片顶深再吸附成形，改善深拉件的壁厚均匀性。",
+     "deps": [
+      "thermoforming_process"
+     ]
+    },
+    {
+     "id": "rotational_molding",
+     "name": "滚塑成形",
+     "en": "Rotational molding",
+     "year": 1948,
+     "note": "粉料在旋转加热模具中熔融附着成形大型中空件，模具成本低。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "pressure_thermoforming",
+     "name": "压力热成形",
+     "en": "Pressure thermoforming",
+     "year": 1950,
+     "note": "以压缩空气把热片正压入模腔，轮廓细节优于真空吸塑。",
+     "deps": [
+      "vacuum_forming"
+     ]
+    },
+    {
+     "id": "injection_blow_molding",
+     "name": "注射吹塑成形",
+     "en": "Injection blow molding",
+     "year": 1953,
+     "note": "先注塑出带螺纹口型坯再转位吹塑，瓶口精度高，多用于小瓶。",
+     "deps": [
+      "injection_molding"
+     ]
+    },
+    {
+     "id": "roll_fed_thermoforming",
+     "name": "卷材连续热成形",
+     "en": "Roll-fed thermoforming",
+     "year": 1955,
+     "note": "卷材连续加热、成形、冲切一次完成，是杯盒类的高速生产方式。",
+     "deps": [
+      "vacuum_forming"
+     ]
+    },
+    {
+     "id": "powder_slush_molding",
+     "name": "粉体搪塑成形",
+     "en": "Powder slush molding",
+     "year": 1958,
+     "note": "粉料在热模腔内壁熔结形成带纹理皮层，成形仪表板蒙皮。",
+     "deps": [
+      "rotational_molding"
+     ]
+    },
+    {
+     "id": "rotary_blow_molding",
+     "name": "旋转式吹塑机",
+     "en": "Rotary blow molding machine",
+     "year": 1962,
+     "note": "多工位旋转台连续完成挤出、吹塑与脱模，实现高速制瓶。",
+     "deps": [
+      "extrusion_blow_molding"
+     ]
+    },
+    {
+     "id": "accumulator_head_blow_molding",
+     "name": "储料缸式吹塑成形",
+     "en": "Accumulator head blow molding",
+     "year": 1965,
+     "note": "先蓄料再压射大管坯，成形汽车油箱与大型储桶等中空制品。",
+     "deps": [
+      "extrusion_blow_molding"
+     ]
+    },
+    {
+     "id": "blow_fill_seal",
+     "name": "吹灌封一体成形",
+     "en": "Blow-fill-seal",
+     "year": 1967,
+     "note": "挤出型坯成形、灌装与封口在无菌环境一次完成，用于输液与眼药。",
+     "deps": [
+      "extrusion_blow_molding"
+     ]
+    },
+    {
+     "id": "stretch_blow_molding",
+     "name": "注拉吹成形",
+     "en": "Injection stretch blow molding",
+     "year": 1973,
+     "note": "注坯经双向拉伸后吹塑，PET碳酸饮料瓶由此实现高强度薄壁。",
+     "deps": [
+      "injection_blow_molding"
+     ]
+    },
+    {
+     "id": "twin_sheet_forming",
+     "name": "双片热成形",
+     "en": "Twin-sheet thermoforming",
+     "year": 1975,
+     "note": "上下两片热板分别成形后压合焊接，制中空厚壁件与物流托盘。",
+     "deps": [
+      "thermoforming_process"
+     ]
+    },
+    {
+     "id": "extrusion_stretch_blow_molding",
+     "name": "挤拉吹成形",
+     "en": "Extrusion stretch blow molding",
+     "year": 1978,
+     "note": "挤出型坯经双向拉伸后吹塑，适合PP等材质瓶的生产。",
+     "deps": [
+      "stretch_blow_molding"
+     ]
+    },
+    {
+     "id": "three_dimensional_blow_molding",
+     "name": "三维吹塑成形",
+     "en": "3D blow molding",
+     "year": 1990,
+     "note": "管坯按弯曲轨迹送入模腔，成形汽车进气管等异形中空件。",
+     "deps": [
+      "accumulator_head_blow_molding"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "模压、层压与反应发泡成形技术",
+   "items": [
+    {
+     "id": "compression_molding",
+     "name": "模压成形",
+     "en": "Compression molding",
+     "year": 1907,
+     "note": "热固性塑料与橡胶在热压模中受压固化，成形电器壳与密封件。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "laminate_pressing",
+     "name": "层压成形",
+     "en": "Laminated pressing",
+     "year": 1910,
+     "note": "浸胶纸布叠合后热压成板材，是绝缘板与装饰板的经典工艺。",
+     "deps": [
+      "compression_molding"
+     ]
+    },
+    {
+     "id": "resin_casting",
+     "name": "树脂浇注成形",
+     "en": "Resin casting",
+     "year": 1930,
+     "note": "液态树脂浇入模具常压固化，成形小批量大型绝缘与装饰件。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "acrylic_cell_casting",
+     "name": "有机玻璃浇铸",
+     "en": "Cell-cast acrylic sheet",
+     "year": 1933,
+     "note": "甲基丙烯酸甲酯在平板模内本体聚合铸板，透明耐候且光学性好。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "transfer_molding",
+     "name": "传递模塑",
+     "en": "Transfer molding",
+     "year": 1935,
+     "note": "物料在料腔预热后由柱塞压入闭合模腔，飞边少，用于封装与嵌件。",
+     "deps": [
+      "compression_molding"
+     ]
+    },
+    {
+     "id": "matched_die_molding",
+     "name": "对模成形",
+     "en": "Matched-die molding",
+     "year": 1943,
+     "note": "上下模具闭合压制增强塑料片材与毡料，周期短、表面双面光洁。",
+     "deps": [
+      "compression_molding"
+     ]
+    },
+    {
+     "id": "vacuum_bag_molding",
+     "name": "真空袋压成形",
+     "en": "Vacuum bag molding",
+     "year": 1945,
+     "note": "铺层外覆真空袋抽气压实后固化，减少层间孔隙与含胶量偏差。",
+     "deps": [
+      "compression_molding"
+     ]
+    },
+    {
+     "id": "epoxy_casting",
+     "name": "环氧树脂浇注",
+     "en": "Epoxy casting",
+     "year": 1946,
+     "note": "环氧体系浇注并固化，用于互感器等电力设备的绝缘包封。",
+     "deps": [
+      "resin_casting"
+     ]
+    },
+    {
+     "id": "ptfe_cold_pressing",
+     "name": "氟塑料冷压烧结成形",
+     "en": "PTFE cold pressing and sintering",
+     "year": 1948,
+     "note": "聚四氟乙烯粉料在模内冷压成坯再高温烧结，成形密封与衬里件。",
+     "deps": [
+      "plastics",
+      "steel"
+     ]
+    },
+    {
+     "id": "steam_chest_molding",
+     "name": "蒸汽珠粒发泡成形",
+     "en": "Steam-chest bead molding",
+     "year": 1950,
+     "note": "预发泡聚苯乙烯珠粒在模内通蒸汽加热熔结，成形保温与缓冲件。",
+     "deps": [
+      "plastics",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "spray_up_forming",
+     "name": "喷射成形",
+     "en": "Spray-up forming",
+     "year": 1952,
+     "note": "喷枪同时喷出树脂与短切玻纤在模具上堆积成形，用于船壳与壳体。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "bead_preexpander",
+     "name": "珠粒预发泡机",
+     "en": "Bead pre-expander",
+     "year": 1953,
+     "note": "蒸汽把可发性珠粒预发胀到设定密度，为模塑发泡提供合格珠粒。",
+     "deps": [
+      "steam_chest_molding"
+     ]
+    },
+    {
+     "id": "polyurethane_slabstock",
+     "name": "聚氨酯软泡连续发泡",
+     "en": "Polyurethane slabstock foam",
+     "year": 1953,
+     "note": "聚醚与异氰酸酯连续混合发泡成大块软泡，再切割成床垫坐垫。",
+     "deps": [
+      "plastics",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "autoclave_molding",
+     "name": "热压罐成形",
+     "en": "Autoclave molding",
+     "year": 1955,
+     "note": "真空袋铺层在热压罐内受高压高温固化，是航空复合材料的成熟工艺。",
+     "deps": [
+      "vacuum_bag_molding"
+     ]
+    },
+    {
+     "id": "polyurethane_elastomer_casting",
+     "name": "聚氨酯弹性体浇注",
+     "en": "Cast polyurethane elastomer",
+     "year": 1955,
+     "note": "浇注型聚氨酯预聚体与扩链剂反应成形，制造胶辊与耐磨衬里。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "monomer_cast_nylon",
+     "name": "单体浇铸尼龙",
+     "en": "Monomer casting nylon",
+     "year": 1956,
+     "note": "己内酰胺在模具内碱催化阴离子聚合直接成形大件，耐磨用作滑轮衬套。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "polyurethane_spray_foam",
+     "name": "聚氨酯现场喷涂发泡",
+     "en": "Spray polyurethane foam",
+     "year": 1960,
+     "note": "双组分聚氨酯在表面现场喷涂发泡，广泛用于建筑与管道保温。",
+     "deps": [
+      "polyurethane_slabstock"
+     ]
+    },
+    {
+     "id": "vacuum_pressure_impregnation",
+     "name": "真空压力浸渍",
+     "en": "Vacuum pressure impregnation",
+     "year": 1965,
+     "note": "真空排除绕组空气后加压注入浸渍树脂并固化，强化电机绝缘。",
+     "deps": [
+      "resin_casting"
+     ]
+    },
+    {
+     "id": "silicone_rubber_casting",
+     "name": "硅橡胶浇注成形",
+     "en": "Silicone rubber casting",
+     "year": 1968,
+     "note": "室温硫化硅胶浇注成弹性体或复制模具，用于原型与小批量制件。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "integral_skin_foam",
+     "name": "自结皮聚氨酯发泡",
+     "en": "Integral skin polyurethane foam",
+     "year": 1970,
+     "note": "反应发泡中形成致密表皮与泡沫芯一体结构，用于方向盘与扶手。",
+     "deps": [
+      "reaction_injection_molding"
+     ]
+    },
+    {
+     "id": "crosslinked_pe_foam_molding",
+     "name": "交联聚乙烯发泡",
+     "en": "Crosslinked polyethylene foam",
+     "year": 1972,
+     "note": "聚乙烯经化学交联后再发泡成闭孔泡沫，用于保温与运动防护。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "pu_sandwich_panel_forming",
+     "name": "聚氨酯夹芯板连续发泡成形",
+     "en": "Continuous PU sandwich panel line",
+     "year": 1975,
+     "note": "面层板之间连续浇注聚氨酯硬泡并压合固化，一次制成保温夹芯板。",
+     "deps": [
+      "polyurethane_spray_foam"
+     ]
+    },
+    {
+     "id": "epp_bead_molding",
+     "name": "聚丙烯珠粒发泡成形",
+     "en": "EPP bead foam molding",
+     "year": 1985,
+     "note": "聚丙烯珠粒蒸汽模塑熔结发泡，回弹韧性好，用于保险杠与包装。",
+     "deps": [
+      "steam_chest_molding"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "粉末冶金成形技术",
+   "items": [
+    {
+     "id": "pm_press_sinter",
+     "name": "粉末压制与烧结",
+     "en": "Powder pressing and sintering",
+     "year": 1828,
+     "note": "把金属粉末在模具中压实成生坯再烧结致密，沃拉斯顿制铂制品为先例。",
+     "deps": [
+      "steel",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "hot_pressing_sintering",
+     "name": "热压烧结",
+     "en": "Hot pressing sintering",
+     "year": 1931,
+     "note": "边加压边加热烧结粉末，短时致密化，用于硬质合金与陶瓷制品。",
+     "deps": [
+      "pm_press_sinter"
+     ]
+    },
+    {
+     "id": "iron_powder_parts",
+     "name": "铁基粉末冶金结构件",
+     "en": "Iron-based powder metallurgy parts",
+     "year": 1936,
+     "note": "铁粉压制烧结成形汽车油泵齿轮等零件，粉末冶金走向大批量。",
+     "deps": [
+      "pm_press_sinter",
+      "iron"
+     ]
+    },
+    {
+     "id": "powder_rolling",
+     "name": "粉末轧制成形",
+     "en": "Powder rolling",
+     "year": 1948,
+     "note": "金属粉末经轧辊连续压实烧结成带材，用于镍带与多孔电极。",
+     "deps": [
+      "pm_press_sinter"
+     ]
+    },
+    {
+     "id": "cold_isostatic_pressing",
+     "name": "冷等静压成形",
+     "en": "Cold isostatic pressing",
+     "year": 1955,
+     "note": "粉末包套置于高压液体中受压，压制复杂形状坯体，金属与陶瓷皆用。",
+     "deps": [
+      "pm_press_sinter"
+     ]
+    },
+    {
+     "id": "copper_infiltration_sintering",
+     "name": "烧结渗铜",
+     "en": "Copper infiltration sintering",
+     "year": 1956,
+     "note": "把铜熔体渗入多孔铁基烧结体孔隙，提高强度与致密度的粉末冶金工艺。",
+     "deps": [
+      "iron_powder_parts"
+     ]
+    },
+    {
+     "id": "hdp_process",
+     "name": "氢化脱氢制粉",
+     "en": "Hydrogenation-dehydrogenation",
+     "year": 1958,
+     "note": "海绵钛经氢化脆化破碎再真空脱氢，制取钛合金用细粉。",
+     "deps": [
+      "iron",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "rotating_electrode_process",
+     "name": "旋转电极制粉",
+     "en": "Rotating electrode process",
+     "year": 1963,
+     "note": "自耗电极高速旋转靠离心力甩出液滴凝固成粉，制取高活性金属球形粉。",
+     "deps": [
+      "iron",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "powder_forging",
+     "name": "粉末锻造",
+     "en": "Powder forging",
+     "year": 1972,
+     "note": "烧结预制坯经闭式锻造压实致密，性能接近锻件，用于连杆齿轮。",
+     "deps": [
+      "pm_press_sinter"
+     ]
+    },
+    {
+     "id": "spray_deposition_forming",
+     "name": "喷射沉积成形",
+     "en": "Spray deposition forming",
+     "year": 1974,
+     "note": "高速气流把金属液滴喷射沉积到收集器成形，奥斯普雷法用于轧辊管坯。",
+     "deps": [
+      "pm_press_sinter"
+     ]
+    },
+    {
+     "id": "warm_compaction",
+     "name": "温压成形",
+     "en": "Warm compaction",
+     "year": 1994,
+     "note": "模具加热到百余摄氏度压制，坯体密度与强度显著高于常温压制。",
+     "deps": [
+      "pm_press_sinter"
+     ]
+    },
+    {
+     "id": "catalytic_debinding",
+     "name": "催化脱脂",
+     "en": "Catalytic debinding",
+     "year": 1996,
+     "note": "以气相酸快速催化分解聚醛粘结剂，缩短注射成形件脱脂时间。",
+     "deps": [
+      "pm_press_sinter",
+      "chemistry"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "先进陶瓷成形技术",
+   "items": [
+    {
+     "id": "ceramic_jiggering",
+     "name": "旋坯成形",
+     "en": "Jiggering",
+     "year": 1890,
+     "note": "旋转石膏模上以型刀刮压泥料成形盘碗，日用瓷大批量生产的雏形。",
+     "deps": [
+      "brick"
+     ]
+    },
+    {
+     "id": "ceramic_dry_pressing",
+     "name": "陶瓷干压成形",
+     "en": "Dry pressing of ceramics",
+     "year": 1905,
+     "note": "含少量粘合剂的陶瓷粉料在钢模中加压成形，瓷砖与电瓷制品常用。",
+     "deps": [
+      "brick",
+      "steel"
+     ]
+    },
+    {
+     "id": "ceramic_extrusion",
+     "name": "陶瓷挤压成形",
+     "en": "Ceramic extrusion",
+     "year": 1925,
+     "note": "塑化泥料经挤嘴连续成形棒管坯体，用于窑具与加热元件基体。",
+     "deps": [
+      "brick"
+     ]
+    },
+    {
+     "id": "ceramic_injection_molding",
+     "name": "陶瓷注射成形",
+     "en": "Ceramic injection molding",
+     "year": 1938,
+     "note": "粉料与有机粘结剂混炼注射成形后脱脂烧结，制造火花塞等复杂瓷件。",
+     "deps": [
+      "plastics",
+      "steel"
+     ]
+    },
+    {
+     "id": "centrifugal_slip_casting",
+     "name": "离心注浆成形",
+     "en": "Centrifugal slip casting",
+     "year": 1945,
+     "note": "旋转模具离心力使泥浆均匀挂壁吸浆，成形轴对称大型陶瓷件。",
+     "deps": [
+      "brick"
+     ]
+    },
+    {
+     "id": "ceramic_tape_casting",
+     "name": "陶瓷流延成形",
+     "en": "Tape casting",
+     "year": 1947,
+     "note": "陶瓷浆料经刮刀流延成薄膜并叠层烧结，是MLCC等电子陶瓷基法。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "hot_wax_casting_ceramic",
+     "name": "热压铸成形",
+     "en": "Hot wax injection of ceramics",
+     "year": 1950,
+     "note": "蜡基粘结剂粉料加热加压注入模腔成形，用于异形无线电瓷元件。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "roller_head_forming",
+     "name": "滚压成形",
+     "en": "Roller-head forming",
+     "year": 1952,
+     "note": "旋转滚头把泥料在石膏模中旋压成形盘碗，替代手工拉坯效率倍增。",
+     "deps": [
+      "ceramic_jiggering"
+     ]
+    },
+    {
+     "id": "ceramic_spray_granulation",
+     "name": "陶瓷粉料喷雾造粒",
+     "en": "Spray-dry granulation of ceramics",
+     "year": 1955,
+     "note": "浆料经雾化热风干燥成球形流动性颗粒，是干压成形的标准备料法。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "pressure_slip_casting",
+     "name": "高压注浆成形",
+     "en": "Pressure casting of ceramics",
+     "year": 1970,
+     "note": "泥浆加压注入微孔树脂模快速吸浆，成形卫生陶瓷等厚壁复杂件。",
+     "deps": [
+      "brick"
+     ]
+    },
+    {
+     "id": "honeycomb_ceramic_extrusion",
+     "name": "蜂窝陶瓷挤压成形",
+     "en": "Honeycomb ceramic extrusion",
+     "year": 1972,
+     "note": "特殊挤嘴一次挤出数千孔道蜂窝载体，用于尾气催化与蓄热体。",
+     "deps": [
+      "ceramic_extrusion"
+     ]
+    },
+    {
+     "id": "ceramic_gelcasting",
+     "name": "凝胶注模成形",
+     "en": "Gelcasting",
+     "year": 1991,
+     "note": "有机单体在浆料中原位聚合凝胶定形，坯体强度高可机加工。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "direct_coagulation_casting",
+     "name": "直接凝固注模成形",
+     "en": "Direct coagulation casting",
+     "year": 1995,
+     "note": "靠酶反应或温度使浆料内部絮凝凝固，无需排胶的陶瓷近净成形。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "freeze_casting_ceramic",
+     "name": "冷冻注模成形",
+     "en": "Freeze casting",
+     "year": 2001,
+     "note": "浆料定向冷冻使冰晶占位、再升华干燥烧结，制取向孔结构多孔陶瓷。",
+     "deps": [
+      "chemistry"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "玻璃成形装备与工艺",
+   "items": [
+    {
+     "id": "glass_annealing_lehr",
+     "name": "玻璃退火窑",
+     "en": "Glass annealing lehr",
+     "year": 1880,
+     "note": "成形后的玻璃制品经缓慢降温消除内应力，防止冷却炸裂。",
+     "deps": [
+      "brick",
+      "iron"
+     ]
+    },
+    {
+     "id": "patterned_rolled_glass",
+     "name": "辊压花纹玻璃成形",
+     "en": "Patterned rolled glass forming",
+     "year": 1890,
+     "note": "玻璃液经刻花辊筒压延成形出压花平板玻璃，兼具采光与遮蔽。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "glass_lampworking",
+     "name": "灯工成形",
+     "en": "Glass lampworking",
+     "year": 1895,
+     "note": "以喷灯火焰软化玻璃管棒后吹拉焊接，制作实验室玻璃仪器。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "wired_glass_rolling",
+     "name": "夹丝玻璃辊压成形",
+     "en": "Wired glass rolling",
+     "year": 1895,
+     "note": "玻璃液辊压时嵌入金属丝网，碎而不散，用于天窗与防火隔断。",
+     "deps": [
+      "patterned_rolled_glass"
+     ]
+    },
+    {
+     "id": "gob_feeder",
+     "name": "料滴供料机",
+     "en": "Gob feeder",
+     "year": 1914,
+     "note": "按节拍剪切定重玻璃料滴送入制瓶机，是机械化制瓶的供料前提。",
+     "deps": [
+      "brick",
+      "steel"
+     ]
+    },
+    {
+     "id": "danner_tube_drawing",
+     "name": "丹纳拉管法",
+     "en": "Danner tube drawing process",
+     "year": 1917,
+     "note": "玻璃液在旋转耐火管上流下并拉制成连续玻璃管，用于制瓶与日光灯。",
+     "deps": [
+      "brick",
+      "iron"
+     ]
+    },
+    {
+     "id": "is_machine",
+     "name": "行列式制瓶机",
+     "en": "Individual Section machine",
+     "year": 1925,
+     "note": "多段独立工位同步制瓶的玻璃瓶罐成形机，逐步取代早期制瓶机。",
+     "deps": [
+      "gob_feeder"
+     ]
+    },
+    {
+     "id": "blow_blow_forming",
+     "name": "吹吹法成形",
+     "en": "Blow-and-blow forming",
+     "year": 1926,
+     "note": "初坯经两次吹气成形窄口瓶，适用于药用与饮料瓶罐生产。",
+     "deps": [
+      "is_machine"
+     ]
+    },
+    {
+     "id": "press_blow_forming",
+     "name": "压吹法成形",
+     "en": "Press-and-blow forming",
+     "year": 1928,
+     "note": "先冲头压制瓶口与初坯再吹气成形，生产广口瓶与轻量罐。",
+     "deps": [
+      "is_machine"
+     ]
+    },
+    {
+     "id": "vello_tube_drawing",
+     "name": "维洛拉管法",
+     "en": "Vello tube drawing process",
+     "year": 1930,
+     "note": "玻璃液经环形模与中心通气管垂直下拉成管，速度高于丹纳法。",
+     "deps": [
+      "danner_tube_drawing"
+     ]
+    },
+    {
+     "id": "glass_bending_forming",
+     "name": "玻璃热弯成形",
+     "en": "Glass bending",
+     "year": 1930,
+     "note": "平板玻璃加热软化后靠自重或模具弯成曲面，用于汽车风挡与幕墙。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "glasswool_steam_blowing",
+     "name": "玻璃棉喷吹成纤",
+     "en": "Steam-blown glass wool",
+     "year": 1931,
+     "note": "玻璃液流被高速蒸汽喷吹成短纤维，加粘结剂固化成保温棉毡。",
+     "deps": [
+      "iron",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "tube_vial_machine",
+     "name": "管制瓶制瓶机",
+     "en": "Tube vial forming machine",
+     "year": 1935,
+     "note": "把拉制玻璃管在火焰下切断封底制安瓿与西林瓶，药瓶由此量产。",
+     "deps": [
+      "danner_tube_drawing"
+     ]
+    }
+   ]
+  }
+ ]
+}

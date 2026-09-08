@@ -1,0 +1,1373 @@
+{
+ "cat": "energy",
+ "catName": "能源",
+ "sub": "light_heat",
+ "subName": "照明与热利用",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "fire",
+  "electricity",
+  "chemistry",
+  "physics",
+  "petroleum",
+  "coal_mining",
+  "semiconductors",
+  "battery",
+  "iron",
+  "steel",
+  "cement",
+  "plastics",
+  "steam_engine",
+  "electromagnetism",
+  "optics"
+ ],
+ "families": [
+  {
+   "name": "火焰光源",
+   "items": [
+    {
+     "id": "torch",
+     "name": "火炬",
+     "en": "Torch",
+     "year": -20000,
+     "note": "以浸脂束薪或布条燃烧照明的便携火把，是最古老的移动人工光源。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "oil_lamp",
+     "name": "油灯",
+     "en": "Oil lamp",
+     "year": -1500,
+     "note": "以动植物油为燃料、灯芯引燃的灯具，从贝石器皿演化为陶、铜与玻璃灯，是人类最早的人工光源之一。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "candle",
+     "name": "蜡烛",
+     "en": "Candle",
+     "year": -200,
+     "note": "以蜡脂包覆烛芯制成的火焰光源，古罗马已普遍使用，后成为宗教与日常照明长盛不衰的器具。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "whale_oil_lamp",
+     "name": "鲸油灯",
+     "en": "Whale oil lamp",
+     "year": 1740,
+     "note": "燃用抹香鲸脑油的高亮油灯，曾是灯塔与街灯的优质燃料光源。",
+     "deps": [
+      "oil_lamp"
+     ]
+    },
+    {
+     "id": "spermaceti_candle",
+     "name": "鲸蜡蜡烛",
+     "en": "Spermaceti candle",
+     "year": 1750,
+     "note": "以抹香鲸蜡制成的高品质硬质蜡烛，烛光白亮少烟，曾为高级照明标准。",
+     "deps": [
+      "candle"
+     ]
+    },
+    {
+     "id": "argand_lamp",
+     "name": "阿甘德油灯",
+     "en": "Argand lamp",
+     "year": 1784,
+     "note": "采用环形灯芯与玻璃烟囱的油灯，供风充分、亮度大增，曾用于家庭与灯塔照明。",
+     "deps": [
+      "oil_lamp"
+     ]
+    },
+    {
+     "id": "colza_lamp",
+     "name": "菜籽油灯",
+     "en": "Colza oil lamp",
+     "year": 1785,
+     "note": "燃用菜籽油的玻璃油灯，是欧洲植物照明油时代的典型灯具。",
+     "deps": [
+      "oil_lamp"
+     ]
+    },
+    {
+     "id": "gas_lamp",
+     "name": "煤气灯",
+     "en": "Gas lamp",
+     "year": 1802,
+     "note": "以煤制气经多孔灯头燃烧照明的灯具，十九世纪城市路灯与室内照明的主要形式。",
+     "deps": [
+      "coal_mining"
+     ]
+    },
+    {
+     "id": "davy_safety_lamp",
+     "name": "戴维安全矿灯",
+     "en": "Davy lamp",
+     "year": 1815,
+     "note": "以细密金属网罩包覆火焰、靠网罩散热防爆的矿灯，为井下照明提供安全保障。",
+     "deps": [
+      "coal_mining"
+     ]
+    },
+    {
+     "id": "paraffin_candle",
+     "name": "石蜡蜡烛",
+     "en": "Paraffin candle",
+     "year": 1850,
+     "note": "以石油石蜡浇制的蜡烛，价格低廉燃烧稳定，取代传统脂蜡成为主流。",
+     "deps": [
+      "candle"
+     ]
+    },
+    {
+     "id": "kerosene_lamp",
+     "name": "煤油灯",
+     "en": "Kerosene lamp",
+     "year": 1853,
+     "note": "以煤油为燃料的玻璃罩灯具，价格低廉光线稳定，成为煤气灯普及前最广用的家庭照明。",
+     "deps": [
+      "oil_lamp"
+     ]
+    },
+    {
+     "id": "oil_lantern",
+     "name": "煤油提灯",
+     "en": "Oil lantern",
+     "year": 1860,
+     "note": "带防风玻璃罩与提手的便携煤油灯，适合户外劳动、巡更与移动照明。",
+     "deps": [
+      "kerosene_lamp"
+     ]
+    },
+    {
+     "id": "welsbach_mantle",
+     "name": "白炽纱罩",
+     "en": "Welsbach mantle",
+     "year": 1885,
+     "note": "由稀土氧化物制成、挂在火苗上灼热发光的纱罩，显著提高燃气灯与油灯亮度。",
+     "deps": [
+      "gas_lamp"
+     ]
+    },
+    {
+     "id": "carbide_lamp",
+     "name": "电石灯",
+     "en": "Carbide lamp",
+     "year": 1893,
+     "note": "以电石遇水产乙炔燃烧照明的灯具，曾用于矿工帽灯、自行车与探洞照明。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "pressure_lantern",
+     "name": "汽灯",
+     "en": "Pressurized lantern",
+     "year": 1900,
+     "note": "燃料加压汽化经白炽纱罩燃烧的高亮灯具，是二十世纪野外与无电地区的强光源。",
+     "deps": [
+      "welsbach_mantle"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "电光源与灯具附件",
+   "items": [
+    {
+     "id": "carbon_arc_lamp",
+     "name": "碳弧灯",
+     "en": "Carbon arc lamp",
+     "year": 1802,
+     "note": "以碳极间电弧放电发光的强光源，最先用于灯塔、街灯与放映机照明。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "fresnel_lens_light",
+     "name": "菲涅尔灯塔灯器",
+     "en": "Fresnel lighthouse lens",
+     "year": 1822,
+     "note": "以菲涅尔透镜把灯芯光聚为远射光束的灯塔灯器，大幅提高灯塔射程。",
+     "deps": [
+      "oil_lamp",
+      "optics"
+     ]
+    },
+    {
+     "id": "street_lighting_system",
+     "name": "道路照明系统",
+     "en": "Street lighting system",
+     "year": 1878,
+     "note": "沿道路布设灯具与线路、按夜间自动启闭的公共照明系统，巴黎首用电弧街灯。",
+     "deps": [
+      "carbon_arc_lamp"
+     ]
+    },
+    {
+     "id": "incandescent_lamp",
+     "name": "白炽灯",
+     "en": "Incandescent lamp",
+     "year": 1879,
+     "note": "爱迪生以碳化灯丝制成的电灯泡，电流加热灯丝至白炽发光，开创电照明时代。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "edison_screw_base",
+     "name": "螺口灯座",
+     "en": "Edison screw base",
+     "year": 1890,
+     "note": "以螺纹旋接灯泡的标准化灯座，便于装拆与互换，至今为通用标准。",
+     "deps": [
+      "incandescent_lamp"
+     ]
+    },
+    {
+     "id": "nernst_lamp",
+     "name": "能斯脱灯",
+     "en": "Nernst lamp",
+     "year": 1897,
+     "note": "以氧化锆陶瓷棒在空气中灼热发光的白炽灯，短暂流行于白炽灯早期。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "flashlight",
+     "name": "手电筒",
+     "en": "Flashlight",
+     "year": 1899,
+     "note": "电池供电的便携电筒，干电池普及后成为最常用的移动照明工具。",
+     "deps": [
+      "battery",
+      "incandescent_lamp"
+     ]
+    },
+    {
+     "id": "luminaire_reflector",
+     "name": "灯具反光器",
+     "en": "Luminaire reflector",
+     "year": 1900,
+     "note": "以镜面反光材料把光导向目标面的灯具部件，提高光利用率与配光精度。",
+     "deps": [
+      "incandescent_lamp"
+     ]
+    },
+    {
+     "id": "signal_lamp",
+     "name": "信号指示灯",
+     "en": "Indicator lamp",
+     "year": 1900,
+     "note": "以小功率灯泡指示设备通电与状态的指示灯，遍布控制面板与仪器。",
+     "deps": [
+      "incandescent_lamp"
+     ]
+    },
+    {
+     "id": "cooper_hewitt_lamp",
+     "name": "库珀休伊特低压汞灯",
+     "en": "Cooper-Hewitt lamp",
+     "year": 1901,
+     "note": "长管状低压汞蒸发放电灯，早期用于工厂与橱窗照明。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "tungsten_filament_lamp",
+     "name": "钨丝白炽灯",
+     "en": "Tungsten filament lamp",
+     "year": 1904,
+     "note": "以高熔点钨丝替代碳丝的白炽灯，寿命与光效显著提高。",
+     "deps": [
+      "incandescent_lamp"
+     ]
+    },
+    {
+     "id": "spotlight",
+     "name": "聚光灯",
+     "en": "Spotlight",
+     "year": 1905,
+     "note": "以透镜或反射镜把光源聚成定向光束的灯具，用于舞台、展览与建筑。",
+     "deps": [
+      "tungsten_filament_lamp"
+     ]
+    },
+    {
+     "id": "electric_cap_lamp",
+     "name": "矿用安全电灯",
+     "en": "Electric cap lamp",
+     "year": 1910,
+     "note": "配蓄电池的安全帽头灯，取代明火矿灯，改善井下照明与安全。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "neon_light",
+     "name": "霓虹灯",
+     "en": "Neon lighting",
+     "year": 1910,
+     "note": "克洛德以惰性气体放电制作的彩色灯管，用于广告招牌与建筑装饰照明。",
+     "deps": [
+      "electricity",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "gas_filled_lamp",
+     "name": "充气白炽灯泡",
+     "en": "Gas-filled incandescent lamp",
+     "year": 1913,
+     "note": "灯泡内充注惰性气体以减少钨丝蒸发，灯丝可烧至更高温而不易断。",
+     "deps": [
+      "tungsten_filament_lamp"
+     ]
+    },
+    {
+     "id": "floodlight",
+     "name": "泛光灯",
+     "en": "Floodlight",
+     "year": 1925,
+     "note": "以大角度均匀照射大面积场地的高功率灯具，用于球场与建筑泛光。",
+     "deps": [
+      "tungsten_filament_lamp"
+     ]
+    },
+    {
+     "id": "reflector_lamp_bulb",
+     "name": "反射型白炽灯泡",
+     "en": "Reflector lamp bulb",
+     "year": 1925,
+     "note": "内壁镀反射层使光定向射出的灯泡，用于射灯与展示照明。",
+     "deps": [
+      "tungsten_filament_lamp"
+     ]
+    },
+    {
+     "id": "low_pressure_sodium_lamp",
+     "name": "低压钠灯",
+     "en": "Low-pressure sodium lamp",
+     "year": 1932,
+     "note": "以低压钠蒸气放电发出单色黄光的灯，光效极高，广泛用于公路照明。",
+     "deps": [
+      "electricity",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "photocell_light_switch",
+     "name": "光控开关",
+     "en": "Photocell light switch",
+     "year": 1935,
+     "note": "按环境照度自动开闭路灯与照明回路的控制装置，节省人力与电能。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "electroluminescent_panel",
+     "name": "电致发光照明板",
+     "en": "Electroluminescent panel",
+     "year": 1936,
+     "note": "以电场激发荧光体发光的平面光源，功耗低，用于夜间指示照明。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "high_pressure_mercury_lamp",
+     "name": "高压汞灯",
+     "en": "High-pressure mercury lamp",
+     "year": 1936,
+     "note": "汞蒸气高压放电发光的灯，光效高于白炽灯，用于街道与厂房照明。",
+     "deps": [
+      "electricity",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "fluorescent_lamp",
+     "name": "荧光灯",
+     "en": "Fluorescent lamp",
+     "year": 1938,
+     "note": "低压汞蒸气放电激发荧光粉发光的灯，光效为白炽灯数倍，长期主导办公照明。",
+     "deps": [
+      "electricity",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "sealed_beam_headlamp",
+     "name": "密封式汽车前照灯",
+     "en": "Sealed beam headlamp",
+     "year": 1939,
+     "note": "灯丝与反射镜密封一体的汽车前照灯，防尘防潮、光型稳定。",
+     "deps": [
+      "tungsten_filament_lamp"
+     ]
+    },
+    {
+     "id": "glow_starter",
+     "name": "荧光灯启辉器",
+     "en": "Glow starter",
+     "year": 1940,
+     "note": "内充气体的双金属开关，预热灯丝后自动断开以启动荧光灯。",
+     "deps": [
+      "fluorescent_lamp"
+     ]
+    },
+    {
+     "id": "magnetic_ballast",
+     "name": "电感镇流器",
+     "en": "Magnetic ballast",
+     "year": 1940,
+     "note": "以电感限制荧光灯电流并产生启动电压的镇流器件，随荧光灯普及。",
+     "deps": [
+      "fluorescent_lamp"
+     ]
+    },
+    {
+     "id": "xenon_short_arc_lamp",
+     "name": "短弧氙灯",
+     "en": "Xenon short-arc lamp",
+     "year": 1952,
+     "note": "高压氙气短弧放电的灯，亮度高色温接近日光，用于放映与车灯。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "halogen_lamp",
+     "name": "卤钨灯",
+     "en": "Halogen lamp",
+     "year": 1959,
+     "note": "灯泡内充卤素气体使钨循环回灯丝的灯，体积小寿命长，用于汽车与舞台。",
+     "deps": [
+      "tungsten_filament_lamp"
+     ]
+    },
+    {
+     "id": "light_dimmer",
+     "name": "电子调光器",
+     "en": "Light dimmer",
+     "year": 1961,
+     "note": "以双向晶闸管斩波控制白炽灯亮度的调光装置，成本低、响应平滑。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "led_diode",
+     "name": "发光二极管",
+     "en": "Light-emitting diode",
+     "year": 1962,
+     "note": "霍尔亚克制成可见光发光二极管，半导体电致发光奠定固体照明基础。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "metal_halide_lamp",
+     "name": "金属卤化物灯",
+     "en": "Metal-halide lamp",
+     "year": 1962,
+     "note": "在汞灯中加入金属卤化物改善光谱的灯，显色好光效高，用于场馆照明。",
+     "deps": [
+      "high_pressure_mercury_lamp"
+     ]
+    },
+    {
+     "id": "high_pressure_sodium_lamp",
+     "name": "高压钠灯",
+     "en": "High-pressure sodium lamp",
+     "year": 1966,
+     "note": "高压钠蒸气放电的暖金色灯，光效高寿命长，曾主宰道路照明。",
+     "deps": [
+      "low_pressure_sodium_lamp"
+     ]
+    },
+    {
+     "id": "compact_fluorescent_lamp",
+     "name": "紧凑型荧光灯",
+     "en": "Compact fluorescent lamp",
+     "year": 1980,
+     "note": "灯管弯曲小型化并配电子镇流器的节能灯，直接替代白炽灯泡。",
+     "deps": [
+      "fluorescent_lamp"
+     ]
+    },
+    {
+     "id": "emergency_lighting",
+     "name": "应急疏散照明",
+     "en": "Emergency lighting",
+     "year": 1980,
+     "note": "市电中断时自动点亮、指引疏散的照明系统，是建筑安全强制配置。",
+     "deps": [
+      "battery",
+      "electricity"
+     ]
+    },
+    {
+     "id": "ccfl_lamp",
+     "name": "冷阴极荧光灯",
+     "en": "Cold cathode fluorescent lamp",
+     "year": 1985,
+     "note": "无灯丝的冷阴极放电灯，细长耐用，曾用作液晶屏背光源。",
+     "deps": [
+      "fluorescent_lamp"
+     ]
+    },
+    {
+     "id": "electronic_ballast",
+     "name": "电子镇流器",
+     "en": "Electronic ballast",
+     "year": 1993,
+     "note": "以高频电子电路驱动气体放电灯的镇流器，无频闪、节能并提高灯寿命。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "white_led",
+     "name": "白光LED",
+     "en": "White LED",
+     "year": 1993,
+     "note": "中村修二以氮化铟镓蓝光芯片激发荧光粉获得白光，开启高效照明新纪元。",
+     "deps": [
+      "led_diode"
+     ]
+    },
+    {
+     "id": "ceramic_metal_halide_lamp",
+     "name": "陶瓷金属卤化物灯",
+     "en": "Ceramic metal-halide lamp",
+     "year": 1994,
+     "note": "以陶瓷电弧管代替石英管的金卤灯，显色稳定寿命更长。",
+     "deps": [
+      "metal_halide_lamp"
+     ]
+    },
+    {
+     "id": "induction_lamp",
+     "name": "无极感应灯",
+     "en": "Induction lamp",
+     "year": 1994,
+     "note": "无电极、靠电磁感应激发气体放电的荧光灯，寿命极长用于难维护场所。",
+     "deps": [
+      "fluorescent_lamp"
+     ]
+    },
+    {
+     "id": "occupancy_light_sensor",
+     "name": "人体感应照明开关",
+     "en": "Occupancy light sensor",
+     "year": 1995,
+     "note": "以红外或微波探测人员存在自动开关照明的控制装置，节约电能。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "smart_lighting_system",
+     "name": "智能照明控制系统",
+     "en": "Smart lighting system",
+     "year": 2005,
+     "note": "以总线或无线把灯具、传感器与场景控制相连的照明管理系统。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "led_driver",
+     "name": "LED驱动电源",
+     "en": "LED driver",
+     "year": 2010,
+     "note": "为LED灯具提供恒定电流并支持调光的电子电源模块。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "led_lamp_bulb",
+     "name": "LED灯泡",
+     "en": "LED lamp",
+     "year": 2010,
+     "note": "以白光LED为光源、含驱动电源的替代灯泡，光效与寿命远超白炽灯。",
+     "deps": [
+      "white_led"
+     ]
+    },
+    {
+     "id": "led_tube_lamp",
+     "name": "LED灯管",
+     "en": "LED tube lamp",
+     "year": 2011,
+     "note": "替换荧光灯管的直管形LED灯具，配套驱动电源可直接改造旧灯架。",
+     "deps": [
+      "led_lamp_bulb"
+     ]
+    },
+    {
+     "id": "oled_lighting",
+     "name": "OLED照明面板",
+     "en": "OLED lighting panel",
+     "year": 2014,
+     "note": "有机发光二极管制成的面光源面板，轻薄可柔，用于高档灯具。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "led_filament_lamp",
+     "name": "LED灯丝灯",
+     "en": "LED filament lamp",
+     "year": 2015,
+     "note": "以玻璃泡内多根LED灯丝发光的复古造型灯泡，兼具装饰与高效。",
+     "deps": [
+      "white_led"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "传统采暖方式",
+   "items": [
+    {
+     "id": "hearth_fire",
+     "name": "火塘",
+     "en": "Hearth fire",
+     "year": -50000,
+     "note": "居于室内中央的燃火点，兼作炊事与取暖，是史前以降最古老的采暖方式。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "brazier",
+     "name": "火盆",
+     "en": "Brazier",
+     "year": -1000,
+     "note": "盛炭火取暖的金属盆，使用灵活，历代宫廷与民居皆用。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "kang",
+     "name": "火炕",
+     "en": "Chinese kang",
+     "year": -100,
+     "note": "以烟气加热土炕面供人卧眠取暖的设施，流行于中国北方农村。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "hypocaust",
+     "name": "古罗马火地暖",
+     "en": "Hypocaust",
+     "year": -60,
+     "note": "以炉火烟气经架空地面下通道流动加热房间的供暖系统，见于古罗马浴场。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "ondol",
+     "name": "温突地炕",
+     "en": "Ondol",
+     "year": 300,
+     "note": "朝鲜半岛以烟火加热地面石板的地暖设施，延续至今演为现代地暖。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "fireplace",
+     "name": "壁炉",
+     "en": "Fireplace",
+     "year": 1100,
+     "note": "贴墙砌筑、附烟道的燃木取暖构筑，中世纪以来欧洲住宅的核心热源。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "chimney_flue",
+     "name": "烟囱",
+     "en": "Chimney",
+     "year": 1300,
+     "note": "把燃烧烟气排出室外的竖向通道，是炉灶与壁炉安全使用的关键。",
+     "deps": [
+      "fireplace"
+     ]
+    },
+    {
+     "id": "tile_stove",
+     "name": "瓷砖火炉",
+     "en": "Tile stove",
+     "year": 1450,
+     "note": "以瓷砖砌面、内蓄烟热的欧式砌体炉，一次添柴可长时缓释热量。",
+     "deps": [
+      "fireplace"
+     ]
+    },
+    {
+     "id": "franklin_stove",
+     "name": "富兰克林取暖炉",
+     "en": "Franklin stove",
+     "year": 1742,
+     "note": "富兰克林设计的铸铁密闭炉，进风可控、热效率高于敞开壁炉。",
+     "deps": [
+      "fireplace",
+      "iron"
+     ]
+    },
+    {
+     "id": "cast_iron_stove",
+     "name": "铸铁炉",
+     "en": "Cast iron stove",
+     "year": 1760,
+     "note": "铸铁铸造的取暖与炊事炉具，热容量大、坚固耐用。",
+     "deps": [
+      "franklin_stove"
+     ]
+    },
+    {
+     "id": "rumford_fireplace",
+     "name": "拉姆福德壁炉",
+     "en": "Rumford fireplace",
+     "year": 1796,
+     "note": "拉姆福德改造的斜收烟道壁炉，烟气流顺畅、辐射热明显增强。",
+     "deps": [
+      "fireplace"
+     ]
+    },
+    {
+     "id": "potbelly_stove",
+     "name": "圆肚炉",
+     "en": "Potbelly stove",
+     "year": 1835,
+     "note": "鼓腹铸铁燃煤取暖炉，配烟囱，十九世纪美国室内采暖常见炉具。",
+     "deps": [
+      "cast_iron_stove"
+     ]
+    },
+    {
+     "id": "coal_stove",
+     "name": "民用燃煤炉",
+     "en": "Coal stove",
+     "year": 1900,
+     "note": "烧煤球或块煤的铸铁炉，配烟囱供室内取暖，曾是中国北方家庭采暖主力。",
+     "deps": [
+      "cast_iron_stove",
+      "coal_mining"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "集中供暖与热源系统",
+   "items": [
+    {
+     "id": "steam_heating_system",
+     "name": "蒸汽供暖系统",
+     "en": "Steam heating system",
+     "year": 1830,
+     "note": "锅炉产汽经管道送至房间散热器凝结放热的供暖方式，是早期集中供暖形式。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "hot_water_heating_system",
+     "name": "热水供暖系统",
+     "en": "Hot-water heating system",
+     "year": 1835,
+     "note": "以热水为热媒循环供热的系统，温度平稳可调，成为现代供暖主流。",
+     "deps": [
+      "steam_heating_system"
+     ]
+    },
+    {
+     "id": "warm_air_furnace",
+     "name": "热风供暖炉",
+     "en": "Warm-air furnace",
+     "year": 1850,
+     "note": "以炉体加热空气、经风道送入各室的中央热风供暖系统。",
+     "deps": [
+      "cast_iron_stove"
+     ]
+    },
+    {
+     "id": "heat_pump",
+     "name": "热泵",
+     "en": "Heat pump",
+     "year": 1856,
+     "note": "逆热机方向把低位热提升为高位热的装置，供热效率高于直接电热。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "sectional_boiler",
+     "name": "铸铁采暖锅炉",
+     "en": "Cast-iron sectional boiler",
+     "year": 1860,
+     "note": "由铸铁片组合而成的低压采暖锅炉，用于住宅与小型建筑供暖。",
+     "deps": [
+      "hot_water_heating_system",
+      "iron"
+     ]
+    },
+    {
+     "id": "district_heating",
+     "name": "区域集中供热",
+     "en": "District heating",
+     "year": 1877,
+     "note": "由热源厂统一产热、经管网向城区众多建筑供热的大型供暖系统。",
+     "deps": [
+      "steam_heating_system"
+     ]
+    },
+    {
+     "id": "oil_burner",
+     "name": "燃油燃烧器",
+     "en": "Oil burner",
+     "year": 1920,
+     "note": "把燃油雾化并配风燃烧的锅炉燃烧装置，用于燃油采暖锅炉。",
+     "deps": [
+      "petroleum",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "electric_heating_boiler",
+     "name": "电热锅炉",
+     "en": "Electric heating boiler",
+     "year": 1930,
+     "note": "以电热元件加热水或蒸汽的锅炉，无烟气排放，用于清洁供暖。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "gas_burner",
+     "name": "燃气燃烧器",
+     "en": "Gas burner",
+     "year": 1930,
+     "note": "以燃气与空气预混燃烧的装置，用于燃气锅炉与热水器。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "ground_source_heat_pump",
+     "name": "地源热泵",
+     "en": "Ground-source heat pump",
+     "year": 1948,
+     "note": "以地下土壤或地下水为热源的热泵供暖系统，冬季供热夏季制冷。",
+     "deps": [
+      "heat_pump"
+     ]
+    },
+    {
+     "id": "hydronic_floor_heating",
+     "name": "低温地面辐射供暖",
+     "en": "Hydronic floor heating",
+     "year": 1965,
+     "note": "以低温热水流经埋地塑料管加热地板的供暖方式，舒适节能。",
+     "deps": [
+      "hot_water_heating_system",
+      "plastics"
+     ]
+    },
+    {
+     "id": "waste_heat_recovery",
+     "name": "余热回收系统",
+     "en": "Waste heat recovery",
+     "year": 1970,
+     "note": "回收烟气或废水余热预热给水与空气的系统，显著提高能源利用效率。",
+     "deps": [
+      "plate_heat_exchanger"
+     ]
+    },
+    {
+     "id": "air_source_heat_pump",
+     "name": "空气源热泵",
+     "en": "Air-source heat pump",
+     "year": 1975,
+     "note": "从室外空气中取热供暖的热泵，安装简便，为电采暖主要替代。",
+     "deps": [
+      "heat_pump"
+     ]
+    },
+    {
+     "id": "radiant_tube_heater",
+     "name": "燃气辐射管加热器",
+     "en": "Radiant tube heater",
+     "year": 1975,
+     "note": "以燃气加热金属辐射管、向高大空间定向辐射供暖的工业采暖设备。",
+     "deps": [
+      "gas_burner"
+     ]
+    },
+    {
+     "id": "condensing_boiler",
+     "name": "冷凝式燃气锅炉",
+     "en": "Condensing boiler",
+     "year": 1980,
+     "note": "回收烟气潜热的燃气锅炉，热效率可达百分之百以上，用于住宅供暖。",
+     "deps": [
+      "gas_burner"
+     ]
+    },
+    {
+     "id": "heat_recovery_ventilator",
+     "name": "全热交换通风机",
+     "en": "Heat recovery ventilator",
+     "year": 1980,
+     "note": "在通风换气时回收排风热量的装置，兼顾新风与节能。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "wall_hung_gas_boiler",
+     "name": "燃气壁挂炉",
+     "en": "Wall-hung gas boiler",
+     "year": 1984,
+     "note": "挂墙安装、兼供采暖与生活热水的紧凑燃气锅炉，欧洲独户供暖主流。",
+     "deps": [
+      "gas_burner"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "散热末端与采暖电器",
+   "items": [
+    {
+     "id": "cast_iron_radiator",
+     "name": "铸铁散热器",
+     "en": "Cast-iron radiator",
+     "year": 1855,
+     "note": "铸铁铸造的对流散热器，热容量大耐腐蚀，是传统暖气的典型末端。",
+     "deps": [
+      "steam_heating_system",
+      "iron"
+     ]
+    },
+    {
+     "id": "electric_space_heater",
+     "name": "电阻式电暖器",
+     "en": "Electric space heater",
+     "year": 1905,
+     "note": "以电阻丝发热的室内取暖器，使用便利，是无集中供热场所的常用补充。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "electric_blanket",
+     "name": "电热毯",
+     "en": "Electric blanket",
+     "year": 1930,
+     "note": "内置电阻丝的床上保温取暖用品，低电压加热保暖。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "steel_panel_radiator",
+     "name": "钢制板式散热器",
+     "en": "Steel panel radiator",
+     "year": 1930,
+     "note": "以冲压钢板焊接成型的薄型散热器，升温快、造型美观。",
+     "deps": [
+      "cast_iron_radiator",
+      "steel"
+     ]
+    },
+    {
+     "id": "fan_heater",
+     "name": "暖风机",
+     "en": "Fan heater",
+     "year": 1935,
+     "note": "电热或燃气加热空气并由风机送出的取暖器，升温快，用于小空间。",
+     "deps": [
+      "electric_space_heater"
+     ]
+    },
+    {
+     "id": "storage_heater",
+     "name": "蓄热电暖器",
+     "en": "Storage heater",
+     "year": 1935,
+     "note": "利用夜间低谷电加热蓄热砖、白天缓慢放热的电暖器，利于移峰填谷。",
+     "deps": [
+      "electric_space_heater"
+     ]
+    },
+    {
+     "id": "convector_heater",
+     "name": "对流散热器",
+     "en": "Convector heater",
+     "year": 1940,
+     "note": "带翅片与外壳、以自然对流散热的末端装置，多嵌装于墙脚。",
+     "deps": [
+      "steel_panel_radiator"
+     ]
+    },
+    {
+     "id": "oil_filled_radiator",
+     "name": "油汀电暖器",
+     "en": "Oil-filled radiator",
+     "year": 1940,
+     "note": "电热元件加热密闭导热油、经散热片放热的电暖器，无明火体感舒适。",
+     "deps": [
+      "electric_space_heater"
+     ]
+    },
+    {
+     "id": "baseboard_heating",
+     "name": "踢脚线式供暖",
+     "en": "Baseboard heating",
+     "year": 1950,
+     "note": "沿墙脚踢脚板位置布置的细长散热装置，均匀散热且节省墙面。",
+     "deps": [
+      "convector_heater"
+     ]
+    },
+    {
+     "id": "heating_cable",
+     "name": "发热电缆",
+     "en": "Heating cable",
+     "year": 1950,
+     "note": "以电阻线缆通电发热的装置，用于地暖、管道伴热与融雪。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "kerosene_heater",
+     "name": "煤油取暖炉",
+     "en": "Kerosene heater",
+     "year": 1950,
+     "note": "燃用煤油的室内取暖炉，无烟囱式设计广泛用于东亚民居。",
+     "deps": [
+      "oil_burner"
+     ]
+    },
+    {
+     "id": "gas_space_heater",
+     "name": "燃气取暖器",
+     "en": "Gas space heater",
+     "year": 1955,
+     "note": "直接燃烧燃气、以辐射或对流方式供暖的室内取暖器。",
+     "deps": [
+      "gas_burner"
+     ]
+    },
+    {
+     "id": "infrared_heater",
+     "name": "红外辐射取暖器",
+     "en": "Infrared heater",
+     "year": 1960,
+     "note": "以石英管或碳纤维辐射远红外的取暖器，定向加热人体。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "radiant_panel_heating",
+     "name": "辐射板采暖",
+     "en": "Radiant panel heating",
+     "year": 1960,
+     "note": "以金属或石膏辐射板吸收盘管热量、向室内辐射供暖的装置。",
+     "deps": [
+      "baseboard_heating"
+     ]
+    },
+    {
+     "id": "ptc_ceramic_heater",
+     "name": "陶瓷PTC暖风机",
+     "en": "PTC ceramic heater",
+     "year": 1980,
+     "note": "以正温度系数陶瓷自限温发热的暖风机，安全免过热。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "electric_heating_film",
+     "name": "电热膜",
+     "en": "Electric heating film",
+     "year": 1990,
+     "note": "印刷电热膜的低温辐射供暖材料，多用于吊顶与墙面采暖。",
+     "deps": [
+      "electricity"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "生活热水与热力计量控制",
+   "items": [
+    {
+     "id": "gas_water_heater",
+     "name": "燃气热水器",
+     "en": "Gas water heater",
+     "year": 1868,
+     "note": "燃用燃气即时加热流水的热水器，即开即热，广泛用于家庭淋浴。",
+     "deps": [
+      "gas_lamp"
+     ]
+    },
+    {
+     "id": "thermostat",
+     "name": "室温恒温器",
+     "en": "Room thermostat",
+     "year": 1885,
+     "note": "按室温偏差自动启停锅炉或阀门的控制仪表，双金属或电子感温。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "electric_kettle",
+     "name": "电热水壶",
+     "en": "Electric kettle",
+     "year": 1891,
+     "note": "通电加热壶内水的快速烧水器具，为常见小家电。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "thermos_flask",
+     "name": "保温瓶",
+     "en": "Vacuum flask",
+     "year": 1892,
+     "note": "以双层真空壁延缓热传导的储热容器，杜瓦为低温实验发明。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "electric_storage_water_heater",
+     "name": "储水式电热水器",
+     "en": "Electric storage water heater",
+     "year": 1895,
+     "note": "电热棒加热水箱储水的热水器，结构简单，普及于家庭。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "gas_storage_water_heater",
+     "name": "燃气储水式热水器",
+     "en": "Gas storage water heater",
+     "year": 1910,
+     "note": "以燃气加热储水箱内热水的热水器，可供多点同时用水。",
+     "deps": [
+      "gas_water_heater"
+     ]
+    },
+    {
+     "id": "immersion_heater",
+     "name": "浸入式电热器",
+     "en": "Immersion heater",
+     "year": 1910,
+     "note": "把电热元件直接浸入水中加热的装置，用于烧水与储罐加热。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "plate_heat_exchanger",
+     "name": "板式换热器",
+     "en": "Plate heat exchanger",
+     "year": 1923,
+     "note": "由波纹板片叠合形成冷热通道的高效换热器，用于热力站换热。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "heating_circulation_pump",
+     "name": "供暖循环泵",
+     "en": "Heating circulation pump",
+     "year": 1930,
+     "note": "驱动热水在供暖管网中循环的水泵，是强制循环采暖的关键设备。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "district_heating_substation",
+     "name": "热力站",
+     "en": "Heating substation",
+     "year": 1950,
+     "note": "把热网高温水经换热降压后配送至用户的中间站，内设换热器与循环泵。",
+     "deps": [
+      "plate_heat_exchanger"
+     ]
+    },
+    {
+     "id": "electric_convection_heater",
+     "name": "对流式电暖器",
+     "en": "Electric convection heater",
+     "year": 1950,
+     "note": "利用自然对流经翅片散热的电暖器，安静无声，用于长时间供暖。",
+     "deps": [
+      "electric_space_heater"
+     ]
+    },
+    {
+     "id": "heat_pipe",
+     "name": "热管",
+     "en": "Heat pipe",
+     "year": 1963,
+     "note": "靠工质相变高效传热的密封管件，导热能力远超金属，用于散热与均温。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "heat_cost_allocator",
+     "name": "蒸发式热分配表",
+     "en": "Heat cost allocator",
+     "year": 1970,
+     "note": "安装在散热器上按蒸发量分摊热费的装置，用于集中供暖按户计量。",
+     "deps": [
+      "thermostat"
+     ]
+    },
+    {
+     "id": "preinsulated_pipe",
+     "name": "预制直埋保温管",
+     "en": "Pre-insulated pipe",
+     "year": 1970,
+     "note": "保温层与钢管工厂预制的直埋供热管道，减少敷设与热损失。",
+     "deps": [
+      "steel",
+      "plastics"
+     ]
+    },
+    {
+     "id": "thermostatic_radiator_valve",
+     "name": "恒温散热器阀",
+     "en": "Thermostatic radiator valve",
+     "year": 1973,
+     "note": "感温包随室温自动调节散热器水量的阀门，实现分室控温。",
+     "deps": [
+      "thermostat"
+     ]
+    },
+    {
+     "id": "instant_electric_water_heater",
+     "name": "即热式电热水器",
+     "en": "Instantaneous electric water heater",
+     "year": 1975,
+     "note": "以大功率电热元件瞬间加热流水的热水器，体积小无需储水箱。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "heat_meter",
+     "name": "热量表",
+     "en": "Heat meter",
+     "year": 1980,
+     "note": "按供回水流量与温差计量用户耗热量的仪表，用于按热量收费。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "electric_control_valve",
+     "name": "电动调节阀",
+     "en": "Electric control valve",
+     "year": 1985,
+     "note": "以电机驱动调节流量的阀门，配合温控器实现供暖回路自动调节。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "programmable_thermostat",
+     "name": "可编程温控器",
+     "en": "Programmable thermostat",
+     "year": 1985,
+     "note": "可按作息时段设定供暖温度曲线的控制器，节省供暖能耗。",
+     "deps": [
+      "thermostat",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "heating_balance_valve",
+     "name": "供暖水力平衡阀",
+     "en": "Balancing valve",
+     "year": 1990,
+     "note": "调节管网各支路阻力使流量按需分配的阀门，改善冷热不均。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "bathroom_heat_lamp",
+     "name": "浴室取暖灯",
+     "en": "Bathroom heat lamp",
+     "year": 1995,
+     "note": "以红外灯泡向人体辐射供热的浴室取暖电器，俗称浴霸。",
+     "deps": [
+      "infrared_heater"
+     ]
+    },
+    {
+     "id": "floor_heating_manifold",
+     "name": "地暖分集水器",
+     "en": "Floor heating manifold",
+     "year": 1995,
+     "note": "把供暖主干水分配到各房间地暖盘管的集配水装置，可逐路调温。",
+     "deps": [
+      "hydronic_floor_heating"
+     ]
+    },
+    {
+     "id": "carbon_fiber_heater",
+     "name": "碳纤维电暖器",
+     "en": "Carbon fiber heater",
+     "year": 2000,
+     "note": "以碳纤维发热体辐射供暖的电暖器，升温快、使用寿命长。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "smart_heat_meter",
+     "name": "智能热量表",
+     "en": "Smart heat meter",
+     "year": 2005,
+     "note": "可远程抄读与计费的热量表，支撑按需供热与热费精细管理。",
+     "deps": [
+      "heat_meter",
+      "semiconductors"
+     ]
+    }
+   ]
+  }
+ ]
+}

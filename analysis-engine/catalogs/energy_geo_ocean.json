@@ -1,0 +1,179 @@
+{
+ "cat": "energy",
+ "catName": "能源",
+ "sub": "geo_ocean",
+ "subName": "地热与海洋能",
+ "anchors": ["fire", "waterwheel", "steam_engine", "generator", "electricity", "power_grid", "chemistry", "thermodynamics", "scientific_method", "petroleum"],
+ "families": [
+  {
+   "name": "地热直接利用与热泵",
+   "items": [
+    {"id": "geothermal_public_bath", "name": "温泉公共浴场", "en": "Public hot spring bath", "year": 60, "note": "古罗马人在不列颠巴斯等地利用天然温泉修建浴场，是地热能直接利用的最早形态。"},
+    {"id": "geothermal_boric_acid", "name": "地热蒸汽硼酸生产", "en": "Geothermal boric acid production", "year": 1827, "note": "意大利托斯卡纳从1827年起用火山蒸汽浓缩硼酸，开现代地热资源工业开采先河。"},
+    {"id": "hot_spring_resort", "name": "温泉疗养地", "en": "Hot spring resort", "year": 1850, "note": "19世纪欧洲依托矿泉水发展温泉疗养城镇，形成系统化的温泉利用方式。"},
+    {"id": "geothermal_greenhouse", "name": "地热温室", "en": "Geothermal greenhouse", "year": 1930, "note": "用地热水供暖的园艺温室，冰岛等地1930年代起利用地热种植蔬菜花卉。"},
+    {"id": "downhole_heat_exchanger", "name": "井下换热器取热", "en": "Downhole heat exchanger", "year": 1932, "note": "在温泉井内安装换热器只取热不取水，美国克拉马斯福尔斯20世纪30年代用于供暖。"},
+    {"id": "geothermal_district_heating", "name": "城市地热区域供暖", "en": "Geothermal district heating", "year": 1943, "note": "冰岛雷克雅未克把地热水送入城市管网，1943年起建成世界最大地热供暖系统。"},
+    {"id": "ground_source_heat_pump", "name": "地源热泵", "en": "Ground-source heat pump", "year": 1948, "note": "以地下岩土为冷热源的热泵系统，1948年美国俄勒冈州首次成功应用。"},
+    {"id": "horizontal_ground_loop", "name": "水平埋管地埋管换热器", "en": "Horizontal ground loop", "year": 1950, "note": "把换热管浅埋于水平沟槽的地埋管形式，施工简便，用于地源热泵系统。"},
+    {"id": "groundwater_heat_pump", "name": "地下水水源热泵", "en": "Groundwater heat pump", "year": 1952, "note": "抽取地下水换热后回灌的水源热泵系统，适合富水地层，需维持水文平衡。"},
+    {"id": "surface_water_heat_pump", "name": "地表水热泵", "en": "Surface-water heat pump", "year": 1960, "note": "以湖水、河水为冷热源的热泵系统，换热器浸没水中，1960年代后用于建筑冷暖。"},
+    {"id": "geothermal_aquaculture", "name": "地热水产养殖", "en": "Geothermal aquaculture", "year": 1965, "note": "用地热水维持养殖水温，养殖罗非鱼、虾等热带品种，冰岛、美国等地广泛采用。"},
+    {"id": "geothermal_cascade_use", "name": "地热梯级利用", "en": "Cascade geothermal use", "year": 1970, "note": "按温度高低依次把地热水用于发电、供暖、温室、养殖，实现热量梯级利用。"},
+    {"id": "geothermal_drying", "name": "地热干燥", "en": "Geothermal drying", "year": 1975, "note": "用地热水加热空气干燥谷物、木材与水产品，是地热直接利用的重要工业环节。"},
+    {"id": "geothermal_absorption_cooling", "name": "地热吸收式制冷", "en": "Geothermal absorption cooling", "year": 1980, "note": "以地热水驱动吸收式制冷机供冷，实现地热的夏季利用，与供暖互补。"},
+    {"id": "geothermal_antifouling", "name": "地热供暖防腐防垢", "en": "Geothermal antifouling and anticorrosion", "year": 1982, "note": "针对地热水含盐易结垢腐蚀的特性，采用密闭系统与防腐阻垢处理保障供暖设备寿命。"},
+    {"id": "thermal_response_test", "name": "钻孔热响应试验", "en": "Thermal response test", "year": 1983, "note": "对地埋管孔进行原位热响应测试，测定岩土导热能力，为地源热泵设计提供参数。"},
+    {"id": "vertical_borehole_heat_exchanger", "name": "垂直埋管地埋管换热器", "en": "Vertical borehole heat exchanger", "year": 1985, "note": "单U或双U管深埋垂直钻孔的地埋管形式，占地小，是地源热泵主流换热方式。"},
+    {"id": "coaxial_ground_loop", "name": "同轴套管式地埋管", "en": "Coaxial borehole exchanger", "year": 1988, "note": "内外管同心布置的套管式地埋管换热器，用于深孔取热，可提高单孔换热量。"},
+    {"id": "direct_expansion_heat_pump", "name": "直接膨胀式地源热泵", "en": "Direct expansion ground heat pump", "year": 1990, "note": "制冷剂直接在地下盘管中蒸发的热泵系统，省去二次换热，换热效率更高。"},
+    {"id": "slinky_ground_loop", "name": "螺旋盘管地埋管换热器", "en": "Slinky ground loop", "year": 1992, "note": "把换热管盘成螺旋圈铺设在沟槽中的地埋管形式，增大单位长度换热量。"},
+    {"id": "geothermal_snow_melting", "name": "地热路面融雪", "en": "Geothermal snow melting", "year": 1994, "note": "把地热水通入路面盘管融化冰雪，冰岛等严寒地区用于道路、人行道与球场。"},
+    {"id": "energy_pile", "name": "地热桩基换热", "en": "Energy pile", "year": 1995, "note": "在建筑桩基中埋设换热管，让桩同时承重与换热，是地源热泵与结构一体化技术。"},
+    {"id": "low_temp_radiant_geothermal", "name": "低温地热辐射采暖", "en": "Low-temperature radiant heating", "year": 1998, "note": "把40至50摄氏度的低温地热水配地面辐射末端供暖，扩大地热直接利用温差范围。"},
+    {"id": "shallow_geothermal_system", "name": "浅层地热能冷暖系统", "en": "Shallow geothermal HVAC system", "year": 2000, "note": "以地源热泵为核心、地埋管为热汇的整栋建筑供冷供暖系统，2000年起在中国规模化应用。"},
+    {"id": "geothermal_tail_water_reuse", "name": "温泉尾水余热利用", "en": "Geothermal tail water reuse", "year": 2005, "note": "对洗浴后仍有余温的温泉尾水用热泵再回收供热，提高温泉资源利用率。"},
+    {"id": "geothermal_pool_heating", "name": "温泉泳池供热", "en": "Geothermal pool heating", "year": 2008, "note": "用地热水加热公共恒温泳池与温泉戏水设施，是旅游型温泉地的常见配套工程。"},
+    {"id": "geothermal_solar_hybrid", "name": "地热太阳能互补供热", "en": "Geothermal-solar hybrid heating", "year": 2010, "note": "地源热泵与太阳能集热联合的供热系统，太阳能夏季蓄热回补土壤，维持热平衡。"},
+    {"id": "geothermal_brine_lithium", "name": "地热卤水提锂", "en": "Lithium extraction from geothermal brine", "year": 2021, "note": "从地热发电卤水中吸附提取锂的工艺，德国等地2020年代初开展产业化示范。"}
+   ]
+  },
+  {
+   "name": "地热勘探与钻井开发",
+   "items": [
+    {"id": "geothermal_gradient_survey", "name": "地温梯度勘查", "en": "Geothermal gradient survey", "year": 1900, "note": "通过浅钻孔测温绘制地温梯度图，圈定地热异常区，是地热勘探的基本手段。"},
+    {"id": "geothermal_well_drilling", "name": "地热井钻井", "en": "Geothermal well drilling", "year": 1904, "note": "为开采地热流体钻凿生产井，1904年拉德瑞罗钻出供汽井并用于发电试验。"},
+    {"id": "geothermal_resistivity_survey", "name": "地热电阻率勘探", "en": "Geothermal resistivity survey", "year": 1920, "note": "依据热储层低电阻率特征，用电测深与电剖面勘查圈定地热田范围。"},
+    {"id": "geothermal_gravity_survey", "name": "地热重磁勘探", "en": "Gravity and magnetic survey", "year": 1950, "note": "以重力与磁法测量识别构造与热蚀变带，为地热田选址提供依据。"},
+    {"id": "magnetotelluric_prospecting", "name": "大地电磁测深", "en": "Magnetotelluric prospecting", "year": 1953, "note": "用天然电磁场探测深部电阻率结构，1950年代发展起来，可圈定千米级地热储层。"},
+    {"id": "geothermal_well_completion", "name": "高温地热井完井", "en": "High-temperature well completion", "year": 1960, "note": "针对高温含蚀地层采用耐温套管与特殊水泥固井，保证地热井长期安全生产。"},
+    {"id": "geochemical_geothermometer", "name": "地热水化学温标勘探", "en": "Geochemical geothermometry", "year": 1962, "note": "依据水中二氧化硅等组分浓度估算深部储层温度，1960年代建立化学温标方法。"},
+    {"id": "geothermal_well_testing", "name": "地热井放喷测试", "en": "Geothermal well discharge test", "year": 1965, "note": "对完钻地热井进行放喷与压力恢复测试，评价产能、温度与储层参数。"},
+    {"id": "geothermal_reservoir_modeling", "name": "地热储层数值模拟", "en": "Geothermal reservoir modeling", "year": 1970, "note": "建立热储数学模型模拟开采-回灌过程，预测热田寿命与可持续开采量。"},
+    {"id": "airborne_thermal_survey", "name": "航空红外地热勘查", "en": "Airborne thermal infrared survey", "year": 1972, "note": "用机载热红外扫描识别地表热异常，1970年代起用于火山与地热区普查。"},
+    {"id": "hdr_reservoir_stimulation", "name": "干热岩储层水力压裂", "en": "Hot dry rock reservoir stimulation", "year": 1974, "note": "1974年美国芬顿山以水力压裂在干热岩中造储层，开创增强型地热系统研究。"},
+    {"id": "geothermal_reinjection", "name": "地热尾水回灌", "en": "Geothermal reinjection", "year": 1975, "note": "把地热开采后流体回注热储，维持储层压力并处理尾水，1970年代起在拉德瑞罗、盖瑟斯应用。"},
+    {"id": "high_temp_well_logging", "name": "耐高温地热测井", "en": "High-temperature well logging", "year": 1978, "note": "研制可耐150至300摄氏度的井下仪器，测量地热井温度压力与流量剖面。"},
+    {"id": "geothermal_downhole_pump", "name": "耐温地热井下泵", "en": "Geothermal downhole pump", "year": 1980, "note": "把耐热潜水泵下入地热井强制提水，用于不自喷的低温地热井供暖供水。"},
+    {"id": "geothermal_foam_drilling", "name": "地热井泡沫钻井", "en": "Foam drilling for geothermal wells", "year": 1985, "note": "用泡沫等低密度介质钻井，解决地热井漏失与热储层伤害问题。"},
+    {"id": "geothermal_mobile_rig", "name": "车载地热钻机", "en": "Mobile geothermal drilling rig", "year": 1990, "note": "模块化车载钻机便于山区与城市快速搬迁，是浅层地热与地埋管施工主力设备。"},
+    {"id": "geothermal_tracer_test", "name": "地热储层示踪试验", "en": "Geothermal tracer test", "year": 1993, "note": "注入示踪剂监测流体在热储中的流动与回灌联通关系，指导采灌井网设计。"},
+    {"id": "doublet_well_system", "name": "地热对井循环采灌", "en": "Geothermal doublet system", "year": 2000, "note": "一眼采、一眼灌的对井开发模式，维持热储压力与水量平衡，广泛用于地热供暖项目。"},
+    {"id": "geothermal_microseismic_monitoring", "name": "地热田微震监测", "en": "Microseismic monitoring", "year": 2005, "note": "监测压裂与注采诱发的微震事件，控制诱发地震风险并刻画裂缝扩展。"},
+    {"id": "directional_deep_geothermal_well", "name": "深层地热定向钻井", "en": "Directional deep geothermal well", "year": 2010, "note": "定向井技术引入地热开发，从有限场地侧钻连通多处热储，减小占地。"},
+    {"id": "supercritical_geothermal_well", "name": "超高温地热井钻探", "en": "Supercritical geothermal drilling", "year": 2017, "note": "冰岛深钻项目在数千米深部探到超临界地热流体，为地热开发新前沿研究。"},
+    {"id": "deep_closed_loop_geothermal", "name": "深层闭环地热系统", "en": "Deep closed-loop geothermal system", "year": 2019, "note": "以封闭井筒工质循环取热的新型系统，无水采出与回灌，2019年加拿大阿尔伯塔示范。"}
+   ]
+  },
+  {
+   "name": "地热发电技术",
+   "items": [
+    {"id": "dry_steam_geothermal", "name": "干蒸汽地热发电", "en": "Dry steam geothermal power", "year": 1904, "note": "1904年意大利拉德瑞罗首次用地热干蒸汽发电，是地热发电的开端。"},
+    {"id": "backpressure_geothermal_plant", "name": "背压式地热电站", "en": "Backpressure geothermal plant", "year": 1913, "note": "1913年拉德瑞罗建成首座商业地热电站，蒸汽经汽轮机后排空或供热，形式简单。"},
+    {"id": "condensing_geothermal_plant", "name": "凝汽式地热电站", "en": "Condensing geothermal plant", "year": 1950, "note": "加装凝汽器回收排汽凝结水并降低背压，提高地热发电效率，1950年代拉德瑞罗重建采用。"},
+    {"id": "flash_geothermal_plant", "name": "单级闪蒸地热发电", "en": "Single-flash geothermal plant", "year": 1958, "note": "1958年新西兰怀拉基首座大型湿蒸汽闪蒸电站投运，闪蒸低压蒸汽驱动汽轮机。"},
+    {"id": "geothermal_separator", "name": "地热井口气水分离器", "en": "Geothermal wellhead separator", "year": 1960, "note": "以旋风分离方式把湿蒸汽分离为干汽与卤水，是闪蒸地热电站必备井口设备。"},
+    {"id": "binary_geothermal_plant", "en": "Binary geothermal power plant", "name": "双工质地热发电", "year": 1967, "note": "用低沸点有机工质吸取地热水热量发电，1967年苏联帕拉通卡建成首座双工质电站。"},
+    {"id": "geothermal_chp_plant", "name": "地热热电联产电站", "en": "Geothermal CHP plant", "year": 1976, "note": "发电同时供应热水的联产电站，1976年冰岛斯瓦辛基电站开创地热热电联供模式。"},
+    {"id": "hdr_closed_loop_test", "name": "干热岩闭式循环取热试验", "en": "Hot dry rock circulation test", "year": 1977, "note": "1977年美国芬顿山完成首次干热岩闭式水循环取热试验，验证人工热储换热可行。"},
+    {"id": "geothermal_turbine_protection", "name": "地热汽轮机除湿防腐", "en": "Geothermal turbine protection", "year": 1980, "note": "针对含腐蚀气体与湿蒸汽的叶片磨损问题，采用耐蚀材料与除湿结构保护地热汽轮机。"},
+    {"id": "kalina_cycle_power", "name": "卡林纳循环发电", "en": "Kalina cycle", "year": 1983, "note": "以氨水为工质变温蒸发做功的循环，1983年卡林纳提出，用于低温地热与余热发电。"},
+    {"id": "double_flash_geothermal", "name": "两级闪蒸地热发电", "en": "Double-flash geothermal plant", "year": 1985, "note": "高压与低压分离器两级闪蒸补汽，充分利用地热卤水热量，提高发电出力。"},
+    {"id": "geothermal_h2s_control", "name": "地热电站硫化氢治理", "en": "Geothermal H2S abatement", "year": 1987, "note": "对地热蒸汽中硫化氢等气体进行洗涤氧化处理，满足环保排放要求。"},
+    {"id": "flash_binary_hybrid", "name": "闪蒸双工质联合地热发电", "en": "Flash-binary geothermal plant", "year": 1995, "note": "闪蒸发电后再以分离卤水驱动双工质底循环，进一步回收余热，提高整体效率。"},
+    {"id": "wellhead_binary_unit", "name": "井口双工质地热机组", "en": "Wellhead binary unit", "year": 2005, "note": "把小型双工质机组直接布置在井口，就近开发低压井与边缘地热资源。"},
+    {"id": "egs_demonstration_plant", "name": "增强型地热系统示范电站", "en": "EGS demonstration plant", "year": 2008, "note": "2008年法国苏尔茨EGS示范电站发电，验证人工热储商业化利用路径。"},
+    {"id": "modular_orc_geothermal", "name": "模块化地热有机朗肯机组", "en": "Modular ORC geothermal unit", "year": 2010, "note": "标准集装箱式的模块化ORC机组，便于快速部署，用于中小型地热与余热发电。"},
+    {"id": "geothermal_screw_expander", "name": "地热螺杆膨胀发电", "en": "Geothermal screw expander", "year": 2015, "note": "以双螺杆膨胀机替代透平用于地热水直发，中国在低温地热电站建成示范。"}
+   ]
+  },
+  {
+   "name": "潮汐与潮流能利用",
+   "items": [
+    {"id": "tidal_mill", "name": "潮汐磨坊", "en": "Tidal mill", "year": 619, "note": "中世纪爱尔兰等地在河口筑池蓄潮驱动水轮磨面，是潮汐能机械利用的早期形态。"},
+    {"id": "tidal_barrage_plant", "name": "潮汐电站", "en": "Tidal barrage power station", "year": 1966, "note": "1966年法国朗斯潮汐电站投运，装机240兆瓦，是世界首座大型潮汐发电站。"},
+    {"id": "bulb_turbine_unit", "name": "灯泡贯流式水轮机组", "en": "Bulb turbine unit", "year": 1966, "note": "发电机置于灯泡体内的低水头机组，可双向发电，朗斯潮汐电站率先大规模采用。"},
+    {"id": "kislaya_tidal_trial", "name": "潮汐试验电站", "en": "Tidal experimental plant", "year": 1968, "note": "1968年苏联基斯拉亚湾建成装机0.4兆瓦的潮汐试验电站，验证严寒海区运行技术。"},
+    {"id": "jiangxia_tidal_plant", "name": "双向潮汐示范电站", "en": "Jiangxia tidal plant", "year": 1980, "note": "中国江厦潮汐电站1980年发电，涨落潮双向运行，曾长期为亚洲装机最大的潮汐电站。"},
+    {"id": "tidal_current_pilot_plant", "name": "潮流能并网示范机组", "en": "Grid-connected tidal current pilot", "year": 2003, "note": "2003年挪威哈默菲斯特300千瓦潮流机组并网，开创潮流能并网发电先例。"},
+    {"id": "vertical_axis_tidal_turbine", "name": "竖轴潮流能水轮机", "en": "Vertical-axis tidal turbine", "year": 2004, "note": "叶片绕竖轴旋转的潮流机，不受流向限制，适合往复潮流，处于试验示范阶段。"},
+    {"id": "horizontal_axis_tidal_turbine", "name": "水平轴兆瓦级潮流机组", "en": "Horizontal-axis tidal turbine", "year": 2008, "note": "2008年英国斯特兰福德湾1.2兆瓦海流机并网，为世界首台兆瓦级并网潮流机组。"},
+    {"id": "pitch_variable_tidal_turbine", "name": "变桨距潮流能机组", "en": "Pitch-controlled tidal turbine", "year": 2010, "note": "叶片可调桨的潮流机组，双向潮流中保持高效发电并控制载荷。"},
+    {"id": "sihwa_tidal_plant", "name": "大型潮汐电站", "en": "Sihwa tidal power station", "year": 2011, "note": "韩国始华湖潮汐电站2011年投运，装机254兆瓦，为目前世界最大的潮汐电站。"},
+    {"id": "floating_tidal_platform", "name": "漂浮式潮流能平台", "en": "Floating tidal energy platform", "year": 2013, "note": "以漂浮平台承载多台潮流机的布置方式，便于深海安装与维护，多国开展示范。"},
+    {"id": "tidal_current_array", "name": "潮流能发电阵列", "en": "Tidal stream array", "year": 2016, "note": "2016年英国彭特兰湾梅根项目投运，为世界首座商业化潮流能阵列电站。"},
+    {"id": "ocean_current_power", "name": "洋流能发电试验", "en": "Ocean current power trial", "year": 2020, "note": "2020年前后日本在黑潮海域布设海底水轮机开展洋流发电试验，尚处示范验证阶段。"}
+   ]
+  },
+  {
+   "name": "波浪能利用",
+   "items": [
+    {"id": "early_wave_motor", "name": "早期波浪发动机", "en": "Early wave motor", "year": 1898, "note": "19世纪末欧美沿海出现多种靠浮体随波浪运动提水做功的波浪机原型，后多废弃。"},
+    {"id": "owc_navigation_buoy", "name": "振荡水柱航标灯", "en": "OWC navigation buoy", "year": 1965, "note": "日本益田善雄1965年研制以振荡水柱驱动空气透平的航标灯，为波浪发电首个实用装置。"},
+    {"id": "salter_duck", "name": "点头鸭波浪装置", "en": "Salter duck", "year": 1974, "note": "爱丁堡大学索尔特1974年提出偏航浮体波浪能装置，波浪俘获效率理论值高，为研究原型。"},
+    {"id": "wells_air_turbine", "name": "威尔斯空气透平", "en": "Wells turbine", "year": 1976, "note": "威尔斯1976年发明双向对称叶片空气透平，往复气流可单向旋转，用于振荡水柱装置。"},
+    {"id": "shore_owc_plant", "name": "岸式振荡水柱电站", "en": "Shoreline OWC plant", "year": 1985, "note": "1985年挪威托夫特斯塔伦建成500千瓦岸式振荡水柱电站，验证波浪能并网发电。"},
+    {"id": "pendulum_wave_device", "name": "摆式波浪发电装置", "en": "Pendulum wave energy device", "year": 1990, "note": "以摆动板吸收波浪能量驱动液压或发电机的装置，中国大万山岛等建设过试验机组。"},
+    {"id": "vizhinjam_owc_plant", "name": "振荡水柱并网示范电站", "en": "Grid-connected OWC demonstration", "year": 1991, "note": "1991年印度维津詹建成150千瓦并网振荡水柱电站，并长期开展波浪发电运行研究。"},
+    {"id": "floating_owc_device", "name": "漂浮式振荡水柱装置", "en": "Floating OWC device", "year": 1998, "note": "日本1998年下水巨鲸号漂浮式振荡水柱试验装置，验证漂浮形态波浪电站可行性。"},
+    {"id": "overtopping_wave_device", "name": "越浪式波浪能装置", "en": "Overtopping wave energy device", "year": 2003, "note": "让波浪越入高位水库再泄流发电的装置，2003年波龙原型机在丹麦下水试验。"},
+    {"id": "snake_floating_wave_device", "name": "蛇形漂浮式波浪能装置", "en": "Pelamis wave energy converter", "year": 2004, "note": "多节铰接浮体随波浪弯曲驱动液压发电的装置，2004年完成首台并网样机。"},
+    {"id": "point_absorber_wave_device", "name": "点吸收式波浪能装置", "en": "Point absorber wave energy device", "year": 2005, "note": "尺寸远小于波长的浮子垂荡吸收波浪能的装置，美国电力浮标等开展海上试验。"},
+    {"id": "linear_generator_wave", "name": "直驱式波浪发电", "en": "Direct-drive wave power", "year": 2006, "note": "用直线发电机把浮体运动直接转化为电能，2006年起瑞典吕瑟希尔试验场并网验证。"},
+    {"id": "wave_glider", "name": "波浪滑翔器", "en": "Wave glider", "year": 2007, "note": "利用波浪上下运动驱动水下翼板推进的无人平台，附带太阳能供电，2007年首航成功。"},
+    {"id": "wave_energy_farm", "name": "波浪能发电阵列", "en": "Wave energy farm", "year": 2008, "note": "2008年葡萄牙阿古萨多拉短暂投运世界首个多机波浪能阵列，验证组网并网技术。"},
+    {"id": "oscillating_surge_device", "name": "近岸摆板式波浪能装置", "en": "Oscillating wave surge converter", "year": 2009, "note": "近岸海底铰接摆板随波浪摆动驱动液压系统的装置，2009年牡蛎机在英国并网。"},
+    {"id": "wave_hydraulic_pto", "name": "波浪能液压能量转换系统", "en": "Wave hydraulic power take-off", "year": 2010, "note": "用液压泵蓄能器平抑波动、驱动发电机的能量转换系统，是多类波浪装置共同核心技术。"},
+    {"id": "mutriku_wave_plant", "name": "商业化岸式波浪电站", "en": "Mutriku wave power plant", "year": 2011, "note": "2011年西班牙穆特里库296千瓦电站并网，为世界首座商业化波浪能电站，建于防波堤内。"},
+    {"id": "ceto_submerged_device", "name": "淹没式点吸收波能装置", "en": "CETO submerged buoy", "year": 2013, "note": "潜于水下靠波浪压缩海水泵的装置，2013年起澳大利亚CETO向岸上供水发电。"},
+    {"id": "wave_island_microgrid", "name": "波浪能海岛微电网", "en": "Wave-powered island microgrid", "year": 2017, "note": "中国在万山群岛等地把波浪能与光伏储能组成海岛微电网，示范波浪能实际供电。"}
+   ]
+  },
+  {
+   "name": "海洋温差能与深层海水利用",
+   "items": [
+    {"id": "open_cycle_otec", "name": "开式海洋温差发电", "en": "Open-cycle OTEC", "year": 1930, "note": "克劳德1930年在古巴近海建成开式循环温差发电装置，以表层温水闪蒸驱动透平。"},
+    {"id": "closed_cycle_otec", "name": "闭式循环海洋温差发电", "en": "Closed-cycle OTEC", "year": 1979, "note": "以低沸点工质闭式循环发电，1979年美国迷你OTEC首次实现净功率输出。"},
+    {"id": "otec_cold_water_pipe", "name": "海洋温差取水冷水管", "en": "OTEC cold water pipe", "year": 1979, "note": "从深海抽取4至6摄氏度冷水的长管道，1979年迷你OTEC用660米聚乙烯管取水。"},
+    {"id": "nauru_otec_plant", "name": "百千瓦级温差试验电站", "en": "Nauru OTEC pilot plant", "year": 1981, "note": "1981年日本在瑙鲁建成100千瓦闭式温差试验电站，为当时世界最大温差发电机组。"},
+    {"id": "floating_otec_research", "name": "漂浮式温差发电研究", "en": "Floating OTEC research", "year": 1985, "note": "各国对深水漂浮式温差电站进行总体设计与研究，验证远海布置与系泊取水方案。"},
+    {"id": "otec_desalination", "name": "温差能海水淡化联产", "en": "OTEC with desalination", "year": 1992, "note": "开式温差循环冷凝淡水为副产，与发电联产淡水的研究示范在夏威夷等地开展。"},
+    {"id": "deep_ocean_water_use", "name": "深层海水综合利用", "en": "Deep ocean water utilization", "year": 1995, "note": "夏威夷自然能源实验室用深层冷海水养殖、育苗并生产高纯度冷海水产品。"},
+    {"id": "seawater_source_heat_pump", "name": "海水源热泵区域供暖", "en": "Seawater-source heat pump heating", "year": 1996, "note": "北欧从1980年代起用海水源热泵为城市区域供热，是海洋热能利用的重要形式。"},
+    {"id": "swac_cooling", "name": "深水冷源空调", "en": "Seawater air conditioning", "year": 2000, "note": "用深层冷水直接供冷的大型空调系统，2000年康奈尔大学建成首个大型工程。"},
+    {"id": "makai_otec_demo", "name": "温差能示范电站", "en": "Makai OTEC plant", "year": 2015, "note": "2015年夏威夷马凯105千瓦闭式温差电站投运，实现长时段稳定净发电示范。"}
+   ]
+  },
+  {
+   "name": "盐差能、资源评估与试验设施",
+   "items": [
+    {"id": "wave_basin_testing", "name": "波浪水池模型试验", "en": "Wave basin model testing", "year": 1965, "note": "在实验室造波水池中按比尺试验海洋能装置，验证水动力性能后再投入海上试验。"},
+    {"id": "wave_buoy_measurement", "name": "测波浮标", "en": "Wave measuring buoy", "year": 1975, "note": "随浪运动并遥测波高周期的浮标，为波浪能资源评估提供长期现场数据。"},
+    {"id": "adcp_current_measurement", "name": "声学多普勒流速剖面测量", "en": "Acoustic Doppler current profiler", "year": 1990, "note": "利用声学多普勒原理测流速剖面的仪器，用于潮流能场址选址与资源普查。"},
+    {"id": "ocean_energy_remote_survey", "name": "海洋能资源遥感评估", "en": "Remote sensing resource assessment", "year": 1992, "note": "结合卫星高度计与数值模式评估全球波浪与潮流能储量，为区划开发提供依据。"},
+    {"id": "emec_test_site", "name": "海洋能并网试验场", "en": "European Marine Energy Centre", "year": 2004, "note": "2004年英国奥克尼建立世界首个波浪与潮流能并网公共试验场，供样机实海况测试。"},
+    {"id": "marine_energy_standards", "name": "海洋能技术标准体系", "en": "Marine energy standards", "year": 2007, "note": "国际电工委员会2007年成立海洋能技术委员会，制定波浪潮流能装置测试与安全标准。"},
+    {"id": "pro_power_generation", "name": "压力延迟渗透发电", "en": "Pressure retarded osmosis", "year": 2009, "note": "利用淡水与海水渗透压发电，2009年挪威斯塔特克拉夫建成世界首座盐差能试验电站。"},
+    {"id": "forward_osmosis_power", "name": "正向渗透盐差能研究", "en": "Forward osmosis research", "year": 2010, "note": "以正渗透膜汲取渗透能的研究方向，主要集中于高选择性渗透膜的实验室研发。"},
+    {"id": "red_power_generation", "name": "反电渗析盐差能发电", "en": "Reverse electrodialysis", "year": 2014, "note": "让盐淡水经交替阴阳离子交换膜产生电压发电，2014年荷兰建成50千瓦试验电站。"},
+    {"id": "wanshan_test_site", "name": "国家海洋能试验场", "en": "National marine energy test site", "year": 2018, "note": "中国珠海万山2018年前后建成公共海洋能试验场，面向波浪能装置开展海试验证。"},
+    {"id": "otec_simulator_platform", "name": "温差能全流程模拟平台", "en": "OTEC process simulation", "year": 2020, "note": "以仿真与小型试验台全流程验证温差发电系统热力性能，支撑工程样机开发。"}
+   ]
+  },
+  {
+   "name": "地热与海洋能工程运维",
+   "items": [
+    {"id": "geothermal_well_stimulation", "name": "地热井增产酸化", "en": "Geothermal well stimulation", "year": 1980, "note": "向地热井注酸溶解近井堵塞并改造裂缝，提高注采能力，是地热井常规增产手段。"},
+    {"id": "heating_station_mixing", "name": "地热换热站混水调节", "en": "Geothermal mixing substation", "year": 1990, "note": "在供暖换热站用循环泵混水调温，按需调节供水温度，保障地热热网稳定经济运行。"},
+    {"id": "dts_geothermal_monitoring", "name": "分布式光纤测温", "en": "Distributed temperature sensing", "year": 1995, "note": "沿光纤连续测温的技术，用于地热井与地埋管温度剖面监测，1990年代进入工程应用。"},
+    {"id": "heat_network_control", "name": "地热供暖热网调控", "en": "Geothermal heat network control", "year": 1998, "note": "以变频泵与分户计量实现地热供暖系统按需供热与节能调节。"},
+    {"id": "wellhead_sand_removal", "name": "温泉井口除砂过滤", "en": "Wellhead sand removal", "year": 2005, "note": "用旋流除砂器与过滤器去除温泉水中砂粒悬浮物，保护换热与输送设备。"},
+    {"id": "tidal_turbine_composite_blade", "name": "潮流机组复合材料叶片", "en": "Composite tidal turbine blade", "year": 2009, "note": "以玻璃钢或碳纤维制造的潮流机叶片，耐海水腐蚀且比强度高，成为主流选择。"},
+    {"id": "dual_source_heat_pump", "name": "双源热泵系统", "en": "Dual-source heat pump", "year": 2012, "note": "可交替以空气与地源为热源的热泵机组，平衡地埋管冬夏吸放热量。"},
+    {"id": "marine_energy_type_approval", "name": "海洋能装置型式认证", "en": "Marine energy type certification", "year": 2015, "note": "依据国际标准对波浪潮流能装置进行设计评审与型式认证，为项目融资投保提供依据。"},
+    {"id": "geothermal_well_reentry", "name": "地热老井加深侧钻", "en": "Geothermal well deepening and sidetracking", "year": 2016, "note": "对产能衰减地热井加深或侧钻分支，重建热储通道，延长井的服役寿命。"},
+    {"id": "digital_twin_marine_energy", "name": "海洋能装置数字孪生监测", "en": "Digital twin monitoring for marine energy", "year": 2020, "note": "建立装置数字孪生模型在线评估载荷与健康状态，指导海上运维与延寿。"}
+   ]
+  }
+ ]
+}

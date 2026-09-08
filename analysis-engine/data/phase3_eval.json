@@ -1,0 +1,27 @@
+{
+ "test_positive_reconstructible_ratio": 0.9497,
+ "meta": {
+  "method": "prerequisite-support hold-out evaluation",
+  "graph": "13392 nodes / 17837 edges",
+  "positive_pool": 3981,
+  "test_positive": 796,
+  "negative_sampled": 796,
+  "seed": 42,
+  "hold_frac": 0.2,
+  "computed_at": "2026-09-08T10:47:37"
+ },
+ "auc": 0.5636,
+ "auc_random_baseline": 0.5,
+ "recall_at_k": {
+  "100": 0.0302,
+  "500": 0.25,
+  "1000": 0.4874,
+  "5000": 0.9497
+ },
+ "recall_random_baseline": {
+  "100": 0.0272,
+  "500": 0.1361,
+  "1000": 0.2723,
+  "5000": 1.0
+ }
+}

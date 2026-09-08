@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全量科技树 · 技术演化数据库</title>
+<link rel="stylesheet" href="assets/style.css?v=20260906f">
+</head>
+<body>
+<header class="site-header"></header>
+<main id="main">
+<section class="view"><div class="section-head"><h2>全量技术演化网络</h2><p class="view-sub">13,392 项真实技术 · 第一性原理五维评分 · 依赖/赋能关系网（Phase 4 集成）</p></div>
+    <div class="tree-toolbar" id="tf-toolbar"></div>
+    <div class="rel-legend" id="tf-legend"></div>
+    <div class="tree-layout">
+      <div class="tree-canvas-wrap">
+        <svg id="tf-svg"></svg>
+        <div class="tree-hint">拖动节点排布 · 滚轮缩放 · 点击节点查看详情与依赖链及五维评分</div>
+      </div>
+      <aside class="tree-side" id="tf-side"></aside>
+    </div></section>
+</main>
+<footer class="site-footer"></footer>
+
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card" id="modal-card"></div>
+</div>
+
+<script src="assets/d3.v7.min.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/data_full.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/shell.js"></script>
+<script src="assets/pages/tree_full.js"></script>
+</body>
+</html>

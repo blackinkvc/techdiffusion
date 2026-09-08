@@ -1,0 +1,1330 @@
+{
+ "cat": "transport",
+ "catName": "交通运载",
+ "sub": "water",
+ "subName": "水路运输",
+ "anchors": [
+  "sail",
+  "steam_ship",
+  "steam_engine",
+  "steel",
+  "iron",
+  "petroleum",
+  "diesel_engine",
+  "nuclear_fission",
+  "electric_motor",
+  "generator",
+  "radio",
+  "telegraph",
+  "gps",
+  "thermodynamics",
+  "internal_combustion",
+  "chemistry",
+  "computer"
+ ],
+ "families": [
+  {
+   "name": "早期舟船与船体工艺",
+   "items": [
+    {
+     "id": "dugout_canoe",
+     "name": "独木舟",
+     "en": "Dugout canoe",
+     "year": -7000,
+     "note": "整木掏空制成的舟船，是人类最早的水上交通工具之一。"
+    },
+    {
+     "id": "reed_boat",
+     "name": "芦苇船",
+     "en": "Reed boat",
+     "year": -6000,
+     "note": "束扎芦苇制成的舟船，两河流域与秘鲁的的喀喀湖古代皆有使用。"
+    },
+    {
+     "id": "animal_skin_boat",
+     "name": "兽皮船",
+     "en": "Skin boat",
+     "year": -4000,
+     "note": "以兽皮蒙覆框架的轻便舟，包括爱斯基摩皮艇与凯尔特圆舟等形制。"
+    },
+    {
+     "id": "plank_boat",
+     "name": "木板船",
+     "en": "Plank-built boat",
+     "year": -3000,
+     "note": "以木板拼接船体，突破整木限制，船体尺度与载重由此扩大。"
+    },
+    {
+     "id": "sewn_boat",
+     "name": "缝合板船",
+     "en": "Sewn boat",
+     "year": -2500,
+     "note": "以绳索缝连木板成壳的古代造船法，埃及与阿拉伯沿海长期沿用。",
+     "deps": [
+      "plank_boat"
+     ]
+    },
+    {
+     "id": "outrigger_canoe",
+     "name": "舷外浮架独木舟",
+     "en": "Outrigger canoe",
+     "year": -2000,
+     "note": "舷侧架设浮木抗浪的独木舟，是太平洋与东南亚远洋迁徙的基石。",
+     "deps": [
+      "dugout_canoe"
+     ]
+    },
+    {
+     "id": "hull_caulking",
+     "name": "船缝捻料",
+     "en": "Hull caulking",
+     "year": -1500,
+     "note": "以沥青、麻絮等填塞板缝防漏的工艺，古代木船建造不可缺少。"
+    },
+    {
+     "id": "double_canoe",
+     "name": "双体独木舟",
+     "en": "Double canoe",
+     "year": -1500,
+     "note": "两舟并列相连形成宽大甲板的舟船，波利尼西亚人赖以横渡大洋。",
+     "deps": [
+      "outrigger_canoe"
+     ]
+    },
+    {
+     "id": "oared_galley",
+     "name": "桨帆船",
+     "en": "Oared galley",
+     "year": -800,
+     "note": "以桨为主辅以帆的地中海船舶，战商两用，延续至近代。"
+    },
+    {
+     "id": "stern_hung_rudder",
+     "name": "艉舵",
+     "en": "Stern-mounted rudder",
+     "year": 100,
+     "note": "装于船尾中线的可转动舵叶，中国率先使用，后传入欧洲。"
+    },
+    {
+     "id": "clinker_hull",
+     "name": "瓦叠式船壳",
+     "en": "Clinker hull",
+     "year": 700,
+     "note": "木板叠压铆接的船体工艺，维京长船为代表，适航于北海风浪。",
+     "deps": [
+      "plank_boat"
+     ]
+    },
+    {
+     "id": "viking_longship",
+     "name": "维京长船",
+     "en": "Viking longship",
+     "year": 800,
+     "note": "浅吃水、桨帆兼用的北欧快船，维京人远航殖民的重要工具。",
+     "deps": [
+      "clinker_hull"
+     ]
+    },
+    {
+     "id": "watertight_bulkhead",
+     "name": "水密隔舱",
+     "en": "Watertight bulkhead",
+     "year": 900,
+     "note": "以舱壁把船体分隔为密封舱段，破损时限制进水，中国宋代已采用。",
+     "deps": [
+      "plank_boat"
+     ]
+    },
+    {
+     "id": "cog_ship",
+     "name": "柯克船",
+     "en": "Cog",
+     "year": 1200,
+     "note": "波罗的海与北海的横帆货运船，汉萨同盟贸易网络的骨干船型。",
+     "deps": [
+      "sail"
+     ]
+    },
+    {
+     "id": "carvel_hull",
+     "name": "平接船壳",
+     "en": "Carvel hull",
+     "year": 1400,
+     "note": "木板边对边平接的船体工艺，外壳光滑且便于加强，支撑远洋大船。",
+     "deps": [
+      "plank_boat"
+     ]
+    },
+    {
+     "id": "copper_sheathing",
+     "name": "船底铜皮包覆",
+     "en": "Copper sheathing",
+     "year": 1761,
+     "note": "以铜皮包覆船底防藤壶附着与蛀蚀，显著提高航速与维护周期。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "all_welded_hull",
+     "name": "全焊接船体",
+     "en": "All-welded hull",
+     "year": 1941,
+     "note": "以电弧焊接取代铆接的船体建造法，战时批量造船效率大幅提高。",
+     "deps": [
+      "steel"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "帆船谱系与风帆装置",
+   "items": [
+    {
+     "id": "lateen_sail",
+     "name": "三角帆",
+     "en": "Lateen sail",
+     "year": 200,
+     "note": "地中海与阿拉伯船只使用的三角帆，可迎风折线航行，催生远洋探索。",
+     "deps": [
+      "sail"
+     ]
+    },
+    {
+     "id": "dhow",
+     "name": "三角帆商船",
+     "en": "Dhow",
+     "year": 600,
+     "note": "阿拉伯海沿岸以三角帆航行的传统商船，主导印度洋贸易数百年。",
+     "deps": [
+      "lateen_sail"
+     ]
+    },
+    {
+     "id": "junk_ship",
+     "name": "中国帆船",
+     "en": "Junk",
+     "year": 1050,
+     "note": "硬帆可转动、带水密舱的中国帆船，宋元明清远洋贸易的主力船型。",
+     "deps": [
+      "watertight_bulkhead"
+     ]
+    },
+    {
+     "id": "caravel",
+     "name": "卡拉维尔帆船",
+     "en": "Caravel",
+     "year": 1450,
+     "note": "轻快多桅的葡萄牙帆船，兼用横帆与三角帆，远洋探险的关键船型。",
+     "deps": [
+      "carvel_hull",
+      "lateen_sail"
+     ]
+    },
+    {
+     "id": "galleon",
+     "name": "盖伦船",
+     "en": "Galleon",
+     "year": 1550,
+     "note": "多甲板高艉楼的远洋武装商船，十六至十七世纪跨洋航行的主力。",
+     "deps": [
+      "caravel"
+     ]
+    },
+    {
+     "id": "fluit_ship",
+     "name": "笛型货船",
+     "en": "Fluit",
+     "year": 1600,
+     "note": "荷兰建造的宽体圆艉货帆船，船宽体大造价低，主导波罗的海贸易。",
+     "deps": [
+      "sail"
+     ]
+    },
+    {
+     "id": "east_indiaman",
+     "name": "东印度商船",
+     "en": "East Indiaman",
+     "year": 1620,
+     "note": "东印度公司的大型武装商船，兼货运与自卫火力，垄断东方贸易。",
+     "deps": [
+      "galleon"
+     ]
+    },
+    {
+     "id": "schooner",
+     "name": "斯库纳纵帆船",
+     "en": "Schooner",
+     "year": 1730,
+     "note": "全纵帆多桅帆船，操纵灵活速度快，为北美近海货运与渔船首选。",
+     "deps": [
+      "sail"
+     ]
+    },
+    {
+     "id": "clipper_ship",
+     "name": "飞剪快帆船",
+     "en": "Clipper",
+     "year": 1850,
+     "note": "长宽比大、帆面惊人的快速帆船，茶运与淘金热时代的速度之王。",
+     "deps": [
+      "sail"
+     ]
+    },
+    {
+     "id": "windjammer",
+     "name": "远洋大帆船",
+     "en": "Windjammer",
+     "year": 1890,
+     "note": "四桅五桅巨型风帆货船，沿盛行西风带运货，是帆船时代最后的巅峰。",
+     "deps": [
+      "clipper_ship"
+     ]
+    },
+    {
+     "id": "flettner_rotor_ship",
+     "name": "弗莱特纳转子船",
+     "en": "Flettner rotor ship",
+     "year": 1924,
+     "note": "利用马格努斯效应以旋转圆筒风力推进的船舶，风能辅助推进的先驱。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "kite_assisted_ship",
+     "name": "风筝帆助航货船",
+     "en": "Kite-assisted cargo ship",
+     "year": 2008,
+     "note": "以巨型风筝牵引助力的货船，2008年首航，属现代风能辅助推进。",
+     "deps": [
+      "sail"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "机械动力船舶与推进系统",
+   "items": [
+    {
+     "id": "iron_hulled_ship",
+     "name": "铁壳船",
+     "en": "Iron-hulled ship",
+     "year": 1821,
+     "note": "以锻铁板材建造的船体，强度高、舱容大，取代木船成为主流。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "screw_propeller",
+     "name": "船用螺旋桨",
+     "en": "Screw propeller",
+     "year": 1836,
+     "note": "埃里克森与史密斯分别研制船用螺旋桨，取代明轮成为标准推进器。",
+     "deps": [
+      "steam_ship"
+     ]
+    },
+    {
+     "id": "compound_marine_engine",
+     "name": "船舶复胀蒸汽机",
+     "en": "Compound marine engine",
+     "year": 1854,
+     "note": "蒸汽经高压与低压缸两次膨胀做功，燃煤消耗显著下降。",
+     "deps": [
+      "steam_ship"
+     ]
+    },
+    {
+     "id": "model_towing_tank",
+     "name": "船模试验水池",
+     "en": "Model towing tank",
+     "year": 1871,
+     "note": "弗鲁德首创以缩尺船模拖曳试验，船舶设计由经验走向科学。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "steel_hulled_ship",
+     "name": "钢壳船",
+     "en": "Steel-hulled ship",
+     "year": 1879,
+     "note": "以钢材造船替代锻铁，船体更轻更强，远洋巨轮时代由此开启。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "marine_steam_turbine",
+     "name": "船用蒸汽轮机",
+     "en": "Marine steam turbine",
+     "year": 1897,
+     "note": "帕森斯以透平尼亚号演示汽轮机推进，高转速带来前所未有的航速。",
+     "deps": [
+      "steam_ship",
+      "thermodynamics"
+     ]
+    },
+    {
+     "id": "outboard_motor",
+     "name": "舷外挂机",
+     "en": "Outboard motor",
+     "year": 1907,
+     "note": "发动机与螺旋桨一体的可拆卸船外推进机，小艇动力由此普及。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "diesel_engined_ship",
+     "name": "柴油机远洋船",
+     "en": "Diesel-engined ship",
+     "year": 1912,
+     "note": "塞兰迪亚号率先以柴油机横渡大洋，船用柴油机取代蒸汽机渐成主流。",
+     "deps": [
+      "diesel_engine"
+     ]
+    },
+    {
+     "id": "diesel_electric_propulsion",
+     "name": "柴电推进",
+     "en": "Diesel-electric propulsion",
+     "year": 1925,
+     "note": "柴油机发电驱动推进电机的传动方式，灵活高效，广泛用于特种船。",
+     "deps": [
+      "diesel_engined_ship",
+      "generator"
+     ]
+    },
+    {
+     "id": "controllable_pitch_propeller",
+     "name": "可调螺距螺旋桨",
+     "en": "Controllable-pitch propeller",
+     "year": 1952,
+     "note": "不停机改变桨叶螺距实现变速换向，拖船渡轮等频繁变速船常用。",
+     "deps": [
+      "screw_propeller"
+     ]
+    },
+    {
+     "id": "bow_thruster",
+     "name": "艏侧推器",
+     "en": "Bow thruster",
+     "year": 1955,
+     "note": "装于船艏的横向推进器，靠离码头与受限水域操纵性大为改善。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "waterjet_propulsion",
+     "name": "喷水推进",
+     "en": "Waterjet propulsion",
+     "year": 1960,
+     "note": "以泵吸入水流向后喷射获得推力，浅水高速性能好，快艇与渡轮常用。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "nuclear_merchant_ship",
+     "name": "核动力商船",
+     "en": "Nuclear-powered merchant ship",
+     "year": 1962,
+     "note": "萨凡纳号核动力货船投入营运，验证核电推进，后多用于破冰与军舰。",
+     "deps": [
+      "nuclear_fission"
+     ]
+    },
+    {
+     "id": "personal_watercraft",
+     "name": "个人摩托艇",
+     "en": "Personal watercraft",
+     "year": 1972,
+     "note": "骑乘式喷水推进小艇，1970年代量产，后成大众水上运动载具。",
+     "deps": [
+      "waterjet_propulsion"
+     ]
+    },
+    {
+     "id": "podded_propulsion",
+     "name": "吊舱式电力推进",
+     "en": "Podded propulsion",
+     "year": 1990,
+     "note": "推进电机装入可回转吊舱，省去轴系与舵，机动与噪声表现俱佳。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "dual_fuel_marine_engine",
+     "name": "船舶双燃料发动机",
+     "en": "Dual-fuel marine engine",
+     "year": 2000,
+     "note": "可在燃油与液化天然气间切换的船用发动机，船舶减排重要路径。",
+     "deps": [
+      "diesel_engine"
+     ]
+    },
+    {
+     "id": "electric_car_ferry",
+     "name": "纯电动渡轮",
+     "en": "Battery-electric ferry",
+     "year": 2015,
+     "note": "以电池动力运营的渡轮，挪威2015年率先投运，绿色航运样板。",
+     "deps": [
+      "battery"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "现代货运船舶谱系",
+   "items": [
+    {
+     "id": "canal_narrowboat",
+     "name": "运河窄船",
+     "en": "Narrowboat",
+     "year": 1760,
+     "note": "适应狭窄运河的细长货运驳船，英国工业革命期水路运输的主力。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "refrigerated_ship",
+     "name": "冷藏运输船",
+     "en": "Refrigerated cargo ship",
+     "year": 1877,
+     "note": "以机械制冷运输冻肉奶油的船舶，跨赤道的大宗食品贸易由此展开。",
+     "deps": [
+      "thermodynamics"
+     ]
+    },
+    {
+     "id": "general_cargo_ship",
+     "name": "杂货船",
+     "en": "General cargo ship",
+     "year": 1880,
+     "note": "以吊杆装卸件杂货的通用货船，是集装箱化以前海运的主要形式。",
+     "deps": [
+      "steel_hulled_ship"
+     ]
+    },
+    {
+     "id": "oil_tanker",
+     "name": "油轮",
+     "en": "Oil tanker",
+     "year": 1886,
+     "note": "格卢考夫号首开散装运输石油，泵舱与管系布置成为现代油轮样板。",
+     "deps": [
+      "petroleum"
+     ]
+    },
+    {
+     "id": "self_unloading_bulker",
+     "name": "自卸散货船",
+     "en": "Self-unloading bulk carrier",
+     "year": 1910,
+     "note": "船底料斗与传送带自动卸货的散货船，湖区码头装卸效率大增。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "push_tow_barge",
+     "name": "顶推驳船队",
+     "en": "Push-tow barge fleet",
+     "year": 1940,
+     "note": "顶推船带动多艘无动力驳船编组运输，内河大宗货运的常见形态。",
+     "deps": [
+      "diesel_engined_ship"
+     ]
+    },
+    {
+     "id": "bulk_carrier",
+     "name": "散货船",
+     "en": "Bulk carrier",
+     "year": 1950,
+     "note": "专运煤粮矿砂的单甲板大舱口货船，大宗干散货运输的标准主力。",
+     "deps": [
+      "steel_hulled_ship"
+     ]
+    },
+    {
+     "id": "container_ship",
+     "name": "集装箱船",
+     "en": "Container ship",
+     "year": 1956,
+     "note": "以标准集装箱整箱装卸的货船，1956年首航后彻底改变海运形态。",
+     "deps": [
+      "steel_hulled_ship"
+     ]
+    },
+    {
+     "id": "ro_ro_ship",
+     "name": "滚装船",
+     "en": "Ro-ro ship",
+     "year": 1958,
+     "note": "车辆经艉门坡道直接开上开下的船舶，免吊装，滚装运输效率高。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "lng_carrier",
+     "name": "液化天然气船",
+     "en": "LNG carrier",
+     "year": 1959,
+     "note": "甲烷先锋号首运液化天然气，低温液货围护技术由此不断发展。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "chemical_tanker",
+     "name": "化学品船",
+     "en": "Chemical tanker",
+     "year": 1960,
+     "note": "带防腐分隔舱运载液态化学品的货船，舱室与管系要求严格隔离。",
+     "deps": [
+      "oil_tanker"
+     ]
+    },
+    {
+     "id": "lpg_carrier",
+     "name": "液化石油气船",
+     "en": "LPG carrier",
+     "year": 1960,
+     "note": "以加压或冷冻方式运输液化石油气的专用液货船。",
+     "deps": [
+      "oil_tanker"
+     ]
+    },
+    {
+     "id": "car_carrier",
+     "name": "汽车运输船",
+     "en": "Car carrier",
+     "year": 1965,
+     "note": "多层甲板滚装载运整车与大型车辆的船舶，随汽车贸易而兴起。",
+     "deps": [
+      "ro_ro_ship"
+     ]
+    },
+    {
+     "id": "cement_carrier",
+     "name": "散装水泥船",
+     "en": "Cement carrier",
+     "year": 1965,
+     "note": "带气力卸货装置的散装水泥专用船，建筑工业链的重要一环。",
+     "deps": [
+      "bulk_carrier"
+     ]
+    },
+    {
+     "id": "vlcc_tanker",
+     "name": "超大型油轮",
+     "en": "Very large crude carrier",
+     "year": 1966,
+     "note": "三十万吨级以上的巨型原油轮，中东产油与全球炼厂间的运输骨干。",
+     "deps": [
+      "oil_tanker"
+     ]
+    },
+    {
+     "id": "product_tanker",
+     "name": "成品油轮",
+     "en": "Product tanker",
+     "year": 1968,
+     "note": "运输汽油柴油等成品油的中小型油轮，分销网络末端运输主力。",
+     "deps": [
+      "oil_tanker"
+     ]
+    },
+    {
+     "id": "lng_membrane_tank",
+     "name": "薄膜型LNG围护系统",
+     "en": "Membrane LNG containment",
+     "year": 1969,
+     "note": "以薄金属膜与绝热层构成液货舱，储罐紧凑，为大型LNG船主流技术。",
+     "deps": [
+      "lng_carrier"
+     ]
+    },
+    {
+     "id": "lash_barge_carrier",
+     "name": "载驳船",
+     "en": "Lighter aboard ship",
+     "year": 1969,
+     "note": "把驳船整体吊上母船的运输方式，免码头泊位，江海联运便捷。",
+     "deps": [
+      "steel_hulled_ship"
+     ]
+    },
+    {
+     "id": "livestock_carrier",
+     "name": "活畜运输船",
+     "en": "Livestock carrier",
+     "year": 1970,
+     "note": "带通风喂饲系统的运输活体牲畜船舶，跨国畜牧业贸易专用。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "log_carrier",
+     "name": "原木运输船",
+     "en": "Log carrier",
+     "year": 1970,
+     "note": "大舱口甲板承载原木的货船，木材贸易中代替散装捆载的船型。",
+     "deps": [
+      "bulk_carrier"
+     ]
+    },
+    {
+     "id": "double_hull_tanker",
+     "name": "双壳油轮",
+     "en": "Double-hull tanker",
+     "year": 1990,
+     "note": "双层船壳包住液货舱，泄漏防护显著增强，后成为国际法定要求。",
+     "deps": [
+      "oil_tanker"
+     ]
+    },
+    {
+     "id": "feeder_container_ship",
+     "name": "支线集装箱船",
+     "en": "Feeder container ship",
+     "year": 1995,
+     "note": "在枢纽港与周边港之间转运集装箱的小型货船，干线网络的延伸。",
+     "deps": [
+      "container_ship"
+     ]
+    },
+    {
+     "id": "ballast_water_treatment",
+     "name": "压载水处理系统",
+     "en": "Ballast water treatment",
+     "year": 2004,
+     "note": "处理压载水中的水生生物以防物种入侵，2004年国际公约确立标准。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "mega_container_ship",
+     "name": "超大型集装箱船",
+     "en": "Mega container ship",
+     "year": 2006,
+     "note": "万箱级以上超大型集装箱船投运，港口设施与航线组织随之升级。",
+     "deps": [
+      "container_ship"
+     ]
+    },
+    {
+     "id": "ship_exhaust_scrubber",
+     "name": "船舶废气脱硫塔",
+     "en": "Marine exhaust scrubber",
+     "year": 2015,
+     "note": "洗涤船舶燃油废气中的硫氧化物，满足排放控制区限硫要求。",
+     "deps": [
+      "chemistry"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "特种船舶与海洋工程装备",
+   "items": [
+    {
+     "id": "steam_tugboat",
+     "name": "蒸汽拖船",
+     "en": "Steam tugboat",
+     "year": 1802,
+     "note": "夏洛特·邓达斯号以蒸汽机牵引驳船，证明机械动力拖带的实用价值。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "suction_dredger",
+     "name": "吸泥挖泥船",
+     "en": "Suction dredger",
+     "year": 1850,
+     "note": "以泥泵吸排水下泥沙的疏浚船，港口航道维护与造地的关键装备。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "submarine_cable_ship",
+     "name": "海缆敷设船",
+     "en": "Cable-laying ship",
+     "year": 1850,
+     "note": "专职敷设海底电报与通信电缆的船舶，跨洋通信网络由此建成。",
+     "deps": [
+      "telegraph"
+     ]
+    },
+    {
+     "id": "research_vessel",
+     "name": "海洋科考船",
+     "en": "Research vessel",
+     "year": 1872,
+     "note": "挑战者号环球科考确立现代海洋学，科考船成为专门船型。"
+    },
+    {
+     "id": "icebreaker",
+     "name": "破冰船",
+     "en": "Icebreaker",
+     "year": 1899,
+     "note": "叶尔马克号首艘真正破冰船，以船体压冰开辟极区航道。",
+     "deps": [
+      "steel_hulled_ship"
+     ]
+    },
+    {
+     "id": "cutter_suction_dredger",
+     "name": "绞吸挖泥船",
+     "en": "Cutter suction dredger",
+     "year": 1930,
+     "note": "绞刀破碎坚硬土石再吸排的挖泥船，港口吹填工程的主力装备。",
+     "deps": [
+      "suction_dredger"
+     ]
+    },
+    {
+     "id": "jackup_rig",
+     "name": "自升式钻井平台",
+     "en": "Jackup drilling rig",
+     "year": 1955,
+     "note": "带可升降桩腿的移动式钻井平台，浅海油气开发的主要装备。",
+     "deps": [
+      "petroleum"
+     ]
+    },
+    {
+     "id": "drillship",
+     "name": "钻井船",
+     "en": "Drillship",
+     "year": 1957,
+     "note": "船体中央设井架的浮式钻井船，可移动作业，深海油气钻探由此展开。",
+     "deps": [
+      "petroleum"
+     ]
+    },
+    {
+     "id": "nuclear_icebreaker",
+     "name": "核动力破冰船",
+     "en": "Nuclear-powered icebreaker",
+     "year": 1959,
+     "note": "列宁号核动力破冰船下水，长航程破冰能力使北极航线可全年通航。",
+     "deps": [
+      "nuclear_fission",
+      "icebreaker"
+     ]
+    },
+    {
+     "id": "platform_supply_vessel",
+     "name": "平台供应船",
+     "en": "Platform supply vessel",
+     "year": 1960,
+     "note": "为海上油气平台运送物资与人员的供应船，穿梭于平台与基地之间。",
+     "deps": [
+      "drillship"
+     ]
+    },
+    {
+     "id": "bathyscaphe",
+     "name": "深海潜水器",
+     "en": "Bathyscaphe",
+     "year": 1960,
+     "note": "的里雅斯特号载人潜至万米海渊，深海载人探测技术自此突破。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "dynamic_positioning",
+     "name": "动力定位系统",
+     "en": "Dynamic positioning",
+     "year": 1961,
+     "note": "以推进器与控制系统自动保持船位，深海作业船不必抛锚定位。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "semisubmersible_rig",
+     "name": "半潜式钻井平台",
+     "en": "Semisubmersible drilling rig",
+     "year": 1962,
+     "note": "下体潜于水下的浮式平台，摇荡小，深海恶劣海况作业的主力。",
+     "deps": [
+      "drillship"
+     ]
+    },
+    {
+     "id": "research_submersible",
+     "name": "载人深潜考察潜艇",
+     "en": "Crewed research submersible",
+     "year": 1964,
+     "note": "阿尔文号等小型载人潜艇可潜至数千米进行海底考察与取样。",
+     "deps": [
+      "bathyscaphe"
+     ]
+    },
+    {
+     "id": "seismic_survey_vessel",
+     "name": "物探船",
+     "en": "Seismic survey vessel",
+     "year": 1970,
+     "note": "拖曳气枪与检波阵列勘探海底油气构造的作业船。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "fpso",
+     "name": "浮式生产储卸油船",
+     "en": "Floating production storage and offloading",
+     "year": 1977,
+     "note": "集油气处理、储存与外输于一体的浮式装置，边际油田开发核心。",
+     "deps": [
+      "oil_tanker",
+      "petroleum"
+     ]
+    },
+    {
+     "id": "semi_submersible_heavy_lift",
+     "name": "半潜式重载运输船",
+     "en": "Semi-submersible heavy-lift vessel",
+     "year": 1979,
+     "note": "潜沉装载钻井平台与巨舰的运输船，海洋工程超重件运输主力。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "tourist_submarine",
+     "name": "观光潜艇",
+     "en": "Tourist submarine",
+     "year": 1985,
+     "note": "供游客下潜观赏海底的载客潜艇，开曼群岛率先投入商业运营。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "autonomous_underwater_vehicle",
+     "name": "自主水下航行器",
+     "en": "Autonomous underwater vehicle",
+     "year": 1995,
+     "note": "无缆自主航行的水下机器人，海洋测绘与水下作业效率大增。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "underwater_glider",
+     "name": "水下滑翔机",
+     "en": "Underwater glider",
+     "year": 2005,
+     "note": "改变浮力以锯齿轨迹滑翔的水下观测器，可长航程海洋环境监测。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "offshore_wind_installation_vessel",
+     "name": "海上风电安装船",
+     "en": "Offshore wind installation vessel",
+     "year": 2008,
+     "note": "带起重与插桩系统的自升式平台船，用于海上风机吊装施工。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "autonomous_surface_vessel",
+     "name": "无人水面艇",
+     "en": "Unmanned surface vessel",
+     "year": 2007,
+     "note": "无人遥控或自主航行的水面船艇，用于水文测量与巡逻作业。",
+     "deps": [
+      "computer"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "客运与渡运船舶",
+   "items": [
+    {
+     "id": "river_steamboat",
+     "name": "内河明轮汽船",
+     "en": "River paddle steamer",
+     "year": 1811,
+     "note": "浅吃水明轮汽船首航密西西比河，内河航运与西部开发由此改变。",
+     "deps": [
+      "steam_ship"
+     ]
+    },
+    {
+     "id": "ocean_liner",
+     "name": "远洋定期客轮",
+     "en": "Ocean liner",
+     "year": 1840,
+     "note": "跨大西洋定期客轮航线开通，洲际客运从此摆脱对风帆的依赖。",
+     "deps": [
+      "steam_ship"
+     ]
+    },
+    {
+     "id": "train_ferry",
+     "name": "火车渡轮",
+     "en": "Train ferry",
+     "year": 1850,
+     "note": "载运铁路客货车辆的渡轮，英国福斯湾率先开通铁路轮渡。",
+     "deps": [
+      "steam_ship"
+     ]
+    },
+    {
+     "id": "hydrofoil",
+     "name": "水翼船",
+     "en": "Hydrofoil",
+     "year": 1906,
+     "note": "船底水翼高速时把船体抬离水面，阻力大减，客渡航速大幅提高。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "steam_turbine_liner",
+     "name": "汽轮机远洋客轮",
+     "en": "Steam-turbine liner",
+     "year": 1907,
+     "note": "汽轮机驱动的远洋邮轮以高速夺蓝飘带，客运进入汽轮机时代。",
+     "deps": [
+      "marine_steam_turbine"
+     ]
+    },
+    {
+     "id": "water_bus",
+     "name": "城市水上巴士",
+     "en": "Water bus",
+     "year": 1881,
+     "note": "威尼斯率先以定线汽艇服务城市水上客运，成为水城公交的范式。",
+     "deps": [
+      "steam_ship"
+     ]
+    },
+    {
+     "id": "ship_stabilizer",
+     "name": "减摇鳍",
+     "en": "Ship stabilizer",
+     "year": 1950,
+     "note": "船底两侧伸出的可转鳍片抑制横摇，大幅改善客船舒适性。"
+    },
+    {
+     "id": "hovercraft",
+     "name": "气垫船",
+     "en": "Hovercraft",
+     "year": 1959,
+     "note": "以气垫托起船体并贴水或贴地航行，1959年首艘气垫船跨越海峡。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "cross_channel_ferry",
+     "name": "跨海车客渡轮",
+     "en": "Car-passenger ferry",
+     "year": 1960,
+     "note": "兼载车辆与旅客的定期渡轮，海峡与群岛运输的骨干交通工具。",
+     "deps": [
+      "diesel_engined_ship"
+     ]
+    },
+    {
+     "id": "cruise_ship",
+     "name": "现代邮轮",
+     "en": "Cruise ship",
+     "year": 1970,
+     "note": "以度假体验为目的的大型客轮，1970年代加勒比邮轮业率先兴起。",
+     "deps": [
+      "ocean_liner"
+     ]
+    },
+    {
+     "id": "ro_pax_ferry",
+     "name": "客滚船",
+     "en": "Ro-pax ferry",
+     "year": 1985,
+     "note": "滚装货舱与旅客舱室结合的渡轮，兼顾货运与客运的跨海主力。",
+     "deps": [
+      "ro_ro_ship"
+     ]
+    },
+    {
+     "id": "high_speed_catamaran",
+     "name": "高速双体客船",
+     "en": "High-speed catamaran",
+     "year": 1990,
+     "note": "穿浪双体船以喷水推进高速渡运，船宽稳性好，90年代起大行其道。",
+     "deps": [
+      "waterjet_propulsion"
+     ]
+    },
+    {
+     "id": "airboat",
+     "name": "空气动力平底艇",
+     "en": "Airboat",
+     "year": 1940,
+     "note": "以航空螺旋桨推动的浅水平底艇，佛罗里达湿地与沼泽地使用。",
+     "deps": [
+      "internal_combustion"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "助航安全、船岸通信与港口设备",
+   "items": [
+    {
+     "id": "lighthouse",
+     "name": "灯塔",
+     "en": "Lighthouse",
+     "year": -280,
+     "note": "以灯光标识岸线险礁的固定助航设施，亚历山大灯塔为古代代表。"
+    },
+    {
+     "id": "marine_compass",
+     "name": "航海磁罗经",
+     "en": "Marine magnetic compass",
+     "year": 1100,
+     "note": "指南针应用于航海后传遍欧亚，船舶远洋定向能力发生根本变革。"
+    },
+    {
+     "id": "dry_dock",
+     "name": "干船坞",
+     "en": "Dry dock",
+     "year": 1495,
+     "note": "排干积水以检修船底的船坞，朴次茅斯首建，近代修造船业关键设施。"
+    },
+    {
+     "id": "marine_chronometer",
+     "name": "航海天文钟",
+     "en": "Marine chronometer",
+     "year": 1761,
+     "note": "哈里森制成保持海上精度的计时仪，使船舶可测定经度。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "marine_sextant",
+     "name": "航海六分仪",
+     "en": "Marine sextant",
+     "year": 1731,
+     "note": "测量天体高度以定船位的反射测角仪，二百余年远洋导航的标准仪器。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "light_vessel",
+     "name": "灯船",
+     "en": "Lightvessel",
+     "year": 1732,
+     "note": "锚泊于浅滩的灯船，泰晤士河口1732年启用，是最早的浮式航标。"
+    },
+    {
+     "id": "floating_dock",
+     "name": "浮船坞",
+     "en": "Floating dock",
+     "year": 1850,
+     "note": "灌水下沉、排水浮起的修船坞，可移动作业，港口修船能力大增。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "marine_wireless",
+     "name": "船用无线电报",
+     "en": "Ship wireless telegraphy",
+     "year": 1900,
+     "note": "船舶与岸站间无线通信开通，海上呼救与调度摆脱有线束缚。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "marine_gyrocompass",
+     "name": "电罗经",
+     "en": "Marine gyrocompass",
+     "year": 1908,
+     "note": "利用陀螺指向真北的罗经，不受船体磁扰，钢铁船定向首选。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "echo_sounder",
+     "name": "回声测深仪",
+     "en": "Echo sounder",
+     "year": 1914,
+     "note": "向水底发射声波测量水深的仪器，取代测深锤保障航行安全。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "loran_navigation",
+     "name": "罗兰无线电导航",
+     "en": "LORAN",
+     "year": 1943,
+     "note": "双曲线原理的岸基无线电定位系统，四十年代起远洋定位依赖。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "ship_radar",
+     "name": "船用雷达",
+     "en": "Ship radar",
+     "year": 1946,
+     "note": "探测他船与岸线的雷达战后开放民用，全天候避碰航行由此实现。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "marine_vhf_radio",
+     "name": "船用甚高频无线电话",
+     "en": "Marine VHF radio",
+     "year": 1950,
+     "note": "船舶间及船岸间的甚高频语音通信，避碰协调与港口联络标配。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "container_portal_crane",
+     "name": "岸边集装箱起重机",
+     "en": "Container gantry crane",
+     "year": 1959,
+     "note": "码头前沿的大型门座起重机，负责集装箱船装卸，港口效率核心装备。",
+     "deps": [
+      "container_ship"
+     ]
+    },
+    {
+     "id": "vessel_traffic_service",
+     "name": "船舶交通管理",
+     "en": "Vessel traffic service",
+     "year": 1960,
+     "note": "以雷达与通信监视引导港区水域船舶的交通管理系统，减少碰撞事故。",
+     "deps": [
+      "ship_radar"
+     ]
+    },
+    {
+     "id": "weather_routing",
+     "name": "船舶气象导航",
+     "en": "Ship weather routing",
+     "year": 1960,
+     "note": "依据气象海况预报选择最佳航线，节油并避开大风浪的航运服务。",
+     "deps": [
+      "telegraph"
+     ]
+    },
+    {
+     "id": "epirb",
+     "name": "应急无线电示位标",
+     "en": "Emergency position-indicating radiobeacon",
+     "year": 1976,
+     "note": "遇险自动发射定位信号的救生示位标，经卫星转发引导搜救。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "automated_container_terminal",
+     "name": "自动化集装箱码头",
+     "en": "Automated container terminal",
+     "year": 1993,
+     "note": "以自动导引车与远程操控堆场设备作业的码头，1993年鹿特丹率先启用。",
+     "deps": [
+      "container_portal_crane",
+      "computer"
+     ]
+    },
+    {
+     "id": "satellite_ship_navigation",
+     "name": "船用卫星导航",
+     "en": "Satellite ship navigation",
+     "year": 1995,
+     "note": "GPS等卫星定位成为船舶定位标配，取代天文与岸基无线电定位。",
+     "deps": [
+      "gps"
+     ]
+    },
+    {
+     "id": "ecdis",
+     "name": "电子海图显示系统",
+     "en": "Electronic chart display and information system",
+     "year": 1995,
+     "note": "以电子海图整合雷达与定位信息，逐步取代纸质海图成为驾驶标配。",
+     "deps": [
+      "computer",
+      "gps"
+     ]
+    },
+    {
+     "id": "gmdss",
+     "name": "全球海上遇险与安全系统",
+     "en": "Global Maritime Distress and Safety System",
+     "year": 1999,
+     "note": "以卫星与数字通信构建的全球海上呼救体系，1999年起全面实施。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "automatic_identification_system",
+     "name": "船舶自动识别系统",
+     "en": "Automatic identification system",
+     "year": 2002,
+     "note": "船舶间互发船位航向信息的广播系统，避碰与船舶监控由此数字化。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "voyage_data_recorder",
+     "name": "航行数据记录仪",
+     "en": "Voyage data recorder",
+     "year": 2002,
+     "note": "记录航行数据的船舶黑匣子，事故调查与运行复盘的重要依据。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "autonomous_cargo_ship",
+     "name": "自主航行货船",
+     "en": "Autonomous cargo ship",
+     "year": 2021,
+     "note": "雅苒·伯克兰号实现全电动自主航行，自主船舶技术进入商业验证。",
+     "deps": [
+      "computer"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1187 @@
+{
+ "cat": "life",
+ "catName": "生命与健康",
+ "sub": "nutrition",
+ "subName": "营养与食品科学",
+ "schemaNote": "catalog v1：营养科学与膳食干预域。覆盖食物成分分析、维生素、矿物质、营养测定、公共营养、临床营养、食品化学、功能食品、饮食与慢病、营养技术。不收食品加工工艺（归 manufact_food_proc）。item.deps 仅引用 _ANCHORS 或本文件更早条目，被依赖 year 严格小于本条。",
+ "anchors": [
+  "chemistry",
+  "scientific_method",
+  "fermentation",
+  "agriculture",
+  "thermodynamics",
+  "evolution"
+ ],
+ "families": [
+  {
+   "name": "食物成分",
+   "items": [
+    {
+     "id": "bomb_calorimeter",
+     "name": "弹式量热计",
+     "en": "Bomb calorimeter",
+     "year": 1881,
+     "note": "Berthelot 发明以燃烧法测定食物总能，奠定食物能量测定基础。",
+     "deps": ["thermodynamics", "chemistry"]
+    },
+    {
+     "id": "atwater_energy_factors",
+     "name": "阿特沃特能量系数",
+     "en": "Atwater energy factors",
+     "year": 1894,
+     "note": "确定蛋白质4、脂肪9、碳水4 kcal/g的换算系数，用于食物能量计算。",
+     "deps": ["bomb_calorimeter"]
+    },
+    {
+     "id": "proximate_analysis",
+     "name": "食物概略分析法",
+     "en": "Proximate analysis",
+     "year": 1860,
+     "note": "将食物分离为水分、灰分、蛋白、脂肪与碳水，是食物成分分析的基本框架。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "kjeldahl_nitrogen",
+     "name": "凯氏定氮法",
+     "en": "Kjeldahl method",
+     "year": 1883,
+     "note": "凯氏法测定氮含量推算蛋白质，长期是食物蛋白分析的标准方法。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "soxhlet_extraction",
+     "name": "索氏提取脂肪法",
+     "en": "Soxhlet extraction",
+     "year": 1879,
+     "note": "以有机溶剂连续回流萃取脂肪，用于食物脂肪含量的测定。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "carbohydrate_class",
+     "name": "食物碳水化合物分类",
+     "en": "Carbohydrate classification",
+     "year": 1840,
+     "note": "将碳水区分为糖、寡糖、淀粉与膳食纤维，明确其在营养中的角色。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "food_cholesterol_chemistry",
+     "name": "食物胆固醇分析",
+     "en": "Food cholesterol analysis",
+     "year": 1815,
+     "note": "自动物组织分离胆固醇，开启膳食脂类与血胆固醇关系研究。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "essential_amino_acids",
+     "name": "氨基酸必需性",
+     "en": "Essential amino acids",
+     "year": 1930,
+     "note": "Rose 确立人体不能合成、必须从食物获取的必需氨基酸体系。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "amino_acid_analyzer",
+     "name": "氨基酸自动分析仪",
+     "en": "Amino acid analyzer",
+     "year": 1958,
+     "note": "Spackman/Moore/Stein 研制，自动分离定量蛋白质中的氨基酸组成。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "gas_chromatography_fat",
+     "name": "脂肪酸气相色谱分析",
+     "en": "Fatty acid GC profiling",
+     "year": 1952,
+     "note": "以气相色谱解析食物脂肪酸谱，区分饱和与不饱和脂肪。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "dietary_fiber_concept",
+     "name": "膳食纤维",
+     "en": "Dietary fiber",
+     "year": 1953,
+     "note": "Hipsley 提出膳食纤维概念，后证实其与肠道与慢病密切相关。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "nitrogen_balance",
+     "name": "氮平衡法",
+     "en": "Nitrogen balance",
+     "year": 1910,
+     "note": "通过摄入与排出氮差评估机体蛋白质营养状况的方法。",
+     "deps": ["kjeldahl_nitrogen"]
+    },
+    {
+     "id": "trans_fat_identification",
+     "name": "反式脂肪酸鉴定",
+     "en": "Trans fatty acid identification",
+     "year": 1902,
+     "note": "早期鉴定氢化油中的反式脂肪酸，后证实其升高心血管病风险。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "glycemic_index",
+     "name": "食物血糖生成指数",
+     "en": "Glycemic index",
+     "year": 1981,
+     "note": "Jenkins 提出以葡萄糖为参照量化食物升糖速度，用于慢病膳食。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "near_infrared_food",
+     "name": "近红外食品成分检测",
+     "en": "Near-infrared food analysis",
+     "year": 1970,
+     "note": "以近红外光谱快速无损测定食物水分、蛋白与脂肪等成分。",
+     "deps": ["chemistry"]
+    }
+   ]
+  },
+  {
+   "name": "维生素",
+   "items": [
+    {
+     "id": "beriberi_vitamin",
+     "name": "脚气病与维生素研究",
+     "en": "Beriberi and vitamins",
+     "year": 1897,
+     "note": "Eijkman 发现精米与脚气病相关，开启维生素缺乏病研究路线。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "vitamine_term",
+     "name": "维生素命名",
+     "en": "Vitamin term",
+     "year": 1912,
+     "note": "Funk 提出 vitamine 概念，指食物中微量而必需的生命胺类物质。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "thiamine_B1",
+     "name": "硫胺素（维B1）",
+     "en": "Thiamine",
+     "year": 1926,
+     "note": "从米糠中分离硫胺素，阐明其缺乏导致脚气病的机制并用于防治。",
+     "deps": ["vitamine_term"]
+    },
+    {
+     "id": "riboflavin_B2",
+     "name": "核黄素（维B2）",
+     "en": "Riboflavin",
+     "year": 1933,
+     "note": "分离核黄素，明确其在能量代谢中的辅酶作用与缺乏表现。",
+     "deps": ["vitamine_term"]
+    },
+    {
+     "id": "niacin_B3",
+     "name": "烟酸（维B3）",
+     "en": "Niacin",
+     "year": 1937,
+     "note": "阐明烟酸缺乏致糙皮病，补充可防治该病，是公共营养里程碑。",
+     "deps": ["vitamine_term"]
+    },
+    {
+     "id": "vitamin_A",
+     "name": "维生素A",
+     "en": "Vitamin A",
+     "year": 1931,
+     "note": "分离视黄醇，证实其缺乏致夜盲并与上皮健康相关。",
+     "deps": ["vitamine_term"]
+    },
+    {
+     "id": "vitamin_D",
+     "name": "维生素D",
+     "en": "Vitamin D",
+     "year": 1932,
+     "note": "分离维生素D并阐明其防治佝偻病、调节钙磷代谢的作用。",
+     "deps": ["vitamine_term"]
+    },
+    {
+     "id": "vitamin_C",
+     "name": "抗坏血酸（维C）",
+     "en": "Vitamin C",
+     "year": 1932,
+     "note": "Szent-Györgyi 分离抗坏血酸，证实其防治坏血病的必需性。",
+     "deps": ["vitamine_term"]
+    },
+    {
+     "id": "vitamin_E",
+     "name": "维生素E",
+     "en": "Vitamin E",
+     "year": 1936,
+     "note": "分离生育酚，明确其作为脂溶性抗氧化营养素的生理功能。",
+     "deps": ["vitamine_term"]
+    },
+    {
+     "id": "vitamin_K",
+     "name": "维生素K",
+     "en": "Vitamin K",
+     "year": 1939,
+     "note": "Dam 发现维生素K，证实其参与凝血因子合成的关键作用。",
+     "deps": ["vitamine_term"]
+    },
+    {
+     "id": "folate",
+     "name": "叶酸",
+     "en": "Folate",
+     "year": 1941,
+     "note": "从菠菜分离叶酸，证实其缺乏致贫血并关乎胎儿神经管发育。",
+     "deps": ["vitamine_term"]
+    },
+    {
+     "id": "vitamin_B12",
+     "name": "维生素B12",
+     "en": "Vitamin B12",
+     "year": 1948,
+     "note": "分离氰钴胺素，阐明其缺乏致恶性贫血及素食者补充的必要性。",
+     "deps": ["vitamine_term"]
+    },
+    {
+     "id": "vitamin_synthesis",
+     "name": "维生素化学合成",
+     "en": "Vitamin synthesis",
+     "year": 1934,
+     "note": "Reichstein 等实现抗坏血酸等维生素的工业合成，推动强化与补充。",
+     "deps": ["vitamine_term"]
+    },
+    {
+     "id": "food_fortification_vit",
+     "name": "维生素强化食品",
+     "en": "Vitamin-fortified food",
+     "year": 1940,
+     "note": "在面粉、人造黄油中强化维生素，作为公共营养缺乏病防治手段。",
+     "deps": ["vitamin_A"]
+    },
+    {
+     "id": "rda_vitamins",
+     "name": "维生素推荐摄入量",
+     "en": "Recommended dietary allowance",
+     "year": 1941,
+     "note": "美国首次发布推荐营养素供给量，规范膳食摄入参考标准。",
+     "deps": ["vitamine_term"]
+    }
+   ]
+  },
+  {
+   "name": "矿物质",
+   "items": [
+    {
+     "id": "iodine_deficiency",
+     "name": "碘缺乏与甲状腺肿",
+     "en": "Iodine deficiency and goiter",
+     "year": 1850,
+     "note": "Chatin 等将环境碘不足与地方性甲状腺肿联系起来，奠定补碘依据。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "salt_iodization",
+     "name": "食盐加碘",
+     "en": "Salt iodization",
+     "year": 1924,
+     "note": "美国率先推行食盐加碘，大幅降低地方性甲状腺肿与克汀病。",
+     "deps": ["iodine_deficiency"]
+    },
+    {
+     "id": "iron_fortification",
+     "name": "铁强化食品",
+     "en": "Iron fortification",
+     "year": 1940,
+     "note": "在面粉与谷物中强化铁以预防缺铁性贫血，是公共营养干预措施。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "iron_absorption",
+     "name": "铁吸收机制",
+     "en": "Iron absorption",
+     "year": 1937,
+     "note": "阐明膳食铁的吸收调节与抑制促进因素，指导贫血防治。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "calcium_requirement",
+     "name": "钙需要量",
+     "en": "Calcium requirement",
+     "year": 1920,
+     "note": "研究钙摄入与骨健康关系，确立各人群钙的推荐摄入量。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "phosphate_physiology",
+     "name": "磷代谢",
+     "en": "Phosphate metabolism",
+     "year": 1920,
+     "note": "阐明磷在骨矿化与能量代谢中的作用，明确其膳食需要量。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "copper_deficiency",
+     "name": "铜缺乏",
+     "en": "Copper deficiency",
+     "year": 1928,
+     "note": "证实铜为人体必需微量元素，缺乏影响造血与结缔组织。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "magnesium_physiology",
+     "name": "镁生理",
+     "en": "Magnesium physiology",
+     "year": 1930,
+     "note": "阐明镁参与酶反应与神经肌肉功能，确立其膳食需要。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "sodium_chloride_diet",
+     "name": "膳食钠与高血压",
+     "en": "Dietary sodium and hypertension",
+     "year": 1904,
+     "note": "提出高钠摄入与血压升高的关联，成为限盐公共政策的依据。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "fluoride_caries",
+     "name": "氟防龋",
+     "en": "Fluoridation and caries",
+     "year": 1945,
+     "note": "证实适量氟可防龋齿，自来水氟化成为重要公共卫生措施。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "zinc_deficiency",
+     "name": "锌缺乏",
+     "en": "Zinc deficiency",
+     "year": 1961,
+     "note": "Prasad 证实人类锌缺乏，表现为生长迟缓与免疫低下。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "selenium_deficiency",
+     "name": "硒缺乏（克山病）",
+     "en": "Selenium deficiency",
+     "year": 1973,
+     "note": "中国证实硒缺乏与克山病相关，补硒成为有效干预手段。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "trace_element_analysis",
+     "name": "微量元素分析",
+     "en": "Trace element analysis",
+     "year": 1950,
+     "note": "以原子吸收等技术测定食物中微量元素，支撑矿物质营养研究。",
+     "deps": ["chemistry"]
+    }
+   ]
+  },
+  {
+   "name": "营养测定",
+   "items": [
+    {
+     "id": "food_weighing_record",
+     "name": "称重法膳食调查",
+     "en": "Weighed dietary record",
+     "year": 1890,
+     "note": "称量食物生重与剩重记录摄入，是精确膳食调查的基础方法。",
+     "deps": ["scientific_method"]
+    },
+    {
+     "id": "food_composition_table",
+     "name": "食物成分表",
+     "en": "Food composition table",
+     "year": 1896,
+     "note": "Atwater 主持编制系统性的食物成分数据表，支撑营养计算。",
+     "deps": ["atwater_energy_factors"]
+    },
+    {
+     "id": "metabolic_chamber",
+     "name": "代谢舱",
+     "en": "Metabolic chamber",
+     "year": 1899,
+     "note": "密闭呼吸代谢舱精确测定能量消耗与物质平衡，用于基础代谢研究。",
+     "deps": ["bomb_calorimeter"]
+    },
+    {
+     "id": "dietary_survey_24h",
+     "name": "24小时膳食回顾",
+     "en": "24-hour dietary recall",
+     "year": 1930,
+     "note": "通过回顾过去24小时进食评估个体膳食摄入的常用调查方法。",
+     "deps": ["scientific_method"]
+    },
+    {
+     "id": "anthropometry_measure",
+     "name": "人体测量学",
+     "en": "Anthropometry",
+     "year": 1830,
+     "note": "Quetelet 等建立身高体重指数等体格测量，评估人群营养状况。",
+     "deps": ["scientific_method"]
+    },
+    {
+     "id": "skinfold_thickness",
+     "name": "皮褶厚度测定",
+     "en": "Skinfold thickness",
+     "year": 1950,
+     "note": "以皮褶卡钳估算体脂率，是简便的体成分现场评估方法。",
+     "deps": ["anthropometry_measure"]
+    },
+    {
+     "id": "bioelectrical_impedance",
+     "name": "生物电阻抗法",
+     "en": "Bioelectrical impedance analysis",
+     "year": 1960,
+     "note": "以微弱电流测阻抗推算体成分，广泛用于体脂与水分评估。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "nutrition_database",
+     "name": "国家食物成分数据库",
+     "en": "National food composition database",
+     "year": 1960,
+     "note": "系统建设可检索的食物成分数据库，支撑膳食评估与政策制定。",
+     "deps": ["food_composition_table"]
+    },
+    {
+     "id": "food_frequency_questionnaire",
+     "name": "食物频率问卷",
+     "en": "Food frequency questionnaire",
+     "year": 1960,
+     "note": "以经常食用食物的频率评估长期膳食模式，适合流行病学调查。",
+     "deps": ["dietary_survey_24h"]
+    },
+    {
+     "id": "biomarker_nutrition",
+     "name": "营养生物标志物",
+     "en": "Nutritional biomarker",
+     "year": 1970,
+     "note": "以血尿中营养素及代谢产物客观反映营养状况，减少回忆偏倚。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "dxa_body_comp",
+     "name": "DXA身体成分分析",
+     "en": "DXA body composition",
+     "year": 1987,
+     "note": "双能X线吸收法精确测定骨量、脂肪与瘦体组织分布。",
+     "deps": ["medical_imaging"]
+    },
+    {
+     "id": "doubly_labeled_water",
+     "name": "双标水法",
+     "en": "Doubly labeled water",
+     "year": 1982,
+     "note": "以稳定同位素标记水测定自由生活下的总能量消耗，金标准方法。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "dietary_intake_software",
+     "name": "膳食营养分析软件",
+     "en": "Dietary assessment software",
+     "year": 1980,
+     "note": "借助计算机依据成分库自动计算膳食营养素摄入，提升调查效率。",
+     "deps": ["computer", "food_composition_table"]
+    },
+    {
+     "id": "continuous_glucose_monitor",
+     "name": "动态血糖监测",
+     "en": "Continuous glucose monitoring",
+     "year": 1999,
+     "note": "皮下传感器连续记录葡萄糖，用于个体化营养与糖尿病管理。",
+     "deps": ["computer"]
+    }
+   ]
+  },
+  {
+   "name": "公共营养",
+   "items": [
+    {
+     "id": "nutrition_education",
+     "name": "营养教育",
+     "en": "Nutrition education",
+     "year": 1920,
+     "note": "通过科普与学校课程传播膳食知识，提升公众营养素养。",
+     "deps": ["food_composition_table"]
+    },
+    {
+     "id": "food_fortification_program",
+     "name": "食物强化计划",
+     "en": "Food fortification program",
+     "year": 1941,
+     "note": "国家层面在主食中强化微量营养素，预防大规模营养缺乏病。",
+     "deps": ["iron_fortification"]
+    },
+    {
+     "id": "school_meal_program",
+     "name": "学生营养餐",
+     "en": "School meal program",
+     "year": 1946,
+     "note": "以立法保障在校儿童营养餐，改善学生体格与学习能力。",
+     "deps": ["food_composition_table"]
+    },
+    {
+     "id": "school_milk_program",
+     "name": "学生奶计划",
+     "en": "School milk program",
+     "year": 1930,
+     "note": "面向学龄儿童供应牛奶补充钙与蛋白，改善生长发育。",
+     "deps": ["food_composition_table"]
+    },
+    {
+     "id": "maternal_child_nutrition",
+     "name": "母婴营养干预",
+     "en": "Maternal and child nutrition",
+     "year": 1950,
+     "note": "针对孕产妇与婴幼儿的营养补充与喂养指导，降低发育迟缓。",
+     "deps": ["food_composition_table"]
+    },
+    {
+     "id": "supplementary_feeding",
+     "name": "补充营养援助",
+     "en": "Supplementary feeding assistance",
+     "year": 1960,
+     "note": "以食品券或配给援助低收入家庭，保障基本营养可及性。",
+     "deps": ["school_meal_program"]
+    },
+    {
+     "id": "national_nutrition_survey",
+     "name": "全国营养调查",
+     "en": "National nutrition survey",
+     "year": 1960,
+     "note": "周期性抽样评估人群膳食与营养状况，指导公共卫生决策。",
+     "deps": ["dietary_survey_24h"]
+    },
+    {
+     "id": "dietary_guidelines",
+     "name": "膳食指南",
+     "en": "Dietary guidelines",
+     "year": 1977,
+     "note": "基于证据提出人群膳食原则，引导健康饮食选择的政策文件。",
+     "deps": ["food_composition_table"]
+    },
+    {
+     "id": "nutrition_labeling",
+     "name": "营养标签",
+     "en": "Nutrition labeling",
+     "year": 1990,
+     "note": "强制标示能量与营养素含量，帮助消费者做出知情选择。",
+     "deps": ["food_composition_table"]
+    },
+    {
+     "id": "food_pyramid",
+     "name": "膳食金字塔",
+     "en": "Food guide pyramid",
+     "year": 1992,
+     "note": "以金字塔图形直观表达各类食物推荐摄入量比例。",
+     "deps": ["dietary_guidelines"]
+    },
+    {
+     "id": "myplate",
+     "name": "健康餐盘",
+     "en": "MyPlate",
+     "year": 2011,
+     "note": "以餐盘分区示意蔬果、谷物、蛋白与 dairy 的合理搭配。",
+     "deps": ["food_pyramid"]
+    },
+    {
+     "id": "salt_reduction_policy",
+     "name": "减盐政策",
+     "en": "Salt reduction policy",
+     "year": 1980,
+     "note": "通过食品标准与公众倡导降低人群钠摄入，防控高血压。",
+     "deps": ["sodium_chloride_diet"]
+    },
+    {
+     "id": "breastfeeding_promotion",
+     "name": "母乳喂养推广",
+     "en": "Breastfeeding promotion",
+     "year": 1990,
+     "note": "以爱婴医院等措施推广母乳喂哺，改善婴幼儿营养与免疫。",
+     "deps": ["maternal_child_nutrition"]
+    },
+    {
+     "id": "community_nutrition_clinic",
+     "name": "社区营养门诊",
+     "en": "Community nutrition clinic",
+     "year": 1970,
+     "note": "在社区层面提供膳食评估与指导，连接临床与公共卫生。",
+     "deps": ["food_composition_table"]
+    }
+   ]
+  },
+  {
+   "name": "临床营养",
+   "items": [
+    {
+     "id": "renal_diet",
+     "name": "肾病饮食",
+     "en": "Renal diet",
+     "year": 1920,
+     "note": "以限制蛋白与电解质摄入延缓肾衰进展，是疾病医学营养治疗。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "diabetic_diet_clinical",
+     "name": "糖尿病饮食治疗",
+     "en": "Diabetic diet therapy",
+     "year": 1910,
+     "note": "以碳水定量与餐次控制管理血糖，是糖尿病基础治疗手段。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "enteral_nutrition",
+     "name": "肠内营养",
+     "en": "Enteral nutrition",
+     "year": 1957,
+     "note": "经胃肠道管饲提供配方营养，维持肠道功能与营养状况。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "elemental_diet",
+     "name": "要素膳",
+     "en": "Elemental diet",
+     "year": 1960,
+     "note": "以单体营养素构成的化学定义膳食，用于吸收障碍患者。",
+     "deps": ["enteral_nutrition"]
+    },
+    {
+     "id": "parenteral_nutrition",
+     "name": "肠外静脉营养",
+     "en": "Parenteral nutrition",
+     "year": 1968,
+     "note": "Dudrick 等经静脉供给全营养，使无法进食者得以长期维持。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "oral_rehydration_therapy",
+     "name": "口服补液盐",
+     "en": "Oral rehydration therapy",
+     "year": 1968,
+     "note": "以糖盐溶液纠正腹泻脱水，挽救大量儿童生命。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "nutrition_support_team",
+     "name": "营养支持团队",
+     "en": "Nutrition support team",
+     "year": 1970,
+     "note": "由医师营养师药师组成团队规范营养支持，降低并发症。",
+     "deps": ["parenteral_nutrition"]
+    },
+    {
+     "id": "perioperative_nutrition",
+     "name": "围手术期营养支持",
+     "en": "Perioperative nutrition",
+     "year": 1980,
+     "note": "术前术后营养干预改善蛋白质储备，促进伤口愈合与恢复。",
+     "deps": ["parenteral_nutrition"]
+    },
+    {
+     "id": "home_parenteral_nutrition",
+     "name": "家庭肠外营养",
+     "en": "Home parenteral nutrition",
+     "year": 1980,
+     "note": "慢性肠衰竭患者在家接受静脉营养，维持长期生存质量。",
+     "deps": ["parenteral_nutrition"]
+    },
+    {
+     "id": "immune_nutrition",
+     "name": "免疫营养",
+     "en": "Immunonutrition",
+     "year": 1990,
+     "note": "以谷氨酰胺、精氨酸等调节免疫与炎症，用于重症与术后。",
+     "deps": ["parenteral_nutrition"]
+    },
+    {
+     "id": "critical_care_nutrition",
+     "name": "ICU营养支持",
+     "en": "Critical care nutrition",
+     "year": 1980,
+     "note": "针对危重症患者的热量蛋白供给与耐受评估的规范营养治疗。",
+     "deps": ["parenteral_nutrition"]
+    },
+    {
+     "id": "nutritional_risk_screening",
+     "name": "营养风险筛查",
+     "en": "Nutritional risk screening",
+     "year": 2002,
+     "note": "NRS-2002 等工具快速识别住院患者营养风险并指导干预。",
+     "deps": ["enteral_nutrition"]
+    },
+    {
+     "id": "malnutrition_diagnosis",
+     "name": "营养不良诊断",
+     "en": "Malnutrition diagnosis",
+     "year": 2010,
+     "note": "GLIM 标准整合表型与病因，统一成人营养不良诊断框架。",
+     "deps": ["nutritional_risk_screening"]
+    }
+   ]
+  },
+  {
+   "name": "食品科学",
+   "items": [
+    {
+     "id": "maillard_reaction",
+     "name": "美拉德反应",
+     "en": "Maillard reaction",
+     "year": 1912,
+     "note": "Maillard 阐明氨基酸与糖的非酶褐变，决定食品色泽与风味。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "food_emulsification",
+     "name": "食品乳化均质",
+     "en": "Food emulsification and homogenization",
+     "year": 1900,
+     "note": "Gaulin 均质机使液滴细化稳定乳液，用于乳与酱料体系。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "food_enzyme_tech",
+     "name": "食品酶技术",
+     "en": "Food enzyme technology",
+     "year": 1900,
+     "note": "利用淀粉酶、蛋白酶等改善质构与风味，是传统发酵的延伸。",
+     "deps": ["chemistry", "fermentation"]
+    },
+    {
+     "id": "starch_gelatinization",
+     "name": "淀粉糊化",
+     "en": "Starch gelatinization",
+     "year": 1920,
+     "note": "研究加热水分下淀粉晶体崩解，是烹煮与加工质构的基础。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "food_colorimetry",
+     "name": "食品色泽测定",
+     "en": "Food colorimetry",
+     "year": 1920,
+     "note": "以色差计量化食品颜色，控制品质与消费者接受度。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "food_rheology",
+     "name": "食品流变学",
+     "en": "Food rheology",
+     "year": 1930,
+     "note": "研究食品在力作用下的变形流动，关联口感与加工行为。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "sensory_evaluation",
+     "name": "感官评价",
+     "en": "Sensory evaluation",
+     "year": 1940,
+     "note": "以受训评价员系统评定色香味质构，建立食品品质方法学。",
+     "deps": ["scientific_method"]
+    },
+    {
+     "id": "food_protein_chemistry",
+     "name": "食品蛋白质化学",
+     "en": "Food protein chemistry",
+     "year": 1940,
+     "note": "研究蛋白变性、凝胶与乳化功能，指导肉乳豆制品加工。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "water_activity",
+     "name": "水分活度",
+     "en": "Water activity",
+     "year": 1953,
+     "note": "Scott 提出水分活度概念，关联微生物生长与食品稳定性。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "food_hydrocolloids",
+     "name": "食品亲水胶体",
+     "en": "Food hydrocolloids",
+     "year": 1950,
+     "note": "以胶类稳定增稠乳化，改善低脂肪食品结构与口感。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "food_flavour_chemistry",
+     "name": "食品风味化学",
+     "en": "Food flavour chemistry",
+     "year": 1960,
+     "note": "分离鉴定挥发性风味物，阐明食品香气的化学来源。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "texture_profile_analysis",
+     "name": "质构剖面分析",
+     "en": "Texture profile analysis",
+     "year": 1963,
+     "note": "Szczesniak 建立以仪器与感官结合的质构定量描述体系。",
+     "deps": ["sensory_evaluation"]
+    },
+    {
+     "id": "food_microstructure",
+     "name": "食品微观结构",
+     "en": "Food microstructure",
+     "year": 1970,
+     "note": "以显微技术观察食物多相结构，解释质构与稳定性机理。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "nonthermal_processing",
+     "name": "食品非热加工",
+     "en": "Non-thermal food processing",
+     "year": 1991,
+     "note": "高压与脉冲电场等技术在不升温下杀菌，保留风味与营养。",
+     "deps": ["chemistry"]
+    }
+   ]
+  },
+  {
+   "name": "功能食品",
+   "items": [
+    {
+     "id": "probiotics",
+     "name": "益生菌",
+     "en": "Probiotics",
+     "year": 1907,
+     "note": "Metchnikoff 提出酸奶乳酸菌有益健康，奠定益生菌概念。",
+     "deps": ["fermentation"]
+    },
+    {
+     "id": "prebiotics",
+     "name": "益生元",
+     "en": "Prebiotics",
+     "year": 1995,
+     "note": "Gibson 等定义选择性促进有益菌的膳食成分如果寡糖。",
+     "deps": ["probiotics"]
+    },
+    {
+     "id": "synbiotics",
+     "name": "合生元",
+     "en": "Synbiotics",
+     "year": 1996,
+     "note": "益生菌与益生元组合协同改善宿主肠道菌群的功能食品。",
+     "deps": ["prebiotics", "probiotics"]
+    },
+    {
+     "id": "fsmp_medical_food",
+     "name": "特医食品",
+     "en": "Food for special medical purpose",
+     "year": 1970,
+     "note": "针对疾病代谢需求配方的医学用途食品，需医师营养指导使用。",
+     "deps": ["enteral_nutrition"]
+    },
+    {
+     "id": "sports_supplement",
+     "name": "运动补剂",
+     "en": "Sports supplement",
+     "year": 1950,
+     "note": "以蛋白粉、碳水化合物等补充运动消耗，提升训练适应。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "protein_bar",
+     "name": "能量蛋白棒",
+     "en": "Protein/energy bar",
+     "year": 1980,
+     "note": "便携的高蛋白能量食品，用于运动与户外营养补给。",
+     "deps": ["sports_supplement"]
+    },
+    {
+     "id": "fortified_staple",
+     "name": "营养强化主食",
+     "en": "Fortified staple food",
+     "year": 1950,
+     "note": "在米面中强化铁、维A等，改善大规模人群微量营养状况。",
+     "deps": ["iron_fortification"]
+    },
+    {
+     "id": "omega3_supplement",
+     "name": "Ω-3脂肪酸补充",
+     "en": "Omega-3 supplement",
+     "year": 1970,
+     "note": "以鱼油提供EPA/DHA，用于心血管与脑健康营养支持。",
+     "deps": ["gas_chromatography_fat"]
+    },
+    {
+     "id": "phytoestrogens",
+     "name": "植物雌激素",
+     "en": "Phytoestrogens",
+     "year": 1950,
+     "note": "大豆异黄酮等植物来源活性物，具弱雌激素样生理效应。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "resistant_starch",
+     "name": "抗性淀粉",
+     "en": "Resistant starch",
+     "year": 1982,
+     "note": "不被小肠消化的淀粉，作为发酵底物发挥膳食纤维功能。",
+     "deps": ["dietary_fiber_concept"]
+    },
+    {
+     "id": "dietary_antioxidants",
+     "name": "膳食抗氧化剂",
+     "en": "Dietary antioxidants",
+     "year": 1990,
+     "note": "以维C、维E、多酚等清除自由基，作为功能营养成分。",
+     "deps": ["vitamin_E"]
+    },
+    {
+     "id": "glucosamine_supplement",
+     "name": "氨糖软骨素补充剂",
+     "en": "Glucosamine supplement",
+     "year": 1990,
+     "note": "以氨基葡萄糖与硫酸软骨素支持关节软骨健康的膳食补充。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "functional_food_term",
+     "name": "功能食品概念",
+     "en": "Functional food",
+     "year": 1991,
+     "note": "日本FOSHU制度确立具特定健康功能的食品管理框架。",
+     "deps": ["probiotics"]
+    },
+    {
+     "id": "nutraceutical",
+     "name": "营养保健品",
+     "en": "Nutraceutical",
+     "year": 1992,
+     "note": "兼具营养与生理调节功能的食品形态，介于食品与药品之间。",
+     "deps": ["functional_food_term"]
+    }
+   ]
+  },
+  {
+   "name": "饮食与慢病",
+   "items": [
+    {
+     "id": "diabetic_diet_clinical_dash",
+     "name": "糖尿病医学营养治疗",
+     "en": "Diabetes medical nutrition therapy",
+     "year": 1921,
+     "note": "胰岛素问世后以个体化营养管理血糖，延用至今的核心治疗。",
+     "deps": ["diabetic_diet_clinical"]
+    },
+    {
+     "id": "caloric_restriction",
+     "name": "热量限制",
+     "en": "Caloric restriction",
+     "year": 1935,
+     "note": "McCay 以动物实验显示限热量延寿，开启衰老营养研究。",
+     "deps": ["bomb_calorimeter"]
+    },
+    {
+     "id": "dietary_fat_heart",
+     "name": "膳食脂肪与冠心病",
+     "en": "Dietary fat and coronary heart disease",
+     "year": 1953,
+     "note": "Keys 等提出脂质假说，确立饱和脂肪与血胆固醇的关联。",
+     "deps": ["food_cholesterol_chemistry"]
+    },
+    {
+     "id": "low_fat_diet",
+     "name": "低脂肪饮食",
+     "en": "Low-fat diet",
+     "year": 1950,
+     "note": "以降低总脂肪与饱和脂肪摄入预防心血管疾病的膳食模式。",
+     "deps": ["food_composition_table"]
+    },
+    {
+     "id": "salt_sensitive_hypertension",
+     "name": "盐敏感性高血压",
+     "en": "Salt-sensitive hypertension",
+     "year": 1940,
+     "note": "识别对钠摄入敏感的高血压亚型，指导个体化限盐。",
+     "deps": ["sodium_chloride_diet"]
+    },
+    {
+     "id": "very_low_calorie_diet",
+     "name": "肥胖极低热量饮食",
+     "en": "Very low calorie diet",
+     "year": 1970,
+     "note": "以配方代餐极低热量摄入治疗肥胖，需医学监护防并发症。",
+     "deps": ["diabetic_diet_clinical"]
+    },
+    {
+     "id": "low_carb_diet",
+     "name": "低碳水饮食",
+     "en": "Low-carbohydrate diet",
+     "year": 1972,
+     "note": "限制碳水改善体重与血糖控制的膳食方案，争议中应用。",
+     "deps": ["diabetic_diet_clinical"]
+    },
+    {
+     "id": "fiber_and_cvd",
+     "name": "膳食纤维与慢病",
+     "en": "Dietary fiber and chronic disease",
+     "year": 1970,
+     "note": "Burkitt 等提出纤维缺乏与肠癌等慢病相关，推动全谷摄入。",
+     "deps": ["dietary_fiber_concept"]
+    },
+    {
+     "id": "mediterranean_diet",
+     "name": "地中海膳食",
+     "en": "Mediterranean diet",
+     "year": 1993,
+     "note": "Lyon 心脏研究证实其降低心血管事件，成为经典健康膳食。",
+     "deps": ["dietary_guidelines"]
+    },
+    {
+     "id": "dash_diet",
+     "name": "DASH饮食",
+     "en": "DASH diet",
+     "year": 1997,
+     "note": "以高果蔬低脂奶的膳食模式被证实可显著降低血压。",
+     "deps": ["sodium_chloride_diet"]
+    },
+    {
+     "id": "dietary_guidelines_satfat",
+     "name": "限饱和脂肪指南",
+     "en": "Guidelines limiting saturated fat",
+     "year": 1980,
+     "note": "膳食指南明确限制饱和脂肪与胆固醇以防控心血管病。",
+     "deps": ["dietary_fat_heart"]
+    },
+    {
+     "id": "sugar_and_disease",
+     "name": "添加糖与疾病",
+     "en": "Added sugar and disease",
+     "year": 1980,
+     "note": "关注添加糖摄入与肥胖龋齿代谢综合征的关联并予限制。",
+     "deps": ["dietary_guidelines"]
+    },
+    {
+     "id": "plant_based_diet",
+     "name": "植物基膳食",
+     "en": "Plant-based diet",
+     "year": 1990,
+     "note": "以植物性食物为主的膳食模式，关联较低慢病与碳排放。",
+     "deps": ["dietary_guidelines"]
+    },
+    {
+     "id": "gut_microbiome_diet",
+     "name": "肠道微生态膳食",
+     "en": "Gut microbiome diet",
+     "year": 2010,
+     "note": "以膳食纤维与发酵食品调控肠道菌群，成为营养研究热点。",
+     "deps": ["probiotics"]
+    }
+   ]
+  },
+  {
+   "name": "营养技术",
+   "items": [
+    {
+     "id": "isotope_tracer_metabolism",
+     "name": "同位素示踪代谢",
+     "en": "Isotope tracer metabolism",
+     "year": 1935,
+     "note": "Schoenheimer 以重同位素示踪揭示体内代谢动态平衡。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "mass_spectrometry_nutrition",
+     "name": "质谱营养分析",
+     "en": "Mass spectrometry in nutrition",
+     "year": 1940,
+     "note": "以质谱测定同位素与分子，支撑代谢与成分的高灵敏分析。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "stable_isotope_absorption",
+     "name": "稳定同位素吸收测定",
+     "en": "Stable isotope absorption test",
+     "year": 1950,
+     "note": "以非放射性稳定同位素定量营养素的吸收与利用。",
+     "deps": ["isotope_tracer_metabolism"]
+    },
+    {
+     "id": "neutron_activation_analysis",
+     "name": "中子活化分析",
+     "en": "Neutron activation analysis",
+     "year": 1950,
+     "note": "以中子辐照测定痕量元素，用于食物矿物质精确定量。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "body_composition_isotope",
+     "name": "同位素稀释法体成分",
+     "en": "Isotope dilution body composition",
+     "year": 1950,
+     "note": "以氘水或稀有气体稀释法测定体内总水量与瘦体组织。",
+     "deps": ["isotope_tracer_metabolism"]
+    },
+    {
+     "id": "stable_isotope_protein",
+     "name": "13C蛋白质代谢示踪",
+     "en": "13C protein turnover tracer",
+     "year": 1970,
+     "note": "以碳13标记氨基酸测定人体蛋白质合成与分解速率。",
+     "deps": ["stable_isotope_absorption"]
+    },
+    {
+     "id": "mineral_bioavailability_isotope",
+     "name": "矿物质生物利用率同位素",
+     "en": "Isotopic mineral bioavailability",
+     "year": 1970,
+     "note": "以同位素比较膳食与参考矿物的真实吸收率，指导强化。",
+     "deps": ["stable_isotope_absorption"]
+    },
+    {
+     "id": "stable_isotope_ratio_ms",
+     "name": "同位素比值质谱",
+     "en": "Isotope ratio mass spectrometry",
+     "year": 1980,
+     "note": "IRMS 高精度测定同位素比值，用于来源与代谢溯源。",
+     "deps": ["mass_spectrometry_nutrition"]
+    },
+    {
+     "id": "nutritional_epidemiology",
+     "name": "营养流行病学",
+     "en": "Nutritional epidemiology",
+     "year": 1950,
+     "note": "以队列与横断面研究膳食与疾病的人群关联，支撑指南。",
+     "deps": ["scientific_method"]
+    },
+    {
+     "id": "randomized_trial_nutrition",
+     "name": "营养干预随机试验",
+     "en": "Randomized nutrition trial",
+     "year": 1948,
+     "note": "以随机对照试验验证膳食干预效果，提升因果证据等级。",
+     "deps": ["scientific_method"]
+    },
+    {
+     "id": "nmr_nutrition",
+     "name": "核磁共振营养分析",
+     "en": "NMR in nutrition analysis",
+     "year": 1970,
+     "note": "以核磁共振无损分析食物成分与代谢组指纹。",
+     "deps": ["chemistry"]
+    },
+    {
+     "id": "computer_dietary_modeling",
+     "name": "营养计算机建模",
+     "en": "Computer dietary modeling",
+     "year": 1980,
+     "note": "以计算机模拟膳食优化与人群营养预测，辅助政策制定。",
+     "deps": ["computer", "food_composition_table"]
+    },
+    {
+     "id": "metabonomics_nutrition",
+     "name": "营养代谢组学",
+     "en": "Nutritional metabolomics",
+     "year": 2000,
+     "note": "以高通量代谢组刻画膳食应答，推动精准营养研究。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "big_data_nutrition",
+     "name": "营养大数据",
+     "en": "Nutrition big data",
+     "year": 2010,
+     "note": "整合膳食、生物与行为大数据，支撑人群营养监测与推荐。",
+     "deps": ["computer"]
+    }
+   ]
+  }
+ ]
+}

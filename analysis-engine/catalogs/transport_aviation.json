@@ -1,0 +1,1287 @@
+{
+ "cat": "transport",
+ "catName": "交通运载",
+ "sub": "aviation",
+ "subName": "航空运输",
+ "anchors": [
+  "airplane",
+  "drone",
+  "internal_combustion",
+  "steam_engine",
+  "electricity",
+  "electric_motor",
+  "semiconductors",
+  "computer",
+  "internet",
+  "gps",
+  "composites",
+  "steel",
+  "cement",
+  "plastics",
+  "petroleum",
+  "radio",
+  "rocket"
+ ],
+ "families": [
+  {
+   "name": "气球与飞艇",
+   "items": [
+    {
+     "id": "hot_air_balloon",
+     "name": "热气球",
+     "en": "Hot air balloon",
+     "year": 1783,
+     "note": "蒙戈尔菲耶兄弟以热空气升空，人类首次实现有控制的载人飞行。"
+    },
+    {
+     "id": "hydrogen_gas_balloon",
+     "name": "氢气气球",
+     "en": "Hydrogen balloon",
+     "year": 1783,
+     "note": "查理以氢气充气球升空，气体气球比热气球升力更大且持久。"
+    },
+    {
+     "id": "roziere_balloon",
+     "name": "罗齐耶混合气球",
+     "en": "Rozière balloon",
+     "year": 1785,
+     "note": "热空气与氢气并用的混合气球，构型沿用至今，用于长距离气球飞行。"
+    },
+    {
+     "id": "powered_airship",
+     "name": "动力飞艇",
+     "en": "Powered airship",
+     "year": 1852,
+     "note": "吉法尔以蒸汽机驱动螺旋桨飞艇，首次实现可操纵的动力飞行。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "rigid_airship",
+     "name": "硬式飞艇",
+     "en": "Rigid airship",
+     "year": 1900,
+     "note": "齐柏林以金属骨架定型的大型飞艇，开创越洋商业飞行时代。"
+    },
+    {
+     "id": "airship_passenger_service",
+     "name": "飞艇定期客运",
+     "en": "Airship passenger service",
+     "year": 1910,
+     "note": "德国航空股份公司以齐柏林飞艇开定期载客航线，为最早的航空客运。",
+     "deps": [
+      "rigid_airship"
+     ]
+    },
+    {
+     "id": "helium_filled_airship",
+     "name": "氦气飞艇",
+     "en": "Helium airship",
+     "year": 1921,
+     "note": "以不可燃氦气替代氢气充装飞艇，消除火灾隐患，美国率先采用。"
+    },
+    {
+     "id": "scientific_balloon",
+     "name": "高空气球",
+     "en": "Scientific high-altitude balloon",
+     "year": 1947,
+     "note": "以聚乙烯薄膜制成的大型气球升至平流层，用于宇宙线与大气探测。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "modern_sport_hot_air_balloon",
+     "name": "现代运动热气球",
+     "en": "Modern sport hot-air balloon",
+     "year": 1960,
+     "note": "以丙烷燃烧器加热并精确控制升降的热气球，推动大众热气球运动。",
+     "deps": [
+      "petroleum"
+     ]
+    },
+    {
+     "id": "superpressure_balloon",
+     "name": "超压气球",
+     "en": "Superpressure balloon",
+     "year": 1980,
+     "note": "密闭耐压气球可在平流层维持高度长期飘航，为新型科研平台。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "hybrid_airship",
+     "name": "混合式飞艇",
+     "en": "Hybrid airship",
+     "year": 2016,
+     "note": "浮力与气动升力结合的飞艇完成试飞，探索长航时低耗运输。",
+     "deps": [
+      "helium_filled_airship"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "空气动力、机体结构与飞行控制",
+   "items": [
+    {
+     "id": "hang_glider",
+     "name": "悬挂滑翔机",
+     "en": "Hang glider",
+     "year": 1891,
+     "note": "李林塔尔以悬挂滑翔机反复试飞，积累的飞行数据为动力飞行奠基。"
+    },
+    {
+     "id": "aircraft_aileron",
+     "name": "副翼",
+     "en": "Aileron",
+     "year": 1908,
+     "note": "机翼后缘差动偏转控制滚转的操纵面，取代翼翘成为滚转操纵标准。"
+    },
+    {
+     "id": "biplane_layout",
+     "name": "双翼机布局",
+     "en": "Biplane",
+     "year": 1910,
+     "note": "上下双翼增加升力的早期飞机布局，一战前后达到高峰，后为单翼取代。",
+     "deps": [
+      "airplane"
+     ]
+    },
+    {
+     "id": "aluminium_airframe",
+     "name": "全金属飞机机体",
+     "en": "Aluminium airframe",
+     "year": 1915,
+     "note": "以铝合金蒙皮与构架取代木布结构，飞机强度寿命大幅提升。"
+    },
+    {
+     "id": "aircraft_trim_tab",
+     "name": "飞机调整片",
+     "en": "Trim tab",
+     "year": 1918,
+     "note": "舵面后缘的小调节片平衡铰链力矩，减轻飞行员长时间施力。"
+    },
+    {
+     "id": "leading_edge_slat",
+     "name": "前缘缝翼",
+     "en": "Leading-edge slat",
+     "year": 1919,
+     "note": "大迎角时前缘伸出的缝翼延缓气流分离，提高低速升力与失速安全。"
+    },
+    {
+     "id": "trailing_edge_flap",
+     "name": "后缘襟翼",
+     "en": "Trailing-edge flap",
+     "year": 1924,
+     "note": "后缘可下偏的增升装置，飞机起降速度得以显著降低。",
+     "deps": [
+      "aircraft_aileron"
+     ]
+    },
+    {
+     "id": "aircraft_deicing_boot",
+     "name": "气动除冰带",
+     "en": "Deicing boot",
+     "year": 1930,
+     "note": "蒙皮表面可充胀的橡胶带，周期性胀裂冰层，用于机翼前缘除冰。"
+    },
+    {
+     "id": "retractable_landing_gear",
+     "name": "收放式起落架",
+     "en": "Retractable landing gear",
+     "year": 1933,
+     "note": "飞行中收入机身机翼的起落架，显著降低高速飞行的阻力。",
+     "deps": [
+      "airplane"
+     ]
+    },
+    {
+     "id": "aircraft_hydraulic_system",
+     "name": "飞机液压系统",
+     "en": "Aircraft hydraulic system",
+     "year": 1936,
+     "note": "以液压驱动起落架襟翼等大载荷部件，现代飞机操纵的动力基础。",
+     "deps": [
+      "retractable_landing_gear"
+     ]
+    },
+    {
+     "id": "tricycle_landing_gear",
+     "name": "前三点起落架",
+     "en": "Tricycle landing gear",
+     "year": 1937,
+     "note": "前轮转向的三点布局，滑跑视野好、不易倒立，喷气客机普遍采用。",
+     "deps": [
+      "airplane"
+     ]
+    },
+    {
+     "id": "pressurised_aircraft_cabin",
+     "name": "增压座舱",
+     "en": "Pressurised aircraft cabin",
+     "year": 1938,
+     "note": "维持高空舱内气压的密封增压结构，客机得以在万米高空舒适飞行。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "aircraft_air_cycle_ac",
+     "name": "客舱空气循环制冷",
+     "en": "Air cycle machine air conditioning",
+     "year": 1944,
+     "note": "利用发动机引气经膨胀涡轮制冷的客舱空调，增压机舱的环境保障。",
+     "deps": [
+      "pressurised_aircraft_cabin"
+     ]
+    },
+    {
+     "id": "swept_wing",
+     "name": "后掠翼",
+     "en": "Swept wing",
+     "year": 1947,
+     "note": "机翼后掠延缓激波增阻，使喷气飞机可飞近音速，被广泛采用。"
+    },
+    {
+     "id": "integral_wing_fuel_tank",
+     "name": "机翼整体油箱",
+     "en": "Integral wing fuel tank",
+     "year": 1947,
+     "note": "直接以机翼密封结构储油，充分利用容积并简化油箱，喷气客机标配。",
+     "deps": [
+      "aluminium_airframe"
+     ]
+    },
+    {
+     "id": "delta_wing",
+     "name": "三角翼",
+     "en": "Delta wing",
+     "year": 1948,
+     "note": "大后掠三角机翼兼顾刚度与高速性能，超音速飞机常用布局。"
+    },
+    {
+     "id": "aircraft_spoiler",
+     "name": "机翼扰流板",
+     "en": "Wing spoiler",
+     "year": 1950,
+     "note": "机翼上表面扰流板用于减速与着地卸升，喷气客机的标准配置。",
+     "deps": [
+      "trailing_edge_flap"
+     ]
+    },
+    {
+     "id": "transonic_area_rule",
+     "name": "跨音速面积律",
+     "en": "Transonic area rule",
+     "year": 1952,
+     "note": "按截面积分布设计机身缩腰，显著降低跨音速波阻，喷气机设计革命。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "supercritical_wing",
+     "name": "超临界机翼",
+     "en": "Supercritical wing",
+     "year": 1965,
+     "note": "平缓上表面延缓激波形成的翼型，巡航速度与燃油效率俱佳。",
+     "deps": [
+      "transonic_area_rule"
+     ]
+    },
+    {
+     "id": "winglet",
+     "name": "翼梢小翼",
+     "en": "Winglet",
+     "year": 1977,
+     "note": "机翼翼梢上翘的小翼减小翼尖涡诱导阻力，节油效果明显。"
+    },
+    {
+     "id": "composite_aircraft_structure",
+     "name": "复合材料机体结构",
+     "en": "Composite aircraft structure",
+     "year": 1985,
+     "note": "碳纤维复合材料用于机身机翼主承力结构，减重且耐腐蚀。",
+     "deps": [
+      "composites"
+     ]
+    },
+    {
+     "id": "fly_by_wire",
+     "name": "电传操纵系统",
+     "en": "Fly-by-wire",
+     "year": 1987,
+     "note": "以电信号与计算机取代机械连杆操纵飞机，客机从A320起广泛采用。",
+     "deps": [
+      "computer"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "航空动力装置",
+   "items": [
+    {
+     "id": "aero_piston_engine",
+     "name": "航空活塞发动机",
+     "en": "Aircraft piston engine",
+     "year": 1903,
+     "note": "莱特兄弟自行研制发动机装飞机，航空动力自此起步。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "liquid_cooled_inline_engine",
+     "name": "液冷直列航空发动机",
+     "en": "Liquid-cooled inline engine",
+     "year": 1915,
+     "note": "汽缸直列或V形布置加液冷，迎风面积小，早期高性能飞机常用。",
+     "deps": [
+      "aero_piston_engine"
+     ]
+    },
+    {
+     "id": "air_cooled_radial_engine",
+     "name": "星形气冷发动机",
+     "en": "Air-cooled radial engine",
+     "year": 1920,
+     "note": "汽缸沿曲轴圆周布置的风冷发动机，功率密度高，螺旋桨飞机主流。",
+     "deps": [
+      "aero_piston_engine"
+     ]
+    },
+    {
+     "id": "variable_pitch_propeller",
+     "name": "变距螺旋桨",
+     "en": "Variable-pitch propeller",
+     "year": 1932,
+     "note": "飞行中调整桨距的螺旋桨，使发动机在不同工况保持高效。",
+     "deps": [
+      "aero_piston_engine"
+     ]
+    },
+    {
+     "id": "aeroengine_supercharger",
+     "name": "航空增压器",
+     "en": "Aeroengine supercharger",
+     "year": 1938,
+     "note": "机械增压补偿高空稀薄空气，活塞发动机得以高空巡航。",
+     "deps": [
+      "aero_piston_engine"
+     ]
+    },
+    {
+     "id": "turbojet_engine",
+     "name": "涡轮喷气发动机",
+     "en": "Turbojet",
+     "year": 1939,
+     "note": "亨克尔He178装配喷气发动机首飞，喷气动力时代由此开启。",
+     "deps": [
+      "thermodynamics"
+     ]
+    },
+    {
+     "id": "turboprop_engine",
+     "name": "涡轮螺旋桨发动机",
+     "en": "Turboprop",
+     "year": 1950,
+     "note": "燃气轮机驱动螺旋桨的中速经济动力，支线客机与运输机广泛采用。",
+     "deps": [
+      "turbojet_engine"
+     ]
+    },
+    {
+     "id": "turboshaft_engine",
+     "name": "涡轴发动机",
+     "en": "Turboshaft",
+     "year": 1951,
+     "note": "以燃气轮机输出轴功率的动力装置，直升机与地面动力设备使用。",
+     "deps": [
+      "turbojet_engine"
+     ]
+    },
+    {
+     "id": "contra_rotating_propeller",
+     "name": "同轴反转螺旋桨",
+     "en": "Contra-rotating propeller",
+     "year": 1952,
+     "note": "双桨反向旋转消除扭矩并提高推进效率，用于大功率螺旋桨动力。",
+     "deps": [
+      "variable_pitch_propeller"
+     ]
+    },
+    {
+     "id": "thrust_reverser",
+     "name": "反推力装置",
+     "en": "Thrust reverser",
+     "year": 1956,
+     "note": "偏转喷流产生反推减速的装置，喷气客机着陆滑跑必备。",
+     "deps": [
+      "turbojet_engine"
+     ]
+    },
+    {
+     "id": "aircraft_apu",
+     "name": "飞机辅助动力装置",
+     "en": "Auxiliary power unit",
+     "year": 1958,
+     "note": "机尾小型燃气轮机，地面供电供气并可在空中启动主发动机。",
+     "deps": [
+      "turboshaft_engine"
+     ]
+    },
+    {
+     "id": "early_turbofan",
+     "name": "涡扇发动机",
+     "en": "Turbofan",
+     "year": 1960,
+     "note": "风扇与内涵道并流的喷气发动机，省油低噪，取代涡喷成为民航主流。",
+     "deps": [
+      "turbojet_engine"
+     ]
+    },
+    {
+     "id": "high_bypass_turbofan",
+     "name": "高涵道比涡扇发动机",
+     "en": "High-bypass turbofan",
+     "year": 1969,
+     "note": "大直径风扇提供大部分推力的大型涡扇，宽体客机与干线客机核心。",
+     "deps": [
+      "early_turbofan"
+     ]
+    },
+    {
+     "id": "fadec",
+     "name": "全权限数字发动机控制",
+     "en": "Full authority digital engine control",
+     "year": 1985,
+     "note": "计算机全权控制发动机供油与状态，油耗与可靠性显著改善。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "geared_turbofan",
+     "name": "齿轮传动涡扇发动机",
+     "en": "Geared turbofan",
+     "year": 2015,
+     "note": "风扇与涡轮间加减速齿轮的涡扇构型，效率与噪声更优，已投入使用。",
+     "deps": [
+      "high_bypass_turbofan"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "民用飞机谱系",
+   "items": [
+    {
+     "id": "seaplane",
+     "name": "水上飞机",
+     "en": "Seaplane",
+     "year": 1910,
+     "note": "以浮筒在水面起降的飞机，法布尔首飞成功，开辟无跑道航线。"
+    },
+    {
+     "id": "flying_boat",
+     "name": "船身式水上飞机",
+     "en": "Flying boat",
+     "year": 1912,
+     "note": "船形机身直接在水面起降的大型水上飞机，跨洋客运先驱。",
+     "deps": [
+      "seaplane"
+     ]
+    },
+    {
+     "id": "all_metal_transport",
+     "name": "全金属运输机",
+     "en": "All-metal transport aircraft",
+     "year": 1919,
+     "note": "容克F13全金属下单翼客机，开创民用运输机金属结构时代。",
+     "deps": [
+      "aluminium_airframe"
+     ]
+    },
+    {
+     "id": "trimotor_airliner",
+     "name": "三发动机客机",
+     "en": "Trimotor airliner",
+     "year": 1926,
+     "note": "以三台发动机保障安全性的早期干线客机，二十年代广泛服役。",
+     "deps": [
+      "all_metal_transport"
+     ]
+    },
+    {
+     "id": "modern_airliner_layout",
+     "name": "低翼双发全金属客机",
+     "en": "Modern low-wing twin airliner",
+     "year": 1933,
+     "note": "下单翼收放起落架全金属双发构型，奠定现代干线客机的基本形式。",
+     "deps": [
+      "all_metal_transport"
+     ]
+    },
+    {
+     "id": "amphibious_aircraft",
+     "name": "水陆两用飞机",
+     "en": "Amphibious aircraft",
+     "year": 1937,
+     "note": "兼有船体浮筒与可收放机轮的飞机，水上起降又能上陆使用。",
+     "deps": [
+      "seaplane"
+     ]
+    },
+    {
+     "id": "transoceanic_flying_boat",
+     "name": "跨洋水上客机",
+     "en": "Transoceanic flying boat",
+     "year": 1938,
+     "note": "四发动机巨型水上客机开通跨大西洋客运，喷气时代前的越洋主力。",
+     "deps": [
+      "flying_boat"
+     ]
+    },
+    {
+     "id": "pressurised_airliner",
+     "name": "增压活塞客机",
+     "en": "Pressurised piston airliner",
+     "year": 1940,
+     "note": "增压座舱装上万米巡航的干线客机，乘客告别缺氧颠簸。",
+     "deps": [
+      "pressurised_aircraft_cabin"
+     ]
+    },
+    {
+     "id": "long_range_piston_airliner",
+     "name": "远程四发活塞客机",
+     "en": "Long-range four-engine piston airliner",
+     "year": 1946,
+     "note": "战后四发增压活塞客机执飞越洋航线，跨大陆客运的最后活塞高峰。",
+     "deps": [
+      "pressurised_airliner"
+     ]
+    },
+    {
+     "id": "jet_airliner",
+     "name": "喷气式客机",
+     "en": "Jet airliner",
+     "year": 1949,
+     "note": "德哈维兰彗星号首飞，喷气客机以高速巡航改写长途航空。",
+     "deps": [
+      "turbojet_engine"
+     ]
+    },
+    {
+     "id": "turboprop_airliner",
+     "name": "涡桨客机",
+     "en": "Turboprop airliner",
+     "year": 1950,
+     "note": "子爵号率先投入运营，涡桨成为支线与短程航线的经济动力。"
+    },
+    {
+     "id": "stol_transport",
+     "name": "短距起降运输机",
+     "en": "STOL transport",
+     "year": 1951,
+     "note": "高升力与坚固起落架支持短距离起降，适用于偏远简易跑道。"
+    },
+    {
+     "id": "narrowbody_jet_airliner",
+     "name": "单通道喷气客机",
+     "en": "Narrow-body jet airliner",
+     "year": 1958,
+     "note": "单通道喷气客机大规模投入干线，航空旅行由此进入喷气大众时代。",
+     "deps": [
+      "jet_airliner"
+     ]
+    },
+    {
+     "id": "business_jet",
+     "name": "喷气公务机",
+     "en": "Business jet",
+     "year": 1963,
+     "note": "小型喷气客机专供企业与私人出行，公务航空产业由此形成。",
+     "deps": [
+      "jet_airliner"
+     ]
+    },
+    {
+     "id": "air_cargo_uld",
+     "name": "航空集装器",
+     "en": "Unit load device",
+     "year": 1965,
+     "note": "标准化航空货箱与集装板，货舱装卸机械化，航空货运效率之源。"
+    },
+    {
+     "id": "combi_aircraft",
+     "name": "客货混装飞机",
+     "en": "Combi aircraft",
+     "year": 1968,
+     "note": "主舱前后分别载客与装货的混装构型，灵活适配淡旺季货运。"
+    },
+    {
+     "id": "widebody_airliner",
+     "name": "宽体客机",
+     "en": "Wide-body airliner",
+     "year": 1970,
+     "note": "双通道宽体喷气客机投入运营，高密度干线运输能力大幅提高。",
+     "deps": [
+      "high_bypass_turbofan"
+     ]
+    },
+    {
+     "id": "dedicated_freighter",
+     "name": "宽体货机",
+     "en": "Wide-body freighter",
+     "year": 1972,
+     "note": "以宽体客机平台发展的大型全货机，航空货运进入集装箱化时代。",
+     "deps": [
+      "widebody_airliner"
+     ]
+    },
+    {
+     "id": "supersonic_airliner",
+     "name": "超音速客机",
+     "en": "Supersonic airliner",
+     "year": 1976,
+     "note": "协和号以两倍音速投入跨大西洋客运，2003年退役后暂无接替。",
+     "deps": [
+      "jet_airliner"
+     ]
+    },
+    {
+     "id": "ultralight_aircraft",
+     "name": "超轻型飞机",
+     "en": "Ultralight aircraft",
+     "year": 1979,
+     "note": "结构轻巧、门槛低的小型飞机，1970年代美国兴起大众飞行运动。"
+    },
+    {
+     "id": "etops_twinjet_operation",
+     "name": "双发延程运行",
+     "en": "ETOPS twin-engine operation",
+     "year": 1985,
+     "note": "放宽双发飞机距备降场距离限制后，双发客机成为跨洋干线主力。"
+    },
+    {
+     "id": "regional_jet",
+     "name": "支线喷气客机",
+     "en": "Regional jet",
+     "year": 1992,
+     "note": "五十至一百座级喷气支线客机，枢纽支线网络的骨干机型。",
+     "deps": [
+      "jet_airliner"
+     ]
+    },
+    {
+     "id": "very_large_airliner",
+     "name": "超大型客机",
+     "en": "Very large airliner",
+     "year": 2005,
+     "note": "五百座级双层宽体客机首飞，刷新干线客机最大载客纪录。",
+     "deps": [
+      "widebody_airliner"
+     ]
+    },
+    {
+     "id": "composite_widebody_airliner",
+     "name": "复合材料宽体客机",
+     "en": "Composite wide-body airliner",
+     "year": 2011,
+     "note": "机体主要采用碳纤维复合材料的宽体客机投入运营，减重省油显著。",
+     "deps": [
+      "composite_aircraft_structure"
+     ]
+    },
+    {
+     "id": "electric_aircraft",
+     "name": "电动推进载人飞机",
+     "en": "Electric aircraft",
+     "year": 2015,
+     "note": "以电池电机驱动的载人飞机完成跨海峡飞行，绿色航空的探索方向。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "general_aviation_aircraft",
+     "name": "轻型通用飞机",
+     "en": "General aviation aircraft",
+     "year": 1946,
+     "note": "战后批量生产的轻型活塞飞机，通航培训与私人飞行的主力。",
+     "deps": [
+      "aero_piston_engine"
+     ]
+    },
+    {
+     "id": "agricultural_aircraft",
+     "name": "农用飞机",
+     "en": "Agricultural aircraft",
+     "year": 1957,
+     "note": "低空喷洒农药种子的专用飞机，农业航空作业的标准装备。",
+     "deps": [
+      "general_aviation_aircraft"
+     ]
+    },
+    {
+     "id": "firefighting_aircraft",
+     "name": "灭火飞机",
+     "en": "Firefighting aircraft",
+     "year": 1967,
+     "note": "汲水洒水扑救山火的专用飞机，森林航空消防的主力装备。",
+     "deps": [
+      "general_aviation_aircraft"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "直升机与垂直起降飞行器",
+   "items": [
+    {
+     "id": "autogyro",
+     "name": "旋翼机",
+     "en": "Autogyro",
+     "year": 1923,
+     "note": "旋翼靠前飞自转产生升力的飞行器，西尔瓦研制，是直升机先导。"
+    },
+    {
+     "id": "practical_helicopter",
+     "name": "实用直升机",
+     "en": "Practical helicopter",
+     "year": 1939,
+     "note": "西科斯基VS-300实现可控悬停，确立单旋翼加尾桨的直升机构型。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "helicopter_swashplate",
+     "name": "直升机倾斜盘",
+     "en": "Swashplate",
+     "year": 1942,
+     "note": "周期与总距变距的操纵机构，使直升机各方向机动成为可能。",
+     "deps": [
+      "practical_helicopter"
+     ]
+    },
+    {
+     "id": "production_helicopter",
+     "name": "量产直升机",
+     "en": "Production helicopter",
+     "year": 1942,
+     "note": "R-4成为首款量产并列装直升机的型号，直升机进入实用化阶段。",
+     "deps": [
+      "practical_helicopter"
+     ]
+    },
+    {
+     "id": "tandem_rotor_helicopter",
+     "name": "纵列双旋翼直升机",
+     "en": "Tandem-rotor helicopter",
+     "year": 1945,
+     "note": "前后纵列双旋翼抵消反扭矩，可省去尾桨并获大载重能力。",
+     "deps": [
+      "practical_helicopter"
+     ]
+    },
+    {
+     "id": "coaxial_rotor_helicopter",
+     "name": "共轴双旋翼直升机",
+     "en": "Coaxial-rotor helicopter",
+     "year": 1947,
+     "note": "上下共轴反向旋转的双旋翼抵消扭矩，机身紧凑无需尾桨。",
+     "deps": [
+      "practical_helicopter"
+     ]
+    },
+    {
+     "id": "turbine_helicopter",
+     "name": "涡轴直升机",
+     "en": "Turbine-powered helicopter",
+     "year": 1954,
+     "note": "涡轴发动机取代活塞发动机后，直升机重量轻、振动噪声降低。",
+     "deps": [
+      "turboshaft_engine"
+     ]
+    },
+    {
+     "id": "heavy_lift_helicopter",
+     "name": "重型起重直升机",
+     "en": "Heavy-lift helicopter",
+     "year": 1962,
+     "note": "专为吊运大型载荷设计的直升机，用于吊装与抢险运输。",
+     "deps": [
+      "turbine_helicopter"
+     ]
+    },
+    {
+     "id": "fenestron_tail",
+     "name": "涵道尾桨",
+     "en": "Fenestron",
+     "year": 1967,
+     "note": "尾梁内置涵道式尾桨，噪音低且安全性好，轻型直升机广泛采用。",
+     "deps": [
+      "turbine_helicopter"
+     ]
+    },
+    {
+     "id": "tiltrotor",
+     "name": "倾转旋翼机",
+     "en": "Tiltrotor",
+     "year": 1989,
+     "note": "旋翼倾转兼有直升机垂直起降与固定翼高速巡航，V-22首飞成功。",
+     "deps": [
+      "practical_helicopter"
+     ]
+    },
+    {
+     "id": "compound_helicopter",
+     "name": "复合式高速直升机",
+     "en": "Compound helicopter",
+     "year": 2010,
+     "note": "加装短翼与推进桨的直升机，原型机突破400公里时速，探索高速旋翼。",
+     "deps": [
+      "practical_helicopter"
+     ]
+    },
+    {
+     "id": "evtol_aircraft",
+     "name": "电动垂直起降飞行器",
+     "en": "Electric vertical take-off and landing aircraft",
+     "year": 2023,
+     "note": "以多旋翼电机实现垂直起降的载人飞行器，已有型号获适航认证。",
+     "deps": [
+      "electric_motor",
+      "drone"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "机场设施与地面运行",
+   "items": [
+    {
+     "id": "paved_airport_runway",
+     "name": "混凝土机场跑道",
+     "en": "Concrete airport runway",
+     "year": 1928,
+     "note": "福特机场率先铺筑硬质混凝土跑道，机场道面自此标准化。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "airfield_lighting",
+     "name": "机场助航灯光",
+     "en": "Airfield lighting",
+     "year": 1930,
+     "note": "跑道边界与进近引导灯构成机场灯光系统，奠定夜航与全天候运行基础。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "control_tower",
+     "name": "机场管制塔台",
+     "en": "Airport control tower",
+     "year": 1930,
+     "note": "居高指挥飞机起降的塔台设施，机场空中交通管理的神经中枢。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "runway_marking",
+     "name": "跑道标线",
+     "en": "Runway marking",
+     "year": 1932,
+     "note": "跑道端的数字与中线标线标示方位与范围，飞行员起降参照的基本设施。",
+     "deps": [
+      "paved_airport_runway"
+     ]
+    },
+    {
+     "id": "instrument_landing_system",
+     "name": "仪表着陆系统",
+     "en": "Instrument landing system",
+     "year": 1938,
+     "note": "以航向台与下滑台引导飞机精密进近着陆，低能见度运行的基础。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "airport_terminal_radar",
+     "name": "机场监视雷达",
+     "en": "Airport surveillance radar",
+     "year": 1948,
+     "note": "覆盖机场周边空域的监视雷达，管制员据此指挥进离场航班。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "heliport",
+     "name": "直升机机场",
+     "en": "Heliport",
+     "year": 1950,
+     "note": "专供直升机起降与停放的机场设施，建于楼顶或地面，城市空中节点。"
+    },
+    {
+     "id": "loading_bridge",
+     "name": "登机桥",
+     "en": "Passenger boarding bridge",
+     "year": 1959,
+     "note": "连接航站楼与飞机的可伸缩廊桥，旅客上下机免受风雨侵扰。"
+    },
+    {
+     "id": "mobile_lounge",
+     "name": "移动式候机厅",
+     "en": "Mobile lounge",
+     "year": 1962,
+     "note": "可升降对接飞机的载客摆渡舱，兼作候机厅使用，杜勒斯机场首创。",
+     "deps": [
+      "loading_bridge"
+     ]
+    },
+    {
+     "id": "runway_visual_aids",
+     "name": "目视进近坡度指示系统",
+     "en": "Visual approach slope indicator",
+     "year": 1956,
+     "note": "以灯光显示下滑道高低的助航设备，飞行员据此修正进近高度。",
+     "deps": [
+      "airfield_lighting"
+     ]
+    },
+    {
+     "id": "airport_baggage_system",
+     "name": "行李自动分拣系统",
+     "en": "Automated baggage handling system",
+     "year": 1975,
+     "note": "条码识别与高速传送带组成的行李分拣系统，枢纽机场客流处理保障。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "airport_security_screening",
+     "name": "机场安检设备",
+     "en": "Airport security screening",
+     "year": 1972,
+     "note": "以X光机与金属探测门检查旅客行李，航空安保体系的核心设施。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "airport_surface_movement_radar",
+     "name": "场面监视雷达",
+     "en": "Airport surface detection radar",
+     "year": 1970,
+     "note": "监视跑道滑行道飞机与车辆活动的雷达，低能见度地面防撞关键。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "automated_weather_observation",
+     "name": "机场自动气象观测",
+     "en": "Automated weather observing system",
+     "year": 1985,
+     "note": "自动采集风向风速能见度等要素的气象设施，起降决断的直接依据。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "aircraft_deicing_facility",
+     "name": "飞机除冰设施",
+     "en": "Aircraft deicing facility",
+     "year": 1965,
+     "note": "以除冰液喷洒清除机体积冰的地面设施，冬季运行安全的基本保障。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "runway_grooving",
+     "name": "跑道刻槽",
+     "en": "Runway grooving",
+     "year": 1968,
+     "note": "在跑道面横向锯出浅槽排水，防止雨天滑水，显著提高制动安全。",
+     "deps": [
+      "paved_airport_runway"
+     ]
+    },
+    {
+     "id": "engineered_materials_arrestor",
+     "name": "跑道拦阻床",
+     "en": "Engineered materials arresting system",
+     "year": 1995,
+     "note": "跑道端头以易碎材料制成的拦阻系统，冲出跑道飞机可安全停住。",
+     "deps": [
+      "cement"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "空中交通管理与机载航电",
+   "items": [
+    {
+     "id": "gyroscopic_autopilot",
+     "name": "陀螺自动驾驶仪",
+     "en": "Gyroscopic autopilot",
+     "year": 1914,
+     "note": "斯佩里以陀螺稳定飞机姿态，实现平飞稳定，自动驾驶由此开端。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "instrument_flight",
+     "name": "仪表飞行",
+     "en": "Instrument flying",
+     "year": 1929,
+     "note": "杜立特仅凭仪表完成盲目飞行，证明无外界参照的可靠航行方法。"
+    },
+    {
+     "id": "air_traffic_control",
+     "name": "空中交通管制",
+     "en": "Air traffic control",
+     "year": 1930,
+     "note": "纽瓦克机场设立首个塔台，管制员以无线电指挥航班起降与航线间隔。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "precision_approach_radar",
+     "name": "精密进近雷达",
+     "en": "Precision approach radar",
+     "year": 1947,
+     "note": "以雷达精确引导飞机对正跑道下滑的进近设备，供管制员语音引导。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "vor_navigation",
+     "name": "甚高频全向信标",
+     "en": "VHF omnidirectional range",
+     "year": 1949,
+     "note": "向四周提供方位基准的无线电导航台，构成航路与进近导航网络。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "atc_surveillance_radar",
+     "name": "航管监视雷达",
+     "en": "Air route surveillance radar",
+     "year": 1950,
+     "note": "探测航路上飞机的远程监视雷达，管制员据此掌握空情动态。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "distance_measuring_equipment",
+     "name": "测距仪",
+     "en": "Distance measuring equipment",
+     "year": 1952,
+     "note": "机载询问应答测距的导航设备，常与甚高频全向信标配合定位。",
+     "deps": [
+      "vor_navigation"
+     ]
+    },
+    {
+     "id": "aircraft_transponder",
+     "name": "飞机应答机",
+     "en": "Aircraft transponder",
+     "year": 1955,
+     "note": "应答地面询问并回发航班代号与高度的二次雷达应答机。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "flight_recorder",
+     "name": "飞行记录仪",
+     "en": "Flight recorder",
+     "year": 1953,
+     "note": "记录飞行参数与驾驶舱语音的黑匣子，为空难调查提供关键证据。"
+    },
+    {
+     "id": "airborne_weather_radar",
+     "name": "机载气象雷达",
+     "en": "Airborne weather radar",
+     "year": 1955,
+     "note": "探测航路前方雷雨等危险气象的机载雷达，机组据此绕飞避让。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "selcal",
+     "name": "选择性呼叫",
+     "en": "Selective calling",
+     "year": 1957,
+     "note": "静默值守的无线选择呼叫系统，地面按编码呼叫特定航班机组。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "autoland",
+     "name": "自动着陆系统",
+     "en": "Autoland",
+     "year": 1966,
+     "note": "飞机在大雾等低能见条件下自动完成进近着陆，英国率先投入应用。",
+     "deps": [
+      "gyroscopic_autopilot"
+     ]
+    },
+    {
+     "id": "aircraft_inertial_navigation",
+     "name": "民航惯性导航",
+     "en": "Aircraft inertial navigation",
+     "year": 1969,
+     "note": "以陀螺与加速度计推算位置的自主导航，跨洋客机摆脱地面台依赖。",
+     "deps": [
+      "gyroscopic_autopilot"
+     ]
+    },
+    {
+     "id": "atis",
+     "name": "通播气象与运行信息",
+     "en": "Automatic terminal information service",
+     "year": 1970,
+     "note": "循环播报机场气象与跑道状态的通播录音，机组按通播码进近。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "ground_proximity_warning",
+     "name": "近地告警系统",
+     "en": "Ground proximity warning system",
+     "year": 1974,
+     "note": "监测飞机与地形接近并及时告警，显著降低可控飞行撞地事故。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "acars",
+     "name": "地空数据链通信",
+     "en": "Aircraft communications addressing and reporting system",
+     "year": 1978,
+     "note": "飞机与地面间收发报文的数据链系统，运行控制与维护信息由此数字化。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "traffic_alert_collision_avoidance",
+     "name": "机载防撞系统",
+     "en": "Traffic alert and collision avoidance system",
+     "year": 1981,
+     "note": "监测周围飞机并给出避让指令的系统，此后成为大型客机法定装备。",
+     "deps": [
+      "aircraft_transponder"
+     ]
+    },
+    {
+     "id": "glass_cockpit",
+     "name": "玻璃驾驶舱",
+     "en": "Glass cockpit",
+     "year": 1982,
+     "note": "以多功能显示器取代传统仪表，机组态势感知与自动化水平跃升。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "flight_management_system",
+     "name": "飞行管理系统",
+     "en": "Flight management system",
+     "year": 1982,
+     "note": "整合导航性能与飞行计划的机载计算机，自动飞行的核心。",
+     "deps": [
+      "computer",
+      "gps"
+     ]
+    },
+    {
+     "id": "aircraft_satellite_communication",
+     "name": "航空卫星通信",
+     "en": "Aircraft satellite communication",
+     "year": 1988,
+     "note": "客机经通信卫星实现跨洋语音与数据通信，全球无缝联系由此建立。",
+     "deps": [
+      "satellite"
+     ]
+    },
+    {
+     "id": "predictive_windshear_warning",
+     "name": "风切变预警系统",
+     "en": "Predictive windshear warning",
+     "year": 1994,
+     "note": "以雷达探测进近航线上的风切变并提前告警，降低低空复飞风险。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "satellite_based_air_navigation",
+     "name": "卫星航空导航",
+     "en": "Satellite-based air navigation",
+     "year": 1995,
+     "note": "GPS引导的区域导航与所需导航性能，航线更直、间隔更密。",
+     "deps": [
+      "gps"
+     ]
+    },
+    {
+     "id": "mode_s_radar",
+     "name": "S模式二次雷达",
+     "en": "Mode S secondary surveillance radar",
+     "year": 1996,
+     "note": "可寻址询问与数据链下传的二次雷达，地面监视容量与精度提升。",
+     "deps": [
+      "aircraft_transponder"
+     ]
+    },
+    {
+     "id": "ads_b",
+     "name": "广播式自动相关监视",
+     "en": "Automatic dependent surveillance-broadcast",
+     "year": 2003,
+     "note": "飞机自动广播位置航迹，地面与邻机共享监视信息，雷达由此增强。",
+     "deps": [
+      "gps",
+      "radio"
+     ]
+    },
+    {
+     "id": "cpdlc",
+     "name": "管制员飞行员数据链通信",
+     "en": "Controller-pilot data link communications",
+     "year": 2005,
+     "note": "以数据链报文替代部分语音指令的管制通信，海洋与远程空域使用。",
+     "deps": [
+      "radio"
+     ]
+    }
+   ]
+  }
+ ]
+}

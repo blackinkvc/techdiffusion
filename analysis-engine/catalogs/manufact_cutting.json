@@ -1,0 +1,1251 @@
+{
+ "cat": "manufact",
+ "catName": "制造与工具",
+ "sub": "cutting",
+ "subName": "切削加工",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "lathe",
+  "interchangeable_parts",
+  "steam_engine",
+  "electricity",
+  "electromagnetism",
+  "lasers",
+  "cnc",
+  "steel",
+  "iron",
+  "optics",
+  "chemistry",
+  "photography",
+  "relativity_qm"
+ ],
+ "families": [
+  {
+   "name": "车削与镗孔加工",
+   "items": [
+    {
+     "id": "boring",
+     "name": "镗削",
+     "en": "Boring",
+     "year": 1775,
+     "note": "用单刃镗刀扩大或精修已有孔的加工方法，1775年威尔金森镗床解决了蒸汽机气缸精度。",
+     "deps": [
+      "lathe"
+     ]
+    },
+    {
+     "id": "turning",
+     "name": "车削",
+     "en": "Turning",
+     "year": 1800,
+     "note": "工件随主轴旋转、刀具作进给运动切除余量的方法，是加工回转类零件的基础工序。",
+     "deps": [
+      "lathe"
+     ]
+    },
+    {
+     "id": "taper_turning",
+     "name": "锥面车削",
+     "en": "Taper turning",
+     "year": 1840,
+     "note": "偏转小刀架或借助锥度附件使刀具走斜线，在车床上加工圆锥表面与锥度配合面。",
+     "deps": [
+      "turning"
+     ]
+    },
+    {
+     "id": "copy_turning",
+     "name": "靠模车削",
+     "en": "Copy turning",
+     "year": 1850,
+     "note": "刀具滑座沿样板或靠模轮廓移动，复制出复杂回转曲面，是仿形加工在车床上的应用。",
+     "deps": [
+      "turning"
+     ]
+    },
+    {
+     "id": "form_turning",
+     "name": "成形车削",
+     "en": "Form turning",
+     "year": 1850,
+     "note": "以刃形与工件廓形一致的成形刀具横向进给，一次车出台阶沟槽等复杂轮廓。"
+    },
+    {
+     "id": "facing",
+     "name": "端面车削",
+     "en": "Facing",
+     "year": 1860,
+     "note": "刀具垂直于轴线进给车削工件端面，以获得平整且与轴线垂直的基准端面。",
+     "deps": [
+      "turning"
+     ]
+    },
+    {
+     "id": "parting_off",
+     "name": "切断车削",
+     "en": "Parting off",
+     "year": 1860,
+     "note": "窄刃切断刀径向切入将工件与棒料分离，是棒料零件成批生产的常用下料工序。",
+     "deps": [
+      "turning"
+     ]
+    },
+    {
+     "id": "grooving_turn",
+     "name": "切槽车削",
+     "en": "Grooving",
+     "year": 1860,
+     "note": "刃宽一定的切槽刀在回转面切出环形沟槽，为密封圈槽与砂轮越程槽等所用。",
+     "deps": [
+      "turning"
+     ]
+    },
+    {
+     "id": "knurling",
+     "name": "滚花",
+     "en": "Knurling",
+     "year": 1880,
+     "note": "滚花轮在车床上滚压出网纹或直纹以增大握持面，属无屑的滚压花纹加工。",
+     "deps": [
+      "turning"
+     ]
+    },
+    {
+     "id": "deep_hole_boring",
+     "name": "深孔镗削",
+     "en": "Deep hole boring",
+     "year": 1930,
+     "note": "借助喷吸钻或BTA系统向切削区供液排屑，加工长径比大且直线度要求高的深孔。",
+     "deps": [
+      "boring"
+     ]
+    },
+    {
+     "id": "cnc_turning",
+     "name": "数控车削",
+     "en": "CNC turning",
+     "year": 1972,
+     "note": "数控系统控制刀架自动完成多工序车削，1952年数控机床问世后逐步应用于车床。",
+     "deps": [
+      "cnc"
+     ]
+    },
+    {
+     "id": "hard_turning",
+     "name": "硬态车削",
+     "en": "Hard turning",
+     "year": 1990,
+     "note": "用立方氮化硼等超硬刀具直接车削淬硬钢件，可替代部分磨削工序提高柔性。"
+    },
+    {
+     "id": "turn_mill_center",
+     "name": "车铣复合加工",
+     "en": "Turn-mill machining",
+     "year": 1995,
+     "note": "在一台机床上集成车削与铣削主轴及回转坐标，一次装夹完成复杂回转体全部加工。",
+     "deps": [
+      "cnc"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "钻削、铣削、刨拉与锯切加工",
+   "items": [
+    {
+     "id": "drilling",
+     "name": "钻削",
+     "en": "Drilling",
+     "year": 1780,
+     "note": "旋转钻头沿轴向进给在实心材料上打孔，18世纪末机床化钻孔用于气缸等零件制造。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "reaming",
+     "name": "铰孔",
+     "en": "Reaming",
+     "year": 1820,
+     "note": "以多刃铰刀切除孔壁微量余量，提高孔径精度与表面质量，属定尺寸精加工。",
+     "deps": [
+      "drilling"
+     ]
+    },
+    {
+     "id": "counterboring",
+     "name": "沉孔锪削",
+     "en": "Counterboring",
+     "year": 1860,
+     "note": "用锪钻将孔口扩大成与孔同轴的台阶或锥窝，以容纳螺栓头、垫圈等紧固件。",
+     "deps": [
+      "drilling"
+     ]
+    },
+    {
+     "id": "countersinking",
+     "name": "锥孔锪削",
+     "en": "Countersinking",
+     "year": 1860,
+     "note": "用锥形锪钻把孔口锪成锥面沉孔，使沉头螺钉铆钉平贴工件表面。",
+     "deps": [
+      "drilling"
+     ]
+    },
+    {
+     "id": "center_drilling",
+     "name": "中心孔钻削",
+     "en": "Center drilling",
+     "year": 1890,
+     "note": "先用中心钻打出定位中心孔，供后续顶尖支承与引导钻头，保证钻孔位置准确。",
+     "deps": [
+      "drilling"
+     ]
+    },
+    {
+     "id": "multi_spindle_drilling",
+     "name": "多轴钻削",
+     "en": "Multi-spindle drilling",
+     "year": 1905,
+     "note": "一台钻床配多根主轴同时钻削多个孔位，汽车发动机缸体等批量件加工效率大增。"
+    },
+    {
+     "id": "gun_drilling",
+     "name": "枪钻深孔钻削",
+     "en": "Gun drilling",
+     "year": 1915,
+     "note": "单刃枪钻经钻杆内孔高压供液排屑，加工长径比数十倍的高质量深孔，源于枪管加工。"
+    },
+    {
+     "id": "trepanning",
+     "name": "套料钻削",
+     "en": "Trepanning",
+     "year": 1920,
+     "note": "环形套料刀头只切出环槽而保留中心芯棒，钻削大直径孔时节省材料并提高效率。"
+    },
+    {
+     "id": "peck_drilling",
+     "name": "啄式钻削",
+     "en": "Peck drilling",
+     "year": 1960,
+     "note": "钻头周期性回撤断屑排屑的深孔钻削方式，避免长切屑堵塞，多由数控程序控制。"
+    },
+    {
+     "id": "micro_drilling",
+     "name": "微孔钻削",
+     "en": "Micro drilling",
+     "year": 1965,
+     "note": "直径小于一毫米的钻削加工，用于喷油嘴、印刷电路板与精密模具的微孔制造。"
+    },
+    {
+     "id": "qunzuan_drill",
+     "name": "群钻",
+     "en": "Qunzuan multi-edge drill",
+     "year": 1953,
+     "note": "中国倪志福1953年改进的钻头刃磨几何，横刃磨短并分屑，显著改善钻削效率与寿命。"
+    },
+    {
+     "id": "nc_drilling",
+     "name": "数控钻削",
+     "en": "NC drilling",
+     "year": 1970,
+     "note": "按数控程序自动定位并钻孔，取代钻模板，钻孔位置精度与换产效率大幅提高。",
+     "deps": [
+      "cnc"
+     ]
+    },
+    {
+     "id": "orbital_drilling",
+     "name": "螺旋铣孔",
+     "en": "Orbital drilling",
+     "year": 2005,
+     "note": "铣刀绕孔心公转并自转的钻孔方法，单刀多径、排屑良好，航空叠层构件装配常用。"
+    },
+    {
+     "id": "milling",
+     "name": "铣削",
+     "en": "Milling",
+     "year": 1820,
+     "note": "多齿铣刀作旋转主运动、工件作进给运动的切削方法，可加工平面、沟槽与成形面。",
+     "deps": [
+      "interchangeable_parts"
+     ]
+    },
+    {
+     "id": "face_milling",
+     "name": "面铣削",
+     "en": "Face milling",
+     "year": 1850,
+     "note": "铣刀轴线垂直于被加工面，用端面刃齿铣削大平面，生产效率高于周铣。",
+     "deps": [
+      "milling"
+     ]
+    },
+    {
+     "id": "slot_milling",
+     "name": "槽铣削",
+     "en": "Slot milling",
+     "year": 1850,
+     "note": "用三面刃铣刀或立铣刀铣出直槽键槽，是轴类零件沟槽加工的基本方法。",
+     "deps": [
+      "milling"
+     ]
+    },
+    {
+     "id": "form_milling",
+     "name": "成形铣削",
+     "en": "Form milling",
+     "year": 1870,
+     "note": "刃形与型面一致的成形铣刀铣削圆弧齿形等轮廓，一次走刀成型，用于批量零件。",
+     "deps": [
+      "milling"
+     ]
+    },
+    {
+     "id": "copy_milling",
+     "name": "仿形铣削",
+     "en": "Copy milling",
+     "year": 1900,
+     "note": "铣床触头沿样板或靠模移动，带动铣刀铣出相同轮廓，是模具型腔的传统加工法。",
+     "deps": [
+      "milling"
+     ]
+    },
+    {
+     "id": "cnc_milling",
+     "name": "数控铣削",
+     "en": "CNC milling",
+     "year": 1958,
+     "note": "数控联动控制刀具轨迹铣削任意平面与曲面轮廓，是现代模具与复杂件核心工序。",
+     "deps": [
+      "cnc"
+     ]
+    },
+    {
+     "id": "contour_milling",
+     "name": "数控轮廓铣削",
+     "en": "Contour milling",
+     "year": 1970,
+     "note": "多坐标联动沿空间曲线曲面走刀加工型面，取代大量钳工手工修整。",
+     "deps": [
+      "cnc_milling"
+     ]
+    },
+    {
+     "id": "surfacing_milling",
+     "name": "曲面型腔铣削",
+     "en": "Surface and cavity milling",
+     "year": 1970,
+     "note": "球头铣刀按行距走刀铣出自由曲面型腔，配合后处理，是模具数控加工主流工序。",
+     "deps": [
+      "cnc_milling"
+     ]
+    },
+    {
+     "id": "highspeed_milling",
+     "name": "高速铣削",
+     "en": "High speed milling",
+     "year": 1990,
+     "note": "高转速小切深快进给铣削，1931年萨洛蒙首倡高速概念，二十世纪九十年代随电主轴普及。"
+    },
+    {
+     "id": "plunge_milling",
+     "name": "插铣",
+     "en": "Plunge milling",
+     "year": 1995,
+     "note": "铣刀沿轴向反复扎入的铣削方式，径向力小，适于深腔与型面粗加工。"
+    },
+    {
+     "id": "band_saw_cutting",
+     "name": "带锯锯切",
+     "en": "Band saw cutting",
+     "year": 1808,
+     "note": "环形锯带沿带轮回转连续锯切金属与木材，1808年出现带锯原型，下料效率高。"
+    },
+    {
+     "id": "circular_saw_cutting",
+     "name": "圆锯锯切",
+     "en": "Circular saw cutting",
+     "year": 1813,
+     "note": "圆盘锯片旋转切下料，锯齿连续切削，广泛用于型材管材的冷切与热切。"
+    },
+    {
+     "id": "planing",
+     "name": "刨削",
+     "en": "Planing",
+     "year": 1817,
+     "note": "工件在刨床工作台作直线往复、刀具作间歇进给，加工大平面的传统方法，1817年龙门刨床出现。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "shaping",
+     "name": "牛头刨削",
+     "en": "Shaping",
+     "year": 1836,
+     "note": "刨刀随机头往复运动切削、工件横向进给的刨削方式，用于中小件的平面沟槽加工。",
+     "deps": [
+      "planing"
+     ]
+    },
+    {
+     "id": "slotting",
+     "name": "插削",
+     "en": "Slotting",
+     "year": 1840,
+     "note": "插刀沿垂直方向往复运动加工内孔键槽与内花键，是单件小批生产的重要工序。",
+     "deps": [
+      "planing"
+     ]
+    },
+    {
+     "id": "power_hacksawing",
+     "name": "弓锯锯切",
+     "en": "Power hacksawing",
+     "year": 1920,
+     "note": "机动弓锯条往复推拉锯切棒料管料，结构简单，曾是机械车间标准下料设备。"
+    },
+    {
+     "id": "broaching",
+     "name": "拉削",
+     "en": "Broaching",
+     "year": 1910,
+     "note": "拉刀刀齿逐级增高的多刃拉削一次成形，拉床拉削键槽花键内孔，精度与效率俱高。",
+     "deps": [
+      "slotting"
+     ]
+    },
+    {
+     "id": "friction_sawing",
+     "name": "摩擦锯切",
+     "en": "Friction sawing",
+     "year": 1945,
+     "note": "无齿圆锯高速摩擦软化金属并锯断，用于铁路钢轨与型钢的快速切断。"
+    }
+   ]
+  },
+  {
+   "name": "磨削与光整加工",
+   "items": [
+    {
+     "id": "lapping",
+     "name": "研磨",
+     "en": "Lapping",
+     "year": 1600,
+     "note": "游离磨料在研具与工件间相对运动去除微量的精整方法，镜片与量块的古老精加工术。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "grinding",
+     "name": "磨削",
+     "en": "Grinding",
+     "year": 1860,
+     "note": "高速旋转砂轮表面磨粒切除工件表层材料的精加工，可加工淬硬钢等高硬度材料。"
+    },
+    {
+     "id": "cylindrical_grinding",
+     "name": "外圆磨削",
+     "en": "Cylindrical grinding",
+     "year": 1876,
+     "note": "工件在两顶尖间旋转、砂轮磨削外圆的精加工，1876年布朗-夏普制成万能外圆磨床。",
+     "deps": [
+      "grinding"
+     ]
+    },
+    {
+     "id": "surface_grinding",
+     "name": "平面磨削",
+     "en": "Surface grinding",
+     "year": 1885,
+     "note": "砂轮端面或圆周磨削工件平面的方法，用于获得高平面度与低粗糙度表面。",
+     "deps": [
+      "grinding"
+     ]
+    },
+    {
+     "id": "polishing",
+     "name": "抛光",
+     "en": "Polishing",
+     "year": 1900,
+     "note": "高速布轮涂抛光膏摩擦工件表面，主要降低粗糙度与增光，去除量极小。",
+     "deps": [
+      "grinding"
+     ]
+    },
+    {
+     "id": "internal_grinding",
+     "name": "内圆磨削",
+     "en": "Internal grinding",
+     "year": 1905,
+     "note": "小直径砂轮在孔内旋转磨削内圆表面，是淬硬孔与轴承孔的精加工方法。",
+     "deps": [
+      "grinding"
+     ]
+    },
+    {
+     "id": "centerless_grinding",
+     "name": "无心磨削",
+     "en": "Centerless grinding",
+     "year": 1917,
+     "note": "工件不经顶尖而由导轮托持贯穿磨削外圆，1917年辛辛那提制成无心磨床，效率高。",
+     "deps": [
+      "grinding"
+     ]
+    },
+    {
+     "id": "belt_grinding",
+     "name": "砂带磨削",
+     "en": "Belt grinding",
+     "year": 1925,
+     "note": "高速环带砂纸压向工件表面磨削，磨削效率高且可磨复杂型面，用于粗精磨与抛光。",
+     "deps": [
+      "grinding"
+     ]
+    },
+    {
+     "id": "honing",
+     "name": "珩磨",
+     "en": "Honing",
+     "year": 1928,
+     "note": "油石条在孔内旋转往复并径向微量涨紧的孔精整法，用于气缸孔等改善圆度圆柱度。",
+     "deps": [
+      "grinding"
+     ]
+    },
+    {
+     "id": "superfinishing",
+     "name": "超精加工",
+     "en": "Superfinishing",
+     "year": 1934,
+     "note": "低压力短行程振荡的油石精整加工，去除磨削残留波峰，获得镜面级表面。",
+     "deps": [
+      "honing"
+     ]
+    },
+    {
+     "id": "highspeed_grinding",
+     "name": "高速磨削",
+     "en": "High speed grinding",
+     "year": 1975,
+     "note": "砂轮线速度八十米每秒以上的磨削，单位时间去除量大，配合高强度砂轮使用。",
+     "deps": [
+      "grinding"
+     ]
+    },
+    {
+     "id": "double_side_lapping",
+     "name": "双面研磨",
+     "en": "Double-side lapping",
+     "year": 1960,
+     "note": "工件夹持于上下研盘间双向研磨两平面，批量获得高平行度薄片，用于垫片与硅片。",
+     "deps": [
+      "lapping"
+     ]
+    },
+    {
+     "id": "form_grinding",
+     "name": "成形磨削",
+     "en": "Form grinding",
+     "year": 1935,
+     "note": "砂轮修整成所需廓形后切入磨削，一次成形齿轮齿槽、花键与冲模等复杂轮廓。",
+     "deps": [
+      "grinding"
+     ]
+    },
+    {
+     "id": "creep_feed_grinding",
+     "name": "缓进给强力磨削",
+     "en": "Creep feed grinding",
+     "year": 1960,
+     "note": "大切深慢进给磨削，砂轮一次切入成形，适合难加工材料槽腔的成形精加工。",
+     "deps": [
+      "grinding"
+     ]
+    },
+    {
+     "id": "barrel_finishing",
+     "name": "滚磨光饰",
+     "en": "Barrel finishing",
+     "year": 1950,
+     "note": "工件与磨块在滚筒内翻滚摩擦去毛刺倒圆，批量小零件的经济光整工艺。"
+    },
+    {
+     "id": "vibratory_finishing",
+     "name": "振动光饰",
+     "en": "Vibratory finishing",
+     "year": 1955,
+     "note": "振动槽带动磨块与工件相对运动进行去毛刺抛光的批量光饰，比滚磨效率高。"
+    },
+    {
+     "id": "magnetorheological_finishing",
+     "name": "磁流变抛光",
+     "en": "Magnetorheological finishing",
+     "year": 1994,
+     "note": "磁流变液在磁场中变硬形成柔性抛光带，可编程控制去除量，用于高精度光学表面加工。"
+    }
+   ]
+  },
+  {
+   "name": "齿轮与螺纹加工",
+   "items": [
+    {
+     "id": "gear_planing",
+     "name": "刨齿",
+     "en": "Gear planing",
+     "year": 1890,
+     "note": "用刨刀按展成法或成形法刨削齿槽，是齿轮机加工早期方法之一。"
+    },
+    {
+     "id": "gear_shaping",
+     "name": "插齿",
+     "en": "Gear shaping",
+     "year": 1896,
+     "note": "插齿刀往复运动并按展成原理与工件啮合切出齿形，1896年费洛斯制成插齿机。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "gear_hobbing",
+     "name": "滚齿",
+     "en": "Gear hobbing",
+     "year": 1897,
+     "note": "滚刀与工件按传动比展成啮合连续切齿，1897年普福特发明滚齿机，效率高应用广。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "gear_milling",
+     "name": "成形铣齿",
+     "en": "Gear milling",
+     "year": 1900,
+     "note": "用盘形或指形齿轮铣刀按齿槽廓形逐齿铣削，适用于大模数齿轮与单件生产。",
+     "deps": [
+      "milling"
+     ]
+    },
+    {
+     "id": "bevel_gear_generating",
+     "name": "锥齿轮展成加工",
+     "en": "Bevel gear generating",
+     "year": 1905,
+     "note": "用往复刨刀与工件展成运动切出直齿锥齿轮齿面，格里森机床为此开拓机器。"
+    },
+    {
+     "id": "hypoid_gear_cutting",
+     "name": "准双曲面齿轮加工",
+     "en": "Hypoid gear cutting",
+     "year": 1926,
+     "note": "轴线相错的小轮大轮齿面展成切齿，1926年用于汽车后桥，容许轴偏置布置。"
+    },
+    {
+     "id": "gear_shaving",
+     "name": "剃齿",
+     "en": "Gear shaving",
+     "year": 1929,
+     "note": "剃齿刀与齿轮啮合对滚切下丝状细屑，精整未淬硬齿轮齿面，效率高精度好。",
+     "deps": [
+      "gear_hobbing"
+     ]
+    },
+    {
+     "id": "gear_grinding",
+     "name": "磨齿",
+     "en": "Gear grinding",
+     "year": 1930,
+     "note": "用成形或展成砂轮磨削淬硬齿轮齿面，是精密齿轮最终加工的可靠手段。",
+     "deps": [
+      "grinding"
+     ]
+    },
+    {
+     "id": "gear_lapping",
+     "name": "研齿",
+     "en": "Gear lapping",
+     "year": 1935,
+     "note": "配对齿轮加研磨膏对滚研磨，改善接触区与噪声，是成对齿轮的传统精整法。"
+    },
+    {
+     "id": "spline_grinding",
+     "name": "花键磨削",
+     "en": "Spline grinding",
+     "year": 1935,
+     "note": "成形砂轮磨削花键侧面与底径，消除热处理变形，保证定心精度。",
+     "deps": [
+      "grinding"
+     ]
+    },
+    {
+     "id": "spiral_bevel_grinding",
+     "name": "螺旋锥齿轮磨齿",
+     "en": "Spiral bevel gear grinding",
+     "year": 1955,
+     "note": "杯形砂轮沿螺旋锥齿轮齿面展成磨削，满足高强度低噪声车桥齿轮要求。",
+     "deps": [
+      "bevel_gear_generating"
+     ]
+    },
+    {
+     "id": "worm_grinding",
+     "name": "蜗杆磨削",
+     "en": "Worm grinding",
+     "year": 1950,
+     "note": "砂轮修整成齿廓形状磨削精密蜗杆螺旋面，是高精度蜗杆副制造的关键工序。",
+     "deps": [
+      "grinding"
+     ]
+    },
+    {
+     "id": "gear_honing",
+     "name": "珩齿",
+     "en": "Gear honing",
+     "year": 1970,
+     "note": "金刚石内齿珩轮与齿轮啮合传动并往复进给的齿面精整，去除磕碰与毛刺。",
+     "deps": [
+      "gear_shaving"
+     ]
+    },
+    {
+     "id": "power_skiving",
+     "name": "刮齿",
+     "en": "Power skiving",
+     "year": 2000,
+     "note": "插齿刀与工件轴线交叉相对旋转的连续展成切齿法，1910年已有构想，近年工业化普及。"
+    },
+    {
+     "id": "screw_thread_turning",
+     "name": "螺纹车削",
+     "en": "Thread turning",
+     "year": 1800,
+     "note": "车床主轴与丝杠联动使刀具沿螺纹升角走刀切出螺旋槽，1800年莫兹利车床可车螺纹。",
+     "deps": [
+      "lathe"
+     ]
+    },
+    {
+     "id": "pipe_threading",
+     "name": "套丝",
+     "en": "Pipe threading",
+     "year": 1860,
+     "note": "旋转板牙或工件切制外螺纹的加工，用于管件连接螺纹的成批生产。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "thread_rolling",
+     "name": "螺纹滚压",
+     "en": "Thread rolling",
+     "year": 1870,
+     "note": "搓丝板或滚丝轮挤压坯料形成螺纹，无屑成形且表面冷作硬化，螺栓批量生产主导工艺。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "machine_tapping",
+     "name": "机动攻丝",
+     "en": "Machine tapping",
+     "year": 1890,
+     "note": "钻床或攻丝机带动丝锥回转并进给切削内螺纹，取代手工攻丝提高效率。",
+     "deps": [
+      "drilling"
+     ]
+    },
+    {
+     "id": "thread_milling",
+     "name": "螺纹铣削",
+     "en": "Thread milling",
+     "year": 1920,
+     "note": "螺纹铣刀与工件螺旋联动铣出内螺纹或外螺纹，断续切削利于排屑，适于大直径件。",
+     "deps": [
+      "milling"
+     ]
+    },
+    {
+     "id": "thread_grinding",
+     "name": "螺纹磨削",
+     "en": "Thread grinding",
+     "year": 1925,
+     "note": "成形砂轮磨削淬硬螺纹，保证丝杠量规等精密螺纹的精度与表面质量。",
+     "deps": [
+      "grinding"
+     ]
+    },
+    {
+     "id": "thread_whirling",
+     "name": "旋风铣螺纹",
+     "en": "Thread whirling",
+     "year": 1950,
+     "note": "刀盘偏心高速旋转、工件慢转的螺纹车铣法，多刃断续切削，适合长螺杆蜗杆高效加工。"
+    },
+    {
+     "id": "forming_tap",
+     "name": "挤压攻丝",
+     "en": "Thread forming",
+     "year": 1960,
+     "note": "无屑丝锥挤压塑性金属形成内螺纹，无切屑、强度好，用于铝铜等韧性材料。"
+    },
+    {
+     "id": "cnc_threading",
+     "name": "数控螺纹加工",
+     "en": "CNC threading",
+     "year": 1980,
+     "note": "数控车削中心用螺纹循环指令控制主轴与进给同步，可车任意螺距与多线螺纹。",
+     "deps": [
+      "cnc_turning"
+     ]
+    },
+    {
+     "id": "whirling_skive_thread",
+     "name": "螺纹梳铣",
+     "en": "Thread chaser milling",
+     "year": 1930,
+     "note": "梳形多刃铣刀一次走刀铣出较短螺纹，用于大量生产中中径精度要求不高的螺纹。",
+     "deps": [
+      "milling"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "刀具与刃具技术",
+   "items": [
+    {
+     "id": "lathe_tool",
+     "name": "车刀",
+     "en": "Lathe tool",
+     "year": 1800,
+     "note": "装夹在刀架上切削回转面的单刃刀具，刃形与几何角度决定切削性能，随车床共同演进。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "reamer_tool",
+     "name": "铰刀",
+     "en": "Reamer",
+     "year": 1820,
+     "note": "周向均布多刃的定尺寸孔精加工刀具，刃带起挤光导向作用，保证孔径一致性。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "milling_cutter",
+     "name": "铣刀",
+     "en": "Milling cutter",
+     "year": 1862,
+     "note": "多齿回转切削刀具，按用途分圆柱铣刀端铣刀立铣刀等，1862年出现螺旋槽铣刀提高平稳性。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "twist_drill",
+     "name": "麻花钻",
+     "en": "Twist drill",
+     "year": 1863,
+     "note": "带双螺旋排屑槽的通用钻孔刀具，1863年莫尔斯定形麻花钻，是现代钻削标准刀具。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "grinding_wheel",
+     "name": "砂轮",
+     "en": "Grinding wheel",
+     "year": 1873,
+     "note": "磨粒与结合剂压烧成的多刃回转磨具，1873年出现粘结砂轮专利，为磨削加工载体。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "gear_shaper_cutter",
+     "name": "插齿刀",
+     "en": "Gear shaper cutter",
+     "year": 1896,
+     "note": "齿形刃磨的盘状插齿刀具，兼具切削刃与展成齿，是插齿机切齿的成形元件。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "gear_hob",
+     "name": "齿轮滚刀",
+     "en": "Gear hob",
+     "year": 1897,
+     "note": "螺旋沟槽开齿的蜗杆状滚齿刀具，滚齿机上的展成切齿元件，模数系列化生产。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "boring_bar",
+     "name": "镗刀杆",
+     "en": "Boring bar",
+     "year": 1900,
+     "note": "悬伸支承镗刀的杆状刀具系统，刚度决定孔加工精度，多孔镗削时配支承导套。",
+     "deps": [
+      "boring"
+     ]
+    },
+    {
+     "id": "broach_tool",
+     "name": "拉刀",
+     "en": "Broach",
+     "year": 1910,
+     "note": "多刀齿按尺寸逐级排列的一次成形刀具，粗切精切校准齿一体，拉削专用刀具。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "gear_shaving_cutter",
+     "name": "剃齿刀",
+     "en": "Gear shaving cutter",
+     "year": 1929,
+     "note": "齿面开有切削槽的盘形剃齿刀具，与齿轮啮合对滚剃出微屑，精整齿形。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "diamond_grinding_wheel",
+     "name": "金刚石砂轮",
+     "en": "Diamond grinding wheel",
+     "year": 1935,
+     "note": "金刚石磨粒烧结于金属或树脂基体的超硬磨具，用于硬质合金与陶瓷的磨削。",
+     "deps": [
+      "grinding_wheel"
+     ]
+    },
+    {
+     "id": "indexable_insert",
+     "name": "可转位刀片",
+     "en": "Indexable insert",
+     "year": 1950,
+     "note": "多刃口硬质合金刀片以螺钉压板夹固于刀体，刃口钝后转位复用，免去重磨。"
+    },
+    {
+     "id": "cermet_insert",
+     "name": "金属陶瓷刀片",
+     "en": "Cermet insert",
+     "year": 1960,
+     "note": "碳氮化钛基陶瓷金属复合的刀片材料，耐高温耐磨，用于钢件高速精车精铣。"
+    },
+    {
+     "id": "coated_tool",
+     "name": "涂层刀具",
+     "en": "Coated cutting tool",
+     "year": 1969,
+     "note": "在硬质合金基体上气相沉积氮化钛等硬质涂层，提高耐磨耐热，1969年商用化。",
+     "deps": [
+      "indexable_insert"
+     ]
+    },
+    {
+     "id": "cbn_tool",
+     "name": "立方氮化硼刀具",
+     "en": "CBN cutting tool",
+     "year": 1969,
+     "note": "硬度仅次于金刚石的超硬刀具材料，热稳定性好，用于淬硬钢与铸铁的高速加工。"
+    },
+    {
+     "id": "pcd_tool",
+     "name": "聚晶金刚石刀具",
+     "en": "PCD cutting tool",
+     "year": 1973,
+     "note": "金刚石微粉高温高压烧结于硬质合金基体上的刀具，用于铝合金与复合材料的精密切削。"
+    },
+    {
+     "id": "solid_carbide_endmill",
+     "name": "整体硬质合金铣刀",
+     "en": "Solid carbide end mill",
+     "year": 1980,
+     "note": "刀体刀齿一体磨制的硬质合金立铣刀，刚性好精度高，数控铣削与高速加工主力刀具。",
+     "deps": [
+      "milling_cutter"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "特种与高能束加工",
+   "items": [
+    {
+     "id": "oxyfuel_cutting",
+     "name": "氧-乙炔火焰切割",
+     "en": "Oxy-fuel cutting",
+     "year": 1903,
+     "note": "预热火焰加热钢至燃点后喷纯氧燃烧吹除氧化渣的切割法，1903年双焰割炬使切割稳定。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "edm",
+     "name": "电火花成形加工",
+     "en": "EDM",
+     "year": 1943,
+     "note": "工具电极与工件间脉冲放电蚀除金属成形，1943年拉扎连科夫妇奠定电火花加工基础。",
+     "deps": [
+      "electromagnetism",
+      "electricity"
+     ]
+    },
+    {
+     "id": "arc_air_gouging",
+     "name": "碳弧气刨",
+     "en": "Carbon arc gouging",
+     "year": 1944,
+     "note": "碳棒电弧熔化金属并高压气流吹除，用于焊缝背面清根与缺陷清除，效率高。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "electrolytic_grinding",
+     "name": "电解磨削",
+     "en": "Electrochemical grinding",
+     "year": 1952,
+     "note": "导电砂轮与工件间的电解作用结合磨削去除金属，磨硬质合金时不产生裂纹。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "ultrasonic_machining",
+     "name": "超声加工",
+     "en": "Ultrasonic machining",
+     "year": 1953,
+     "note": "超声频振动的工具带动磨料冲击工件表面蚀除材料，可加工玻璃陶瓷等硬脆材料。"
+    },
+    {
+     "id": "plasma_cutting",
+     "name": "等离子弧切割",
+     "en": "Plasma cutting",
+     "year": 1955,
+     "note": "压缩电弧形成高温等离子弧熔化并吹除金属，可切割不锈钢铝铜等火焰难切材料。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "chemical_milling",
+     "name": "化学铣削",
+     "en": "Chemical milling",
+     "year": 1956,
+     "note": "按掩膜图形用化学溶液溶解金属减薄成形的加工，二十世纪五十年代用于航空蒙皮。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "electron_beam_machining",
+     "name": "电子束加工",
+     "en": "Electron beam machining",
+     "year": 1958,
+     "note": "真空聚焦电子束轰击工件使材料瞬时熔化汽化，用于打孔切槽，1958年前后工业化。"
+    },
+    {
+     "id": "electrochemical_machining",
+     "name": "电解加工",
+     "en": "Electrochemical machining",
+     "year": 1959,
+     "note": "金属在电解液中阳极溶解成形的工艺，不受硬度限制，用于叶片型面与深型腔成型。",
+     "deps": [
+      "electricity",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "ion_beam_machining",
+     "name": "离子束加工",
+     "en": "Ion beam machining",
+     "year": 1965,
+     "note": "离子束溅射逐层蚀除材料至纳米级，用于薄膜减薄与精密器件修形。",
+     "deps": [
+      "relativity_qm"
+     ]
+    },
+    {
+     "id": "photochemical_machining",
+     "name": "光化学加工",
+     "en": "Photochemical machining",
+     "year": 1965,
+     "note": "光刻抗蚀膜保护与化学腐蚀结合，批量加工薄片精密零件，用于引线框架与滤网。",
+     "deps": [
+      "photography"
+     ]
+    },
+    {
+     "id": "abrasive_flow_machining",
+     "name": "磨粒流加工",
+     "en": "Abrasive flow machining",
+     "year": 1966,
+     "note": "含磨料的粘弹性介质往复挤过内腔表面去毛刺抛光，用于模具型腔与喷嘴内道。"
+    },
+    {
+     "id": "laser_cutting",
+     "name": "激光切割",
+     "en": "Laser cutting",
+     "year": 1967,
+     "note": "聚焦激光束熔化材料并辅助气体吹除的切割，1967年实现工业化，切缝窄精度高。",
+     "deps": [
+      "lasers"
+     ]
+    },
+    {
+     "id": "wire_edm",
+     "name": "电火花线切割",
+     "en": "Wire EDM",
+     "year": 1969,
+     "note": "移动电极丝与工件间脉冲放电切割轮廓，1969年瑞士研制数控线切割机床，广泛用于模具制造。",
+     "deps": [
+      "edm"
+     ]
+    },
+    {
+     "id": "electropolishing",
+     "name": "电解抛光",
+     "en": "Electropolishing",
+     "year": 1930,
+     "note": "工件作阳极在电解液中微溶解整平表面，去除加工变质层并提高光洁度。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "waterjet_cutting",
+     "name": "水射流切割",
+     "en": "Waterjet cutting",
+     "year": 1971,
+     "note": "超高压细水柱冲击切割软质材料，冷态无热影响，1971年首台工业水射流切割系统运行。"
+    },
+    {
+     "id": "laser_drilling",
+     "name": "激光打孔",
+     "en": "Laser drilling",
+     "year": 1972,
+     "note": "脉冲激光逐次蒸发材料打出微孔，用于涡轮叶片冷却孔与金刚石拉丝模孔。",
+     "deps": [
+      "lasers"
+     ]
+    },
+    {
+     "id": "abrasive_waterjet",
+     "name": "磨料水射流切割",
+     "en": "Abrasive waterjet cutting",
+     "year": 1983,
+     "note": "水射流掺入磨料形成的强蚀流切割金属石材复合材料，1983年取得专利并商品化。",
+     "deps": [
+      "waterjet_cutting"
+     ]
+    },
+    {
+     "id": "small_hole_edm",
+     "name": "电火花小孔加工",
+     "en": "Small hole EDM drilling",
+     "year": 1980,
+     "note": "管状电极回转并高速冲液打细小深孔，主要加工喷油嘴与气膜冷却孔。",
+     "deps": [
+      "edm"
+     ]
+    },
+    {
+     "id": "electrochemical_deburring",
+     "name": "电解去毛刺",
+     "en": "Electrochemical deburring",
+     "year": 1965,
+     "note": "毛刺随阳极溶解快速去除的工艺，用于齿轮内孔等难达部位的批量去刺。",
+     "deps": [
+      "electrochemical_machining"
+     ]
+    },
+    {
+     "id": "electrical_discharge_grinding",
+     "name": "放电磨削",
+     "en": "EDM grinding",
+     "year": 1975,
+     "note": "旋转石墨或金属轮电极与工件间脉冲放电成形磨削，用于硬质合金刀具刃磨。",
+     "deps": [
+      "edm"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "高速切削与切削辅助技术",
+   "items": [
+    {
+     "id": "cutting_fluid",
+     "name": "切削液",
+     "en": "Cutting fluid",
+     "year": 1900,
+     "note": "冷却并润滑切削区的液体介质，乳化油与水基液为主，可延长刀具寿命并改善表面质量。"
+    },
+    {
+     "id": "ultrasonic_vibration_cutting",
+     "name": "超声振动切削",
+     "en": "Ultrasonic vibration cutting",
+     "year": 1960,
+     "note": "刀具或工件附加超声频振动的切削方式，脉冲式切入降低切削力，用于难加工硬脆材料。"
+    },
+    {
+     "id": "highspeed_cutting",
+     "name": "高速切削",
+     "en": "High speed cutting",
+     "year": 1990,
+     "note": "远超常规速度的切削加工，1931年萨洛蒙提出高速区概念，随高速主轴与刀具发展实用化。"
+    },
+    {
+     "id": "mql",
+     "name": "微量润滑切削",
+     "en": "Minimum quantity lubrication",
+     "year": 1995,
+     "note": "以极少量油雾润滑切削区代替浇注切削液，兼顾润滑与清洁，九十年代在铝合金加工推广。",
+     "deps": [
+      "cutting_fluid"
+     ]
+    },
+    {
+     "id": "dry_machining",
+     "name": "干式切削",
+     "en": "Dry machining",
+     "year": 1995,
+     "note": "不使用切削液的绿色切削方式，靠涂层刀具与优化工艺散热排屑，避免废液处理。"
+    },
+    {
+     "id": "cryogenic_machining",
+     "name": "低温切削",
+     "en": "Cryogenic machining",
+     "year": 2000,
+     "note": "液氮等低温介质冷却刀具或工件的切削方法，改善难加工材料刀具寿命与表面完整性。"
+    },
+    {
+     "id": "high_pressure_coolant",
+     "name": "高压冷却切削",
+     "en": "High pressure coolant",
+     "year": 2000,
+     "note": "高压切削液射向刀尖断屑降温，解决深孔与难加工材料切屑缠绕问题。",
+     "deps": [
+      "cutting_fluid"
+     ]
+    },
+    {
+     "id": "chip_breaking",
+     "name": "断屑控制",
+     "en": "Chip control",
+     "year": 1970,
+     "note": "刀片断屑槽与工艺参数配合控制切屑卷曲折断，防止缠绕刀具划伤工件。"
+    }
+   ]
+  }
+ ]
+}

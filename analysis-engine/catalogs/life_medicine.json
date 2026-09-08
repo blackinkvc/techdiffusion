@@ -1,0 +1,199 @@
+{
+ "cat": "life",
+ "catName": "生命与健康",
+ "sub": "medicine",
+ "subName": "药物与治疗",
+ "schemaNote": "life_medicine 任务域真实技术目录。anchors 为可引用的全局上游锚点；families[].items[] 为真实药物与治疗技术；item.deps 仅引 _ANCHORS 或本文件更早条目。",
+ "anchors": [
+  "chemistry",
+  "vaccination",
+  "anesthesia",
+  "dna",
+  "genetic_engineering",
+  "fermentation",
+  "scientific_method"
+ ],
+ "families": [
+  {
+   "name": "本草与草药",
+   "items": [
+    { "id": "med_bencao_herbal", "name": "本草纲目体系", "en": "Compendium of Materia Medica system", "year": 1596, "note": "李时珍系统总结药物学，收载药物1892种并附图谱与性味归经。", "deps": [] },
+    { "id": "med_herb_processing", "name": "草药炮制", "en": "Herb processing (Paoyi)", "year": -200, "note": "通过蒸炒炙煅等处理减毒增效，是中药饮片制备的核心工艺。", "deps": [] },
+    { "id": "med_tcm_compounding", "name": "中药配伍", "en": "Chinese formula compounding", "year": 200, "note": "以君臣佐使原则组方，张仲景《伤寒论》奠定方剂学基础。", "deps": ["med_herb_processing"] },
+    { "id": "med_heji_bureau", "name": "官药局与和剂局", "en": "Imperial pharmacy bureau", "year": 1076, "note": "宋代设太平惠民和剂局统一炮制与发售成药，规范药材质量。", "deps": ["med_herb_processing"] },
+    { "id": "med_essential_oil", "name": "植物精油蒸馏", "en": "Essential oil distillation", "year": 1000, "note": "阿拉伯学者以蒸馏法提取玫瑰水等精油，开创挥发油制药。", "deps": [] },
+    { "id": "med_quinine", "name": "金鸡纳霜(奎宁)", "en": "Quinine (Jesuit's bark)", "year": 1632, "note": "从金鸡纳树皮提取抗疟生物碱，欧洲首个特效抗疟药。", "deps": [] },
+    { "id": "med_digitalis", "name": "洋地黄强心", "en": "Digitalis cardiotonic", "year": 1785, "note": "维特林确立洋地黄叶治疗水肿与心衰，开启强心苷类药物。", "deps": [] },
+    { "id": "med_morphine_iso", "name": "吗啡分离", "en": "Morphine isolation", "year": 1804, "note": "赛尔图纳从鸦片中分离吗啡，奠定生物碱提纯路线。", "deps": [] },
+    { "id": "med_cocaine_iso", "name": "可卡因分离", "en": "Cocaine isolation", "year": 1859, "note": "从古柯叶分离可卡因，早期局麻与血管收缩药来源。", "deps": [] },
+    { "id": "med_pharmacognosy", "name": "生药学", "en": "Pharmacognosy", "year": 1815, "note": "系统研究天然药物基源、形态与鉴定的学科建立。", "deps": ["chemistry"] },
+    { "id": "med_herbarium", "name": "药用植物标本馆", "en": "Medicinal herbarium", "year": 1560, "note": "腊叶标本与植物志整理推动药物来源标准化。", "deps": [] },
+    { "id": "med_rhubarb_trade", "name": "药材跨区贸易", "en": "Cross-regional drug trade", "year": 100, "note": "丝绸之路将大黄、香料等药材纳入跨区药用体系。", "deps": [] },
+    { "id": "med_opium_tincture", "name": "鸦片酊", "en": "Opium tincture", "year": 1500, "note": "以酒浸鸦片制成的镇痛止泻制剂，曾长期用于临床。", "deps": [] },
+    { "id": "med_ephedra_mahuang", "name": "麻黄用药", "en": "Ephedra (Mahuang) use", "year": 200, "note": "张仲景以麻黄汤发汗解表，麻黄碱后成平喘药源。", "deps": [] },
+    { "id": "med_traditional_pill", "name": "丸散膏丹", "en": "Traditional Chinese dosage forms", "year": 200, "note": "丸散膏丹等中药传统剂型制备工艺体系。", "deps": ["med_herb_processing"] },
+    { "id": "med_materia_medica_europe", "name": "欧洲本草学", "en": "European materia medica", "year": 1500, "note": "文艺复兴时期本草图谱系统收录并描述药用植物。", "deps": [] }
+   ]
+  },
+  {
+   "name": "化学药",
+   "items": [
+    { "id": "med_salicylate", "name": "水杨酸", "en": "Salicylic acid", "year": 1876, "note": "从柳树皮成分合成水杨酸，是阿司匹林的直接前体。", "deps": ["chemistry"] },
+    { "id": "med_aspirin", "name": "阿司匹林", "en": "Aspirin", "year": 1899, "note": "拜耳以乙酰水杨酸解热镇痛抗炎，最广泛的非甾体抗炎药。", "deps": ["chemistry"] },
+    { "id": "med_barbiturate", "name": "巴比妥类", "en": "Barbiturates", "year": 1903, "note": "首个合成镇静催眠药，用于抗惊厥与麻醉前给药。", "deps": ["chemistry"] },
+    { "id": "med_local_anesthetic_syn", "name": "合成局麻药", "en": "Synthetic local anesthetics", "year": 1905, "note": "普鲁卡因等取代可卡因，安全局麻广泛用于牙科外科。", "deps": ["med_cocaine_iso"] },
+    { "id": "med_sulfonamide", "name": "磺胺药", "en": "Sulfonamides", "year": 1935, "note": "多马克发现百浪多息，开启合成抗菌药时代。", "deps": ["chemistry"] },
+    { "id": "med_antihistamine", "name": "抗组胺药", "en": "Antihistamines", "year": 1937, "note": "苯海拉明等缓解过敏，开启现代抗过敏药。", "deps": [] },
+    { "id": "med_antimalarial_synthetic", "name": "合成抗疟药", "en": "Synthetic antimalarials", "year": 1939, "note": "米帕林等合成抗疟药用于疟疾防治与战地防疫。", "deps": [] },
+    { "id": "med_thyroid_hormone", "name": "甲状腺激素", "en": "Thyroid hormone", "year": 1891, "note": "甲状腺素替代治疗甲状腺功能减退。", "deps": [] },
+    { "id": "med_cortisone", "name": "糖皮质激素", "en": "Corticosteroids", "year": 1948, "note": "可的松抗炎免疫抑制，治疗类风湿与多种炎症。", "deps": [] },
+    { "id": "med_antihypertensive", "name": "降压药", "en": "Antihypertensives", "year": 1950, "note": "利血平、噻嗪类等控制血压，降低心脑血管事件。", "deps": [] },
+    { "id": "med_antidiabetic_oral", "name": "口服降糖药", "en": "Oral antidiabetics", "year": 1957, "note": "二甲双胍等改善糖代谢，是2型糖尿病治疗基石。", "deps": [] },
+    { "id": "med_oral_contraceptive", "name": "口服避孕药", "en": "Oral contraceptives", "year": 1960, "note": "甾体激素复合制剂实现可控的生育调节。", "deps": [] },
+    { "id": "med_antiviral_syn", "name": "合成抗病毒药", "en": "Synthetic antivirals", "year": 1963, "note": "碘苷等抑制病毒复制，用于疱疹与流感治疗。", "deps": [] },
+    { "id": "med_nsaid_ibuprofen", "name": "布洛芬", "en": "Ibuprofen", "year": 1969, "note": "丙酸类非甾体抗炎药，解热镇痛应用广泛。", "deps": ["med_aspirin"] },
+    { "id": "med_statin", "name": "他汀类", "en": "Statins", "year": 1987, "note": "洛伐他汀等抑制胆固醇合成，防控动脉粥样硬化。", "deps": [] },
+    { "id": "med_ppi", "name": "质子泵抑制剂", "en": "Proton pump inhibitors", "year": 1989, "note": "奥美拉唑抑制胃酸分泌，革新消化性溃疡治疗。", "deps": [] },
+    { "id": "med_dmard", "name": "慢作用抗风湿药", "en": "DMARDs", "year": 1950, "note": "甲氨蝶呤等控制类风湿关节炎的病情进展。", "deps": [] }
+   ]
+  },
+  {
+   "name": "抗生素",
+   "items": [
+    { "id": "med_penicillin_discovery", "name": "青霉素发现", "en": "Penicillin discovery", "year": 1928, "note": "弗莱明发现青霉菌抑制葡萄球菌生长。", "deps": [] },
+    { "id": "med_penicillin_industrial", "name": "青霉素工业化", "en": "Industrial penicillin", "year": 1943, "note": "弗洛里链式发酵量产青霉素，开创抗生素时代。", "deps": ["fermentation", "chemistry"] },
+    { "id": "med_streptomycin", "name": "链霉素", "en": "Streptomycin", "year": 1944, "note": "瓦克斯曼从链霉菌分离，首个有效抗结核抗生素。", "deps": ["fermentation"] },
+    { "id": "med_tetracycline", "name": "四环素", "en": "Tetracycline", "year": 1948, "note": "广谱抗生素抑制蛋白质合成，用于多种感染。", "deps": ["fermentation"] },
+    { "id": "med_macrolide", "name": "大环内酯类", "en": "Macrolides", "year": 1952, "note": "红霉素等用于青霉素过敏者的呼吸道感染。", "deps": ["fermentation"] },
+    { "id": "med_semisynthetic_penicillin", "name": "半合成青霉素", "en": "Semi-synthetic penicillins", "year": 1959, "note": "以青霉素母核改造耐酶与广谱品种如甲氧西林。", "deps": ["med_penicillin_industrial", "chemistry"] },
+    { "id": "med_ampicillin", "name": "氨苄西林", "en": "Ampicillin", "year": 1961, "note": "广谱半合成青霉素，可口服抗革兰阴性菌。", "deps": ["med_semisynthetic_penicillin"] },
+    { "id": "med_cephalosporin", "name": "头孢菌素", "en": "Cephalosporins", "year": 1961, "note": "从头孢菌属开发，β-内酰胺类广谱抗生素。", "deps": ["med_penicillin_industrial"] },
+    { "id": "med_polymyxin", "name": "多粘菌素", "en": "Polymyxins", "year": 1947, "note": "多肽类抗生素用于耐药革兰阴性菌感染。", "deps": ["fermentation"] },
+    { "id": "med_gentamicin", "name": "庆大霉素", "en": "Gentamicin", "year": 1963, "note": "氨基糖苷类抗生素用于严重革兰阴性菌感染。", "deps": ["fermentation"] },
+    { "id": "med_vancomycin", "name": "万古霉素", "en": "Vancomycin", "year": 1958, "note": "糖肽类抗生素，耐甲氧西林金葡菌最后防线。", "deps": ["fermentation"] },
+    { "id": "med_antifungal_antibiotic", "name": "抗真菌抗生素", "en": "Antifungal antibiotics", "year": 1957, "note": "两性霉素B等控制深部真菌感染。", "deps": ["fermentation"] },
+    { "id": "med_resistance_test", "name": "药物敏感性试验", "en": "Antimicrobial susceptibility testing", "year": 1940, "note": "测定微生物药物敏感性以指导临床选药。", "deps": ["med_penicillin_discovery"] }
+   ]
+  },
+  {
+   "name": "疫苗",
+   "items": [
+    { "id": "med_variolation", "name": "人痘接种", "en": "Variolation", "year": 1000, "note": "中国与中东以天花痂皮接种预防天花，早于牛痘。", "deps": [] },
+    { "id": "med_cowpox_vaccine", "name": "牛痘接种", "en": "Cowpox vaccination", "year": 1796, "note": "詹纳以牛痘预防天花，是现代疫苗学的开端。", "deps": ["med_variolation"] },
+    { "id": "med_rabies_vaccine", "name": "狂犬疫苗", "en": "Rabies vaccine", "year": 1885, "note": "巴斯德以减毒狂犬病毒制备首个人工疫苗。", "deps": ["med_cowpox_vaccine"] },
+    { "id": "med_attenuated_vaccine", "name": "减毒活疫苗", "en": "Live attenuated vaccine", "year": 1900, "note": "以弱化病原体诱导持久免疫，如卡介苗与口服脊灰。", "deps": ["med_rabies_vaccine"] },
+    { "id": "med_inactivated_vaccine", "name": "灭活疫苗", "en": "Inactivated vaccine", "year": 1920, "note": "以灭活病原体保留抗原性，如灭活脊灰与流感。", "deps": ["med_attenuated_vaccine"] },
+    { "id": "med_diptheria_toxoid", "name": "类毒素疫苗", "en": "Toxoid vaccine", "year": 1923, "note": "甲醛处理毒素制成白喉破伤风类毒素。", "deps": ["med_inactivated_vaccine"] },
+    { "id": "med_influenza_vaccine", "name": "流感疫苗", "en": "Influenza vaccine", "year": 1942, "note": "灭活流感疫苗用于季节性呼吸道防护。", "deps": ["med_inactivated_vaccine"] },
+    { "id": "med_oral_polio", "name": "口服脊灰疫苗", "en": "Oral polio vaccine", "year": 1961, "note": "萨宾减毒活疫苗口服免疫，推动脊灰控制。", "deps": ["med_attenuated_vaccine"] },
+    { "id": "med_subunit_vaccine", "name": "亚单位疫苗", "en": "Subunit vaccine", "year": 1981, "note": "以病原体抗原亚单位如表面抗原诱导免疫。", "deps": ["dna"] },
+    { "id": "med_conjugate_vaccine", "name": "结合疫苗", "en": "Conjugate vaccine", "year": 1987, "note": "多糖结合蛋白增强婴幼儿荚膜菌免疫，如Hib疫苗。", "deps": [] },
+    { "id": "med_viral_vector_vaccine", "name": "病毒载体疫苗", "en": "Viral vector vaccine", "year": 2020, "note": "以改造腺病毒递送抗原基因，用于埃博拉与新冠。", "deps": ["genetic_engineering"] },
+    { "id": "med_mrna_vaccine", "name": "mRNA疫苗", "en": "mRNA vaccine", "year": 2020, "note": "以脂质包裹mRNA指导细胞表达抗原，新冠中大规模应用。", "deps": ["genetic_engineering", "dna"] }
+   ]
+  },
+  {
+   "name": "生物药",
+   "items": [
+    { "id": "med_hybridoma_mab", "name": "单抗杂交瘤", "en": "Monoclonal antibody hybridoma", "year": 1975, "note": "柯勒与米尔斯坦建杂交瘤技术制备单克隆抗体。", "deps": ["genetic_engineering"] },
+    { "id": "med_recombinant_insulin", "name": "重组人胰岛素", "en": "Recombinant human insulin", "year": 1982, "note": "基因工程大肠杆菌产胰岛素，替代猪牛来源。", "deps": ["genetic_engineering", "dna"] },
+    { "id": "med_recombinant_protein", "name": "重组蛋白药", "en": "Recombinant protein drugs", "year": 1986, "note": "促红细胞生成素等重组蛋白治疗缺乏症。", "deps": ["genetic_engineering", "dna"] },
+    { "id": "med_monoclonal_therapy", "name": "治疗性单抗", "en": "Therapeutic monoclonal antibodies", "year": 1986, "note": "利妥昔等单抗靶向治疗血液与实体肿瘤。", "deps": ["med_hybridoma_mab"] },
+    { "id": "med_interferon", "name": "重组干扰素", "en": "Recombinant interferon", "year": 1987, "note": "重组干扰素用于抗病毒与某些肿瘤治疗。", "deps": ["med_recombinant_protein"] },
+    { "id": "med_growth_hormone", "name": "重组生长激素", "en": "Recombinant growth hormone", "year": 1985, "note": "基因工程人生长激素治疗生长激素缺乏症。", "deps": ["genetic_engineering", "dna"] },
+    { "id": "med_erythropoietin", "name": "重组促红素", "en": "Recombinant erythropoietin", "year": 1989, "note": "治疗肾性贫血的重组蛋白药物。", "deps": ["med_recombinant_protein"] },
+    { "id": "med_antibody_drug_conjugate", "name": "抗体偶联药物", "en": "Antibody-drug conjugate", "year": 2000, "note": "单抗连接细胞毒药物精准杀伤肿瘤细胞。", "deps": ["med_hybridoma_mab"] },
+    { "id": "med_tnf_inhibitor", "name": "TNF抑制剂", "en": "TNF inhibitor", "year": 1998, "note": "抗TNF单抗治疗类风湿关节炎等自身免疫病。", "deps": ["med_hybridoma_mab"] },
+    { "id": "med_fusion_protein", "name": "融合蛋白药", "en": "Fusion protein drugs", "year": 1998, "note": "依那西普等融合蛋白抑制炎症信号通路。", "deps": ["med_recombinant_protein"] },
+    { "id": "med_biosimilar", "name": "生物类似药", "en": "Biosimilars", "year": 2006, "note": "原研生物药专利到期后仿制的高度相似产品。", "deps": ["med_recombinant_insulin"] },
+    { "id": "med_cell_factor", "name": "重组凝血因子", "en": "Recombinant clotting factor", "year": 1992, "note": "重组凝血因子VIII治疗血友病。", "deps": ["med_recombinant_protein"] },
+    { "id": "med_recombinant_vaccine", "name": "重组疫苗", "en": "Recombinant vaccine", "year": 1986, "note": "以重组抗原制备无活病原体的安全疫苗。", "deps": ["genetic_engineering", "dna"] },
+    { "id": "med_antisense_oligo", "name": "反义寡核苷酸药", "en": "Antisense oligonucleotide drugs", "year": 1998, "note": "反义核酸调控基因表达治疗遗传病。", "deps": ["dna", "genetic_engineering"] }
+   ]
+  },
+  {
+   "name": "细胞基因治疗",
+   "items": [
+    { "id": "med_car_tumor_infiltrating", "name": "肿瘤浸润淋巴细胞", "en": "Tumor-infiltrating lymphocyte therapy", "year": 1988, "note": "体外扩增患者TIL回输治疗黑色素瘤。", "deps": ["dna"] },
+    { "id": "med_somatic_gene", "name": "体内基因治疗", "en": "In vivo gene therapy", "year": 1990, "note": "首家人体体内基因治疗试验治疗ADA缺乏。", "deps": ["genetic_engineering", "dna"] },
+    { "id": "med_stem_cell_therapy", "name": "干细胞治疗", "en": "Stem cell therapy", "year": 2000, "note": "造血干细胞移植治疗血液病与免疫缺陷。", "deps": ["dna"] },
+    { "id": "med_ex_vivo_gene", "name": "体外基因修饰细胞", "en": "Ex vivo genetically modified cells", "year": 2003, "note": "离体改造细胞回输治疗遗传代谢病。", "deps": ["genetic_engineering"] },
+    { "id": "med_gene_therapy_approval", "name": "获批基因疗法", "en": "Approved gene therapy", "year": 2003, "note": "西方首款基因治疗药物获批用于先天缺陷。", "deps": ["genetic_engineering", "dna"] },
+    { "id": "med_genetically_modified_cell", "name": "基因修饰免疫细胞", "en": "Genetically modified immune cells", "year": 2006, "note": "改造T细胞表达受体增强抗肿瘤能力。", "deps": ["genetic_engineering", "dna"] },
+    { "id": "med_genome_editing_tool", "name": "基因编辑工具", "en": "Genome editing tool", "year": 2012, "note": "CRISPR-Cas9技术实现高效定点基因编辑。", "deps": ["genetic_engineering", "dna"] },
+    { "id": "med_aav_gene_therapy", "name": "AAV基因治疗", "en": "AAV gene therapy", "year": 2012, "note": "腺相关病毒递送正常基因治疗遗传性失明等。", "deps": ["genetic_engineering", "dna"] },
+    { "id": "med_cart", "name": "CAR-T细胞治疗", "en": "CAR-T cell therapy", "year": 2012, "note": "改造T细胞表达嵌合抗原受体清除血液肿瘤。", "deps": ["genetic_engineering", "dna"] },
+    { "id": "med_gene_editing_therapy", "name": "基因编辑疗法", "en": "Gene editing therapy", "year": 2019, "note": "CRISPR编辑致病基因治疗镰刀型贫血。", "deps": ["genetic_engineering", "dna"] }
+   ]
+  },
+  {
+   "name": "抗肿瘤",
+   "items": [
+    { "id": "med_hormone_therapy", "name": "内分泌治疗", "en": "Endocrine therapy", "year": 1941, "note": "去势与雌激素治疗前列腺癌与乳腺癌。", "deps": [] },
+    { "id": "med_chemotherapy", "name": "肿瘤化疗", "en": "Cancer chemotherapy", "year": 1943, "note": "氮芥等细胞毒药物治疗白血病与实体瘤。", "deps": ["chemistry"] },
+    { "id": "med_alkylating_agent", "name": "烷化剂", "en": "Alkylating agents", "year": 1946, "note": "环磷酰胺等破坏DNA治疗多种肿瘤。", "deps": ["med_chemotherapy"] },
+    { "id": "med_antimetabolite", "name": "抗代谢药", "en": "Antimetabolites", "year": 1948, "note": "甲氨蝶呤等干扰核酸合成治疗白血病。", "deps": ["med_chemotherapy"] },
+    { "id": "med_platinum_drug", "name": "铂类化疗", "en": "Platinum chemotherapeutics", "year": 1978, "note": "顺铂等交联DNA治疗睾丸与卵巢癌。", "deps": ["med_chemotherapy", "chemistry"] },
+    { "id": "med_taxane", "name": "紫杉醇类", "en": "Taxanes", "year": 1992, "note": "抑制微管解聚治疗乳腺癌与卵巢癌。", "deps": ["med_chemotherapy"] },
+    { "id": "med_immunotherapy_cancer", "name": "癌症免疫治疗", "en": "Cancer immunotherapy", "year": 1985, "note": "细胞因子与疫苗激活抗肿瘤免疫应答。", "deps": ["dna"] },
+    { "id": "med_targeted_therapy", "name": "靶向治疗", "en": "Targeted therapy", "year": 2001, "note": "伊马替尼靶向BCR-ABL治疗慢性髓性白血病。", "deps": ["dna"] },
+    { "id": "med_immune_checkpoint", "name": "免疫检查点抑制剂", "en": "Immune checkpoint inhibitor", "year": 2011, "note": "抗PD-1/CTLA-4解除肿瘤免疫抑制。", "deps": ["med_hybridoma_mab"] },
+    { "id": "med_angiogenesis_inhibitor", "name": "抗血管生成药", "en": "Anti-angiogenic drugs", "year": 2004, "note": "贝伐珠单抗抑制肿瘤血管生成。", "deps": ["med_hybridoma_mab"] },
+    { "id": "med_radioimmunotherapy", "name": "放射免疫治疗", "en": "Radioimmunotherapy", "year": 2002, "note": "标记抗体靶向递送放射性核素杀伤肿瘤。", "deps": ["med_hybridoma_mab"] },
+    { "id": "med_hdac_inhibitor", "name": "表观遗传抗肿瘤药", "en": "HDAC inhibitors", "year": 2006, "note": "组蛋白去乙酰化酶抑制剂治疗淋巴瘤。", "deps": ["dna"] },
+    { "id": "med_parp_inhibitor", "name": "PARP抑制剂", "en": "PARP inhibitors", "year": 2014, "note": "抑制DNA修复治疗BRCA突变卵巢癌。", "deps": ["dna"] }
+   ]
+  },
+  {
+   "name": "给药",
+   "items": [
+    { "id": "med_oral_solid", "name": "口服固体制剂", "en": "Oral solid dosage", "year": 1843, "note": "片剂压制成型便于剂量控制与储运。", "deps": [] },
+    { "id": "med_injection", "name": "注射给药", "en": "Injection administration", "year": 1853, "note": "注射器皮下肌内静脉给药实现快速起效。", "deps": [] },
+    { "id": "med_iv_infusion", "name": "静脉输液", "en": "Intravenous infusion", "year": 1900, "note": "大容量输注补液与持续给药。", "deps": ["med_injection"] },
+    { "id": "med_suppository", "name": "栓剂直肠给药", "en": "Rectal suppository", "year": 1700, "note": "直肠栓剂避免首过效应的局部与全身给药。", "deps": [] },
+    { "id": "med_ocular_drop", "name": "滴眼给药", "en": "Ophthalmic drops", "year": 1860, "note": "眼用制剂治疗眼部感染与青光眼。", "deps": [] },
+    { "id": "med_nasal_spray", "name": "鼻喷给药", "en": "Nasal spray", "year": 1950, "note": "鼻用喷雾递送局部与全身药物。", "deps": [] },
+    { "id": "med_sustained_release", "name": "缓释制剂", "en": "Sustained-release formulation", "year": 1950, "note": "控制药物释放速率延长作用时间。", "deps": [] },
+    { "id": "med_inhalation", "name": "吸入给药", "en": "Inhalation administration", "year": 1956, "note": "定量气雾剂治疗哮喘与慢阻肺。", "deps": [] },
+    { "id": "med_enterictablet", "name": "肠溶片剂", "en": "Enteric-coated tablet", "year": 1930, "note": "包衣片剂肠道释放保护胃并定位释药。", "deps": [] },
+    { "id": "med_liposome", "name": "脂质体载药", "en": "Liposomal drug delivery", "year": 1965, "note": "磷脂囊泡包载药物改善靶向与降低毒性。", "deps": ["chemistry"] },
+    { "id": "med_microsphere", "name": "微球制剂", "en": "Microsphere formulation", "year": 1970, "note": "可注射微球缓释多肽与蛋白药物。", "deps": ["med_sustained_release"] },
+    { "id": "med_transdermal", "name": "透皮给药", "en": "Transdermal delivery", "year": 1979, "note": "贴剂经皮肤控释硝酸甘油等治疗心绞痛。", "deps": ["med_sustained_release"] },
+    { "id": "med_nanoparticle_drug", "name": "纳米药物载体", "en": "Nanoparticle drug carrier", "year": 1995, "note": "纳米粒提高难溶药生物利用度与靶向性。", "deps": ["med_liposome"] },
+    { "id": "med_targeted_delivery", "name": "靶向递送系统", "en": "Targeted delivery system", "year": 2000, "note": "配体修饰载体定向富集于病灶组织。", "deps": ["med_nanoparticle_drug"] }
+   ]
+  },
+  {
+   "name": "放疗",
+   "items": [
+    { "id": "med_xray_therapy", "name": "X线治疗", "en": "X-ray therapy", "year": 1896, "note": "发现X线后随即用于皮肤癌等放射治疗。", "deps": ["medical_imaging"] },
+    { "id": "med_brachytherapy", "name": "近距离放疗", "en": "Brachytherapy", "year": 1901, "note": "放射性源置入瘤腔照射前列腺癌等。", "deps": ["medical_imaging"] },
+    { "id": "med_gamma_knife", "name": "γ刀", "en": "Gamma knife", "year": 1968, "note": "多束伽马射线聚焦无创治疗颅内病灶。", "deps": ["medical_imaging"] },
+    { "id": "med_linac", "name": "直线加速器", "en": "Medical linear accelerator", "year": 1953, "note": "医用电子直线加速器提供高能X线精准放疗。", "deps": ["medical_imaging"] },
+    { "id": "med_radiosurgery", "name": "立体定向放疗", "en": "Stereotactic radiotherapy", "year": 1980, "note": "精确定位高剂量照射小体积肿瘤。", "deps": ["med_linac", "computer"] },
+    { "id": "med_proton_therapy", "name": "质子治疗", "en": "Proton therapy", "year": 1990, "note": "质子布拉格峰精准杀伤肿瘤保护周围组织。", "deps": ["med_linac"] },
+    { "id": "med_imrt", "name": "调强放疗", "en": "Intensity-modulated radiotherapy", "year": 1990, "note": "动态多叶光栅调制剂量分布适形靶区。", "deps": ["med_linac", "computer"] },
+    { "id": "med_radioprotector", "name": "放射增敏防护", "en": "Radiosensitizer & radioprotector", "year": 1970, "note": "药物调节肿瘤与正常组织的放射敏感性。", "deps": ["med_xray_therapy"] }
+   ]
+  },
+  {
+   "name": "药物制造",
+   "items": [
+    { "id": "med_pharmacopeia", "name": "药典", "en": "Pharmacopeia", "year": 1546, "note": "欧洲药典与后世药典统一药品标准与检验。", "deps": ["printing"] },
+    { "id": "med_synthesis_industry", "name": "药物合成工业", "en": "Pharmaceutical synthesis industry", "year": 1880, "note": "煤焦油染料衍生合成药，建立有机合成制药体系。", "deps": ["chemistry"] },
+    { "id": "med_patent_protection", "name": "药品专利", "en": "Drug patent", "year": 1850, "note": "药物专利保护激励制药研发投入。", "deps": [] },
+    { "id": "med_tablet_press", "name": "压片机", "en": "Tablet press", "year": 1880, "note": "旋转压片机实现片剂大规模生产。", "deps": ["med_oral_solid"] },
+    { "id": "med_extraction_purification", "name": "天然药物提取", "en": "Natural product extraction", "year": 1820, "note": "溶剂提取与结晶纯化植物有效成分。", "deps": ["chemistry"] },
+    { "id": "med_purification_chromatography", "name": "药物层析纯化", "en": "Pharmaceutical chromatography", "year": 1906, "note": "色谱技术分离纯化药物活性成分。", "deps": ["chemistry"] },
+    { "id": "med_lyophilization", "name": "冷冻干燥", "en": "Freeze-drying (lyophilization)", "year": 1900, "note": "冻干工艺稳定生物制品与疫苗。", "deps": [] },
+    { "id": "med_fermentation_pharma", "name": "微生物发酵制药", "en": "Microbial fermentation pharma", "year": 1943, "note": "深层发酵生产抗生素与维生素等。", "deps": ["fermentation", "chemistry"] },
+    { "id": "med_quality_control_lab", "name": "药品检验", "en": "Pharmaceutical quality control", "year": 1900, "note": "理化与生物检定把关原料与成品质量。", "deps": ["med_pharmacopeia"] },
+    { "id": "med_gmp", "name": "药品生产质量管理规范", "en": "Good Manufacturing Practice", "year": 1963, "note": "GMP制度规范生产全流程保障药品质量均一。", "deps": ["med_synthesis_industry"] },
+    { "id": "med_bioreactor", "name": "生物反应器", "en": "Bioreactor", "year": 1970, "note": "大规模培养细胞生产重组蛋白与疫苗。", "deps": ["fermentation"] },
+    { "id": "med_qbd", "name": "质量源于设计", "en": "Quality by Design", "year": 2004, "note": "QbD以工艺理解前瞻控制药品质量。", "deps": ["med_gmp"] },
+    { "id": "med_continuous_manufacturing", "name": "连续制造", "en": "Continuous manufacturing", "year": 2015, "note": "连续流生产提升药物制造效率与一致性。", "deps": ["med_gmp"] },
+    { "id": "med_scales_dosing", "name": "计量分装", "en": "Dosing and filling", "year": 1900, "note": "自动称量分装保证制剂剂量准确。", "deps": ["med_tablet_press"] }
+   ]
+  }
+ ]
+}

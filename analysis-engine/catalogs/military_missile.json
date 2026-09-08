@@ -1,0 +1,194 @@
+{
+ "cat": "military",
+ "catName": "军事与国防",
+ "sub": "missile",
+ "subName": "导弹与制导武器",
+ "schemaNote": "任务域级真实技术目录：导弹与制导武器。锚点为可引用全局上游基石；families[].items[] 为真实导弹技术门类；item.deps 仅写锚点或本文件更早条目，被依赖 year 严格小于本条；year 取真实关键时点。transport_space 收航天运载火箭，本域收'导弹武器'侧，命名以'弹道导弹'区别于'运载火箭'；禁品牌型号。",
+ "anchors": [
+  "missile",
+  "rocket",
+  "explosives",
+  "internal_combustion",
+  "electricity",
+  "semiconductors",
+  "gps",
+  "nuclear_weapon",
+  "computer",
+  "nuclear_fission",
+  "airplane",
+  "radio"
+ ],
+ "families": [
+  {
+   "name": "弹道导弹",
+   "items": [
+    { "id": "msl_v2", "name": "早期弹道导弹", "en": "Early ballistic missile", "year": 1944, "note": "以火箭推进、抛物线弹道飞行的早期导弹雏形。", "deps": ["rocket", "explosives"] },
+    { "id": "msl_liquid_fuel", "name": "液体燃料导弹", "en": "Liquid-fuel missile", "year": 1950, "note": "以液体推进剂驱动的弹道导弹体系。", "deps": ["msl_v2", "internal_combustion"] },
+    { "id": "msl_short_range", "name": "短程弹道导弹", "en": "Short-range ballistic missile", "year": 1950, "note": "射程数百公里的战术/战区弹道导弹。", "deps": ["msl_v2", "missile"] },
+    { "id": "msl_medium_range", "name": "中程弹道导弹", "en": "Medium-range ballistic missile", "year": 1955, "note": "射程数千公里的中程战略弹道导弹。", "deps": ["msl_short_range", "missile"] },
+    { "id": "msl_icbm", "name": "洲际弹道导弹", "en": "Intercontinental ballistic missile", "year": 1957, "note": "跨洲际射程、可携核弹头的战略威慑导弹。", "deps": ["msl_medium_range", "missile", "nuclear_fission"] },
+    { "id": "msl_reentry_vehicle", "name": "再入弹头", "en": "Reentry vehicle", "year": 1958, "note": "耐受再入高温、保护战斗部的弹头舱。", "deps": ["msl_icbm"] },
+    { "id": "msl_slrbm", "name": "潜射弹道导弹", "en": "Submarine-launched ballistic missile", "year": 1960, "note": "由潜艇水下发射的弹道导弹，二次核打击。", "deps": ["msl_icbm", "missile", "nuclear_fission"] },
+    { "id": "msl_solid_fuel", "name": "固体燃料导弹", "en": "Solid-fuel missile", "year": 1960, "note": "以固体药柱简化保障的弹道导弹体系。", "deps": ["msl_short_range", "explosives"] },
+    { "id": "msl_silo", "name": "导弹发射井", "en": "Missile silo", "year": 1960, "note": "地下加固垂直贮存与发射弹道导弹的设施。", "deps": ["msl_icbm"] },
+    { "id": "msl_cold_launch", "name": "冷发射", "en": "Cold launch", "year": 1962, "note": "以燃气弹射出井再点火的发射方式。", "deps": ["msl_slrbm"] },
+    { "id": "msl_mirv", "name": "分导多弹头", "en": "MIRV", "year": 1970, "note": "一枚导弹释放多枚独立瞄准弹头的技术。", "deps": ["msl_icbm", "nuclear_weapon"] },
+    { "id": "msl_maRV", "name": "机动再入弹头", "en": "Maneuvering reentry vehicle", "year": 1980, "note": "再入段机动规避拦截的弹头技术。", "deps": ["msl_reentry_vehicle"] },
+    { "id": "msl_mobile_irbm", "name": "机动中程导弹", "en": "Mobile IRBM", "year": 1970, "note": "公路机动部署、提升生存力的中程导弹。", "deps": ["msl_medium_range"] },
+    { "id": "msl_solid_icbm", "name": "固体洲际导弹", "en": "Solid-fuel ICBM", "year": 1970, "note": "全固体推进的洲际导弹，反应更快。", "deps": ["msl_solid_fuel", "msl_icbm"] },
+    { "id": "msl_rail_mobile", "name": "铁路机动导弹", "en": "Rail-mobile missile", "year": 1980, "note": "以铁路列车机动部署的洲际导弹系统。", "deps": ["msl_icbm"] },
+    { "id": "msl_road_mobile_icbm", "name": "公路机动洲际导弹", "en": "Road-mobile ICBM", "year": 1985, "note": "越野车机动发射的固体洲际导弹。", "deps": ["msl_solid_icbm"] },
+    { "id": "msl_coastal_ballistic", "name": "岸基弹道导弹", "en": "Coastal ballistic missile", "year": 1960, "note": "岸防部署的中短程弹道反舰导弹。", "deps": ["msl_icbm"] },
+    { "id": "msl_thrust_vector_missile", "name": "导弹推力矢量", "en": "Missile thrust vectoring", "year": 1970, "note": "弹道主动段姿控以修正与突防的技术。", "deps": ["msl_solid_fuel"] },
+    { "id": "msl_reentry_glider", "name": "再入滑翔体", "en": "Hypersonic glide vehicle", "year": 2010, "note": "再入后滑翔机动的高超声速打击体。", "deps": ["msl_maRV"] },
+    { "id": "msl_mobile_srbm", "name": "机动短程弹道导弹", "en": "Mobile SRBM", "year": 1970, "note": "轮式机动发射的短程战术弹道导弹。", "deps": ["msl_short_range"] },
+    { "id": "msl_theater", "name": "战区弹道导弹", "en": "Theater ballistic missile", "year": 1980, "note": "战区范围内使用的短中程弹道导弹。", "deps": ["msl_short_range"] },
+    { "id": "msl_submarine_launch", "name": "潜艇发射弹道导弹", "en": "Submarine-launched ballistic missile (deployment)", "year": 1962, "note": "潜艇水下发射弹道导弹的系统与流程。", "deps": ["msl_slrbm"] }
+   ]
+  },
+  {
+   "name": "巡航导弹",
+   "items": [
+    { "id": "msl_v1", "name": "飞航式导弹", "en": "Cruise missile (early)", "year": 1944, "note": "以巡航飞行、贴地突防的早期飞航导弹。", "deps": ["rocket", "internal_combustion"] },
+    { "id": "msl_turbojet_cruise", "name": "涡喷巡航导弹", "en": "Turbojet cruise missile", "year": 1950, "note": "以涡轮喷气动力巡航飞行的导弹。", "deps": ["msl_v1", "internal_combustion"] },
+    { "id": "msl_subsonic_cruise", "name": "亚声速巡航导弹", "en": "Subsonic cruise missile", "year": 1958, "note": "亚声速低空突防的巡航导弹类别。", "deps": ["msl_v1"] },
+    { "id": "msl_turbofan_cruise", "name": "涡扇巡航导弹", "en": "Turbofan cruise missile", "year": 1970, "note": "以涡扇提升航程与经济的巡航导弹。", "deps": ["msl_turbojet_cruise"] },
+    { "id": "msl_supersonic_cruise", "name": "超声速巡航导弹", "en": "Supersonic cruise missile", "year": 1970, "note": "超声速飞行、缩短突防时间的巡航导弹。", "deps": ["msl_subsonic_cruise", "missile"] },
+    { "id": "msl_anti_ship_cruise", "name": "反舰巡航导弹", "en": "Anti-ship cruise missile", "year": 1962, "note": "以掠海飞行打击水面舰艇的巡航导弹。", "deps": ["msl_subsonic_cruise"] },
+    { "id": "msl_air_launched_cruise", "name": "空射巡航导弹", "en": "Air-launched cruise missile", "year": 1980, "note": "由飞机挂载远程发射的巡航导弹。", "deps": ["msl_subsonic_cruise", "airplane"] },
+    { "id": "msl_ground_launched_cruise", "name": "陆射巡航导弹", "en": "Ground-launched cruise missile", "year": 1980, "note": "地面车辆发射的远程常规巡航导弹。", "deps": ["msl_subsonic_cruise"] },
+    { "id": "msl_ship_launched_cruise", "name": "舰射巡航导弹", "en": "Ship-launched cruise missile", "year": 1982, "note": "由水面舰艇垂直/倾斜发射的巡航导弹。", "deps": ["msl_air_launched_cruise"] },
+    { "id": "msl_terrain_following_cruise", "name": "地形匹配巡航导弹", "en": "Terrain-matching cruise missile", "year": 1982, "note": "以地形匹配实现低空自主突防的巡航弹。", "deps": ["msl_air_launched_cruise", "computer"] },
+    { "id": "msl_low_observable_cruise", "name": "隐身巡航导弹", "en": "Stealth cruise missile", "year": 1990, "note": "低可探测外形与吸波材料的巡航导弹。", "deps": ["msl_subsonic_cruise"] },
+    { "id": "msl_nuclear_cruise", "name": "核巡航导弹", "en": "Nuclear cruise missile", "year": 1980, "note": "携核战斗部的远程战略巡航导弹。", "deps": ["msl_subsonic_cruise", "nuclear_weapon"] },
+    { "id": "msl_gliding_cruise", "name": "滑翔巡航导弹", "en": "Gliding cruise missile", "year": 2000, "note": "末段滑翔增程或机动的巡航导弹。", "deps": ["msl_supersonic_cruise"] },
+    { "id": "msl_hypersonic_cruise", "name": "高超声速巡航导弹", "en": "Hypersonic cruise missile", "year": 2010, "note": "以超燃/冲压实现高超声速巡航的导弹。", "deps": ["msl_supersonic_cruise", "explosives"] },
+    { "id": "msl_sea_skimming_cruise", "name": "掠海巡航导弹", "en": "Sea-skimming cruise missile", "year": 1975, "note": "贴海面飞行规避雷达的巡航导弹。", "deps": ["msl_subsonic_cruise"] },
+    { "id": "msl_decoy_cruise", "name": "巡航导弹诱饵", "en": "Cruise missile decoy", "year": 1990, "note": "模拟巡航导弹雷达特征的诱饵弹。", "deps": ["msl_subsonic_cruise"] }
+   ]
+  },
+  {
+   "name": "反舰导弹",
+   "items": [
+    { "id": "msl_ship_ship", "name": "舰舰导弹", "en": "Ship-to-ship missile", "year": 1950, "note": "由水面舰艇发射打击敌舰的反舰导弹。", "deps": ["missile", "rocket"] },
+    { "id": "msl_air_ship", "name": "空舰导弹", "en": "Air-to-ship missile", "year": 1958, "note": "由飞机发射的反舰导弹，远程打击。", "deps": ["msl_ship_ship", "airplane"] },
+    { "id": "msl_coast_ship", "name": "岸舰导弹", "en": "Coast-to-ship missile", "year": 1960, "note": "由岸防阵地发射的反舰导弹系统。", "deps": ["msl_ship_ship"] },
+    { "id": "msl_anti_ship_radar", "name": "雷达制导反舰导弹", "en": "Radar-guided anti-ship missile", "year": 1960, "note": "以雷达寻的末段锁定水面目标的导弹。", "deps": ["msl_ship_ship"] },
+    { "id": "msl_sea_skimming", "name": "掠海飞行反舰导弹", "en": "Sea-skimming anti-ship missile", "year": 1970, "note": "贴海面飞行压缩被探测距离的导弹。", "deps": ["msl_anti_ship_radar"] },
+    { "id": "msl_anti_ship_ir", "name": "红外反舰导弹", "en": "Infrared anti-ship missile", "year": 1970, "note": "以红外成像寻的的小型反舰导弹。", "deps": ["msl_air_ship", "explosives"] },
+    { "id": "msl_supersonic_anti_ship", "name": "超声速反舰导弹", "en": "Supersonic anti-ship missile", "year": 1980, "note": "超声速突防、高动能击穿舰体的导弹。", "deps": ["msl_anti_ship_radar"] },
+    { "id": "msl_supersonic_asm_skimming", "name": "超声速掠海反舰导弹", "en": "Supersonic sea-skimming ASM", "year": 1985, "note": "超声速与掠海结合的末段突防导弹。", "deps": ["msl_supersonic_anti_ship"] },
+    { "id": "msl_anti_ship_cluster", "name": "子母反舰战斗部", "en": "Anti-ship cluster warhead", "year": 1990, "note": "抛撒多个子弹提升命中概率的战斗部。", "deps": ["msl_supersonic_anti_ship", "explosives"] },
+    { "id": "msl_heavy_anti_ship", "name": "重型反舰导弹", "en": "Heavy anti-ship missile", "year": 1982, "note": "大战斗部远程重载的反舰导弹。", "deps": ["msl_supersonic_anti_ship"] },
+    { "id": "msl_anti_ship_swarm", "name": "反舰导弹饱和攻击", "en": "Anti-ship saturation attack", "year": 2010, "note": "多弹协同饱和压制舰载防空的战法。", "deps": ["msl_supersonic_anti_ship", "computer"] },
+    { "id": "msl_coastal_defense_asm", "name": "岸防反舰导弹", "en": "Coastal defense anti-ship missile", "year": 1962, "note": "固定/机动岸防部署的反舰导弹系统。", "deps": ["msl_coast_ship"] },
+    { "id": "msl_asm_terminal", "name": "反舰末端制导", "en": "Anti-ship terminal guidance", "year": 1980, "note": "末段多模寻的提升命中精度的技术。", "deps": ["msl_sea_skimming"] },
+    { "id": "msl_asm_guidance", "name": "反舰复合制导", "en": "Anti-ship compound guidance", "year": 1985, "note": "中段惯导加末段主动雷达的制导。", "deps": ["msl_anti_ship_radar"] }
+   ]
+  },
+  {
+   "name": "防空导弹",
+   "items": [
+    { "id": "msl_sam", "name": "地空导弹", "en": "Surface-to-air missile", "year": 1950, "note": "由地面发射拦截空中目标的导弹。", "deps": ["missile", "rocket"] },
+    { "id": "msl_command_guidance_sam", "name": "指令制导地空导弹", "en": "Command-guided SAM", "year": 1955, "note": "以地面雷达指令引导的早期地空导弹。", "deps": ["msl_sam"] },
+    { "id": "msl_track_via_missile", "name": "驾束制导防空导弹", "en": "Beam-riding SAM", "year": 1960, "note": "沿雷达波束飞行的中低空防空导弹。", "deps": ["msl_sam"] },
+    { "id": "msl_medium_range_sam", "name": "中程防空导弹", "en": "Medium-range SAM", "year": 1958, "note": "覆盖中距离空域的区域防空导弹。", "deps": ["msl_sam"] },
+    { "id": "msl_long_range_sam", "name": "远程防空导弹", "en": "Long-range SAM", "year": 1960, "note": "远程高空拦截的防空导弹系统。", "deps": ["msl_medium_range_sam"] },
+    { "id": "msl_higher_altitude", "name": "高空拦截弹", "en": "High-altitude interceptor", "year": 1970, "note": "针对高空高速目标的专用拦截导弹。", "deps": ["msl_long_range_sam"] },
+    { "id": "msl_ship_aa_missile", "name": "舰空导弹", "en": "Ship-to-air missile", "year": 1955, "note": "由舰艇发射的防空导弹，舰队防空。", "deps": ["msl_sam"] },
+    { "id": "msl_point_defense", "name": "点防空导弹", "en": "Point-defense SAM", "year": 1970, "note": "近程自卫拦截的舰载/阵地点防空。", "deps": ["msl_ship_aa_missile"] },
+    { "id": "msl_manpads", "name": "便携式防空导弹", "en": "MANPADS", "year": 1960, "note": "单兵肩射的近程红外防空导弹。", "deps": ["msl_sam", "explosives"] },
+    { "id": "msl_ir_sam", "name": "红外防空导弹", "en": "Infrared SAM", "year": 1965, "note": "以红外寻的的便携/近程防空导弹。", "deps": ["msl_manpads"] },
+    { "id": "msl_continuous_rod", "name": "连续杆战斗部", "en": "Continuous-rod warhead", "year": 1960, "note": "展开杆环切割目标的防空破片战斗部。", "deps": ["msl_sam", "explosives"] },
+    { "id": "msl_dual_mode_sam", "name": "双模制导防空", "en": "Dual-mode SAM", "year": 1990, "note": "雷达/红外复合寻的的防空导弹。", "deps": ["msl_sam"] },
+    { "id": "msl_terminal_air_defense", "name": "末段反导", "en": "Terminal missile defense", "year": 1998, "note": "拦截末段弹道导弹的近程反导系统。", "deps": ["msl_sam", "computer"] },
+    { "id": "msl_anti_ballistic", "name": "反导拦截弹", "en": "Anti-ballistic missile interceptor", "year": 2000, "note": "以动能/破片拦截来袭弹道导弹的拦截弹。", "deps": ["msl_terminal_air_defense", "computer"] },
+    { "id": "msl_asat", "name": "反卫星导弹", "en": "Anti-satellite missile", "year": 1985, "note": "拦截摧毁轨道卫星的上升式导弹。", "deps": ["msl_sam"] },
+    { "id": "msl_mobile_sam", "name": "机动防空导弹", "en": "Mobile SAM", "year": 1970, "note": "车载机动部署的中程防空导弹系统。", "deps": ["msl_medium_range_sam"] },
+    { "id": "msl_naval_point_defense", "name": "舰载点防御", "en": "Naval point defense", "year": 1975, "note": "舰面近程末端拦截的反导导弹。", "deps": ["msl_point_defense"] }
+   ]
+  },
+  {
+   "name": "空地导弹",
+   "items": [
+    { "id": "msl_air_anti_tank", "name": "空射反坦克导弹", "en": "Air-launched anti-tank missile", "year": 1960, "note": "由直升机/飞机发射、攻顶反装甲导弹。", "deps": ["missile", "airplane", "explosives"] },
+    { "id": "msl_laser_guidance_air", "name": "激光制导空地弹", "en": "Laser-guided air-to-ground missile", "year": 1970, "note": "以激光指示半主动寻的的空地导弹。", "deps": ["msl_air_anti_tank", "explosives"] },
+    { "id": "msl_anti_radiation", "name": "反辐射导弹", "en": "Anti-radiation missile", "year": 1965, "note": "以雷达辐射寻的压制防空的反辐射弹。", "deps": ["msl_air_anti_tank", "semiconductors"] },
+    { "id": "msl_anti_radiation_2", "name": "反辐射导弹改进型", "en": "Advanced anti-radiation missile", "year": 1980, "note": "记忆与目标排序能力提升的反辐射弹。", "deps": ["msl_anti_radiation"] },
+    { "id": "msl_standoff_air_ground", "name": "防区外空地导弹", "en": "Standoff air-to-ground missile", "year": 1978, "note": "在敌防区外发射的远程精确空地弹。", "deps": ["missile", "airplane", "computer"] },
+    { "id": "msl_air_launch_cluster", "name": "空射子母弹", "en": "Air-launched cluster munition", "year": 1970, "note": "空射母弹抛撒子弹的面杀伤弹药。", "deps": ["msl_air_anti_tank", "explosives"] },
+    { "id": "msl_anti_runway", "name": "反跑道导弹", "en": "Anti-runway missile", "year": 1982, "note": "以侵彻与子雷封锁机场跑道的导弹。", "deps": ["msl_standoff_air_ground"] },
+    { "id": "msl_glide_air_ground", "name": "滑翔空地弹", "en": "Gliding air-to-ground munition", "year": 2000, "note": "以滑翔增程的空射防区外弹药。", "deps": ["msl_standoff_air_ground"] },
+    { "id": "msl_air_launch_pgm", "name": "空射精确制导弹", "en": "Air-launched precision-guided munition", "year": 1992, "note": "以卫星/惯导组合的高精度空射弹药。", "deps": ["msl_standoff_air_ground", "gps"] },
+    { "id": "msl_bunker_buster_air", "name": "空射钻地弹", "en": "Air-launched bunker buster", "year": 1990, "note": "硬侵彻战斗部摧毁地下工事的弹药。", "deps": ["msl_standoff_air_ground", "explosives"] },
+    { "id": "msl_cruise_ground_attack", "name": "对地攻击巡航导弹", "en": "Ground-attack cruise missile", "year": 1980, "note": "以巡航导弹实施纵深对地打击的弹种。", "deps": ["msl_standoff_air_ground"] },
+    { "id": "msl_air_launch_decoy", "name": "空射诱饵", "en": "Air-launched decoy", "year": 1990, "note": "模拟战机雷达特征的空射诱饵弹。", "deps": ["msl_standoff_air_ground"] },
+    { "id": "msl_gps_air_ground", "name": "卫星制导空地弹", "en": "GPS-guided air-to-ground missile", "year": 1995, "note": "以卫星定位惯导组合的空地导弹。", "deps": ["msl_air_launch_pgm", "msl_gps_guidance"] }
+   ]
+  },
+  {
+   "name": "制导炸弹",
+   "items": [
+    { "id": "msl_laser_gb", "name": "激光制导炸弹", "en": "Laser-guided bomb", "year": 1970, "note": "以激光半主动寻的的滑翔制导炸弹。", "deps": ["explosives", "computer"] },
+    { "id": "msl_tv_gb", "name": "电视制导炸弹", "en": "TV-guided bomb", "year": 1960, "note": "以电视摄像人工跟踪的制导炸弹。", "deps": ["explosives", "semiconductors"] },
+    { "id": "msl_smart_bomb", "name": "智能炸弹", "en": "Smart bomb", "year": 1988, "note": "以惯导/卫星修正提高命中精度的炸弹。", "deps": ["msl_laser_gb", "computer"] },
+    { "id": "msl_sat_gb", "name": "卫星制导炸弹", "en": "Satellite-guided bomb", "year": 1995, "note": "以卫星定位惯导组合的低成本精确弹。", "deps": ["msl_laser_gb", "gps"] },
+    { "id": "msl_glide_bomb", "name": "滑翔炸弹", "en": "Glide bomb", "year": 1998, "note": "以弹翼滑翔增程的防区外制导炸弹。", "deps": ["msl_laser_gb"] },
+    { "id": "msl_terminal_sensing", "name": "末敏弹", "en": "Terminal sensor munition", "year": 1980, "note": "母弹抛撒、末端自寻的攻顶的子弹。", "deps": ["explosives", "semiconductors"] },
+    { "id": "msl_penetrator_gb", "name": "侵彻制导炸弹", "en": "Penetrator guided bomb", "year": 1990, "note": "硬侵彻战斗部穿透工事再起爆的炸弹。", "deps": ["msl_smart_bomb", "explosives"] },
+    { "id": "msl_cluster_gb", "name": "制导子母弹", "en": "Guided cluster bomb", "year": 1995, "note": "以制导母弹抛撒子弹的子母弹药。", "deps": ["msl_smart_bomb", "explosives"] },
+    { "id": "msl_dual_gb", "name": "双模制导炸弹", "en": "Dual-mode guided bomb", "year": 2000, "note": "激光/卫星双模寻的提高抗扰的炸弹。", "deps": ["msl_laser_gb", "msl_gps_guidance"] },
+    { "id": "msl_small_diameter", "name": "小直径炸弹", "en": "Small diameter bomb", "year": 2002, "note": "小弹体多载、滑翔增程的精确炸弹。", "deps": ["msl_glide_bomb"] },
+    { "id": "msl_ins_gb", "name": "惯导制导炸弹", "en": "INS-guided bomb", "year": 1996, "note": "以惯性导航自主制导的防区外炸弹。", "deps": ["msl_sat_gb", "computer"] },
+    { "id": "msl_top_attack", "name": "攻顶制导炸弹", "en": "Top-attack guided bomb", "year": 1995, "note": "末敏攻顶打击装甲顶甲的制导弹药。", "deps": ["msl_terminal_sensing"] }
+   ]
+  },
+  {
+   "name": "制导技术",
+   "items": [
+    { "id": "msl_inertial", "name": "惯性导航", "en": "Inertial navigation", "year": 1950, "note": "以陀螺加速度计自主定位的导航技术。", "deps": ["computer", "missile"] },
+    { "id": "msl_command_guidance", "name": "指令制导", "en": "Command guidance", "year": 1950, "note": "由地面站发送指令控制导弹飞行的制导。", "deps": ["missile", "radio"] },
+    { "id": "msl_beam_rider", "name": "驾束制导", "en": "Beam-rider guidance", "year": 1955, "note": "导弹沿雷达/激光波束飞行的制导。", "deps": ["missile", "electricity"] },
+    { "id": "msl_radar_seeker", "name": "雷达导引头", "en": "Radar seeker", "year": 1955, "note": "以雷达探测与跟踪目标的导引头。", "deps": ["missile", "electricity"] },
+    { "id": "msl_ir_seeker", "name": "红外导引头", "en": "Infrared seeker", "year": 1958, "note": "以红外辐射寻的目标的导引头。", "deps": ["missile", "explosives"] },
+    { "id": "msl_tv_command", "name": "电视指令制导", "en": "TV command guidance", "year": 1960, "note": "电视跟踪加指令修正的有线/无线电制导。", "deps": ["missile", "semiconductors"] },
+    { "id": "msl_star_tracker", "name": "星光制导", "en": "Stellar guidance", "year": 1960, "note": "以恒星定位校正惯导的精确制导。", "deps": ["msl_inertial"] },
+    { "id": "msl_active_radar", "name": "主动雷达导引头", "en": "Active radar seeker", "year": 1970, "note": "弹载雷达主动照射目标的末制导头。", "deps": ["msl_radar_seeker", "semiconductors"] },
+    { "id": "msl_seeker_cooling", "name": "导引头制冷", "en": "Seeker cooling", "year": 1970, "note": "对红外探测器制冷以提升灵敏度的技术。", "deps": ["msl_ir_seeker"] },
+    { "id": "msl_strapdown_ins", "name": "捷联惯导", "en": "Strapdown INS", "year": 1968, "note": "器件固联弹体、以算法解算的惯导。", "deps": ["msl_inertial", "computer"] },
+    { "id": "msl_terrain_contour", "name": "地形匹配", "en": "Terrain contour matching", "year": 1980, "note": "以地形高程图匹配修正惯导的制导。", "deps": ["msl_inertial", "computer"] },
+    { "id": "msl_gps_guidance", "name": "卫星制导", "en": "Satellite guidance", "year": 1992, "note": "以卫星导航修正惯导的精确制导。", "deps": ["gps", "msl_inertial"] },
+    { "id": "msl_datalink", "name": "数据链制导", "en": "Datalink guidance", "year": 1980, "note": "以数据链中继更新目标信息的制导。", "deps": ["computer", "missile"] },
+    { "id": "msl_multi_mode", "name": "多模复合制导", "en": "Multi-mode composite guidance", "year": 1990, "note": "雷达红外等多模融合抗干扰的制导。", "deps": ["msl_active_radar", "msl_ir_seeker", "semiconductors"] },
+    { "id": "msl_fiber_optic_guidance", "name": "光纤制导", "en": "Fiber-optic guidance", "year": 1980, "note": "以光纤回传图像的有线指令制导。", "deps": ["msl_command_guidance", "semiconductors"] },
+    { "id": "msl_antijam", "name": "抗干扰导引", "en": "Anti-jam seeker", "year": 1990, "note": "以频率捷变与信号处理抗干扰的导引。", "deps": ["msl_active_radar", "semiconductors"] },
+    { "id": "msl_gps_ins", "name": "卫星惯导组合", "en": "GPS/INS integration", "year": 1995, "note": "卫星与惯导互补的高精度组合导航。", "deps": ["msl_gps_guidance", "msl_inertial"] },
+    { "id": "msl_bi_static", "name": "双基制导", "en": "Bistatic guidance", "year": 1990, "note": "发射与接收分置的双基雷达制导。", "deps": ["msl_active_radar"] },
+    { "id": "msl_semi_active_radar", "name": "半主动雷达导引头", "en": "Semi-active radar seeker", "year": 1965, "note": "弹外照射、弹上接收的雷达导引头。", "deps": ["msl_radar_seeker"] },
+    { "id": "msl_infrared_imaging", "name": "红外成像导引头", "en": "Infrared imaging seeker", "year": 1980, "note": "以红外成像识别目标的智能化导引头。", "deps": ["msl_ir_seeker", "semiconductors"] }
+   ]
+  },
+  {
+   "name": "火箭技术",
+   "items": [
+    { "id": "msl_rocket_propellant", "name": "火箭推进剂", "en": "Rocket propellant", "year": 1930, "note": "液体/固体推进剂的配方与装填体系。", "deps": ["rocket", "explosives"] },
+    { "id": "msl_staging", "name": "火箭分级", "en": "Staging", "year": 1944, "note": "以级间分离提升速度增量的技术。", "deps": ["rocket"] },
+    { "id": "msl_spin_stabilize", "name": "旋转稳定", "en": "Spin stabilization", "year": 1944, "note": "以自旋保持飞行稳定的火箭控制。", "deps": ["rocket"] },
+    { "id": "msl_solid_rocket", "name": "固体火箭发动机", "en": "Solid rocket motor", "year": 1940, "note": "以固体药柱燃烧产生推力的发动机。", "deps": ["rocket", "explosives"] },
+    { "id": "msl_liquid_upper", "name": "液体火箭上面级", "en": "Liquid rocket upper stage", "year": 1950, "note": "以液体发动机完成末段加速的上面级。", "deps": ["rocket", "internal_combustion"] },
+    { "id": "msl_attitude_control", "name": "姿态控制", "en": "Attitude control", "year": 1952, "note": "以喷流/舵面控制飞行姿态的系统。", "deps": ["rocket", "electricity"] },
+    { "id": "msl_gimbal_engine", "name": "摇摆发动机", "en": "Gimbaled engine", "year": 1956, "note": "以摆动喷管实现推力矢量姿控的发动机。", "deps": ["msl_attitude_control"] },
+    { "id": "msl_gas_jet_control", "name": "燃气舵控制", "en": "Gas-jet control", "year": 1954, "note": "以燃气舵/侧向喷流进行姿控的技术。", "deps": ["msl_attitude_control"] },
+    { "id": "msl_thrust_termination", "name": "推力终止", "en": "Thrust termination", "year": 1960, "note": "以反向喷口终止推力的关机技术。", "deps": ["msl_solid_rocket"] },
+    { "id": "msl_ramjet_rocket", "name": "火箭冲压发动机", "en": "Ramjet-boosted rocket", "year": 1960, "note": "助推火箭加冲压主推的组合动力。", "deps": ["msl_solid_rocket", "internal_combustion"] },
+    { "id": "msl_hybrid_rocket", "name": "混合火箭发动机", "en": "Hybrid rocket motor", "year": 1990, "note": "固液混合推进剂的火箭发动机。", "deps": ["msl_solid_rocket", "internal_combustion"] },
+    { "id": "msl_thrust_vector_control", "name": "推力矢量控制", "en": "Thrust vector control", "year": 1970, "note": "偏转推力方向实现机动与姿控的技术。", "deps": ["msl_attitude_control"] },
+    { "id": "msl_rocket_engine_turbopump", "name": "涡轮泵", "en": "Rocket engine turbopump", "year": 1955, "note": "以涡轮泵输送液体推进剂入燃烧室。", "deps": ["msl_liquid_upper", "internal_combustion"] },
+    { "id": "msl_composite_case", "name": "复合材料发动机壳体", "en": "Composite motor case", "year": 1980, "note": "以复合材料减重增强的发动机壳体。", "deps": ["msl_solid_rocket"] },
+    { "id": "msl_ins_rocket", "name": "火箭惯性制导", "en": "Rocket inertial guidance", "year": 1955, "note": "以惯性平台控制火箭弹道的制导。", "deps": ["msl_inertial", "rocket"] },
+    { "id": "msl_strapdown_rocket", "name": "火箭捷联惯导", "en": "Rocket strapdown INS", "year": 1972, "note": "以捷联惯导控制火箭飞行的制导。", "deps": ["msl_strapdown_ins", "rocket"] },
+    { "id": "msl_liquid_injection", "name": "液体推进剂输送", "en": "Liquid propellant feed", "year": 1955, "note": "以增压/泵压输送液体推进剂的系统。", "deps": ["msl_liquid_upper"] }
+   ]
+  }
+ ]
+}

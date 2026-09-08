@@ -1,0 +1,1386 @@
+{
+ "cat": "info",
+ "catName": "信息与通信",
+ "sub": "security",
+ "subName": "信息安全与密码",
+ "schemaNote": "catalog v1：信息安全与密码域真实技术目录。防火墙与 VPN 归网络与互联网域，本域收密码算法、协议、认证与安全实践；量子密钥分发不收，后量子密码按 NIST 2022 定案收录。",
+ "anchors": [
+  "writing",
+  "mathematics",
+  "telegraph",
+  "electricity",
+  "computer",
+  "semiconductors",
+  "ic",
+  "internet"
+ ],
+ "families": [
+  {
+   "name": "古典与机械密码",
+   "items": [
+    {
+     "id": "sec_yinfu_code",
+     "name": "阴符与字验编码",
+     "en": "Yinfu code",
+     "year": -1000,
+     "note": "西周以符契长短传递军情，宋代字验以诗歌字序对应军语，是华夏早期编码术。",
+     "deps": [
+      "writing"
+     ]
+    },
+    {
+     "id": "sec_substitution_cipher",
+     "name": "单表替换密码",
+     "en": "Monoalphabetic substitution cipher",
+     "year": -500,
+     "note": "以固定字母对照表逐字替换的加密术，希伯来字母码为其古老形态。",
+     "deps": [
+      "writing"
+     ]
+    },
+    {
+     "id": "sec_steganography",
+     "name": "隐写术",
+     "en": "Steganography",
+     "year": -440,
+     "note": "以剃发刺字与蜡板等手段隐藏消息存在本身，与密码学并行的保密术。",
+     "deps": [
+      "writing"
+     ]
+    },
+    {
+     "id": "sec_scytale",
+     "name": "斯巴达密码棒",
+     "en": "Scytale",
+     "year": -400,
+     "note": "缠绕皮条读取密文的换位加密器具，换位密码的古代源头。",
+     "deps": [
+      "writing"
+     ]
+    },
+    {
+     "id": "sec_caesar_cipher",
+     "name": "凯撒密码",
+     "en": "Caesar cipher",
+     "year": -50,
+     "note": "罗马军团按固定位移替换字母的军事密码，古代密码的代名词。",
+     "deps": [
+      "writing"
+     ]
+    },
+    {
+     "id": "sec_frequency_analysis",
+     "name": "频率分析",
+     "en": "Frequency analysis",
+     "year": 850,
+     "note": "金迪以字母出现频率破解替换密码，使密码分析成为系统学问。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sec_nomenclator",
+     "name": "密本与密表体系",
+     "en": "Nomenclator",
+     "year": 1400,
+     "note": "宫廷以代码本混合替换与代字的外交密码体系，文艺复兴时期主流。",
+     "deps": [
+      "writing"
+     ]
+    },
+    {
+     "id": "sec_cipher_disk",
+     "name": "阿尔贝蒂密码盘",
+     "en": "Alberti cipher disk",
+     "year": 1467,
+     "note": "双盘错位对合旋转读出密文的加密装置，首创多表替换的思想。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sec_vigenere_cipher",
+     "name": "维吉尼亚密码",
+     "en": "Vigenere cipher",
+     "year": 1553,
+     "note": "贝拉索以关键词选取多张替换表，曾号称三百年不可破译。",
+     "deps": [
+      "sec_cipher_disk"
+     ]
+    },
+    {
+     "id": "sec_cardan_grille",
+     "name": "格栅密码",
+     "en": "Cardan grille",
+     "year": 1550,
+     "note": "以开孔模板在明文上读取密文与隐写的器具，卡尔达诺发明。",
+     "deps": [
+      "writing"
+     ]
+    },
+    {
+     "id": "sec_autokey_cipher",
+     "name": "自密钥密码",
+     "en": "Autokey cipher",
+     "year": 1586,
+     "note": "以明文自身延展密钥流的改进维吉尼亚形态，密钥不重复使用。",
+     "deps": [
+      "sec_vigenere_cipher"
+     ]
+    },
+    {
+     "id": "sec_jefferson_wheel",
+     "name": "杰斐逊密码轮",
+     "en": "Jefferson disk",
+     "year": 1795,
+     "note": "多盘错位排列换字的机械加密器，美军沿用到二十世纪二十年代。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sec_playfair_cipher",
+     "name": "普莱费尔密码",
+     "en": "Playfair cipher",
+     "year": 1854,
+     "note": "以双字母对与方阵替换的首个实用双字密码，战地通信长期使用。",
+     "deps": [
+      "sec_frequency_analysis"
+     ]
+    },
+    {
+     "id": "sec_telegraph_cipher",
+     "name": "电报商用密本",
+     "en": "Telegraph code book",
+     "year": 1859,
+     "note": "为节省字费与保密而压缩词组的电码本，电报时代的编码产业。",
+     "deps": [
+      "telegraph"
+     ]
+    },
+    {
+     "id": "sec_one_time_pad",
+     "name": "一次一密",
+     "en": "One-time pad",
+     "year": 1917,
+     "note": "随机密钥仅用一次即销毁，香农证明其为唯一无条件安全的密码。",
+     "deps": [
+      "telegraph"
+     ]
+    },
+    {
+     "id": "sec_rotor_machine",
+     "name": "转轮密码机",
+     "en": "Rotor cipher machine",
+     "year": 1918,
+     "note": "电气转轮逐字变换线路的机械加密机，恩尼格玛为其最著名形态。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "sec_hill_cipher",
+     "name": "希尔密码",
+     "en": "Hill cipher",
+     "year": 1929,
+     "note": "以矩阵乘法对字母组线性变换的首个代数化密码，密码学数学化的先声。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sec_codebreaking_machine",
+     "name": "密码破译机",
+     "en": "Cryptanalytic machine",
+     "year": 1940,
+     "note": "图灵等人以机电装置自动搜索转轮机密钥，破译恩尼格玛扭转战局。",
+     "deps": [
+      "electricity",
+      "mathematics"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "对称密码与哈希",
+   "items": [
+    {
+     "id": "sec_stream_cipher",
+     "name": "流密码",
+     "en": "Stream cipher",
+     "year": 1949,
+     "note": "以密钥流逐比特加密的密码体制，香农理论奠基，RC4 等广泛用于无线通信。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sec_feistel_network",
+     "name": "费斯妥网络",
+     "en": "Feistel network",
+     "year": 1973,
+     "note": "对半互换迭代的分组结构，使任意轮函数都能构造可逆加密。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_block_cipher",
+     "name": "分组密码",
+     "en": "Block cipher",
+     "year": 1977,
+     "note": "数据加密标准确立的定长分组加密门类，现代对称密码的主体形态。",
+     "deps": [
+      "sec_feistel_network"
+     ]
+    },
+    {
+     "id": "sec_hash_function",
+     "name": "密码学哈希函数",
+     "en": "Cryptographic hash function",
+     "year": 1979,
+     "note": "默克尔-达姆加德结构把任意消息压缩为定长摘要，单向抗碰撞的基石。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_block_cipher_modes",
+     "name": "分组密码工作模式",
+     "en": "Block cipher modes of operation",
+     "year": 1980,
+     "note": "链接与反馈模式规范分组间关系，使分组密码可加密任意长消息。",
+     "deps": [
+      "sec_block_cipher"
+     ]
+    },
+    {
+     "id": "sec_csprng",
+     "name": "密码学安全随机数生成器",
+     "en": "Cryptographically secure RNG",
+     "year": 1986,
+     "note": "输出不可预测的随机源，布鲁姆等人给出可证明安全的构造。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_differential_cryptanalysis",
+     "name": "差分密码分析",
+     "en": "Differential cryptanalysis",
+     "year": 1990,
+     "note": "比哈姆与沙米尔以明文差分追踪密钥的攻击法，重塑分组密码设计准则。",
+     "deps": [
+      "sec_block_cipher"
+     ]
+    },
+    {
+     "id": "sec_md5_algorithm",
+     "name": "MD5 消息摘要算法",
+     "en": "MD5",
+     "year": 1991,
+     "note": "里维斯特设计的百二十八位摘要算法，曾广泛使用后被证实可碰撞。",
+     "deps": [
+      "sec_hash_function"
+     ]
+    },
+    {
+     "id": "sec_linear_cryptanalysis",
+     "name": "线性密码分析",
+     "en": "Linear cryptanalysis",
+     "year": 1993,
+     "note": "松井充以线性近似逼近密钥的通用攻击方法，与差分分析并称双璧。",
+     "deps": [
+      "sec_differential_cryptanalysis"
+     ]
+    },
+    {
+     "id": "sec_sha_family",
+     "name": "安全哈希算法",
+     "en": "Secure Hash Algorithm",
+     "year": 1995,
+     "note": "美国标准摘要算法家族，数字签名与区块链的信任根基。",
+     "deps": [
+      "sec_hash_function"
+     ]
+    },
+    {
+     "id": "sec_mac_authentication",
+     "name": "消息认证码",
+     "en": "Message authentication code",
+     "year": 1996,
+     "note": "以密钥化的摘要检验消息完整与来源，HMAC 为其通用标准形态。",
+     "deps": [
+      "sec_hash_function"
+     ]
+    },
+    {
+     "id": "sec_triple_des",
+     "name": "三重数据加密算法",
+     "en": "Triple DES",
+     "year": 1998,
+     "note": "以三重分组运算延长旧标准寿命的过渡方案，金融卡沿用多年。",
+     "deps": [
+      "sec_block_cipher"
+     ]
+    },
+    {
+     "id": "sec_pbkdf_derivation",
+     "name": "基于口令的密钥派生",
+     "en": "Password-based key derivation",
+     "year": 1999,
+     "note": "加盐多轮拉伸口令到密钥的函数，抵抗穷举的口令保护规范。",
+     "deps": [
+      "sec_hash_function"
+     ]
+    },
+    {
+     "id": "sec_aes_cipher",
+     "name": "高级加密标准",
+     "en": "Advanced Encryption Standard",
+     "year": 2001,
+     "note": "公开遴选产生的标准分组算法，全球硬件与软件加密的事实基线。",
+     "deps": [
+      "sec_block_cipher"
+     ]
+    },
+    {
+     "id": "sec_aead_mode",
+     "name": "认证加密模式",
+     "en": "Authenticated encryption",
+     "year": 2005,
+     "note": "单次运算同时完成加密与完整性校验的模式，无线与协议栈标配。",
+     "deps": [
+      "sec_block_cipher_modes"
+     ]
+    },
+    {
+     "id": "sec_lightweight_crypto",
+     "name": "轻量级密码算法",
+     "en": "Lightweight cryptography",
+     "year": 2007,
+     "note": "面向低功耗器件的紧凑密码设计，物联网安全的基础件。",
+     "deps": [
+      "sec_aes_cipher"
+     ]
+    },
+    {
+     "id": "sec_sponge_hash",
+     "name": "海绵结构哈希算法",
+     "en": "Sponge construction hash",
+     "year": 2012,
+     "note": "吸收与挤出交替的海绵构造，新一代标准哈希的算法基型。",
+     "deps": [
+      "sec_sha_family"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "公钥密码与签名体系",
+   "items": [
+    {
+     "id": "sec_dh_exchange",
+     "name": "迪菲-赫尔曼密钥交换",
+     "en": "Diffie-Hellman key exchange",
+     "year": 1976,
+     "note": "以离散对数难题让陌生双方公开协商出共享密钥，开启公钥密码革命。",
+     "deps": [
+      "mathematics",
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_rsa_algorithm",
+     "name": "RSA 算法",
+     "en": "RSA algorithm",
+     "year": 1978,
+     "note": "以大整数分解难题实现公钥加密与签名的算法，公钥密码的旗帜。",
+     "deps": [
+      "sec_dh_exchange"
+     ]
+    },
+    {
+     "id": "sec_digital_signature",
+     "name": "数字签名",
+     "en": "Digital signature",
+     "year": 1978,
+     "note": "私钥生成公钥验证的不可否认签章，电子世界的签押替代。",
+     "deps": [
+      "sec_dh_exchange"
+     ]
+    },
+    {
+     "id": "sec_code_based_crypto",
+     "name": "码基密码体制",
+     "en": "Code-based cryptography",
+     "year": 1978,
+     "note": "麦克艾利斯以纠错码难题构造的公钥方案，后量子候选之一。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sec_secret_sharing",
+     "name": "秘密共享方案",
+     "en": "Secret sharing",
+     "year": 1979,
+     "note": "沙米尔以多项式把秘密拆分为门限份，凑齐方可重建的托管技术。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sec_merkle_tree",
+     "name": "哈希默克尔树",
+     "en": "Merkle tree",
+     "year": 1979,
+     "note": "以叶子哈希逐层汇聚的数据结构，轻量验证海量数据完整性。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_mix_network",
+     "name": "混淆网络",
+     "en": "Mix network",
+     "year": 1981,
+     "note": "乔姆以中继混洗打乱通信对应关系，匿名通信研究的源头。",
+     "deps": [
+      "sec_rsa_algorithm"
+     ]
+    },
+    {
+     "id": "sec_blind_signature",
+     "name": "盲签名",
+     "en": "Blind signature",
+     "year": 1982,
+     "note": "签名者不知内容即可签发的技术，数字现金的隐私要件。",
+     "deps": [
+      "sec_rsa_algorithm"
+     ]
+    },
+    {
+     "id": "sec_ecc_crypto",
+     "name": "椭圆曲线密码",
+     "en": "Elliptic curve cryptography",
+     "year": 1985,
+     "note": "以椭圆曲线点群离散对数构建的公钥体制，短密钥高强度。",
+     "deps": [
+      "sec_dh_exchange"
+     ]
+    },
+    {
+     "id": "sec_zero_knowledge",
+     "name": "零知识证明",
+     "en": "Zero-knowledge proof",
+     "year": 1985,
+     "note": "不泄露秘密本身即可证明知情的技术，隐私与认证的钥匙。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sec_pki_infra",
+     "name": "公钥基础设施",
+     "en": "Public key infrastructure",
+     "year": 1988,
+     "note": "证书签发吊销与信任链管理体系，让公钥可信地属于其主人。",
+     "deps": [
+      "sec_rsa_algorithm"
+     ]
+    },
+    {
+     "id": "sec_schnorr_signature",
+     "name": "Schnorr 签名算法",
+     "en": "Schnorr signature",
+     "year": 1989,
+     "note": "短签名且可多签聚合的经典构造，现代区块链签名的主流谱系。",
+     "deps": [
+      "sec_digital_signature"
+     ]
+    },
+    {
+     "id": "sec_dsa_standard",
+     "name": "数字签名标准",
+     "en": "Digital Signature Standard",
+     "year": 1994,
+     "note": "美国发布的标准签名算法族，证书与协议的官方签名方案。",
+     "deps": [
+      "sec_digital_signature"
+     ]
+    },
+    {
+     "id": "sec_lattice_crypto",
+     "name": "格密码",
+     "en": "Lattice-based cryptography",
+     "year": 1996,
+     "note": "以格上困难问题构造的密码体系，抗量子攻击的后量子主力。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sec_identity_based",
+     "name": "基于身份的加密",
+     "en": "Identity-based encryption",
+     "year": 2001,
+     "note": "以用户身份字符串为公钥的方案，免去证书分发的繁琐。",
+     "deps": [
+      "sec_ecc_crypto"
+     ]
+    },
+    {
+     "id": "sec_homomorphic_encryption",
+     "name": "全同态加密",
+     "en": "Fully homomorphic encryption",
+     "year": 2009,
+     "note": "金特里首次实现密文上直接运算的加密，可委托云端计算而不泄密。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sec_certificate_transparency",
+     "name": "证书透明度",
+     "en": "Certificate Transparency",
+     "year": 2013,
+     "note": "以公开只追加日志监督证书签发的机制，遏制错发与滥发。",
+     "deps": [
+      "sec_pki_infra"
+     ]
+    },
+    {
+     "id": "sec_post_quantum",
+     "name": "后量子密码",
+     "en": "Post-quantum cryptography",
+     "year": 2022,
+     "note": "抵御量子算法的公钥新标准，美国定案以格密码为主的第一批算法。",
+     "deps": [
+      "sec_lattice_crypto"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "安全通信协议",
+   "items": [
+    {
+     "id": "sec_kerberos_protocol",
+     "name": "Kerberos 认证协议",
+     "en": "Kerberos protocol",
+     "year": 1988,
+     "note": "以第三方票据完成网络身份认证的协议，校园网与企业网经典。",
+     "deps": [
+      "computer",
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_pgp_email",
+     "name": "PGP 邮件加密",
+     "en": "PGP email encryption",
+     "year": 1991,
+     "note": "齐默曼发布的个人加密软件，推动端到端邮件加密平民化。",
+     "deps": [
+      "sec_rsa_algorithm",
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_radius_protocol",
+     "name": "拨入认证服务协议",
+     "en": "RADIUS protocol",
+     "year": 1991,
+     "note": "集中校验网络接入用户的认证计费协议，运营商与企业沿用至今。",
+     "deps": [
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_ssl_tls",
+     "name": "SSL 与 TLS 协议",
+     "en": "SSL and TLS protocols",
+     "year": 1995,
+     "note": "为可靠连接提供加密与完整性保护的安全层协议，互联网传输的护身符。",
+     "deps": [
+      "sec_rsa_algorithm",
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_https_protocol",
+     "name": "HTTPS 安全传输",
+     "en": "HTTPS",
+     "year": 1995,
+     "note": "以安全层承载超文本传输的万维网安全通道，网站可信通信的标配。",
+     "deps": [
+      "www",
+      "sec_rsa_algorithm"
+     ]
+    },
+    {
+     "id": "sec_ssh_protocol",
+     "name": "SSH 安全外壳协议",
+     "en": "SSH protocol",
+     "year": 1995,
+     "note": "加密远程登录与文件传输的协议，系统管理员的日常通道。",
+     "deps": [
+      "sec_dh_exchange",
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_s_mime",
+     "name": "安全多用途邮件扩展",
+     "en": "S/MIME",
+     "year": 1995,
+     "note": "以证书体系给邮件加密封签的标准，企业邮件保密的主流方案。",
+     "deps": [
+      "sec_pki_infra"
+     ]
+    },
+    {
+     "id": "sec_ipsec_suite",
+     "name": "IPsec 协议套件",
+     "en": "IPsec suite",
+     "year": 1998,
+     "note": "网络层认证加密的协议族，为上层一切流量提供安全基座。",
+     "deps": [
+      "sec_dh_exchange",
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_dnssec_protocol",
+     "name": "域名系统安全扩展",
+     "en": "DNSSEC",
+     "year": 1999,
+     "note": "以数字签名保证域名应答真实性的扩展，防止解析劫持。",
+     "deps": [
+      "internet",
+      "sec_digital_signature"
+     ]
+    },
+    {
+     "id": "sec_oauth_authorization",
+     "name": "开放授权协议",
+     "en": "OAuth authorization",
+     "year": 2010,
+     "note": "以令牌代替口令授权第三方访问的标准，开放平台的授权基础。",
+     "deps": [
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_secure_messaging",
+     "name": "端到端消息协议",
+     "en": "End-to-end messaging protocol",
+     "year": 2014,
+     "note": "棘轮式轮换密钥的即时通信加密协议，主流聊天应用的安全内核。",
+     "deps": [
+      "sec_dh_exchange"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "访问控制与身份认证",
+   "items": [
+    {
+     "id": "sec_password_auth",
+     "name": "口令认证",
+     "en": "Password authentication",
+     "year": 1961,
+     "note": "分时系统首创以口令区分用户身份，至今仍是最大众的认证方式。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_access_control_model",
+     "name": "安全访问控制模型",
+     "en": "Access control model",
+     "year": 1974,
+     "note": "分级安全的形式化模型，确立主客客体与读写规则的推演传统。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_password_hashing",
+     "name": "口令散列存储",
+     "en": "Password hashing storage",
+     "year": 1976,
+     "note": "以单向函数与加盐存放口令，系统文件被窃也不致明文泄露。",
+     "deps": [
+      "sec_password_auth"
+     ]
+    },
+    {
+     "id": "sec_biometric_auth",
+     "name": "生物特征识别认证",
+     "en": "Biometric authentication",
+     "year": 1980,
+     "note": "以指纹虹膜人脸等生理特征确认身份，八十年代自动指纹系统起步。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_otp_auth",
+     "name": "一次性口令认证",
+     "en": "One-time password",
+     "year": 1981,
+     "note": "以哈希链与令牌生成随用随弃的口令，重放攻击无从下手。",
+     "deps": [
+      "sec_password_auth"
+     ]
+    },
+    {
+     "id": "sec_smartcard_chip",
+     "name": "智能卡与安全芯片",
+     "en": "Smart card and secure chip",
+     "year": 1983,
+     "note": "内置芯片的卡片可安全存钥与运算，金融支付与身份卡片的载体。",
+     "deps": [
+      "ic"
+     ]
+    },
+    {
+     "id": "sec_two_factor_auth",
+     "name": "双因素认证",
+     "en": "Two-factor authentication",
+     "year": 1986,
+     "note": "以所知加所持双重校验身份，令牌与短信码使其走向大众。",
+     "deps": [
+      "sec_password_auth"
+     ]
+    },
+    {
+     "id": "sec_rbac_model",
+     "name": "基于角色的访问控制",
+     "en": "Role-based access control",
+     "year": 1992,
+     "note": "按角色而非个人分配权限的模型，大型系统授权管理的规范。",
+     "deps": [
+      "sec_access_control_model"
+     ]
+    },
+    {
+     "id": "sec_iris_recognition",
+     "name": "虹膜识别认证",
+     "en": "Iris recognition",
+     "year": 1994,
+     "note": "道格曼的虹膜纹理编码使识别错误率近乎为零，高安全门禁首选。",
+     "deps": [
+      "sec_biometric_auth"
+     ]
+    },
+    {
+     "id": "sec_captcha_verification",
+     "name": "人机验证",
+     "en": "CAPTCHA",
+     "year": 2000,
+     "note": "以人易机难的问题区分真实用户与脚本，公共服务的守门机制。",
+     "deps": [
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_port_access_control",
+     "name": "端口网络访问控制",
+     "en": "Port-based network access control",
+     "year": 2001,
+     "note": "接入前先行认证的交换机端口标准，内网准入的第一道闸。",
+     "deps": [
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_sso_federation",
+     "name": "单点登录与身份联邦",
+     "en": "Single sign-on and identity federation",
+     "year": 2002,
+     "note": "一次登录通行多个系统的断言标准，跨域身份互信的框架。",
+     "deps": [
+      "sec_kerberos_protocol"
+     ]
+    },
+    {
+     "id": "sec_liveness_detection",
+     "name": "生物特征活体检测",
+     "en": "Biometric liveness detection",
+     "year": 2010,
+     "note": "以眨眼纹理与深度线索鉴别真人照片面具，人脸支付的反欺诈件。",
+     "deps": [
+      "sec_biometric_auth"
+     ]
+    },
+    {
+     "id": "sec_device_fingerprint",
+     "name": "设备指纹识别",
+     "en": "Device fingerprinting",
+     "year": 2010,
+     "note": "以软硬件特征组合标识设备身份，风险控制与反欺诈的依据。",
+     "deps": [
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_passwordless_auth",
+     "name": "无口令认证标准",
+     "en": "Passwordless authentication",
+     "year": 2014,
+     "note": "以设备内置密钥替代口令的开放标准，钓鱼窃取口令的终结路线。",
+     "deps": [
+      "sec_rsa_algorithm"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "系统安全与攻防实践",
+   "items": [
+    {
+     "id": "sec_pen_testing",
+     "name": "渗透测试方法论",
+     "en": "Penetration testing methodology",
+     "year": 1970,
+     "note": "受雇攻击方以红队流程检验系统防线，安全评估的职业方法。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_filesystem_isolation",
+     "name": "文件系统隔离",
+     "en": "Filesystem isolation",
+     "year": 1979,
+     "note": "以变更进程根目录限定其可见范围，主机隔离的早期机制。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_audit_logging",
+     "name": "安全审计与日志",
+     "en": "Security audit logging",
+     "year": 1983,
+     "note": "分级安全标准要求记录可追责事件，事后取证与告警的数据底座。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_computer_virus",
+     "name": "计算机病毒",
+     "en": "Computer virus",
+     "year": 1983,
+     "note": "科恩演示的自我复制寄生代码，恶意代码研究的起点范畴。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_digital_forensics",
+     "name": "数字取证技术",
+     "en": "Digital forensics",
+     "year": 1984,
+     "note": "以可重现流程提取保全电子证据，司法鉴定与事件调查的支撑。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_ids_system",
+     "name": "入侵检测系统",
+     "en": "Intrusion detection system",
+     "year": 1986,
+     "note": "邓宁模型以行为特征发现越权与攻击，网络安全的哨兵。",
+     "deps": [
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_antivirus_engine",
+     "name": "杀毒引擎",
+     "en": "Antivirus engine",
+     "year": 1987,
+     "note": "以特征库与启发式规则扫描清除恶意程序，个人安全软件的核。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_fuzz_testing",
+     "name": "模糊测试",
+     "en": "Fuzz testing",
+     "year": 1988,
+     "note": "以随机畸形输入冲击程序暴露崩溃漏洞，软件安全测试利器。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_malware_analysis",
+     "name": "恶意软件分析",
+     "en": "Malware analysis",
+     "year": 1990,
+     "note": "以静态逆向与受控执行剖析恶意行为，防护产品的情报源头。",
+     "deps": [
+      "sec_antivirus_engine"
+     ]
+    },
+    {
+     "id": "sec_honeypot_system",
+     "name": "蜜罐技术",
+     "en": "Honeypot",
+     "year": 1990,
+     "note": "以伪装目标诱捕攻击者并采集手法，主动欺骗的情报陷阱。",
+     "deps": [
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_file_integrity_monitoring",
+     "name": "文件完整性监控",
+     "en": "File integrity monitoring",
+     "year": 1992,
+     "note": "以基线哈希比对发现关键文件被改，入侵后的第一声警报。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_vulnerability_scanning",
+     "name": "漏洞扫描",
+     "en": "Vulnerability scanning",
+     "year": 1992,
+     "note": "自动化探测系统已知弱点并对照清单，安全自查的常规手段。",
+     "deps": [
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_sandbox_isolation",
+     "name": "沙箱隔离技术",
+     "en": "Sandboxing",
+     "year": 1995,
+     "note": "以受限环境运行不可信代码，浏览器插件与文档打开的安全围栏。",
+     "deps": [
+      "sec_filesystem_isolation"
+     ]
+    },
+    {
+     "id": "sec_code_signing",
+     "name": "代码签名验证",
+     "en": "Code signing",
+     "year": 1995,
+     "note": "发行前对软件签名并在运行时验证，抑制篡改与供应链投毒。",
+     "deps": [
+      "sec_digital_signature"
+     ]
+    },
+    {
+     "id": "sec_code_obfuscation",
+     "name": "代码混淆",
+     "en": "Code obfuscation",
+     "year": 1997,
+     "note": "以语义等价变换隐藏程序逻辑，保护软件机密与反逆向。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_stack_protection",
+     "name": "缓冲区溢出防护",
+     "en": "Buffer overflow protection",
+     "year": 1998,
+     "note": "以金丝雀值与不可执行栈遏制溢出劫持，最经典漏洞的系统性防线。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_cve_database",
+     "name": "通用漏洞披露库",
+     "en": "Common vulnerabilities database",
+     "year": 1999,
+     "note": "统一编号公开漏洞的公共库，全球防护体系的信息枢纽。",
+     "deps": [
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_aslr_randomization",
+     "name": "地址空间布局随机化",
+     "en": "Address space layout randomization",
+     "year": 2001,
+     "note": "每次运行随机化内存布局，使攻击者难以定位注入目标。",
+     "deps": [
+      "sec_stack_protection"
+     ]
+    },
+    {
+     "id": "sec_ips_system",
+     "name": "入侵防御系统",
+     "en": "Intrusion prevention system",
+     "year": 2002,
+     "note": "检测后主动阻断恶意流量的在线防御设备，从旁听走向拦截。",
+     "deps": [
+      "sec_ids_system"
+     ]
+    },
+    {
+     "id": "sec_spam_filtering",
+     "name": "垃圾邮件过滤",
+     "en": "Spam filtering",
+     "year": 2002,
+     "note": "以统计分类判别并拦截垃圾邮件，贝叶斯方法打响 Inbox 保卫战。",
+     "deps": [
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_tpm_module",
+     "name": "可信平台模块",
+     "en": "Trusted platform module",
+     "year": 2003,
+     "note": "主板上承接信任根的专用芯片，密钥保管与度量报告的硬件锚点。",
+     "deps": [
+      "ic"
+     ]
+    },
+    {
+     "id": "sec_siem_platform",
+     "name": "安全信息与事件管理",
+     "en": "Security information and event management",
+     "year": 2005,
+     "note": "聚合日志实时关联告警的平台，安全运营中心的中枢系统。",
+     "deps": [
+      "sec_ids_system"
+     ]
+    },
+    {
+     "id": "sec_botnet_detection",
+     "name": "僵尸网络检测",
+     "en": "Botnet detection",
+     "year": 2005,
+     "note": "以通信行为特征发现受控主机集群，掐断大规模攻击的傀儡源。",
+     "deps": [
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_rootkit_detection",
+     "name": "内核根套件检测",
+     "en": "Rootkit detection",
+     "year": 2005,
+     "note": "针对深藏内核的隐身木马的比对检测，系统底层的猫鼠游戏。",
+     "deps": [
+      "sec_antivirus_engine"
+     ]
+    },
+    {
+     "id": "sec_zero_trust",
+     "name": "零信任安全架构",
+     "en": "Zero trust architecture",
+     "year": 2010,
+     "note": "不信任内网默认放行的架构原则，持续验证每个访问请求。",
+     "deps": [
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_secure_boot",
+     "name": "安全启动链",
+     "en": "Secure boot",
+     "year": 2012,
+     "note": "固件逐级验证下一级代码签名后加载，开机即构筑信任链。",
+     "deps": [
+      "sec_tpm_module"
+     ]
+    },
+    {
+     "id": "sec_edr_system",
+     "name": "端点检测与响应",
+     "en": "Endpoint detection and response",
+     "year": 2013,
+     "note": "以端侧行为遥测发现并处置高级威胁，杀毒范式的升级。",
+     "deps": [
+      "sec_ids_system"
+     ]
+    },
+    {
+     "id": "sec_ransomware_defense",
+     "name": "勒索软件防护",
+     "en": "Ransomware defense",
+     "year": 2013,
+     "note": "以行为拦截备份隔离对抗加密勒索，恢复能力成为最后防线。",
+     "deps": [
+      "sec_antivirus_engine"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "数据安全与分布式信任",
+   "items": [
+    {
+     "id": "sec_emission_security",
+     "name": "电磁泄漏防护",
+     "en": "Emission security",
+     "year": 1970,
+     "note": "屏蔽与滤波抑制设备电磁泄漏，防范搭线截获重建屏幕内容。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_secure_multiparty",
+     "name": "安全多方计算",
+     "en": "Secure multi-party computation",
+     "year": 1982,
+     "note": "姚期智百万富翁问题引出的协议族，各持隐私输入共同算结果。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sec_threshold_crypto",
+     "name": "门限密码体制",
+     "en": "Threshold cryptography",
+     "year": 1987,
+     "note": "以秘密共享分散解密签名权，凑足门限方可生效的协商保护。",
+     "deps": [
+      "sec_secret_sharing"
+     ]
+    },
+    {
+     "id": "sec_electronic_cash",
+     "name": "电子现金",
+     "en": "Electronic cash",
+     "year": 1990,
+     "note": "乔姆以盲签名实现匿名数字货币，央行之外的可追踪性方案先驱。",
+     "deps": [
+      "sec_blind_signature"
+     ]
+    },
+    {
+     "id": "sec_e2e_encryption",
+     "name": "端到端加密",
+     "en": "End-to-end encryption",
+     "year": 1991,
+     "note": "仅在收发双方解密的通信保护，服务商也无法窥视内容。",
+     "deps": [
+      "sec_rsa_algorithm"
+     ]
+    },
+    {
+     "id": "sec_full_disk_encryption",
+     "name": "全盘加密",
+     "en": "Full disk encryption",
+     "year": 1995,
+     "note": "对整个存储卷透明加解密的防护，设备遗失或报废不致数据泄露。",
+     "deps": [
+      "sec_block_cipher"
+     ]
+    },
+    {
+     "id": "sec_digital_watermarking",
+     "name": "数字水印",
+     "en": "Digital watermarking",
+     "year": 1993,
+     "note": "向媒体嵌入不可感知标识以溯源确权，隐写术的现代延伸。",
+     "deps": [
+      "sec_steganography"
+     ]
+    },
+    {
+     "id": "sec_proof_of_work",
+     "name": "工作量证明",
+     "en": "Proof of work",
+     "year": 1993,
+     "note": "以可验证计算代价抵御滥用与女巫攻击，反垃圾与账本共识的引擎。",
+     "deps": [
+      "sec_hash_function"
+     ]
+    },
+    {
+     "id": "sec_tamper_resistant_package",
+     "name": "防篡改安全封装",
+     "en": "Tamper-resistant packaging",
+     "year": 1994,
+     "note": "以网格涂层与传感层使拆解留痕，安全模块的物理盔甲。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "sec_side_channel_protection",
+     "name": "旁路攻击防护",
+     "en": "Side-channel attack countermeasures",
+     "year": 1996,
+     "note": "以掩码恒定时间对付时序功耗泄露，密码芯片的隐形战线。",
+     "deps": [
+      "ic"
+     ]
+    },
+    {
+     "id": "sec_consensus_algorithm",
+     "name": "分布式共识算法",
+     "en": "Distributed consensus algorithms",
+     "year": 1998,
+     "note": "帕克松等算法使分布式节点对决议达成一致，容错系统的根基。",
+     "deps": [
+      "computer",
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_bft_consensus",
+     "name": "拜占庭容错共识",
+     "en": "Byzantine fault tolerance",
+     "year": 1999,
+     "note": "在恶意节点存在下仍能一致的协议，许可链与关键系统的引擎。",
+     "deps": [
+      "computer",
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_searchable_encryption",
+     "name": "可搜索加密",
+     "en": "Searchable encryption",
+     "year": 2000,
+     "note": "在密文上执行关键词检索的方案，云存储隐私与效率的折中。",
+     "deps": [
+      "sec_rsa_algorithm"
+     ]
+    },
+    {
+     "id": "sec_puf_device",
+     "name": "物理不可克隆函数",
+     "en": "Physical unclonable function",
+     "year": 2001,
+     "note": "以制造偏差的不可复制响应作为器件指纹，硬件身份的基因锁。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "sec_ring_signature",
+     "name": "环签名",
+     "en": "Ring signature",
+     "year": 2001,
+     "note": "签名者隐匿于群体之中无法指认，匿名交易的技术要件。",
+     "deps": [
+      "sec_digital_signature"
+     ]
+    },
+    {
+     "id": "sec_onion_routing",
+     "name": "洋葱路由匿名网络",
+     "en": "Onion routing",
+     "year": 2002,
+     "note": "多层加密逐站剥离的匿名中继网络，抵抗流量分析的关键。",
+     "deps": [
+      "sec_mix_network"
+     ]
+    },
+    {
+     "id": "sec_whitebox_crypto",
+     "name": "白盒密码实现",
+     "en": "White-box cryptography",
+     "year": 2002,
+     "note": "在完全可见环境下仍隐藏密钥的软件实现术，移动端保护方案。",
+     "deps": [
+      "sec_block_cipher"
+     ]
+    },
+    {
+     "id": "sec_data_masking",
+     "name": "数据脱敏技术",
+     "en": "Data masking",
+     "year": 2003,
+     "note": "以遮蔽替换保留格式的敏感数据改造，测试与共享的隐私前提。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sec_trusted_execution_env",
+     "name": "可信执行环境",
+     "en": "Trusted execution environment",
+     "year": 2004,
+     "note": "处理器内隔离的安全飞地，敏感计算免受富操作系统窥探。",
+     "deps": [
+      "ic"
+     ]
+    },
+    {
+     "id": "sec_differential_privacy",
+     "name": "差分隐私",
+     "en": "Differential privacy",
+     "year": 2006,
+     "note": "以可控噪声给出数学可证的隐私保证，统计发布的新基准。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sec_blockchain",
+     "name": "区块链",
+     "en": "Blockchain",
+     "year": 2008,
+     "note": "以哈希链与共识维护的公开账本，无中介信任机器的奠基形态。",
+     "deps": [
+      "sec_sha_family",
+      "internet"
+     ]
+    },
+    {
+     "id": "sec_pos_consensus",
+     "name": "权益证明共识",
+     "en": "Proof of stake",
+     "year": 2012,
+     "note": "以持币权益替代算力竞争的共识机制，能耗大降的账本路线。",
+     "deps": [
+      "sec_proof_of_work"
+     ]
+    },
+    {
+     "id": "sec_zk_snark",
+     "name": "简洁零知识证明",
+     "en": "Zero-knowledge succinct proof",
+     "year": 2013,
+     "note": "毫秒级验证不泄密的简洁证明，扩容与隐私兼顾的新工具。",
+     "deps": [
+      "sec_zero_knowledge"
+     ]
+    },
+    {
+     "id": "sec_distributed_ledger",
+     "name": "分布式账本技术",
+     "en": "Distributed ledger technology",
+     "year": 2015,
+     "note": "多方共同维护同步的账本技术总称，超越单一链式的许可形态。",
+     "deps": [
+      "sec_blockchain"
+     ]
+    },
+    {
+     "id": "sec_smart_contract",
+     "name": "智能合约",
+     "en": "Smart contract",
+     "year": 2015,
+     "note": "账本上自动执行的程序化合约，无需人工干预的条件履约。",
+     "deps": [
+      "sec_blockchain"
+     ]
+    }
+   ]
+  }
+ ]
+}

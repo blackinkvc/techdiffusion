@@ -1,0 +1,1177 @@
+{
+ "cat": "manufact",
+ "catName": "制造与工具",
+ "sub": "casting",
+ "subName": "铸造与锻压",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "bronze_casting",
+  "iron_smelting",
+  "bronze",
+  "iron",
+  "steel",
+  "steam_engine",
+  "electricity",
+  "plastics",
+  "fire",
+  "explosives"
+ ],
+ "families": [
+  {
+   "name": "砂型与砂芯铸造",
+   "items": [
+    {
+     "id": "sand_casting",
+     "name": "砂型铸造",
+     "en": "Sand casting",
+     "year": 1700,
+     "note": "以型砂制成铸型浇注金属液的通用铸造法，铸铁时代起逐步成为应用最广的铸造工艺。",
+     "deps": [
+      "iron_smelting"
+     ]
+    },
+    {
+     "id": "molding_pattern",
+     "name": "铸造模样",
+     "en": "Foundry pattern",
+     "year": 1750,
+     "note": "按铸件轮廓加放收缩率与加工余量制作的实体模样，是砂型造型取得型腔的依据。"
+    },
+    {
+     "id": "green_sand_molding",
+     "name": "湿砂型造型",
+     "en": "Green sand molding",
+     "year": 1800,
+     "note": "型砂在含水湿态直接造型浇注，成本低周转快，中小铸件生产采用最多的造型法。",
+     "deps": [
+      "sand_casting"
+     ]
+    },
+    {
+     "id": "dry_sand_molding",
+     "name": "干砂型造型",
+     "en": "Dry sand molding",
+     "year": 1800,
+     "note": "型砂经烘干后合型浇注，强度与透气性更好，用于大中型的承受高压铸件。",
+     "deps": [
+      "sand_casting"
+     ]
+    },
+    {
+     "id": "pit_molding",
+     "name": "地坑造型",
+     "en": "Pit molding",
+     "year": 1800,
+     "note": "在砂坑中就地造型的大型件铸造法，以地面代砂箱，床身机座等大件常用。",
+     "deps": [
+      "sand_casting"
+     ]
+    },
+    {
+     "id": "molding_sand_prep",
+     "name": "型砂制备",
+     "en": "Molding sand preparation",
+     "year": 1850,
+     "note": "原砂与膨润土煤粉水分按配比混碾成均匀可用的型砂，决定砂型的强度与透气性。"
+    },
+    {
+     "id": "sand_core_making",
+     "name": "砂芯制造",
+     "en": "Sand core making",
+     "year": 1850,
+     "note": "用芯砂制成铸件内腔与孔道的型芯，芯头定位排气，是空心铸件成形的关键工序。"
+    },
+    {
+     "id": "shell_molding",
+     "name": "壳型铸造",
+     "en": "Shell molding",
+     "year": 1944,
+     "note": "酚醛树脂覆膜砂在热模上结壳成型的铸造法，1944年克朗宁发明，铸件表面光洁。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "co2_sand_process",
+     "name": "水玻璃砂吹CO2造型",
+     "en": "CO2 silicate process",
+     "year": 1953,
+     "note": "型砂拌入水玻璃后吹二氧化碳硬化成型，硬化快不需烘干，五十年代广泛用于铸钢。"
+    },
+    {
+     "id": "fluid_selfhardening_sand",
+     "name": "水玻璃流态自硬砂",
+     "en": "Fluid self-hardening sand",
+     "year": 1960,
+     "note": "水玻璃砂加入发泡剂呈流态自硬成型，无需捣固即可充填空腔，用于大件造型。"
+    },
+    {
+     "id": "lost_foam_casting",
+     "name": "消失模铸造",
+     "en": "Lost foam casting",
+     "year": 1958,
+     "note": "泡沫塑料模样留在铸型中，浇注时气化消失形成型腔，1958年取得专利，免取模精度好。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "resin_selfhardening_sand",
+     "name": "树脂自硬砂造型",
+     "en": "No-bake resin sand molding",
+     "year": 1958,
+     "note": "呋喃树脂与固化剂在常温下反应使型砂自硬，尺寸精度好，单件与中大件生产常用。"
+    },
+    {
+     "id": "hot_box_core",
+     "name": "热芯盒制芯",
+     "en": "Hot box process",
+     "year": 1960,
+     "note": "芯盒加热使树脂砂快速固化成芯，节拍短强度好，用于缸体缸盖等大批量内腔芯。"
+    },
+    {
+     "id": "high_pressure_molding",
+     "name": "垂直分型无箱造型",
+     "en": "Flaskless high-pressure molding",
+     "year": 1964,
+     "note": "高压压实并垂直分型的无砂箱自动造型，1964年迪沙造型机开创紧凑高效造型线。"
+    },
+    {
+     "id": "cold_box_core",
+     "name": "冷芯盒制芯",
+     "en": "Cold box process",
+     "year": 1968,
+     "note": "三乙胺气体催化使砂芯常温瞬时硬化，1968年工业化，节能高效且精度高。"
+    },
+    {
+     "id": "core_assembly_molding",
+     "name": "组芯造型",
+     "en": "Core assembly molding",
+     "year": 1970,
+     "note": "多块砂芯组合成完整铸型，缸盖等复杂内腔铸件不再依赖外模，精度与效率兼顾。"
+    },
+    {
+     "id": "v_process",
+     "name": "V法真空造型",
+     "en": "V-process molding",
+     "year": 1971,
+     "note": "薄膜密封干砂抽真空成型的造型法，起模后解除真空出件，1971年日本开发，表面光洁。"
+    },
+    {
+     "id": "gating_system",
+     "name": "浇注系统设计",
+     "en": "Gating system",
+     "year": 1800,
+     "note": "直浇道横浇道内浇道组成的充型通道结构，控制流速流向，减少卷气夹渣。",
+     "deps": [
+      "sand_casting"
+     ]
+    },
+    {
+     "id": "riser_design",
+     "name": "冒口补缩",
+     "en": "Riser feeding",
+     "year": 1800,
+     "note": "在铸件厚壁处设置补缩冒口，使金属液补给凝固收缩，是消除缩孔缩松的基本手段。",
+     "deps": [
+      "sand_casting"
+     ]
+    },
+    {
+     "id": "chill_use",
+     "name": "冷铁激冷",
+     "en": "Chills",
+     "year": 1850,
+     "note": "在砂型局部安放金属冷铁加速散热，控制凝固顺序，实现定向补缩与细化晶粒。"
+    }
+   ]
+  },
+  {
+   "name": "特种与精密铸造",
+   "items": [
+    {
+     "id": "centrifugal_casting",
+     "name": "离心铸造",
+     "en": "Centrifugal casting",
+     "year": 1809,
+     "note": "金属液注入旋转铸型中在离心力下贴壁凝固，组织致密，1809年出现专利，用于管套。"
+    },
+    {
+     "id": "permanent_mold_casting",
+     "name": "金属型铸造",
+     "en": "Permanent mold casting",
+     "year": 1850,
+     "note": "铸铁钢等金属型重复浇注的重力铸造，铸件晶粒细密，铝活塞缸体等批量生产。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "plaster_mold_casting",
+     "name": "石膏型铸造",
+     "en": "Plaster mold casting",
+     "year": 1890,
+     "note": "以石膏浆灌注制型的精密铸造，可复现精细表面，用于锌铝合金精密小件。"
+    },
+    {
+     "id": "graphite_mold_casting",
+     "name": "石墨型铸造",
+     "en": "Graphite mold casting",
+     "year": 1900,
+     "note": "石墨型导热快且不粘金属，铸件晶粒细密，用于铜合金与要求光洁的铸件。"
+    },
+    {
+     "id": "bimetal_casting",
+     "name": "双金属铸造",
+     "en": "Bimetal casting",
+     "year": 1900,
+     "note": "两种金属复合浇注或先后浇注结合成一体，轴瓦衬层与耐磨复合件以此为工艺基础。"
+    },
+    {
+     "id": "die_casting",
+     "name": "压铸",
+     "en": "Die casting",
+     "year": 1905,
+     "note": "金属液高压高速充填金属模具的铸造法，锌铝镁合金薄壁件成批生产的主导工艺。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "low_pressure_casting",
+     "name": "低压铸造",
+     "en": "Low-pressure casting",
+     "year": 1910,
+     "note": "金属液受气压自下而上平稳充型并在压力下凝固，充型可控铸件致密，用于轮毂缸盖。"
+    },
+    {
+     "id": "cold_chamber_diecasting",
+     "name": "冷室压铸",
+     "en": "Cold-chamber die casting",
+     "year": 1920,
+     "note": "压射室与熔炉分离的压铸方式，适合铝等高温合金，避免熔杯浸蚀，二十世纪二十年代推广。",
+     "deps": [
+      "die_casting"
+     ]
+    },
+    {
+     "id": "continuous_casting_nonferrous",
+     "name": "有色金属连铸",
+     "en": "Continuous casting of nonferrous metals",
+     "year": 1935,
+     "note": "铝铜合金液经水冷结晶器连续凝固成锭坯，与轧制联动，二十世纪三十年代实现工业化。"
+    },
+    {
+     "id": "investment_casting",
+     "name": "熔模铸造",
+     "en": "Investment casting",
+     "year": 1945,
+     "note": "蜡模涂挂耐火浆料结壳后熔蜡失模成型的精密铸造，由古代失蜡法发展而来，用于涡轮叶片。",
+     "deps": [
+      "bronze_casting"
+     ]
+    },
+    {
+     "id": "ceramic_mold_casting",
+     "name": "陶瓷型铸造",
+     "en": "Ceramic mold casting",
+     "year": 1950,
+     "note": "陶瓷浆料制壳制型的高精度铸造法，用于模具型腔与精密铸钢件，表面质量好。"
+    },
+    {
+     "id": "twin_roll_casting",
+     "name": "双辊铸轧",
+     "en": "Twin-roll strip casting",
+     "year": 1954,
+     "note": "金属液在双辊辊缝间凝固并直接轧成薄带，1954年前后用于铝带生产，省去热轧工序。",
+     "deps": [
+      "continuous_casting_nonferrous"
+     ]
+    },
+    {
+     "id": "vacuum_diecasting",
+     "name": "真空压铸",
+     "en": "Vacuum die casting",
+     "year": 1960,
+     "note": "压铸前抽除型腔气体以消除卷气气孔，铸件致密可热处理，用于受力压铸件。",
+     "deps": [
+      "cold_chamber_diecasting"
+     ]
+    },
+    {
+     "id": "horizontal_continuous_casting",
+     "name": "水平连铸",
+     "en": "Horizontal continuous casting",
+     "year": 1960,
+     "note": "卧式布置结晶器的连铸法，设备低矮投资省，铸铁棒管与铜材小型钢厂广泛应用。",
+     "deps": [
+      "continuous_casting_nonferrous"
+     ]
+    },
+    {
+     "id": "squeeze_casting",
+     "name": "挤压铸造",
+     "en": "Squeeze casting",
+     "year": 1965,
+     "note": "金属液定量浇入型腔后高压下凝固成形的液态模锻，无浇冒口且组织致密。"
+    },
+    {
+     "id": "directional_solidification",
+     "name": "定向凝固铸造",
+     "en": "Directional solidification casting",
+     "year": 1965,
+     "note": "控制温度梯度使柱状晶沿轴向定向凝固的精密铸造，显著提高涡轮叶片高温蠕变性能。",
+     "deps": [
+      "investment_casting"
+     ]
+    },
+    {
+     "id": "counter_pressure_casting",
+     "name": "差压铸造",
+     "en": "Counter-pressure casting",
+     "year": 1970,
+     "note": "坩埚与型腔同时加压并以恒定差压充型的铸造法，充型平稳气密性好，用于气密轮毂。",
+     "deps": [
+      "low_pressure_casting"
+     ]
+    },
+    {
+     "id": "thixocasting",
+     "name": "半固态触变压铸",
+     "en": "Thixocasting",
+     "year": 1971,
+     "note": "半固态金属浆料在触变状态下压铸成形，1971年麻省理工提出，充型平稳缺陷少。"
+    },
+    {
+     "id": "single_crystal_casting",
+     "name": "单晶叶片铸造",
+     "en": "Single-crystal blade casting",
+     "year": 1970,
+     "note": "选晶器淘汰晶界获得单一晶粒取向的定向凝固铸造，用于航空发动机高温叶片。",
+     "deps": [
+      "directional_solidification"
+     ]
+    },
+    {
+     "id": "ceramic_core_investment",
+     "name": "熔模陶芯",
+     "en": "Ceramic core for investment casting",
+     "year": 1965,
+     "note": "石英基陶瓷芯预置型腔中形成空心气冷通道，浇注后脱芯，是空心叶片铸造关键。",
+     "deps": [
+      "investment_casting"
+     ]
+    },
+    {
+     "id": "vacuum_investment_casting",
+     "name": "真空熔模铸造",
+     "en": "Vacuum investment casting",
+     "year": 1970,
+     "note": "真空熔炼与浇注下进行熔模铸造，避免高温合金氧化，精密涡轮件生产标准工艺。",
+     "deps": [
+      "investment_casting"
+     ]
+    },
+    {
+     "id": "metal_mold_coated_sand",
+     "name": "铁型覆砂铸造",
+     "en": "Coated-sand permanent mold casting",
+     "year": 1980,
+     "note": "金属型腔面覆薄层树脂砂的铸造法，兼得激冷与充型，曲轴等批量铸件采用。",
+     "deps": [
+      "permanent_mold_casting"
+     ]
+    },
+    {
+     "id": "metal_mold_coating",
+     "name": "铸型涂料",
+     "en": "Mold coating",
+     "year": 1900,
+     "note": "涂敷于铸型表面的耐火涂料，隔离金属与铸型并调节冷却，改善表面与脱模。"
+    },
+    {
+     "id": "shakeout_cleaning",
+     "name": "落砂清理",
+     "en": "Shakeout",
+     "year": 1900,
+     "note": "铸件凝固冷却后振动落砂机使砂型溃散脱落，是砂型铸造车间的第一道后处理工序。"
+    },
+    {
+     "id": "fettling",
+     "name": "铸件清整",
+     "en": "Fettling",
+     "year": 1920,
+     "note": "切割浇冒口、打磨飞边毛刺使铸件符合交货尺寸的清理工序，多用砂轮与气割完成。"
+    },
+    {
+     "id": "melt_filtration",
+     "name": "金属液过滤",
+     "en": "Metal melt filtration",
+     "year": 1970,
+     "note": "泡沫陶瓷过滤器拦截金属液中非金属夹杂，净化充型金属，显著降低铸件废品率。"
+    },
+    {
+     "id": "exothermic_riser",
+     "name": "发热保温冒口",
+     "en": "Exothermic riser sleeve",
+     "year": 1950,
+     "note": "内壁衬发热保温材料的冒口套，延长冒口金属液补缩时间，提高工艺出品率。"
+    },
+    {
+     "id": "sand_reclamation",
+     "name": "旧砂再生",
+     "en": "Sand reclamation",
+     "year": 1975,
+     "note": "机械或热法再生处理回收铸造旧砂，循环利用型砂，减少废砂排放与成本。",
+     "deps": [
+      "resin_selfhardening_sand"
+     ]
+    },
+    {
+     "id": "casting_simulation",
+     "name": "铸造凝固模拟",
+     "en": "Casting simulation",
+     "year": 1985,
+     "note": "数值模拟金属液充型凝固与缺陷形成，八十年代起用于优化浇冒口系统，减少试制。"
+    }
+   ]
+  },
+  {
+   "name": "手工锻造与自由锻",
+   "items": [
+    {
+     "id": "hand_smithing",
+     "name": "手工锻造",
+     "en": "Hand forging",
+     "year": -800,
+     "note": "铁匠持锤在砧上反复锤锻热铁成形的技艺，伴随冶铁出现，是全部锻压工艺的源头。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "upsetting_forging",
+     "name": "镦粗锻造",
+     "en": "Upset forging",
+     "year": 1000,
+     "note": "沿轴向加压使坯料截面增大高度减小的锻造工序，用于法兰盘头等局部增料成形。"
+    },
+    {
+     "id": "drawing_out",
+     "name": "拔长锻造",
+     "en": "Drawing out",
+     "year": 1000,
+     "note": "沿轴向反复锻打使坯料伸长减径的锻造工序，自由锻中轴杆件成形的基本操作。"
+    },
+    {
+     "id": "open_die_forging",
+     "name": "自由锻",
+     "en": "Open-die forging",
+     "year": 1600,
+     "note": "平砧间无专用型模的锻造成形，配蒸汽锤或水压机锻造大型轴类与盘件。"
+    },
+    {
+     "id": "loose_tool_forging",
+     "name": "胎模锻",
+     "en": "Loose-tool forging",
+     "year": 1700,
+     "note": "可移动胎模置于砧面锻造的方式，介于自由锻与模锻之间，单件小批常用。",
+     "deps": [
+      "open_die_forging"
+     ]
+    },
+    {
+     "id": "steam_hammer_forging",
+     "name": "蒸汽锤锻造",
+     "en": "Steam hammer forging",
+     "year": 1843,
+     "note": "蒸汽驱动锤头冲击锻打工件，1843年内史密斯蒸汽锤投产，锻造进入机器动力时代。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "drop_die_forging",
+     "name": "锤上模锻",
+     "en": "Drop forging",
+     "year": 1860,
+     "note": "蒸汽锤冲击使金属在锻模型腔中流动成形的模锻，十九世纪中叶用于武器与机件制造。",
+     "deps": [
+      "steam_hammer_forging"
+     ]
+    },
+    {
+     "id": "ring_rolling",
+     "name": "辗环",
+     "en": "Ring rolling",
+     "year": 1860,
+     "note": "环形坯在辗环机驱动辊与芯辊间减壁扩径，滚制出无缝环件，轴承套圈与法兰用。"
+    },
+    {
+     "id": "rotary_swaging",
+     "name": "旋锻",
+     "en": "Rotary swaging",
+     "year": 1860,
+     "note": "锤头绕坯料圆周高频交替锤击使其径向收径，用于棒端与管件收口，效率高。"
+    },
+    {
+     "id": "upset_machine_forging",
+     "name": "平锻机镦锻",
+     "en": "Horizontal upset forging",
+     "year": 1880,
+     "note": "卧式平锻机沿棒料轴向镦锻局部聚料成形，用于螺钉头、法兰轴与环形件批量生产。"
+    },
+    {
+     "id": "hydraulic_free_forging",
+     "name": "水压机自由锻",
+     "en": "Hydraulic free forging",
+     "year": 1890,
+     "note": "大型自由锻液压机以静压力锻造主轴转子等大锻件，十九世纪末万吨级压机出现。",
+     "deps": [
+      "open_die_forging"
+     ]
+    },
+    {
+     "id": "press_die_forging",
+     "name": "压力机模锻",
+     "en": "Press forging",
+     "year": 1900,
+     "note": "曲柄或液压压力机以静压代替锤击模锻，变形深入且冲击噪声小，精密件生产优选。",
+     "deps": [
+      "drop_die_forging"
+     ]
+    },
+    {
+     "id": "coining",
+     "name": "精压",
+     "en": "Coining",
+     "year": 1900,
+     "note": "高压力下使零件表层流动填充模腔的成形法，获得精密尺寸与压印花纹，硬币压制传统工艺。"
+    },
+    {
+     "id": "roll_forging",
+     "name": "辊锻",
+     "en": "Roll forging",
+     "year": 1920,
+     "note": "扇形模具随辊旋转反复辊压坯料使其轴向延伸成形，用于叶片连杆等预制坯。"
+    },
+    {
+     "id": "cold_heading",
+     "name": "冷镦",
+     "en": "Cold heading",
+     "year": 1840,
+     "note": "冷态线材在镦锻机中镦制螺栓螺钉头部的批量成形法，材料利用率高。"
+    },
+    {
+     "id": "cold_forging",
+     "name": "冷锻",
+     "en": "Cold forging",
+     "year": 1950,
+     "note": "室温闭式模锻或冷挤压成形，精度高表面好且省材，二十世纪五十年代在汽车工业推广。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "radial_forging",
+     "name": "径向锻造",
+     "en": "Radial forging",
+     "year": 1960,
+     "note": "多锤头在圆周同步高频锤击并送进的锻造机锻造实心轴与管件，尺寸精度高。"
+    },
+    {
+     "id": "multiaction_forging",
+     "name": "多向模锻",
+     "en": "Multi-action forging",
+     "year": 1960,
+     "note": "水平与垂直多冲头同时合模施压的闭式模锻，一次成形三通阀体等复杂件。",
+     "deps": [
+      "press_die_forging"
+     ]
+    },
+    {
+     "id": "high_energy_rate_forging",
+     "name": "高速锤锻造",
+     "en": "High-energy-rate forging",
+     "year": 1962,
+     "note": "高压气体瞬时释放驱动锤头高速成形的锻造法，用于薄壁精密叶片等难成形件。"
+    },
+    {
+     "id": "precision_forging",
+     "name": "精密锻造",
+     "en": "Precision forging",
+     "year": 1965,
+     "note": "近净成形小余量模锻工艺，齿轮锥盘锻后少加工甚至免加工，用于汽车传动件。",
+     "deps": [
+      "press_die_forging"
+     ]
+    },
+    {
+     "id": "isothermal_forging",
+     "name": "等温锻造",
+     "en": "Isothermal forging",
+     "year": 1970,
+     "note": "模具与坯料同温的慢速锻造，成形性好且组织均匀，钛合金与高温合金叶片盘件采用。"
+    },
+    {
+     "id": "warm_forging",
+     "name": "温锻",
+     "en": "Warm forging",
+     "year": 1970,
+     "note": "在再结晶温度以下适度加热的锻造成形，兼顾冷锻精度与热锻成形性，用于中碳钢件。"
+    },
+    {
+     "id": "orbital_forging",
+     "name": "摆动辗压",
+     "en": "Orbital forging",
+     "year": 1975,
+     "note": "摆动模锥面连续辗压局部变形累积成形的盘形件锻造法，设备小、变形力低。",
+     "deps": [
+      "precision_forging"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "冲压分离与成形工序",
+   "items": [
+    {
+     "id": "shearing",
+     "name": "剪裁",
+     "en": "Shearing",
+     "year": 1800,
+     "note": "剪板机上下刃相对错动切断板料，把大板剪成条料方块，是冲压车间第一道下料工序。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "blanking",
+     "name": "落料冲裁",
+     "en": "Blanking",
+     "year": 1850,
+     "note": "凸凹模刃口分离板料获得成品外形或坯料，是最基本的冲压分离工序。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "punching",
+     "name": "冲孔",
+     "en": "Punching",
+     "year": 1860,
+     "note": "在板料上冲出所需孔洞的分离工序，冲下的部分是废料，常与落料复合。",
+     "deps": [
+      "blanking"
+     ]
+    },
+    {
+     "id": "burring",
+     "name": "翻孔",
+     "en": "Burring",
+     "year": 1900,
+     "note": "沿预制孔用凸模翻出带竖边的孔缘，用于铆接与螺纹连接的小凸缘孔成形。"
+    },
+    {
+     "id": "trimming",
+     "name": "修边",
+     "en": "Trimming",
+     "year": 1900,
+     "note": "切去拉深件或冲压件周边的工艺余量边，使零件达到最终轮廓尺寸。",
+     "deps": [
+      "blanking"
+     ]
+    },
+    {
+     "id": "bending_stamp",
+     "name": "弯曲冲压",
+     "en": "Bending",
+     "year": 1850,
+     "note": "板料在模具中沿弯曲线塑性弯折成角形槽形零件，覆盖件加强件广泛采用。"
+    },
+    {
+     "id": "flanging",
+     "name": "翻边",
+     "en": "Flanging",
+     "year": 1900,
+     "note": "沿内孔或外缘将板料翻起一定高度竖边的成形工序，用于加强孔缘与连接边。"
+    },
+    {
+     "id": "curling",
+     "name": "卷边",
+     "en": "Curling",
+     "year": 1900,
+     "note": "将板料边缘卷成圆筒状的成形工序，消除锋边并增强刚度，容器口部与薄板件常用。"
+    },
+    {
+     "id": "hemming",
+     "name": "包边",
+     "en": "Hemming",
+     "year": 1910,
+     "note": "将外层板边折弯包住内层板的连接成形工序，汽车车门引擎盖等内外板总成工艺。"
+    },
+    {
+     "id": "embossing",
+     "name": "压花",
+     "en": "Embossing",
+     "year": 1900,
+     "note": "模具在板面压出凸凹花纹与加强筋的成形工序，兼具装饰与强化作用。"
+    },
+    {
+     "id": "deep_drawing",
+     "name": "拉深",
+     "en": "Deep drawing",
+     "year": 1860,
+     "note": "凸模把板料拉入凹模形成开口空心件的成形工序，杯状与筒形零件的基础制造法。"
+    },
+    {
+     "id": "ironing",
+     "name": "变薄拉深",
+     "en": "Ironing",
+     "year": 1900,
+     "note": "逐道减小筒壁厚度的拉深工序，用于弹药筒、气瓶与两片罐的壁厚精确成形。",
+     "deps": [
+      "deep_drawing"
+     ]
+    },
+    {
+     "id": "roll_forming",
+     "name": "辊弯成形",
+     "en": "Roll forming",
+     "year": 1860,
+     "note": "板料连续通过多道成形辊逐步弯折成等截面型材，屋面板、货架与汽车纵梁采用。"
+    },
+    {
+     "id": "compound_die_stamping",
+     "name": "复合模冲压",
+     "en": "Compound die stamping",
+     "year": 1900,
+     "note": "落料与冲孔等多工序在一副模具同一工位完成，定位准确且生产率高。",
+     "deps": [
+      "blanking"
+     ]
+    },
+    {
+     "id": "progressive_die_stamping",
+     "name": "级进模冲压",
+     "en": "Progressive die stamping",
+     "year": 1920,
+     "note": "带料在级进模多工位间逐步送进完成冲裁弯曲拉深，高速冲床大批量精密冲件工艺。",
+     "deps": [
+      "compound_die_stamping"
+     ]
+    },
+    {
+     "id": "tube_bending",
+     "name": "弯管成形",
+     "en": "Tube bending",
+     "year": 1900,
+     "note": "芯棒支撑下弯管机弯曲管材成形的工艺，排气管与管路系统的标准成形方法。"
+    },
+    {
+     "id": "necking",
+     "name": "缩口",
+     "en": "Necking",
+     "year": 1900,
+     "note": "将管口或筒口部直径缩小的成形工序，气瓶与容器收口采用。"
+    },
+    {
+     "id": "flaring",
+     "name": "扩口",
+     "en": "Flaring",
+     "year": 1900,
+     "note": "将管端向外扩张成喇叭口的成形工序，管件连接与密封结构的基础。"
+    },
+    {
+     "id": "bulging",
+     "name": "胀形",
+     "en": "Bulging",
+     "year": 1920,
+     "note": "以内压或分瓣凸模使筒形件局部向外膨胀的成形工序，波纹管与壶体成形用。"
+    }
+   ]
+  },
+  {
+   "name": "特种板料与液压成形",
+   "items": [
+    {
+     "id": "metal_spinning",
+     "name": "金属旋压",
+     "en": "Metal spinning",
+     "year": 1800,
+     "note": "板坯与芯模同转、旋轮逐点碾压使其贴模成形的回转件工艺，灯罩锅体等传统成形法。"
+    },
+    {
+     "id": "rubber_pad_forming",
+     "name": "橡皮成形",
+     "en": "Rubber pad forming",
+     "year": 1940,
+     "note": "橡皮垫代替凸模或凹模压制钣金的成形法，航空小批量蒙皮零件采用，免制金属模。"
+    },
+    {
+     "id": "stretch_forming",
+     "name": "拉弯成形",
+     "en": "Stretch forming",
+     "year": 1945,
+     "note": "板料在张紧状态下贴模弯曲，回弹小且表面好，用于飞机蒙皮与梁类零件。"
+    },
+    {
+     "id": "shear_spinning",
+     "name": "强力旋压",
+     "en": "Shear spinning",
+     "year": 1950,
+     "note": "旋轮减薄板坯并使其贴模延伸的旋压法，成形火箭贮箱封头等大型薄壁回转件。",
+     "deps": [
+      "metal_spinning"
+     ]
+    },
+    {
+     "id": "hydroforming",
+     "name": "液压成形",
+     "en": "Hydroforming",
+     "year": 1950,
+     "note": "以高压液体代替刚性凹模或冲头成形管件钣金，八十年代用于汽车轻量化结构件。"
+    },
+    {
+     "id": "explosive_forming",
+     "name": "爆炸成形",
+     "en": "Explosive forming",
+     "year": 1955,
+     "note": "水下炸药冲击波经水传递使板料贴模成形的特种工艺，用于大型难成形件。",
+     "deps": [
+      "explosives"
+     ]
+    },
+    {
+     "id": "electromagnetic_forming",
+     "name": "电磁成形",
+     "en": "Electromagnetic forming",
+     "year": 1965,
+     "note": "脉冲电流在感应线圈与工件间产生磁场力冲击成形，用于轻合金管件与接头装配。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "superplastic_forming",
+     "name": "超塑成形",
+     "en": "Superplastic forming",
+     "year": 1975,
+     "note": "超细晶材料在低应变率下气胀成形复杂钣金件，钛合金航空件以此减重。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "hot_stamping",
+     "name": "热冲压成形",
+     "en": "Hot stamping",
+     "year": 1990,
+     "note": "硼钢板加热奥氏体化后在模具中成形并淬火，获得高强度冲压件，用于汽车防撞梁。"
+    },
+    {
+     "id": "incremental_sheet_forming",
+     "name": "渐进成形",
+     "en": "Incremental sheet forming",
+     "year": 1995,
+     "note": "数控工具头沿轨迹逐点碾压板料成形，无专用模具，适合小批量定制钣金件。"
+    },
+    {
+     "id": "fine_blanking",
+     "name": "精冲",
+     "en": "Fine blanking",
+     "year": 1960,
+     "note": "V形齿圈压边与极小间隙下的精密冲裁，断面光洁且公差小，二十世纪六十年代推广。",
+     "deps": [
+      "blanking"
+     ]
+    },
+    {
+     "id": "hydromechanical_drawing",
+     "name": "充液拉深",
+     "en": "Hydromechanical deep drawing",
+     "year": 1960,
+     "note": "凸模拉深同时型腔充高压液体作为柔性凹模，摩擦有利成形极限高，用于复杂曲面件。",
+     "deps": [
+      "deep_drawing"
+     ]
+    },
+    {
+     "id": "reconfigurable_die_forming",
+     "name": "多点模具成形",
+     "en": "Reconfigurable die forming",
+     "year": 1980,
+     "note": "密集可调冲头组成柔性模具的曲面成形法，代替整体模具，用于船板与复杂蒙皮。"
+    }
+   ]
+  },
+  {
+   "name": "挤压成形",
+   "items": [
+    {
+     "id": "extrusion",
+     "name": "金属挤压",
+     "en": "Metal extrusion",
+     "year": 1797,
+     "note": "挤压杆推动锭坯通过模具孔挤出成形的工艺，1797年布拉默铅管挤压机开启挤压历史。"
+    },
+    {
+     "id": "impact_extrusion",
+     "name": "冲击挤压",
+     "en": "Impact extrusion",
+     "year": 1841,
+     "note": "冲头高速冲击坯料使其沿冲头与凹模间隙反向流动成筒形，软金属软管等日用件工艺。",
+     "deps": [
+      "extrusion"
+     ]
+    },
+    {
+     "id": "hot_extrusion_nonferrous",
+     "name": "有色金属热挤压",
+     "en": "Hot extrusion",
+     "year": 1894,
+     "note": "加热坯料挤压降低变形抗力，1894年迪克试验成功使铝黄铜挤压走向工业应用。",
+     "deps": [
+      "extrusion"
+     ]
+    },
+    {
+     "id": "direct_extrusion",
+     "name": "正向挤压",
+     "en": "Direct extrusion",
+     "year": 1900,
+     "note": "挤压杆推动金属沿挤压方向流出的基本挤压法，型材棒材生产最常用。",
+     "deps": [
+      "hot_extrusion_nonferrous"
+     ]
+    },
+    {
+     "id": "tube_extrusion",
+     "name": "管材挤压",
+     "en": "Tube extrusion",
+     "year": 1900,
+     "note": "穿孔针与挤压模配合使金属沿针壁与模孔间流出成形管材，铝合金管的生产主流。",
+     "deps": [
+      "extrusion"
+     ]
+    },
+    {
+     "id": "glass_lubricated_extrusion",
+     "name": "玻璃润滑热挤压",
+     "en": "Sejournet glass-lubricated extrusion",
+     "year": 1949,
+     "note": "玻璃垫润滑与隔热使钢及难变形合金热挤压成为可能，1949年法国塞茹内法工业化。"
+    },
+    {
+     "id": "cold_extrusion",
+     "name": "冷挤压",
+     "en": "Cold extrusion",
+     "year": 1950,
+     "note": "室温下金属在模内挤压流动成形，精度高省料并强化组织，用于销轴与传动件。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "indirect_extrusion",
+     "name": "反向挤压",
+     "en": "Indirect extrusion",
+     "year": 1950,
+     "note": "模具向不动坯料移动，金属相对挤压筒静止，挤压力小且变形均匀，难变形合金采用。",
+     "deps": [
+      "direct_extrusion"
+     ]
+    },
+    {
+     "id": "hydrostatic_extrusion",
+     "name": "静液挤压",
+     "en": "Hydrostatic extrusion",
+     "year": 1965,
+     "note": "高压液体均匀传递压力驱动坯料挤过模孔，无摩擦且可挤脆性材料。",
+     "deps": [
+      "extrusion"
+     ]
+    },
+    {
+     "id": "conform_continuous_extrusion",
+     "name": "康仿连续挤压",
+     "en": "Conform process",
+     "year": 1978,
+     "note": "坯料被旋转槽轮摩擦驱动连续挤过模孔，实现线材卷材的无头连续挤压，1978年前后英国发明。",
+     "deps": [
+      "direct_extrusion"
+     ]
+    },
+    {
+     "id": "isothermal_extrusion",
+     "name": "等温挤压",
+     "en": "Isothermal extrusion",
+     "year": 1980,
+     "note": "梯度加热模具补偿温升使挤压过程近等温，提高铝型材尺寸稳定性与挤压速度。",
+     "deps": [
+      "hot_extrusion_nonferrous"
+     ]
+    },
+    {
+     "id": "porthole_die_extrusion",
+     "name": "分流模挤压",
+     "en": "Porthole die extrusion",
+     "year": 1900,
+     "note": "分流孔桥式模具把金属分流再在焊合室焊合挤出中空型材，铝合金门窗型材主流工艺。",
+     "deps": [
+      "hot_extrusion_nonferrous"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "轧制成形",
+   "items": [
+    {
+     "id": "rolling",
+     "name": "轧制",
+     "en": "Rolling",
+     "year": 1550,
+     "note": "金属在旋转轧辊间隙中受压缩减薄延伸的成形工艺，十六世纪已用于轧制铅板。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "hot_rolling",
+     "name": "热轧",
+     "en": "Hot rolling",
+     "year": 1783,
+     "note": "金属在再结晶温度以上轧制成形，1783年科特槽辊轧机开创轧钢工业。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "section_rolling",
+     "name": "型钢轧制",
+     "en": "Section rolling",
+     "year": 1850,
+     "note": "异形孔型轧辊逐道轧出工字钢钢轨等复杂截面型材，随铁路建设而发展。",
+     "deps": [
+      "hot_rolling"
+     ]
+    },
+    {
+     "id": "cold_rolling",
+     "name": "冷轧",
+     "en": "Cold rolling",
+     "year": 1850,
+     "note": "在再结晶温度以下轧制薄板带，获得高精度高表面质量与加工硬化性能的冷轧材。",
+     "deps": [
+      "rolling"
+     ]
+    },
+    {
+     "id": "plate_rolling",
+     "name": "中厚板轧制",
+     "en": "Plate rolling",
+     "year": 1860,
+     "note": "轧制厚度数毫米以上的宽幅板材，造船桥梁压力容器用钢板的制造工序。",
+     "deps": [
+      "hot_rolling"
+     ]
+    },
+    {
+     "id": "wire_rod_rolling",
+     "name": "线材轧制",
+     "en": "Wire rod rolling",
+     "year": 1880,
+     "note": "多机架连续轧机把钢坯轧成盘卷线材，配合控冷获得良好组织，供拉丝与紧固件用。",
+     "deps": [
+      "hot_rolling"
+     ]
+    },
+    {
+     "id": "seamless_tube_rolling",
+     "name": "无缝钢管轧制",
+     "en": "Seamless tube rolling",
+     "year": 1885,
+     "note": "1885年曼内斯曼斜轧穿孔并配轧管工序制成无缝钢管，取代锻焊管成为管材主流。",
+     "deps": [
+      "hot_rolling"
+     ]
+    },
+    {
+     "id": "foil_rolling",
+     "name": "箔材轧制",
+     "en": "Foil rolling",
+     "year": 1920,
+     "note": "多道冷轧至微米级厚度的极薄箔材，二十世纪二十年代铝箔进入包装工业。",
+     "deps": [
+      "cold_rolling"
+     ]
+    },
+    {
+     "id": "tandem_cold_strip",
+     "name": "冷连轧带钢",
+     "en": "Tandem cold rolling",
+     "year": 1930,
+     "note": "多机架连续冷轧机组一次轧成成品薄带，1930年前后投产，汽车板与镀锡板的母材工艺。",
+     "deps": [
+      "cold_rolling"
+     ]
+    },
+    {
+     "id": "pilger_rolling",
+     "name": "皮尔格冷轧管",
+     "en": "Pilger tube rolling",
+     "year": 1930,
+     "note": "皮尔格式冷轧管机周期式减径减壁轧制冷轧管，精密薄壁与不锈钢管用此法。",
+     "deps": [
+      "cold_rolling"
+     ]
+    },
+    {
+     "id": "cross_wedge_rolling",
+     "name": "楔横轧",
+     "en": "Cross wedge rolling",
+     "year": 1960,
+     "note": "楔形模具径向滚轧坯料轴向延伸成阶梯轴，少屑高效，汽车轴类零件采用。"
+    },
+    {
+     "id": "skew_ball_rolling",
+     "name": "螺旋斜轧钢球",
+     "en": "Skew rolling of balls",
+     "year": 1960,
+     "note": "螺旋孔型斜轧机直接轧出研磨钢球，无切屑且组织沿球面连续，用于矿山磨矿。"
+    },
+    {
+     "id": "tmcp_rolling",
+     "name": "控轧控冷",
+     "en": "Thermomechanical controlled processing",
+     "year": 1970,
+     "note": "控制轧制温度与轧后冷却制度细化晶粒改善相变，显著提高厚板强韧性，七十年代工业化。",
+     "deps": [
+      "hot_rolling"
+     ]
+    },
+    {
+     "id": "strip_shape_control",
+     "name": "板形控制",
+     "en": "Strip shape control",
+     "year": 1980,
+     "note": "轧辊弯辊窜辊与分段冷却控制带钢板形平坦度，是冷轧高速生产的质量控制技术。",
+     "deps": [
+      "cold_rolling"
+     ]
+    },
+    {
+     "id": "planetary_hot_rolling",
+     "name": "行星轧机热轧",
+     "en": "Planetary hot rolling",
+     "year": 1950,
+     "note": "支承辊带动小直径行星辊绕坯料多道次辗轧，大压下量热轧板带，二十世纪中期森吉米尔开发。",
+     "deps": [
+      "hot_rolling"
+     ]
+    }
+   ]
+  }
+ ]
+}

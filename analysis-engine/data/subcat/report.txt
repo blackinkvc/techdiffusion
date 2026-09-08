@@ -1,0 +1,1464 @@
+# 任务域生成报告
+目录数: 88  新增条目: 11031  存量打标: 448  跳过: 739  依赖告警: 629
+
+## 新增条目分类统计
+- basic/astronomy: 133
+- basic/biosci: 129
+- basic/chemistry: 131
+- basic/earthsci: 158
+- basic/math: 101
+- basic/measure: 122
+- basic/method: 114
+- basic/physics: 124
+- build/building: 149
+- build/civil: 136
+- build/construction: 118
+- build/facility: 140
+- build/planning: 126
+- build/structure: 106
+- build/waterworks: 138
+- energy/animal_human: 129
+- energy/biomass: 129
+- energy/electric_gen: 129
+- energy/fossil: 137
+- energy/geo_ocean: 128
+- energy/grid: 125
+- energy/hydropower: 140
+- energy/light_heat: 123
+- energy/nuclear_energy: 117
+- energy/power_machine: 113
+- energy/solar: 129
+- energy/storage: 117
+- energy/windpower: 131
+- info/ai: 112
+- info/broadcast: 136
+- info/compute: 128
+- info/datastore: 127
+- info/interface: 132
+- info/network: 124
+- info/record: 136
+- info/security: 124
+- info/software: 118
+- info/telecom: 130
+- life/agriculture: 124
+- life/biotech: 110
+- life/diag: 122
+- life/medicine: 120
+- life/nutrition: 138
+- life/publichealth: 130
+- life/rehab: 125
+- life/repro: 130
+- life/surgery: 131
+- manufact/additive: 129
+- manufact/assembly: 128
+- manufact/automation: 123
+- manufact/casting: 128
+- manufact/chem_process: 115
+- manufact/cutting: 119
+- manufact/food_proc: 143
+- manufact/hand_tool: 131
+- manufact/joining: 119
+- manufact/machinetool: 123
+- manufact/molding: 130
+- manufact/precision: 125
+- material/buildmaterial: 118
+- material/ceramic_glass: 120
+- material/composite: 110
+- material/funmaterial: 128
+- material/metal_adv: 115
+- material/metal_basic: 125
+- material/nanomaterial: 126
+- material/natmaterial: 126
+- material/polymer: 108
+- material/semimaterial: 114
+- material/textile: 121
+- military/airforce: 122
+- military/armor_vehicle: 138
+- military/ew: 125
+- military/firearm: 124
+- military/logi: 132
+- military/melee: 123
+- military/missile: 123
+- military/navy: 131
+- military/nuclear_weapon: 132
+- military/sensor: 120
+- transport/aviation: 110
+- transport/logistics: 125
+- transport/pipeline: 128
+- transport/rail: 127
+- transport/road: 114
+- transport/space: 125
+- transport/urban: 131
+- transport/water: 108
+
+## 跳过明细
+- kepler_laws「开普勒行星运动三定律」: id 已存在于全库
+- cell_theory「细胞学说」: id 已存在于全库
+- organoid_culture「类器官培养」: 同名已存在(=lf_bio_71)，改为打标
+- chem_periodic_table「元素周期律」: 同名已存在(=periodic_table)，改为打标
+- chem_column_chromatography「色谱分离法」: 本批目录内重名(=chromatography)，跳过重复
+- geographic_information_system「地理信息系统」: 同名已存在(=inf_gis)，改为打标
+- ground_penetrating_radar「探地雷达」: 同名已存在(=ml_uav_101)，改为打标
+- math_decimal_fraction「十进制小数」: 同名已存在(=decimal)，改为打标
+- math_trig「三角学」: 同名已存在(=trigonometry)，改为打标
+- math_analytic_geometry「解析几何」: 同名已存在(=analytic_geom)，改为打标
+- math_differential_geometry「微分几何」: 同名已存在(=bx_math_19)，改为打标
+- math_topology「拓扑学」: 同名已存在(=topology)，改为打标
+- math_algebraic_geometry「代数几何」: 同名已存在(=bx_math_18)，改为打标
+- math_fractal「分形几何」: 同名已存在(=fractal)，改为打标
+- math_group_theory「群论」: 同名已存在(=group_theory)，改为打标
+- math_calculus「微积分」: 同名已存在(=calculus)，改为打标
+- math_variational_calculus「变分法」: 同名已存在(=bx_math_5)，改为打标
+- math_functional_analysis「泛函分析」: 同名已存在(=bx_math_44)，改为打标
+- math_ergodic_theory「遍历理论」: 同名已存在(=bx_math_26)，改为打标
+- math_ito_calculus「伊藤积分」: 同名已存在(=bx_math_52)，改为打标
+- math_numerical_analysis「数值分析」: 同名已存在(=numerical)，改为打标
+- math_chaos_theory「混沌理论」: 同名已存在(=chaos)，改为打标
+- math_wavelet_analysis「小波分析」: 同名已存在(=bx_math_2)，改为打标
+- math_probability「概率论」: 同名已存在(=probability)，改为打标
+- math_pca「主成分分析」: 同名已存在(=bx_math_90)，改为打标
+- math_design_of_experiments「实验设计」: 同名已存在(=bx_math_60)，改为打标
+- math_monte_carlo「蒙特卡洛方法」: 同名已存在(=bx_math_70)，改为打标
+- math_set_theory「集合论」: 同名已存在(=set_theory)，改为打标
+- math_proof_theory「证明论」: 同名已存在(=proof_theory)，改为打标
+- math_lambda_calculus「λ演算」: 同名已存在(=lambda_calc)，改为打标
+- math_type_theory「类型论」: 同名已存在(=bx_math_40)，改为打标
+- math_category_theory「范畴论」: 同名已存在(=category_theory)，改为打标
+- math_information_theory「信息论」: 同名已存在(=info_theory)，改为打标
+- math_model_theory「模型论」: 同名已存在(=bx_math_37)，改为打标
+- math_graph_theory「图论」: 同名已存在(=graph_theory)，改为打标
+- math_queuing_theory「排队论」: 同名已存在(=bx_math_54)，改为打标
+- math_game_theory「博弈论」: 同名已存在(=game_theory)，改为打标
+- math_linear_programming「线性规划」: 同名已存在(=bx_math_13)，改为打标
+- math_dynamic_programming「动态规划」: 同名已存在(=bx_math_14)，改为打标
+- su_song_astronomical_clock「水运仪象台」: 本批目录内重名(=water_driven_armillary)，跳过重复
+- mechanical_clock「机械钟」: 同名已存在(=clock)，改为打标
+- cross_staff「十字测角仪」: 本批目录内 id 重复，跳过
+- triangulation_survey「三角测量」: 本批目录内重名(=triangulation_survey)，跳过重复
+- electronic_distance_measurement「电磁波测距仪」: 本批目录内 id 重复，跳过
+- mercury_barometer「水银气压计」: 本批目录内重名(=mercury_barometer)，跳过重复
+- aneroid_barometer「无液气压计」: 本批目录内 id 重复，跳过
+- hair_hygrometer「毛发湿度计」: 本批目录内重名(=hygrometer)，跳过重复
+- radiocarbon_dating「放射性碳测年法」: 本批目录内 id 重复，跳过
+- microtome「切片机」: 本批目录内 id 重复，跳过
+- fluorescence_microscope「荧光显微镜」: 本批目录内重名(=fluorescence_microscope)，跳过重复
+- electron_microscope「电子显微镜」: 本批目录内重名(=electron_microscope)，跳过重复
+- phase_contrast_microscope「相差显微镜」: 本批目录内重名(=phase_contrast_microscope)，跳过重复
+- scanning_electron_microscope「扫描电子显微镜」: 本批目录内重名(=scanning_electron_microscope)，跳过重复
+- cryo_electron_microscopy「冷冻电子显微术」: 本批目录内 id 重复，跳过
+- raman_spectroscopy「拉曼光谱法」: 本批目录内重名(=chem_raman)，跳过重复
+- paper_chromatography「纸色谱法」: 本批目录内 id 重复，跳过
+- gas_chromatography「气相色谱法」: 本批目录内重名(=chem_gc)，跳过重复
+- gel_electrophoresis「凝胶电泳」: 本批目录内重名(=gel_electrophoresis)，跳过重复
+- gel_filtration_chromatography「凝胶过滤色谱法」: 本批目录内 id 重复，跳过
+- petri_dish「培养皿」: 本批目录内 id 重复，跳过
+- peer_review「同行评议」: id 已存在于全库
+- wind_tunnel「风洞」: 同名已存在(=tr_windtunnel)，改为打标
+- culture_collection「菌种保藏中心」: 本批目录内 id 重复，跳过
+- cleanroom「洁净室」: 同名已存在(=bd_civ_155)，改为打标
+- phys_special_relativity「狭义相对论」: 同名已存在(=special_rel)，改为打标
+- phys_general_relativity「广义相对论」: 同名已存在(=general_relativity)，改为打标
+- phys_cyclotron「回旋加速器」: 本批目录内重名(=cyclotron)，跳过重复
+- phys_synchrotron「同步加速器」: 本批目录内重名(=synchrotron)，跳过重复
+- phys_quantum_hall「量子霍尔效应」: 同名已存在(=bx_phys_5)，改为打标
+- phys_bec「玻色-爱因斯坦凝聚」: 同名已存在(=bx_phys_16)，改为打标
+- bld_membrane_structure「膜结构」: 同名已存在(=bd_civ_78)，改为打标
+- bld_prefab_cast「预制混凝土构件」: 同名已存在(=bd_civ_1)，改为打标
+- bld_modular_building「模块化建筑」: 同名已存在(=bld_modular)，改为打标
+- bld_cad「计算机辅助设计」: 同名已存在(=cad)，改为打标
+- bld_bim「BIM建筑信息模型」: id 已存在于全库
+- bld_glass_curtain_wall「玻璃幕墙」: 同名已存在(=bld_curtain)，改为打标
+- bld_double_skin_facade「双层呼吸幕墙」: 同名已存在(=bd_civ_137)，改为打标
+- civil_tunnel_boring「隧道掘进」: 同名已存在(=bld_tunnel3)，改为打标
+- civil_airport_runway「机场跑道」: 同名已存在(=tr_runway)，改为打标
+- civil_pile_foundation「桩基础」: 同名已存在(=bld_pile)，改为打标
+- civil_diaphragm_wall「地下连续墙」: 本批目录内重名(=bld_diaphragm_wall)，跳过重复
+- civil_bridge_health「桥梁健康监测」: 同名已存在(=bd_civ_24)，改为打标
+- constr_excavation「明挖法」: 本批目录内重名(=civil_cut_cover)，跳过重复
+- constr_shield「盾构机」: 同名已存在(=shield_tbm)，改为打标
+- constr_bored_tunnel「钻爆法」: 同名已存在(=drill_blast)，改为打标
+- constr_tunnel_lining「隧道衬砌」: 同名已存在(=tunnel_lining)，改为打标
+- constr_immersed_tunnel「沉管隧道」: 同名已存在(=bld_immersed)，改为打标
+- constr_climb_form「爬模」: 同名已存在(=bld_climbform)，改为打标
+- constr_theodolite「经纬仪」: 本批目录内重名(=theodolite)，跳过重复
+- constr_aerial_photogrammetry「航空摄影测量」: 本批目录内重名(=aerial_survey_mapping)，跳过重复
+- constr_drone_survey「无人机测绘」: 同名已存在(=bld_dronesurvey)，改为打标
+- constr_bulldozer「推土机」: 同名已存在(=tr_bulldozer)，改为打标
+- constr_excavator「挖掘机」: 同名已存在(=tr_excavator)，改为打标
+- constr_loading_shovel「装载机」: 同名已存在(=tr_loader)，改为打标
+- constr_concrete_pump_truck「混凝土泵车」: 同名已存在(=bld_pump)，改为打标
+- constr_tqm「全面质量管理」: 同名已存在(=mfg_quality)，改为打标
+- fac_fresh_air「新风系统」: 同名已存在(=bd_civ_118)，改为打标
+- fac_escalator「自动扶梯」: 同名已存在(=tr_escalator)，改为打标
+- fac_emergency_lighting「应急照明」: 同名已存在(=bd_civ_127)，改为打标
+- fac_bms「楼宇自控」: 同名已存在(=bd_civ_116)，改为打标
+- plan_utility_tunnel「综合管廊」: 同名已存在(=bd_civ_30)，改为打标
+- plan_underground_space「地下空间开发」: 同名已存在(=bd_civ_56)，改为打标
+- plan_sponge_city「海绵城市」: 同名已存在(=bld_sponge)，改为打标
+- plan_photogrammetry「摄影测量」: 本批目录内重名(=photogrammetry)，跳过重复
+- plan_drone_survey「无人机测绘」: 同名已存在(=bld_dronesurvey)，改为打标
+- plan_digital_twin_city「数字孪生城市」: 同名已存在(=bd_civ_15)，改为打标
+- plan_smart_city「智慧城市」: 同名已存在(=bld_smartcity)，改为打标
+- struct_mud_brick「土坯砖」: 同名已存在(=bld_adobe)，改为打标
+- struct_rammed_earth「夯土墙」: 本批目录内重名(=bld_rammed_earth_wall)，跳过重复
+- struct_wattle_daub「木骨泥墙」: 本批目录内重名(=bld_wattle_daub)，跳过重复
+- struct_stilt_house「干栏式建筑」: 本批目录内重名(=bld_gandlan)，跳过重复
+- struct_dome「穹顶」: 同名已存在(=bld_dome)，改为打标
+- struct_dougong「斗拱」: 同名已存在(=bld_dougong)，改为打标
+- struct_flying_buttress「飞扶壁」: 同名已存在(=bld_flying)，改为打标
+- struct_shear_wall「剪力墙」: 同名已存在(=bld_shearwall)，改为打标
+- struct_precast「预制构件」: 同名已存在(=bld_precast)，改为打标
+- struct_prestressed「预应力混凝土」: 同名已存在(=mat_prestress)，改为打标
+- struct_brb「屈曲约束支撑」: 同名已存在(=bd_civ_87)，改为打标
+- struct_floating_bridge「浮桥」: 同名已存在(=bd_civ_69)，改为打标
+- struct_aqueduct「渡槽」: 本批目录内重名(=civil_transfer_aqueduct)，跳过重复
+- struct_trestle「栈桥」: 本批目录内重名(=civil_causeway)，跳过重复
+- struct_suspension_bridge「悬索桥」: 同名已存在(=bld_suspension)，改为打标
+- struct_movable_bridge「开启桥」: 同名已存在(=bd_civ_67)，改为打标
+- struct_bridge_bearing「桥梁支座」: 本批目录内重名(=civil_bridge_bearing)，跳过重复
+- struct_cable_stayed「斜拉桥」: 同名已存在(=bld_cablestay)，改为打标
+- struct_extradosed「矮塔斜拉桥」: 同名已存在(=bd_civ_66)，改为打标
+- struct_tube「筒体结构」: 同名已存在(=bld_tube)，改为打标
+- struct_membrane「膜结构」: 同名已存在(=bd_civ_78)，改为打标
+- struct_tmd「调谐质量阻尼器」: 同名已存在(=bd_civ_85)，改为打标
+- struct_base_isolation「基础隔震」: 同名已存在(=bd_civ_89)，改为打标
+- struct_pile_foundation「桩基础」: 同名已存在(=bld_pile)，改为打标
+- struct_caisson「沉井」: 本批目录内重名(=civil_caisson_sinking)，跳过重复
+- ww_water_meter「水表」: 本批目录内重名(=fac_water_meter)，跳过重复
+- ww_uv_disinfection「紫外消毒」: 本批目录内重名(=fac_uv_disinfection)，跳过重复
+- ww_detention_tank「调蓄池」: 同名已存在(=bd_civ_37)，改为打标
+- ww_rain_garden「雨水花园」: 同名已存在(=bd_civ_33)，改为打标
+- ww_sponge_city「海绵城市」: 同名已存在(=bld_sponge)，改为打标
+- ww_green_roof「绿色屋顶」: 同名已存在(=bd_civ_38)，改为打标
+- stirrup「马镫」: 同名已存在(=tr_stirrup)，改为打标
+- sewage_sludge_digestion「污泥厌氧消化」: 本批目录内重名(=ww_sludge_digestion)，跳过重复
+- circulating_fluidized_bed「循环流化床锅炉」: 本批目录内重名(=cfb_boiler)，跳过重复
+- ground_source_heat_pump「地源热泵」: 本批目录内重名(=fac_geothermal_hp)，跳过重复
+- magnetotelluric_prospecting「大地电磁测深」: 本批目录内重名(=magnetotelluric_sounding)，跳过重复
+- substation「变电站」: id 已存在于全库
+- microgrid「微电网」: 同名已存在(=ene_microgrid)，改为打标
+- smart_grid「智能电网」: 同名已存在(=ene_smartgrid)，改为打标
+- busbar_trunking「母线槽」: 本批目录内重名(=fac_busway)，跳过重复
+- motor_control_center「电动机控制中心」: 本批目录内重名(=fac_motor_control)，跳过重复
+- tide_mill「潮汐磨坊」: 本批目录内重名(=tidal_mill)，跳过重复
+- water_lifting_noria「筒车」: 本批目录内重名(=ww_tub_wheel)，跳过重复
+- steel_penstock「压力钢管」: 本批目录内重名(=civil_penstock)，跳过重复
+- surge_chamber「调压井」: 本批目录内重名(=civil_surge_tank)，跳过重复
+- underground_powerhouse「地下厂房」: 本批目录内重名(=civil_powerhouse_cavern)，跳过重复
+- davy_safety_lamp「戴维安全矿灯」: 本批目录内 id 重复，跳过
+- street_lighting_system「道路照明系统」: 本批目录内重名(=plan_road_lighting)，跳过重复
+- led_diode「发光二极管」: 同名已存在(=led)，改为打标
+- kang「火炕」: 本批目录内重名(=fac_kang)，跳过重复
+- heat_pump「热泵」: 同名已存在(=ene_heatpump)，改为打标
+- ground_source_heat_pump「地源热泵」: 本批目录内重名(=fac_geothermal_hp)，跳过重复
+- radiant_panel_heating「辐射板采暖」: 本批目录内重名(=fac_radiant_panel)，跳过重复
+- pressurized_water_reactor「压水堆」: 同名已存在(=ene_pwr)，改为打标
+- boiling_water_reactor「沸水堆」: 同名已存在(=ene_bwr)，改为打标
+- floating_nuclear_plant「浮动核电站」: 本批目录内 id 重复，跳过
+- control_rod_drive「控制棒驱动机构」: 本批目录内重名(=control_rod_drive_mechanism)，跳过重复
+- pressurizer「稳压器」: 本批目录内重名(=pressurizer)，跳过重复
+- reactor_coolant_pump「反应堆冷却剂泵」: 本批目录内 id 重复，跳过
+- reactor_pressure_vessel「反应堆压力容器」: 本批目录内重名(=reactor_pressure_vessel)，跳过重复
+- containment_building「反应堆安全壳」: 本批目录内 id 重复，跳过
+- spent_fuel_pool「乏燃料贮存水池」: 本批目录内重名(=spent_fuel_pool)，跳过重复
+- dry_cask_storage「乏燃料干式贮存」: 本批目录内重名(=spent_fuel_dry_storage)，跳过重复
+- radioisotope_thermoelectric_generator「放射性同位素温差电池」: 本批目录内 id 重复，跳过
+- tokamak「托卡马克」: 同名已存在(=ene_tokamak)，改为打标
+- inertial_confinement「惯性约束聚变」: 同名已存在(=ene_icf)，改为打标
+- high_pressure_steam_engine「高压蒸汽机」: 同名已存在(=high_pressure_steam)，改为打标
+- water_tube_boiler「水管锅炉」: 本批目录内重名(=water_tube_boiler)，跳过重复
+- steam_turbine「蒸汽轮机」: 同名已存在(=ene_steamturbine)，改为打标
+- turbo_generator_set「汽轮发电机组」: 本批目录内重名(=turbogenerator)，跳过重复
+- surface_condenser「表面式凝汽器」: 本批目录内重名(=surface_condenser)，跳过重复
+- back_pressure_turbine「背压式汽轮机」: 本批目录内重名(=backpressure_turbine)，跳过重复
+- regenerative_feedwater_heating「给水回热加热系统」: 本批目录内 id 重复，跳过
+- carburetor「化油器」: id 已存在于全库
+- turbocharger「涡轮增压器」: id 已存在于全库
+- gas_turbine「燃气轮机」: 同名已存在(=ene_gasturbine)，改为打标
+- afterburner「加力燃烧室」: id 已存在于全库
+- combined_cycle_gas_turbine「燃气-蒸汽联合循环」: 本批目录内重名(=combined_cycle_gas_turbine)，跳过重复
+- aero_derivative_gas_turbine「航改燃气轮机」: 本批目录内 id 重复，跳过
+- microturbine「微型燃气轮机」: 本批目录内重名(=micro_gas_turbine)，跳过重复
+- scramjet_engine「超燃冲压发动机」: 同名已存在(=scramjet)，改为打标
+- stirling_engine「斯特林发动机」: 同名已存在(=ene_stirling)，改为打标
+- servo_system「伺服系统」: 同名已存在(=mfg_servo)，改为打标
+- bipv「光伏建筑一体化」: 同名已存在(=ene_bipv)，改为打标
+- pumped_hydro「抽水蓄能」: 同名已存在(=ene_pumped)，改为打标
+- compressed_air_storage「压缩空气储能」: 同名已存在(=ene_caes)，改为打标
+- liquid_air_storage「液态空气储能」: 同名已存在(=ene_liquidair)，改为打标
+- flywheel_storage「飞轮储能」: 同名已存在(=ene_flywheel)，改为打标
+- gravity_storage「重力储能」: 同名已存在(=ene_gravity)，改为打标
+- nickel_iron_battery「镍铁电池」: 同名已存在(=en_bat_12)，改为打标
+- nickel_cadmium_battery「镍镉电池」: 同名已存在(=ene_nicd)，改为打标
+- nickel_zinc_battery「镍锌电池」: 同名已存在(=en_bat_11)，改为打标
+- nimh_battery「镍氢电池」: 同名已存在(=ene_nimh)，改为打标
+- lithium_ion_battery「锂离子电池」: 同名已存在(=ene_liion)，改为打标
+- sodium_ion_battery「钠离子电池」: 同名已存在(=ene_nas)，改为打标
+- lithium_sulfur_battery「锂硫电池」: 同名已存在(=en_bat_7)，改为打标
+- zinc_air_battery「锌空气电池」: 同名已存在(=ene_zincair)，改为打标
+- alkaline_fuel_cell「碱性燃料电池」: 同名已存在(=en_h2_1)，改为打标
+- pem_fuel_cell「质子交换膜燃料电池」: 同名已存在(=en_h2_0)，改为打标
+- phosphoric_fuel_cell「磷酸燃料电池」: 同名已存在(=en_h2_2)，改为打标
+- mcfc_fuel_cell「熔融碳酸盐燃料电池」: 同名已存在(=en_h2_3)，改为打标
+- sofc_fuel_cell「固体氧化物燃料电池」: 同名已存在(=en_h2_4)，改为打标
+- dmfc_fuel_cell「直接甲醇燃料电池」: 同名已存在(=en_h2_5)，改为打标
+- molten_salt_storage「熔盐储热」: 同名已存在(=ene_molten)，改为打标
+- v2g「车网互动」: 同名已存在(=ene_v2g)，改为打标
+- battery_management_system「电池管理系统」: 同名已存在(=en_bat_50)，改为打标
+- iron_air_battery「铁空气电池」: 同名已存在(=en_bat_10)，改为打标
+- tension_leg_platform「张力腿平台」: 本批目录内重名(=tension_leg_platform)，跳过重复
+- ai_cybernetics「控制论」: 同名已存在(=control_theory)，改为打标
+- ai_expert_system「专家系统」: 同名已存在(=inf_expert)，改为打标
+- ai_knowledge_graph「知识图谱」: 同名已存在(=inf_knowledge)，改为打标
+- ai_hidden_markov「隐马尔可夫模型」: 同名已存在(=bx_math_79)，改为打标
+- ai_svm_model「支持向量机」: 同名已存在(=bx_math_94)，改为打标
+- ai_gaussian_process「高斯过程回归」: 同名已存在(=bx_math_95)，改为打标
+- ai_manifold_learning「流形学习」: 同名已存在(=bx_math_92)，改为打标
+- ai_matrix_factorization「矩阵分解推荐」: 同名已存在(=it_alg_25)，改为打标
+- ai_neural_arch_search「神经架构搜索」: 同名已存在(=it_alg_66)，改为打标
+- ai_machine_translation「机器翻译」: 同名已存在(=inf_mt)，改为打标
+- ai_named_entity「命名实体识别」: 同名已存在(=it_alg_50)，改为打标
+- ai_sentiment_analysis「情感分析」: 同名已存在(=it_alg_56)，改为打标
+- ai_curriculum_learning「课程学习」: 同名已存在(=it_alg_38)，改为打标
+- ai_generative_adversarial「生成对抗网络」: 同名已存在(=inf_gan)，改为打标
+- ai_diffusion_model「扩散模型」: 同名已存在(=inf_diffusion)，改为打标
+- ai_knowledge_distillation「知识蒸馏」: 同名已存在(=it_alg_60)，改为打标
+- ai_federated_learning「联邦学习」: 同名已存在(=it_alg_41)，改为打标
+- ai_vector_database「向量数据库」: 同名已存在(=inf_vector_db)，改为打标
+- ai_rag_technique「检索增强生成」: 同名已存在(=inf_rag)，改为打标
+- bc_blackwhite_tv「黑白电视」: 同名已存在(=inf_bw_tv)，改为打标
+- bc_color_tv「彩色电视」: 同名已存在(=inf_color_tv)，改为打标
+- bc_vinyl_record「黑胶唱片」: 同名已存在(=inf_vinyl)，改为打标
+- bc_content_delivery「内容分发网络」: 同名已存在(=inf_cdn)，改为打标
+- compute_first_generation_vacuum「电子管计算机」: 同名已存在(=eniac)，改为打标
+- compute_transistor_computer「晶体管计算机」: 同名已存在(=transistor_computer)，改为打标
+- microcomputer「微型计算机」: id 已存在于全库
+- microprocessor「微处理器」: 同名已存在(=inf_microprocessor)，改为打标
+- cloud_computing「云计算」: 同名已存在(=inf_cloud)，改为打标
+- edge_computing「边缘计算」: 同名已存在(=inf_edge)，改为打标
+- compute_container「容器技术」: 同名已存在(=inf_container)，改为打标
+- store_floppy_disk「软盘」: 同名已存在(=inf_floppy)，改为打标
+- store_tape_cartridge「盒式磁带」: 本批目录内重名(=bc_compact_cassette)，跳过重复
+- store_blu_ray「蓝光光盘」: 本批目录内重名(=bc_blu_ray)，跳过重复
+- store_ssd「固态硬盘」: 同名已存在(=inf_ssd)，改为打标
+- net_packet_switching「分组交换」: 同名已存在(=packet_switch)，改为打标
+- net_queuing_theory「排队论」: 同名已存在(=bx_math_54)，改为打标
+- net_information_theory「信息论」: 同名已存在(=info_theory)，改为打标
+- net_modem「调制解调器」: 同名已存在(=inf_modem)，改为打标
+- net_network_switch「网络交换机」: 同名已存在(=inf_net_switch)，改为打标
+- net_bluetooth「蓝牙」: 同名已存在(=inf_bluetooth)，改为打标
+- net_router「路由器」: 同名已存在(=inf_router)，改为打标
+- net_web_browser「网页浏览器」: 同名已存在(=inf_browser)，改为打标
+- net_search_engine「搜索引擎」: 同名已存在(=inf_search)，改为打标
+- net_qkd「量子密钥分发」: 同名已存在(=inf_qkd)，改为打标
+- rec_ballpoint_pen「圆珠笔」: 同名已存在(=inf_ballpoint)，改为打标
+- rec_microfilm「缩微胶片」: 本批目录内重名(=store_microfilm)，跳过重复
+- rec_microfiche「缩微平片」: 本批目录内重名(=store_microfiche)，跳过重复
+- rec_qr_code「二维码」: 同名已存在(=inf_qrcode)，改为打标
+- sec_digital_signature「数字签名」: 同名已存在(=inf_digitalsig)，改为打标
+- sec_zero_knowledge「零知识证明」: 同名已存在(=inf_zeroknowledge)，改为打标
+- sec_ids_system「入侵检测系统」: 本批目录内重名(=net_ids)，跳过重复
+- sec_secure_multiparty「安全多方计算」: 同名已存在(=it_alg_79)，改为打标
+- sec_digital_watermarking「数字水印」: 同名已存在(=inf_watermark)，改为打标
+- sec_trusted_execution_env「可信执行环境」: 同名已存在(=it_alg_81)，改为打标
+- sec_differential_privacy「差分隐私」: 同名已存在(=it_alg_78)，改为打标
+- sec_blockchain「区块链」: 同名已存在(=inf_blockchain)，改为打标
+- sw_union_find「并查集」: 同名已存在(=it_alg_7)，改为打标
+- sw_fft_algorithm「快速傅里叶变换」: 同名已存在(=it_alg_0)，改为打标
+- sw_bloom_filter「布隆过滤器」: 同名已存在(=it_alg_5)，改为打标
+- sw_b_tree「B 树」: 同名已存在(=it_alg_13)，改为打标
+- sw_red_black_tree「红黑树」: 同名已存在(=it_alg_12)，改为打标
+- sw_c_language「C 语言」: 同名已存在(=inf_pl_c)，改为打标
+- sw_compiler「编译器」: 同名已存在(=inf_compiler)，改为打标
+- sw_virtual_memory「虚拟内存」: 本批目录内重名(=compute_virtual_memory)，跳过重复
+- sw_realtime_os「实时操作系统」: 本批目录内重名(=compute_realtime_system)，跳过重复
+- sw_mobile_os「移动操作系统」: 同名已存在(=mobile_os)，改为打标
+- sw_data_lake「数据湖」: 本批目录内重名(=store_data_lake)，跳过重复
+- sw_uml_modeling「统一建模语言」: 同名已存在(=inf_uml)，改为打标
+- sw_continuous_integration「持续集成」: 同名已存在(=inf_cicd)，改为打标
+- sw_devops_practice「DevOps」: 同名已存在(=inf_devops)，改为打标
+- tele_submarine_cable「海底电缆」: 同名已存在(=inf_submarine_cable)，改为打标
+- tele_microwave_relay「微波中继」: 同名已存在(=inf_microwave)，改为打标
+- tele_leo_constellation「低轨卫星星座」: 同名已存在(=inf_leo)，改为打标
+- tele_network_slicing「网络切片」: 本批目录内重名(=net_network_slicing)，跳过重复
+- tele_optical_fiber「光纤」: 同名已存在(=optic_fiber)，改为打标
+- tele_pon「无源光网络」: 本批目录内重名(=net_pon)，跳过重复
+- tele_modem「调制解调器」: 同名已存在(=inf_modem)，改为打标
+- tele_packet_switch「分组交换」: 同名已存在(=packet_switch)，改为打标
+- tele_frame_relay「帧中继」: 本批目录内重名(=net_frame_relay)，跳过重复
+- tele_ethernet「以太网」: 本批目录内重名(=net_ethernet)，跳过重复
+- agr_aqueduct「引水渠」: 同名已存在(=aqueduct)，改为打标
+- agr_karez「坎儿井」: 本批目录内重名(=ww_karez)，跳过重复
+- agr_check_dam「淤地坝」: 本批目录内重名(=ww_check_dam)，跳过重复
+- agr_sprinkler「喷灌」: 本批目录内重名(=ww_sprinkler_irrigation)，跳过重复
+- agr_drip_irrigation「滴灌」: 本批目录内重名(=ww_drip_irrigation)，跳过重复
+- agr_subsurface_irrigation「渗灌」: 本批目录内重名(=ww_seepage_irrigation)，跳过重复
+- agr_combine_harvester「联合收割机」: 同名已存在(=tr_combine)，改为打标
+- agr_vertical_farming「垂直农业」: 同名已存在(=vertical_farm)，改为打标
+- bt_restriction_enzyme「限制性内切酶」: 本批目录内重名(=restriction_enzyme)，跳过重复
+- bt_recombinant_dna「重组DNA技术」: 同名已存在(=recombinant_dna)，改为打标
+- bt_pcr「聚合酶链式反应」: 本批目录内重名(=polymerase_chain_reaction)，跳过重复
+- bt_phage_display「噬菌体展示」: 同名已存在(=lf_bio_29)，改为打标
+- bt_cell_culture「细胞培养」: 本批目录内重名(=cell_culture)，跳过重复
+- bt_microcarrier「微载体培养」: 同名已存在(=lf_bio_38)，改为打标
+- bt_stem_cell「干细胞」: 同名已存在(=stem_cells)，改为打标
+- bt_monoclonal_ab「单克隆抗体」: 同名已存在(=bio_monoclonal)，改为打标
+- bt_ips「诱导多能干细胞」: 本批目录内重名(=induced_pluripotent_stem_cells)，跳过重复
+- bt_organoid「类器官」: 同名已存在(=bio_organoid)，改为打标
+- bt_tissue_engineering「组织工程」: 同名已存在(=bio_tissueeng)，改为打标
+- bt_enzyme_immobilization「酶固定化」: 同名已存在(=lf_bio_40)，改为打标
+- bt_enzyme_engineering「酶工程」: 同名已存在(=bio_enzyme)，改为打标
+- bt_immobilized_cell「固定化细胞」: 同名已存在(=lf_bio_39)，改为打标
+- bt_protein_engineering「蛋白质工程」: 同名已存在(=bio_proteineng)，改为打标
+- bt_antibody_engineering「抗体工程」: 同名已存在(=lf_bio_28)，改为打标
+- bt_direct_evolution「定向进化」: 同名已存在(=bio_directedevo)，改为打标
+- bt_bioreactor「生物反应器」: 同名已存在(=bio_bioreactor)，改为打标
+- bt_metabolic_engineering「代谢工程」: 同名已存在(=bio_metabeng)，改为打标
+- bt_pathway_engineering「途径工程」: 同名已存在(=lf_bio_59)，改为打标
+- bt_gene_circuit「基因线路」: 同名已存在(=lf_bio_57)，改为打标
+- bt_cell_free_synthesis「无细胞蛋白合成」: 同名已存在(=lf_bio_34)，改为打标
+- bt_proteomics「蛋白质组学」: 同名已存在(=proteomics)，改为打标
+- bt_metabolomics「代谢组学」: 同名已存在(=bio_metabolomics)，改为打标
+- diag_ultrasound「超声诊断」: 同名已存在(=bio_ultrasound)，改为打标
+- diag_digital_pathology「数字病理」: 同名已存在(=lf_dx_11)，改为打标
+- diag_flow_cytometry「流式细胞术」: 本批目录内重名(=flow_cytometry)，跳过重复
+- diag_sanger_seq「桑格测序」: 本批目录内重名(=bt_sanger_sequencing)，跳过重复
+- diag_qpcr「实时荧光定量PCR」: 本批目录内重名(=quantitative_pcr)，跳过重复
+- diag_mrna_seq「转录组测序」: 本批目录内重名(=rna_sequencing)，跳过重复
+- diag_single_cell_seq「单细胞测序」: 同名已存在(=bio_singlecell)，改为打标
+- diag_liquid_biopsy「液体活检」: 同名已存在(=bio_liquidbiopsy)，改为打标
+- diag_proteomics「蛋白质组学」: 同名已存在(=proteomics)，改为打标
+- diag_teleconsult「远程会诊」: 同名已存在(=lf_dx_32)，改为打标
+- med_aspirin「阿司匹林」: 同名已存在(=bio_aspirin)，改为打标
+- med_cowpox_vaccine「牛痘接种」: 同名已存在(=bio_smallpox)，改为打标
+- med_attenuated_vaccine「减毒活疫苗」: 同名已存在(=lf_bio_6)，改为打标
+- med_inactivated_vaccine「灭活疫苗」: 同名已存在(=lf_bio_7)，改为打标
+- med_subunit_vaccine「亚单位疫苗」: 同名已存在(=lf_bio_4)，改为打标
+- med_viral_vector_vaccine「病毒载体疫苗」: 同名已存在(=lf_bio_1)，改为打标
+- med_stem_cell_therapy「干细胞治疗」: 同名已存在(=stem_cell_therapy)，改为打标
+- med_targeted_therapy「靶向治疗」: 同名已存在(=bio_targeted)，改为打标
+- med_sustained_release「缓释制剂」: 同名已存在(=bio_sustained)，改为打标
+- med_transdermal「透皮给药」: 同名已存在(=bio_transdermal)，改为打标
+- med_bioreactor「生物反应器」: 同名已存在(=bio_bioreactor)，改为打标
+- probiotics「益生菌」: 同名已存在(=bio_probiotic)，改为打标
+- neutron_activation_analysis「中子活化分析」: 本批目录内重名(=chem_neutron_activation)，跳过重复
+- ph_sewage_treatment「污水处理」: 同名已存在(=bld_sewage)，改为打标
+- ph_cold_chain「疫苗冷链」: 同名已存在(=lf_dx_37)，改为打标
+- ph_meta_analysis「荟萃分析」: 本批目录内重名(=meta_analysis)，跳过重复
+- ph_local_exhaust「局部排风」: 本批目录内重名(=fac_spot_vent)，跳过重复
+- cochlear_implant「人工耳蜗」: 同名已存在(=bio_cochlear)，改为打标
+- occupational_therapy「作业治疗」: 同名已存在(=lf_dx_67)，改为打标
+- speech_swallow_rehab「吞咽康复」: 同名已存在(=lf_dx_69)，改为打标
+- cognitive_rehab「认知康复」: 同名已存在(=lf_dx_70)，改为打标
+- exercise_prescription「运动处方」: 本批目录内重名(=ph_physical_activity)，跳过重复
+- acupuncture「针灸」: 同名已存在(=bio_acupuncture)，改为打标
+- repr_oral_contraceptive「口服避孕药」: 本批目录内重名(=med_oral_contraceptive)，跳过重复
+- repr_pap_smear「巴氏涂片」: 本批目录内重名(=diag_pap_smear)，跳过重复
+- surg_notes「经自然腔道内镜」: 同名已存在(=lf_dx_50)，改为打标
+- surg_single_port「单孔腹腔镜」: 同名已存在(=lf_dx_49)，改为打标
+- surg_surgical_navigation「手术导航」: 同名已存在(=lf_dx_52)，改为打标
+- selective_laser_sintering「选择性激光烧结」: 同名已存在(=sls)，改为打标
+- asm_gauge_block「量块」: 本批目录内重名(=gauge_blocks)，跳过重复
+- asm_limit_gauge「极限量规」: 本批目录内重名(=limit_gauge)，跳过重复
+- asm_kanban「看板管理」: 同名已存在(=mfg_kanban)，改为打标
+- aut_agv「自动导引车」: 同名已存在(=mfg_agv)，改为打标
+- aut_thermostat「恒温控制器」: 本批目录内重名(=fac_thermostat)，跳过重复
+- aut_direct_digital_control「直接数字控制」: 本批目录内重名(=fac_ddc)，跳过重复
+- aut_plc「可编程逻辑控制器」: 同名已存在(=mfg_plc)，改为打标
+- aut_load_cell「称重传感器」: 本批目录内重名(=load_cell)，跳过重复
+- aut_paint_robot「喷涂机器人」: 同名已存在(=bd_civ_12)，改为打标
+- aut_cobot「协作机器人」: 同名已存在(=mfg_cobot)，改为打标
+- aut_fms「柔性制造系统」: 同名已存在(=mfg_fms)，改为打标
+- aut_mes「制造执行系统」: 同名已存在(=mfg_mes)，改为打标
+- aut_industrial_pc「工业计算机」: 本批目录内重名(=compute_industrial_computer)，跳过重复
+- sand_casting「砂型铸造」: 同名已存在(=mfg_sandcast)，改为打标
+- die_casting「压铸」: 同名已存在(=mfg_diecast)，改为打标
+- rolling「轧制」: 同名已存在(=mat_rolling)，改为打标
+- chem_vacuum_distillation「减压蒸馏」: 本批目录内重名(=vacuum_distillation)，跳过重复
+- chem_activated_carbon「活性炭吸附」: 本批目录内重名(=ww_activated_carbon)，跳过重复
+- chem_solvent_deasphalting「溶剂脱沥青」: 本批目录内重名(=solvent_deasphalting)，跳过重复
+- chem_acid_gas_sweetening_claus「克劳斯硫回收」: 本批目录内重名(=claus_sulfur_recovery)，跳过重复
+- chem_reverse_osmosis「反渗透」: 本批目录内重名(=ww_reverse_osmosis)，跳过重复
+- chem_leblanc_process「吕布兰制碱法」: 本批目录内重名(=chem_leblanc)，跳过重复
+- chem_contact_sulfuric「接触法制硫酸」: 本批目录内重名(=chem_contact)，跳过重复
+- chem_solvay_process「索尔维制碱法」: 本批目录内重名(=chem_solvay)，跳过重复
+- chem_haber_ammonia「哈伯-博施合成氨」: 本批目录内重名(=chem_haber_bosch)，跳过重复
+- chem_thermal_cracking「热裂化」: 本批目录内重名(=thermal_cracking)，跳过重复
+- chem_delayed_coking「延迟焦化」: 本批目录内重名(=delayed_coking)，跳过重复
+- chem_fcc「流化催化裂化」: 本批目录内重名(=fluid_catalytic_cracking)，跳过重复
+- chem_catalytic_reforming「催化重整」: 本批目录内重名(=catalytic_reforming)，跳过重复
+- chem_hydrocracking「加氢裂化」: 本批目录内重名(=hydrocracking)，跳过重复
+- chem_hydrodesulfurization「加氢脱硫」: 本批目录内重名(=hydrodesulfurization)，跳过重复
+- chem_lube_dewaxing「溶剂脱蜡」: 本批目录内重名(=solvent_dewaxing)，跳过重复
+- drilling「钻削」: id 已存在于全库
+- lapping「研磨」: 同名已存在(=mfg_lapp)，改为打标
+- polishing「抛光」: 同名已存在(=mfg_polish)，改为打标
+- magnetorheological_finishing「磁流变抛光」: 同名已存在(=mn_proc_3)，改为打标
+- grinding_wheel「砂轮」: 同名已存在(=mfg_grindingwheel)，改为打标
+- electrolytic_grinding「电解磨削」: 同名已存在(=mfg_ecmg)，改为打标
+- ultrasonic_machining「超声加工」: 同名已存在(=mfg_ultrasonicm)，改为打标
+- electrochemical_machining「电解加工」: 同名已存在(=mfg_ecm)，改为打标
+- laser_cutting「激光切割」: 同名已存在(=mfg_lasercut)，改为打标
+- waterjet_cutting「水射流切割」: 同名已存在(=mfg_waterjet)，改为打标
+- cutting_fluid「切削液」: 同名已存在(=mfg_coolant)，改为打标
+- cryogenic_machining「低温切削」: 同名已存在(=mfg_cryogenicm)，改为打标
+- food_wine_fermentation「葡萄酒酿造」: 本批目录内重名(=bt_wine)，跳过重复
+- food_cheese_making「奶酪制作」: 本批目录内重名(=bt_cheese)，跳过重复
+- food_freeze_drying「冷冻干燥」: 本批目录内重名(=med_lyophilization)，跳过重复
+- spirit_level「水准器」: 本批目录内 id 重复，跳过
+- self_tapping_screw「自攻螺钉」: 本批目录内重名(=asm_self_tapping_screw)，跳过重复
+- lock_nut「防松螺母」: 本批目录内重名(=asm_lock_nut)，跳过重复
+- threaded_insert「钢丝螺套」: 本批目录内重名(=asm_wire_thread_insert)，跳过重复
+- self_drilling_screw「自钻螺钉」: 本批目录内重名(=asm_self_drilling_screw)，跳过重复
+- hex_socket_screw「内六角螺钉」: 本批目录内重名(=asm_socket_screw)，跳过重复
+- riveting「铆接」: 同名已存在(=mfg_rivet)，改为打标
+- blind_rivet「抽芯铆钉」: 本批目录内重名(=asm_blind_rivet)，跳过重复
+- circlip「弹性挡圈」: 本批目录内重名(=asm_retaining_ring)，跳过重复
+- split_pin「开口销」: 本批目录内重名(=asm_cotter_pin)，跳过重复
+- friction_stir_welding「搅拌摩擦焊」: 同名已存在(=mfg_fsw)，改为打标
+- electron_beam_welding「电子束焊」: 同名已存在(=mfg_ebw)，改为打标
+- milling_machine_origin「铣床」: 同名已存在(=mfg_mill)，改为打标
+- numerically_controlled_machine「数控机床」: 同名已存在(=mfg_cnc)，改为打标
+- machining_center「加工中心」: 同名已存在(=mfg_mc)，改为打标
+- flexible_manufacturing_system「柔性制造系统」: 同名已存在(=mfg_fms)，改为打标
+- flexible_manufacturing_cell「柔性制造单元」: 本批目录内重名(=aut_fmc)，跳过重复
+- electrochemical_grinding「电解磨削」: 同名已存在(=mfg_ecmg)，改为打标
+- automatic_pallet_changer「自动托盘交换装置」: 本批目录内重名(=aut_pallet_changer)，跳过重复
+- chemomechanical_polishing「化学机械抛光」: 同名已存在(=mn_proc_4)，改为打标
+- magnetorheological_optics_finishing「磁流变抛光」: 同名已存在(=mn_proc_3)，改为打标
+- cnc_coordinate_measuring_machine「三坐标测量机」: 本批目录内重名(=coordinate_measuring_machine)，跳过重复
+- laser_interferometric_length_measurement「激光干涉测长仪」: 本批目录内重名(=laser_interferometer_measurement)，跳过重复
+- harmonic_drive_reducer「谐波减速器」: 同名已存在(=mfg_harmonic)，改为打标
+- lime_binder「石灰」: 同名已存在(=lime)，改为打标
+- reinforced_concrete「钢筋混凝土」: 同名已存在(=mat_reconcrete)，改为打标
+- prestressed_concrete「预应力混凝土」: 同名已存在(=mat_prestress)，改为打标
+- shotcrete「喷射混凝土」: 本批目录内重名(=constr_shotcrete)，跳过重复
+- mass_concrete_thermoregulation「大体积混凝土温控」: 本批目录内重名(=civil_mass_concrete_cool)，跳过重复
+- self_compacting_concrete「自密实混凝土」: 本批目录内重名(=struct_scc)，跳过重复
+- rammed_earth「夯土版筑」: 本批目录内重名(=bld_rammed_earth)，跳过重复
+- glass_curtain_wall「玻璃幕墙」: 同名已存在(=bld_curtain)，改为打标
+- unitized_curtain_wall「单元式幕墙」: 本批目录内重名(=bld_curtain_wall_system)，跳过重复
+- terrazzo_floor「水磨石」: 本批目录内重名(=waterstone)，跳过重复
+- plywood_panel「胶合板」: 同名已存在(=mat_plywood)，改为打标
+- glulam_timber「胶合木」: 本批目录内重名(=struct_glued_laminated)，跳过重复
+- silicon_sealant「硅酮密封胶」: 本批目录内重名(=silicone_sealant)，跳过重复
+- glazed_roof_tile「琉璃瓦」: 本批目录内重名(=glazed_roof_tile)，跳过重复
+- float_glass「浮法玻璃」: 同名已存在(=mat_floatglass)，改为打标
+- tempered_safety_glass「钢化玻璃」: 同名已存在(=mat_tempered)，改为打标
+- glass_ceramic「微晶玻璃」: 同名已存在(=mt_cer_13)，改为打标
+- laser_glass「激光玻璃」: 同名已存在(=mt_cer_20)，改为打标
+- photochromic_glass「光致变色玻璃」: 同名已存在(=mt_cer_15)，改为打标
+- silicon_carbide「碳化硅」: 同名已存在(=mat_sic)，改为打标
+- silicon_nitride_ceramic「氮化硅陶瓷」: 同名已存在(=mat_sin)，改为打标
+- sialon_ceramic「赛隆陶瓷」: 同名已存在(=mt_cer_6)，改为打标
+- boron_nitride_ceramic「氮化硼陶瓷」: 同名已存在(=mt_cer_2)，改为打标
+- reinforced_concrete「钢筋混凝土」: 同名已存在(=mat_reconcrete)，改为打标
+- prestressed_concrete「预应力混凝土」: 同名已存在(=mat_prestress)，改为打标
+- steel_fiber_concrete「钢纤维混凝土」: 本批目录内重名(=steel_fiber_concrete)，跳过重复
+- glass_reinforced_concrete「玻璃纤维增强水泥」: 本批目录内重名(=glass_reinforced_concrete)，跳过重复
+- uhpc_fiber_concrete「超高性能混凝土」: 本批目录内重名(=uhpc_reactive_powder)，跳过重复
+- glass_wool「玻璃棉」: 本批目录内重名(=glass_wool)，跳过重复
+- continuous_glass_fiber「连续玻璃纤维」: 本批目录内重名(=glass_fiber)，跳过重复
+- glass_reinforced_plastic「玻璃钢」: 同名已存在(=mat_frp)，改为打标
+- carbon_carbon_composite「碳-碳复合材料」: 同名已存在(=mt_alloy_6)，改为打标
+- carbon_fiber_reinforced_plastic「碳纤维复合材料」: 同名已存在(=mat_cfrp)，改为打标
+- metal_matrix_composite「金属基复合材料」: 同名已存在(=mat_mmc)，改为打标
+- plywood「胶合板」: 同名已存在(=mat_plywood)，改为打标
+- hardboard「硬质纤维板」: 本批目录内重名(=fiberboard_hard)，跳过重复
+- particleboard「刨花板」: 本批目录内重名(=particleboard)，跳过重复
+- medium_density_fiberboard「中密度纤维板」: 本批目录内重名(=mdf_board)，跳过重复
+- laminated_veneer_lumber「单板层积材」: 本批目录内重名(=lvl_lumber)，跳过重复
+- oriented_strand_board「定向刨花板」: 本批目录内重名(=osb_board)，跳过重复
+- wood_i_joist「木质工字梁」: 本批目录内 id 重复，跳过
+- cross_laminated_timber「正交胶合木」: 本批目录内重名(=struct_clt)，跳过重复
+- laminated_bamboo「竹集成材」: 本批目录内重名(=laminated_bamboo)，跳过重复
+- thermal_interface_material「导热界面材料」: 本批目录内重名(=thermal_interface_material)，跳过重复
+- ion_exchange_resin「离子交换树脂」: 本批目录内重名(=chem_ion_exchange_resin)，跳过重复
+- magnesium_elektron_alloy「镁合金」: 同名已存在(=mat_mgalloy)，改为打标
+- nichrome_heating_alloy「镍铬电热合金」: 本批目录内重名(=nichrome_heating_alloy)，跳过重复
+- directional_solidification「定向凝固叶片」: 本批目录内 id 重复，跳过
+- hot_isostatic_pressing「热等静压」: 同名已存在(=mfg_hip)，改为打标
+- niobium_titanium_superconductor「铌钛超导线材」: 本批目录内重名(=nbti_superconducting_wire)，跳过重复
+- metal_injection_molding「金属注射成形」: 同名已存在(=mfg_pim)，改为打标
+- spark_plasma_sintering「放电等离子烧结」: 同名已存在(=mat_sps)，改为打标
+- permalloy_soft_magnetic「坡莫合金」: 本批目录内重名(=permalloy)，跳过重复
+- nb3sn_superconductor「铌三锡超导材料」: 本批目录内 id 重复，跳过
+- nitinol_shape_memory_alloy「镍钛形状记忆合金」: 本批目录内重名(=nitinol_shape_memory)，跳过重复
+- copper_shape_memory_alloy「铜基形状记忆合金」: 本批目录内重名(=copper_shape_memory_alloy)，跳过重复
+- nanocrystalline_soft_magnetic「纳米晶软磁合金」: 本批目录内重名(=nanocrystalline_soft_magnet)，跳过重复
+- silicon_electrical_steel「电工硅钢」: 本批目录内重名(=electrical_silicon_steel)，跳过重复
+- high_speed_steel「高速钢」: 同名已存在(=mat_hss)，改为打标
+- grain_oriented_silicon_steel「取向硅钢」: 本批目录内重名(=grain_oriented_steel)，跳过重复
+- blast_furnace_ironmaking「高炉炼铁」: 同名已存在(=mat_blastfurnace)，改为打标
+- crucible_steel「坩埚钢」: 同名已存在(=mat_steel2)，改为打标
+- cupola_furnace「冲天炉」: 同名已存在(=mat_cupola)，改为打标
+- electroslag_remelting「电渣重熔」: 同名已存在(=mat_esr)，改为打标
+- quenching_steel「淬火」: 同名已存在(=mat_quench)，改为打标
+- tempering_steel「回火」: 同名已存在(=mat_temper)，改为打标
+- ductile_iron「球墨铸铁」: 同名已存在(=mat_ductile)，改为打标
+- carbon_nanotube「碳纳米管」: id 已存在于全库
+- graphene「石墨烯」: id 已存在于全库
+- metal_organic_framework「金属有机框架」: 同名已存在(=mat_mof)，改为打标
+- scanning_tunneling_microscope「扫描隧道显微镜」: 本批目录内重名(=scanning_tunneling_microscope)，跳过重复
+- atomic_force_microscope「原子力显微镜」: 本批目录内重名(=atomic_force_microscope)，跳过重复
+- nanoimprint_technology「纳米压印光刻」: 本批目录内重名(=nanoimprint_lithography)，跳过重复
+- plywood「胶合板」: 同名已存在(=mat_plywood)，改为打标
+- glulam「胶合层压木」: 本批目录内 id 重复，跳过
+- particleboard「刨花板」: 本批目录内重名(=particleboard)，跳过重复
+- mdf_board「中密度纤维板」: 本批目录内重名(=mdf_board)，跳过重复
+- rotary_quern「旋转石磨」: 本批目录内 id 重复，跳过
+- basketry「编织篮筐」: id 已存在于全库
+- wax_casting「失蜡铸造」: 本批目录内重名(=lost_wax_casting)，跳过重复
+- natural_rubber「天然橡胶」: 同名已存在(=mat_rubber)，改为打标
+- rubber_vulcanization「橡胶硫化」: 本批目录内重名(=rubber_vulcanization)，跳过重复
+- gutta_percha「古塔波胶」: 本批目录内 id 重复，跳过
+- ebonite「硬质橡胶」: 本批目录内重名(=ebonite)，跳过重复
+- shellac_resin「虫胶」: 本批目录内重名(=shellac)，跳过重复
+- phenol_formaldehyde_resin「酚醛树脂」: 同名已存在(=mat_phenolic)，改为打标
+- polyurethane_resin「聚氨酯」: 同名已存在(=mat_pu)，改为打标
+- epoxy_resin「环氧树脂」: 同名已存在(=mat_epoxy)，改为打标
+- polyvinyl_chloride「聚氯乙烯」: 同名已存在(=mat_pvc)，改为打标
+- polystyrene「聚苯乙烯」: 同名已存在(=mat_ps)，改为打标
+- polymethyl_methacrylate「有机玻璃」: 同名已存在(=mat_pmma)，改为打标
+- polypropylene「聚丙烯」: 同名已存在(=mat_pp)，改为打标
+- ultra_high_molecular_pe「超高分子量聚乙烯」: 同名已存在(=mat_uhmwpe)，改为打标
+- polycarbonate「聚碳酸酯」: 同名已存在(=mat_pc)，改为打标
+- peek_resin「聚醚醚酮」: 同名已存在(=mat_peek)，改为打标
+- styrene_butadiene_rubber「丁苯橡胶」: 同名已存在(=mat_sbr)，改为打标
+- nitrile_rubber「丁腈橡胶」: 同名已存在(=mat_nbr)，改为打标
+- polytetrafluoroethylene「聚四氟乙烯」: 同名已存在(=mat_ptfe)，改为打标
+- silicone_rubber「硅橡胶」: 同名已存在(=mat_silicone)，改为打标
+- polyimide「聚酰亚胺」: 同名已存在(=mat_pi)，改为打标
+- ion_exchange_resin「离子交换树脂」: 本批目录内重名(=chem_ion_exchange_resin)，跳过重复
+- phenolic_foam「酚醛泡沫塑料」: 本批目录内 id 重复，跳过
+- conductive_rubber「导电橡胶」: 本批目录内重名(=conductive_rubber_emi)，跳过重复
+- selenium_photoconductor「硒光电导材料」: 本批目录内重名(=selenium_photoconductor)，跳过重复
+- lead_sulfide_detector「硫化铅红外材料」: 本批目录内 id 重复，跳过
+- indium_antimonide「锑化铟」: 本批目录内 id 重复，跳过
+- silicon_single_crystal「单晶硅」: 同名已存在(=mat_siliconw)，改为打标
+- mercury_cadmium_telluride「碲镉汞」: 本批目录内 id 重复，跳过
+- gallium_arsenide「砷化镓」: 同名已存在(=mat_gaas)，改为打标
+- indium_phosphide「磷化铟」: 同名已存在(=mat_inp)，改为打标
+- silicon_carbide「碳化硅」: 同名已存在(=mat_sic)，改为打标
+- gallium_nitride「氮化镓」: 同名已存在(=mat_gan)，改为打标
+- chemical_mechanical_polishing「化学机械抛光」: 同名已存在(=mn_proc_4)，改为打标
+- cmp_slurry「CMP抛光浆料」: 本批目录内 id 重复，跳过
+- glass_to_metal_seal「玻璃金属封接」: 本批目录内重名(=glass_to_metal_seal)，跳过重复
+- thermal_interface_material「导热界面材料」: 本批目录内重名(=thermal_interface_material)，跳过重复
+- solder_paste「焊膏」: 本批目录内重名(=solder_paste)，跳过重复
+- aluminum_nitride_substrate「氮化铝陶瓷基板」: 本批目录内重名(=aluminum_nitride_substrate)，跳过重复
+- pzt_piezoelectric_ceramic「锆钛酸铅压电陶瓷」: 本批目录内重名(=pzt_piezoceramic)，跳过重复
+- lithium_niobate_crystal「铌酸锂晶体」: 本批目录内重名(=lithium_niobate_crystal)，跳过重复
+- hand_spinning_wheel「手摇纺车」: 本批目录内重名(=spinning_wheel)，跳过重复
+- silk_reeling_ancient「缫丝」: 本批目录内重名(=silk_reeling)，跳过重复
+- cotton_gin「轧棉机」: 本批目录内重名(=cotton_gin)，跳过重复
+- treadle_loom「踏板织机」: 本批目录内 id 重复，跳过
+- felt_making「毛毡制作」: 本批目录内 id 重复，跳过
+- mauveine「苯胺紫染料」: 本批目录内重名(=chem_mauveine)，跳过重复
+- synthetic_indigo「合成靛蓝」: 本批目录内重名(=chem_synthetic_indigo)，跳过重复
+- rubberized_waterproof_cloth「橡胶防水布」: 本批目录内重名(=rubberized_fabric)，跳过重复
+- cuprammonium_rayon「铜氨纤维」: 本批目录内 id 重复，跳过
+- viscose_rayon「黏胶纤维」: 本批目录内 id 重复，跳过
+- nylon66「尼龙66」: 本批目录内重名(=nylon_66)，跳过重复
+- nylon6「尼龙6」: 本批目录内重名(=nylon_6)，跳过重复
+- af_jet_engine「涡轮喷气发动机」: 本批目录内重名(=turbojet_engine)，跳过重复
+- af_ramjet「冲压发动机」: 本批目录内重名(=ramjet_engine)，跳过重复
+- af_strategic_bomber「战略轰炸机」: 同名已存在(=mil_bomber)，改为打标
+- af_helicopter「直升机」: 同名已存在(=tr_helicopter)，改为打标
+- af_awacs「预警机」: 同名已存在(=mil_aewc)，改为打标
+- af_tanker「空中加油机」: 同名已存在(=mil_tankerac)，改为打标
+- af_ew_aircraft「电子战飞机」: 同名已存在(=ml_uav_59)，改为打标
+- af_laser_guided_bomb「激光制导炸弹」: 同名已存在(=ml_uav_10)，改为打标
+- af_gps_bomb「卫星制导炸弹」: 同名已存在(=ml_uav_11)，改为打标
+- av_apc「装甲运兵车」: 同名已存在(=mil_apc)，改为打标
+- ew_radar_warning_receiver「雷达告警接收机」: 本批目录内重名(=af_radar_warning)，跳过重复
+- ew_sigint_aircraft「电子侦察机」: 同名已存在(=ml_uav_60)，改为打标
+- ew_stealth「隐身技术」: 同名已存在(=mil_stealth2)，改为打标
+- ew_vuln_scan「漏洞扫描」: 本批目录内重名(=sec_vulnerability_scanning)，跳过重复
+- ew_firewall「防火墙」: 本批目录内重名(=net_firewall)，跳过重复
+- gun_flintlock「燧发枪」: 同名已存在(=mil_fintlock)，改为打标
+- gun_musket「滑膛枪」: 同名已存在(=mil_musket)，改为打标
+- gun_sniper_rifle「狙击步枪」: 同名已存在(=mil_sniper)，改为打标
+- gun_submachine_gun「冲锋枪」: 同名已存在(=mil_submachine)，改为打标
+- gun_howitzer「榴弹炮」: 同名已存在(=mil_howitzer)，改为打标
+- gun_field_gun「加农炮」: 同名已存在(=mil_cannon)，改为打标
+- gun_anti_aircraft_gun「高射炮」: 同名已存在(=mil_aagun)，改为打标
+- gun_rocket_artillery「火箭炮」: 同名已存在(=mil_mrl)，改为打标
+- gun_hand_grenade「手榴弹」: 同名已存在(=mil_grenade)，改为打标
+- gun_smokeless_powder「无烟火药」: 同名已存在(=mil_smokeless)，改为打标
+- gun_cluster「子母弹」: 同名已存在(=ml_uav_7)，改为打标
+- logi_pontoon_bridge「舟桥」: 同名已存在(=mil_assaultbridge)，改为打标
+- logi_assault_bridge「装甲架桥车」: 本批目录内重名(=av_armored_bridge)，跳过重复
+- logi_armored_engineer「装甲工程车」: 本批目录内重名(=av_combat_engineer)，跳过重复
+- logi_mine_clearing「扫雷」: 同名已存在(=mil_mineclear)，改为打标
+- logi_mine_plow「扫雷犁」: 本批目录内重名(=av_mine_plow)，跳过重复
+- logi_flail_tank「扫雷滚」: 本批目录内重名(=av_mine_roller)，跳过重复
+- logi_fh_radio「跳频电台」: 同名已存在(=ml_uav_118)，改为打标
+- logi_military_datalink「战术数据链」: 同名已存在(=ml_uav_112)，改为打标
+- logi_tactical_internet「战术互联网」: 同名已存在(=ml_uav_126)，改为打标
+- logi_field_hospital「野战医院」: 本批目录内重名(=ph_field_hospital)，跳过重复
+- logi_blood_transfusion「输血」: 同名已存在(=bio_transfusion)，改为打标
+- logi_triage「检伤分类」: 本批目录内重名(=ph_triage)，跳过重复
+- melee_javelin「标枪」: 同名已存在(=mil_javelin)，改为打标
+- melee_crossbow「弩」: 同名已存在(=mil_crossbow)，改为打标
+- melee_chainmail「锁子甲」: 同名已存在(=mil_chainmail)，改为打标
+- melee_plate_armor「板甲」: 同名已存在(=mil_plate)，改为打标
+- melee_matchlock「火绳枪」: 同名已存在(=mil_matchlock)，改为打标
+- melee_stirrup「马镫」: 同名已存在(=tr_stirrup)，改为打标
+- melee_horseshoe「马蹄铁」: 同名已存在(=tr_horseshoe)，改为打标
+- msl_air_ship「空舰导弹」: 本批目录内重名(=af_anti_ship_missile_air)，跳过重复
+- msl_asat「反卫星导弹」: 同名已存在(=ml_uav_68)，改为打标
+- msl_air_anti_tank「空射反坦克导弹」: 本批目录内重名(=af_anti_tank_missile_air)，跳过重复
+- msl_anti_radiation「反辐射导弹」: 同名已存在(=ml_uav_20)，改为打标
+- msl_laser_gb「激光制导炸弹」: 同名已存在(=ml_uav_10)，改为打标
+- msl_sat_gb「卫星制导炸弹」: 同名已存在(=ml_uav_11)，改为打标
+- msl_terminal_sensing「末敏弹」: 同名已存在(=ml_uav_2)，改为打标
+- msl_small_diameter「小直径炸弹」: 同名已存在(=ml_uav_13)，改为打标
+- navy_watertube_boiler「水管锅炉」: 本批目录内重名(=water_tube_boiler)，跳过重复
+- navy_destroyer「驱逐舰」: 同名已存在(=tr_destroyer)，改为打标
+- navy_cruiser「巡洋舰」: 同名已存在(=tr_cruiser)，改为打标
+- navy_frigate_modern「护卫舰」: 同名已存在(=mil_frigate)，改为打标
+- navy_ballistic_sub「战略导弹潜艇」: 同名已存在(=mil_ssbn)，改为打标
+- navy_naval_mine「水雷」: 同名已存在(=mil_seamine)，改为打标
+- navy_torpedo「鱼雷」: 同名已存在(=mil_torpedo)，改为打标
+- navy_depth_charge「深水炸弹」: 同名已存在(=mil_depthcharge)，改为打标
+- navy_sam_naval「舰空导弹」: 本批目录内重名(=msl_ship_aa_missile)，跳过重复
+- navy_naval_radar「舰载雷达」: 同名已存在(=ml_uav_88)，改为打标
+- nw_neutron_warhead「中子弹」: 同名已存在(=mil_neutron)，改为打标
+- nw_mirv_warhead「分导多弹头」: 本批目录内重名(=msl_mirv)，跳过重复
+- nw_nuclear_triad「核三位一体」: 同名已存在(=mil_triad)，改为打标
+- sens_laser_rangefinder「激光测距仪」: 本批目录内重名(=laser_rangefinder_survey)，跳过重复
+- sens_height_finder「测高雷达」: 同名已存在(=ml_uav_92)，改为打标
+- sens_airborne_radar「机载雷达」: 本批目录内重名(=af_airborne_radar)，跳过重复
+- sens_pulse_doppler「脉冲多普勒雷达」: 同名已存在(=ml_uav_99)，改为打标
+- sens_phased_array_radar「相控阵雷达」: 同名已存在(=mil_phasedradar)，改为打标
+- sens_sar「合成孔径雷达」: 本批目录内重名(=synthetic_aperture_radar)，跳过重复
+- sens_bistatic_radar「双基雷达」: 同名已存在(=ml_uav_95)，改为打标
+- sens_passive_sonar「被动声呐」: 本批目录内重名(=navy_passive_sonar)，跳过重复
+- sens_active_sonar「主动声呐」: 本批目录内重名(=navy_active_sonar)，跳过重复
+- sens_awacs「预警机」: 同名已存在(=mil_aewc)，改为打标
+- sens_laser_warning_receiver「激光告警」: 本批目录内重名(=av_laser_warning)，跳过重复
+- hot_air_balloon「热气球」: 同名已存在(=tr_balloon)，改为打标
+- rigid_airship「硬式飞艇」: 本批目录内重名(=af_zeppelin)，跳过重复
+- pressurised_aircraft_cabin「增压座舱」: 本批目录内重名(=af_pressure_cabin)，跳过重复
+- swept_wing「后掠翼」: 本批目录内重名(=af_swept_wing)，跳过重复
+- delta_wing「三角翼」: 本批目录内重名(=af_delta_wing)，跳过重复
+- winglet「翼梢小翼」: 本批目录内重名(=af_winglets)，跳过重复
+- turbojet_engine「涡轮喷气发动机」: 本批目录内重名(=turbojet_engine)，跳过重复
+- turboprop_engine「涡轮螺旋桨发动机」: 本批目录内重名(=turboprop_engine)，跳过重复
+- turboshaft_engine「涡轴发动机」: 本批目录内重名(=turboshaft_engine)，跳过重复
+- thrust_reverser「反推力装置」: 本批目录内重名(=thrust_reverser)，跳过重复
+- aircraft_apu「飞机辅助动力装置」: 本批目录内重名(=aircraft_apu)，跳过重复
+- early_turbofan「涡扇发动机」: 本批目录内重名(=af_turbofan)，跳过重复
+- high_bypass_turbofan「高涵道比涡扇发动机」: 本批目录内 id 重复，跳过
+- geared_turbofan「齿轮传动涡扇发动机」: 本批目录内重名(=geared_turbofan)，跳过重复
+- seaplane「水上飞机」: 本批目录内重名(=af_floatplane)，跳过重复
+- supersonic_airliner「超音速客机」: 同名已存在(=tr_supersonic)，改为打标
+- electric_aircraft「电动推进载人飞机」: id 已存在于全库
+- autogyro「旋翼机」: 同名已存在(=tr_autogyro)，改为打标
+- precision_approach_radar「精密进近雷达」: 同名已存在(=ml_uav_106)，改为打标
+- selcal「选择性呼叫」: 本批目录内重名(=tele_selective_call)，跳过重复
+- logi_reefer_container「冷藏集装箱」: 本批目录内重名(=food_reefer_container)，跳过重复
+- logi_vacuum_pack「真空包装」: 本批目录内重名(=food_vacuum_packaging)，跳过重复
+- logi_forklift「叉车」: 同名已存在(=tr_forklift)，改为打标
+- logi_agv「自动导引车」: 同名已存在(=mfg_agv)，改为打标
+- logi_barcode「条码」: 本批目录内重名(=rec_barcode)，跳过重复
+- logi_rfid「射频识别」: 同名已存在(=inf_rfid)，改为打标
+- logi_cold_storage「冷库」: 本批目录内重名(=food_cold_storage_warehouse)，跳过重复
+- logi_edi「电子数据交换」: 本批目录内重名(=rec_edi)，跳过重复
+- pipe_hydrogen_pipeline「输氢管道」: 本批目录内重名(=hydrogen_pipeline)，跳过重复
+- pipe_digital_twin「数字孪生」: 同名已存在(=mfg_digitaltwin)，改为打标
+- pipe_composite_city「综合管廊」: 同名已存在(=bd_civ_30)，改为打标
+- pipe_heat_exchange「热力站」: 本批目录内重名(=district_heating_substation)，跳过重复
+- high_speed_rail「高速铁路」: 同名已存在(=tr_hsr)，改为打标
+- electric_streetcar「有轨电车」: 同名已存在(=tr_tram)，改为打标
+- monorail「单轨铁路」: 同名已存在(=tr_monorail)，改为打标
+- straddle_monorail「跨座式单轨」: 同名已存在(=tp_urban_2)，改为打标
+- asphalt_concrete「沥青混凝土路面」: 本批目录内 id 重复，跳过
+- cement_concrete_pavement「水泥混凝土路面」: 本批目录内重名(=civil_concrete_pavement)，跳过重复
+- electric_traffic_signal「交通信号灯」: 同名已存在(=tr_trafficsignal)，改为打标
+- asphalt_emulsion「乳化沥青」: 本批目录内重名(=emulsified_asphalt)，跳过重复
+- limited_access_motorway「高速公路」: 本批目录内重名(=civil_expressway)，跳过重复
+- porous_asphalt「排水沥青路面」: 本批目录内重名(=porous_asphalt)，跳过重复
+- stone_mastic_asphalt「沥青玛蹄脂碎石路面」: 本批目录内重名(=stone_matrix_asphalt)，跳过重复
+- warm_mix_asphalt「温拌沥青混合料」: 本批目录内 id 重复，跳过
+- wheelbarrow「独轮手推车」: 本批目录内重名(=wheelbarrow)，跳过重复
+- sedan_chair「轿子」: 本批目录内重名(=sedan_chair)，跳过重复
+- rickshaw「人力车」: 本批目录内重名(=rickshaw)，跳过重复
+- carburetor「化油器」: id 已存在于全库
+- automotive_clutch「摩擦离合器」: 本批目录内重名(=friction_clutch)，跳过重复
+- electric_starter「电动起动机」: 本批目录内 id 重复，跳过
+- car_radio「车载收音机」: 本批目录内重名(=bc_car_radio)，跳过重复
+- glassfibre_car_body「玻璃钢汽车车身」: 本批目录内重名(=glass_fiber_vehicle_body)，跳过重复
+- cvt_transmission「无级变速器」: 本批目录内 id 重复，跳过
+- tactile_paving「盲道砖」: 本批目录内 id 重复，跳过
+- space_multistage_rocket「多级火箭」: 同名已存在(=multistage_rocket)，改为打标
+- space_recoverable_booster「可回收火箭」: 同名已存在(=tr_reusablerocket)，改为打标
+- space_liquid_engine「液体火箭发动机」: 同名已存在(=liquid_rocket)，改为打标
+- space_turbopump「涡轮泵」: 本批目录内重名(=msl_rocket_engine_turbopump)，跳过重复
+- space_solid_motor「固体火箭发动机」: 本批目录内重名(=msl_solid_rocket)，跳过重复
+- space_comet_probe「彗星探测器」: 本批目录内重名(=comet_probe)，跳过重复
+- space_landing_radar「着陆雷达」: 同名已存在(=ml_uav_107)，改为打标
+- space_habitation_module「居住舱」: 同名已存在(=habitat)，改为打标
+- urb_trolleybus「无轨电车」: 同名已存在(=tr_trolley)，改为打标
+- urb_commuter_rail「市域铁路」: 同名已存在(=tp_urban_6)，改为打标
+- urb_motorbus「公共汽车」: 同名已存在(=tr_bus)，改为打标
+- urb_bus_lane「公交专用道」: 同名已存在(=tp_urban_9)，改为打标
+- urb_roundabout「环形交叉」: 本批目录内重名(=plan_roundabout)，跳过重复
+- urb_cooperative_its「车路协同」: 同名已存在(=tr_v2x)，改为打标
+- urb_robotaxi「自动驾驶出租车」: 同名已存在(=tp_road_8)，改为打标
+- urb_auto_parking「自动泊车」: 同名已存在(=tp_road_47)，改为打标
+- urb_traj_prediction「轨迹预测」: 同名已存在(=it_alg_47)，改为打标
+- dugout_canoe「独木舟」: 同名已存在(=tr_canoe)，改为打标
+- caravel「卡拉维尔帆船」: 本批目录内重名(=navy_caravel)，跳过重复
+- marine_steam_turbine「船用蒸汽轮机」: 本批目录内 id 重复，跳过
+- outboard_motor「舷外挂机」: 本批目录内 id 重复，跳过
+- waterjet_propulsion「喷水推进」: 本批目录内重名(=av_hydrojet)，跳过重复
+- nuclear_merchant_ship「核动力商船」: 本批目录内重名(=nuclear_merchant_ship)，跳过重复
+- oil_tanker「油轮」: 同名已存在(=tr_bulktanker)，改为打标
+- container_ship「集装箱船」: 同名已存在(=tr_containership)，改为打标
+- ro_ro_ship「滚装船」: 同名已存在(=tr_roship)，改为打标
+- icebreaker「破冰船」: 同名已存在(=tr_icebreaker)，改为打标
+- cutter_suction_dredger「绞吸挖泥船」: 本批目录内重名(=civil_cutter_dredger)，跳过重复
+- jackup_rig「自升式钻井平台」: 本批目录内重名(=jackup_drilling_rig)，跳过重复
+- drillship「钻井船」: 本批目录内重名(=drillship)，跳过重复
+- nuclear_icebreaker「核动力破冰船」: 本批目录内重名(=nuclear_icebreaker)，跳过重复
+- semisubmersible_rig「半潜式钻井平台」: 本批目录内重名(=semi_submersible_rig)，跳过重复
+- autonomous_underwater_vehicle「自主水下航行器」: 同名已存在(=tr_auv)，改为打标
+- ship_stabilizer「减摇鳍」: 本批目录内重名(=navy_stabilizer)，跳过重复
+- hovercraft「气垫船」: 同名已存在(=tr_hovercraft)，改为打标
+- lighthouse「灯塔」: 同名已存在(=tr_lighthouse)，改为打标
+- marine_chronometer「航海天文钟」: 本批目录内重名(=marine_chronometer)，跳过重复
+- marine_sextant「航海六分仪」: 本批目录内重名(=marine_sextant)，跳过重复
+- echo_sounder「回声测深仪」: 本批目录内重名(=echo_sounder)，跳过重复
+
+## 依赖告警
+- mercury_barometer 依赖 physics：年份(1687)不早于自身(1643)，剔除
+- single_wall_nanotube 依赖 carbon_nanotube：年份(2035)不早于自身(1993)，剔除
+- cnt_vapor_growth 依赖 carbon_nanotube：年份(2035)不早于自身(1996)，剔除
+- graphene_cvd 依赖 graphene：年份(2035)不早于自身(2009)，剔除
+- cnt_fiber_assembly 依赖 carbon_nanotube：年份(2035)不早于自身(2000)，剔除
+- graphene_nanoplatelet 依赖 graphene：年份(2035)不早于自身(2010)，剔除
+- cnt_conductive_paste 依赖 carbon_nanotube：年份(2035)不早于自身(2005)，剔除
+- molybdenum_disulfide_nanosheet 依赖 graphene：年份(2035)不早于自身(2010)，剔除
+- hexagonal_boron_nitride 依赖 graphene：年份(2035)不早于自身(2010)，剔除
+- boron_nitride_nanotube 依赖 carbon_nanotube：年份(2035)不早于自身(1995)，剔除
+- graphene_aerogel 依赖 graphene：年份(2035)不早于自身(2013)，剔除
+- nano_lubricant_additive 依赖 graphene：年份(2035)不早于自身(2010)，剔除
+- cnt_reinforced_composite 依赖 carbon_nanotube：年份(2035)不早于自身(1995)，剔除
+- graphene_reinforced_composite 依赖 graphene：年份(2035)不早于自身(2008)，剔除
+- electromagnetic_shielding_paint 依赖 carbon_nanotube：年份(2035)不早于自身(2005)，剔除
+- graphene_heating_film 依赖 graphene：年份(2035)不早于自身(2015)，剔除
+- graphene_field_effect_device 依赖 graphene：年份(2035)不早于自身(2007)，剔除
+- carbon_sponge 依赖 carbon_nanotube：年份(2035)不早于自身(2010)，剔除
+- melee_arrowhead 依赖 bow_arrow：年份(-20000)不早于自身(-28000)，剔除
+- widebody_airliner 依赖 high_bypass_turbofan：年份(1970)不早于自身(1970)，剔除
+- flight_management_system 依赖 gps：年份(1990)不早于自身(1982)，剔除
+- platform_supply_vessel 依赖 drillship：年份(1960)不早于自身(1960)，剔除
+- chem_argon 依赖 chem_periodic_table：目标被去重/不存在，已剔除
+- chem_atomic_number 依赖 chem_periodic_table：目标被去重/不存在，已剔除
+- chem_ion_exchange 依赖 chem_column_chromatography：目标被去重/不存在，已剔除
+- chem_tlc 依赖 chem_column_chromatography：目标被去重/不存在，已剔除
+- chem_gc 依赖 chem_column_chromatography：目标被去重/不存在，已剔除
+- chem_hplc 依赖 chem_column_chromatography：目标被去重/不存在，已剔除
+- math_logarithm 依赖 math_decimal_fraction：目标被去重/不存在，已剔除
+- math_spherical_trig 依赖 math_trig：目标被去重/不存在，已剔除
+- math_descriptive_geometry 依赖 math_analytic_geometry：目标被去重/不存在，已剔除
+- math_riemann_geometry 依赖 math_differential_geometry：目标被去重/不存在，已剔除
+- math_four_color 依赖 math_topology：目标被去重/不存在，已剔除
+- math_function_concept 依赖 math_calculus：目标被去重/不存在，已剔除
+- math_ode 依赖 math_calculus：目标被去重/不存在，已剔除
+- math_taylor_series 依赖 math_calculus：目标被去重/不存在，已剔除
+- math_laplace_transform 依赖 math_calculus：目标被去重/不存在，已剔除
+- math_lagrange_multiplier 依赖 math_variational_calculus：目标被去重/不存在，已剔除
+- math_epsilon_delta 依赖 math_calculus：目标被去重/不存在，已剔除
+- math_vector_calculus 依赖 math_calculus：目标被去重/不存在，已剔除
+- math_distribution_theory 依赖 math_functional_analysis：目标被去重/不存在，已剔除
+- math_large_numbers 依赖 math_probability：目标被去重/不存在，已剔除
+- math_bayes 依赖 math_probability：目标被去重/不存在，已剔除
+- math_least_squares 依赖 math_probability：目标被去重/不存在，已剔除
+- math_markov_chain 依赖 math_probability：目标被去重/不存在，已剔除
+- math_mle 依赖 math_probability：目标被去重/不存在，已剔除
+- math_peano_axioms 依赖 math_set_theory：目标被去重/不存在，已剔除
+- math_zfc 依赖 math_set_theory：目标被去重/不存在，已剔除
+- math_fuzzy_set 依赖 math_set_theory：目标被去重/不存在，已剔除
+- math_matroid 依赖 math_graph_theory：目标被去重/不存在，已剔除
+- math_hamming_code 依赖 math_information_theory：目标被去重/不存在，已剔除
+- math_markov_decision 依赖 math_dynamic_programming：目标被去重/不存在，已剔除
+- hourglass 依赖 mechanical_clock：目标被去重/不存在，已剔除
+- spring_driven_clock 依赖 mechanical_clock：目标被去重/不存在，已剔除
+- pendulum_clock 依赖 mechanical_clock：目标被去重/不存在，已剔除
+- high_performance_liquid_chromatography 依赖 gas_chromatography：目标被去重/不存在，已剔除
+- gc_ms 依赖 gas_chromatography：目标被去重/不存在，已剔除
+- phys_light_deflection 依赖 phys_general_relativity：目标被去重/不存在，已剔除
+- phys_dirac_equation 依赖 phys_special_relativity：目标被去重/不存在，已剔除
+- phys_gravitational_waves 依赖 phys_general_relativity：目标被去重/不存在，已剔除
+- bld_precast_concrete 依赖 bld_prefab_cast：目标被去重/不存在，已剔除
+- bld_parametric_design 依赖 bld_cad：目标被去重/不存在，已剔除
+- bld_performance_simulation 依赖 bld_cad：目标被去重/不存在，已剔除
+- bld_digital_fabrication 依赖 bld_cad：目标被去重/不存在，已剔除
+- bld_curtain_wall_system 依赖 bld_glass_curtain_wall：目标被去重/不存在，已剔除
+- civil_snow_ice_control 依赖 civil_airport_runway：目标被去重/不存在，已剔除
+- civil_shm_sensing 依赖 civil_bridge_health：目标被去重/不存在，已剔除
+- civil_remote_inspection 依赖 civil_bridge_health：目标被去重/不存在，已剔除
+- constr_epb_shield 依赖 constr_shield：目标被去重/不存在，已剔除
+- constr_slurry_shield 依赖 constr_shield：目标被去重/不存在，已剔除
+- constr_tbm 依赖 constr_shield：目标被去重/不存在，已剔除
+- constr_microtunneling 依赖 constr_shield：目标被去重/不存在，已剔除
+- fac_heat_recovery 依赖 fac_fresh_air：目标被去重/不存在，已剔除
+- fac_erv 依赖 fac_fresh_air：目标被去重/不存在，已剔除
+- fac_chill_water_plant 依赖 fac_cooling_tower：目标被去重/不存在，已剔除
+- fac_moving_walkway 依赖 fac_escalator：目标被去重/不存在，已剔除
+- fac_escalator_safety 依赖 fac_escalator：目标被去重/不存在，已剔除
+- fac_energy_management 依赖 fac_bms：目标被去重/不存在，已剔除
+- fac_power_monitor 依赖 fac_bms：目标被去重/不存在，已剔除
+- struct_cave_dwelling 依赖 struct_rammed_earth：目标被去重/不存在，已剔除
+- struct_cliff_dwelling 依赖 struct_rammed_earth：目标被去重/不存在，已剔除
+- struct_pagoda_timber 依赖 struct_dougong：目标被去重/不存在，已剔除
+- struct_cob 依赖 struct_rammed_earth：目标被去重/不存在，已剔除
+- struct_double_tee 依赖 struct_precast：目标被去重/不存在，已剔除
+- struct_partial_prestress 依赖 struct_prestressed：目标被去重/不存在，已剔除
+- struct_swing_bridge 依赖 struct_movable_bridge：目标被去重/不存在，已剔除
+- struct_bascule 依赖 struct_movable_bridge：目标被去重/不存在，已剔除
+- struct_lift_bridge 依赖 struct_movable_bridge：目标被去重/不存在，已剔除
+- struct_segmental 依赖 struct_precast：目标被去重/不存在，已剔除
+- struct_cable_net 依赖 struct_suspension_bridge：目标被去重/不存在，已剔除
+- struct_frame_tube 依赖 struct_tube：目标被去重/不存在，已剔除
+- struct_tensile_membrane 依赖 struct_membrane：目标被去重/不存在，已剔除
+- struct_braced_tube 依赖 struct_tube：目标被去重/不存在，已剔除
+- struct_viscous_damper 依赖 struct_tmd：目标被去重/不存在，已剔除
+- struct_diagrid 依赖 struct_tube：目标被去重/不存在，已剔除
+- struct_pneumatic_caisson 依赖 struct_caisson：目标被去重/不存在，已剔除
+- struct_bored_pile 依赖 struct_pile_foundation：目标被去重/不存在，已剔除
+- struct_pile_cap 依赖 struct_pile_foundation：目标被去重/不存在，已剔除
+- struct_underpinning 依赖 struct_pile_foundation：目标被去重/不存在，已剔除
+- struct_micropile 依赖 struct_pile_foundation：目标被去重/不存在，已剔除
+- struct_composite_pile 依赖 struct_pile_foundation：目标被去重/不存在，已剔除
+- struct_piled_raft 依赖 struct_pile_foundation：目标被去重/不存在，已剔除
+- struct_lng_tank 依赖 struct_prestressed：目标被去重/不存在，已剔除
+- ww_uv_advanced 依赖 ww_uv_disinfection：目标被去重/不存在，已剔除
+- plug_flow_digester 依赖 sewage_sludge_digestion：目标被去重/不存在，已剔除
+- white_led 依赖 led_diode：目标被去重/不存在，已剔除
+- waste_heat_recovery 依赖 plate_heat_exchanger：目标被去重/不存在，已剔除
+- air_source_heat_pump 依赖 heat_pump：目标被去重/不存在，已剔除
+- vver_reactor 依赖 pressurized_water_reactor：目标被去重/不存在，已剔除
+- rbmk_reactor 依赖 boiling_water_reactor：目标被去重/不存在，已剔除
+- nuclear_heating_reactor 依赖 pressurized_water_reactor：目标被去重/不存在，已剔除
+- nuclear_steam_generator 依赖 pressurized_water_reactor：目标被去重/不存在，已剔除
+- reactor_core_instrumentation 依赖 pressurized_water_reactor：目标被去重/不存在，已剔除
+- reactor_internals 依赖 pressurized_water_reactor：目标被去重/不存在，已剔除
+- reactor_pressure_relief 依赖 pressurized_water_reactor：目标被去重/不存在，已剔除
+- reactor_refueling_machine 依赖 pressurized_water_reactor：目标被去重/不存在，已剔除
+- nuclear_submarine_engine 依赖 pressurized_water_reactor：目标被去重/不存在，已剔除
+- nuclear_icebreaker 依赖 pressurized_water_reactor：目标被去重/不存在，已剔除
+- nuclear_aircraft_carrier 依赖 pressurized_water_reactor：目标被去重/不存在，已剔除
+- nuclear_merchant_ship 依赖 pressurized_water_reactor：目标被去重/不存在，已剔除
+- nuclear_desalination 依赖 pressurized_water_reactor：目标被去重/不存在，已剔除
+- nuclear_cogeneration 依赖 pressurized_water_reactor：目标被去重/不存在，已剔除
+- neutral_beam_heating 依赖 tokamak：目标被去重/不存在，已剔除
+- electron_cyclotron_heating 依赖 tokamak：目标被去重/不存在，已剔除
+- d3d_tokamak 依赖 tokamak：目标被去重/不存在，已剔除
+- divertor 依赖 tokamak：目标被去重/不存在，已剔除
+- tfrt 依赖 tokamak：目标被去重/不存在，已剔除
+- jet_tokamak 依赖 tokamak：目标被去重/不存在，已剔除
+- textor_tokamak 依赖 tokamak：目标被去重/不存在，已剔除
+- jt60_tokamak 依赖 tokamak：目标被去重/不存在，已剔除
+- t15_reactor 依赖 tokamak：目标被去重/不存在，已剔除
+- tore_supra 依赖 tokamak：目标被去重/不存在，已剔除
+- reversed_field_pinch 依赖 tokamak：目标被去重/不存在，已剔除
+- asdex_upgrade 依赖 tokamak：目标被去重/不存在，已剔除
+- spherical_tokamak 依赖 tokamak：目标被去重/不存在，已剔除
+- alcator_cmod 依赖 tokamak：目标被去重/不存在，已剔除
+- east_tokamak 依赖 tokamak：目标被去重/不存在，已剔除
+- kstar_tokamak 依赖 tokamak：目标被去重/不存在，已剔除
+- borated_water_system 依赖 pressurized_water_reactor：目标被去重/不存在，已剔除
+- high_air_purification 依赖 pressurized_water_reactor：目标被去重/不存在，已剔除
+- reaction_turbine 依赖 steam_turbine：目标被去重/不存在，已剔除
+- condensing_turbine 依赖 steam_turbine：目标被去重/不存在，已剔除
+- marine_steam_turbine 依赖 steam_turbine：目标被去重/不存在，已剔除
+- mechanical_drive_turbine 依赖 steam_turbine：目标被去重/不存在，已剔除
+- reheat_steam_turbine 依赖 steam_turbine：目标被去重/不存在，已剔除
+- electrohydraulic_governor 依赖 steam_turbine：目标被去重/不存在，已剔除
+- centrifugal_compressor 依赖 gas_turbine：目标被去重/不存在，已剔除
+- axial_compressor 依赖 gas_turbine：目标被去重/不存在，已剔除
+- turbojet_engine 依赖 gas_turbine：目标被去重/不存在，已剔除
+- pulsejet_engine 依赖 gas_turbine：目标被去重/不存在，已剔除
+- turboprop_engine 依赖 gas_turbine：目标被去重/不存在，已剔除
+- turboshaft_engine 依赖 gas_turbine：目标被去重/不存在，已剔除
+- aircraft_apu 依赖 gas_turbine：目标被去重/不存在，已剔除
+- recuperated_gas_turbine 依赖 gas_turbine：目标被去重/不存在，已剔除
+- turbine_blade_cooling 依赖 gas_turbine：目标被去重/不存在，已剔除
+- marine_gas_turbine 依赖 gas_turbine：目标被去重/不存在，已剔除
+- low_noise_combustor 依赖 gas_turbine：目标被去重/不存在，已剔除
+- hot_air_engine 依赖 stirling_engine：目标被去重/不存在，已剔除
+- organic_rankine_cycle 依赖 steam_turbine：目标被去重/不存在，已剔除
+- free_piston_stirling 依赖 stirling_engine：目标被去重/不存在，已剔除
+- servo_drive 依赖 servo_system：目标被去重/不存在，已剔除
+- mechanical_transmission_gear 依赖 steam_turbine：目标被去重/不存在，已剔除
+- reversible_pump_turbine 依赖 pumped_hydro：目标被去重/不存在，已剔除
+- seawater_pumped 依赖 pumped_hydro：目标被去重/不存在，已剔除
+- adiabatic_caes 依赖 compressed_air_storage：目标被去重/不存在，已剔除
+- nickel_hydrogen_battery 依赖 nickel_cadmium_battery：目标被去重/不存在，已剔除
+- lmo_battery 依赖 lithium_ion_battery：目标被去重/不存在，已剔除
+- lfp_battery 依赖 lithium_ion_battery：目标被去重/不存在，已剔除
+- nmc_battery 依赖 lithium_ion_battery：目标被去重/不存在，已剔除
+- nca_battery 依赖 lithium_ion_battery：目标被去重/不存在，已剔除
+- lto_battery 依赖 lithium_ion_battery：目标被去重/不存在，已剔除
+- solid_state_battery 依赖 lithium_ion_battery：目标被去重/不存在，已剔除
+- aluminum_air_battery 依赖 zinc_air_battery：目标被去重/不存在，已剔除
+- lithium_ion_capacitor 依赖 lithium_ion_battery：目标被去重/不存在，已剔除
+- bess_plant 依赖 lithium_ion_battery：目标被去重/不存在，已剔除
+- home_storage 依赖 lithium_ion_battery：目标被去重/不存在，已剔除
+- battery_second_life 依赖 lithium_ion_battery：目标被去重/不存在，已剔除
+- microgrid_storage 依赖 lithium_ion_battery：目标被去重/不存在，已剔除
+- soc_estimation 依赖 battery_management_system：目标被去重/不存在，已剔除
+- battery_balancer 依赖 battery_management_system：目标被去重/不存在，已剔除
+- battery_thermal_management 依赖 battery_management_system：目标被去重/不存在，已剔除
+- battery_pack_assembly 依赖 battery_management_system：目标被去重/不存在，已剔除
+- battery_cloud_diagnosis 依赖 battery_management_system：目标被去重/不存在，已剔除
+- isothermal_caes 依赖 compressed_air_storage：目标被去重/不存在，已剔除
+- liquid_co2_storage 依赖 liquid_air_storage：目标被去重/不存在，已剔除
+- hydrogen_fc_backup_power 依赖 pem_fuel_cell：目标被去重/不存在，已剔除
+- underwater_caes 依赖 compressed_air_storage：目标被去重/不存在，已剔除
+- ai_expert_shell 依赖 ai_expert_system：目标被去重/不存在，已剔除
+- ai_statistical_mt 依赖 ai_hidden_markov：目标被去重/不存在，已剔除
+- ai_text_to_3d 依赖 ai_diffusion_model：目标被去重/不存在，已剔除
+- bc_color_pal 依赖 bc_color_tv：目标被去重/不存在，已剔除
+- bc_secam 依赖 bc_color_tv：目标被去重/不存在，已剔除
+- bc_cable_tv 依赖 bc_blackwhite_tv：目标被去重/不存在，已剔除
+- bc_remote_control 依赖 bc_blackwhite_tv：目标被去重/不存在，已剔除
+- bc_teletext 依赖 bc_color_tv：目标被去重/不存在，已剔除
+- bc_closed_caption 依赖 bc_color_tv：目标被去重/不存在，已剔除
+- bc_lp_record 依赖 bc_vinyl_record：目标被去重/不存在，已剔除
+- bc_cd_audio 依赖 bc_vinyl_record：目标被去重/不存在，已剔除
+- bc_mastering 依赖 bc_vinyl_record：目标被去重/不存在，已剔除
+- personal_computer 依赖 microprocessor：目标被去重/不存在，已剔除
+- compute_industrial_computer 依赖 embedded_computer：目标被去重/不存在，已剔除
+- compute_vector_supercomputer 依赖 supercomputer：目标被去重/不存在，已剔除
+- microcontroller 依赖 microprocessor：目标被去重/不存在，已剔除
+- risc_architecture 依赖 microprocessor：目标被去重/不存在，已剔除
+- dsp_processor 依赖 microprocessor：目标被去重/不存在，已剔除
+- soc_chip 依赖 microprocessor：目标被去重/不存在，已剔除
+- compute_pipeline 依赖 microprocessor：目标被去重/不存在，已剔除
+- compute_simd 依赖 microprocessor：目标被去重/不存在，已剔除
+- compute_multicore 依赖 microprocessor：目标被去重/不存在，已剔除
+- compute_network_processor 依赖 microprocessor：目标被去重/不存在，已剔除
+- compute_isa_x86 依赖 microprocessor：目标被去重/不存在，已剔除
+- compute_serverless 依赖 cloud_computing：目标被去重/不存在，已剔除
+- compute_orchestration 依赖 compute_container：目标被去重/不存在，已剔除
+- compute_chipset 依赖 microprocessor：目标被去重/不存在，已剔除
+- compute_bios_firmware 依赖 microprocessor：目标被去重/不存在，已剔除
+- store_archival_disc 依赖 store_blu_ray：目标被去重/不存在，已剔除
+- store_nvme 依赖 store_ssd：目标被去重/不存在，已剔除
+- store_computational_storage 依赖 store_ssd：目标被去重/不存在，已剔除
+- store_zns_ssd 依赖 store_ssd：目标被去重/不存在，已剔除
+- net_distributed_network 依赖 net_packet_switching：目标被去重/不存在，已剔除
+- net_protocol_layering 依赖 net_packet_switching：目标被去重/不存在，已剔除
+- net_packet_radio 依赖 net_packet_switching：目标被去重/不存在，已剔除
+- net_ethernet_csma 依赖 net_packet_switching：目标被去重/不存在，已剔除
+- net_network_coding 依赖 net_information_theory：目标被去重/不存在，已剔除
+- net_ospf 依赖 net_router：目标被去重/不存在，已剔除
+- net_bgp 依赖 net_router：目标被去重/不存在，已剔除
+- net_core_router 依赖 net_router：目标被去重/不存在，已剔除
+- net_frame_relay 依赖 net_router：目标被去重/不存在，已剔除
+- net_atm 依赖 net_router：目标被去重/不存在，已剔除
+- net_qos 依赖 net_router：目标被去重/不存在，已剔除
+- net_routing_table 依赖 net_router：目标被去重/不存在，已剔除
+- net_l2tp 依赖 net_router：目标被去重/不存在，已剔除
+- net_javascript 依赖 net_web_browser：目标被去重/不存在，已剔除
+- net_web_2 依赖 net_search_engine：目标被去重/不存在，已剔除
+- net_pwa 依赖 net_web_browser：目标被去重/不存在，已剔除
+- net_sdn 依赖 net_router：目标被去重/不存在，已剔除
+- net_quantum_repeater 依赖 net_qkd：目标被去重/不存在，已剔除
+- rec_roller_pen 依赖 rec_ballpoint_pen：目标被去重/不存在，已剔除
+- rec_microfilm_reader 依赖 rec_microfilm：目标被去重/不存在，已剔除
+- rec_roll_microfilm 依赖 rec_microfilm：目标被去重/不存在，已剔除
+- rec_aperture_card 依赖 rec_microfiche：目标被去重/不存在，已剔除
+- rec_archive_microfilm 依赖 rec_microfilm：目标被去重/不存在，已剔除
+- rec_microfilm_camera 依赖 rec_microfilm：目标被去重/不存在，已剔除
+- rec_microfilm_scanner 依赖 rec_microfilm：目标被去重/不存在，已剔除
+- sec_schnorr_signature 依赖 sec_digital_signature：目标被去重/不存在，已剔除
+- sec_dsa_standard 依赖 sec_digital_signature：目标被去重/不存在，已剔除
+- sec_dnssec_protocol 依赖 sec_digital_signature：目标被去重/不存在，已剔除
+- sec_code_signing 依赖 sec_digital_signature：目标被去重/不存在，已剔除
+- sec_ips_system 依赖 sec_ids_system：目标被去重/不存在，已剔除
+- sec_siem_platform 依赖 sec_ids_system：目标被去重/不存在，已剔除
+- sec_edr_system 依赖 sec_ids_system：目标被去重/不存在，已剔除
+- sec_ring_signature 依赖 sec_digital_signature：目标被去重/不存在，已剔除
+- sec_zk_snark 依赖 sec_zero_knowledge：目标被去重/不存在，已剔除
+- sec_distributed_ledger 依赖 sec_blockchain：目标被去重/不存在，已剔除
+- sec_smart_contract 依赖 sec_blockchain：目标被去重/不存在，已剔除
+- sw_discrete_wavelet 依赖 sw_fft_algorithm：目标被去重/不存在，已剔除
+- sw_cpp_language 依赖 sw_c_language：目标被去重/不存在，已剔除
+- sw_verilog_hdl 依赖 sw_c_language：目标被去重/不存在，已剔除
+- sw_perl_language 依赖 sw_c_language：目标被去重/不存在，已剔除
+- sw_python_language 依赖 sw_c_language：目标被去重/不存在，已剔除
+- sw_lua_language 依赖 sw_c_language：目标被去重/不存在，已剔除
+- sw_javascript_language 依赖 sw_c_language：目标被去重/不存在，已剔除
+- sw_go_language 依赖 sw_c_language：目标被去重/不存在，已剔除
+- sw_interpreter 依赖 sw_compiler：目标被去重/不存在，已剔除
+- sw_parsing_technique 依赖 sw_compiler：目标被去重/不存在，已剔除
+- sw_compiler_optimization 依赖 sw_compiler：目标被去重/不存在，已剔除
+- sw_build_automation 依赖 sw_c_language：目标被去重/不存在，已剔除
+- sw_static_analysis 依赖 sw_compiler：目标被去重/不存在，已剔除
+- sw_memory_protection 依赖 sw_virtual_memory：目标被去重/不存在，已剔除
+- sw_ide_tool 依赖 sw_c_language：目标被去重/不存在，已剔除
+- sw_game_engine 依赖 sw_c_language：目标被去重/不存在，已剔除
+- tele_transatlantic 依赖 tele_submarine_cable：目标被去重/不存在，已剔除
+- tele_submarine_repeat 依赖 tele_submarine_cable：目标被去重/不存在，已剔除
+- tele_cable_laying 依赖 tele_submarine_cable：目标被去重/不存在，已剔除
+- tele_cable_armor 依赖 tele_submarine_cable：目标被去重/不存在，已剔除
+- tele_troposcatter 依赖 tele_microwave_relay：目标被去重/不存在，已剔除
+- tele_point_to_point_mw 依赖 tele_microwave_relay：目标被去重/不存在，已剔除
+- tele_twt_amplifier 依赖 tele_microwave_relay：目标被去重/不存在，已剔除
+- tele_sat_internet 依赖 tele_leo_constellation：目标被去重/不存在，已剔除
+- tele_mobile_backhaul 依赖 tele_microwave_relay：目标被去重/不存在，已剔除
+- tele_single_mode_fiber 依赖 tele_optical_fiber：目标被去重/不存在，已剔除
+- tele_optical_transceiver 依赖 tele_optical_fiber：目标被去重/不存在，已剔除
+- tele_x25 依赖 tele_packet_switch：目标被去重/不存在，已剔除
+- tele_atm 依赖 tele_frame_relay：目标被去重/不存在，已剔除
+- tele_token_ring 依赖 tele_ethernet：目标被去重/不存在，已剔除
+- tele_cable_modem 依赖 tele_modem：目标被去重/不存在，已剔除
+- tele_dsl 依赖 tele_modem：目标被去重/不存在，已剔除
+- tele_isp 依赖 tele_packet_switch：目标被去重/不存在，已剔除
+- tele_datacenter_interconnect 依赖 tele_ethernet：目标被去重/不存在，已剔除
+- agr_water_saving_irrigation 依赖 agr_drip_irrigation：目标被去重/不存在，已剔除
+- agr_combine_self 依赖 agr_combine_harvester：目标被去重/不存在，已剔除
+- bt_gene_editing_breeding 依赖 bt_crispr_toolbox：目标被去重/不存在，已剔除
+- bt_plasmid_vector 依赖 bt_restriction_enzyme：目标被去重/不存在，已剔除
+- bt_agrobacterium 依赖 bt_recombinant_dna：目标被去重/不存在，已剔除
+- bt_crispr_toolbox 依赖 bt_recombinant_dna：目标被去重/不存在，已剔除
+- bt_animal_cell_culture 依赖 bt_cell_culture：目标被去重/不存在，已剔除
+- bt_callus 依赖 bt_cell_culture：目标被去重/不存在，已剔除
+- bt_plant_cell_culture 依赖 bt_cell_culture：目标被去重/不存在，已剔除
+- bt_cryopreservation 依赖 bt_cell_culture：目标被去重/不存在，已剔除
+- bt_nuclear_transfer 依赖 bt_cell_culture：目标被去重/不存在，已剔除
+- bt_esc 依赖 bt_stem_cell：目标被去重/不存在，已剔除
+- bt_penicillin_acylase 依赖 bt_enzyme_immobilization：目标被去重/不存在，已剔除
+- bt_enzyme_reactor 依赖 bt_enzyme_immobilization：目标被去重/不存在，已剔除
+- bt_bioplastic_pha 依赖 bt_bioreactor：目标被去重/不存在，已剔除
+- bt_biorefinery 依赖 bt_bioreactor：目标被去重/不存在，已剔除
+- bt_pla 依赖 bt_bioreactor：目标被去重/不存在，已剔除
+- bt_artemisinin_yeast 依赖 bt_metabolic_engineering：目标被去重/不存在，已剔除
+- bt_engineered_biosensor 依赖 bt_gene_circuit：目标被去重/不存在，已剔除
+- bt_pigment_biosynthesis 依赖 bt_metabolic_engineering：目标被去重/不存在，已剔除
+- bt_synthetic_gene_network 依赖 bt_gene_circuit：目标被去重/不存在，已剔除
+- bt_minimal_genome 依赖 bt_recombinant_dna：目标被去重/不存在，已剔除
+- bt_chassis_cell 依赖 bt_metabolic_engineering：目标被去重/不存在，已剔除
+- bt_enzyme_cascade 依赖 bt_enzyme_engineering：目标被去重/不存在，已剔除
+- diag_ai_pathology 依赖 diag_digital_pathology：目标被去重/不存在，已剔除
+- diag_tele_ultrasound 依赖 diag_ultrasound：目标被去重/不存在，已剔除
+- med_nsaid_ibuprofen 依赖 med_aspirin：目标被去重/不存在，已剔除
+- med_rabies_vaccine 依赖 med_cowpox_vaccine：目标被去重/不存在，已剔除
+- med_diptheria_toxoid 依赖 med_inactivated_vaccine：目标被去重/不存在，已剔除
+- med_influenza_vaccine 依赖 med_inactivated_vaccine：目标被去重/不存在，已剔除
+- med_oral_polio 依赖 med_attenuated_vaccine：目标被去重/不存在，已剔除
+- med_microsphere 依赖 med_sustained_release：目标被去重/不存在，已剔除
+- prebiotics 依赖 probiotics：目标被去重/不存在，已剔除
+- synbiotics 依赖 probiotics：目标被去重/不存在，已剔除
+- functional_food_term 依赖 probiotics：目标被去重/不存在，已剔除
+- gut_microbiome_diet 依赖 probiotics：目标被去重/不存在，已剔除
+- ph_cold_chain_monitor 依赖 ph_cold_chain：目标被去重/不存在，已剔除
+- bone_anchored_hearing 依赖 cochlear_implant：目标被去重/不存在，已剔除
+- retinal_prosthesis 依赖 cochlear_implant：目标被去重/不存在，已剔除
+- tele_rehabilitation 依赖 occupational_therapy：目标被去重/不存在，已剔除
+- moxibustion 依赖 acupuncture：目标被去重/不存在，已剔除
+- acupuncture_analgesia 依赖 acupuncture：目标被去重/不存在，已剔除
+- electroacupuncture 依赖 acupuncture：目标被去重/不存在，已剔除
+- acupotomy 依赖 acupuncture：目标被去重/不存在，已剔除
+- ear_acupoint 依赖 acupuncture：目标被去重/不存在，已剔除
+- tcm_rehab_theory 依赖 acupuncture：目标被去重/不存在，已剔除
+- repr_injectable_contraceptive 依赖 repr_oral_contraceptive：目标被去重/不存在，已剔除
+- repr_emergency_contraception 依赖 repr_oral_contraceptive：目标被去重/不存在，已剔除
+- repr_contraceptive_patch 依赖 repr_oral_contraceptive：目标被去重/不存在，已剔除
+- repr_male_contraceptive_research 依赖 repr_oral_contraceptive：目标被去重/不存在，已剔除
+- wax_laser_sintering 依赖 selective_laser_sintering：目标被去重/不存在，已剔除
+- nylon_laser_sintering 依赖 selective_laser_sintering：目标被去重/不存在，已剔除
+- direct_metal_laser_sintering 依赖 selective_laser_sintering：目标被去重/不存在，已剔除
+- multi_jet_fusion 依赖 selective_laser_sintering：目标被去重/不存在，已剔除
+- aut_safety_plc 依赖 aut_plc：目标被去重/不存在，已剔除
+- aut_unmanned_factory 依赖 aut_fms：目标被去重/不存在，已剔除
+- aut_agv_forklift 依赖 aut_agv：目标被去重/不存在，已剔除
+- green_sand_molding 依赖 sand_casting：目标被去重/不存在，已剔除
+- dry_sand_molding 依赖 sand_casting：目标被去重/不存在，已剔除
+- pit_molding 依赖 sand_casting：目标被去重/不存在，已剔除
+- gating_system 依赖 sand_casting：目标被去重/不存在，已剔除
+- riser_design 依赖 sand_casting：目标被去重/不存在，已剔除
+- cold_chamber_diecasting 依赖 die_casting：目标被去重/不存在，已剔除
+- cold_rolling 依赖 rolling：目标被去重/不存在，已剔除
+- chem_ultrafiltration 依赖 chem_reverse_osmosis：目标被去重/不存在，已剔除
+- chem_nanofiltration 依赖 chem_reverse_osmosis：目标被去重/不存在，已剔除
+- chem_urea_synthesis 依赖 chem_haber_ammonia：目标被去重/不存在，已剔除
+- chem_ammonium_nitrate 依赖 chem_haber_ammonia：目标被去重/不存在，已剔除
+- double_side_lapping 依赖 lapping：目标被去重/不存在，已剔除
+- diamond_grinding_wheel 依赖 grinding_wheel：目标被去重/不存在，已剔除
+- abrasive_waterjet 依赖 waterjet_cutting：目标被去重/不存在，已剔除
+- electrochemical_deburring 依赖 electrochemical_machining：目标被去重/不存在，已剔除
+- mql 依赖 cutting_fluid：目标被去重/不存在，已剔除
+- high_pressure_coolant 依赖 cutting_fluid：目标被去重/不存在，已剔除
+- thread_forming_screw 依赖 self_tapping_screw：目标被去重/不存在，已剔除
+- hot_riveting 依赖 riveting：目标被去重/不存在，已剔除
+- cold_riveting 依赖 riveting：目标被去重/不存在，已剔除
+- lockbolt 依赖 blind_rivet：目标被去重/不存在，已剔除
+- radial_riveting 依赖 riveting：目标被去重/不存在，已剔除
+- self_piercing_rivet 依赖 blind_rivet：目标被去重/不存在，已剔除
+- tubular_rivet 依赖 riveting：目标被去重/不存在，已剔除
+- rivet_nut 依赖 blind_rivet：目标被去重/不存在，已剔除
+- rivet_bonding 依赖 riveting：目标被去重/不存在，已剔除
+- universal_milling_machine 依赖 milling_machine_origin：目标被去重/不存在，已剔除
+- planer_type_milling_machine 依赖 milling_machine_origin：目标被去重/不存在，已剔除
+- cnc_milling_machine 依赖 milling_machine_origin：目标被去重/不存在，已剔除
+- bed_type_milling_machine 依赖 milling_machine_origin：目标被去重/不存在，已剔除
+- face_and_center_machine 依赖 milling_machine_origin：目标被去重/不存在，已剔除
+- automatic_tool_changer 依赖 numerically_controlled_machine：目标被去重/不存在，已剔除
+- vertical_machining_center 依赖 machining_center：目标被去重/不存在，已剔除
+- horizontal_machining_center 依赖 machining_center：目标被去重/不存在，已剔除
+- five_axis_machining_center 依赖 machining_center：目标被去重/不存在，已剔除
+- parallel_kinematic_machine 依赖 machining_center：目标被去重/不存在，已剔除
+- multitasking_turn_mill 依赖 machining_center：目标被去重/不存在，已剔除
+- unmanned_machining_cell 依赖 flexible_manufacturing_cell：目标被去重/不存在，已剔除
+- dividing_head 依赖 milling_machine_origin：目标被去重/不存在，已剔除
+- tool_setting_gauge 依赖 machining_center：目标被去重/不存在，已剔除
+- trigger_probe_cmm 依赖 cnc_coordinate_measuring_machine：目标被去重/不存在，已剔除
+- ballbar_tester 依赖 cnc_coordinate_measuring_machine：目标被去重/不存在，已剔除
+- articulated_measuring_arm 依赖 cnc_coordinate_measuring_machine：目标被去重/不存在，已剔除
+- nano_measuring_machine 依赖 laser_interferometric_length_measurement：目标被去重/不存在，已剔除
+- subaperture_stitching_interferometry 依赖 laser_interferometric_length_measurement：目标被去重/不存在，已剔除
+- freeform_optics_machining 依赖 magnetorheological_optics_finishing：目标被去重/不存在，已剔除
+- lime_mortar 依赖 lime_binder：目标被去重/不存在，已剔除
+- deformed_steel_bar 依赖 reinforced_concrete：目标被去重/不存在，已剔除
+- welded_wire_mesh 依赖 reinforced_concrete：目标被去重/不存在，已剔除
+- prestressing_strand 依赖 prestressed_concrete：目标被去重/不存在，已剔除
+- lightweight_aggregate_concrete 依赖 reinforced_concrete：目标被去重/不存在，已剔除
+- roller_compacted_concrete 依赖 reinforced_concrete：目标被去重/不存在，已剔除
+- steel_fiber_concrete 依赖 reinforced_concrete：目标被去重/不存在，已剔除
+- cfst_column 依赖 reinforced_concrete：目标被去重/不存在，已剔除
+- pervious_concrete 依赖 reinforced_concrete：目标被去重/不存在，已剔除
+- recycled_aggregate_concrete 依赖 reinforced_concrete：目标被去重/不存在，已剔除
+- underwater_concrete 依赖 reinforced_concrete：目标被去重/不存在，已剔除
+- ready_mixed_concrete 依赖 reinforced_concrete：目标被去重/不存在，已剔除
+- sandlime_brick 依赖 lime_binder：目标被去重/不存在，已剔除
+- wood_i_joist 依赖 plywood_panel：目标被去重/不存在，已剔除
+- lvl_lumber 依赖 plywood_panel：目标被去重/不存在，已剔除
+- clt_panel 依赖 glulam_timber：目标被去重/不存在，已剔除
+- finger_jointed_lumber 依赖 glulam_timber：目标被去重/不存在，已剔除
+- silicon_nitride_bearing 依赖 silicon_nitride_ceramic：目标被去重/不存在，已剔除
+- glass_fiber_cloth 依赖 continuous_glass_fiber：目标被去重/不存在，已剔除
+- e_glass_fiber 依赖 continuous_glass_fiber：目标被去重/不存在，已剔除
+- glass_fiber_vehicle_body 依赖 glass_reinforced_plastic：目标被去重/不存在，已剔除
+- hand_layup 依赖 glass_reinforced_plastic：目标被去重/不存在，已剔除
+- carbon_fiber_prepreg 依赖 carbon_fiber_reinforced_plastic：目标被去重/不存在，已剔除
+- carbon_carbon_aircraft_brake 依赖 carbon_carbon_composite：目标被去重/不存在，已剔除
+- fiberglass_boat_hull 依赖 glass_reinforced_plastic：目标被去重/不存在，已剔除
+- composite_antenna_reflector 依赖 carbon_fiber_reinforced_plastic：目标被去重/不存在，已剔除
+- composite_stay_cable 依赖 carbon_fiber_reinforced_plastic：目标被去重/不存在，已剔除
+- carbon_fiber_silicon_carbide 依赖 carbon_carbon_composite：目标被去重/不存在，已剔除
+- sic_particle_aluminum 依赖 metal_matrix_composite：目标被去重/不存在，已剔除
+- blockboard 依赖 plywood：目标被去重/不存在，已剔除
+- ion_exchange_membrane 依赖 ion_exchange_resin：目标被去重/不存在，已剔除
+- beryllium_copper_alloy 依赖 magnesium_elektron_alloy：目标被去重/不存在，已剔除
+- magnesium_die_casting_alloy 依赖 magnesium_elektron_alloy：目标被去重/不存在，已剔除
+- magnesium_rare_earth_alloy 依赖 magnesium_elektron_alloy：目标被去重/不存在，已剔除
+- magnesium_sacrificial_anode 依赖 magnesium_elektron_alloy：目标被去重/不存在，已剔除
+- magnesium_lithium_alloy 依赖 magnesium_elektron_alloy：目标被去重/不存在，已剔除
+- iron_manganese_silicon_sma 依赖 nitinol_shape_memory_alloy：目标被去重/不存在，已剔除
+- nitinol_superelastic_wire 依赖 nitinol_shape_memory_alloy：目标被去重/不存在，已剔除
+- sma_cryofit_coupling 依赖 nitinol_shape_memory_alloy：目标被去重/不存在，已剔除
+- finery_process 依赖 blast_furnace_ironmaking：目标被去重/不存在，已剔除
+- hot_blast_stove 依赖 blast_furnace_ironmaking：目标被去重/不存在，已剔除
+- iron_ore_sintering 依赖 blast_furnace_ironmaking：目标被去重/不存在，已剔除
+- flame_hardening 依赖 quenching_steel：目标被去重/不存在，已剔除
+- austempering 依赖 quenching_steel：目标被去重/不存在，已剔除
+- martempering 依赖 quenching_steel：目标被去重/不存在，已剔除
+- cryogenic_treatment 依赖 quenching_steel：目标被去重/不存在，已剔除
+- compacted_graphite_iron 依赖 ductile_iron：目标被去重/不存在，已剔除
+- austempered_ductile_iron 依赖 ductile_iron：目标被去重/不存在，已剔除
+- zeolitic_imidazolate_framework 依赖 metal_organic_framework：目标被去重/不存在，已剔除
+- covalent_organic_framework 依赖 metal_organic_framework：目标被去重/不存在，已剔除
+- wood_bending_press 依赖 plywood：目标被去重/不存在，已剔除
+- engineered_wood_floor 依赖 plywood：目标被去重/不存在，已剔除
+- chlorinated_rubber 依赖 natural_rubber：目标被去重/不存在，已剔除
+- chlorinated_pvc 依赖 polyvinyl_chloride：目标被去重/不存在，已剔除
+- sbc_resin 依赖 polystyrene：目标被去重/不存在，已剔除
+- pc_abs_alloy 依赖 polycarbonate：目标被去重/不存在，已剔除
+- synthetic_polyisoprene 依赖 natural_rubber：目标被去重/不存在，已剔除
+- thermoplastic_polyolefin_elastomer 依赖 polypropylene：目标被去重/不存在，已剔除
+- hydrogenated_nitrile_rubber 依赖 nitrile_rubber：目标被去重/不存在，已剔除
+- fluorosilicone_rubber 依赖 silicone_rubber：目标被去重/不存在，已剔除
+- expanded_polytetrafluoroethylene 依赖 polytetrafluoroethylene：目标被去重/不存在，已剔除
+- phthalate_plasticizer 依赖 polyvinyl_chloride：目标被去重/不存在，已剔除
+- extruded_polystyrene_foam 依赖 polystyrene：目标被去重/不存在，已剔除
+- expanded_polystyrene 依赖 polystyrene：目标被去重/不存在，已剔除
+- polyurethane_foam 依赖 polyurethane_resin：目标被去重/不存在，已剔除
+- epp_foam 依赖 polypropylene：目标被去重/不存在，已剔除
+- aluminum_gallium_arsenide 依赖 gallium_arsenide：目标被去重/不存在，已剔除
+- indium_gallium_arsenide 依赖 indium_phosphide：目标被去重/不存在，已剔除
+- indium_gallium_arsenide_phosphide 依赖 indium_phosphide：目标被去重/不存在，已剔除
+- silicon_on_insulator 依赖 silicon_single_crystal：目标被去重/不存在，已剔除
+- silicon_germanium 依赖 silicon_single_crystal：目标被去重/不存在，已剔除
+- indium_gallium_nitride 依赖 gallium_nitride：目标被去重/不存在，已剔除
+- silicon_epitaxy 依赖 silicon_single_crystal：目标被去重/不存在，已剔除
+- gallium_arsenide_vpe 依赖 gallium_arsenide：目标被去重/不存在，已剔除
+- liquid_encapsulated_czochralski 依赖 gallium_arsenide：目标被去重/不存在，已剔除
+- silicon_thermal_oxidation 依赖 silicon_single_crystal：目标被去重/不存在，已剔除
+- cmp_polishing_pad 依赖 chemical_mechanical_polishing：目标被去重/不存在，已剔除
+- hydrogenated_amorphous_silicon 依赖 silicon_single_crystal：目标被去重/不存在，已剔除
+- yag_cerium_phosphor 依赖 gallium_nitride：目标被去重/不存在，已剔除
+- water_great_spinning_frame 依赖 hand_spinning_wheel：目标被去重/不存在，已剔除
+- yarn_doubling 依赖 hand_spinning_wheel：目标被去重/不存在，已剔除
+- silk_brocade 依赖 silk_reeling_ancient：目标被去重/不存在，已剔除
+- cocoon_boiling 依赖 silk_reeling_ancient：目标被去重/不存在，已剔除
+- silk_degumming 依赖 silk_reeling_ancient：目标被去重/不存在，已剔除
+- tapestry_weaving 依赖 hand_spinning_wheel：目标被去重/不存在，已剔除
+- synthetic_alizarin 依赖 mauveine：目标被去重/不存在，已剔除
+- azo_dyes 依赖 mauveine：目标被去重/不存在，已剔除
+- polyester_fiber 依赖 nylon66：目标被去重/不存在，已剔除
+- melt_spinning 依赖 nylon66：目标被去重/不存在，已剔除
+- af_jet_fighter 依赖 af_jet_engine：目标被去重/不存在，已剔除
+- af_turbojet 依赖 af_jet_engine：目标被去重/不存在，已剔除
+- af_turbofan 依赖 af_jet_engine：目标被去重/不存在，已剔除
+- af_vtol 依赖 af_jet_engine：目标被去重/不存在，已剔除
+- af_jet_strategic 依赖 af_strategic_bomber：目标被去重/不存在，已剔除
+- af_cruise_missile_carrier 依赖 af_strategic_bomber：目标被去重/不存在，已剔除
+- af_military_helicopter 依赖 af_helicopter：目标被去重/不存在，已剔除
+- af_air_refueling 依赖 af_tanker：目标被去重/不存在，已剔除
+- av_tracked_apc 依赖 av_apc：目标被去重/不存在，已剔除
+- av_wheeled_apc 依赖 av_apc：目标被去重/不存在，已剔除
+- av_ifv 依赖 av_apc：目标被去重/不存在，已剔除
+- av_amphibious_afv 依赖 av_apc：目标被去重/不存在，已剔除
+- av_airborne_afv 依赖 av_apc：目标被去重/不存在，已剔除
+- av_command_vehicle 依赖 av_apc：目标被去重/不存在，已剔除
+- av_mortar_carrier 依赖 av_apc：目标被去重/不存在，已剔除
+- av_armored_recovery 依赖 av_apc：目标被去重/不存在，已剔除
+- av_armored_bridge 依赖 av_apc：目标被去重/不存在，已剔除
+- av_bulldozer_armor 依赖 av_apc：目标被去重/不存在，已剔除
+- av_mine_clear 依赖 av_apc：目标被去重/不存在，已剔除
+- av_breach_vehicle 依赖 av_apc：目标被去重/不存在，已剔除
+- av_armored_ambulance 依赖 av_apc：目标被去重/不存在，已剔除
+- av_logistics_armor 依赖 av_apc：目标被去重/不存在，已剔除
+- av_armored_cmd_post 依赖 av_apc：目标被去重/不存在，已剔除
+- ew_anti_radiation_use 依赖 ew_radar_warning_receiver：目标被去重/不存在，已剔除
+- ew_plasma_stealth 依赖 ew_stealth：目标被去重/不存在，已剔除
+- ew_low_observable_aircraft 依赖 ew_stealth：目标被去重/不存在，已剔除
+- ew_radar_warning_counter 依赖 ew_radar_warning_receiver：目标被去重/不存在，已剔除
+- gun_flintlock_pistol 依赖 gun_flintlock：目标被去重/不存在，已剔除
+- gun_percussion_cap 依赖 gun_flintlock：目标被去重/不存在，已剔除
+- gun_brown_bess 依赖 gun_musket：目标被去重/不存在，已剔除
+- gun_charleville 依赖 gun_musket：目标被去重/不存在，已剔除
+- gun_anti_materiel_rifle 依赖 gun_sniper_rifle：目标被去重/不存在，已剔除
+- gun_mountain_gun 依赖 gun_field_gun：目标被去重/不存在，已剔除
+- gun_anti_tank_gun 依赖 gun_field_gun：目标被去重/不存在，已剔除
+- gun_assault_gun 依赖 gun_field_gun：目标被去重/不存在，已剔除
+- gun_cordite 依赖 gun_smokeless_powder：目标被去重/不存在，已剔除
+- gun_rocket_warhead 依赖 gun_rocket_artillery：目标被去重/不存在，已剔除
+- logi_bridging_ferry 依赖 logi_pontoon_bridge：目标被去重/不存在，已剔除
+- logi_combat_net_radio 依赖 logi_fh_radio：目标被去重/不存在，已剔除
+- logi_secure_voice 依赖 logi_fh_radio：目标被去重/不存在，已剔除
+- logi_combat_net 依赖 logi_fh_radio：目标被去重/不存在，已剔除
+- logi_blue_force_tracker 依赖 logi_military_datalink：目标被去重/不存在，已剔除
+- logi_narrowband_waveform 依赖 logi_fh_radio：目标被去重/不存在，已剔除
+- logi_mobile_surgical_team 依赖 logi_field_hospital：目标被去重/不存在，已剔除
+- logi_blood_bank 依赖 logi_field_hospital：目标被去重/不存在，已剔除
+- logi_decontamination_med 依赖 logi_field_hospital：目标被去重/不存在，已剔除
+- logi_medical_supply 依赖 logi_field_hospital：目标被去重/不存在，已剔除
+- logi_mobile_field_surgery 依赖 logi_field_hospital：目标被去重/不存在，已剔除
+- logi_field_dentistry 依赖 logi_field_hospital：目标被去重/不存在，已剔除
+- logi_field_pharmacy 依赖 logi_field_hospital：目标被去重/不存在，已剔除
+- logi_combat_lifesaver 依赖 logi_triage：目标被去重/不存在，已剔除
+- melee_repeating_crossbow 依赖 melee_crossbow：目标被去重/不存在，已剔除
+- msl_anti_ship_ir 依赖 msl_air_ship：目标被去重/不存在，已剔除
+- msl_laser_guidance_air 依赖 msl_air_anti_tank：目标被去重/不存在，已剔除
+- msl_anti_radiation_2 依赖 msl_anti_radiation：目标被去重/不存在，已剔除
+- msl_air_launch_cluster 依赖 msl_air_anti_tank：目标被去重/不存在，已剔除
+- msl_gps_air_ground 依赖 msl_gps_guidance：目标被去重/不存在，已剔除
+- msl_smart_bomb 依赖 msl_laser_gb：目标被去重/不存在，已剔除
+- msl_glide_bomb 依赖 msl_laser_gb：目标被去重/不存在，已剔除
+- msl_dual_gb 依赖 msl_laser_gb、msl_gps_guidance：目标被去重/不存在，已剔除
+- msl_ins_gb 依赖 msl_sat_gb：目标被去重/不存在，已剔除
+- msl_top_attack 依赖 msl_terminal_sensing：目标被去重/不存在，已剔除
+- navy_aa_cruiser 依赖 navy_cruiser：目标被去重/不存在，已剔除
+- navy_landing_ship 依赖 navy_cruiser：目标被去重/不存在，已剔除
+- navy_corvette 依赖 navy_frigate_modern：目标被去重/不存在，已剔除
+- navy_helicopter_carrier 依赖 navy_cruiser：目标被去重/不存在，已剔除
+- navy_guided_missile_cruiser 依赖 navy_cruiser：目标被去重/不存在，已剔除
+- navy_guided_missile_destroyer 依赖 navy_destroyer：目标被去重/不存在，已剔除
+- navy_command_ship 依赖 navy_cruiser：目标被去重/不存在，已剔除
+- navy_amphibious_assault 依赖 navy_cruiser：目标被去重/不存在，已剔除
+- navy_littoral_combat 依赖 navy_frigate_modern：目标被去重/不存在，已剔除
+- navy_fleet_carrier 依赖 navy_cruiser：目标被去重/不存在，已剔除
+- navy_attack_sub 依赖 navy_nuclear_sub：目标被去重/不存在，已剔除
+- navy_ssbn 依赖 navy_ballistic_sub：目标被去重/不存在，已剔除
+- navy_contact_mine 依赖 navy_naval_mine：目标被去重/不存在，已剔除
+- navy_moored_mine 依赖 navy_naval_mine：目标被去重/不存在，已剔除
+- navy_torpedo_tube 依赖 navy_torpedo：目标被去重/不存在，已剔除
+- navy_mine_layer 依赖 navy_naval_mine：目标被去重/不存在，已剔除
+- navy_hedgehog 依赖 navy_depth_charge：目标被去重/不存在，已剔除
+- navy_anti_sub_rocket 依赖 navy_depth_charge：目标被去重/不存在，已剔除
+- navy_asroc 依赖 navy_depth_charge：目标被去重/不存在，已剔除
+- navy_sam_launcher 依赖 navy_sam_naval：目标被去重/不存在，已剔除
+- navy_cavity_radar 依赖 navy_naval_radar：目标被去重/不存在，已剔除
+- navy_integrated_bridge 依赖 navy_naval_radar：目标被去重/不存在，已剔除
+- navy_combat_management 依赖 navy_naval_radar：目标被去重/不存在，已剔除
+- navy_electronic_warfare 依赖 navy_naval_radar：目标被去重/不存在，已剔除
+- nw_mutually_assured_destruction 依赖 nw_nuclear_triad：目标被去重/不存在，已剔除
+- sens_aew_radar 依赖 sens_phased_array_radar：目标被去重/不存在，已剔除
+- sens_maritime_patrol_radar 依赖 sens_airborne_radar：目标被去重/不存在，已剔除
+- sens_sonobuoy 依赖 sens_passive_sonar：目标被去重/不存在，已剔除
+- sens_dipping_sonar 依赖 sens_active_sonar：目标被去重/不存在，已剔除
+- sens_towed_array 依赖 sens_passive_sonar：目标被去重/不存在，已剔除
+- sens_variable_depth_sonar 依赖 sens_passive_sonar：目标被去重/不存在，已剔除
+- sens_hull_mounted_sonar 依赖 sens_active_sonar：目标被去重/不存在，已剔除
+- sens_sonar_processing 依赖 sens_passive_sonar：目标被去重/不存在，已剔除
+- sens_passive_range 依赖 sens_passive_sonar：目标被去重/不存在，已剔除
+- sens_lf_surface_sonar 依赖 sens_passive_sonar：目标被去重/不存在，已剔除
+- sens_sonar_calibration 依赖 sens_active_sonar：目标被去重/不存在，已剔除
+- sens_bottom_mounted_sonar 依赖 sens_passive_sonar：目标被去重/不存在，已剔除
+- sens_acoustic_countermeasure 依赖 sens_active_sonar：目标被去重/不存在，已剔除
+- sens_sar_satellite 依赖 sens_sar：目标被去重/不存在，已剔除
+- sens_airborne_warning 依赖 sens_phased_array_radar：目标被去重/不存在，已剔除
+- sens_acoustic_sensor 依赖 sens_passive_sonar：目标被去重/不存在，已剔除
+- sens_seismic_sensor 依赖 sens_passive_sonar：目标被去重/不存在，已剔除
+- sens_ground_sensor 依赖 sens_passive_sonar：目标被去重/不存在，已剔除
+- sens_uav_sar 依赖 sens_sar：目标被去重/不存在，已剔除
+- sens_bi_static_radar_recon 依赖 sens_bistatic_radar：目标被去重/不存在，已剔除
+- sens_chemical_recon 依赖 sens_passive_sonar：目标被去重/不存在，已剔除
+- airship_passenger_service 依赖 rigid_airship：目标被去重/不存在，已剔除
+- aircraft_air_cycle_ac 依赖 pressurised_aircraft_cabin：目标被去重/不存在，已剔除
+- flying_boat 依赖 seaplane：目标被去重/不存在，已剔除
+- amphibious_aircraft 依赖 seaplane：目标被去重/不存在，已剔除
+- pressurised_airliner 依赖 pressurised_aircraft_cabin：目标被去重/不存在，已剔除
+- concentrated_power_highspeed 依赖 high_speed_rail：目标被去重/不存在，已剔除
+- operation_350_kmh 依赖 high_speed_rail：目标被去重/不存在，已剔除
+- modern_light_rail 依赖 electric_streetcar：目标被去重/不存在，已剔除
+- low_floor_tram 依赖 electric_streetcar：目标被去重/不存在，已剔除
+- space_heavy_lift 依赖 space_multistage_rocket：目标被去重/不存在，已剔除
+- space_cryogenic_stage 依赖 space_multistage_rocket：目标被去重/不存在，已剔除
+- space_gas_generator_cycle 依赖 space_turbopump：目标被去重/不存在，已剔除
+- space_staged_combustion 依赖 space_turbopump：目标被去重/不存在，已剔除
+- space_electric_pump_engine 依赖 space_liquid_engine：目标被去重/不存在，已剔除
+- space_rcs_thruster 依赖 space_liquid_engine：目标被去重/不存在，已剔除
+- space_cryogenic_engine 依赖 space_turbopump：目标被去重/不存在，已剔除
+- space_kerolox_engine 依赖 space_liquid_engine：目标被去重/不存在，已剔除
+- space_pintle_engine 依赖 space_liquid_engine：目标被去重/不存在，已剔除
+- space_pressure_feed_engine 依赖 space_liquid_engine：目标被去重/不存在，已剔除
+- space_thrust_vector 依赖 space_liquid_engine：目标被去重/不存在，已剔除
+- space_bipropellant_upper 依赖 space_multistage_rocket：目标被去重/不存在，已剔除
+- space_nuclear_thermal 依赖 space_liquid_engine：目标被去重/不存在，已剔除
+- space_grasshopper_test 依赖 space_recoverable_booster：目标被去重/不存在，已剔除
+- space_shuttle_srb 依赖 space_solid_motor：目标被去重/不存在，已剔除
+- space_vertical_recovery 依赖 space_recoverable_booster：目标被去重/不存在，已剔除
+- outrigger_canoe 依赖 dugout_canoe：目标被去重/不存在，已剔除
+- galleon 依赖 caravel：目标被去重/不存在，已剔除
+- personal_watercraft 依赖 waterjet_propulsion：目标被去重/不存在，已剔除
+- chemical_tanker 依赖 oil_tanker：目标被去重/不存在，已剔除
+- lpg_carrier 依赖 oil_tanker：目标被去重/不存在，已剔除
+- car_carrier 依赖 ro_ro_ship：目标被去重/不存在，已剔除
+- vlcc_tanker 依赖 oil_tanker：目标被去重/不存在，已剔除
+- product_tanker 依赖 oil_tanker：目标被去重/不存在，已剔除
+- double_hull_tanker 依赖 oil_tanker：目标被去重/不存在，已剔除
+- feeder_container_ship 依赖 container_ship：目标被去重/不存在，已剔除
+- mega_container_ship 依赖 container_ship：目标被去重/不存在，已剔除
+- fpso 依赖 oil_tanker：目标被去重/不存在，已剔除
+- ro_pax_ferry 依赖 ro_ro_ship：目标被去重/不存在，已剔除
+- high_speed_catamaran 依赖 waterjet_propulsion：目标被去重/不存在，已剔除
+- container_portal_crane 依赖 container_ship：目标被去重/不存在，已剔除

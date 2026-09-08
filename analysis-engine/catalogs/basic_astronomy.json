@@ -1,0 +1,1476 @@
+{
+ "cat": "basic",
+ "catName": "科学基础与方法",
+ "sub": "astronomy",
+ "subName": "天文与宇宙探索",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "astronomy",
+  "mathematics",
+  "optics",
+  "physics",
+  "scientific_method",
+  "photography",
+  "electromagnetism",
+  "radio",
+  "relativity_qm",
+  "lasers",
+  "computer",
+  "camera",
+  "satellite",
+  "rocket"
+ ],
+ "families": [
+  {
+   "name": "古代天象记录与宇宙模型",
+   "items": [
+    {
+     "id": "babylonian_astronomical_tablets",
+     "name": "巴比伦天文泥板档案",
+     "en": "Babylonian astronomical tablets",
+     "year": -1800,
+     "note": "用楔形文字系统记录日月位置与行星会合周期，留下人类最早成序列的定量天文档案。",
+     "deps": [
+      "astronomy"
+     ]
+    },
+    {
+     "id": "chinese_astronomical_records",
+     "name": "中国历代天象实录",
+     "en": "Chinese dynastic astronomical records",
+     "year": -1200,
+     "note": "从甲骨文到历代官方天文志连续记录日食彗星新星，为后世研究罕见天象提供独特史料。",
+     "deps": [
+      "astronomy",
+      "writing"
+     ]
+    },
+    {
+     "id": "gnomon_shadow_observing",
+     "name": "圭表测影",
+     "en": "Gnomon shadow measurement",
+     "year": -700,
+     "note": "直立标杆测日影长度以定节气与回归年长度，是早期天文测时的基本装置。",
+     "deps": [
+      "astronomy"
+     ]
+    },
+    {
+     "id": "saros_eclipse_cycle",
+     "name": "沙罗食周期",
+     "en": "Saros eclipse cycle",
+     "year": -600,
+     "note": "巴比伦人由长期观测总结日月食约十八年重现的周期，实现粗略的食预报。",
+     "deps": [
+      "astronomy"
+     ]
+    },
+    {
+     "id": "lunar_mansion_system",
+     "name": "二十八宿分区体系",
+     "en": "Chinese lunar mansions",
+     "year": -400,
+     "note": "沿赤道划分二十八宿作为月行与天区坐标参照，构成中国古代坐标天文学骨架。",
+     "deps": [
+      "astronomy"
+     ]
+    },
+    {
+     "id": "stellar_magnitude_scale",
+     "name": "目视星等体系",
+     "en": "Stellar magnitude scale",
+     "year": -130,
+     "note": "喜帕恰斯将恒星按亮度分为六等，其对数标度沿用至今并扩展为现代星等系统。",
+     "deps": [
+      "astronomy"
+     ]
+    },
+    {
+     "id": "hipparchus_star_catalog",
+     "name": "喜帕恰斯星表",
+     "en": "Hipparchus star catalogue",
+     "year": -129,
+     "note": "以肉眼测定约千颗恒星的位置与亮度，开创以坐标描述天空的定量天文学。",
+     "deps": [
+      "astronomy",
+      "mathematics"
+     ]
+    },
+    {
+     "id": "precession_measurement",
+     "name": "岁差测定",
+     "en": "Measurement of precession",
+     "year": -127,
+     "note": "喜帕恰斯对比观测发现春分点缓慢西移，定量给出岁差现象并确定其周年速率。",
+     "deps": [
+      "astronomy"
+     ]
+    },
+    {
+     "id": "ptolemaic_geocentric_model",
+     "name": "托勒密本轮均轮体系",
+     "en": "Ptolemaic geocentric system",
+     "year": 150,
+     "note": "以本轮均轮叠加解释行星逆行视运动，长期作为推算行星位置的历表数学模型。",
+     "deps": [
+      "astronomy",
+      "mathematics"
+     ]
+    },
+    {
+     "id": "indian_siddhanta_astronomy",
+     "name": "印度悉檀多天文推步",
+     "en": "Indian Siddhanta astronomy",
+     "year": 499,
+     "note": "阿耶波多等以代数方法推算日月与行星位置，精确度在同时代处领先地位。",
+     "deps": [
+      "astronomy",
+      "mathematics"
+     ]
+    },
+    {
+     "id": "dunhuang_star_chart",
+     "name": "敦煌星图",
+     "en": "Dunhuang star chart",
+     "year": 700,
+     "note": "唐代手绘星图保留一千三百余颗恒星位置，是现存最早的大幅全天空图卷。",
+     "deps": [
+      "astronomy",
+      "paper"
+     ]
+    },
+    {
+     "id": "heliocentric_theory",
+     "name": "日心说体系",
+     "en": "Heliocentric system",
+     "year": 1543,
+     "note": "哥白尼把太阳置于宇宙中心，以地球绕日运动统一解释行星视运动，开启天文学范式变革。",
+     "deps": [
+      "ptolemaic_geocentric_model",
+      "mathematics"
+     ]
+    },
+    {
+     "id": "tycho_brahe_observations",
+     "name": "第谷精密观测",
+     "en": "Tycho Brahe's systematic observations",
+     "year": 1576,
+     "note": "第谷在汶岛持续二十年以裸眼加大型仪器测定行星位置，误差进入角分级，为开普勒提供数据。",
+     "deps": [
+      "astronomy",
+      "mathematics"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "几何天文学与测天仪器",
+   "items": [
+    {
+     "id": "celestial_globe",
+     "name": "天球仪",
+     "en": "Celestial globe",
+     "year": -150,
+     "note": "以球面模型复现星空与坐标网格，用于演示天球运动与训练目视认星。",
+     "deps": [
+      "astronomy"
+     ]
+    },
+    {
+     "id": "armillary_sphere",
+     "name": "浑仪",
+     "en": "Armillary sphere",
+     "year": -104,
+     "note": "落下闳等人制成以多层圆环标定赤道与黄道坐标的观测装置，可读天体位置。",
+     "deps": [
+      "astronomy"
+     ]
+    },
+    {
+     "id": "astrolabe",
+     "name": "星盘",
+     "en": "Astrolabe",
+     "year": 600,
+     "note": "可旋转星网与刻度盘的便携仪器，用于测时测高与定位，经伊斯兰世界完善后西传。",
+     "deps": [
+      "astronomy",
+      "mathematics"
+     ]
+    },
+    {
+     "id": "water_driven_armillary",
+     "name": "水运仪象台",
+     "en": "Water-powered armillary sphere tower",
+     "year": 1092,
+     "note": "苏颂等以水力机械驱动浑仪与演示天球自动运转，兼作天文钟与观象台。",
+     "deps": [
+      "armillary_sphere",
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "islamic_observatory",
+     "name": "伊斯兰大型天文台",
+     "en": "Islamic observatory",
+     "year": 1259,
+     "note": "马拉盖与撒马尔罕等台站装备巨型墙象限仪并持续编表，代表中世纪观测精度高峰。",
+     "deps": [
+      "astronomy"
+     ]
+    },
+    {
+     "id": "simplified_instrument",
+     "name": "简仪",
+     "en": "Simplified armillary instrument",
+     "year": 1276,
+     "note": "郭守敬拆去多重遮蔽圆环制成赤道式简化装置，减少视线遮挡并提高读数精度。",
+     "deps": [
+      "armillary_sphere",
+      "mathematics"
+     ]
+    },
+    {
+     "id": "cross_staff",
+     "name": "十字测天仪",
+     "en": "Cross staff",
+     "year": 1342,
+     "note": "以滑动横木测天体角距的杆式仪器，为航海测高与星角测量的常用工具。",
+     "deps": [
+      "astronomy"
+     ]
+    },
+    {
+     "id": "telescopic_sight",
+     "name": "望远镜瞄准器",
+     "en": "Telescopic sight for instruments",
+     "year": 1667,
+     "note": "把小型望远镜装在象限仪等量角器上作准星，取代裸眼照准使测角误差大幅下降。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "transit_instrument",
+     "name": "中星仪",
+     "en": "Transit instrument",
+     "year": 1690,
+     "note": "罗默首创固定子午面内的望远镜，记录恒星过中天时刻以测赤经并校时。",
+     "deps": [
+      "telescopic_sight",
+      "mathematics"
+     ]
+    },
+    {
+     "id": "marine_sextant",
+     "name": "航海六分仪",
+     "en": "Marine sextant",
+     "year": 1731,
+     "note": "哈德利发明的反射式测角仪，可同时见日与地平线，用于海上测天定位。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "meridian_circle",
+     "name": "子午环",
+     "en": "Meridian circle",
+     "year": 1812,
+     "note": "中星仪与垂直刻度盘结合的精密仪器，一次测量即得恒星的赤经与赤纬。",
+     "deps": [
+      "transit_instrument"
+     ]
+    },
+    {
+     "id": "photographic_astrometry",
+     "name": "照相天体测量",
+     "en": "Photographic astrometry",
+     "year": 1850,
+     "note": "用干版照相记录星野再量度底片坐标，成批提高恒星位置与自行测量效率。",
+     "deps": [
+      "photography"
+     ]
+    },
+    {
+     "id": "parallax_trigonometry",
+     "name": "三角视差测距",
+     "en": "Trigonometric parallax",
+     "year": 1838,
+     "note": "贝塞尔等测定恒星周年视差，首次以几何方法得到恒星距离并验证哥白尼体系。",
+     "deps": [
+      "meridian_circle",
+      "heliocentric_theory"
+     ]
+    },
+    {
+     "id": "planetarium",
+     "name": "天象仪",
+     "en": "Planetarium projector",
+     "year": 1923,
+     "note": "耶拿光学厂制成第一台光学天象仪，在穹顶投影星空供教学与公众演示。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "coronagraph",
+     "name": "日冕仪",
+     "en": "Coronagraph",
+     "year": 1930,
+     "note": "利奥以人工日食遮挡日面，可在非全食时观测日冕，开创常设太阳外层观测。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "photoelectric_photometer",
+     "name": "光电光度计",
+     "en": "Photoelectric photometer",
+     "year": 1946,
+     "note": "以光电管替代眼睛与底片测星亮度，使测光精度进入千分之几星等。",
+     "deps": [
+      "stellar_magnitude_scale",
+      "photography"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "光学望远镜与天文成像",
+   "items": [
+    {
+     "id": "refracting_telescope",
+     "name": "折射望远镜",
+     "en": "Refracting telescope",
+     "year": 1608,
+     "note": "利佩希制成首台实用望远镜，伽利略随即用于天文观测，开创望远镜天文学时代。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "galilean_telescopic_astronomy",
+     "name": "伽利略望远镜观测",
+     "en": "Galilean telescopic astronomy",
+     "year": 1610,
+     "note": "伽利略以望远镜发现月面环形山、木星卫星与金星位相，动摇地心说的经验基础。",
+     "deps": [
+      "refracting_telescope"
+     ]
+    },
+    {
+     "id": "reflecting_telescope",
+     "name": "反射望远镜",
+     "en": "Reflecting telescope",
+     "year": 1668,
+     "note": "牛顿以凹面镜替代透镜消除色差制成首台反射望远镜，为大口径天文镜开辟道路。",
+     "deps": [
+      "refracting_telescope",
+      "optics"
+     ]
+    },
+    {
+     "id": "achromatic_telescope",
+     "name": "消色差折射望远镜",
+     "en": "Achromatic refracting telescope",
+     "year": 1758,
+     "note": "以不同色散玻璃组合透镜消除色差，使长焦距折射镜可用于高倍行星观测。",
+     "deps": [
+      "refracting_telescope"
+     ]
+    },
+    {
+     "id": "double_star_observation",
+     "name": "双星观测",
+     "en": "Double star observation",
+     "year": 1803,
+     "note": "赫歇尔系统测双星相对位置，发现其互绕运动，证明万有引力定律适用于恒星系统。",
+     "deps": [
+      "refracting_telescope",
+      "physics"
+     ]
+    },
+    {
+     "id": "large_reflector_telescopes",
+     "name": "大型反射望远镜",
+     "en": "Large reflector telescopes",
+     "year": 1845,
+     "note": "帕森斯建成口径一米八的列维亚森巨镜，打开研究旋涡星云等深空天体的窗口。",
+     "deps": [
+      "reflecting_telescope"
+     ]
+    },
+    {
+     "id": "astrograph",
+     "name": "天体照相仪",
+     "en": "Astrograph",
+     "year": 1882,
+     "note": "专为照相设计的宽视场折射镜，配合干版支撑全天巡天与星表工程。",
+     "deps": [
+      "photographic_astrometry",
+      "achromatic_telescope"
+     ]
+    },
+    {
+     "id": "schmidt_camera",
+     "name": "施密特望远镜",
+     "en": "Schmidt camera",
+     "year": 1930,
+     "note": "施密特以改正板加球面镜获得大视场无彗差成像，成为巡天照相的主力镜型。",
+     "deps": [
+      "astrograph",
+      "optics"
+     ]
+    },
+    {
+     "id": "large_optical_observatory",
+     "name": "现代大型光学天文台",
+     "en": "Modern large optical observatory",
+     "year": 1948,
+     "note": "帕洛马山两百英寸海耳望远镜落成，标志大型镜面磨制与支承技术的成熟。",
+     "deps": [
+      "large_reflector_telescopes"
+     ]
+    },
+    {
+     "id": "ccd_astronomy",
+     "name": "CCD天文成像",
+     "en": "CCD astronomy",
+     "year": 1976,
+     "note": "电荷耦合器件取代照相底片，量子效率近百分百，使测光与巡天效率革命性提升。",
+     "deps": [
+      "camera",
+      "computer"
+     ]
+    },
+    {
+     "id": "multiple_mirror_telescope",
+     "name": "多镜面望远镜",
+     "en": "Multiple mirror telescope",
+     "year": 1979,
+     "note": "以多块子镜合成等效大口径的方案，为拼接主镜与极大望远镜积累经验。",
+     "deps": [
+      "large_optical_observatory"
+     ]
+    },
+    {
+     "id": "segmented_mirror_telescope",
+     "name": "拼接镜面望远镜",
+     "en": "Segmented mirror telescope",
+     "year": 1993,
+     "note": "凯克望远镜以三十六块六边形子镜主动拼接成十米主镜，实现光学镜面口径跃升。",
+     "deps": [
+      "multiple_mirror_telescope",
+      "computer"
+     ]
+    },
+    {
+     "id": "adaptive_optics",
+     "name": "自适应光学",
+     "en": "Adaptive optics",
+     "year": 1989,
+     "note": "以波前传感器与可变形镜实时校正大气湍流，恢复地面望远镜近衍射极限分辨率。",
+     "deps": [
+      "lasers",
+      "computer"
+     ]
+    },
+    {
+     "id": "laser_guide_star",
+     "name": "激光导引星",
+     "en": "Laser guide star",
+     "year": 1994,
+     "note": "以钠层激光制造人造星点供波前传感，使自适应光学不再依赖天然亮星。",
+     "deps": [
+      "adaptive_optics",
+      "lasers"
+     ]
+    },
+    {
+     "id": "optical_interferometry",
+     "name": "光学干涉测量",
+     "en": "Optical interferometry",
+     "year": 1920,
+     "note": "迈克耳孙以干涉仪直接测出恒星角直径，后发展为多镜组阵高分辨率成像。",
+     "deps": [
+      "reflecting_telescope",
+      "physics"
+     ]
+    },
+    {
+     "id": "wide_field_survey_telescope",
+     "name": "广域巡天望远镜",
+     "en": "Wide-field survey telescope",
+     "year": 2003,
+     "note": "大视场巡天设备自动拍摄全天并产出海量天体目录，支撑统计天文学研究。",
+     "deps": [
+      "ccd_astronomy",
+      "computer"
+     ]
+    },
+    {
+     "id": "solar_telescope_network",
+     "name": "太阳望远镜网络",
+     "en": "Solar telescope network",
+     "year": 1969,
+     "note": "全球联网的日面连续观测站追踪黑子与耀斑，为空间天气预警提供地基数据。",
+     "deps": [
+      "refracting_telescope",
+      "telephone"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "行星系认识与天体力学",
+   "items": [
+    {
+     "id": "kepler_laws",
+     "name": "开普勒行星运动三定律",
+     "en": "Kepler's laws of planetary motion",
+     "year": 1619,
+     "note": "开普勒由第谷数据归纳椭圆轨道与面积速度定律，确立行星绕日运动数学描述。",
+     "deps": [
+      "tycho_brahe_observations",
+      "mathematics"
+     ]
+    },
+    {
+     "id": "newtonian_celestial_mechanics",
+     "name": "牛顿天体力学",
+     "en": "Newtonian celestial mechanics",
+     "year": 1687,
+     "note": "万有引力定律统一解释行星运动与潮汐，天体运动研究由此纳入力学计算。",
+     "deps": [
+      "kepler_laws",
+      "physics"
+     ]
+    },
+    {
+     "id": "uranus_discovery",
+     "name": "天王星发现",
+     "en": "Discovery of Uranus",
+     "year": 1781,
+     "note": "赫歇尔巡天中意外发现太阳系第七颗行星，首次把太阳系疆界推进到土星之外。",
+     "deps": [
+      "refracting_telescope"
+     ]
+    },
+    {
+     "id": "asteroid_belt_discovery",
+     "name": "小行星带发现",
+     "en": "Discovery of the asteroid belt",
+     "year": 1801,
+     "note": "皮亚齐发现谷神星后数年又找到智神星等，确认火星木星之间存在小行星族群。",
+     "deps": [
+      "refracting_telescope"
+     ]
+    },
+    {
+     "id": "perturbation_calculation",
+     "name": "摄动计算法",
+     "en": "Perturbation theory in astronomy",
+     "year": 1845,
+     "note": "勒威耶与亚当斯由天王星轨道反常反推未知行星位置，促成海王星发现。",
+     "deps": [
+      "newtonian_celestial_mechanics",
+      "mathematics"
+     ]
+    },
+    {
+     "id": "neptune_discovery",
+     "name": "海王星发现",
+     "en": "Discovery of Neptune",
+     "year": 1846,
+     "note": "按数学预言在望远镜中确认新行星，展示牛顿力学预测能力的标志性事件。",
+     "deps": [
+      "perturbation_calculation"
+     ]
+    },
+    {
+     "id": "sunspot_cycle",
+     "name": "太阳黑子周期",
+     "en": "Sunspot cycle",
+     "year": 1843,
+     "note": "施瓦贝经长期统计发现黑子约十一年周期，确立太阳活动变化的规律性。",
+     "deps": [
+      "refracting_telescope"
+     ]
+    },
+    {
+     "id": "spectroscopic_planet_study",
+     "name": "行星光谱学研究",
+     "en": "Spectroscopic study of planets",
+     "year": 1862,
+     "note": "以光谱方法探测行星大气成分与自转，太阳系研究从位置测量进入物性研究。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "martian_canals_debate",
+     "name": "火星表面观测",
+     "en": "Observation of the Martian surface",
+     "year": 1877,
+     "note": "斯基亚帕雷利绘制火星表面细节并提出所谓运河，引发对火星环境的长期争论与观测。",
+     "deps": [
+      "large_reflector_telescopes"
+     ]
+    },
+    {
+     "id": "lunar_cartography",
+     "name": "月球制图学",
+     "en": "Lunar cartography",
+     "year": 1651,
+     "note": "里乔利等绘制月面并命名环形山，望远镜月面学由此形成系统研究分支。",
+     "deps": [
+      "refracting_telescope"
+     ]
+    },
+    {
+     "id": "jupiter_moons_timing",
+     "name": "木卫掩食计时",
+     "en": "Jupiter satellite timing",
+     "year": 1676,
+     "note": "罗默由木卫食时刻差测得光速有限，天文计时成为测定光速的早期手段。",
+     "deps": [
+      "galilean_telescopic_astronomy"
+     ]
+    },
+    {
+     "id": "saturn_ring_structure",
+     "name": "土星环系研究",
+     "en": "Study of Saturn's rings",
+     "year": 1857,
+     "note": "麦克斯韦论证土星环由无数小天体构成，后由光谱与探测器观测证实。",
+     "deps": [
+      "newtonian_celestial_mechanics",
+      "physics"
+     ]
+    },
+    {
+     "id": "pluto_discovery",
+     "name": "冥王星发现",
+     "en": "Discovery of Pluto",
+     "year": 1930,
+     "note": "汤博在巡天底片上找到海王星外天体，后确认其为柯伊伯带天体成员之一。",
+     "deps": [
+      "astrograph"
+     ]
+    },
+    {
+     "id": "kuiper_belt_study",
+     "name": "柯伊伯带观测",
+     "en": "Kuiper belt survey",
+     "year": 1992,
+     "note": "大型巡天在海王星外发现众多冰质小天体，揭示太阳系外围的环带结构。",
+     "deps": [
+      "ccd_astronomy"
+     ]
+    },
+    {
+     "id": "exoplanet_radial_velocity",
+     "name": "系外行星视向速度法",
+     "en": "Exoplanet radial velocity method",
+     "year": 1995,
+     "note": "由恒星光谱多普勒摆动间接发现行星，开创系外行星探测的统计时代。",
+     "deps": [
+      "optics",
+      "physics"
+     ]
+    },
+    {
+     "id": "exoplanet_transit_method",
+     "name": "系外行星凌星法",
+     "en": "Exoplanet transit method",
+     "year": 1999,
+     "note": "测恒星周期性变光推断行星凌越，配合空间望远镜可反演行星大气成分。",
+     "deps": [
+      "photoelectric_photometer",
+      "satellite"
+     ]
+    },
+    {
+     "id": "direct_imaging_planets",
+     "name": "系外行星直接成像",
+     "en": "Direct imaging of exoplanets",
+     "year": 2008,
+     "note": "以星冕仪与自适应光学压制恒星辉光直接拍得年轻行星图像。",
+     "deps": [
+      "adaptive_optics",
+      "ccd_astronomy"
+     ]
+    },
+    {
+     "id": "meteorite_study",
+     "name": "陨石学研究",
+     "en": "Meteorite science",
+     "year": 1803,
+     "note": "确认陨石源自天外并系统分类分析，成为研究太阳系早期物质的直接样本。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "celestial_mechanics_numerical",
+     "name": "天体轨道数值积分",
+     "en": "Numerical integration of orbits",
+     "year": 1960,
+     "note": "借助计算机逐步积分轨道方程，用于预报人造天体与复核小行星轨道。",
+     "deps": [
+      "newtonian_celestial_mechanics",
+      "computer"
+     ]
+    },
+    {
+     "id": "photometric_asteroid_rotation",
+     "name": "小行星光变测光",
+     "en": "Asteroid lightcurve photometry",
+     "year": 1906,
+     "note": "测小行星周期光变推自转形状，后扩用于双小行星与掩星观测。",
+     "deps": [
+      "astrograph"
+     ]
+    },
+    {
+     "id": "planetary_radar",
+     "name": "行星雷达测距测形",
+     "en": "Planetary radar astronomy",
+     "year": 1946,
+     "note": "向行星发射雷达波回波测距测形，精确测定地月距离与行星表面粗糙度。",
+     "deps": [
+      "radio",
+      "electromagnetism"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "光谱观测与恒星科学",
+   "items": [
+    {
+     "id": "spectroscope_astronomy",
+     "name": "天文光谱仪",
+     "en": "Astronomical spectroscope",
+     "year": 1814,
+     "note": "夫琅和费在太阳光谱中定位数百条暗线并测其波长，谱线分析由此开端。",
+     "deps": [
+      "refracting_telescope",
+      "optics"
+     ]
+    },
+    {
+     "id": "chemical_composition_spectra",
+     "name": "光谱元素认证",
+     "en": "Identification of elements in spectra",
+     "year": 1860,
+     "note": "基尔霍夫与本生以实验室谱线对照太阳光谱，证明日面与恒星含地球元素。",
+     "deps": [
+      "spectroscope_astronomy",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "helium_discovery",
+     "name": "太阳氦元素发现",
+     "en": "Discovery of helium in the Sun",
+     "year": 1868,
+     "note": "詹森在日食光谱中观察到未知谱线，后确认元素氦，系首例在太阳上发现的元素。",
+     "deps": [
+      "chemical_composition_spectra"
+     ]
+    },
+    {
+     "id": "spectroscopic_doppler",
+     "name": "光谱多普勒测速",
+     "en": "Spectroscopic Doppler measurement",
+     "year": 1868,
+     "note": "以谱线位移测天体视向速度，应用于双星轨道、恒星旋转与星系运动研究。",
+     "deps": [
+      "spectroscope_astronomy",
+      "physics"
+     ]
+    },
+    {
+     "id": "spectroscopic_binary",
+     "name": "分光双星",
+     "en": "Spectroscopic binaries",
+     "year": 1889,
+     "note": "由谱线周期摆动发现互相绕转的恒星，为恒星质量测定提供样本。",
+     "deps": [
+      "spectroscopic_doppler"
+     ]
+    },
+    {
+     "id": "harvard_spectral_classification",
+     "name": "哈佛恒星光谱分类",
+     "en": "Harvard spectral classification",
+     "year": 1890,
+     "note": "对数十万颗恒星光谱按吸收线强度排成OBAFGKM序列，建立恒星光谱分类体系。",
+     "deps": [
+      "chemical_composition_spectra"
+     ]
+    },
+    {
+     "id": "celestial_photography_atlas",
+     "name": "全天照相巡天",
+     "en": "All-sky photographic surveys",
+     "year": 1885,
+     "note": "多国望远镜系统拍摄全天底片并出版星图，为天体位置与形态普查奠定基础。",
+     "deps": [
+      "astrograph"
+     ]
+    },
+    {
+     "id": "hertzsprung_russell_diagram",
+     "name": "赫罗图",
+     "en": "Hertzsprung-Russell diagram",
+     "year": 1910,
+     "note": "以光度对温度作图揭示恒星序列，成为恒星结构与演化研究的基本工具。",
+     "deps": [
+      "harvard_spectral_classification",
+      "stellar_magnitude_scale"
+     ]
+    },
+    {
+     "id": "cepheid_distance_scale",
+     "name": "造父变星周光关系",
+     "en": "Cepheid period-luminosity relation",
+     "year": 1912,
+     "note": "勒维特发现造父变星光变周期与光度相关，成为测量遥远天体距离的标准烛光。",
+     "deps": [
+      "astrograph"
+     ]
+    },
+    {
+     "id": "stellar_evolution_theory",
+     "name": "恒星演化理论",
+     "en": "Stellar evolution theory",
+     "year": 1920,
+     "note": "爱丁顿等建立恒星结构与产能模型，后经核物理证实其能源来自核聚变。",
+     "deps": [
+      "hertzsprung_russell_diagram",
+      "relativity_qm"
+     ]
+    },
+    {
+     "id": "interstellar_matter_study",
+     "name": "星际介质研究",
+     "en": "Study of the interstellar medium",
+     "year": 1904,
+     "note": "由光谱中的星际吸收线发现弥散星际气体与尘埃，认识其消光与星云作用。",
+     "deps": [
+      "spectroscope_astronomy"
+     ]
+    },
+    {
+     "id": "nebular_spectroscopy",
+     "name": "星云光谱学",
+     "en": "Nebular spectroscopy",
+     "year": 1864,
+     "note": "哈金斯测得行星状星云与气体的明线光谱，区分气体星云与恒星系统。",
+     "deps": [
+      "chemical_composition_spectra"
+     ]
+    },
+    {
+     "id": "white_dwarf_recognition",
+     "name": "白矮星认证",
+     "en": "Recognition of white dwarfs",
+     "year": 1915,
+     "note": "天狼伴星因光谱与质量矛盾被认出为致密简并星，揭示恒星终态类型。",
+     "deps": [
+      "spectroscopic_doppler",
+      "physics"
+     ]
+    },
+    {
+     "id": "mass_luminosity_relation",
+     "name": "质光关系",
+     "en": "Mass-luminosity relation",
+     "year": 1924,
+     "note": "爱丁顿给出恒星质量与光度的幂律关系，为恒星参数推算提供经验依据。",
+     "deps": [
+      "spectroscopic_binary",
+      "stellar_evolution_theory"
+     ]
+    },
+    {
+     "id": "galaxy_spiral_nature",
+     "name": "旋涡星云本质判定",
+     "en": "Nature of spiral nebulae",
+     "year": 1924,
+     "note": "哈勃在仙女座大星云中发现造父变星，确认旋涡星云为银河系外巨星系。",
+     "deps": [
+      "cepheid_distance_scale",
+      "large_reflector_telescopes"
+     ]
+    },
+    {
+     "id": "galaxy_morphology",
+     "name": "星系形态分类",
+     "en": "Galaxy morphological classification",
+     "year": 1926,
+     "note": "哈勃按椭圆旋涡棒旋排列星系形态序列，形成沿用至今的哈勃音叉图。",
+     "deps": [
+      "galaxy_spiral_nature"
+     ]
+    },
+    {
+     "id": "supernova_typing",
+     "name": "超新星分类",
+     "en": "Supernova classification",
+     "year": 1933,
+     "note": "按光谱有无氢线区分超新星类型，为宇宙距离与元素核合成研究提供样本。",
+     "deps": [
+      "chemical_composition_spectra"
+     ]
+    },
+    {
+     "id": "pulsar_discovery",
+     "name": "脉冲星发现",
+     "en": "Discovery of pulsars",
+     "year": 1967,
+     "note": "休伊什小组在射电记录中发现周期脉冲源，后证实为高速自转中子星。",
+     "deps": [
+      "radio",
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "neutron_star_study",
+     "name": "中子星物态研究",
+     "en": "Neutron star astrophysics",
+     "year": 1970,
+     "note": "由射电脉冲计时研究致密天体磁场与自转，检验极端物态方程。",
+     "deps": [
+      "pulsar_discovery"
+     ]
+    },
+    {
+     "id": "black_hole_observation",
+     "name": "黑洞天体观测",
+     "en": "Observation of black holes",
+     "year": 1971,
+     "note": "天鹅座X-1等X射线双星被证实含恒星质量黑洞，后经事件视界望远镜成像。",
+     "deps": [
+      "relativity_qm"
+     ]
+    },
+    {
+     "id": "infrared_dust_imaging",
+     "name": "红外尘云成像",
+     "en": "Infrared imaging of dust clouds",
+     "year": 1983,
+     "note": "红外空间观测穿透尘埃揭示恒星形成区与星系核，开创红外天文学谱段。",
+     "deps": [
+      "satellite"
+     ]
+    },
+    {
+     "id": "asteroseismology",
+     "name": "星震学",
+     "en": "Asteroseismology",
+     "year": 1976,
+     "note": "由太阳与恒星表面振动频率反推内部结构，建立探测恒星内部的手段。",
+     "deps": [
+      "spectroscopic_doppler",
+      "stellar_evolution_theory"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "射电与多波段天文",
+   "items": [
+    {
+     "id": "radio_telescope",
+     "name": "射电望远镜",
+     "en": "Radio telescope",
+     "year": 1932,
+     "note": "央斯基发现银河射电，雷伯建成抛物面射电望远镜，开启非光学波段观测。",
+     "deps": [
+      "radio",
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "radio_interferometry",
+     "name": "射电干涉仪",
+     "en": "Radio interferometry",
+     "year": 1946,
+     "note": "两副以上天线联合相位相干测量，突破单天线角分辨率极限。",
+     "deps": [
+      "radio_telescope",
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "vlbi",
+     "name": "甚长基线干涉测量",
+     "en": "Very long baseline interferometry",
+     "year": 1967,
+     "note": "跨洲天线以原子钟同步作干涉，获得毫角秒级分辨率，兼测地球自转参数。",
+     "deps": [
+      "radio_interferometry",
+      "atomic_clock"
+     ]
+    },
+    {
+     "id": "aperture_synthesis",
+     "name": "综合孔径成像",
+     "en": "Aperture synthesis",
+     "year": 1960,
+     "note": "赖尔以地球自转等效大孔径并作傅里叶合成，实现高分辨射电成像并获诺奖。",
+     "deps": [
+      "radio_interferometry",
+      "mathematics"
+     ]
+    },
+    {
+     "id": "radio_spectroscopy",
+     "name": "射电谱线观测",
+     "en": "Radio spectroscopy",
+     "year": 1951,
+     "note": "探测氢原子二十一厘米谱线与分子谱线，为银河结构与星际化学提供探针。",
+     "deps": [
+      "radio_telescope",
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "quasar_discovery",
+     "name": "类星体发现",
+     "en": "Discovery of quasars",
+     "year": 1963,
+     "note": "射电源光学对应体呈大红移恒星状，揭示活动星系核的极端能量释放。",
+     "deps": [
+      "radio_telescope",
+      "spectroscope_astronomy"
+     ]
+    },
+    {
+     "id": "microwave_background_detection",
+     "name": "宇宙微波背景辐射发现",
+     "en": "Discovery of the cosmic microwave background",
+     "year": 1965,
+     "note": "彭齐亚斯与威尔逊探测到全天均匀的毫米波背景，成为大爆炸宇宙学关键证据。",
+     "deps": [
+      "radio_telescope"
+     ]
+    },
+    {
+     "id": "cosmic_background_anisotropy",
+     "name": "微波背景各向异性测量",
+     "en": "CMB anisotropy measurement",
+     "year": 1992,
+     "note": "COBE卫星测得背景辐射温度涨落，其功率谱支持暴胀与结构形成模型。",
+     "deps": [
+      "microwave_background_detection",
+      "satellite"
+     ]
+    },
+    {
+     "id": "xray_astronomy",
+     "name": "X射线天文学",
+     "en": "X-ray astronomy",
+     "year": 1962,
+     "note": "贾科尼以探空火箭发现天蝎座X-1，X射线波段观测由此成为独立分支。",
+     "deps": [
+      "rocket",
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "gamma_ray_astronomy",
+     "name": "伽马射线天文学",
+     "en": "Gamma-ray astronomy",
+     "year": 1967,
+     "note": "维拉卫星记录到宇宙伽马暴，后建立全天伽马巡天与暴发定位体系。",
+     "deps": [
+      "satellite",
+      "relativity_qm"
+     ]
+    },
+    {
+     "id": "ir_astronomy",
+     "name": "红外天文学",
+     "en": "Infrared astronomy",
+     "year": 1965,
+     "note": "以红外探测器观测冷天体与消光区，须借助气球、机载与空间平台避开大气水汽。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "ultraviolet_astronomy",
+     "name": "紫外天文学",
+     "en": "Ultraviolet astronomy",
+     "year": 1946,
+     "note": "以火箭与卫星在紫外波段观测热星与星际气体，须在电离层之上工作。",
+     "deps": [
+      "rocket",
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "neutrino_astronomy",
+     "name": "中微子天文学",
+     "en": "Neutrino astronomy",
+     "year": 1968,
+     "note": "戴维斯以地下探测器捕获太阳中微子，实现以中微子观测恒星核心。",
+     "deps": [
+      "relativity_qm",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "neutrino_supernova_1987a",
+     "name": "超新星中微子探测",
+     "en": "Neutrino detection of SN 1987A",
+     "year": 1987,
+     "note": "多台探测器捕获超新星爆发中微子暴，证实超新星核坍缩的物理图像。",
+     "deps": [
+      "neutrino_astronomy"
+     ]
+    },
+    {
+     "id": "gravitational_wave_astronomy",
+     "name": "引力波天文台",
+     "en": "Gravitational wave observatory",
+     "year": 2015,
+     "note": "激光干涉仪LIGO首次直接探测双黑洞并合引力波，开创多信使天文学。",
+     "deps": [
+      "lasers",
+      "relativity_qm"
+     ]
+    },
+    {
+     "id": "multi_messenger_astronomy",
+     "name": "多信使联合观测",
+     "en": "Multi-messenger astronomy",
+     "year": 2017,
+     "note": "引力波事件与电磁、中微子信号联合定位，验证了双中子星并合的千新星模型。",
+     "deps": [
+      "gravitational_wave_astronomy",
+      "gamma_ray_astronomy"
+     ]
+    },
+    {
+     "id": "gamma_ray_burst_afterglow",
+     "name": "伽马暴余晖观测",
+     "en": "Gamma-ray burst afterglow observation",
+     "year": 1997,
+     "note": "发现伽马暴多波段余晖并测定其宇宙学红移，确认暴源位于遥远星系。",
+     "deps": [
+      "gamma_ray_astronomy"
+     ]
+    },
+    {
+     "id": "dark_matter_probe",
+     "name": "暗物质观测方法",
+     "en": "Dark matter probes",
+     "year": 1975,
+     "note": "由星系旋转曲线、引力透镜与团内气体温度等推知不可见物质分布。",
+     "deps": [
+      "spectroscopic_doppler",
+      "relativity_qm"
+     ]
+    },
+    {
+     "id": "gravitational_lensing",
+     "name": "引力透镜观测",
+     "en": "Gravitational lensing",
+     "year": 1979,
+     "note": "发现类星体双像，确认前景天体质量弯曲光线，成为测绘暗物质与放大天体的工具。",
+     "deps": [
+      "quasar_discovery",
+      "relativity_qm"
+     ]
+    },
+    {
+     "id": "microlensing_survey",
+     "name": "微引力透镜巡天",
+     "en": "Microlensing survey",
+     "year": 1993,
+     "note": "恒星被前景天体短暂增亮的微透镜事件，用于搜寻暗天体与系外行星。",
+     "deps": [
+      "gravitational_lensing"
+     ]
+    },
+    {
+     "id": "radio_astronomy_survey",
+     "name": "射电全天巡天",
+     "en": "Radio all-sky survey",
+     "year": 1964,
+     "note": "系统扫描天区编目射电源，为宇宙学与星系演化提供统计样本。",
+     "deps": [
+      "radio_telescope"
+     ]
+    },
+    {
+     "id": "fast_radio_burst",
+     "name": "快速射电暴定位",
+     "en": "Localization of fast radio bursts",
+     "year": 2016,
+     "note": "干涉阵列定位毫秒级射电暴的宿主星系，正在阐明其物理起源。",
+     "deps": [
+      "vlbi",
+      "radio_telescope"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "宇宙学观测与空间探测",
+   "items": [
+    {
+     "id": "expanding_universe_evidence",
+     "name": "星系退行与哈勃定律",
+     "en": "Galaxy recession and Hubble's law",
+     "year": 1929,
+     "note": "哈勃发现星系红移与距离成正比，为宇宙膨胀提供观测基础，改写宇宙图景。",
+     "deps": [
+      "spectroscopic_doppler",
+      "galaxy_spiral_nature"
+     ]
+    },
+    {
+     "id": "big_bang_model",
+     "name": "大爆炸宇宙模型",
+     "en": "Big Bang model",
+     "year": 1948,
+     "note": "伽莫夫等由膨胀回溯提出热大爆炸演化图像，预言元素合成与背景辐射。",
+     "deps": [
+      "expanding_universe_evidence",
+      "relativity_qm"
+     ]
+    },
+    {
+     "id": "steady_state_debate",
+     "name": "宇宙学检验方法",
+     "en": "Cosmological tests",
+     "year": 1965,
+     "note": "以计数、背景辐射与元素丰度等检验演化模型，最终确立热大爆炸图景。",
+     "deps": [
+      "big_bang_model"
+     ]
+    },
+    {
+     "id": "primordial_nucleosynthesis",
+     "name": "原初核合成计算",
+     "en": "Big Bang nucleosynthesis",
+     "year": 1967,
+     "note": "计算早期宇宙轻元素产额并与实测丰度对照，约束重子密度与模型。",
+     "deps": [
+      "big_bang_model",
+      "nuclear_fusion"
+     ]
+    },
+    {
+     "id": "dark_energy_discovery",
+     "name": "暗能量发现",
+     "en": "Discovery of dark energy",
+     "year": 1998,
+     "note": "以Ia型超新星测距发现宇宙加速膨胀，揭示主导宇宙的暗能量成分。",
+     "deps": [
+      "supernova_typing",
+      "cepheid_distance_scale"
+     ]
+    },
+    {
+     "id": "redshift_survey",
+     "name": "星系红移巡天",
+     "en": "Galaxy redshift survey",
+     "year": 1977,
+     "note": "大规模测星系红移绘制三维分布，揭示纤维状大尺度结构并约束宇宙学参数。",
+     "deps": [
+      "spectroscope_astronomy",
+      "computer"
+     ]
+    },
+    {
+     "id": "space_telescope",
+     "name": "空间望远镜",
+     "en": "Space telescope",
+     "year": 1990,
+     "note": "哈勃空间望远镜摆脱大气扰动与吸收，实现紫外到近红外的稳定高分辨观测。",
+     "deps": [
+      "large_optical_observatory",
+      "satellite"
+     ]
+    },
+    {
+     "id": "space_cmb_mission",
+     "name": "空间微波背景卫星",
+     "en": "Space CMB missions",
+     "year": 1989,
+     "note": "COBE及后继WMAP、普朗克卫星在空间精确测量背景辐射谱与各向异性。",
+     "deps": [
+      "satellite",
+      "microwave_background_detection"
+     ]
+    },
+    {
+     "id": "xray_space_observatory",
+     "name": "X射线空间天文台",
+     "en": "X-ray space observatory",
+     "year": 1970,
+     "note": "乌呼鲁卫星开启轨道X射线巡天，钱德拉与XMM-牛顿实现高分辨成像光谱。",
+     "deps": [
+      "xray_astronomy",
+      "satellite"
+     ]
+    },
+    {
+     "id": "infrared_space_observatory",
+     "name": "红外空间天文台",
+     "en": "Infrared space observatory",
+     "year": 1983,
+     "note": "IRAS全天红外观测后，斯皮策与詹姆斯·韦布等以低温镜面做深空红外观测。",
+     "deps": [
+      "ir_astronomy",
+      "satellite"
+     ]
+    },
+    {
+     "id": "gamma_space_observatory",
+     "name": "伽马射线空间望远镜",
+     "en": "Gamma-ray space telescopes",
+     "year": 1991,
+     "note": "康普顿与费米望远镜巡测伽马射线天空，定位伽马暴与高能源。",
+     "deps": [
+      "gamma_ray_astronomy",
+      "satellite"
+     ]
+    },
+    {
+     "id": "space_interferometry",
+     "name": "空间长基线测量",
+     "en": "Space astrometry missions",
+     "year": 1989,
+     "note": "依巴谷与盖亚卫星在空间测量恒星视差与自行，构建超高精度银河系星表。",
+     "deps": [
+      "parallax_trigonometry",
+      "satellite"
+     ]
+    },
+    {
+     "id": "lunar_probe",
+     "name": "月球探测器",
+     "en": "Lunar probes",
+     "year": 1959,
+     "note": "月球号与勘测者号等实现近月成像与软着陆，取回月壤并布置月面仪器。",
+     "deps": [
+      "rocket",
+      "satellite"
+     ]
+    },
+    {
+     "id": "planetary_flyby_probe",
+     "name": "行星飞掠探测",
+     "en": "Planetary flyby probes",
+     "year": 1962,
+     "note": "水手号率先飞掠金星火星，旅行者号借引力弹弓探测四颗巨行星。",
+     "deps": [
+      "rocket",
+      "satellite"
+     ]
+    },
+    {
+     "id": "planetary_orbiter",
+     "name": "行星轨道器",
+     "en": "Planetary orbiters",
+     "year": 1971,
+     "note": "环绕行星的长周期测绘卫星，系统测绘火星、金星等表面与大气。",
+     "deps": [
+      "planetary_flyby_probe"
+     ]
+    },
+    {
+     "id": "planetary_lander",
+     "name": "行星着陆器",
+     "en": "Planetary landers",
+     "year": 1970,
+     "note": "金星号与海盗号等在行星表面软着陆，直接测量大气与土壤。",
+     "deps": [
+      "planetary_flyby_probe"
+     ]
+    },
+    {
+     "id": "planetary_rover",
+     "name": "行星巡视车",
+     "en": "Planetary rovers",
+     "year": 1970,
+     "note": "月球车与火星车在星表移动探测，携带相机与钻具开展现场矿物分析。",
+     "deps": [
+      "rocket",
+      "satellite"
+     ]
+    },
+    {
+     "id": "comet_probe",
+     "name": "彗星探测器",
+     "en": "Comet probes",
+     "year": 1986,
+     "note": "哈雷舰队与罗塞塔等飞掠环绕彗核，释放着陆器分析彗发与彗核物质。",
+     "deps": [
+      "planetary_flyby_probe"
+     ]
+    },
+    {
+     "id": "sample_return_mission",
+     "name": "小天体采样返回",
+     "en": "Asteroid sample return",
+     "year": 2003,
+     "note": "隼鸟号与OSIRIS-REx从小行星采集样品返回地球，供实验室精细分析。",
+     "deps": [
+      "planetary_rover",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "satellite_astrophysics_obs",
+     "name": "天文卫星平台",
+     "en": "Astrophysics satellite platforms",
+     "year": 1968,
+     "note": "轨道天文台OAO等验证卫星指向与遥测技术，为专用天文卫星铺路。",
+     "deps": [
+      "satellite"
+     ]
+    },
+    {
+     "id": "telescope_in_space_maintenance",
+     "name": "在轨望远镜维修",
+     "en": "In-orbit telescope servicing",
+     "year": 1993,
+     "note": "航天员多次上天更换哈勃仪器与矫正光学，验证在轨维护大型望远镜的可行性。",
+     "deps": [
+      "space_telescope"
+     ]
+    },
+    {
+     "id": "observational_archives",
+     "name": "天文数据中心",
+     "en": "Astronomical data archives",
+     "year": 1993,
+     "note": "对巡天与卫星数据统一归档并在线发布，支撑全波段统计与再分析研究。",
+     "deps": [
+      "computer",
+      "internet"
+     ]
+    },
+    {
+     "id": "citizen_astronomy",
+     "name": "公众参与天文项目",
+     "en": "Citizen science astronomy",
+     "year": 2007,
+     "note": "以互联网平台聚合公众完成星系分类与变星搜索，扩展海量数据处理能力。",
+     "deps": [
+      "wide_field_survey_telescope",
+      "internet"
+     ]
+    }
+   ]
+  }
+ ]
+}

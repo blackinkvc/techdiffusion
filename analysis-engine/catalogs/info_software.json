@@ -1,0 +1,1389 @@
+{
+ "cat": "info",
+ "catName": "信息与通信",
+ "sub": "software",
+ "subName": "软件与算法",
+ "schemaNote": "catalog v1：软件与算法域真实技术目录。算法史、语言谱系、编译执行、操作系统、数据管理、软件工程、应用与开源生态七大族。欧几里得算法/动态规划/蒙特卡洛等已由数学域收录，本目录不重复。",
+ "anchors": [
+  "mathematics",
+  "writing",
+  "computer",
+  "ic",
+  "internet",
+  "www",
+  "ai"
+ ],
+ "families": [
+  {
+   "name": "算法与数据结构",
+   "items": [
+    {
+     "id": "sw_newton_iteration",
+     "name": "牛顿迭代法",
+     "en": "Newton's method",
+     "year": 1669,
+     "note": "以切线逐步逼近求非线性方程数值解的经典迭代算法，至今仍是数值软件的基础工具。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sw_radix_sort",
+     "name": "基数排序",
+     "en": "Radix sort",
+     "year": 1887,
+     "note": "霍尔瑞斯穿孔卡片制表中形成的按位分桶排序方法，是多关键字排序的鼻祖。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sw_merge_sort",
+     "name": "归并排序",
+     "en": "Merge sort",
+     "year": 1945,
+     "note": "冯·诺依曼在存储程序计算机设计中提出的分治排序算法，是外排序与函数式编程的标准工具。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sw_binary_search",
+     "name": "二分查找",
+     "en": "Binary search",
+     "year": 1946,
+     "note": "在有序数据上折半缩小范围的查找算法，对数级效率使其成为计算机科学的入门经典。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sw_simplex_method",
+     "name": "单纯形法",
+     "en": "Simplex method",
+     "year": 1947,
+     "note": "丹齐格提出的线性规划求解算法，支撑运输调度与资源配置优化，获广泛应用。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sw_pseudorandom_gen",
+     "name": "伪随机数生成器",
+     "en": "Pseudorandom number generator",
+     "year": 1949,
+     "note": "莱默尔提出的线性同余法以确定性公式产生伪随机序列，是仿真与采样软件的基础。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_huffman_coding",
+     "name": "哈夫曼编码",
+     "en": "Huffman coding",
+     "year": 1952,
+     "note": "按符号频率构造最优前缀码的无损压缩算法，是文件压缩与通信编码的基本构件。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sw_hash_table",
+     "name": "哈希表",
+     "en": "Hash table",
+     "year": 1953,
+     "note": "以散列函数将键映射到存储桶的索引结构，实现平均常数时间的查找与插入。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_linked_list",
+     "name": "链表",
+     "en": "Linked list",
+     "year": 1955,
+     "note": "纽厄尔与肖在信息处理语言中以指针串联结点的动态数据结构，是动态内存管理的基础。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_regex_pattern",
+     "name": "正则表达式",
+     "en": "Regular expression",
+     "year": 1956,
+     "note": "克林提出的正则语言记法，后成为文本搜索与词法分析的标准模式描述工具。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sw_dijkstra_algo",
+     "name": "Dijkstra 最短路径算法",
+     "en": "Dijkstra's shortest path algorithm",
+     "year": 1959,
+     "note": "狄克斯特拉提出的单源最短路径算法，广泛用于网络路由与交通规划。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_quick_sort",
+     "name": "快速排序",
+     "en": "Quicksort",
+     "year": 1959,
+     "note": "霍尔提出的原地分治排序算法，平均效率高，是应用最广的通用内排序方法之一。",
+     "deps": [
+      "sw_merge_sort"
+     ]
+    },
+    {
+     "id": "sw_shell_sort",
+     "name": "希尔排序",
+     "en": "Shellsort",
+     "year": 1959,
+     "note": "希尔提出的按递减增量分组插入的排序算法，是首批突破平方复杂度的实用排序。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_avl_tree",
+     "name": "AVL 平衡树",
+     "en": "AVL tree",
+     "year": 1962,
+     "note": "阿德尔森-弗尔斯基等人提出的自平衡二叉搜索树，保证查找与更新保持对数复杂度。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_union_find",
+     "name": "并查集",
+     "en": "Disjoint-set data structure",
+     "year": 1964,
+     "note": "以树与路径压缩维护不相交集合的结构，是图连通判定与最小生成树算法的基石。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_fft_algorithm",
+     "name": "快速傅里叶变换",
+     "en": "Fast Fourier transform",
+     "year": 1965,
+     "note": "库利与图基提出的离散傅里叶变换快速算法，使谱分析与信号处理进入实用时代。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_astar_search",
+     "name": "A* 启发式搜索算法",
+     "en": "A* search algorithm",
+     "year": 1968,
+     "note": "哈特等人提出的启发式最优路径搜索算法，成为游戏寻路与机器人规划的标准方法。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_strassen_multiply",
+     "name": "快速矩阵乘法算法",
+     "en": "Strassen's matrix multiplication",
+     "year": 1969,
+     "note": "斯特拉森以分块技巧降低矩阵乘法运算量的算法，开启快速线性代数研究。",
+     "deps": [
+      "mathematics",
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_bloom_filter",
+     "name": "布隆过滤器",
+     "en": "Bloom filter",
+     "year": 1970,
+     "note": "以位数组与多哈希函数近似判断成员归属的概率结构，节省空间地支撑缓存与过滤。",
+     "deps": [
+      "sw_hash_table"
+     ]
+    },
+    {
+     "id": "sw_b_tree",
+     "name": "B 树",
+     "en": "B-tree",
+     "year": 1972,
+     "note": "拜尔与麦克赖特提出的平衡多路搜索树，成为数据库与文件系统磁盘索引的标准结构。",
+     "deps": [
+      "sw_avl_tree"
+     ]
+    },
+    {
+     "id": "sw_kmp_matching",
+     "name": "KMP 字符串匹配算法",
+     "en": "Knuth-Morris-Pratt algorithm",
+     "year": 1977,
+     "note": "克努特等人利用已匹配前缀信息避免回溯的线性时间串匹配算法，是文本处理经典。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_boyer_moore",
+     "name": "Boyer-Moore 字符串搜索算法",
+     "en": "Boyer-Moore string search",
+     "year": 1977,
+     "note": "从模式尾部比较并按坏字符跳转的搜索算法，长模式下效率突出，被多数查找工具采用。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_lz77_compression",
+     "name": "LZ77 字典压缩算法",
+     "en": "LZ77 compression",
+     "year": 1977,
+     "note": "伦佩尔与齐夫提出的滑动窗口字典压缩算法，是 ZIP、gzip 等无损压缩格式的核心。",
+     "deps": [
+      "sw_huffman_coding"
+     ]
+    },
+    {
+     "id": "sw_red_black_tree",
+     "name": "红黑树",
+     "en": "Red-black tree",
+     "year": 1978,
+     "note": "以着色规则近似平衡的二叉搜索树，广泛用于内存索引与关联容器实现。",
+     "deps": [
+      "sw_b_tree"
+     ]
+    },
+    {
+     "id": "sw_discrete_wavelet",
+     "name": "离散小波变换",
+     "en": "Discrete wavelet transform",
+     "year": 1989,
+     "note": "马拉特提出的快速小波变换算法，支撑图像压缩与多分辨率信号分析。",
+     "deps": [
+      "sw_fft_algorithm"
+     ]
+    },
+    {
+     "id": "sw_pagerank_algo",
+     "name": "PageRank 链接分析算法",
+     "en": "PageRank algorithm",
+     "year": 1998,
+     "note": "布林与佩奇以网页链接结构迭代计算重要性的排序算法，奠定搜索引擎排序基础。",
+     "deps": [
+      "internet"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "程序设计语言谱系",
+   "items": [
+    {
+     "id": "sw_assembly_language",
+     "name": "汇编语言",
+     "en": "Assembly language",
+     "year": 1949,
+     "note": "以助记符代替机器指令码的低级语言与汇编程序，始自 EDSAC，延续至今用于底层开发。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_fortran",
+     "name": "Fortran 语言",
+     "en": "Fortran",
+     "year": 1957,
+     "note": "IBM 团队发布的首个广泛使用的高级科学计算语言，数值计算领域沿用至今。",
+     "deps": [
+      "sw_assembly_language"
+     ]
+    },
+    {
+     "id": "sw_lisp",
+     "name": "Lisp 语言",
+     "en": "Lisp",
+     "year": 1958,
+     "note": "麦卡锡创立的表处理语言，首创垃圾回收与递归一等公民，影响后续函数式语言。",
+     "deps": [
+      "sw_assembly_language"
+     ]
+    },
+    {
+     "id": "sw_cobol",
+     "name": "COBOL 语言",
+     "en": "COBOL",
+     "year": 1959,
+     "note": "面向商业数据处理的通用语言，语法近自然语言，银行与政务系统大量沿用至今。",
+     "deps": [
+      "sw_fortran"
+     ]
+    },
+    {
+     "id": "sw_algol",
+     "name": "ALGOL 语言",
+     "en": "ALGOL",
+     "year": 1960,
+     "note": "以块结构与巴科斯范式定义算法的语言，其语法思想为 C 与 Pascal 等继承。",
+     "deps": [
+      "sw_fortran"
+     ]
+    },
+    {
+     "id": "sw_apl_language",
+     "name": "APL 数组语言",
+     "en": "APL",
+     "year": 1962,
+     "note": "艾弗森设计的数组运算语言，以紧凑符号表达向量运算，影响数值与数组编程范式。",
+     "deps": [
+      "sw_fortran"
+     ]
+    },
+    {
+     "id": "sw_basic",
+     "name": "BASIC 语言",
+     "en": "BASIC",
+     "year": 1964,
+     "note": "凯梅尼与库尔茨为教学设计的交互式语言，随微型计算机普及成为入门编程语言。",
+     "deps": [
+      "sw_fortran"
+     ]
+    },
+    {
+     "id": "sw_simula_language",
+     "name": "Simula 仿真语言",
+     "en": "Simula",
+     "year": 1967,
+     "note": "达尔与尼加德为离散事件仿真创造的语言，首次引入类与对象概念。",
+     "deps": [
+      "sw_algol"
+     ]
+    },
+    {
+     "id": "sw_pascal",
+     "name": "Pascal 语言",
+     "en": "Pascal",
+     "year": 1970,
+     "note": "沃斯设计的结构化教学语言，类型严谨，曾广泛用于教学与早期微机软件。",
+     "deps": [
+      "sw_algol"
+     ]
+    },
+    {
+     "id": "sw_c_language",
+     "name": "C 语言",
+     "en": "C programming language",
+     "year": 1972,
+     "note": "里奇在贝尔实验室为重写 UNIX 而创造的语言，成为系统软件与嵌入式开发的基石。",
+     "deps": [
+      "sw_algol"
+     ]
+    },
+    {
+     "id": "sw_prolog",
+     "name": "Prolog 逻辑式语言",
+     "en": "Prolog",
+     "year": 1972,
+     "note": "科尔梅罗尔等创造的逻辑编程语言，以规则与合一推理求解，用于符号 AI 与语言处理。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sw_smalltalk",
+     "name": "Smalltalk 语言",
+     "en": "Smalltalk",
+     "year": 1972,
+     "note": "凯与英格尔斯在施乐帕克发展的纯面向对象语言，消息传递范式影响深远。",
+     "deps": [
+      "sw_lisp"
+     ]
+    },
+    {
+     "id": "sw_ml_language",
+     "name": "ML 函数式语言",
+     "en": "ML programming language",
+     "year": 1973,
+     "note": "米尔纳为定理证明器元语言设计的函数式语言，确立类型推断机制。",
+     "deps": [
+      "sw_lisp"
+     ]
+    },
+    {
+     "id": "sw_ada_language",
+     "name": "Ada 语言",
+     "en": "Ada",
+     "year": 1980,
+     "note": "美国国防部主导研制的高可靠大型系统语言，强调强类型与并发任务。",
+     "deps": [
+      "sw_pascal"
+     ]
+    },
+    {
+     "id": "sw_cpp_language",
+     "name": "C++ 语言",
+     "en": "C++",
+     "year": 1985,
+     "note": "斯特劳斯特鲁普在 C 上扩展类与泛型的语言，兼顾效率与抽象，支撑大型软件工程。",
+     "deps": [
+      "sw_c_language"
+     ]
+    },
+    {
+     "id": "sw_verilog_hdl",
+     "name": "Verilog 硬件描述语言",
+     "en": "Verilog HDL",
+     "year": 1985,
+     "note": "以类 C 语法描述数字电路行为的硬件描述语言，支撑芯片设计与仿真验证。",
+     "deps": [
+      "sw_c_language"
+     ]
+    },
+    {
+     "id": "sw_perl_language",
+     "name": "Perl 脚本语言",
+     "en": "Perl",
+     "year": 1987,
+     "note": "沃利斯创造的文本处理脚本语言，以正则表达式集成著称，曾主导早期网站开发。",
+     "deps": [
+      "sw_c_language"
+     ]
+    },
+    {
+     "id": "sw_haskell_language",
+     "name": "Haskell 惰性函数式语言",
+     "en": "Haskell",
+     "year": 1990,
+     "note": "学界联合设计的纯函数式惰性语言，以类型系统与单子抽象推动语言研究。",
+     "deps": [
+      "sw_ml_language"
+     ]
+    },
+    {
+     "id": "sw_python_language",
+     "name": "Python 语言",
+     "en": "Python",
+     "year": 1991,
+     "note": "范罗苏姆创造的清晰易读的通用脚本语言，如今主导数据科学与 AI 应用生态。",
+     "deps": [
+      "sw_c_language"
+     ]
+    },
+    {
+     "id": "sw_lua_language",
+     "name": "Lua 嵌入式脚本语言",
+     "en": "Lua",
+     "year": 1993,
+     "note": "巴西团队设计的轻量嵌入式脚本语言，广泛用于游戏与设备内的可编程扩展。",
+     "deps": [
+      "sw_c_language"
+     ]
+    },
+    {
+     "id": "sw_java_language",
+     "name": "Java 语言",
+     "en": "Java",
+     "year": 1995,
+     "note": "戈斯林团队创造的跨平台面向对象语言，以字节码虚拟机实现一次编写到处运行。",
+     "deps": [
+      "sw_cpp_language"
+     ]
+    },
+    {
+     "id": "sw_javascript_language",
+     "name": "JavaScript 语言",
+     "en": "JavaScript",
+     "year": 1995,
+     "note": "艾克为网页浏览器十天设计的脚本语言，如今驱动浏览器端与服务器端应用生态。",
+     "deps": [
+      "www",
+      "sw_c_language"
+     ]
+    },
+    {
+     "id": "sw_go_language",
+     "name": "Go 语言",
+     "en": "Go",
+     "year": 2009,
+     "note": "谷歌创造的简洁并发语言，以协程与快速编译支撑云基础设施服务开发。",
+     "deps": [
+      "sw_c_language"
+     ]
+    },
+    {
+     "id": "sw_rust_language",
+     "name": "Rust 语言",
+     "en": "Rust",
+     "year": 2015,
+     "note": "以所有权系统保证内存安全的系统语言，2015 年发布 1.0 后广泛进入底层软件。",
+     "deps": [
+      "sw_cpp_language"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "编译与执行系统",
+   "items": [
+    {
+     "id": "sw_compiler",
+     "name": "编译器",
+     "en": "Compiler",
+     "year": 1952,
+     "note": "霍珀的 A-0 起将高级语言自动翻译为机器码的程序，使程序员摆脱手写汇编。",
+     "deps": [
+      "sw_assembly_language",
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_interpreter",
+     "name": "解释器",
+     "en": "Interpreter",
+     "year": 1958,
+     "note": "逐条读取并直接执行源程序的系统，Lisp 起实现交互式编程环境的基础设施。",
+     "deps": [
+      "sw_compiler"
+     ]
+    },
+    {
+     "id": "sw_linker",
+     "name": "链接器",
+     "en": "Linker",
+     "year": 1958,
+     "note": "随 FORTRAN 分离编译出现的工具，把多个目标模块拼装为可执行程序。",
+     "deps": [
+      "sw_fortran"
+     ]
+    },
+    {
+     "id": "sw_garbage_collection",
+     "name": "自动垃圾回收",
+     "en": "Garbage collection",
+     "year": 1959,
+     "note": "麦卡锡为 Lisp 设计的运行时自动回收无用内存机制，解放程序员的手工内存管理。",
+     "deps": [
+      "sw_lisp"
+     ]
+    },
+    {
+     "id": "sw_debugger",
+     "name": "调试器",
+     "en": "Debugger",
+     "year": 1961,
+     "note": "允许断点、单步与变量观察的程序诊断工具，自 DDT 起成为开发流程标配。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_parsing_technique",
+     "name": "语法分析技术",
+     "en": "Parsing techniques",
+     "year": 1965,
+     "note": "克努特的 LR 分析等自底向上语法理论，使编译器前端可由文法自动生成。",
+     "deps": [
+      "sw_algol",
+      "sw_compiler"
+     ]
+    },
+    {
+     "id": "sw_compiler_optimization",
+     "name": "编译器优化技术",
+     "en": "Compiler optimization",
+     "year": 1965,
+     "note": "寄存器分配、公共子表达式消除等变换，使编译出的代码逼近手工调优性能。",
+     "deps": [
+      "sw_compiler"
+     ]
+    },
+    {
+     "id": "sw_bytecode_vm",
+     "name": "字节码虚拟机",
+     "en": "Bytecode virtual machine",
+     "year": 1973,
+     "note": "以栈式中间码实现跨平台执行的技术，从 Pascal 码到 Java 虚拟机一脉相承。",
+     "deps": [
+      "sw_pascal"
+     ]
+    },
+    {
+     "id": "sw_build_automation",
+     "name": "软件构建自动化",
+     "en": "Build automation",
+     "year": 1976,
+     "note": "以 make 为代表的构建工具按依赖关系增量编译项目，规范了软件的自动构建流程。",
+     "deps": [
+      "sw_c_language"
+     ]
+    },
+    {
+     "id": "sw_static_analysis",
+     "name": "静态代码分析",
+     "en": "Static code analysis",
+     "year": 1977,
+     "note": "约翰逊的 lint 起在不运行程序的前提下检查缺陷与风格问题，融入质量门禁。",
+     "deps": [
+      "sw_compiler"
+     ]
+    },
+    {
+     "id": "sw_perf_profiler",
+     "name": "程序性能剖析工具",
+     "en": "Profiling tools",
+     "year": 1982,
+     "note": "采样与插桩测量程序运行时间分布的工具，指引性能瓶颈定位与优化。",
+     "deps": [
+      "sw_debugger"
+     ]
+    },
+    {
+     "id": "sw_dynamic_linking",
+     "name": "动态链接技术",
+     "en": "Dynamic linking",
+     "year": 1988,
+     "note": "程序运行时载入共享库的技术，节省内存并使库可独立升级。",
+     "deps": [
+      "sw_linker"
+     ]
+    },
+    {
+     "id": "sw_package_manager",
+     "name": "软件包管理器",
+     "en": "Package manager",
+     "year": 1994,
+     "note": "自动完成软件包下载、依赖解析与安装升级的工具，重塑了软件分发方式。",
+     "deps": [
+      "internet"
+     ]
+    },
+    {
+     "id": "sw_jit_compilation",
+     "name": "即时编译技术",
+     "en": "Just-in-time compilation",
+     "year": 1999,
+     "note": "运行时将热点字节码编译为本地机器码的技术，兼顾可移植性与执行性能。",
+     "deps": [
+      "sw_bytecode_vm",
+      "sw_compiler_optimization"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "操作系统",
+   "items": [
+    {
+     "id": "sw_batch_os",
+     "name": "批处理操作系统",
+     "en": "Batch processing operating system",
+     "year": 1956,
+     "note": "GM-NAA I/O 起自动依次执行作业队列的操作系统，免除人工逐个上机的等待。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_virtual_memory",
+     "name": "虚拟内存",
+     "en": "Virtual memory",
+     "year": 1959,
+     "note": "阿特拉斯计算机引入的按需调页技术，让程序使用超出物理内存的地址空间。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_time_sharing_os",
+     "name": "分时操作系统",
+     "en": "Time-sharing operating system",
+     "year": 1961,
+     "note": "CTSS 起以时间片轮转让多用户同时交互使用一台计算机，奠定多用户计算模式。",
+     "deps": [
+      "sw_batch_os"
+     ]
+    },
+    {
+     "id": "sw_memory_protection",
+     "name": "内存保护与特权级",
+     "en": "Memory protection",
+     "year": 1962,
+     "note": "以硬件界域与特权指令隔离进程与内核，防止程序相互破坏，保障系统稳定。",
+     "deps": [
+      "sw_virtual_memory"
+     ]
+    },
+    {
+     "id": "sw_semaphore_sync",
+     "name": "信号量与进程同步",
+     "en": "Semaphore synchronization",
+     "year": 1965,
+     "note": "狄克斯特拉提出的信号量原语解决并发进程互斥与同步，是并发编程的基础设施。",
+     "deps": [
+      "sw_time_sharing_os"
+     ]
+    },
+    {
+     "id": "sw_process_model",
+     "name": "进程与线程模型",
+     "en": "Process and thread model",
+     "year": 1968,
+     "note": "以进程抽象运行程序及其资源，后发展出更轻量的线程，构成任务管理的核心概念。",
+     "deps": [
+      "sw_semaphore_sync"
+     ]
+    },
+    {
+     "id": "sw_unix_os",
+     "name": "UNIX 及类 UNIX 操作系统",
+     "en": "UNIX and UNIX-like operating systems",
+     "year": 1969,
+     "note": "汤普逊与里奇以 C 语言重写的多用户系统，其设计哲学衍生出 BSD、Linux 等谱系。",
+     "deps": [
+      "sw_time_sharing_os"
+     ]
+    },
+    {
+     "id": "sw_hierarchical_fs",
+     "name": "分层文件系统",
+     "en": "Hierarchical file system",
+     "year": 1969,
+     "note": "以树形目录统一组织存储数据的方式，随 Multics 与 UNIX 成为通用范式。",
+     "deps": [
+      "sw_time_sharing_os"
+     ]
+    },
+    {
+     "id": "sw_shell_scripting",
+     "name": "Shell 脚本编程",
+     "en": "Shell scripting",
+     "year": 1971,
+     "note": "在命令解释器中组合命令与控制流的自动化语言，是系统运维的看家工具。",
+     "deps": [
+      "sw_unix_os"
+     ]
+    },
+    {
+     "id": "sw_hypervisor",
+     "name": "虚拟机监视器",
+     "en": "Hypervisor",
+     "year": 1972,
+     "note": "IBM CP 系统开创的多虚拟机层，在一台物理机上运行多个完整操作系统。",
+     "deps": [
+      "sw_time_sharing_os"
+     ]
+    },
+    {
+     "id": "sw_microcomputer_os",
+     "name": "微型计算机操作系统",
+     "en": "Microcomputer operating system",
+     "year": 1974,
+     "note": "面向八位微机的磁盘操作系统，CP/M 确立随后个人计算机操作系统的基本形态。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_realtime_os",
+     "name": "实时操作系统",
+     "en": "Real-time operating system",
+     "year": 1981,
+     "note": "保证任务在确定时限内响应的操作系统，用于工业控制、航电与通信设备。",
+     "deps": [
+      "sw_process_model"
+     ]
+    },
+    {
+     "id": "sw_microkernel_os",
+     "name": "微内核架构",
+     "en": "Microkernel operating system",
+     "year": 1985,
+     "note": "把服务移出内核只保留最小机制的架构，Mach 与 QNX 提升了系统的模块化与可靠。",
+     "deps": [
+      "sw_unix_os"
+     ]
+    },
+    {
+     "id": "sw_posix_standard",
+     "name": "POSIX 可移植标准",
+     "en": "POSIX standard",
+     "year": 1988,
+     "note": "IEEE 制定的操作系统接口标准，使应用软件在各类 UNIX 系统间可移植。",
+     "deps": [
+      "sw_unix_os"
+     ]
+    },
+    {
+     "id": "sw_mobile_os",
+     "name": "移动操作系统",
+     "en": "Mobile operating system",
+     "year": 2008,
+     "note": "面向触屏终端、整合应用商店与传感器框架的操作系统，开启移动计算时代。",
+     "deps": [
+      "sw_unix_os",
+      "internet"
+     ]
+    },
+    {
+     "id": "sw_container_tech",
+     "name": "操作系统容器",
+     "en": "OS-level containerization",
+     "year": 2008,
+     "note": "以命名空间与控制组隔离进程运行环境的技术，使应用打包部署轻量化标准化。",
+     "deps": [
+      "sw_unix_os"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "数据管理",
+   "items": [
+    {
+     "id": "sw_oltp",
+     "name": "联机事务处理",
+     "en": "Online transaction processing",
+     "year": 1960,
+     "note": "SABRE 订票系统开创的实时联机更新与查询模式，支撑订票与银行等关键业务。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_hier_net_db",
+     "name": "层次与网状数据库",
+     "en": "Hierarchical and network databases",
+     "year": 1966,
+     "note": "IMS 等以记录指针导航的数据模型，在关系数据库普及前承担大型业务数据管理。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_relational_model",
+     "name": "关系数据模型",
+     "en": "Relational model",
+     "year": 1970,
+     "note": "科德以关系与集合运算描述数据的思想，使数据库独立于物理存储，引发产业革命。",
+     "deps": [
+      "mathematics",
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_sql_language",
+     "name": "SQL 结构化查询语言",
+     "en": "SQL",
+     "year": 1974,
+     "note": "IBM 研究院为关系数据库设计的声明式查询语言，后成为国际标准。",
+     "deps": [
+      "sw_relational_model"
+     ]
+    },
+    {
+     "id": "sw_er_modeling",
+     "name": "实体关系建模",
+     "en": "Entity-relationship modeling",
+     "year": 1976,
+     "note": "陈品山的实体联系图方法，成为数据库概念设计的主流表达工具。",
+     "deps": [
+      "sw_relational_model"
+     ]
+    },
+    {
+     "id": "sw_query_optimization",
+     "name": "查询优化器",
+     "en": "Query optimizer",
+     "year": 1979,
+     "note": "System R 代价估算选择执行计划的技术，使声明式 SQL 无需人工指定访问路径。",
+     "deps": [
+      "sw_sql_language"
+     ]
+    },
+    {
+     "id": "sw_acid_txn",
+     "name": "事务 ACID 特性与并发控制",
+     "en": "ACID transactions",
+     "year": 1983,
+     "note": "原子一致隔离持久的数据库事务概念与加锁并发控制，保障多用户数据正确性。",
+     "deps": [
+      "sw_oltp"
+     ]
+    },
+    {
+     "id": "sw_object_db",
+     "name": "面向对象数据库",
+     "en": "Object-oriented database",
+     "year": 1989,
+     "note": "以对象与继承直接持久化程序数据的数据库体系，用于工程设计与复杂结构管理。",
+     "deps": [
+      "sw_relational_model"
+     ]
+    },
+    {
+     "id": "sw_data_warehouse",
+     "name": "数据仓库",
+     "en": "Data warehouse",
+     "year": 1990,
+     "note": "英蒙确立的面向分析主题的集成历史数据存储体系，支撑企业决策系统。",
+     "deps": [
+      "sw_sql_language"
+     ]
+    },
+    {
+     "id": "sw_olap_cube",
+     "name": "联机分析处理",
+     "en": "Online analytical processing",
+     "year": 1993,
+     "note": "以多维立方体与上钻下钻支持交互式汇总分析的技术，成为商业智能核心。",
+     "deps": [
+      "sw_data_warehouse"
+     ]
+    },
+    {
+     "id": "sw_data_mining",
+     "name": "数据挖掘",
+     "en": "Data mining",
+     "year": 1996,
+     "note": "从大规模数据中发现关联规则与模式的学科，超市篮分析与推荐由此兴起。",
+     "deps": [
+      "sw_data_warehouse"
+     ]
+    },
+    {
+     "id": "sw_mapreduce",
+     "name": "MapReduce 分布式计算模型",
+     "en": "MapReduce",
+     "year": 2004,
+     "note": "谷歌提出的分片映射归约编程模型，使普通机器集群可处理超大规模数据。",
+     "deps": [
+      "internet"
+     ]
+    },
+    {
+     "id": "sw_columnar_db",
+     "name": "列式数据库",
+     "en": "Column-oriented database",
+     "year": 2005,
+     "note": "按列组织存储的数据库体系，提高分析型查询的压缩比与扫描效率。",
+     "deps": [
+      "sw_mapreduce"
+     ]
+    },
+    {
+     "id": "sw_nosql_db",
+     "name": "NoSQL 数据库",
+     "en": "NoSQL databases",
+     "year": 2009,
+     "note": "以键值、文档等宽松模式换取水平扩展的数据库运动，服务互联网海量负载。",
+     "deps": [
+      "sw_mapreduce",
+      "sw_relational_model"
+     ]
+    },
+    {
+     "id": "sw_data_lake",
+     "name": "数据湖",
+     "en": "Data lake",
+     "year": 2010,
+     "note": "以原始格式集中保存海量多源数据的存储体系，为大数据分析提供统一底座。",
+     "deps": [
+      "sw_mapreduce"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "软件工程方法",
+   "items": [
+    {
+     "id": "sw_flowchart",
+     "name": "程序流程图",
+     "en": "Program flowchart",
+     "year": 1947,
+     "note": "戈德斯坦与冯·诺依曼倡导的框图表示法，使程序逻辑可先于编码被规划交流。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_subroutine_library",
+     "name": "子程序与程序库",
+     "en": "Subroutine and program library",
+     "year": 1949,
+     "note": "EDSAC 建立的可复用子程序库，开创代码复用与库管理的工程实践。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_software_testing",
+     "name": "软件系统化测试",
+     "en": "Systematic software testing",
+     "year": 1958,
+     "note": "测试从调试中分离为独立验证活动，逐步发展出用例设计与覆盖度量体系。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_oop_paradigm",
+     "name": "面向对象编程",
+     "en": "Object-oriented programming",
+     "year": 1967,
+     "note": "以类封装数据与行为的编程范式，自 Simula 起成为大型软件组织的主流方法。",
+     "deps": [
+      "sw_algol"
+     ]
+    },
+    {
+     "id": "sw_software_engineering",
+     "name": "软件工程学科",
+     "en": "Software engineering",
+     "year": 1968,
+     "note": "应对软件危机的 NATO 会议提出以工程化方法开发维护软件，确立独立学科。",
+     "deps": [
+      "sw_software_testing"
+     ]
+    },
+    {
+     "id": "sw_structured_programming",
+     "name": "结构化编程",
+     "en": "Structured programming",
+     "year": 1968,
+     "note": "狄克斯特拉反对滥用跳转的著名信件确立顺序选择循环三种控制结构方法论。",
+     "deps": [
+      "sw_flowchart"
+     ]
+    },
+    {
+     "id": "sw_formal_verification",
+     "name": "程序正确性形式验证",
+     "en": "Formal program verification",
+     "year": 1969,
+     "note": "霍尔逻辑等以数学方法证明程序符合规约，用于高安全等级软件验证。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "sw_waterfall_model",
+     "name": "瀑布模型",
+     "en": "Waterfall model",
+     "year": 1970,
+     "note": "罗伊斯描述的按阶段推进的开发生命周期模型，确立需求设计编码测试阶段划分。",
+     "deps": [
+      "sw_software_engineering"
+     ]
+    },
+    {
+     "id": "sw_modular_design",
+     "name": "模块化与信息隐藏",
+     "en": "Modular design and information hiding",
+     "year": 1972,
+     "note": "帕纳斯主张以接口与秘密划分模块，成为软件分解与封装设计的基石原则。",
+     "deps": [
+      "sw_structured_programming"
+     ]
+    },
+    {
+     "id": "sw_ide_tool",
+     "name": "集成开发环境",
+     "en": "Integrated development environment",
+     "year": 1983,
+     "note": "将编辑、编译、调试集于统一界面的工具，显著提升程序员的日常效率。",
+     "deps": [
+      "sw_debugger",
+      "sw_c_language"
+     ]
+    },
+    {
+     "id": "sw_cvs_vcs",
+     "name": "集中式版本控制",
+     "en": "Centralized version control",
+     "year": 1990,
+     "note": "CVS 起的中央仓库版本管理，支持多人协作与分支合并，SVN 为其完善形态。",
+     "deps": [
+      "sw_unix_os"
+     ]
+    },
+    {
+     "id": "sw_design_patterns",
+     "name": "设计模式",
+     "en": "Design patterns",
+     "year": 1994,
+     "note": "四人帮将常见面向对象设计经验命名为可复用模式，成为软件设计通用词汇。",
+     "deps": [
+      "sw_oop_paradigm"
+     ]
+    },
+    {
+     "id": "sw_test_automation",
+     "name": "测试自动化框架",
+     "en": "Test automation frameworks",
+     "year": 1994,
+     "note": "贝克的 SUnit 起以框架自动运行断言用例，xUnit 系列成为回归测试基础设施。",
+     "deps": [
+      "sw_software_testing"
+     ]
+    },
+    {
+     "id": "sw_software_architecture",
+     "name": "软件架构方法",
+     "en": "Software architecture methods",
+     "year": 1994,
+     "note": "将系统级结构与质量属性作为显式设计对象的工程方法，形成架构描述语言。",
+     "deps": [
+      "sw_software_engineering"
+     ]
+    },
+    {
+     "id": "sw_uml_modeling",
+     "name": "统一建模语言",
+     "en": "Unified Modeling Language",
+     "year": 1997,
+     "note": "统一多种面向对象建模记法的标准语言，用于软件结构与行为的图形化规约。",
+     "deps": [
+      "sw_oop_paradigm"
+     ]
+    },
+    {
+     "id": "sw_refactoring",
+     "name": "代码重构",
+     "en": "Code refactoring",
+     "year": 1999,
+     "note": "在不改变外部行为前提下改善代码内部结构的系统化方法，配合测试保障安全。",
+     "deps": [
+      "sw_oop_paradigm"
+     ]
+    },
+    {
+     "id": "sw_continuous_integration",
+     "name": "持续集成",
+     "en": "Continuous integration",
+     "year": 2001,
+     "note": "频繁合并代码并自动构建测试的实践，CruiseControl 起以服务器自动执行。",
+     "deps": [
+      "sw_test_automation",
+      "sw_cvs_vcs"
+     ]
+    },
+    {
+     "id": "sw_agile_methods",
+     "name": "敏捷开发方法",
+     "en": "Agile software development",
+     "year": 2001,
+     "note": "敏捷宣言确立的迭代增量交付与自适应规划方法，含 Scrum 与极限编程等流派。",
+     "deps": [
+      "sw_waterfall_model"
+     ]
+    },
+    {
+     "id": "sw_git_dvcs",
+     "name": "分布式版本控制",
+     "en": "Distributed version control",
+     "year": 2005,
+     "note": "每个克隆都是完整仓库的版本管理方式，托瓦兹的 Git 成为协作开发事实标准。",
+     "deps": [
+      "sw_cvs_vcs"
+     ]
+    },
+    {
+     "id": "sw_devops_practice",
+     "name": "DevOps",
+     "en": "DevOps",
+     "year": 2009,
+     "note": "融合开发与运维的自动化协作文化与实践，实现高频可靠的应用交付。",
+     "deps": [
+      "sw_continuous_integration",
+      "sw_agile_methods"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "应用软件与开源生态",
+   "items": [
+    {
+     "id": "sw_cad_software",
+     "name": "计算机辅助设计软件",
+     "en": "Computer-aided design software",
+     "year": 1963,
+     "note": "萨瑟兰的画板系统开创交互式图形设计，CAD 软件成为工程与建筑设计的核心工具。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_tp_monitor",
+     "name": "事务监控中间件",
+     "en": "Transaction processing monitor",
+     "year": 1969,
+     "note": "CICS 开创的联机事务管理软件，居应用与数据库之间调度大量并发交易。",
+     "deps": [
+      "sw_oltp"
+     ]
+    },
+    {
+     "id": "sw_word_processing",
+     "name": "文字处理软件",
+     "en": "Word processing software",
+     "year": 1976,
+     "note": "从专用文字处理机演化为通用软件，完成文档编辑排版与打印的普及化。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_spreadsheet_software",
+     "name": "电子表格软件",
+     "en": "Spreadsheet software",
+     "year": 1979,
+     "note": "VisiCalc 确立单元格与公式重算的范式，成为个人计算机的杀手级应用。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_scientific_library",
+     "name": "科学计算程序库",
+     "en": "Scientific computing libraries",
+     "year": 1979,
+     "note": "LINPACK 与 BLAS 等数值子程序库，使科学与工程计算可复用经过验证的算法。",
+     "deps": [
+      "sw_fortran"
+     ]
+    },
+    {
+     "id": "sw_gnu_project",
+     "name": "GNU 计划与工具链",
+     "en": "GNU Project and toolchain",
+     "year": 1983,
+     "note": "斯托曼发起的自由软件计划，产出编译器与编辑器等完整工具链。",
+     "deps": [
+      "sw_unix_os"
+     ]
+    },
+    {
+     "id": "sw_desktop_publishing",
+     "name": "桌面出版软件",
+     "en": "Desktop publishing software",
+     "year": 1985,
+     "note": "个人计算机上完成排版与激光照排的软件体系，革新印刷出版流程。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "sw_gpl_license",
+     "name": "GPL 自由软件许可证",
+     "en": "GPL license",
+     "year": 1989,
+     "note": "保障使用者运行研究修改分发自由的著佐权许可证，确立开源法律框架基型。",
+     "deps": [
+      "sw_gnu_project"
+     ]
+    },
+    {
+     "id": "sw_office_suite",
+     "name": "集成办公软件套件",
+     "en": "Integrated office suite",
+     "year": 1990,
+     "note": "文字处理、电子表格与演示文稿的组合套件，成为办公电脑的标准配置。",
+     "deps": [
+      "sw_word_processing",
+      "sw_spreadsheet_software"
+     ]
+    },
+    {
+     "id": "sw_erp_system",
+     "name": "企业资源计划系统",
+     "en": "Enterprise resource planning",
+     "year": 1990,
+     "note": "由物料需求计划扩展整合企业财务供应链等流程的管理软件，重塑企业管理信息化。",
+     "deps": [
+      "sw_oltp"
+     ]
+    },
+    {
+     "id": "sw_linux_kernel",
+     "name": "Linux 内核",
+     "en": "Linux kernel",
+     "year": 1991,
+     "note": "托瓦兹发布的自由类 UNIX 内核，与 GNU 工具构成服务器与安卓设备的基础。",
+     "deps": [
+      "sw_unix_os",
+      "sw_gnu_project"
+     ]
+    },
+    {
+     "id": "sw_game_engine",
+     "name": "游戏引擎",
+     "en": "Game engine",
+     "year": 1993,
+     "note": "将渲染物理与脚本等通用功能抽取为可复用框架，形成游戏工业化的技术底座。",
+     "deps": [
+      "sw_c_language"
+     ]
+    },
+    {
+     "id": "sw_message_queue",
+     "name": "消息队列中间件",
+     "en": "Message-oriented middleware",
+     "year": 1993,
+     "note": "以异步消息队列解耦分布式应用的技术，支撑企业级可靠数据交换。",
+     "deps": [
+      "sw_tp_monitor"
+     ]
+    },
+    {
+     "id": "sw_open_source_db",
+     "name": "开源关系数据库",
+     "en": "Open-source relational databases",
+     "year": 1995,
+     "note": "PostgreSQL 与 MySQL 等开源数据库，使关系数据库技术普惠至所有开发者。",
+     "deps": [
+      "sw_sql_language",
+      "sw_gpl_license"
+     ]
+    },
+    {
+     "id": "sw_open_source_movement",
+     "name": "开源软件运动",
+     "en": "Open source software movement",
+     "year": 1998,
+     "note": "开放源代码促进会确立开源定义与协作社区模式，催生现代软件生产方式变革。",
+     "deps": [
+      "sw_gpl_license"
+     ]
+    },
+    {
+     "id": "sw_saas_model",
+     "name": "软件即服务",
+     "en": "Software as a service",
+     "year": 1999,
+     "note": "以订阅方式经网络交付软件的模式，免去本地安装维护，重塑软件产业形态。",
+     "deps": [
+      "internet",
+      "www"
+     ]
+    },
+    {
+     "id": "sw_web_framework",
+     "name": "Web 应用开发框架",
+     "en": "Web application framework",
+     "year": 2005,
+     "note": "约定优于配置的框架结构化 Web 开发，大幅降低动态网站与服务的构建门槛。",
+     "deps": [
+      "www",
+      "sw_oop_paradigm"
+     ]
+    }
+   ]
+  }
+ ]
+}

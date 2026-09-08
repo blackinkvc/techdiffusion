@@ -1,0 +1,1382 @@
+{
+ "cat": "basic",
+ "catName": "科学基础与方法",
+ "sub": "biosci",
+ "subName": "生命科学研究",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "optics",
+  "mathematics",
+  "chemistry",
+  "physics",
+  "electromagnetism",
+  "scientific_method",
+  "photography",
+  "evolution",
+  "dna",
+  "genetic_engineering",
+  "computer",
+  "internet",
+  "lasers",
+  "radio",
+  "gps"
+ ],
+ "families": [
+  {
+   "name": "生物形态与显微观测",
+   "items": [
+    {
+     "id": "anatomical_atlas",
+     "name": "人体解剖图谱",
+     "en": "Human anatomical atlas",
+     "year": 1543,
+     "note": "维萨里《人体的构造》以精确手绘确立系统解剖图谱传统，为生物学形态研究奠基。",
+     "deps": [
+      "printing"
+     ]
+    },
+    {
+     "id": "compound_microscope",
+     "name": "复式显微镜",
+     "en": "Compound microscope",
+     "year": 1590,
+     "note": "詹森父子以双透镜组放大微小物体，成为观察细胞与微生物的基本仪器。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "single_lens_microscope",
+     "name": "单透镜显微镜",
+     "en": "Single-lens microscope",
+     "year": 1674,
+     "note": "列文虎克磨制高倍单透镜，首次系统观察细菌、原生动物与毛细血管循环。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "microtome",
+     "name": "组织切片机",
+     "en": "Microtome",
+     "year": 1770,
+     "note": "以机械方式把组织切成透明薄片供透射观察，是组织学与病理学必备设备。",
+     "deps": [
+      "compound_microscope"
+     ]
+    },
+    {
+     "id": "photomicrography",
+     "name": "显微摄影",
+     "en": "Photomicrography",
+     "year": 1840,
+     "note": "把摄影术接驳显微镜记录视野图像，使形态观察结果可留档与发表。",
+     "deps": [
+      "photography",
+      "compound_microscope"
+     ]
+    },
+    {
+     "id": "tissue_staining",
+     "name": "组织染色技术",
+     "en": "Tissue staining",
+     "year": 1865,
+     "note": "以染料使不同细胞成分显色区分，配合切片使组织学观察成为标准流程。",
+     "deps": [
+      "microtome",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "fluorescence_microscope",
+     "name": "荧光显微镜",
+     "en": "Fluorescence microscope",
+     "year": 1904,
+     "note": "以紫外激发自发荧光观察标本，后与荧光染料结合成为分子定位成像手段。",
+     "deps": [
+      "compound_microscope"
+     ]
+    },
+    {
+     "id": "electron_microscope",
+     "name": "电子显微镜",
+     "en": "Electron microscope",
+     "year": 1931,
+     "note": "鲁斯卡用电子束替代光成像，突破光学分辨极限，揭示亚细胞结构与病毒形态。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "phase_contrast_microscope",
+     "name": "相差显微镜",
+     "en": "Phase-contrast microscope",
+     "year": 1934,
+     "note": "泽尼克把透明活细胞的相位差转为明暗对比，实现不经染色的活体观察。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "scanning_electron_microscope",
+     "name": "扫描电子显微镜",
+     "en": "Scanning electron microscope",
+     "year": 1937,
+     "note": "以聚焦电子束逐点扫描样品表面，得到立体感强的三维表面形貌图像。",
+     "deps": [
+      "electron_microscope"
+     ]
+    },
+    {
+     "id": "differential_interference_microscope",
+     "name": "微分干涉显微镜",
+     "en": "Differential interference contrast microscope",
+     "year": 1952,
+     "note": "诺马尔斯基以偏振光产生浮雕式对比，无色差地观察活体细胞立体结构。",
+     "deps": [
+      "phase_contrast_microscope"
+     ]
+    },
+    {
+     "id": "confocal_microscope",
+     "name": "共聚焦显微镜",
+     "en": "Confocal microscope",
+     "year": 1957,
+     "note": "点光源与针孔滤除离焦光，实现荧光标本的光学切片与三维重建。",
+     "deps": [
+      "fluorescence_microscope"
+     ]
+    },
+    {
+     "id": "protein_xray_crystallography",
+     "name": "蛋白质X射线晶体学",
+     "en": "Protein X-ray crystallography",
+     "year": 1958,
+     "note": "解析肌红蛋白等大分子晶体衍射图，获得生物大分子原子级三维结构。",
+     "deps": [
+      "chemistry",
+      "physics"
+     ]
+    },
+    {
+     "id": "cryo_electron_microscopy",
+     "name": "冷冻电镜",
+     "en": "Cryo-electron microscopy",
+     "year": 1984,
+     "note": "把含水样品快速玻璃化后低温成像，无需结晶即可解析蛋白复合物结构。",
+     "deps": [
+      "electron_microscope"
+     ]
+    },
+    {
+     "id": "atomic_force_microscope_biology",
+     "name": "生物原子力显微镜",
+     "en": "Atomic force microscopy in biology",
+     "year": 1986,
+     "note": "以微悬臂探针扫描样品表面，可在近生理条件下成像并测单分子力学。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "calcium_imaging",
+     "name": "荧光钙成像",
+     "en": "Fluorescence calcium imaging",
+     "year": 1989,
+     "note": "以钙指示剂荧光强度变化实时观测细胞内钙信号，研究神经与细胞活动。",
+     "deps": [
+      "fluorescence_microscope"
+     ]
+    },
+    {
+     "id": "green_fluorescent_protein_marker",
+     "name": "绿色荧光蛋白标记",
+     "en": "Green fluorescent protein tagging",
+     "year": 1994,
+     "note": "把水母荧光蛋白与目标蛋白融合表达，实现活细胞内蛋白定位与动态追踪。",
+     "deps": [
+      "dna"
+     ]
+    },
+    {
+     "id": "light_sheet_microscopy",
+     "name": "光片荧光显微术",
+     "en": "Light-sheet fluorescence microscopy",
+     "year": 2004,
+     "note": "以薄片激光从侧面照明样品，成像快、光毒性低，适于胚胎等大样品三维成像。",
+     "deps": [
+      "lasers",
+      "confocal_microscope"
+     ]
+    },
+    {
+     "id": "super_resolution_microscopy",
+     "name": "超分辨荧光显微术",
+     "en": "Super-resolution microscopy",
+     "year": 2006,
+     "note": "以受激发射损耗或单分子定位突破衍射极限，分辨纳米级亚细胞结构。",
+     "deps": [
+      "fluorescence_microscope",
+      "lasers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "分类学与生物多样性记录",
+   "items": [
+    {
+     "id": "herbarium_specimen",
+     "name": "腊叶标本与标本馆",
+     "en": "Herbarium specimens",
+     "year": 1545,
+     "note": "把植物压制干燥装订成册并系统收藏，为植物分类与比对提供实物档案。",
+     "deps": [
+      "paper"
+     ]
+    },
+    {
+     "id": "linnaean_classification",
+     "name": "林奈分类体系",
+     "en": "Linnaean taxonomy",
+     "year": 1735,
+     "note": "以纲目属种层级与双名命名统一动植物分类，建立现代生物命名框架。",
+     "deps": [
+      "scientific_method"
+     ]
+    },
+    {
+     "id": "binomial_nomenclature",
+     "name": "双名法命名",
+     "en": "Binomial nomenclature",
+     "year": 1753,
+     "note": "以属名加种加词唯一命名物种，消除同名异物的混乱，通行于全部生物类群。",
+     "deps": [
+      "linnaean_classification"
+     ]
+    },
+    {
+     "id": "paleontological_reconstruction",
+     "name": "化石形态重建",
+     "en": "Fossil reconstruction",
+     "year": 1796,
+     "note": "居维叶依骨骼比例重建已灭绝动物，确立化石比较解剖研究范式。",
+     "deps": [
+      "anatomical_atlas"
+     ]
+    },
+    {
+     "id": "comparative_anatomy",
+     "name": "比较解剖学方法",
+     "en": "Comparative anatomy",
+     "year": 1800,
+     "note": "系统比较不同物种器官结构同源与差异，为分类和演化提供形态证据。",
+     "deps": [
+      "paleontological_reconstruction"
+     ]
+    },
+    {
+     "id": "zoogeographic_regions",
+     "name": "动物地理区划",
+     "en": "Zoogeographic regionalization",
+     "year": 1876,
+     "note": "华莱士按物种分布划分全球动物地理区，揭示生物分布的历史成因。",
+     "deps": [
+      "comparative_anatomy"
+     ]
+    },
+    {
+     "id": "nomenclature_codes",
+     "name": "生物命名法规",
+     "en": "Biological nomenclature codes",
+     "year": 1905,
+     "note": "以国际规则约束物种命名与模式标本引用，保证分类名称全球一致。",
+     "deps": [
+      "binomial_nomenclature"
+     ]
+    },
+    {
+     "id": "culture_collection",
+     "name": "菌种保藏库",
+     "en": "Microbial culture collection",
+     "year": 1925,
+     "note": "集中保藏标准菌株与模式菌株并鉴定编目，为研究与工业提供对照资源。"
+    },
+    {
+     "id": "biological_species_concept",
+     "name": "生物学物种概念",
+     "en": "Biological species concept",
+     "year": 1942,
+     "note": "以种群间实际能否交配生殖界定物种，为物种划分提供操作性标准。",
+     "deps": [
+      "evolution"
+     ]
+    },
+    {
+     "id": "cladistics",
+     "name": "支序分类学",
+     "en": "Cladistics",
+     "year": 1950,
+     "note": "亨尼希按共同衍征构建分支谱系，使分类反映演化亲缘关系。",
+     "deps": [
+      "comparative_anatomy"
+     ]
+    },
+    {
+     "id": "numerical_taxonomy",
+     "name": "数值分类学",
+     "en": "Numerical taxonomy",
+     "year": 1963,
+     "note": "对大量性状作数学聚类定量分类，为生物统计分类奠定计算基础。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "molecular_phylogenetics",
+     "name": "分子系统发育分析",
+     "en": "Molecular phylogenetics",
+     "year": 1967,
+     "note": "以核酸与蛋白质序列差异构建系统树，定量重建各物种演化谱系。",
+     "deps": [
+      "dna"
+     ]
+    },
+    {
+     "id": "dna_barcoding",
+     "name": "DNA条形码鉴定",
+     "en": "DNA barcoding",
+     "year": 2003,
+     "note": "以标准短序列比对快速鉴定物种，使生物多样性调查走向高通量分子化。",
+     "deps": [
+      "dna"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "细胞学与微生物培养体系",
+   "items": [
+    {
+     "id": "cell_nucleus_discovery",
+     "name": "细胞核发现与观察",
+     "en": "Observation of the cell nucleus",
+     "year": 1831,
+     "note": "布朗在兰科细胞中辨识出细胞核，细胞内部结构研究由此起步。",
+     "deps": [
+      "compound_microscope"
+     ]
+    },
+    {
+     "id": "cell_theory",
+     "name": "细胞学说",
+     "en": "Cell theory",
+     "year": 1839,
+     "note": "施莱登与施旺提出动植物皆由细胞构成，确立细胞为生命基本单位。",
+     "deps": [
+      "compound_microscope"
+     ]
+    },
+    {
+     "id": "mitosis_observation",
+     "name": "有丝分裂观察",
+     "en": "Observation of mitosis",
+     "year": 1879,
+     "note": "弗莱明以染色观察细胞分裂中的染色体行为，揭示体细胞增殖方式。",
+     "deps": [
+      "tissue_staining"
+     ]
+    },
+    {
+     "id": "pure_culture",
+     "name": "微生物纯培养技术",
+     "en": "Pure culture technique",
+     "year": 1881,
+     "note": "科赫以固体培养基分离单个菌落，使细菌种属的纯化与鉴定成为可能。",
+     "deps": [
+      "tissue_staining"
+     ]
+    },
+    {
+     "id": "gram_stain",
+     "name": "革兰染色法",
+     "en": "Gram staining",
+     "year": 1884,
+     "note": "按细胞壁结构把细菌分为革兰阳性与阴性两类，是细菌鉴定的基础染色。",
+     "deps": [
+      "pure_culture"
+     ]
+    },
+    {
+     "id": "petri_dish",
+     "name": "皮氏培养皿",
+     "en": "Petri dish",
+     "year": 1887,
+     "note": "彼特里设计的带盖扁圆培养皿，成为微生物纯培养与细胞培养的标准容器。",
+     "deps": [
+      "pure_culture"
+     ]
+    },
+    {
+     "id": "tissue_culture",
+     "name": "组织培养技术",
+     "en": "Tissue culture",
+     "year": 1907,
+     "note": "哈里森在体外培养蛙胚神经组织并见突起生长，开创离体细胞研究。",
+     "deps": [
+      "cell_theory"
+     ]
+    },
+    {
+     "id": "microinjection",
+     "name": "细胞显微注射",
+     "en": "Cell microinjection",
+     "year": 1911,
+     "note": "以显微操作针向单细胞注入物质，用于核移植与单细胞水平功能研究。",
+     "deps": [
+      "microtome",
+      "compound_microscope"
+     ]
+    },
+    {
+     "id": "ultracentrifugation",
+     "name": "超速离心技术",
+     "en": "Ultracentrifugation",
+     "year": 1925,
+     "note": "斯韦德贝里以极高转速分离大分子与细胞器，借沉降系数测定分子大小。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "organ_culture",
+     "name": "器官培养技术",
+     "en": "Organ culture technique",
+     "year": 1929,
+     "note": "把完整器官原基在体外培养保存其组织关系，用于胚胎发育与药物研究。",
+     "deps": [
+      "tissue_culture"
+     ]
+    },
+    {
+     "id": "plant_tissue_culture",
+     "name": "植物组织培养",
+     "en": "Plant tissue culture",
+     "year": 1939,
+     "note": "高特雷等用激素诱导植物愈伤组织长期培养，后发展为植物快速繁殖与育种手段。",
+     "deps": [
+      "tissue_culture"
+     ]
+    },
+    {
+     "id": "cell_fractionation",
+     "name": "细胞器分级分离",
+     "en": "Cell fractionation",
+     "year": 1946,
+     "note": "差速离心把匀浆细胞按组分逐级分离，供分别研究各细胞器功能。",
+     "deps": [
+      "ultracentrifugation"
+     ]
+    },
+    {
+     "id": "cryopreservation",
+     "name": "细胞冷冻保存",
+     "en": "Cell cryopreservation",
+     "year": 1949,
+     "note": "以甘油等保护剂深低温保存细胞，实现细胞系与生殖资源的长期保藏。",
+     "deps": [
+      "tissue_culture"
+     ]
+    },
+    {
+     "id": "continuous_cell_line",
+     "name": "传代细胞系建立",
+     "en": "Continuous cell lines",
+     "year": 1951,
+     "note": "以可无限传代的细胞系替代原代细胞，为病毒学与疫苗研制提供稳定基质。",
+     "deps": [
+      "tissue_culture"
+     ]
+    },
+    {
+     "id": "flow_cytometry",
+     "name": "流式细胞术",
+     "en": "Flow cytometry",
+     "year": 1953,
+     "note": "让细胞逐个通过光检测器计数并测荧光，可高速分析群体中细胞特征。",
+     "deps": [
+      "fluorescence_microscope"
+     ]
+    },
+    {
+     "id": "patch_clamp",
+     "name": "膜片钳技术",
+     "en": "Patch clamp technique",
+     "year": 1976,
+     "note": "以玻璃微电极封接膜片记录单通道离子电流，是细胞电生理研究核心手段。",
+     "deps": [
+      "microinjection"
+     ]
+    },
+    {
+     "id": "stem_cell_culture",
+     "name": "胚胎干细胞培养",
+     "en": "Embryonic stem cell culture",
+     "year": 1998,
+     "note": "汤姆森建立人胚胎干细胞系并保持多能性，为发育与再生研究提供细胞模型。",
+     "deps": [
+      "continuous_cell_line"
+     ]
+    },
+    {
+     "id": "induced_pluripotent_stem_cells",
+     "name": "诱导多能干细胞",
+     "en": "Induced pluripotent stem cells",
+     "year": 2006,
+     "note": "山中伸弥以转录因子把成体细胞重编程为多能态，规避胚胎来源伦理争议。",
+     "deps": [
+      "genetic_engineering"
+     ]
+    },
+    {
+     "id": "organoid_culture",
+     "name": "类器官培养",
+     "en": "Organoid culture",
+     "year": 2009,
+     "note": "以三维支架让干细胞自组装成微型器官，用于发育机制与药物筛选。",
+     "deps": [
+      "stem_cell_culture"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "生物化学与免疫分析技术",
+   "items": [
+    {
+     "id": "diastase_enzyme",
+     "name": "酶活性鉴定",
+     "en": "Enzyme activity assay",
+     "year": 1833,
+     "note": "佩恩从麦芽中提取可分解淀粉的酶并命名，确立酶催化研究的方向。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "chromatography",
+     "name": "色谱分离法",
+     "en": "Chromatography",
+     "year": 1903,
+     "note": "茨维特以吸附柱分离植物色素，开创按迁移差异分离混合物的色谱原理。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "enzyme_kinetics",
+     "name": "酶动力学参数测定",
+     "en": "Enzyme kinetic analysis",
+     "year": 1913,
+     "note": "米夏埃利斯与门滕以方程描述底物浓度与反应速率关系，定量表征酶催化性质。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "isotope_tracer",
+     "name": "同位素示踪技术",
+     "en": "Isotope tracer technique",
+     "year": 1923,
+     "note": "海韦希以放射性同位素标记化合物追踪其在生物体内的去向与代谢。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "autoradiography",
+     "name": "放射自显影",
+     "en": "Autoradiography",
+     "year": 1924,
+     "note": "以感光乳剂记录样品中放射性标记位置，定位同位素在组织与凝胶中的分布。",
+     "deps": [
+      "isotope_tracer",
+      "photography"
+     ]
+    },
+    {
+     "id": "immunofluorescence_staining",
+     "name": "免疫荧光标记",
+     "en": "Immunofluorescence labeling",
+     "year": 1941,
+     "note": "以荧光素标记抗体特异性定位抗原，把免疫学与显微成像结合。",
+     "deps": [
+      "fluorescence_microscope",
+      "photography"
+     ]
+    },
+    {
+     "id": "uv_visible_spectrophotometry",
+     "name": "紫外可见分光光度法",
+     "en": "UV-visible spectrophotometry",
+     "year": 1941,
+     "note": "以特征吸收定量核酸与蛋白质，成为生化实验室最常用的比色定量手段。",
+     "deps": [
+      "physics",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "paper_chromatography",
+     "name": "纸层析法",
+     "en": "Paper chromatography",
+     "year": 1944,
+     "note": "马丁与辛格以滤纸分配层析分离氨基酸，为生物小分子分析提供简便方法。",
+     "deps": [
+      "chromatography"
+     ]
+    },
+    {
+     "id": "edman_degradation",
+     "name": "埃德曼降解法",
+     "en": "Edman degradation",
+     "year": 1950,
+     "note": "逐次从肽链氨基端切除并鉴定氨基酸，是经典蛋白质序列测定法。",
+     "deps": [
+      "paper_chromatography"
+     ]
+    },
+    {
+     "id": "insulin_sequence_determination",
+     "name": "胰岛素全序列测定",
+     "en": "Complete insulin sequencing",
+     "year": 1955,
+     "note": "桑格完成胰岛素五十一残基全序列测定，首次证明蛋白质具有确定一级结构。",
+     "deps": [
+      "edman_degradation"
+     ]
+    },
+    {
+     "id": "gel_electrophoresis",
+     "name": "凝胶电泳",
+     "en": "Gel electrophoresis",
+     "year": 1955,
+     "note": "以凝胶介质按分子大小与电荷分离蛋白和核酸，是分子生物学基本分离手段。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "gel_filtration_chromatography",
+     "name": "凝胶过滤层析",
+     "en": "Gel filtration chromatography",
+     "year": 1959,
+     "note": "按分子大小经凝胶孔排阻分离蛋白与核酸，用于脱盐、分级与分子量测定。",
+     "deps": [
+      "chromatography"
+     ]
+    },
+    {
+     "id": "radioimmunoassay",
+     "name": "放射免疫分析",
+     "en": "Radioimmunoassay",
+     "year": 1960,
+     "note": "亚洛以标记抗原竞争结合测痕量激素，使微量物质检测灵敏度大幅提高。",
+     "deps": [
+      "isotope_tracer"
+     ]
+    },
+    {
+     "id": "affinity_chromatography",
+     "name": "亲和层析",
+     "en": "Affinity chromatography",
+     "year": 1968,
+     "note": "利用生物分子特异亲和力一次纯化目标蛋白，是现代蛋白纯化关键步骤。",
+     "deps": [
+      "chromatography"
+     ]
+    },
+    {
+     "id": "elisa",
+     "name": "酶联免疫吸附测定",
+     "en": "Enzyme-linked immunosorbent assay",
+     "year": 1971,
+     "note": "以酶标抗体显色定量抗原或抗体，成为检测诊断领域通用免疫学方法。",
+     "deps": [
+      "immunofluorescence_staining"
+     ]
+    },
+    {
+     "id": "monoclonal_antibody",
+     "name": "单克隆抗体技术",
+     "en": "Monoclonal antibody technology",
+     "year": 1975,
+     "note": "科勒与米尔斯坦融合杂交瘤细胞获得单一特异抗体，广泛用于检测与研究。",
+     "deps": [
+      "continuous_cell_line"
+     ]
+    },
+    {
+     "id": "western_blot",
+     "name": "免疫印迹法",
+     "en": "Western blot",
+     "year": 1979,
+     "note": "把电泳分离蛋白转移到膜上再以抗体检测，特异鉴定目标蛋白表达。",
+     "deps": [
+      "gel_electrophoresis",
+      "monoclonal_antibody"
+     ]
+    },
+    {
+     "id": "protein_nmr",
+     "name": "蛋白质核磁共振解析",
+     "en": "Protein NMR spectroscopy",
+     "year": 1985,
+     "note": "维特里希以多维核磁共振在溶液态解析蛋白结构，补充晶体学局限。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "protein_mass_spectrometry",
+     "name": "蛋白质质谱分析",
+     "en": "Protein mass spectrometry",
+     "year": 1988,
+     "note": "以软电离质谱测肽段精确质量，支撑蛋白鉴定与翻译后修饰分析。",
+     "deps": [
+      "physics",
+      "computer"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "遗传学与基因组研究",
+   "items": [
+    {
+     "id": "mendel_hybridization",
+     "name": "孟德尔杂交实验",
+     "en": "Mendel's hybridization experiments",
+     "year": 1865,
+     "note": "孟德尔以豌豆杂交统计揭示分离与自由组合定律，奠定定量遗传学。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "chromosome_theory",
+     "name": "染色体遗传学说",
+     "en": "Chromosome theory of inheritance",
+     "year": 1902,
+     "note": "萨顿与博韦里把遗传因子定位到染色体上，统一了孟德尔定律与细胞学。",
+     "deps": [
+      "mendel_hybridization"
+     ]
+    },
+    {
+     "id": "population_genetics",
+     "name": "群体遗传学",
+     "en": "Population genetics",
+     "year": 1908,
+     "note": "哈迪与温伯格以代数方程描述等位基因频率平衡，定量研究群体变异。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "drosophila_genetics",
+     "name": "果蝇遗传实验体系",
+     "en": "Drosophila genetics",
+     "year": 1910,
+     "note": "摩尔根以白眼果蝇验证伴性遗传，果蝇成为经典遗传学模式生物。",
+     "deps": [
+      "chromosome_theory"
+     ]
+    },
+    {
+     "id": "genetic_linkage_map",
+     "name": "遗传连锁图谱",
+     "en": "Genetic linkage map",
+     "year": 1913,
+     "note": "斯特蒂文特按重组率把基因排列成线性连锁图，为基因定位提供方法。",
+     "deps": [
+      "drosophila_genetics"
+     ]
+    },
+    {
+     "id": "xray_mutation",
+     "name": "X射线诱变",
+     "en": "X-ray induced mutation",
+     "year": 1927,
+     "note": "穆勒以X射线大幅提高果蝇突变率，确立诱变作为遗传研究的工具。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "bacterial_transformation",
+     "name": "细菌转化实验",
+     "en": "Bacterial transformation experiment",
+     "year": 1928,
+     "note": "格里菲思发现死菌物质可使活菌获得毒力，揭示遗传物质传递现象。",
+     "deps": [
+      "pure_culture"
+     ]
+    },
+    {
+     "id": "one_gene_one_enzyme",
+     "name": "一基因一酶实验",
+     "en": "One gene-one enzyme hypothesis",
+     "year": 1941,
+     "note": "比德尔与塔特姆以脉孢菌营养缺陷型阐明基因与酶对应关系。",
+     "deps": [
+      "xray_mutation"
+     ]
+    },
+    {
+     "id": "fluctuation_test",
+     "name": "突变波动试验",
+     "en": "Luria-Delbruck fluctuation test",
+     "year": 1943,
+     "note": "以统计波动区分自发突变与诱导适应，证明突变随机自发发生。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "dna_heredity_identification",
+     "name": "DNA遗传物质鉴定",
+     "en": "Identification of DNA as hereditary material",
+     "year": 1944,
+     "note": "艾弗里证明转化物质为DNA，首次把遗传物质指向脱氧核糖核酸。",
+     "deps": [
+      "bacterial_transformation"
+     ]
+    },
+    {
+     "id": "bacterial_conjugation",
+     "name": "细菌接合实验",
+     "en": "Bacterial conjugation",
+     "year": 1946,
+     "note": "莱德伯格发现细菌通过直接接触交换遗传物质，扩展遗传分析对象。",
+     "deps": [
+      "pure_culture"
+     ]
+    },
+    {
+     "id": "transposable_elements",
+     "name": "转座子研究",
+     "en": "Transposable element research",
+     "year": 1951,
+     "note": "麦克林托克在玉米中发现可移动的遗传元件，解释基因在染色体间跳跃。",
+     "deps": [
+      "genetic_linkage_map"
+     ]
+    },
+    {
+     "id": "phage_infection_experiment",
+     "name": "噬菌体感染实验",
+     "en": "Phage infection experiment",
+     "year": 1952,
+     "note": "赫尔希与蔡斯以同位素标记噬菌体证明进入细菌的是DNA而非蛋白质。",
+     "deps": [
+      "dna_heredity_identification"
+     ]
+    },
+    {
+     "id": "karyotype_analysis",
+     "name": "染色体核型分析",
+     "en": "Karyotype analysis",
+     "year": 1956,
+     "note": "确认人类染色体为四十六条并按形态排列核型，成为染色体病诊断基础。",
+     "deps": [
+      "microtome"
+     ]
+    },
+    {
+     "id": "genetic_code_deciphering",
+     "name": "遗传密码破译",
+     "en": "Genetic code deciphering",
+     "year": 1961,
+     "note": "尼伦伯格以人工RNA模板解出首个密码子，后逐步破译全部六十四密码。",
+     "deps": [
+      "dna"
+     ]
+    },
+    {
+     "id": "operon_model",
+     "name": "操纵子模型",
+     "en": "Operon model",
+     "year": 1961,
+     "note": "雅各布与莫诺以乳糖操纵子阐明原核基因表达调控的基本方式。",
+     "deps": [
+      "bacterial_conjugation"
+     ]
+    },
+    {
+     "id": "molecular_clock",
+     "name": "分子钟方法",
+     "en": "Molecular clock",
+     "year": 1962,
+     "note": "据序列差异随分岐时间近似恒速累积来推断物种分歧年代。",
+     "deps": [
+      "evolution"
+     ]
+    },
+    {
+     "id": "chromosome_banding",
+     "name": "染色体显带技术",
+     "en": "Chromosome banding",
+     "year": 1971,
+     "note": "以吉姆萨等染色显现染色体横纹，精确定位染色体片段与结构异常。",
+     "deps": [
+      "karyotype_analysis"
+     ]
+    },
+    {
+     "id": "dna_methylation_study",
+     "name": "DNA甲基化研究",
+     "en": "DNA methylation analysis",
+     "year": 1975,
+     "note": "以特异性酶切与测序检测胞嘧啶甲基化，开启表观遗传学定量研究。",
+     "deps": [
+      "dna"
+     ]
+    },
+    {
+     "id": "gene_targeting",
+     "name": "基因打靶技术",
+     "en": "Gene targeting",
+     "year": 1989,
+     "note": "借助同源重组定向敲除小鼠特定基因，建立研究基因功能的模型。",
+     "deps": [
+      "genetic_engineering"
+     ]
+    },
+    {
+     "id": "dna_microarray",
+     "name": "DNA微阵列芯片",
+     "en": "DNA microarray",
+     "year": 1995,
+     "note": "在固相表面并行杂交数万探针，高通量测定基因表达谱。",
+     "deps": [
+      "dna",
+      "computer"
+     ]
+    },
+    {
+     "id": "human_genome_project",
+     "name": "人类基因组测序计划",
+     "en": "Human Genome Project",
+     "year": 2003,
+     "note": "多国协作完成人类基因组全序列测定，推动基因组医学时代来临。",
+     "deps": [
+      "dna",
+      "computer"
+     ]
+    },
+    {
+     "id": "gwas",
+     "name": "全基因组关联分析",
+     "en": "Genome-wide association study",
+     "year": 2007,
+     "note": "以高通量基因分型扫描常见变异与疾病关联，用于复杂性状遗传定位。",
+     "deps": [
+      "human_genome_project"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "分子生物学与基因操作工具",
+   "items": [
+    {
+     "id": "nucleic_acid_in_situ_hybridization",
+     "name": "核酸原位杂交",
+     "en": "In situ hybridization",
+     "year": 1969,
+     "note": "以标记核酸探针在染色体或组织中定位特异序列，绘制基因空间分布。",
+     "deps": [
+      "dna"
+     ]
+    },
+    {
+     "id": "restriction_enzyme",
+     "name": "限制性内切酶",
+     "en": "Restriction enzymes",
+     "year": 1970,
+     "note": "从细菌中提纯能定点切割DNA的酶，成为重组DNA技术的分子剪刀。",
+     "deps": [
+      "dna"
+     ]
+    },
+    {
+     "id": "reverse_transcriptase_cdna",
+     "name": "逆转录酶与cDNA合成",
+     "en": "Reverse transcriptase and cDNA synthesis",
+     "year": 1970,
+     "note": "以逆转录酶把RNA反转录为cDNA，使真核基因可在体外克隆分析。",
+     "deps": [
+      "dna"
+     ]
+    },
+    {
+     "id": "transfection",
+     "name": "细胞转染技术",
+     "en": "Transfection",
+     "year": 1973,
+     "note": "以磷酸钙等方法把外源核酸导入培养细胞，用于基因表达与功能研究。",
+     "deps": [
+      "continuous_cell_line"
+     ]
+    },
+    {
+     "id": "southern_blot",
+     "name": "DNA印迹杂交",
+     "en": "Southern blot",
+     "year": 1975,
+     "note": "桑格把酶切DNA转膜后以探针杂交，特异检测基因组中的目标序列。",
+     "deps": [
+      "restriction_enzyme",
+      "gel_electrophoresis"
+     ]
+    },
+    {
+     "id": "sanger_sequencing",
+     "name": "桑格双脱氧测序",
+     "en": "Sanger sequencing",
+     "year": 1977,
+     "note": "以双脱氧终止法测定DNA碱基序列，主导了三十余年的分子测序。",
+     "deps": [
+      "gel_electrophoresis"
+     ]
+    },
+    {
+     "id": "northern_blot",
+     "name": "RNA印迹杂交",
+     "en": "Northern blot",
+     "year": 1979,
+     "note": "把电泳RNA转膜杂交探针，定量检测特定基因的转录水平。",
+     "deps": [
+      "southern_blot"
+     ]
+    },
+    {
+     "id": "rflp_marker",
+     "name": "限制性片段长度多态标记",
+     "en": "Restriction fragment length polymorphism",
+     "year": 1980,
+     "note": "以酶切图谱差异作DNA分子标记，用于基因定位与个体鉴定。",
+     "deps": [
+      "restriction_enzyme"
+     ]
+    },
+    {
+     "id": "electroporation",
+     "name": "电穿孔转染",
+     "en": "Electroporation",
+     "year": 1982,
+     "note": "以短暂电场在细胞膜开孔导入外源核酸，适用于难转染的细胞类型。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "site_directed_mutagenesis",
+     "name": "定点突变技术",
+     "en": "Site-directed mutagenesis",
+     "year": 1982,
+     "note": "以合成寡核苷酸在克隆基因指定位置引入突变，用于研究蛋白功能位点。",
+     "deps": [
+      "genetic_engineering"
+     ]
+    },
+    {
+     "id": "polymerase_chain_reaction",
+     "name": "聚合酶链式反应",
+     "en": "Polymerase chain reaction",
+     "year": 1983,
+     "note": "穆利斯发明以引物与聚合酶指数扩增特异DNA片段，分子生物学由此普惠化。",
+     "deps": [
+      "dna"
+     ]
+    },
+    {
+     "id": "chromatin_immunoprecipitation",
+     "name": "染色质免疫沉淀",
+     "en": "Chromatin immunoprecipitation",
+     "year": 1984,
+     "note": "以抗体富集与蛋白结合的DNA片段，定位转录因子在全基因组的结合位点。",
+     "deps": [
+      "dna"
+     ]
+    },
+    {
+     "id": "dna_fingerprinting",
+     "name": "DNA指纹鉴定",
+     "en": "DNA fingerprinting",
+     "year": 1984,
+     "note": "杰弗里斯以多座位探针显示个体特异条带图谱，用于亲缘鉴定与法医学。",
+     "deps": [
+      "southern_blot"
+     ]
+    },
+    {
+     "id": "phage_display",
+     "name": "噬菌体展示技术",
+     "en": "Phage display",
+     "year": 1985,
+     "note": "史密斯把外源肽与噬菌体外壳蛋白融合展示，用于筛选特异结合分子。",
+     "deps": [
+      "phage_infection_experiment"
+     ]
+    },
+    {
+     "id": "automated_fluorescence_sequencing",
+     "name": "荧光自动测序",
+     "en": "Automated fluorescence sequencing",
+     "year": 1986,
+     "note": "以荧光标记与毛细管电泳自动化读出序列，支撑大规模基因组测序。",
+     "deps": [
+      "sanger_sequencing"
+     ]
+    },
+    {
+     "id": "gene_gun",
+     "name": "基因枪转化",
+     "en": "Gene gun transformation",
+     "year": 1987,
+     "note": "以微弹轰击把DNA导入植物与微生物细胞，植物转基因常用方法之一。",
+     "deps": [
+      "genetic_engineering"
+     ]
+    },
+    {
+     "id": "reporter_gene",
+     "name": "报告基因技术",
+     "en": "Reporter gene assay",
+     "year": 1987,
+     "note": "以荧光素酶或绿色荧光蛋白等报告基因监测启动子活性，研究基因表达调控。",
+     "deps": [
+      "genetic_engineering"
+     ]
+    },
+    {
+     "id": "yeast_two_hybrid",
+     "name": "酵母双杂交系统",
+     "en": "Yeast two-hybrid system",
+     "year": 1989,
+     "note": "以转录因子拆分重构检测蛋白间相互作用，实现互作组高通量筛选。",
+     "deps": [
+      "genetic_engineering"
+     ]
+    },
+    {
+     "id": "quantitative_pcr",
+     "name": "实时荧光定量PCR",
+     "en": "Quantitative PCR",
+     "year": 1996,
+     "note": "在扩增过程中实时读取荧光信号，准确定量起始模板拷贝数。",
+     "deps": [
+      "polymerase_chain_reaction"
+     ]
+    },
+    {
+     "id": "rna_interference",
+     "name": "RNA干扰技术",
+     "en": "RNA interference",
+     "year": 1998,
+     "note": "以双链RNA特异沉默目标基因，成为反向遗传学与基因治疗的研究工具。",
+     "deps": [
+      "dna"
+     ]
+    },
+    {
+     "id": "high_throughput_sequencing",
+     "name": "高通量测序",
+     "en": "High-throughput sequencing",
+     "year": 2005,
+     "note": "以并行化边合成边测序大幅降低测序成本，掀起基因组学革命。",
+     "deps": [
+      "automated_fluorescence_sequencing"
+     ]
+    },
+    {
+     "id": "rna_sequencing",
+     "name": "转录组测序",
+     "en": "RNA sequencing",
+     "year": 2008,
+     "note": "对转录本高通量测序，定量基因表达并发现新转录本与可变剪接。",
+     "deps": [
+      "high_throughput_sequencing"
+     ]
+    },
+    {
+     "id": "crispr_gene_editing",
+     "name": "CRISPR基因编辑",
+     "en": "CRISPR gene editing",
+     "year": 2012,
+     "note": "以Cas9核酸酶与引导RNA对基因组定点切割编辑，使基因操作进入精准时代。",
+     "deps": [
+      "dna"
+     ]
+    },
+    {
+     "id": "nanopore_sequencing",
+     "name": "纳米孔测序",
+     "en": "Nanopore sequencing",
+     "year": 2014,
+     "note": "让DNA单链穿过纳米孔按电流变化实时读序，实现长读长便携测序。",
+     "deps": [
+      "high_throughput_sequencing"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "演化与生态观测方法",
+   "items": [
+    {
+     "id": "mark_recapture",
+     "name": "标记重捕法",
+     "en": "Mark-recapture method",
+     "year": 1896,
+     "note": "彼得森以标记释放再重捕的比例估算种群数量，为动物种群调查标准方法。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "quadrat_survey",
+     "name": "样方植被调查",
+     "en": "Quadrat vegetation survey",
+     "year": 1898,
+     "note": "以固定面积样方记录植物组成与多度，定量描述植物群落结构。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "bird_banding",
+     "name": "鸟类环志",
+     "en": "Bird banding",
+     "year": 1899,
+     "note": "给候鸟戴上编号环并全球回收，追踪迁徙路线与种群动态。",
+     "deps": [
+      "mark_recapture"
+     ]
+    },
+    {
+     "id": "camera_trap",
+     "name": "红外自动相机调查",
+     "en": "Camera trap survey",
+     "year": 1906,
+     "note": "以自动触发相机记录野生动物活动，用于隐秘物种的存在与行为调查。",
+     "deps": [
+      "photography"
+     ]
+    },
+    {
+     "id": "lotka_volterra_model",
+     "name": "种群动态数学模型",
+     "en": "Lotka-Volterra model",
+     "year": 1925,
+     "note": "以微分方程描述捕食者与猎物数量波动，奠定数学生态学方法。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "ethology_observation",
+     "name": "动物行为学观察",
+     "en": "Ethological observation",
+     "year": 1935,
+     "note": "洛伦茨以印随等实验建立动物行为学，以自然与实验观察研究行为本能。",
+     "deps": [
+      "scientific_method"
+     ]
+    },
+    {
+     "id": "ecosystem_energy_flow",
+     "name": "生态系统能量流分析",
+     "en": "Ecosystem energy flow analysis",
+     "year": 1942,
+     "note": "林德曼以营养级间的能量传递研究生态系统，量化食物链能量效率。",
+     "deps": [
+      "lotka_volterra_model"
+     ]
+    },
+    {
+     "id": "biodiversity_index",
+     "name": "生物多样性指数",
+     "en": "Biodiversity indices",
+     "year": 1949,
+     "note": "以香农与辛普森指数综合物种丰富度与均匀度，比较群落多样性。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "radio_telemetry_tracking",
+     "name": "野生动物无线电遥测",
+     "en": "Wildlife radio telemetry",
+     "year": 1963,
+     "note": "给动物佩戴无线电发射器并跟踪，研究其活动范围与栖息地利用。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "stable_isotope_ecology",
+     "name": "稳定同位素生态分析",
+     "en": "Stable isotope ecology",
+     "year": 1978,
+     "note": "以碳氮稳定同位素比值重建食性与营养级，追踪物质在食物网中的流动。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "long_term_ecological_research",
+     "name": "长期生态研究站网",
+     "en": "Long-term ecological research networks",
+     "year": 1980,
+     "note": "对固定样地开展数十年连续观测，揭示生态系统长期变化与干扰效应。",
+     "deps": [
+      "scientific_method"
+     ]
+    },
+    {
+     "id": "long_term_evolution_experiment",
+     "name": "实验室长期演化实验",
+     "en": "Long-term evolution experiment",
+     "year": 1988,
+     "note": "伦斯基连续传代培养大肠杆菌数万代，直接观测并检验自然选择过程。",
+     "deps": [
+      "pure_culture"
+     ]
+    },
+    {
+     "id": "gps_animal_tracking",
+     "name": "GPS野生动物追踪",
+     "en": "GPS animal tracking",
+     "year": 1995,
+     "note": "以卫星定位项圈实时获取动物活动轨迹，研究大尺度迁徙与生境选择。",
+     "deps": [
+      "gps"
+     ]
+    },
+    {
+     "id": "edna_detection",
+     "name": "环境DNA检测",
+     "en": "Environmental DNA analysis",
+     "year": 2008,
+     "note": "从水体土壤中扩增生物脱落DNA并测序，非侵入式普查物种组成。",
+     "deps": [
+      "polymerase_chain_reaction"
+     ]
+    }
+   ]
+  }
+ ]
+}

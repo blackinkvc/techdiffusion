@@ -1,0 +1,1327 @@
+{
+ "cat": "material",
+ "catName": "材料",
+ "sub": "textile",
+ "subName": "纤维纺织与印染",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "agriculture",
+  "chemistry",
+  "physics",
+  "plastics",
+  "petroleum",
+  "fire",
+  "steam_engine",
+  "electricity",
+  "internal_combustion",
+  "paper"
+ ],
+ "families": [
+  {
+   "name": "纤维提取与纺纱",
+   "items": [
+    {
+     "id": "spinning_whorl",
+     "name": "纺轮纺纱",
+     "en": "Spindle whorl spinning",
+     "year": -6000,
+     "note": "以旋转纺锤加捻短纤维成纱，新石器时代西亚与中国已使用，是最古老的成纱方式。"
+    },
+    {
+     "id": "flax_retting",
+     "name": "亚麻沤制",
+     "en": "Flax retting",
+     "year": -5000,
+     "note": "浸沤或露沤使亚麻韧皮胶质分解，分离出可纺长纤维的初加工工序。"
+    },
+    {
+     "id": "hemp_processing",
+     "name": "大麻剥制",
+     "en": "Hemp fiber processing",
+     "year": -3000,
+     "note": "刮麻与梳理获取大麻韧皮纤维，中国古代广泛用于绳索与粗布。"
+    },
+    {
+     "id": "hand_spinning_wheel",
+     "name": "手摇纺车",
+     "en": "Hand spinning wheel",
+     "year": 1000,
+     "note": "以轮带动锭子连续回转的纺纱装置，宋代前后在中国普及并传入欧洲。",
+     "deps": [
+      "spinning_whorl"
+     ]
+    },
+    {
+     "id": "water_great_spinning_frame",
+     "name": "水转大纺车",
+     "en": "Water-powered spinning frame",
+     "year": 1313,
+     "note": "王祯《农书》记载的水力驱动多锭大纺车，用于加工麻苎，是早期机械纺纱代表。",
+     "deps": [
+      "hand_spinning_wheel",
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "silk_reeling_ancient",
+     "name": "缫丝",
+     "en": "Silk reeling",
+     "year": -2500,
+     "note": "中国新石器时代起源，煮茧解舒并集多根茧丝抱合成生丝，是丝绸业核心工序。"
+    },
+    {
+     "id": "cotton_gin",
+     "name": "轧棉机",
+     "en": "Cotton gin",
+     "year": 1793,
+     "note": "惠特尼发明锯齿式轧棉机，使棉籽与纤维高效分离，推动美国棉花产业扩张。"
+    },
+    {
+     "id": "carding_machine",
+     "name": "罗拉梳理机",
+     "en": "Carding machine",
+     "year": 1748,
+     "note": "路易斯·保罗研制，以针布梳理开松棉毛纤维并成条，是纺纱准备的关键机械。"
+    },
+    {
+     "id": "drawing_frame",
+     "name": "并条机",
+     "en": "Drawing frame",
+     "year": 1772,
+     "note": "以多根条子牵伸并合改善纤维平行度与条干均匀性，属前纺关键工序。",
+     "deps": [
+      "carding_machine"
+     ]
+    },
+    {
+     "id": "spinning_jenny",
+     "name": "珍妮纺纱机",
+     "en": "Spinning jenny",
+     "year": 1764,
+     "note": "哈格里夫斯发明，一台机器带动多锭立式纱锭，拉开英国纺纱机械化序幕。"
+    },
+    {
+     "id": "water_frame",
+     "name": "水力纺纱机",
+     "en": "Water frame",
+     "year": 1769,
+     "note": "阿克莱特的水力驱动罗拉牵伸纺纱机，产纱坚实，催生工厂化棉纺。",
+     "deps": [
+      "waterwheel"
+     ]
+    },
+    {
+     "id": "spinning_mule",
+     "name": "骡机",
+     "en": "Spinning mule",
+     "year": 1779,
+     "note": "克隆普顿综合珍妮机与水力纺纱机而成，可纺细匀纱线，一度主导精纺业。",
+     "deps": [
+      "spinning_jenny",
+      "water_frame"
+     ]
+    },
+    {
+     "id": "combing_machine",
+     "name": "精梳机",
+     "en": "Combing machine",
+     "year": 1845,
+     "note": "海尔曼发明，用精梳排除短绒留长纤维，是精梳毛纺与高支棉纱的准备设备。"
+    },
+    {
+     "id": "selfacting_mule",
+     "name": "自动走锭细纱机",
+     "en": "Self-acting mule",
+     "year": 1825,
+     "note": "罗伯茨实现走锭机牵伸卷绕自动化，工人只管接头，大幅提升棉纱产量。",
+     "deps": [
+      "spinning_mule"
+     ]
+    },
+    {
+     "id": "ring_spinning",
+     "name": "环锭纺纱",
+     "en": "Ring spinning",
+     "year": 1828,
+     "note": "以钢丝圈在钢领上回转而加捻卷绕的纺纱法，成为二十世纪主导纺纱工艺。",
+     "deps": [
+      "selfacting_mule"
+     ]
+    },
+    {
+     "id": "cap_spinning",
+     "name": "帽锭纺纱",
+     "en": "Cap spinning",
+     "year": 1828,
+     "note": "纱线绕过帽盖边缘加捻，多用于毛与麻纺，曾与环锭并行发展。"
+    },
+    {
+     "id": "wool_carbonizing",
+     "name": "羊毛炭化",
+     "en": "Wool carbonizing",
+     "year": 1850,
+     "note": "以硫酸处理去除羊毛中植物性杂质，为毛纺原料清洁提供化学方法。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "cashmere_dehairing",
+     "name": "羊绒分梳",
+     "en": "Cashmere dehairing",
+     "year": 1895,
+     "note": "以分梳机分离山羊绒细绒与粗毛，使稀贵羊绒可批量纺制高档织物。"
+    },
+    {
+     "id": "open_end_rotor_spinning",
+     "name": "转杯纺纱",
+     "en": "Rotor spinning",
+     "year": 1967,
+     "note": "自由端纺纱的成熟形式，条子直接纺纱卷绕，速度高且用工少，广泛用于中低支棉纱。",
+     "deps": [
+      "ring_spinning",
+      "electricity"
+     ]
+    },
+    {
+     "id": "friction_spinning",
+     "name": "摩擦纺纱",
+     "en": "Friction spinning",
+     "year": 1975,
+     "note": "以多孔辊气流凝聚纤维再摩擦加捻，适合粗支纱与产业用纱。",
+     "deps": [
+      "open_end_rotor_spinning"
+     ]
+    },
+    {
+     "id": "air_vortex_spinning",
+     "name": "喷气涡流纺纱",
+     "en": "Air-jet vortex spinning",
+     "year": 1997,
+     "note": "利用高速旋转气流使纤维包缠成纱，速度极快，适合化纤与混纺纱。",
+     "deps": [
+      "open_end_rotor_spinning"
+     ]
+    },
+    {
+     "id": "compact_spinning",
+     "name": "紧密纺纱",
+     "en": "Compact spinning",
+     "year": 1999,
+     "note": "在环锭加捻区加装气流集束使毛羽极少，成纱强力高，用于高档精梳纱。",
+     "deps": [
+      "ring_spinning"
+     ]
+    },
+    {
+     "id": "yarn_doubling",
+     "name": "并捻与股线",
+     "en": "Yarn doubling and twisting",
+     "year": 1500,
+     "note": "将两股以上单纱合并加捻成股线，是缝纫线与帘子线等的传统工艺。",
+     "deps": [
+      "hand_spinning_wheel"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "机织与织物技术",
+   "items": [
+    {
+     "id": "backstrap_loom",
+     "name": "腰机织造",
+     "en": "Back-strap loom",
+     "year": -4000,
+     "note": "织工腰部绷紧经线的原始织机，新石器时代已有使用，至今仍存于少数民族织布。"
+    },
+    {
+     "id": "warp_beam_loom",
+     "name": "地机织造",
+     "en": "Ground loom",
+     "year": -3000,
+     "note": "以木桩固定经线的平铺式织机，古埃及与美索不达米亚广泛使用。",
+     "deps": [
+      "backstrap_loom"
+     ]
+    },
+    {
+     "id": "treadle_loom",
+     "name": "踏板织机",
+     "en": "Treadle loom",
+     "year": -100,
+     "note": "以脚踏提综代替手提的织机，汉代中国普遍采用，解放双手提高织速。",
+     "deps": [
+      "warp_beam_loom"
+     ]
+    },
+    {
+     "id": "drawloom",
+     "name": "提花织机",
+     "en": "Drawloom",
+     "year": 100,
+     "note": "以线综按程序提升经线织出复杂花纹的织机，中国汉代即用于织锦。",
+     "deps": [
+      "treadle_loom"
+     ]
+    },
+    {
+     "id": "warp_sizing",
+     "name": "经纱上浆",
+     "en": "Warp sizing",
+     "year": -2000,
+     "note": "以淀粉等浆料涂覆经纱增加耐磨与强力，减少织造断经，古埃及已使用。"
+    },
+    {
+     "id": "silk_brocade",
+     "name": "织锦",
+     "en": "Brocade weaving",
+     "year": -200,
+     "note": "多色纬线按花纹沉浮显花的丝织工艺，汉代蜀锦即为代表。",
+     "deps": [
+      "silk_reeling_ancient"
+     ]
+    },
+    {
+     "id": "gauze_weaving",
+     "name": "纱罗织造",
+     "en": "Leno and gauze weaving",
+     "year": -300,
+     "note": "经线相互绞转再织纬，形成孔眼稳定而通透的纱罗织物，战国楚墓已有实物。"
+    },
+    {
+     "id": "flying_shuttle",
+     "name": "飞梭",
+     "en": "Flying shuttle",
+     "year": 1733,
+     "note": "凯发明梭子抛射装置，单人即可快速打纬，织机宽度与效率大幅提高。",
+     "deps": [
+      "treadle_loom"
+     ]
+    },
+    {
+     "id": "power_loom",
+     "name": "动力织机",
+     "en": "Power loom",
+     "year": 1785,
+     "note": "卡特赖特以蒸汽驱动织机，使织布摆脱人力，推动棉纺织工厂化。",
+     "deps": [
+      "flying_shuttle",
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "jacquard_loom",
+     "name": "贾卡提花机",
+     "en": "Jacquard loom",
+     "year": 1804,
+     "note": "以穿孔纹板自动控制每根经线升降，可织任意复杂花纹，启发了程序控制思想。",
+     "deps": [
+      "drawloom",
+      "power_loom"
+     ]
+    },
+    {
+     "id": "automatic_loom",
+     "name": "自动换梭织机",
+     "en": "Automatic loom",
+     "year": 1894,
+     "note": "诺斯罗普发明自动换梭补纬装置，一名工人可看管多台织机。",
+     "deps": [
+      "power_loom"
+     ]
+    },
+    {
+     "id": "projectile_loom",
+     "name": "片梭织机",
+     "en": "Projectile loom",
+     "year": 1953,
+     "note": "瑞士苏尔寿研制，以夹持梭片投射引纬，幅宽大且产量高，用于产业织物。",
+     "deps": [
+      "automatic_loom"
+     ]
+    },
+    {
+     "id": "rapier_loom",
+     "name": "剑杆织机",
+     "en": "Rapier loom",
+     "year": 1970,
+     "note": "以刚性或挠性剑杆交接纬纱引纬，花色灵活，是中窄幅织造主流机型。",
+     "deps": [
+      "automatic_loom"
+     ]
+    },
+    {
+     "id": "airjet_loom",
+     "name": "喷气织机",
+     "en": "Air-jet loom",
+     "year": 1955,
+     "note": "以压缩空气气流引纬的无梭织机，车速极高，广泛用于大批量棉与化纤织造。",
+     "deps": [
+      "automatic_loom",
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "waterjet_loom",
+     "name": "喷水织机",
+     "en": "Water-jet loom",
+     "year": 1955,
+     "note": "以高压水流引纬，适合疏水性长丝织造，能耗低且布面平整。",
+     "deps": [
+      "automatic_loom"
+     ]
+    },
+    {
+     "id": "denim_fabric",
+     "name": "牛仔布",
+     "en": "Denim fabric",
+     "year": 1873,
+     "note": "靛蓝经纱与白纬纱交织的斜纹棉布，因工装裤流行成为标志性服装面料。",
+     "deps": [
+      "power_loom"
+     ]
+    },
+    {
+     "id": "terry_towel_weave",
+     "name": "毛圈织物织造",
+     "en": "Terry towel weaving",
+     "year": 1850,
+     "note": "以打纬运动形成经向毛圈的织造工艺，用于毛巾与浴袍织造。",
+     "deps": [
+      "power_loom"
+     ]
+    },
+    {
+     "id": "pile_velvet",
+     "name": "割绒织物",
+     "en": "Cut-pile velvet",
+     "year": 1300,
+     "note": "双层织造后割开经线成绒的织物工艺，欧洲中世纪丝绒生产使其成熟。",
+     "deps": [
+      "drawloom"
+     ]
+    },
+    {
+     "id": "carpet_weaving",
+     "name": "手工栽绒地毯",
+     "en": "Hand-knotted carpet",
+     "year": -400,
+     "note": "以手工打结纱线植绒成毯面的地毯工艺，阿尔泰巴泽雷克古墓出土最早实物。"
+    },
+    {
+     "id": "tufting_machine",
+     "name": "簇绒地毯机",
+     "en": "Tufting machine",
+     "year": 1940,
+     "note": "以针簇快速植绒形成绒面，使地毯生产高速化，取代大量手工打结地毯。"
+    }
+   ]
+  },
+  {
+   "name": "针织、编织与非织造布",
+   "items": [
+    {
+     "id": "knitting_by_hand",
+     "name": "手工针织",
+     "en": "Hand knitting",
+     "year": 1000,
+     "note": "以两根棒针套圈编结成衣的古老技法，中世纪埃及与欧洲已出现针织袜。"
+    },
+    {
+     "id": "stocking_frame",
+     "name": "织袜机",
+     "en": "Stocking frame",
+     "year": 1589,
+     "note": "李发明世界上首台针织机，以舌针编结平针织物，织袜业由此进入机械时代。",
+     "deps": [
+      "knitting_by_hand"
+     ]
+    },
+    {
+     "id": "circular_knitting_machine",
+     "name": "圆纬机",
+     "en": "Circular knitting machine",
+     "year": 1816,
+     "note": "以圆筒针床连续回转编结筒状坯布，是现代内衣与针织面料的主力机型。",
+     "deps": [
+      "stocking_frame"
+     ]
+    },
+    {
+     "id": "flat_knitting_machine",
+     "name": "横机",
+     "en": "Flat knitting machine",
+     "year": 1863,
+     "note": "平板针床往复编结的针织机，可织成形衣片，后发展出电脑全自动横机。",
+     "deps": [
+      "stocking_frame"
+     ]
+    },
+    {
+     "id": "warp_knitting_machine",
+     "name": "经编机",
+     "en": "Warp knitting machine",
+     "year": 1775,
+     "note": "纱线沿经向由导纱梳栉喂入编结，织物不易脱散，用于网眼与产业织物。",
+     "deps": [
+      "stocking_frame"
+     ]
+    },
+    {
+     "id": "raschel_machine",
+     "name": "拉舍尔经编机",
+     "en": "Raschel machine",
+     "year": 1856,
+     "note": "可织较厚重与花纹织物的经编机，用于蕾丝、网布与家纺产品。",
+     "deps": [
+      "warp_knitting_machine"
+     ]
+    },
+    {
+     "id": "seamless_knitting",
+     "name": "无缝针织",
+     "en": "Seamless knitting",
+     "year": 1990,
+     "note": "电脑圆机直接编结出筒状无缝衣身，减少缝纫工序，用于内衣与运动装。",
+     "deps": [
+      "circular_knitting_machine"
+     ]
+    },
+    {
+     "id": "felt_making",
+     "name": "毛毡制作",
+     "en": "Felt making",
+     "year": -900,
+     "note": "利用羊毛鳞片的毡缩性经湿热挤压成毡，不需纺纱织造，为游牧民族常用。"
+    },
+    {
+     "id": "needle_punching",
+     "name": "针刺非织造",
+     "en": "Needle-punched nonwoven",
+     "year": 1870,
+     "note": "以带钩刺针反复穿刺使纤维缠结成布，用于毡毯、过滤与汽车内饰材料。",
+     "deps": [
+      "felt_making"
+     ]
+    },
+    {
+     "id": "spunbond_nonwoven",
+     "name": "纺粘法非织造布",
+     "en": "Spunbond nonwoven",
+     "year": 1965,
+     "note": "熔融聚合物喷丝成网后热轧固结，一次成型成布，广泛用于卫材与包装。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "meltblown_nonwoven",
+     "name": "熔喷法非织造布",
+     "en": "Meltblown nonwoven",
+     "year": 1955,
+     "note": "高速气流吹细熔体成微米级纤维并自粘成网，是口罩滤材的核心材料。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "spunlace_nonwoven",
+     "name": "水刺法非织造布",
+     "en": "Spunlace nonwoven",
+     "year": 1973,
+     "note": "以高压水针缠结纤维成布，手感柔软、无粘合剂，广泛用于湿巾与医用敷料。",
+     "deps": [
+      "felt_making"
+     ]
+    },
+    {
+     "id": "airlaid_nonwoven",
+     "name": "气流成网非织造布",
+     "en": "Airlaid nonwoven",
+     "year": 1975,
+     "note": "气流把短纤维铺成网后粘合固结，蓬松吸液，用于卫生巾与餐巾。",
+     "deps": [
+      "needle_punching"
+     ]
+    },
+    {
+     "id": "leavers_lace",
+     "name": "利华花边机",
+     "en": "Leavers lace machine",
+     "year": 1813,
+     "note": "以纱线绞织与衬纬织出网状花边的拉舍尔类机器，是机制蕾丝的开端。",
+     "deps": [
+      "warp_knitting_machine"
+     ]
+    },
+    {
+     "id": "braiding_machine",
+     "name": "编带机",
+     "en": "Braiding machine",
+     "year": 1800,
+     "note": "多条纱线沿轨迹交叉编结成形绳带，用于鞋带、绳索与线缆编织。",
+     "deps": [
+      "yarn_doubling"
+     ]
+    },
+    {
+     "id": "geotextile_app",
+     "name": "非织造土工布",
+     "en": "Nonwoven geotextile",
+     "year": 1960,
+     "note": "以丙纶或涤纶非织造布用于道路排水与加筋，是产业用纺织品的代表。",
+     "deps": [
+      "needle_punching",
+      "plastics"
+     ]
+    },
+    {
+     "id": "nonwoven_filter_media",
+     "name": "非织造过滤材料",
+     "en": "Nonwoven filter media",
+     "year": 1960,
+     "note": "以熔喷或针刺纤维网过滤颗粒与气溶胶，是空气与水净化的基础材料。",
+     "deps": [
+      "meltblown_nonwoven"
+     ]
+    },
+    {
+     "id": "wetlaid_nonwoven",
+     "name": "湿法成网非织造布",
+     "en": "Wetlaid nonwoven",
+     "year": 1930,
+     "note": "借鉴造纸的纤维悬浮成网工艺，制成品致密均匀，用于茶叶袋与医用材料。",
+     "deps": [
+      "paper"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "丝绸、装饰织物与特种整理",
+   "items": [
+    {
+     "id": "cocoon_boiling",
+     "name": "煮茧",
+     "en": "Cocoon boiling",
+     "year": -2000,
+     "note": "以热水浸煮使茧层丝胶软化，便于缫丝时连续抽出茧丝。",
+     "deps": [
+      "silk_reeling_ancient"
+     ]
+    },
+    {
+     "id": "silk_degumming",
+     "name": "丝脱胶",
+     "en": "Silk degumming",
+     "year": -1500,
+     "note": "以皂碱处理去除丝胶、显露丝素光泽，是生丝加工为熟丝的工序。",
+     "deps": [
+      "silk_reeling_ancient",
+      "fire"
+     ]
+    },
+    {
+     "id": "satin_weave",
+     "name": "缎纹织造",
+     "en": "Satin weave",
+     "year": 1200,
+     "note": "浮长线长的缎组织使织物光亮平滑，宋元起中国缎类丝织物发展成熟。"
+    },
+    {
+     "id": "kesi_weaving",
+     "name": "缂丝",
+     "en": "Kesi silk tapestry",
+     "year": 700,
+     "note": "通经断纬的丝织工艺，纬线按轮廓分段织入，可再现书画笔意，唐代已出现。",
+     "deps": [
+      "silk_brocade"
+     ]
+    },
+    {
+     "id": "figured_silk_warp",
+     "name": "妆花织造",
+     "en": "Zhuanghua silk weaving",
+     "year": 1400,
+     "note": "以挖梭织彩呈现局部花纹的云锦工艺，明代南京发展至鼎盛。",
+     "deps": [
+      "silk_brocade"
+     ]
+    },
+    {
+     "id": "suzhou_embroidery",
+     "name": "刺绣",
+     "en": "Embroidery",
+     "year": -500,
+     "note": "以针引线在织物上绣出纹样图案的手工技艺，中国与各地绣派传承千年。"
+    },
+    {
+     "id": "embroidery_machine",
+     "name": "多头绣花机",
+     "en": "Multi-head embroidery machine",
+     "year": 1863,
+     "note": "以穿孔纸带控制针迹的多头刺绣机，使成衣刺绣装饰实现批量生产。",
+     "deps": [
+      "suzhou_embroidery"
+     ]
+    },
+    {
+     "id": "velvet_silk",
+     "name": "丝绒",
+     "en": "Silk velvet",
+     "year": 1400,
+     "note": "以真丝为地经绒经的割绒织物，欧洲文艺复兴时期用于礼服与帷幕。",
+     "deps": [
+      "pile_velvet"
+     ]
+    },
+    {
+     "id": "cutwork_drawnwork",
+     "name": "抽纱挑花",
+     "en": "Cutwork and drawn-thread work",
+     "year": 1500,
+     "note": "抽去部分经纬纱再以线固定编结形成镂空花纹的装饰工艺，源于欧洲。",
+     "deps": [
+      "suzhou_embroidery"
+     ]
+    },
+    {
+     "id": "tapestry_weaving",
+     "name": "壁毯织造",
+     "en": "Tapestry weaving",
+     "year": 1400,
+     "note": "以通纬显色织出大幅图画壁挂的欧洲工艺，如哥白林工坊所产壁毯。",
+     "deps": [
+      "hand_spinning_wheel"
+     ]
+    },
+    {
+     "id": "silk_quilt_fiber",
+     "name": "蚕丝被制作",
+     "en": "Silk wadding quilt making",
+     "year": 1000,
+     "note": "把丝绵片拉制成被胎的传统工艺，中国江南地区历史久远并延续至今。",
+     "deps": [
+      "silk_degumming"
+     ]
+    },
+    {
+     "id": "woven_label_weaving",
+     "name": "提花商标织造",
+     "en": "Woven label weaving",
+     "year": 1870,
+     "note": "窄幅提花织机织出服装织唛与装饰带，是纺织品标识的重要工艺。",
+     "deps": [
+      "jacquard_loom"
+     ]
+    },
+    {
+     "id": "padded_jacket_wadding",
+     "name": "絮料充填",
+     "en": "Fiber wadding filling",
+     "year": 1800,
+     "note": "把棉絮或羽绒等蓬松絮料充填于表里层间制成保暖被服的工艺。",
+     "deps": [
+      "cotton_gin"
+     ]
+    },
+    {
+     "id": "quilt_stitching",
+     "name": "绗缝",
+     "en": "Quilting",
+     "year": 1400,
+     "note": "以行针线迹固定表布、絮料与里布，防止滑移并形成立体花纹。",
+     "deps": [
+      "suzhou_embroidery"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "染色、印花与后整理",
+   "items": [
+    {
+     "id": "indigo_dyeing",
+     "name": "靛蓝染色",
+     "en": "Indigo dyeing",
+     "year": -2000,
+     "note": "以靛蓝植物还原发酵染蓝的古老工艺，印度与中国古代广泛使用。",
+     "deps": [
+      "fermentation"
+     ]
+    },
+    {
+     "id": "madder_dyeing",
+     "name": "茜草染红",
+     "en": "Madder dyeing",
+     "year": -2000,
+     "note": "以茜草根中的茜素经媒染染出红橙色，古埃及与罗马织物染色已用。"
+    },
+    {
+     "id": "tyrian_purple",
+     "name": "骨螺紫",
+     "en": "Tyrian purple",
+     "year": -1200,
+     "note": "取自骨螺腺体的珍贵紫色染料，腓尼基人掌握并垄断，象征王权。"
+    },
+    {
+     "id": "mordant_dyeing",
+     "name": "媒染工艺",
+     "en": "Mordant dyeing",
+     "year": -1500,
+     "note": "以明矾等金属盐作媒染剂固着天然染料，是天然染色显色与耐洗的关键。"
+    },
+    {
+     "id": "resist_dyeing",
+     "name": "防染工艺",
+     "en": "Resist dyeing",
+     "year": -500,
+     "note": "以扎结、蜡封或型版遮挡使局部不上色的染色方法，衍生扎染与蜡染。",
+     "deps": [
+      "indigo_dyeing"
+     ]
+    },
+    {
+     "id": "tie_dye",
+     "name": "扎染",
+     "en": "Tie-dye",
+     "year": 700,
+     "note": "以线扎结布面后浸染形成放射花纹的防染技法，中国唐代绞缬实物众多。",
+     "deps": [
+      "resist_dyeing"
+     ]
+    },
+    {
+     "id": "batik_wax_resist",
+     "name": "蜡染",
+     "en": "Batik wax-resist dyeing",
+     "year": 700,
+     "note": "以蜡液绘写布面后浸染、脱蜡显花的防染工艺，中国唐代已有蜡缬。",
+     "deps": [
+      "resist_dyeing"
+     ]
+    },
+    {
+     "id": "clamp_resist",
+     "name": "夹缬",
+     "en": "Clamp-resist dyeing",
+     "year": 700,
+     "note": "以雕花版夹紧布匹浸染的对称防染工艺，唐代夹缬印染十分流行。",
+     "deps": [
+      "resist_dyeing"
+     ]
+    },
+    {
+     "id": "mauveine",
+     "name": "苯胺紫染料",
+     "en": "Mauveine",
+     "year": 1856,
+     "note": "珀金在伦敦意外合成的首个合成染料，开启煤焦油合成染料工业。",
+     "deps": [
+      "chemistry",
+      "coal_mining"
+     ]
+    },
+    {
+     "id": "synthetic_alizarin",
+     "name": "合成茜素",
+     "en": "Synthetic alizarin",
+     "year": 1868,
+     "note": "格雷贝与利伯曼由蒽醌合成茜素，BASF随即量产，打击了天然茜草种植。",
+     "deps": [
+      "mauveine"
+     ]
+    },
+    {
+     "id": "azo_dyes",
+     "name": "偶氮染料",
+     "en": "Azo dyes",
+     "year": 1863,
+     "note": "以重氮偶合反应合成的黄红色系染料，此后成为品种最多的染料家族。",
+     "deps": [
+      "mauveine"
+     ]
+    },
+    {
+     "id": "synthetic_indigo",
+     "name": "合成靛蓝",
+     "en": "Synthetic indigo",
+     "year": 1897,
+     "note": "BASF历经多年实现靛蓝工业化合成，成为牛仔布染色的染料主体。",
+     "deps": [
+      "indigo_dyeing",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "indanthrene",
+     "name": "阴丹士林染料",
+     "en": "Indanthrene vat dye",
+     "year": 1901,
+     "note": "博恩合成的还原染料，色泽坚牢耐洗，用于棉布高档染色。",
+     "deps": [
+      "azo_dyes"
+     ]
+    },
+    {
+     "id": "disperse_dyes",
+     "name": "分散染料",
+     "en": "Disperse dyes",
+     "year": 1923,
+     "note": "为疏水性醋酯纤维开发的非离子染料，后用于涤纶高温高压染色。",
+     "deps": [
+      "synthetic_alizarin",
+      "plastics"
+     ]
+    },
+    {
+     "id": "reactive_dyes",
+     "name": "活性染料",
+     "en": "Reactive dyes",
+     "year": 1956,
+     "note": "染料分子与纤维素纤维形成共价键，色泽鲜艳且耐洗牢度极高。",
+     "deps": [
+      "disperse_dyes"
+     ]
+    },
+    {
+     "id": "optical_brightener",
+     "name": "荧光增白剂",
+     "en": "Optical brightener",
+     "year": 1940,
+     "note": "吸收紫外并发射蓝光以抵消织物泛黄，现代洗涤与增白普遍添加。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "woodblock_textile_printing",
+     "name": "木版印花",
+     "en": "Woodblock textile printing",
+     "year": -300,
+     "note": "以刻花木版蘸色在布面压印花纹，印度与中国古代印花棉布即用此法。"
+    },
+    {
+     "id": "stencil_printing",
+     "name": "型版印花",
+     "en": "Stencil printing",
+     "year": 100,
+     "note": "以镂空型版刮浆防染或直接印花的工艺，汉代夹纈技法与此相关。",
+     "deps": [
+      "woodblock_textile_printing"
+     ]
+    },
+    {
+     "id": "roller_printing",
+     "name": "滚筒印花机",
+     "en": "Roller printing machine",
+     "year": 1783,
+     "note": "贝尔发明的铜辊连续印花机，使彩色印花布实现大规模机械化生产。",
+     "deps": [
+      "woodblock_textile_printing",
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "perrotine_printing",
+     "name": "辊筒刮印",
+     "en": "Perrotine machine",
+     "year": 1834,
+     "note": "法国佩罗印花机以辊筒多次套色刮印，是圆网印花前的套色机械。",
+     "deps": [
+      "roller_printing"
+     ]
+    },
+    {
+     "id": "rotary_screen_printing",
+     "name": "圆网印花机",
+     "en": "Rotary screen printing",
+     "year": 1963,
+     "note": "荷兰斯托克研制，金属圆网连续刮印，产量高，是印染厂主流印花机。",
+     "deps": [
+      "roller_printing"
+     ]
+    },
+    {
+     "id": "thermal_transfer_printing",
+     "name": "热转移印花",
+     "en": "Heat transfer printing",
+     "year": 1968,
+     "note": "分散染料经加热由转印纸升华转移到涤纶织物，花纹精细且无污水。",
+     "deps": [
+      "disperse_dyes"
+     ]
+    },
+    {
+     "id": "inkjet_textile_printing",
+     "name": "数码喷墨印花",
+     "en": "Inkjet textile printing",
+     "year": 1995,
+     "note": "喷头按图像直接喷印织物，无需制版，适合小批量高精度印花。",
+     "deps": [
+      "rotary_screen_printing",
+      "computer"
+     ]
+    },
+    {
+     "id": "mercerizing",
+     "name": "丝光整理",
+     "en": "Mercerization",
+     "year": 1890,
+     "note": "以浓氢氧化钠在张力下处理棉纱或棉布，赋予光泽并提高染色与强力。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "sanforizing",
+     "name": "防缩整理",
+     "en": "Sanforizing",
+     "year": 1928,
+     "note": "以机械预缩方式消除织物残余收缩，经处理的棉布水洗尺寸稳定。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "crease_resist_finish",
+     "name": "树脂防皱整理",
+     "en": "Resin crease-resistant finish",
+     "year": 1929,
+     "note": "以脲醛类树脂交联纤维素纤维，使棉织物获得免烫与防皱性能。",
+     "deps": [
+      "chemistry",
+      "plastics"
+     ]
+    },
+    {
+     "id": "fluorocarbon_repellent",
+     "name": "含氟三防整理",
+     "en": "Fluorocarbon DWR finish",
+     "year": 1952,
+     "note": "以氟碳聚合物整理织物获得拒水拒油拒污性能，用于户外与工装面料。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "rubberized_waterproof_cloth",
+     "name": "橡胶防水布",
+     "en": "Rubberized waterproof cloth",
+     "year": 1823,
+     "note": "麦金托什以天然橡胶涂布织物制雨衣，开功能涂层织物的先河。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "durable_press",
+     "name": "耐久压烫整理",
+     "en": "Durable press finishing",
+     "year": 1955,
+     "note": "树脂与后焙烘工艺结合，使衬衫裤装洗后免烫保持褶裥，源自美军军服研究。",
+     "deps": [
+      "crease_resist_finish"
+     ]
+    },
+    {
+     "id": "denim_stone_washing",
+     "name": "牛仔石磨水洗",
+     "en": "Denim stone-washing",
+     "year": 1980,
+     "note": "以浮石或酶在转笼中水洗牛仔布获得做旧外观，形成时装风格工艺。",
+     "deps": [
+      "denim_fabric"
+     ]
+    },
+    {
+     "id": "flame_retardant_finish",
+     "name": "阻燃整理",
+     "en": "Flame-retardant finishing",
+     "year": 1970,
+     "note": "以磷氮系阻燃剂处理织物使其离火自熄，用于防护服与窗帘装饰织物。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "antimicrobial_finish",
+     "name": "抗菌整理",
+     "en": "Antimicrobial finishing",
+     "year": 1990,
+     "note": "以银离子或有机抗菌剂赋予织物抑菌功能，用于运动服与医疗纺织品。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "dope_dyeing",
+     "name": "原液着色",
+     "en": "Dope dyeing / mass coloration",
+     "year": 1900,
+     "note": "在纺丝原液中加入颜料直接纺出有色纤维，染色牢度高且节水省染。"
+    }
+   ]
+  },
+  {
+   "name": "化学纤维",
+   "items": [
+    {
+     "id": "chardonnet_silk",
+     "name": "硝酸纤维素人造丝",
+     "en": "Chardonnet silk",
+     "year": 1891,
+     "note": "夏尔多内以硝化纤维素纺出首个商品化人造丝，人称“假丝”，但易燃。",
+     "deps": [
+      "chemistry",
+      "paper"
+     ]
+    },
+    {
+     "id": "cuprammonium_rayon",
+     "name": "铜氨纤维",
+     "en": "Cuprammonium rayon",
+     "year": 1892,
+     "note": "以铜氨溶液溶解纤维素纺制的再生纤维，纤维纤细，用于高档里料。",
+     "deps": [
+      "chardonnet_silk"
+     ]
+    },
+    {
+     "id": "viscose_rayon",
+     "name": "黏胶纤维",
+     "en": "Viscose rayon",
+     "year": 1892,
+     "note": "克罗斯与贝文以二硫化碳法制黏胶液纺丝，1905年实现大规模生产，为人造棉主力。",
+     "deps": [
+      "chardonnet_silk"
+     ]
+    },
+    {
+     "id": "acetate_fiber",
+     "name": "醋酯纤维",
+     "en": "Acetate fiber",
+     "year": 1921,
+     "note": "以纤维素醋酸酯纺丝的长丝，光泽似丝，用于衬里与烟用滤材。",
+     "deps": [
+      "viscose_rayon"
+     ]
+    },
+    {
+     "id": "nylon66",
+     "name": "尼龙66",
+     "en": "Nylon 66",
+     "year": 1935,
+     "note": "卡罗瑟斯在杜邦合成聚己二酰己二胺，1938年以“尼龙”名义投产，首个合成纤维。",
+     "deps": [
+      "plastics",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "nylon6",
+     "name": "尼龙6",
+     "en": "Nylon 6",
+     "year": 1938,
+     "note": "施拉克以己内酰胺开环聚合制得聚酰胺纤维，是锦纶两大品种之一。",
+     "deps": [
+      "nylon66"
+     ]
+    },
+    {
+     "id": "polyester_fiber",
+     "name": "涤纶",
+     "en": "Polyester fiber",
+     "year": 1941,
+     "note": "温菲尔德与迪克森合成聚对苯二甲酸乙二酯并纺丝，后称涤纶，现为产量最大合成纤维。",
+     "deps": [
+      "nylon66"
+     ]
+    },
+    {
+     "id": "acrylic_fiber",
+     "name": "腈纶",
+     "en": "Acrylic fiber",
+     "year": 1948,
+     "note": "杜邦以聚丙烯腈纺丝制奥纶，纤维蓬松似羊毛，用于针织与毛毯。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "polypropylene_fiber",
+     "name": "丙纶",
+     "en": "Polypropylene fiber",
+     "year": 1957,
+     "note": "以等规聚丙烯纺制，质轻耐磨且不吸水，广泛用于地毯与产业用布。",
+     "deps": [
+      "plastics",
+      "petroleum"
+     ]
+    },
+    {
+     "id": "vinylon",
+     "name": "维纶",
+     "en": "Vinylon (PVA fiber)",
+     "year": 1950,
+     "note": "聚乙烯醇缩甲醛纤维，吸湿接近棉，日本仓敷实现商品化生产。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "spandex_fiber",
+     "name": "氨纶",
+     "en": "Spandex fiber",
+     "year": 1959,
+     "note": "杜邦研发的聚氨酯弹性纤维，断裂伸长极高，为弹力面料提供伸缩性。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "modacrylic_fiber",
+     "name": "改性腈纶",
+     "en": "Modacrylic fiber",
+     "year": 1949,
+     "note": "含氯乙烯共聚的腈纶变体，具阻燃性，用于假发与阻燃织物。",
+     "deps": [
+      "acrylic_fiber"
+     ]
+    },
+    {
+     "id": "polyolefin_elastic",
+     "name": "聚烯烃弹性纤维",
+     "en": "Polyolefin elastomer fiber",
+     "year": 1990,
+     "note": "以聚烯烃嵌段共聚物纺制的弹性纤维，轻量耐化学品，作氨纶替代。",
+     "deps": [
+      "spandex_fiber"
+     ]
+    },
+    {
+     "id": "microfiber",
+     "name": "超细纤维",
+     "en": "Microfiber",
+     "year": 1970,
+     "note": "海岛复合纺丝后开纤制得线密度小于一分的细纤维，用于麂皮与洁净布。",
+     "deps": [
+      "polyester_fiber"
+     ]
+    },
+    {
+     "id": "bicomponent_fiber",
+     "name": "双组分纤维",
+     "en": "Bicomponent fiber",
+     "year": 1965,
+     "note": "两种聚合物沿截面并列或皮芯分布的复合纤维，可自卷曲或热粘合。",
+     "deps": [
+      "polyester_fiber"
+     ]
+    },
+    {
+     "id": "modal_fiber",
+     "name": "莫代尔",
+     "en": "Modal fiber",
+     "year": 1964,
+     "note": "高湿模量黏胶纤维，强力与尺寸稳定性优于普通黏胶，用于内衣面料。",
+     "deps": [
+      "viscose_rayon"
+     ]
+    },
+    {
+     "id": "lyocell_fiber",
+     "name": "莱赛尔纤维",
+     "en": "Lyocell fiber",
+     "year": 1990,
+     "note": "以NMMO溶剂直接溶解纤维素纺丝，溶剂可回收，属绿色再生纤维。",
+     "deps": [
+      "viscose_rayon"
+     ]
+    },
+    {
+     "id": "polylactic_fiber",
+     "name": "聚乳酸纤维",
+     "en": "Polylactic acid fiber",
+     "year": 2003,
+     "note": "以玉米淀粉发酵制乳酸再聚合纺丝，可生物降解，用于环保时装。",
+     "deps": [
+      "plastics",
+      "fermentation"
+     ]
+    },
+    {
+     "id": "hollow_fiber",
+     "name": "中空纤维",
+     "en": "Hollow fiber",
+     "year": 1965,
+     "note": "喷丝孔呈环形或C形纺出的中空纤维，保暖且轻，也用于膜分离。",
+     "deps": [
+      "polyester_fiber"
+     ]
+    },
+    {
+     "id": "profile_fiber",
+     "name": "异形截面纤维",
+     "en": "Profile fiber",
+     "year": 1960,
+     "note": "以异形喷丝孔纺出三角、三叶等截面纤维，改善光泽、手感和吸湿。",
+     "deps": [
+      "polyester_fiber"
+     ]
+    },
+    {
+     "id": "false_twist_texturing",
+     "name": "假捻变形丝",
+     "en": "False-twist textured yarn",
+     "year": 1953,
+     "note": "对涤纶长丝假捻定形后解捻形成卷曲蓬松，是弹力与仿毛纱的来源。",
+     "deps": [
+      "polyester_fiber"
+     ]
+    },
+    {
+     "id": "melt_spinning",
+     "name": "熔融纺丝",
+     "en": "Melt spinning",
+     "year": 1939,
+     "note": "将成纤高聚物熔体经喷丝孔挤出凝固成丝，为涤纶锦纶等主要纺丝法。",
+     "deps": [
+      "nylon66"
+     ]
+    },
+    {
+     "id": "wet_spinning",
+     "name": "湿法纺丝",
+     "en": "Wet spinning",
+     "year": 1893,
+     "note": "聚合物溶液经喷丝孔进入凝固浴析出成丝的工艺，用于黏胶与腈纶。",
+     "deps": [
+      "viscose_rayon"
+     ]
+    },
+    {
+     "id": "dry_spinning",
+     "name": "干法纺丝",
+     "en": "Dry spinning",
+     "year": 1900,
+     "note": "聚合物溶液喷丝后以热风挥发溶剂凝固成丝，用于醋酯与氨纶生产。",
+     "deps": [
+      "chardonnet_silk"
+     ]
+    },
+    {
+     "id": "highspeed_spinning_poY",
+     "name": "高速纺丝",
+     "en": "High-speed spinning (POY)",
+     "year": 1970,
+     "note": "以每分钟数千米卷绕速度直接制得预取向丝，显著提高涤纶纺丝效率。",
+     "deps": [
+      "melt_spinning"
+     ]
+    }
+   ]
+  }
+ ]
+}

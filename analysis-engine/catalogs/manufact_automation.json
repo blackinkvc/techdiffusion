@@ -1,0 +1,1112 @@
+{
+ "cat": "manufact",
+ "catName": "制造与工具",
+ "sub": "automation",
+ "subName": "自动化与产线",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "interchangeable_parts",
+  "steam_engine",
+  "electricity",
+  "electric_motor",
+  "assembly_line",
+  "robot",
+  "cnc",
+  "computer",
+  "ic",
+  "semiconductors",
+  "internet",
+  "waterwheel",
+  "camera",
+  "lasers"
+ ],
+ "families": [
+  {
+   "name": "物料输送与搬运装备",
+   "items": [
+    {
+     "id": "aut_screw_conveyor",
+     "name": "螺旋输送机",
+     "en": "Screw conveyor",
+     "year": -250,
+     "note": "由阿基米德螺旋提水器演化而来的旋转叶片输送机构，用于谷物与散料短距输送。"
+    },
+    {
+     "id": "aut_gravity_chute",
+     "name": "重力溜槽",
+     "en": "Gravity chute",
+     "year": 100,
+     "note": "物料沿斜面靠自重下滑的简易输送方式，至今仍用于短程转运与漏斗出料。"
+    },
+    {
+     "id": "aut_bucket_elevator",
+     "name": "斗式提升机",
+     "en": "Bucket elevator",
+     "year": 1785,
+     "note": "奥利弗·埃文斯面粉厂用斗式链带垂直连续提粮，开创机械连续输送先河。",
+     "deps": ["waterwheel"]
+    },
+    {
+     "id": "aut_belt_conveyor",
+     "name": "带式输送机",
+     "en": "Belt conveyor",
+     "year": 1795,
+     "note": "埃文斯制成首台工业带式输送机转运谷物，成为散料与工件输送的主流设备。",
+     "deps": ["steam_engine"]
+    },
+    {
+     "id": "aut_scraper_conveyor",
+     "name": "刮板输送机",
+     "en": "Scraper conveyor",
+     "year": 1850,
+     "note": "刮板沿料槽拖动物料移动，用于煤矿、铸造厂的水平与倾斜输送。",
+     "deps": ["steam_engine"]
+    },
+    {
+     "id": "aut_pneumatic_conveyor",
+     "name": "气力输送系统",
+     "en": "Pneumatic conveying system",
+     "year": 1866,
+     "note": "以气流在密闭管道中运送散料，广泛用于粮库、水泥与塑料颗粒的装卸。",
+     "deps": ["steam_engine"]
+    },
+    {
+     "id": "aut_slat_conveyor",
+     "name": "链板输送机",
+     "en": "Slat conveyor",
+     "year": 1895,
+     "note": "以金属链板承载工件在工位间转运，适用于冲压件与箱类物料输送。",
+     "deps": ["electric_motor"]
+    },
+    {
+     "id": "aut_roller_conveyor",
+     "name": "辊道输送机",
+     "en": "Roller conveyor",
+     "year": 1908,
+     "note": "以滚筒承载物品滚动输送，是工厂与物流仓库最基本的输送单元。",
+     "deps": ["electric_motor"]
+    },
+    {
+     "id": "aut_overhead_chain_conveyor",
+     "name": "悬挂输送机",
+     "en": "Overhead chain conveyor",
+     "year": 1920,
+     "note": "悬链把工件吊挂于空中轨道小车输送，广泛用于涂装线及工序间缓存。",
+     "deps": ["electric_motor"]
+    },
+    {
+     "id": "aut_powered_roller_conveyor",
+     "name": "动力辊道输送机",
+     "en": "Powered roller conveyor",
+     "year": 1930,
+     "note": "辊道分组电动驱动实现定速与积放输送，可平滑衔接各自动化工位。",
+     "deps": ["aut_roller_conveyor", "electric_motor"]
+    },
+    {
+     "id": "aut_vibratory_conveyor",
+     "name": "振动输送机",
+     "en": "Vibratory conveyor",
+     "year": 1935,
+     "note": "通过激振使物料沿槽体小跳前进，兼具输送、冷却与筛分之用。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_power_and_free_conveyor",
+     "name": "积放式输送机",
+     "en": "Power-and-free conveyor",
+     "year": 1942,
+     "note": "动力轨与自由小车分置，工件可积放缓存与自动转线，适配多品种产线。",
+     "deps": ["aut_overhead_chain_conveyor"]
+    },
+    {
+     "id": "aut_towline_conveyor",
+     "name": "牵引拖车输送机",
+     "en": "Towline conveyor",
+     "year": 1946,
+     "note": "地板槽内牵引链带动小车组流动，用于仓库与装配主线的物料配送。",
+     "deps": ["electric_motor"]
+    },
+    {
+     "id": "aut_vibratory_bowl_feeder",
+     "name": "振动料盘给料机",
+     "en": "Vibratory bowl feeder",
+     "year": 1950,
+     "note": "依靠振动使散乱零件沿螺旋料道整列送出，是自动装配的标准上料装置。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_chip_conveyor",
+     "name": "切屑输送机",
+     "en": "Chip conveyor",
+     "year": 1950,
+     "note": "自动从机床收集并排出金属切屑，保障加工自动线连续运转。",
+     "deps": ["electric_motor"]
+    },
+    {
+     "id": "aut_agv",
+     "name": "自动导引车",
+     "en": "Automated guided vehicle",
+     "year": 1953,
+     "note": "巴雷特公司推出首台感应线导引拖车，后发展为工厂无人搬运车。",
+     "deps": ["electricity", "semiconductors"]
+    },
+    {
+     "id": "aut_magazine_loader",
+     "name": "料仓自动上料装置",
+     "en": "Magazine loader",
+     "year": 1955,
+     "note": "把成批毛坯或工件存于料仓，按节拍自动逐件推入机床或工位。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_rail_transfer_car",
+     "name": "有轨制导搬运车",
+     "en": "Rail guided vehicle",
+     "year": 1956,
+     "note": "沿固定轨道高速往返运送物料，承重大、定位准，常用于重型工件输送。",
+     "deps": ["electric_motor"]
+    },
+    {
+     "id": "aut_vertical_conveyor",
+     "name": "垂直往复输送机",
+     "en": "Vertical reciprocating conveyor",
+     "year": 1960,
+     "note": "用升降平台把工件在楼层间换层输送，节省平面空间并连接上下线体。",
+     "deps": ["electric_motor"]
+    },
+    {
+     "id": "aut_pick_and_place_unit",
+     "name": "气动拾放机械手",
+     "en": "Pneumatic pick-and-place unit",
+     "year": 1960,
+     "note": "以气缸驱动的多轴拾放机构，将小件抓取并精确移位到工位。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_centrifugal_feeder",
+     "name": "离心式送料器",
+     "en": "Centrifugal feeder",
+     "year": 1962,
+     "note": "利用离心力使零件贴壁回转定向，适合高速输送小型轴类与盖类件。",
+     "deps": ["electric_motor"]
+    },
+    {
+     "id": "aut_air_float_conveyor",
+     "name": "气垫输送装置",
+     "en": "Air float conveyor",
+     "year": 1965,
+     "note": "以气膜支承玻璃板或托盘作无接触输送，避免划伤并大幅降低阻力。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_lift_transfer_device",
+     "name": "升降横移送料机",
+     "en": "Lift-and-transfer unit",
+     "year": 1970,
+     "note": "将工件在平行输送线间升降横移转接，是自动线转弯与分流的常见装置。",
+     "deps": ["aut_powered_roller_conveyor"]
+    },
+    {
+     "id": "aut_flexible_feeder",
+     "name": "柔性振动送料系统",
+     "en": "Flexible parts feeding system",
+     "year": 2000,
+     "note": "基于视觉识别散乱零件姿态并引导抓取的供料系统，适应多品种小批量。",
+     "deps": ["robot"]
+    },
+    {
+     "id": "aut_linear_motor_transport",
+     "name": "直线电机输送系统",
+     "en": "Linear motor transport system",
+     "year": 2006,
+     "note": "以直线电机驱动滑座高速高精度输送，用于制药与电子装配产线。",
+     "deps": ["electric_motor", "semiconductors"]
+    },
+    {
+     "id": "aut_amr",
+     "name": "自主移动机器人",
+     "en": "Autonomous mobile robot",
+     "year": 2013,
+     "note": "基于SLAM地图导航，可绕障自主搬运的移动机器人，已走入柔性物流。",
+     "deps": ["robot"]
+    }
+   ]
+  },
+  {
+   "name": "自动控制与驱动执行",
+   "items": [
+    {
+     "id": "aut_thermostat",
+     "name": "恒温控制器",
+     "en": "Thermostat",
+     "year": 1624,
+     "note": "德雷贝尔发明用于孵卵箱的温度自动调节装置，是闭环温控的早期雏形。"
+    },
+    {
+     "id": "aut_motor_starter",
+     "name": "电动机起动器",
+     "en": "Electric motor starter",
+     "year": 1895,
+     "note": "实现电机安全起动与过载保护的电器装置，是产线电机控制的基件。",
+     "deps": ["electric_motor", "electricity"]
+    },
+    {
+     "id": "aut_relay_logic",
+     "name": "继电器逻辑控制",
+     "en": "Relay logic control",
+     "year": 1900,
+     "note": "以电磁继电器组成电机的起动、互锁与顺序逻辑电路，统治机床控制数十年。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_pneumatic_drive",
+     "name": "气压传动装置",
+     "en": "Pneumatic drive system",
+     "year": 1910,
+     "note": "以压缩空气驱动气缸与马达完成往复、夹紧与进给，广泛用于自动化机械。",
+     "deps": ["steam_engine"]
+    },
+    {
+     "id": "aut_solenoid_valve",
+     "name": "电磁阀",
+     "en": "Solenoid valve",
+     "year": 1915,
+     "note": "电磁铁驱动启闭气液回路的阀件，构成顺序控制系统的执行元件。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_pid_controller",
+     "name": "PID调节器",
+     "en": "PID controller",
+     "year": 1922,
+     "note": "米诺尔斯基提出比例-积分-微分控制律，此后成为工业回路调节的主流算法。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_pneumatic_instrumentation",
+     "name": "气动调节仪表",
+     "en": "Pneumatic instrumentation",
+     "year": 1930,
+     "note": "以压缩空气作信号的气动变送与调节仪表，在防爆场合长期主导过程控制。",
+     "deps": ["aut_pid_controller"]
+    },
+    {
+     "id": "aut_hydraulic_servo",
+     "name": "液压伺服机构",
+     "en": "Hydraulic servo mechanism",
+     "year": 1940,
+     "note": "以液压放大驱动执行机构，二战起用于火炮随动与机床进给伺服。"
+    },
+    {
+     "id": "aut_stepper_motor",
+     "name": "步进电机",
+     "en": "Stepper motor",
+     "year": 1960,
+     "note": "把电脉冲转换为精确转角增量，是数控机床与自动装置开环定位的基础。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_direct_digital_control",
+     "name": "直接数字控制",
+     "en": "Direct digital control",
+     "year": 1963,
+     "note": "计算机直接取代调节器分时控制多个回路，是流程工业数字控制的起点。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "aut_plc",
+     "name": "可编程逻辑控制器",
+     "en": "Programmable logic controller",
+     "year": 1969,
+     "note": "莫迪康公司按通用汽车需求研制首台PLC，以程序取代硬接线，成为工业自动化的核心。",
+     "deps": ["semiconductors", "ic"]
+    },
+    {
+     "id": "aut_servo_drive",
+     "name": "交流伺服驱动器",
+     "en": "AC servo drive",
+     "year": 1970,
+     "note": "以电力电子变换驱动交流伺服电机，实现数控与机器人高动态的位置控制。",
+     "deps": ["electric_motor", "ic"]
+    },
+    {
+     "id": "aut_frequency_converter",
+     "name": "变频调速器",
+     "en": "Variable frequency drive",
+     "year": 1975,
+     "note": "变频改变交流电机转速的电力电子装置，使风机泵类与产线实现节能调速。",
+     "deps": ["semiconductors", "ic"]
+    },
+    {
+     "id": "aut_dcs",
+     "name": "集散控制系统",
+     "en": "Distributed control system",
+     "year": 1975,
+     "note": "分散控制、集中管理的计算机控制系统，主导石化与发电厂过程控制。",
+     "deps": ["computer", "ic"]
+    },
+    {
+     "id": "aut_scada",
+     "name": "数据采集与监控系统",
+     "en": "SCADA system",
+     "year": 1976,
+     "note": "对广域工业设备进行遥测、遥信与遥控的监控软件系统，常用于管网与产线。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "aut_motion_controller",
+     "name": "多轴运动控制器",
+     "en": "Multi-axis motion controller",
+     "year": 1985,
+     "note": "基于微处理器规划并同步多轴运动的控制板卡，用于点胶、贴装等装备。",
+     "deps": ["ic", "computer"]
+    },
+    {
+     "id": "aut_fieldbus",
+     "name": "现场总线",
+     "en": "Fieldbus",
+     "year": 1987,
+     "note": "连接现场仪表与控制器的数字通信总线，PROFIBUS等标准相继成型。",
+     "deps": ["ic"]
+    },
+    {
+     "id": "aut_opc",
+     "name": "OPC工业通信标准",
+     "en": "OPC interoperability standard",
+     "year": 1996,
+     "note": "统一过程控制应用与现场设备的数据交换接口，解决异构系统互联。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "aut_safety_plc",
+     "name": "安全可编程控制器",
+     "en": "Safety PLC",
+     "year": 1997,
+     "note": "通过功能安全认证、具备冗余与诊断的专用控制器，用于机器人围栏等保护。",
+     "deps": ["aut_plc"]
+    },
+    {
+     "id": "aut_industrial_ethernet",
+     "name": "工业以太网",
+     "en": "Industrial Ethernet",
+     "year": 2001,
+     "note": "面向实时控制的以太网现场协议族，EtherNet/IP与PROFINET先后商用。",
+     "deps": ["internet", "ic"]
+    },
+    {
+     "id": "aut_electric_actuator",
+     "name": "电动执行机构",
+     "en": "Electric actuator",
+     "year": 1950,
+     "note": "把电信号转换为阀门与挡板转角或直线行程的执行器，便于远程调节。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_valve_positioner",
+     "name": "阀门定位器",
+     "en": "Valve positioner",
+     "year": 1950,
+     "note": "提高调节阀对信号的响应与定位精度，是气动回路的重要附件。",
+     "deps": ["aut_pneumatic_instrumentation"]
+    }
+   ]
+  },
+  {
+   "name": "工业传感器与在线检测",
+   "items": [
+    {
+     "id": "aut_limit_switch",
+     "name": "限位开关",
+     "en": "Limit switch",
+     "year": 1900,
+     "note": "机械触碰触发的行程检测元件，用于机床换向与机构极限保护。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_dynamic_balancing_machine",
+     "name": "动平衡机",
+     "en": "Dynamic balancing machine",
+     "year": 1915,
+     "note": "检测旋转件不平衡量及其相位并指导去重的设备，用于电机转子与曲轴检测。"
+    },
+    {
+     "id": "aut_photoelectric_sensor",
+     "name": "光电传感器",
+     "en": "Photoelectric sensor",
+     "year": 1930,
+     "note": "利用光束通断或反射检测工件有无与位置，广泛用于产线计数与定位。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_load_cell",
+     "name": "称重传感器",
+     "en": "Load cell",
+     "year": 1945,
+     "note": "把重量转换为电信号的应变式器件，用于配料、包装与在线计量。"
+    },
+    {
+     "id": "aut_inductive_proximity_sensor",
+     "name": "电感式接近开关",
+     "en": "Inductive proximity sensor",
+     "year": 1955,
+     "note": "利用涡流效应非接触检测金属件到位，寿命长、响应快。",
+     "deps": ["semiconductors"]
+    },
+    {
+     "id": "aut_rotary_encoder",
+     "name": "旋转编码器",
+     "en": "Rotary encoder",
+     "year": 1958,
+     "note": "把轴角位移转换为脉冲或码值的光电装置，是数控伺服的位置反馈元件。",
+     "deps": ["semiconductors"]
+    },
+    {
+     "id": "aut_inline_gauging",
+     "name": "在线自动测量仪",
+     "en": "In-process gauging system",
+     "year": 1960,
+     "note": "在磨削或自动线中实时测量工件尺寸并闭环修正，保证批量加工精度。"
+    },
+    {
+     "id": "aut_leak_test_machine",
+     "name": "气密检漏仪",
+     "en": "Leak test machine",
+     "year": 1965,
+     "note": "以压降或差压检测密封件泄漏量，用于发动机、阀体与电池包下线检测。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_machine_vision_inspection",
+     "name": "机器视觉检测",
+     "en": "Machine vision inspection",
+     "year": 1980,
+     "note": "以工业相机与图像算法自动判读工件外观与尺寸，取代人工目检。",
+     "deps": ["computer", "camera"]
+    },
+    {
+     "id": "aut_tool_breakage_monitor",
+     "name": "刀具破损监测",
+     "en": "Tool breakage monitoring",
+     "year": 1980,
+     "note": "通过声发射或载荷信号实时判断加工刀具折断，防止自动线连锁事故。",
+     "deps": ["ic"]
+    },
+    {
+     "id": "aut_aoi",
+     "name": "自动光学检测",
+     "en": "Automated optical inspection",
+     "year": 1985,
+     "note": "高速成像比对发现电路板缺陷与装配缺件，是电子组装线的质检关卡。",
+     "deps": ["computer", "camera"]
+    },
+    {
+     "id": "aut_laser_profile_scanner",
+     "name": "激光轮廓扫描仪",
+     "en": "Laser profile scanner",
+     "year": 1990,
+     "note": "投射激光线并三角测量获得物体断面轮廓，用于焊缝与胶条在线检查。",
+     "deps": ["lasers", "camera"]
+    },
+    {
+     "id": "aut_xray_inspection_line",
+     "name": "在线X射线检测",
+     "en": "Inline X-ray inspection",
+     "year": 1990,
+     "note": "在流水线上透视检测铸件内部缺陷与产品内部装配，保障关键件质量。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "aut_force_torque_sensor",
+     "name": "多维力觉传感器",
+     "en": "Force-torque sensor",
+     "year": 1990,
+     "note": "测量六维力与力矩的传感装置，使机器人力控装配与柔顺作业成为可能。",
+     "deps": ["semiconductors"]
+    },
+    {
+     "id": "aut_laser_tracker",
+     "name": "激光跟踪测量仪",
+     "en": "Laser tracker",
+     "year": 1990,
+     "note": "激光干涉测距跟踪靶标，为飞机与机床大尺寸部件的装调提供坐标基准。",
+     "deps": ["lasers", "camera"]
+    },
+    {
+     "id": "aut_current_loop_signal",
+     "name": "4-20毫安电流信号",
+     "en": "4-20 mA current loop",
+     "year": 1955,
+     "note": "以电流大小传递过程变量的仪表信号标准，抗干扰强且便于远传。",
+     "deps": ["electricity"]
+    }
+   ]
+  },
+  {
+   "name": "工业机器人技术与应用",
+   "items": [
+    {
+     "id": "aut_hot_cell_manipulator",
+     "name": "热室主从机械手",
+     "en": "Master-slave manipulator",
+     "year": 1955,
+     "note": "操作者在屏蔽窗外随动控制的长杆机械手，用于核材料等危险环境搬运。"
+    },
+    {
+     "id": "aut_machine_tending_robot",
+     "name": "机床上下料机器人",
+     "en": "Machine tending robot",
+     "year": 1962,
+     "note": "机器人向压铸机或机床自动送取工件，最早实现规模化应用的机器人场景。",
+     "deps": ["robot"]
+    },
+    {
+     "id": "aut_robot_gripper",
+     "name": "机器人末端夹持器",
+     "en": "Robot end-of-arm gripper",
+     "year": 1965,
+     "note": "装在机器人腕部的抓取执行器，含气爪、真空吸盘与电磁吸盘等类型。",
+     "deps": ["robot"]
+    },
+    {
+     "id": "aut_spot_welding_robot",
+     "name": "点焊机器人",
+     "en": "Spot welding robot",
+     "year": 1969,
+     "note": "带焊钳对白车身钣金逐点焊接的机器人，是汽车焊装车间的核心装备。",
+     "deps": ["robot"]
+    },
+    {
+     "id": "aut_paint_robot",
+     "name": "喷涂机器人",
+     "en": "Spray painting robot",
+     "year": 1970,
+     "note": "按示教轨迹自动完成喷漆作业的机器人，改善工人环境并保证涂层均匀。",
+     "deps": ["robot"]
+    },
+    {
+     "id": "aut_six_axis_robot",
+     "name": "六轴关节机器人",
+     "en": "Six-axis articulated robot",
+     "year": 1973,
+     "note": "六自由度串联关节臂可任意姿态作业，是现代工业机器人主流构型。",
+     "deps": ["robot"]
+    },
+    {
+     "id": "aut_palletizing_robot",
+     "name": "码垛机器人",
+     "en": "Palletizing robot",
+     "year": 1974,
+     "note": "按垛形自动抓取箱袋类物料堆码，取代人工重体力码垛。",
+     "deps": ["robot"]
+    },
+    {
+     "id": "aut_arc_welding_robot",
+     "name": "弧焊机器人",
+     "en": "Arc welding robot",
+     "year": 1976,
+     "note": "携带焊枪完成连续电弧焊的机器人，配变位机组成焊接工作站。",
+     "deps": ["robot"]
+    },
+    {
+     "id": "aut_scara",
+     "name": "SCARA机器人",
+     "en": "SCARA robot",
+     "year": 1981,
+     "note": "平面关节型机器人在水平面内高速运动，专用于电子件拾放与装配。",
+     "deps": ["robot"]
+    },
+    {
+     "id": "aut_cleanroom_robot",
+     "name": "洁净室机器人",
+     "en": "Cleanroom robot",
+     "year": 1985,
+     "note": "低发尘、可真空环境的搬运机器人，用于半导体晶圆与光掩模传送。",
+     "deps": ["robot"]
+    },
+    {
+     "id": "aut_delta_robot",
+     "name": "并联Delta机器人",
+     "en": "Delta robot",
+     "year": 1985,
+     "note": "克莱维尔发明的并联机械臂，轻载高速，广泛用于食品与药品分拣。",
+     "deps": ["robot"]
+    },
+    {
+     "id": "aut_gantry_robot",
+     "name": "龙门桁架机器人",
+     "en": "Gantry robot",
+     "year": 1985,
+     "note": "在龙门架上移动的直角坐标机械手，承担大型工件的上下料与搬运。",
+     "deps": ["robot"]
+    },
+    {
+     "id": "aut_laser_processing_robot",
+     "name": "激光加工机器人",
+     "en": "Laser processing robot",
+     "year": 1985,
+     "note": "引导激光头完成切割与焊接的机器人系统，灵活加工复杂空间曲线。",
+     "deps": ["robot", "lasers"]
+    },
+    {
+     "id": "aut_sealing_robot",
+     "name": "涂胶密封机器人",
+     "en": "Sealing robot",
+     "year": 1987,
+     "note": "沿缝隙自动涂布胶粘剂与密封胶，用于汽车风挡、车身与电池包密封。",
+     "deps": ["robot"]
+    },
+    {
+     "id": "aut_robot_offline_programming",
+     "name": "机器人离线编程",
+     "en": "Robot offline programming",
+     "year": 1988,
+     "note": "在计算机中建模规划机器人轨迹并下载程序，缩短示教时间并提高精度。",
+     "deps": ["robot", "computer"]
+    },
+    {
+     "id": "aut_vision_guided_robot",
+     "name": "视觉引导机器人",
+     "en": "Vision-guided robot",
+     "year": 1990,
+     "note": "相机识别工件位置与姿态后引导机器人抓取，适应来料随机摆放。",
+     "deps": ["robot", "camera"]
+    },
+    {
+     "id": "aut_force_control_robot",
+     "name": "力控机器人",
+     "en": "Force-controlled robot",
+     "year": 1995,
+     "note": "依据力觉反馈柔顺作业的机器人，可完成精密装配、打磨与抛光。",
+     "deps": ["robot", "aut_force_torque_sensor"]
+    },
+    {
+     "id": "aut_robot_grinding_polishing",
+     "name": "机器人磨抛单元",
+     "en": "Robotic grinding and polishing cell",
+     "year": 1998,
+     "note": "配力控与砂带装置的磨抛工作站，用于铸件、叶片与3C外壳精整。",
+     "deps": ["robot", "aut_force_torque_sensor"]
+    },
+    {
+     "id": "aut_dual_arm_robot",
+     "name": "双臂机器人",
+     "en": "Dual-arm robot",
+     "year": 2005,
+     "note": "模拟人双臂协调作业的机器人，可协同完成装配、搬运等复杂动作。",
+     "deps": ["robot"]
+    },
+    {
+     "id": "aut_cobot",
+     "name": "协作机器人",
+     "en": "Collaborative robot",
+     "year": 2008,
+     "note": "具备力限制与碰撞检测、可与人同空间作业的轻型机器人，便于人机共线。",
+     "deps": ["robot"]
+    },
+    {
+     "id": "aut_bin_picking_robot",
+     "name": "乱序抓取机器人",
+     "en": "Bin picking robot",
+     "year": 2010,
+     "note": "以三维视觉识别料箱内堆叠零件并逐个抓取，实现来料自动化上料。",
+     "deps": ["robot", "camera"]
+    },
+    {
+     "id": "aut_mobile_manipulator",
+     "name": "移动操作机器人",
+     "en": "Mobile manipulator",
+     "year": 2014,
+     "note": "把机械臂装于自主移动平台，边行走边作业，用于柔性工位服务。",
+     "deps": ["robot", "aut_amr"]
+    }
+   ]
+  },
+  {
+   "name": "生产自动线装备",
+   "items": [
+    {
+     "id": "aut_transfer_machine",
+     "name": "组合机床自动线",
+     "en": "Transfer machine",
+     "year": 1924,
+     "note": "莫里斯发动机厂率先以工件自动传送贯通多台专用机床，加工缸体等大批量件。",
+     "deps": ["electricity", "assembly_line"]
+    },
+    {
+     "id": "aut_rotary_index_machine",
+     "name": "回转分度多工位机床",
+     "en": "Rotary index machine",
+     "year": 1930,
+     "note": "工件在回转工作台上分度经过多个加工工位，紧凑完成钻孔攻丝等工序。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_automatic_plating_line",
+     "name": "自动电镀生产线",
+     "en": "Automatic electroplating line",
+     "year": 1930,
+     "note": "行车按程序把挂具依次送入各镀槽，实现镀件批量连续处理。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_paint_booth",
+     "name": "喷漆室",
+     "en": "Paint spray booth",
+     "year": 1930,
+     "note": "带通风与漆雾净化的喷涂作业室，为工件喷涂提供清洁气流环境。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_parts_washing_machine",
+     "name": "零件自动清洗机",
+     "en": "Industrial parts washer",
+     "year": 1935,
+     "note": "以喷淋或浸洗方式自动清除工件油污与铁屑，是加工线间的必需设备。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_resistance_weld_line",
+     "name": "电阻焊自动线",
+     "en": "Resistance welding line",
+     "year": 1940,
+     "note": "固定点焊机与传送装置组合的连续焊接线，批量焊制钣金结构件。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_pallet_transfer_line",
+     "name": "随行夹具加工线",
+     "en": "Pallet transfer machining line",
+     "year": 1950,
+     "note": "工件装于随行夹具在机床间循环传送，适合箱体类零件的多工序加工。",
+     "deps": ["aut_transfer_machine"]
+    },
+    {
+     "id": "aut_body_framing_line",
+     "name": "白车身定位焊装线",
+     "en": "Body framing line",
+     "year": 1955,
+     "note": "用合装夹具定位左右侧围与顶盖并自动焊接成形，确立车身基准尺寸。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_powder_coating_line",
+     "name": "静电粉末喷涂线",
+     "en": "Electrostatic powder coating line",
+     "year": 1965,
+     "note": "粉末带电吸附工件后烘烤成膜，环保且涂层厚，广泛用于金属件涂装。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_cathodic_electrocoat_line",
+     "name": "阴极电泳涂装线",
+     "en": "Cathodic electrocoating line",
+     "year": 1976,
+     "note": "车身浸入电泳槽使涂料均匀沉积内腔，防锈能力远优于喷涂底漆。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "aut_end_of_line_tester",
+     "name": "下线综合检测台",
+     "en": "End-of-line test stand",
+     "year": 1990,
+     "note": "在产线末端自动完成产品功能、性能与密封综合测试并判级放行。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "aut_conveyor_oven_line",
+     "name": "连续式烘干炉",
+     "en": "Continuous curing oven",
+     "year": 1930,
+     "note": "工件随输送链穿越加热炉完成漆膜固化或工件烘干，实现连续生产。",
+     "deps": ["electricity"]
+    }
+   ]
+  },
+  {
+   "name": "柔性制造与工厂自动化系统",
+   "items": [
+    {
+     "id": "aut_group_technology",
+     "name": "成组技术",
+     "en": "Group technology",
+     "year": 1959,
+     "note": "米特罗法诺夫提出按零件工艺相似性分组组织生产，为成组单元与FMS奠基。"
+    },
+    {
+     "id": "aut_fms",
+     "name": "柔性制造系统",
+     "en": "Flexible manufacturing system",
+     "year": 1967,
+     "note": "莫林斯系统24为代表，由计算机调度多台机床与物流实现无人化连续加工。",
+     "deps": ["cnc", "computer"]
+    },
+    {
+     "id": "aut_direct_nc",
+     "name": "直接数控",
+     "en": "Direct numerical control",
+     "year": 1968,
+     "note": "由中央计算机向多台数控机床实时分配加工程序，奠定车间联网基础。",
+     "deps": ["cnc", "computer"]
+    },
+    {
+     "id": "aut_cim",
+     "name": "计算机集成制造",
+     "en": "Computer integrated manufacturing",
+     "year": 1973,
+     "note": "哈林顿提出把设计、制造与管理信息贯通的企业集成理念，驱动工厂信息化。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "aut_unmanned_factory",
+     "name": "无人值守工厂",
+     "en": "Lights-out factory",
+     "year": 1982,
+     "note": "发那科建成夜间无人连续加工的工厂，机器人上下料并自动物流。",
+     "deps": ["robot", "cnc", "aut_fms"]
+    },
+    {
+     "id": "aut_fmc",
+     "name": "柔性制造单元",
+     "en": "Flexible manufacturing cell",
+     "year": 1985,
+     "note": "单台加工中心配刀库与托盘库自主加工，是柔性制造的最小系统。",
+     "deps": ["cnc", "robot"]
+    },
+    {
+     "id": "aut_mes",
+     "name": "制造执行系统",
+     "en": "Manufacturing execution system",
+     "year": 1992,
+     "note": "实时跟踪车间计划、物料与质量的执行层软件，填补计划与产线之间的断层。",
+     "deps": ["computer", "internet"]
+    },
+    {
+     "id": "aut_reconfigurable_mfg",
+     "name": "可重构制造系统",
+     "en": "Reconfigurable manufacturing system",
+     "year": 1999,
+     "note": "柯伦提出可随产能与品种快速调整机床与物流配置的下一代制造范式。"
+    },
+    {
+     "id": "aut_factory_simulation",
+     "name": "工厂离散仿真",
+     "en": "Discrete-event factory simulation",
+     "year": 1975,
+     "note": "以计算机仿真产线节拍、瓶颈与物流，在设计阶段即优化自动线。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "aut_factory_data_collection",
+     "name": "车间数据采集系统",
+     "en": "Factory data collection",
+     "year": 1975,
+     "note": "通过终端与PLC采集产量、停机与质量数据，为车间管理提供实时依据。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "aut_robot_workcell",
+     "name": "机器人工作站",
+     "en": "Robotic workcell",
+     "year": 1975,
+     "note": "机器人、工装夹具与安全防护集成的作业单元，可独立完成一种工艺。",
+     "deps": ["robot"]
+    },
+    {
+     "id": "aut_rfid_tracking",
+     "name": "射频识别物料跟踪",
+     "en": "RFID work-in-process tracking",
+     "year": 2000,
+     "note": "给托盘或工件附加电子标签，自动读写以跟踪批次与工序状态。",
+     "deps": ["semiconductors", "internet"]
+    }
+   ]
+  },
+  {
+   "name": "厂内仓储与产线配套装备",
+   "items": [
+    {
+     "id": "aut_eddy_current_tester",
+     "name": "涡流探伤仪",
+     "en": "Eddy-current flaw detector",
+     "year": 1950,
+     "note": "以涡流变化检测导电工件表面裂纹，常用于在线检测线材与管材。",
+     "deps": ["semiconductors"]
+    },
+    {
+     "id": "aut_stackercrane",
+     "name": "巷道堆垛机",
+     "en": "Stacker crane",
+     "year": 1958,
+     "note": "在高架货架巷道内升降伸缩存取货物的起重机械，是自动立体库的核心。",
+     "deps": ["electric_motor"]
+    },
+    {
+     "id": "aut_vacuum_suction_cup",
+     "name": "真空吸盘",
+     "en": "Vacuum suction cup",
+     "year": 1960,
+     "note": "以负压吸持平整工件或包装物的端拾器，被机器人广泛用于抓取搬运。"
+    },
+    {
+     "id": "aut_asrs",
+     "name": "自动化立体仓库",
+     "en": "Automated storage and retrieval system",
+     "year": 1962,
+     "note": "高架货架配合堆垛机由计算机控制存取，实现仓库作业自动化。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "aut_pyrometer",
+     "name": "工业红外测温仪",
+     "en": "Industrial infrared pyrometer",
+     "year": 1965,
+     "note": "非接触测量高温物体温度，用于轧钢、热处理等产线的实时测温。"
+    },
+    {
+     "id": "aut_ultrasonic_proximity_sensor",
+     "name": "超声波接近传感器",
+     "en": "Ultrasonic proximity sensor",
+     "year": 1970,
+     "note": "以超声回波检测物体距离，不受颜色与材料透明度影响。",
+     "deps": ["semiconductors"]
+    },
+    {
+     "id": "aut_vlm",
+     "name": "垂直升降货柜",
+     "en": "Vertical lift module",
+     "year": 1975,
+     "note": "以升降提取器把托盘送到操作口的自动存取设备，适合密集存储小件。",
+     "deps": ["electric_motor"]
+    },
+    {
+     "id": "aut_pallet_changer",
+     "name": "自动托盘交换装置",
+     "en": "Automatic pallet changer",
+     "year": 1975,
+     "note": "加工中心快速交换承载工件的托盘，缩短装夹时间实现连续加工。",
+     "deps": ["cnc"]
+    },
+    {
+     "id": "aut_pallet_rotator",
+     "name": "托盘翻转机",
+     "en": "Pallet rotator",
+     "year": 1980,
+     "note": "将托盘或工件夹紧翻转一定角度，用于上下料与换向输送。",
+     "deps": ["electric_motor"]
+    },
+    {
+     "id": "aut_depalletizer",
+     "name": "自动卸垛机",
+     "en": "Depalletizer",
+     "year": 1980,
+     "note": "从托盘上自动抓取整层或逐件取下箱袋，与码垛机组成装卸单元。",
+     "deps": ["aut_palletizing_robot"]
+    },
+    {
+     "id": "aut_welding_positioner",
+     "name": "焊接变位机",
+     "en": "Welding positioner",
+     "year": 1985,
+     "note": "回转并倾斜工件使焊缝处于最佳姿态，与焊接机器人协调作业。",
+     "deps": ["electric_motor"]
+    },
+    {
+     "id": "aut_industrial_pc",
+     "name": "工业计算机",
+     "en": "Industrial PC",
+     "year": 1988,
+     "note": "适应恶劣环境的计算机，运行控制与监控软件，是产线数字化节点。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "aut_agv_forklift",
+     "name": "自动导引叉车",
+     "en": "Automated forklift",
+     "year": 1990,
+     "note": "带叉具的导引车辆自动完成托盘存取与搬运，衔接仓库与工位。",
+     "deps": ["aut_agv"]
+    },
+    {
+     "id": "aut_hmi_panel",
+     "name": "工业人机界面",
+     "en": "Industrial HMI panel",
+     "year": 1990,
+     "note": "以图形界面显示工艺并输入参数的触摸终端，取代按钮与仪表盘。",
+     "deps": ["computer", "ic"]
+    },
+    {
+     "id": "aut_robot_seventh_axis",
+     "name": "机器人行走轴",
+     "en": "Robot linear track",
+     "year": 1990,
+     "note": "导轨上的移动底座扩展机器人工作范围，可服务多个工位。",
+     "deps": ["robot"]
+    },
+    {
+     "id": "aut_laser_displacement_sensor",
+     "name": "激光位移传感器",
+     "en": "Laser displacement sensor",
+     "year": 1995,
+     "note": "以激光三角法精密测量距离与厚度，用于在线尺寸监控。",
+     "deps": ["lasers"]
+    },
+    {
+     "id": "aut_fixed_barcode_reader",
+     "name": "固定式条码读码器",
+     "en": "Fixed barcode reader",
+     "year": 1995,
+     "note": "在输送线旁自动识读产品条码，实现批次追溯与分流控制。",
+     "deps": ["semiconductors"]
+    },
+    {
+     "id": "aut_smart_camera",
+     "name": "智能相机",
+     "en": "Smart camera",
+     "year": 2000,
+     "note": "把图像传感器与处理芯片集成于一体，自带视觉算法独立完成检测。",
+     "deps": ["camera", "computer"]
+    },
+    {
+     "id": "aut_safety_laser_scanner",
+     "name": "安全激光扫描仪",
+     "en": "Safety laser scanner",
+     "year": 2000,
+     "note": "以激光扫描二维区域实现人员入侵保护，代替安全光幕覆盖非规则区域。",
+     "deps": ["lasers", "semiconductors"]
+    },
+    {
+     "id": "aut_tote_shuttle",
+     "name": "料箱穿梭车",
+     "en": "Tote shuttle system",
+     "year": 2005,
+     "note": "在货架轨道上往返搬运料箱的高速小车，提升小件拣选吞吐率。",
+     "deps": ["electric_motor"]
+    },
+    {
+     "id": "aut_wireless_hart",
+     "name": "无线HART仪表网络",
+     "en": "WirelessHART",
+     "year": 2007,
+     "note": "面向过程仪表的无线自组网协议，免布线扩展现场测点。",
+     "deps": ["aut_fieldbus", "internet"]
+    },
+    {
+     "id": "aut_predictive_maintenance",
+     "name": "设备预测性维护",
+     "en": "Predictive maintenance system",
+     "year": 2010,
+     "note": "基于振动与数据建模预判设备故障，提前检修以减少非计划停机。",
+     "deps": ["computer", "internet"]
+    },
+    {
+     "id": "aut_digital_twin_factory",
+     "name": "工厂数字孪生",
+     "en": "Factory digital twin",
+     "year": 2015,
+     "note": "以实时数据驱动的虚拟产线镜像，用于仿真验证与运营优化。",
+     "deps": ["computer", "internet"]
+    }
+   ]
+  }
+ ]
+}

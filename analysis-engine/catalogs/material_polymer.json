@@ -1,0 +1,1189 @@
+{
+ "cat": "material",
+ "catName": "材料",
+ "sub": "polymer",
+ "subName": "高分子与塑料",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "chemistry",
+  "petroleum",
+  "paper",
+  "plastics",
+  "composites"
+ ],
+ "families": [
+  {
+   "name": "天然与生物质高分子材料",
+   "items": [
+    {
+     "id": "natural_rubber",
+     "name": "天然橡胶",
+     "en": "Natural rubber",
+     "year": 1736,
+     "note": "由三叶橡胶树乳汁凝成的弹性天然高分子，是轮胎、胶带等橡胶制品的原料基础。",
+     "deps": []
+    },
+    {
+     "id": "rubber_vulcanization",
+     "name": "橡胶硫化",
+     "en": "Rubber vulcanization",
+     "year": 1839,
+     "note": "古德伊尔用硫黄加热生胶使其分子交联，橡胶由此获得稳定的高弹性并走向大规模应用。",
+     "deps": [
+      "natural_rubber"
+     ]
+    },
+    {
+     "id": "gutta_percha",
+     "name": "古塔波胶",
+     "en": "Gutta-percha",
+     "year": 1848,
+     "note": "古塔胶树分泌的热塑性天然胶，1850年代起用作海底电报电缆绝缘层。",
+     "deps": [
+      "natural_rubber"
+     ]
+    },
+    {
+     "id": "ebonite",
+     "name": "硬质橡胶",
+     "en": "Ebonite",
+     "year": 1851,
+     "note": "高硫量深度硫化的橡胶，坚硬且绝缘，用于蓄电池槽壳与电绝缘制品。",
+     "deps": [
+      "rubber_vulcanization"
+     ]
+    },
+    {
+     "id": "linoleum",
+     "name": "亚麻油毡",
+     "en": "Linoleum",
+     "year": 1863,
+     "note": "氧化亚麻油与软木粉等压制成的弹性地面卷材，为早期商用铺地材料。",
+     "deps": []
+    },
+    {
+     "id": "celluloid",
+     "name": "赛璐珞",
+     "en": "Celluloid",
+     "year": 1869,
+     "note": "樟脑增塑硝酸纤维素而成，为首种可模塑热塑性塑料，用于台球、梳子与早期胶片。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "shellac_resin",
+     "name": "虫胶",
+     "en": "Shellac",
+     "year": 1890,
+     "note": "紫胶虫分泌的天然树脂，制虫胶清漆，十九世纪末广泛用于留声机唱片。",
+     "deps": []
+    },
+    {
+     "id": "viscose_rayon",
+     "name": "粘胶人造丝",
+     "en": "Viscose rayon",
+     "year": 1892,
+     "note": "纤维素经黄原酸化溶解后纺丝再生，是化学纤维工业的开端产品。",
+     "deps": []
+    },
+    {
+     "id": "casein_plastic",
+     "name": "酪素塑料",
+     "en": "Casein plastic",
+     "year": 1897,
+     "note": "以甲醛处理酪蛋白成型的塑料，质轻可染色且可降解，多用于纽扣与饰品。",
+     "deps": []
+    },
+    {
+     "id": "cellulose_acetate",
+     "name": "醋酸纤维素",
+     "en": "Cellulose acetate",
+     "year": 1904,
+     "note": "纤维素乙酰化产物，成膜透明，用于摄影胶片、镜架与滤嘴丝束。",
+     "deps": []
+    },
+    {
+     "id": "cellophane",
+     "name": "玻璃纸",
+     "en": "Cellophane",
+     "year": 1911,
+     "note": "再生纤维素制成的透明薄膜，是最早的透明商品包装材料。",
+     "deps": []
+    },
+    {
+     "id": "cuprammonium_rayon",
+     "name": "铜铵人造丝",
+     "en": "Cuprammonium rayon",
+     "year": 1918,
+     "note": "纤维素溶于铜铵溶液纺成的再生纤维，细软光洁，用于仿真丝织物。",
+     "deps": []
+    },
+    {
+     "id": "carboxymethyl_cellulose",
+     "name": "羧甲基纤维素",
+     "en": "Carboxymethyl cellulose",
+     "year": 1918,
+     "note": "水溶性纤维素醚，作增稠与保水剂，用于食品、造纸与钻井泥浆。",
+     "deps": []
+    },
+    {
+     "id": "nitrocellulose_lacquer",
+     "name": "硝基漆",
+     "en": "Nitrocellulose lacquer",
+     "year": 1923,
+     "note": "硝化棉溶于溶剂而成的快干涂料，曾广泛用于汽车与家具涂装。",
+     "deps": [
+      "celluloid"
+     ]
+    },
+    {
+     "id": "latex_foam_rubber",
+     "name": "胶乳海绵",
+     "en": "Latex foam rubber",
+     "year": 1929,
+     "note": "天然胶乳机械起泡后硫化成的多孔弹性体，用于床垫与坐垫填充。",
+     "deps": [
+      "rubber_vulcanization"
+     ]
+    },
+    {
+     "id": "chlorinated_rubber",
+     "name": "氯化橡胶",
+     "en": "Chlorinated rubber",
+     "year": 1931,
+     "note": "天然橡胶氯化改性的成膜树脂，耐蚀耐候，用于船舶与化工防腐涂料。",
+     "deps": [
+      "natural_rubber"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "热固性树脂与交联高分子",
+   "items": [
+    {
+     "id": "phenol_formaldehyde_resin",
+     "name": "酚醛树脂",
+     "en": "Phenol-formaldehyde resin",
+     "year": 1909,
+     "note": "贝克兰以苯酚与甲醛缩聚成首个全合成塑料，电绝缘且耐热，用于电器件与模塑制品。",
+     "deps": [
+      "chemistry",
+      "plastics"
+     ]
+    },
+    {
+     "id": "alkyd_resin",
+     "name": "醇酸树脂",
+     "en": "Alkyd resin",
+     "year": 1927,
+     "note": "多元醇与多元酸缩聚的涂料树脂，成膜附着力与耐候性好，用于工业涂料。",
+     "deps": []
+    },
+    {
+     "id": "urea_formaldehyde_resin",
+     "name": "脲醛树脂",
+     "en": "Urea-formaldehyde resin",
+     "year": 1929,
+     "note": "尿素与甲醛缩聚的氨基树脂，色浅价廉，大量用于人造板胶黏剂。",
+     "deps": []
+    },
+    {
+     "id": "unsaturated_polyester_resin",
+     "name": "不饱和聚酯树脂",
+     "en": "Unsaturated polyester resin",
+     "year": 1933,
+     "note": "与苯乙烯共聚固化成耐水树脂，是玻璃钢制品的主要基体。",
+     "deps": []
+    },
+    {
+     "id": "melamine_formaldehyde_resin",
+     "name": "三聚氰胺甲醛树脂",
+     "en": "Melamine-formaldehyde resin",
+     "year": 1935,
+     "note": "三聚氰胺与甲醛缩聚成硬而耐热的氨基树脂，用于餐具与装饰层压板。",
+     "deps": []
+    },
+    {
+     "id": "polyurethane_resin",
+     "name": "聚氨酯",
+     "en": "Polyurethane",
+     "year": 1937,
+     "note": "拜耳开发异氰酸酯加聚工艺，产物兼作泡沫、弹性体、涂料与胶黏剂。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "resorcinol_formaldehyde_resin",
+     "name": "间苯二酚甲醛树脂",
+     "en": "Resorcinol-formaldehyde resin",
+     "year": 1943,
+     "note": "可常温固化的耐水木材胶黏树脂，用于建筑胶合木与木结构粘接。",
+     "deps": []
+    },
+    {
+     "id": "diallyl_phthalate_resin",
+     "name": "邻苯二甲酸二烯丙酯树脂",
+     "en": "Diallyl phthalate resin",
+     "year": 1946,
+     "note": "交联密度高的热固树脂，尺寸稳定绝缘，用于精密电气元件。",
+     "deps": []
+    },
+    {
+     "id": "epoxy_resin",
+     "name": "环氧树脂",
+     "en": "Epoxy resin",
+     "year": 1946,
+     "note": "双酚A型环氧树脂粘接与耐蚀性突出，成为胶黏剂、涂料与复合材料的主要基体。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "furan_resin",
+     "name": "呋喃树脂",
+     "en": "Furan resin",
+     "year": 1950,
+     "note": "糠醇类缩聚树脂，耐酸碱侵蚀，用于防腐胶泥与铸造砂芯粘结。",
+     "deps": []
+    },
+    {
+     "id": "vinyl_ester_resin",
+     "name": "乙烯基酯树脂",
+     "en": "Vinyl ester resin",
+     "year": 1962,
+     "note": "环氧骨架端接不饱和基团的耐蚀树脂，用于化工防腐玻璃钢设备。",
+     "deps": []
+    },
+    {
+     "id": "bismaleimide_resin",
+     "name": "双马来酰亚胺树脂",
+     "en": "Bismaleimide resin",
+     "year": 1975,
+     "note": "耐高温的热固性树脂，用作航空结构复合材料的耐温基体，湿热性能优于环氧。",
+     "deps": []
+    },
+    {
+     "id": "cyanate_ester_resin",
+     "name": "氰酸酯树脂",
+     "en": "Cyanate ester resin",
+     "year": 1980,
+     "note": "介电性能优良且耐高温，用于雷达天线罩与高速印制电路基材。",
+     "deps": []
+    }
+   ]
+  },
+  {
+   "name": "通用热塑性塑料",
+   "items": [
+    {
+     "id": "polyvinyl_acetate",
+     "name": "聚乙酸乙烯酯",
+     "en": "Polyvinyl acetate",
+     "year": 1912,
+     "note": "白乳胶的主要成分，广泛用于木材粘接、墙纸胶与水性涂料。",
+     "deps": []
+    },
+    {
+     "id": "polyvinyl_chloride",
+     "name": "聚氯乙烯",
+     "en": "Polyvinyl chloride",
+     "year": 1926,
+     "note": "增塑后柔软、未增塑则坚硬，用于管材、型材与薄膜，是产量最大的塑料之一。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "polystyrene",
+     "name": "聚苯乙烯",
+     "en": "Polystyrene",
+     "year": 1930,
+     "note": "透明易成型的通用树脂，用于包装、日用品、家电与绝缘件。",
+     "deps": []
+    },
+    {
+     "id": "polymethyl_methacrylate",
+     "name": "有机玻璃",
+     "en": "Polymethyl methacrylate",
+     "year": 1933,
+     "note": "聚甲基丙烯酸甲酯透明板材，耐候不易碎，用于照明器具与航空座舱玻璃。",
+     "deps": []
+    },
+    {
+     "id": "low_density_polyethylene",
+     "name": "低密度聚乙烯",
+     "en": "Low-density polyethylene",
+     "year": 1933,
+     "note": "高压自由基聚合的支化聚乙烯，柔软透明，是薄膜包装的主要原料。",
+     "deps": [
+      "petroleum"
+     ]
+    },
+    {
+     "id": "polyvinyl_butyral",
+     "name": "聚乙烯醇缩丁醛",
+     "en": "Polyvinyl butyral",
+     "year": 1936,
+     "note": "与玻璃复合制成夹层安全玻璃，广泛用于汽车风挡与建筑玻璃。",
+     "deps": []
+    },
+    {
+     "id": "polyvinylidene_chloride",
+     "name": "聚偏二氯乙烯",
+     "en": "Polyvinylidene chloride",
+     "year": 1939,
+     "note": "气体阻隔性优异的共聚物，用作食品保鲜阻隔涂层与收缩薄膜。",
+     "deps": []
+    },
+    {
+     "id": "styrene_acrylonitrile_resin",
+     "name": "苯乙烯-丙烯腈共聚物",
+     "en": "Styrene-acrylonitrile resin",
+     "year": 1948,
+     "note": "刚性好、耐化学的透明树脂，用于家用器具、仪表外壳与包装。",
+     "deps": []
+    },
+    {
+     "id": "high_impact_polystyrene",
+     "name": "高抗冲聚苯乙烯",
+     "en": "High-impact polystyrene",
+     "year": 1951,
+     "note": "以聚丁二烯橡胶增韧聚苯乙烯，冲击韧性明显提高，用于家电壳体与内衬。",
+     "deps": []
+    },
+    {
+     "id": "high_density_polyethylene",
+     "name": "高密度聚乙烯",
+     "en": "High-density polyethylene",
+     "year": 1953,
+     "note": "齐格勒低压催化聚合的线型聚乙烯，刚性与耐热较好，用于瓶罐、管道与周转箱。",
+     "deps": [
+      "low_density_polyethylene"
+     ]
+    },
+    {
+     "id": "polypropylene",
+     "name": "聚丙烯",
+     "en": "Polypropylene",
+     "year": 1954,
+     "note": "纳塔聚合出等规聚丙烯，质轻耐热，广泛用于薄膜、纤维与注塑件。",
+     "deps": []
+    },
+    {
+     "id": "abs_resin",
+     "name": "丙烯腈-丁二烯-苯乙烯塑料",
+     "en": "ABS resin",
+     "year": 1954,
+     "note": "三元接枝共聚的热塑性树脂，韧性与加工性均衡，用于家电、汽车与管材。",
+     "deps": []
+    },
+    {
+     "id": "ultra_high_molecular_pe",
+     "name": "超高分子量聚乙烯",
+     "en": "Ultra-high-molecular-weight polyethylene",
+     "year": 1955,
+     "note": "分子量极高的聚乙烯，耐磨自润滑，用于耐磨衬板与人工关节部件。",
+     "deps": [
+      "high_density_polyethylene"
+     ]
+    },
+    {
+     "id": "chlorinated_pvc",
+     "name": "氯化聚氯乙烯",
+     "en": "Chlorinated polyvinyl chloride",
+     "year": 1958,
+     "note": "聚氯乙烯氯化后耐热性提高，用于热水管、化工管件与阻燃制品。",
+     "deps": [
+      "polyvinyl_chloride"
+     ]
+    },
+    {
+     "id": "eva_copolymer",
+     "name": "乙烯-醋酸乙烯酯共聚物",
+     "en": "Ethylene-vinyl acetate copolymer",
+     "year": 1960,
+     "note": "乙烯-醋酸乙烯酯共聚物柔韧且可发泡，用于鞋材、热熔胶与光伏封装胶膜。",
+     "deps": []
+    },
+    {
+     "id": "ionomer_resin",
+     "name": "离聚物树脂",
+     "en": "Ionomer resin",
+     "year": 1964,
+     "note": "含金属离子的乙烯共聚物，透明坚韧，制高尔夫球壳与热封包装层。",
+     "deps": []
+    },
+    {
+     "id": "sbc_resin",
+     "name": "苯乙烯-丁二烯透明共聚物",
+     "en": "Styrene-butadiene block resin",
+     "year": 1972,
+     "note": "透明耐冲击的嵌段共聚树脂，用于包装盒、玩具与医用容器。",
+     "deps": [
+      "polystyrene"
+     ]
+    },
+    {
+     "id": "evoh_resin",
+     "name": "乙烯-乙烯醇共聚物",
+     "en": "Ethylene-vinyl alcohol copolymer",
+     "year": 1972,
+     "note": "乙烯-乙烯醇共聚物阻氧性极佳，用作食品软包装的阻隔中间层。",
+     "deps": []
+    },
+    {
+     "id": "linear_low_density_polyethylene",
+     "name": "线性低密度聚乙烯",
+     "en": "Linear low-density polyethylene",
+     "year": 1978,
+     "note": "低压共聚的线型聚乙烯，薄膜强度与韧性好，现为包装膜主力。",
+     "deps": [
+      "high_density_polyethylene"
+     ]
+    },
+    {
+     "id": "metallocene_polyethylene",
+     "name": "茂金属聚乙烯",
+     "en": "Metallocene polyethylene",
+     "year": 1991,
+     "note": "茂金属催化聚合的分子量分布均匀聚乙烯，用于高端薄膜与医用包装。",
+     "deps": [
+      "linear_low_density_polyethylene"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "工程塑料与耐热热塑性高分子",
+   "items": [
+    {
+     "id": "nylon_66",
+     "name": "尼龙66",
+     "en": "Nylon 66",
+     "year": 1935,
+     "note": "卡罗瑟斯缩聚出首个合成聚酰胺，强韧耐磨，兼作工程塑料与合成纤维。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "nylon_6",
+     "name": "尼龙6",
+     "en": "Nylon 6",
+     "year": 1938,
+     "note": "己内酰胺开环聚合的聚酰胺，纤维与工程塑料产量均大。",
+     "deps": []
+    },
+    {
+     "id": "pet_resin",
+     "name": "聚对苯二甲酸乙二醇酯",
+     "en": "Polyethylene terephthalate",
+     "year": 1941,
+     "note": "缩聚型聚酯，可纺丝、制瓶与制膜，是产量最大的聚酯品种。",
+     "deps": []
+    },
+    {
+     "id": "nylon_11",
+     "name": "尼龙11",
+     "en": "Nylon 11",
+     "year": 1947,
+     "note": "以蓖麻油为原料的长碳链聚酰胺，低吸湿耐候，用于汽车管路与气动管。",
+     "deps": []
+    },
+    {
+     "id": "polycarbonate",
+     "name": "聚碳酸酯",
+     "en": "Polycarbonate",
+     "year": 1953,
+     "note": "双酚A型聚碳酸酯透明坚韧耐热，用于安全防护、汽车零部件与光盘。",
+     "deps": []
+    },
+    {
+     "id": "pom_resin",
+     "name": "聚甲醛",
+     "en": "Polyoxymethylene",
+     "year": 1960,
+     "note": "高刚性低摩擦的结晶性工程塑料，制齿轮、卡扣与滑动件。",
+     "deps": []
+    },
+    {
+     "id": "polyphenylene_oxide",
+     "name": "聚苯醚",
+     "en": "Polyphenylene oxide",
+     "year": 1964,
+     "note": "耐水解耐热的苯醚聚合物，多与聚苯乙烯共混成合金使用。",
+     "deps": []
+    },
+    {
+     "id": "polysulfone",
+     "name": "聚砜",
+     "en": "Polysulfone",
+     "year": 1965,
+     "note": "主链含砜基的耐高温透明树脂，用于医疗器械与耐热结构件。",
+     "deps": []
+    },
+    {
+     "id": "polyamide_12",
+     "name": "尼龙12",
+     "en": "Nylon 12",
+     "year": 1966,
+     "note": "低吸湿的长碳链聚酰胺，用于精密齿轮、燃油管与增材制造粉末。",
+     "deps": []
+    },
+    {
+     "id": "polybutylene_terephthalate",
+     "name": "聚对苯二甲酸丁二醇酯",
+     "en": "Polybutylene terephthalate",
+     "year": 1970,
+     "note": "结晶快易成型，耐热耐化学，广泛用于电气接插件与线圈骨架。",
+     "deps": []
+    },
+    {
+     "id": "polyethersulfone",
+     "name": "聚醚砜",
+     "en": "Polyethersulfone",
+     "year": 1972,
+     "note": "耐高温的砜类树脂，透明阻燃，用于医疗器械与食品接触设备。",
+     "deps": [
+      "polysulfone"
+     ]
+    },
+    {
+     "id": "pps_resin",
+     "name": "聚苯硫醚",
+     "en": "Polyphenylene sulfide",
+     "year": 1973,
+     "note": "耐高温耐化学品的芳香族硫醚聚合物，用于汽车与电器耐热件。",
+     "deps": []
+    },
+    {
+     "id": "peek_resin",
+     "name": "聚醚醚酮",
+     "en": "Polyether ether ketone",
+     "year": 1978,
+     "note": "高性能耐热聚合物，耐辐射且生物相容，用于航空、油田与医疗器械。",
+     "deps": []
+    },
+    {
+     "id": "polyetherimide",
+     "name": "聚醚酰亚胺",
+     "en": "Polyetherimide",
+     "year": 1982,
+     "note": "耐高温透明热塑性树脂，用于航空内饰与耐热电气零件。",
+     "deps": []
+    },
+    {
+     "id": "pc_abs_alloy",
+     "name": "聚碳酸酯/ABS合金",
+     "en": "PC/ABS alloy",
+     "year": 1982,
+     "note": "共混改性工程塑料，兼顾强度与加工性，用于汽车仪表板等大型薄壁件。",
+     "deps": [
+      "polycarbonate",
+      "abs_resin"
+     ]
+    },
+    {
+     "id": "nylon_46",
+     "name": "尼龙46",
+     "en": "Nylon 46",
+     "year": 1984,
+     "note": "高结晶度耐热聚酰胺，长期耐温高，用于汽车发动机舱耐热件。",
+     "deps": [
+      "nylon_66"
+     ]
+    },
+    {
+     "id": "liquid_crystal_polymer",
+     "name": "液晶聚合物",
+     "en": "Liquid-crystal polymer",
+     "year": 1985,
+     "note": "芳香族热致液晶聚酯，高耐热低膨胀，制精密连接器与微波器件。",
+     "deps": []
+    },
+    {
+     "id": "polyphthalamide",
+     "name": "聚邻苯二甲酰胺",
+     "en": "Polyphthalamide",
+     "year": 1991,
+     "note": "高耐热的半芳香族聚酰胺，用于汽车发动机周边耐热件。",
+     "deps": []
+    },
+    {
+     "id": "cycloolefin_polymer",
+     "name": "环烯烃聚合物",
+     "en": "Cyclo-olefin polymer",
+     "year": 1995,
+     "note": "光学透明、低双折射的环烯烃树脂，用于镜片、预灌封注射器与光学膜。",
+     "deps": []
+    }
+   ]
+  },
+  {
+   "name": "合成橡胶与热塑性弹性体",
+   "items": [
+    {
+     "id": "polysulfide_rubber",
+     "name": "聚硫橡胶",
+     "en": "Polysulfide rubber",
+     "year": 1929,
+     "note": "多硫键弹性体耐油密封性极好，早期用于航空燃油箱衬里与密封胶。",
+     "deps": []
+    },
+    {
+     "id": "styrene_butadiene_rubber",
+     "name": "丁苯橡胶",
+     "en": "Styrene-butadiene rubber",
+     "year": 1929,
+     "note": "丁二烯与苯乙烯共聚，是轮胎用量最大的通用合成橡胶。",
+     "deps": []
+    },
+    {
+     "id": "polyisobutylene",
+     "name": "聚异丁烯",
+     "en": "Polyisobutylene",
+     "year": 1931,
+     "note": "饱和无支化聚合物，气密耐老化，用于密封胶与胶黏剂增黏组分。",
+     "deps": []
+    },
+    {
+     "id": "chloroprene_rubber",
+     "name": "氯丁橡胶",
+     "en": "Chloroprene rubber",
+     "year": 1931,
+     "note": "杜邦公司开发，耐油耐臭氧，用于胶管、传动带与电缆护套。",
+     "deps": []
+    },
+    {
+     "id": "nitrile_rubber",
+     "name": "丁腈橡胶",
+     "en": "Nitrile rubber",
+     "year": 1937,
+     "note": "丁二烯与丙烯腈共聚，耐油耐溶剂，用于油封与耐油胶管。",
+     "deps": []
+    },
+    {
+     "id": "butyl_rubber",
+     "name": "丁基橡胶",
+     "en": "Butyl rubber",
+     "year": 1937,
+     "note": "异丁烯与少量异戊二烯共聚，气密性极佳，用于内胎与轮胎气密层。",
+     "deps": []
+    },
+    {
+     "id": "chlorosulfonated_polyethylene_rubber",
+     "name": "氯磺化聚乙烯橡胶",
+     "en": "Chlorosulfonated polyethylene rubber",
+     "year": 1952,
+     "note": "氯磺化改性的饱和弹性体，耐臭氧耐候，用于防水卷材与电缆护套。",
+     "deps": []
+    },
+    {
+     "id": "polybutadiene_rubber",
+     "name": "顺丁橡胶",
+     "en": "Polybutadiene rubber",
+     "year": 1956,
+     "note": "高顺式聚丁二烯，弹性与耐磨好，与丁苯胶并用制轮胎胎面。",
+     "deps": []
+    },
+    {
+     "id": "thermoplastic_polyurethane_elastomer",
+     "name": "热塑性聚氨酯弹性体",
+     "en": "Thermoplastic polyurethane elastomer",
+     "year": 1958,
+     "note": "可注塑挤出加工的聚氨酯弹性体，强度高，用于鞋底与高压软管。",
+     "deps": []
+    },
+    {
+     "id": "synthetic_polyisoprene",
+     "name": "异戊橡胶",
+     "en": "Synthetic polyisoprene",
+     "year": 1960,
+     "note": "合成顺式聚异戊二烯，性能接近天然橡胶，用于轮胎与胶鞋。",
+     "deps": [
+      "natural_rubber"
+     ]
+    },
+    {
+     "id": "ethylene_propylene_rubber",
+     "name": "乙丙橡胶",
+     "en": "Ethylene-propylene rubber",
+     "year": 1961,
+     "note": "乙烯与丙烯共聚，耐老化电绝缘，用于密封条与电线绝缘层。",
+     "deps": []
+    },
+    {
+     "id": "epdm_rubber",
+     "name": "三元乙丙橡胶",
+     "en": "EPDM rubber",
+     "year": 1963,
+     "note": "引入二烯单体的可硫化乙丙胶，用于汽车密封条与防水卷材。",
+     "deps": [
+      "ethylene_propylene_rubber"
+     ]
+    },
+    {
+     "id": "styrene_block_elastomer",
+     "name": "苯乙烯类热塑性弹性体",
+     "en": "Styrenic block elastomer",
+     "year": 1965,
+     "note": "SBS嵌段共聚物常温显弹性、高温可注塑，用于鞋材与沥青改性。",
+     "deps": []
+    },
+    {
+     "id": "hydrogenated_sbs",
+     "name": "加氢苯乙烯弹性体",
+     "en": "Hydrogenated styrenic block copolymer",
+     "year": 1972,
+     "note": "加氢SBS耐热耐候性提高，用于汽车零件与医用弹性件。",
+     "deps": [
+      "styrene_block_elastomer"
+     ]
+    },
+    {
+     "id": "copolyester_elastomer",
+     "name": "热塑性共聚酯弹性体",
+     "en": "Copolyester elastomer",
+     "year": 1972,
+     "note": "硬段聚酯与软段聚醚交替的热塑弹性体，用于管材与传动部件。",
+     "deps": []
+    },
+    {
+     "id": "thermoplastic_polyolefin_elastomer",
+     "name": "热塑性聚烯烃弹性体",
+     "en": "Thermoplastic polyolefin elastomer",
+     "year": 1980,
+     "note": "乙丙橡胶增韧聚丙烯的共混物，用于汽车保险杠与防水卷材。",
+     "deps": [
+      "polypropylene"
+     ]
+    },
+    {
+     "id": "tpv_rubber",
+     "name": "热塑性硫化橡胶",
+     "en": "Thermoplastic vulcanizate",
+     "year": 1981,
+     "note": "动态硫化的乙丙橡胶与聚丙烯共混，弹性好且可反复加工。",
+     "deps": [
+      "thermoplastic_polyolefin_elastomer"
+     ]
+    },
+    {
+     "id": "peba_elastomer",
+     "name": "聚醚嵌段酰胺弹性体",
+     "en": "Polyether block amide elastomer",
+     "year": 1981,
+     "note": "聚酰胺硬段与聚醚软段共聚弹性体，用于运动鞋底与医疗导管。",
+     "deps": []
+    },
+    {
+     "id": "hydrogenated_nitrile_rubber",
+     "name": "氢化丁腈橡胶",
+     "en": "Hydrogenated nitrile rubber",
+     "year": 1984,
+     "note": "加氢饱和的丁腈橡胶，耐热耐老化，用于油田密封与传动带。",
+     "deps": [
+      "nitrile_rubber"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "含氟、有机硅与特种耐热高分子",
+   "items": [
+    {
+     "id": "polytetrafluoroethylene",
+     "name": "聚四氟乙烯",
+     "en": "Polytetrafluoroethylene",
+     "year": 1938,
+     "note": "普伦基特意外发现，化学惰性极强且摩擦系数低，用于不粘涂层与密封材料。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "silicone_polymer",
+     "name": "有机硅聚合物",
+     "en": "Silicone polymer",
+     "year": 1943,
+     "note": "聚硅氧烷主链的树脂、硅油与硅脂，耐温绝缘且疏水，用于润滑防护。",
+     "deps": []
+    },
+    {
+     "id": "silicone_rubber",
+     "name": "硅橡胶",
+     "en": "Silicone rubber",
+     "year": 1944,
+     "note": "有机硅弹性体耐高低温且电绝缘，用于密封件、线缆与医用植入物。",
+     "deps": [
+      "silicone_polymer"
+     ]
+    },
+    {
+     "id": "fep_resin",
+     "name": "氟化乙丙烯共聚物",
+     "en": "Fluorinated ethylene propylene",
+     "year": 1956,
+     "note": "可熔融加工的含氟树脂，用于电线电缆绝缘与热收缩套管。",
+     "deps": []
+    },
+    {
+     "id": "fluororubber",
+     "name": "氟橡胶",
+     "en": "Fluoroelastomer",
+     "year": 1957,
+     "note": "含氟弹性体耐高温耐油，用于航空密封圈、阀门与耐油胶管。",
+     "deps": []
+    },
+    {
+     "id": "fluorosilicone_rubber",
+     "name": "氟硅橡胶",
+     "en": "Fluorosilicone rubber",
+     "year": 1960,
+     "note": "兼含氟与硅的弹性体，既耐油又耐高低温，用于航空燃油密封。",
+     "deps": [
+      "silicone_rubber"
+     ]
+    },
+    {
+     "id": "polyvinylidene_fluoride",
+     "name": "聚偏氟乙烯",
+     "en": "Polyvinylidene fluoride",
+     "year": 1961,
+     "note": "耐候且具压电性的含氟树脂，用于户外涂料、锂电隔膜与传感器。",
+     "deps": []
+    },
+    {
+     "id": "polybenzimidazole",
+     "name": "聚苯并咪唑",
+     "en": "Polybenzimidazole",
+     "year": 1961,
+     "note": "主链含苯并咪唑环的耐高温聚合物，制阻燃纤维与燃料电池隔膜。",
+     "deps": []
+    },
+    {
+     "id": "perfluorosulfonic_acid_membrane",
+     "name": "全氟磺酸离子交换膜",
+     "en": "Perfluorosulfonic acid membrane",
+     "year": 1962,
+     "note": "全氟磺酸树脂制成的离子交换膜，用于氯碱电解槽与燃料电池。",
+     "deps": []
+    },
+    {
+     "id": "polyimide",
+     "name": "聚酰亚胺",
+     "en": "Polyimide",
+     "year": 1965,
+     "note": "耐高温芳杂环聚合物，成膜性佳，制柔性电路与耐热漆包线绝缘。",
+     "deps": []
+    },
+    {
+     "id": "parylene_coating",
+     "name": "聚对二甲苯涂覆层",
+     "en": "Parylene coating",
+     "year": 1965,
+     "note": "对二甲苯气相聚合生成的保形薄膜，绝缘防水，保护电路与医用器件。",
+     "deps": []
+    },
+    {
+     "id": "perfluoroelastomer",
+     "name": "全氟醚橡胶",
+     "en": "Perfluoroelastomer",
+     "year": 1968,
+     "note": "耐化学性极强的全氟弹性体，用于苛刻腐蚀工况的密封圈。",
+     "deps": [
+      "fluororubber"
+     ]
+    },
+    {
+     "id": "expanded_polytetrafluoroethylene",
+     "name": "膨体聚四氟乙烯",
+     "en": "Expanded polytetrafluoroethylene",
+     "year": 1969,
+     "note": "拉伸成微孔的聚四氟乙烯膜，透气防水，用于户外服装与医用补片。",
+     "deps": [
+      "polytetrafluoroethylene"
+     ]
+    },
+    {
+     "id": "pfa_resin",
+     "name": "全氟烷氧基树脂",
+     "en": "Perfluoroalkoxy resin",
+     "year": 1972,
+     "note": "全氟烷氧基共聚树脂，耐蚀且可熔融加工，用于半导体与化工管路。",
+     "deps": [
+      "fep_resin"
+     ]
+    },
+    {
+     "id": "etfe_resin",
+     "name": "乙烯-四氟乙烯共聚物",
+     "en": "Ethylene tetrafluoroethylene",
+     "year": 1972,
+     "note": "强韧可熔融的含氟树脂，用于建筑膜结构、电线与化工衬里。",
+     "deps": [
+      "fep_resin"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "泡沫塑料、功能高分子与绿色塑料",
+   "items": [
+    {
+     "id": "carbon_black_reinforcement",
+     "name": "炭黑补强橡胶",
+     "en": "Carbon black reinforcement",
+     "year": 1904,
+     "note": "炭黑作为补强填料加入橡胶，显著提高强度与耐磨性，成为轮胎工业关键。",
+     "deps": []
+    },
+    {
+     "id": "rubber_vulcanization_accelerator",
+     "name": "橡胶硫化促进剂",
+     "en": "Rubber vulcanization accelerator",
+     "year": 1906,
+     "note": "有机促进剂大幅缩短硫化时间并改善性能，橡胶助剂体系由此成形。",
+     "deps": []
+    },
+    {
+     "id": "polyvinyl_alcohol",
+     "name": "聚乙烯醇",
+     "en": "Polyvinyl alcohol",
+     "year": 1924,
+     "note": "水溶性合成高分子，制维纶纤维、胶水、水溶性包装膜与浆料。",
+     "deps": []
+    },
+    {
+     "id": "polyhydroxybutyrate",
+     "name": "聚羟基丁酸酯",
+     "en": "Polyhydroxybutyrate",
+     "year": 1926,
+     "note": "微生物合成的可降解聚酯，可热塑加工，用于包装与缓释基材。",
+     "deps": []
+    },
+    {
+     "id": "phthalate_plasticizer",
+     "name": "邻苯二甲酸酯增塑剂",
+     "en": "Phthalate plasticizer",
+     "year": 1933,
+     "note": "用于聚氯乙烯等增塑的酯类助剂，使塑料柔软，曾是产量最大的增塑剂。",
+     "deps": [
+      "polyvinyl_chloride"
+     ]
+    },
+    {
+     "id": "ion_exchange_resin",
+     "name": "离子交换树脂",
+     "en": "Ion-exchange resin",
+     "year": 1935,
+     "note": "带活性基团的高分子球粒，用于水软化、纯水制备与分离提纯。",
+     "deps": []
+    },
+    {
+     "id": "extruded_polystyrene_foam",
+     "name": "挤塑聚苯乙烯泡沫",
+     "en": "Extruded polystyrene foam",
+     "year": 1941,
+     "note": "熔融挤出连续发泡的闭孔保温板，用于墙体、屋面与冷库保温。",
+     "deps": [
+      "polystyrene"
+     ]
+    },
+    {
+     "id": "cyanoacrylate_adhesive",
+     "name": "氰基丙烯酸酯胶黏剂",
+     "en": "Cyanoacrylate adhesive",
+     "year": 1942,
+     "note": "湿气引发快速固化的瞬干胶，可粘接金属、塑料与橡胶。",
+     "deps": []
+    },
+    {
+     "id": "phenolic_foam",
+     "name": "酚醛泡沫塑料",
+     "en": "Phenolic foam",
+     "year": 1942,
+     "note": "酚醛树脂发泡成的保温材料，耐燃且发烟低，用于建筑与风管。",
+     "deps": [
+      "phenol_formaldehyde_resin"
+     ]
+    },
+    {
+     "id": "conductive_rubber",
+     "name": "导电橡胶",
+     "en": "Conductive rubber",
+     "year": 1945,
+     "note": "掺入炭黑或金属粉的弹性导电体，用于抗静电件、按键与屏蔽垫片。",
+     "deps": [
+      "carbon_black_reinforcement"
+     ]
+    },
+    {
+     "id": "expanded_polystyrene",
+     "name": "发泡聚苯乙烯",
+     "en": "Expanded polystyrene",
+     "year": 1951,
+     "note": "可发性聚苯乙烯珠粒预发泡成型，用于保温与缓冲包装。",
+     "deps": [
+      "polystyrene"
+     ]
+    },
+    {
+     "id": "polyurethane_foam",
+     "name": "聚氨酯泡沫塑料",
+     "en": "Polyurethane foam",
+     "year": 1953,
+     "note": "软泡作衬垫缓冲、硬泡作保温隔热层，用途遍及家具、建筑与冷链。",
+     "deps": [
+      "polyurethane_resin"
+     ]
+    },
+    {
+     "id": "azodicarbonamide_blowing_agent",
+     "name": "偶氮二甲酰胺发泡剂",
+     "en": "Azodicarbonamide blowing agent",
+     "year": 1954,
+     "note": "高温分解释放气体的有机发泡剂，广泛用于橡塑发泡制品。",
+     "deps": []
+    },
+    {
+     "id": "polyacrylamide",
+     "name": "聚丙烯酰胺",
+     "en": "Polyacrylamide",
+     "year": 1955,
+     "note": "水溶性高分子絮凝剂，用于水处理、造纸与三次采油驱油。",
+     "deps": []
+    },
+    {
+     "id": "hydrogel_material",
+     "name": "水凝胶材料",
+     "en": "Hydrogel material",
+     "year": 1960,
+     "note": "亲水交联聚合物网络，用于隐形眼镜、伤口敷料与药物缓释载体。",
+     "deps": []
+    },
+    {
+     "id": "crosslinked_polyethylene",
+     "name": "交联聚乙烯",
+     "en": "Crosslinked polyethylene",
+     "year": 1963,
+     "note": "化学或辐照交联提高耐热与力学性能，用于电力电缆绝缘与热缩材料。",
+     "deps": []
+    },
+    {
+     "id": "pir_rigid_foam",
+     "name": "聚异氰脲酸酯硬泡",
+     "en": "Polyisocyanurate rigid foam",
+     "year": 1965,
+     "note": "耐燃性优于聚氨酯的异氰脲酸酯泡沫，用于建筑保温板。",
+     "deps": [
+      "polyurethane_foam"
+     ]
+    },
+    {
+     "id": "crosslinked_pe_foam",
+     "name": "交联聚乙烯泡沫",
+     "en": "Crosslinked polyethylene foam",
+     "year": 1970,
+     "note": "交联后的聚乙烯发泡材料，用于保温、鞋材与缓冲包装。",
+     "deps": [
+      "crosslinked_polyethylene"
+     ]
+    },
+    {
+     "id": "brominated_flame_retardant",
+     "name": "溴系阻燃剂",
+     "en": "Brominated flame retardant",
+     "year": 1970,
+     "note": "含溴阻燃助剂效率高，用于电子电器塑料，后因环保争议逐步受限。",
+     "deps": []
+    },
+    {
+     "id": "polyglycolide",
+     "name": "聚乙醇酸",
+     "en": "Polyglycolide",
+     "year": 1970,
+     "note": "可吸收聚酯，制手术缝合线在体内降解吸收，免于二次拆线。",
+     "deps": []
+    },
+    {
+     "id": "conductive_polymer",
+     "name": "导电高分子",
+     "en": "Conductive polymer",
+     "year": 1977,
+     "note": "碘掺杂聚乙炔使绝缘聚合物导电，开启导电高分子研究，获2000年诺奖。",
+     "deps": []
+    },
+    {
+     "id": "superabsorbent_polymer",
+     "name": "高吸水树脂",
+     "en": "Superabsorbent polymer",
+     "year": 1978,
+     "note": "聚丙烯酸钠可吸收自重百倍以上的水分，用于纸尿裤与农林保水。",
+     "deps": []
+    },
+    {
+     "id": "hindered_amine_light_stabilizer",
+     "name": "受阻胺光稳定剂",
+     "en": "Hindered amine light stabilizer",
+     "year": 1980,
+     "note": "高效光稳定助剂，抑制高分子光老化，用于户外薄膜与汽车塑料件。",
+     "deps": []
+    },
+    {
+     "id": "uv_curable_resin",
+     "name": "光固化树脂",
+     "en": "UV-curable resin",
+     "year": 1984,
+     "note": "光引发快速交联的丙烯酸酯体系，用于涂料、油墨与光固化三维打印。",
+     "deps": []
+    },
+    {
+     "id": "shape_memory_polymer",
+     "name": "形状记忆聚合物",
+     "en": "Shape-memory polymer",
+     "year": 1988,
+     "note": "可固定临时形态并受热回复原状的聚合物，用于智能结构与医用器件。",
+     "deps": []
+    },
+    {
+     "id": "epp_foam",
+     "name": "发泡聚丙烯",
+     "en": "Expanded polypropylene",
+     "year": 1990,
+     "note": "模内发泡成形的聚丙烯珠粒泡沫，用于汽车保险杠、儿童座椅与包装。",
+     "deps": [
+      "polypropylene"
+     ]
+    },
+    {
+     "id": "starch_biodegradable_plastic",
+     "name": "淀粉基生物降解塑料",
+     "en": "Starch-based biodegradable plastic",
+     "year": 1993,
+     "note": "淀粉与可降解聚酯共混的降解塑料，用于垃圾袋与一次性餐具。",
+     "deps": []
+    },
+    {
+     "id": "pbs_polyester",
+     "name": "聚丁二酸丁二醇酯",
+     "en": "Polybutylene succinate",
+     "year": 1993,
+     "note": "丁二酸与丁二醇缩聚的生物降解聚酯，用于薄膜与一次性餐具。",
+     "deps": []
+    },
+    {
+     "id": "polylactic_acid",
+     "name": "聚乳酸",
+     "en": "Polylactic acid",
+     "year": 2001,
+     "note": "以玉米淀粉发酵制乳酸的生物降解塑料，用于包装、餐具与三维打印。",
+     "deps": []
+    }
+   ]
+  }
+ ]
+}

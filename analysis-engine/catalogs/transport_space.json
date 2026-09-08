@@ -1,0 +1,1133 @@
+{
+ "cat": "transport",
+ "catName": "交通运输",
+ "sub": "space",
+ "subName": "航天运输",
+ "anchors": [
+  "rocket",
+  "satellite",
+  "space_station",
+  "ic",
+  "computer",
+  "radio",
+  "atomic_clock",
+  "gps",
+  "electricity"
+ ],
+ "families": [
+  {
+   "name": "运载火箭谱系",
+   "items": [
+    {
+     "id": "space_liquid_rocket",
+     "name": "液体火箭",
+     "en": "Liquid-propellant rocket",
+     "year": 1926,
+     "note": "以液态燃料与氧化剂分别输送燃烧的火箭，戈达德1926年首次试飞成功。",
+     "deps": ["rocket"]
+    },
+    {
+     "id": "space_solid_rocket",
+     "name": "固体火箭",
+     "en": "Solid-propellant rocket",
+     "year": 1944,
+     "note": "推进剂预混铸入燃烧室的固体火箭，战时用于辅助推进与探空。",
+     "deps": ["rocket"]
+    },
+    {
+     "id": "space_multistage_rocket",
+     "name": "多级火箭",
+     "en": "Multistage rocket",
+     "year": 1949,
+     "note": "串联级间分离的阶梯火箭，Bumper-WAC验证入轨原理。",
+     "deps": ["rocket"]
+    },
+    {
+     "id": "space_clustered_booster",
+     "name": "捆绑式火箭",
+     "en": "Strap-on booster",
+     "year": 1957,
+     "note": "芯级四周捆绑助推器的并联构型，R-7首次采用实现大推力发射。",
+     "deps": ["rocket"]
+    },
+    {
+     "id": "space_sounding_rocket",
+     "name": "探空火箭",
+     "en": "Sounding rocket",
+     "year": 1945,
+     "note": "飞抵临近空间进行大气与微重力试验的无入轨火箭，战后由V-2改造。",
+     "deps": ["rocket"]
+    },
+    {
+     "id": "space_hypergolic_rocket",
+     "name": "双组元自燃火箭",
+     "en": "Hypergolic rocket",
+     "year": 1950,
+     "note": "燃料与氧化剂接触即自燃的火箭，省去点火器，广泛用于姿控与上面级。",
+     "deps": ["space_liquid_rocket"]
+    },
+    {
+     "id": "space_airship_launch",
+     "name": "空射运载火箭",
+     "en": "Air-launched rocket",
+     "year": 1990,
+     "note": "由载机空中投放发射的小型火箭，降低对地面发射场依赖并节省燃料。",
+     "deps": ["airplane"]
+    },
+    {
+     "id": "space_sea_launch",
+     "name": "海上发射平台",
+     "en": "Sea launch platform",
+     "year": 1999,
+     "note": "在海上驳船上实施发射的机动平台，避开陆地空域限制并贴近赤道。",
+     "deps": ["space_clustered_booster"]
+    },
+    {
+     "id": "space_mobile_launcher",
+     "name": "机动发射车",
+     "en": "Mobile launch vehicle",
+     "year": 1985,
+     "note": "以越野车承载火箭机动发射，提高生存性与发射灵活性。",
+     "deps": ["rocket"]
+    },
+    {
+     "id": "space_heavy_lift",
+     "name": "重型运载火箭",
+     "en": "Heavy-lift launch vehicle",
+     "year": 1967,
+     "note": "起飞推力逾百万牛顿的巨型火箭，土星五号支撑载人登月。",
+     "deps": ["space_multistage_rocket"]
+    },
+    {
+     "id": "space_cryogenic_stage",
+     "name": "低温上面级",
+     "en": "Cryogenic upper stage",
+     "year": 1962,
+     "note": "以液氢液氧低温推进剂工作的上面级，比冲高，用于高轨与深空。",
+     "deps": ["space_multistage_rocket"]
+    },
+    {
+     "id": "space_super_heavy",
+     "name": "超重型运载火箭",
+     "en": "Super-heavy launch vehicle",
+     "year": 2023,
+     "note": "起飞推力数千万牛顿的可重复使用巨型火箭，2023年首飞试验。",
+     "deps": ["space_heavy_lift"]
+    },
+    {
+     "id": "space_small_launcher",
+     "name": "小型运载火箭",
+     "en": "Small satellite launcher",
+     "year": 2009,
+     "note": "面向小卫星的低成本轻小型火箭，商业航天兴起后快速发展。",
+     "deps": ["space_liquid_rocket"]
+    },
+    {
+     "id": "space_recoverable_booster",
+     "name": "可回收火箭",
+     "en": "Reusable orbital rocket",
+     "year": 2015,
+     "note": "一子级垂直回收重复使用的轨道火箭，猎鹰九号2015年首次着陆。",
+     "deps": ["space_clustered_booster"]
+    }
+   ]
+  },
+  {
+   "name": "火箭发动机",
+   "items": [
+    {
+     "id": "space_liquid_engine",
+     "name": "液体火箭发动机",
+     "en": "Liquid rocket engine",
+     "year": 1926,
+     "note": "以泵输送液体推进剂并燃烧产生推力的发动机，戈达德首次实现液体飞行。",
+     "deps": ["rocket"]
+    },
+    {
+     "id": "space_turbopump",
+     "name": "涡轮泵",
+     "en": "Rocket turbopump",
+     "year": 1942,
+     "note": "以涡轮驱动泵增压输送推进剂的组件，是液体发动机大推力的关键。",
+     "deps": ["space_liquid_engine"]
+    },
+    {
+     "id": "space_gas_generator_cycle",
+     "name": "燃气发生器循环",
+     "en": "Gas-generator cycle",
+     "year": 1949,
+     "note": "部分推进剂预燃驱动涡轮后排出的开式循环，结构成熟可靠。",
+     "deps": ["space_turbopump"]
+    },
+    {
+     "id": "space_staged_combustion",
+     "name": "分级燃烧循环",
+     "en": "Staged combustion cycle",
+     "year": 1959,
+     "note": "涡轮废气注入主燃烧室二次燃烧的闭式循环，比冲更高更省推进剂。",
+     "deps": ["space_turbopump"]
+    },
+    {
+     "id": "space_electric_pump_engine",
+     "name": "电液泵循环发动机",
+     "en": "Electric-pump-fed engine",
+     "year": 2015,
+     "note": "以电动机驱动泵输送推进剂的轻量发动机，利于回收复用。",
+     "deps": ["space_liquid_engine"]
+    },
+    {
+     "id": "space_solid_motor",
+     "name": "固体火箭发动机",
+     "en": "Solid rocket motor",
+     "year": 1945,
+     "note": "燃烧铸入壳体内固体药柱产生推力的发动机，多用于助推段。",
+     "deps": ["space_solid_rocket"]
+    },
+    {
+     "id": "space_rcs_thruster",
+     "name": "姿控发动机",
+     "en": "Reaction control thruster",
+     "year": 1959,
+     "note": "小推力喷管组，在真空与再入段调整航天器姿态与轨道。",
+     "deps": ["space_liquid_engine"]
+    },
+    {
+     "id": "space_cryogenic_engine",
+     "name": "低温发动机",
+     "en": "Cryogenic rocket engine",
+     "year": 1962,
+     "note": "以液氢液氧为推进剂的发动机，比冲高，支撑上面级与低温火箭。",
+     "deps": ["space_turbopump"]
+    },
+    {
+     "id": "space_kerolox_engine",
+     "name": "煤油液氧发动机",
+     "en": "Kerolox engine",
+     "year": 1957,
+     "note": "以RP-1煤油与液氧为推进剂的发动机，推力大成本低，广泛用于一子级。",
+     "deps": ["space_liquid_engine"]
+    },
+    {
+     "id": "space_throttleable_engine",
+     "name": "变推力发动机",
+     "en": "Throttleable rocket engine",
+     "year": 1970,
+     "note": "可连续调节推力的发动机，用于着陆减速与飞船软着陆精确控制。",
+     "deps": ["space_rcs_thruster"]
+    },
+    {
+     "id": "space_pintle_engine",
+     "name": "针栓式发动机",
+     "en": "Pintle engine",
+     "year": 1960,
+     "note": "以中心针栓喷注的可节流发动机，通用性强，用于登月舱下降级。",
+     "deps": ["space_liquid_engine"]
+    },
+    {
+     "id": "space_pressure_feed_engine",
+     "name": "气压挤压输送发动机",
+     "en": "Pressure-fed engine",
+     "year": 1950,
+     "note": "以高压气体挤压推进剂入腔的开式发动机，无涡轮泵、可靠性高。",
+     "deps": ["space_liquid_engine"]
+    },
+    {
+     "id": "space_thrust_vector",
+     "name": "发动机推力矢量控制",
+     "en": "Thrust vector control",
+     "year": 1957,
+     "note": "摆动喷管改变推力方向控制飞行姿态的伺服机构，火箭稳定飞行必需。",
+     "deps": ["space_liquid_engine"]
+    },
+    {
+     "id": "space_electrothermal_thruster",
+     "name": "电热发动机",
+     "en": "Electrothermal thruster",
+     "year": 1960,
+     "note": "以电热加热工质喷射产生小推力的发动机，用于卫星姿态与轨道微调。",
+     "deps": ["space_rcs_thruster"]
+    }
+   ]
+  },
+  {
+   "name": "发射设施",
+   "items": [
+    {
+     "id": "space_launch_pad",
+     "name": "发射台",
+     "en": "Launch pad",
+     "year": 1957,
+     "note": "支承火箭竖立并导流尾焰的混凝土基座，拜科努尔1957年启用。",
+     "deps": ["rocket"]
+    },
+    {
+     "id": "space_launch_tower",
+     "name": "发射塔",
+     "en": "Launch tower",
+     "year": 1958,
+     "note": "竖立、装配与维护火箭的高耸塔架，集成勤务通道与防风设施。",
+     "deps": ["space_launch_pad"]
+    },
+    {
+     "id": "space_umbilical_tower",
+     "name": "脐带塔",
+     "en": "Umbilical tower",
+     "year": 1961,
+     "note": "以管路电缆连接火箭并临射前脱离的勤务塔，保障加注供电通信。",
+     "deps": ["space_launch_tower"]
+    },
+    {
+     "id": "space_gantry",
+     "name": "勤务臂",
+     "en": "Service gantry arm",
+     "year": 1962,
+     "note": "可摆动的通道臂，发射前为箭体提供人员与管路通道并自动脱落。",
+     "deps": ["space_umbilical_tower"]
+    },
+    {
+     "id": "space_ground_fueling",
+     "name": "地面加注系统",
+     "en": "Ground propellant loading",
+     "year": 1958,
+     "note": "将推进剂从贮罐安全输送至箭体贮箱的地面泵阀与管路系统。",
+     "deps": ["space_launch_pad"]
+    },
+    {
+     "id": "space_flame_deflector",
+     "name": "导流槽",
+     "en": "Flame deflector",
+     "year": 1958,
+     "note": "将起飞尾焰与高温燃气导离台体的耐烧结构，保护箭体与地面设备。",
+     "deps": ["space_launch_pad"]
+    },
+    {
+     "id": "space_water_deluge",
+     "name": "喷水降噪系统",
+     "en": "Water deluge system",
+     "year": 1967,
+     "note": "发射瞬间向台体喷水抑制声振与高温的系统，保护箭体与设施。",
+     "deps": ["space_flame_deflector"]
+    },
+    {
+     "id": "space_crawler_transporter",
+     "name": "履带运输车",
+     "en": "Crawler-transporter",
+     "year": 1965,
+     "note": "以履带将火箭与发射台整体运至发射位的重型运输车，阿波罗计划采用。",
+     "deps": ["space_launch_pad"]
+    },
+    {
+     "id": "space_mobile_service_tower",
+     "name": "移动服务塔",
+     "en": "Mobile service tower",
+     "year": 1965,
+     "note": "可移动至台体旁进行总装的塔架，完成后撤离发射区。",
+     "deps": ["space_launch_tower"]
+    },
+    {
+     "id": "space_clean_room",
+     "name": "航天洁净间",
+     "en": "Clean room",
+     "year": 1960,
+     "note": "控制微粒与温湿度的装配洁净环境，防止污染物影响航天器与卫星。",
+     "deps": ["space_launch_pad"]
+    },
+    {
+     "id": "space_launch_control_center",
+     "name": "发射控制中心",
+     "en": "Launch control center",
+     "year": 1957,
+     "note": "集中监视箭体状态并下达点火指令的指挥设施，是发射决策中枢。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "space_range_safety",
+     "name": "靶场安全系统",
+     "en": "Range safety system",
+     "year": 1958,
+     "note": "监测偏离航迹的火箭并发送自毁指令的安全系统，保障地面安全。",
+     "deps": ["radio"]
+    }
+   ]
+  },
+  {
+   "name": "航天器推进",
+   "items": [
+    {
+     "id": "space_bipropellant_upper",
+     "name": "双组元化学上面级",
+     "en": "Bipropellant chemical upper stage",
+     "year": 1959,
+     "note": "以双组元液体推进剂工作的上面级，提供轨道转移所需的速度增量。",
+     "deps": ["space_multistage_rocket"]
+    },
+    {
+     "id": "space_monopropellant",
+     "name": "单组元推进",
+     "en": "Monopropellant thruster",
+     "year": 1960,
+     "note": "以催化分解单组元工质产生推力的小发动机，用于卫星姿态控制。",
+     "deps": ["space_rcs_thruster"]
+    },
+    {
+     "id": "space_ion_thruster",
+     "name": "离子推进器",
+     "en": "Ion thruster",
+     "year": 1970,
+     "note": "以电场加速离子产生推力的电推进，比冲极高，深空探测长期工作。",
+     "deps": ["space_electrothermal_thruster"]
+    },
+    {
+     "id": "space_hall_thruster",
+     "name": "霍尔推进器",
+     "en": "Hall-effect thruster",
+     "year": 1971,
+     "note": "以电场与磁场约束加速离子的电推进，苏联率先实用，广泛用于卫星。",
+     "deps": ["space_ion_thruster"]
+    },
+    {
+     "id": "space_drag_compensation",
+     "name": "阻力补偿系统",
+     "en": "Drag compensation system",
+     "year": 1978,
+     "note": "以低推力抵消大气阻力的推进控制，维持低轨航天器轨道衰减。",
+     "deps": ["space_monopropellant"]
+    },
+    {
+     "id": "space_resistojet",
+     "name": "电阻加热推进",
+     "en": "Resistojet",
+     "year": 1965,
+     "note": "以电阻加热工质膨胀喷射的电热推进，结构简单用于微小卫星。",
+     "deps": ["space_electrothermal_thruster"]
+    },
+    {
+     "id": "space_arcjet",
+     "name": "电弧加热推进",
+     "en": "Arcjet",
+     "year": 1961,
+     "note": "以电弧加热工质产生推力的电热推进，比冲高于电阻加热式。",
+     "deps": ["space_electrothermal_thruster"]
+    },
+    {
+     "id": "space_green_propellant",
+     "name": "绿色推进剂",
+     "en": "Green propellant",
+     "year": 2010,
+     "note": "以低毒肼替代物为工质的航天器推进，降低操作与环境风险。",
+     "deps": ["space_monopropellant"]
+    },
+    {
+     "id": "space_magnetoplasma_thruster",
+     "name": "磁等离子体推进",
+     "en": "Magnetoplasma thruster",
+     "year": 2000,
+     "note": "以磁场约束等离子体加速的电推进，比冲高，处于在轨验证阶段。",
+     "deps": ["space_hall_thruster"]
+    },
+    {
+     "id": "space_solar_electric_prop",
+     "name": "太阳电推进",
+     "en": "Solar electric propulsion",
+     "year": 1998,
+     "note": "以太阳能供电的电推进系统，深空与卫星轨道转移的主流高效方案。",
+     "deps": ["space_ion_thruster"]
+    },
+    {
+     "id": "space_cold_gas_thruster",
+     "name": "冷气推进",
+     "en": "Cold-gas thruster",
+     "year": 1960,
+     "note": "以压缩气体喷射产生微推力的姿态控制，结构简单用于小卫星。",
+     "deps": ["space_rcs_thruster"]
+    },
+    {
+     "id": "space_biprop_maneuver",
+     "name": "双组元轨道机动",
+     "en": "Bipropellant orbital maneuver",
+     "year": 1965,
+     "note": "以双组元小发动机执行变轨与交会的推进，同步轨道卫星常用。",
+     "deps": ["space_bipropellant_upper"]
+    },
+    {
+     "id": "space_nuclear_thermal",
+     "name": "核热火箭",
+     "en": "Nuclear thermal rocket",
+     "year": 1960,
+     "note": "以反应堆加热工质喷射的火箭，比冲高，NERVA计划试验但末入轨。",
+     "deps": ["space_liquid_engine"]
+    },
+    {
+     "id": "space_thruster_cluster",
+     "name": "推进器集群布局",
+     "en": "Thruster cluster layout",
+     "year": 1965,
+     "note": "多台小推力器组合布置实现三轴控制与轨道机动的布局方式。",
+     "deps": ["space_rcs_thruster"]
+    }
+   ]
+  },
+  {
+   "name": "载人航天",
+   "items": [
+    {
+     "id": "space_capsule",
+     "name": "载人飞船",
+     "en": "Crewed spacecraft",
+     "year": 1961,
+     "note": "搭载航天员返回地球的可控飞船，东方一号1961年首次载人轨道飞行。",
+     "deps": ["satellite"]
+    },
+    {
+     "id": "space_eva_suit",
+     "name": "舱外航天服",
+     "en": "EVA spacesuit",
+     "year": 1965,
+     "note": "供航天员舱外活动的密闭服，列昂诺夫1965年首次出舱验证。",
+     "deps": ["space_capsule"]
+    },
+    {
+     "id": "space_els",
+     "name": "生保系统",
+     "en": "Environmental control and life support",
+     "year": 1962,
+     "note": "维持舱内大气、温湿度与水循环的生命保障系统，载人航天必备。",
+     "deps": ["space_capsule"]
+    },
+    {
+     "id": "space_rendezvous",
+     "name": "交会对接",
+     "en": "Rendezvous and docking",
+     "year": 1966,
+     "note": "两航天器轨道接近并机械连接的机动，1966年双子星首次验证。",
+     "deps": ["space_capsule"]
+    },
+    {
+     "id": "space_docking_radar",
+     "name": "空间交会对接雷达",
+     "en": "Rendezvous radar",
+     "year": 1967,
+     "note": "测量相对距离与姿态引导对接的雷达，双子星任务首次用于交会。",
+     "deps": ["space_rendezvous"]
+    },
+    {
+     "id": "space_crew_module",
+     "name": "指令舱",
+     "en": "Command module",
+     "year": 1968,
+     "note": "阿波罗指令舱承载乘员再入，1968年首次载人绕月。",
+     "deps": ["space_capsule"]
+    },
+    {
+     "id": "space_lunar_module",
+     "name": "登月舱",
+     "en": "Lunar module",
+     "year": 1969,
+     "note": "登陆月面并起飞返回的专用着陆器，1969年阿波罗首次载人登月。",
+     "deps": ["space_rendezvous"]
+    },
+    {
+     "id": "space_orbit_lab",
+     "name": "载人轨道实验室",
+     "en": "Crewed orbital laboratory",
+     "year": 1971,
+     "note": "礼炮一号1971年首个空间站式载人轨道实验室，开展长期驻留试验。",
+     "deps": ["space_els"]
+    },
+    {
+     "id": "space_launch_escape",
+     "name": "逃逸塔",
+     "en": "Launch escape system",
+     "year": 1962,
+     "note": "火箭故障时牵引飞船脱离的固体逃逸系统，东方号即装备。",
+     "deps": ["space_capsule"]
+    },
+    {
+     "id": "space_crew_rescue",
+     "name": "航天员搜救",
+     "en": "Crew recovery",
+     "year": 1962,
+     "note": "回收返回舱并搜救航天员的体系，海上与陆地回收并重。",
+     "deps": ["space_capsule"]
+    },
+    {
+     "id": "space_ebd",
+     "name": "出舱机动装置",
+     "en": "Manned maneuvering unit",
+     "year": 1984,
+     "note": "航天员舱外自由飞行的背包推进装置，1984年航天飞机任务验证。",
+     "deps": ["space_eva_suit"]
+    },
+    {
+     "id": "space_grasshopper_test",
+     "name": "重复使用载人返回",
+     "en": "Reusable crew return",
+     "year": 2020,
+     "note": "可垂直回收复用的载人飞船，2020年首次商业载人飞行。",
+     "deps": ["space_recoverable_booster"]
+    },
+    {
+     "id": "space_spacewalk_tools",
+     "name": "舱外作业工具",
+     "en": "EVA tools",
+     "year": 1966,
+     "note": "供舱外组装与维修的专用工具套件，保障空间站建造维护。",
+     "deps": ["space_eva_suit"]
+    },
+    {
+     "id": "space_crew_training",
+     "name": "航天员训练",
+     "en": "Astronaut training",
+     "year": 1962,
+     "note": "离心机、失重水槽与模拟器的系统化训练，保障任务执行能力。",
+     "deps": ["space_capsule"]
+    }
+   ]
+  },
+  {
+   "name": "航天飞机",
+   "items": [
+    {
+     "id": "space_shuttle_orbiter",
+     "name": "轨道器",
+     "en": "Space shuttle orbiter",
+     "year": 1981,
+     "note": "可重复使用的带翼航天飞机本体，1981年哥伦比亚号首飞。",
+     "deps": ["space_capsule"]
+    },
+    {
+     "id": "space_shuttle_srb",
+     "name": "固体助推器",
+     "en": "Solid rocket booster",
+     "year": 1981,
+     "note": "航天飞机起飞段并联的固体助推器，分离后伞降海上回收复用。",
+     "deps": ["space_solid_motor"]
+    },
+    {
+     "id": "space_shuttle_et",
+     "name": "外储箱",
+     "en": "External tank",
+     "year": 1981,
+     "note": "承载液氢液氧供主发动机的大型外贮箱，入轨后抛离焚毁。",
+     "deps": ["space_cryogenic_engine"]
+    },
+    {
+     "id": "space_shuttle_tps",
+     "name": "热防护瓦",
+     "en": "Thermal protection tile",
+     "year": 1985,
+     "note": "敷于机体表面的耐高温陶瓷瓦，抵御再入数千度气动加热。",
+     "deps": ["space_shuttle_orbiter"]
+    },
+    {
+     "id": "space_shuttle_main_engine",
+     "name": "航天飞机主发动机",
+     "en": "Space shuttle main engine",
+     "year": 1981,
+     "note": "以液氢液氧分级燃烧的高性能可复用主发动机，可多次点火。",
+     "deps": ["space_staged_combustion"]
+    },
+    {
+     "id": "space_shuttle_payload_bay",
+     "name": "载荷舱",
+     "en": "Payload bay",
+     "year": 1985,
+     "note": "轨道器内大型货舱，部署卫星与携带空间实验室等有效载荷。",
+     "deps": ["space_shuttle_orbiter"]
+    },
+    {
+     "id": "space_shuttle_robotic_arm",
+     "name": "遥控机械臂",
+     "en": "Canadarm",
+     "year": 1985,
+     "note": "轨道器舱内部署的关节机械臂，用于释放回收卫星及舱外辅助。",
+     "deps": ["space_shuttle_orbiter"]
+    },
+    {
+     "id": "space_shuttle_gliding_reentry",
+     "name": "滑翔再入",
+     "en": "Unpowered gliding reentry",
+     "year": 1986,
+     "note": "无动力滑翔返回并以跑道着陆的再入方式，航天飞机标志性能力。",
+     "deps": ["space_shuttle_tps"]
+    },
+    {
+     "id": "space_shuttle_mission_control",
+     "name": "在轨操作控制台",
+     "en": "Flight deck cockpit",
+     "year": 1985,
+     "note": "轨道器乘员操作的驾驶与任务控制台，集中管理飞行与载荷。",
+     "deps": ["space_shuttle_orbiter"]
+    },
+    {
+     "id": "space_reusable_thermal_shield",
+     "name": "可复用防热系统",
+     "en": "Reusable thermal protection",
+     "year": 1990,
+     "note": "可多次飞行的防热结构体系，包括毡与隔热层，降低维护成本。",
+     "deps": ["space_shuttle_tps"]
+    },
+    {
+     "id": "space_shuttle_wing",
+     "name": "机翼结构",
+     "en": "Orbiter wing",
+     "year": 1985,
+     "note": "可复用带翼再入的机体机翼，提供滑翔升力与气动控制。",
+     "deps": ["space_shuttle_orbiter"]
+    },
+    {
+     "id": "space_external_tank_foam",
+     "name": "外储箱泡沫",
+     "en": "ET foam insulation",
+     "year": 1985,
+     "note": "外储箱表面保冷隔热泡沫层，维持低温推进剂温度。",
+     "deps": ["space_shuttle_et"]
+    }
+   ]
+  },
+  {
+   "name": "深空探测",
+   "items": [
+    {
+     "id": "space_planetary_probe",
+     "name": "行星探测器",
+     "en": "Planetary probe",
+     "year": 1962,
+     "note": "飞向行星进行探测的无人航天器，1962年水手二号飞掠金星成功。",
+     "deps": ["satellite"]
+    },
+    {
+     "id": "space_gravity_assist",
+     "name": "引力弹弓",
+     "en": "Gravity assist",
+     "year": 1974,
+     "note": "借行星引力改变速度与航向的借力机动，1974年水手十号首次应用。",
+     "deps": ["space_planetary_probe"]
+    },
+    {
+     "id": "space_deep_space_network",
+     "name": "深空测控网",
+     "en": "Deep Space Network",
+     "year": 1963,
+     "note": "全球布站的大口径天线网，对深空探测器跟踪测距与通信。",
+     "deps": ["radio"]
+    },
+    {
+     "id": "space_lander",
+     "name": "着陆器",
+     "en": "Planetary lander",
+     "year": 1966,
+     "note": "在天体表面软着陆的探测器，1966年月球九号首次月面软着陆。",
+     "deps": ["space_planetary_probe"]
+    },
+    {
+     "id": "space_rover",
+     "name": "巡视器",
+     "en": "Planetary rover",
+     "year": 1971,
+     "note": "在天体表面移动探测的巡视车，1971年月球车一号月面行驶。",
+     "deps": ["space_lander"]
+    },
+    {
+     "id": "space_flyby_probe",
+     "name": "飞掠探测器",
+     "en": "Flyby probe",
+     "year": 1963,
+     "note": "以近距离飞掠方式探测天体的无人航天器，无需进入轨道。",
+     "deps": ["space_planetary_probe"]
+    },
+    {
+     "id": "space_orbiter_probe",
+     "name": "环绕探测器",
+     "en": "Orbital probe",
+     "year": 1971,
+     "note": "进入天体轨道长期环绕探测的航天器，1971年水手九号入火星轨。",
+     "deps": ["space_planetary_probe"]
+    },
+    {
+     "id": "space_sample_return",
+     "name": "采样返回",
+     "en": "Sample return mission",
+     "year": 1970,
+     "note": "采集天体样本并送回地球的探测任务，1970年月球样品率先返回。",
+     "deps": ["space_lander"]
+    },
+    {
+     "id": "space_interplanetary_bus",
+     "name": "深空巡航器",
+     "en": "Deep-space cruise stage",
+     "year": 1990,
+     "note": "负责行星际转移段推进与姿态的母舱，抵达后分离释放着陆器。",
+     "deps": ["space_gravity_assist"]
+    },
+    {
+     "id": "space_asteroid_probe",
+     "name": "小行星探测器",
+     "en": "Asteroid probe",
+     "year": 1991,
+     "note": "飞抵小行星着陆取样的探测器，1991年飞近加斯普拉。",
+     "deps": ["space_orbiter_probe"]
+    },
+    {
+     "id": "space_comet_probe",
+     "name": "彗星探测器",
+     "en": "Comet probe",
+     "year": 1986,
+     "note": "飞抵彗星采样与伴飞的探测器，1986年乔托近探哈雷彗星。",
+     "deps": ["space_flyby_probe"]
+    },
+    {
+     "id": "space_outer_planet_probe",
+     "name": "外行星探测器",
+     "en": "Outer planet probe",
+     "year": 1973,
+     "note": "探测木星以远巨行星的探测器，1973年先驱者十号飞掠木星。",
+     "deps": ["space_orbiter_probe"]
+    },
+    {
+     "id": "space_interstellar_probe",
+     "name": "星际探测器",
+     "en": "Interstellar probe",
+     "year": 2012,
+     "note": "飞出日球层进入星际空间的探测器，旅行者一号2012年越界。",
+     "deps": ["space_outer_planet_probe"]
+    },
+    {
+     "id": "space_landing_radar",
+     "name": "着陆雷达",
+     "en": "Landing radar",
+     "year": 1967,
+     "note": "测量相对高度速度引导软着陆的雷达，月面着陆器必备。",
+     "deps": ["space_lander"]
+    }
+   ]
+  },
+  {
+   "name": "卫星平台",
+   "items": [
+    {
+     "id": "space_sat_structure",
+     "name": "卫星结构",
+     "en": "Satellite bus structure",
+     "year": 1957,
+     "note": "承载载荷与设备的卫星主承力框架，斯普特尼克首次入轨。",
+     "deps": ["satellite"]
+    },
+    {
+     "id": "space_solar_array",
+     "name": "太阳翼",
+     "en": "Solar array",
+     "year": 1958,
+     "note": "帆板展开的光伏阵列为卫星供电，先锋一号首次应用。",
+     "deps": ["space_sat_structure"]
+    },
+    {
+     "id": "space_three_axis_stab",
+     "name": "三轴稳定",
+     "en": "Three-axis stabilization",
+     "year": 1960,
+     "note": "以反作用轮维持三轴指向的稳定方式，优于自旋稳定。",
+     "deps": ["space_sat_structure"]
+    },
+    {
+     "id": "space_acs",
+     "name": "姿控系统",
+     "en": "Attitude control system",
+     "year": 1958,
+     "note": "测量并控制卫星姿态的系统，保障天线与太阳翼指向。",
+     "deps": ["space_sat_structure"]
+    },
+    {
+     "id": "space_propellant_tank",
+     "name": "推进剂贮箱",
+     "en": "Propellant tank",
+     "year": 1958,
+     "note": "贮存姿态与轨道控制推进剂的轻量化压力容器，常采用共底结构。",
+     "deps": ["space_sat_structure"]
+    },
+    {
+     "id": "space_spin_stabilized",
+     "name": "自旋稳定",
+     "en": "Spin stabilization",
+     "year": 1958,
+     "note": "以自转维持姿态稳定的早期方式，先锋与早期卫星常用。",
+     "deps": ["space_sat_structure"]
+    },
+    {
+     "id": "space_star_tracker",
+     "name": "星敏感器",
+     "en": "Star tracker",
+     "year": 1960,
+     "note": "以恒星为基准测定姿态的光学敏感器，指向精度高。",
+     "deps": ["space_acs"]
+    },
+    {
+     "id": "space_reaction_wheel",
+     "name": "反作用轮",
+     "en": "Reaction wheel",
+     "year": 1961,
+     "note": "以飞轮角动量交换实现姿态调整的执行机构，三轴稳定核心。",
+     "deps": ["space_three_axis_stab"]
+    },
+    {
+     "id": "space_magnetorquer",
+     "name": "磁力矩器",
+     "en": "Magnetorquer",
+     "year": 1960,
+     "note": "以线圈与地磁场交互产生力矩的姿控执行器，小卫星常用。",
+     "deps": ["space_acs"]
+    },
+    {
+     "id": "space_thermal_control",
+     "name": "热控系统",
+     "en": "Thermal control system",
+     "year": 1958,
+     "note": "以多层隔热与辐射器调节温度的卫星热控，保障设备工作。",
+     "deps": ["space_sat_structure"]
+    },
+    {
+     "id": "space_deployable_antenna",
+     "name": "展开天线",
+     "en": "Deployable antenna",
+     "year": 1962,
+     "note": "入轨后展开的大口径通信天线，提升增益与覆盖范围。",
+     "deps": ["space_sat_structure"]
+    },
+    {
+     "id": "space_battery_sat",
+     "name": "卫星蓄电池",
+     "en": "Satellite battery",
+     "year": 1959,
+     "note": "阴影期供电的星载蓄电池，与太阳翼协同维持能源。",
+     "deps": ["space_solar_array"]
+    },
+    {
+     "id": "space_ttc_transponder",
+     "name": "遥测遥控应答机",
+     "en": "TT&C transponder",
+     "year": 1958,
+     "note": "与地面测控通信收发的星载设备，实现遥控与遥测。",
+     "deps": ["radio"]
+    },
+    {
+     "id": "space_gps_receiver_sat",
+     "name": "星载定位接收",
+     "en": "Spacecraft navigation receiver",
+     "year": 1990,
+     "note": "航天器自主定轨的导航接收设备，借助GNSS提升轨道确定精度。",
+     "deps": ["gps", "space_sat_structure"]
+    }
+   ]
+  },
+  {
+   "name": "空间站",
+   "items": [
+    {
+     "id": "space_station_module",
+     "name": "空间站舱段",
+     "en": "Space station module",
+     "year": 1998,
+     "note": "桁架与密封舱组成的大型在轨组合体舱段，和平号与国际站采用。",
+     "deps": ["space_station"]
+    },
+    {
+     "id": "space_station_robotic_arm",
+     "name": "空间站机械臂",
+     "en": "Space station robotic arm",
+     "year": 2001,
+     "note": "舱外大型机械臂，用于舱段组装与载荷搬运，国际站加拿臂。",
+     "deps": ["space_station_module"]
+    },
+    {
+     "id": "space_regenerative_els",
+     "name": "再生生保",
+     "en": "Regenerative life support",
+     "year": 2000,
+     "note": "以电解水与物质循环再生的生保，减少地面补给依赖。",
+     "deps": ["space_station_module"]
+    },
+    {
+     "id": "space_docking_port",
+     "name": "对接端口",
+     "en": "Docking port",
+     "year": 1999,
+     "note": "供飞船与舱段对接的标准化接口，国际站多端口节点舱。",
+     "deps": ["space_station_module"]
+    },
+    {
+     "id": "space_node_module",
+     "name": "节点舱",
+     "en": "Node module",
+     "year": 2000,
+     "note": "连接多舱段并提供对接口的过渡舱，国际站曙光号后扩展。",
+     "deps": ["space_docking_port"]
+    },
+    {
+     "id": "space_lab_module",
+     "name": "实验舱",
+     "en": "Laboratory module",
+     "year": 2008,
+     "note": "开展微重力科学实验的专用密封舱，国际站哥伦布与希望号。",
+     "deps": ["space_station_module"]
+    },
+    {
+     "id": "space_airlock",
+     "name": "气闸舱",
+     "en": "Airlock",
+     "year": 2001,
+     "note": "供航天员出舱与设备转移的压力过渡舱，连接舱内外。",
+     "deps": ["space_station_module"]
+    },
+    {
+     "id": "space_truss",
+     "name": "桁架结构",
+     "en": "Space station truss",
+     "year": 2002,
+     "note": "支撑太阳翼与散热器的主桁架，国际站桁架分段在轨组装。",
+     "deps": ["space_station_module"]
+    },
+    {
+     "id": "space_radiator",
+     "name": "散热阵",
+     "en": "Space radiator",
+     "year": 2003,
+     "note": "向太空辐射废热的可展开散热面板，维持站内热平衡。",
+     "deps": ["space_truss"]
+    },
+    {
+     "id": "space_crew_return_vehicle",
+     "name": "载人返回器",
+     "en": "Crew return vehicle",
+     "year": 2000,
+     "note": "停靠空间站应急撤离航天员的飞船，联盟号长期对接。",
+     "deps": ["space_station_module"]
+    },
+    {
+     "id": "space_cargo_vehicle",
+     "name": "货运飞船",
+     "en": "Cargo spacecraft",
+     "year": 2000,
+     "note": "定期补给燃料物资的无人飞船，进步号与国际站货运。",
+     "deps": ["space_station_module"]
+    },
+    {
+     "id": "space_habitation_module",
+     "name": "居住舱",
+     "en": "Habitation module",
+     "year": 2001,
+     "note": "提供乘员休息与生活的密封舱，保障长期驻留。",
+     "deps": ["space_station_module"]
+    }
+   ]
+  },
+  {
+   "name": "再入回收",
+   "items": [
+    {
+     "id": "space_ablation_shield",
+     "name": "烧蚀防热",
+     "en": "Ablative heat shield",
+     "year": 1962,
+     "note": "以材料烧蚀带走热量的防热层，早期飞船返回舱广泛采用。",
+     "deps": ["space_capsule"]
+    },
+    {
+     "id": "space_abort_system",
+     "name": "逃逸救生系统",
+     "en": "Abort escape system",
+     "year": 1965,
+     "note": "发射段应急逃逸保全乘员的系统，含逃逸塔与分离装置。",
+     "deps": ["space_capsule"]
+    },
+    {
+     "id": "space_recovery_parachute",
+     "name": "着陆减速伞",
+     "en": "Recovery parachute",
+     "year": 1962,
+     "note": "返回舱减速着陆的降落伞系统，多伞依次展开保证软着陆。",
+     "deps": ["space_capsule"]
+    },
+    {
+     "id": "space_vertical_recovery",
+     "name": "垂直回收",
+     "en": "Vertical take-off recovery",
+     "year": 2016,
+     "note": "一子级发动机反推垂直着陆的回收，2015年首次成功复用。",
+     "deps": ["space_recoverable_booster"]
+    },
+    {
+     "id": "space_ballistic_reentry",
+     "name": "弹道再入",
+     "en": "Ballistic reentry",
+     "year": 1962,
+     "note": "无升力再入沿弹道下降的返回方式，早期飞船采用。",
+     "deps": ["space_capsule"]
+    },
+    {
+     "id": "space_skip_reentry",
+     "name": "跳跃再入",
+     "en": "Skip reentry",
+     "year": 1963,
+     "note": "借大气层弹跳延长航程的再入，阿波罗返航用于调整落点。",
+     "deps": ["space_ballistic_reentry"]
+    },
+    {
+     "id": "space_lifting_body",
+     "name": "升力体",
+     "en": "Lifting body",
+     "year": 1966,
+     "note": "以机身产生升力的无翼再入飞行器，验证航天飞机返回技术。",
+     "deps": ["space_ballistic_reentry"]
+    },
+    {
+     "id": "space_parafoil_recovery",
+     "name": "翼伞回收",
+     "en": "Parafoil recovery",
+     "year": 1990,
+     "note": "以可控翼伞滑翔回收的返回舱，提升落点精度。",
+     "deps": ["space_recovery_parachute"]
+    },
+    {
+     "id": "space_heatshield_material",
+     "name": "防热材料",
+     "en": "Ablative material",
+     "year": 1965,
+     "note": "酚醛与硅基烧蚀复合材料，抵御数千度再入热流。",
+     "deps": ["space_ablation_shield"]
+    },
+    {
+     "id": "space_soft_landing_engine",
+     "name": "软着陆发动机",
+     "en": "Soft-landing engine",
+     "year": 1969,
+     "note": "着陆段节流减速的发动机，月球与行星着陆器采用。",
+     "deps": ["space_rcs_thruster"]
+    },
+    {
+     "id": "space_water_recovery",
+     "name": "水上溅落回收",
+     "en": "Splashdown recovery",
+     "year": 1962,
+     "note": "返回舱海上溅落并由舰船打捞的回收方式，载人早期采用。",
+     "deps": ["space_capsule"]
+    },
+    {
+     "id": "space_retrorocket",
+     "name": "制动火箭",
+     "en": "Retrorocket",
+     "year": 1962,
+     "note": "再入前减速制动的反推火箭，调整返回轨道与落点。",
+     "deps": ["space_capsule"]
+    },
+    {
+     "id": "space_reentry_guidance",
+     "name": "再入制导",
+     "en": "Reentry guidance",
+     "year": 1965,
+     "note": "再入段轨迹与姿态控制制导，保证落点精度与安全。",
+     "deps": ["space_ballistic_reentry"]
+    }
+   ]
+  }
+ ]
+}

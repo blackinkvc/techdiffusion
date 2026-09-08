@@ -1,0 +1,1334 @@
+{
+ "cat": "material",
+ "catName": "材料",
+ "sub": "metal_adv",
+ "subName": "先进金属与特种合金",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "iron",
+  "steel",
+  "electricity",
+  "chemistry",
+  "thermodynamics",
+  "physics",
+  "nuclear_fission",
+  "semiconductors",
+  "magnets",
+  "optics"
+ ],
+ "families": [
+  {
+   "name": "铝的冶炼与铝合金体系",
+   "items": [
+    {
+     "id": "hall_heroult_process",
+     "name": "霍尔-埃鲁电解炼铝",
+     "en": "Hall-Héroult process",
+     "year": 1886,
+     "note": "在冰晶石熔体中电解氧化铝制取金属铝，使铝成为廉价工业金属。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "bayer_process",
+     "name": "拜耳法提取氧化铝",
+     "en": "Bayer process",
+     "year": 1888,
+     "note": "用苛性碱浸出铝土矿再沉淀灼烧，为电解法提供高纯氧化铝。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "duralumin",
+     "name": "硬铝",
+     "en": "Duralumin",
+     "year": 1906,
+     "note": "威尔姆发现铝铜镁合金经时效可显著强化，成为飞机蒙皮材料。",
+     "deps": [
+      "hall_heroult_process"
+     ]
+    },
+    {
+     "id": "aluminium_foil",
+     "name": "压延铝箔",
+     "en": "Aluminium foil",
+     "year": 1910,
+     "note": "反复冷轧铝锭成极薄箔材，用于包装、电容器与保温隔热层。",
+     "deps": [
+      "hall_heroult_process"
+     ]
+    },
+    {
+     "id": "aluminium_scrap_recycling",
+     "name": "废铝回收重熔",
+     "en": "Aluminium recycling",
+     "year": 1915,
+     "note": "重熔废铝仅耗原铝电解能量的百分之五，构成铝工业的重要循环。",
+     "deps": [
+      "hall_heroult_process"
+     ]
+    },
+    {
+     "id": "aluminium_silicon_casting_alloy",
+     "name": "铝硅铸造合金",
+     "en": "Aluminium-silicon casting alloy",
+     "year": 1920,
+     "note": "加硅改善铝液流动性，广泛用于活塞、缸体等铸造件。",
+     "deps": [
+      "hall_heroult_process"
+     ]
+    },
+    {
+     "id": "aluminium_anodizing",
+     "name": "铝阳极氧化",
+     "en": "Anodizing of aluminium",
+     "year": 1923,
+     "note": "阳极电解在铝表面生成多孔氧化膜，可染色并提高耐蚀耐磨性。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "alclad_sheet",
+     "name": "包铝防蚀板",
+     "en": "Alclad sheet",
+     "year": 1927,
+     "note": "在硬铝表面轧合纯铝保护层，解决航空板材的晶间腐蚀问题。",
+     "deps": [
+      "duralumin"
+     ]
+    },
+    {
+     "id": "aluminium_magnesium_alloy",
+     "name": "铝镁系合金",
+     "en": "Aluminium-magnesium alloy",
+     "year": 1930,
+     "note": "镁固溶强化并提高耐蚀性，是船舶与化工常用防锈铝系。",
+     "deps": [
+      "hall_heroult_process"
+     ]
+    },
+    {
+     "id": "aluminium_mgsi_alloy",
+     "name": "铝镁硅系合金",
+     "en": "Al-Mg-Si alloy",
+     "year": 1935,
+     "note": "人工时效强化的挤压合金系，广泛用于建筑型材与车辆结构。",
+     "deps": [
+      "aluminium_magnesium_alloy"
+     ]
+    },
+    {
+     "id": "aluminium_znmgcu_alloy",
+     "name": "铝锌镁铜系高强度铝合金",
+     "en": "Al-Zn-Mg-Cu high strength alloy",
+     "year": 1943,
+     "note": "时效强度最高的变形铝合金系，支撑大型飞机机翼与机身结构。",
+     "deps": [
+      "duralumin"
+     ]
+    },
+    {
+     "id": "sintered_aluminium_powder",
+     "name": "烧结铝粉耐热材料",
+     "en": "Sintered aluminium powder",
+     "year": 1947,
+     "note": "铝粉表面氧化膜弥散强化，使铝材可在二百度以上保持强度。",
+     "deps": [
+      "hall_heroult_process"
+     ]
+    },
+    {
+     "id": "aluminium_lithium_alloy",
+     "name": "铝锂合金",
+     "en": "Aluminium-lithium alloy",
+     "year": 1958,
+     "note": "锂使合金比重降低刚度提升，用于航天结构与飞机减重。",
+     "deps": [
+      "aluminium_znmgcu_alloy"
+     ]
+    },
+    {
+     "id": "high_purity_capacitor_foil",
+     "name": "高纯电子铝箔",
+     "en": "High purity aluminium foil for capacitors",
+     "year": 1960,
+     "note": "高纯铝箔经腐蚀扩面与阳极氧化形成介质，是铝电解电容器阳极。",
+     "deps": [
+      "aluminium_foil"
+     ]
+    },
+    {
+     "id": "aluminium_foam",
+     "name": "泡沫铝",
+     "en": "Aluminium foam",
+     "year": 2000,
+     "note": "发泡法在铝基体中引入孔隙，兼具轻量与吸能，用于吸能结构。",
+     "deps": [
+      "hall_heroult_process"
+     ]
+    },
+    {
+     "id": "soederberg_anode_cell",
+     "name": "自焙阳极电解槽",
+     "en": "Söderberg anode cell",
+     "year": 1919,
+     "note": "泽德伯格发明的连续自焙阳极简化换极操作，20世纪30年代广泛采用。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "prebaked_anode_cell",
+     "name": "预焙阳极电解槽",
+     "en": "Prebaked anode cell",
+     "year": 1935,
+     "note": "阳极先在阳极车间焙烧再装入电解槽，能耗与排放控制更优。",
+     "deps": [
+      "hall_heroult_process"
+     ]
+    },
+    {
+     "id": "aluminium_honeycomb_core",
+     "name": "铝蜂窝芯材",
+     "en": "Aluminium honeycomb core",
+     "year": 1950,
+     "note": "铝箔拉伸成蜂窝状芯层，与蒙皮胶接成航空轻质夹层板。",
+     "deps": [
+      "aluminium_foil"
+     ]
+    },
+    {
+     "id": "aluminium_scandium_alloy",
+     "name": "铝钪合金",
+     "en": "Aluminium-scandium alloy",
+     "year": 2000,
+     "note": "微量钪细化晶粒并强化，用于航空航天及高性能运动器材。",
+     "deps": [
+      "hall_heroult_process"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "镁、钛、锆与活性轻金属",
+   "items": [
+    {
+     "id": "magnesium_electrolysis",
+     "name": "电解法炼镁",
+     "en": "Electrolysis of magnesium chloride",
+     "year": 1886,
+     "note": "熔融氯化镁电解制取金属镁，是早期镁工业的基本方法。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "magnesium_elektron_alloy",
+     "name": "镁合金",
+     "en": "Magnesium Elektron alloys",
+     "year": 1910,
+     "note": "德国伊莱克特龙工厂开发镁基轻合金，用于航空发动机与飞艇。",
+     "deps": [
+      "magnesium_electrolysis"
+     ]
+    },
+    {
+     "id": "beryllium_copper_alloy",
+     "name": "铍铜合金",
+     "en": "Beryllium copper",
+     "year": 1932,
+     "note": "含铍百分之二铜合金经固溶时效获得高强度高弹性，用于弹簧。",
+     "deps": [
+      "magnesium_elektron_alloy"
+     ]
+    },
+    {
+     "id": "titanium_kroll_process",
+     "name": "克罗尔法炼钛",
+     "en": "Kroll process",
+     "year": 1940,
+     "note": "克罗尔以镁还原四氯化钛制得海绵钛，奠定钛工业基础。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "pidgeon_process_magnesium",
+     "name": "皮江法炼镁",
+     "en": "Pidgeon process",
+     "year": 1941,
+     "note": "真空罐内硅铁还原煅烧白云石制镁，成为大规模炼镁工艺。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "titanium_metal_industry",
+     "name": "钛材工业量产",
+     "en": "Commercial titanium production",
+     "year": 1948,
+     "note": "海绵钛真空熔炼后轧制加工，钛合金开始进入航空航天市场。",
+     "deps": [
+      "titanium_kroll_process"
+     ]
+    },
+    {
+     "id": "zirconium_hafnium_separation",
+     "name": "锆铪分离",
+     "en": "Zirconium-hafnium separation",
+     "year": 1950,
+     "note": "溶剂萃取法分离锆铪，低热中子吸收锆方可作核堆结构材料。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "zircaloy_nuclear_alloy",
+     "name": "核级锆合金",
+     "en": "Zircaloy nuclear alloys",
+     "year": 1952,
+     "note": "锆锡系合金用于核燃料包壳，热中子吸收截面小、耐腐蚀。",
+     "deps": [
+      "nuclear_fission"
+     ]
+    },
+    {
+     "id": "titanium_64_alloy",
+     "name": "α-β钛合金",
+     "en": "Ti-6Al-4V alloy",
+     "year": 1954,
+     "note": "含铝钒的双相钛合金，强度高工艺性好，占钛应用一半以上。",
+     "deps": [
+      "titanium_metal_industry"
+     ]
+    },
+    {
+     "id": "beta_titanium_alloy",
+     "name": "β型钛合金",
+     "en": "Beta titanium alloy",
+     "year": 1955,
+     "note": "高β稳定元素含量的钛合金，可时效到高强度并利于冷成形。",
+     "deps": [
+      "titanium_64_alloy"
+     ]
+    },
+    {
+     "id": "titanium_var_melting",
+     "name": "钛真空自耗电弧熔炼",
+     "en": "Vacuum arc remelting of titanium",
+     "year": 1955,
+     "note": "真空自耗炉两次重熔钛锭，去除气体与夹杂并保证成分均匀。",
+     "deps": [
+      "titanium_metal_industry"
+     ]
+    },
+    {
+     "id": "magnesium_die_casting_alloy",
+     "name": "压铸镁合金",
+     "en": "Magnesium die casting alloys",
+     "year": 1960,
+     "note": "以AZ系镁合金压铸薄壁壳体，广泛用于汽车与电子外壳。",
+     "deps": [
+      "magnesium_elektron_alloy"
+     ]
+    },
+    {
+     "id": "titanium_investment_casting",
+     "name": "钛合金熔模精铸",
+     "en": "Investment casting of titanium",
+     "year": 1975,
+     "note": "在真空与惰性气氛中精铸钛构件，减少航空钛件切削损耗。",
+     "deps": [
+      "titanium_metal_industry"
+     ]
+    },
+    {
+     "id": "magnesium_rare_earth_alloy",
+     "name": "含稀土耐热镁合金",
+     "en": "Magnesium rare-earth alloy",
+     "year": 1985,
+     "note": "稀土元素强化晶界使镁合金高温强度提升，用于航空发动机壳体。",
+     "deps": [
+      "magnesium_elektron_alloy"
+     ]
+    },
+    {
+     "id": "near_alpha_titanium_alloy",
+     "name": "近α高温钛合金",
+     "en": "Near-alpha titanium alloy",
+     "year": 1985,
+     "note": "近α组织钛合金蠕变强度高，用于压气机盘与叶片等高温部位。",
+     "deps": [
+      "titanium_64_alloy"
+     ]
+    },
+    {
+     "id": "hunter_titanium_process",
+     "name": "亨特法炼钛",
+     "en": "Hunter process",
+     "year": 1910,
+     "note": "亨特以钠还原四氯化钛制得金属钛，是克罗尔法之前的制钛路线。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "dow_magnesium_process",
+     "name": "道氏电解炼镁",
+     "en": "Dow process",
+     "year": 1916,
+     "note": "道化学从海水提氯化镁熔盐电解炼镁，实现镁的大规模生产。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "beryllium_metal_electrolysis",
+     "name": "铍的工业电解",
+     "en": "Beryllium electrolysis",
+     "year": 1930,
+     "note": "熔盐电解制取金属铍，用于航天结构件与X射线窗口。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "magnesium_sacrificial_anode",
+     "name": "镁牺牲阳极",
+     "en": "Magnesium sacrificial anode",
+     "year": 1940,
+     "note": "镁阳极与钢制管道构成电偶腐蚀防护，广泛用于埋地设施保护。",
+     "deps": [
+      "magnesium_elektron_alloy"
+     ]
+    },
+    {
+     "id": "magnesium_lithium_alloy",
+     "name": "镁锂合金",
+     "en": "Magnesium-lithium alloy",
+     "year": 1960,
+     "note": "锂使密度降至1.4以下，是最轻的结构合金之一，用于航天。",
+     "deps": [
+      "magnesium_elektron_alloy"
+     ]
+    },
+    {
+     "id": "zirconium_niobium_alloy",
+     "name": "锆铌合金包壳",
+     "en": "Zr-Nb cladding alloy",
+     "year": 1995,
+     "note": "锆铌系合金耐腐蚀优于锆锡系，用作压水堆先进燃料包壳。",
+     "deps": [
+      "zircaloy_nuclear_alloy"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "不锈钢与耐蚀合金",
+   "items": [
+    {
+     "id": "ferritic_stainless_steel",
+     "name": "铁素体不锈钢",
+     "en": "Ferritic stainless steel",
+     "year": 1912,
+     "note": "含铬百分之十二以上的铁素体组织不锈钢，耐蚀而成本较低。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "martensitic_stainless_steel",
+     "name": "马氏体不锈钢",
+     "en": "Martensitic stainless steel",
+     "year": 1913,
+     "note": "布雷尔利发现高铬钢可淬硬且耐蚀，制成不锈刀具。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "austenitic_stainless_steel",
+     "name": "奥氏体不锈钢",
+     "en": "Austenitic stainless steel",
+     "year": 1913,
+     "note": "含铬镍的十八八钢无磁且韧性好，成为用量最大的不锈钢。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "molybdenum_stainless_steel",
+     "name": "含钼耐蚀不锈钢",
+     "en": "Molybdenum-bearing stainless steel",
+     "year": 1924,
+     "note": "加钼显著提高抗氯离子点蚀能力，用于海水与纸浆设备。",
+     "deps": [
+      "austenitic_stainless_steel"
+     ]
+    },
+    {
+     "id": "duplex_stainless_steel",
+     "name": "双相不锈钢",
+     "en": "Duplex stainless steel",
+     "year": 1930,
+     "note": "铁素体与奥氏体双相组织兼得强度与耐蚀，八十年代起广泛采用。",
+     "deps": [
+      "austenitic_stainless_steel"
+     ]
+    },
+    {
+     "id": "stabilized_stainless_steel",
+     "name": "稳定化不锈钢",
+     "en": "Stabilized stainless steel",
+     "year": 1935,
+     "note": "加钛或铌固定碳，防止晶界贫铬引起的晶间腐蚀，适焊后使用。",
+     "deps": [
+      "austenitic_stainless_steel"
+     ]
+    },
+    {
+     "id": "precipitation_hardening_stainless",
+     "name": "沉淀硬化不锈钢",
+     "en": "Precipitation hardening stainless steel",
+     "year": 1943,
+     "note": "马氏体基体上析出强化相，兼具高硬度耐蚀与加工成形性。",
+     "deps": [
+      "martensitic_stainless_steel"
+     ]
+    },
+    {
+     "id": "vacuum_oxygen_decarburization",
+     "name": "真空氧脱碳精炼",
+     "en": "Vacuum oxygen decarburization",
+     "year": 1968,
+     "note": "真空下吹氧脱碳保护铬，配合氩气搅拌冶炼超低碳不锈钢。",
+     "deps": [
+      "austenitic_stainless_steel"
+     ]
+    },
+    {
+     "id": "superaustenitic_stainless",
+     "name": "超级奥氏体不锈钢",
+     "en": "Superaustenitic stainless steel",
+     "year": 1975,
+     "note": "高钼高氮奥氏体钢耐点蚀缝隙腐蚀，用于苛刻湿法工况。",
+     "deps": [
+      "molybdenum_stainless_steel"
+     ]
+    },
+    {
+     "id": "high_nitrogen_stainless",
+     "name": "高氮不锈钢",
+     "en": "High nitrogen stainless steel",
+     "year": 1995,
+     "note": "加压或常压增氮的奥氏体钢无磁高强，用于医疗与耐磨部件。",
+     "deps": [
+      "austenitic_stainless_steel"
+     ]
+    },
+    {
+     "id": "superduplex_stainless",
+     "name": "超级双相不锈钢",
+     "en": "Super duplex stainless steel",
+     "year": 1985,
+     "note": "高合金双相钢耐点蚀当量高，用于深海油气与化工苛刻环境。",
+     "deps": [
+      "duplex_stainless_steel"
+     ]
+    },
+    {
+     "id": "monel_alloy",
+     "name": "蒙乃尔合金",
+     "en": "Monel alloy",
+     "year": 1906,
+     "note": "镍铜合金耐海水与氢氟酸腐蚀，用于化工与船舶部件。",
+     "deps": []
+    },
+    {
+     "id": "hastelloy_alloy",
+     "name": "哈氏合金",
+     "en": "Hastelloy alloy",
+     "year": 1930,
+     "note": "镍钼系合金耐强还原性酸，是化工苛刻介质的典型耐蚀材料。",
+     "deps": []
+    },
+    {
+     "id": "inconel_alloy",
+     "name": "因科镍合金",
+     "en": "Inconel alloy",
+     "year": 1932,
+     "note": "镍铬系耐热耐蚀合金，兼具高温强度与抗氧化性。",
+     "deps": []
+    },
+    {
+     "id": "heat_resistant_austenitic_steel",
+     "name": "耐热奥氏体不锈钢",
+     "en": "Heat-resistant austenitic steel",
+     "year": 1930,
+     "note": "高铬镍奥氏体钢耐高温氧化，用作炉管与热处理炉构件。",
+     "deps": [
+      "austenitic_stainless_steel"
+     ]
+    },
+    {
+     "id": "manganese_substituted_austenitic",
+     "name": "锰代镍奥氏体不锈钢",
+     "en": "Manganese-substituted austenitic steel",
+     "year": 1945,
+     "note": "以锰氮代镍缓解镍荒，发展出低成本无磁奥氏体钢。",
+     "deps": [
+      "austenitic_stainless_steel"
+     ]
+    },
+    {
+     "id": "superferritic_stainless",
+     "name": "超级铁素体不锈钢",
+     "en": "Superferritic stainless steel",
+     "year": 1975,
+     "note": "高铬钼低间隙铁素体钢耐海水点蚀，用于凝汽器管材。",
+     "deps": [
+      "ferritic_stainless_steel"
+     ]
+    },
+    {
+     "id": "supermartensitic_stainless",
+     "name": "超级马氏体不锈钢",
+     "en": "Supermartensitic stainless steel",
+     "year": 1995,
+     "note": "超低碳马氏体钢兼得强度与焊接性，用于油气输送管线。",
+     "deps": [
+      "martensitic_stainless_steel"
+     ]
+    },
+    {
+     "id": "lean_duplex_stainless",
+     "name": "经济型双相不锈钢",
+     "en": "Lean duplex stainless steel",
+     "year": 2000,
+     "note": "低镍钼含量的双相钢降低成本，用于建筑与储罐制造。",
+     "deps": [
+      "duplex_stainless_steel"
+     ]
+    },
+    {
+     "id": "nickel_200_pure_nickel",
+     "name": "纯镍耐蚀材料",
+     "en": "Nickel 200",
+     "year": 1920,
+     "note": "低碳纯镍耐苛性碱与食品介质，用于化工设备衬里。",
+     "deps": []
+    }
+   ]
+  },
+  {
+   "name": "镍基与钴基高温合金",
+   "items": [
+    {
+     "id": "stellite_cobalt_alloy",
+     "name": "司太立钴合金",
+     "en": "Stellite cobalt alloy",
+     "year": 1906,
+     "note": "海恩斯发明钴铬钨耐磨耐热合金，用于阀门与切削刀具。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "nichrome_heating_alloy",
+     "name": "镍铬电热合金",
+     "en": "Nichrome heating alloy",
+     "year": 1906,
+     "note": "镍铬合金电阻稳定耐氧化，成为电热丝与电阻元件的标准材料。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "nimonic_nickel_superalloy",
+     "name": "镍基高温合金",
+     "en": "Nimonic nickel-base superalloy",
+     "year": 1941,
+     "note": "以γ'相强化的镍铬合金，是喷气发动机涡轮叶片的主材。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "investment_cast_turbine_blade",
+     "name": "熔模精铸涡轮叶片",
+     "en": "Investment casting of turbine blades",
+     "year": 1945,
+     "note": "失蜡精密铸造整体成形带冷却腔的叶片，突破锻造成形限制。",
+     "deps": [
+      "nimonic_nickel_superalloy"
+     ]
+    },
+    {
+     "id": "vacuum_arc_remelting_superalloy",
+     "name": "高温合金真空自耗重熔",
+     "en": "Vacuum arc remelting of superalloys",
+     "year": 1950,
+     "note": "真空电弧重熔去除气体杂质，生产高纯净高温合金锭。",
+     "deps": [
+      "nimonic_nickel_superalloy"
+     ]
+    },
+    {
+     "id": "cobalt_base_superalloy",
+     "name": "钴基高温合金",
+     "en": "Cobalt-base superalloy",
+     "year": 1952,
+     "note": "钴基固溶强化的抗热疲劳合金，用于涡轮导向叶片。",
+     "deps": [
+      "stellite_cobalt_alloy"
+     ]
+    },
+    {
+     "id": "vacuum_induction_melting",
+     "name": "真空感应熔炼",
+     "en": "Vacuum induction melting",
+     "year": 1955,
+     "note": "真空感应炉熔化并精确控制合金成分，是高温合金冶炼核心。",
+     "deps": [
+      "nimonic_nickel_superalloy"
+     ]
+    },
+    {
+     "id": "directional_solidification",
+     "name": "定向凝固叶片",
+     "en": "Directional solidification",
+     "year": 1966,
+     "note": "定向结晶消除横向晶界，显著提高叶片蠕变与热疲劳寿命。",
+     "deps": [
+      "investment_cast_turbine_blade"
+     ]
+    },
+    {
+     "id": "mechanical_alloying",
+     "name": "机械合金化",
+     "en": "Mechanical alloying",
+     "year": 1966,
+     "note": "高能球磨反复冷焊破碎混合粉末，制取难熔弥散强化合金。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "powder_metallurgy_superalloy",
+     "name": "粉末高温合金",
+     "en": "Powder metallurgy superalloy",
+     "year": 1970,
+     "note": "雾化制粉后热等静压成形涡轮盘，消除偏析提高强度。",
+     "deps": [
+      "mechanical_alloying"
+     ]
+    },
+    {
+     "id": "oxide_dispersion_strengthened_alloy",
+     "name": "氧化物弥散强化合金",
+     "en": "Oxide dispersion strengthened alloy",
+     "year": 1975,
+     "note": "以纳米氧化钇颗粒钉扎位错，工作温度高于同类铸造合金。",
+     "deps": [
+      "mechanical_alloying"
+     ]
+    },
+    {
+     "id": "single_crystal_superalloy",
+     "name": "单晶高温合金",
+     "en": "Single crystal superalloy",
+     "year": 1980,
+     "note": "选晶法消除全部晶界，配复杂气冷通道用于先进涡轮叶片。",
+     "deps": [
+      "directional_solidification"
+     ]
+    },
+    {
+     "id": "rhenium_single_crystal_alloy",
+     "name": "含铼单晶高温合金",
+     "en": "Rhenium-bearing single crystal alloy",
+     "year": 1995,
+     "note": "加铼强化γ相并改善抗氧化，承温能力领先各代高温合金。",
+     "deps": [
+      "single_crystal_superalloy"
+     ]
+    },
+    {
+     "id": "titanium_aluminide_blade",
+     "name": "钛铝金属间化合物叶片",
+     "en": "Titanium aluminide blades",
+     "year": 2010,
+     "note": "γ-TiAl比重轻耐热，本世纪已用于大型客机发动机低压涡轮。",
+     "deps": [
+      "titanium_64_alloy"
+     ]
+    },
+    {
+     "id": "vitallium_cobalt_alloy",
+     "name": "钴铬钼铸造合金",
+     "en": "Vitallium cobalt alloy",
+     "year": 1932,
+     "note": "钴铬钼铸造合金耐磨耐蚀，1930年代用于牙科与人工关节。",
+     "deps": []
+    },
+    {
+     "id": "equiaxed_cast_nickel_alloy",
+     "name": "等轴晶铸造镍基合金",
+     "en": "Equiaxed cast nickel superalloy",
+     "year": 1950,
+     "note": "铸造镍基合金用于中温涡轮导向叶片，工艺简单成本低。",
+     "deps": [
+      "nimonic_nickel_superalloy"
+     ]
+    },
+    {
+     "id": "wrought_nickel_disc_alloy",
+     "name": "变形镍基涡轮盘合金",
+     "en": "Wrought nickel disc superalloy",
+     "year": 1955,
+     "note": "锻造消除偏析的镍基合金盘件，满足涡轮盘强度与寿命要求。",
+     "deps": [
+      "nimonic_nickel_superalloy"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "难熔金属、硬质合金与粉末冶金",
+   "items": [
+    {
+     "id": "ductile_tantalum",
+     "name": "延性钽",
+     "en": "Ductile tantalum",
+     "year": 1903,
+     "note": "博尔顿制取高纯延性钽丝，曾用作白炽灯丝与化工耐蚀件。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "ductile_tungsten_wire",
+     "name": "延性钨丝",
+     "en": "Ductile tungsten wire",
+     "year": 1909,
+     "note": "库里奇以粉末冶金与旋锻拉丝制出延性钨丝，支撑电灯工业。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "molybdenum_metal_working",
+     "name": "钼的延性化加工",
+     "en": "Ductile molybdenum",
+     "year": 1913,
+     "note": "钼粉烧结后锻轧拉制成材，用于灯丝支架、电极与高温构件。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "cemented_tungsten_carbide",
+     "name": "烧结碳化钨硬质合金",
+     "en": "Cemented tungsten carbide",
+     "year": 1923,
+     "note": "碳化钨粉钴粘结烧结成刀片，硬度极高，革新金属切削加工。",
+     "deps": [
+      "ductile_tungsten_wire"
+     ]
+    },
+    {
+     "id": "tungsten_heavy_alloy",
+     "name": "高比重钨合金",
+     "en": "Tungsten heavy alloy",
+     "year": 1945,
+     "note": "钨镍铁系粉末冶金合金密度高，用于配重、屏蔽与穿甲弹芯。",
+     "deps": [
+      "ductile_tungsten_wire"
+     ]
+    },
+    {
+     "id": "water_atomized_steel_powder",
+     "name": "水雾化钢粉",
+     "en": "Water atomization of steel powder",
+     "year": 1945,
+     "note": "高压水冲击钢流制得球形粉末，是粉末冶金结构件的原料。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "hot_isostatic_pressing",
+     "name": "热等静压",
+     "en": "Hot isostatic pressing",
+     "year": 1955,
+     "note": "高温高压气体使粉末或铸件致密化，消除内部孔隙与缺陷。",
+     "deps": [
+      "water_atomized_steel_powder"
+     ]
+    },
+    {
+     "id": "titanium_carbide_cermet",
+     "name": "碳化钛金属陶瓷",
+     "en": "Titanium carbide cermet",
+     "year": 1956,
+     "note": "碳化钛镍粘结的刀具材料，高速精加工钢件寿命长。",
+     "deps": [
+      "cemented_tungsten_carbide"
+     ]
+    },
+    {
+     "id": "niobium_titanium_superconductor",
+     "name": "铌钛超导线材",
+     "en": "NbTi superconducting wire",
+     "year": 1961,
+     "note": "铌钛合金拉制超导线，支撑磁共振与粒子加速器超导磁体。",
+     "deps": [
+      "magnets"
+     ]
+    },
+    {
+     "id": "powder_high_speed_steel",
+     "name": "粉末高速钢",
+     "en": "Powder metallurgy high speed steel",
+     "year": 1967,
+     "note": "雾化制粉消除碳化物偏析，刀具耐磨性均匀性大幅提升。",
+     "deps": [
+      "water_atomized_steel_powder"
+     ]
+    },
+    {
+     "id": "coated_carbide_insert",
+     "name": "涂层硬质合金刀片",
+     "en": "Coated carbide inserts",
+     "year": 1969,
+     "note": "化学气相沉积氮化钛等涂层，成倍提高刀片切削寿命。",
+     "deps": [
+      "cemented_tungsten_carbide"
+     ]
+    },
+    {
+     "id": "metal_injection_molding",
+     "name": "金属注射成形",
+     "en": "Metal injection molding",
+     "year": 1979,
+     "note": "金属粉末与粘结剂混炼注射成形后脱脂烧结，近净成形小件。",
+     "deps": [
+      "water_atomized_steel_powder"
+     ]
+    },
+    {
+     "id": "niobium_steel_microalloy",
+     "name": "铌微合金化技术",
+     "en": "Niobium microalloying",
+     "year": 1960,
+     "note": "微量铌细化晶粒并析出强化，配合控轧提高钢材强韧水平。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "sponge_iron_powder",
+     "name": "海绵铁粉还原法",
+     "en": "Höganäs sponge iron process",
+     "year": 1911,
+     "note": "以固体碳还原铁矿石制海绵铁粉，是铁粉粉末冶金的开端。",
+     "deps": []
+    },
+    {
+     "id": "oil_impregnated_sintered_bearing",
+     "name": "粉末冶金含油轴承",
+     "en": "Oil-impregnated sintered bearing",
+     "year": 1920,
+     "note": "多孔青铜或铁基烧结体浸油自润滑，属粉末冶金经典制品。",
+     "deps": []
+    },
+    {
+     "id": "sintered_friction_material",
+     "name": "烧结摩擦材料",
+     "en": "Sintered friction material",
+     "year": 1950,
+     "note": "铜基铁基粉末烧结成离合器与制动摩擦片，耐高温耐磨损。",
+     "deps": []
+    },
+    {
+     "id": "molybdenum_disilicide_heater",
+     "name": "硅化钼电热元件",
+     "en": "MoSi2 heating element",
+     "year": 1950,
+     "note": "硅化钼发热体在空气中可工作至1700摄氏度，用于高温电炉。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "gas_atomized_metal_powder",
+     "name": "惰性气体雾化制粉",
+     "en": "Inert gas atomization",
+     "year": 1975,
+     "note": "雾化制取高纯球形合金粉末，供高温合金盘件与增材制造。",
+     "deps": [
+      "water_atomized_steel_powder"
+     ]
+    },
+    {
+     "id": "spark_plasma_sintering",
+     "name": "放电等离子烧结",
+     "en": "Spark plasma sintering",
+     "year": 1995,
+     "note": "脉冲电流快速烧结粉末，短时致密化，用于陶瓷与金属间化合物。",
+     "deps": [
+      "metal_injection_molding"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "精密合金与特种功能合金",
+   "items": [
+    {
+     "id": "manganin_resistance_alloy",
+     "name": "锰铜精密电阻合金",
+     "en": "Manganin resistance alloy",
+     "year": 1892,
+     "note": "铜锰镍合金电阻温度系数小，用作标准电阻与电测元件。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "constantan_thermocouple_alloy",
+     "name": "康铜合金",
+     "en": "Constantan",
+     "year": 1893,
+     "note": "铜镍合金电阻率稳定，与铜等配用构成热电偶测温元件。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "invar_low_expansion_alloy",
+     "name": "因瓦合金",
+     "en": "Invar",
+     "year": 1896,
+     "note": "铁镍百分之三十六合金热膨胀近零，用于精密仪器与标准尺。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "elinvar_constant_modulus_alloy",
+     "name": "艾林瓦恒弹性合金",
+     "en": "Elinvar",
+     "year": 1913,
+     "note": "铁镍铬合金弹性模量温度系数近零，用于钟表游丝与弹簧。",
+     "deps": [
+      "invar_low_expansion_alloy"
+     ]
+    },
+    {
+     "id": "permalloy_soft_magnetic",
+     "name": "坡莫合金",
+     "en": "Permalloy",
+     "year": 1920,
+     "note": "含镍百分之七十八的铁镍软磁合金，磁导率极高用于磁屏蔽。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "kovar_sealing_alloy",
+     "name": "可伐封接合金",
+     "en": "Kovar alloy",
+     "year": 1935,
+     "note": "铁镍钴合金热膨胀与玻璃陶瓷匹配，实现电子器件气密封装。",
+     "deps": [
+      "invar_low_expansion_alloy"
+     ]
+    },
+    {
+     "id": "nb3sn_superconductor",
+     "name": "铌三锡超导材料",
+     "en": "Nb3Sn superconductor",
+     "year": 1954,
+     "note": "金属间化合物超导线临界磁场高，用于高场超导磁体。",
+     "deps": [
+      "magnets"
+     ]
+    },
+    {
+     "id": "amorphous_metal_splat",
+     "name": "液态急冷非晶合金",
+     "en": "Splat-quenched amorphous alloy",
+     "year": 1960,
+     "note": "杜维兹以每百万度速率冷却金硅熔体，首次制得非晶金属。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "nitinol_shape_memory_alloy",
+     "name": "镍钛形状记忆合金",
+     "en": "Nitinol shape memory alloy",
+     "year": 1962,
+     "note": "比勒发现镍钛合金可恢复形状，用于接头、驱动器与医用支架。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "copper_shape_memory_alloy",
+     "name": "铜基形状记忆合金",
+     "en": "Copper-based shape memory alloy",
+     "year": 1974,
+     "note": "铜锌铝与铜铝镍记忆合金成本低，用于温控与连接器件。",
+     "deps": [
+      "nitinol_shape_memory_alloy"
+     ]
+    },
+    {
+     "id": "amorphous_transformer_ribbon",
+     "name": "非晶变压器铁芯带材",
+     "en": "Amorphous transformer ribbon",
+     "year": 1982,
+     "note": "铁基非晶薄带磁损耗低，制成配电变压器铁芯节能显著。",
+     "deps": [
+      "amorphous_metal_splat"
+     ]
+    },
+    {
+     "id": "iron_manganese_silicon_sma",
+     "name": "铁锰硅形状记忆合金",
+     "en": "Fe-Mn-Si shape memory alloy",
+     "year": 1982,
+     "note": "铁基记忆合金成本低易加工，用于钢轨鱼尾板等工程连接件。",
+     "deps": [
+      "nitinol_shape_memory_alloy"
+     ]
+    },
+    {
+     "id": "nanocrystalline_soft_magnetic",
+     "name": "纳米晶软磁合金",
+     "en": "Nanocrystalline soft magnetic alloy",
+     "year": 1988,
+     "note": "铁基非晶晶化退火得纳米晶粒，磁导率高损耗低用于互感器。",
+     "deps": [
+      "amorphous_transformer_ribbon"
+     ]
+    },
+    {
+     "id": "bulk_metallic_glass",
+     "name": "块体金属玻璃",
+     "en": "Bulk metallic glass",
+     "year": 1993,
+     "note": "锆基合金可浇注成厘米级非晶块体，兼具高强度高弹性。",
+     "deps": [
+      "amorphous_metal_splat"
+     ]
+    },
+    {
+     "id": "chromel_alumel_thermocouple",
+     "name": "镍铬镍铝热电偶丝",
+     "en": "Chromel-alumel thermocouple alloy",
+     "year": 1906,
+     "note": "镍铬镍铝配成K型热电偶，测温范围宽且价格低，工业最常用。",
+     "deps": []
+    },
+    {
+     "id": "nitinol_superelastic_wire",
+     "name": "镍钛超弹丝材",
+     "en": "Superelastic NiTi wire",
+     "year": 1980,
+     "note": "超弹性镍钛丝大变形可回复，用作正畸弓丝与医用导丝。",
+     "deps": [
+      "nitinol_shape_memory_alloy"
+     ]
+    },
+    {
+     "id": "sma_cryofit_coupling",
+     "name": "形状记忆管接头",
+     "en": "Shape-memory pipe coupling",
+     "year": 1970,
+     "note": "低温扩径的镍钛记忆合金接头受热收缩，锁紧航空航天液压管。",
+     "deps": [
+      "nitinol_shape_memory_alloy"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "先进钢铁材料与超高强度钢",
+   "items": [
+    {
+     "id": "hadfield_manganese_steel",
+     "name": "高锰耐磨钢",
+     "en": "Hadfield manganese steel",
+     "year": 1882,
+     "note": "哈德菲尔德发现含锰百分之十三钢加工硬化显著，用于铁路道岔。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "silicon_electrical_steel",
+     "name": "电工硅钢",
+     "en": "Silicon electrical steel",
+     "year": 1900,
+     "note": "含硅钢片磁滞损耗低，是电机与变压器铁芯的基本材料。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "high_speed_steel",
+     "name": "高速钢",
+     "en": "High speed steel",
+     "year": 1900,
+     "note": "泰勒与怀特用钨铬钒钢高温回火，使刀具切削速度大幅提升。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "chromium_bearing_steel",
+     "name": "高碳铬轴承钢",
+     "en": "High carbon chromium bearing steel",
+     "year": 1905,
+     "note": "高碳铬钢淬硬后接触疲劳寿命长，是滚动轴承的标准材料。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "weathering_steel",
+     "name": "耐候钢",
+     "en": "Weathering steel",
+     "year": 1933,
+     "note": "加铜磷等使表面生成致密锈层，裸露桥梁建筑可少涂装。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "grain_oriented_silicon_steel",
+     "name": "取向硅钢",
+     "en": "Grain-oriented silicon steel",
+     "year": 1934,
+     "note": "高斯发明冷轧二次再结晶获得高斯织构，变压器铁损更低。",
+     "deps": [
+      "silicon_electrical_steel"
+     ]
+    },
+    {
+     "id": "nine_percent_nickel_steel",
+     "name": "9%镍低温钢",
+     "en": "9% nickel cryogenic steel",
+     "year": 1944,
+     "note": "含镍百分之九钢低温韧性优异，用于液化天然气储罐。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "maraging_steel",
+     "name": "马氏体时效钢",
+     "en": "Maraging steel",
+     "year": 1961,
+     "note": "低碳镍钴钼马氏体经时效强化，超高强度且焊接性好。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "microalloyed_hsla_steel",
+     "name": "微合金化高强度钢",
+     "en": "Microalloyed HSLA steel",
+     "year": 1970,
+     "note": "以铌钒钛微合金化配合控轧控冷，实现高强与良好焊接性。",
+     "deps": [
+      "niobium_steel_microalloy"
+     ]
+    },
+    {
+     "id": "hot_stamping_boron_steel",
+     "name": "热冲压硼钢",
+     "en": "Hot stamping boron steel",
+     "year": 1984,
+     "note": "硼钢加热成形并模内淬火，制超高强度汽车防撞零件。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "advanced_high_strength_steel",
+     "name": "汽车先进高强钢",
+     "en": "Advanced high strength steel",
+     "year": 1990,
+     "note": "双相钢等组织设计兼顾成形与吸能，推动车身轻量化。",
+     "deps": [
+      "microalloyed_hsla_steel"
+     ]
+    },
+    {
+     "id": "ultra_high_strength_alloy_steel",
+     "name": "超高强度合金结构钢",
+     "en": "Ultra-high strength alloy steel",
+     "year": 1955,
+     "note": "铬镍钼中碳钢淬回火到高强韧性，用于飞机起落架与压力容器。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "quenched_tempered_ship_steel",
+     "name": "舰船调质高强度钢",
+     "en": "Quenched and tempered ship steel",
+     "year": 1950,
+     "note": "调质处理的高强度舰船钢，屈服强度高且低温韧性与焊接良好。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "chromium_molybdenum_boiler_steel",
+     "name": "铬钼锅炉耐热钢",
+     "en": "Cr-Mo boiler steel",
+     "year": 1943,
+     "note": "约2.25%铬1%钼钢蠕变强度高，用于电站锅炉与加氢反应器。",
+     "deps": []
+    },
+    {
+     "id": "dual_phase_steel",
+     "name": "双相钢",
+     "en": "Dual-phase steel",
+     "year": 1975,
+     "note": "铁素体加马氏体双相组织，强度与成形性兼顾，用于汽车板。",
+     "deps": []
+    },
+    {
+     "id": "x80_linepipe_steel",
+     "name": "X80级管线钢",
+     "en": "X80 linepipe steel",
+     "year": 1985,
+     "note": "微合金化与控轧控冷使管材达X80强度级，用于高压输气管道。",
+     "deps": [
+      "microalloyed_hsla_steel"
+     ]
+    },
+    {
+     "id": "trip_steel",
+     "name": "相变诱导塑性钢",
+     "en": "TRIP steel",
+     "year": 1995,
+     "note": "残余奥氏体在变形中相变增塑，兼顾成形与碰撞吸能。",
+     "deps": [
+      "advanced_high_strength_steel"
+     ]
+    }
+   ]
+  }
+ ]
+}

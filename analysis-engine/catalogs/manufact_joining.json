@@ -1,0 +1,1335 @@
+{
+ "cat": "manufact",
+ "catName": "制造与工具",
+ "sub": "joining",
+ "subName": "连接与焊接",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "bronze",
+  "iron",
+  "steel",
+  "electricity",
+  "electromagnetism",
+  "interchangeable_parts",
+  "lasers",
+  "plastics",
+  "transistor",
+  "fire",
+  "explosives",
+  "steam_engine"
+ ],
+ "families": [
+  {
+   "name": "螺纹紧固与可拆连接",
+   "items": [
+    {
+     "id": "screw_fastener",
+     "name": "螺钉连接",
+     "en": "Screw fastening",
+     "year": 1500,
+     "note": "螺钉旋入带螺纹孔或配螺母夹紧被连接件的可拆连接，文艺复兴起广泛用于机械与木作。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "nut_connection",
+     "name": "螺母连接",
+     "en": "Nut and bolt",
+     "year": 1550,
+     "note": "螺母与螺栓配合旋合夹紧零件的连接方式，随金属车制螺纹出现而推广。",
+     "deps": [
+      "screw_fastener"
+     ]
+    },
+    {
+     "id": "wood_screw",
+     "name": "木螺钉",
+     "en": "Wood screw",
+     "year": 1550,
+     "note": "锥形尖头带螺纹的紧固件，直接旋入木材固定连接，家具与木结构应用广泛。",
+     "deps": [
+      "screw_fastener"
+     ]
+    },
+    {
+     "id": "set_screw",
+     "name": "紧定螺钉",
+     "en": "Set screw",
+     "year": 1700,
+     "note": "旋入轮毂螺纹孔顶紧轴面传递扭矩的螺钉，用于齿轮带轮在轴上的固定。",
+     "deps": [
+      "screw_fastener"
+     ]
+    },
+    {
+     "id": "bolt_connection",
+     "name": "螺栓连接",
+     "en": "Bolted joint",
+     "year": 1800,
+     "note": "螺栓穿过被连接件由螺母夹紧的标准可拆连接，机械结构中最通用的紧固形式。",
+     "deps": [
+      "interchangeable_parts"
+     ]
+    },
+    {
+     "id": "washer",
+     "name": "垫圈",
+     "en": "Washer",
+     "year": 1850,
+     "note": "垫于螺母或螺钉头下方的环形垫片，分散压力保护表面并调整支承尺寸。",
+     "deps": [
+      "bolt_connection"
+     ]
+    },
+    {
+     "id": "stud_connection",
+     "name": "双头螺柱连接",
+     "en": "Stud bolt connection",
+     "year": 1850,
+     "note": "两端螺纹的螺柱旋入较厚机体后加螺母紧固，用于缸盖法兰等需拆卸部位。",
+     "deps": [
+      "bolt_connection"
+     ]
+    },
+    {
+     "id": "flanged_bolted_joint",
+     "name": "法兰螺栓连接",
+     "en": "Flanged bolted joint",
+     "year": 1850,
+     "note": "法兰盘间垫密封垫并以螺栓组夹紧的管道连接，蒸汽与流体管路的标准接口。",
+     "deps": [
+      "bolt_connection"
+     ]
+    },
+    {
+     "id": "trapezoidal_thread",
+     "name": "梯形螺纹传动",
+     "en": "Trapezoidal thread",
+     "year": 1895,
+     "note": "牙型角三十度的传动螺纹，用于丝杠承受双向轴向力，车床走刀与升降机构。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "self_tapping_screw",
+     "name": "自攻螺钉",
+     "en": "Self-tapping screw",
+     "year": 1914,
+     "note": "旋入时自行切出配合螺纹的螺钉，省去攻丝工序，1914年出现专利，用于薄板连接。",
+     "deps": [
+      "screw_fastener"
+     ]
+    },
+    {
+     "id": "lock_nut",
+     "name": "防松螺母",
+     "en": "Lock nut",
+     "year": 1930,
+     "note": "尼龙圈或变形螺纹提供摩擦防松的螺母，抵抗振动松脱，1930年前后商业化。",
+     "deps": [
+      "nut_connection"
+     ]
+    },
+    {
+     "id": "threaded_insert",
+     "name": "钢丝螺套",
+     "en": "Threaded insert",
+     "year": 1946,
+     "note": "菱形钢丝绕成的内螺纹衬套，修复与增强铝件螺孔，1946年赫利线圈取得专利。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "high_strength_bolted_joint",
+     "name": "高强度螺栓摩擦连接",
+     "en": "High-strength bolted joint",
+     "year": 1955,
+     "note": "高强度螺栓大预紧力使板叠摩擦面传力的钢结构连接，二十世纪五十年代取代铆接。",
+     "deps": [
+      "bolt_connection"
+     ]
+    },
+    {
+     "id": "self_drilling_screw",
+     "name": "自钻螺钉",
+     "en": "Self-drilling screw",
+     "year": 1960,
+     "note": "钻尖兼作钻头的螺钉，一次完成钻孔攻丝拧紧，钢结构彩钢板的快速连接件。",
+     "deps": [
+      "self_tapping_screw"
+     ]
+    },
+    {
+     "id": "thread_standardization",
+     "name": "螺纹标准化",
+     "en": "Thread standardization",
+     "year": 1841,
+     "note": "统一螺纹牙形与螺距规格的系统，1841年惠氏螺纹始，后统一螺纹与米制螺纹相继确立。",
+     "deps": [
+      "interchangeable_parts"
+     ]
+    },
+    {
+     "id": "unified_thread",
+     "name": "统一标准螺纹",
+     "en": "Unified thread standard",
+     "year": 1864,
+     "note": "塞勒斯在美国确立的六角牙型螺纹标准，1864年前后成为美制紧固件依据。",
+     "deps": [
+      "thread_standardization"
+     ]
+    },
+    {
+     "id": "iso_metric_thread",
+     "name": "国际米制螺纹",
+     "en": "ISO metric thread",
+     "year": 1947,
+     "note": "国际标准化组织颁布的米制螺纹体系，取代各本国制式，1947年起成为全球通用标准。",
+     "deps": [
+      "thread_standardization"
+     ]
+    },
+    {
+     "id": "spring_washer",
+     "name": "弹簧垫圈",
+     "en": "Spring washer",
+     "year": 1900,
+     "note": "开口弹性垫圈受压回弹产生轴向张力防松，简单经济的螺栓防松元件。",
+     "deps": [
+      "washer"
+     ]
+    },
+    {
+     "id": "castellated_nut",
+     "name": "开槽螺母",
+     "en": "Castellated nut",
+     "year": 1900,
+     "note": "槽口配开口销锁止的防松螺母，用于振动与安全要求高的轴承与销轴部位。",
+     "deps": [
+      "nut_connection"
+     ]
+    },
+    {
+     "id": "hex_socket_screw",
+     "name": "内六角螺钉",
+     "en": "Socket head cap screw",
+     "year": 1910,
+     "note": "头部内六角孔配合内六角扳手拧紧的螺钉，可承受大力矩，机床模具装配标准件。",
+     "deps": [
+      "screw_fastener"
+     ]
+    },
+    {
+     "id": "expansion_bolt",
+     "name": "膨胀螺栓",
+     "en": "Expansion anchor bolt",
+     "year": 1913,
+     "note": "锥面胀套在拧紧时胀开锚固于混凝土孔的螺栓，1913年前后膨胀锚栓实用化。",
+     "deps": [
+      "bolt_connection"
+     ]
+    },
+    {
+     "id": "thread_forming_screw",
+     "name": "自挤螺钉",
+     "en": "Thread-forming screw",
+     "year": 1930,
+     "note": "旋入时挤压材料形成配合螺纹的螺钉，用于塑料与薄板，连接强度优于自攻。",
+     "deps": [
+      "self_tapping_screw"
+     ]
+    },
+    {
+     "id": "torque_preload_control",
+     "name": "螺栓预紧力控制",
+     "en": "Bolt preload control",
+     "year": 1956,
+     "note": "以扭矩法转角法或拉伸法精确控制螺栓预紧，是承力螺栓连接可靠性的关键工序。",
+     "deps": [
+      "high_strength_bolted_joint"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "铆接、键销与固定机械连接",
+   "items": [
+    {
+     "id": "riveting",
+     "name": "铆接",
+     "en": "Riveting",
+     "year": -2000,
+     "note": "铆钉穿过被连接件镦粗两端形成钉头的固定连接，青铜时代起用于金属器物与造船。",
+     "deps": [
+      "bronze"
+     ]
+    },
+    {
+     "id": "pin_joint",
+     "name": "销钉连接",
+     "en": "Pin joint",
+     "year": -1000,
+     "note": "以柱销锥销或开口销固定相对位置的连接，转轴铰链与结构定位的传统元件。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "key_joint",
+     "name": "键连接",
+     "en": "Key joint",
+     "year": 100,
+     "note": "轴与毂间嵌入键以传递扭矩的可拆连接，罗马水磨传动中已见键接形式。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "folded_seam",
+     "name": "咬缝连接",
+     "en": "Folded seam",
+     "year": 1600,
+     "note": "相邻板边相互折弯咬合的无紧固件连接，锡器白铁皮的罐体与屋面成型结合工艺。"
+    },
+    {
+     "id": "hot_riveting",
+     "name": "热铆",
+     "en": "Hot riveting",
+     "year": 1800,
+     "note": "铆钉加热后穿入并镦头，冷却收缩夹紧板叠，十九世纪钢桥与锅炉结构的连接方法。",
+     "deps": [
+      "riveting"
+     ]
+    },
+    {
+     "id": "press_fit",
+     "name": "过盈压装",
+     "en": "Press fit",
+     "year": 1800,
+     "note": "轴径大于孔径，压入后靠弹性变形握紧的固定连接，轮轴与衬套的装配方式。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "shrink_fit",
+     "name": "热装过盈",
+     "en": "Shrink fit",
+     "year": 1850,
+     "note": "加热包容件胀大后套入冷却收缩锁紧的连接，机车车轮与轮轴采用热装装配。",
+     "deps": [
+      "press_fit"
+     ]
+    },
+    {
+     "id": "cold_riveting",
+     "name": "冷铆",
+     "en": "Cold riveting",
+     "year": 1900,
+     "note": "常温下镦压铆钉头成形，多用于薄板与有色金属，飞机铝合金蒙皮广泛采用冷铆。",
+     "deps": [
+      "riveting"
+     ]
+    },
+    {
+     "id": "woodruff_key",
+     "name": "半圆键",
+     "en": "Woodruff key",
+     "year": 1900,
+     "note": "半圆盘形键自动对中安装方便，用于锥轴与小直径轴的扭矩传递。",
+     "deps": [
+      "key_joint"
+     ]
+    },
+    {
+     "id": "spline_joint",
+     "name": "花键连接",
+     "en": "Spline joint",
+     "year": 1910,
+     "note": "轴与毂沿圆周均布齿键啮合传递大扭矩，轴向可滑动，汽车变速箱与传动轴采用。",
+     "deps": [
+      "key_joint"
+     ]
+    },
+    {
+     "id": "blind_rivet",
+     "name": "抽芯铆钉",
+     "en": "Blind rivet",
+     "year": 1916,
+     "note": "单面拉铆使芯杆拉断形成钉头的铆钉，1916年问世，钣金与飞机蒙皮装配常用。",
+     "deps": [
+      "cold_riveting"
+     ]
+    },
+    {
+     "id": "circlip",
+     "name": "弹性挡圈",
+     "en": "Circlip",
+     "year": 1920,
+     "note": "卡入轴槽或孔槽定位零件的弹性环，安装拆卸方便，轴承与齿轮轴向固定的标准件。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "lockbolt",
+     "name": "环槽铆钉",
+     "en": "Lockbolt",
+     "year": 1940,
+     "note": "拉铆后在环槽锁紧的紧固件，抗振性好，用于桥梁铁路车辆的结构连接。",
+     "deps": [
+      "blind_rivet"
+     ]
+    },
+    {
+     "id": "squeeze_riveting",
+     "name": "压铆",
+     "en": "Squeeze riveting",
+     "year": 1935,
+     "note": "气动压铆钳或铆钉机以静压力镦成钉头，飞机工厂批量铆接工艺。",
+     "deps": [
+      "cold_riveting"
+     ]
+    },
+    {
+     "id": "taper_lock_bushing",
+     "name": "胀紧连接套",
+     "en": "Taper-lock bushing",
+     "year": 1930,
+     "note": "锥面开缝套筒胀紧固定轴毂的无键连接，可调相位且便于装拆，传动设计通用件。",
+     "deps": [
+      "key_joint"
+     ]
+    },
+    {
+     "id": "radial_riveting",
+     "name": "径向旋铆",
+     "en": "Radial riveting",
+     "year": 1960,
+     "note": "摆动的铆头沿径向轨迹逐步碾压铆钉头成形，变形小且表面好，精密部件铆接。",
+     "deps": [
+      "riveting"
+     ]
+    },
+    {
+     "id": "self_piercing_rivet",
+     "name": "自冲铆接",
+     "en": "Self-piercing riveting",
+     "year": 1995,
+     "note": "铆钉冲穿上层板并在下层板中扩铆成形的冷连接，铝钢混合车身轻量化关键工艺。",
+     "deps": [
+      "blind_rivet"
+     ]
+    },
+    {
+     "id": "wedge_key",
+     "name": "楔键",
+     "en": "Wedge key",
+     "year": 1500,
+     "note": "单面斜度楔入轴毂槽的键，可承受单向轴向力，老式皮带轮与飞轮固定。",
+     "deps": [
+      "key_joint"
+     ]
+    },
+    {
+     "id": "parallel_key",
+     "name": "平键",
+     "en": "Parallel key",
+     "year": 1850,
+     "note": "矩形截面的标准键，靠两侧面传递扭矩，是最通用的轴毂连接键。",
+     "deps": [
+      "key_joint"
+     ]
+    },
+    {
+     "id": "taper_pin",
+     "name": "锥销",
+     "en": "Taper pin",
+     "year": 1800,
+     "note": "带锥度自锁的圆柱销，靠轴向楔紧定位传力，便于拆装，铰链与联轴器定位。",
+     "deps": [
+      "pin_joint"
+     ]
+    },
+    {
+     "id": "split_pin",
+     "name": "开口销",
+     "en": "Split pin",
+     "year": 1900,
+     "note": "对折尾部张开锁止的金属销，与开槽螺母配合防止松脱。",
+     "deps": [
+      "pin_joint"
+     ]
+    },
+    {
+     "id": "hose_clamp",
+     "name": "卡箍连接",
+     "en": "Hose clamp",
+     "year": 1896,
+     "note": "蜗杆传动带箍收紧软管与接头密封连接，冷却管路与软管系统的标准紧固件。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "tubular_rivet",
+     "name": "空心铆钉",
+     "en": "Tubular rivet",
+     "year": 1900,
+     "note": "钉杆中空的铆钉，铆接力小且变形可控，电器与箱包等薄件装配。",
+     "deps": [
+      "riveting"
+     ]
+    },
+    {
+     "id": "rivet_nut",
+     "name": "压铆螺母",
+     "en": "Rivet nut",
+     "year": 1940,
+     "note": "单面安装的螺纹铆固螺母，在薄板内形成内螺纹，机柜钣金装配的标准连接件。",
+     "deps": [
+      "blind_rivet"
+     ]
+    },
+    {
+     "id": "cable_tie",
+     "name": "尼龙扎带",
+     "en": "Cable tie",
+     "year": 1958,
+     "note": "自锁齿纹的塑料捆扎带，1958年出现，电线电缆束集与标记的便捷固定件。",
+     "deps": [
+      "plastics"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "电弧焊与气焊",
+   "items": [
+    {
+     "id": "thermite_welding",
+     "name": "铝热焊接",
+     "en": "Thermite welding",
+     "year": 1895,
+     "note": "铝粉与氧化铁铝热反应产生高温铁水浇铸接头，1895年戈尔德施密特用于铁路钢轨焊接。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "oxy_acetylene_welding",
+     "name": "氧乙炔气焊",
+     "en": "Oxy-acetylene welding",
+     "year": 1903,
+     "note": "乙炔与氧混合焰熔化母材与焊丝的焊接，1903年双管焊炬成熟，薄板与管道焊接传统法。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "carbon_arc_welding",
+     "name": "碳弧焊",
+     "en": "Carbon arc welding",
+     "year": 1885,
+     "note": "碳电极与工件间电弧熔化金属的焊接，1885年贝纳尔多斯取得专利，是最早实用电弧焊。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "mma_welding",
+     "name": "焊条电弧焊",
+     "en": "Shielded metal arc welding",
+     "year": 1907,
+     "note": "药皮焊条与工件间引弧，药皮造渣气保护熔池，1907年谢尔贝里发明涂药焊条，应用最广。",
+     "deps": [
+      "carbon_arc_welding"
+     ]
+    },
+    {
+     "id": "underwater_welding",
+     "name": "水下焊接",
+     "en": "Underwater welding",
+     "year": 1932,
+     "note": "潜水环境中的湿法或干法电弧焊，1932年苏联实现水下电焊，用于海洋结构维修。",
+     "deps": [
+      "mma_welding"
+     ]
+    },
+    {
+     "id": "gas_pressure_welding",
+     "name": "气压焊",
+     "en": "Gas pressure welding",
+     "year": 1940,
+     "note": "对接面加热至塑性后加压顶锻形成接头的焊接，钢轨与钢筋现场焊接采用。",
+     "deps": [
+      "oxy_acetylene_welding"
+     ]
+    },
+    {
+     "id": "submerged_arc_welding",
+     "name": "埋弧焊",
+     "en": "Submerged arc welding",
+     "year": 1935,
+     "note": "颗粒状焊剂覆盖电弧区实现自动焊接，1935年前后发明，厚板长焊缝高效成形。",
+     "deps": [
+      "mma_welding"
+     ]
+    },
+    {
+     "id": "stud_welding",
+     "name": "螺柱焊",
+     "en": "Stud welding",
+     "year": 1938,
+     "note": "螺柱端引弧熔化后压入母材形成连接的焊接，船舶与钢结构中大量敷焊紧固件。",
+     "deps": [
+      "carbon_arc_welding"
+     ]
+    },
+    {
+     "id": "tig_welding",
+     "name": "钨极氩弧焊",
+     "en": "Gas tungsten arc welding",
+     "year": 1942,
+     "note": "钨极不熔化、氩气保护熔池的电弧焊，1941至1942年间研制成功，铝镁钛等高质焊接。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "mig_welding",
+     "name": "熔化极惰性气体保护焊",
+     "en": "Gas metal arc welding",
+     "year": 1948,
+     "note": "焊丝作电极连续送进并在保护气中熔化，1948年米格焊实现铝的高效焊接。",
+     "deps": [
+      "tig_welding"
+     ]
+    },
+    {
+     "id": "electroslag_welding",
+     "name": "电渣焊",
+     "en": "Electroslag welding",
+     "year": 1950,
+     "note": "电流通过渣池产热熔化母材与焊丝，一次焊透极厚钢板，重型设备制造采用。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "co2_welding",
+     "name": "二氧化碳气体保护焊",
+     "en": "CO2 welding",
+     "year": 1953,
+     "note": "以二氧化碳保护熔池的实心焊丝电弧焊，成本低效率高，低碳钢焊接主导工艺。",
+     "deps": [
+      "mig_welding"
+     ]
+    },
+    {
+     "id": "flux_cored_welding",
+     "name": "药芯焊丝焊",
+     "en": "Flux-cored arc welding",
+     "year": 1957,
+     "note": "管状焊丝内装造渣剂兼作保护，可加气可自保护，立焊全位置效率高。",
+     "deps": [
+      "mma_welding"
+     ]
+    },
+    {
+     "id": "plasma_arc_welding",
+     "name": "等离子弧焊",
+     "en": "Plasma arc welding",
+     "year": 1957,
+     "note": "喷嘴压缩电弧形成高能等离子弧，1957年工业化，能量集中适合精密与薄板焊接。",
+     "deps": [
+      "tig_welding"
+     ]
+    },
+    {
+     "id": "electrogas_welding",
+     "name": "气电立焊",
+     "en": "Electrogas welding",
+     "year": 1960,
+     "note": "立焊缝水冷滑块约束熔池的机械化气保护焊，储罐与船板立向大厚板一次成形。",
+     "deps": [
+      "co2_welding"
+     ]
+    },
+    {
+     "id": "welding_electrode",
+     "name": "药皮焊条",
+     "en": "Coated electrode",
+     "year": 1907,
+     "note": "金属芯外压涂药皮的焊接消耗材料，药皮稳弧造渣并保护熔池，1907年实用化。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "welding_flux",
+     "name": "埋弧焊剂",
+     "en": "Submerged arc flux",
+     "year": 1936,
+     "note": "覆盖电弧的颗粒状造渣材料，隔离空气并参与冶金反应，决定埋弧焊缝质量。",
+     "deps": [
+      "submerged_arc_welding"
+     ]
+    },
+    {
+     "id": "shielding_gas",
+     "name": "焊接保护气体",
+     "en": "Shielding gas",
+     "year": 1943,
+     "note": "氩气二氧化碳等隔离空气的焊接用气，按母材与工艺配比，是气保护焊必备要素。",
+     "deps": [
+      "tig_welding"
+     ]
+    },
+    {
+     "id": "groove_preparation",
+     "name": "坡口加工",
+     "en": "Joint groove preparation",
+     "year": 1900,
+     "note": "焊前在板边加工V形X形U形坡口，保证厚板全熔透，决定焊缝承载能力。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "weld_preheat",
+     "name": "焊前预热",
+     "en": "Weld preheating",
+     "year": 1920,
+     "note": "焊接前整体或局部加热工件降低冷速，防止淬硬开裂，高碳钢与厚板焊接必要措施。"
+    },
+    {
+     "id": "post_weld_heat_treatment",
+     "name": "焊后热处理",
+     "en": "Post-weld heat treatment",
+     "year": 1930,
+     "note": "焊后加热保温缓冷消除残余应力并改善组织，压力容器与重要钢结构标准工序。"
+    },
+    {
+     "id": "atomic_hydrogen_welding",
+     "name": "原子氢焊",
+     "en": "Atomic hydrogen welding",
+     "year": 1926,
+     "note": "氢分子在电弧中解离再复合放热并隔离空气的焊接，1926年朗缪尔应用于焊接。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "welding_wire",
+     "name": "实心焊丝",
+     "en": "Solid welding wire",
+     "year": 1930,
+     "note": "连续送进的金属焊丝兼作电极与填充金属，自动埋弧焊与气保焊的必备耗材。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "orbital_welding",
+     "name": "全位置轨道焊",
+     "en": "Orbital welding",
+     "year": 1965,
+     "note": "焊枪沿管件轨道自动回转完成环缝焊接，洁净管道与半导体高纯管路焊接。",
+     "deps": [
+      "tig_welding"
+     ]
+    },
+    {
+     "id": "narrow_gap_welding",
+     "name": "窄间隙埋弧焊",
+     "en": "Narrow-gap submerged arc welding",
+     "year": 1970,
+     "note": "小坡口角的多层埋弧焊，显著减少填充金属与变形，厚壁压力容器筒体焊接。",
+     "deps": [
+      "submerged_arc_welding"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "电阻焊与固相焊",
+   "items": [
+    {
+     "id": "forge_welding",
+     "name": "锻焊",
+     "en": "Forge welding",
+     "year": -1000,
+     "note": "金属加热至塑性后锤击加压使原子结合的古老焊接，铁器时代的刀剑制作基础工艺。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "spot_welding",
+     "name": "电阻点焊",
+     "en": "Resistance spot welding",
+     "year": 1886,
+     "note": "电极加压通电使搭接处电阻热熔化形成焊点，1886年汤姆森电阻焊机问世，车身焊接主力。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "seam_welding",
+     "name": "缝焊",
+     "en": "Resistance seam welding",
+     "year": 1900,
+     "note": "旋转电极滚压连续点焊形成密封焊缝，油箱水箱等要求气密焊缝的容器制造。",
+     "deps": [
+      "spot_welding"
+     ]
+    },
+    {
+     "id": "flash_butt_welding",
+     "name": "闪光对焊",
+     "en": "Flash butt welding",
+     "year": 1900,
+     "note": "工件通电闪光加热端面后加压顶锻成对接焊，钢轨、车轮轮箍与锚链的高效焊接。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "projection_welding",
+     "name": "凸焊",
+     "en": "Projection welding",
+     "year": 1930,
+     "note": "利用工件预制凸点接触通电加热压溃形成焊点的电阻焊，螺母螺栓与板件多点焊接。",
+     "deps": [
+      "spot_welding"
+     ]
+    },
+    {
+     "id": "cold_pressure_welding",
+     "name": "冷压焊",
+     "en": "Cold pressure welding",
+     "year": 1945,
+     "note": "室温大压力使纯净表面原子结合成焊的固相焊，铝铜线缆接头无热影响。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "ultrasonic_welding",
+     "name": "超声波焊接",
+     "en": "Ultrasonic welding",
+     "year": 1950,
+     "note": "超声振动摩擦使界面原子结合，金属箔与塑料件焊接，动力电池极耳焊接主要工艺。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "friction_welding",
+     "name": "摩擦焊",
+     "en": "Friction welding",
+     "year": 1956,
+     "note": "旋转摩擦生热使界面塑化后顶锻结合的固相焊，1956年苏联丘季科夫发明，轴杆件高效。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "explosive_welding",
+     "name": "爆炸焊接",
+     "en": "Explosive welding",
+     "year": 1959,
+     "note": "炸药爆炸冲击使金属板高速斜撞结合的固相焊，用于复合板制造与换热管堵漏。",
+     "deps": [
+      "explosives"
+     ]
+    },
+    {
+     "id": "diffusion_welding",
+     "name": "扩散焊",
+     "en": "Diffusion welding",
+     "year": 1960,
+     "note": "真空高温压力下原子相互扩散实现连接的固相焊，钛合金与异种材料精密构件。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "inertia_friction_welding",
+     "name": "惯性摩擦焊",
+     "en": "Inertia friction welding",
+     "year": 1962,
+     "note": "飞轮储能驱动旋转件摩擦生热后顶锻的摩擦焊，涡轮盘与轴的高可靠连接。",
+     "deps": [
+      "friction_welding"
+     ]
+    },
+    {
+     "id": "high_frequency_welding",
+     "name": "高频电阻焊",
+     "en": "High-frequency resistance welding",
+     "year": 1952,
+     "note": "高频电流沿V形开口边缘趋肤流过熔化后挤压成缝焊管，螺旋焊管与翅片管高效生产。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "friction_stir_welding",
+     "name": "搅拌摩擦焊",
+     "en": "Friction stir welding",
+     "year": 1991,
+     "note": "旋转搅拌头摩擦生热并塑化材料形成固相连接，1991年英国焊接研究所发明，铝材焊接。",
+     "deps": [
+      "friction_welding"
+     ]
+    },
+    {
+     "id": "magnetic_pulse_welding",
+     "name": "磁脉冲焊接",
+     "en": "Magnetic pulse welding",
+     "year": 1970,
+     "note": "脉冲磁场驱动飞片高速碰撞实现异种金属固相连接，轻量化管件接头装配。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "upset_butt_welding",
+     "name": "电阻对焊",
+     "en": "Upset butt welding",
+     "year": 1900,
+     "note": "工件端面通电加热至塑性后加压顶锻对接，棒材线材与链条环的连续焊接。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "percussion_welding",
+     "name": "储能冲击焊",
+     "en": "Percussion welding",
+     "year": 1945,
+     "note": "电容储能瞬时放电并冲击加压的微型焊接，触点与继电器片的精密连接。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "thermocompression_bonding",
+     "name": "热压键合",
+     "en": "Thermocompression bonding",
+     "year": 1957,
+     "note": "加热加压使金丝与芯片焊盘原子结合的固相连接，1957年起用于半导体引线互连。"
+    },
+    {
+     "id": "ultrasonic_wire_bonding",
+     "name": "超声引线键合",
+     "en": "Ultrasonic wire bonding",
+     "year": 1965,
+     "note": "超声振动配合压力完成引线固相键合，常温进行，半导体封装大规模互连工艺。",
+     "deps": [
+      "ultrasonic_welding"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "钎焊与软钎焊",
+   "items": [
+    {
+     "id": "soldering",
+     "name": "软钎焊",
+     "en": "Soldering",
+     "year": -2500,
+     "note": "以熔点低于母材的锡铅钎料熔化连接工件，古代金银器制造已有应用，电子产品核心连接法。"
+    },
+    {
+     "id": "brazing",
+     "name": "硬钎焊",
+     "en": "Brazing",
+     "year": -1500,
+     "note": "以铜锌银基钎料在高于四百五十度下毛细填缝的连接，青铜时代金铜器已有应用。",
+     "deps": [
+      "bronze"
+     ]
+    },
+    {
+     "id": "copper_bit_soldering",
+     "name": "烙铁钎焊",
+     "en": "Soldering iron",
+     "year": 100,
+     "note": "加热铜烙铁头熔化钎料的手工钎焊方法，古罗马铅工即用烙铁，延续至电子时代。"
+    },
+    {
+     "id": "flame_brazing",
+     "name": "火焰钎焊",
+     "en": "Flame brazing",
+     "year": 1905,
+     "note": "氧乙炔焰加热接头的钎焊方法，配钎剂去除氧化膜，铜管管路与刀具焊接常用。",
+     "deps": [
+      "oxy_acetylene_welding"
+     ]
+    },
+    {
+     "id": "induction_brazing",
+     "name": "感应钎焊",
+     "en": "Induction brazing",
+     "year": 1940,
+     "note": "高频感应电流加热工件实现钎焊，加热快且可控，硬质合金刀头与接头批量钎焊。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "furnace_brazing",
+     "name": "炉中钎焊",
+     "en": "Furnace brazing",
+     "year": 1950,
+     "note": "钎料预置后随炉整体加热完成的钎焊，可大批量处理，汽车散热器与蜂窝结构采用。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "silver_brazing",
+     "name": "银钎焊",
+     "en": "Silver brazing",
+     "year": 1900,
+     "note": "银基钎料连接铜钢等材料的钎焊，接头强度高导电好，制冷管路与电气接头工艺。",
+     "deps": [
+      "brazing"
+     ]
+    },
+    {
+     "id": "vacuum_brazing",
+     "name": "真空钎焊",
+     "en": "Vacuum brazing",
+     "year": 1960,
+     "note": "真空炉中无钎剂钎焊，避免氧化且接头洁净，航空发动机与精密组件连接。",
+     "deps": [
+      "furnace_brazing"
+     ]
+    },
+    {
+     "id": "soldering_flux",
+     "name": "助焊剂",
+     "en": "Soldering flux",
+     "year": 1900,
+     "note": "清除氧化膜并降低表面张力的钎焊辅料，松香与活性焊剂决定焊点润湿质量。"
+    },
+    {
+     "id": "solder_alloy",
+     "name": "钎料合金",
+     "en": "Filler metal",
+     "year": 1900,
+     "note": "按熔点与母材配伍的钎料体系，锡铅无铅与银铜锌系覆盖软硬钎焊全部应用。",
+     "deps": [
+      "bronze"
+     ]
+    },
+    {
+     "id": "wave_soldering",
+     "name": "波峰焊",
+     "en": "Wave soldering",
+     "year": 1956,
+     "note": "熔融焊料泵成波峰使插装元件引脚焊接的工艺，1956年问世，印刷电路板量产核心。",
+     "deps": [
+      "transistor"
+     ]
+    },
+    {
+     "id": "reflow_soldering",
+     "name": "回流焊",
+     "en": "Reflow soldering",
+     "year": 1980,
+     "note": "焊膏印刷后整体加热重熔完成表面贴装焊接，随贴片技术普及成为电子组装主流。",
+     "deps": [
+      "wave_soldering"
+     ]
+    },
+    {
+     "id": "solder_paste",
+     "name": "焊膏",
+     "en": "Solder paste",
+     "year": 1970,
+     "note": "微细焊粉与助焊剂膏体混合物，印刷到焊盘供回流焊使用，表面贴装关键材料。",
+     "deps": [
+      "soldering_flux"
+     ]
+    },
+    {
+     "id": "resistance_brazing",
+     "name": "电阻钎焊",
+     "en": "Resistance brazing",
+     "year": 1940,
+     "note": "以电阻热加热接头完成钎焊，加热集中快速，电气触头与线缆端头连接。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "dip_brazing",
+     "name": "浸渍钎焊",
+     "en": "Dip brazing",
+     "year": 1945,
+     "note": "工件浸入熔盐或熔融钎料中加热钎焊，钎剂作用充分，铝合金蜂窝与散热器制造。",
+     "deps": [
+      "brazing"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "高能束焊接",
+   "items": [
+    {
+     "id": "electron_beam_welding",
+     "name": "电子束焊",
+     "en": "Electron beam welding",
+     "year": 1958,
+     "note": "真空聚焦电子束能量熔化材料形成深宽比大的焊缝，1958年前后工业化，精密厚件焊接。"
+    },
+    {
+     "id": "laser_welding",
+     "name": "激光焊接",
+     "en": "Laser welding",
+     "year": 1965,
+     "note": "聚焦激光束熔化金属形成焊缝，能量密度高变形小，1965年前后用于工业焊接。",
+     "deps": [
+      "lasers"
+     ]
+    },
+    {
+     "id": "laser_deep_penetration_welding",
+     "name": "激光深熔焊",
+     "en": "Laser keyhole welding",
+     "year": 1970,
+     "note": "高功率激光形成匙孔获得大熔深焊缝，可实现厚板单道焊，车身与管道制造应用。",
+     "deps": [
+      "laser_welding"
+     ]
+    },
+    {
+     "id": "laser_mig_hybrid",
+     "name": "激光电弧复合焊",
+     "en": "Laser-arc hybrid welding",
+     "year": 1980,
+     "note": "激光束与电弧同区复合的焊接方法，兼顾熔深与桥接能力，船舶厚板高速焊接。",
+     "deps": [
+      "laser_welding"
+     ]
+    },
+    {
+     "id": "laser_remote_welding",
+     "name": "远程激光焊",
+     "en": "Remote laser welding",
+     "year": 2000,
+     "note": "扫描振镜高速偏转激光束的焊接，无需移动焊头，车身多焊点快速焊接。",
+     "deps": [
+      "laser_deep_penetration_welding"
+     ]
+    },
+    {
+     "id": "laser_brazing",
+     "name": "激光钎焊",
+     "en": "Laser brazing",
+     "year": 2000,
+     "note": "激光加热钎料填充接头间隙的钎焊，热输入可控，镀锌钢板车顶等外观焊缝工艺。",
+     "deps": [
+      "laser_welding"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "胶接与混合连接",
+   "items": [
+    {
+     "id": "structural_adhesive",
+     "name": "结构胶接",
+     "en": "Structural adhesive bonding",
+     "year": 1940,
+     "note": "高强度胶粘剂承受载荷的连接技术，1940年代飞机蜂窝结构应用推动其发展。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "epoxy_adhesive",
+     "name": "环氧树脂胶",
+     "en": "Epoxy adhesive",
+     "year": 1946,
+     "note": "双组分环氧胶粘剂，附着力强耐介质，金属混凝土与复合材料的结构修补连接。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "cyanoacrylate",
+     "name": "瞬干胶",
+     "en": "Cyanoacrylate adhesive",
+     "year": 1942,
+     "note": "氰基丙烯酸酯在微量水分下瞬间固化，1942年发明，通用快粘小件连接。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "anaerobic_adhesive",
+     "name": "厌氧胶",
+     "en": "Anaerobic adhesive",
+     "year": 1953,
+     "note": "隔绝空气才固化的胶粘密封剂，用于螺纹锁固与平面密封，1953年前后商品化。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "acrylic_adhesive",
+     "name": "丙烯酸结构胶",
+     "en": "Acrylic adhesive",
+     "year": 1970,
+     "note": "室温快固的丙烯酸酯结构胶，耐油耐候，汽车与磁铁装配取代部分机械紧固。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "hot_melt_adhesive",
+     "name": "热熔胶",
+     "en": "Hot-melt adhesive",
+     "year": 1950,
+     "note": "加热熔融涂布冷却固化的热塑性胶粘剂，包装木工与服装衬里高速生产线使用。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "pressure_sensitive_adhesive",
+     "name": "压敏胶带",
+     "en": "Pressure-sensitive adhesive",
+     "year": 1930,
+     "note": "轻压即粘不需加热固化的胶带体系，1930年前后透明胶带问世，包装遮蔽与电气绝缘。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "uv_curable_adhesive",
+     "name": "光固化胶",
+     "en": "UV-curable adhesive",
+     "year": 1970,
+     "note": "紫外光引发瞬间固化的胶粘剂，定位快，光学镜头与电子元件精密装配。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "silicone_sealant",
+     "name": "硅酮密封胶",
+     "en": "Silicone sealant",
+     "year": 1960,
+     "note": "室温硫化硅橡胶密封胶，耐温耐候弹性好，建筑幕墙与电子灌封的密封连接。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "adhesive_surface_prep",
+     "name": "胶接表面处理",
+     "en": "Adhesive surface preparation",
+     "year": 1950,
+     "note": "除油打磨化学氧化等胶前表面处理，形成高能稳定表面，是胶接强度的前提。",
+     "deps": [
+      "structural_adhesive"
+     ]
+    },
+    {
+     "id": "rivet_bonding",
+     "name": "铆胶复合连接",
+     "en": "Rivet bonding",
+     "year": 1990,
+     "note": "胶粘剂与铆钉并用的混合连接，兼顾刚性与疲劳耐久，汽车与航空轻量化构件采用。",
+     "deps": [
+      "riveting",
+      "structural_adhesive"
+     ]
+    },
+    {
+     "id": "weld_bonding",
+     "name": "点焊胶接",
+     "en": "Weld bonding",
+     "year": 1980,
+     "note": "先涂胶后点焊的混合连接工艺，焊点定位固化胶层提高刚度密封，车身覆盖件应用。",
+     "deps": [
+      "spot_welding"
+     ]
+    },
+    {
+     "id": "contact_adhesive",
+     "name": "接触胶",
+     "en": "Contact adhesive",
+     "year": 1948,
+     "note": "氯丁橡胶基的接触型胶粘剂，两面涂胶晾置后压合即粘，层压板与饰面粘贴。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "conductive_adhesive",
+     "name": "导电胶",
+     "en": "Conductive adhesive",
+     "year": 1955,
+     "note": "含银等导电填料的胶粘剂，同时实现粘接与导电，电子组装中替代部分焊接。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "polyurethane_adhesive",
+     "name": "聚氨酯胶",
+     "en": "Polyurethane adhesive",
+     "year": 1965,
+     "note": "湿气固化的聚氨酯胶粘剂，弹性与粘接强度兼备，汽车风挡玻璃直接粘接密封。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "gasket_in_place",
+     "name": "现场成型密封胶",
+     "en": "Formed-in-place gasket",
+     "year": 1975,
+     "note": "涂布后原地固化成密封垫的液态垫圈材料，取代预切垫片，发动机油底壳密封。",
+     "deps": [
+      "silicone_sealant"
+     ]
+    },
+    {
+     "id": "anisotropic_conductive_film",
+     "name": "异向导电胶膜",
+     "en": "Anisotropic conductive film",
+     "year": 1980,
+     "note": "仅沿厚度方向导电的胶膜，1980年代用于液晶屏与基板电极连接，热压绑定工艺。",
+     "deps": [
+      "conductive_adhesive"
+     ]
+    },
+    {
+     "id": "adhesive_film_bonding",
+     "name": "结构胶膜",
+     "en": "Adhesive film bonding",
+     "year": 1970,
+     "note": "预成型胶膜铺贴后加压固化完成大面积胶接，蜂窝夹层与蒙皮等航空结构采用。",
+     "deps": [
+      "structural_adhesive"
+     ]
+    }
+   ]
+  }
+ ]
+}

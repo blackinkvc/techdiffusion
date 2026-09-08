@@ -1,0 +1,1248 @@
+{
+ "cat": "material",
+ "catName": "材料",
+ "sub": "ceramic_glass",
+ "subName": "陶瓷与玻璃",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "fire",
+  "stone_tools",
+  "brick",
+  "chemistry",
+  "optics",
+  "electricity",
+  "physics",
+  "lasers"
+ ],
+ "families": [
+  {
+   "name": "陶器成形、胎料与窑炉技术",
+   "items": [
+    {
+     "id": "pottery_origin",
+     "name": "原始陶器",
+     "en": "Earliest pottery",
+     "year": -16000,
+     "note": "黏土烧制的容器是新石器早期的人工材料，东亚一万六千年前已见陶片。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "pottery_pit_firing",
+     "name": "露天堆烧",
+     "en": "Pit firing",
+     "year": -12000,
+     "note": "把陶坯堆于柴火中就地烧成，是最原始的陶器烧成方式。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "pottery_coil_building",
+     "name": "泥条盘筑成形",
+     "en": "Coil building",
+     "year": -8000,
+     "note": "以泥条螺旋盘叠再抹平成形，是窑炉出现前的主要制陶手段。",
+     "deps": [
+      "pottery_origin"
+     ]
+    },
+    {
+     "id": "pottery_wheel",
+     "name": "陶轮拉坯",
+     "en": "Potter's wheel",
+     "year": -3500,
+     "note": "借助旋转陶轮离心拉坯，使器壁均匀并大幅提高制陶产量。",
+     "deps": []
+    },
+    {
+     "id": "updraft_kiln",
+     "name": "升焰窑",
+     "en": "Updraft kiln",
+     "year": -5000,
+     "note": "火焰自火膛上升穿过陶器的竖穴窑，可稳定控制烧成温度。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "painted_pottery",
+     "name": "彩陶",
+     "en": "Painted pottery",
+     "year": -4500,
+     "note": "在陶坯上以红黑矿物颜料绘纹再烧成，反映早期装饰技术。",
+     "deps": [
+      "pottery_origin"
+     ]
+    },
+    {
+     "id": "black_pottery_reduction",
+     "name": "磨光黑陶",
+     "en": "Burnished black pottery",
+     "year": -2400,
+     "note": "渗碳还原气氛烧出乌亮胎体，龙山蛋壳黑陶壁薄至毫米级。",
+     "deps": [
+      "updraft_kiln"
+     ]
+    },
+    {
+     "id": "white_kaolin_pottery",
+     "name": "白陶",
+     "en": "White kaolin pottery",
+     "year": -1500,
+     "note": "高岭质黏土高温烧成的白胎陶器，是瓷器胎料的先声。",
+     "deps": [
+      "pottery_origin"
+     ]
+    },
+    {
+     "id": "dragon_kiln",
+     "name": "龙窑",
+     "en": "Dragon kiln",
+     "year": -1500,
+     "note": "依山坡筑长条形窑室，自然抽力强可获高烧成温度，利于青瓷。",
+     "deps": [
+      "updraft_kiln"
+     ]
+    },
+    {
+     "id": "impressed_hard_pottery",
+     "name": "几何印纹硬陶",
+     "en": "Stamped hard pottery",
+     "year": -1100,
+     "note": "南方地区拍印几何纹的高温硬质陶器，为原始瓷前身。",
+     "deps": [
+      "dragon_kiln"
+     ]
+    },
+    {
+     "id": "saggar_firing",
+     "name": "匣钵装烧",
+     "en": "Saggar firing",
+     "year": 300,
+     "note": "以耐火匣钵隔离火焰与落渣装烧坯件，使釉面洁净并可叠烧。",
+     "deps": [
+      "dragon_kiln"
+     ]
+    },
+    {
+     "id": "mantou_kiln",
+     "name": "馒头窑",
+     "en": "Mantou kiln",
+     "year": 400,
+     "note": "拱顶半倒焰窑保温性好，北方白瓷与青瓷多用此类窑烧成。",
+     "deps": [
+      "dragon_kiln"
+     ]
+    },
+    {
+     "id": "ceramic_mould_pressing",
+     "name": "模印成形",
+     "en": "Mould pressing",
+     "year": 700,
+     "note": "以模具压制坯体或纹饰，用于批量成形器物与构件。",
+     "deps": [
+      "pottery_coil_building"
+     ]
+    },
+    {
+     "id": "kiln_furniture_posts",
+     "name": "窑具垫具系统",
+     "en": "Kiln furniture",
+     "year": 1000,
+     "note": "窑柱、支钉与垫饼构成装烧系统，实现瓷器层叠量产。",
+     "deps": [
+      "saggar_firing"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "釉与釉陶工艺",
+   "items": [
+    {
+     "id": "faience_glazing",
+     "name": "釉砂费昂斯",
+     "en": "Faience glazing",
+     "year": -4000,
+     "note": "石英砂表面烧结出碱钙玻璃质层，是最早的人工釉面材料。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "ash_glaze_highfire",
+     "name": "草木灰高温釉",
+     "en": "Ash glaze",
+     "year": -1300,
+     "note": "石灰质草木灰釉在高温下熔融挂釉，用于原始瓷与早期青瓷。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "lead_glaze_lowfire",
+     "name": "低温铅釉",
+     "en": "Lead glaze",
+     "year": -100,
+     "note": "铅基助熔剂使釉在低温熔融，汉代已制出翠绿釉陶器。",
+     "deps": []
+    },
+    {
+     "id": "sancai_glaze",
+     "name": "唐三彩釉陶",
+     "en": "Sancai lead glazes",
+     "year": 700,
+     "note": "以黄绿白等低温铅釉交混装饰俑器，盛唐随葬用陶的典型。",
+     "deps": [
+      "lead_glaze_lowfire"
+     ]
+    },
+    {
+     "id": "tin_glaze_islamic",
+     "name": "锡釉陶",
+     "en": "Tin-glazed pottery",
+     "year": 850,
+     "note": "以锡釉乳浊遮盖胎色，伊斯兰地区首创并传入欧洲。",
+     "deps": [
+      "lead_glaze_lowfire"
+     ]
+    },
+    {
+     "id": "luster_glaze",
+     "name": "虹彩光泽釉",
+     "en": "Lusterware glaze",
+     "year": 900,
+     "note": "金属盐在还原焰中析出光泽膜层，形成虹彩装饰效果。",
+     "deps": [
+      "tin_glaze_islamic"
+     ]
+    },
+    {
+     "id": "fritware_body",
+     "name": "石英胎釉陶",
+     "en": "Fritware",
+     "year": 1100,
+     "note": "以石英黏土玻璃料制胎，伊斯兰地区发展出细白胎体。",
+     "deps": [
+      "tin_glaze_islamic"
+     ]
+    },
+    {
+     "id": "salt_glaze",
+     "name": "盐釉",
+     "en": "Salt glazing",
+     "year": 1450,
+     "note": "烧窑时投入食盐使硅酸盐在坯面形成釉层，欧洲炻器工艺。",
+     "deps": []
+    },
+    {
+     "id": "majolica_ware",
+     "name": "马约利卡陶器",
+     "en": "Majolica",
+     "year": 1500,
+     "note": "意大利锡釉陶结合彩绘，成为文艺复兴装饰陶瓷代表。",
+     "deps": [
+      "tin_glaze_islamic"
+     ]
+    },
+    {
+     "id": "delftware_tiles",
+     "name": "代尔夫特蓝陶",
+     "en": "Delftware",
+     "year": 1600,
+     "note": "荷兰以锡釉白底钴蓝彩模仿青花瓷，形成特色陶器。",
+     "deps": [
+      "majolica_ware"
+     ]
+    },
+    {
+     "id": "celadon_ash_lime",
+     "name": "石灰碱釉",
+     "en": "Lime-alkali glaze",
+     "year": 1100,
+     "note": "降低氧化钙引入钾钠，釉面更厚润通透，支撑青瓷发展。",
+     "deps": [
+      "ash_glaze_highfire"
+     ]
+    },
+    {
+     "id": "opacified_zircon_glaze",
+     "name": "锆乳浊釉",
+     "en": "Zircon opacified glaze",
+     "year": 1950,
+     "note": "以锆英砂替代锡使釉乳浊且成本低，用于卫生与外墙砖。",
+     "deps": []
+    },
+    {
+     "id": "fritted_glaze",
+     "name": "熔块釉",
+     "en": "Fritted glazes",
+     "year": 1750,
+     "note": "将含铅硼原料先熔成玻璃质熔块再磨浆施釉，稳定配方并降低毒性。",
+     "deps": [
+      "lead_glaze_lowfire"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "瓷器体系与装饰技术",
+   "items": [
+    {
+     "id": "proto_porcelain",
+     "name": "原始瓷",
+     "en": "Proto-porcelain",
+     "year": -1100,
+     "note": "高温烧成、施釉的瓷质器物雏形，胎釉已具瓷器特征。",
+     "deps": [
+      "ash_glaze_highfire"
+     ]
+    },
+    {
+     "id": "yue_celadon",
+     "name": "越窑青瓷",
+     "en": "Yue celadon",
+     "year": 200,
+     "note": "东汉越窑烧成真正意义上的青瓷，釉色青翠胎质致密。",
+     "deps": [
+      "proto_porcelain"
+     ]
+    },
+    {
+     "id": "xing_white_porcelain",
+     "name": "邢窑白瓷",
+     "en": "Xing white porcelain",
+     "year": 600,
+     "note": "唐代邢窑烧出类银似雪的白瓷，确立北方白瓷体系。",
+     "deps": [
+      "yue_celadon"
+     ]
+    },
+    {
+     "id": "changsha_underglaze",
+     "name": "长沙窑釉下彩",
+     "en": "Changsha underglaze decoration",
+     "year": 800,
+     "note": "以铁铜彩料在釉下绘画，首创成熟的釉下彩瓷。",
+     "deps": [
+      "yue_celadon"
+     ]
+    },
+    {
+     "id": "qingbai_porcelain",
+     "name": "青白瓷",
+     "en": "Qingbai porcelain",
+     "year": 1000,
+     "note": "景德镇烧出釉色青白淡雅的影青瓷，胎薄透光。",
+     "deps": [
+      "xing_white_porcelain"
+     ]
+    },
+    {
+     "id": "yaozhou_carved_celadon",
+     "name": "耀州窑刻花青瓷",
+     "en": "Yaozhou carved celadon",
+     "year": 1050,
+     "note": "以刻划花装饰的青瓷，北宋北方窑口的代表性品种。",
+     "deps": [
+      "yue_celadon"
+     ]
+    },
+    {
+     "id": "ru_ware_sky_glaze",
+     "name": "汝窑天青釉",
+     "en": "Ru ware glaze",
+     "year": 1100,
+     "note": "以玛瑙入釉烧出天青色，配香灰胎支钉烧，居宋瓷之首。",
+     "deps": [
+      "yue_celadon"
+     ]
+    },
+    {
+     "id": "longquan_celadon",
+     "name": "龙泉青瓷",
+     "en": "Longquan celadon",
+     "year": 1100,
+     "note": "厚釉多次施挂的青瓷，南宋达到梅子青与粉青的釉色高峰。",
+     "deps": [
+      "yue_celadon"
+     ]
+    },
+    {
+     "id": "jun_ware_transmutation",
+     "name": "钧窑铜红窑变",
+     "en": "Jun ware transmutation glaze",
+     "year": 1100,
+     "note": "铜元素在还原焰中呈红紫窑变，开创高温色釉装饰。",
+     "deps": [
+      "yue_celadon"
+     ]
+    },
+    {
+     "id": "ding_white_porcelain",
+     "name": "定窑白瓷",
+     "en": "Ding ware",
+     "year": 1100,
+     "note": "覆烧工艺增加产量，印花划花装饰精细，宋五大名窑之一。",
+     "deps": [
+      "xing_white_porcelain"
+     ]
+    },
+    {
+     "id": "cizhou_black_flower",
+     "name": "磁州窑白地黑花",
+     "en": "Cizhou ware",
+     "year": 1100,
+     "note": "以铁彩在化妆土胎上绘花，宋金时期北方最大民窑体系。",
+     "deps": [
+      "changsha_underglaze"
+     ]
+    },
+    {
+     "id": "ge_ware_crackle",
+     "name": "哥窑开片",
+     "en": "Ge ware crackle glaze",
+     "year": 1200,
+     "note": "釉面开片形成金丝铁线纹样，成为独特的装饰语言。",
+     "deps": [
+      "ru_ware_sky_glaze"
+     ]
+    },
+    {
+     "id": "gaoling_porcelain_stone_body",
+     "name": "瓷石高岭二元配方",
+     "en": "Kaolin-porcelain stone body",
+     "year": 1300,
+     "note": "瓷石配高岭土制胎，提高大件瓷器成形与烧成合格率。",
+     "deps": [
+      "proto_porcelain"
+     ]
+    },
+    {
+     "id": "qinghua_blue_white",
+     "name": "青花瓷",
+     "en": "Blue-and-white porcelain",
+     "year": 1325,
+     "note": "钴料釉下绘青后罩透明釉烧成，成为最负盛名的中国瓷器。",
+     "deps": [
+      "gaoling_porcelain_stone_body"
+     ]
+    },
+    {
+     "id": "underglaze_red",
+     "name": "釉里红",
+     "en": "Underglaze red",
+     "year": 1350,
+     "note": "以铜红料釉下绘画再罩釉烧成，元代景德镇创烧。",
+     "deps": [
+      "qinghua_blue_white"
+     ]
+    },
+    {
+     "id": "doucai_porcelain",
+     "name": "斗彩",
+     "en": "Doucai porcelain",
+     "year": 1470,
+     "note": "釉下青花与釉上彩拼斗成图，明成化时成熟。",
+     "deps": [
+      "qinghua_blue_white"
+     ]
+    },
+    {
+     "id": "wucai_porcelain",
+     "name": "五彩瓷",
+     "en": "Wucai porcelain",
+     "year": 1520,
+     "note": "以釉上多色料绘彩再低温烘烧，明嘉靖万历盛行。",
+     "deps": [
+      "doucai_porcelain"
+     ]
+    },
+    {
+     "id": "yixing_purple_clay",
+     "name": "宜兴紫砂",
+     "en": "Yixing zisha ware",
+     "year": 1500,
+     "note": "含铁紫泥不施釉烧成的炻器，明清盛行茶壶制作。",
+     "deps": [
+      "white_kaolin_pottery"
+     ]
+    },
+    {
+     "id": "qing_blue_porcelain",
+     "name": "郎窑红与豇豆红",
+     "en": "Langyao red glaze",
+     "year": 1680,
+     "note": "康熙朝高温铜红釉恢复并创新，形成郎窑红等名品。",
+     "deps": [
+      "underglaze_red"
+     ]
+    },
+    {
+     "id": "falangcai_enamel",
+     "name": "珐琅彩瓷",
+     "en": "Enamel-on-porcelain",
+     "year": 1700,
+     "note": "以珐琅彩料在瓷面彩绘低温烧成，清宫御用新品种。",
+     "deps": [
+      "doucai_porcelain"
+     ]
+    },
+    {
+     "id": "meissen_hard_paste",
+     "name": "欧洲硬质瓷",
+     "en": "Meissen hard-paste porcelain",
+     "year": 1710,
+     "note": "伯特格尔以高岭土与长石烧出欧洲第一批硬质瓷。",
+     "deps": []
+    },
+    {
+     "id": "famille_rose",
+     "name": "粉彩瓷",
+     "en": "Famille rose porcelain",
+     "year": 1720,
+     "note": "以玻璃白打底渲染的柔和彩瓷，雍正乾隆时成熟。",
+     "deps": [
+      "falangcai_enamel"
+     ]
+    },
+    {
+     "id": "soft_paste_porcelain",
+     "name": "软质瓷",
+     "en": "Soft-paste porcelain",
+     "year": 1740,
+     "note": "以玻璃质熔块代高岭土的欧洲仿瓷，法国塞夫勒为其代表。",
+     "deps": []
+    },
+    {
+     "id": "slip_casting_porcelain",
+     "name": "注浆成形",
+     "en": "Slip casting",
+     "year": 1750,
+     "note": "将泥浆注入石膏模吸浆成坯，可成形复杂形状瓷件。",
+     "deps": []
+    },
+    {
+     "id": "transfer_printing",
+     "name": "转移贴花",
+     "en": "Transfer printing",
+     "year": 1756,
+     "note": "以铜版印刷贴花转移图案到瓷面，实现花纹批量装饰。",
+     "deps": []
+    },
+    {
+     "id": "bone_china",
+     "name": "骨瓷",
+     "en": "Bone china",
+     "year": 1794,
+     "note": "以骨灰入坯烧成的高白半透明瓷，英国斯波德创制。",
+     "deps": [
+      "meissen_hard_paste"
+     ]
+    },
+    {
+     "id": "jian_ware_black_glaze",
+     "name": "建窑黑釉盏",
+     "en": "Jian ware black glaze",
+     "year": 1100,
+     "note": "铁系结晶釉烧出兔毫油滴纹样，宋代点茶斗茶名器。",
+     "deps": []
+    },
+    {
+     "id": "jizhou_leaf_bowl",
+     "name": "吉州窑木叶盏",
+     "en": "Jizhou leaf-decorated bowl",
+     "year": 1200,
+     "note": "以天然木叶贴于釉面烧成剪影纹，吉州窑特色工艺。",
+     "deps": []
+    },
+    {
+     "id": "thin_bodied_porcelain",
+     "name": "薄胎瓷",
+     "en": "Thin-bodied porcelain",
+     "year": 1420,
+     "note": "修坯至极薄而成脱胎瓷，迎光可透，明永乐景德镇技艺高峰。",
+     "deps": [
+      "gaoling_porcelain_stone_body"
+     ]
+    },
+    {
+     "id": "dehua_blanc_de_chine",
+     "name": "德化白瓷",
+     "en": "Dehua blanc de chine",
+     "year": 1450,
+     "note": "高白温润的德化白瓷人物造像与器物，明清大量外销。",
+     "deps": [
+      "xing_white_porcelain"
+     ]
+    },
+    {
+     "id": "qinghua_underglaze_red",
+     "name": "青花釉里红",
+     "en": "Blue-and-white with underglaze red",
+     "year": 1380,
+     "note": "钴蓝与铜红同器釉下绘制，窑火控制极难，元代创烧。",
+     "deps": [
+      "qinghua_blue_white"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "建筑与日用陶瓷制品",
+   "items": [
+    {
+     "id": "ceramic_drain_pipe",
+     "name": "陶质排水管",
+     "en": "Ceramic drain pipes",
+     "year": -1300,
+     "note": "陶管套接成地下排水系统，商周城址已有成套发现。",
+     "deps": [
+      "pottery_origin"
+     ]
+    },
+    {
+     "id": "ceramic_roof_tile",
+     "name": "陶瓦",
+     "en": "Ceramic roof tiles",
+     "year": -700,
+     "note": "西周起以陶瓦铺顶防水，取代茅草成为建筑进步标志。",
+     "deps": [
+      "updraft_kiln"
+     ]
+    },
+    {
+     "id": "glazed_roof_tile",
+     "name": "琉璃瓦",
+     "en": "Glazed roof tiles",
+     "year": 650,
+     "note": "低温铅釉烧成的建筑瓦件，宫殿寺庙屋顶的标志。",
+     "deps": [
+      "lead_glaze_lowfire"
+     ]
+    },
+    {
+     "id": "terracotta_architectural",
+     "name": "建筑陶塑",
+     "en": "Architectural terracotta",
+     "year": 1750,
+     "note": "以陶土模制檐脊吻兽与立面构件，兼具装饰与防火。",
+     "deps": [
+      "ceramic_mould_pressing"
+     ]
+    },
+    {
+     "id": "salt_glazed_sewer_pipe",
+     "name": "盐釉陶排污管",
+     "en": "Salt-glazed sewer pipes",
+     "year": 1840,
+     "note": "盐釉炻管内壁光洁耐蚀，19世纪城市排水重要管材。",
+     "deps": [
+      "salt_glaze"
+     ]
+    },
+    {
+     "id": "porcelain_enamelware",
+     "name": "金属搪瓷",
+     "en": "Enameled metalware",
+     "year": 1850,
+     "note": "将瓷釉涂烧于铸铁或钢板表面，制成日用搪瓷器皿。",
+     "deps": [
+      "lead_glaze_lowfire"
+     ]
+    },
+    {
+     "id": "porcelain_sanitaryware",
+     "name": "瓷质卫生洁具",
+     "en": "Porcelain sanitary ware",
+     "year": 1885,
+     "note": "瓷质釉面坐便器与洁具量产，支撑现代卫生排水革命。",
+     "deps": []
+    },
+    {
+     "id": "glazed_wall_tile",
+     "name": "釉面墙地砖",
+     "en": "Glazed ceramic tiles",
+     "year": 1900,
+     "note": "以压制成形与连续窑烧成的建筑饰面砖，工业化生产。",
+     "deps": []
+    },
+    {
+     "id": "porcelain_steatite_fixture",
+     "name": "高频绝缘陶瓷件",
+     "en": "Steatite ceramics",
+     "year": 1930,
+     "note": "滑石瓷等高频低损耗陶瓷，用于无线电绝缘子。",
+     "deps": []
+    }
+   ]
+  },
+  {
+   "name": "玻璃熔制与成形工艺",
+   "items": [
+    {
+     "id": "glass_beads",
+     "name": "最早的玻璃珠",
+     "en": "Early glass beads",
+     "year": -2500,
+     "note": "两河流域以石英砂与碱熔制玻璃珠，玻璃艺术由此发端。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "core_forming_vessel",
+     "name": "芯棒成形玻璃器",
+     "en": "Core-formed glass vessels",
+     "year": -1500,
+     "note": "以泥芯蘸玻璃液成形小瓶，是玻璃容器的早期制作法。",
+     "deps": [
+      "glass_beads"
+     ]
+    },
+    {
+     "id": "glass_blowing",
+     "name": "玻璃吹制",
+     "en": "Glassblowing",
+     "year": -50,
+     "note": "以吹管鼓气成形中空玻璃器，黎凡特地区首创并迅速传播。",
+     "deps": [
+      "core_forming_vessel"
+     ]
+    },
+    {
+     "id": "mosaic_glass_cane",
+     "name": "马赛克玻璃棒",
+     "en": "Mosaic glass canes",
+     "year": -100,
+     "note": "把彩色玻璃棒熔合切割成图案，制作千花玻璃器物。",
+     "deps": [
+      "core_forming_vessel"
+     ]
+    },
+    {
+     "id": "cameo_glass",
+     "name": "浮雕玻璃",
+     "en": "Cameo glass",
+     "year": 10,
+     "note": "双色玻璃套料后雕去表层显衬底纹样，罗马名品波特兰花瓶。",
+     "deps": [
+      "glass_blowing"
+     ]
+    },
+    {
+     "id": "roman_window_glass",
+     "name": "罗马窗玻璃",
+     "en": "Roman cast window glass",
+     "year": 100,
+     "note": "玻璃液浇铸展平成的窗板，开启建筑玻璃采光先例。",
+     "deps": [
+      "glass_blowing"
+     ]
+    },
+    {
+     "id": "cage_cup_glass",
+     "name": "笼杯玻璃",
+     "en": "Cage cups (diatreta)",
+     "year": 350,
+     "note": "整块玻璃雕琢出外层网笼，晚期罗马高超雕切工艺。",
+     "deps": [
+      "cameo_glass"
+     ]
+    },
+    {
+     "id": "stained_glass_window",
+     "name": "教堂彩色玻璃窗",
+     "en": "Stained glass windows",
+     "year": 1100,
+     "note": "铅条镶嵌彩色玻璃构成窗画，哥特式教堂的典型艺术。",
+     "deps": []
+    },
+    {
+     "id": "crown_glass_pane",
+     "name": "冠冕法玻璃片",
+     "en": "Crown glass panes",
+     "year": 1300,
+     "note": "吹泡旋转甩平而成的圆形窗片，近代窗玻璃主要工艺。",
+     "deps": [
+      "glass_blowing"
+     ]
+    },
+    {
+     "id": "venetian_cristallo",
+     "name": "威尼斯水晶玻璃",
+     "en": "Venetian cristallo",
+     "year": 1450,
+     "note": "穆拉诺岛以纯碱玻璃料制无色透明玻璃，欧洲玻璃中心。",
+     "deps": []
+    },
+    {
+     "id": "filigree_glass",
+     "name": "玻璃拉丝嵌饰",
+     "en": "Filigree glass",
+     "year": 1500,
+     "note": "以乳白玻璃丝嵌入透明料内形成网格纹，穆拉诺特色。",
+     "deps": [
+      "venetian_cristallo"
+     ]
+    },
+    {
+     "id": "lead_crystal_glass",
+     "name": "铅晶质玻璃",
+     "en": "Lead crystal glass",
+     "year": 1676,
+     "note": "雷文斯克罗夫特以铅助熔制高折射玻璃，奠定优质水晶玻璃。",
+     "deps": [
+      "venetian_cristallo"
+     ]
+    },
+    {
+     "id": "gold_ruby_glass",
+     "name": "金红玻璃",
+     "en": "Gold ruby glass",
+     "year": 1679,
+     "note": "以胶体金呈色的宝石红玻璃，库克尔首创并保密多年。",
+     "deps": []
+    },
+    {
+     "id": "plate_glass_casting",
+     "name": "平板玻璃浇铸",
+     "en": "Plate glass casting",
+     "year": 1688,
+     "note": "玻璃液浇铸碾平并研磨抛光，法国圣戈班首创大平板玻璃。",
+     "deps": [
+      "glass_blowing"
+     ]
+    },
+    {
+     "id": "pressed_glass",
+     "name": "模压玻璃",
+     "en": "Pressed glass",
+     "year": 1827,
+     "note": "以金属模具压制玻璃器，美国实现玻璃器皿廉价量产。",
+     "deps": []
+    },
+    {
+     "id": "cylinder_window_glass",
+     "name": "圆筒法窗玻璃",
+     "en": "Cylinder window glass",
+     "year": 1840,
+     "note": "吹成大圆筒后割开展平制窗玻璃，取代冠冕法降低成本。",
+     "deps": [
+      "crown_glass_pane"
+     ]
+    },
+    {
+     "id": "glass_tank_furnace",
+     "name": "连续玻璃池窑",
+     "en": "Continuous glass tank furnace",
+     "year": 1870,
+     "note": "蓄热式池窑连续熔化玻璃，支撑平板与瓶罐工业化。",
+     "deps": []
+    },
+    {
+     "id": "automatic_bottle_machine",
+     "name": "全自动制瓶机",
+     "en": "Automatic bottle machine",
+     "year": 1903,
+     "note": "欧文斯发明全自动制瓶机，瓶罐玻璃产量大增。",
+     "deps": []
+    },
+    {
+     "id": "glass_fiber",
+     "name": "连续玻璃纤维",
+     "en": "Glass fiber",
+     "year": 1938,
+     "note": "高速拉丝制得连续玻璃纤维，用于复合材料增强。",
+     "deps": []
+    },
+    {
+     "id": "float_glass",
+     "name": "浮法玻璃",
+     "en": "Float glass process",
+     "year": 1959,
+     "note": "锡槽浮抛成形平板玻璃，皮尔金顿公司实现工业化生产。",
+     "deps": [
+      "cylinder_window_glass"
+     ]
+    },
+    {
+     "id": "mould_blown_glass",
+     "name": "模吹成形玻璃",
+     "en": "Mould-blown glass",
+     "year": 50,
+     "note": "把玻璃料吹入模中成形，罗马时期实现器物纹样量产。",
+     "deps": [
+      "glass_blowing"
+     ]
+    },
+    {
+     "id": "enameled_glass",
+     "name": "珐琅彩玻璃",
+     "en": "Enameled glass",
+     "year": 1200,
+     "note": "以低温珐琅彩在玻璃器上绘饰并烘烤，伊斯兰马穆鲁克盛行。",
+     "deps": []
+    },
+    {
+     "id": "bohemian_cut_crystal",
+     "name": "波希米亚刻花玻璃",
+     "en": "Bohemian cut crystal",
+     "year": 1700,
+     "note": "以轮刻技术在晶质玻璃上磨刻花纹，波希米亚玻璃闻名欧洲。",
+     "deps": [
+      "lead_crystal_glass"
+     ]
+    },
+    {
+     "id": "fourcault_drawn_sheet",
+     "name": "弗克法引上玻璃",
+     "en": "Fourcault drawn sheet glass",
+     "year": 1905,
+     "note": "从槽口垂直引上拉制成平板玻璃，实现机械化连续生产。",
+     "deps": []
+    },
+    {
+     "id": "pharmaceutical_glass_vials",
+     "name": "药用中性玻璃",
+     "en": "Pharmaceutical neutral glass",
+     "year": 1920,
+     "note": "耐水耐化学侵蚀的硼硅中性玻璃，用于安瓿与注射剂瓶。",
+     "deps": []
+    }
+   ]
+  },
+  {
+   "name": "光学玻璃与特种玻璃",
+   "items": [
+    {
+     "id": "achromatic_optical_glass",
+     "name": "消色差光学玻璃",
+     "en": "Achromatic optical glass",
+     "year": 1811,
+     "note": "夫琅和费规范熔炼冕牌与火石玻璃，使望远镜色差矫正可重复。",
+     "deps": []
+    },
+    {
+     "id": "borosilicate_glass",
+     "name": "硼硅酸盐玻璃",
+     "en": "Borosilicate glass",
+     "year": 1893,
+     "note": "耐热耐化学侵蚀的硼硅酸盐玻璃，成为实验室与炊具材料。",
+     "deps": []
+    },
+    {
+     "id": "fused_quartz_glass",
+     "name": "熔融石英玻璃",
+     "en": "Fused quartz glass",
+     "year": 1899,
+     "note": "高纯石英熔制玻璃，耐高温透紫外，用于灯与半导体工艺。",
+     "deps": []
+    },
+    {
+     "id": "laminated_safety_glass",
+     "name": "夹层安全玻璃",
+     "en": "Laminated safety glass",
+     "year": 1909,
+     "note": "两片玻璃间夹聚乙烯醇缩丁醛胶膜，碎裂不飞溅。",
+     "deps": []
+    },
+    {
+     "id": "tempered_safety_glass",
+     "name": "钢化玻璃",
+     "en": "Tempered safety glass",
+     "year": 1930,
+     "note": "玻璃加热后急冷在表面形成压应力，强度提高且碎成小粒。",
+     "deps": []
+    },
+    {
+     "id": "rare_earth_optical_glass",
+     "name": "稀土光学玻璃",
+     "en": "Rare-earth optical glass",
+     "year": 1935,
+     "note": "以氧化镧等提高折射率，为高像质光学镜头提供玻璃材料。",
+     "deps": []
+    },
+    {
+     "id": "glass_ceramic",
+     "name": "微晶玻璃",
+     "en": "Glass-ceramic",
+     "year": 1953,
+     "note": "玻璃经晶化热处理析出微晶体，兼具玻璃成形与陶瓷强度。",
+     "deps": []
+    },
+    {
+     "id": "laser_glass",
+     "name": "激光玻璃",
+     "en": "Laser glass",
+     "year": 1961,
+     "note": "掺钕玻璃在闪光灯泵浦下受激辐射，用于高能激光装置。",
+     "deps": []
+    },
+    {
+     "id": "chemically_strengthened_glass",
+     "name": "化学强化玻璃",
+     "en": "Chemically strengthened glass",
+     "year": 1962,
+     "note": "熔盐离子交换使表面压应力强化，用于显示盖板与航空舷窗。",
+     "deps": []
+    },
+    {
+     "id": "photochromic_glass",
+     "name": "光致变色玻璃",
+     "en": "Photochromic glass",
+     "year": 1964,
+     "note": "卤化银微粒使玻璃见光变暗、退光复明，用于眼镜镜片。",
+     "deps": []
+    },
+    {
+     "id": "optical_fiber_preform",
+     "name": "光纤预制棒",
+     "en": "Optical fiber preform",
+     "year": 1974,
+     "note": "气相沉积法制备高纯石英预制棒，拉丝后成为通信光纤。",
+     "deps": []
+    },
+    {
+     "id": "alkali_free_display_glass",
+     "name": "无碱玻璃基板",
+     "en": "Alkali-free display glass",
+     "year": 1990,
+     "note": "热膨胀与碱含量受控的基板玻璃，支撑液晶面板产业。",
+     "deps": []
+    },
+    {
+     "id": "silvered_mirror_glass",
+     "name": "镀银玻璃镜",
+     "en": "Silvered glass mirror",
+     "year": 1835,
+     "note": "李比希发明化学镀银法在玻璃背面成镜，取代水银锡汞镜。",
+     "deps": [
+      "plate_glass_casting"
+     ]
+    },
+    {
+     "id": "radiation_shielding_lead_glass",
+     "name": "防辐射铅玻璃",
+     "en": "Radiation shielding lead glass",
+     "year": 1900,
+     "note": "高铅玻璃吸收X射线与伽马射线，用于辐射防护观察窗。",
+     "deps": []
+    },
+    {
+     "id": "colored_filter_glass",
+     "name": "有色滤光玻璃",
+     "en": "Colored filter glass",
+     "year": 1900,
+     "note": "以金属氧化物着色的光学玻璃，控制透过光谱用于仪器。",
+     "deps": []
+    },
+    {
+     "id": "glass_to_metal_seal",
+     "name": "玻璃金属封接",
+     "en": "Glass-to-metal seal",
+     "year": 1900,
+     "note": "玻璃与金属匹配封接成气密过渡件，支撑灯泡与电子管制造。",
+     "deps": []
+    }
+   ]
+  },
+  {
+   "name": "耐火材料与先进陶瓷",
+   "items": [
+    {
+     "id": "porcelain_insulator",
+     "name": "瓷质电绝缘子",
+     "en": "Porcelain insulator",
+     "year": 1850,
+     "note": "以瓷为绝缘子的电报与输电线路悬挂元件。",
+     "deps": []
+    },
+    {
+     "id": "fireclay_refractory_brick",
+     "name": "黏土质耐火砖",
+     "en": "Fireclay refractory brick",
+     "year": 1850,
+     "note": "以耐火黏土烧制的高温炉衬砖，支撑冶金玻璃窑炉。",
+     "deps": []
+    },
+    {
+     "id": "silica_refractory_brick",
+     "name": "硅质耐火砖",
+     "en": "Silica brick",
+     "year": 1856,
+     "note": "以石英岩烧成的酸性耐火砖，用于炼焦炉与玻璃窑顶。",
+     "deps": [
+      "fireclay_refractory_brick"
+     ]
+    },
+    {
+     "id": "magnesia_refractory_brick",
+     "name": "镁质耐火砖",
+     "en": "Magnesite brick",
+     "year": 1885,
+     "note": "以死烧镁砂制碱性耐火砖，支撑平炉与碱性炼钢。",
+     "deps": [
+      "fireclay_refractory_brick"
+     ]
+    },
+    {
+     "id": "silicon_carbide",
+     "name": "碳化硅",
+     "en": "Silicon carbide",
+     "year": 1891,
+     "note": "艾奇逊电炉合成碳化硅，兼作磨料、耐火与发热材料。",
+     "deps": []
+    },
+    {
+     "id": "silicon_carbide_heater",
+     "name": "碳化硅电热元件",
+     "en": "SiC heating elements",
+     "year": 1906,
+     "note": "碳化硅棒通电发热至1500摄氏度，用于电阻高温炉。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "spark_plug_ceramic",
+     "name": "火花塞绝缘瓷",
+     "en": "Spark plug insulator",
+     "year": 1900,
+     "note": "瓷质绝缘体耐高温高压，为内燃机点火关键部件。",
+     "deps": []
+    },
+    {
+     "id": "high_alumina_sparkplug",
+     "name": "高铝瓷火花塞",
+     "en": "Alumina spark plug insulator",
+     "year": 1935,
+     "note": "高纯氧化铝瓷替代滑石瓷，大幅提高火花塞热稳定性。",
+     "deps": [
+      "spark_plug_ceramic"
+     ]
+    },
+    {
+     "id": "alumina_cutting_ceramic",
+     "name": "氧化铝陶瓷刀具",
+     "en": "Alumina ceramic cutting tools",
+     "year": 1950,
+     "note": "高硬度氧化铝刀片高速切削铸铁与淬硬钢，比硬质合金更耐磨。",
+     "deps": []
+    },
+    {
+     "id": "ceramic_fiber_insulation",
+     "name": "陶瓷纤维毡",
+     "en": "Ceramic fiber insulation",
+     "year": 1960,
+     "note": "硅酸铝纤维制成的高温隔热毡，大幅降低工业炉热损失。",
+     "deps": []
+    },
+    {
+     "id": "alumina_ceramic_hip",
+     "name": "氧化铝人工髋关节",
+     "en": "Alumina hip joint",
+     "year": 1970,
+     "note": "高纯致密氧化铝球臼用于人工髋关节，耐磨生物相容好。",
+     "deps": []
+    },
+    {
+     "id": "silicon_nitride_ceramic",
+     "name": "氮化硅陶瓷",
+     "en": "Silicon nitride ceramics",
+     "year": 1970,
+     "note": "共价键强、抗热震耐磨的工程陶瓷，用于轴承与发动机部件。",
+     "deps": []
+    },
+    {
+     "id": "sialon_ceramic",
+     "name": "赛隆陶瓷",
+     "en": "Sialon ceramics",
+     "year": 1971,
+     "note": "氮化硅中固溶铝氧的赛隆材料，切削与耐磨性能优异。",
+     "deps": [
+      "silicon_nitride_ceramic"
+     ]
+    },
+    {
+     "id": "cordierite_honeycomb_catalyst",
+     "name": "堇青石蜂窝陶瓷载体",
+     "en": "Cordierite honeycomb substrate",
+     "year": 1975,
+     "note": "蜂窝结构堇青石涂覆催化剂，用于汽车尾气净化。",
+     "deps": []
+    },
+    {
+     "id": "zirconia_toughened_ceramic",
+     "name": "氧化锆增韧陶瓷",
+     "en": "Zirconia-toughened ceramics",
+     "year": 1975,
+     "note": "相变增韧使氧化锆韧性居陶瓷之冠，用于刀具与结构件。",
+     "deps": []
+    },
+    {
+     "id": "hydroxyapatite_bioceramic",
+     "name": "羟基磷灰石生物陶瓷",
+     "en": "Hydroxyapatite bioceramic",
+     "year": 1980,
+     "note": "成分接近人骨的磷酸钙陶瓷，用于骨缺损填充与涂层。",
+     "deps": []
+    },
+    {
+     "id": "magnesia_carbon_brick",
+     "name": "镁碳砖",
+     "en": "Magnesia-carbon brick",
+     "year": 1980,
+     "note": "镁砂与碳复合的耐火砖，显著延长转炉炉龄。",
+     "deps": [
+      "magnesia_refractory_brick"
+     ]
+    },
+    {
+     "id": "silicon_nitride_bearing",
+     "name": "氮化硅陶瓷轴承",
+     "en": "Silicon nitride bearings",
+     "year": 1985,
+     "note": "混合陶瓷球轴承绝缘轻量且耐高温，用于高速机床与电机。",
+     "deps": [
+      "silicon_nitride_ceramic"
+     ]
+    },
+    {
+     "id": "porcelain_fused_metal_dental",
+     "name": "瓷熔附金属牙冠",
+     "en": "Porcelain-fused-to-metal",
+     "year": 1965,
+     "note": "陶瓷层熔附金属冠体，兼顾美观与强度的人工牙修复。",
+     "deps": []
+    },
+    {
+     "id": "alumina_ceramic_substrate",
+     "name": "氧化铝陶瓷基板",
+     "en": "Alumina ceramic substrate",
+     "year": 1960,
+     "note": "高导热绝缘的氧化铝基板承载厚膜电路，用于电子封装。",
+     "deps": []
+    },
+    {
+     "id": "boron_nitride_ceramic",
+     "name": "氮化硼陶瓷",
+     "en": "Boron nitride ceramics",
+     "year": 1960,
+     "note": "六方氮化硼耐高温易切削，用作坩埚绝缘与高温润滑材料。",
+     "deps": []
+    },
+    {
+     "id": "ceramic_foam_filter",
+     "name": "泡沫陶瓷过滤器",
+     "en": "Ceramic foam filter",
+     "year": 1975,
+     "note": "开孔泡沫陶瓷过滤金属熔液中的夹杂，提高铸件质量。",
+     "deps": []
+    }
+   ]
+  }
+ ]
+}

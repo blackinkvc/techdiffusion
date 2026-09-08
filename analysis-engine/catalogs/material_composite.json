@@ -1,0 +1,1181 @@
+{
+ "cat": "material",
+ "catName": "材料",
+ "sub": "composite",
+ "subName": "复合材料",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "iron",
+  "steel",
+  "cement",
+  "plastics",
+  "composites",
+  "railway",
+  "automobile",
+  "airplane",
+  "rocket",
+  "skyscraper"
+ ],
+ "families": [
+  {
+   "name": "无机胶凝基复合材料",
+   "items": [
+    {
+     "id": "ferrocement",
+     "name": "钢丝网水泥",
+     "en": "Ferrocement",
+     "year": 1848,
+     "note": "以密集钢丝网增强水泥砂浆的薄壁材料，是钢筋混凝土技术的前驱。",
+     "deps": []
+    },
+    {
+     "id": "reinforced_concrete",
+     "name": "钢筋混凝土",
+     "en": "Reinforced concrete",
+     "year": 1867,
+     "note": "钢筋承担拉力、混凝土承担压力，蒙耶取得专利后推广至建筑与桥梁。",
+     "deps": [
+      "cement",
+      "steel"
+     ]
+    },
+    {
+     "id": "asbestos_cement",
+     "name": "石棉水泥板",
+     "en": "Asbestos-cement sheet",
+     "year": 1900,
+     "note": "石棉纤维增强水泥的薄板与管材，耐水防火，后因石棉危害被限制。",
+     "deps": []
+    },
+    {
+     "id": "prestressed_concrete",
+     "name": "预应力混凝土",
+     "en": "Prestressed concrete",
+     "year": 1928,
+     "note": "弗雷西内创立张拉钢筋对混凝土预加压应力的方法，大幅提高抗裂与跨度。",
+     "deps": [
+      "reinforced_concrete"
+     ]
+    },
+    {
+     "id": "bamboo_reinforced_concrete",
+     "name": "竹筋混凝土",
+     "en": "Bamboo-reinforced concrete",
+     "year": 1950,
+     "note": "以竹筋替代钢筋的实验性增强混凝土，应用于竹产区的临时与轻型结构。",
+     "deps": []
+    },
+    {
+     "id": "polymer_concrete",
+     "name": "聚合物混凝土",
+     "en": "Polymer concrete",
+     "year": 1958,
+     "note": "以合成树脂替代水泥胶结骨料，快硬且耐蚀，用于修补与地坪。",
+     "deps": []
+    },
+    {
+     "id": "steel_fiber_concrete",
+     "name": "钢纤维混凝土",
+     "en": "Steel-fiber concrete",
+     "year": 1960,
+     "note": "乱向分布的钢纤维抑制裂缝扩展，用于工业地坪与隧道衬砌。",
+     "deps": [
+      "reinforced_concrete"
+     ]
+    },
+    {
+     "id": "synthetic_fiber_concrete",
+     "name": "合成纤维混凝土",
+     "en": "Synthetic-fiber concrete",
+     "year": 1970,
+     "note": "聚丙烯等微细纤维提高抗裂抗渗性，用于地坪与喷射混凝土。",
+     "deps": []
+    },
+    {
+     "id": "glass_reinforced_concrete",
+     "name": "玻璃纤维增强水泥",
+     "en": "Glass-fiber reinforced concrete",
+     "year": 1970,
+     "note": "耐碱玻璃纤维增强水泥薄板，用于建筑幕墙与装饰构件。",
+     "deps": []
+    },
+    {
+     "id": "eps_lightweight_concrete",
+     "name": "EPS轻骨料混凝土",
+     "en": "EPS lightweight concrete",
+     "year": 1975,
+     "note": "聚苯乙烯泡沫颗粒作骨料的轻质混凝土，隔热隔声，用于填充与找坡。",
+     "deps": []
+    },
+    {
+     "id": "frp_rebar",
+     "name": "纤维增强聚合物筋",
+     "en": "FRP rebar",
+     "year": 1980,
+     "note": "以玻璃或碳纤维筋替代钢筋，耐腐蚀，用于桥梁与海洋工程。",
+     "deps": []
+    },
+    {
+     "id": "cellulose_fiber_cement",
+     "name": "纤维素纤维水泥板",
+     "en": "Cellulose-fiber cement board",
+     "year": 1985,
+     "note": "以纤维素纤维替代石棉的水泥纤维板，用于外墙与防火隔墙。",
+     "deps": [
+      "asbestos_cement"
+     ]
+    },
+    {
+     "id": "ecc_composite",
+     "name": "高延性水泥基复合材料",
+     "en": "Engineered cementitious composite",
+     "year": 1993,
+     "note": "纤维桥接裂缝使水泥基材料呈应变硬化，抗裂抗渗性能优异。",
+     "deps": []
+    },
+    {
+     "id": "textile_reinforced_concrete",
+     "name": "织物增强混凝土",
+     "en": "Textile-reinforced concrete",
+     "year": 1995,
+     "note": "耐碱纤维织物增强薄层混凝土，用于轻质围护与建筑表皮。",
+     "deps": [
+      "glass_reinforced_concrete"
+     ]
+    },
+    {
+     "id": "uhpc_fiber_concrete",
+     "name": "超高性能混凝土",
+     "en": "Ultra-high-performance concrete",
+     "year": 1998,
+     "note": "掺钢纤维的超高性能水泥基材料，抗压强度高，用于桥梁与预制构件。",
+     "deps": [
+      "steel_fiber_concrete"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "玻璃纤维与玻璃钢体系",
+   "items": [
+    {
+     "id": "high_pressure_decorative_laminate",
+     "name": "高压装饰层压板",
+     "en": "High-pressure decorative laminate",
+     "year": 1913,
+     "note": "牛皮纸与面纸浸酚醛等树脂高压成板，覆于板材表面作耐火装饰。",
+     "deps": []
+    },
+    {
+     "id": "glass_wool",
+     "name": "玻璃棉",
+     "en": "Glass wool",
+     "year": 1930,
+     "note": "熔融玻璃离心成纤制成的蓬松保温材料，用于建筑与管道绝热。",
+     "deps": []
+    },
+    {
+     "id": "continuous_glass_fiber",
+     "name": "连续玻璃纤维",
+     "en": "Continuous glass fiber",
+     "year": 1936,
+     "note": "经漏板拉制的连续玻纤成为复合材料主要增强原料，1930年代实现工业化。",
+     "deps": []
+    },
+    {
+     "id": "glass_fiber_cloth",
+     "name": "玻璃纤维布",
+     "en": "Glass fiber cloth",
+     "year": 1942,
+     "note": "织造玻纤布浸树脂层压，用于雷达罩、覆铜板与结构板材。",
+     "deps": [
+      "continuous_glass_fiber"
+     ]
+    },
+    {
+     "id": "glass_reinforced_plastic",
+     "name": "玻璃钢",
+     "en": "Glass-reinforced plastic",
+     "year": 1942,
+     "note": "玻纤增强不饱和聚酯等树脂的复合材料，轻质高强，用于船体、储罐与汽车件。",
+     "deps": [
+      "continuous_glass_fiber"
+     ]
+    },
+    {
+     "id": "e_glass_fiber",
+     "name": "E玻璃纤维",
+     "en": "E-glass fiber",
+     "year": 1943,
+     "note": "电绝缘型无碱玻璃纤维，是通用增强型玻纤的主流品种。",
+     "deps": [
+      "continuous_glass_fiber"
+     ]
+    },
+    {
+     "id": "resin_transfer_molding",
+     "name": "树脂传递模塑",
+     "en": "Resin transfer molding",
+     "year": 1946,
+     "note": "闭模低压注入树脂浸渍干纤维的成型工艺，用于船艇与汽车部件。",
+     "deps": []
+    },
+    {
+     "id": "filament_winding",
+     "name": "缠绕成型",
+     "en": "Filament winding",
+     "year": 1947,
+     "note": "浸胶纤维沿芯模既定轨迹缠绕后固化，制造高压气瓶与管道。",
+     "deps": []
+    },
+    {
+     "id": "gelcoat",
+     "name": "胶衣",
+     "en": "Gelcoat",
+     "year": 1950,
+     "note": "模具面先喷涂的着色树脂层，赋予玻璃钢制品光滑耐候的表面。",
+     "deps": []
+    },
+    {
+     "id": "pultrusion",
+     "name": "拉挤成型",
+     "en": "Pultrusion",
+     "year": 1951,
+     "note": "纤维浸胶后牵引通过加热模具连续固化，制造等截面复合材料型材。",
+     "deps": []
+    },
+    {
+     "id": "sheet_molding_compound",
+     "name": "片状模塑料",
+     "en": "Sheet molding compound",
+     "year": 1953,
+     "note": "玻纤毡浸渍树脂糊夹膜成卷的半成品，压制成汽车与电气部件。",
+     "deps": []
+    },
+    {
+     "id": "glass_fiber_vehicle_body",
+     "name": "玻璃钢汽车车身",
+     "en": "Fiberglass vehicle body",
+     "year": 1953,
+     "note": "以玻璃钢模压或手糊成型的整车车身，轻质耐蚀，开创量产化应用。",
+     "deps": [
+      "glass_reinforced_plastic"
+     ]
+    },
+    {
+     "id": "hand_layup",
+     "name": "手糊成型",
+     "en": "Hand lay-up",
+     "year": 1955,
+     "note": "逐层铺放浸胶纤维并辊压排气固化，是玻璃钢制品最早的成型方式。",
+     "deps": [
+      "glass_reinforced_plastic"
+     ]
+    },
+    {
+     "id": "glass_fiber_prepreg",
+     "name": "玻璃纤维预浸料",
+     "en": "Glass-fiber prepreg",
+     "year": 1958,
+     "note": "玻璃布预浸环氧等树脂的半固化片，用于覆铜板与结构层压。",
+     "deps": []
+    },
+    {
+     "id": "bulk_molding_compound",
+     "name": "团状模塑料",
+     "en": "Bulk molding compound",
+     "year": 1962,
+     "note": "短切玻纤与树脂糊捏合成的团料，模压成型小型复杂零件。",
+     "deps": []
+    },
+    {
+     "id": "s_glass_fiber",
+     "name": "S玻璃纤维",
+     "en": "S-glass fiber",
+     "year": 1962,
+     "note": "高强玻璃纤维，用于航空结构、压力容器与高性能构件。",
+     "deps": [
+      "e_glass_fiber"
+     ]
+    },
+    {
+     "id": "grp_pipe",
+     "name": "玻璃钢复合管道",
+     "en": "GRP pipe",
+     "year": 1965,
+     "note": "缠绕或离心成型的玻璃钢管，耐蚀轻质，用于给排水与化工输送。",
+     "deps": []
+    },
+    {
+     "id": "alkali_resistant_glass_fiber",
+     "name": "耐碱玻璃纤维",
+     "en": "Alkali-resistant glass fiber",
+     "year": 1967,
+     "note": "含锆的耐碱玻纤可承受水泥碱性侵蚀，支撑玻璃纤维增强水泥应用。",
+     "deps": [
+      "e_glass_fiber"
+     ]
+    },
+    {
+     "id": "glass_mat_thermoplastic",
+     "name": "玻璃毡增强热塑性板材",
+     "en": "Glass-mat thermoplastic",
+     "year": 1972,
+     "note": "玻纤毡与聚丙烯热压成片材，可快速模压成汽车护板与底护板。",
+     "deps": []
+    },
+    {
+     "id": "d_glass_fiber",
+     "name": "D玻璃纤维",
+     "en": "D-glass fiber",
+     "year": 1975,
+     "note": "低介电损耗玻璃纤维，用于雷达天线罩与高速电路基板。",
+     "deps": [
+      "e_glass_fiber"
+     ]
+    },
+    {
+     "id": "glass_reinforced_engineering_plastic",
+     "name": "玻纤增强热塑性工程塑料",
+     "en": "Glass-reinforced engineering plastic",
+     "year": 1975,
+     "note": "短切玻纤填充尼龙、聚酯等注塑料，提高强度与耐热，用于机械零件。",
+     "deps": []
+    },
+    {
+     "id": "three_d_braided_preform",
+     "name": "三维编织预制体",
+     "en": "3D braided preform",
+     "year": 1982,
+     "note": "纤维三维编织成整体预制体，消除层间界面，用于耐冲击构件。",
+     "deps": []
+    },
+    {
+     "id": "composite_insulator_core",
+     "name": "复合绝缘子芯棒",
+     "en": "Composite insulator core",
+     "year": 1985,
+     "note": "玻纤拉挤芯棒配硅橡胶伞裙的绝缘子，耐污闪且重量轻。",
+     "deps": []
+    },
+    {
+     "id": "composite_rock_bolt",
+     "name": "复合材料锚杆",
+     "en": "Composite rock bolt",
+     "year": 1985,
+     "note": "玻纤增强树脂锚杆抗腐蚀抗静电，用于煤矿与隧道支护。",
+     "deps": []
+    },
+    {
+     "id": "vacuum_infusion",
+     "name": "真空灌注成型",
+     "en": "Vacuum infusion",
+     "year": 1995,
+     "note": "真空袋压驱动树脂浸渍干纤维，含胶量均匀，是大型风电叶片主成型法。",
+     "deps": []
+    },
+    {
+     "id": "composite_conductor_core",
+     "name": "复合材料导线芯",
+     "en": "Composite conductor core",
+     "year": 2005,
+     "note": "碳纤维复合材料芯增强架空导线，弧垂小、载流量大且耐腐蚀。",
+     "deps": []
+    }
+   ]
+  },
+  {
+   "name": "高性能纤维与先进增强体",
+   "items": [
+    {
+     "id": "ptfe_fiber",
+     "name": "聚四氟乙烯纤维",
+     "en": "PTFE fiber",
+     "year": 1954,
+     "note": "耐化学腐蚀与高低温的含氟纤维，用于过滤袋与密封填料。",
+     "deps": []
+    },
+    {
+     "id": "ceramic_fiber",
+     "name": "硅酸铝陶瓷纤维",
+     "en": "Alumino-silicate ceramic fiber",
+     "year": 1955,
+     "note": "耐高温的陶瓷短纤维，用于隔热衬里与高温复合材料增强。",
+     "deps": []
+    },
+    {
+     "id": "meta_aramid_fiber",
+     "name": "间位芳纶纤维",
+     "en": "Meta-aramid fiber",
+     "year": 1961,
+     "note": "耐热阻燃的芳香族聚酰胺纤维，用于防护服与高温过滤。",
+     "deps": []
+    },
+    {
+     "id": "para_aramid_fiber",
+     "name": "对位芳纶纤维",
+     "en": "Para-aramid fiber",
+     "year": 1965,
+     "note": "液晶纺丝制得的高强高模纤维，用于防弹、缆索与增强复合材料。",
+     "deps": []
+    },
+    {
+     "id": "boron_fiber",
+     "name": "硼纤维",
+     "en": "Boron fiber",
+     "year": 1966,
+     "note": "在钨芯上气相沉积硼的连续纤维，是早期先进复合材料的增强体。",
+     "deps": []
+    },
+    {
+     "id": "silicon_carbide_whisker",
+     "name": "碳化硅晶须",
+     "en": "Silicon carbide whisker",
+     "year": 1970,
+     "note": "近单晶的针状碳化硅增强体，提高陶瓷与金属基体强度韧性。",
+     "deps": []
+    },
+    {
+     "id": "alumina_short_fiber",
+     "name": "氧化铝短纤维",
+     "en": "Alumina short fiber",
+     "year": 1974,
+     "note": "耐高温氧化铝短纤维，用于隔热与金属基复合材料增强。",
+     "deps": []
+    },
+    {
+     "id": "silicon_carbide_fiber",
+     "name": "碳化硅纤维",
+     "en": "Silicon carbide fiber",
+     "year": 1975,
+     "note": "先驱体转化制得的连续碳化硅纤维，用于陶瓷基复合材料。",
+     "deps": []
+    },
+    {
+     "id": "oxide_ceramic_fiber",
+     "name": "氧化物陶瓷纤维",
+     "en": "Oxide ceramic fiber",
+     "year": 1978,
+     "note": "氧化铝系连续纤维耐高温抗氧化，用于氧化物陶瓷基复合。",
+     "deps": []
+    },
+    {
+     "id": "uhmwpe_fiber",
+     "name": "超高分子量聚乙烯纤维",
+     "en": "UHMWPE fiber",
+     "year": 1979,
+     "note": "超高分子量聚乙烯经凝胶纺丝制成的高强纤维，用于防弹与缆绳。",
+     "deps": []
+    },
+    {
+     "id": "pps_fiber",
+     "name": "聚苯硫醚纤维",
+     "en": "PPS fiber",
+     "year": 1980,
+     "note": "耐高温耐化学腐蚀的聚苯硫醚纤维，用于燃煤电厂高温过滤袋。",
+     "deps": []
+    },
+    {
+     "id": "polyimide_fiber",
+     "name": "聚酰亚胺纤维",
+     "en": "Polyimide fiber",
+     "year": 1983,
+     "note": "耐高温且阻燃的芳杂环纤维，用于高温过滤与防护材料。",
+     "deps": []
+    },
+    {
+     "id": "basalt_fiber",
+     "name": "玄武岩纤维",
+     "en": "Basalt fiber",
+     "year": 1985,
+     "note": "玄武岩熔融拉制纤维，耐温耐蚀，性能介于玻纤与碳纤之间。",
+     "deps": []
+    },
+    {
+     "id": "aromatic_polyester_fiber",
+     "name": "液晶聚酯纤维",
+     "en": "Aromatic polyester fiber",
+     "year": 1990,
+     "note": "热致液晶聚酯纺成的高强纤维，低蠕变，用于缆索与防割手套。",
+     "deps": []
+    },
+    {
+     "id": "natural_fiber_composite",
+     "name": "天然纤维增强塑料",
+     "en": "Natural-fiber composite",
+     "year": 1995,
+     "note": "亚麻、洋麻等植物纤维增强塑料，用于汽车内饰与可降解制品。",
+     "deps": []
+    },
+    {
+     "id": "pbo_fiber",
+     "name": "PBO纤维",
+     "en": "PBO fiber",
+     "year": 1998,
+     "note": "聚对苯撑苯并双噁唑纤维，比强度极高，用于防弹与高温材料。",
+     "deps": []
+    }
+   ]
+  },
+  {
+   "name": "碳纤维与碳基复合材料",
+   "items": [
+    {
+     "id": "rayon_based_carbon_fiber",
+     "name": "粘胶基碳纤维",
+     "en": "Rayon-based carbon fiber",
+     "year": 1958,
+     "note": "以粘胶纤维为原丝碳化制成，是最早实用化的碳纤维品种。",
+     "deps": []
+    },
+    {
+     "id": "pan_based_carbon_fiber",
+     "name": "PAN基碳纤维",
+     "en": "PAN-based carbon fiber",
+     "year": 1964,
+     "note": "聚丙烯腈原丝经预氧化、碳化与石墨化制成，成高性能碳纤维主流路线。",
+     "deps": []
+    },
+    {
+     "id": "carbon_carbon_composite",
+     "name": "碳-碳复合材料",
+     "en": "Carbon-carbon composite",
+     "year": 1965,
+     "note": "碳纤维增强碳基体的耐高温材料，早期用于火箭喷管与热防护。",
+     "deps": []
+    },
+    {
+     "id": "carbon_phenolic_ablative",
+     "name": "碳酚醛烧蚀材料",
+     "en": "Carbon-phenolic ablative material",
+     "year": 1965,
+     "note": "碳布增强酚醛的烧蚀防热层，用于弹头再入与发动机喷管。",
+     "deps": []
+    },
+    {
+     "id": "pitch_based_carbon_fiber",
+     "name": "沥青基碳纤维",
+     "en": "Pitch-based carbon fiber",
+     "year": 1970,
+     "note": "以中间相沥青为原料纺丝，再经碳化处理制得的高模量碳纤维。",
+     "deps": []
+    },
+    {
+     "id": "carbon_fiber_reinforced_plastic",
+     "name": "碳纤维复合材料",
+     "en": "Carbon-fiber reinforced plastic",
+     "year": 1970,
+     "note": "碳纤维增强环氧等树脂的结构材料，比强度高，用于航空航天构件。",
+     "deps": [
+      "pan_based_carbon_fiber"
+     ]
+    },
+    {
+     "id": "carbon_fiber_prepreg",
+     "name": "碳纤维预浸料",
+     "en": "Carbon fiber prepreg",
+     "year": 1972,
+     "note": "单向或织物碳纤维预浸树脂制成半固化片，供层压与自动铺放。",
+     "deps": [
+      "carbon_fiber_reinforced_plastic"
+     ]
+    },
+    {
+     "id": "carbon_fiber_fabric",
+     "name": "碳纤维织物",
+     "en": "Carbon fiber fabric",
+     "year": 1975,
+     "note": "碳纤维织造或编织成的增强布，用于层合板与三维预制体。",
+     "deps": [
+      "pan_based_carbon_fiber"
+     ]
+    },
+    {
+     "id": "carbon_carbon_aircraft_brake",
+     "name": "碳-碳刹车盘",
+     "en": "Carbon-carbon aircraft brake",
+     "year": 1975,
+     "note": "碳-碳复合材料耐热耐磨，用作大型客机的机轮刹车盘。",
+     "deps": [
+      "carbon_carbon_composite"
+     ]
+    },
+    {
+     "id": "activated_carbon_fiber",
+     "name": "活性碳纤维",
+     "en": "Activated carbon fiber",
+     "year": 1975,
+     "note": "高比表面积的纤维状吸附材料，用于防护装具与气体净化。",
+     "deps": []
+    },
+    {
+     "id": "carbon_fiber_reinforced_concrete",
+     "name": "碳纤维增强混凝土",
+     "en": "Carbon-fiber reinforced concrete",
+     "year": 1985,
+     "note": "短切碳纤维增强水泥基材料，抗裂导电，用于智能结构监测。",
+     "deps": []
+    },
+    {
+     "id": "carbon_fiber_thermoplastic",
+     "name": "碳纤维增强热塑性复合材料",
+     "en": "Carbon-fiber thermoplastic composite",
+     "year": 1992,
+     "note": "碳纤增强聚醚醚酮等热塑树脂，耐冲击可再加工，用于航空与医疗。",
+     "deps": [
+      "carbon_fiber_prepreg"
+     ]
+    },
+    {
+     "id": "recycled_carbon_fiber",
+     "name": "再生碳纤维",
+     "en": "Recycled carbon fiber",
+     "year": 2010,
+     "note": "裂解回收退役碳纤维再加工，降本减碳，用于非承力复合材料件。",
+     "deps": [
+      "pan_based_carbon_fiber"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "夹层结构、芯材与复材结构技术",
+   "items": [
+    {
+     "id": "balsa_core",
+     "name": "轻木夹芯",
+     "en": "Balsa core",
+     "year": 1940,
+     "note": "轻木作为低密度夹芯材料，用于早期木质夹层航空结构。",
+     "deps": []
+    },
+    {
+     "id": "composite_laminate",
+     "name": "复合材料层合板",
+     "en": "Composite laminate",
+     "year": 1945,
+     "note": "多层增强材料按铺层方向叠合固化成的板材，力学性能可设计。",
+     "deps": []
+    },
+    {
+     "id": "fiberglass_boat_hull",
+     "name": "玻璃钢船体",
+     "en": "Fiberglass boat hull",
+     "year": 1946,
+     "note": "二战末期发展出的玻璃钢船体制法，标志复合材料走向民用。",
+     "deps": [
+      "glass_reinforced_plastic"
+     ]
+    },
+    {
+     "id": "composite_radome",
+     "name": "复合材料雷达罩",
+     "en": "Composite radome",
+     "year": 1950,
+     "note": "玻璃钢等透波材料制成雷达天线罩，兼顾透波与气动承载。",
+     "deps": []
+    },
+    {
+     "id": "aluminum_honeycomb",
+     "name": "铝蜂窝夹芯",
+     "en": "Aluminium honeycomb core",
+     "year": 1950,
+     "note": "铝箔制成的六角蜂窝芯与蒙皮胶接成夹层板，用于飞机结构。",
+     "deps": []
+    },
+    {
+     "id": "paper_honeycomb",
+     "name": "纸蜂窝夹芯",
+     "en": "Paper honeycomb core",
+     "year": 1950,
+     "note": "牛皮纸制成的蜂窝芯材轻而价廉，用于门板与包装托盘。",
+     "deps": []
+    },
+    {
+     "id": "syntactic_foam",
+     "name": "复合泡沫",
+     "en": "Syntactic foam",
+     "year": 1955,
+     "note": "空心微球填充树脂形成的低密度材料，提供浮力，用于深海设备。",
+     "deps": []
+    },
+    {
+     "id": "composite_rocket_motor_case",
+     "name": "复合材料火箭发动机壳体",
+     "en": "Composite rocket motor case",
+     "year": 1961,
+     "note": "玻璃纤维缠绕成型的导弹发动机壳体，比强度高并减轻质量。",
+     "deps": [
+      "filament_winding"
+     ]
+    },
+    {
+     "id": "pvc_foam_core",
+     "name": "聚氯乙烯泡沫芯材",
+     "en": "PVC foam core",
+     "year": 1965,
+     "note": "交联聚氯乙烯泡沫作为夹芯材料，用于船体、叶片与夹层板。",
+     "deps": []
+    },
+    {
+     "id": "nomex_honeycomb",
+     "name": "芳纶纸蜂窝",
+     "en": "Nomex honeycomb",
+     "year": 1972,
+     "note": "间位芳纶纸浸胶成蜂窝芯，轻质阻燃，用于飞机内饰与结构。",
+     "deps": [
+      "meta_aramid_fiber"
+     ]
+    },
+    {
+     "id": "composite_wind_blade",
+     "name": "复合材料风机叶片",
+     "en": "Composite wind turbine blade",
+     "year": 1978,
+     "note": "玻纤与碳纤复合材料叶片轻质耐疲劳，支撑风力发电机大型化。",
+     "deps": []
+    },
+    {
+     "id": "composite_antenna_reflector",
+     "name": "复合材料天线反射面",
+     "en": "Composite antenna reflector",
+     "year": 1980,
+     "note": "碳纤维复合材料制造的高精度天线反射面，热变形小且刚度高。",
+     "deps": [
+      "carbon_fiber_reinforced_plastic"
+     ]
+    },
+    {
+     "id": "composite_leaf_spring",
+     "name": "复合材料板簧",
+     "en": "Composite leaf spring",
+     "year": 1981,
+     "note": "纤维增强塑料制成的板簧减轻悬架质量，用于商用车与赛车。",
+     "deps": []
+    },
+    {
+     "id": "composite_driveshaft",
+     "name": "复合材料传动轴",
+     "en": "Composite driveshaft",
+     "year": 1985,
+     "note": "碳纤维缠绕传动轴比强度高，临界转速高，用于汽车与船舶。",
+     "deps": [
+      "filament_winding"
+     ]
+    },
+    {
+     "id": "pmi_foam_core",
+     "name": "PMI泡沫芯材",
+     "en": "PMI foam core",
+     "year": 1985,
+     "note": "聚甲基丙烯酰亚胺泡沫刚性高，耐热耐压，用于高性能夹芯。",
+     "deps": []
+    },
+    {
+     "id": "prepreg_automated_placement",
+     "name": "预浸料自动铺放",
+     "en": "Automated tape laying and fiber placement",
+     "year": 1985,
+     "note": "数控铺带与自动铺丝机高效铺放预浸料，成型大型航空结构。",
+     "deps": [
+      "carbon_fiber_prepreg"
+     ]
+    },
+    {
+     "id": "fiber_metal_laminate",
+     "name": "纤维金属层板",
+     "en": "Fiber-metal laminate",
+     "year": 1987,
+     "note": "薄铝板与玻璃纤维预浸料交替层压，抗疲劳，用于飞机蒙皮。",
+     "deps": []
+    },
+    {
+     "id": "polypropylene_honeycomb",
+     "name": "聚丙烯蜂窝芯",
+     "en": "Polypropylene honeycomb",
+     "year": 1995,
+     "note": "热塑性蜂窝芯可热成型且可回收，用于轻质结构与包装。",
+     "deps": []
+    },
+    {
+     "id": "composite_patch_repair",
+     "name": "复合材料贴片修补",
+     "en": "Composite patch repair",
+     "year": 1995,
+     "note": "以预固化补片胶接修补损伤结构，用于飞机蒙皮与管道修复。",
+     "deps": []
+    },
+    {
+     "id": "composite_bridge_deck",
+     "name": "复合材料桥面板",
+     "en": "Composite bridge deck",
+     "year": 1996,
+     "note": "拉挤或夹层玻璃钢桥面板轻质耐蚀，施工速度快，用于桥梁建设。",
+     "deps": []
+    },
+    {
+     "id": "steel_elastomer_sandwich",
+     "name": "钢弹性体夹层板",
+     "en": "Steel-elastomer sandwich panel",
+     "year": 1998,
+     "note": "双层钢板夹弹性体芯材的复合板，吸能抗爆，用于船体与桥面。",
+     "deps": []
+    },
+    {
+     "id": "composite_utility_pole",
+     "name": "复合材料电杆",
+     "en": "Composite utility pole",
+     "year": 2000,
+     "note": "拉挤或缠绕成型的纤维增强塑料电杆，轻质绝缘且寿命长。",
+     "deps": []
+    },
+    {
+     "id": "composite_stay_cable",
+     "name": "复合材料拉索",
+     "en": "Composite stay cable",
+     "year": 2005,
+     "note": "碳纤维复合材料拉索耐蚀高强，用于斜拉桥与大型结构张拉。",
+     "deps": [
+      "carbon_fiber_reinforced_plastic"
+     ]
+    },
+    {
+     "id": "composite_marine_propeller",
+     "name": "复合材料船用螺旋桨",
+     "en": "Composite marine propeller",
+     "year": 2005,
+     "note": "碳纤维复合材料螺旋桨轻质低噪耐腐蚀，用于船舶推进。",
+     "deps": []
+    }
+   ]
+  },
+  {
+   "name": "陶瓷基、金属基与热防护复合材料",
+   "items": [
+    {
+     "id": "metal_matrix_composite",
+     "name": "金属基复合材料",
+     "en": "Metal-matrix composite",
+     "year": 1970,
+     "note": "以金属为基体、颗粒或纤维增强的复合材料，比强度刚度高于原金属。",
+     "deps": [
+      "composites"
+     ]
+    },
+    {
+     "id": "boron_aluminum_composite",
+     "name": "硼纤维增强铝基复合材料",
+     "en": "Boron/aluminium composite",
+     "year": 1970,
+     "note": "硼纤维增强铝的早期金属基复合材料，用于航天结构件。",
+     "deps": [
+      "boron_fiber"
+     ]
+    },
+    {
+     "id": "carbon_fiber_aluminum_composite",
+     "name": "碳纤维增强铝基复合材料",
+     "en": "Carbon-fiber reinforced aluminium",
+     "year": 1975,
+     "note": "碳纤维增强铝基材料比刚度高，用于航天桁架与天线结构件。",
+     "deps": [
+      "pan_based_carbon_fiber"
+     ]
+    },
+    {
+     "id": "carbon_fiber_silicon_carbide",
+     "name": "碳纤维增强碳化硅",
+     "en": "C/SiC composite",
+     "year": 1985,
+     "note": "碳纤维增韧碳化硅基体，耐高温抗氧化，用于刹车与热防护。",
+     "deps": [
+      "carbon_carbon_composite"
+     ]
+    },
+    {
+     "id": "sic_fiber_titanium_composite",
+     "name": "碳化硅纤维增强钛基复合材料",
+     "en": "SiC-fiber reinforced titanium",
+     "year": 1985,
+     "note": "连续碳化硅纤维增强钛基体，用于航空发动机风扇叶片。",
+     "deps": [
+      "silicon_carbide_fiber"
+     ]
+    },
+    {
+     "id": "sic_particle_aluminum",
+     "name": "碳化硅颗粒增强铝基复合材料",
+     "en": "SiC-particle reinforced aluminium",
+     "year": 1986,
+     "note": "碳化硅颗粒增强铝，比刚度高，用于刹车盘与电子封装。",
+     "deps": [
+      "metal_matrix_composite"
+     ]
+    },
+    {
+     "id": "silicon_carbide_ceramic_matrix",
+     "name": "碳化硅纤维增强碳化硅",
+     "en": "SiC/SiC ceramic-matrix composite",
+     "year": 1990,
+     "note": "碳化硅纤维增韧碳化硅陶瓷，用于航空发动机热端与核工业。",
+     "deps": [
+      "silicon_carbide_fiber"
+     ]
+    },
+    {
+     "id": "sic_al_electronic_package",
+     "name": "铝碳化硅电子封装材料",
+     "en": "Al/SiC electronic packaging material",
+     "year": 1990,
+     "note": "碳化硅颗粒增强铝的可调膨胀封装材料，用于微波器件载体。",
+     "deps": [
+      "sic_particle_aluminum"
+     ]
+    },
+    {
+     "id": "magnesium_matrix_composite",
+     "name": "镁基复合材料",
+     "en": "Magnesium-matrix composite",
+     "year": 1992,
+     "note": "颗粒或纤维增强镁基体，比刚度高，用于轻量化壳体与结构件。",
+     "deps": []
+    },
+    {
+     "id": "oxide_ceramic_matrix_composite",
+     "name": "氧化物陶瓷基复合材料",
+     "en": "Oxide/oxide ceramic-matrix composite",
+     "year": 1995,
+     "note": "氧化铝纤维与多孔氧化物基体复合，抗氧化，用于燃烧室衬套。",
+     "deps": [
+      "oxide_ceramic_fiber"
+     ]
+    },
+    {
+     "id": "diamond_metal_composite",
+     "name": "金刚石金属导热复合材料",
+     "en": "Diamond-metal composite",
+     "year": 1995,
+     "note": "金刚石颗粒增强金属的高导热材料，用于电子器件散热。",
+     "deps": []
+    },
+    {
+     "id": "carbon_ceramic_brake",
+     "name": "碳陶制动盘",
+     "en": "Carbon-ceramic brake disc",
+     "year": 2000,
+     "note": "C/SiC碳陶材料制动盘耐高温耐磨损，用于高性能汽车。",
+     "deps": [
+      "carbon_fiber_silicon_carbide"
+     ]
+    },
+    {
+     "id": "cmc_hot_section_part",
+     "name": "陶瓷基复合材料热端部件",
+     "en": "CMC hot-section component",
+     "year": 2015,
+     "note": "陶瓷基复合材料制成的涡轮罩环等热端件，降低冷却空气需求。",
+     "deps": [
+      "silicon_carbide_ceramic_matrix"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "木质、竹材与生物基复合材料",
+   "items": [
+    {
+     "id": "plywood",
+     "name": "胶合板",
+     "en": "Plywood",
+     "year": 1900,
+     "note": "旋切单板纵横交错胶压成板，强度均匀，是用途最广的木基复合材料。",
+     "deps": []
+    },
+    {
+     "id": "glulam",
+     "name": "层板胶合木",
+     "en": "Glued laminated timber",
+     "year": 1901,
+     "note": "多层板材顺纹叠层胶合成大截面构件，用于大跨木结构屋顶。",
+     "deps": []
+    },
+    {
+     "id": "hardboard",
+     "name": "硬质纤维板",
+     "en": "Hardboard",
+     "year": 1924,
+     "note": "木质纤维热压成高密度板材，强度高，用于门板与包装。",
+     "deps": []
+    },
+    {
+     "id": "wood_wool_cement_board",
+     "name": "木丝水泥板",
+     "en": "Wood-wool cement board",
+     "year": 1930,
+     "note": "木丝与水泥胶合而成的板材，防火保温，用作吸声与衬板。",
+     "deps": []
+    },
+    {
+     "id": "particleboard",
+     "name": "刨花板",
+     "en": "Particleboard",
+     "year": 1943,
+     "note": "木质刨花与胶黏剂热压成板，价廉，为家具工业常用基材。",
+     "deps": []
+    },
+    {
+     "id": "blockboard",
+     "name": "细木工板",
+     "en": "Blockboard",
+     "year": 1950,
+     "note": "板条芯两面贴单板的大幅面板，供家具与室内装修使用。",
+     "deps": [
+      "plywood"
+     ]
+    },
+    {
+     "id": "bagasse_panel",
+     "name": "蔗渣板",
+     "en": "Bagasse panel",
+     "year": 1950,
+     "note": "以甘蔗渣为原料压制的人造板，资源循环，用于隔墙与家具。",
+     "deps": []
+    },
+    {
+     "id": "cement_bonded_particleboard",
+     "name": "水泥刨花板",
+     "en": "Cement-bonded particleboard",
+     "year": 1955,
+     "note": "水泥胶结木质刨花的板材，防火耐潮，用于外墙与地板衬层。",
+     "deps": []
+    },
+    {
+     "id": "medium_density_fiberboard",
+     "name": "中密度纤维板",
+     "en": "Medium-density fiberboard",
+     "year": 1966,
+     "note": "干法纤维热压成中密度板，断面细腻，用于家具与模压门。",
+     "deps": []
+    },
+    {
+     "id": "laminated_veneer_lumber",
+     "name": "单板层积材",
+     "en": "Laminated veneer lumber",
+     "year": 1970,
+     "note": "旋切单板平行组坯胶压成梁材，强度高且可制成大跨直材。",
+     "deps": [
+      "plywood"
+     ]
+    },
+    {
+     "id": "straw_particleboard",
+     "name": "麦秸刨花板",
+     "en": "Straw particleboard",
+     "year": 1975,
+     "note": "以麦秸为原料压制的板材，利用农业秸秆，用于家具与包装。",
+     "deps": []
+    },
+    {
+     "id": "oriented_strand_board",
+     "name": "定向刨花板",
+     "en": "Oriented strand board",
+     "year": 1978,
+     "note": "定向铺装木刨花热压成的结构板材，替代胶合板用于建筑覆面。",
+     "deps": []
+    },
+    {
+     "id": "wood_i_joist",
+     "name": "木质工字梁",
+     "en": "Wood I-joist",
+     "year": 1980,
+     "note": "木翼缘与定向刨花板腹板组合的工字梁，轻质且造价经济。",
+     "deps": [
+      "oriented_strand_board"
+     ]
+    },
+    {
+     "id": "parallel_strand_lumber",
+     "name": "平行木片胶合木",
+     "en": "Parallel strand lumber",
+     "year": 1980,
+     "note": "长薄木片平行胶压成的结构材，强度高，用于大跨梁柱。",
+     "deps": []
+    },
+    {
+     "id": "laminated_strand_lumber",
+     "name": "定向重组木",
+     "en": "Laminated strand lumber",
+     "year": 1985,
+     "note": "把重组木束定向压制成型的结构用材，可充分利用小径木材。",
+     "deps": []
+    },
+    {
+     "id": "cross_laminated_timber",
+     "name": "正交胶合木",
+     "en": "Cross-laminated timber",
+     "year": 1995,
+     "note": "正交叠层胶合的大幅板材，双向承载，推动多层木结构建筑。",
+     "deps": [
+      "glulam"
+     ]
+    },
+    {
+     "id": "wood_plastic_composite",
+     "name": "木塑复合材料",
+     "en": "Wood-plastic composite",
+     "year": 1996,
+     "note": "木粉与热塑性塑料共混成材，耐潮免漆，制铺板与护栏。",
+     "deps": []
+    },
+    {
+     "id": "laminated_bamboo",
+     "name": "竹集成材",
+     "en": "Laminated bamboo",
+     "year": 1999,
+     "note": "竹片胶合成的板材与方材，硬重耐腐，用于地板与家具。",
+     "deps": []
+    },
+    {
+     "id": "scrimber_bamboo",
+     "name": "重组竹",
+     "en": "Bamboo scrimber",
+     "year": 2005,
+     "note": "竹束疏解浸胶热压成的高强度材料，用于户外结构与建筑。",
+     "deps": []
+    },
+    {
+     "id": "coir_fiber_board",
+     "name": "椰棕纤维板",
+     "en": "Coir fiber board",
+     "year": 1980,
+     "note": "椰壳纤维压制或胶合的板材，透气弹性，用于床垫与隔板。",
+     "deps": []
+    },
+    {
+     "id": "bamboo_curtain_plywood",
+     "name": "竹帘胶合板",
+     "en": "Bamboo curtain plywood",
+     "year": 1990,
+     "note": "竹帘浸胶热压成的厚板材，强度高，多用作混凝土模板。",
+     "deps": []
+    },
+    {
+     "id": "hemp_crete",
+     "name": "大麻混凝土",
+     "en": "Hempcrete",
+     "year": 1995,
+     "note": "大麻秆碎屑与石灰胶凝材料混合的墙体复合材料，轻质透气。",
+     "deps": []
+    },
+    {
+     "id": "mycelium_composite",
+     "name": "菌丝复合材料",
+     "en": "Mycelium composite",
+     "year": 2014,
+     "note": "以菌丝体胶结农业废料生长的可降解材料，用于包装与保温。",
+     "deps": []
+    }
+   ]
+  }
+ ]
+}

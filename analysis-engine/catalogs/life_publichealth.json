@@ -1,0 +1,202 @@
+{
+ "cat": "life",
+ "catName": "生命与健康",
+ "sub": "publichealth",
+ "subName": "公共卫生与防疫",
+ "schemaNote": "life_publichealth 任务域真实技术目录。anchors 为可引用的全局上游锚点；families 覆盖公共卫生主要技术谱系(工程实体归 build 系，本域收策略与制度)；item.deps 仅引 _ANCHORS 或本文件更早条目。",
+ "anchors": [
+  "vaccination",
+  "scientific_method",
+  "thermodynamics",
+  "evolution",
+  "fermentation",
+  "computer",
+  "internet"
+ ],
+ "families": [
+  {
+   "name": "卫生工程策略",
+   "items": [
+    { "id": "ph_quarantine", "name": "检疫隔离", "en": "Quarantine", "year": 1377, "note": "威尼斯设隔离期阻断鼠疫跨境传播。", "deps": [] },
+    { "id": "ph_health_code", "name": "卫生法规", "en": "Public health act", "year": 1848, "note": "英国1848公共卫生法确立卫生治理。", "deps": [] },
+    { "id": "ph_sanitary_survey", "name": "卫生调查", "en": "Sanitary survey", "year": 1850, "note": "系统调查环境危害指导干预。", "deps": [] },
+    { "id": "ph_ventilation_hospital", "name": "医院通风", "en": "Hospital ventilation", "year": 1850, "note": "通风换气降低院内交叉感染。", "deps": [] },
+    { "id": "ph_sewage_treatment", "name": "污水处理", "en": "Sewage treatment", "year": 1850, "note": "集中处理污水切断粪口传播。", "deps": [] },
+    { "id": "ph_water_treatment", "name": "给水处理", "en": "Water treatment", "year": 1900, "note": "混凝沉淀过滤供给安全饮用水。", "deps": [] },
+    { "id": "ph_sanitation_engineering", "name": "卫生工程", "en": "Sanitary engineering", "year": 1850, "note": "以工程手段改善人居环境卫生。", "deps": [] },
+    { "id": "ph_food_hygiene", "name": "食品卫生规范", "en": "Food hygiene regulation", "year": 1900, "note": "规范加工储运降低食源性疾病。", "deps": [] },
+    { "id": "ph_building_hygiene", "name": "建筑卫生标准", "en": "Building hygiene standard", "year": 1900, "note": "以标准约束采光通风与密度。", "deps": [] },
+    { "id": "ph_env_monitoring", "name": "环境卫生监测", "en": "Environmental health monitoring", "year": 1950, "note": "监测空气水质噪声等暴露。", "deps": [] },
+    { "id": "ph_disinfection_protocol", "name": "消毒规范", "en": "Disinfection protocol", "year": 1880, "note": "以制度规范场所与器械消毒。", "deps": [] },
+    { "id": "ph_food_inspection", "name": "食品检验", "en": "Food inspection", "year": 1900, "note": "检验掺假与污染保障食品安全。", "deps": [] },
+    { "id": "ph_rodent_control", "name": "灭鼠", "en": "Rodent control", "year": 1900, "note": "控制鼠类阻断鼠疫等传播。", "deps": [] },
+    { "id": "ph_waste_management", "name": "医疗废物管理", "en": "Medical waste management", "year": 1980, "note": "分类处置医疗废物防二次污染。", "deps": [] }
+   ]
+  },
+  {
+   "name": "免疫规划",
+   "items": [
+    { "id": "ph_herd_immunity", "name": "群体免疫", "en": "Herd immunity", "year": 1920, "note": "高接种率间接保护未免人群。", "deps": [] },
+    { "id": "ph_cold_chain", "name": "疫苗冷链", "en": "Vaccine cold chain", "year": 1970, "note": "全程低温保疫苗效价。", "deps": [] },
+    { "id": "ph_ring_vaccination", "name": "环形接种", "en": "Ring vaccination", "year": 1970, "note": "围绕疫点一圈接种阻断扩散。", "deps": [] },
+    { "id": "ph_antigen_mix", "name": "联合疫苗", "en": "Combined vaccine", "year": 1950, "note": "多抗原合一减少接种针次。", "deps": [] },
+    { "id": "ph_eip", "name": "EPI扩大免疫规划", "en": "Expanded Programme on Immunization", "year": 1974, "note": "WHO推动全球儿童常规免疫。", "deps": [] },
+    { "id": "ph_vaccine_schedule", "name": "免疫程序", "en": "Immunization schedule", "year": 1980, "note": "按年龄时序安排接种。", "deps": [] },
+    { "id": "ph_school_immunization", "name": "入学接种", "en": "School-entry immunization", "year": 1980, "note": "以入学查证提高覆盖率。", "deps": [] },
+    { "id": "ph_vaccine_surveillance", "name": "接种监测", "en": "Vaccination surveillance", "year": 1980, "note": "监测覆盖率与异常反应。", "deps": [] },
+    { "id": "ph_vaccine_vial_monitor", "name": "疫苗温度监测", "en": "Vaccine vial monitor", "year": 1980, "note": "热敏标签显示疫苗受热程度。", "deps": [] },
+    { "id": "ph_auto_disable_syringe", "name": "自毁式注射器", "en": "Auto-disable syringe", "year": 1990, "note": "单次使用防复用与交叉感染。", "deps": [] },
+    { "id": "ph_supplemental_campaign", "name": "强化免疫活动", "en": "Supplemental immunization", "year": 1990, "note": "集中补种快速提升覆盖率。", "deps": [] },
+    { "id": "ph_community_immunity", "name": "社区免疫", "en": "Community immunity", "year": 1990, "note": "以社区为单位组织接种。", "deps": [] },
+    { "id": "ph_vaccine_stock", "name": "疫苗库存管理", "en": "Vaccine stock management", "year": 1980, "note": "库存预测避免断供与浪费。", "deps": [] },
+    { "id": "ph_cold_chain_monitor", "name": "冷链监测", "en": "Cold chain monitoring", "year": 1990, "note": "以传感记录全程温度。", "deps": ["ph_cold_chain"] }
+   ]
+  },
+  {
+   "name": "流行病学",
+   "items": [
+    { "id": "ph_epidemiology_method", "name": "现代流行病学", "en": "Modern epidemiology", "year": 1850, "note": "以群体方法研究疾病分布。", "deps": [] },
+    { "id": "ph_snow_cholera", "name": "霍乱调查", "en": "Cholera investigation", "year": 1854, "note": "斯诺以地图定位水源暴发。", "deps": [] },
+    { "id": "ph_biostatistics", "name": "生物统计", "en": "Biostatistics", "year": 1920, "note": "以统计量化健康事件关联。", "deps": [] },
+    { "id": "ph_rct", "name": "RCT临床试验", "en": "Randomized controlled trial", "year": 1948, "note": "随机对照验证干预有效性。", "deps": [] },
+    { "id": "ph_cohort_study", "name": "队列研究", "en": "Cohort study", "year": 1948, "note": "随访暴露队列观察发病。", "deps": [] },
+    { "id": "ph_case_control", "name": "病例对照研究", "en": "Case-control study", "year": 1950, "note": "以病例对照回溯暴露因素。", "deps": [] },
+    { "id": "ph_disease_surveillance", "name": "疾病监测", "en": "Disease surveillance", "year": 1950, "note": "系统收集分析疾病动态。", "deps": [] },
+    { "id": "ph_screening", "name": "疾病筛查", "en": "Disease screening", "year": 1950, "note": "无症状人群早查早治。", "deps": [] },
+    { "id": "ph_risk_factor", "name": "危险因素", "en": "Risk factor", "year": 1960, "note": "识别可干预致病因素。", "deps": [] },
+    { "id": "ph_meta_analysis", "name": "荟萃分析", "en": "Meta-analysis", "year": 1976, "note": "合并多项研究提升证据力。", "deps": [] },
+    { "id": "ph_outbreak_investigation", "name": "暴发调查", "en": "Outbreak investigation", "year": 1900, "note": "现场溯源控制疫情扩散。", "deps": [] },
+    { "id": "ph_sentinel_surveillance", "name": "哨点监测", "en": "Sentinel surveillance", "year": 1990, "note": "以哨点网高效捕捉信号。", "deps": [] },
+    { "id": "ph_pharmacovigilance", "name": "药物警戒", "en": "Pharmacovigilance", "year": 1960, "note": "监测上市后药品不良反应。", "deps": [] },
+    { "id": "ph_statistical_inference", "name": "统计推断", "en": "Statistical inference", "year": 1900, "note": "以抽样推断总体健康参数。", "deps": [] }
+   ]
+  },
+  {
+   "name": "消毒消杀",
+   "items": [
+    { "id": "ph_hand_disinfection", "name": "手消毒", "en": "Hand disinfection", "year": 1850, "note": "塞梅尔维斯以氯水洗手降产褥热。", "deps": [] },
+    { "id": "ph_chemical_disinfectant", "name": "化学消毒剂", "en": "Chemical disinfectants", "year": 1850, "note": "石炭酸等杀灭环境与器械病原。", "deps": [] },
+    { "id": "ph_pasteurization", "name": "巴氏消毒", "en": "Pasteurization", "year": 1864, "note": "温热杀菌保留食品营养。", "deps": [] },
+    { "id": "ph_alcohol_disinfect", "name": "酒精消毒", "en": "Alcohol disinfection", "year": 1850, "note": "乙醇快速杀灭体表病原。", "deps": [] },
+    { "id": "ph_iodophor", "name": "碘伏消毒", "en": "Iodophor disinfection", "year": 1950, "note": "碘伏广谱低刺激皮肤消毒。", "deps": [] },
+    { "id": "ph_autoclave", "name": "高压灭菌", "en": "Autoclaving", "year": 1880, "note": "高压蒸汽可靠灭菌器械敷料。", "deps": [] },
+    { "id": "ph_disinfection_by_heat", "name": "干热灭菌", "en": "Dry heat sterilization", "year": 1880, "note": "干热烤箱灭菌耐高温物品。", "deps": [] },
+    { "id": "ph_uv_disinfection", "name": "紫外线消毒", "en": "UV disinfection", "year": 1900, "note": "紫外照射空气与物表杀菌。", "deps": [] },
+    { "id": "ph_chlorination", "name": "水氯化消毒", "en": "Water chlorination", "year": 1900, "note": "加氯灭活饮用水病原。", "deps": [] },
+    { "id": "ph_surface_disinfect", "name": "物表消毒", "en": "Surface disinfection", "year": 1900, "note": "擦拭环境表面清除病原。", "deps": [] },
+    { "id": "ph_fumigation", "name": "熏蒸消毒", "en": "Fumigation", "year": 1900, "note": "气体熏蒸密闭空间灭菌。", "deps": [] },
+    { "id": "ph_vector_control", "name": "病媒防治", "en": "Vector control", "year": 1900, "note": "灭蚊灭鼠阻断虫媒传播。", "deps": [] },
+    { "id": "ph_ultrasonic_clean", "name": "超声清洗", "en": "Ultrasonic cleaning", "year": 1950, "note": "超声空化去除器械污物。", "deps": [] },
+    { "id": "ph_pest_control", "name": "害虫控制", "en": "Pest control", "year": 1900, "note": "综合防治仓储与居所害虫。", "deps": [] }
+   ]
+  },
+  {
+   "name": "职业卫生",
+   "items": [
+    { "id": "ph_local_exhaust", "name": "局部排风", "en": "Local exhaust ventilation", "year": 1900, "note": "源头捕集粉尘与毒气。", "deps": [] },
+    { "id": "ph_ventilation_dust", "name": "通风防尘", "en": "Ventilation dust control", "year": 1900, "note": "通风稀释降低粉尘浓度。", "deps": [] },
+    { "id": "ph_respirator", "name": "呼吸防护器", "en": "Respirator", "year": 1900, "note": "过滤口罩防护吸入有害物。", "deps": [] },
+    { "id": "ph_protective_clothing", "name": "防护服", "en": "Protective clothing", "year": 1900, "note": "阻隔化学与生物危害。", "deps": [] },
+    { "id": "ph_occupational_survey", "name": "职业危害调查", "en": "Occupational hazard survey", "year": 1900, "note": "识别工作场所健康风险。", "deps": [] },
+    { "id": "ph_hearing_protection", "name": "听力防护", "en": "Hearing protection", "year": 1930, "note": "耳塞耳罩防噪声聋。", "deps": [] },
+    { "id": "ph_chemical_protection", "name": "化学防护", "en": "Chemical protection", "year": 1940, "note": "防化装备应对毒物暴露。", "deps": [] },
+    { "id": "ph_exposure_limit", "name": "职业暴露限值", "en": "Occupational exposure limit", "year": 1940, "note": "以阈值约束有害物接触。", "deps": [] },
+    { "id": "ph_radiation_protection", "name": "放射防护", "en": "Radiation protection", "year": 1950, "note": "以屏蔽与剂量限值防辐射。", "deps": [] },
+    { "id": "ph_ergonomics", "name": "工效学", "en": "Ergonomics", "year": 1950, "note": "适配人机减少劳损。", "deps": [] },
+    { "id": "ph_occupational_disease", "name": "职业病诊断", "en": "Occupational disease diagnosis", "year": 1950, "note": "规范诊断尘肺等职业病。", "deps": [] },
+    { "id": "ph_biological_monitoring", "name": "生物监测", "en": "Biological monitoring", "year": 1960, "note": "测体内毒物负荷评估暴露。", "deps": [] },
+    { "id": "ph_vibration_protection", "name": "振动防护", "en": "Vibration protection", "year": 1960, "note": "防振手套与工具减白指病。", "deps": [] },
+    { "id": "ph_respiratory_protection_standard", "name": "呼吸防护标准", "en": "Respiratory protection standard", "year": 1970, "note": "以标准规范防护装备选用。", "deps": [] }
+   ]
+  },
+  {
+   "name": "健康干预",
+   "items": [
+    { "id": "ph_health_education", "name": "健康教育", "en": "Health education", "year": 1900, "note": "传播知识促进行为改善。", "deps": [] },
+    { "id": "ph_nutrition_guideline", "name": "营养指导", "en": "Nutrition guidance", "year": 1900, "note": "膳食建议预防营养缺乏。", "deps": [] },
+    { "id": "ph_oral_health", "name": "口腔保健", "en": "Oral health", "year": 1900, "note": "刷牙与涂氟预防龋齿。", "deps": [] },
+    { "id": "ph_maternal_care", "name": "孕产保健", "en": "Maternal care", "year": 1900, "note": "产前检查与接生保障母婴。", "deps": [] },
+    { "id": "ph_physical_activity", "name": "运动处方", "en": "Exercise prescription", "year": 1950, "note": "个体化运动防慢病。", "deps": [] },
+    { "id": "ph_child_health", "name": "儿童保健", "en": "Child health", "year": 1950, "note": "生长发育监测与营养。", "deps": [] },
+    { "id": "ph_mental_health", "name": "心理卫生", "en": "Mental hygiene", "year": 1950, "note": "促进心理健康与预防疾病。", "deps": [] },
+    { "id": "ph_screening_program", "name": "筛查项目", "en": "Screening program", "year": 1960, "note": "以人群筛查早诊慢病。", "deps": [] },
+    { "id": "ph_tobacco_control", "name": "烟草控制", "en": "Tobacco control", "year": 1964, "note": "警示与限烟降低吸烟率。", "deps": [] },
+    { "id": "ph_community_health", "name": "社区健康促进", "en": "Community health promotion", "year": 1970, "note": "以社区动员改善健康。", "deps": [] },
+    { "id": "ph_alcohol_policy", "name": "限酒政策", "en": "Alcohol policy", "year": 1980, "note": "以税收与限制减酒害。", "deps": [] },
+    { "id": "ph_obesity_control", "name": "肥胖防控", "en": "Obesity control", "year": 2000, "note": "饮食运动综合干预肥胖。", "deps": [] }
+   ]
+  },
+  {
+   "name": "全球卫生",
+   "items": [
+    { "id": "ph_who_establish", "name": "世界卫生组织", "en": "World Health Organization", "year": 1948, "note": "UN下属全球卫生协调机构。", "deps": [] },
+    { "id": "ph_international_health_reg", "name": "国际卫生条例", "en": "International Health Regulations", "year": 1951, "note": "约束跨境疫病通报与合作。", "deps": [] },
+    { "id": "ph_negative_list", "name": "疫区国别列表", "en": "Country disease list", "year": 1851, "note": "国际公约列明疫区港口。", "deps": [] },
+    { "id": "ph_smallpox_eradication", "name": "天花根除", "en": "Smallpox eradication", "year": 1980, "note": "全球接种实现天花灭绝。", "deps": [] },
+    { "id": "ph_polio_elimination", "name": "脊灰消除", "en": "Polio elimination", "year": 1988, "note": "全球倡议推动脊灰清零。", "deps": [] },
+    { "id": "ph_global_surveillance", "name": "全球监测", "en": "Global surveillance", "year": 1990, "note": "网络互通预警新发传染病。", "deps": [] },
+    { "id": "ph_vaccine_alliance", "name": "疫苗联盟", "en": "Vaccine alliance (GAVI)", "year": 2000, "note": "资助低收入国疫苗可及。", "deps": [] },
+    { "id": "ph_health_systems", "name": "卫生系统建设", "en": "Health system strengthening", "year": 2000, "note": "提升基层服务与公平。", "deps": [] },
+    { "id": "ph_health_equity", "name": "卫生公平", "en": "Health equity", "year": 2000, "note": "缩小人群健康差距。", "deps": [] },
+    { "id": "ph_disease_eradication", "name": "疾病根除策略", "en": "Disease eradication strategy", "year": 1980, "note": "以接种监测根绝特定病。", "deps": [] },
+    { "id": "ph_global_fund", "name": "全球基金", "en": "Global Fund", "year": 2002, "note": "筹资抗击艾滋结核疟疾。", "deps": [] },
+    { "id": "ph_pandemic_preparedness", "name": "大流行防范", "en": "Pandemic preparedness", "year": 2005, "note": "预案储备应对大流行。", "deps": [] }
+   ]
+  },
+  {
+   "name": "院感控制",
+   "items": [
+    { "id": "ph_hand_hygiene", "name": "手卫生", "en": "Hand hygiene", "year": 1847, "note": "洗手制度大幅降院感率。", "deps": [] },
+    { "id": "ph_isolation_precaution", "name": "隔离预防", "en": "Isolation precaution", "year": 1880, "note": "按传播途径分类隔离患者。", "deps": [] },
+    { "id": "ph_negative_pressure", "name": "负压隔离", "en": "Negative pressure isolation", "year": 1900, "note": "负压病房防空气播散。", "deps": [] },
+    { "id": "ph_surgical_antiseptic", "name": "术前皮肤准备", "en": "Surgical skin prep", "year": 1880, "note": "术区消毒备皮防切口感染。", "deps": [] },
+    { "id": "ph_surveillance_infection", "name": "院感监测", "en": "Infection surveillance", "year": 1970, "note": "监测院感率指导防控。", "deps": [] },
+    { "id": "ph_surgical_site_prevention", "name": "手术部位感染防控", "en": "SSI prevention", "year": 1970, "note": "围术期措施减少切口感染。", "deps": [] },
+    { "id": "ph_ppe_protocol", "name": "个人防护用品规范", "en": "PPE protocol", "year": 1980, "note": "规范穿戴防护用品。", "deps": [] },
+    { "id": "ph_environmental_cleaning", "name": "环境清洁", "en": "Environmental cleaning", "year": 1980, "note": "高频接触面清洁降菌。", "deps": [] },
+    { "id": "ph_central_line_bundle", "name": "中心静脉导管防控", "en": "Central line bundle", "year": 1990, "note": "集束化措施防导管血感。", "deps": [] },
+    { "id": "ph_ventilator_bundle", "name": "呼吸机肺炎防控", "en": "Ventilator bundle", "year": 1990, "note": "集束护理降呼吸机肺炎。", "deps": [] },
+    { "id": "ph_antibiotic_stewardship", "name": "抗菌药物管理", "en": "Antibiotic stewardship", "year": 1990, "note": "合理用药延缓耐药产生。", "deps": [] },
+    { "id": "ph_multidrug_resistance", "name": "耐药菌监测", "en": "Multidrug-resistant surveillance", "year": 1990, "note": "监测耐药菌指导防控。", "deps": [] }
+   ]
+  },
+  {
+   "name": "应急",
+   "items": [
+    { "id": "ph_triage", "name": "检伤分类", "en": "Triage", "year": 1792, "note": "按伤情优先级分配救治。", "deps": [] },
+    { "id": "ph_field_hospital", "name": "野战医院", "en": "Field hospital", "year": 1800, "note": "机动部署收治大批伤员。", "deps": [] },
+    { "id": "ph_colostomy_emer", "name": "战伤后送", "en": "Casualty evacuation", "year": 1850, "note": "分级后送危重伤员。", "deps": [] },
+    { "id": "ph_disaster_medicine", "name": "灾害医学", "en": "Disaster medicine", "year": 1900, "note": "系统应对自然灾害医学需求。", "deps": [] },
+    { "id": "ph_ambulance_system", "name": "急救系统", "en": "Ambulance system", "year": 1900, "note": "专业急救与转运网络。", "deps": [] },
+    { "id": "ph_shock_resus_emer", "name": "应急复苏", "en": "Emergency resuscitation", "year": 1900, "note": "现场心肺复苏稳住生命。", "deps": [] },
+    { "id": "ph_mass_casualty", "name": "大规模伤亡应对", "en": "Mass casualty response", "year": 1940, "note": "预案统筹资源分批救治。", "deps": [] },
+    { "id": "ph_emergency_supply", "name": "应急物资储备", "en": "Emergency supply reserve", "year": 1950, "note": "储备药品器械应对突发。", "deps": [] },
+    { "id": "ph_search_rescue", "name": "搜救", "en": "Search and rescue", "year": 1900, "note": "定位营救受困幸存者。", "deps": [] },
+    { "id": "ph_chemical_emergency", "name": "化学事故应急", "en": "Chemical emergency response", "year": 1980, "note": "侦检洗消处置毒害。", "deps": [] },
+    { "id": "ph_biosafety_level", "name": "生物安全等级", "en": "Biosafety level", "year": 1970, "note": "分级防护实验室病原。", "deps": [] },
+    { "id": "ph_decon_emergency", "name": "洗消处置", "en": "Decontamination", "year": 1980, "note": "去除人员装备污染物。", "deps": [] },
+    { "id": "ph_emergency_comm", "name": "应急通信", "en": "Emergency communication", "year": 1990, "note": "以网络保障指挥调度。", "deps": ["internet"] },
+    { "id": "ph_medical_countermeasure", "name": "医疗对策", "en": "Medical countermeasure", "year": 2000, "note": "储备疫苗药械应对突发。", "deps": [] }
+   ]
+  },
+  {
+   "name": "统计",
+   "items": [
+    { "id": "ph_life_table", "name": "生命表", "en": "Life table", "year": 1600, "note": "以分年龄生存率描述死亡模式。", "deps": [] },
+    { "id": "ph_vital_statistics", "name": "生命统计", "en": "Vital statistics", "year": 1800, "note": "登记出生死亡婚姻人口事件。", "deps": [] },
+    { "id": "ph_mortality_rate", "name": "死亡率统计", "en": "Mortality statistics", "year": 1850, "note": "以率描述人群死亡水平。", "deps": [] },
+    { "id": "ph_icd", "name": "国际疾病分类", "en": "ICD", "year": 1893, "note": "统一疾病编码便于比较。", "deps": [] },
+    { "id": "ph_death_registration", "name": "死因登记", "en": "Death registration", "year": 1900, "note": "登记死因绘制死亡谱。", "deps": [] },
+    { "id": "ph_morbidity_stat", "name": "发病统计", "en": "Morbidity statistics", "year": 1900, "note": "量化疾病发生频率。", "deps": [] },
+    { "id": "ph_census_health", "name": "人口健康普查", "en": "Health census", "year": 1900, "note": "普查收集人口健康基线。", "deps": [] },
+    { "id": "ph_notifiable_disease", "name": "法定传染病报告", "en": "Notifiable disease reporting", "year": 1900, "note": "强制报告法定传染病。", "deps": [] },
+    { "id": "ph_health_survey", "name": "健康调查", "en": "Health survey", "year": 1950, "note": "抽样评估人群健康。", "deps": [] },
+    { "id": "ph_health_indicator", "name": "健康指标", "en": "Health indicator", "year": 1950, "note": "以指标监测健康水平。", "deps": [] },
+    { "id": "ph_sampling_survey", "name": "抽样调查", "en": "Sampling survey", "year": 1950, "note": "抽样高效估计总体参数。", "deps": [] },
+    { "id": "ph_health_economics", "name": "卫生经济学", "en": "Health economics", "year": 1960, "note": "评价干预成本效果。", "deps": [] },
+    { "id": "ph_burden_disease", "name": "疾病负担", "en": "Burden of disease", "year": 1990, "note": "以DALY量化疾病损失。", "deps": [] },
+    { "id": "ph_global_burden", "name": "全球疾病负担", "en": "Global burden of disease", "year": 1990, "note": "跨国比较健康损失。", "deps": [] }
+   ]
+  }
+ ]
+}

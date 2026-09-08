@@ -1,0 +1,1350 @@
+{
+ "cat": "basic",
+ "catName": "科学基础与方法",
+ "sub": "physics",
+ "subName": "物理探索",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实存在的人类物理发现/定律/研究装置；item.deps 仅写域内/族间额外依赖(可选)；year 均取真实关键时点。",
+ "anchors": [
+  "physics",
+  "mathematics",
+  "scientific_method",
+  "astronomy",
+  "chemistry",
+  "electromagnetism",
+  "thermodynamics",
+  "relativity_qm",
+  "electricity",
+  "magnets",
+  "optics",
+  "lasers"
+ ],
+ "families": [
+  {
+   "name": "经典力学与运动",
+   "items": [
+    {
+     "id": "phys_buoyancy",
+     "name": "阿基米德浮力定律",
+     "en": "Archimedes' principle",
+     "year": -250,
+     "note": "阿基米德发现浸入流体所受浮力等于排开流体重量，奠定静力学基础。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "phys_stevin",
+     "name": "斜面与静力平衡原理",
+     "en": "Stevinus' principle of the inclined plane",
+     "year": 1586,
+     "note": "斯蒂文用斜面链条论证静力平衡，静力学走向严格推导。",
+     "deps": []
+    },
+    {
+     "id": "phys_pendulum",
+     "name": "摆的等时性研究",
+     "en": "Isochronism of the pendulum",
+     "year": 1602,
+     "note": "伽利略发现单摆周期近似与摆长有关而与振幅无关，为计时与振动研究奠基。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "phys_freefall",
+     "name": "自由落体运动研究",
+     "en": "Study of free fall",
+     "year": 1604,
+     "note": "伽利略以斜面实验确立匀加速下落规律，推翻物体下落速度与重量相关的旧说。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "phys_projectile",
+     "name": "抛体运动规律",
+     "en": "Laws of projectile motion",
+     "year": 1638,
+     "note": "伽利略证明抛体轨迹为抛物线，运动的合成与分解观念由此确立。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "phys_centripetal",
+     "name": "向心力规律",
+     "en": "Centripetal force",
+     "year": 1659,
+     "note": "惠更斯给出圆周运动向心力公式，为天体运动与动力学提供关键工具。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "phys_momentum",
+     "name": "动量守恒定律",
+     "en": "Conservation of momentum",
+     "year": 1669,
+     "note": "惠更斯等研究碰撞现象后确立动量守恒，成为力学的普遍原理之一。",
+     "deps": [
+      "phys_centripetal"
+     ]
+    },
+    {
+     "id": "phys_hooke",
+     "name": "胡克定律",
+     "en": "Hooke's law",
+     "year": 1678,
+     "note": "胡克发现弹性形变与外力成正比的规律，成为材料力学与弹簧设计的基础。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "phys_gravity",
+     "name": "万有引力定律",
+     "en": "Law of universal gravitation",
+     "year": 1687,
+     "note": "牛顿在《原理》中提出引力与质量乘积成正比、与距离平方成反比，统一天上与地面运动。",
+     "deps": [
+      "mathematics",
+      "physics"
+     ]
+    },
+    {
+     "id": "phys_rigid_body",
+     "name": "刚体转动理论",
+     "en": "Rigid body dynamics",
+     "year": 1765,
+     "note": "欧拉建立刚体绕定点转动的运动方程，转动动力学由此系统化。",
+     "deps": [
+      "mathematics",
+      "physics"
+     ]
+    },
+    {
+     "id": "phys_friction",
+     "name": "库仑摩擦定律",
+     "en": "Coulomb's law of friction",
+     "year": 1785,
+     "note": "库仑以实验确立滑动摩擦力与正压力成正比、与接触面积基本无关。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "phys_cavendish",
+     "name": "卡文迪许扭秤实验",
+     "en": "Cavendish experiment",
+     "year": 1798,
+     "note": "卡文迪许用扭秤首次测得引力常数，使地球质量等可被称量。",
+     "deps": [
+      "phys_gravity"
+     ]
+    },
+    {
+     "id": "phys_young_modulus",
+     "name": "杨氏模量",
+     "en": "Young's modulus",
+     "year": 1807,
+     "note": "托马斯·杨定义材料拉伸的应力-应变比例系数，成为工程力学的基本参数。",
+     "deps": [
+      "phys_hooke"
+     ]
+    },
+    {
+     "id": "phys_coriolis",
+     "name": "科里奥利力",
+     "en": "Coriolis force",
+     "year": 1835,
+     "note": "科里奥利阐明旋转参考系中的惯性力，用以解释大气环流与洋流的偏转。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "phys_foucault_pendulum",
+     "name": "傅科摆",
+     "en": "Foucault pendulum",
+     "year": 1851,
+     "note": "傅科用长摆摆动平面的缓慢旋转直接演示了地球的自转。",
+     "deps": [
+      "phys_pendulum"
+     ]
+    },
+    {
+     "id": "phys_gyroscope",
+     "name": "陀螺仪原理",
+     "en": "Gyroscope principle",
+     "year": 1852,
+     "note": "傅科研制陀螺仪演示其转动轴指向不变，后被用于姿态测量与惯性导航。",
+     "deps": [
+      "phys_rigid_body"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "流体与波动·声学",
+   "items": [
+    {
+     "id": "phys_string_harmonics",
+     "name": "弦振动规律",
+     "en": "Laws of vibrating strings",
+     "year": 1636,
+     "note": "梅森测定弦振动频率与长度、张力及密度的关系，确立音乐声学的数量基础。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "phys_sound_speed",
+     "name": "声速测量",
+     "en": "Measurement of the speed of sound",
+     "year": 1640,
+     "note": "梅森用回声法测得声速近似值，声学开始进入定量研究。",
+     "deps": [
+      "scientific_method"
+     ]
+    },
+    {
+     "id": "phys_atmospheric_pressure",
+     "name": "大气压强的测定",
+     "en": "Measurement of atmospheric pressure",
+     "year": 1643,
+     "note": "托里拆利用水银柱测出大气压并解释真空形成，气压测量与真空研究由此发端。",
+     "deps": [
+      "scientific_method"
+     ]
+    },
+    {
+     "id": "phys_pascal_law",
+     "name": "帕斯卡定律",
+     "en": "Pascal's law",
+     "year": 1653,
+     "note": "帕斯卡指出静止流体中压强向各方向等值传递，构成液压机械的原理。",
+     "deps": []
+    },
+    {
+     "id": "phys_maddeburg",
+     "name": "马德堡半球实验",
+     "en": "Magdeburg hemispheres",
+     "year": 1654,
+     "note": "格里克以抽空球内空气后用马队拉开半球的表演直观证明大气压的存在。",
+     "deps": [
+      "phys_atmospheric_pressure"
+     ]
+    },
+    {
+     "id": "phys_viscosity_law",
+     "name": "牛顿黏性定律",
+     "en": "Newton's law of viscosity",
+     "year": 1687,
+     "note": "牛顿在《原理》中提出流体剪切应力与速度梯度成正比，奠定流变学基础。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "phys_bernoulli",
+     "name": "伯努利原理",
+     "en": "Bernoulli's principle",
+     "year": 1738,
+     "note": "伯努利建立理想流体沿流管能量守恒关系，解释升力与流速-压强关系。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "phys_chladni",
+     "name": "克拉尼图形",
+     "en": "Chladni figures",
+     "year": 1787,
+     "note": "克拉尼让沙粒显示振动板上的驻波节线，直观呈现声波振动模式。",
+     "deps": [
+      "phys_string_harmonics"
+     ]
+    },
+    {
+     "id": "phys_surface_tension",
+     "name": "表面张力理论",
+     "en": "Theory of surface tension",
+     "year": 1805,
+     "note": "杨与拉普拉斯以分子力解释弯月面压强差，毛细现象获得定量理论。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "phys_doppler",
+     "name": "多普勒效应",
+     "en": "Doppler effect",
+     "year": 1842,
+     "note": "多普勒指出波源与观察者相对运动引起频率变化，后应用于天文与测速。",
+     "deps": [
+      "phys_string_harmonics"
+     ]
+    },
+    {
+     "id": "phys_navier_stokes",
+     "name": "纳维-斯托克斯方程",
+     "en": "Navier-Stokes equations",
+     "year": 1845,
+     "note": "斯托克斯完善黏性流体运动方程，成为流体力学与工程计算的核心方程。",
+     "deps": [
+      "phys_bernoulli"
+     ]
+    },
+    {
+     "id": "phys_reynolds",
+     "name": "雷诺数",
+     "en": "Reynolds number",
+     "year": 1883,
+     "note": "雷诺用无量纲数划分层流与湍流，流体动力学实验与工程换算由此标准化。",
+     "deps": [
+      "phys_navier_stokes"
+     ]
+    },
+    {
+     "id": "phys_shockwave",
+     "name": "激波与马赫数",
+     "en": "Shock waves and Mach number",
+     "year": 1887,
+     "note": "马赫以光学实验观测超声速弹丸激波并定义马赫数，高速空气动力学由此发端。",
+     "deps": [
+      "phys_doppler"
+     ]
+    },
+    {
+     "id": "phys_cavitation",
+     "name": "空化现象理论",
+     "en": "Theory of cavitation",
+     "year": 1917,
+     "note": "瑞利分析水中气泡溃灭的压强冲击，空化理论成为船舶与泵设计的重要依据。",
+     "deps": [
+      "phys_navier_stokes"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "热学与统计物理",
+   "items": [
+    {
+     "id": "phys_latent_heat",
+     "name": "潜热与比热研究",
+     "en": "Study of latent and specific heat",
+     "year": 1761,
+     "note": "布莱克区分热量与温度并提出潜热与比热概念，量热学由此建立。",
+     "deps": []
+    },
+    {
+     "id": "phys_heat_conduction",
+     "name": "热传导定律",
+     "en": "Fourier's law of heat conduction",
+     "year": 1822,
+     "note": "傅里叶给出热流量与温度梯度成正比的关系，热传导分析由此数量化。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "phys_energy_conservation",
+     "name": "热功当量与能量守恒",
+     "en": "Mechanical equivalent of heat and conservation of energy",
+     "year": 1843,
+     "note": "焦耳以搅拌实验测定热功当量，与迈耶、亥姆霍兹共同确立能量守恒定律。",
+     "deps": [
+      "thermodynamics"
+     ]
+    },
+    {
+     "id": "phys_joule_thomson",
+     "name": "焦耳-汤姆孙效应",
+     "en": "Joule-Thomson effect",
+     "year": 1852,
+     "note": "焦耳与汤姆孙发现气体节流膨胀降温，成为制冷与气体液化的重要原理。",
+     "deps": [
+      "phys_energy_conservation"
+     ]
+    },
+    {
+     "id": "phys_kinetic_theory",
+     "name": "气体分子运动论",
+     "en": "Kinetic theory of gases",
+     "year": 1857,
+     "note": "克劳修斯把气体压强归结为分子碰撞，分子图像开始解释宏观热现象。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "phys_maxwell_distribution",
+     "name": "麦克斯韦速率分布",
+     "en": "Maxwell-Boltzmann distribution",
+     "year": 1860,
+     "note": "麦克斯韦给出气体分子速率分布规律，气体动理论的统计特征由此显现。",
+     "deps": [
+      "phys_kinetic_theory"
+     ]
+    },
+    {
+     "id": "phys_entropy",
+     "name": "熵与热力学第二定律",
+     "en": "Entropy and the second law of thermodynamics",
+     "year": 1865,
+     "note": "克劳修斯引入熵并表述热力学第二定律，热过程方向性由此得到统一刻画。",
+     "deps": [
+      "thermodynamics"
+     ]
+    },
+    {
+     "id": "phys_critical_point",
+     "name": "临界现象的发现",
+     "en": "Discovery of the critical point",
+     "year": 1869,
+     "note": "安德鲁斯发现二氧化碳存在临界温度，气液两相在此之上不可区分。",
+     "deps": [
+      "phys_energy_conservation"
+     ]
+    },
+    {
+     "id": "phys_boltzmann",
+     "name": "玻尔兹曼统计力学",
+     "en": "Boltzmann statistical mechanics",
+     "year": 1877,
+     "note": "玻尔兹曼建立熵与微观状态数的关系，把热力学纳入概率统计框架。",
+     "deps": [
+      "phys_maxwell_distribution"
+     ]
+    },
+    {
+     "id": "phys_thermal_radiation",
+     "name": "热辐射定律",
+     "en": "Stefan-Boltzmann law",
+     "year": 1879,
+     "note": "斯特藩由实验发现黑体辐射功率正比于温度四次方，玻尔兹曼随后给出理论推导。",
+     "deps": [
+      "phys_boltzmann"
+     ]
+    },
+    {
+     "id": "phys_wien_law",
+     "name": "维恩位移定律",
+     "en": "Wien's displacement law",
+     "year": 1893,
+     "note": "维恩给出黑体辐射峰值波长与温度成反比的规律，为量子假说铺路。",
+     "deps": [
+      "phys_thermal_radiation"
+     ]
+    },
+    {
+     "id": "phys_brownian_theory",
+     "name": "布朗运动的统计理论",
+     "en": "Statistical theory of Brownian motion",
+     "year": 1905,
+     "note": "爱因斯坦以分子涨落解释布朗运动，为原子与分子实在性提供定量证据。",
+     "deps": [
+      "phys_boltzmann"
+     ]
+    },
+    {
+     "id": "phys_third_law",
+     "name": "热力学第三定律",
+     "en": "Third law of thermodynamics",
+     "year": 1906,
+     "note": "能斯特提出绝对零度附近熵趋于常数的定理，低温化学平衡获得依据。",
+     "deps": [
+      "phys_entropy"
+     ]
+    },
+    {
+     "id": "phys_heat_capacity_quantum",
+     "name": "固体比热的量子理论",
+     "en": "Quantum theory of specific heat",
+     "year": 1907,
+     "note": "爱因斯坦用能量子解释低温固体比热下降，德拜1912年进一步完善晶格振动模型。",
+     "deps": [
+      "phys_thermal_radiation"
+     ]
+    },
+    {
+     "id": "phys_helium_liquefaction",
+     "name": "氦的液化",
+     "en": "Liquefaction of helium",
+     "year": 1908,
+     "note": "昂内斯液化氦获得4.2开尔文低温，开启低温物理实验研究。",
+     "deps": [
+      "phys_joule_thomson"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "光学与光物理",
+   "items": [
+    {
+     "id": "phys_snell",
+     "name": "光的折射定律",
+     "en": "Snell's law of refraction",
+     "year": 1621,
+     "note": "斯涅耳与笛卡尔确立折射角与入射角的正弦比恒定，成为几何光学基石。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "phys_diffraction",
+     "name": "光的衍射现象",
+     "en": "Discovery of light diffraction",
+     "year": 1665,
+     "note": "格里马尔迪观察到光绕过障碍物的弯曲现象，挑战光的直线传播观点。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "phys_dispersion",
+     "name": "光的色散",
+     "en": "Dispersion of white light",
+     "year": 1666,
+     "note": "牛顿用棱镜把白光分解为彩色光谱，证明白光由不同颜色的光组成。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "phys_light_speed",
+     "name": "光速的测定",
+     "en": "Measurement of the speed of light",
+     "year": 1676,
+     "note": "罗默由木卫蚀的时间差首次估算光速有限，斐索1849年在地面完成测定。",
+     "deps": [
+      "astronomy"
+     ]
+    },
+    {
+     "id": "phys_huygens_wave",
+     "name": "光的波动说",
+     "en": "Huygens' wave theory of light",
+     "year": 1678,
+     "note": "惠更斯提出以子波叠加解释光传播的波动理论，与微粒说长期并存。",
+     "deps": [
+      "phys_diffraction"
+     ]
+    },
+    {
+     "id": "phys_achromatic_lens",
+     "name": "消色差透镜",
+     "en": "Achromatic lens",
+     "year": 1758,
+     "note": "多朗德用不同折射率玻璃组合消除色差，望远镜与显微镜成像质量大幅提高。",
+     "deps": [
+      "phys_dispersion"
+     ]
+    },
+    {
+     "id": "phys_infrared",
+     "name": "红外线的发现",
+     "en": "Discovery of infrared radiation",
+     "year": 1800,
+     "note": "赫歇尔用温度计探测到红光之外存在不可见辐射，红外研究由此开始。",
+     "deps": [
+      "phys_dispersion"
+     ]
+    },
+    {
+     "id": "phys_ultraviolet",
+     "name": "紫外线的发现",
+     "en": "Discovery of ultraviolet radiation",
+     "year": 1801,
+     "note": "里特发现可见光紫端之外能使银盐变黑的辐射，紫外光谱学随之展开。",
+     "deps": [
+      "phys_dispersion"
+     ]
+    },
+    {
+     "id": "phys_double_slit",
+     "name": "杨氏双缝干涉",
+     "en": "Young's double-slit experiment",
+     "year": 1801,
+     "note": "托马斯·杨用双缝显示光的干涉条纹，为光的波动说提供决定性证据。",
+     "deps": [
+      "phys_huygens_wave"
+     ]
+    },
+    {
+     "id": "phys_polarization",
+     "name": "光的偏振",
+     "en": "Polarization of light",
+     "year": 1809,
+     "note": "马吕斯发现光反射后出现偏振现象，证实光是横波，为波动说提供关键证据。",
+     "deps": [
+      "phys_double_slit"
+     ]
+    },
+    {
+     "id": "phys_fraunhofer",
+     "name": "夫琅禾费谱线",
+     "en": "Fraunhofer lines",
+     "year": 1814,
+     "note": "夫琅禾费在太阳光谱中发现暗线，日后成为天体化学与光谱学的基础。",
+     "deps": [
+      "phys_dispersion"
+     ]
+    },
+    {
+     "id": "phys_fresnel",
+     "name": "菲涅耳衍射理论",
+     "en": "Fresnel's wave theory of diffraction",
+     "year": 1818,
+     "note": "菲涅耳以子波干涉完整解释衍射与直进，波动光学理论由此成熟。",
+     "deps": [
+      "phys_double_slit"
+     ]
+    },
+    {
+     "id": "phys_diffraction_grating",
+     "name": "衍射光栅",
+     "en": "Diffraction grating",
+     "year": 1821,
+     "note": "夫琅禾费制作精密刻线光栅测定波长，光谱测量精度获得大幅提升。",
+     "deps": [
+      "phys_fresnel",
+      "phys_fraunhofer"
+     ]
+    },
+    {
+     "id": "phys_interferometer",
+     "name": "迈克耳孙干涉仪",
+     "en": "Michelson interferometer",
+     "year": 1881,
+     "note": "迈克耳孙研制分光干涉装置，精密测量长度与光速，并用于检验以太。",
+     "deps": [
+      "phys_fresnel"
+     ]
+    },
+    {
+     "id": "phys_michelson_morley",
+     "name": "迈克耳孙-莫雷实验",
+     "en": "Michelson-Morley experiment",
+     "year": 1887,
+     "note": "该实验未测到光速随地球运动的变化，为狭义相对论提供了关键反证。",
+     "deps": [
+      "phys_interferometer"
+     ]
+    },
+    {
+     "id": "phys_stimulated_emission",
+     "name": "受激辐射理论",
+     "en": "Theory of stimulated emission",
+     "year": 1917,
+     "note": "爱因斯坦由量子跃迁论证受激辐射的存在，为微波激射器与激光奠定理论。",
+     "deps": []
+    },
+    {
+     "id": "phys_radiation_pressure",
+     "name": "光压的测量",
+     "en": "Measurement of radiation pressure",
+     "year": 1901,
+     "note": "列别捷夫以精密扭秤测出光压数值，验证电磁场确实携带动量与能量。",
+     "deps": [
+      "phys_interferometer"
+     ]
+    },
+    {
+     "id": "phys_holography",
+     "name": "全息术",
+     "en": "Holography",
+     "year": 1948,
+     "note": "伽博提出记录物体波前相位与振幅的全息方法，1960年激光出现后获得实用。",
+     "deps": [
+      "phys_double_slit"
+     ]
+    },
+    {
+     "id": "phys_maser",
+     "name": "微波激射器",
+     "en": "Maser",
+     "year": 1954,
+     "note": "汤斯等利用受激辐射实现氨分子微波放大，是激光器问世前的同源技术。",
+     "deps": [
+      "phys_stimulated_emission"
+     ]
+    },
+    {
+     "id": "phys_nonlinear_optics",
+     "name": "非线性光学",
+     "en": "Nonlinear optics",
+     "year": 1961,
+     "note": "弗兰肯等在激光照射下观察到倍频效应，非线性光学成为独立研究领域。",
+     "deps": [
+      "lasers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "电学与磁学",
+   "items": [
+    {
+     "id": "phys_terrestrial_magnetism",
+     "name": "地磁学的奠基",
+     "en": "Foundations of geomagnetism",
+     "year": 1600,
+     "note": "吉尔伯特在《论磁》中论证地球本身是一块大磁体，磁学研究由此科学化。",
+     "deps": [
+      "magnets"
+     ]
+    },
+    {
+     "id": "phys_lightning",
+     "name": "雷电的电学本质",
+     "en": "Electrical nature of lightning",
+     "year": 1752,
+     "note": "富兰克林风筝实验证明雷电与摩擦电同质，并据此发明避雷针。",
+     "deps": [
+      "magnets"
+     ]
+    },
+    {
+     "id": "phys_coulomb_law",
+     "name": "库仑定律",
+     "en": "Coulomb's law",
+     "year": 1785,
+     "note": "库仑以扭秤实验确立点电荷间作用力与距离平方成反比。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "phys_galvani",
+     "name": "生物电现象",
+     "en": "Animal electricity",
+     "year": 1791,
+     "note": "伽伐尼发现蛙腿肌肉在电刺激下收缩，引发电流化学研究并促电池问世。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "phys_oersted",
+     "name": "电流的磁效应",
+     "en": "Oersted's discovery",
+     "year": 1820,
+     "note": "奥斯特发现通电导线使磁针偏转，首次揭示电与磁之间的联系。",
+     "deps": []
+    },
+    {
+     "id": "phys_biot_savart",
+     "name": "毕奥-萨伐尔定律",
+     "en": "Biot-Savart law",
+     "year": 1820,
+     "note": "毕奥与萨伐尔给出电流元产生磁场的定量关系，静磁学由此建立。",
+     "deps": []
+    },
+    {
+     "id": "phys_ampere_force",
+     "name": "安培力定律",
+     "en": "Ampère's force law",
+     "year": 1820,
+     "note": "安培发现平行载流导线相互作用力并建立电动力学定律，磁性源于电流的假说随之提出。",
+     "deps": []
+    },
+    {
+     "id": "phys_seebeck",
+     "name": "塞贝克效应",
+     "en": "Seebeck effect",
+     "year": 1821,
+     "note": "塞贝克发现两种金属连接点温差会产生电流，热电效应研究由此开始。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "phys_ohm_law",
+     "name": "欧姆定律",
+     "en": "Ohm's law",
+     "year": 1827,
+     "note": "欧姆确定电压、电流与电阻的比例关系，电路分析由此定量化。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "phys_induction",
+     "name": "电磁感应定律",
+     "en": "Law of electromagnetic induction",
+     "year": 1831,
+     "note": "法拉第发现变化磁场在回路中产生感应电流，发电机与变压器的原理由此确立。",
+     "deps": [
+      "phys_oersted"
+     ]
+    },
+    {
+     "id": "phys_lenz_law",
+     "name": "楞次定律",
+     "en": "Lenz's law",
+     "year": 1834,
+     "note": "楞次给出感应电流方向判别法则，体现电磁感应中的能量守恒。",
+     "deps": [
+      "phys_induction"
+     ]
+    },
+    {
+     "id": "phys_faraday_cage",
+     "name": "法拉第笼",
+     "en": "Faraday cage",
+     "year": 1836,
+     "note": "法拉第演示导体空腔屏蔽外电场，静电屏蔽原理由此确立并应用于防护。",
+     "deps": [
+      "phys_coulomb_law"
+     ]
+    },
+    {
+     "id": "phys_kirchhoff_circuit",
+     "name": "基尔霍夫电路定律",
+     "en": "Kirchhoff's circuit laws",
+     "year": 1845,
+     "note": "基尔霍夫提出节点电流与回路电压两定律，复杂电路分析由此系统化。",
+     "deps": [
+      "phys_ohm_law"
+     ]
+    },
+    {
+     "id": "phys_eddy_current",
+     "name": "涡电流现象",
+     "en": "Eddy currents",
+     "year": 1855,
+     "note": "傅科发现交变磁场在导体中感应出涡状电流，感应加热与电磁阻尼皆赖此原理。",
+     "deps": [
+      "phys_induction"
+     ]
+    },
+    {
+     "id": "phys_hall_effect",
+     "name": "霍尔效应",
+     "en": "Hall effect",
+     "year": 1879,
+     "note": "霍尔发现载流导体在磁场中产生横向电压，成为探测磁场与载流子性质的手段。",
+     "deps": [
+      "phys_ampere_force"
+     ]
+    },
+    {
+     "id": "phys_piezoelectric",
+     "name": "压电效应",
+     "en": "Piezoelectricity",
+     "year": 1880,
+     "note": "居里兄弟发现石英受压产生电荷的压电效应，日后用于振荡器与传感器。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "phys_hertz_waves",
+     "name": "电磁波的实验验证",
+     "en": "Experimental verification of electromagnetic waves",
+     "year": 1888,
+     "note": "赫兹用火花放电产生并接收电磁波，验证麦克斯韦预言，无线通信由此开启。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "phys_lorentz_force",
+     "name": "洛伦兹力",
+     "en": "Lorentz force",
+     "year": 1895,
+     "note": "洛伦兹给出电荷在电磁场中受力公式，成为带电粒子动力学的基本方程。",
+     "deps": [
+      "electromagnetism"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "原子、量子与相对论",
+   "items": [
+    {
+     "id": "phys_xray",
+     "name": "X射线的发现",
+     "en": "Discovery of X-rays",
+     "year": 1895,
+     "note": "伦琴发现穿透力很强的未知射线并拍摄人手骨骼照片，直接催生医学影像学。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "phys_radioactivity",
+     "name": "放射性的发现",
+     "en": "Discovery of radioactivity",
+     "year": 1896,
+     "note": "贝克勒尔发现铀盐使照相底片感光，物质自发辐射现象由此进入科学视野。",
+     "deps": [
+      "phys_xray"
+     ]
+    },
+    {
+     "id": "phys_electron",
+     "name": "电子的发现",
+     "en": "Discovery of the electron",
+     "year": 1897,
+     "note": "汤姆孙由阴极射线测得其荷质比，确认原子内部存在带负电的基本粒子。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "phys_planck_quantum",
+     "name": "能量子假说",
+     "en": "Planck's quantum hypothesis",
+     "year": 1900,
+     "note": "普朗克为解释黑体辐射引入能量量子化，量子概念由此进入物理学。",
+     "deps": [
+      "phys_thermal_radiation"
+     ]
+    },
+    {
+     "id": "phys_decay_law",
+     "name": "放射性衰变定律",
+     "en": "Radioactive decay law",
+     "year": 1902,
+     "note": "卢瑟福与索迪建立指数衰变规律并发现原子嬗变，核化学由此奠基。",
+     "deps": [
+      "phys_radioactivity"
+     ]
+    },
+    {
+     "id": "phys_photoelectric",
+     "name": "光电效应的光量子解释",
+     "en": "Einstein's explanation of the photoelectric effect",
+     "year": 1905,
+     "note": "爱因斯坦以光量子假设解释光电效应，确立光的粒子性并获1921年诺贝尔奖。",
+     "deps": [
+      "phys_planck_quantum"
+     ]
+    },
+    {
+     "id": "phys_special_relativity",
+     "name": "狭义相对论",
+     "en": "Special relativity",
+     "year": 1905,
+     "note": "爱因斯坦提出光速不变与相对性原理，导出质能关系E等于mc平方，重塑时空观。",
+     "deps": [
+      "phys_michelson_morley"
+     ]
+    },
+    {
+     "id": "phys_millikan",
+     "name": "密立根油滴实验",
+     "en": "Millikan oil-drop experiment",
+     "year": 1909,
+     "note": "密立根以油滴平衡电场测定电子电荷，证明电荷存在最小单位。",
+     "deps": [
+      "phys_electron"
+     ]
+    },
+    {
+     "id": "phys_rutherford_nucleus",
+     "name": "原子核的发现",
+     "en": "Discovery of the atomic nucleus",
+     "year": 1911,
+     "note": "卢瑟福由α粒子大角散射推断原子中心存在带正电的致密核。",
+     "deps": [
+      "phys_radioactivity"
+     ]
+    },
+    {
+     "id": "phys_bohr_atom",
+     "name": "玻尔原子模型",
+     "en": "Bohr model of the atom",
+     "year": 1913,
+     "note": "玻尔用量子化轨道解释氢原子光谱，量子理论首次成功描述原子结构。",
+     "deps": [
+      "phys_planck_quantum"
+     ]
+    },
+    {
+     "id": "phys_franck_hertz",
+     "name": "弗兰克-赫兹实验",
+     "en": "Franck-Hertz experiment",
+     "year": 1914,
+     "note": "弗兰克与赫兹以电子碰撞汞蒸气验证原子能级分立，支持玻尔模型。",
+     "deps": [
+      "phys_bohr_atom"
+     ]
+    },
+    {
+     "id": "phys_general_relativity",
+     "name": "广义相对论",
+     "en": "General relativity",
+     "year": 1915,
+     "note": "爱因斯坦把引力解释为时空弯曲，并以场方程描述物质与时空的关系。",
+     "deps": [
+      "phys_special_relativity"
+     ]
+    },
+    {
+     "id": "phys_transmutation",
+     "name": "人工核嬗变",
+     "en": "Artificial nuclear transmutation",
+     "year": 1919,
+     "note": "卢瑟福用α粒子轰击氮核首次实现人工元素转变，核反应研究由此展开。",
+     "deps": [
+      "phys_rutherford_nucleus"
+     ]
+    },
+    {
+     "id": "phys_light_deflection",
+     "name": "光线偏折的日食观测",
+     "en": "Solar-eclipse observation of light bending",
+     "year": 1919,
+     "note": "爱丁顿日食观测证实星光掠过太阳发生偏折，广义相对论获首个观测支持。",
+     "deps": [
+      "phys_general_relativity"
+     ]
+    },
+    {
+     "id": "phys_stern_gerlach",
+     "name": "斯特恩-盖拉赫实验",
+     "en": "Stern-Gerlach experiment",
+     "year": 1922,
+     "note": "银原子束通过非均匀磁场分裂为两束，揭示电子自旋与空间量子化。",
+     "deps": [
+      "phys_bohr_atom"
+     ]
+    },
+    {
+     "id": "phys_compton",
+     "name": "康普顿效应",
+     "en": "Compton effect",
+     "year": 1923,
+     "note": "康普顿观测X射线散射波长变化，证明光子具有动量，光量子说获进一步确认。",
+     "deps": [
+      "phys_photoelectric"
+     ]
+    },
+    {
+     "id": "phys_de_broglie",
+     "name": "物质波假说",
+     "en": "de Broglie hypothesis",
+     "year": 1924,
+     "note": "德布罗意提出粒子伴随波长与动量成反比的波，揭示波粒二象性的普遍性。",
+     "deps": [
+      "phys_compton"
+     ]
+    },
+    {
+     "id": "phys_matrix_mechanics",
+     "name": "矩阵力学",
+     "en": "Matrix mechanics",
+     "year": 1925,
+     "note": "海森堡、玻恩与约当用非对易矩阵表述量子力学，量子理论获得严密形式。",
+     "deps": [
+      "phys_compton"
+     ]
+    },
+    {
+     "id": "phys_pauli_exclusion",
+     "name": "泡利不相容原理",
+     "en": "Pauli exclusion principle",
+     "year": 1925,
+     "note": "泡利提出同一原子中两电子不能占据相同量子态，解释元素周期结构。",
+     "deps": [
+      "phys_bohr_atom"
+     ]
+    },
+    {
+     "id": "phys_schrodinger",
+     "name": "薛定谔波动方程",
+     "en": "Schrödinger equation",
+     "year": 1926,
+     "note": "薛定谔建立波动力学基本方程，波函数成为描述微观系统的核心工具。",
+     "deps": [
+      "phys_de_broglie"
+     ]
+    },
+    {
+     "id": "phys_uncertainty",
+     "name": "不确定性原理",
+     "en": "Uncertainty principle",
+     "year": 1927,
+     "note": "海森堡指出位置与动量等共轭量不能同时精确确定，划定量子测量的边界。",
+     "deps": [
+      "phys_matrix_mechanics"
+     ]
+    },
+    {
+     "id": "phys_electron_diffraction",
+     "name": "电子衍射实验",
+     "en": "Davisson-Germer experiment",
+     "year": 1927,
+     "note": "戴维森与革末在镍晶体上观测到电子衍射，实验证实电子的波动性。",
+     "deps": [
+      "phys_de_broglie"
+     ]
+    },
+    {
+     "id": "phys_dirac_equation",
+     "name": "狄拉克方程",
+     "en": "Dirac equation",
+     "year": 1928,
+     "note": "狄拉克写出相对论性电子方程，预言反粒子存在，统一量子论与狭义相对论。",
+     "deps": [
+      "phys_schrodinger",
+      "phys_special_relativity"
+     ]
+    },
+    {
+     "id": "phys_tunneling",
+     "name": "量子隧穿效应",
+     "en": "Quantum tunneling",
+     "year": 1928,
+     "note": "伽莫夫用隧穿解释α衰变，势垒穿透成为扫描隧道显微与半导体器件基础。",
+     "deps": [
+      "phys_schrodinger"
+     ]
+    },
+    {
+     "id": "phys_qed",
+     "name": "量子电动力学",
+     "en": "Quantum electrodynamics",
+     "year": 1947,
+     "note": "费曼、施温格与朝永振一郎用重整化处理电子与光相互作用，精度极高。",
+     "deps": [
+      "phys_dirac_equation"
+     ]
+    },
+    {
+     "id": "phys_bell_inequality",
+     "name": "量子纠缠与贝尔不等式",
+     "en": "Quantum entanglement and Bell's inequality",
+     "year": 1964,
+     "note": "贝尔给出检验局域隐变量的不等式，量子纠缠随后经实验确立为真实现象。",
+     "deps": [
+      "phys_qed"
+     ]
+    },
+    {
+     "id": "phys_gravitational_waves",
+     "name": "引力波探测",
+     "en": "Detection of gravitational waves",
+     "year": 2015,
+     "note": "LIGO激光干涉仪首次直接探测双黑洞并合产生的引力波，验证广义相对论预言。",
+     "deps": [
+      "phys_general_relativity",
+      "lasers"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "核物理、粒子与凝聚态",
+   "items": [
+    {
+     "id": "phys_superconductivity",
+     "name": "超导电性的发现",
+     "en": "Discovery of superconductivity",
+     "year": 1911,
+     "note": "昂内斯发现汞在4.2开尔文以下电阻骤降为零，超导现象由此被发现。",
+     "deps": [
+      "phys_helium_liquefaction"
+     ]
+    },
+    {
+     "id": "phys_cosmic_ray",
+     "name": "宇宙射线的发现",
+     "en": "Discovery of cosmic rays",
+     "year": 1912,
+     "note": "赫斯乘气球观测到随高度增强的穿透性辐射，发现来自宇宙的高能粒子。",
+     "deps": [
+      "phys_radioactivity"
+     ]
+    },
+    {
+     "id": "phys_positron",
+     "name": "正电子的发现",
+     "en": "Discovery of the positron",
+     "year": 1932,
+     "note": "安德森在宇宙线云室照片中发现正电子，证实反物质预言。",
+     "deps": [
+      "phys_dirac_equation"
+     ]
+    },
+    {
+     "id": "phys_neutron",
+     "name": "中子的发现",
+     "en": "Discovery of the neutron",
+     "year": 1932,
+     "note": "查德威克用α粒子轰击铍发现中性粒子，原子核由质子与中子组成自此明确。",
+     "deps": [
+      "phys_rutherford_nucleus"
+     ]
+    },
+    {
+     "id": "phys_cyclotron",
+     "name": "回旋加速器",
+     "en": "Cyclotron",
+     "year": 1932,
+     "note": "劳伦斯建成用交变电场反复加速粒子的回旋加速器，高能核物理实验由此展开。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "phys_meissner",
+     "name": "迈斯纳效应",
+     "en": "Meissner effect",
+     "year": 1933,
+     "note": "迈斯纳与奥克森菲尔德发现超导体完全排斥磁场，超导与理想导体得以区分。",
+     "deps": [
+      "phys_superconductivity"
+     ]
+    },
+    {
+     "id": "phys_superfluid",
+     "name": "氦的超流态",
+     "en": "Superfluid helium",
+     "year": 1938,
+     "note": "卡皮查发现液氦在低温下黏度消失并爬壁流动，宏观量子现象由此确立。",
+     "deps": [
+      "phys_helium_liquefaction"
+     ]
+    },
+    {
+     "id": "phys_fission",
+     "name": "核裂变的发现",
+     "en": "Discovery of nuclear fission",
+     "year": 1938,
+     "note": "哈恩与斯特拉斯曼发现铀经中子轰击裂为更轻核，迈特纳给出理论解释。",
+     "deps": [
+      "phys_neutron"
+     ]
+    },
+    {
+     "id": "phys_synchrotron",
+     "name": "同步加速器",
+     "en": "Synchrotron",
+     "year": 1947,
+     "note": "麦克米兰等发展同步加速原理，同步加速器成为高能物理与同步辐射光源的载体。",
+     "deps": [
+      "phys_cyclotron"
+     ]
+    },
+    {
+     "id": "phys_neutrino",
+     "name": "中微子的探测",
+     "en": "Detection of the neutrino",
+     "year": 1956,
+     "note": "莱因斯与考恩在反应堆旁探测到反中微子，证实泡利1930年预言的粒子。",
+     "deps": [
+      "phys_fission"
+     ]
+    },
+    {
+     "id": "phys_parity_violation",
+     "name": "宇称不守恒的发现",
+     "en": "Discovery of parity violation",
+     "year": 1956,
+     "note": "李政道与杨振宁提出弱相互作用宇称不守恒，吴健雄实验随即证实。",
+     "deps": [
+      "phys_radioactivity"
+     ]
+    },
+    {
+     "id": "phys_bcs",
+     "name": "BCS超导理论",
+     "en": "BCS theory of superconductivity",
+     "year": 1957,
+     "note": "巴丁、库珀与施里弗以电子库珀对凝聚解释超导，微观超导理论由此建立。",
+     "deps": [
+      "phys_superconductivity"
+     ]
+    },
+    {
+     "id": "phys_josephson",
+     "name": "约瑟夫森效应",
+     "en": "Josephson effect",
+     "year": 1962,
+     "note": "约瑟夫森预言超导结中的无电压超流与交流效应，后用于精密测量与量子比特。",
+     "deps": [
+      "phys_bcs"
+     ]
+    },
+    {
+     "id": "phys_quark",
+     "name": "夸克模型",
+     "en": "Quark model",
+     "year": 1964,
+     "note": "盖尔曼与茨威格提出强子由夸克组成，粒子分类获得统一说明。",
+     "deps": [
+      "phys_cosmic_ray"
+     ]
+    },
+    {
+     "id": "phys_electroweak",
+     "name": "弱电统一理论",
+     "en": "Electroweak unification",
+     "year": 1967,
+     "note": "温伯格与萨拉姆把电磁力与弱力统一为电弱相互作用，标准模型的基石。",
+     "deps": [
+      "phys_qed"
+     ]
+    },
+    {
+     "id": "phys_quantum_hall",
+     "name": "量子霍尔效应",
+     "en": "Quantum Hall effect",
+     "year": 1980,
+     "note": "克利青发现二维电子气霍尔电导精确量子化，电阻标准由此重新定义。",
+     "deps": [
+      "phys_hall_effect",
+      "phys_schrodinger"
+     ]
+    },
+    {
+     "id": "phys_wboson",
+     "name": "W与Z玻色子的发现",
+     "en": "Discovery of the W and Z bosons",
+     "year": 1983,
+     "note": "欧洲核子研究中心在质子-反质子对撞中发现传递弱力的W与Z粒子。",
+     "deps": [
+      "phys_electroweak"
+     ]
+    },
+    {
+     "id": "phys_high_tc",
+     "name": "高温超导电性",
+     "en": "High-temperature superconductivity",
+     "year": 1986,
+     "note": "柏诺兹与米勒发现铜氧化物陶瓷在35开尔文以上超导，掀起高温超导研究热潮。",
+     "deps": [
+      "phys_bcs"
+     ]
+    },
+    {
+     "id": "phys_bec",
+     "name": "玻色-爱因斯坦凝聚",
+     "en": "Bose-Einstein condensate",
+     "year": 1995,
+     "note": "威曼等以激光冷却与磁囚禁实现铷原子凝聚，宏观量子态首次在实验室获得。",
+     "deps": [
+      "lasers"
+     ]
+    },
+    {
+     "id": "phys_higgs",
+     "name": "希格斯玻色子的发现",
+     "en": "Discovery of the Higgs boson",
+     "year": 2012,
+     "note": "大型强子对撞机实验发现希格斯玻色子，粒子物理标准模型拼图由此完整。",
+     "deps": [
+      "phys_wboson"
+     ]
+    }
+   ]
+  }
+ ]
+}

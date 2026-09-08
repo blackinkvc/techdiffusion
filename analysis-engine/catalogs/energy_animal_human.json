@@ -1,0 +1,1343 @@
+{
+ "cat": "energy",
+ "catName": "能源",
+ "sub": "animal_human",
+ "subName": "人力畜力利用",
+ "anchors": [
+  "agriculture",
+  "plow",
+  "wheel",
+  "horse_gear",
+  "bronze",
+  "iron",
+  "steel",
+  "road",
+  "irrigation",
+  "waterwheel",
+  "steam_engine",
+  "electricity"
+ ],
+ "families": [
+  {
+   "name": "役畜驯化与繁育",
+   "items": [
+    {
+     "id": "draft_ox_domestication",
+     "name": "役用牛驯养",
+     "en": "Draft cattle domestication",
+     "year": -5000,
+     "note": "驯化黄牛并役用于曳犁拉车，是最早且分布最广的挽畜。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "donkey_domestication",
+     "name": "驴驯化役用",
+     "en": "Donkey domestication",
+     "year": -4500,
+     "note": "在干旱地区驯化的耐苦役畜，驮载与拉磨能力持久稳定。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "draft_animal_castration",
+     "name": "役畜去势",
+     "en": "Draft animal castration",
+     "year": -4000,
+     "note": "阉割公畜使其温顺耐役，是规模化役用管理的基础技术。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "horse_domestication",
+     "name": "家马驯化",
+     "en": "Horse domestication",
+     "year": -3500,
+     "note": "草原驯化马匹提供高速乘骑与挽力，深刻改变运输与征战。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "dromedary_domestication",
+     "name": "单峰驼驯化",
+     "en": "Dromedary domestication",
+     "year": -3000,
+     "note": "阿拉伯半岛驯化的沙漠役畜，耐热耐渴，专长长途驮运。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "water_buffalo_domestication",
+     "name": "水牛役用驯化",
+     "en": "Water buffalo domestication",
+     "year": -2500,
+     "note": "驯化水牛用于水田曳犁与泥泞地耕作，耐湿热环境，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "bactrian_camel_domestication",
+     "name": "双峰驼驯化",
+     "en": "Bactrian camel domestication",
+     "year": -2400,
+     "note": "中亚驯化的双峰驼耐寒耐旱，是丝绸之路长途驮运主力。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "yak_domestication",
+     "name": "牦牛役用驯化",
+     "en": "Yak domestication",
+     "year": -2200,
+     "note": "青藏高原驯化牦牛供驮运与曳挽，适应高寒缺氧环境，在相应条件下长期使用。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "llama_domestication",
+     "name": "羊驼驮用驯化",
+     "en": "Llama domestication",
+     "year": -2000,
+     "note": "安第斯山区驯化的负重畜，载重虽小但在山地商路作用重大。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "elephant_domestication",
+     "name": "象役驯化",
+     "en": "Working elephant domestication",
+     "year": -2000,
+     "note": "印度河流域驯象服役，用于曳木、搬运与战争载具，服务特定的生产与生活需要。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "mule_breeding",
+     "name": "骡繁殖利用",
+     "en": "Mule breeding",
+     "year": -1500,
+     "note": "驴马杂交育骡，兼具耐力与力量，成为负重挽用优选，构成相关作业体系的重要一环。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "draft_breaking",
+     "name": "役畜调教",
+     "en": "Draft animal training",
+     "year": -1000,
+     "note": "以口令与器械驯导年轻役畜，使其服从曳挽与驮乘作业。",
+     "deps": [
+      "horse_gear"
+     ]
+    },
+    {
+     "id": "zebu_draft",
+     "name": "瘤牛役用",
+     "en": "Zebu draft use",
+     "year": -1000,
+     "note": "印度地区以瘤牛作挽用，抗热耐粗饲，广泛用于农田，技术上持续沿用并有所改进。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "reindeer_domestication",
+     "name": "驯鹿役驯",
+     "en": "Reindeer domestication",
+     "year": -800,
+     "note": "极地族群驯养驯鹿用于拖橇与驮运，兼供乳肉，与同类装置共同构成完整谱系。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "heavy_horse_breeding",
+     "name": "重型挽马育成",
+     "en": "Heavy horse breeding",
+     "year": 1100,
+     "note": "中世纪欧洲选育重型挽马，专供重载曳挽与城市货运，实际效果得到广泛验证。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "dzo_hybrid_draft",
+     "name": "犏牛役用",
+     "en": "Dzo hybrid draft cattle",
+     "year": -500,
+     "note": "牦牛与黄牛杂交的犏牛兼有两者优点，是高原地区常用挽驮畜。",
+     "deps": [
+      "draft_ox_domestication",
+      "yak_domestication"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "挽具与驭御装置",
+   "items": [
+    {
+     "id": "dog_draft_harness",
+     "name": "犬挽具",
+     "en": "Dog draft harness",
+     "year": -3000,
+     "note": "为曳橇犬设计的套带，将拉力分布到胸背以拖运雪橇，属于该领域的成熟实用技术。"
+    },
+    {
+     "id": "double_ox_yoke",
+     "name": "双牛横轭",
+     "en": "Double-ox yoke",
+     "year": -2500,
+     "note": "以横木轭并双牛协同曳犁拉车，是古典耕作的标准挽法。",
+     "deps": [
+      "plow",
+      "agriculture"
+     ]
+    },
+    {
+     "id": "horse_breast_harness",
+     "name": "马胸带挽具",
+     "en": "Horse breast harness",
+     "year": -1500,
+     "note": "以胸带承力的挽具，比颈轭更利马匹发挥快拉力量，其基本思路沿用至今。",
+     "deps": [
+      "horse_gear"
+     ]
+    },
+    {
+     "id": "ox_nose_ring",
+     "name": "牛鼻环",
+     "en": "Ox nose ring",
+     "year": -1200,
+     "note": "穿鼻加环作为牛的控制点，牵引灵敏，便于驾驭，应用范围遍及多个地区。",
+     "deps": [
+      "bronze"
+     ]
+    },
+    {
+     "id": "snaffle_bit",
+     "name": "双环口衔",
+     "en": "Snaffle bit",
+     "year": -1000,
+     "note": "马口含衔配合缰绳控制转向，是骑乘与驾车的基本驭具。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "camel_harness",
+     "name": "骆驼挽具",
+     "en": "Camel harness",
+     "year": -800,
+     "note": "为驼颈与驼身定制的曳挽套具，适应驼拉犁与碾场，是该技术门类的典型代表。",
+     "deps": [
+      "horse_gear"
+     ]
+    },
+    {
+     "id": "trace_rope",
+     "name": "挽索",
+     "en": "Traction traces",
+     "year": -600,
+     "note": "连接挽畜与农具车辆的索带，负责传递纵向拉力，为后续发展奠定了基础。",
+     "deps": [
+      "horse_breast_harness"
+     ]
+    },
+    {
+     "id": "curb_bit",
+     "name": "长杆马衔",
+     "en": "Curb bit",
+     "year": -500,
+     "note": "带杠杆臂的马衔可放大驭手控力，用于快速骑乘，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "snaffle_bit"
+     ]
+    },
+    {
+     "id": "oxbow_neck_yoke",
+     "name": "牛弯颈轭",
+     "en": "Oxbow neck yoke",
+     "year": -400,
+     "note": "弯形颈轭贴合牛颈肩，使挽力平稳而不压气管，在相应条件下长期使用。",
+     "deps": [
+      "double_ox_yoke"
+     ]
+    },
+    {
+     "id": "elephant_goad",
+     "name": "象钩驭具",
+     "en": "Elephant goad",
+     "year": -300,
+     "note": "驭象师以钩尖轻触象体发出指令，是役象作业的标配工具。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "quadriga_driving",
+     "name": "四马编驾",
+     "en": "Quadriga team driving",
+     "year": -100,
+     "note": "以衡杆与挽索编驾四马并行，兼顾速度与方向的编组法。",
+     "deps": [
+      "trace_rope"
+     ]
+    },
+    {
+     "id": "horse_collar",
+     "name": "马颈圈挽具",
+     "en": "Horse collar harness",
+     "year": 900,
+     "note": "硬质颈圈把挽力转至马肩，不压气管，大幅提升曳力，服务特定的生产与生活需要。",
+     "deps": [
+      "iron",
+      "trace_rope"
+     ]
+    },
+    {
+     "id": "crupper_strap",
+     "name": "鞦带",
+     "en": "Crupper strap",
+     "year": 1000,
+     "note": "绕臀固定鞍或挽具的皮带，防止其前滑移位，构成相关作业体系的重要一环。",
+     "deps": [
+      "horse_collar"
+     ]
+    },
+    {
+     "id": "whiffletree",
+     "name": "均衡挽杆",
+     "en": "Whiffletree",
+     "year": 1200,
+     "note": "铰接横杆均分多畜拉力，减少单畜受力不均与车体歪斜。",
+     "deps": [
+      "horse_collar"
+     ]
+    },
+    {
+     "id": "horse_blinkers",
+     "name": "马眼罩",
+     "en": "Horse blinkers",
+     "year": 1700,
+     "note": "遮挡马匹侧后方视野，减少惊吓，用于城市驾车马，技术上持续沿用并有所改进。",
+     "deps": [
+      "horse_gear"
+     ]
+    },
+    {
+     "id": "ox_yoke_pin",
+     "name": "轭栓销",
+     "en": "Yoke pin",
+     "year": -2300,
+     "note": "连接轭木与挽索的销栓，保证横轭随畜力方向转动灵活。",
+     "deps": [
+      "double_ox_yoke"
+     ]
+    },
+    {
+     "id": "halter_rope",
+     "name": "络头牵绳",
+     "en": "Halter rope",
+     "year": -1200,
+     "note": "无口衔的笼头配牵绳，用于拴系与牵行役畜，与同类装置共同构成完整谱系。",
+     "deps": [
+      "horse_gear"
+     ]
+    },
+    {
+     "id": "horse_hobbles",
+     "name": "绊马索",
+     "en": "Horse hobbles",
+     "year": -800,
+     "note": "束缚马前肢的软索，供放牧拴系防止牲畜走失，实际效果得到广泛验证。",
+     "deps": [
+      "snaffle_bit"
+     ]
+    },
+    {
+     "id": "harness_pads",
+     "name": "挽具衬垫",
+     "en": "Harness padding",
+     "year": -500,
+     "note": "垫于挽具与畜体之间的衬料，减小摩擦与压伤，属于该领域的成熟实用技术。",
+     "deps": [
+      "horse_breast_harness"
+     ]
+    },
+    {
+     "id": "camel_nose_peg",
+     "name": "驼鼻栓",
+     "en": "Camel nose peg",
+     "year": -700,
+     "note": "穿入骆驼鼻孔的木栓系缰，便于牵引控制，其基本思路沿用至今。",
+     "deps": [
+      "camel_harness"
+     ]
+    },
+    {
+     "id": "breeching_strap",
+     "name": "后鞅制动带",
+     "en": "Breeching strap",
+     "year": 1100,
+     "note": "绕过马臀的挽带，下坡或停车时协助制动车辆，应用范围遍及多个地区。",
+     "deps": [
+      "horse_collar"
+     ]
+    },
+    {
+     "id": "iron_trace_chain",
+     "name": "铁质挽链",
+     "en": "Iron trace chain",
+     "year": 1500,
+     "note": "以铁链替代麻索挽拽，强度更高，用于重载车驾，是该技术门类的典型代表。",
+     "deps": [
+      "trace_rope"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "鞍具、骑乘与驮运",
+   "items": [
+    {
+     "id": "pack_saddle",
+     "name": "驮鞍",
+     "en": "Pack saddle",
+     "year": -1000,
+     "note": "专为驮畜设计的鞍架，两侧挂货使重量均匀分布于畜背。",
+     "deps": [
+      "horse_gear"
+     ]
+    },
+    {
+     "id": "saddle_pad",
+     "name": "鞍垫",
+     "en": "Saddle pad",
+     "year": -900,
+     "note": "以织物垫于马背保护皮肤，是最早的骑乘缓冲装置，为后续发展奠定了基础。",
+     "deps": [
+      "horse_gear"
+     ]
+    },
+    {
+     "id": "camel_saddle",
+     "name": "骆驼驮鞍",
+     "en": "Camel saddle",
+     "year": -600,
+     "note": "跨置驼峰的鞍架，配合驮筐承载商路货物，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "pack_saddle"
+     ]
+    },
+    {
+     "id": "spurs",
+     "name": "马刺",
+     "en": "Riding spurs",
+     "year": -500,
+     "note": "靴跟装刺以脚部轻触催马，是骑手与马匹的辅助信号装置。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "elephant_howdah",
+     "name": "象舆驮轿",
+     "en": "Elephant howdah",
+     "year": -300,
+     "note": "固定在象背的乘载轿厢，用于仪仗、狩猎与战争瞭望，在相应条件下长期使用。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "pack_frame",
+     "name": "驮运架",
+     "en": "Pack frame",
+     "year": -200,
+     "note": "贴合畜背的木制框架，供捆绑货袋并保护脊柱，服务特定的生产与生活需要。",
+     "deps": [
+      "pack_saddle"
+     ]
+    },
+    {
+     "id": "wooden_saddle_tree",
+     "name": "硬木鞍架",
+     "en": "Saddle tree",
+     "year": 100,
+     "note": "以木质骨架承托骑手重量并分布到马背，替代软垫鞍，构成相关作业体系的重要一环。",
+     "deps": [
+      "saddle_pad"
+     ]
+    },
+    {
+     "id": "nailed_horseshoe",
+     "name": "蹄铁钉掌",
+     "en": "Nailed horseshoe",
+     "year": 200,
+     "note": "铁质蹄铁钉于蹄底，保护蹄壁并增强耐磨与抓地，技术上持续沿用并有所改进。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "stirrup",
+     "name": "马镫",
+     "en": "Stirrup",
+     "year": 300,
+     "note": "悬于鞍侧的踏脚装置，使骑手稳坐并解放双手作战，与同类装置共同构成完整谱系。",
+     "deps": [
+      "wooden_saddle_tree"
+     ]
+    },
+    {
+     "id": "yak_salt_caravan",
+     "name": "牦牛驮盐",
+     "en": "Yak salt caravan",
+     "year": 700,
+     "note": "青藏高原以牦牛驮队运输盐茶，形成高海拔驮运体系，实际效果得到广泛验证。",
+     "deps": [
+      "yak_domestication",
+      "pack_saddle"
+     ]
+    },
+    {
+     "id": "sidesaddle",
+     "name": "侧鞍",
+     "en": "Sidesaddle",
+     "year": 1400,
+     "note": "供侧坐骑乘的鞍形，配钩镫固定，历史上为女性骑乘所用。",
+     "deps": [
+      "wooden_saddle_tree"
+     ]
+    },
+    {
+     "id": "pack_mule_bell",
+     "name": "驮铃",
+     "en": "Pack bell",
+     "year": 1000,
+     "note": "系于驮畜颈部的响铃，在山道警示对向驮队与行人，属于该领域的成熟实用技术。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "saddle_girth",
+     "name": "鞍肚带",
+     "en": "Saddle girth",
+     "year": -800,
+     "note": "绕马腹收紧鞍具的皮带，是固定鞍座的关键构件，其基本思路沿用至今。",
+     "deps": [
+      "saddle_pad"
+     ]
+    },
+    {
+     "id": "cargo_panniers",
+     "name": "驮货筐具",
+     "en": "Cargo panniers",
+     "year": 200,
+     "note": "成对挂于驮鞍两侧的筐囊，用于承载散货与农产品，应用范围遍及多个地区。",
+     "deps": [
+      "pack_saddle"
+     ]
+    },
+    {
+     "id": "breastplate_strap",
+     "name": "鞍前胸带",
+     "en": "Breastplate strap",
+     "year": -200,
+     "note": "马胸前固定鞍具的皮带，防止鞍座上鞍时后移，是该技术门类的典型代表。",
+     "deps": [
+      "saddle_pad"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "畜力驱动的机械",
+   "items": [
+    {
+     "id": "pompeian_donkey_mill",
+     "name": "庞贝骡拉磨",
+     "en": "Pompeian donkey mill",
+     "year": 100,
+     "note": "罗马人用骡牵引立式双石盘旋转磨谷，是大型畜力磨，为后续发展奠定了基础。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "saqiya_water_lift",
+     "name": "萨基耶畜力提水机",
+     "en": "Saqiya animal water lift",
+     "year": 200,
+     "note": "畜力转盘带动链斗连续提水，广泛用于地中海灌溉，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "irrigation"
+     ]
+    },
+    {
+     "id": "ox_driven_chain_pump",
+     "name": "畜力翻车",
+     "en": "Animal-driven chain pump",
+     "year": 300,
+     "note": "中国以牛畜驱动刮板链提水，用于农田灌溉与排涝，在相应条件下长期使用。",
+     "deps": [
+      "irrigation",
+      "wheel"
+     ]
+    },
+    {
+     "id": "horse_capstan_winch",
+     "name": "畜力绞盘机",
+     "en": "Horse capstan",
+     "year": 1000,
+     "note": "马绕圈曳动立轴绞盘，可提升重物或驱动磨碾，服务特定的生产与生活需要。",
+     "deps": [
+      "iron",
+      "wheel"
+     ]
+    },
+    {
+     "id": "horse_gin_hoist",
+     "name": "矿井马绞车",
+     "en": "Horse gin hoist",
+     "year": 1150,
+     "note": "以马曳绞盘提升矿井矿石与人员，是中世纪采矿标准设备。",
+     "deps": [
+      "horse_capstan_winch"
+     ]
+    },
+    {
+     "id": "horse_mill",
+     "name": "畜力磨坊",
+     "en": "Horse mill",
+     "year": 1250,
+     "note": "以马匹绕行驱动石磨磨面，是风力水力之外的重要动力源。",
+     "deps": [
+      "horse_capstan_winch"
+     ]
+    },
+    {
+     "id": "cattle_oil_press",
+     "name": "畜力榨油机",
+     "en": "Animal-driven oil press",
+     "year": 1300,
+     "note": "牛畜绕行驱动螺杆或杠杆压榨油料，提高出油效率，构成相关作业体系的重要一环。",
+     "deps": [
+      "horse_capstan_winch"
+     ]
+    },
+    {
+     "id": "buffalo_hulling_mill",
+     "name": "水牛碾米机",
+     "en": "Buffalo hulling mill",
+     "year": 1400,
+     "note": "以水牛曳石碾去除稻壳，是东亚传统稻米加工动力，技术上持续沿用并有所改进。",
+     "deps": [
+      "horse_capstan_winch"
+     ]
+    },
+    {
+     "id": "sugar_cane_cattle_mill",
+     "name": "畜力榨蔗机",
+     "en": "Cattle-driven sugar mill",
+     "year": 1550,
+     "note": "畜力曳转立辊压榨甘蔗取汁，在加勒比蔗园广泛使用，与同类装置共同构成完整谱系。",
+     "deps": [
+      "horse_capstan_winch"
+     ]
+    },
+    {
+     "id": "horse_pump_engine",
+     "name": "畜力泵站",
+     "en": "Horse pump engine",
+     "year": 1600,
+     "note": "马匹驱动往复泵排水或供水，用于矿井与市政抽水，实际效果得到广泛验证。",
+     "deps": [
+      "horse_capstan_winch"
+     ]
+    },
+    {
+     "id": "horse_wagonway",
+     "name": "马拉轨道车",
+     "en": "Horse-drawn wagonway",
+     "year": 1650,
+     "note": "矿区以马沿木轨牵引煤车，是铁路运输的早期雏形，属于该领域的成熟实用技术。",
+     "deps": [
+      "road"
+     ]
+    },
+    {
+     "id": "horse_barge_towing",
+     "name": "马拉驳船曳引",
+     "en": "Horse barge towing",
+     "year": 1680,
+     "note": "沿纤道以马曳船通行运河，为近代内河货运的主要动力。",
+     "deps": [
+      "horse_collar"
+     ]
+    },
+    {
+     "id": "horse_thresher",
+     "name": "畜力脱粒机",
+     "en": "Horse-powered thresher",
+     "year": 1790,
+     "note": "以畜力驱动滚筒脱粒的机械，取代人工连枷打场，其基本思路沿用至今。",
+     "deps": [
+      "horse_capstan_winch"
+     ]
+    },
+    {
+     "id": "horse_engine",
+     "name": "畜力踏车发动机",
+     "en": "Horse engine treadmill",
+     "year": 1800,
+     "note": "畜在倾斜踏车行走带动轴系，供农田机械与脱粒使用，应用范围遍及多个地区。",
+     "deps": [
+      "horse_capstan_winch"
+     ]
+    },
+    {
+     "id": "gunpowder_horse_mill",
+     "name": "火药畜力碾磨",
+     "en": "Horse-powered gunpowder mill",
+     "year": 1450,
+     "note": "以畜力碾磨硝石与火药成分，是近代火药厂的标准动力。",
+     "deps": [
+      "horse_mill"
+     ]
+    },
+    {
+     "id": "fen_drainage_horsewheel",
+     "name": "畜力排水轮",
+     "en": "Horse-powered drainage wheel",
+     "year": 1650,
+     "note": "马匹驱动排水轮提水排涝，用于低地圩田改造，是该技术门类的典型代表。",
+     "deps": [
+      "horse_pump_engine"
+     ]
+    },
+    {
+     "id": "horse_fire_engine",
+     "name": "马拉消防泵",
+     "en": "Horse-drawn fire engine",
+     "year": 1720,
+     "note": "马拉载运与驱动的水泵消防车，为近代城市救火主力，为后续发展奠定了基础。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "animal_cotton_gin",
+     "name": "畜力轧棉机",
+     "en": "Animal-powered cotton gin",
+     "year": 1750,
+     "note": "畜力驱动辊筒分离棉籽与纤维，是早期棉花加工机械，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "horse_capstan_winch"
+     ]
+    },
+    {
+     "id": "pit_pony_haulage",
+     "name": "矿井矮马牵引",
+     "en": "Pit pony haulage",
+     "year": 1700,
+     "note": "以小马在井下巷道牵引煤车，长期承担矿井运输，在相应条件下长期使用。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "horse_cable_haul",
+     "name": "畜力钢缆牵引",
+     "en": "Horse cable haulage",
+     "year": 1800,
+     "note": "畜力绞盘收放钢缆拖拽坡道矿车，用于斜坡运输，服务特定的生产与生活需要。",
+     "deps": [
+      "horse_collar"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "人力驱动机具与装置",
+   "items": [
+    {
+     "id": "pestle_mortar",
+     "name": "石臼捣舂",
+     "en": "Pestle and mortar",
+     "year": -4000,
+     "note": "人力上下捣击脱壳碎粒，是最基础的人工作业方式，构成相关作业体系的重要一环。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "shaduf",
+     "name": "桔槔汲水",
+     "en": "Shaduf",
+     "year": -2000,
+     "note": "杠杆平衡原理的提水装置，人力上下牵动舀水灌田，技术上持续沿用并有所改进。",
+     "deps": [
+      "irrigation"
+     ]
+    },
+    {
+     "id": "saddle_quern",
+     "name": "鞍形手磨",
+     "en": "Saddle quern",
+     "year": -1500,
+     "note": "以手推上磨石往复研磨谷粒，是早期谷物粉碎工具，与同类装置共同构成完整谱系。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "rotary_quern",
+     "name": "手摇旋转磨",
+     "en": "Rotary hand quern",
+     "year": -400,
+     "note": "上下两石相对旋转磨粉，由手柄驱动，效率高于往复磨。",
+     "deps": [
+      "saddle_quern"
+     ]
+    },
+    {
+     "id": "treadwheel_crane",
+     "name": "踏轮起重机",
+     "en": "Treadwheel crane",
+     "year": -200,
+     "note": "人在轮内行走驱动卷扬吊重，古罗马大型建筑施工关键设备。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "hand_winch",
+     "name": "手摇绞盘",
+     "en": "Hand winch",
+     "year": -100,
+     "note": "人力摇柄经齿轮放大拉力提升重物，船用与井用普遍，实际效果得到广泛验证。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "human_tilt_hammer",
+     "name": "脚踏碓",
+     "en": "Treadle tilt hammer",
+     "year": -50,
+     "note": "脚踏杠杆使碓头起落捣米，比手臂舂捣省力高效，属于该领域的成熟实用技术。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "piston_bellows",
+     "name": "双动活塞风箱",
+     "en": "Double-acting piston bellows",
+     "year": 50,
+     "note": "活塞往复持续鼓风，供冶铁与锻造炉使用，其基本思路沿用至今。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "hand_winnowing_fan",
+     "name": "手摇扬谷扇",
+     "en": "Rotary winnowing fan",
+     "year": 100,
+     "note": "摇动手柄驱动扇叶扬弃谷壳，是中国汉代出现的清选机械。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "human_chain_pump",
+     "name": "脚踏龙骨水车",
+     "en": "Pedal-driven chain pump",
+     "year": 200,
+     "note": "脚踏轮驱动刮板链连续提水，供稻田灌溉，应用范围遍及多个地区。",
+     "deps": [
+      "irrigation"
+     ]
+    },
+    {
+     "id": "hand_crank",
+     "name": "手摇曲柄传动",
+     "en": "Hand-crank drive",
+     "year": 900,
+     "note": "曲柄摇把将圆周运动传给机械，广泛用于磨与绞盘，是该技术门类的典型代表。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "spinning_wheel",
+     "name": "手摇纺车",
+     "en": "Spinning wheel",
+     "year": 1000,
+     "note": "手摇大轮带动锭子加捻纺纱，大幅提高纺纱产量，为后续发展奠定了基础。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "hand_pump_well",
+     "name": "手压井泵",
+     "en": "Hand pump",
+     "year": 1700,
+     "note": "手动杠杆驱动活塞抽水，为农村井水取用的标准设备，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "reel_mower",
+     "name": "人力滚刀割草机",
+     "en": "Reel lawn mower",
+     "year": 1830,
+     "note": "推行时刀盘滚动剪草，是近代最早的人力草坪机械，在相应条件下长期使用。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "hand_field_magneto",
+     "name": "手摇磁石发电机",
+     "en": "Hand-crank magneto generator",
+     "year": 1880,
+     "note": "手摇永磁发电供磁石电话与警报器使用，服务特定的生产与生活需要。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "hand_chain_hoist",
+     "name": "手拉葫芦",
+     "en": "Hand chain block",
+     "year": 1850,
+     "note": "手拉链条经齿轮与棘轮提升重物，用于车间起吊，构成相关作业体系的重要一环。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "manual_pallet_truck",
+     "name": "手动托盘搬运车",
+     "en": "Manual pallet truck",
+     "year": 1920,
+     "note": "人力液压升降货叉搬运托盘，是现代仓库基本工具，技术上持续沿用并有所改进。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "self_winding_watch",
+     "name": "自动上弦手表",
+     "en": "Self-winding watch",
+     "year": 1923,
+     "note": "佩戴者手臂摆动驱动摆陀自动上弦，将人体运动转为储能。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "bicycle_generator",
+     "name": "脚踏发电机",
+     "en": "Bicycle generator",
+     "year": 1950,
+     "note": "蹬踏带动发电机为蓄电池充电，供离网地区照明用电，与同类装置共同构成完整谱系。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "pedal_boat",
+     "name": "脚踏游船",
+     "en": "Pedal boat",
+     "year": 1875,
+     "note": "脚蹬驱动明轮或螺旋桨的水上游乐艇，实际效果得到广泛验证。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "human_powered_aircraft",
+     "name": "人力飞机",
+     "en": "Human-powered aircraft",
+     "year": 1977,
+     "note": "飞行员蹬踏驱动螺旋桨飞越海峡，是人力动力的极限应用。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "rowing_ergometer",
+     "name": "划船测功机",
+     "en": "Rowing ergometer",
+     "year": 1981,
+     "note": "以拉浆驱动风阻轮并计量功率，是训练与测功的标准器械。"
+    },
+    {
+     "id": "treadle_pump",
+     "name": "脚踏水泵",
+     "en": "Treadle pump",
+     "year": 1970,
+     "note": "脚踏杠杆驱动活塞泵提水，适合小农户灌溉，属于该领域的成熟实用技术。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "windup_flashlight",
+     "name": "手摇充电电筒",
+     "en": "Windup flashlight",
+     "year": 1993,
+     "note": "摇柄发电储能于电容或电池，供应急照明，其基本思路沿用至今。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "windup_radio",
+     "name": "手摇发电收音机",
+     "en": "Windup radio",
+     "year": 1994,
+     "note": "手摇发电供收音机使用，面向缺电地区的信息获取，应用范围遍及多个地区。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "gym_energy_recovery",
+     "name": "健身动能回收发电",
+     "en": "Gym energy recovery",
+     "year": 2010,
+     "note": "健身器械带动发电机回收运动能量并入楼宇电网，是该技术门类的典型代表。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "handloom",
+     "name": "手动织机",
+     "en": "Handloom",
+     "year": -3000,
+     "note": "以手脚交替提综投梭织布的原始机械，是纺织业起点，为后续发展奠定了基础。",
+     "deps": [
+      "agriculture"
+     ]
+    },
+    {
+     "id": "treadle_loom",
+     "name": "脚踏织机",
+     "en": "Treadle loom",
+     "year": -100,
+     "note": "双踏板提综解放双手，提高织造速度与布幅质量，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "handloom"
+     ]
+    },
+    {
+     "id": "brace_drill",
+     "name": "手摇曲柄钻",
+     "en": "Brace drill",
+     "year": 1450,
+     "note": "以曲柄回转带动钻头，是木工钻孔的常用手持工具，在相应条件下长期使用。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "prison_treadmill",
+     "name": "监狱踏磨机",
+     "en": "Penal treadmill",
+     "year": 1818,
+     "note": "囚犯踏轮驱动磨粉，兼作惩戒与动力来源，服务特定的生产与生活需要。",
+     "deps": [
+      "treadwheel_crane"
+     ]
+    },
+    {
+     "id": "manual_fire_pump",
+     "name": "双缸手压消防泵",
+     "en": "Manual fire pump",
+     "year": 1721,
+     "note": "人力摇臂驱动双缸往复泵连续射水灭火，构成相关作业体系的重要一环。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "hand_coffee_grinder",
+     "name": "手摇咖啡磨",
+     "en": "Hand coffee grinder",
+     "year": 1850,
+     "note": "手摇锥形磨轮研磨咖啡豆的户用器具，技术上持续沿用并有所改进。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "hand_washing_wringer",
+     "name": "手摇衣物绞干器",
+     "en": "Hand wringer",
+     "year": 1850,
+     "note": "手摇双辊挤压脱水，取代手工拧衣，与同类装置共同构成完整谱系。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "treadle_sewing_machine",
+     "name": "脚踏缝纫机",
+     "en": "Treadle sewing machine",
+     "year": 1855,
+     "note": "脚踏曲柄驱动缝纫机，解放双手并提高缝纫效率，实际效果得到广泛验证。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "corn_sheller",
+     "name": "手摇玉米脱粒机",
+     "en": "Hand corn sheller",
+     "year": 1840,
+     "note": "手摇齿辊搓下玉米粒，减轻农事劳动强度，属于该领域的成熟实用技术。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "manual_air_pump",
+     "name": "手动打气筒",
+     "en": "Manual air pump",
+     "year": 1890,
+     "note": "人力往复活塞压缩空气，为轮胎与气囊充气，其基本思路沿用至今。",
+     "deps": [
+      "iron"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "人畜动力的提升与搬运装置",
+   "items": [
+    {
+     "id": "shoulder_pole_carrying",
+     "name": "扁担挑运",
+     "en": "Shoulder-pole carrying",
+     "year": -3000,
+     "note": "弹性扁担两端挂物担于肩，利用颤动减轻负重，盛行于东亚。"
+    },
+    {
+     "id": "back_carry_frame",
+     "name": "背负架",
+     "en": "Back carrying frame",
+     "year": -2000,
+     "note": "木架贴身背负货物，把重量传给肩背与骨盆，适于山地。"
+    },
+    {
+     "id": "tumpline",
+     "name": "额带背负",
+     "en": "Tumpline",
+     "year": -1000,
+     "note": "以额带牵拉背货，颈背协同承力，见于美洲与山地人群。"
+    },
+    {
+     "id": "dog_sled_hauling",
+     "name": "狗拉雪橇",
+     "en": "Dog sled hauling",
+     "year": -800,
+     "note": "犬队曳橇在雪原运输人货，是极地族群传统交通动力，应用范围遍及多个地区。",
+     "deps": [
+      "dog_draft_harness"
+     ]
+    },
+    {
+     "id": "block_and_tackle",
+     "name": "滑轮组",
+     "en": "Block and tackle",
+     "year": -300,
+     "note": "多轮复式滑轮倍增人力，用于船吊与施工起重，是该技术门类的典型代表。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "human_towpath_hauling",
+     "name": "拉纤曳船",
+     "en": "Human towpath hauling",
+     "year": -200,
+     "note": "纤夫沿河岸拉纤引船逆流，是内河航运重要人力动力，为后续发展奠定了基础。",
+     "deps": [
+      "road"
+     ]
+    },
+    {
+     "id": "wheelbarrow",
+     "name": "独轮手推车",
+     "en": "Wheelbarrow",
+     "year": 100,
+     "note": "单轮车载物由人推挽，适合窄路小量搬运，源出中国，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "handcart_push",
+     "name": "手推双轮车",
+     "en": "Pushcart",
+     "year": 300,
+     "note": "双轮手推车运输较重货物，在站场与街市普遍使用，在相应条件下长期使用。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "shoulder_litter",
+     "name": "肩舆",
+     "en": "Shoulder litter",
+     "year": 200,
+     "note": "轿厢架于双杠由两人或四人肩抬，供人代步，服务特定的生产与生活需要。",
+     "deps": [
+      "road"
+     ]
+    },
+    {
+     "id": "sedan_chair",
+     "name": "轿子",
+     "en": "Sedan chair",
+     "year": 700,
+     "note": "封闭轿厢由轿夫抬行，为古代城市客运主要方式之一，构成相关作业体系的重要一环。",
+     "deps": [
+      "shoulder_litter"
+     ]
+    },
+    {
+     "id": "elephant_log_skidding",
+     "name": "象力曳木",
+     "en": "Elephant log skidding",
+     "year": 400,
+     "note": "驯象拖曳原木集材出林，用于东南亚与南亚林业，技术上持续沿用并有所改进。",
+     "deps": [
+      "elephant_domestication"
+     ]
+    },
+    {
+     "id": "rickshaw",
+     "name": "人力车",
+     "en": "Rickshaw",
+     "year": 1869,
+     "note": "单人拉曳双轮载客车，在近代亚洲城市风行一时，与同类装置共同构成完整谱系。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "handcar_railway",
+     "name": "轨道手摇车",
+     "en": "Handcar",
+     "year": 1850,
+     "note": "人工压动杠杆在铁轨上行驶的检修小车，实际效果得到广泛验证。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "differential_pulley",
+     "name": "差动滑轮",
+     "en": "Differential pulley block",
+     "year": 1854,
+     "note": "由韦斯顿发明的差动滑轮，人手牵引可精确吊装重物，属于该领域的成熟实用技术。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "manual_stack_truck",
+     "name": "手动堆高车",
+     "en": "Manual stacker truck",
+     "year": 1940,
+     "note": "人力推行与液压升降的货架存取小车，其基本思路沿用至今。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "hand_gantry_crane",
+     "name": "手动龙门吊",
+     "en": "Hand gantry crane",
+     "year": 1900,
+     "note": "门架配手摇卷扬的简易吊装设备，用于车间与码头零星作业。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "hand_winch_crab",
+     "name": "手摇卷扬小车",
+     "en": "Hand crab winch",
+     "year": 1900,
+     "note": "沿轨道行走的手摇起重小车，用于车间与船台吊装，应用范围遍及多个地区。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "hydraulic_hand_jack",
+     "name": "手压液压千斤顶",
+     "en": "Hydraulic hand jack",
+     "year": 1910,
+     "note": "手柄泵油顶升重物，是车辆与设备维修的通用工具，是该技术门类的典型代表。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "cycle_rickshaw",
+     "name": "脚踏三轮车",
+     "en": "Cycle rickshaw",
+     "year": 1938,
+     "note": "蹬踏三轮载客运货，在东南亚与南亚广泛使用，为后续发展奠定了基础。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "flatbed_dolly",
+     "name": "手推平板车",
+     "en": "Flatbed dolly",
+     "year": 1945,
+     "note": "平板带轮手推车，用于仓储与货场短途搬运，是这一领域具有代表性的实现方式。",
+     "deps": [
+      "wheel"
+     ]
+    },
+    {
+     "id": "luggage_trolley",
+     "name": "手推行李车",
+     "en": "Luggage trolley",
+     "year": 1950,
+     "note": "带筐手推行李车，是车站机场的标准旅客设施，在相应条件下长期使用。",
+     "deps": [
+      "wheel"
+     ]
+    }
+   ]
+  }
+ ]
+}

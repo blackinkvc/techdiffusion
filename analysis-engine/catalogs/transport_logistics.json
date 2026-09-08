@@ -1,0 +1,978 @@
+{
+ "cat": "transport",
+ "catName": "交通运输",
+ "sub": "logistics",
+ "subName": "物流与仓储",
+ "anchors": [
+  "railway",
+  "automobile",
+  "airplane",
+  "internet",
+  "computer",
+  "ic",
+  "gps"
+ ],
+ "families": [
+  {
+   "name": "古代仓储",
+   "items": [
+    {
+     "id": "logi_granary",
+     "name": "粮仓",
+     "en": "Granary",
+     "year": -3000,
+     "note": "储藏谷物的库房，是文明早期国家粮政的基础。"
+    },
+    {
+     "id": "logi_changpingcang",
+     "name": "常平仓",
+     "en": "Ever-normal granary",
+     "year": -50,
+     "note": "汉代设常平仓平粜调剂粮价，稳定民生。"
+    },
+    {
+     "id": "logi_yicang",
+     "name": "义仓",
+     "en": "Charity granary",
+     "year": 600,
+     "note": "隋唐社仓义仓备荒赈灾，民间储粮互助。"
+    },
+    {
+     "id": "logi_jiaocang",
+     "name": "窖藏",
+     "en": "Pit storage",
+     "year": -5000,
+     "note": "地窖储藏块根与谷物，史前已普遍使用。"
+    },
+    {
+     "id": "logi_silo",
+     "name": "简仓",
+     "en": "Grain silo",
+     "year": 1873,
+     "note": "圆筒立筒仓机械化储粮，十九世纪后半叶普及。"
+    },
+    {
+     "id": "logi_raised_granary",
+     "name": "干栏粮仓",
+     "en": "Raised granary",
+     "year": 1000,
+     "note": "架空防潮的南方粮仓，避免鼠害与霉变。"
+    },
+    {
+     "id": "logi_salt_storage",
+     "name": "盐仓",
+     "en": "Salt store",
+     "year": -200,
+     "note": "官营盐仓专储专卖，是国家专卖体系环节。"
+    },
+    {
+     "id": "logi_ice_house",
+     "name": "冰窖",
+     "en": "Ice house",
+     "year": 1000,
+     "note": "冬季藏冰夏季用的冷藏库雏形。"
+    },
+    {
+     "id": "logi_wine_cellar",
+     "name": "酒窖",
+     "en": "Wine cellar",
+     "year": -2000,
+     "note": "地下酒窖恒温陈酿，古代酿造仓储设施。"
+    },
+    {
+     "id": "logi_state_warehouse",
+     "name": "官仓",
+     "en": "State warehouse",
+     "year": -2000,
+     "note": "王朝转运与储备的中央官仓体系。"
+    },
+    {
+     "id": "logi_barn",
+     "name": "谷草仓",
+     "en": "Barn",
+     "year": -3000,
+     "note": "农畜与草料的仓储建筑，乡村储运基础。"
+    },
+    {
+     "id": "logi_amphora_store",
+     "name": "陶罐储藏",
+     "en": "Amphora storage",
+     "year": -3000,
+     "note": "陶罐储油储酒的贸易与转运仓储方式。"
+    },
+    {
+     "id": "logi_godown",
+     "name": "货栈",
+     "en": "Warehouse",
+     "year": 1500,
+     "note": "商港货栈堆放转运货物，近代仓储业雏形。"
+    },
+    {
+     "id": "logi_climate_granary",
+     "name": "通风干燥仓",
+     "en": "Ventilated granary",
+     "year": 1900,
+     "note": "机械通风降水的安全储粮仓，降低霉变损耗。"
+    },
+    {
+     "id": "logi_grain_elevator",
+     "name": "粮食提升塔",
+     "en": "Grain elevator",
+     "year": 1842,
+     "note": "气动提升散粮入筒仓，北美粮运枢纽设施。"
+    },
+    {
+     "id": "logi_oil_depot",
+     "name": "油库",
+     "en": "Oil depot",
+     "year": 1880,
+     "note": "储油罐区集中存储成品油与原油。"
+    },
+    {
+     "id": "logi_coal_yard",
+     "name": "煤场",
+     "en": "Coal yard",
+     "year": 1850,
+     "note": "铁路煤场堆储散煤，供应城市与工业。"
+    },
+    {
+     "id": "logi_bonded_warehouse",
+     "name": "保税仓库",
+     "en": "Bonded warehouse",
+     "year": 1870,
+     "note": "海关监管下的保税仓储，便利国际贸易。"
+    },
+    {
+     "id": "logi_public_godown",
+     "name": "公共仓库",
+     "en": "Public warehouse",
+     "year": 1850,
+     "note": "营业性出租仓储，服务中小货主。"
+    },
+    {
+     "id": "logi_state_grain_reserve",
+     "name": "国家粮储",
+     "en": "National grain reserve",
+     "year": 1950,
+     "note": "现代国家粮食储备体系，保障粮食安全。"
+    },
+    {
+     "id": "logi_granary_fumigation",
+     "name": "粮仓熏蒸",
+     "en": "Grain fumigation",
+     "year": 1900,
+     "note": "以药剂熏蒸杀虫的储粮养护工艺。"
+    }
+   ]
+  },
+  {
+   "name": "包装与集装单元化",
+   "items": [
+    {
+     "id": "logi_wooden_crate",
+     "name": "木箱",
+     "en": "Wooden crate",
+     "year": 1800,
+     "note": "木板钉制的运输包装箱，承重大保护性强。"
+    },
+    {
+     "id": "logi_woven_basket",
+     "name": "编织筐",
+     "en": "Woven basket",
+     "year": -5000,
+     "note": "藤竹编筐装载农产品，最古老包装之一。"
+    },
+    {
+     "id": "logi_corrugated_box",
+     "name": "瓦楞纸箱",
+     "en": "Corrugated box",
+     "year": 1871,
+     "note": "瓦楞纸板箱质轻抗压，成为流通领域主包装。"
+    },
+    {
+     "id": "logi_pallet",
+     "name": "托盘",
+     "en": "Pallet",
+     "year": 1925,
+     "note": "平板载货单元便于叉车整体装卸搬运。"
+    },
+    {
+     "id": "logi_container_standard",
+     "name": "集装箱标准",
+     "en": "Container standard",
+     "year": 1956,
+     "note": "ISO标准化钢制集装箱催生全球多式联运。"
+    },
+    {
+     "id": "logi_unit_load",
+     "name": "集装单元化",
+     "en": "Unit load",
+     "year": 1950,
+     "note": "货物集为单元整体装卸，减少散件搬运。"
+    },
+    {
+     "id": "logi_shrink_wrap",
+     "name": "缠绕膜包装",
+     "en": "Stretch wrapping",
+     "year": 1970,
+     "note": "塑料膜缠绕固定托盘货，防散垛防尘。"
+    },
+    {
+     "id": "logi_freight_bag",
+     "name": "麻袋",
+     "en": "Gunny sack",
+     "year": 1800,
+     "note": "麻织袋装运粮糖等散装农产品。"
+    },
+    {
+     "id": "logi_drum",
+     "name": "桶装",
+     "en": "Drum",
+     "year": 1900,
+     "note": "钢桶装运液体与化工品，密封耐搬运。"
+    },
+    {
+     "id": "logi_flexible_container",
+     "name": "集装袋",
+     "en": "FIBC",
+     "year": 1970,
+     "note": "吨袋装运散货，吊装高效且成本低。"
+    },
+    {
+     "id": "logi_wooden_barrel",
+     "name": "木桶",
+     "en": "Wooden barrel",
+     "year": -2000,
+     "note": "箍桶盛装酒油，古代液体运输包装。"
+    },
+    {
+     "id": "logi_paper_sack",
+     "name": "纸袋",
+     "en": "Paper sack",
+     "year": 1850,
+     "note": "多层纸袋装运水泥与粉料。"
+    },
+    {
+     "id": "logi_iso_tank",
+     "name": "罐式集装箱",
+     "en": "Tank container",
+     "year": 1960,
+     "note": "液体散货集装箱，罐箱联运免倒装。"
+    },
+    {
+     "id": "logi_reefer_container",
+     "name": "冷藏集装箱",
+     "en": "Reefer container",
+     "year": 1960,
+     "note": "带制冷机组的保温集装箱，支撑冷链多式联运。"
+    },
+    {
+     "id": "logi_flat_rack",
+     "name": "框架集装箱",
+     "en": "Flat rack container",
+     "year": 1970,
+     "note": "无侧板的框架箱装运超限与重型货。"
+    },
+    {
+     "id": "logi_collapsible_crate",
+     "name": "折叠箱",
+     "en": "Collapsible crate",
+     "year": 1990,
+     "note": "可折叠周转箱循环使用，降低返空成本。"
+    },
+    {
+     "id": "logi_strapping",
+     "name": "打包钢带",
+     "en": "Steel strapping",
+     "year": 1920,
+     "note": "钢带捆扎加固重货包装。"
+    },
+    {
+     "id": "logi_stretch_wrapper",
+     "name": "拉伸缠绕机",
+     "en": "Stretch wrapper",
+     "year": 1980,
+     "note": "自动裹膜固定托盘货的包装机械。"
+    },
+    {
+     "id": "logi_vacuum_pack",
+     "name": "真空包装",
+     "en": "Vacuum packaging",
+     "year": 1950,
+     "note": "抽真空密封保鲜，延长食品货架期。"
+    },
+    {
+     "id": "logi_blister_pack",
+     "name": "泡罩包装",
+     "en": "Blister pack",
+     "year": 1960,
+     "note": "药片与小件泡罩封装，定量防护。"
+    },
+    {
+     "id": "logi_bag_closer",
+     "name": "封口机",
+     "en": "Bag closer",
+     "year": 1960,
+     "note": "自动缝合或热封袋口，包装线末端设备。"
+    }
+   ]
+  },
+  {
+   "name": "港口与货运装卸设备",
+   "items": [
+    {
+     "id": "logi_portal_crane",
+     "name": "门座起重机",
+     "en": "Portal crane",
+     "year": 1950,
+     "note": "港口通用件杂货起重机，可回转变幅作业。"
+    },
+    {
+     "id": "logi_rubber_gantry",
+     "name": "轮胎式集装箱龙门吊",
+     "en": "Rubber-tyred gantry crane",
+     "year": 1980,
+     "note": "堆场轮胎吊跨箱区灵活搬运集装箱。"
+    },
+    {
+     "id": "logi_rmg",
+     "name": "轨道式集装箱龙门吊",
+     "en": "Rail-mounted gantry crane",
+     "year": 1970,
+     "note": "轨道固定的龙门吊堆码与转运集装箱。"
+    },
+    {
+     "id": "logi_straddle_carrier",
+     "name": "跨运车",
+     "en": "Straddle carrier",
+     "year": 1970,
+     "note": "跨骑搬运集装箱的场地机械。"
+    },
+    {
+     "id": "logi_reach_stacker",
+     "name": "正面吊",
+     "en": "Reach stacker",
+     "year": 1980,
+     "note": "正面吊运与堆码集装箱的机动机械。"
+    },
+    {
+     "id": "logi_forklift",
+     "name": "叉车",
+     "en": "Forklift",
+     "year": 1917,
+     "note": "CLARK机动叉车实现货物机械化搬运。"
+    },
+    {
+     "id": "logi_container_spreader",
+     "name": "集装箱吊具",
+     "en": "Container spreader",
+     "year": 1960,
+     "note": "抓取集装箱四角的锁具吊具，配合起重机。"
+    },
+    {
+     "id": "logi_grab_bucket",
+     "name": "抓斗",
+     "en": "Grab bucket",
+     "year": 1880,
+     "note": "散货抓斗装卸煤炭矿石等散料。"
+    },
+    {
+     "id": "logi_conveyor_bulk",
+     "name": "散货传送带",
+     "en": "Bulk conveyor",
+     "year": 1900,
+     "note": "皮带连续输送散料，港口堆场主干。"
+    },
+    {
+     "id": "logi_ship_unloader",
+     "name": "连续式卸船机",
+     "en": "Continuous ship unloader",
+     "year": 1950,
+     "note": "链斗或波状挡边连续卸船，效率高于抓斗。"
+    },
+    {
+     "id": "logi_ship_loader",
+     "name": "装船机",
+     "en": "Ship loader",
+     "year": 1950,
+     "note": "臂架皮带连续装船，散货装船主力。"
+    },
+    {
+     "id": "logi_gantry_unloader",
+     "name": "桥式抓斗卸船机",
+     "en": "Gantry grab unloader",
+     "year": 1960,
+     "note": "桥架抓斗卸船机，大吨位散货船作业。"
+    },
+    {
+     "id": "logi_floating_crane",
+     "name": "浮吊",
+     "en": "Floating crane",
+     "year": 1920,
+     "note": "船基起重设备，大件与重件水上吊装。"
+    },
+    {
+     "id": "logi_mobile_crane",
+     "name": "汽车起重机",
+     "en": "Truck crane",
+     "year": 1920,
+     "note": "车载起重机动性强，适用于分散装卸点。"
+    },
+    {
+     "id": "logi_stacker_reclaimer",
+     "name": "堆取料机",
+     "en": "Stacker-reclaimer",
+     "year": 1960,
+     "note": "散料堆场堆取一体机，提升堆场效率。"
+    },
+    {
+     "id": "logi_warehouse_truck",
+     "name": "手动托盘车",
+     "en": "Pallet truck",
+     "year": 1930,
+     "note": "手动液压托盘搬运车，库内短距转运。"
+    },
+    {
+     "id": "logi_crane_magnet",
+     "name": "起重电磁铁",
+     "en": "Lifting electromagnet",
+     "year": 1920,
+     "note": "磁力吊运废钢与黑色金属，装卸高效。"
+    },
+    {
+     "id": "logi_cargo_net",
+     "name": "货网",
+     "en": "Cargo net",
+     "year": 1950,
+     "note": "成组吊装网，散件货集组吊运。"
+    },
+    {
+     "id": "logi_hopper",
+     "name": "装卸漏斗",
+     "en": "Loading hopper",
+     "year": 1900,
+     "note": "漏斗快速装车，散货装车设备。"
+    },
+    {
+     "id": "logi_bulk_loader",
+     "name": "散料装车机",
+     "en": "Bulk loader",
+     "year": 1960,
+     "note": "自动称量装车的散料装车机械。"
+    },
+    {
+     "id": "logi_empty_container_handler",
+     "name": "空箱堆高机",
+     "en": "Empty container handler",
+     "year": 1980,
+     "note": "专门堆高空集装箱的场地机械。"
+    },
+    {
+     "id": "logi_roll_trailer",
+     "name": "滚装拖车",
+     "en": "Roll trailer",
+     "year": 1960,
+     "note": "滚装作业拖车，港口滚装装卸辅助。"
+    },
+    {
+     "id": "logi_container_chassis",
+     "name": "集装箱半挂车",
+     "en": "Container chassis",
+     "year": 1960,
+     "note": "公路转运集装箱的骨架半挂车，公铁水衔接。"
+    }
+   ]
+  },
+  {
+   "name": "自动化仓储与分拣",
+   "items": [
+    {
+     "id": "logi_high_bay_warehouse",
+     "name": "立体仓库",
+     "en": "High-bay warehouse",
+     "year": 1962,
+     "note": "高层货架密集储货的自动化库房。"
+    },
+    {
+     "id": "logi_stacker_crane",
+     "name": "堆垛机",
+     "en": "Stacker crane",
+     "year": 1965,
+     "note": "巷道内升降取货的窄巷道堆垛机。"
+    },
+    {
+     "id": "logi_asrs",
+     "name": "自动化立体库",
+     "en": "AS/RS",
+     "year": 1970,
+     "note": "计算机调度存取的全自动仓储系统。"
+    },
+    {
+     "id": "logi_agv",
+     "name": "自动导引车",
+     "en": "AGV",
+     "year": 1954,
+     "note": "1954年首台自动导引车，库内自主搬运。"
+    },
+    {
+     "id": "logi_conveyor_system",
+     "name": "输送线",
+     "en": "Conveyor system",
+     "year": 1900,
+     "note": "皮带与滚筒连续输送线，物流主线。"
+    },
+    {
+     "id": "logi_sorting_system",
+     "name": "分拣系统",
+     "en": "Sorting system",
+     "year": 1960,
+     "note": "自动识别分流包裹的分拣系统。"
+    },
+    {
+     "id": "logi_crossbelt_sorter",
+     "name": "交叉带分拣机",
+     "en": "Cross-belt sorter",
+     "year": 1980,
+     "note": "小车交叉带高速分拣，电商仓主流。"
+    },
+    {
+     "id": "logi_miniload",
+     "name": "料箱式立体库",
+     "en": "Miniload",
+     "year": 1980,
+     "note": "小件料箱自动库，拆零拣选高效。"
+    },
+    {
+     "id": "logi_radioshuttle",
+     "name": "穿梭车",
+     "en": "Radio shuttle",
+     "year": 2000,
+     "note": "货架内穿梭搬运的密集存储设备。"
+    },
+    {
+     "id": "logi_pick_robot",
+     "name": "拣选机器人",
+     "en": "Picking robot",
+     "year": 2010,
+     "note": "机械臂自动拣取货物，替代人工。"
+    },
+    {
+     "id": "logi_warehouse_lift",
+     "name": "垂直输送机",
+     "en": "Vertical conveyor",
+     "year": 1950,
+     "note": "库内垂直提升货物的输送设备。"
+    },
+    {
+     "id": "logi_carousel_rack",
+     "name": "回转货柜",
+     "en": "Carousel rack",
+     "year": 1980,
+     "note": "旋转货架自动存取，节省拣货步行。"
+    },
+    {
+     "id": "logi_automated_palletizer",
+     "name": "自动码垛机",
+     "en": "Automatic palletizer",
+     "year": 1960,
+     "note": "自动将货物码成托盘单元，末端作业。"
+    },
+    {
+     "id": "logi_drone_inventory",
+     "name": "仓储盘点无人机",
+     "en": "Inventory drone",
+     "year": 2015,
+     "note": "无人机库内扫描盘点，替代人工爬高。"
+    },
+    {
+     "id": "logi_rfid_gate",
+     "name": "仓储RFID通道",
+     "en": "RFID gate",
+     "year": 2000,
+     "note": "出入库射频识别通道，自动采集货品。"
+    },
+    {
+     "id": "logi_voice_picking",
+     "name": "语音拣选",
+     "en": "Voice picking",
+     "year": 1995,
+     "note": "语音指导拣货，解放双手提升准确。"
+    },
+    {
+     "id": "logi_goods_to_person",
+     "name": "货到人系统",
+     "en": "Goods-to-person",
+     "year": 2012,
+     "note": "货架自动送至拣选站，减少行走。"
+    },
+    {
+     "id": "logi_kiva_robot",
+     "name": "仓储搬运机器人",
+     "en": "Warehouse mobile robot",
+     "year": 2008,
+     "note": "货架搬运机器人搬运整架至工作站。"
+    },
+    {
+     "id": "logi_warehouse_robot_arm",
+     "name": "仓储机械臂",
+     "en": "Warehouse robot arm",
+     "year": 2010,
+     "note": "拆码垛机械臂，包装线自动化。"
+    },
+    {
+     "id": "logi_sortation_conveyor",
+     "name": "滑块分拣",
+     "en": "Sliding shoe sorter",
+     "year": 1990,
+     "note": "滑块推出式分拣，中速大件适用。"
+    },
+    {
+     "id": "logi_putwall",
+     "name": "播种墙",
+     "en": "Put wall",
+     "year": 2015,
+     "note": "集中分播墙，批量订单二次分拣。"
+    }
+   ]
+  },
+  {
+   "name": "快递配送、冷链与航空货运",
+   "items": [
+    {
+     "id": "logi_parcel_sorting_center",
+     "name": "分拣中心",
+     "en": "Sorting center",
+     "year": 1980,
+     "note": "快递集散与自动分拣的区域中心。"
+    },
+    {
+     "id": "logi_barcode",
+     "name": "条码",
+     "en": "Barcode",
+     "year": 1974,
+     "note": "一维条码物品标识，自动识别基础。"
+    },
+    {
+     "id": "logi_barcode_scanner",
+     "name": "条码扫描",
+     "en": "Barcode scanner",
+     "year": 1980,
+     "note": "激光扫码录入货物信息，结算与追踪。"
+    },
+    {
+     "id": "logi_rfid",
+     "name": "射频识别",
+     "en": "RFID",
+     "year": 1983,
+     "note": "无线射频识别标签，非接触批量读取。"
+    },
+    {
+     "id": "logi_parcel_locker",
+     "name": "快递柜",
+     "en": "Parcel locker",
+     "year": 2010,
+     "note": "智能自提柜，缓解末端签收难题。"
+    },
+    {
+     "id": "logi_cold_chain",
+     "name": "冷链物流",
+     "en": "Cold chain",
+     "year": 1950,
+     "note": "全程温控的易腐品运输与仓储链条。"
+    },
+    {
+     "id": "logi_cold_storage",
+     "name": "冷库",
+     "en": "Cold storage",
+     "year": 1900,
+     "note": "机械制冷仓储，冻品与生鲜存储。"
+    },
+    {
+     "id": "logi_reefer_truck",
+     "name": "冷藏车",
+     "en": "Reefer truck",
+     "year": 1950,
+     "note": "隔热制冷的货车，公路冷链主力。"
+    },
+    {
+     "id": "logi_cargo_aircraft",
+     "name": "货机",
+     "en": "Cargo aircraft",
+     "year": 1920,
+     "note": "专用货运飞机，远程高值快件运输。"
+    },
+    {
+     "id": "logi_air_cargo_terminal",
+     "name": "航空货运站",
+     "en": "Air cargo terminal",
+     "year": 1950,
+     "note": "空运货物收运、安检与装载的处理站。"
+    },
+    {
+     "id": "logi_unit_load_device",
+     "name": "航空集装板",
+     "en": "Unit load device",
+     "year": 1950,
+     "note": "飞机专用集装板与集装箱，成组装载。"
+    },
+    {
+     "id": "logi_express_delivery",
+     "name": "快递服务",
+     "en": "Express delivery",
+     "year": 1965,
+     "note": "限时门到门寄递，商务文件与小件。"
+    },
+    {
+     "id": "logi_last_mile",
+     "name": "末端配送",
+     "en": "Last-mile delivery",
+     "year": 2000,
+     "note": "从网点至用户的最后一公里配送网络。"
+    },
+    {
+     "id": "logi_courier_app",
+     "name": "快递调度终端",
+     "en": "Courier handheld",
+     "year": 2010,
+     "note": "手持终端与App调度，实时回传签收。"
+    },
+    {
+     "id": "logi_cold_chain_monitor",
+     "name": "冷链监控",
+     "en": "Cold chain monitoring",
+     "year": 2000,
+     "note": "温湿度实时监测与报警，保障品质。"
+    },
+    {
+     "id": "logi_drone_delivery",
+     "name": "无人机配送",
+     "en": "Drone delivery",
+     "year": 2015,
+     "note": "无人机小件配送试点，偏远与紧急场景。"
+    },
+    {
+     "id": "logi_robotic_delivery",
+     "name": "配送机器人",
+     "en": "Delivery robot",
+     "year": 2016,
+     "note": "无人配送车承担社区末端投递。"
+    },
+    {
+     "id": "logi_freight_forwarder",
+     "name": "货运代理",
+     "en": "Freight forwarder",
+     "year": 1850,
+     "note": "代办订舱报关的中介，组织全程运输。"
+    },
+    {
+     "id": "logi_third_party_logistics",
+     "name": "第三方物流",
+     "en": "Third-party logistics",
+     "year": 1980,
+     "note": "外包物流服务商，整合仓储与运输。"
+    },
+    {
+     "id": "logi_cold_chain_warehouse",
+     "name": "冷链仓",
+     "en": "Cold chain warehouse",
+     "year": 1990,
+     "note": "低温配送中心，衔接冷链干线末端。"
+    },
+    {
+     "id": "logi_air_mail",
+     "name": "航空邮件",
+     "en": "Air mail",
+     "year": 1918,
+     "note": "空运信件，国际邮政提速。"
+    },
+    {
+     "id": "logi_belly_cargo",
+     "name": "客机腹舱货运",
+     "en": "Belly cargo",
+     "year": 1950,
+     "note": "客机腹舱载货，利用客运运力。"
+    },
+    {
+     "id": "logi_express_network",
+     "name": "快递网络",
+     "en": "Express network",
+     "year": 1980,
+     "note": "轴辐式快递网，集散与干线衔接。"
+    },
+    {
+     "id": "logi_locker_terminal",
+     "name": "快递驿站",
+     "en": "Parcel station",
+     "year": 2015,
+     "note": "社区代收点，整合多快递末端。"
+    }
+   ]
+  },
+  {
+   "name": "物流信息、多式联运与邮政",
+   "items": [
+    {
+     "id": "logi_wms",
+     "name": "仓储管理系统",
+     "en": "WMS",
+     "year": 1980,
+     "note": "仓库作业计划与库存管理的软件系统。"
+    },
+    {
+     "id": "logi_tms",
+     "name": "运输管理系统",
+     "en": "TMS",
+     "year": 1990,
+     "note": "运输调度与路径优化的管理软件。"
+    },
+    {
+     "id": "logi_edi",
+     "name": "电子数据交换",
+     "en": "EDI",
+     "year": 1970,
+     "note": "企业间标准报文计算机交换，单证无纸化。"
+    },
+    {
+     "id": "logi_logistics_tracking",
+     "name": "物流跟踪",
+     "en": "Logistics tracking",
+     "year": 1995,
+     "note": "全程在途位置与状态追踪，提升可视性。"
+    },
+    {
+     "id": "logi_intermodal",
+     "name": "多式联运",
+     "en": "Intermodal transport",
+     "year": 1960,
+     "note": "公铁水集装箱一次装箱多式衔接。"
+    },
+    {
+     "id": "logi_road_rail_intermodal",
+     "name": "公铁联运",
+     "en": "Road-rail intermodal",
+     "year": 1958,
+     "note": "集装箱公铁换装联运，避免二次装卸。"
+    },
+    {
+     "id": "logi_piggyback",
+     "name": "驮背运输",
+     "en": "Piggyback transport",
+     "year": 1955,
+     "note": "公路挂车装上铁路平车，公铁无缝转运。"
+    },
+    {
+     "id": "logi_postcode",
+     "name": "邮政编码",
+     "en": "Postal code",
+     "year": 1963,
+     "note": "分区编码提高邮件分拣与投递效率。"
+    },
+    {
+     "id": "logi_postal_network",
+     "name": "邮政网络",
+     "en": "Postal network",
+     "year": 1840,
+     "note": "全国性邮政收投与转运网络。"
+    },
+    {
+     "id": "logi_mail_sorting",
+     "name": "邮件自动分拣",
+     "en": "Mail sorting",
+     "year": 1950,
+     "note": "信函自动分拣机，邮政处理自动化。"
+    },
+    {
+     "id": "logi_parcel_post",
+     "name": "包裹邮政",
+     "en": "Parcel post",
+     "year": 1880,
+     "note": "邮政包裹寄递业务，普惠物流。"
+    },
+    {
+     "id": "logi_logistics_cloud",
+     "name": "物流云平台",
+     "en": "Logistics cloud platform",
+     "year": 2010,
+     "note": "云端协同多方物流资源的平台。"
+    },
+    {
+     "id": "logi_gps_fleet",
+     "name": "车辆定位调度",
+     "en": "Fleet GPS dispatch",
+     "year": 1995,
+     "note": "车队卫星定位与调度，提升运力利用。"
+    },
+    {
+     "id": "logi_supply_chain",
+     "name": "供应链管理",
+     "en": "Supply chain management",
+     "year": 1990,
+     "note": "端到端供应链协同与优化。"
+    },
+    {
+     "id": "logi_blockchain_logistics",
+     "name": "物流区块链",
+     "en": "Logistics blockchain",
+     "year": 2016,
+     "note": "区块链溯源与单证防伪，可信协作。"
+    },
+    {
+     "id": "logi_3d_warehouse_sim",
+     "name": "仓储仿真",
+     "en": "Warehouse simulation",
+     "year": 1990,
+     "note": "仿真优化仓储布局与作业流程。"
+    },
+    {
+     "id": "logi_edi_customs",
+     "name": "电子报关",
+     "en": "Electronic customs declaration",
+     "year": 1990,
+     "note": "电子数据报关，加速口岸放行。"
+    },
+    {
+     "id": "logi_rfid_tag_logi",
+     "name": "物流电子标签",
+     "en": "Logistics RFID tag",
+     "year": 2000,
+     "note": "物流射频标签，资产与货品标识。"
+    },
+    {
+     "id": "logi_warehouse_iot",
+     "name": "仓储物联网",
+     "en": "Warehouse IoT",
+     "year": 2012,
+     "note": "传感联网的仓储环境监控与定位。"
+    },
+    {
+     "id": "logi_digital_twin_warehouse",
+     "name": "仓储数字孪生",
+     "en": "Warehouse digital twin",
+     "year": 2018,
+     "note": "仓库数字镜像支撑仿真与优化。"
+    },
+    {
+     "id": "logi_freight_exchange",
+     "name": "货运交易平台",
+     "en": "Freight exchange",
+     "year": 2000,
+     "note": "车货匹配的在线交易平台，撮合运力。"
+    },
+    {
+     "id": "logi_smart_contract_logi",
+     "name": "物流智能合约",
+     "en": "Logistics smart contract",
+     "year": 2017,
+     "note": "自动执行物流结算与履约的合约。"
+    },
+    {
+     "id": "logi_logistics_dashboard",
+     "name": "物流看板",
+     "en": "Logistics dashboard",
+     "year": 2015,
+     "note": "可视化监控全网物流运行的看板。"
+    }
+   ]
+  }
+ ]
+}

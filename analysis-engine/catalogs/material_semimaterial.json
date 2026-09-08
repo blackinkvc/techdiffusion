@@ -1,0 +1,1182 @@
+{
+ "cat": "material",
+ "catName": "材料",
+ "sub": "semimaterial",
+ "subName": "半导体与电子材料",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "physics",
+  "chemistry",
+  "electromagnetism",
+  "electricity",
+  "semiconductors",
+  "transistor",
+  "ic",
+  "solar",
+  "lasers",
+  "atomic_clock",
+  "camera",
+  "touchscreen"
+ ],
+ "families": [
+  {
+   "name": "半导体单晶与衬底材料",
+   "items": [
+    {
+     "id": "selenium_photoconductor",
+     "name": "硒光电导材料",
+     "en": "Selenium photoconductor",
+     "year": 1873,
+     "note": "光电导效应首先在硒上发现，用于早期光电管、整流器与复印感光鼓。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "copper_oxide_rectifier",
+     "name": "氧化亚铜整流材料",
+     "en": "Cuprous oxide rectifier material",
+     "year": 1926,
+     "note": "金属与氧化亚铜结的整流特性使其实用化，是最早的半导体整流器件材料。",
+     "deps": []
+    },
+    {
+     "id": "lead_sulfide_detector",
+     "name": "硫化铅红外材料",
+     "en": "Lead sulfide infrared material",
+     "year": 1933,
+     "note": "早期红外探测器用窄带隙材料，用于红外制导与夜视探测。",
+     "deps": []
+    },
+    {
+     "id": "germanium_crystal",
+     "name": "锗单晶",
+     "en": "Germanium crystal",
+     "year": 1947,
+     "note": "贝尔实验室制取的高纯锗单晶支撑首只晶体管诞生，是早期半导体器件的材料。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "indium_antimonide",
+     "name": "锑化铟",
+     "en": "Indium antimonide",
+     "year": 1952,
+     "note": "窄禁带化合物半导体，制成红外探测器与高灵敏霍尔传感器。",
+     "deps": []
+    },
+    {
+     "id": "cadmium_sulfide_photoconductor",
+     "name": "硫化镉光敏材料",
+     "en": "Cadmium sulfide photoconductor",
+     "year": 1952,
+     "note": "光导性显著的化合物半导体，用作光敏电阻与测光元件。",
+     "deps": []
+    },
+    {
+     "id": "silicon_single_crystal",
+     "name": "单晶硅",
+     "en": "Single-crystal silicon",
+     "year": 1954,
+     "note": "直拉法生长的硅单晶自1950年代起取代锗，成为集成电路的标准衬底材料。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "indium_arsenide",
+     "name": "砷化铟",
+     "en": "Indium arsenide",
+     "year": 1958,
+     "note": "砷化铟为窄带隙化合物半导体，用于中波红外探测与高速电子器件。",
+     "deps": []
+    },
+    {
+     "id": "mercury_cadmium_telluride",
+     "name": "碲镉汞",
+     "en": "Mercury cadmium telluride",
+     "year": 1959,
+     "note": "禁带宽度可调的三元窄带隙材料，是红外焦平面探测器的主流感光材料。",
+     "deps": []
+    },
+    {
+     "id": "gallium_arsenide",
+     "name": "砷化镓",
+     "en": "Gallium arsenide",
+     "year": 1962,
+     "note": "直接带隙化合物半导体，用于发光二极管、微波与高频器件。",
+     "deps": []
+    },
+    {
+     "id": "gallium_arsenide_phosphide",
+     "name": "磷砷化镓",
+     "en": "Gallium arsenide phosphide",
+     "year": 1962,
+     "note": "最早商用的发光二极管材料，1962年据此制成红色LED。",
+     "deps": []
+    },
+    {
+     "id": "gallium_phosphide_led",
+     "name": "磷化镓发光材料",
+     "en": "Gallium phosphide LED material",
+     "year": 1964,
+     "note": "1960年代实现电致发光的化合物半导体，用于黄绿色指示灯。",
+     "deps": []
+    },
+    {
+     "id": "indium_phosphide",
+     "name": "磷化铟",
+     "en": "Indium phosphide",
+     "year": 1970,
+     "note": "高速电子与光通信器件的衬底材料，支撑异质结晶体管与激光器。",
+     "deps": []
+    },
+    {
+     "id": "aluminum_gallium_arsenide",
+     "name": "铝镓砷",
+     "en": "Aluminium gallium arsenide",
+     "year": 1975,
+     "note": "与砷化镓晶格匹配的三元材料，用于高亮红光LED与半导体激光器。",
+     "deps": [
+      "gallium_arsenide"
+     ]
+    },
+    {
+     "id": "indium_gallium_arsenide",
+     "name": "铟镓砷",
+     "en": "Indium gallium arsenide",
+     "year": 1976,
+     "note": "与磷化铟晶格匹配的合金半导体，用于光通信探测器与高速晶体管。",
+     "deps": [
+      "indium_phosphide"
+     ]
+    },
+    {
+     "id": "indium_gallium_arsenide_phosphide",
+     "name": "铟镓砷磷",
+     "en": "Indium gallium arsenide phosphide",
+     "year": 1977,
+     "note": "四元化合物构成1.3与1.55微米光通信激光器有源层材料。",
+     "deps": [
+      "indium_phosphide"
+     ]
+    },
+    {
+     "id": "silicon_on_insulator",
+     "name": "绝缘体上硅",
+     "en": "Silicon on insulator",
+     "year": 1978,
+     "note": "绝缘埋层上制作硅膜的衬底技术，改善隔离并降低功耗，用于特种芯片。",
+     "deps": [
+      "silicon_single_crystal"
+     ]
+    },
+    {
+     "id": "sapphire_substrate",
+     "name": "蓝宝石衬底",
+     "en": "Sapphire substrate",
+     "year": 1986,
+     "note": "氮化物外延生长用单晶衬底，推动蓝光LED与射频器件的实用化。",
+     "deps": []
+    },
+    {
+     "id": "silicon_germanium",
+     "name": "硅锗异质材料",
+     "en": "Silicon-germanium",
+     "year": 1987,
+     "note": "在硅衬底上生长应变硅锗层，用于射频与高速双极晶体管。",
+     "deps": [
+      "silicon_single_crystal"
+     ]
+    },
+    {
+     "id": "aluminum_indium_gallium_phosphide",
+     "name": "铝铟镓磷",
+     "en": "Aluminium indium gallium phosphide",
+     "year": 1991,
+     "note": "直接带隙四元材料，1990年代实现超高亮红橙黄光LED。",
+     "deps": [
+      "gallium_phosphide_led"
+     ]
+    },
+    {
+     "id": "silicon_carbide",
+     "name": "碳化硅",
+     "en": "Silicon carbide",
+     "year": 1991,
+     "note": "宽禁带化合物半导体，其单晶衬底用于高温高频与功率器件。",
+     "deps": []
+    },
+    {
+     "id": "cadmium_zinc_telluride",
+     "name": "碲锌镉",
+     "en": "Cadmium zinc telluride",
+     "year": 1992,
+     "note": "室温辐射探测用化合物单晶，也是碲镉汞薄膜外延的衬底材料。",
+     "deps": []
+    },
+    {
+     "id": "gallium_nitride",
+     "name": "氮化镓",
+     "en": "Gallium nitride",
+     "year": 1993,
+     "note": "宽禁带半导体材料，1993年实现高效蓝光LED，亦用于功率与射频器件。",
+     "deps": []
+    },
+    {
+     "id": "indium_gallium_nitride",
+     "name": "铟镓氮",
+     "en": "Indium gallium nitride",
+     "year": 1995,
+     "note": "作为多量子阱发光层材料，是蓝绿光LED与激光器的核心。",
+     "deps": [
+      "gallium_nitride"
+     ]
+    },
+    {
+     "id": "gallium_oxide_crystal",
+     "name": "氧化镓单晶",
+     "en": "Gallium oxide crystal",
+     "year": 2012,
+     "note": "超宽禁带功率半导体材料，2010年代生长出单晶衬底并研制功率器件。",
+     "deps": []
+    }
+   ]
+  },
+  {
+   "name": "晶体生长、高纯化与外延掺杂技术",
+   "items": [
+    {
+     "id": "czochralski_method",
+     "name": "直拉法",
+     "en": "Czochralski method",
+     "year": 1916,
+     "note": "从熔体提拉生长单晶的方法，现为硅单晶生产的主流工艺。",
+     "deps": []
+    },
+    {
+     "id": "bridgman_stockbarger_method",
+     "name": "坩埚下降法",
+     "en": "Bridgman-Stockbarger method",
+     "year": 1925,
+     "note": "通过坩埚定向凝固生长晶体的方法，用于化合物半导体与闪烁晶体。",
+     "deps": []
+    },
+    {
+     "id": "zone_refining",
+     "name": "区熔提纯",
+     "en": "Zone refining",
+     "year": 1952,
+     "note": "让熔区沿锭体缓慢移动分离杂质，把锗硅提纯到半导体级纯度。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "float_zone_silicon",
+     "name": "悬浮区熔法",
+     "en": "Float-zone method",
+     "year": 1955,
+     "note": "以无坩埚悬浮熔区生长高纯硅单晶，避免容器污染，制高阻衬底。",
+     "deps": [
+      "zone_refining"
+     ]
+    },
+    {
+     "id": "solid_state_diffusion",
+     "name": "高温扩散掺杂",
+     "en": "Solid-state diffusion doping",
+     "year": 1956,
+     "note": "高温下把磷、硼等杂质扩散进硅片形成导电区，为早期器件掺杂手段。",
+     "deps": []
+    },
+    {
+     "id": "siemens_process",
+     "name": "西门子多晶硅法",
+     "en": "Siemens process",
+     "year": 1959,
+     "note": "以三氯氢硅在加热棒上还原沉积高纯多晶硅，是电子级硅的原料基础。",
+     "deps": []
+    },
+    {
+     "id": "silicon_epitaxy",
+     "name": "硅外延生长",
+     "en": "Silicon epitaxy",
+     "year": 1960,
+     "note": "气相外延在衬底上生长同质单晶层，用于功率器件与埋层结构。",
+     "deps": [
+      "silicon_single_crystal"
+     ]
+    },
+    {
+     "id": "gallium_arsenide_vpe",
+     "name": "砷化镓气相外延",
+     "en": "Gallium arsenide vapor phase epitaxy",
+     "year": 1963,
+     "note": "以含砷氯的气相输运生长外延层，用于高频与光电器件。",
+     "deps": [
+      "gallium_arsenide"
+     ]
+    },
+    {
+     "id": "liquid_encapsulated_czochralski",
+     "name": "液封直拉法",
+     "en": "Liquid-encapsulated Czochralski",
+     "year": 1965,
+     "note": "用液态氧化硼覆盖熔体抑制砷磷挥发，用于生长砷化镓等化合物单晶。",
+     "deps": [
+      "gallium_arsenide"
+     ]
+    },
+    {
+     "id": "mocvd",
+     "name": "金属有机物气相外延",
+     "en": "Metalorganic chemical vapor deposition",
+     "year": 1968,
+     "note": "以金属有机化合物与氢化物为源沉积外延膜，是化合物器件主流工艺。",
+     "deps": []
+    },
+    {
+     "id": "molecular_beam_epitaxy",
+     "name": "分子束外延",
+     "en": "Molecular beam epitaxy",
+     "year": 1968,
+     "note": "超高真空中原子级逐层沉积，可生长量子阱与超晶格结构。",
+     "deps": []
+    },
+    {
+     "id": "ion_implantation",
+     "name": "离子注入掺杂",
+     "en": "Ion implantation",
+     "year": 1971,
+     "note": "把电离杂质加速注入硅片，精确控制掺杂剂量与深度，取代部分扩散工艺。",
+     "deps": [
+      "solid_state_diffusion"
+     ]
+    },
+    {
+     "id": "neutron_transmutation_doping",
+     "name": "中子嬗变掺杂",
+     "en": "Neutron transmutation doping",
+     "year": 1975,
+     "note": "以反应堆中子轰击均匀掺杂硅，用于电力电子器件所需的高均匀度硅片。",
+     "deps": []
+    }
+   ]
+  },
+  {
+   "name": "薄膜、栅介质与互连材料",
+   "items": [
+    {
+     "id": "vacuum_evaporation",
+     "name": "真空蒸镀",
+     "en": "Vacuum evaporation",
+     "year": 1935,
+     "note": "真空中加热蒸发源材料在基片表面成膜，用于光学薄膜与早期金属电极。",
+     "deps": []
+    },
+    {
+     "id": "silicon_thermal_oxidation",
+     "name": "硅热氧化",
+     "en": "Thermal oxidation of silicon",
+     "year": 1959,
+     "note": "高温氧化生成致密二氧化硅层，作MOS器件栅介质与扩散掩蔽层。",
+     "deps": [
+      "silicon_single_crystal"
+     ]
+    },
+    {
+     "id": "aluminum_metallization",
+     "name": "铝金属化互连",
+     "en": "Aluminum metallization",
+     "year": 1960,
+     "note": "蒸镀铝膜再刻蚀成互连线，是平面工艺以来的主流互连金属。",
+     "deps": []
+    },
+    {
+     "id": "silicon_nitride_passivation",
+     "name": "氮化硅钝化膜",
+     "en": "Silicon nitride passivation",
+     "year": 1965,
+     "note": "沉积的氮化硅致密膜保护芯片表面，阻挡水汽与离子污染。",
+     "deps": []
+    },
+    {
+     "id": "pecvd_deposition",
+     "name": "等离子体增强化学气相沉积",
+     "en": "Plasma-enhanced chemical vapor deposition",
+     "year": 1965,
+     "note": "借等离子体降低沉积温度，用于氮化硅钝化与层间介质成膜。",
+     "deps": []
+    },
+    {
+     "id": "polysilicon_gate",
+     "name": "掺杂多晶硅栅",
+     "en": "Polysilicon gate",
+     "year": 1968,
+     "note": "以掺杂多晶硅替代铝作栅电极，配合自对准工艺减小栅极重叠电容。",
+     "deps": [
+      "aluminum_metallization"
+     ]
+    },
+    {
+     "id": "magnetron_sputtering",
+     "name": "磁控溅射镀膜",
+     "en": "Magnetron sputtering",
+     "year": 1970,
+     "note": "以磁场约束电子提高溅射沉积速率，广泛用于电极与阻挡层成膜。",
+     "deps": []
+    },
+    {
+     "id": "atomic_layer_deposition",
+     "name": "原子层沉积",
+     "en": "Atomic layer deposition",
+     "year": 1974,
+     "note": "前驱体交替自限制反应逐层成膜，厚度控制精确均匀，用于栅介质。",
+     "deps": []
+    },
+    {
+     "id": "bpsg_dielectric",
+     "name": "硼磷硅玻璃介质",
+     "en": "BPSG dielectric",
+     "year": 1980,
+     "note": "掺硼磷的硅玻璃在高温下回流平坦化，用作层间绝缘介质。",
+     "deps": []
+    },
+    {
+     "id": "teos_oxide",
+     "name": "TEOS氧化硅",
+     "en": "TEOS oxide",
+     "year": 1980,
+     "note": "以正硅酸乙酯分解沉积的氧化硅，台阶覆盖好，用于层间介质填充。",
+     "deps": []
+    },
+    {
+     "id": "metal_silicide_contact",
+     "name": "金属硅化物接触层",
+     "en": "Metal silicide contact",
+     "year": 1980,
+     "note": "钛硅化物等低阻硅化物用于源漏与栅接触，显著降低接触电阻。",
+     "deps": []
+    },
+    {
+     "id": "tungsten_plug",
+     "name": "钨塞填充",
+     "en": "Tungsten plug",
+     "year": 1986,
+     "note": "以化学气相沉积钨填充接触孔与通孔，连接器件与上层互连。",
+     "deps": []
+    },
+    {
+     "id": "copper_interconnect",
+     "name": "铜互连",
+     "en": "Copper interconnect",
+     "year": 1997,
+     "note": "大马士革工艺以电镀铜取代铝互连，降低电阻并改善电迁移可靠性。",
+     "deps": []
+    },
+    {
+     "id": "copper_plating_electrolyte",
+     "name": "铜互连电镀液",
+     "en": "Copper plating electrolyte",
+     "year": 1997,
+     "note": "含硫酸铜与有机添加剂的镀液，电镀填充电镀铜互连结构。",
+     "deps": []
+    },
+    {
+     "id": "low_k_dielectric",
+     "name": "低介电常数介质",
+     "en": "Low-k dielectric",
+     "year": 1997,
+     "note": "多孔含碳硅氧化物等低介电材料作层间介质，减小互连电容与信号延迟。",
+     "deps": []
+    },
+    {
+     "id": "diffusion_barrier_layer",
+     "name": "互连扩散阻挡层",
+     "en": "Diffusion barrier layer",
+     "year": 1997,
+     "note": "钽、氮化钽等阻挡层防止铜扩散进入介质与硅，是铜互连的必需结构。",
+     "deps": []
+    },
+    {
+     "id": "high_k_gate_dielectric",
+     "name": "高介电常数栅介质",
+     "en": "High-k gate dielectric",
+     "year": 2007,
+     "note": "以二氧化铪等高介电材料替代二氧化硅，抑制栅极漏电并延续摩尔定律。",
+     "deps": [
+      "atomic_layer_deposition"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "光刻胶、图形化材料与平坦化",
+   "items": [
+    {
+     "id": "semiconductor_photoresist",
+     "name": "半导体光刻胶",
+     "en": "Semiconductor photoresist",
+     "year": 1957,
+     "note": "感光高分子经曝光显影把掩膜图形转移到晶圆，是光刻工艺的核心材料。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "photomask",
+     "name": "铬掩膜版",
+     "en": "Chrome photomask",
+     "year": 1961,
+     "note": "在石英玻璃上镀铬刻出电路原版图形，供光刻投影机使用。",
+     "deps": []
+    },
+    {
+     "id": "rca_clean",
+     "name": "RCA标准清洗",
+     "en": "RCA clean",
+     "year": 1965,
+     "note": "以碱性与酸性双氧水溶液分步清洗，去除硅片表面金属与颗粒污染。",
+     "deps": []
+    },
+    {
+     "id": "novolak_positive_resist",
+     "name": "酚醛-重氮萘醌正性光刻胶",
+     "en": "Novolak positive resist",
+     "year": 1968,
+     "note": "曝光区溶于碱性显影液的正胶体系，分辨率优于早期负胶。",
+     "deps": [
+      "semiconductor_photoresist"
+     ]
+    },
+    {
+     "id": "hmds_adhesion_promoter",
+     "name": "硅烷增粘底涂",
+     "en": "HMDS adhesion promoter",
+     "year": 1970,
+     "note": "六甲基二硅氮烷处理硅片表面，增强光刻胶与基底的粘附性。",
+     "deps": []
+    },
+    {
+     "id": "pellicle",
+     "name": "掩膜防尘膜",
+     "en": "Pellicle",
+     "year": 1978,
+     "note": "张紧于掩膜表面的透明薄膜阻挡尘埃，防止颗粒缺陷转印到晶圆。",
+     "deps": [
+      "photomask"
+     ]
+    },
+    {
+     "id": "chemically_amplified_resist",
+     "name": "化学放大光刻胶",
+     "en": "Chemically amplified resist",
+     "year": 1982,
+     "note": "曝光产生的酸催化放大反应，灵敏度高，支撑深紫外光刻。",
+     "deps": []
+    },
+    {
+     "id": "phase_shift_mask",
+     "name": "相移掩膜",
+     "en": "Phase-shift mask",
+     "year": 1982,
+     "note": "在掩膜上刻蚀相移层使相邻透光区相位反转，以提高分辨率与焦深。",
+     "deps": [
+      "photomask"
+     ]
+    },
+    {
+     "id": "tmah_developer",
+     "name": "四甲基氢氧化铵显影液",
+     "en": "TMAH developer",
+     "year": 1983,
+     "note": "四甲基氢氧化铵水溶液不含金属离子，用作正性光刻胶的显影液。",
+     "deps": []
+    },
+    {
+     "id": "chemical_mechanical_polishing",
+     "name": "化学机械抛光",
+     "en": "Chemical mechanical polishing",
+     "year": 1983,
+     "note": "化学腐蚀与机械研磨协同去除表面材料，实现晶圆全局平坦化。",
+     "deps": []
+    },
+    {
+     "id": "cmp_slurry",
+     "name": "CMP抛光浆料",
+     "en": "CMP slurry",
+     "year": 1986,
+     "note": "含纳米磨料与氧化剂的浆料，配合抛光垫完成材料去除与平坦化。",
+     "deps": [
+      "chemical_mechanical_polishing"
+     ]
+    },
+    {
+     "id": "bottom_antireflective_coating",
+     "name": "底部抗反射涂层",
+     "en": "Bottom antireflective coating",
+     "year": 1990,
+     "note": "涂于光刻胶下方的吸光层，抑制衬底反射引起的驻波效应。",
+     "deps": [
+      "semiconductor_photoresist"
+     ]
+    },
+    {
+     "id": "cmp_polishing_pad",
+     "name": "CMP抛光垫",
+     "en": "CMP polishing pad",
+     "year": 1990,
+     "note": "多孔聚氨酯等垫层携带浆料并维持压力，实现均匀抛光。",
+     "deps": [
+      "chemical_mechanical_polishing"
+     ]
+    },
+    {
+     "id": "euv_photoresist",
+     "name": "极紫外光刻胶",
+     "en": "EUV photoresist",
+     "year": 2019,
+     "note": "适配13.5纳米波长的光刻胶，支撑极紫外光刻的小节点量产。",
+     "deps": [
+      "chemically_amplified_resist"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "电子特种气体与高纯工艺化学品",
+   "items": [
+    {
+     "id": "silane_gas",
+     "name": "硅烷",
+     "en": "Silane",
+     "year": 1960,
+     "note": "硅烷是化学气相沉积多晶硅、氮化硅与氧化硅薄膜的硅源气体。",
+     "deps": []
+    },
+    {
+     "id": "phosphine_gas",
+     "name": "磷化氢",
+     "en": "Phosphine",
+     "year": 1960,
+     "note": "磷化氢用作N型磷掺杂气源，用于扩散与离子注入掺杂工艺。",
+     "deps": []
+    },
+    {
+     "id": "electronic_grade_ammonia",
+     "name": "电子级氨",
+     "en": "Electronic-grade ammonia",
+     "year": 1960,
+     "note": "电子级氨是氮化硅等薄膜沉积用的氮源气体，须达极高纯度。",
+     "deps": []
+    },
+    {
+     "id": "ultrapure_wet_chemicals",
+     "name": "电子级高纯湿化学品",
+     "en": "Ultrapure wet chemicals",
+     "year": 1965,
+     "note": "电子级高纯酸碱与双氧水等湿化学品，用于晶圆清洗与腐蚀工艺。",
+     "deps": []
+    },
+    {
+     "id": "dichlorosilane_gas",
+     "name": "二氯硅烷",
+     "en": "Dichlorosilane",
+     "year": 1965,
+     "note": "二氯硅烷是低温外延与氧化硅沉积常用的含氯硅源气体。",
+     "deps": [
+      "silane_gas"
+     ]
+    },
+    {
+     "id": "arsine_gas",
+     "name": "砷化氢",
+     "en": "Arsine",
+     "year": 1965,
+     "note": "砷化氢气体用作砷掺杂源，用于硅与化合物半导体制造工艺。",
+     "deps": []
+    },
+    {
+     "id": "buffered_oxide_etch",
+     "name": "缓冲氧化物刻蚀液",
+     "en": "Buffered oxide etch",
+     "year": 1968,
+     "note": "氢氟酸加氟化铵的缓冲溶液，选择性湿法腐蚀二氧化硅。",
+     "deps": []
+    },
+    {
+     "id": "diborane_gas",
+     "name": "乙硼烷",
+     "en": "Diborane",
+     "year": 1970,
+     "note": "乙硼烷是硼掺杂气源，用于P型掺杂与硼硅玻璃的形成。",
+     "deps": []
+    },
+    {
+     "id": "chlorine_etch_gas",
+     "name": "氯气刻蚀气体",
+     "en": "Chlorine etch gas",
+     "year": 1970,
+     "note": "氯气等含氯刻蚀气体用于铝与多晶硅的干法刻蚀，形成垂直侧壁图形。",
+     "deps": []
+    },
+    {
+     "id": "boron_trichloride_gas",
+     "name": "三氯化硼",
+     "en": "Boron trichloride",
+     "year": 1980,
+     "note": "三氯化硼是干法刻蚀金属与介质膜的含氯刻蚀气，可搭配含氟气体使用。",
+     "deps": []
+    },
+    {
+     "id": "carbon_tetrafluoride_gas",
+     "name": "四氟化碳",
+     "en": "Carbon tetrafluoride",
+     "year": 1980,
+     "note": "四氟化碳是等离子体刻蚀的含氟气体，用于氧化硅与硅刻蚀。",
+     "deps": []
+    },
+    {
+     "id": "trifluoromethane_gas",
+     "name": "三氟甲烷",
+     "en": "Trifluoromethane",
+     "year": 1980,
+     "note": "三氟甲烷为含氢氟碳刻蚀气，用于氧化硅相对硅的选择性刻蚀。",
+     "deps": []
+    },
+    {
+     "id": "tungsten_hexafluoride_gas",
+     "name": "六氟化钨",
+     "en": "Tungsten hexafluoride",
+     "year": 1985,
+     "note": "六氟化钨是钨化学气相沉积的前驱体，用于钨塞与接触填充。",
+     "deps": []
+    },
+    {
+     "id": "germane_gas",
+     "name": "锗烷",
+     "en": "Germane",
+     "year": 1985,
+     "note": "锗烷气体用作硅锗异质结外延生长的锗源，与硅烷共同参与沉积。",
+     "deps": []
+    },
+    {
+     "id": "nitrogen_trifluoride_gas",
+     "name": "三氟化氮",
+     "en": "Nitrogen trifluoride",
+     "year": 1990,
+     "note": "三氟化氮作反应腔清洗的氟源，替代全氟烃以降低温室气体排放。",
+     "deps": []
+    },
+    {
+     "id": "sulfur_hexafluoride_gas",
+     "name": "六氟化硫",
+     "en": "Sulfur hexafluoride",
+     "year": 1990,
+     "note": "六氟化硫用于高深宽比硅结构刻蚀，是MEMS制造关键气体。",
+     "deps": []
+    },
+    {
+     "id": "hexafluoroethane_gas",
+     "name": "六氟乙烷",
+     "en": "Hexafluoroethane",
+     "year": 1995,
+     "note": "六氟乙烷是低损伤介电膜刻蚀用氟碳气体，用于集成电路制造。",
+     "deps": []
+    },
+    {
+     "id": "octafluorocyclobutane_gas",
+     "name": "八氟环丁烷",
+     "en": "Octafluorocyclobutane",
+     "year": 1995,
+     "note": "八氟环丁烷作钝化保护气体，用于深反应离子刻蚀的高深宽比结构。",
+     "deps": []
+    }
+   ]
+  },
+  {
+   "name": "电子封装与互连材料",
+   "items": [
+    {
+     "id": "metal_can_package",
+     "name": "金属管壳封装",
+     "en": "Metal can package",
+     "year": 1955,
+     "note": "金属壳气密封装晶体管等器件，是早期高可靠封装的主流形式。",
+     "deps": []
+    },
+    {
+     "id": "glass_to_metal_seal",
+     "name": "玻璃金属封接",
+     "en": "Glass-to-metal seal",
+     "year": 1955,
+     "note": "玻璃与金属封接形成气密端子，用于管壳引线引出与密封窗。",
+     "deps": []
+    },
+    {
+     "id": "gold_bonding_wire",
+     "name": "金丝键合",
+     "en": "Gold wire bonding",
+     "year": 1957,
+     "note": "金丝经热压或超声键合连接芯片焊盘与引脚，是经典引线互连方式。",
+     "deps": []
+    },
+    {
+     "id": "lead_frame",
+     "name": "引线框架",
+     "en": "Lead frame",
+     "year": 1960,
+     "note": "铜合金冲压成型的框架，承载芯片并把电极引出为封装外引脚。",
+     "deps": []
+    },
+    {
+     "id": "alumina_ceramic_package",
+     "name": "氧化铝陶瓷封装",
+     "en": "Alumina ceramic package",
+     "year": 1960,
+     "note": "高纯氧化铝陶瓷基板与盖板构成气密封装，用于高可靠器件。",
+     "deps": []
+    },
+    {
+     "id": "silver_glass_die_attach",
+     "name": "银玻璃芯片贴装",
+     "en": "Silver-glass die attach",
+     "year": 1965,
+     "note": "含银玻璃浆料经烧结把芯片固定在基座上，兼起导电导热作用。",
+     "deps": []
+    },
+    {
+     "id": "epoxy_molding_compound",
+     "name": "环氧塑封料",
+     "en": "Epoxy molding compound",
+     "year": 1968,
+     "note": "环氧树脂与填料组成的模塑料包封芯片，是集成电路主流封装材料。",
+     "deps": [
+      "ic"
+     ]
+    },
+    {
+     "id": "fr4_copper_clad_laminate",
+     "name": "FR-4覆铜板",
+     "en": "FR-4 copper clad laminate",
+     "year": 1968,
+     "note": "玻璃布浸环氧与铜箔热压成的覆铜层压板，是印制电路板基础。",
+     "deps": []
+    },
+    {
+     "id": "controlled_collapse_chip_connection",
+     "name": "C4倒装焊凸点",
+     "en": "Controlled collapse chip connection",
+     "year": 1969,
+     "note": "IBM开发的高铅焊料凸点使芯片面朝下倒装互连，提高引线密度。",
+     "deps": []
+    },
+    {
+     "id": "under_bump_metallurgy",
+     "name": "凸点下金属层",
+     "en": "Under bump metallurgy",
+     "year": 1969,
+     "note": "位于焊料凸点与芯片焊盘间的多层金属，起粘附与阻挡扩散作用。",
+     "deps": []
+    },
+    {
+     "id": "die_attach_adhesive",
+     "name": "导电胶芯片贴装",
+     "en": "Conductive die attach adhesive",
+     "year": 1970,
+     "note": "银填充环氧导电胶把芯片粘到基座，同时实现导热与电气连接。",
+     "deps": []
+    },
+    {
+     "id": "tape_automated_bonding",
+     "name": "载带自动焊",
+     "en": "Tape automated bonding",
+     "year": 1975,
+     "note": "在聚酰亚胺载带铜箔上布线的自动焊连接技术，适合高引脚数器件。",
+     "deps": []
+    },
+    {
+     "id": "solder_resist_mask",
+     "name": "阻焊油墨",
+     "en": "Solder resist",
+     "year": 1975,
+     "note": "网印或喷涂的绝缘油墨，保护电路板铜走线并限定焊接区域。",
+     "deps": []
+    },
+    {
+     "id": "flip_chip_underfill",
+     "name": "倒装芯片底部填充胶",
+     "en": "Flip-chip underfill",
+     "year": 1975,
+     "note": "填充倒装芯片与基板间隙的环氧胶，分散热应力并提高可靠性。",
+     "deps": [
+      "controlled_collapse_chip_connection"
+     ]
+    },
+    {
+     "id": "thermal_interface_material",
+     "name": "导热界面材料",
+     "en": "Thermal interface material",
+     "year": 1980,
+     "note": "填充芯片与散热器间隙的导热硅脂或垫片，降低接触热阻。",
+     "deps": []
+    },
+    {
+     "id": "solder_paste",
+     "name": "焊膏",
+     "en": "Solder paste",
+     "year": 1983,
+     "note": "锡粉与助焊剂混合的膏体，经印刷与回流焊连接表贴元器件。",
+     "deps": []
+    },
+    {
+     "id": "aluminum_nitride_substrate",
+     "name": "氮化铝陶瓷基板",
+     "en": "Aluminium nitride substrate",
+     "year": 1985,
+     "note": "氮化铝陶瓷基板热导率高且绝缘，用于功率电子器件的散热。",
+     "deps": []
+    },
+    {
+     "id": "direct_bonded_copper",
+     "name": "陶瓷覆铜功率基板",
+     "en": "Direct bonded copper substrate",
+     "year": 1985,
+     "note": "陶瓷基板直接键合铜箔作功率模块衬底，兼顾绝缘与导热。",
+     "deps": []
+    },
+    {
+     "id": "low_temperature_cofired_ceramic",
+     "name": "低温共烧陶瓷基板",
+     "en": "LTCC substrate",
+     "year": 1985,
+     "note": "低温共烧的多层陶瓷基板，可内埋无源元件与多层布线。",
+     "deps": [
+      "alumina_ceramic_package"
+     ]
+    },
+    {
+     "id": "enig_surface_finish",
+     "name": "化学镍金表面处理",
+     "en": "Electroless nickel immersion gold",
+     "year": 1985,
+     "note": "化学镀镍再浸金处理焊盘，保证可焊性与长期储存可靠性。",
+     "deps": []
+    },
+    {
+     "id": "die_attach_film",
+     "name": "芯片粘接膜",
+     "en": "Die attach film",
+     "year": 1990,
+     "note": "预制的胶膜粘贴芯片后再切割，用于叠层与多芯片封装。",
+     "deps": []
+    },
+    {
+     "id": "ball_grid_array_substrate",
+     "name": "BGA封装基板",
+     "en": "BGA substrate",
+     "year": 1993,
+     "note": "球栅阵列封装用积层有机基板，支撑高密度布线芯片封装。",
+     "deps": []
+    },
+    {
+     "id": "solder_ball",
+     "name": "焊球阵列",
+     "en": "Solder ball",
+     "year": 1993,
+     "note": "在基板背面排布共晶或高铅焊球，供回流焊接到电路板。",
+     "deps": []
+    },
+    {
+     "id": "abf_film_substrate",
+     "name": "ABF积层膜基板",
+     "en": "ABF film substrate",
+     "year": 1999,
+     "note": "以积层绝缘膜制成的高密度互连基板，支撑CPU等大型芯片封装。",
+     "deps": [
+      "ball_grid_array_substrate"
+     ]
+    },
+    {
+     "id": "lead_free_solder",
+     "name": "无铅焊料",
+     "en": "Lead-free solder",
+     "year": 1999,
+     "note": "锡银铜无铅焊料替代铅锡焊料，满足电子产品无铅化法规要求。",
+     "deps": []
+    },
+    {
+     "id": "copper_bonding_wire",
+     "name": "铜丝键合",
+     "en": "Copper wire bonding",
+     "year": 2007,
+     "note": "以铜丝替代金丝键合，降低成本并提升电学与机械性能。",
+     "deps": [
+      "gold_bonding_wire"
+     ]
+    },
+    {
+     "id": "copper_pillar_bump",
+     "name": "铜柱凸点",
+     "en": "Copper pillar bump",
+     "year": 2008,
+     "note": "铜柱加焊帽的高密度互连凸点，节距小且抗电迁移性能好。",
+     "deps": [
+      "controlled_collapse_chip_connection"
+     ]
+    },
+    {
+     "id": "through_silicon_via",
+     "name": "硅通孔",
+     "en": "Through-silicon via",
+     "year": 2008,
+     "note": "贯穿硅片并金属填充的通孔，实现三维堆叠芯片的垂直互连。",
+     "deps": [
+      "copper_interconnect"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "显示、光电与电子功能材料",
+   "items": [
+    {
+     "id": "barium_titanate_dielectric",
+     "name": "钛酸钡介电陶瓷",
+     "en": "Barium titanate dielectric ceramic",
+     "year": 1942,
+     "note": "钛酸钡是高介电常数陶瓷材料，使陶瓷电容器走向小型化。",
+     "deps": []
+    },
+    {
+     "id": "synthetic_quartz_crystal",
+     "name": "人造石英晶体",
+     "en": "Synthetic quartz crystal",
+     "year": 1947,
+     "note": "水热法生长的高纯石英单晶，用作频率控制谐振器的基材。",
+     "deps": []
+    },
+    {
+     "id": "sodium_iodide_scintillator",
+     "name": "碘化钠闪烁晶体",
+     "en": "Sodium iodide scintillator",
+     "year": 1948,
+     "note": "掺铊碘化钠把射线能量转成荧光，用于核辐射探测与能谱测量。",
+     "deps": []
+    },
+    {
+     "id": "pzt_piezoelectric_ceramic",
+     "name": "锆钛酸铅压电陶瓷",
+     "en": "PZT piezoelectric ceramic",
+     "year": 1954,
+     "note": "压电系数高且居里温度高，用于换能器、致动器与点火器件。",
+     "deps": []
+    },
+    {
+     "id": "lithium_niobate_crystal",
+     "name": "铌酸锂晶体",
+     "en": "Lithium niobate crystal",
+     "year": 1965,
+     "note": "压电与电光性能优异的晶体，用于声表面波滤波器与光调制器。",
+     "deps": []
+    },
+    {
+     "id": "lithium_tantalate_crystal",
+     "name": "钽酸锂晶体",
+     "en": "Lithium tantalate crystal",
+     "year": 1965,
+     "note": "压电晶体材料，用于高频声表面波器件与高温压电应用。",
+     "deps": []
+    },
+    {
+     "id": "ito_transparent_electrode",
+     "name": "铟锡氧化物透明电极",
+     "en": "ITO transparent electrode",
+     "year": 1970,
+     "note": "透明导电氧化物薄膜，作平板显示、触摸屏与光伏电极。",
+     "deps": []
+    },
+    {
+     "id": "nematic_liquid_crystal",
+     "name": "向列相液晶材料",
+     "en": "Nematic liquid crystal material",
+     "year": 1971,
+     "note": "向列相液晶驱动电压低且响应快，支撑液晶显示器产业化。",
+     "deps": []
+    },
+    {
+     "id": "rare_earth_triphosphor",
+     "name": "稀土三基色荧光粉",
+     "en": "Rare-earth tri-phosphor",
+     "year": 1974,
+     "note": "铕、铽等激活的三色荧光粉组合，提升荧光灯的光效与显色性。",
+     "deps": []
+    },
+    {
+     "id": "hydrogenated_amorphous_silicon",
+     "name": "氢化非晶硅",
+     "en": "Hydrogenated amorphous silicon",
+     "year": 1975,
+     "note": "可大面积沉积的硅基半导体薄膜，用于液晶开关与薄膜光伏。",
+     "deps": [
+      "silicon_single_crystal"
+     ]
+    },
+    {
+     "id": "low_temperature_polysilicon",
+     "name": "低温多晶硅",
+     "en": "Low-temperature polycrystalline silicon",
+     "year": 1985,
+     "note": "低温晶化形成的高迁移率硅膜，用于高分辨率显示背板。",
+     "deps": [
+      "hydrogenated_amorphous_silicon"
+     ]
+    },
+    {
+     "id": "organic_semiconductor",
+     "name": "有机半导体材料",
+     "en": "Organic semiconductor",
+     "year": 1986,
+     "note": "共轭分子与聚合物具半导体特性，用于柔性显示与有机电子器件。",
+     "deps": []
+    },
+    {
+     "id": "oled_organic_emitter",
+     "name": "OLED有机发光材料",
+     "en": "OLED organic emitter",
+     "year": 1987,
+     "note": "柯达研制小分子有机电致发光器件，开创平板显示新材料体系。",
+     "deps": []
+    },
+    {
+     "id": "yag_cerium_phosphor",
+     "name": "铈激活钇铝石榴石荧光粉",
+     "en": "YAG:Ce phosphor",
+     "year": 1996,
+     "note": "被蓝光激发发射黄光的荧光粉，与蓝光LED合成白光照明。",
+     "deps": [
+      "gallium_nitride"
+     ]
+    },
+    {
+     "id": "electrophoretic_ink",
+     "name": "电泳显示墨水",
+     "en": "Electrophoretic ink",
+     "year": 1997,
+     "note": "微胶囊内带电颜料颗粒受电场移动，构成低功耗电子纸显示材料。",
+     "deps": []
+    },
+    {
+     "id": "igzo_semiconductor",
+     "name": "铟镓锌氧化物半导体",
+     "en": "IGZO semiconductor",
+     "year": 2004,
+     "note": "氧化物半导体薄膜，用于高分辨率显示背板与柔性面板。",
+     "deps": []
+    }
+   ]
+  }
+ ]
+}

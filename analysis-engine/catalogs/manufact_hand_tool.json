@@ -1,0 +1,1082 @@
+{
+ "cat": "manufact",
+ "catName": "制造与工具",
+ "sub": "hand_tool",
+ "subName": "手工工具",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "stone_tools",
+  "fire",
+  "bronze",
+  "iron",
+  "steel",
+  "mathematics"
+ ],
+ "families": [
+  {
+   "name": "远古石、骨与青铜工具",
+   "items": [
+    {
+     "id": "hammerstone",
+     "name": "敲击石锤",
+     "en": "Hammerstone",
+     "year": -2500000,
+     "note": "旧石器时代最早的打击工具，用于砸击石核与敲碎骨骼，是打制石器的基本工具。",
+     "deps": [
+      "stone_tools"
+     ]
+    },
+    {
+     "id": "handaxe_biface",
+     "name": "双面石手斧",
+     "en": "Acheulean hand axe",
+     "year": -1700000,
+     "note": "阿舍利文化的对称双面打制工具，刃口环绕器身，兼作切割、挖掘与屠宰工具。",
+     "deps": [
+      "stone_tools"
+     ]
+    },
+    {
+     "id": "flake_blade_knife",
+     "name": "石叶刀",
+     "en": "Blade knife",
+     "year": -60000,
+     "note": "以间接剥片技术制出的长条形石刃，边缘锋利，为旧石器晚期的高效切割刀具。",
+     "deps": [
+      "stone_tools"
+     ]
+    },
+    {
+     "id": "antler_wedge",
+     "name": "鹿角楔具",
+     "en": "Antler wedge",
+     "year": -25000,
+     "note": "利用鹿角的韧性与冲击韧性劈解骨料与木料，是无金属时代重要的楔入工具。",
+     "deps": [
+      "stone_tools"
+     ]
+    },
+    {
+     "id": "bone_scraper",
+     "name": "骨刮削器",
+     "en": "Bone scraper",
+     "year": -20000,
+     "note": "以骨片磨制的刮具，用于清除兽皮上的肉屑油脂，属于皮料初加工的常用手工具。",
+     "deps": [
+      "stone_tools"
+     ]
+    },
+    {
+     "id": "ground_stone_axe",
+     "name": "磨制石斧",
+     "en": "Ground stone axe",
+     "year": -8000,
+     "note": "新石器时代磨刃技术的产物，刃口经磨砺更锋利耐用，广泛用于砍伐与木作。",
+     "deps": [
+      "stone_tools"
+     ]
+    },
+    {
+     "id": "polished_stone_adze",
+     "name": "磨光石锛",
+     "en": "Polished stone adze",
+     "year": -7000,
+     "note": "单面刃的横柄木作工具，用于削平木材表面，是早期细木工与造船的基础刃具。",
+     "deps": [
+      "ground_stone_axe"
+     ]
+    },
+    {
+     "id": "stone_chisel",
+     "name": "石凿",
+     "en": "Stone chisel",
+     "year": -5000,
+     "note": "凿形磨刃石器，借助敲击凿削木质与石质表面，是凿削工艺的直接前身。",
+     "deps": [
+      "stone_tools"
+     ]
+    },
+    {
+     "id": "obsidian_blade",
+     "name": "黑曜石刀",
+     "en": "Obsidian blade",
+     "year": -4000,
+     "note": "用火山玻璃剥片而成的刀具，刃口极薄且锋利，用于精细切割与祭祀用品制作。",
+     "deps": [
+      "flake_blade_knife"
+     ]
+    },
+    {
+     "id": "bronze_chisel",
+     "name": "青铜凿",
+     "en": "Bronze chisel",
+     "year": -2000,
+     "note": "青铜刃凿硬度与韧性俱佳，可用于木工与石工，标志凿类工具进入金属时代。",
+     "deps": [
+      "bronze"
+     ]
+    },
+    {
+     "id": "bronze_saw",
+     "name": "青铜锯",
+     "en": "Bronze saw",
+     "year": -1800,
+     "note": "带齿青铜薄片作往复锯切，用于木材开槽截断，是金属锯具的早期形态。",
+     "deps": [
+      "bronze"
+     ]
+    },
+    {
+     "id": "iron_axe",
+     "name": "铁制斧头",
+     "en": "Iron axe",
+     "year": -1000,
+     "note": "铁刃斧强度与韧性超过青铜斧，成为古代砍伐树木与粗木作的主力工具。",
+     "deps": [
+      "iron"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "木工刃具：斧、凿与刨削",
+   "items": [
+    {
+     "id": "wood_adze",
+     "name": "木工锛",
+     "en": "Woodworking adze",
+     "year": -6000,
+     "note": "刃口与柄垂直的横刃木作工具，以弧线挥削修平原木表面，历史悠久的木工刃具。",
+     "deps": [
+      "polished_stone_adze"
+     ]
+    },
+    {
+     "id": "hand_plane",
+     "name": "木刨",
+     "en": "Hand plane",
+     "year": 100,
+     "note": "刃口倒装平置于刨身底面的整平工具，古罗马已有金属刃木刨实物，用于刨光木面。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "firmer_chisel",
+     "name": "木凿",
+     "en": "Firmer chisel",
+     "year": 800,
+     "note": "直柄平刃凿，既可锤击亦可手推，用于凿削榫眼与修整木料的通用木工凿。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "broadaxe",
+     "name": "宽刃斧",
+     "en": "Broadaxe",
+     "year": 900,
+     "note": "单面开刃的宽体斧，沿木纹方向将圆木找平成方料，是中世纪造船与木构基础工具。"
+    },
+    {
+     "id": "hand_hatchet",
+     "name": "单手短斧",
+     "en": "Hand hatchet",
+     "year": 1000,
+     "note": "单手持用的轻便短柄斧，用于粗劈木料与断削，木工现场常备的小型斧。"
+    },
+    {
+     "id": "wood_carving_knife",
+     "name": "木雕刀",
+     "en": "Wood carving knife",
+     "year": 1100,
+     "note": "不同刃型的雕刻刀具组合，用于木雕的粗坯凿削与细部刻画，随雕刻业流传。"
+    },
+    {
+     "id": "gouge_chisel",
+     "name": "弧口凿",
+     "en": "Gouge",
+     "year": 1300,
+     "note": "截面呈弧形的凹槽凿，用于挖槽、剔孔与雕刻曲面，刃口分内外弧两类。"
+    },
+    {
+     "id": "drawknife",
+     "name": "刮皮刀",
+     "en": "Drawknife",
+     "year": 1400,
+     "note": "两端带柄的横刃刮刀，双手拉削去皮与粗整形，用于原木初步加工。"
+    },
+    {
+     "id": "splitting_maul",
+     "name": "劈柴锤",
+     "en": "Splitting maul",
+     "year": 1500,
+     "note": "楔形重刃斧，靠自重沿木纹劈裂柴料，是薪柴备料与木料解料的常用工具。"
+    },
+    {
+     "id": "molding_plane",
+     "name": "线脚刨",
+     "en": "Molding plane",
+     "year": 1550,
+     "note": "刨底按成形刃口制成凹凸轮廓，一次刨出装饰线脚，用于家具与建筑木装修。"
+    },
+    {
+     "id": "smoothing_plane",
+     "name": "光刨",
+     "en": "Smoothing plane",
+     "year": 1600,
+     "note": "短身小刨配细调刃口，用于木面最终修光，去除先前工序留下的刨痕。"
+    },
+    {
+     "id": "spokeshave",
+     "name": "刮刨",
+     "en": "Spokeshave",
+     "year": 1600,
+     "note": "双手握持的短柄刨，用于修整曲面与圆棒，车辐、弓臂与弯曲件加工常用。"
+    },
+    {
+     "id": "mortise_chisel",
+     "name": "榫凿",
+     "en": "Mortise chisel",
+     "year": 1650,
+     "note": "厚身粗壮的凿子，承受锤击凿出矩形榫眼，为榫卯结构制作的关键刃具。"
+    },
+    {
+     "id": "jointer_plane",
+     "name": "合缝刨",
+     "en": "Jointer plane",
+     "year": 1700,
+     "note": "长身刨用于刨平长料并使拼缝平直，是板材拼接与木板找平的基础工具。"
+    },
+    {
+     "id": "plow_plane",
+     "name": "槽刨",
+     "en": "Plow plane",
+     "year": 1700,
+     "note": "可调刀距并配限深装置的刨，用于沿木纹刨出等宽等深的沟槽。"
+    },
+    {
+     "id": "card_scraper",
+     "name": "刮光片",
+     "en": "Card scraper",
+     "year": 1700,
+     "note": "淬硬薄钢片以卷刃刮削木面，可获得比砂光更细腻的表面，细木工收光技术。"
+    },
+    {
+     "id": "paring_chisel",
+     "name": "修边凿",
+     "en": "Paring chisel",
+     "year": 1750,
+     "note": "刃角更斜的细长凿，完全靠手推进行精细修削，用于榫接与镶嵌的精修。"
+    },
+    {
+     "id": "router_plane",
+     "name": "修槽刨",
+     "en": "Router plane",
+     "year": 1780,
+     "note": "窄刃垂直于底面的刨，用于刨平沟槽与榫眼底面，属老式手用修槽工具。"
+    },
+    {
+     "id": "shoulder_plane",
+     "name": "肩刨",
+     "en": "Shoulder plane",
+     "year": 1800,
+     "note": "刃口达刨体侧边的直角刨，用于精修榫肩与端面，保证榫接合缝严密。"
+    },
+    {
+     "id": "block_plane",
+     "name": "单手刨",
+     "en": "Block plane",
+     "year": 1830,
+     "note": "短小单手操作的刨，刀口角小，适合横纹与端面刨削，细木工随身工具。"
+    },
+    {
+     "id": "corner_chisel",
+     "name": "角凿",
+     "en": "Corner chisel",
+     "year": 1800,
+     "note": "刃口呈直角形制的凿子，用于清理榫眼内角与刻出方形凹槽，配合直角工件。"
+    },
+    {
+     "id": "marking_knife",
+     "name": "划线刀",
+     "en": "Marking knife",
+     "year": 1850,
+     "note": "小刃刀沿尺缘划出细线的木工刀具，线迹比铅笔更精确，下料定位常用。"
+    }
+   ]
+  },
+  {
+   "name": "锯削、钻削与旋拧工具",
+   "items": [
+    {
+     "id": "bow_saw",
+     "name": "弓形锯",
+     "en": "Bow saw",
+     "year": -1400,
+     "note": "弓形张力框绷紧锯条的古埃及锯具，凭弓背张力保持锯条平直锯切木料。",
+     "deps": [
+      "bronze_saw"
+     ]
+    },
+    {
+     "id": "rip_saw",
+     "name": "纵割锯",
+     "en": "Rip saw",
+     "year": 1500,
+     "note": "齿刃如凿的纵切用锯，齿形利于沿木纹方向割裂纤维，是剖分木料的专用锯。"
+    },
+    {
+     "id": "crosscut_saw",
+     "name": "横截锯",
+     "en": "Crosscut saw",
+     "year": 1500,
+     "note": "斜刃带齿的横切用锯，齿刃如刀切断木纤维，用于垂直木纹截断木材。"
+    },
+    {
+     "id": "japanese_pull_saw",
+     "name": "日式拉锯",
+     "en": "Japanese pull saw",
+     "year": 1600,
+     "note": "薄钢片在回拉行程中切削的日式锯，锯路窄且省力，江户时代木工常用。"
+    },
+    {
+     "id": "back_saw",
+     "name": "夹背锯",
+     "en": "Back saw",
+     "year": 1700,
+     "note": "锯背嵌装加厚钢梁以保持挺直的精切锯，用于榫头燕尾等细木工锯割。"
+    },
+    {
+     "id": "dovetail_saw",
+     "name": "燕尾锯",
+     "en": "Dovetail saw",
+     "year": 1760,
+     "note": "细齿夹背锯的一种，用于锯切燕尾榫等细小精密部位，切口光洁。"
+    },
+    {
+     "id": "keyhole_saw",
+     "name": "开孔锯",
+     "en": "Keyhole saw",
+     "year": 1800,
+     "note": "窄长渐细锯条的手锯，先钻孔后伸入锯切内部形状，用于开钥匙孔类内孔。"
+    },
+    {
+     "id": "fret_saw",
+     "name": "线锯",
+     "en": "Fret saw",
+     "year": 1830,
+     "note": "细钢丝锯条绷于弓架的锯具，可转弯锯出精细镂空图案，属装饰细木工锯。"
+    },
+    {
+     "id": "hacksaw",
+     "name": "钢锯",
+     "en": "Hacksaw",
+     "year": 1880,
+     "note": "弓架张紧窄条细齿锯条以锯切金属，是钳工锯割金属型材与管件的标准工具。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "coping_saw",
+     "name": "曲线锯",
+     "en": "Coping saw",
+     "year": 1870,
+     "note": "深弓细齿锯条可旋转的锯架，锯割薄木板曲线轮廓，木工与模型制作常用。"
+    },
+    {
+     "id": "two_man_saw",
+     "name": "双人横锯",
+     "en": "Two-man crosscut saw",
+     "year": 1500,
+     "note": "两端装柄的大型锯，两人对拉锯切大径级原木，是工业伐木普及前的主力锯。"
+    },
+    {
+     "id": "hand_panel_saw",
+     "name": "手板锯",
+     "en": "Panel saw",
+     "year": 1700,
+     "note": "梯形薄钢片的通用手锯，兼作横截与纵切，是木工最基本的手用锯具。"
+    },
+    {
+     "id": "bow_drill",
+     "name": "拉弓钻",
+     "en": "Bow drill",
+     "year": -3000,
+     "note": "弓弦绕杆往复拉动带动钻杆旋转，用于木、骨、石打孔，也是古人钻木取火工具。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "pump_drill",
+     "name": "泵钻",
+     "en": "Pump drill",
+     "year": 200,
+     "note": "飞轮加绳盘结构的往复抽压钻具，利用惯性连续单向旋转，用于精细钻孔。"
+    },
+    {
+     "id": "auger",
+     "name": "螺旋木钻",
+     "en": "Auger",
+     "year": 1400,
+     "note": "带螺旋排屑槽与横柄的钻孔工具，人力旋转钻削原木与厚料的大直径孔。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "gimlet",
+     "name": "手捻钻",
+     "en": "Gimlet",
+     "year": 1500,
+     "note": "螺杆式小钻头配横柄，手捻旋入木料钻小孔，用于起螺钉前的导向孔。"
+    },
+    {
+     "id": "hand_brace",
+     "name": "弓摇钻",
+     "en": "Carpenter's brace",
+     "year": 1500,
+     "note": "曲柄弓形框架夹持钻头的木工钻具，旋转弓臂驱动钻头钻孔，配不同钻头使用。"
+    },
+    {
+     "id": "screwdriver",
+     "name": "一字螺丝刀",
+     "en": "Screwdriver",
+     "year": 1560,
+     "note": "与开槽螺钉头配合的旋拧工具，拧紧或退出螺钉，随螺钉普及而出现。"
+    },
+    {
+     "id": "hand_reamer",
+     "name": "手用铰刀",
+     "en": "Hand reamer",
+     "year": 1750,
+     "note": "多刃锥形铰孔刀具，手工旋转修光并精确扩大已钻孔径，保证配合精度。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "breast_drill",
+     "name": "胸压钻",
+     "en": "Breast drill",
+     "year": 1830,
+     "note": "胸托抵身双手摇转的齿轮增速钻，向下加压即可钻孔，机械时代早期手钻。"
+    },
+    {
+     "id": "hand_tap",
+     "name": "手用丝锥",
+     "en": "Hand tap",
+     "year": 1840,
+     "note": "在底孔内攻制内螺纹的三支成套锥形刀具，配铰手手工操作，钳工常用。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "adjustable_wrench",
+     "name": "活动扳手",
+     "en": "Adjustable wrench",
+     "year": 1841,
+     "note": "钳口开度可调的旋拧工具，一把适配多种规格六角头，通用维修工具。"
+    },
+    {
+     "id": "thread_die",
+     "name": "圆板牙",
+     "en": "Round split die",
+     "year": 1842,
+     "note": "带外螺纹刃槽的环形刀具，配合板牙扳手在圆杆上套制外螺纹。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "eggbeater_hand_drill",
+     "name": "手摇钻",
+     "en": "Hand drill",
+     "year": 1850,
+     "note": "锥齿轮增速的手摇钻具，单手摇把钻削小孔，木金工通用，钻孔快捷。"
+    },
+    {
+     "id": "ratchet_socket_wrench",
+     "name": "棘轮套筒扳手",
+     "en": "Ratchet socket wrench",
+     "year": 1863,
+     "note": "套筒头配合棘轮机构，单向连续回转拧紧螺栓螺母，省去反复装卡。"
+    },
+    {
+     "id": "push_drill",
+     "name": "推压钻",
+     "en": "Push drill",
+     "year": 1875,
+     "note": "螺旋杆外套往复推压使钻头单向旋进的工具，用于钻细小定位孔。"
+    },
+    {
+     "id": "hex_key",
+     "name": "内六角扳手",
+     "en": "Allen key",
+     "year": 1910,
+     "note": "L形六角钢棒，插入内六角螺钉头部旋拧，广泛用于机械与家具装配。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "phillips_screwdriver",
+     "name": "十字螺丝刀",
+     "en": "Phillips screwdriver",
+     "year": 1936,
+     "note": "十字槽螺钉配套的旋拧刀头，能自动对中且不易滑脱，配合电动工具普及。"
+    }
+   ]
+  },
+  {
+   "name": "锉削与磨锐工具",
+   "items": [
+    {
+     "id": "whetstone",
+     "name": "磨刀石",
+     "en": "Whetstone",
+     "year": -800,
+     "note": "天然磨石加水研磨刃口，去铁增锐，是人类最悠久的刃具维护工具。"
+    },
+    {
+     "id": "iron_file",
+     "name": "铁锉",
+     "en": "Hand file",
+     "year": -600,
+     "note": "表面淬硬的刻齿铁锉，以推拉锉削修整金属与木材，古罗马锉刀已成型。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "wood_rasp",
+     "name": "木锉",
+     "en": "Wood rasp",
+     "year": 1000,
+     "note": "齿面呈尖刺状的粗锉，用于快速锉削软化木料与蹄角等材料表面。"
+    },
+    {
+     "id": "abrasive_paper",
+     "name": "砂纸",
+     "en": "Abrasive paper",
+     "year": 1250,
+     "note": "纸基粘结碎贝壳或玻璃砂制成的磨光材料，用于打磨木面与去除漆层。"
+    },
+    {
+     "id": "strop",
+     "name": "荡刀布",
+     "en": "Razor strop",
+     "year": 1300,
+     "note": "皮革帆布条用于刃口荡磨去毛刺，使刀刃恢复锋利，理发刀与雕刻刀常用。"
+    },
+    {
+     "id": "emery_cloth",
+     "name": "金刚砂布",
+     "en": "Emery cloth",
+     "year": 1600,
+     "note": "布基粘结天然金刚砂的磨光材料，用于金属件除锈去痕与表面抛光。"
+    },
+    {
+     "id": "waterstone",
+     "name": "水磨石",
+     "en": "Japanese waterstone",
+     "year": 1650,
+     "note": "浸水研磨的天然磨石，磨削快且自锐性好，为刀磨传统工具，日式磨刃为代表。"
+    },
+    {
+     "id": "oilstone",
+     "name": "油石",
+     "en": "Oilstone",
+     "year": 1700,
+     "note": "以油为润滑剂的天然磨石，质地细腻，用于刀具与金属工具的最终精磨。"
+    },
+    {
+     "id": "needle_file",
+     "name": "针锉",
+     "en": "Needle file",
+     "year": 1750,
+     "note": "极细小的什锦锉系列，截面形状多样，用于钟表与精密仪器的细微锉修。"
+    },
+    {
+     "id": "file_card",
+     "name": "锉刷",
+     "en": "File card",
+     "year": 1800,
+     "note": "细钢丝刷面的清屑工具，用于刷除锉齿间嵌塞的金属屑，保持锉削效率。"
+    },
+    {
+     "id": "saw_file",
+     "name": "锯锉",
+     "en": "Saw file",
+     "year": 1700,
+     "note": "三角截面细齿锉，用于修磨锯条锯齿的刃口角度，维持锯切锋利。"
+    },
+    {
+     "id": "diamond_file",
+     "name": "金刚石锉",
+     "en": "Diamond file",
+     "year": 1960,
+     "note": "电镀金刚石磨粒的微型锉具，用于硬质合金、玻璃与陶瓷件的微量修整。"
+    },
+    {
+     "id": "sharpening_steel",
+     "name": "磨刀钢棒",
+     "en": "Honing steel",
+     "year": 1850,
+     "note": "表面淬硬的带纹钢棒，餐刀与厨刀以一定角度滑磨整直刃口，非真磨削。"
+    },
+    {
+     "id": "grinding_compound",
+     "name": "研磨膏",
+     "en": "Grinding compound",
+     "year": 1900,
+     "note": "磨料与膏体混合的涂敷磨剂，配合平板或棉布研磨密封面，用于气门与阀座配研。"
+    },
+    {
+     "id": "diamond_sharpening_plate",
+     "name": "金刚石磨板",
+     "en": "Diamond sharpening plate",
+     "year": 1960,
+     "note": "电镀金刚石磨粒的平板磨具，磨削快速且平整度好，现代刃磨标准工具。"
+    }
+   ]
+  },
+  {
+   "name": "锤击、锻工与钣金工具",
+   "items": [
+    {
+     "id": "wooden_mallet",
+     "name": "木槌",
+     "en": "Wooden mallet",
+     "year": -3000,
+     "note": "以硬木为槌头的敲击工具，敲打凿柄或榫接时不易损伤工件，木作雕刻常备。"
+    },
+    {
+     "id": "iron_wedge",
+     "name": "铁楔",
+     "en": "Iron wedge",
+     "year": -800,
+     "note": "楔形铁具借锤击楔入，用于劈解木材石料与拆卸连接件，是古老的变力工具。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "crowbar",
+     "name": "撬棍",
+     "en": "Crowbar",
+     "year": -300,
+     "note": "弯头铁制杠杆，用于撬起重物、拆解结构与起拔铁钉，是通用的拆装工具。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "claw_hammer",
+     "name": "羊角锤",
+     "en": "Claw hammer",
+     "year": 1500,
+     "note": "一端为平击面、另一端为起钉叉的锤具，钉接作业中兼具锤击与拔钉功能。"
+    },
+    {
+     "id": "sledgehammer",
+     "name": "大锤",
+     "en": "Sledge hammer",
+     "year": 1600,
+     "note": "长柄重型锤，靠人力大幅摆动产生冲击，用于凿石、打桩与锻打金属场合。"
+    },
+    {
+     "id": "masonry_hammer",
+     "name": "砌筑锤",
+     "en": "Mason's hammer",
+     "year": 1700,
+     "note": "一端锤击另一端为刃口的瓦石两用锤，用于砌墙时劈整砖石与敲打就位。"
+    },
+    {
+     "id": "copper_hammer",
+     "name": "铜锤",
+     "en": "Copper hammer",
+     "year": 1750,
+     "note": "铜质软金属锤头，冲击时不产生火花，用于易燃易爆场所及保护工件表面。"
+    },
+    {
+     "id": "ball_peen_hammer",
+     "name": "圆头锤",
+     "en": "Ball-peen hammer",
+     "year": 1800,
+     "note": "一头平击一头球面的金工锤，用于铆接与金属成型，是钳工常用锤具。"
+    },
+    {
+     "id": "lump_hammer",
+     "name": "八角锤",
+     "en": "Lump hammer",
+     "year": 1800,
+     "note": "八角截面的短柄重锤，比大锤轻便，多用于砌筑凿石的粗重敲击。"
+    },
+    {
+     "id": "centre_punch",
+     "name": "中心冲",
+     "en": "Centre punch",
+     "year": 1800,
+     "note": "在工件表面冲出锥形定位眼，引导钻头起钻，防止钻孔时滑移跑偏。"
+    },
+    {
+     "id": "pin_punch",
+     "name": "销冲",
+     "en": "Pin punch",
+     "year": 1800,
+     "note": "细杆冲子用于把圆柱销、铆钉冲出销孔，是拆装机械零件的辅助工具。"
+    },
+    {
+     "id": "riveting_hammer",
+     "name": "铆工锤",
+     "en": "Riveting hammer",
+     "year": 1850,
+     "note": "细长敲击面用于铆接时锤实铆钉头，是铆工与钣金作业的专用锤。"
+    },
+    {
+     "id": "rubber_mallet",
+     "name": "橡胶锤",
+     "en": "Rubber mallet",
+     "year": 1900,
+     "note": "软质橡胶锤头用于薄板件敲平与装配就位，避免留下锤痕。"
+    },
+    {
+     "id": "nail_set",
+     "name": "钉冲",
+     "en": "Nail set",
+     "year": 1900,
+     "note": "冲杆用于将钉帽沉入工件表面之下，供后续腻子填补，细木工收尾常用。"
+    },
+    {
+     "id": "dead_blow_hammer",
+     "name": "软面填充锤",
+     "en": "Dead-blow hammer",
+     "year": 1930,
+     "note": "锤腔内充填铅砂以吸收回弹冲击，敲击力平稳不外弹，适合精密装配。"
+    },
+    {
+     "id": "geological_hammer",
+     "name": "地质锤",
+     "en": "Geologist's hammer",
+     "year": 1850,
+     "note": "一头锤击一头凿刃的地质采样锤，用于敲取岩石标本与野外探矿。"
+    },
+    {
+     "id": "chasing_hammer",
+     "name": "錾刻锤",
+     "en": "Chasing hammer",
+     "year": 1850,
+     "note": "细长轻巧的锤头用于敲击錾子在金属表面錾刻花纹，金银细工常用工具。"
+    },
+    {
+     "id": "anvil",
+     "name": "铁砧",
+     "en": "Anvil",
+     "year": -1200,
+     "note": "锻造作业的承击砧座，上承工件下抵锤击，配砧面与角砧供多向成形。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "smith_tongs",
+     "name": "锻工长钳",
+     "en": "Blacksmith's tongs",
+     "year": -1000,
+     "note": "长柄夹钳用于夹持烧红的工件出入炉灶并配合锤锻，是锻工必备夹具。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "drawplate",
+     "name": "拉丝板",
+     "en": "Draw plate",
+     "year": 100,
+     "note": "开列逐级缩径孔眼的钢板，穿拉金属线材减径，古罗马金匠已用于抽丝。"
+    },
+    {
+     "id": "cold_chisel",
+     "name": "冷錾",
+     "en": "Cold chisel",
+     "year": 800,
+     "note": "刃角较钝的淬火钢錾，锤击下切割冷态金属，用于切断铆钉与开槽。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "fullering_tool",
+     "name": "压槽锤",
+     "en": "Fuller",
+     "year": 1500,
+     "note": "圆弧工作面的锻压工具，锤击下在热铁上压出凹槽，为锻件塑性变形成形。"
+    },
+    {
+     "id": "swage_block",
+     "name": "型砧",
+     "en": "Swage block",
+     "year": 1500,
+     "note": "开有各种型孔的砧块，配合冲头把工件锻成圆、方与异形截面，属型砧体系。"
+    },
+    {
+     "id": "tin_snips",
+     "name": "铁皮剪",
+     "en": "Tin snips",
+     "year": 1750,
+     "note": "长柄杠杆剪刀，人力剪裁薄钢板与铁皮，是钣金下料的基本手工工具。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "needle_nose_pliers",
+     "name": "尖嘴钳",
+     "en": "Needle-nose pliers",
+     "year": 1800,
+     "note": "钳口细长的夹钳，用于伸入狭小部位夹持与弯折导线小件，精密作业常用。"
+    },
+    {
+     "id": "pipe_wrench",
+     "name": "管子钳",
+     "en": "Pipe wrench",
+     "year": 1888,
+     "note": "钳口带齿的自紧扳钳，越拧越紧，用于旋拧圆管与圆柱件，水暖作业标配。"
+    },
+    {
+     "id": "pliers_wrench",
+     "name": "水泵钳",
+     "en": "Tongue-and-groove pliers",
+     "year": 1890,
+     "note": "带滑槽可调钳口的夹钳，钳口平行夹持力大，用于夹持螺母与水管。"
+    },
+    {
+     "id": "aviation_snips",
+     "name": "航空剪",
+     "en": "Aviation snips",
+     "year": 1945,
+     "note": "复合杠杆增力的剪钳，可剪切较厚钢板并切出曲线，钣金下料常用工具。"
+    }
+   ]
+  },
+  {
+   "name": "量测、划线、夹持与辅助工具",
+   "items": [
+    {
+     "id": "plumb_bob",
+     "name": "铅锤",
+     "en": "Plumb bob",
+     "year": -2500,
+     "note": "吊线悬挂的重锤，借重力给出竖直基准，自古用于定垂线与校准柱体。"
+    },
+    {
+     "id": "saw_horse",
+     "name": "锯木架",
+     "en": "Sawhorse",
+     "year": -2000,
+     "note": "X形腿的木工作业台架，架托木料便于锯切与刨削，属古老辅助支承具。"
+    },
+    {
+     "id": "dividers",
+     "name": "分规",
+     "en": "Dividers",
+     "year": -500,
+     "note": "两尖脚的量划工具，等分线段与转移尺寸，木工与金属划线的基本工具。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "chalk_line",
+     "name": "墨斗",
+     "en": "Chalk line",
+     "year": -200,
+     "note": "贮墨线盒弹出直线标记的工具，中国木工与营造业沿用两千年以上的弹线工具。"
+    },
+    {
+     "id": "calipers",
+     "name": "卡钳",
+     "en": "Calipers",
+     "year": 100,
+     "note": "两脚开合的量具，靠卡持工件比较内径外径与厚度，古罗马已见青铜卡钳。",
+     "deps": [
+      "bronze"
+     ]
+    },
+    {
+     "id": "try_square",
+     "name": "直角尺",
+     "en": "Try square",
+     "year": 1200,
+     "note": "固定九十度的校验尺，用于检验与划画垂直边，木工与钳工的基准量具。"
+    },
+    {
+     "id": "scratch_awl",
+     "name": "划针",
+     "en": "Scratch awl",
+     "year": 1500,
+     "note": "淬硬钢尖的划线工具，在金属表面划出细线作加工基准，配钢尺与角尺使用。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "marking_gauge",
+     "name": "划线规",
+     "en": "Marking gauge",
+     "year": 1500,
+     "note": "木杆带挡块与针尖的定距划线器，沿材边划出平行线，用于榫卯定位。"
+    },
+    {
+     "id": "folding_rule",
+     "name": "折尺",
+     "en": "Folding rule",
+     "year": 1600,
+     "note": "铰链连接的多节木尺，展开测长折叠携带，是木工放样量料的随身量具。"
+    },
+    {
+     "id": "workbench",
+     "name": "木工工作台",
+     "en": "Workbench",
+     "year": 1600,
+     "note": "厚实台面配台钳与挡块的作业台，供刨凿锯削固定工件，木工坊核心设施。"
+    },
+    {
+     "id": "sliding_bevel",
+     "name": "斜角规",
+     "en": "Sliding bevel",
+     "year": 1650,
+     "note": "角度可调并锁定的划线规，用于复制与划画非直角斜线，斜接放样常用。"
+    },
+    {
+     "id": "spirit_level",
+     "name": "水准器",
+     "en": "Spirit level",
+     "year": 1661,
+     "note": "以气泡居中的玻璃管指示水平与铅垂，装于尺体内供校准找平，1661年始有记载。"
+    },
+    {
+     "id": "woodworking_vise",
+     "name": "木工台钳",
+     "en": "Woodworking vise",
+     "year": 1650,
+     "note": "木面钳口的台装夹钳，夹持木料不损伤表面，供刨锯凿削时固定工件。"
+    },
+    {
+     "id": "bench_vise",
+     "name": "机用台钳",
+     "en": "Bench vise",
+     "year": 1750,
+     "note": "铸铁钳身钢质钳口的台式夹钳，钳工锉锯攻丝时夹持金属件的标准夹具。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "tape_measure",
+     "name": "卷尺",
+     "en": "Tape measure",
+     "year": 1829,
+     "note": "钢带盘入盒内的伸缩量尺，1829年出现发条回收式卷尺，量长便捷精确。"
+    },
+    {
+     "id": "c_clamp",
+     "name": "C形夹",
+     "en": "C-clamp",
+     "year": 1830,
+     "note": "C形框架配丝杆压紧的夹持工具，临时夹固板料与工件，木金工通用。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "bar_clamp",
+     "name": "长杆夹",
+     "en": "Bar clamp",
+     "year": 1860,
+     "note": "长导杆上滑动的压紧夹具，用于板材拼宽与框架胶合时的大跨距夹固。"
+    },
+    {
+     "id": "combination_square",
+     "name": "组合角尺",
+     "en": "Combination square",
+     "year": 1879,
+     "note": "直角头与量角器可换的组合量具，兼作直角尺、划线规与水平尺，用途广泛。"
+    },
+    {
+     "id": "hand_screw_clamp",
+     "name": "木螺旋夹",
+     "en": "Hand screw clamp",
+     "year": 1890,
+     "note": "双丝杆可调平行钳口的木质夹钳，夹持斜面或易损件时不致偏斜损伤。"
+    },
+    {
+     "id": "spring_clamp",
+     "name": "弹簧夹",
+     "en": "Spring clamp",
+     "year": 1950,
+     "note": "钢簧提供夹紧力的快速夹具，单手开合，用于轻载临时夹持与胶合固定。"
+    },
+    {
+     "id": "precision_tweezers",
+     "name": "镊子",
+     "en": "Tweezers",
+     "year": -3000,
+     "note": "簧片夹取小件的工具，古埃及金箔与美容用青铜镊，现为电子装配常备工具。",
+     "deps": [
+      "bronze"
+     ]
+    },
+    {
+     "id": "putty_knife",
+     "name": "油灰刀",
+     "en": "Putty knife",
+     "year": 1700,
+     "note": "弹性薄刃的小刮刀，用于挑抹腻子油灰与清理表面，油漆与门窗作业常用。"
+    },
+    {
+     "id": "tack_hammer",
+     "name": "布钉锤",
+     "en": "Tack hammer",
+     "year": 1800,
+     "note": "一头磁吸一头锤击的细杆小锤，用于钉装软包布面小钉，家具包饰专用。"
+    },
+    {
+     "id": "wire_brush",
+     "name": "钢丝刷",
+     "en": "Wire brush",
+     "year": 1880,
+     "note": "植有钢丝束的刷具，用于除锈、清渣与粗化金属表面，焊前清理常用。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "glass_cutter",
+     "name": "玻璃刀",
+     "en": "Glass cutter",
+     "year": 1868,
+     "note": "镶硬质轮刀划刻玻璃表面应力线再折裂的切割工具，1868年钢轮玻璃刀问世。"
+    },
+    {
+     "id": "locking_pliers",
+     "name": "自锁钳",
+     "en": "Locking pliers",
+     "year": 1924,
+     "note": "过中心连杆锁紧钳口的强力夹钳，可锁定夹持并兼作扳手，1924年取得专利。"
+    },
+    {
+     "id": "utility_knife",
+     "name": "美工刀",
+     "en": "Utility knife",
+     "year": 1956,
+     "note": "可折断刀片的推拉刃刀具，用于裁纸开箱与轻量切割，通用性极高的现代刀。"
+    }
+   ]
+  }
+ ]
+}

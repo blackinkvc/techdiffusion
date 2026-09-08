@@ -1,0 +1,1112 @@
+{
+ "cat": "material",
+ "catName": "材料",
+ "sub": "natmaterial",
+ "subName": "天然材料利用",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "stone_tools",
+  "fire",
+  "bronze",
+  "iron",
+  "steel",
+  "brick",
+  "cement",
+  "paper",
+  "agriculture",
+  "fermentation",
+  "plastics"
+ ],
+ "families": [
+  {
+   "name": "木材利用与木作工艺",
+   "items": [
+    {
+     "id": "timber_framing",
+     "name": "木构架体系",
+     "en": "Timber framing",
+     "year": -3000,
+     "note": "以梁柱与榫卯构成房屋骨架的建造体系，是东亚与北欧传统木建筑基础。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "mortise_tenon_joint",
+     "name": "榫卯连接",
+     "en": "Mortise and tenon joint",
+     "year": -5000,
+     "note": "凸榫嵌入凹卯固定构件，河姆渡遗址显示其已用于木构建筑。"
+    },
+    {
+     "id": "log_splitting",
+     "name": "楔劈开料",
+     "en": "Log splitting with wedges",
+     "year": -4000,
+     "note": "沿纹理打入楔子把原木劈成板材，是金属锯普及前的主要开料方式。",
+     "deps": ["stone_tools"]
+    },
+    {
+     "id": "wood_carving",
+     "name": "木雕",
+     "en": "Wood carving",
+     "year": -3000,
+     "note": "以刀凿在木料上雕出纹饰与立体形象，古埃及与商周均已形成传统。"
+    },
+    {
+     "id": "wood_turning",
+     "name": "木旋床",
+     "en": "Wood turning lathe",
+     "year": -1300,
+     "note": "以绳索弓弦带动工件旋转、刀具车削成形，古埃及已有旋木器皿。",
+     "deps": ["mortise_tenon_joint"]
+    },
+    {
+     "id": "wood_veneer",
+     "name": "木皮贴面",
+     "en": "Wood veneering",
+     "year": -1400,
+     "note": "以贵重薄木皮贴饰家具表面，古埃及棺椁与箱柜已使用贴木工艺。",
+     "deps": ["wood_carving"]
+    },
+    {
+     "id": "cooperage",
+     "name": "制桶工艺",
+     "en": "Cooperage",
+     "year": -100,
+     "note": "以弯曲弧板配铁箍拼成木桶，罗马时期成为运储酒油的主要容器。",
+     "deps": ["iron"]
+    },
+    {
+     "id": "wood_drying",
+     "name": "木材干燥",
+     "en": "Wood seasoning",
+     "year": -3000,
+     "note": "通过自然阴干或人工烘烤降低含水率，防止木构件开裂变形。"
+    },
+    {
+     "id": "frame_saw",
+     "name": "框锯剖板",
+     "en": "Frame saw milling",
+     "year": 100,
+     "note": "把锯条张紧于木框中双人推拉，将原木纵向剖解为厚板材。",
+     "deps": ["iron"]
+    },
+    {
+     "id": "steam_bent_wood",
+     "name": "蒸弯曲木",
+     "en": "Steam-bent wood",
+     "year": 1841,
+     "note": "托内特以蒸汽软化木条后弯成曲线并定型，开创曲木家具工艺。",
+     "deps": ["iron"]
+    },
+    {
+     "id": "plywood",
+     "name": "胶合板",
+     "en": "Plywood",
+     "year": 1797,
+     "note": "以旋切薄木片交叉胶合热压成板，改善木材各向异性并扩大幅面。",
+     "deps": ["wood_veneer"]
+    },
+    {
+     "id": "timber_preservation",
+     "name": "杂酚油木材防腐",
+     "en": "Creosote timber preservation",
+     "year": 1838,
+     "note": "贝塞尔以煤焦杂酚油加压浸注枕木与桩木，延长户外木材寿命。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "glulam",
+     "name": "胶合层压木",
+     "en": "Glued laminated timber",
+     "year": 1906,
+     "note": "赫策尔把多层木板胶合压成大型梁，可制造大跨度木结构。",
+     "deps": ["plywood"]
+    },
+    {
+     "id": "particleboard",
+     "name": "刨花板",
+     "en": "Particleboard",
+     "year": 1941,
+     "note": "以木屑刨花加胶热压成板，二战期间德国实现工业化生产。",
+     "deps": ["plywood"]
+    },
+    {
+     "id": "mdf_board",
+     "name": "中密度纤维板",
+     "en": "Medium-density fibreboard",
+     "year": 1966,
+     "note": "以木质纤维干法成型热压为匀质板材，广泛用于家具与饰面基材。",
+     "deps": ["particleboard"]
+    },
+    {
+     "id": "wood_bending_press",
+     "name": "模压成型木件",
+     "en": "Molded plywood",
+     "year": 1946,
+     "note": "胶合木片在模具中压成三维曲面，用于座椅与家具壳体造型。",
+     "deps": ["plywood"]
+    },
+    {
+     "id": "dowel_joinery",
+     "name": "木钉销接合",
+     "en": "Dowel joinery",
+     "year": -2500,
+     "note": "以圆木钉贯穿两构件定位防滑，古埃及家具中已普遍使用。",
+     "deps": ["mortise_tenon_joint"]
+    },
+    {
+     "id": "engineered_wood_floor",
+     "name": "工程木地板",
+     "en": "Engineered wood flooring",
+     "year": 1960,
+     "note": "以多层胶合基材上覆实木表层制成地板，兼具稳定与实木质感。",
+     "deps": ["plywood"]
+    },
+    {
+     "id": "wood_pulp",
+     "name": "木材纤维分离",
+     "en": "Wood pulp production",
+     "year": 1844,
+     "note": "凯勒以磨木机把木材磨成纤维浆，开辟以木材为造纸原料的途径。",
+     "deps": ["paper"]
+    },
+    {
+     "id": "charcoal_kiln",
+     "name": "木炭窑烧制",
+     "en": "Charcoal kiln",
+     "year": -3000,
+     "note": "在缺氧窑中干馏木材得木炭，古代长期作为冶炼与生活燃料。",
+     "deps": ["fire"]
+    }
+   ]
+  },
+  {
+   "name": "石材开采与加工",
+   "items": [
+    {
+     "id": "open_pit_quarrying",
+     "name": "露天采石",
+     "en": "Open-pit quarrying",
+     "year": -2500,
+     "note": "在露天地表以楔、杠杆与人力剥离规整岩块，古埃及采石场规模庞大。",
+     "deps": ["stone_tools"]
+    },
+    {
+     "id": "stone_wedge_splitting",
+     "name": "楔裂取石",
+     "en": "Stone splitting by wedges",
+     "year": -2500,
+     "note": "沿钻孔打入木楔浸水膨胀或铁楔锤击，使岩石沿解理面裂开成材。",
+     "deps": ["bronze"]
+    },
+    {
+     "id": "stone_abrasive_sawing",
+     "name": "磨料锯切石料",
+     "en": "Abrasive sawing of stone",
+     "year": -2000,
+     "note": "以金属锯条带动石英砂磨料往复切割硬岩，古埃及用于切割花岗岩。",
+     "deps": ["bronze"]
+    },
+    {
+     "id": "stone_polishing",
+     "name": "石材磨光",
+     "en": "Stone polishing",
+     "year": -3000,
+     "note": "以粗磨细磨逐级磨平石面并用磨料抛光，使碑石与建筑石面光洁。",
+     "deps": ["stone_tools"]
+    },
+    {
+     "id": "dimension_stone",
+     "name": "规格料石生产",
+     "en": "Dimension stone",
+     "year": -2000,
+     "note": "按标准尺寸加工方正料石，供大型建筑精确砌筑。",
+     "deps": ["stone_wedge_splitting"]
+    },
+    {
+     "id": "stone_drilling",
+     "name": "硬石钻孔",
+     "en": "Stone drilling",
+     "year": -3000,
+     "note": "以弓钻带动管钻加磨料在硬石上钻孔，古埃及用于串珠与器皿装配。",
+     "deps": ["stone_tools"]
+    },
+    {
+     "id": "stone_basin_vessels",
+     "name": "石制容器",
+     "en": "Carved stone vessels",
+     "year": -2000,
+     "note": "以钻磨方法掏空整石制成容器，古埃及硬石瓶工艺精细。",
+     "deps": ["stone_drilling"]
+    },
+    {
+     "id": "rotary_quern",
+     "name": "旋转石磨",
+     "en": "Rotary quern",
+     "year": -400,
+     "note": "上下两盘相对旋转研磨谷物，取代往复碾磨成为粮食加工主工具。",
+     "deps": ["agriculture"]
+    },
+    {
+     "id": "slate_roofing",
+     "name": "石板瓦",
+     "en": "Slate roofing",
+     "year": 100,
+     "note": "沿板岩解理劈成薄片作屋面瓦，罗马时期欧洲已广泛使用。",
+     "deps": ["stone_wedge_splitting"]
+    },
+    {
+     "id": "marble_veneer",
+     "name": "大理石饰面",
+     "en": "Marble veneer",
+     "year": -100,
+     "note": "把大理石锯成薄板贴于墙体表面，罗马建筑以此营造华丽室内。",
+     "deps": ["stone_abrasive_sawing"]
+    },
+    {
+     "id": "stone_sculpture",
+     "name": "石雕",
+     "en": "Stone sculpture",
+     "year": -2500,
+     "note": "以錾凿逐层削减石料雕琢形象，是古代纪念性艺术的主要形式。",
+     "deps": ["bronze"]
+    },
+    {
+     "id": "stone_mosaic",
+     "name": "石质马赛克",
+     "en": "Stone mosaic",
+     "year": -300,
+     "note": "以天然彩色石料碎块拼贴成图案铺地，希腊化时期发展为镶嵌艺术。",
+     "deps": ["stone_sculpture"]
+    },
+    {
+     "id": "millstone_grinding",
+     "name": "磨盘碾磨",
+     "en": "Millstone grinding",
+     "year": -1000,
+     "note": "以大型磨盘碾磨谷物或矿石，为农业与矿业提供粗碎手段。",
+     "deps": ["stone_tools"]
+    },
+    {
+     "id": "fire_setting",
+     "name": "火烧激冷裂岩",
+     "en": "Fire-setting",
+     "year": -1500,
+     "note": "以柴火灼烧岩面再泼水骤冷，使硬岩炸裂便于开采。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "grindstone_tool_sharpening",
+     "name": "旋转磨刀石",
+     "en": "Rotary grindstone",
+     "year": -600,
+     "note": "以脚踏旋转的砂质圆盘磨锐金属刃具，随铁器普及成为常见工具。",
+     "deps": ["iron"]
+    },
+    {
+     "id": "jade_working",
+     "name": "玉器琢磨",
+     "en": "Jade working",
+     "year": -2500,
+     "note": "以解玉砂研磨硬玉成形并钻孔抛光，新石器时代已出现玉制礼器。",
+     "deps": ["stone_polishing"]
+    },
+    {
+     "id": "stone_abacus",
+     "name": "石制算珠",
+     "en": "Stone counting beads",
+     "year": -500,
+     "note": "以打磨圆珠串于算盘杆上作计算元件，是算盘系统的组成部分。",
+     "deps": ["stone_drilling"]
+    }
+   ]
+  },
+  {
+   "name": "骨角牙贝材料",
+   "items": [
+    {
+     "id": "bone_needle",
+     "name": "骨针",
+     "en": "Bone needle",
+     "year": -40000,
+     "note": "以骨片磨制带孔缝针，旧石器时代已用于缝制兽皮衣物。",
+     "deps": ["stone_tools"]
+    },
+    {
+     "id": "bone_fishhook",
+     "name": "骨制鱼钩",
+     "en": "Bone fishhook",
+     "year": -15000,
+     "note": "以骨角磨制带倒刺的鱼钩，是渔业早期的重要渔具。",
+     "deps": ["bone_needle"]
+    },
+    {
+     "id": "antler_softening",
+     "name": "鹿角软化整形",
+     "en": "Antler softening and shaping",
+     "year": -12000,
+     "note": "浸水蒸软后切割压弯鹿角，用于制作鱼叉与工具柄。",
+     "deps": ["bone_needle"]
+    },
+    {
+     "id": "antler_harpoon",
+     "name": "骨角鱼叉",
+     "en": "Antler harpoon",
+     "year": -10000,
+     "note": "以鹿角削制带倒刺鱼叉，中石器时代水域捕捞的重要工具。",
+     "deps": ["antler_softening"]
+    },
+    {
+     "id": "ivory_carving",
+     "name": "象牙雕刻",
+     "en": "Ivory carving",
+     "year": -2500,
+     "note": "以象牙雕刻雕像与饰件，古埃及与印度均有悠久传统。"
+    },
+    {
+     "id": "bone_glue",
+     "name": "骨胶熬制",
+     "en": "Bone glue making",
+     "year": -3000,
+     "note": "熬煮骨皮提取明胶作胶粘剂，古埃及家具与彩绘中已使用。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "horn_heat_shaping",
+     "name": "牛角热压成形",
+     "en": "Horn pressing",
+     "year": -1000,
+     "note": "加热软化牛角后模压成梳、扣与号角，角料可塑性强。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "tortoiseshell_work",
+     "name": "玳瑁加工",
+     "en": "Tortoiseshell work",
+     "year": -500,
+     "note": "加热加压使玳瑁甲片软化拼接，制成梳篦与镶嵌饰件。"
+    },
+    {
+     "id": "mother_of_pearl_inlay",
+     "name": "螺钿镶嵌",
+     "en": "Mother-of-pearl inlay",
+     "year": 700,
+     "note": "以贝壳内层磨片镶嵌于漆木器物，唐代漆器螺钿工艺兴盛。",
+     "deps": ["ivory_carving"]
+    },
+    {
+     "id": "shell_scraping",
+     "name": "贝壳刮削器",
+     "en": "Shell scraper",
+     "year": -8000,
+     "note": "利用贝壳锋利刃缘刮削果实与皮料，滨海聚落的常见用具。",
+     "deps": ["stone_tools"]
+    },
+    {
+     "id": "bone_bodkin",
+     "name": "骨锥与骨凿",
+     "en": "Bone awl and chisel",
+     "year": -20000,
+     "note": "以骨角尖锥钻孔或刻槽，是皮革与木器加工的辅助工具。",
+     "deps": ["bone_needle"]
+    },
+    {
+     "id": "bone_comb",
+     "name": "骨梳篦",
+     "en": "Bone comb",
+     "year": -1000,
+     "note": "以骨片锯凿成齿制梳篦，古代墓葬中常见骨角梳遗物。",
+     "deps": ["bone_bodkin"]
+    },
+    {
+     "id": "whale_baleen_use",
+     "name": "鲸须利用",
+     "en": "Baleen use",
+     "year": 1600,
+     "note": "以鲸须板条制束腰撑、伞骨等弹性构件，近代西方广泛使用。"
+    },
+    {
+     "id": "shell_currency",
+     "name": "贝壳货币",
+     "en": "Shell money",
+     "year": -2000,
+     "note": "以打磨穿孔的海贝作交换媒介，中国商周以货贝为币。"
+    },
+    {
+     "id": "antler_tool_handle",
+     "name": "角骨工具柄",
+     "en": "Antler tool hafting",
+     "year": -10000,
+     "note": "把石刃或金属刃镶嵌于鹿角柄上，兼得牢固与减震。",
+     "deps": ["antler_softening"]
+    },
+    {
+     "id": "bone_tube_container",
+     "name": "骨管容器",
+     "en": "Bone tube containers",
+     "year": -8000,
+     "note": "截取动物长骨空腔作盛器，用于储存颜料或小件物品。",
+     "deps": ["bone_needle"]
+    }
+   ]
+  },
+  {
+   "name": "竹藤草柳与软木",
+   "items": [
+    {
+     "id": "basketry",
+     "name": "编织篮筐",
+     "en": "Basketry",
+     "year": -8000,
+     "note": "以韧条经纬交编成篮筐容器，早于陶器出现并延续至今。"
+    },
+    {
+     "id": "bamboo_strip_weaving",
+     "name": "竹篾编织",
+     "en": "Bamboo strip weaving",
+     "year": -4000,
+     "note": "剖竹成篾编成席、篮与笼，东亚南方竹编工艺品种丰富。",
+     "deps": ["basketry"]
+    },
+    {
+     "id": "wicker_weaving",
+     "name": "柳条编织",
+     "en": "Wicker weaving",
+     "year": -5000,
+     "note": "以柳条等柔韧枝条编结家具与容器，欧洲柳编传统深厚。",
+     "deps": ["basketry"]
+    },
+    {
+     "id": "straw_weaving",
+     "name": "草编",
+     "en": "Straw weaving",
+     "year": -3000,
+     "note": "以麦秆稻草编成帽、席与垫具，是谷物副产物的利用方式。",
+     "deps": ["agriculture"]
+    },
+    {
+     "id": "bamboo_furniture",
+     "name": "竹家具",
+     "en": "Bamboo furniture",
+     "year": -200,
+     "note": "以竹竿竹片接合制成的轻便家具，明清时期中国竹器兴盛。",
+     "deps": ["bamboo_strip_weaving"]
+    },
+    {
+     "id": "rattan_furniture",
+     "name": "藤制家具",
+     "en": "Rattan furniture",
+     "year": 1800,
+     "note": "以藤茎藤芯弯曲缠绕制成家具，19世纪欧洲兴起藤艺家具。",
+     "deps": ["basketry"]
+    },
+    {
+     "id": "cork_products",
+     "name": "软木制品",
+     "en": "Cork products",
+     "year": -100,
+     "note": "剥取栓皮栎树皮制成瓶塞与浮具，罗马人已用软木密封容器。"
+    },
+    {
+     "id": "reed_thatched_roof",
+     "name": "茅草屋盖",
+     "en": "Thatched roof",
+     "year": -6000,
+     "note": "以芦苇茅草层叠铺盖屋顶并排水，是传统民居常见屋面。",
+     "deps": ["agriculture"]
+    },
+    {
+     "id": "palm_leaf_weaving",
+     "name": "棕编",
+     "en": "Palm leaf weaving",
+     "year": -1000,
+     "note": "以棕榈叶与棕丝编结蓑衣、绳索与扇具，热带地区广泛利用。"
+    },
+    {
+     "id": "bamboo_scaffolding",
+     "name": "竹脚手架",
+     "en": "Bamboo scaffolding",
+     "year": 100,
+     "note": "以竹竿绑扎成施工脚手架，东亚城市高层建筑施工沿用至今。",
+     "deps": ["bamboo_furniture"]
+    },
+    {
+     "id": "rush_matting",
+     "name": "蒲草编织",
+     "en": "Rush matting",
+     "year": -4000,
+     "note": "以蒲草灯芯草编席铺地或作榻面，古埃及与东亚均有遗存。",
+     "deps": ["basketry"]
+    },
+    {
+     "id": "bamboo_wind_instrument",
+     "name": "竹制管乐器",
+     "en": "Bamboo wind instruments",
+     "year": -3000,
+     "note": "以竹管开孔制成笛箫类乐器，贾湖骨笛传统后由竹笛接续。"
+    },
+    {
+     "id": "tree_bark_cloth",
+     "name": "树皮布",
+     "en": "Barkcloth",
+     "year": -3000,
+     "note": "捶打楮树等内皮成布状片材，太平洋岛民与古代东亚用作衣料。",
+     "deps": ["stone_tools"]
+    },
+    {
+     "id": "bamboo_water_pipe",
+     "name": "竹水笕",
+     "en": "Bamboo aqueduct",
+     "year": -500,
+     "note": "以竹管承接引水，中国南方山区长期用作灌溉与饮水管道。",
+     "deps": ["agriculture"]
+    }
+   ]
+  },
+  {
+   "name": "皮革鞣制与毛皮利用",
+   "items": [
+    {
+     "id": "rawhide_processing",
+     "name": "生皮加工",
+     "en": "Rawhide processing",
+     "year": -8000,
+     "note": "刮肉去毛后干燥即得生皮，坚韧硬挺，用于蒙鼓与捆扎。",
+     "deps": ["stone_tools"]
+    },
+    {
+     "id": "smoke_tanning",
+     "name": "烟熏鞣制",
+     "en": "Smoke tanning",
+     "year": -4000,
+     "note": "以烟气中的酚类物质处理兽皮使其柔软耐水，北美原住民传统技法。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "brain_tanning",
+     "name": "脑鞣法",
+     "en": "Brain tanning",
+     "year": -4000,
+     "note": "以动物脑浆乳化油脂揉入生皮，制成柔软白皙的鞣革。",
+     "deps": ["rawhide_processing"]
+    },
+    {
+     "id": "vegetable_tanning",
+     "name": "植物鞣制",
+     "en": "Vegetable tanning",
+     "year": -3000,
+     "note": "以含鞣质的树皮果实浸泡生皮使蛋白结合，是最古老的皮革鞣法。",
+     "deps": ["rawhide_processing"]
+    },
+    {
+     "id": "alum_tawing",
+     "name": "明矾鞣制",
+     "en": "Alum tawing",
+     "year": -1500,
+     "note": "以明矾与盐处理兽皮得到白鞣革，古埃及与中东地区沿用。",
+     "deps": ["vegetable_tanning"]
+    },
+    {
+     "id": "parchment_making",
+     "name": "羊皮纸制作",
+     "en": "Parchment making",
+     "year": -150,
+     "note": "对羊皮进行脱毛绷干与刮磨而不经鞣制，制成书写材料。",
+     "deps": ["alum_tawing"]
+    },
+    {
+     "id": "oil_tanning",
+     "name": "油鞣革",
+     "en": "Oil tanning",
+     "year": 700,
+     "note": "以鱼油反复搓揉氧化鞣制兽皮，得柔软可洗的麂皮类革。",
+     "deps": ["vegetable_tanning"]
+    },
+    {
+     "id": "leather_flask",
+     "name": "皮囊",
+     "en": "Leather flask",
+     "year": -1500,
+     "note": "整张兽皮缝合成防水容器，游牧民族用于携带水与乳。",
+     "deps": ["rawhide_processing"]
+    },
+    {
+     "id": "rawhide_drum",
+     "name": "生皮蒙鼓",
+     "en": "Rawhide drum",
+     "year": -2000,
+     "note": "以生皮绷覆腔体作鼓面，干燥后张力均匀，古代打击乐器。",
+     "deps": ["rawhide_processing"]
+    },
+    {
+     "id": "chrome_tanning",
+     "name": "铬鞣法",
+     "en": "Chrome tanning",
+     "year": 1858,
+     "note": "以铬盐溶液鞣制生皮，速度快且成革柔软耐热，成为现代制革主流。",
+     "deps": ["vegetable_tanning"]
+    },
+    {
+     "id": "patent_leather",
+     "name": "漆皮",
+     "en": "Patent leather",
+     "year": 1818,
+     "note": "博伊登以亚麻油清漆涂饰皮革表面，获得镜面般光亮涂层。",
+     "deps": ["vegetable_tanning"]
+    },
+    {
+     "id": "fur_garments",
+     "name": "毛皮服装",
+     "en": "Fur garments",
+     "year": -30000,
+     "note": "保留动物毛层缝制御寒衣物，是旧石器时代人类的保暖技术。",
+     "deps": ["bone_needle"]
+    },
+    {
+     "id": "leather_currying",
+     "name": "皮革加脂回软",
+     "en": "Leather currying",
+     "year": -2000,
+     "note": "鞣后以油脂揉入革面使其柔软，并赋予防水与光泽。",
+     "deps": ["vegetable_tanning"]
+    },
+    {
+     "id": "dehairing_lime",
+     "name": "浸灰脱毛",
+     "en": "Liming",
+     "year": -2000,
+     "note": "以石灰水浸泡生皮膨胀松散毛根，便于机械脱毛。",
+     "deps": ["vegetable_tanning"]
+    },
+    {
+     "id": "shagreen",
+     "name": "鲨革与鲛皮",
+     "en": "Shagreen leather",
+     "year": -500,
+     "note": "以鲨鱼或鳐鱼粗糙皮肤制革，表面具颗粒质感，用于剑柄与盒面。"
+    },
+    {
+     "id": "leather_lacing",
+     "name": "皮革系带缝缀",
+     "en": "Leather lacing",
+     "year": -5000,
+     "note": "以裁割皮条系绑或缝缀各部件，是早期皮具成型的主要连接法。",
+     "deps": ["rawhide_processing"]
+    },
+    {
+     "id": "tawed_glove_making",
+     "name": "鞣革手套缝制",
+     "en": "Glove making",
+     "year": -300,
+     "note": "以软薄鞣革按手型裁剪缝制手套，中世纪欧洲行会工艺成熟。",
+     "deps": ["alum_tawing"]
+    },
+    {
+     "id": "leatherwater_proofing_wax",
+     "name": "皮革涂蜡防水",
+     "en": "Wax waterproofing of leather",
+     "year": -1000,
+     "note": "以蜂蜡油脂涂抹革面阻挡水分，用于靴鞋与鞍具防护。",
+     "deps": ["leather_currying"]
+    }
+   ]
+  },
+  {
+   "name": "天然纤维原料与初加工",
+   "items": [
+    {
+     "id": "flax_cultivation",
+     "name": "亚麻种植与沤制",
+     "en": "Flax growing and retting",
+     "year": -6000,
+     "note": "种植亚麻并浸沤脱胶取出韧皮纤维，是最早的植物纺织原料。",
+     "deps": ["agriculture"]
+    },
+    {
+     "id": "silk_reeling",
+     "name": "缫丝",
+     "en": "Silk reeling",
+     "year": -3000,
+     "note": "煮茧抽丝并绕成丝绞，中国新石器时代晚期已掌握缫丝技术。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "cotton_gin",
+     "name": "轧棉机",
+     "en": "Cotton gin",
+     "year": 1793,
+     "note": "惠特尼以锯齿辊快速分离棉籽与棉绒，推动短绒棉种植。",
+     "deps": ["agriculture"]
+    },
+    {
+     "id": "wool_scouring",
+     "name": "羊毛洗涤梳理",
+     "en": "Wool scouring and carding",
+     "year": -4000,
+     "note": "以温水脱脂并梳顺羊毛纤维，为纺线准备平行毛束。",
+     "deps": ["agriculture"]
+    },
+    {
+     "id": "hemp_decorication",
+     "name": "大麻沤麻脱胶",
+     "en": "Hemp retting",
+     "year": -4000,
+     "note": "浸沤大麻茎秆分离韧皮纤维，用于绳索与粗布。",
+     "deps": ["agriculture"]
+    },
+    {
+     "id": "ramie_fiber",
+     "name": "苎麻绩麻",
+     "en": "Ramie fiber processing",
+     "year": -3000,
+     "note": "刮青绩纱处理苎麻韧皮，中国新石器时代即用作织物原料。",
+     "deps": ["agriculture"]
+    },
+    {
+     "id": "felt_making",
+     "name": "擀毡",
+     "en": "Felt making",
+     "year": -3000,
+     "note": "以湿热水与压力使羊毛鳞片毡合，不需纺织即得片材。",
+     "deps": ["wool_scouring"]
+    },
+    {
+     "id": "cordage_twisting",
+     "name": "搓绳绞缆",
+     "en": "Cordage making",
+     "year": -8000,
+     "note": "以纤维束反向加捻合股搓成绳索，用于捆扎与起重。",
+     "deps": ["agriculture"]
+    },
+    {
+     "id": "fishing_net_weaving",
+     "name": "渔网编织",
+     "en": "Fishing net making",
+     "year": -6000,
+     "note": "以细绳打结编网，是水产捕捞的捕集装置。",
+     "deps": ["cordage_twisting"]
+    },
+    {
+     "id": "sisal_agave",
+     "name": "剑麻纤维抽取",
+     "en": "Sisal fiber extraction",
+     "year": 1500,
+     "note": "刮取龙舌兰叶片纤维，坚韧耐磨，用于船缆与粗麻布。",
+     "deps": ["cordage_twisting"]
+    },
+    {
+     "id": "coir_fiber",
+     "name": "椰棕纤维",
+     "en": "Coir fiber",
+     "year": 1500,
+     "note": "浸泡椰壳提取棕纤维，制绳垫弹性耐水，印度洋沿岸传统利用。",
+     "deps": ["cordage_twisting"]
+    },
+    {
+     "id": "bamboo_fiber",
+     "name": "竹纤维制取",
+     "en": "Bamboo fiber extraction",
+     "year": 2000,
+     "note": "以机械或化学方法分离竹材纤维，用于造纸与织物。",
+     "deps": ["paper"]
+    },
+    {
+     "id": "kapok_filling",
+     "name": "木棉填充",
+     "en": "Kapok filling",
+     "year": 1500,
+     "note": "以木棉果绒作枕垫与浮具填充料，轻盈疏水。"
+    },
+    {
+     "id": "down_harvesting",
+     "name": "羽绒收集",
+     "en": "Down feather processing",
+     "year": 1000,
+     "note": "收集水禽绒羽作被褥与寒衣填充，保暖性好。",
+     "deps": ["agriculture"]
+    },
+    {
+     "id": "camel_hair",
+     "name": "驼毛绒毛分梳",
+     "en": "Camel hair processing",
+     "year": -1000,
+     "note": "分梳骆驼绒毛用于织毯与衣物，中亚游牧传统工艺。",
+     "deps": ["wool_scouring"]
+    },
+    {
+     "id": "mohair_angora",
+     "name": "安哥拉山羊毛",
+     "en": "Mohair",
+     "year": 1500,
+     "note": "以安哥拉山羊长毛纺纱，光泽如丝，土耳其传统出口品。",
+     "deps": ["wool_scouring"]
+    },
+    {
+     "id": "horschair_weaving",
+     "name": "马鬃马尾加工",
+     "en": "Horsehair processing",
+     "year": 1700,
+     "note": "以马鬃作弓弦、刷毛与衬垫填充，弹挺耐用。",
+     "deps": ["cordage_twisting"]
+    },
+    {
+     "id": "kapok_planting",
+     "name": "棉毛类种子纤维",
+     "en": "Seed-hair fibres",
+     "year": -2000,
+     "note": "以棉与木棉等种子绒毛作纺织与填充材料，印度河流域已有棉纺。",
+     "deps": ["agriculture"]
+    }
+   ]
+  },
+  {
+   "name": "橡胶、树脂与树胶",
+   "items": [
+    {
+     "id": "natural_latex_collection",
+     "name": "天然乳胶采集",
+     "en": "Natural latex collection",
+     "year": -1500,
+     "note": "割取橡胶树流出的乳胶并凝固，中美洲奥尔梅克文明已制作胶球。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "rubber_eraser",
+     "name": "橡胶擦字块",
+     "en": "Rubber eraser",
+     "year": 1770,
+     "note": "天然橡胶早期民用制品之一，用于擦除铅笔笔迹。",
+     "deps": ["natural_latex_collection"]
+    },
+    {
+     "id": "rubber_vulcanization",
+     "name": "橡胶硫化",
+     "en": "Rubber vulcanization",
+     "year": 1839,
+     "note": "古德伊尔发现硫磺加热可交联生胶，消除其热粘冷脆缺陷。",
+     "deps": ["rubber_eraser"]
+    },
+    {
+     "id": "rubber_mastication",
+     "name": "橡胶塑炼",
+     "en": "Rubber mastication",
+     "year": 1841,
+     "note": "汉考克以辊压机械降低生胶黏弹，使橡胶便于混炼加工。",
+     "deps": ["rubber_vulcanization"]
+    },
+    {
+     "id": "gutta_percha",
+     "name": "古塔胶",
+     "en": "Gutta-percha",
+     "year": 1843,
+     "note": "提取热带树胶成型，绝缘且可塑性好，早期海底电缆的主要包覆料。",
+     "deps": ["rubber_mastication"]
+    },
+    {
+     "id": "ebonite",
+     "name": "硬质橡胶",
+     "en": "Ebonite",
+     "year": 1851,
+     "note": "以高比例硫磺硫化天然胶制得硬胶，用于梳刷与电绝缘件。",
+     "deps": ["rubber_vulcanization"]
+    },
+    {
+     "id": "rubberized_fabric",
+     "name": "橡胶防水布",
+     "en": "Rubberized fabric",
+     "year": 1823,
+     "note": "麦金托什以天然胶液涂布织物制成防水雨衣布料。",
+     "deps": ["rubber_eraser"]
+    },
+    {
+     "id": "latex_foam",
+     "name": "乳胶发泡",
+     "en": "Latex foam",
+     "year": 1929,
+     "note": "以机械打泡法把乳胶制成多孔弹性体，用于床垫坐垫。",
+     "deps": ["natural_latex_collection"]
+    },
+    {
+     "id": "pine_resin_tapping",
+     "name": "松脂采集",
+     "en": "Pine resin tapping",
+     "year": -1000,
+     "note": "割伤松树干收集树脂，经蒸馏分得松香与松节油。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "rosin_distillation",
+     "name": "松香精制",
+     "en": "Rosin refining",
+     "year": 1000,
+     "note": "蒸馏松脂制取松香，用作焊剂、上光料与造纸施胶剂。",
+     "deps": ["pine_resin_tapping"]
+    },
+    {
+     "id": "amber_polish",
+     "name": "琥珀加工",
+     "en": "Amber working",
+     "year": -2000,
+     "note": "磨抛石化树脂琥珀成珠饰，波罗的海沿岸自古采集贸易。",
+     "deps": ["stone_polishing"]
+    },
+    {
+     "id": "gum_arabic",
+     "name": "阿拉伯胶",
+     "en": "Gum arabic",
+     "year": 700,
+     "note": "采集金合欢树胶，用作墨水与颜料的稳定粘合剂。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "shellac",
+     "name": "虫胶",
+     "en": "Shellac",
+     "year": 1300,
+     "note": "紫胶虫分泌物经熔滤成片，作木器漆与封蜡原料。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "beeswax",
+     "name": "蜂蜡利用",
+     "en": "Beeswax",
+     "year": -3000,
+     "note": "提取蜂巢蜡用于封缄、涂料与铸造模料，古代埃及与地中海已使用。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "pitch_sealing",
+     "name": "焦油沥青密封",
+     "en": "Pitch sealing",
+     "year": -3000,
+     "note": "以天然沥青或木焦油填缝防水，两河流域用于船与管道密封。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "sealing_wax",
+     "name": "封蜡",
+     "en": "Sealing wax",
+     "year": 1400,
+     "note": "以树脂虫胶与颜料熬制封蜡，熔融盖印用于密封文书。",
+     "deps": ["shellac"]
+    },
+    {
+     "id": "chicle_chewing_gum",
+     "name": "人心果树胶糖",
+     "en": "Chicle chewing gum",
+     "year": 1860,
+     "note": "以人心果树胶质制口香糖，中美洲传统咀嚼物进入商业化。",
+     "deps": ["natural_latex_collection"]
+    }
+   ]
+  },
+  {
+   "name": "漆、胶与装饰性天然材料",
+   "items": [
+    {
+     "id": "lacquer_tree_sap",
+     "name": "生漆采集",
+     "en": "Lacquer sap collection",
+     "year": -5000,
+     "note": "割取漆树汁液，经脱水精制得可髹涂的天然漆。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "urushi_lacquering",
+     "name": "漆器髹涂",
+     "en": "Urushi lacquerware",
+     "year": -4000,
+     "note": "以生漆多层涂饰木胎器物，干燥后坚硬耐腐，中国新石器时代已见漆器。",
+     "deps": ["lacquer_tree_sap"]
+    },
+    {
+     "id": "hide_glue",
+     "name": "皮胶",
+     "en": "Hide glue",
+     "year": -3000,
+     "note": "熬煮兽皮制胶，用于木作粘合与颜料调配，古埃及木器使用。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "fish_glue",
+     "name": "鱼鳔胶",
+     "en": "Isinglass",
+     "year": -500,
+     "note": "熬制鱼鳔得高纯度明胶，用于澄清酒液与精细粘接。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "casein_glue",
+     "name": "酪蛋白胶",
+     "en": "Casein glue",
+     "year": -2000,
+     "note": "以奶中酪蛋白调制成胶，耐水性强，用于木器与颜料基底。",
+     "deps": ["agriculture"]
+    },
+    {
+     "id": "starch_paste",
+     "name": "淀粉浆糊",
+     "en": "Starch paste",
+     "year": -3000,
+     "note": "以谷物淀粉糊化作粘合剂，用于纸张裱糊与纺织品上浆。",
+     "deps": ["agriculture"]
+    },
+    {
+     "id": "egg_tempera",
+     "name": "蛋彩画底料",
+     "en": "Egg tempera binder",
+     "year": -1500,
+     "note": "以蛋黄乳化作颜料粘合剂，古埃及墓画与欧洲木板画使用。",
+     "deps": ["agriculture"]
+    },
+    {
+     "id": "whale_oil",
+     "name": "鲸油",
+     "en": "Whale oil",
+     "year": 1600,
+     "note": "熬炼鲸脂得灯用与润滑用油，近代捕鲸业主要产品。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "tallow_candle",
+     "name": "动物油脂蜡",
+     "en": "Tallow",
+     "year": -1500,
+     "note": "提炼牛羊脂肪制照明烛与皂料，是古代油脂化工原料。",
+     "deps": ["fire"]
+    },
+    {
+     "id": "ivory_inlay",
+     "name": "骨木镶嵌",
+     "en": "Bone and wood marquetry",
+     "year": -1000,
+     "note": "以象牙骨片嵌饰木器表面，波斯与东亚细木工工艺。",
+     "deps": ["ivory_carving"]
+    },
+    {
+     "id": "coral_working",
+     "name": "红珊瑚加工",
+     "en": "Coral carving",
+     "year": -1000,
+     "note": "采集磨制红珊瑚枝为珠饰雕刻，地中海沿岸传统工艺。",
+     "deps": ["stone_polishing"]
+    },
+    {
+     "id": "pearl_mother_of_pearl",
+     "name": "珍珠母贝利用",
+     "en": "Pearl and mother-of-pearl",
+     "year": -1000,
+     "note": "以珍珠与珍珠层片制饰，海湾与南亚自古采集天然珍珠。"
+    },
+    {
+     "id": "wax_casting",
+     "name": "失蜡铸造",
+     "en": "Lost-wax casting",
+     "year": -2500,
+     "note": "以蜡模包泥焙烧熔蜡成空腔再浇金属，古代精密铸件的重要方法。",
+     "deps": ["beeswax"]
+    }
+   ]
+  }
+ ]
+}

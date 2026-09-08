@@ -1,0 +1,1398 @@
+{
+ "cat": "energy",
+ "catName": "能源",
+ "sub": "power_machine",
+ "subName": "动力机械",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点（蒸汽机/内燃机/电动机等已锚点者不重复收录，只在其下位与姊妹技术）；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "steam_engine",
+  "internal_combustion",
+  "diesel_engine",
+  "electric_motor",
+  "generator",
+  "electricity",
+  "thermodynamics",
+  "electromagnetism",
+  "semiconductors",
+  "computer",
+  "automobile",
+  "airplane",
+  "railway",
+  "rocket",
+  "battery",
+  "magnets",
+  "physics"
+ ],
+ "families": [
+  {
+   "name": "蒸汽动力机械",
+   "items": [
+    {
+     "id": "compound_steam_engine",
+     "name": "复胀式蒸汽机",
+     "en": "Compound steam engine",
+     "year": 1781,
+     "note": "让蒸汽依次在高低压气缸中膨胀做功的多缸蒸汽机，热效率显著高于单缸机。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "high_pressure_steam_engine",
+     "name": "高压蒸汽机",
+     "en": "High-pressure steam engine",
+     "year": 1802,
+     "note": "特里维西克制成的高压无冷凝蒸汽机，取消了冷凝器并大幅缩小体积。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "corliss_engine",
+     "name": "柯利斯蒸汽机",
+     "en": "Corliss steam engine",
+     "year": 1849,
+     "note": "科利斯式自动配汽阀蒸汽机，配汽平稳效率高，统治十九世纪后半叶固定式动力。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "water_tube_boiler",
+     "name": "水管锅炉",
+     "en": "Water-tube boiler",
+     "year": 1866,
+     "note": "水在管内流动吸热的锅炉，可承受高压且启动快，为高压蒸汽动力提供汽源。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "triple_expansion_engine",
+     "name": "三胀式蒸汽机",
+     "en": "Triple-expansion steam engine",
+     "year": 1881,
+     "note": "蒸汽依次经高、中、低压三级气缸膨胀的往复蒸汽机，是大型船用蒸汽机主流。",
+     "deps": [
+      "compound_steam_engine"
+     ]
+    },
+    {
+     "id": "impulse_turbine",
+     "name": "冲击式汽轮机",
+     "en": "Impulse steam turbine",
+     "year": 1883,
+     "note": "蒸汽在喷嘴中降压增速冲击动叶做功的汽轮机，拉瓦尔单级机开其先河。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "steam_turbine",
+     "name": "蒸汽轮机",
+     "en": "Steam turbine",
+     "year": 1884,
+     "note": "帕森斯制成多级反动式汽轮机，将蒸汽动能连续转化为旋转机械功。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "reaction_turbine",
+     "name": "反动式汽轮机",
+     "en": "Reaction steam turbine",
+     "year": 1885,
+     "note": "蒸汽在动叶通道内继续膨胀的反作用力驱动叶轮，与冲动级组合构成现代汽轮机。",
+     "deps": [
+      "steam_turbine"
+     ]
+    },
+    {
+     "id": "turbo_generator_set",
+     "name": "汽轮发电机组",
+     "en": "Turbo generator set",
+     "year": 1889,
+     "note": "汽轮机直接耦合发电机同轴旋转的机组，为火力与核能电站提供电能。",
+     "deps": [
+      "steam_turbine",
+      "generator"
+     ]
+    },
+    {
+     "id": "condensing_turbine",
+     "name": "凝汽式汽轮机",
+     "en": "Condensing turbine",
+     "year": 1900,
+     "note": "排汽进入凝汽器维持真空的汽轮机，充分膨胀做功，用于纯凝发电。",
+     "deps": [
+      "steam_turbine"
+     ]
+    },
+    {
+     "id": "surface_condenser",
+     "name": "表面式凝汽器",
+     "en": "Surface condenser",
+     "year": 1900,
+     "note": "以循环水冷却管束使排汽凝结并建立真空的热交换器，是凝汽机组的关键辅机。",
+     "deps": [
+      "steam_turbine"
+     ]
+    },
+    {
+     "id": "marine_steam_turbine",
+     "name": "船用汽轮机",
+     "en": "Marine steam turbine",
+     "year": 1905,
+     "note": "驱动船舶螺旋桨的汽轮机动力装置，转速高、振动小，曾用于大型军舰与邮轮。",
+     "deps": [
+      "steam_turbine"
+     ]
+    },
+    {
+     "id": "uniflow_engine",
+     "name": "单流式蒸汽机",
+     "en": "Uniflow steam engine",
+     "year": 1909,
+     "note": "蒸汽在缸内单向流动、经中部排口排汽的蒸汽机，减少冷凝与流动损失。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "mechanical_drive_turbine",
+     "name": "机械驱动汽轮机",
+     "en": "Mechanical drive steam turbine",
+     "year": 1910,
+     "note": "驱动压缩机、泵与风机等旋转机械的汽轮机，广泛用于炼油与化工厂。",
+     "deps": [
+      "steam_turbine"
+     ]
+    },
+    {
+     "id": "back_pressure_turbine",
+     "name": "背压式汽轮机",
+     "en": "Back-pressure turbine",
+     "year": 1915,
+     "note": "排汽压力高于大气并直接供热用户的汽轮机，蒸汽全部用于热负荷。",
+     "deps": [
+      "steam_turbine"
+     ]
+    },
+    {
+     "id": "extraction_turbine",
+     "name": "抽汽式汽轮机",
+     "en": "Extraction turbine",
+     "year": 1915,
+     "note": "从中间级抽出部分蒸汽供工业或采暖用热的汽轮机，实现热电联产。",
+     "deps": [
+      "condensing_turbine"
+     ]
+    },
+    {
+     "id": "geared_marine_turbine",
+     "name": "齿轮减速船用汽轮机",
+     "en": "Geared marine steam turbine",
+     "year": 1915,
+     "note": "以减速齿轮匹配高速汽轮机与低速螺旋桨的推进装置，效率高且体积小。",
+     "deps": [
+      "marine_steam_turbine"
+     ]
+    },
+    {
+     "id": "regenerative_feedwater_heating",
+     "name": "给水回热加热系统",
+     "en": "Regenerative feedwater heating",
+     "year": 1920,
+     "note": "用抽汽预热锅炉给水的热力系统，减少冷源损失并提高机组循环效率。",
+     "deps": [
+      "condensing_turbine"
+     ]
+    },
+    {
+     "id": "reheat_steam_turbine",
+     "name": "中间再热汽轮机",
+     "en": "Reheat steam turbine",
+     "year": 1955,
+     "note": "高压缸排汽回炉再热后进中低压缸继续做功的机组，进一步提高循环效率。",
+     "deps": [
+      "steam_turbine"
+     ]
+    },
+    {
+     "id": "electrohydraulic_governor",
+     "name": "汽轮机数字电液调节系统",
+     "en": "Digital electro-hydraulic control",
+     "year": 1980,
+     "note": "以计算机处理转速与负荷信号、电液转换驱动油动机的汽轮机调速系统。",
+     "deps": [
+      "computer",
+      "steam_turbine"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "内燃发动机及其变型",
+   "items": [
+    {
+     "id": "two_stroke_engine",
+     "name": "二冲程内燃机",
+     "en": "Two-stroke engine",
+     "year": 1878,
+     "note": "每两冲程完成一次做功循环的发动机，功率密度高，曾用于摩托与舷外机。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "atkinson_engine",
+     "name": "阿特金森循环发动机",
+     "en": "Atkinson cycle engine",
+     "year": 1882,
+     "note": "以特殊连杆实现膨胀比大于压缩比的内燃机，热效率高，用于现代混合动力。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "supercharger",
+     "name": "机械增压器",
+     "en": "Supercharger",
+     "year": 1885,
+     "note": "由曲轴带动的强制进气装置，提高气缸充气量以增大发动机功率。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "hot_bulb_engine",
+     "name": "热球式发动机",
+     "en": "Hot-bulb engine",
+     "year": 1890,
+     "note": "以缸盖热球点燃喷入燃油的半柴油机，曾广泛用于渔船与小型船舶。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "carburetor",
+     "name": "化油器",
+     "en": "Carburetor",
+     "year": 1893,
+     "note": "使汽油雾化并与空气混合形成可燃气的装置，是早期汽油机的标准供油方式。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "magneto_ignition",
+     "name": "磁电机点火",
+     "en": "Magneto ignition",
+     "year": 1897,
+     "note": "由旋转磁铁直接感应产生高压电火花的点火系统，适用于无蓄电池场合。",
+     "deps": [
+      "internal_combustion",
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "opposed_piston_engine",
+     "name": "对置活塞发动机",
+     "en": "Opposed-piston engine",
+     "year": 1900,
+     "note": "同一气缸内两支活塞对向运动共用一个燃烧室的发动机，省去缸盖。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "ignition_coil",
+     "name": "点火线圈",
+     "en": "Ignition coil",
+     "year": 1902,
+     "note": "把蓄电池低压电升为上万伏高压供火花塞放电的变压器式器件。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "spark_plug",
+     "name": "火花塞",
+     "en": "Spark plug",
+     "year": 1903,
+     "note": "把高压电引入燃烧室形成火花的点火部件，是点燃式发动机的必备件。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "engine_radiator",
+     "name": "发动机散热器",
+     "en": "Engine radiator",
+     "year": 1904,
+     "note": "以空气冷却循环水的热交换器，维持内燃机缸体工作温度。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "pressure_lubrication",
+     "name": "压力润滑系统",
+     "en": "Pressure lubrication system",
+     "year": 1905,
+     "note": "以机油泵向轴承与运动副强制供油的润滑方式，提高发动机可靠性与寿命。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "turbocharger",
+     "name": "涡轮增压器",
+     "en": "Turbocharger",
+     "year": 1905,
+     "note": "利用排气能量驱动压气机增压的装置，显著提高发动机功率与效率。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "outboard_motor",
+     "name": "舷外机",
+     "en": "Outboard motor",
+     "year": 1907,
+     "note": "把发动机、传动与螺旋桨集成为一体的可拆装船用动力装置，多用于小艇。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "electric_starter",
+     "name": "电启动马达",
+     "en": "Electric starter",
+     "year": 1912,
+     "note": "以小型电动机带动发动机飞轮起动的装置，取代了人工摇把起动。",
+     "deps": [
+      "electric_motor",
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "diesel_injection_pump",
+     "name": "柴油高压喷油泵",
+     "en": "Diesel fuel injection pump",
+     "year": 1922,
+     "note": "博世研制的机械高压喷油泵，使柴油雾化定量喷射以精确控制燃烧。",
+     "deps": [
+      "diesel_engine"
+     ]
+    },
+    {
+     "id": "free_piston_engine",
+     "name": "自由活塞发动机",
+     "en": "Free-piston engine",
+     "year": 1928,
+     "note": "无曲轴、活塞在气缸中自由往复并带动压气机工作的内燃动力装置。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "intercooler",
+     "name": "增压中冷器",
+     "en": "Intercooler",
+     "year": 1930,
+     "note": "冷却增压后高温进气的热交换器，提高进气密度并降低爆震倾向。",
+     "deps": [
+      "turbocharger"
+     ]
+    },
+    {
+     "id": "natural_gas_engine",
+     "name": "天然气发动机",
+     "en": "Natural gas engine",
+     "year": 1930,
+     "note": "燃用天然气或沼气的内燃机，排放清洁，用于固定动力与重载运输。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "miller_cycle_engine",
+     "name": "米勒循环发动机",
+     "en": "Miller cycle engine",
+     "year": 1947,
+     "note": "通过提前关进气门实现膨胀比大于压缩比的循环，兼顾效率与功率密度。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "wankel_engine",
+     "name": "转子发动机",
+     "en": "Wankel engine",
+     "year": 1957,
+     "note": "汪克尔研制的三角转子旋转做功的发动机，体积小振动小，曾量产装车。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "exhaust_gas_recirculation",
+     "name": "废气再循环系统",
+     "en": "Exhaust gas recirculation",
+     "year": 1973,
+     "note": "把部分废气送回进气道以降低燃烧温度、抑制氮氧化物的排放控制技术。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "engine_ecu",
+     "name": "发动机电控单元",
+     "en": "Engine control unit",
+     "year": 1980,
+     "note": "实时采集转速进气等信号并控制喷油与点火的微型计算机，满足排放法规。",
+     "deps": [
+      "semiconductors",
+      "computer"
+     ]
+    },
+    {
+     "id": "variable_valve_timing",
+     "name": "可变气门正时系统",
+     "en": "Variable valve timing",
+     "year": 1989,
+     "note": "液压或电控改变气门开启时刻的系统，兼顾低速扭矩与高速功率。",
+     "deps": [
+      "engine_ecu",
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "variable_geometry_turbo",
+     "name": "可变几何涡轮增压器",
+     "en": "Variable-geometry turbocharger",
+     "year": 1990,
+     "note": "通过调节导流叶片改变涡轮流通面积的增压器，改善低速响应与效率。",
+     "deps": [
+      "turbocharger"
+     ]
+    },
+    {
+     "id": "gasoline_direct_injection",
+     "name": "汽油缸内直喷",
+     "en": "Gasoline direct injection",
+     "year": 1996,
+     "note": "把汽油直接喷入气缸的供油方式，精确控制燃烧以节油减排。",
+     "deps": [
+      "engine_ecu",
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "common_rail_injection",
+     "name": "高压共轨喷射系统",
+     "en": "Common rail fuel injection",
+     "year": 1997,
+     "note": "以共用高压油轨分时电控喷射的柴油供油系统，降低噪声与排放。",
+     "deps": [
+      "diesel_injection_pump",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "hydrogen_ic_engine",
+     "name": "氢内燃机",
+     "en": "Hydrogen internal combustion engine",
+     "year": 2007,
+     "note": "直接燃烧氢气作功的内燃机，排放以水为主，已在商用车示范应用。",
+     "deps": [
+      "internal_combustion"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "燃气轮机与喷气发动机",
+   "items": [
+    {
+     "id": "gas_turbine",
+     "name": "燃气轮机",
+     "en": "Gas turbine",
+     "year": 1903,
+     "note": "由压气机、燃烧室与涡轮构成的旋转热机，艾林制成首台输出净功样机。",
+     "deps": [
+      "thermodynamics"
+     ]
+    },
+    {
+     "id": "centrifugal_compressor",
+     "name": "离心式压气机",
+     "en": "Centrifugal compressor",
+     "year": 1930,
+     "note": "靠高速叶轮离心增压的空气压缩部件，结构简单，用于早期喷气发动机。",
+     "deps": [
+      "gas_turbine"
+     ]
+    },
+    {
+     "id": "axial_compressor",
+     "name": "轴流式压气机",
+     "en": "Axial compressor",
+     "year": 1939,
+     "note": "气流沿轴向逐级增压的压气机，效率高，是现代燃气轮机的核心部件。",
+     "deps": [
+      "gas_turbine"
+     ]
+    },
+    {
+     "id": "turbojet_engine",
+     "name": "涡轮喷气发动机",
+     "en": "Turbojet engine",
+     "year": 1939,
+     "note": "海因克尔He178首次飞行验证的喷气推进发动机，靠高速喷流产生推力。",
+     "deps": [
+      "gas_turbine"
+     ]
+    },
+    {
+     "id": "pulsejet_engine",
+     "name": "脉动喷气发动机",
+     "en": "Pulsejet engine",
+     "year": 1942,
+     "note": "以周期性燃烧脉冲直接产生推力的简易喷气装置，曾用于飞弹推进。",
+     "deps": [
+      "gas_turbine"
+     ]
+    },
+    {
+     "id": "afterburner",
+     "name": "加力燃烧室",
+     "en": "Afterburner",
+     "year": 1944,
+     "note": "在涡轮后喷油再燃以瞬时增大推力的装置，用于战斗机超音速飞行。",
+     "deps": [
+      "turbojet_engine"
+     ]
+    },
+    {
+     "id": "ramjet_engine",
+     "name": "冲压发动机",
+     "en": "Ramjet",
+     "year": 1945,
+     "note": "无转动部件、靠高速来流滞止增压的喷气发动机，需高马赫数起动。",
+     "deps": [
+      "turbojet_engine"
+     ]
+    },
+    {
+     "id": "turboprop_engine",
+     "name": "涡轮螺旋桨发动机",
+     "en": "Turboprop engine",
+     "year": 1945,
+     "note": "涡轮主要驱动螺旋桨、少量燃气喷流辅助推力的发动机，巡航油耗低。",
+     "deps": [
+      "gas_turbine"
+     ]
+    },
+    {
+     "id": "turboshaft_engine",
+     "name": "涡轴发动机",
+     "en": "Turboshaft engine",
+     "year": 1950,
+     "note": "动力涡轮经减速器输出轴功率的燃气轮机，是直升机的标准动力。",
+     "deps": [
+      "gas_turbine"
+     ]
+    },
+    {
+     "id": "aircraft_apu",
+     "name": "飞机辅助动力装置",
+     "en": "Aircraft auxiliary power unit",
+     "year": 1955,
+     "note": "装在机尾的小型燃气轮机，为飞机地面与应急提供电、气源。",
+     "deps": [
+      "gas_turbine"
+     ]
+    },
+    {
+     "id": "thrust_reverser",
+     "name": "反推力装置",
+     "en": "Thrust reverser",
+     "year": 1955,
+     "note": "把喷气气流反向偏转产生减速推力的装置，缩短飞机着陆滑跑距离。",
+     "deps": [
+      "turbojet_engine"
+     ]
+    },
+    {
+     "id": "combined_cycle_gas_turbine",
+     "name": "燃气-蒸汽联合循环",
+     "en": "Combined cycle power plant",
+     "year": 1960,
+     "note": "燃气轮机排气余热锅炉产汽驱动汽轮机的联合动力系统，发电效率可达六成。",
+     "deps": [
+      "gas_turbine",
+      "steam_turbine"
+     ]
+    },
+    {
+     "id": "turbofan_engine",
+     "name": "涡轮风扇发动机",
+     "en": "Turbofan engine",
+     "year": 1960,
+     "note": "前方风扇提供大量旁通气流的喷气发动机，经济安静，为干线客机主流动力。",
+     "deps": [
+      "turbojet_engine"
+     ]
+    },
+    {
+     "id": "recuperated_gas_turbine",
+     "name": "回热式燃气轮机",
+     "en": "Recuperated gas turbine",
+     "year": 1965,
+     "note": "以回热器用排气预热压缩空气的燃气轮机循环，热效率更高。",
+     "deps": [
+      "gas_turbine"
+     ]
+    },
+    {
+     "id": "turbine_blade_cooling",
+     "name": "涡轮叶片气膜冷却",
+     "en": "Turbine blade film cooling",
+     "year": 1965,
+     "note": "从叶片内部气孔排出冷却气形成保护膜的工艺，允许燃气温度高于材料极限。",
+     "deps": [
+      "gas_turbine"
+     ]
+    },
+    {
+     "id": "marine_gas_turbine",
+     "name": "舰用燃气轮机",
+     "en": "Marine gas turbine",
+     "year": 1968,
+     "note": "为大中型水面舰艇提供推进功率的船用燃气轮机，加速快、比功率高。",
+     "deps": [
+      "gas_turbine"
+     ]
+    },
+    {
+     "id": "aero_derivative_gas_turbine",
+     "name": "航改燃气轮机",
+     "en": "Aero-derivative gas turbine",
+     "year": 1969,
+     "note": "由航空涡扇或涡轴发动机改型的陆用燃气轮机，用于发电与油气输送。",
+     "deps": [
+      "gas_turbine",
+      "turbofan_engine"
+     ]
+    },
+    {
+     "id": "high_bypass_turbofan",
+     "name": "大涵道比涡扇发动机",
+     "en": "High-bypass turbofan",
+     "year": 1970,
+     "note": "旁通比达五以上的大型风扇发动机，燃油经济性与噪声远优于早期涡扇。",
+     "deps": [
+      "turbofan_engine"
+     ]
+    },
+    {
+     "id": "low_noise_combustor",
+     "name": "低排放燃烧室",
+     "en": "Low-emission combustor",
+     "year": 1990,
+     "note": "采用贫油预混燃烧抑制氮氧化物的燃烧室，满足日益严格的环保标准。",
+     "deps": [
+      "gas_turbine"
+     ]
+    },
+    {
+     "id": "microturbine",
+     "name": "微型燃气轮机",
+     "en": "Microturbine",
+     "year": 1998,
+     "note": "功率数十至数百千瓦的小型燃气轮机，用于分布式热电联供。",
+     "deps": [
+      "gas_turbine"
+     ]
+    },
+    {
+     "id": "scramjet_engine",
+     "name": "超燃冲压发动机",
+     "en": "Scramjet",
+     "year": 2004,
+     "note": "在超声速气流中组织燃烧的冲压发动机，X-43A实现了马赫数接近10的飞行。",
+     "deps": [
+      "ramjet_engine"
+     ]
+    },
+    {
+     "id": "geared_turbofan",
+     "name": "齿轮传动涡扇发动机",
+     "en": "Geared turbofan",
+     "year": 2016,
+     "note": "在风扇与低压涡轮间加入减速齿轮的涡扇发动机，效率高、噪声低。",
+     "deps": [
+      "turbofan_engine"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "热气机与外燃动力装置",
+   "items": [
+    {
+     "id": "stirling_engine",
+     "name": "斯特林发动机",
+     "en": "Stirling engine",
+     "year": 1816,
+     "note": "按斯特林循环闭式工作的外燃热机，热源多样、安静低排放。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "hot_air_engine",
+     "name": "热气机",
+     "en": "Hot air engine",
+     "year": 1827,
+     "note": "以空气为工质、靠外部加热驱动活塞的发动机，曾用于驱动小型机械。",
+     "deps": [
+      "stirling_engine"
+     ]
+    },
+    {
+     "id": "ericsson_hot_air_engine",
+     "name": "爱立信热气机",
+     "en": "Ericsson hot air engine",
+     "year": 1850,
+     "note": "爱立信设计的大功率开式循环热气机，曾装于船舶与马车实验。",
+     "deps": [
+      "hot_air_engine"
+     ]
+    },
+    {
+     "id": "organic_rankine_cycle",
+     "name": "有机朗肯循环发电装置",
+     "en": "Organic Rankine cycle unit",
+     "year": 1980,
+     "note": "以低沸点有机工质回收中低温余热发电的动力装置，用于地热与工业余热。",
+     "deps": [
+      "steam_turbine"
+     ]
+    },
+    {
+     "id": "free_piston_stirling",
+     "name": "自由活塞斯特林发电机",
+     "en": "Free-piston Stirling converter",
+     "year": 1969,
+     "note": "以线性发电机耦合自由活塞斯特林机的装置，为航天与便携提供安静电源。",
+     "deps": [
+      "stirling_engine",
+      "generator"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "电动机类型",
+   "items": [
+    {
+     "id": "dc_commutator_motor",
+     "name": "直流换向电动机",
+     "en": "DC commutator motor",
+     "year": 1873,
+     "note": "靠换向器改变电枢电流方向的直流电动机，调速简单，早期应用广泛。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "pm_dc_motor",
+     "name": "永磁直流电动机",
+     "en": "Permanent-magnet DC motor",
+     "year": 1880,
+     "note": "以永磁体建立磁场的直流电动机，体积小效率高，用于汽车与家电。",
+     "deps": [
+      "electric_motor",
+      "magnets"
+     ]
+    },
+    {
+     "id": "induction_motor",
+     "name": "感应电动机",
+     "en": "Induction motor",
+     "year": 1887,
+     "note": "特斯拉发明以旋转磁场感生转子电流的异步电动机，结构坚固，为工业主力。",
+     "deps": [
+      "electric_motor",
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "squirrel_cage_rotor",
+     "name": "鼠笼式转子",
+     "en": "Squirrel-cage rotor",
+     "year": 1889,
+     "note": "以铸铝导条构成转子绕组，无集电环免维护，是异步电机最常见的转子型式。",
+     "deps": [
+      "induction_motor"
+     ]
+    },
+    {
+     "id": "shaded_pole_motor",
+     "name": "罩极电动机",
+     "en": "Shaded-pole motor",
+     "year": 1890,
+     "note": "以短路铜环形成旋转磁场的单相小功率电机，用于风扇等长期运行设备。",
+     "deps": [
+      "induction_motor"
+     ]
+    },
+    {
+     "id": "synchronous_motor",
+     "name": "同步电动机",
+     "en": "Synchronous motor",
+     "year": 1890,
+     "note": "转子转速与旋转磁场严格同步的电动机，恒速运行并改善电网功率因数。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "wound_rotor_motor",
+     "name": "绕线式异步电动机",
+     "en": "Wound-rotor motor",
+     "year": 1891,
+     "note": "转子经滑环外接电阻以改善起动与调速性能的异步电机，用于大惯量负载。",
+     "deps": [
+      "induction_motor"
+     ]
+    },
+    {
+     "id": "repulsion_motor",
+     "name": "推斥电动机",
+     "en": "Repulsion motor",
+     "year": 1895,
+     "note": "电刷短接换向器形成推斥转矩的交流电动机，曾用于电梯与矿山设备。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "hysteresis_motor",
+     "name": "磁滞电动机",
+     "en": "Hysteresis motor",
+     "year": 1900,
+     "note": "靠磁滞材料损耗产生恒定转矩的同步电机，运行平稳，用于陀螺与钟表。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "reluctance_motor",
+     "name": "磁阻电动机",
+     "en": "Reluctance motor",
+     "year": 1900,
+     "note": "依靠转子磁阻最小化原理产生转矩的电机，结构简单、成本低。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "universal_motor",
+     "name": "串励通用电动机",
+     "en": "Universal motor",
+     "year": 1900,
+     "note": "交直流两用的串励换向电动机，转速高扭矩大，用于吸尘器与电动工具。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "submersible_motor",
+     "name": "潜水电动机",
+     "en": "Submersible motor",
+     "year": 1929,
+     "note": "与潜水泵一体下井的充水密封电动机，直接驱动深井提水叶轮。",
+     "deps": [
+      "induction_motor"
+     ]
+    },
+    {
+     "id": "capacitor_motor",
+     "name": "电容分相电动机",
+     "en": "Capacitor-run motor",
+     "year": 1930,
+     "note": "以电容器分相起动与运转的单相异步电动机，是家用电器的主力动力。",
+     "deps": [
+      "induction_motor"
+     ]
+    },
+    {
+     "id": "explosion_proof_motor",
+     "name": "防爆电动机",
+     "en": "Explosion-proof motor",
+     "year": 1930,
+     "note": "外壳能承受内部爆炸而不引燃外部易燃气的电动机，用于石化与煤矿。",
+     "deps": [
+      "induction_motor"
+     ]
+    },
+    {
+     "id": "canned_motor",
+     "name": "屏蔽电动机",
+     "en": "Canned motor",
+     "year": 1945,
+     "note": "定转子以薄壁屏蔽套密封的电动机，与被输送介质隔离，用于无泄漏泵。",
+     "deps": [
+      "induction_motor"
+     ]
+    },
+    {
+     "id": "linear_motor",
+     "name": "直线电动机",
+     "en": "Linear motor",
+     "year": 1947,
+     "note": "把旋转电机展开成直线运动的结构，直接产生推力，用于磁悬浮与精密平台。",
+     "deps": [
+      "induction_motor"
+     ]
+    },
+    {
+     "id": "servo_motor",
+     "name": "伺服电动机",
+     "en": "Servo motor",
+     "year": 1950,
+     "note": "响应指令快速精确定位的小型控制电机，配合编码器用于位置伺服系统。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "stepper_motor",
+     "name": "步进电动机",
+     "en": "Stepper motor",
+     "year": 1957,
+     "note": "每输入一个脉冲就转过固定角度的电机，无需反馈即可开环精确定位。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "torque_motor",
+     "name": "力矩电动机",
+     "en": "Torque motor",
+     "year": 1960,
+     "note": "可直接驱动负载并允许长期堵转的大转矩电动机，用于卷绕与直驱转台。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "ironless_core_motor",
+     "name": "空心杯电动机",
+     "en": "Ironless core motor",
+     "year": 1965,
+     "note": "转子无铁心呈杯状的高响应微电机，广泛用于仪器仪表与航模。",
+     "deps": [
+      "dc_commutator_motor",
+      "magnets"
+     ]
+    },
+    {
+     "id": "switched_reluctance_motor",
+     "name": "开关磁阻电动机",
+     "en": "Switched reluctance motor",
+     "year": 1980,
+     "note": "按顺序向定子相绕组通电的磁阻电机，耐高温高速，用于电动工具与电车。",
+     "deps": [
+      "reluctance_motor",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "permanent_magnet_synchronous_motor",
+     "name": "永磁同步电动机",
+     "en": "Permanent magnet synchronous motor",
+     "year": 1986,
+     "note": "以永磁体建立转子磁场的同步电机，效率密度高，是电动车主流动力。",
+     "deps": [
+      "synchronous_motor",
+      "magnets"
+     ]
+    },
+    {
+     "id": "ultrasonic_motor",
+     "name": "超声电动机",
+     "en": "Ultrasonic motor",
+     "year": 1987,
+     "note": "以压电陶瓷超声振动驱动动子的电动机，低速大转矩且无电磁噪声。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "planar_motor",
+     "name": "平面电动机",
+     "en": "Planar motor",
+     "year": 1995,
+     "note": "可直接产生二维平面运动的电机，用于光刻机与贴片机精密定位。",
+     "deps": [
+      "linear_motor"
+     ]
+    },
+    {
+     "id": "axial_flux_motor",
+     "name": "轴向磁通电动机",
+     "en": "Axial flux motor",
+     "year": 2007,
+     "note": "磁通沿轴向穿过气隙的盘式电机，轴向短、转矩密度高，用于轮毂直驱。",
+     "deps": [
+      "permanent_magnet_synchronous_motor"
+     ]
+    },
+    {
+     "id": "synchronous_reluctance_motor",
+     "name": "同步磁阻电动机",
+     "en": "Synchronous reluctance motor",
+     "year": 2011,
+     "note": "转子不含永磁与绕组、靠磁阻凸极同步旋转的电机，成本低且无稀土依赖。",
+     "deps": [
+      "reluctance_motor"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "电动机应用与驱动系统",
+   "items": [
+    {
+     "id": "traction_motor",
+     "name": "牵引电动机",
+     "en": "Traction motor",
+     "year": 1890,
+     "note": "驱动电力机车与有轨电车车轮的电动机，要求大扭矩过载与宽调速范围。",
+     "deps": [
+      "electric_motor",
+      "railway"
+     ]
+    },
+    {
+     "id": "ward_leonard_drive",
+     "name": "发电机-电动机变速系统",
+     "en": "Ward Leonard drive",
+     "year": 1891,
+     "note": "以直流发电机为电动机供电并调压调速的系统，曾用于提升机与轧机。",
+     "deps": [
+      "generator",
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "in_wheel_motor",
+     "name": "轮毂电动机",
+     "en": "In-wheel motor",
+     "year": 1900,
+     "note": "直接装于车轮内驱动的电动机，省去传动轴，早年被电动车试装并于近年复兴。",
+     "deps": [
+      "electric_motor",
+      "automobile"
+     ]
+    },
+    {
+     "id": "elevator_traction_machine",
+     "name": "电梯曳引机",
+     "en": "Elevator traction machine",
+     "year": 1903,
+     "note": "由电动机减速驱动曳引轮提升轿厢的装置，取代了早期液压直顶方式。",
+     "deps": [
+      "electric_motor",
+      "elevator"
+     ]
+    },
+    {
+     "id": "submarine_propulsion_motor",
+     "name": "潜艇电力推进电机",
+     "en": "Submarine propulsion motor",
+     "year": 1906,
+     "note": "潜艇水下潜航时由蓄电池供电驱动螺旋桨的推进电动机。",
+     "deps": [
+      "electric_motor",
+      "battery"
+     ]
+    },
+    {
+     "id": "diesel_electric_drive",
+     "name": "柴油机-电力传动装置",
+     "en": "Diesel-electric drive",
+     "year": 1912,
+     "note": "柴油机驱动发电机、再以电动机驱动车轮或螺旋桨的传动系统。",
+     "deps": [
+      "diesel_engine",
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "servo_system",
+     "name": "伺服系统",
+     "en": "Servo system",
+     "year": 1950,
+     "note": "由伺服电机、驱动器与反馈构成的位置闭环控制系统，是机床与机器人核心。",
+     "deps": [
+      "electric_motor",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "electric_actuator",
+     "name": "电动执行器",
+     "en": "Electric actuator",
+     "year": 1965,
+     "note": "把电动机旋转运动转换为阀杆或机构位移的执行装置，用于过程自动化。",
+     "deps": [
+      "electric_motor",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "variable_frequency_drive",
+     "name": "变频调速装置",
+     "en": "Variable frequency drive",
+     "year": 1970,
+     "note": "以晶闸管或IGBT变频供电实现交流电机无级调速的电力电子装置。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "vector_control",
+     "name": "矢量控制",
+     "en": "Vector control",
+     "year": 1971,
+     "note": "仿照直流机解耦控制交流电机励磁与转矩分量的算法，使异步机获得高性能调速。",
+     "deps": [
+      "variable_frequency_drive",
+      "computer"
+     ]
+    },
+    {
+     "id": "servo_drive",
+     "name": "伺服驱动器",
+     "en": "Servo drive",
+     "year": 1975,
+     "note": "放大指令并驱动伺服电机的功率控制器，内含电流环与位置环运算。",
+     "deps": [
+      "servo_system",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "machine_tool_spindle_motor",
+     "name": "机床内装主轴电机",
+     "en": "Built-in spindle motor",
+     "year": 1980,
+     "note": "与机床主轴一体化、由变频驱动的内装电机，实现高速高精度切削。",
+     "deps": [
+      "electric_motor",
+      "variable_frequency_drive"
+     ]
+    },
+    {
+     "id": "motor_soft_starter",
+     "name": "电机软起动器",
+     "en": "Motor soft starter",
+     "year": 1980,
+     "note": "通过晶闸管降压缓慢起动交流电机的装置，减小起动电流冲击。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "direct_torque_control",
+     "name": "直接转矩控制",
+     "en": "Direct torque control",
+     "year": 1985,
+     "note": "直接按磁链与转矩滞环选择开关状态的电机控制方法，动态响应快。",
+     "deps": [
+      "vector_control",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "electric_propulsion_ship",
+     "name": "船舶电力推进系统",
+     "en": "Electric ship propulsion",
+     "year": 1986,
+     "note": "由发电机组供电、电动机驱动螺旋桨的推进系统，布置灵活噪声低。",
+     "deps": [
+      "generator",
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "maglev_linear_propulsion",
+     "name": "磁悬浮直线推进系统",
+     "en": "Linear propulsion for maglev",
+     "year": 2003,
+     "note": "用长定子直线电机驱动磁悬浮列车前进的系统，上海磁浮线为其商业应用。",
+     "deps": [
+      "linear_motor",
+      "railway"
+     ]
+    },
+    {
+     "id": "starter_generator",
+     "name": "起动发电一体机",
+     "en": "Starter-generator",
+     "year": 2004,
+     "note": "兼具起动发动机与发电回收功能的电机，支撑皮带传动微混动系统。",
+     "deps": [
+      "electric_motor",
+      "generator",
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "electric_vehicle_drivetrain",
+     "name": "电动车电驱动总成",
+     "en": "Electric vehicle drivetrain",
+     "year": 2008,
+     "note": "把驱动电机、减速器与逆变器集成的电驱动单元，为电动汽车提供动力。",
+     "deps": [
+      "permanent_magnet_synchronous_motor",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "electric_drive_axle",
+     "name": "电驱桥",
+     "en": "Electric drive axle",
+     "year": 2012,
+     "note": "把驱动电机、减速器与差速器集成的电动车桥，为电动客车卡车提供动力。",
+     "deps": [
+      "electric_vehicle_drivetrain"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "动力机械调速与控制装置",
+   "items": [
+    {
+     "id": "flyball_governor",
+     "name": "离心调速器",
+     "en": "Flyball governor",
+     "year": 1788,
+     "note": "以飞球离心力反馈调节蒸汽进汽量的机械调速器，是最早的自动控制装置之一。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "mechanical_transmission_gear",
+     "name": "机械减速传动装置",
+     "en": "Reduction gearbox",
+     "year": 1890,
+     "note": "以齿轮系匹配高速原动机与低速工作机的传动机构，广泛用于轮机与电机驱动。",
+     "deps": [
+      "steam_turbine"
+     ]
+    },
+    {
+     "id": "friction_clutch",
+     "name": "摩擦离合器",
+     "en": "Friction clutch",
+     "year": 1900,
+     "note": "靠摩擦面压紧传递转矩、可平稳分离的联轴装置，用于发动机与变速箱间。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "planetary_reduction_gear",
+     "name": "行星齿轮减速器",
+     "en": "Planetary gear reducer",
+     "year": 1900,
+     "note": "以太阳轮、行星轮与齿圈构成同轴减速的传动装置，结构紧凑传动比大。",
+     "deps": [
+      "mechanical_transmission_gear"
+     ]
+    },
+    {
+     "id": "fluid_coupling",
+     "name": "液力偶合器",
+     "en": "Fluid coupling",
+     "year": 1908,
+     "note": "以液体动能传递转矩的柔性联轴装置，用于内燃机车与船舶传动。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "torque_converter",
+     "name": "液力变矩器",
+     "en": "Torque converter",
+     "year": 1920,
+     "note": "在液力偶合基础上增设导轮以放大转矩的装置，用于自动变速器与工程机械。",
+     "deps": [
+      "fluid_coupling"
+     ]
+    },
+    {
+     "id": "hydrostatic_transmission",
+     "name": "静液压传动",
+     "en": "Hydrostatic transmission",
+     "year": 1950,
+     "note": "以变量泵与液压马达组合实现无级调速的传动系统，用于工程机械与农机。",
+     "deps": [
+      "fluid_coupling"
+     ]
+    },
+    {
+     "id": "cvt_transmission",
+     "name": "无级变速传动",
+     "en": "Continuously variable transmission",
+     "year": 1958,
+     "note": "靠金属带与锥轮连续改变传动比的变速装置，使发动机始终工作在高效区。",
+     "deps": [
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "dc_chopper_control",
+     "name": "直流斩波调速",
+     "en": "DC chopper control",
+     "year": 1965,
+     "note": "以晶闸管斩波改变直流电机端电压的调速方式，用于电力机车牵引。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "electronic_speed_governor",
+     "name": "电子调速器",
+     "en": "Electronic governor",
+     "year": 1985,
+     "note": "以微处理器按转速偏差控制执行器的调速装置，用于柴油发电机组与燃气轮机。",
+     "deps": [
+      "semiconductors",
+      "computer"
+     ]
+    },
+    {
+     "id": "power_split_transmission",
+     "name": "功率分流混动系统",
+     "en": "Power-split hybrid drive",
+     "year": 1997,
+     "note": "以行星排分配发动机与电机功率的混合动力传动，丰田普锐斯为首款量产应用。",
+     "deps": [
+      "electric_motor",
+      "internal_combustion"
+     ]
+    }
+   ]
+  }
+ ]
+}

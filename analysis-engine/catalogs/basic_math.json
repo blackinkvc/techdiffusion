@@ -1,0 +1,1396 @@
+{
+ "cat": "basic",
+ "catName": "科学基础与方法",
+ "sub": "math",
+ "subName": "数学与逻辑",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实存在的人类数学成就/方法体系；item.deps 仅写域内/族间额外依赖(可选)；year 均取真实关键时点。",
+ "anchors": [
+  "language",
+  "writing",
+  "mathematics",
+  "astronomy",
+  "scientific_method",
+  "physics",
+  "chemistry",
+  "computer",
+  "printing",
+  "telegraph",
+  "ai"
+ ],
+ "families": [
+  {
+   "name": "数系与算术记数",
+   "items": [
+    {
+     "id": "math_tally",
+     "name": "计数刻痕",
+     "en": "Tally marks",
+     "year": -20000,
+     "note": "旧石器时代骨器上的刻痕按一一对应记录数量，是人类最早的记数实物证据。",
+     "deps": [
+      "language"
+     ]
+    },
+    {
+     "id": "math_decimal",
+     "name": "十进制记数",
+     "en": "Decimal numeral system",
+     "year": -3200,
+     "note": "以十为基的数制，古埃及象形数字已按十进分组，成为通行度量与算术的基础。",
+     "deps": [
+      "language"
+     ]
+    },
+    {
+     "id": "math_sexagesimal",
+     "name": "六十进制记数",
+     "en": "Sexagesimal numeral system",
+     "year": -1800,
+     "note": "巴比伦采用以六十为基的位值记数，现今角度与时间的六十分划即源于此。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "math_egyptian_fraction",
+     "name": "埃及分数",
+     "en": "Egyptian fractions",
+     "year": -1650,
+     "note": "古埃及以单位分数表示分数，《莱因德纸草书》保存了其系统的分数算法。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "math_multiplication_table",
+     "name": "九九乘法表",
+     "en": "Multiplication table",
+     "year": -500,
+     "note": "中国先秦已出现口诀化乘法表，使多位数乘法演算变得简单可靠。",
+     "deps": [
+      "writing"
+     ]
+    },
+    {
+     "id": "math_irrational",
+     "name": "无理数的发现",
+     "en": "Discovery of irrational numbers",
+     "year": -430,
+     "note": "毕达哥拉斯学派发现根号2不能表为整数之比，突破了数为有理的观念。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "math_mayan_vigesimal",
+     "name": "玛雅二十进制记数",
+     "en": "Maya vigesimal numeral system",
+     "year": -300,
+     "note": "中美洲玛雅文明独立发展出逢二十进一的位值记数，并很早使用零号。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "math_negative",
+     "name": "负数的引入",
+     "en": "Introduction of negative numbers",
+     "year": -150,
+     "note": "《九章算术》以红黑算筹区分正负数，使负数进入系统化的计算。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "math_nine_chapters",
+     "name": "九章算术",
+     "en": "The Nine Chapters on the Mathematical Art",
+     "year": -100,
+     "note": "汉代成书的算经总集，系统总结分数、开方、方程术与盈不足等解法，影响东亚数学近两千年。",
+     "deps": [
+      "writing",
+      "mathematics"
+     ]
+    },
+    {
+     "id": "math_zero",
+     "name": "零与位值记数",
+     "en": "Zero as a numeral",
+     "year": 628,
+     "note": "印度数学家确立表示空位的零并让其参与运算，十进位值制由此完备。",
+     "deps": [
+      "math_decimal"
+     ]
+    },
+    {
+     "id": "math_indo_arabic",
+     "name": "印度-阿拉伯数字",
+     "en": "Indo-Arabic numerals",
+     "year": 830,
+     "note": "经阿拉伯学者传入欧洲的十进位值数字及其算法，是今日通用数码的源头。",
+     "deps": [
+      "math_zero"
+     ]
+    },
+    {
+     "id": "math_operator_symbol",
+     "name": "数学运算符号",
+     "en": "Mathematical operator notation",
+     "year": 1557,
+     "note": "加减乘除与等号在十六世纪陆续通行，使代数式书写逐步规范化。",
+     "deps": [
+      "printing",
+      "math_indo_arabic"
+     ]
+    },
+    {
+     "id": "math_decimal_fraction",
+     "name": "十进制小数",
+     "en": "Decimal fractions",
+     "year": 1585,
+     "note": "斯台文系统论述十进制小数的记写与运算，统一了度量的分划与计算记法。",
+     "deps": [
+      "math_decimal"
+     ]
+    },
+    {
+     "id": "math_symbolic_algebra",
+     "name": "符号代数的建立",
+     "en": "Symbolic algebra",
+     "year": 1591,
+     "note": "韦达用字母表示已知量与未知量并规定运算，代数由此可以作形式演算。",
+     "deps": [
+      "math_operator_symbol"
+     ]
+    },
+    {
+     "id": "math_logarithm",
+     "name": "对数的发明",
+     "en": "Logarithms",
+     "year": 1614,
+     "note": "纳皮尔为化简天文计算引入对数，把乘除化为加减，推动了数值计算变革。",
+     "deps": [
+      "math_decimal_fraction"
+     ]
+    },
+    {
+     "id": "math_binary",
+     "name": "二进制记数",
+     "en": "Binary numeral system",
+     "year": 1679,
+     "note": "莱布尼茨系统阐述逢二进一的记数法，为后世数字计算奠定形式基础。",
+     "deps": [
+      "math_decimal"
+     ]
+    },
+    {
+     "id": "math_natural_e",
+     "name": "自然常数e",
+     "en": "Euler's number e",
+     "year": 1748,
+     "note": "欧拉系统研究并命名自然对数的底e，确立指数函数与对数的分析基础。",
+     "deps": [
+      "math_logarithm"
+     ]
+    },
+    {
+     "id": "math_transcendence",
+     "name": "超越数理论",
+     "en": "Transcendental number theory",
+     "year": 1844,
+     "note": "刘维尔给出首个超越数，埃尔米特与林德曼相继证明e与π的超越性。",
+     "deps": [
+      "math_irrational"
+     ]
+    },
+    {
+     "id": "math_real_number",
+     "name": "实数理论",
+     "en": "Real number theory",
+     "year": 1872,
+     "note": "戴德金分割与康托尔基本列在十九世纪后期给出无理数的严格定义，实数体系完备化。",
+     "deps": [
+      "math_transcendence"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "几何学",
+   "items": [
+    {
+     "id": "math_pythagorean",
+     "name": "勾股定理",
+     "en": "Pythagorean theorem",
+     "year": -1800,
+     "note": "巴比伦泥板已记录勾股数组，后世毕达哥拉斯学派给出证明，是最基础的长度关系之一。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "math_euclid",
+     "name": "欧几里得《几何原本》",
+     "en": "Euclid's Elements",
+     "year": -300,
+     "note": "以公理与演绎证明组织几何与数论知识的著作，两千余年间是数学严密性的范本。",
+     "deps": [
+      "math_pythagorean"
+     ]
+    },
+    {
+     "id": "math_pi",
+     "name": "圆周率计算",
+     "en": "Approximation of pi",
+     "year": -240,
+     "note": "阿基米德以割圆术给出圆周率上下界，后世祖冲之等把精度推进到七位小数。",
+     "deps": [
+      "math_euclid"
+     ]
+    },
+    {
+     "id": "math_conic",
+     "name": "圆锥曲线论",
+     "en": "Conic sections",
+     "year": -200,
+     "note": "阿波罗尼奥斯系统论述椭圆、抛物线与双曲线的性质，奠定圆锥曲线理论。",
+     "deps": [
+      "math_euclid"
+     ]
+    },
+    {
+     "id": "math_trig",
+     "name": "三角学",
+     "en": "Trigonometry",
+     "year": -140,
+     "note": "喜帕恰斯编制弦表供天文测量查用，三角关系开始成为可计算的工具。",
+     "deps": [
+      "math_euclid"
+     ]
+    },
+    {
+     "id": "math_spherical_trig",
+     "name": "球面三角学",
+     "en": "Spherical trigonometry",
+     "year": 100,
+     "note": "梅涅劳斯与托勒密发展球面三角形的边角关系，支撑天文与航海中的球面计算。",
+     "deps": [
+      "math_trig"
+     ]
+    },
+    {
+     "id": "math_analytic_geometry",
+     "name": "解析几何",
+     "en": "Analytic geometry",
+     "year": 1637,
+     "note": "笛卡尔把坐标与方程引入几何，几何问题由此转化为代数演算。",
+     "deps": [
+      "math_symbolic_algebra",
+      "math_pythagorean"
+     ]
+    },
+    {
+     "id": "math_euler_polyhedron",
+     "name": "欧拉多面体公式",
+     "en": "Euler's polyhedron formula",
+     "year": 1750,
+     "note": "凸多面体顶点、棱与面满足V减E加F等于二，成为拓扑学与图论的早期源头。",
+     "deps": [
+      "math_euclid"
+     ]
+    },
+    {
+     "id": "math_descriptive_geometry",
+     "name": "画法几何",
+     "en": "Descriptive geometry",
+     "year": 1795,
+     "note": "蒙日以两幅正投影确定空间形体，成为工程制图与机械设计的几何基础。",
+     "deps": [
+      "math_analytic_geometry"
+     ]
+    },
+    {
+     "id": "math_projective_geometry",
+     "name": "射影几何",
+     "en": "Projective geometry",
+     "year": 1822,
+     "note": "彭赛列系统整理透视投影下保持不变的性质，使十七世纪德扎格开创的领域复兴成形。",
+     "deps": [
+      "math_descriptive_geometry"
+     ]
+    },
+    {
+     "id": "math_hyperbolic_geometry",
+     "name": "双曲几何",
+     "en": "Hyperbolic geometry",
+     "year": 1826,
+     "note": "罗巴切夫斯基构造平行公设不成立的几何，打破了欧氏几何唯一性的观念。",
+     "deps": [
+      "math_euclid"
+     ]
+    },
+    {
+     "id": "math_differential_geometry",
+     "name": "微分几何",
+     "en": "Differential geometry",
+     "year": 1827,
+     "note": "高斯以内蕴方法研究曲面曲率，开启以微积分为工具研究几何对象的学科。",
+     "deps": [
+      "math_analytic_geometry"
+     ]
+    },
+    {
+     "id": "math_impossible_constructions",
+     "name": "尺规作图不可能性",
+     "en": "Impossibility of classical constructions",
+     "year": 1837,
+     "note": "旺策尔证明三等分角与倍立方尺规不可作，为古典作图问题划出确定界限。",
+     "deps": [
+      "math_euclid"
+     ]
+    },
+    {
+     "id": "math_riemann_geometry",
+     "name": "黎曼几何",
+     "en": "Riemannian geometry",
+     "year": 1854,
+     "note": "黎曼把几何推广到任意维流形上的度量结构，成为广义相对论的数学框架。",
+     "deps": [
+      "math_differential_geometry"
+     ]
+    },
+    {
+     "id": "math_topology",
+     "name": "拓扑学",
+     "en": "Topology",
+     "year": 1895,
+     "note": "庞加莱引入同调等不变量研究连续变形下的性质，拓扑学由此成为独立分支。",
+     "deps": [
+      "math_euler_polyhedron",
+      "math_riemann_geometry"
+     ]
+    },
+    {
+     "id": "math_geometry_foundations",
+     "name": "几何基础的公理化",
+     "en": "Axiomatic foundations of geometry",
+     "year": 1899,
+     "note": "希尔伯特给出欧氏几何的完备公理体系，使公理化方法成为现代数学的范式。",
+     "deps": [
+      "math_euclid"
+     ]
+    },
+    {
+     "id": "math_algebraic_geometry",
+     "name": "代数几何",
+     "en": "Algebraic geometry",
+     "year": 1960,
+     "note": "研究多项式方程组零点集的几何，格罗滕迪克以概形语言统一并深化了该学科。",
+     "deps": [
+      "math_riemann_geometry"
+     ]
+    },
+    {
+     "id": "math_fractal",
+     "name": "分形几何",
+     "en": "Fractal geometry",
+     "year": 1975,
+     "note": "曼德博提出自相似与分数维概念，用于刻画海岸线、山脉等不规则几何对象。",
+     "deps": [
+      "math_topology"
+     ]
+    },
+    {
+     "id": "math_four_color",
+     "name": "四色定理的计算机证明",
+     "en": "Computer proof of the four color theorem",
+     "year": 1976,
+     "note": "阿佩尔与哈肯借助计算机穷举验证四色猜想，开启了机器辅助证明的先河。",
+     "deps": [
+      "math_topology",
+      "computer"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "代数与数论",
+   "items": [
+    {
+     "id": "math_quadratic_equation",
+     "name": "二次方程解法",
+     "en": "Solving quadratic equations",
+     "year": -1800,
+     "note": "古巴比伦泥板以配方步骤求解二次方程，此方法为各文明相继传承。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "math_prime_theory",
+     "name": "素数理论",
+     "en": "Theory of prime numbers",
+     "year": -300,
+     "note": "欧几里得证明素数有无穷多个并给出整除判别思路，开启数论研究。",
+     "deps": []
+    },
+    {
+     "id": "math_euclidean_algorithm",
+     "name": "欧几里得算法",
+     "en": "Euclidean algorithm",
+     "year": -300,
+     "note": "以辗转相除求最大公约数，是最古老且至今仍广泛使用的算法之一。",
+     "deps": []
+    },
+    {
+     "id": "math_chinese_remainder",
+     "name": "中国剩余定理",
+     "en": "Chinese remainder theorem",
+     "year": 300,
+     "note": "《孙子算经》物不知数问题给出一次同余方程组的解法，后世用于历法与编码。",
+     "deps": [
+      "math_nine_chapters"
+     ]
+    },
+    {
+     "id": "math_al_jabr",
+     "name": "《代数学》与移项合并规则",
+     "en": "Al-Jabr",
+     "year": 830,
+     "note": "花拉子米著作确立移项与合并同类项的变形规则，学科名称由此而来。",
+     "deps": [
+      "math_quadratic_equation"
+     ]
+    },
+    {
+     "id": "math_fibonacci",
+     "name": "斐波那契数列",
+     "en": "Fibonacci sequence",
+     "year": 1202,
+     "note": "斐波那契在算书中记载的递推数列，后成为数论与组合数学的经典对象。",
+     "deps": [
+      "math_indo_arabic"
+     ]
+    },
+    {
+     "id": "math_cubic_equation",
+     "name": "三次方程求根",
+     "en": "Solution of the cubic equation",
+     "year": 1545,
+     "note": "卡尔达诺整理塔尔塔利亚与费罗的三次方程解法并出版，推动代数学的突破。",
+     "deps": [
+      "math_al_jabr"
+     ]
+    },
+    {
+     "id": "math_complex_number",
+     "name": "复数概念",
+     "en": "Complex numbers",
+     "year": 1572,
+     "note": "邦贝利以虚数运算三次方程的实根，虚数由此开始合法进入数学。",
+     "deps": [
+      "math_cubic_equation"
+     ]
+    },
+    {
+     "id": "math_determinant",
+     "name": "行列式理论",
+     "en": "Theory of determinants",
+     "year": 1683,
+     "note": "关孝和与莱布尼茨各自用行列式求解线性方程组，日后发展为独立代数工具。",
+     "deps": [
+      "math_quadratic_equation"
+     ]
+    },
+    {
+     "id": "math_cramer_rule",
+     "name": "克莱姆法则",
+     "en": "Cramer's rule",
+     "year": 1750,
+     "note": "用行列式比值给出线性方程组解的公式，是方程理论的经典结果。",
+     "deps": [
+      "math_determinant"
+     ]
+    },
+    {
+     "id": "math_fta",
+     "name": "代数基本定理",
+     "en": "Fundamental theorem of algebra",
+     "year": 1799,
+     "note": "高斯证明n次多项式在复数域中恰有n个根，确立复数的完备地位。",
+     "deps": [
+      "math_complex_number"
+     ]
+    },
+    {
+     "id": "math_modular_arithmetic",
+     "name": "同余算术",
+     "en": "Modular arithmetic",
+     "year": 1801,
+     "note": "高斯在《算术研究》中系统建立同余理论，成为现代数论与密码学的基石。",
+     "deps": [
+      "math_prime_theory"
+     ]
+    },
+    {
+     "id": "math_gaussian_elimination",
+     "name": "高斯消元法",
+     "en": "Gaussian elimination",
+     "year": 1810,
+     "note": "以初等行变换化阶梯形求解线性方程组，是数值计算的基本方法。",
+     "deps": [
+      "math_cramer_rule"
+     ]
+    },
+    {
+     "id": "math_abel_unsolvable",
+     "name": "五次方程不可解性",
+     "en": "Abel's impossibility theorem",
+     "year": 1824,
+     "note": "阿贝尔证明一般五次方程无根式解，终结了长达数百年的求解之争。",
+     "deps": [
+      "math_cubic_equation"
+     ]
+    },
+    {
+     "id": "math_elliptic_function",
+     "name": "椭圆函数论",
+     "en": "Theory of elliptic functions",
+     "year": 1829,
+     "note": "阿贝尔与雅可比建立双周期椭圆函数理论，沟通复分析、数论与代数几何。",
+     "deps": [
+      "math_complex_number"
+     ]
+    },
+    {
+     "id": "math_group_theory",
+     "name": "群论",
+     "en": "Group theory",
+     "year": 1832,
+     "note": "伽罗瓦以置换群刻画方程可解性，抽象群概念随后由凯莱等学者确立。",
+     "deps": [
+      "math_abel_unsolvable"
+     ]
+    },
+    {
+     "id": "math_quaternion",
+     "name": "四元数",
+     "en": "Quaternions",
+     "year": 1843,
+     "note": "哈密顿构造第一个非交换代数系统，推动了数系扩张与向量代数的发展。",
+     "deps": [
+      "math_complex_number"
+     ]
+    },
+    {
+     "id": "math_matrix",
+     "name": "矩阵理论",
+     "en": "Matrix theory",
+     "year": 1858,
+     "note": "凯莱把线性变换写成矩阵并定义其运算，线性代数由此获得系统表述。",
+     "deps": [
+      "math_determinant",
+      "math_quaternion"
+     ]
+    },
+    {
+     "id": "math_algebraic_number_theory",
+     "name": "代数数论",
+     "en": "Algebraic number theory",
+     "year": 1871,
+     "note": "戴德金以理想概念恢复代数整数域中的唯一分解，奠定代数数论基础。",
+     "deps": [
+      "math_prime_theory"
+     ]
+    },
+    {
+     "id": "math_prime_number_theorem",
+     "name": "素数定理",
+     "en": "Prime number theorem",
+     "year": 1896,
+     "note": "阿达马与德·拉·瓦莱-普桑独立证明素数分布趋近对数的渐近规律。",
+     "deps": [
+      "math_prime_theory",
+      "math_modular_arithmetic"
+     ]
+    },
+    {
+     "id": "math_fermat_last",
+     "name": "费马大定理的证明",
+     "en": "Proof of Fermat's Last Theorem",
+     "year": 1995,
+     "note": "怀尔斯完成费马大定理证明，综合模形式、椭圆曲线等现代数学工具。",
+     "deps": [
+      "math_algebraic_number_theory",
+      "math_elliptic_function"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "微积分与分析",
+   "items": [
+    {
+     "id": "math_calculus",
+     "name": "微积分",
+     "en": "Calculus",
+     "year": 1684,
+     "note": "牛顿与莱布尼茨各自建立微分与积分运算，成为近代科学的核心数学工具。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "math_function_concept",
+     "name": "函数概念",
+     "en": "Concept of function",
+     "year": 1694,
+     "note": "莱布尼茨首次使用函数一词，经欧拉等发展，成为分析学的基本对象。",
+     "deps": [
+      "math_calculus"
+     ]
+    },
+    {
+     "id": "math_ode",
+     "name": "常微分方程理论",
+     "en": "Theory of ordinary differential equations",
+     "year": 1695,
+     "note": "伯努利兄弟与莱布尼茨时期建立初等解法，常微分方程由此成为独立研究领域。",
+     "deps": [
+      "math_calculus"
+     ]
+    },
+    {
+     "id": "math_taylor_series",
+     "name": "泰勒级数",
+     "en": "Taylor series",
+     "year": 1715,
+     "note": "泰勒给出函数幂级数展开的一般形式，成为逼近与数值计算的常用工具。",
+     "deps": [
+      "math_calculus"
+     ]
+    },
+    {
+     "id": "math_variational_calculus",
+     "name": "变分法",
+     "en": "Calculus of variations",
+     "year": 1744,
+     "note": "欧拉与拉格朗日把求极值对象推广到函数，为力学与最优问题提供方法。",
+     "deps": [
+      "math_calculus"
+     ]
+    },
+    {
+     "id": "math_wave_equation",
+     "name": "波动方程",
+     "en": "Wave equation",
+     "year": 1746,
+     "note": "达朗贝尔求解弦振动方程，标志偏微分方程这一全新分支的开端。",
+     "deps": [
+      "math_ode"
+     ]
+    },
+    {
+     "id": "math_laplace_transform",
+     "name": "拉普拉斯变换",
+     "en": "Laplace transform",
+     "year": 1782,
+     "note": "拉普拉斯发展的积分变换方法，把微分方程化为代数问题求解，工程应用广泛。",
+     "deps": [
+      "math_calculus"
+     ]
+    },
+    {
+     "id": "math_lagrange_multiplier",
+     "name": "拉格朗日乘数法",
+     "en": "Lagrange multipliers",
+     "year": 1788,
+     "note": "以引入乘子处理约束条件下的极值问题，是优化理论的经典工具。",
+     "deps": [
+      "math_variational_calculus"
+     ]
+    },
+    {
+     "id": "math_fourier_analysis",
+     "name": "傅里叶级数",
+     "en": "Fourier series",
+     "year": 1807,
+     "note": "傅里叶用三角级数表示热传导中的函数，奠定调和分析的基础。",
+     "deps": [
+      "math_wave_equation"
+     ]
+    },
+    {
+     "id": "math_epsilon_delta",
+     "name": "极限与连续的严格定义",
+     "en": "Epsilon-delta definition of limit",
+     "year": 1821,
+     "note": "柯西以清晰表述整顿极限与连续概念，魏尔斯特拉斯随后给出严格刻画。",
+     "deps": [
+      "math_calculus"
+     ]
+    },
+    {
+     "id": "math_complex_analysis",
+     "name": "复变函数论",
+     "en": "Complex analysis",
+     "year": 1851,
+     "note": "柯西建立留数与积分理论，黎曼给出解析函数几何观念，学科体系日臻完善。",
+     "deps": [
+      "math_complex_number",
+      "math_epsilon_delta"
+     ]
+    },
+    {
+     "id": "math_vector_calculus",
+     "name": "向量分析",
+     "en": "Vector calculus",
+     "year": 1881,
+     "note": "吉布斯与亥维赛整理向量运算与梯度、散度、旋度，成为电磁学等领域的语言。",
+     "deps": [
+      "math_quaternion",
+      "math_calculus"
+     ]
+    },
+    {
+     "id": "math_measure_integral",
+     "name": "测度论与勒贝格积分",
+     "en": "Measure theory and Lebesgue integral",
+     "year": 1902,
+     "note": "勒贝格以测度定义更广的积分，解决黎曼积分的极限交换难题，支撑现代分析。",
+     "deps": [
+      "math_epsilon_delta"
+     ]
+    },
+    {
+     "id": "math_functional_analysis",
+     "name": "泛函分析",
+     "en": "Functional analysis",
+     "year": 1922,
+     "note": "希尔伯特与巴拿赫研究无穷维空间上的函数与算子，成为量子力学的数学框架。",
+     "deps": [
+      "math_measure_integral"
+     ]
+    },
+    {
+     "id": "math_ergodic_theory",
+     "name": "遍历理论",
+     "en": "Ergodic theory",
+     "year": 1931,
+     "note": "伯克霍夫证明遍历定理，把统计物理的长时平均问题纳入动力学系统研究。",
+     "deps": [
+      "math_measure_integral"
+     ]
+    },
+    {
+     "id": "math_ito_calculus",
+     "name": "伊藤积分",
+     "en": "Itô calculus",
+     "year": 1944,
+     "note": "伊藤清建立随机过程的微积分，成为随机分析与金融数学的基本工具。",
+     "deps": [
+      "math_measure_integral"
+     ]
+    },
+    {
+     "id": "math_numerical_analysis",
+     "name": "数值分析",
+     "en": "Numerical analysis",
+     "year": 1947,
+     "note": "以近似算法求解方程、积分与微分方程的学科，随电子计算机普及而壮大。",
+     "deps": [
+      "math_calculus",
+      "computer"
+     ]
+    },
+    {
+     "id": "math_distribution_theory",
+     "name": "广义函数理论",
+     "en": "Theory of distributions",
+     "year": 1950,
+     "note": "施瓦茨把狄拉克函数等纳入严密理论，使偏微分方程与物理公式化运算合法化。",
+     "deps": [
+      "math_functional_analysis"
+     ]
+    },
+    {
+     "id": "math_chaos_theory",
+     "name": "混沌理论",
+     "en": "Chaos theory",
+     "year": 1963,
+     "note": "洛伦茨发现确定性系统对初值的敏感依赖，促使混沌成为动力系统的研究主题。",
+     "deps": [
+      "math_ergodic_theory",
+      "computer"
+     ]
+    },
+    {
+     "id": "math_wavelet_analysis",
+     "name": "小波分析",
+     "en": "Wavelet analysis",
+     "year": 1988,
+     "note": "马拉特等建立多分辨率分析，使小波成为信号处理与图像压缩的常用工具。",
+     "deps": [
+      "math_fourier_analysis",
+      "computer"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "概率与统计推断",
+   "items": [
+    {
+     "id": "math_probability",
+     "name": "概率论",
+     "en": "Probability theory",
+     "year": 1654,
+     "note": "帕斯卡与费马通过通信解决掷骰问题，概率论由此诞生。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "math_large_numbers",
+     "name": "大数定律",
+     "en": "Law of large numbers",
+     "year": 1713,
+     "note": "雅各布·伯努利证明频率随试验次数趋于概率，为统计推断提供理论依据。",
+     "deps": [
+      "math_probability"
+     ]
+    },
+    {
+     "id": "math_bayes",
+     "name": "贝叶斯定理",
+     "en": "Bayes' theorem",
+     "year": 1763,
+     "note": "贝叶斯提出由结果反推原因概率的公式，成为现代贝叶斯统计的基础。",
+     "deps": [
+      "math_probability"
+     ]
+    },
+    {
+     "id": "math_least_squares",
+     "name": "最小二乘法",
+     "en": "Method of least squares",
+     "year": 1805,
+     "note": "勒让德与高斯用平方和最小拟合观测数据，成为数据拟合的标准方法。",
+     "deps": [
+      "math_probability"
+     ]
+    },
+    {
+     "id": "math_normal_distribution",
+     "name": "正态分布",
+     "en": "Normal distribution",
+     "year": 1809,
+     "note": "高斯以误差分布导出正态曲线，其在统计与自然科学中无处不在。",
+     "deps": [
+      "math_least_squares"
+     ]
+    },
+    {
+     "id": "math_central_limit",
+     "name": "中心极限定理",
+     "en": "Central limit theorem",
+     "year": 1810,
+     "note": "拉普拉斯证明大量独立随机量之和趋于正态，构成统计理论的支柱之一。",
+     "deps": [
+      "math_normal_distribution"
+     ]
+    },
+    {
+     "id": "math_regression",
+     "name": "回归分析",
+     "en": "Regression analysis",
+     "year": 1886,
+     "note": "高尔顿研究身高遗传提出回归概念，后发展为变量关系建模的统计工具。",
+     "deps": [
+      "math_least_squares"
+     ]
+    },
+    {
+     "id": "math_correlation",
+     "name": "皮尔逊相关系数",
+     "en": "Pearson correlation coefficient",
+     "year": 1895,
+     "note": "皮尔逊给出度量两个变量线性相关程度的指标，是统计学最常用工具之一。",
+     "deps": [
+      "math_regression"
+     ]
+    },
+    {
+     "id": "math_pca",
+     "name": "主成分分析",
+     "en": "Principal component analysis",
+     "year": 1901,
+     "note": "皮尔逊提出用正交变换提取数据主要变异的降维方法，多变量统计由此发端。",
+     "deps": [
+      "math_correlation"
+     ]
+    },
+    {
+     "id": "math_chi_square",
+     "name": "卡方检验",
+     "en": "Chi-square test",
+     "year": 1900,
+     "note": "皮尔逊提出卡方分布用于拟合优度与独立性检验，奠定假设检验方法基础。",
+     "deps": [
+      "math_normal_distribution"
+     ]
+    },
+    {
+     "id": "math_markov_chain",
+     "name": "马尔可夫链",
+     "en": "Markov chain",
+     "year": 1906,
+     "note": "马尔可夫研究只依赖当前状态的随机过程，是随机过程理论的重要分支。",
+     "deps": [
+      "math_probability"
+     ]
+    },
+    {
+     "id": "math_student_t",
+     "name": "学生t检验",
+     "en": "Student's t-test",
+     "year": 1908,
+     "note": "戈塞特以笔名学生发表小样本均值检验方法，适用于总体方差未知的情形。",
+     "deps": [
+      "math_normal_distribution"
+     ]
+    },
+    {
+     "id": "math_mle",
+     "name": "极大似然估计",
+     "en": "Maximum likelihood estimation",
+     "year": 1922,
+     "note": "费希尔系统提出以似然函数最大化估计参数的方法，成为统计推断的核心工具。",
+     "deps": [
+      "math_probability"
+     ]
+    },
+    {
+     "id": "math_anova",
+     "name": "方差分析",
+     "en": "Analysis of variance",
+     "year": 1925,
+     "note": "费希尔把变异分解为组间与组内成分，用于多组均值比较的实验数据分析。",
+     "deps": [
+      "math_mle"
+     ]
+    },
+    {
+     "id": "math_hypothesis_testing",
+     "name": "假设检验理论",
+     "en": "Hypothesis testing theory",
+     "year": 1928,
+     "note": "奈曼与皮尔逊给出检验的严格表述与最优性判据，完善显著性检验框架。",
+     "deps": [
+      "math_student_t",
+      "math_chi_square"
+     ]
+    },
+    {
+     "id": "math_stochastic_process",
+     "name": "随机过程理论",
+     "en": "Theory of stochastic processes",
+     "year": 1931,
+     "note": "柯尔莫哥洛夫以概率公理为基础系统研究随机过程，使该学科走向严格化。",
+     "deps": [
+      "math_markov_chain"
+     ]
+    },
+    {
+     "id": "math_probability_axioms",
+     "name": "概率的公理化",
+     "en": "Axiomatization of probability",
+     "year": 1933,
+     "note": "柯尔莫哥洛夫以测度论公理定义概率，结束概率论长期缺乏严格基础的状态。",
+     "deps": [
+      "math_measure_integral"
+     ]
+    },
+    {
+     "id": "math_sample_survey",
+     "name": "抽样调查方法",
+     "en": "Survey sampling",
+     "year": 1934,
+     "note": "奈曼建立分层抽样与置信推断理论，使抽样调查成为可靠的统计手段。",
+     "deps": [
+      "math_hypothesis_testing"
+     ]
+    },
+    {
+     "id": "math_design_of_experiments",
+     "name": "实验设计",
+     "en": "Design of experiments",
+     "year": 1935,
+     "note": "费希尔系统提出随机化、重复与区组原则，是科学试验安排的统计方法。",
+     "deps": [
+      "math_anova"
+     ]
+    },
+    {
+     "id": "math_rank_test",
+     "name": "非参数秩检验",
+     "en": "Nonparametric rank tests",
+     "year": 1945,
+     "note": "威尔科克森提出秩和检验，摆脱对总体分布形式的依赖，扩展了检验适用范围。",
+     "deps": [
+      "math_hypothesis_testing"
+     ]
+    },
+    {
+     "id": "math_monte_carlo",
+     "name": "蒙特卡洛方法",
+     "en": "Monte Carlo method",
+     "year": 1949,
+     "note": "乌拉姆与冯·诺依曼用随机抽样数值求解确定性问题，随计算机推广而普及。",
+     "deps": [
+      "math_large_numbers",
+      "computer"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "逻辑与数学基础",
+   "items": [
+    {
+     "id": "math_syllogism",
+     "name": "三段论逻辑",
+     "en": "Aristotelian syllogistic logic",
+     "year": -350,
+     "note": "亚里士多德以三段论形式化演绎推理，成为西方逻辑学两千年的范式。",
+     "deps": [
+      "writing"
+     ]
+    },
+    {
+     "id": "math_boolean_algebra",
+     "name": "布尔代数",
+     "en": "Boolean algebra",
+     "year": 1854,
+     "note": "布尔把逻辑推理转化为代数运算，后人将其发展为数字电路设计的基础。",
+     "deps": [
+      "math_syllogism"
+     ]
+    },
+    {
+     "id": "math_set_theory",
+     "name": "集合论",
+     "en": "Set theory",
+     "year": 1874,
+     "note": "康托尔引入无穷集合与基数概念，为整个数学提供统一的语言基础。",
+     "deps": [
+      "math_real_number"
+     ]
+    },
+    {
+     "id": "math_predicate_logic",
+     "name": "谓词逻辑",
+     "en": "Predicate logic",
+     "year": 1879,
+     "note": "弗雷格在《概念文字》中建立量词与命题演算体系，数理逻辑由此诞生。",
+     "deps": [
+      "math_boolean_algebra"
+     ]
+    },
+    {
+     "id": "math_peano_axioms",
+     "name": "皮亚诺公理",
+     "en": "Peano axioms",
+     "year": 1889,
+     "note": "皮亚诺用五条公理刻画自然数，算术首次获得严格的公理基础。",
+     "deps": [
+      "math_set_theory"
+     ]
+    },
+    {
+     "id": "math_zfc",
+     "name": "公理集合论",
+     "en": "Zermelo-Fraenkel set theory",
+     "year": 1908,
+     "note": "策梅洛给出集合的公理化以避免罗素悖论，后经弗伦克尔等补充为通行体系。",
+     "deps": [
+      "math_set_theory"
+     ]
+    },
+    {
+     "id": "math_principia",
+     "name": "《数学原理》",
+     "en": "Principia Mathematica",
+     "year": 1910,
+     "note": "罗素与怀特海尝试把数学化归为逻辑的巨著，推动数理逻辑的系统发展。",
+     "deps": [
+      "math_predicate_logic"
+     ]
+    },
+    {
+     "id": "math_completeness_theorem",
+     "name": "一阶逻辑完备性定理",
+     "en": "Gödel's completeness theorem",
+     "year": 1930,
+     "note": "哥德尔证明一阶逻辑中凡真公式皆可证，建立语义与证明系统之间的桥梁。",
+     "deps": [
+      "math_predicate_logic"
+     ]
+    },
+    {
+     "id": "math_godel_incompleteness",
+     "name": "哥德尔不完备定理",
+     "en": "Gödel's incompleteness theorems",
+     "year": 1931,
+     "note": "哥德尔证明足够强的一致形式系统必有不可判定命题，划定公理化方法的边界。",
+     "deps": [
+      "math_completeness_theorem"
+     ]
+    },
+    {
+     "id": "math_proof_theory",
+     "name": "证明论",
+     "en": "Proof theory",
+     "year": 1934,
+     "note": "根岑建立自然演绎与相继式演算，以元数学方式研究证明本身的结构。",
+     "deps": [
+      "math_godel_incompleteness"
+     ]
+    },
+    {
+     "id": "math_recursion_theory",
+     "name": "递归论",
+     "en": "Recursion theory",
+     "year": 1936,
+     "note": "丘奇与克林用递归函数刻画可计算性，与图灵机共同奠基可计算性理论。",
+     "deps": [
+      "math_predicate_logic"
+     ]
+    },
+    {
+     "id": "math_turing_machine",
+     "name": "图灵机",
+     "en": "Turing machine",
+     "year": 1936,
+     "note": "图灵提出抽象计算模型并证明停机问题不可判定，是现代计算机理论基石。",
+     "deps": []
+    },
+    {
+     "id": "math_lambda_calculus",
+     "name": "λ演算",
+     "en": "Lambda calculus",
+     "year": 1936,
+     "note": "丘奇用函数抽象与代入建立等价的可计算形式体系，启发了函数式编程。",
+     "deps": []
+    },
+    {
+     "id": "math_type_theory",
+     "name": "类型论",
+     "en": "Type theory",
+     "year": 1940,
+     "note": "丘奇以简单类型限制λ演算以避免悖论，后发展为程序语言与证明理论的基础。",
+     "deps": [
+      "math_lambda_calculus"
+     ]
+    },
+    {
+     "id": "math_category_theory",
+     "name": "范畴论",
+     "en": "Category theory",
+     "year": 1945,
+     "note": "艾伦伯格与麦克莱恩以对象与态射刻画数学结构，提供统一而抽象的语言。",
+     "deps": [
+      "math_set_theory"
+     ]
+    },
+    {
+     "id": "math_information_theory",
+     "name": "信息论",
+     "en": "Information theory",
+     "year": 1948,
+     "note": "香农以熵度量信息并给出信道编码定理，奠定了通信与数据压缩的理论。",
+     "deps": [
+      "math_probability",
+      "telegraph"
+     ]
+    },
+    {
+     "id": "math_model_theory",
+     "name": "模型论",
+     "en": "Model theory",
+     "year": 1954,
+     "note": "塔尔斯基等研究形式语言的结构与满足关系，使逻辑结构分析成为独立分支。",
+     "deps": [
+      "math_predicate_logic"
+     ]
+    },
+    {
+     "id": "math_formal_language",
+     "name": "形式语言理论",
+     "en": "Formal language theory",
+     "year": 1956,
+     "note": "乔姆斯基提出文法层级刻画语言结构，成为编译原理与自动机理论的基石。",
+     "deps": [
+      "math_turing_machine"
+     ]
+    },
+    {
+     "id": "math_fuzzy_set",
+     "name": "模糊集理论",
+     "en": "Fuzzy set theory",
+     "year": 1965,
+     "note": "扎德以隶属度描述渐变概念，模糊逻辑后广泛用于控制与决策系统。",
+     "deps": [
+      "math_set_theory"
+     ]
+    },
+    {
+     "id": "math_complexity_theory",
+     "name": "计算复杂性理论",
+     "en": "Computational complexity theory",
+     "year": 1971,
+     "note": "库克与莱文定义NP完全问题，把算法效率与问题难度纳入严格的数学框架。",
+     "deps": [
+      "math_turing_machine"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "离散数学与运筹优化",
+   "items": [
+    {
+     "id": "math_sieve",
+     "name": "埃拉托斯特尼筛法",
+     "en": "Sieve of Eratosthenes",
+     "year": -240,
+     "note": "古希腊人用逐步划去倍数的方法枚举素数，是最古老的算法之一。",
+     "deps": [
+      "math_prime_theory"
+     ]
+    },
+    {
+     "id": "math_pascal_triangle",
+     "name": "帕斯卡三角形",
+     "en": "Pascal's triangle",
+     "year": 1261,
+     "note": "中国贾宪、杨辉早已载录二项式系数三角形，帕斯卡后对其系统研究并命名。",
+     "deps": [
+      "math_multiplication_table"
+     ]
+    },
+    {
+     "id": "math_graph_theory",
+     "name": "图论",
+     "en": "Graph theory",
+     "year": 1736,
+     "note": "欧拉解决哥尼斯堡七桥问题，把抽象网络关系纳入数学研究，图论由此诞生。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "math_latin_square",
+     "name": "拉丁方",
+     "en": "Latin square",
+     "year": 1783,
+     "note": "欧拉研究行列符号各出现一次的排列方阵，日后用于试验设计与编码理论。",
+     "deps": [
+      "math_pascal_triangle"
+     ]
+    },
+    {
+     "id": "math_finite_field",
+     "name": "有限域理论",
+     "en": "Finite field theory",
+     "year": 1830,
+     "note": "伽罗瓦构造有限个元素的域并研究其结构，现为编码与密码学的数学基础。",
+     "deps": [
+      "math_prime_theory"
+     ]
+    },
+    {
+     "id": "math_queuing_theory",
+     "name": "排队论",
+     "en": "Queuing theory",
+     "year": 1909,
+     "note": "埃尔朗用概率模型研究电话交换的等待问题，开创运筹学的重要分支。",
+     "deps": [
+      "math_markov_chain"
+     ]
+    },
+    {
+     "id": "math_matroid",
+     "name": "拟阵理论",
+     "en": "Matroid theory",
+     "year": 1935,
+     "note": "惠特尼抽象出线性无关的推广结构，统一了图论与线性代数中的组合性质。",
+     "deps": [
+      "math_graph_theory"
+     ]
+    },
+    {
+     "id": "math_statistical_decision",
+     "name": "统计决策理论",
+     "en": "Statistical decision theory",
+     "year": 1939,
+     "note": "瓦尔德把估计与检验纳入决策框架，引入损失函数与最优决策准则。",
+     "deps": [
+      "math_hypothesis_testing"
+     ]
+    },
+    {
+     "id": "math_game_theory",
+     "name": "博弈论",
+     "en": "Game theory",
+     "year": 1944,
+     "note": "冯·诺依曼与摩根斯特恩系统建立策略互动与均衡的数学理论，后被广泛应用。",
+     "deps": [
+      "math_probability"
+     ]
+    },
+    {
+     "id": "math_linear_programming",
+     "name": "线性规划",
+     "en": "Linear programming",
+     "year": 1947,
+     "note": "丹齐格提出单纯形法求解线性约束优化问题，成为运筹学的核心方法。",
+     "deps": [
+      "math_gaussian_elimination"
+     ]
+    },
+    {
+     "id": "math_hamming_code",
+     "name": "汉明纠错码",
+     "en": "Hamming code",
+     "year": 1950,
+     "note": "汉明构造可纠正单个错误的线性分组码，开创代数编码理论。",
+     "deps": [
+      "math_information_theory"
+     ]
+    },
+    {
+     "id": "math_dynamic_programming",
+     "name": "动态规划",
+     "en": "Dynamic programming",
+     "year": 1953,
+     "note": "贝尔曼提出以最优子结构递推求解多阶段决策问题的方法。",
+     "deps": [
+      "math_linear_programming"
+     ]
+    },
+    {
+     "id": "math_markov_decision",
+     "name": "马尔可夫决策过程",
+     "en": "Markov decision process",
+     "year": 1957,
+     "note": "贝尔曼把带随机转移的最优控制问题形式化，构成强化学习的数学框架。",
+     "deps": [
+      "math_dynamic_programming",
+      "math_markov_chain"
+     ]
+    }
+   ]
+  }
+ ]
+}

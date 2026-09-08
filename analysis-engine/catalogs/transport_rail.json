@@ -1,0 +1,1251 @@
+{
+ "cat": "transport",
+ "catName": "交通运载",
+ "sub": "rail",
+ "subName": "轨道运输",
+ "anchors": [
+  "railway",
+  "steam_engine",
+  "electricity",
+  "electric_motor",
+  "generator",
+  "electromagnetism",
+  "power_grid",
+  "steel",
+  "iron",
+  "cement",
+  "coal_mining",
+  "diesel_engine",
+  "tunnel",
+  "semiconductors",
+  "computer",
+  "telegraph"
+ ],
+ "families": [
+  {
+   "name": "轨道工程与线路技术",
+   "items": [
+    {
+     "id": "wooden_railed_wagonway",
+     "name": "木轨矿车路",
+     "en": "Wooden railed wagonway",
+     "year": 1550,
+     "note": "德国矿区以木轨引导矿车减少阻力，是铁路轮轨运行的最早形态。"
+    },
+    {
+     "id": "cast_iron_rail",
+     "name": "铸铁轨",
+     "en": "Cast iron rail",
+     "year": 1767,
+     "note": "科尔布鲁克代尔以铸铁轨替换易损木轨，铁路由此进入金属轨时代。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "flanged_wheel_edge_rail",
+     "name": "凸缘轮与缘轨",
+     "en": "Flanged wheel and edge rail",
+     "year": 1789,
+     "note": "以车轮内缘卡住平顶轨缘防脱轨，确立现代轮轨关系的几何基础。"
+    },
+    {
+     "id": "timber_railway_sleeper",
+     "name": "枕木",
+     "en": "Timber railway sleeper",
+     "year": 1800,
+     "note": "横向铺于轨下的承托构件，传递车轮荷载并保持轨距，是轨道基础件。"
+    },
+    {
+     "id": "railway_ballast_bed",
+     "name": "道砟",
+     "en": "Railway ballast",
+     "year": 1830,
+     "note": "轨枕下铺设的碎石垫层，分散压力、排水并便于养护找平。",
+     "deps": [
+      "railway"
+     ]
+    },
+    {
+     "id": "railway_point_switch",
+     "name": "道岔",
+     "en": "Railway point and crossing",
+     "year": 1832,
+     "note": "引导车轮由一股轨道转入另一股的转辙设备，是铁路组网的关键部件。"
+    },
+    {
+     "id": "broad_gauge_railway",
+     "name": "宽轨铁路",
+     "en": "Broad gauge railway",
+     "year": 1842,
+     "note": "俄罗斯确立1524毫米宽轨距，东欧与中亚铁路网络沿用至今。",
+     "deps": [
+      "railway"
+     ]
+    },
+    {
+     "id": "rail_fishplate",
+     "name": "鱼尾夹板",
+     "en": "Rail fishplate",
+     "year": 1844,
+     "note": "以夹板与螺栓连接相邻钢轨，保证轮轨通过接头时保持平顺。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "standard_rail_gauge",
+     "name": "标准轨距",
+     "en": "Standard rail gauge",
+     "year": 1846,
+     "note": "英国立法确立1435毫米轨距，此后成为全球约六成铁路采用的标准。",
+     "deps": [
+      "railway"
+     ]
+    },
+    {
+     "id": "steel_rail",
+     "name": "钢轨",
+     "en": "Steel rail",
+     "year": 1857,
+     "note": "贝塞麦钢首次轧制成轨，使用寿命远超铸铁轨，钢轨自此普及。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "narrow_gauge_railway",
+     "name": "窄轨铁路",
+     "en": "Narrow gauge railway",
+     "year": 1870,
+     "note": "轨距小于标准轨的铁路，造价低且爬坡适应性强，多用于山区矿区。",
+     "deps": [
+      "standard_rail_gauge"
+     ]
+    },
+    {
+     "id": "railway_switch_machine",
+     "name": "电动转辙机",
+     "en": "Railway switch machine",
+     "year": 1900,
+     "note": "以电机驱动道岔转换并锁闭的装置，取代人力扳道，信号集中化基础。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "rail_aluminothermic_weld",
+     "name": "铝热钢轨焊接",
+     "en": "Aluminothermic rail welding",
+     "year": 1903,
+     "note": "铝热反应产生的高温钢水现场焊接钢轨，取代夹板实现无缝化。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "plain_concrete_sleeper",
+     "name": "钢筋混凝土轨枕",
+     "en": "Reinforced concrete sleeper",
+     "year": 1910,
+     "note": "以钢筋混凝土预制的轨枕，比木枕耐久，为预应力轨枕的先驱。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "prestressed_concrete_sleeper",
+     "name": "预应力混凝土轨枕",
+     "en": "Prestressed concrete sleeper",
+     "year": 1945,
+     "note": "预应力混凝土轨枕寿命长、节省木材，随干线改造大规模推广。",
+     "deps": [
+      "cement"
+     ]
+    },
+    {
+     "id": "continuously_welded_rail",
+     "name": "无缝钢轨",
+     "en": "Continuously welded rail",
+     "year": 1950,
+     "note": "钢轨焊接成长轨条消除轨缝，行车平稳噪声小，养护量大幅减少。",
+     "deps": [
+      "steel_rail"
+     ]
+    },
+    {
+     "id": "ballast_tamping_machine",
+     "name": "捣固车",
+     "en": "Ballast tamping machine",
+     "year": 1955,
+     "note": "机械化捣实道砟以恢复轨道几何状态的养路机械，大幅提高作业效率。"
+    },
+    {
+     "id": "rail_elastic_fastener",
+     "name": "弹性扣件",
+     "en": "Elastic rail fastener",
+     "year": 1960,
+     "note": "把钢轨弹性固定于道床的扣压装置，减振降噪，城市与无砟线路依赖。",
+     "deps": [
+      "prestressed_concrete_sleeper"
+     ]
+    },
+    {
+     "id": "ballastless_slab_track",
+     "name": "无砟轨道",
+     "en": "Ballastless slab track",
+     "year": 1964,
+     "note": "以混凝土道床取代道砟的轨道结构，平顺稳定，为高速铁路普遍采用。",
+     "deps": [
+      "prestressed_concrete_sleeper"
+     ]
+    },
+    {
+     "id": "movable_frog_turnout",
+     "name": "可动心轨道岔",
+     "en": "Movable-frog turnout",
+     "year": 1970,
+     "note": "转动式辙叉心消除有害空间，高速列车可高速度直向过岔。",
+     "deps": [
+      "railway_point_switch"
+     ]
+    },
+    {
+     "id": "rail_grinding_train",
+     "name": "钢轨打磨列车",
+     "en": "Rail grinding train",
+     "year": 1975,
+     "note": "高速磨头修整钢轨廓形并消除波磨，延长钢轨寿命、降低轮轨噪声。"
+    },
+    {
+     "id": "track_geometry_car",
+     "name": "轨道几何检测车",
+     "en": "Track geometry car",
+     "year": 1980,
+     "note": "以惯性基准与激光测量轨距、高低等几何参数的检测车，指导养护作业。"
+    }
+   ]
+  },
+  {
+   "name": "蒸汽机车谱系",
+   "items": [
+    {
+     "id": "trevithick_railway_locomotive",
+     "name": "高压蒸汽机车",
+     "en": "Trevithick's railway locomotive",
+     "year": 1804,
+     "note": "特里维西克制成在轨道上运行的蒸汽机车，是铁路蒸汽牵引的起点。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "rack_steam_locomotive",
+     "name": "齿轨蒸汽机车",
+     "en": "Rack steam locomotive",
+     "year": 1812,
+     "note": "布莱金索普的齿轮机车在米德尔顿矿线运营，为最早商业成功的蒸汽机车。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "multitube_boiler_locomotive",
+     "name": "多管锅炉机车",
+     "en": "Multitube-boiler locomotive",
+     "year": 1829,
+     "note": "斯蒂芬森火箭号以多管锅炉提高蒸发量，赢得雷希尔试验并确立机车形式。",
+     "deps": [
+      "railway"
+     ]
+    },
+    {
+     "id": "locomotive_leading_truck",
+     "name": "机车导轮转向架",
+     "en": "Locomotive leading truck",
+     "year": 1832,
+     "note": "前部导轮转向架引导机车平稳通过曲线，美国干线机车率先采用。"
+    },
+    {
+     "id": "locomotive_sandbox",
+     "name": "机车撒砂装置",
+     "en": "Locomotive sandbox",
+     "year": 1840,
+     "note": "向轨面撒砂增大轮轨黏着，防止机车起动与爬坡时车轮打滑。"
+    },
+    {
+     "id": "steam_locomotive_valve_gear",
+     "name": "斯蒂芬森阀动机构",
+     "en": "Stephenson valve gear",
+     "year": 1842,
+     "note": "以连杆带动滑块换向配汽的阀动装置，实现蒸汽机车的倒顺行驶。"
+    },
+    {
+     "id": "locomotive_spark_arrester",
+     "name": "机车火星熄灭器",
+     "en": "Locomotive spark arrester",
+     "year": 1860,
+     "note": "装于烟囱拦截火星的装置，防止机车喷火引燃沿途草木，美式机车常见。"
+    },
+    {
+     "id": "compound_steam_locomotive",
+     "name": "复胀式蒸汽机车",
+     "en": "Compound steam locomotive",
+     "year": 1874,
+     "note": "蒸汽先后在两个汽缸膨胀做功以提高热效率，广泛用于干线重载机车。"
+    },
+    {
+     "id": "shay_geared_locomotive",
+     "name": "斜轴齿轮机车",
+     "en": "Shay geared locomotive",
+     "year": 1881,
+     "note": "以万向传动驱动全轮轴的齿轮机车，适用于陡坡与林区支线。"
+    },
+    {
+     "id": "mallet_articulated_locomotive",
+     "name": "马尔莱关节式机车",
+     "en": "Mallet articulated locomotive",
+     "year": 1887,
+     "note": "前后车架可相对摆动的复胀关节机车，兼顾大功率与小曲线半径。",
+     "deps": [
+      "compound_steam_locomotive"
+     ]
+    },
+    {
+     "id": "locomotive_superheater",
+     "name": "机车蒸汽过热器",
+     "en": "Locomotive superheater",
+     "year": 1898,
+     "note": "将饱和蒸汽过热后送入汽缸，节煤显著并减少缸内冷凝损失。"
+    },
+    {
+     "id": "mechanical_stoker",
+     "name": "自动加煤机",
+     "en": "Mechanical stoker",
+     "year": 1903,
+     "note": "机械连续向炉膛送煤，减轻司炉劳动并维持锅炉稳定出力。"
+    },
+    {
+     "id": "garratt_locomotive",
+     "name": "加勒特关节式机车",
+     "en": "Garratt locomotive",
+     "year": 1909,
+     "note": "锅炉居中、动力转向架分置两端的关节机车，擅长宽轨重载干线。"
+    },
+    {
+     "id": "oil_fired_steam_locomotive",
+     "name": "燃油蒸汽机车",
+     "en": "Oil-fired steam locomotive",
+     "year": 1903,
+     "note": "以喷油燃烧替代烧煤的蒸汽机车，用于少煤多油地区与隧道线路。",
+     "deps": [
+      "petroleum"
+     ]
+    },
+    {
+     "id": "steam_railmotor",
+     "name": "蒸汽机动客车",
+     "en": "Steam railmotor",
+     "year": 1905,
+     "note": "机车与客车合一的轻型蒸汽车辆，用于支线与市郊短途客运。",
+     "deps": [
+      "railway"
+     ]
+    },
+    {
+     "id": "streamlined_steam_locomotive",
+     "name": "流线型高速蒸汽机车",
+     "en": "Streamlined steam locomotive",
+     "year": 1938,
+     "note": "为高速客运采用流线外壳，1938年创下蒸汽机车的世界速度纪录。",
+     "deps": [
+      "steam_engine"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "电力与内燃牵引技术",
+   "items": [
+    {
+     "id": "davidson_electric_locomotive",
+     "name": "蓄电池电力机车",
+     "en": "Davidson's electric locomotive",
+     "year": 1837,
+     "note": "戴维森试制蓄电池驱动的电力机车，验证了电力牵引的可行性。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "exhibition_electric_locomotive",
+     "name": "展览电力机车",
+     "en": "Siemens exhibition electric locomotive",
+     "year": 1879,
+     "note": "西门子在柏林博览会以轨道供电展出电力机车，现代电牵引由此起步。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "overhead_catenary_supply",
+     "name": "架空接触网",
+     "en": "Overhead catenary supply",
+     "year": 1881,
+     "note": "沿线路架设导线向车辆供电的方式，柏林试验线率先采用并沿用至今。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "third_rail_supply",
+     "name": "第三轨供电",
+     "en": "Third rail supply",
+     "year": 1890,
+     "note": "走行轨旁设带电第三轨的供电方式，用于限界紧张的深埋地铁线路。"
+    },
+    {
+     "id": "railway_pantograph",
+     "name": "受电弓",
+     "en": "Railway pantograph",
+     "year": 1895,
+     "note": "车顶折叠集电器沿接触网滑动取电，随干线电气化而广泛采用。"
+    },
+    {
+     "id": "mainline_railway_electrification",
+     "name": "干线铁路电气化",
+     "en": "Main-line railway electrification",
+     "year": 1895,
+     "note": "巴尔的摩—俄亥俄铁路隧道段率先干线电气化，开启电力牵引的干线时代。",
+     "deps": [
+      "power_grid"
+     ]
+    },
+    {
+     "id": "low_frequency_ac_traction",
+     "name": "低频单相交流牵引",
+     "en": "Low-frequency single-phase AC traction",
+     "year": 1912,
+     "note": "德国率先采用15千伏16.7赫兹单相交流制，适应长距离重载电气化。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "diesel_locomotive",
+     "name": "柴油机车",
+     "en": "Diesel locomotive",
+     "year": 1912,
+     "note": "瑞士苏尔寿研制首台柴油机机车，摆脱对电气化线路的依赖。",
+     "deps": [
+      "diesel_engine"
+     ]
+    },
+    {
+     "id": "diesel_electric_locomotive",
+     "name": "电传动柴油机车",
+     "en": "Diesel-electric locomotive",
+     "year": 1925,
+     "note": "柴油机驱动发电机再供电牵引电机的机车，1920年代在美国量产。",
+     "deps": [
+      "diesel_locomotive"
+     ]
+    },
+    {
+     "id": "diesel_hydraulic_locomotive",
+     "name": "液力传动柴油机车",
+     "en": "Diesel-hydraulic locomotive",
+     "year": 1953,
+     "note": "以液力变矩器传动代替电传动的柴油机车，德国与日本大量采用。",
+     "deps": [
+      "diesel_locomotive"
+     ]
+    },
+    {
+     "id": "industrial_frequency_electrification",
+     "name": "25千伏工频电气化",
+     "en": "25 kV industrial-frequency electrification",
+     "year": 1954,
+     "note": "法国率先以25千伏50赫兹工频制改造干线，成为世界主流牵引制式。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "express_electric_locomotive",
+     "name": "高速客运电力机车",
+     "en": "Express electric locomotive",
+     "year": 1955,
+     "note": "法国电力机车于1955年创下331公里时速纪录，展现电牵引高速潜力。",
+     "deps": [
+      "mainline_railway_electrification"
+     ]
+    },
+    {
+     "id": "silicon_rectifier_locomotive",
+     "name": "硅整流电力机车",
+     "en": "Silicon-rectifier locomotive",
+     "year": 1960,
+     "note": "以硅整流器把交流变为直流供电牵引电机，机车电传动效率跃升。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "thyristor_phase_control_locomotive",
+     "name": "相控整流电力机车",
+     "en": "Thyristor phase-controlled locomotive",
+     "year": 1972,
+     "note": "以晶闸管相控调压的整流电力机车，1970年代起成为干线电传动主流。",
+     "deps": [
+      "silicon_rectifier_locomotive"
+     ]
+    },
+    {
+     "id": "asynchronous_traction_drive",
+     "name": "变频交流异步牵引",
+     "en": "Variable-frequency asynchronous traction",
+     "year": 1990,
+     "note": "变频器驱动异步电机，牵引传动全面转向交流化，效率与可靠性更高。",
+     "deps": [
+      "semiconductors",
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "pmsm_traction_drive",
+     "name": "永磁同步牵引电机",
+     "en": "Permanent-magnet synchronous traction",
+     "year": 2005,
+     "note": "永磁电机装入动车与机车牵引，功率密度高、节能且噪声低。",
+     "deps": [
+      "magnets"
+     ]
+    },
+    {
+     "id": "hybrid_rail_vehicle",
+     "name": "混合动力铁路车辆",
+     "en": "Hybrid rail vehicle",
+     "year": 2007,
+     "note": "柴油机与蓄电池组混合供能的动车组，2007年投入日本山区线路运营。",
+     "deps": [
+      "diesel_locomotive"
+     ]
+    },
+    {
+     "id": "modern_battery_locomotive",
+     "name": "电池电力机车",
+     "en": "Battery electric locomotive",
+     "year": 2017,
+     "note": "面向无电化区段与港口的车载电池机车，2010年代起商业示范运行。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "hydrogen_fuel_cell_train",
+     "name": "氢能燃料电池列车",
+     "en": "Hydrogen fuel-cell train",
+     "year": 2018,
+     "note": "以氢燃料电池发电驱动的铁路动车组，2018年在德国投入商业运营。",
+     "deps": [
+      "electric_motor"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "客货车辆与列车装备",
+   "items": [
+    {
+     "id": "sleeping_car",
+     "name": "卧铺客车",
+     "en": "Sleeping car",
+     "year": 1858,
+     "note": "设卧铺铺位的长途客车，美国率先发展出规模化夜行客运服务。"
+    },
+    {
+     "id": "railway_bogie",
+     "name": "铁路转向架",
+     "en": "Railway bogie",
+     "year": 1860,
+     "note": "置于车体下方的可转动轮架，使长车体顺利通过曲线并承担载重。"
+    },
+    {
+     "id": "rail_tank_wagon",
+     "name": "铁路罐车",
+     "en": "Rail tank wagon",
+     "year": 1866,
+     "note": "装运油品与液体化工品的罐式货车，随石油运输需求而出现。",
+     "deps": [
+      "petroleum"
+     ]
+    },
+    {
+     "id": "refrigerated_railcar",
+     "name": "机械冷藏车",
+     "en": "Refrigerated railcar",
+     "year": 1867,
+     "note": "以冰或机械制冷保持低温运输易腐货物的货车，支撑冷链长距运输。"
+    },
+    {
+     "id": "dining_car",
+     "name": "餐车",
+     "en": "Dining car",
+     "year": 1868,
+     "note": "供旅客在途中就餐的餐饮车厢，长途客运服务设施由此完善。"
+    },
+    {
+     "id": "westinghouse_air_brake",
+     "name": "压缩空气制动",
+     "en": "Westinghouse air brake",
+     "year": 1869,
+     "note": "韦斯汀豪斯发明的自动空气制动机，全列车制动由此联动可靠。"
+    },
+    {
+     "id": "knuckle_automatic_coupler",
+     "name": "自动车钩",
+     "en": "Knuckle coupler",
+     "year": 1873,
+     "note": "詹尼自动车钩碰撞即联挂，无需人工插销，调车事故大幅减少。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "vestibule_gangway",
+     "name": "风挡贯通道",
+     "en": "Vestibule and gangway",
+     "year": 1887,
+     "note": "车厢端部的封闭通道，使旅客可在整列列车内安全通行。"
+    },
+    {
+     "id": "multiple_unit_control",
+     "name": "多单元牵引控制",
+     "en": "Multiple-unit train control",
+     "year": 1897,
+     "note": "斯普拉格实现司机在一端集中控制多节动车，动车组技术由此诞生。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "all_steel_passenger_car",
+     "name": "全钢客车",
+     "en": "All-steel passenger car",
+     "year": 1904,
+     "note": "钢制车体取代木制客车，火灾与碰撞安全性显著提升。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "diesel_electric_trainset",
+     "name": "电传动内燃动车组",
+     "en": "Diesel-electric trainset",
+     "year": 1934,
+     "note": "美国流线型列车率先以电传动内燃动车组投入干线，长途客运提速。",
+     "deps": [
+      "diesel_locomotive"
+     ]
+    },
+    {
+     "id": "air_conditioned_coach",
+     "name": "空调客车",
+     "en": "Air-conditioned coach",
+     "year": 1936,
+     "note": "机械制冷空调进入旅客列车，乘车舒适性在长途干线明显改善。"
+    },
+    {
+     "id": "double_deck_passenger_car",
+     "name": "双层客车",
+     "en": "Double-deck passenger car",
+     "year": 1955,
+     "note": "两层载客的客车提高单列运能，城际通勤铁路与市郊线路广泛采用。",
+     "deps": [
+      "all_steel_passenger_car"
+     ]
+    },
+    {
+     "id": "piggyback_flatcar",
+     "name": "驮背式联运平车",
+     "en": "Trailer-on-flatcar",
+     "year": 1955,
+     "note": "以平车载运公路挂车实现公铁联运，避免货物二次装卸。"
+    },
+    {
+     "id": "unit_train",
+     "name": "单元列车",
+     "en": "Unit train",
+     "year": 1960,
+     "note": "固定编组往返运煤运矿的专用列车，装卸快周转高，开重载运输先河。"
+    },
+    {
+     "id": "container_rail_freight",
+     "name": "集装箱铁路运输",
+     "en": "Container rail freight",
+     "year": 1966,
+     "note": "标准集装箱装车开行直达班列，1960年代起成为多式联运的骨干。"
+    },
+    {
+     "id": "heavy_haul_railway",
+     "name": "重载铁路",
+     "en": "Heavy-haul railway",
+     "year": 1970,
+     "note": "以万吨编组与高轴重输送大宗散货的重载体系，北美澳洲率先运营。",
+     "deps": [
+      "unit_train"
+     ]
+    },
+    {
+     "id": "double_stack_container_train",
+     "name": "双层集装箱列车",
+     "en": "Double-stack container train",
+     "year": 1984,
+     "note": "集装箱双层叠放运输，单列运能大幅提升，北美铁路干线广泛采用。",
+     "deps": [
+      "container_rail_freight"
+     ]
+    },
+    {
+     "id": "electronic_pneumatic_brake",
+     "name": "电控空气制动",
+     "en": "Electronically controlled pneumatic brake",
+     "year": 1995,
+     "note": "以电指令同步制动全列车，缩短长大重载列车的制动距离与纵向冲动。",
+     "deps": [
+      "westinghouse_air_brake"
+     ]
+    },
+    {
+     "id": "low_floor_regional_train",
+     "name": "低地板城际动车组",
+     "en": "Low-floor regional trainset",
+     "year": 1996,
+     "note": "低地板设计方便站台乘降，欧洲区域与通勤动车组普遍采用。",
+     "deps": [
+      "multiple_unit_control"
+     ]
+    },
+    {
+     "id": "driverless_freight_train",
+     "name": "无人驾驶货运列车",
+     "en": "Driverless freight train",
+     "year": 2018,
+     "note": "力拓在澳大利亚实现矿石重载列车全自动运行，无人驾驶货运投入运营。",
+     "deps": [
+      "computer"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "高速铁路与磁悬浮",
+   "items": [
+    {
+     "id": "high_speed_rail",
+     "name": "高速铁路",
+     "en": "High-speed rail",
+     "year": 1964,
+     "note": "日本东海道新干线以210公里时速商业运营，开创高速铁路时代。",
+     "deps": [
+      "railway"
+     ]
+    },
+    {
+     "id": "distributed_power_highspeed",
+     "name": "动力分散式高速动车组",
+     "en": "Distributed-power high-speed train",
+     "year": 1964,
+     "note": "新干线采用多轴同时牵引的动力分散构型，成为多数高铁动车的主流。",
+     "deps": [
+      "railway"
+     ]
+    },
+    {
+     "id": "airtight_train_body",
+     "name": "气密性高速车体",
+     "en": "Airtight high-speed car body",
+     "year": 1964,
+     "note": "隧道气压波冲击下保持车内压力稳定的气密车体，保障旅客舒适。",
+     "deps": [
+      "railway"
+     ]
+    },
+    {
+     "id": "high_speed_bogie",
+     "name": "高速转向架",
+     "en": "High-speed bogie",
+     "year": 1964,
+     "note": "为高速运行优化轮对定位与悬挂的动车转向架，新干线首创并沿用。",
+     "deps": [
+      "railway_bogie"
+     ]
+    },
+    {
+     "id": "variable_gauge_train",
+     "name": "可变轨距列车",
+     "en": "Variable-gauge train",
+     "year": 1968,
+     "note": "转向架轮距可调整使列车跨境直通，西班牙塔尔戈技术开创先例。"
+    },
+    {
+     "id": "tilting_train",
+     "name": "摆式列车",
+     "en": "Tilting train",
+     "year": 1969,
+     "note": "过弯自动倾摆抵消离心力以提速的列车，意大利率先研制并实用化。"
+    },
+    {
+     "id": "ems_maglev",
+     "name": "常导电磁磁悬浮",
+     "en": "Electromagnetic suspension maglev",
+     "year": 1971,
+     "note": "德国自1960年代末研制的电磁吸力磁浮，后发展为高速磁浮制式。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "eds_maglev",
+     "name": "超导电动磁悬浮",
+     "en": "Electrodynamic suspension maglev",
+     "year": 1979,
+     "note": "日本超导斥力磁浮试验车创517公里时速纪录，后转入山梨试验线。",
+     "deps": [
+      "magnets"
+     ]
+    },
+    {
+     "id": "concentrated_power_highspeed",
+     "name": "动力集中式高速列车",
+     "en": "Concentrated-power high-speed train",
+     "year": 1981,
+     "note": "法国高速列车以两端动力车牵引，1981年商业时速达到260公里。",
+     "deps": [
+      "high_speed_rail"
+     ]
+    },
+    {
+     "id": "aluminium_hsr_carbody",
+     "name": "铝合金高速车体",
+     "en": "Aluminium high-speed car body",
+     "year": 1992,
+     "note": "铝合金型材焊接车体显著减重，兼顾高速运行的气密与强度要求。",
+     "deps": [
+      "all_steel_passenger_car"
+     ]
+    },
+    {
+     "id": "commercial_maglev_operation",
+     "name": "磁浮商业运营线",
+     "en": "Commercial maglev line",
+     "year": 2004,
+     "note": "上海磁浮示范线以430公里时速运营，为世界首条高速磁浮运营线。",
+     "deps": [
+      "ems_maglev"
+     ]
+    },
+    {
+     "id": "urban_low_speed_maglev",
+     "name": "中低速磁浮列车",
+     "en": "Low-speed urban maglev",
+     "year": 2005,
+     "note": "面向城市轨道的中低速磁浮系统，2005年名古屋线路率先商业运行。",
+     "deps": [
+      "ems_maglev"
+     ]
+    },
+    {
+     "id": "operation_350_kmh",
+     "name": "时速350公里运营",
+     "en": "350 km/h commercial operation",
+     "year": 2008,
+     "note": "京津城际铁路率先以350公里时速运营，轮轨高速进入新阶段。",
+     "deps": [
+      "high_speed_rail"
+     ]
+    },
+    {
+     "id": "hts_pinning_maglev",
+     "name": "高温超导钉扎磁悬浮",
+     "en": "High-temperature superconducting maglev",
+     "year": 2014,
+     "note": "中国研制的自稳定高温超导磁浮试验车，无需主动控制即可悬浮。",
+     "deps": [
+      "magnets"
+     ]
+    },
+    {
+     "id": "maglev_600_prototype",
+     "name": "时速600公里磁浮样车",
+     "en": "600 km/h maglev prototype",
+     "year": 2021,
+     "note": "时速600公里级高速磁浮试验样车下线并完成试跑，尚处试验阶段。",
+     "deps": [
+      "ems_maglev"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "城市轨道交通系统",
+   "items": [
+    {
+     "id": "horse_drawn_streetcar",
+     "name": "马拉街车",
+     "en": "Horse-drawn streetcar",
+     "year": 1832,
+     "note": "纽约率先开办轨道马车客运，轮轨交通由此进入城市街道。",
+     "deps": [
+      "railway"
+     ]
+    },
+    {
+     "id": "underground_railway",
+     "name": "地下铁道",
+     "en": "Underground railway",
+     "year": 1863,
+     "note": "伦敦大都会铁路以蒸汽牵引开通世界首条地铁，采用明挖法建造。",
+     "deps": [
+      "tunnel",
+      "railway"
+     ]
+    },
+    {
+     "id": "elevated_railway",
+     "name": "高架铁路",
+     "en": "Elevated railway",
+     "year": 1870,
+     "note": "以钢架支撑的高架轨道线路，纽约率先运营并缓解地面拥堵。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "cable_street_railway",
+     "name": "缆索街车",
+     "en": "Cable car railway",
+     "year": 1873,
+     "note": "旧金山缆车以地下循环钢缆牵引，能攀爬陡坡，是城市动力的革新。"
+    },
+    {
+     "id": "electric_streetcar",
+     "name": "有轨电车",
+     "en": "Electric streetcar",
+     "year": 1888,
+     "note": "斯普拉格在里士满建成首个大型电动街车系统，城市电车由此普及。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "deep_tube_metro",
+     "name": "深埋电动地铁",
+     "en": "Deep-level electric tube",
+     "year": 1890,
+     "note": "伦敦城市-南伦敦线为深埋隧道电动地铁，确立地铁电气化标准。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "monorail",
+     "name": "单轨铁路",
+     "en": "Monorail",
+     "year": 1901,
+     "note": "伍珀塔尔悬挂式单轨建成，车辆悬挂于轨梁下，是别具一格的城市制式。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "straddle_monorail",
+     "name": "跨座式单轨",
+     "en": "Straddle-beam monorail",
+     "year": 1952,
+     "note": "车辆骑跨混凝土轨梁行驶的单轨制式，东京等地用于中运量城市客运。",
+     "deps": [
+      "monorail"
+     ]
+    },
+    {
+     "id": "rubber_tyred_metro",
+     "name": "橡胶轮地铁",
+     "en": "Rubber-tyred metro",
+     "year": 1956,
+     "note": "巴黎地铁试验充气橡胶轮车辆，加减速快且噪声低，多线相继采用。"
+    },
+    {
+     "id": "automated_people_mover",
+     "name": "自动旅客捷运",
+     "en": "Automated people mover",
+     "year": 1971,
+     "note": "全自动胶轮捷运服务于机场与园区，1971年美国建成示范系统。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "modern_light_rail",
+     "name": "现代轻轨",
+     "en": "Modern light rail transit",
+     "year": 1978,
+     "note": "七十年代兴起的中运量城轨，埃德蒙顿率先建成北美观代轻轨。",
+     "deps": [
+      "electric_streetcar"
+     ]
+    },
+    {
+     "id": "automated_driverless_metro",
+     "name": "全自动无人驾驶地铁",
+     "en": "Automated driverless metro",
+     "year": 1983,
+     "note": "里尔地铁首创胶轮全自动无人驾驶，成为自动化城轨的样板。",
+     "deps": [
+      "automated_people_mover"
+     ]
+    },
+    {
+     "id": "linear_motor_metro",
+     "name": "直线电机地铁",
+     "en": "Linear-motor metro",
+     "year": 1985,
+     "note": "直线感应电机驱动的扁平车辆，隧道断面小、爬坡能力强。",
+     "deps": [
+      "electric_motor"
+     ]
+    },
+    {
+     "id": "low_floor_tram",
+     "name": "低地板有轨电车",
+     "en": "Low-floor tram",
+     "year": 1997,
+     "note": "低地板车厢便于无障碍乘降，是现代有轨电车复兴的标志。",
+     "deps": [
+      "electric_streetcar"
+     ]
+    },
+    {
+     "id": "metro_platform_screen_door",
+     "name": "站台屏蔽门",
+     "en": "Platform screen door",
+     "year": 2002,
+     "note": "站台与轨区之间加装屏蔽门，防坠落并节能，新建地铁普遍配置。",
+     "deps": [
+      "deep_tube_metro"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "特种轨道与信号运营安全",
+   "items": [
+    {
+     "id": "atmospheric_railway",
+     "name": "气压动力铁路",
+     "en": "Atmospheric railway",
+     "year": 1843,
+     "note": "以管道真空驱动活塞列车的实验铁路，英法短暂运营后为机车取代。"
+    },
+    {
+     "id": "railway_semaphore_signal",
+     "name": "臂板信号机",
+     "en": "Railway semaphore signal",
+     "year": 1841,
+     "note": "以臂板与色灯显示行车许可的固定信号，是铁路信号的早期形式。"
+    },
+    {
+     "id": "railway_telegraph_block",
+     "name": "电报闭塞法",
+     "en": "Telegraph block working",
+     "year": 1844,
+     "note": "借助电报确认区间空闲的闭塞制度，防范列车追尾事故。",
+     "deps": [
+      "telegraph"
+     ]
+    },
+    {
+     "id": "mechanical_interlocking",
+     "name": "机械联锁",
+     "en": "Mechanical interlocking",
+     "year": 1856,
+     "note": "联锁装置保证敌对信号与道岔不能同时开放，车站作业从此安全。"
+    },
+    {
+     "id": "funicular_railway",
+     "name": "缆索登山铁路",
+     "en": "Funicular railway",
+     "year": 1862,
+     "note": "以钢缆牵引沿陡坡上下行的轨道车辆，里昂率先开通现代缆索铁路。"
+    },
+    {
+     "id": "mountain_rack_railway",
+     "name": "登山齿轨铁路",
+     "en": "Mountain rack railway",
+     "year": 1871,
+     "note": "齿轨与驱动齿轮啮合攀爬陡坡，瑞士里吉山线建成后山区铁路大兴。",
+     "deps": [
+      "rack_steam_locomotive"
+     ]
+    },
+    {
+     "id": "track_circuit",
+     "name": "轨道电路",
+     "en": "Track circuit",
+     "year": 1872,
+     "note": "以钢轨为导体检测列车占用状态，为自动信号与闭塞提供基础。"
+    },
+    {
+     "id": "token_instrument",
+     "name": "路签闭塞",
+     "en": "Token instrument",
+     "year": 1878,
+     "note": "司机须持行车路签方可进入区间的闭塞制度，单线铁路沿用百年。"
+    },
+    {
+     "id": "hump_marshalling_yard",
+     "name": "驼峰编组场",
+     "en": "Hump marshalling yard",
+     "year": 1880,
+     "note": "利用驼峰坡度溜放车辆自动编组的大型调车场，是货运集散枢纽。"
+    },
+    {
+     "id": "railway_switch_machine_auto",
+     "name": "电动道岔联锁",
+     "en": "Power interlocking",
+     "year": 1890,
+     "note": "以电力操作道岔与信号并集中联锁，人工扳道与臂板时代告终。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "automatic_train_stop",
+     "name": "机车自动停车装置",
+     "en": "Automatic train stop",
+     "year": 1901,
+     "note": "地面信号与机车制动联动，列车冒进停车信号时自动紧急制动。"
+    },
+    {
+     "id": "aerial_passenger_tramway",
+     "name": "客运架空索道",
+     "en": "Aerial passenger tramway",
+     "year": 1908,
+     "note": "以钢索吊运车厢越谷登山的客运索道，山岳景区广泛应用。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "cab_signaling",
+     "name": "机车信号",
+     "en": "Cab signaling",
+     "year": 1921,
+     "note": "把地面信号条件复示到驾驶室的信号系统，恶劣天气下依然可靠。"
+    },
+    {
+     "id": "centralized_traffic_control",
+     "name": "调度集中系统",
+     "en": "Centralized traffic control",
+     "year": 1927,
+     "note": "调度中心集中控制全线信号道岔，单线铁路通过能力显著提高。",
+     "deps": [
+      "telegraph"
+     ]
+    },
+    {
+     "id": "level_crossing_automatic_warning",
+     "name": "道口自动预警",
+     "en": "Automatic level-crossing warning",
+     "year": 1928,
+     "note": "列车接近时道口自动闪灯鸣铃并落杆，铁路道口安全由此标准化。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "relay_interlocking",
+     "name": "继电集中联锁",
+     "en": "Relay interlocking",
+     "year": 1930,
+     "note": "以继电器取代机械拉杆实现集中联锁，控制距离与车站规模扩大。",
+     "deps": [
+      "mechanical_interlocking"
+     ]
+    },
+    {
+     "id": "hotbox_detector",
+     "name": "热轴探测器",
+     "en": "Hot-box detector",
+     "year": 1960,
+     "note": "红外测温探测轴承过热，预防切轴事故，重载长大列车沿线普遍设置。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "automatic_train_protection",
+     "name": "列车自动防护",
+     "en": "Automatic train protection",
+     "year": 1964,
+     "note": "按速度曲线连续监控列车的安全防护系统，新干线率先投入运用。",
+     "deps": [
+      "automatic_train_stop"
+     ]
+    },
+    {
+     "id": "computer_based_interlocking",
+     "name": "计算机联锁",
+     "en": "Computer-based interlocking",
+     "year": 1978,
+     "note": "以计算机软逻辑实现联锁取代继电器，是铁路信号数字化的标志。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "moving_block_cbtc",
+     "name": "基于通信的移动闭塞",
+     "en": "Communication-based train control",
+     "year": 1985,
+     "note": "车地连续通信按列车实际位置移动闭塞，追踪间隔显著缩短。",
+     "deps": [
+      "radio",
+      "computer"
+     ]
+    },
+    {
+     "id": "led_railway_signal",
+     "name": "LED铁路信号机",
+     "en": "LED railway signal",
+     "year": 1995,
+     "note": "以发光二极管阵列取代灯泡的信号机，寿命长能耗低，逐步取代色灯。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "ertms_etcs",
+     "name": "欧洲列车运行控制系统",
+     "en": "ERTMS / ETCS",
+     "year": 1999,
+     "note": "以统一车载设备与无线闭塞实现跨国互通的列车控制标准体系。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "positive_train_control",
+     "name": "列车主动控制",
+     "en": "Positive train control",
+     "year": 2008,
+     "note": "美国干线强制装备的列车控制，可自动防止超速、追尾与对向冲突。",
+     "deps": [
+      "gps"
+     ]
+    }
+   ]
+  }
+ ]
+}

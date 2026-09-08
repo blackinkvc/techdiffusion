@@ -1,0 +1,1132 @@
+{
+ "cat": "info",
+ "catName": "信息与通信",
+ "sub": "network",
+ "subName": "网络与互联网",
+ "anchors": [
+  "internet",
+  "www",
+  "computer",
+  "ic",
+  "transistor",
+  "semiconductors",
+  "electricity",
+  "lasers",
+  "smartphone",
+  "ai",
+  "mathematics",
+  "telegraph",
+  "telephone",
+  "radio",
+  "satellite"
+ ],
+ "families": [
+  {
+   "name": "网络理论基础",
+   "items": [
+    {
+     "id": "net_packet_switching",
+     "name": "分组交换",
+     "en": "Packet switching",
+     "year": 1964,
+     "note": "将信息切分为独立分组逐跳传输的交换思想，是互联网的理论基石。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "net_distributed_network",
+     "name": "分布式网络",
+     "en": "Distributed network",
+     "year": 1965,
+     "note": "无中心节点、单点失效不影响整体的容错网络架构思想。",
+     "deps": ["net_packet_switching"]
+    },
+    {
+     "id": "net_store_and_forward",
+     "name": "存储转发",
+     "en": "Store-and-forward",
+     "year": 1965,
+     "note": "节点缓存完整报文再逐跳转发的分组交换实现方式。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "net_protocol_layering",
+     "name": "协议分层模型",
+     "en": "Protocol layering",
+     "year": 1978,
+     "note": "以分层接口与封装组织网络协议的设计方法（TCP/IP与OSI模型）。",
+     "deps": ["net_packet_switching"]
+    },
+    {
+     "id": "net_end_to_end",
+     "name": "端到端原则",
+     "en": "End-to-end principle",
+     "year": 1981,
+     "note": "功能尽量在通信端系统实现、网络本身保持简单的设计原则。",
+     "deps": ["net_protocol_layering"]
+    },
+    {
+     "id": "net_congestion_control",
+     "name": "拥塞控制理论",
+     "en": "Congestion control",
+     "year": 1986,
+     "note": "控制注入速率以避免网络过载的算法体系，如TCP拥塞控制。",
+     "deps": ["net_protocol_layering"]
+    },
+    {
+     "id": "net_flow_control",
+     "name": "流量控制",
+     "en": "Flow control",
+     "year": 1983,
+     "note": "通过滑动窗口等机制匹配收发速率、防止接收方溢出的方法。",
+     "deps": ["net_protocol_layering"]
+    },
+    {
+     "id": "net_queuing_theory",
+     "name": "排队论",
+     "en": "Queuing theory",
+     "year": 1909,
+     "note": "以随机过程建模服务时延与吞吐的数学理论，是网络性能分析基础。",
+     "deps": ["mathematics"]
+    },
+    {
+     "id": "net_graph_routing",
+     "name": "网络图论路由",
+     "en": "Graph-theoretic routing",
+     "year": 1960,
+     "note": "以图论建模网络并求解最短路径的路由理论基础。",
+     "deps": ["mathematics"]
+    },
+    {
+     "id": "net_information_theory",
+     "name": "信息论",
+     "en": "Information theory",
+     "year": 1948,
+     "note": "香农奠定信道容量与编码理论，为通信与网络传输提供极限依据。",
+     "deps": ["mathematics"]
+    },
+    {
+     "id": "net_circuit_switching",
+     "name": "电路交换",
+     "en": "Circuit switching",
+     "year": 1878,
+     "note": "通信前建立独占物理电路、全程占用的交换方式，电话网基础。",
+     "deps": ["telephone"]
+    },
+    {
+     "id": "net_message_switching",
+     "name": "报文交换",
+     "en": "Message switching",
+     "year": 1960,
+     "note": "整份报文存储转发、无需建立专用电路的交换方式。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "net_packet_radio",
+     "name": "分组无线网",
+     "en": "Packet radio network",
+     "year": 1971,
+     "note": "在无线信道上采用分组交换的随机接入网络（如ALOHA）。",
+     "deps": ["net_packet_switching"]
+    },
+    {
+     "id": "net_ethernet_csma",
+     "name": "载波侦听多路访问",
+     "en": "CSMA/CD",
+     "year": 1973,
+     "note": "以太网采用的先侦听、冲突检测后退避的介质访问方法。",
+     "deps": ["net_packet_switching"]
+    },
+    {
+     "id": "net_osi_model",
+     "name": "OSI参考模型",
+     "en": "OSI reference model",
+     "year": 1984,
+     "note": "ISO提出的七层网络体系结构参考模型，规范协议分层。",
+     "deps": ["net_protocol_layering"]
+    },
+    {
+     "id": "net_network_coding",
+     "name": "网络编码",
+     "en": "Network coding",
+     "year": 2000,
+     "note": "对中转分组进行编码组合以提升网络吞吐与鲁棒性的理论。",
+     "deps": ["net_information_theory"]
+    }
+   ]
+  },
+  {
+   "name": "早期互联网与协议",
+   "items": [
+    {
+     "id": "net_arpanet",
+     "name": "ARPANET",
+     "en": "ARPANET",
+     "year": 1969,
+     "note": "美国防部资助的首个分组交换广域网，是互联网的直接前身。",
+     "deps": ["internet"]
+    },
+    {
+     "id": "net_ncp",
+     "name": "网络控制协议NCP",
+     "en": "Network Control Protocol",
+     "year": 1970,
+     "note": "ARPANET早期的主机间通信协议，后被TCP/IP取代。",
+     "deps": ["net_arpanet"]
+    },
+    {
+     "id": "net_tcp_ip",
+     "name": "TCP/IP协议栈",
+     "en": "TCP/IP protocol suite",
+     "year": 1983,
+     "note": "传输控制与网际互联协议族，成为互联网的标准通信基础。",
+     "deps": ["net_ncp"]
+    },
+    {
+     "id": "net_tcp",
+     "name": "传输控制协议TCP",
+     "en": "Transmission Control Protocol",
+     "year": 1974,
+     "note": "提供可靠字节流传输、面向连接的端到端传输协议。",
+     "deps": ["net_ncp"]
+    },
+    {
+     "id": "net_ip",
+     "name": "网际协议IP",
+     "en": "Internet Protocol",
+     "year": 1974,
+     "note": "提供无连接分组寻址与转发的网络层协议。",
+     "deps": ["net_ncp"]
+    },
+    {
+     "id": "net_dns",
+     "name": "域名系统DNS",
+     "en": "Domain Name System",
+     "year": 1984,
+     "note": "将易记域名解析为IP地址的分布式命名系统。",
+     "deps": ["net_tcp_ip"]
+    },
+    {
+     "id": "net_email",
+     "name": "电子邮件协议",
+     "en": "Email protocols",
+     "year": 1971,
+     "note": "最早的网络应用之一，SMTP等协议实现报文收发。",
+     "deps": ["net_arpanet"]
+    },
+    {
+     "id": "net_imap_pop",
+     "name": "邮件收取协议POP/IMAP",
+     "en": "POP / IMAP",
+     "year": 1984,
+     "note": "从服务器检索邮箱的收件协议，支持离线与在线管理。",
+     "deps": ["net_email"]
+    },
+    {
+     "id": "net_usenet",
+     "name": "Usenet",
+     "en": "Usenet",
+     "year": 1980,
+     "note": "基于UUCP的分布式新闻组网络，早期公共讨论平台。",
+     "deps": ["net_arpanet"]
+    },
+    {
+     "id": "net_ftp",
+     "name": "文件传输协议FTP",
+     "en": "File Transfer Protocol",
+     "year": 1971,
+     "note": "早期互联网主机间文件传输的标准应用层协议。",
+     "deps": ["net_arpanet"]
+    },
+    {
+     "id": "net_telnet",
+     "name": "远程终端协议Telnet",
+     "en": "Telnet",
+     "year": 1973,
+     "note": "允许用户远程登录到主机的早期明文终端协议。",
+     "deps": ["net_arpanet"]
+    },
+    {
+     "id": "net_nsfnet",
+     "name": "NSFNET骨干网",
+     "en": "NSFNET",
+     "year": 1986,
+     "note": "美国科学基金会建设的学术互联网骨干，推动网络普及。",
+     "deps": ["net_tcp_ip"]
+    },
+    {
+     "id": "net_rfc",
+     "name": "请求评议RFC",
+     "en": "Request for Comments",
+     "year": 1969,
+     "note": "互联网标准与协议文档公开评审、归档的机制。",
+     "deps": ["internet"]
+    },
+    {
+     "id": "net_ipv6",
+     "name": "IPv6",
+     "en": "Internet Protocol version 6",
+     "year": 1998,
+     "note": "扩展地址空间、改进报头的网际协议版本，应对IPv4耗尽。",
+     "deps": ["net_tcp_ip"]
+    },
+    {
+     "id": "net_dhcp",
+     "name": "动态主机配置DHCP",
+     "en": "Dynamic Host Configuration Protocol",
+     "year": 1993,
+     "note": "自动为接入主机分配IP地址与网络参数的协议。",
+     "deps": ["net_tcp_ip"]
+    },
+    {
+     "id": "net_ntp",
+     "name": "网络时间协议NTP",
+     "en": "Network Time Protocol",
+     "year": 1985,
+     "note": "在互联网上实现时钟同步的协议，保障日志与协同一致。",
+     "deps": ["net_tcp_ip"]
+    },
+    {
+     "id": "net_snmp",
+     "name": "简单网络管理SNMP",
+     "en": "Simple Network Management Protocol",
+     "year": 1988,
+     "note": "用于监控与管理网络设备的标准协议。",
+     "deps": ["net_tcp_ip"]
+    },
+    {
+     "id": "net_modem",
+     "name": "调制解调器",
+     "en": "Modem",
+     "year": 1960,
+     "note": "将数字信号调制到电话线模拟信道上进行数据传输的设备。",
+     "deps": ["telephone"]
+    },
+    {
+     "id": "net_icmp",
+     "name": "网际控制报文ICMP",
+     "en": "Internet Control Message Protocol",
+     "year": 1981,
+     "note": "用于差错报告与网络诊断的IP配套协议（如ping）。",
+     "deps": ["net_ip"]
+    },
+    {
+     "id": "net_bitnet",
+     "name": "BITNET",
+     "en": "BITNET",
+     "year": 1981,
+     "note": "连接大学、以电子邮件与文件传输为主的学术网络。",
+     "deps": ["net_arpanet"]
+    }
+   ]
+  },
+  {
+   "name": "局域网与无线接入",
+   "items": [
+    {
+     "id": "net_ethernet",
+     "name": "以太网",
+     "en": "Ethernet",
+     "year": 1973,
+     "note": "施乐PARC开发的载波侦听多路访问局域网，成为LAN主流。",
+     "deps": ["computer", "ic"]
+    },
+    {
+     "id": "net_802_3",
+     "name": "以太网标准IEEE 802.3",
+     "en": "IEEE 802.3",
+     "year": 1983,
+     "note": "以太网经IEEE正式标准化，确立物理与链路层规范。",
+     "deps": ["net_ethernet"]
+    },
+    {
+     "id": "net_token_ring",
+     "name": "令牌环网",
+     "en": "Token Ring",
+     "year": 1984,
+     "note": "IEEE 802.5环形介质访问局域网，以令牌控制发送权。",
+     "deps": ["net_ethernet"]
+    },
+    {
+     "id": "net_arcnet",
+     "name": "ARCNET",
+     "en": "ARCNET",
+     "year": 1977,
+     "note": "较早的局域网之一，采用令牌传递的总线结构。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "net_switched_ethernet",
+     "name": "交换式以太网",
+     "en": "Switched Ethernet",
+     "year": 1990,
+     "note": "以交换机取代集线器、实现全双工点到点连接的局域网。",
+     "deps": ["net_ethernet"]
+    },
+    {
+     "id": "net_vlan",
+     "name": "虚拟局域网VLAN",
+     "en": "Virtual LAN",
+     "year": 1995,
+     "note": "在交换网上逻辑隔离广播域、灵活划分网段的机制。",
+     "deps": ["net_switched_ethernet"]
+    },
+    {
+     "id": "net_hub",
+     "name": "集线器",
+     "en": "Hub",
+     "year": 1985,
+     "note": "在物理层放大中继信号、共享介质的简易连接设备。",
+     "deps": ["net_ethernet"]
+    },
+    {
+     "id": "net_network_switch",
+     "name": "网络交换机",
+     "en": "Network switch",
+     "year": 1990,
+     "note": "基于MAC地址学习在第二层高速转发帧的设备。",
+     "deps": ["net_ethernet"]
+    },
+    {
+     "id": "net_mac_address",
+     "name": "MAC地址",
+     "en": "MAC address",
+     "year": 1983,
+     "note": "网络接口的全球唯一物理地址标识，用于链路层寻址。",
+     "deps": ["net_ethernet"]
+    },
+    {
+     "id": "net_wifi",
+     "name": "无线局域网WiFi",
+     "en": "Wi-Fi (IEEE 802.11)",
+     "year": 1997,
+     "note": "基于IEEE 802.11的免许可频段无线局域网标准。",
+     "deps": ["net_ethernet", "semiconductors"]
+    },
+    {
+     "id": "net_access_point",
+     "name": "无线接入点",
+     "en": "Wireless Access Point",
+     "year": 2000,
+     "note": "将无线客户端桥接到有线网络的基站设备。",
+     "deps": ["net_wifi"]
+    },
+    {
+     "id": "net_wlan_security",
+     "name": "无线安全WPA",
+     "en": "Wi-Fi Protected Access",
+     "year": 2003,
+     "note": "替代脆弱WEP、以TKIP/AES保护无线接入的加密标准。",
+     "deps": ["net_wifi"]
+    },
+    {
+     "id": "net_home_network",
+     "name": "家庭局域网",
+     "en": "Home network",
+     "year": 1995,
+     "note": "以路由器连接多设备的家庭内部有线无线混合网络。",
+     "deps": ["net_ethernet"]
+    },
+    {
+     "id": "net_bluetooth",
+     "name": "蓝牙",
+     "en": "Bluetooth",
+     "year": 1999,
+     "note": "短距离低功耗无线个域网标准，连接外设与便携设备。",
+     "deps": ["semiconductors"]
+    },
+    {
+     "id": "net_pon",
+     "name": "无源光网络",
+     "en": "Passive Optical Network",
+     "year": 2005,
+     "note": "以无源分光器实现光纤到户的接入网（如GPON）。",
+     "deps": ["net_ethernet", "lasers"]
+    },
+    {
+     "id": "net_zigbee",
+     "name": "Zigbee",
+     "en": "Zigbee",
+     "year": 2003,
+     "note": "低功耗短距网状个域网标准（IEEE 802.15.4）。",
+     "deps": ["semiconductors"]
+    },
+    {
+     "id": "net_powerline",
+     "name": "电力线通信",
+     "en": "Power-line communication",
+     "year": 2001,
+     "note": "利用既有电力线传输局域网信号的家庭联网技术。",
+     "deps": ["net_ethernet"]
+    },
+    {
+     "id": "net_mesh_wlan",
+     "name": "无线网状网",
+     "en": "Wireless mesh network",
+     "year": 2005,
+     "note": "多节点自组织多跳转发、扩展覆盖的无线网形态。",
+     "deps": ["net_wifi"]
+    },
+    {
+     "id": "net_6lowpan",
+     "name": "低功耗IPv6",
+     "en": "6LoWPAN",
+     "year": 2011,
+     "note": "在受限物联网链路上承载IPv6分组的适配层。",
+     "deps": ["net_ipv6"]
+    },
+    {
+     "id": "net_fddi",
+     "name": "光纤分布式数据接口",
+     "en": "FDDI",
+     "year": 1988,
+     "note": "基于光纤双环的高速局域网骨干标准。",
+     "deps": ["net_token_ring"]
+    },
+    {
+     "id": "net_can_bus",
+     "name": "控制器局域网CAN",
+     "en": "CAN bus",
+     "year": 1986,
+     "note": "面向汽车与工业控制的串行通信总线，抗干扰实时。",
+     "deps": ["semiconductors"]
+    }
+   ]
+  },
+  {
+   "name": "广域网络与路由",
+   "items": [
+    {
+     "id": "net_router",
+     "name": "路由器",
+     "en": "Router",
+     "year": 1984,
+     "note": "依据IP地址转发分组、连接不同网络的互联设备。",
+     "deps": ["net_tcp_ip"]
+    },
+    {
+     "id": "net_gateway",
+     "name": "网关",
+     "en": "Gateway",
+     "year": 1986,
+     "note": "连接异构网络、进行协议转换的边界设备。",
+     "deps": ["net_tcp_ip"]
+    },
+    {
+     "id": "net_ospf",
+     "name": "开放最短路径优先OSPF",
+     "en": "OSPF",
+     "year": 1989,
+     "note": "基于链路状态的内部网关路由协议，用于自治系统内部。",
+     "deps": ["net_router"]
+    },
+    {
+     "id": "net_bgp",
+     "name": "边界网关协议BGP",
+     "en": "Border Gateway Protocol",
+     "year": 1994,
+     "note": "在自治系统之间交换路由信息的域间路由协议。",
+     "deps": ["net_router"]
+    },
+    {
+     "id": "net_core_router",
+     "name": "核心路由器",
+     "en": "Core router",
+     "year": 1995,
+     "note": "部署于骨干网、大容量高速转发的核心互联设备。",
+     "deps": ["net_router"]
+    },
+    {
+     "id": "net_mpls",
+     "name": "多协议标签交换MPLS",
+     "en": "MPLS",
+     "year": 1999,
+     "note": "基于标签转发的广域流量工程与虚拟专线技术。",
+     "deps": ["net_core_router"]
+    },
+    {
+     "id": "net_frame_relay",
+     "name": "帧中继",
+     "en": "Frame Relay",
+     "year": 1992,
+     "note": "面向连接的广域分组交换服务，简化差错恢复。",
+     "deps": ["net_router"]
+    },
+    {
+     "id": "net_atm",
+     "name": "异步传输模式ATM",
+     "en": "ATM",
+     "year": 1990,
+     "note": "以固定信元交换的广域与骨干传输技术。",
+     "deps": ["net_router"]
+    },
+    {
+     "id": "net_nat",
+     "name": "网络地址转换NAT",
+     "en": "Network Address Translation",
+     "year": 1994,
+     "note": "以少量公网IP复用大量私网地址，缓解IPv4短缺。",
+     "deps": ["net_tcp_ip"]
+    },
+    {
+     "id": "net_anycast",
+     "name": "任播",
+     "en": "Anycast",
+     "year": 1998,
+     "note": "同一地址多节点、路由就近投递的流量分发方式。",
+     "deps": ["net_bgp"]
+    },
+    {
+     "id": "net_qos",
+     "name": "服务质量QoS",
+     "en": "Quality of Service",
+     "year": 1995,
+     "note": "对流量分类与调度以保障带宽、时延与丢包率。",
+     "deps": ["net_router"]
+    },
+    {
+     "id": "net_routing_table",
+     "name": "路由表与转发",
+     "en": "Routing table",
+     "year": 1986,
+     "note": "路由器依目的网络查表决策下一跳的转发机制。",
+     "deps": ["net_router"]
+    },
+    {
+     "id": "net_isdn",
+     "name": "综合业务数字网ISDN",
+     "en": "ISDN",
+     "year": 1988,
+     "note": "在电话线上承载数字语音与数据的综合接入网。",
+     "deps": ["telephone"]
+    },
+    {
+     "id": "net_x25",
+     "name": "X.25分组网",
+     "en": "X.25",
+     "year": 1976,
+     "note": "早期面向连接的公用分组交换数据网标准。",
+     "deps": ["telephone"]
+    },
+    {
+     "id": "net_vpls",
+     "name": "虚拟专用局域网VPLS",
+     "en": "VPLS",
+     "year": 2005,
+     "note": "跨广域提供二层透明以太网服务的MPLS VPN。",
+     "deps": ["net_mpls"]
+    },
+    {
+     "id": "net_segment_routing",
+     "name": "段路由",
+     "en": "Segment Routing",
+     "year": 2015,
+     "note": "源路由式、简化控制平面的流量工程机制。",
+     "deps": ["net_mpls"]
+    },
+    {
+     "id": "net_l2tp",
+     "name": "二层隧道协议L2TP",
+     "en": "L2TP",
+     "year": 1999,
+     "note": "在IP上封装链路层帧、构建虚拟专用网络的隧道协议。",
+     "deps": ["net_router"]
+    }
+   ]
+  },
+  {
+   "name": "万维网与网络应用",
+   "items": [
+    {
+     "id": "net_http",
+     "name": "超文本传输协议HTTP",
+     "en": "Hypertext Transfer Protocol",
+     "year": 1991,
+     "note": "万维网中传输超文本文档的应用层协议。",
+     "deps": ["www"]
+    },
+    {
+     "id": "net_html",
+     "name": "超文本标记语言HTML",
+     "en": "HTML",
+     "year": 1991,
+     "note": "描述网页结构与超链接的标记语言。",
+     "deps": ["www"]
+    },
+    {
+     "id": "net_web_server",
+     "name": "网页服务器",
+     "en": "Web server",
+     "year": 1992,
+     "note": "托管并响应HTTP请求、返回网页内容的服务器软件。",
+     "deps": ["www", "net_http"]
+    },
+    {
+     "id": "net_web_browser",
+     "name": "网页浏览器",
+     "en": "Web browser",
+     "year": 1993,
+     "note": "图形化获取并渲染万维网页面的客户端软件。",
+     "deps": ["net_http"]
+    },
+    {
+     "id": "net_url",
+     "name": "统一资源定位符URL",
+     "en": "URL",
+     "year": 1994,
+     "note": "标识万维网上资源位置的地址方案。",
+     "deps": ["net_http"]
+    },
+    {
+     "id": "net_search_engine",
+     "name": "搜索引擎",
+     "en": "Search engine",
+     "year": 1994,
+     "note": "索引万维网内容并提供关键词检索的服务。",
+     "deps": ["net_web_server"]
+    },
+    {
+     "id": "net_css",
+     "name": "层叠样式表CSS",
+     "en": "CSS",
+     "year": 1996,
+     "note": "描述网页表现样式、实现结构与表现分离的语言。",
+     "deps": ["net_html"]
+    },
+    {
+     "id": "net_javascript",
+     "name": "网页脚本JavaScript",
+     "en": "JavaScript",
+     "year": 1995,
+     "note": "在浏览器端实现交互逻辑的脚本语言。",
+     "deps": ["net_web_browser"]
+    },
+    {
+     "id": "net_dynamic_web",
+     "name": "动态网页",
+     "en": "Dynamic web page",
+     "year": 1995,
+     "note": "由服务端程序生成、可随数据变化的交互式网页。",
+     "deps": ["net_web_server"]
+    },
+    {
+     "id": "net_web_2",
+     "name": "Web 2.0",
+     "en": "Web 2.0",
+     "year": 2004,
+     "note": "以用户生成内容与社交互动为特征的万维网阶段。",
+     "deps": ["net_search_engine"]
+    },
+    {
+     "id": "net_rest",
+     "name": "REST架构",
+     "en": "REST",
+     "year": 2000,
+     "note": "以资源与无状态接口构建Web服务的架构风格。",
+     "deps": ["net_http"]
+    },
+    {
+     "id": "net_websocket",
+     "name": "WebSocket",
+     "en": "WebSocket",
+     "year": 2011,
+     "note": "在HTTP上升级的浏览器与服务器全双工长连接协议。",
+     "deps": ["net_http"]
+    },
+    {
+     "id": "net_xml",
+     "name": "可扩展标记语言XML",
+     "en": "XML",
+     "year": 1998,
+     "note": "用于结构化数据交换与配置描述的标记语言。",
+     "deps": ["net_html"]
+    },
+    {
+     "id": "net_ajax",
+     "name": "Ajax异步交互",
+     "en": "Ajax",
+     "year": 2005,
+     "note": "不刷新整页、局部更新内容的浏览器异步技术。",
+     "deps": ["net_javascript"]
+    },
+    {
+     "id": "net_spdy_http2",
+     "name": "HTTP/2",
+     "en": "HTTP/2",
+     "year": 2015,
+     "note": "引入多路复用与头部压缩的HTTP新版本。",
+     "deps": ["net_http"]
+    },
+    {
+     "id": "net_pwa",
+     "name": "渐进式Web应用",
+     "en": "Progressive Web App",
+     "year": 2015,
+     "note": "具离线可装、类原生体验的Web应用形态。",
+     "deps": ["net_web_browser"]
+    },
+    {
+     "id": "net_graphql",
+     "name": "GraphQL",
+     "en": "GraphQL",
+     "year": 2015,
+     "note": "以声明式查询替代固定接口的新一代Web API风格。",
+     "deps": ["net_rest"]
+    },
+    {
+     "id": "net_single_page_app",
+     "name": "单页应用",
+     "en": "Single-page application",
+     "year": 2010,
+     "note": "在单文档内前端路由、动态更新的Web应用架构。",
+     "deps": ["net_ajax"]
+    }
+   ]
+  },
+  {
+   "name": "现代网络设施",
+   "items": [
+    {
+     "id": "net_cdn",
+     "name": "内容分发网络CDN",
+     "en": "Content Delivery Network",
+     "year": 1998,
+     "note": "在边缘节点缓存内容、就近加速用户访问的分布式网络。",
+     "deps": ["net_web_server"]
+    },
+    {
+     "id": "net_sdn",
+     "name": "软件定义网络SDN",
+     "en": "Software-Defined Networking",
+     "year": 2008,
+     "note": "控制面与转发面分离、集中可编程的网络架构。",
+     "deps": ["net_router"]
+    },
+    {
+     "id": "net_datacenter_network",
+     "name": "数据中心网络",
+     "en": "Data center network",
+     "year": 2005,
+     "note": "以叶脊等拓扑高密度互联服务器的规模化网络。",
+     "deps": ["net_ethernet"]
+    },
+    {
+     "id": "net_nfv",
+     "name": "网络功能虚拟化NFV",
+     "en": "NFV",
+     "year": 2012,
+     "note": "以软件在通用服务器上实现路由、防火墙等网络功能。",
+     "deps": ["net_sdn"]
+    },
+    {
+     "id": "net_cloud_network",
+     "name": "云网络",
+     "en": "Cloud network",
+     "year": 2008,
+     "note": "按需虚拟化、弹性供给的网络与连接服务。",
+     "deps": ["net_datacenter_network"]
+    },
+    {
+     "id": "net_load_balancer",
+     "name": "负载均衡器",
+     "en": "Load balancer",
+     "year": 1998,
+     "note": "将请求分发到多台服务器以提升可用与吞吐的设备。",
+     "deps": ["net_web_server"]
+    },
+    {
+     "id": "net_overlay_network",
+     "name": "覆盖网络",
+     "en": "Overlay network",
+     "year": 2005,
+     "note": "在底层IP之上构建的逻辑虚拟网络（如VXLAN）。",
+     "deps": ["net_tcp_ip"]
+    },
+    {
+     "id": "net_vxlan",
+     "name": "VXLAN",
+     "en": "VXLAN",
+     "year": 2014,
+     "note": "以MAC-in-UDP封装实现大规模多租户二层扩展。",
+     "deps": ["net_overlay_network"]
+    },
+    {
+     "id": "net_network_analytics",
+     "name": "网络遥测",
+     "en": "Network telemetry",
+     "year": 2015,
+     "note": "实时采集与分析网络状态、支撑可观测性的技术。",
+     "deps": ["net_sdn"]
+    },
+    {
+     "id": "net_edge_networking",
+     "name": "边缘网络",
+     "en": "Edge networking",
+     "year": 2015,
+     "note": "在接入侧就近处理与缓存、降低时延的网络部署。",
+     "deps": ["net_cdn", "net_cloud_network"]
+    },
+    {
+     "id": "net_zero_trust",
+     "name": "零信任网络",
+     "en": "Zero-trust network",
+     "year": 2018,
+     "note": "不默认信任内网、持续验证访问者身份的网络模型。",
+     "deps": ["net_sdn"]
+    },
+    {
+     "id": "net_sdwan",
+     "name": "软件定义广域网",
+     "en": "SD-WAN",
+     "year": 2014,
+     "note": "以软件编排多条广域链路、提升性价比的组网方式。",
+     "deps": ["net_sdn"]
+    },
+    {
+     "id": "net_service_mesh",
+     "name": "服务网格",
+     "en": "Service mesh",
+     "year": 2017,
+     "note": "以Sidecar代理层管理微服务间通信与治理。",
+     "deps": ["net_cloud_network"]
+    },
+    {
+     "id": "net_api_gateway",
+     "name": "API网关",
+     "en": "API gateway",
+     "year": 2014,
+     "note": "统一接入、认证与限流后端API的网关服务。",
+     "deps": ["net_load_balancer"]
+    },
+    {
+     "id": "net_multicast",
+     "name": "IP组播",
+     "en": "IP multicast",
+     "year": 1988,
+     "note": "单源向多点高效投递分组的网络传输技术。",
+     "deps": ["net_ip"]
+    },
+    {
+     "id": "net_dnssec",
+     "name": "DNS安全扩展",
+     "en": "DNSSEC",
+     "year": 1997,
+     "note": "对DNS响应进行数字签名、防止污染与劫持的扩展。",
+     "deps": ["net_dns"]
+    }
+   ]
+  },
+  {
+   "name": "移动互联·物联网·安全·P2P·量子网络",
+   "items": [
+    {
+     "id": "net_mobile_ip",
+     "name": "移动IP",
+     "en": "Mobile IP",
+     "year": 1996,
+     "note": "移动节点跨子网移动时保持IP可达性的协议。",
+     "deps": ["net_tcp_ip"]
+    },
+    {
+     "id": "net_3g_core",
+     "name": "3G核心网",
+     "en": "3G core network",
+     "year": 2000,
+     "note": "蜂窝网络的分组域核心网（如UMTS），支撑移动数据。",
+     "deps": ["net_mobile_ip"]
+    },
+    {
+     "id": "net_4g_core",
+     "name": "4G核心网",
+     "en": "4G core network",
+     "year": 2009,
+     "note": "全IP的LTE演进分组核心，提供高速移动宽带。",
+     "deps": ["net_3g_core"]
+    },
+    {
+     "id": "net_5g_core",
+     "name": "5G核心网",
+     "en": "5G core network",
+     "year": 2018,
+     "note": "基于服务化架构的蜂窝核心网，支持超低时延。",
+     "deps": ["net_4g_core"]
+    },
+    {
+     "id": "net_app_distribution",
+     "name": "应用商店分发",
+     "en": "App distribution",
+     "year": 2008,
+     "note": "移动应用集中上架、下载与更新的分发平台。",
+     "deps": ["smartphone"]
+    },
+    {
+     "id": "net_push_notification",
+     "name": "推送服务",
+     "en": "Push notification",
+     "year": 2009,
+     "note": "服务器主动向移动终端下发消息的通知机制。",
+     "deps": ["smartphone"]
+    },
+    {
+     "id": "net_rfid",
+     "name": "射频识别RFID",
+     "en": "RFID",
+     "year": 1980,
+     "note": "以无线方式读取标签标识的自动识别技术。",
+     "deps": ["semiconductors"]
+    },
+    {
+     "id": "net_m2m",
+     "name": "机器对机器M2M",
+     "en": "Machine to machine",
+     "year": 2005,
+     "note": "设备间自主通信与数据交换的物联网形态。",
+     "deps": ["net_3g_core"]
+    },
+    {
+     "id": "net_lora",
+     "name": "LoRa远距离低功耗",
+     "en": "LoRa",
+     "year": 2015,
+     "note": "基于扩频调制的广域低功耗物联网接入技术。",
+     "deps": ["semiconductors"]
+    },
+    {
+     "id": "net_nbiot",
+     "name": "窄带物联网NB-IoT",
+     "en": "NB-IoT",
+     "year": 2016,
+     "note": "蜂窝制式的窄带海量连接物联网技术。",
+     "deps": ["net_4g_core"]
+    },
+    {
+     "id": "net_smart_home_protocol",
+     "name": "智能家居协议",
+     "en": "Smart home protocol",
+     "year": 2014,
+     "note": "家庭设备互联与控制的协议族（如Thread/Matter）。",
+     "deps": ["net_wifi"]
+    },
+    {
+     "id": "net_wimax",
+     "name": "WiMAX",
+     "en": "WiMAX",
+     "year": 2005,
+     "note": "城域宽带无线接入标准（IEEE 802.16）。",
+     "deps": ["net_3g_core"]
+    },
+    {
+     "id": "net_lte_m",
+     "name": "LTE-M",
+     "en": "LTE-M / Cat-M",
+     "year": 2016,
+     "note": "面向物联网的低功耗广覆盖蜂窝连接。",
+     "deps": ["net_4g_core"]
+    },
+    {
+     "id": "net_thread",
+     "name": "Thread网状协议",
+     "en": "Thread",
+     "year": 2015,
+     "note": "基于IPv6的低功耗家居设备网状协议。",
+     "deps": ["net_smart_home_protocol"]
+    },
+    {
+     "id": "net_matter",
+     "name": "Matter互联标准",
+     "en": "Matter",
+     "year": 2022,
+     "note": "跨厂商智能家居设备的统一互联与配网标准。",
+     "deps": ["net_smart_home_protocol"]
+    },
+    {
+     "id": "net_ipsec",
+     "name": "IPsec安全协议",
+     "en": "IPsec",
+     "year": 1998,
+     "note": "在网络层提供加密与认证的端到端安全协议族。",
+     "deps": ["net_tcp_ip"]
+    },
+    {
+     "id": "net_vpn",
+     "name": "虚拟专用网VPN",
+     "en": "VPN",
+     "year": 1996,
+     "note": "在公共网络上以加密隧道构建私有专网的设施。",
+     "deps": ["net_tcp_ip"]
+    },
+    {
+     "id": "net_firewall",
+     "name": "防火墙",
+     "en": "Firewall",
+     "year": 1988,
+     "note": "依据规则过滤跨边界流量的网络安全设备。",
+     "deps": ["net_tcp_ip"]
+    },
+    {
+     "id": "net_ids",
+     "name": "入侵检测系统",
+     "en": "IDS / IPS",
+     "year": 1998,
+     "note": "监测异常流量、识别入侵行为的网络防护系统。",
+     "deps": ["net_firewall"]
+    },
+    {
+     "id": "net_p2p",
+     "name": "对等网络",
+     "en": "Peer-to-peer network",
+     "year": 1999,
+     "note": "节点对等共享资源、无中心索引的去中心化网络。",
+     "deps": ["net_web_server", "internet"]
+    },
+    {
+     "id": "net_dht",
+     "name": "分布式哈希表",
+     "en": "Distributed hash table",
+     "year": 2001,
+     "note": "无中心索引的键值分布与查找结构（如Kademlia）。",
+     "deps": ["net_p2p"]
+    },
+    {
+     "id": "net_bittorrent",
+     "name": "内容分发BT",
+     "en": "BitTorrent",
+     "year": 2003,
+     "note": "基于分块与swarm的P2P高效内容分发协议。",
+     "deps": ["net_dht"]
+    },
+    {
+     "id": "net_tor",
+     "name": "匿名网络Tor",
+     "en": "Tor",
+     "year": 2002,
+     "note": "基于洋葱路由的多跳匿名通信网络。",
+     "deps": ["net_p2p"]
+    },
+    {
+     "id": "net_qkd",
+     "name": "量子密钥分发",
+     "en": "Quantum key distribution",
+     "year": 2002,
+     "note": "基于量子信道分发密钥的实用化工程（如BB84现场网）。",
+     "deps": ["internet", "lasers"]
+    },
+    {
+     "id": "net_quantum_repeater",
+     "name": "量子中继",
+     "en": "Quantum repeater",
+     "year": 2015,
+     "note": "延伸量子信道距离、中继量子态的工程装置。",
+     "deps": ["net_qkd"]
+    },
+    {
+     "id": "net_network_slicing",
+     "name": "网络切片",
+     "en": "Network slicing",
+     "year": 2019,
+     "note": "在统一物理网上切分独立逻辑网络的5G能力。",
+     "deps": ["net_5g_core"]
+    }
+   ]
+  }
+ ]
+}

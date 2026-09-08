@@ -1,0 +1,1097 @@
+{
+ "cat": "transport",
+ "catName": "交通运输",
+ "sub": "pipeline",
+ "subName": "管道运输",
+ "anchors": [
+  "iron",
+  "steel",
+  "cement",
+  "steam_engine",
+  "petroleum",
+  "electricity",
+  "composites",
+  "computer"
+ ],
+ "families": [
+  {
+   "name": "古代管道",
+   "items": [
+    {
+     "id": "pipe_bamboo_aqueduct",
+     "name": "竹木引水",
+     "en": "Bamboo water conduit",
+     "year": -500,
+     "note": "以竹筒套接引水的输水设施，古代中国南方农田与城郊广泛采用。"
+    },
+    {
+     "id": "pipe_earthenware",
+     "name": "陶管",
+     "en": "Earthenware pipe",
+     "year": -700,
+     "note": "以陶土烧制的排水管，古代两河流域与罗马用于下水道。"
+    },
+    {
+     "id": "pipe_lead_roman",
+     "name": "铅管",
+     "en": "Lead pipe",
+     "year": -100,
+     "note": "罗马帝国以铅管输配饮用水，是金属管道的雏形。"
+    },
+    {
+     "id": "pipe_tile_drain",
+     "name": "瓦管暗渠",
+     "en": "Tile drainage conduit",
+     "year": -100,
+     "note": "以陶瓦拼合的地下暗渠，罗马用于农田排水与城郊引水。"
+    },
+    {
+     "id": "pipe_qanat",
+     "name": "坎儿井暗渠",
+     "en": "Qanat underground channel",
+     "year": -500,
+     "note": "波斯干旱区以地下暗渠引山泉的灌溉系统，至今沿用。"
+    },
+    {
+     "id": "pipe_wooden_log",
+     "name": "木管",
+     "en": "Hollow log pipe",
+     "year": 1500,
+     "note": "以掏空原木输水的管道，文艺复兴欧洲城市供水采用。"
+    },
+    {
+     "id": "pipe_stone_aqueduct",
+     "name": "石砌渡槽",
+     "en": "Stone aqueduct",
+     "year": -300,
+     "note": "以石拱高架引水的输水道，罗马高架渠是工程代表。"
+    },
+    {
+     "id": "pipe_brick_sewer",
+     "name": "砖砌下水道",
+     "en": "Brick sewer",
+     "year": -600,
+     "note": "以砖砌筑的地下排污道，罗马城大下水道为代表。"
+    },
+    {
+     "id": "pipe_clay_sewer_rome",
+     "name": "罗马陶土排水",
+     "en": "Roman clay drainage",
+     "year": -200,
+     "note": "罗马以陶土管组成的城市排水网，排入河道。"
+    },
+    {
+     "id": "pipe_bamboo_flume",
+     "name": "竹枧引泉",
+     "en": "Bamboo flume",
+     "year": -300,
+     "note": "以竹枧引流山泉的简易输水设施，山区聚落常用。"
+    },
+    {
+     "id": "pipe_underground_cistern",
+     "name": "地下蓄水池",
+     "en": "Underground cistern",
+     "year": -700,
+     "note": "以石砌地下池贮水供旱季的设施，地中海城邦普遍。"
+    },
+    {
+     "id": "pipe_terracotta_conduit",
+     "name": "赤陶输水管",
+     "en": "Terracotta conduit",
+     "year": -500,
+     "note": "赤陶烧制的承压输水管，古代近东城市供水干管。"
+    },
+    {
+     "id": "pipe_wooden_stave",
+     "name": "木桶板管",
+     "en": "Wooden stave pipe",
+     "year": 1600,
+     "note": "以木板箍成的承压管，早期欧洲用于低压输水。"
+    },
+    {
+     "id": "pipe_cast_lead_joint",
+     "name": "铅接口铸铁",
+     "en": "Lead-jointed pipe",
+     "year": 1700,
+     "note": "以铅嵌缝连接的早期承压管，过渡到金属管。"
+    },
+    {
+     "id": "pipe_covered_ditch",
+     "name": "盖板明渠",
+     "en": "Covered open channel",
+     "year": -300,
+     "note": "以石板覆盖的输水明渠，减少蒸发与污染。"
+    }
+   ]
+  },
+  {
+   "name": "金属管道",
+   "items": [
+    {
+     "id": "pipe_cast_iron",
+     "name": "铸铁管",
+     "en": "Cast iron pipe",
+     "year": 1450,
+     "note": "以铸铁铸管的输水承压管，中世纪晚期城市供水采用。"
+    },
+    {
+     "id": "pipe_welded_steel",
+     "name": "焊接钢管",
+     "en": "Welded steel pipe",
+     "year": 1820,
+     "note": "以钢板卷焊成管的钢管，承压高，现代长输管道主体。",
+     "deps": ["steel"]
+    },
+    {
+     "id": "pipe_seamless_steel",
+     "name": "无缝钢管",
+     "en": "Seamless steel pipe",
+     "year": 1890,
+     "note": "以穿孔轧制无焊缝的钢管，承压与耐蚀更优。",
+     "deps": ["steel"]
+    },
+    {
+     "id": "pipe_large_diameter",
+     "name": "大口径管",
+     "en": "Large-diameter pipe",
+     "year": 1950,
+     "note": "直径逾米的高强度螺旋焊管，跨大陆油气干线采用。",
+     "deps": ["pipe_welded_steel"]
+    },
+    {
+     "id": "pipe_elbow_tee",
+     "name": "弯头三通",
+     "en": "Pipe elbow and tee",
+     "year": 1900,
+     "note": "改变走向与分流的管件，管网组装必需。",
+     "deps": ["pipe_welded_steel"]
+    },
+    {
+     "id": "pipe_flange",
+     "name": "法兰连接",
+     "en": "Flange connection",
+     "year": 1880,
+     "note": "以法兰盘与螺栓连接的管端，便于拆装检修。",
+     "deps": ["steel"]
+    },
+    {
+     "id": "pipe_spiral_weld",
+     "name": "螺旋缝焊管",
+     "en": "Spiral-welded pipe",
+     "year": 1950,
+     "note": "以钢带螺旋卷焊的焊管，生产效率高适合大口径。",
+     "deps": ["pipe_welded_steel"]
+    },
+    {
+     "id": "pipe_socket_joint",
+     "name": "承插接口",
+     "en": "Socket joint",
+     "year": 1850,
+     "note": "管端承插填料的连接，铸铁管传统连接方式。"
+    },
+    {
+     "id": "pipe_butterfly_valve",
+     "name": "蝶阀",
+     "en": "Butterfly valve",
+     "year": 1900,
+     "note": "以圆盘旋转控流的阀门，管线截断与调节用。",
+     "deps": ["pipe_flange"]
+    },
+    {
+     "id": "pipe_gate_valve",
+     "name": "闸阀",
+     "en": "Gate valve",
+     "year": 1880,
+     "note": "以闸板升降截断的阀门，长输管线主干截断。",
+     "deps": ["steel"]
+    },
+    {
+     "id": "pipe_hdpe",
+     "name": "聚乙烯管",
+     "en": "HDPE pipe",
+     "year": 1950,
+     "note": "高密度聚乙烯塑料管，耐蚀轻便，用于给水与燃气。",
+     "deps": ["plastics"]
+    },
+    {
+     "id": "pipe_composite_pipe",
+     "name": "复合管",
+     "en": "Composite pipe",
+     "year": 1980,
+     "note": "金属与塑料复合的管材，兼顾强度与耐蚀。",
+     "deps": ["composites"]
+    },
+    {
+     "id": "pipe_duplex_steel",
+     "name": "双相钢管",
+     "en": "Duplex stainless pipe",
+     "year": 1980,
+     "note": "铁素体奥氏体双相不锈钢管，耐氯化物腐蚀，海底管线用。",
+     "deps": ["steel"]
+    },
+    {
+     "id": "pipe_gasket_joint",
+     "name": "橡胶密封接口",
+     "en": "Rubber gasket joint",
+     "year": 1960,
+     "note": "以橡胶圈密封的柔性接口，铸铁与塑料管快速连接。",
+     "deps": ["pipe_socket_joint"]
+    },
+    {
+     "id": "pipe_prestressed_concrete",
+     "name": "预应力混凝土管",
+     "en": "Prestressed concrete pipe",
+     "year": 1950,
+     "note": "环向预应力的混凝土承压管，大口径输水用。",
+     "deps": ["cement"]
+    }
+   ]
+  },
+  {
+   "name": "泵送与压缩",
+   "items": [
+    {
+     "id": "pipe_oil_pump_station",
+     "name": "输油泵站",
+     "en": "Oil pump station",
+     "year": 1870,
+     "note": "沿原油管线增压的泵站，19世纪后期成品油管道出现。",
+     "deps": ["petroleum"]
+    },
+    {
+     "id": "pipe_centrifugal_pump",
+     "name": "离心泵",
+     "en": "Centrifugal pump",
+     "year": 1850,
+     "note": "以叶轮离心力输液的泵，长输管线主力增压设备。",
+     "deps": ["steam_engine"]
+    },
+    {
+     "id": "pipe_reciprocating_pump",
+     "name": "往复泵",
+     "en": "Reciprocating pump",
+     "year": 1800,
+     "note": "以活塞往复增压的泵，早期管线与注水泵用。"
+    },
+    {
+     "id": "pipe_compressor_station",
+     "name": "压缩机站",
+     "en": "Compressor station",
+     "year": 1940,
+     "note": "沿气管线压缩天然气的站场，保障气体输送压力。",
+     "deps": ["pipe_centrifugal_pump"]
+    },
+    {
+     "id": "pipe_booster_station",
+     "name": "增压站",
+     "en": "Booster station",
+     "year": 1900,
+     "note": "中途为介质增压的站场，油气水输送通用。",
+     "deps": ["pipe_oil_pump_station"]
+    },
+    {
+     "id": "pipe_centrifugal_compressor",
+     "name": "离心压缩机",
+     "en": "Centrifugal compressor",
+     "year": 1945,
+     "note": "以叶轮增压气体的压缩机，长输气管线大流量增压。",
+     "deps": ["pipe_compressor_station"]
+    },
+    {
+     "id": "pipe_reciprocating_compressor",
+     "name": "往复压缩机",
+     "en": "Reciprocating compressor",
+     "year": 1920,
+     "note": "以活塞增压的高压压缩机，储气库与注气用。"
+    },
+    {
+     "id": "pipe_variable_speed_drive",
+     "name": "变频驱动泵",
+     "en": "Variable-speed pump drive",
+     "year": 1980,
+     "note": "以变频调节流量的泵机组，节能并平滑增压。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "pipe_turbine_pump",
+     "name": "输油主泵",
+     "en": "Pipeline main pump",
+     "year": 1950,
+     "note": "大流量高扬程的管线主泵，常由电动机或燃机驱动。",
+     "deps": ["pipe_centrifugal_pump"]
+    },
+    {
+     "id": "pipe_pig_launcher",
+     "name": "清管器收发",
+     "en": "Pig launcher",
+     "year": 1950,
+     "note": "发射与接收清管器的装置，管线清洁与检测用。",
+     "deps": ["pipe_booster_station"]
+    },
+    {
+     "id": "pipe_metering_station",
+     "name": "计量站",
+     "en": "Metering station",
+     "year": 1960,
+     "note": "测量管输流量与能量的交接计量站，贸易结算用。"
+    },
+    {
+     "id": "pipe_gas_turbine_drive",
+     "name": "燃机驱动压缩",
+     "en": "Gas-turbine compressor drive",
+     "year": 1960,
+     "note": "以燃气轮机驱动压缩机的偏远站场，免去电网依赖。",
+     "deps": ["pipe_centrifugal_compressor"]
+    },
+    {
+     "id": "pipe_electric_motor_pump",
+     "name": "电驱泵站",
+     "en": "Electrically driven pump",
+     "year": 1880,
+     "note": "以电动机驱动管泵的站场，依托电网稳定供电。",
+     "deps": ["electricity"]
+    },
+    {
+     "id": "pipe_skid_station",
+     "name": "橇装泵站",
+     "en": "Skid-mounted station",
+     "year": 1990,
+     "note": "工厂预制整体橇装的泵站，现场快速安装部署。",
+     "deps": ["pipe_turbine_pump"]
+    },
+    {
+     "id": "pipe_heat_tracing",
+     "name": "伴热保温",
+     "en": "Heat tracing",
+     "year": 1970,
+     "note": "维持管温防凝的伴热系统，高黏原油与化工管用。",
+     "deps": ["pipe_centrifugal_pump"]
+    }
+   ]
+  },
+  {
+   "name": "防腐防护",
+   "items": [
+    {
+     "id": "pipe_coating",
+     "name": "管道涂层",
+     "en": "Pipeline coating",
+     "year": 1920,
+     "note": "涂覆管外的有机防腐层，隔离土壤与钢管减缓腐蚀。",
+     "deps": ["steel"]
+    },
+    {
+     "id": "pipe_cathodic_protection",
+     "name": "阴极保护",
+     "en": "Cathodic protection",
+     "year": 1930,
+     "note": "以牺牲阳极或外加电流抑制钢管腐蚀的防护，与涂层联用。",
+     "deps": ["pipe_coating"]
+    },
+    {
+     "id": "pipe_insulating_joint",
+     "name": "绝缘接头",
+     "en": "Insulating joint",
+     "year": 1950,
+     "note": "电绝缘的管接头，隔离保护段防止阴极电流流失。",
+     "deps": ["pipe_cathodic_protection"]
+    },
+    {
+     "id": "pipe_leak_detection",
+     "name": "泄漏监测",
+     "en": "Leak detection",
+     "year": 1970,
+     "note": "以流量与负压波监测管漏的系统，及时报警定位。",
+     "deps": ["pipe_metering_station"]
+    },
+    {
+     "id": "pipe_three_layer_pe",
+     "name": "三层聚乙烯防腐",
+     "en": "3LPE coating",
+     "year": 1980,
+     "note": "熔结环氧加胶粘剂与聚乙烯的三层外防腐，长输管线主流。",
+     "deps": ["pipe_coating"]
+    },
+    {
+     "id": "pipe_concrete_weight_coat",
+     "name": "混凝土配重层",
+     "en": "Concrete weight coating",
+     "year": 1960,
+     "note": "海底管外浇筑混凝土配重，保证负浮力着底稳定。",
+     "deps": ["cement"]
+    },
+    {
+     "id": "pipe_sacrificial_anode",
+     "name": "牺牲阳极",
+     "en": "Sacrificial anode",
+     "year": 1950,
+     "note": "以活泼金属牺牲自身保护钢管的阳极，浅海与储罐用。",
+     "deps": ["pipe_cathodic_protection"]
+    },
+    {
+     "id": "pipe_impressed_current",
+     "name": "外加电流保护",
+     "en": "Impressed current cathodic",
+     "year": 1950,
+     "note": "以整流电源施加保护电流的阴极保护，长干线适用。",
+     "deps": ["pipe_cathodic_protection"]
+    },
+    {
+     "id": "pipe_internal_coating",
+     "name": "内防腐涂层",
+     "en": "Internal lining",
+     "year": 1960,
+     "note": "管内壁涂层的减阻与防蚀，提升输量延长寿命。",
+     "deps": ["pipe_coating"]
+    },
+    {
+     "id": "pipe_corrosion_coupon",
+     "name": "腐蚀挂片",
+     "en": "Corrosion coupon",
+     "year": 1960,
+     "note": "埋设试片监测腐蚀速率的简易手段，评估防护效果。",
+     "deps": ["pipe_cathodic_protection"]
+    },
+    {
+     "id": "pipe_close_interval_survey",
+     "name": "密间隔电位",
+     "en": "CIS survey",
+     "year": 1980,
+     "note": "沿线测保护电位的密间隔检测，评估阴极保护覆盖率。",
+     "deps": ["pipe_impressed_current"]
+    },
+    {
+     "id": "pipe_fiberglass_wrap",
+     "name": "玻璃钢包覆",
+     "en": "FRP wrap",
+     "year": 1970,
+     "note": "以玻璃纤维增强包覆补强防腐，弯头与补口处用。",
+     "deps": ["composites"]
+    },
+    {
+     "id": "pipe_cathodic_monitor",
+     "name": "阴极保护监控",
+     "en": "CP monitoring",
+     "year": 1990,
+     "note": "遥测保护参数的监控系统，远程掌握防护状态。",
+     "deps": ["pipe_impressed_current", "computer"]
+    },
+    {
+     "id": "pipe_holiday_detection",
+     "name": "涂层漏点检测",
+     "en": "Holiday detector",
+     "year": 1970,
+     "note": "检测外防腐层破损漏点的电火花检测，施工与维护用。",
+     "deps": ["pipe_coating"]
+    }
+   ]
+  },
+  {
+   "name": "穿越工程",
+   "items": [
+    {
+     "id": "pipe_hdd_crossing",
+     "name": "定向钻穿越",
+     "en": "Horizontal directional drilling",
+     "year": 1970,
+     "note": "以导向钻水平钻进敷设管线的非开挖穿越，河流公路适用。",
+     "deps": ["pipe_welded_steel"]
+    },
+    {
+     "id": "pipe_tbm_crossing",
+     "name": "盾构穿越",
+     "en": "TBM crossing",
+     "year": 1960,
+     "note": "以盾构机掘进隧道敷设管线的穿越，城市与山体适用。",
+     "deps": ["tunnel"]
+    },
+    {
+     "id": "pipe_river_tunnel",
+     "name": "穿越河流隧道",
+     "en": "River crossing tunnel",
+     "year": 1900,
+     "note": "以沉管或盾构下穿河流的管道隧道，早期以盾构实现。",
+     "deps": ["tunnel"]
+    },
+    {
+     "id": "pipe_underwater_pipeline",
+     "name": "水底管道",
+     "en": "Submarine pipeline",
+     "year": 1950,
+     "note": "海底或河底直接敷设的管线，锚固与配重保障稳定。",
+     "deps": ["pipe_welded_steel"]
+    },
+    {
+     "id": "pipe_microtunneling",
+     "name": "顶管法",
+     "en": "Pipe jacking",
+     "year": 1950,
+     "note": "以顶进法敷设管道的浅埋穿越，避免大开挖。",
+     "deps": ["pipe_welded_steel"]
+    },
+    {
+     "id": "pipe_auger_boring",
+     "name": "螺旋钻穿越",
+     "en": "Auger boring",
+     "year": 1960,
+     "note": "以螺旋钻非开挖穿越道路的小型管线敷设。",
+     "deps": ["pipe_microtunneling"]
+    },
+    {
+     "id": "pipe_immersed_tube",
+     "name": "沉管穿越",
+     "en": "Immersed tube crossing",
+     "year": 1910,
+     "note": "分段预制沉放管节的穿越，跨越宽阔水域。",
+     "deps": ["cement"]
+    },
+    {
+     "id": "pipe_dir_drill_guidance",
+     "name": "导向系统",
+     "en": "Drilling guidance",
+     "year": 1980,
+     "note": "以陀螺与随钻测量引导钻进的导向系统，提升穿越精度。",
+     "deps": ["pipe_hdd_crossing"]
+    },
+    {
+     "id": "pipe_river_crossing_clamp",
+     "name": "稳管压块",
+     "en": "Ballast weight",
+     "year": 1960,
+     "note": "固定水底管的混凝土压块，抗浮抗移。",
+     "deps": ["pipe_underwater_pipeline"]
+    },
+    {
+     "id": "pipe_trenching",
+     "name": "挖沟敷设",
+     "en": "Trenching lay",
+     "year": 1950,
+     "note": "开挖沟槽埋管的传统敷设，陆上与滩海常用。",
+     "deps": ["pipe_welded_steel"]
+    },
+    {
+     "id": "pipe_horizontal_auger",
+     "name": "水平螺旋钻",
+     "en": "Horizontal auger",
+     "year": 1961,
+     "note": "水平钻进敷设套管的非开挖工法。",
+     "deps": ["pipe_auger_boring"]
+    },
+    {
+     "id": "pipe_bored_tunnel",
+     "name": "钻爆法隧道",
+     "en": "Drill-and-blast tunnel",
+     "year": 1900,
+     "note": "以钻爆掘进的穿越隧道，岩石地层管线穿越。",
+     "deps": ["explosives"]
+    },
+    {
+     "id": "pipe_casing_pipe",
+     "name": "套管保护",
+     "en": "Casing pipe",
+     "year": 1950,
+     "note": "穿越段外套钢管的保护，防挤压与便于维护。",
+     "deps": ["pipe_welded_steel"]
+    },
+    {
+     "id": "pipe_directional_survey",
+     "name": "穿越轨迹测量",
+     "en": "Crossing survey",
+     "year": 1990,
+     "note": "以测量控制穿越轨迹的设计与验收，保障精度。",
+     "deps": ["pipe_dir_drill_guidance"]
+    }
+   ]
+  },
+  {
+   "name": "储运设施",
+   "items": [
+    {
+     "id": "pipe_above_ground_tank",
+     "name": "地上储罐",
+     "en": "Above-ground storage tank",
+     "year": 1860,
+     "note": "地面立式储油罐，油气田与炼厂中转贮存。",
+     "deps": ["petroleum"]
+    },
+    {
+     "id": "pipe_underground_gas_storage",
+     "name": "地下储气库",
+     "en": "Underground gas storage",
+     "year": 1915,
+     "note": "以枯竭气田或盐穴储气的库，调峰保供。",
+     "deps": ["petroleum"]
+    },
+    {
+     "id": "pipe_spherical_tank",
+     "name": "球罐",
+     "en": "Spherical tank",
+     "year": 1930,
+     "note": "球型承压储罐，液化气与乙烯等低温介质贮存。",
+     "deps": ["steel"]
+    },
+    {
+     "id": "pipe_lng_tank",
+     "name": "LNG低温储罐",
+     "en": "LNG cryogenic tank",
+     "year": 1960,
+     "note": "绝热低温贮槽储液化天然气，常压零下162度。",
+     "deps": ["pipe_spherical_tank"]
+    },
+    {
+     "id": "pipe_floating_roof_tank",
+     "name": "浮顶罐",
+     "en": "Floating-roof tank",
+     "year": 1950,
+     "note": "浮顶随液面升降减少蒸发的油罐，降低损耗与火灾。",
+     "deps": ["pipe_above_ground_tank"]
+    },
+    {
+     "id": "pipe_bullet_tank",
+     "name": "卧式储罐",
+     "en": "Bullet tank",
+     "year": 1940,
+     "note": "卧式圆筒承压罐，高压气体与液化气贮存。",
+     "deps": ["pipe_spherical_tank"]
+    },
+    {
+     "id": "pipe_salt_cavern_storage",
+     "name": "盐穴储库",
+     "en": "Salt cavern storage",
+     "year": 1960,
+     "note": "溶蚀盐层成腔的储气库，采注循环调峰。",
+     "deps": ["pipe_underground_gas_storage"]
+    },
+    {
+     "id": "pipe_cryogenic_tank_farm",
+     "name": "低温罐区",
+     "en": "Cryogenic tank farm",
+     "year": 1970,
+     "note": "多座低温罐组成的接收站罐区，LNG进口终端核心。",
+     "deps": ["pipe_lng_tank"]
+    },
+    {
+     "id": "pipe_product_tank_farm",
+     "name": "成品油库",
+     "en": "Product tank farm",
+     "year": 1900,
+     "note": "收发存成品油的罐区与泵棚，管网节点。",
+     "deps": ["pipe_above_ground_tank"]
+    },
+    {
+     "id": "pipe_domed_tank",
+     "name": "拱顶罐",
+     "en": "Fixed-roof tank",
+     "year": 1900,
+     "note": "固定顶盖的常压储罐，轻质油与化工品贮存。",
+     "deps": ["pipe_above_ground_tank"]
+    },
+    {
+     "id": "pipe_tank_insulation",
+     "name": "储罐绝热",
+     "en": "Tank insulation",
+     "year": 1961,
+     "note": "低温罐的泡沫与珍珠岩绝热层，维持低温保冷。",
+     "deps": ["pipe_lng_tank"]
+    },
+    {
+     "id": "pipe_terminal_loading",
+     "name": "装车栈桥",
+     "en": "Tanker loading rack",
+     "year": 1920,
+     "note": "以鹤管装车船的栈桥，库区对外发运。",
+     "deps": ["pipe_product_tank_farm"]
+    },
+    {
+     "id": "pipe_dehydration_facility",
+     "name": "脱水装置",
+     "en": "Dehydration facility",
+     "year": 1950,
+     "note": "脱除天然气水的装置，防止管线冰堵与腐蚀。",
+     "deps": ["pipe_compressor_station"]
+    },
+    {
+     "id": "pipe_store_and_forward",
+     "name": "储输调度",
+     "en": "Storage and forwarding",
+     "year": 1990,
+     "note": "以库容调节管输节奏的调度，平衡供需波动。",
+     "deps": ["pipe_terminal_loading", "computer"]
+    },
+    {
+     "id": "pipe_instrument_air",
+     "name": "仪表风系统",
+     "en": "Instrument air system",
+     "year": 1970,
+     "note": "为阀门与仪表供净压缩空气的站场公用系统。",
+     "deps": ["pipe_booster_station"]
+    }
+   ]
+  },
+  {
+   "name": "特殊介质管道",
+   "items": [
+    {
+     "id": "pipe_gas_transmission",
+     "name": "输气管道",
+     "en": "Gas transmission pipeline",
+     "year": 1941,
+     "note": "长距离高压输送天然气的干线，现代能源动脉。",
+     "deps": ["pipe_compressor_station"]
+    },
+    {
+     "id": "pipe_oil_transmission",
+     "name": "输油管道",
+     "en": "Oil transmission pipeline",
+     "year": 1870,
+     "note": "长距离输送原油与成品油的干线，首条成品油管线十九世纪。",
+     "deps": ["petroleum"]
+    },
+    {
+     "id": "pipe_slurry_pipeline",
+     "name": "浆体管道",
+     "en": "Slurry pipeline",
+     "year": 1960,
+     "note": "以浆液输送煤与矿浆的管道，煤浆矿浆管道兴起。",
+     "deps": ["pipe_centrifugal_pump"]
+    },
+    {
+     "id": "pipe_coal_slurry",
+     "name": "煤浆管道",
+     "en": "Coal slurry pipeline",
+     "year": 1970,
+     "note": "高浓度水煤浆长距离输送的管道，美国黑迈萨线代表。",
+     "deps": ["pipe_slurry_pipeline"]
+    },
+    {
+     "id": "pipe_water_pipeline",
+     "name": "输水管道",
+     "en": "Water pipeline",
+     "year": 1850,
+     "note": "城市与跨流域输配水的干管，铸铁与钢管为主。",
+     "deps": ["pipe_cast_iron"]
+    },
+    {
+     "id": "pipe_chemical_pipeline",
+     "name": "化工管道",
+     "en": "Chemical pipeline",
+     "year": 1951,
+     "note": "输送酸碱与石化原料的耐蚀管道，材质与连接特殊。",
+     "deps": ["pipe_hdpe"]
+    },
+    {
+     "id": "pipe_gathering_pipeline",
+     "name": "集输管道",
+     "en": "Gathering pipeline",
+     "year": 1900,
+     "note": "油气田内部汇集单井产物的支线管网。",
+     "deps": ["petroleum"]
+    },
+    {
+     "id": "pipe_product_pipeline",
+     "name": "成品油管道",
+     "en": "Products pipeline",
+     "year": 1871,
+     "note": "顺序输送多种成品油的管网，批次界面监控。",
+     "deps": ["pipe_oil_transmission"]
+    },
+    {
+     "id": "pipe_oxygen_pipeline",
+     "name": "工业气体管道",
+     "en": "Industrial gas pipeline",
+     "year": 1950,
+     "note": "输送氧氮氩等工业气体的特种管道，禁油脱脂。",
+     "deps": ["pipe_welded_steel"]
+    },
+    {
+     "id": "pipe_hydrogen_pipeline",
+     "name": "输氢管道",
+     "en": "Hydrogen pipeline",
+     "year": 1980,
+     "note": "输送纯氢或掺氢的管道，材料需抗氢脆。",
+     "deps": ["pipe_gas_transmission"]
+    },
+    {
+     "id": "pipe_gas_storage_line",
+     "name": "储气库井场管",
+     "en": "Cavern wellhead line",
+     "year": 1960,
+     "note": "连接储气库井与处理厂的集气管线。",
+     "deps": ["pipe_underground_gas_storage"]
+    },
+    {
+     "id": "pipe_brine_pipeline",
+     "name": "卤水管道",
+     "en": "Brine pipeline",
+     "year": 1960,
+     "note": "输送盐卤的耐蚀管道，盐化工原料输送。",
+     "deps": ["pipe_chemical_pipeline"]
+    },
+    {
+     "id": "pipe_cryogenic_line",
+     "name": "低温管道",
+     "en": "Cryogenic pipeline",
+     "year": 1961,
+     "note": "输送LNG与低温液体的绝热管道，保冷设计。",
+     "deps": ["pipe_lng_tank"]
+    },
+    {
+     "id": "pipe_multiproduct_batch",
+     "name": "顺序输送",
+     "en": "Batch transport",
+     "year": 1970,
+     "note": "同一管线交替输送不同油品的分批运行，提高效率。",
+     "deps": ["pipe_product_pipeline"]
+    },
+    {
+     "id": "pipe_geothermal_pipeline",
+     "name": "地热管道",
+     "en": "Geothermal pipeline",
+     "year": 1980,
+     "note": "输送地热水与回灌的耐蚀保温管道，地热利用。",
+     "deps": ["pipe_chemical_pipeline"]
+    }
+   ]
+  },
+  {
+   "name": "智能运维",
+   "items": [
+    {
+     "id": "pipe_il_i",
+     "name": "管道内检测",
+     "en": "In-line inspection",
+     "year": 1965,
+     "note": "以智能清管器检测管体变形与金属损失的完整性评估。",
+     "deps": ["pipe_pig_launcher"]
+    },
+    {
+     "id": "pipe_mfl_detection",
+     "name": "漏磁检测",
+     "en": "Magnetic flux leakage",
+     "year": 1970,
+     "note": "以漏磁场探测管壁腐蚀缺欠的内检测技术，主流手段。",
+     "deps": ["pipe_il_i"]
+    },
+    {
+     "id": "pipe_utc_scan",
+     "name": "超声内检测",
+     "en": "Ultrasonic ILI",
+     "year": 1980,
+     "note": "以超声测厚的管内检测，量化壁厚损失。",
+     "deps": ["pipe_il_i"]
+    },
+    {
+     "id": "pipe_scada",
+     "name": "SCADA监控",
+     "en": "Pipeline SCADA",
+     "year": 1980,
+     "note": "数据采集与监控系统统管全线压力流量，集中调度。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "pipe_distributed_fiber",
+     "name": "分布式光纤",
+     "en": "Distributed fiber sensing",
+     "year": 2000,
+     "note": "沿管敷设感测温度振动的光纤，连续监测。",
+     "deps": ["pipe_scada"]
+    },
+    {
+     "id": "pipe_fiber_alarm",
+     "name": "光纤预警",
+     "en": "Fiber optic intrusion alarm",
+     "year": 2005,
+     "note": "以光纤异常识别施工入侵与泄漏的预警系统。",
+     "deps": ["pipe_distributed_fiber"]
+    },
+    {
+     "id": "pipe_leak_correlate",
+     "name": "相关检漏",
+     "en": "Correlation leak detection",
+     "year": 1990,
+     "note": "以两端信号互相关定位泄漏声源的检漏。",
+     "deps": ["pipe_leak_detection"]
+    },
+    {
+     "id": "pipe_gis",
+     "name": "管线地理信息",
+     "en": "Pipeline GIS",
+     "year": 1995,
+     "note": "以地理信息系统管理管线空间与属性数据。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "pipe_pig_tracking",
+     "name": "清管器跟踪",
+     "en": "Pig tracking",
+     "year": 1980,
+     "note": "以标记器追踪清管器位置的系统，防卡阻定位。",
+     "deps": ["pipe_pig_launcher"]
+    },
+    {
+     "id": "pipe_integrity_mgmt",
+     "name": "完整性管理",
+     "en": "Integrity management",
+     "year": 2000,
+     "note": "以风险评价周期检测的管理体系，保障管线安全。",
+     "deps": ["pipe_il_i"]
+    },
+    {
+     "id": "pipe_smart_pig",
+     "name": "智能清管器",
+     "en": "Smart pig",
+     "year": 1985,
+     "note": "载传感与记录仪的清管器，离线分析缺陷。",
+     "deps": ["pipe_il_i"]
+    },
+    {
+     "id": "pipe_remote_valve",
+     "name": "远程阀门",
+     "en": "Remote control valve",
+     "year": 1990,
+     "note": "可远程启闭的干线截断阀，事故隔离。",
+     "deps": ["pipe_gate_valve"]
+    },
+    {
+     "id": "pipe_digital_twin",
+     "name": "数字孪生",
+     "en": "Pipeline digital twin",
+     "year": 2015,
+     "note": "以模型映射物理管线的虚拟体，辅助预测与决策。",
+     "deps": ["pipe_integrity_mgmt"]
+    },
+    {
+     "id": "pipe_robot_inspection",
+     "name": "管内巡检机器人",
+     "en": "In-pipe robot",
+     "year": 2010,
+     "note": "自主沿管行走巡检的机器人，复杂段替代清管器。",
+     "deps": ["pipe_smart_pig"]
+    }
+   ]
+  },
+  {
+   "name": "城市管网",
+   "items": [
+    {
+     "id": "pipe_city_gas",
+     "name": "城市燃气管网",
+     "en": "City gas network",
+     "year": 1860,
+     "note": "向居民与工商业供煤制气的城市管网，后转天然气。",
+     "deps": ["pipe_cast_iron"]
+    },
+    {
+     "id": "pipe_heat_network",
+     "name": "城市供热管网",
+     "en": "District heating network",
+     "year": 1900,
+     "note": "集中供热供回水管网，北欧与北方城市普及。"
+    },
+    {
+     "id": "pipe_water_main",
+     "name": "给水干管",
+     "en": "Water main",
+     "year": 1850,
+     "note": "城市供水主干管，铸铁与球墨铸铁为主。",
+     "deps": ["pipe_cast_iron"]
+    },
+    {
+     "id": "pipe_sewer_main",
+     "name": "污水干管",
+     "en": "Sewer trunk",
+     "year": 1860,
+     "note": "收集输送污水的城市主干管，重力流为主。"
+    },
+    {
+     "id": "pipe_ductile_iron",
+     "name": "球墨铸铁管",
+     "en": "Ductile iron pipe",
+     "year": 1950,
+     "note": "韧性铸铁承压管，城市给水与燃气主干升级。",
+     "deps": ["pipe_cast_iron"]
+    },
+    {
+     "id": "pipe_pe_gas",
+     "name": "聚乙烯燃气管",
+     "en": "PE gas pipe",
+     "year": 1960,
+     "note": "以聚乙烯管输配天然气，柔韧耐蚀连接可靠。",
+     "deps": ["pipe_hdpe"]
+    },
+    {
+     "id": "pipe_pressure_zone",
+     "name": "分压供水",
+     "en": "Pressure zoning",
+     "year": 1950,
+     "note": "分区控压的供水管网，降漏损防爆管。",
+     "deps": ["pipe_water_main"]
+    },
+    {
+     "id": "pipe_district_metering",
+     "name": "计量分区",
+     "en": "District metering area",
+     "year": 1990,
+     "note": "以分区计量定位漏失的城市管网管理，控漏损。",
+     "deps": ["pipe_water_main"]
+    },
+    {
+     "id": "pipe_cathodic_city",
+     "name": "城市管网阴极",
+     "en": "City pipe CP",
+     "year": 1970,
+     "note": "城市埋地管的阴极保护，防土壤腐蚀。",
+     "deps": ["pipe_cathodic_protection"]
+    },
+    {
+     "id": "pipe_composite_city",
+     "name": "综合管廊",
+     "en": "Utility tunnel",
+     "year": 1990,
+     "note": "多种管线共沟敷设的地下综合管廊，便于维护。",
+     "deps": ["tunnel"]
+    },
+    {
+     "id": "pipe_underground_gas_tank",
+     "name": "小区气化站",
+     "en": "Neighborhood gas station",
+     "year": 1990,
+     "note": "瓶组或气化站向小区供气的设施。",
+     "deps": ["pipe_city_gas"]
+    },
+    {
+     "id": "pipe_heat_exchange",
+     "name": "热力站",
+     "en": "Heat exchange station",
+     "year": 1960,
+     "note": "换热与调控的供热节点，连接干线与用户。",
+     "deps": ["pipe_heat_network"]
+    },
+    {
+     "id": "pipe_water_treatment_main",
+     "name": "配水厂出水管",
+     "en": "Treatment plant outfall",
+     "year": 1900,
+     "note": "水厂清水输往管网的出水管，消毒后配送。",
+     "deps": ["pipe_water_main"]
+    },
+    {
+     "id": "pipe_smart_meter",
+     "name": "智能户表",
+     "en": "Smart metering",
+     "year": 2010,
+     "note": "远传计量的户用气水表，管网损耗精细管理。",
+     "deps": ["pipe_district_metering"]
+    },
+    {
+     "id": "pipe_rainwater_pipe",
+     "name": "雨水管网",
+     "en": "Storm sewer",
+     "year": 1900,
+     "note": "排放雨水的城市重力管网，防内涝。",
+     "deps": ["pipe_sewer_main"]
+    }
+   ]
+  }
+ ]
+}

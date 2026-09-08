@@ -1,0 +1,552 @@
+[
+ {
+  "id": "language",
+  "name": "语言",
+  "year": -100000
+ },
+ {
+  "id": "mathematics",
+  "name": "数学",
+  "year": -3000
+ },
+ {
+  "id": "astronomy",
+  "name": "天文学",
+  "year": -3000
+ },
+ {
+  "id": "scientific_method",
+  "name": "科学方法",
+  "year": 1600
+ },
+ {
+  "id": "physics",
+  "name": "经典力学",
+  "year": 1687
+ },
+ {
+  "id": "chemistry",
+  "name": "化学",
+  "year": 1661
+ },
+ {
+  "id": "thermodynamics",
+  "name": "热力学",
+  "year": 1824
+ },
+ {
+  "id": "electromagnetism",
+  "name": "电磁学",
+  "year": 1865
+ },
+ {
+  "id": "evolution",
+  "name": "进化论",
+  "year": 1859
+ },
+ {
+  "id": "relativity_qm",
+  "name": "相对论与量子力学",
+  "year": 1905
+ },
+ {
+  "id": "stone_tools",
+  "name": "石器",
+  "year": -2600000
+ },
+ {
+  "id": "fire",
+  "name": "用火",
+  "year": -1000000
+ },
+ {
+  "id": "brick",
+  "name": "砖与砌筑",
+  "year": -7000
+ },
+ {
+  "id": "bronze",
+  "name": "青铜",
+  "year": -3300
+ },
+ {
+  "id": "iron",
+  "name": "铁器",
+  "year": -1200
+ },
+ {
+  "id": "steel",
+  "name": "钢铁",
+  "year": -1000
+ },
+ {
+  "id": "cement",
+  "name": "水泥与混凝土",
+  "year": -200
+ },
+ {
+  "id": "paper",
+  "name": "造纸",
+  "year": 105
+ },
+ {
+  "id": "plastics",
+  "name": "塑料",
+  "year": 1907
+ },
+ {
+  "id": "semiconductors",
+  "name": "半导体材料",
+  "year": 1947
+ },
+ {
+  "id": "composites",
+  "name": "复合材料",
+  "year": 1960
+ },
+ {
+  "id": "waterwheel",
+  "name": "水车",
+  "year": 100
+ },
+ {
+  "id": "coal_mining",
+  "name": "煤炭开采与利用",
+  "year": 1700
+ },
+ {
+  "id": "steam_engine",
+  "name": "蒸汽机",
+  "year": 1769
+ },
+ {
+  "id": "petroleum",
+  "name": "石油工业",
+  "year": 1859
+ },
+ {
+  "id": "battery",
+  "name": "电池",
+  "year": 1800
+ },
+ {
+  "id": "generator",
+  "name": "发电机与电动机",
+  "year": 1831
+ },
+ {
+  "id": "electricity",
+  "name": "电力系统",
+  "year": 1879
+ },
+ {
+  "id": "power_grid",
+  "name": "电网",
+  "year": 1882
+ },
+ {
+  "id": "nuclear_fission",
+  "name": "核裂变",
+  "year": 1942
+ },
+ {
+  "id": "solar",
+  "name": "太阳能光伏",
+  "year": 1954
+ },
+ {
+  "id": "nuclear_fusion",
+  "name": "核聚变",
+  "year": 1952
+ },
+ {
+  "id": "bronze_casting",
+  "name": "青铜铸造",
+  "year": -3200
+ },
+ {
+  "id": "iron_smelting",
+  "name": "冶铁",
+  "year": -1200
+ },
+ {
+  "id": "wheel",
+  "name": "轮子",
+  "year": -3500
+ },
+ {
+  "id": "lathe",
+  "name": "车床与精密加工",
+  "year": 1751
+ },
+ {
+  "id": "printing",
+  "name": "印刷术",
+  "year": 1040
+ },
+ {
+  "id": "assembly_line",
+  "name": "流水线",
+  "year": 1913
+ },
+ {
+  "id": "cnc",
+  "name": "数控加工",
+  "year": 1952
+ },
+ {
+  "id": "robot",
+  "name": "工业机器人",
+  "year": 1961
+ },
+ {
+  "id": "sail",
+  "name": "帆船",
+  "year": -3500
+ },
+ {
+  "id": "road",
+  "name": "道路与驿道",
+  "year": -300
+ },
+ {
+  "id": "horse_gear",
+  "name": "马具与马车",
+  "year": -2000
+ },
+ {
+  "id": "railway",
+  "name": "铁路",
+  "year": 1825
+ },
+ {
+  "id": "steam_ship",
+  "name": "蒸汽船",
+  "year": 1807
+ },
+ {
+  "id": "automobile",
+  "name": "汽车",
+  "year": 1886
+ },
+ {
+  "id": "airplane",
+  "name": "飞机",
+  "year": 1903
+ },
+ {
+  "id": "rocket",
+  "name": "火箭",
+  "year": 1926
+ },
+ {
+  "id": "satellite",
+  "name": "人造卫星",
+  "year": 1957
+ },
+ {
+  "id": "space_station",
+  "name": "空间站",
+  "year": 1998
+ },
+ {
+  "id": "writing",
+  "name": "文字",
+  "year": -3200
+ },
+ {
+  "id": "telegraph",
+  "name": "电报",
+  "year": 1837
+ },
+ {
+  "id": "telephone",
+  "name": "电话",
+  "year": 1876
+ },
+ {
+  "id": "photography",
+  "name": "摄影",
+  "year": 1839
+ },
+ {
+  "id": "radio",
+  "name": "无线电",
+  "year": 1895
+ },
+ {
+  "id": "television",
+  "name": "电视",
+  "year": 1927
+ },
+ {
+  "id": "transistor",
+  "name": "晶体管",
+  "year": 1947
+ },
+ {
+  "id": "computer",
+  "name": "电子计算机",
+  "year": 1946
+ },
+ {
+  "id": "ic",
+  "name": "集成电路",
+  "year": 1958
+ },
+ {
+  "id": "internet",
+  "name": "互联网",
+  "year": 1969
+ },
+ {
+  "id": "www",
+  "name": "万维网",
+  "year": 1991
+ },
+ {
+  "id": "smartphone",
+  "name": "智能手机",
+  "year": 2007
+ },
+ {
+  "id": "ai",
+  "name": "人工智能",
+  "year": 1956
+ },
+ {
+  "id": "llm",
+  "name": "大语言模型",
+  "year": 2017
+ },
+ {
+  "id": "agriculture",
+  "name": "农业",
+  "year": -10000
+ },
+ {
+  "id": "irrigation",
+  "name": "灌溉",
+  "year": -6000
+ },
+ {
+  "id": "plow",
+  "name": "犁",
+  "year": -3000
+ },
+ {
+  "id": "fermentation",
+  "name": "发酵",
+  "year": -7000
+ },
+ {
+  "id": "fertilizer",
+  "name": "化肥",
+  "year": 1840
+ },
+ {
+  "id": "vaccination",
+  "name": "疫苗",
+  "year": 1796
+ },
+ {
+  "id": "anesthesia",
+  "name": "麻醉",
+  "year": 1846
+ },
+ {
+  "id": "surgery",
+  "name": "无菌外科",
+  "year": 1867
+ },
+ {
+  "id": "medical_imaging",
+  "name": "医学影像",
+  "year": 1895
+ },
+ {
+  "id": "dna",
+  "name": "遗传学 / DNA",
+  "year": 1953
+ },
+ {
+  "id": "genetic_engineering",
+  "name": "基因工程",
+  "year": 1973
+ },
+ {
+  "id": "gmo",
+  "name": "转基因作物",
+  "year": 1994
+ },
+ {
+  "id": "arch",
+  "name": "拱与穹顶",
+  "year": -100
+ },
+ {
+  "id": "steel_frame",
+  "name": "钢结构",
+  "year": 1885
+ },
+ {
+  "id": "skyscraper",
+  "name": "摩天大楼",
+  "year": 1885
+ },
+ {
+  "id": "tunnel",
+  "name": "隧道与地下工程",
+  "year": 1843
+ },
+ {
+  "id": "bow_arrow",
+  "name": "弓箭",
+  "year": -20000
+ },
+ {
+  "id": "gunpowder",
+  "name": "火药",
+  "year": 850
+ },
+ {
+  "id": "firearm",
+  "name": "火器",
+  "year": 1280
+ },
+ {
+  "id": "cannon",
+  "name": "火炮",
+  "year": 1300
+ },
+ {
+  "id": "tank",
+  "name": "坦克",
+  "year": 1916
+ },
+ {
+  "id": "missile",
+  "name": "导弹",
+  "year": 1942
+ },
+ {
+  "id": "nuclear_weapon",
+  "name": "核武器",
+  "year": 1945
+ },
+ {
+  "id": "internal_combustion",
+  "name": "内燃机",
+  "year": 1876
+ },
+ {
+  "id": "interchangeable_parts",
+  "name": "可互换零件",
+  "year": 1798
+ },
+ {
+  "id": "elevator",
+  "name": "安全升降机",
+  "year": 1853
+ },
+ {
+  "id": "explosives",
+  "name": "现代炸药",
+  "year": 1867
+ },
+ {
+  "id": "touchscreen",
+  "name": "触摸屏",
+  "year": 1970
+ },
+ {
+  "id": "transformer_arch",
+  "name": "Transformer 架构",
+  "year": 2017
+ },
+ {
+  "id": "electric_motor",
+  "name": "电动机",
+  "year": 1837
+ },
+ {
+  "id": "optics",
+  "name": "光学",
+  "year": 1000
+ },
+ {
+  "id": "atomic_clock",
+  "name": "原子钟",
+  "year": 1955
+ },
+ {
+  "id": "gps",
+  "name": "全球卫星定位 GNSS",
+  "year": 1990
+ },
+ {
+  "id": "lasers",
+  "name": "激光器",
+  "year": 1960
+ },
+ {
+  "id": "camera",
+  "name": "数码相机 / 图像传感器",
+  "year": 1975
+ },
+ {
+  "id": "lidar",
+  "name": "激光雷达",
+  "year": 2005
+ },
+ {
+  "id": "computer_vision",
+  "name": "计算机视觉",
+  "year": 2012
+ },
+ {
+  "id": "vacuum_cleaner",
+  "name": "真空吸尘器",
+  "year": 1901
+ },
+ {
+  "id": "brushless_motor",
+  "name": "无刷电机",
+  "year": 1985
+ },
+ {
+  "id": "magnets",
+  "name": "永磁材料",
+  "year": -600
+ },
+ {
+  "id": "drone",
+  "name": "无人机",
+  "year": 2010
+ },
+ {
+  "id": "autonomous_driving",
+  "name": "自动驾驶 / 汽车智能",
+  "year": 2009
+ },
+ {
+  "id": "robot_vacuum",
+  "name": "家用扫地机器人",
+  "year": 2002
+ },
+ {
+  "id": "smart_mower",
+  "name": "智能割草机器人",
+  "year": 2015
+ },
+ {
+  "id": "gesture_comm",
+  "name": "手势交流",
+  "year": -100000
+ },
+ {
+  "id": "diesel_engine",
+  "name": "柴油压燃发动机",
+  "year": 1893
+ }
+]

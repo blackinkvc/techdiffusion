@@ -1,0 +1,1406 @@
+{
+ "cat": "manufact",
+ "catName": "制造与工具",
+ "sub": "additive",
+ "subName": "增材制造",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "computer",
+  "ic",
+  "lasers",
+  "cnc",
+  "robot",
+  "plastics",
+  "composites",
+  "semiconductors",
+  "chemistry",
+  "medical_imaging"
+ ],
+ "families": [
+  {
+   "name": "光聚合（光固化）增材制造技术",
+   "items": [
+    {
+     "id": "photopolymer_layered_prototype",
+     "name": "光敏树脂固化快速成形研究装置",
+     "en": "Early photopolymer layered prototyping",
+     "year": 1981,
+     "note": "小玉秀男报道紫外光逐层固化光敏树脂制造立体形状，是最早的光固化打印研究。",
+     "deps": [
+      "chemistry",
+      "computer"
+     ]
+    },
+    {
+     "id": "stereolithography",
+     "name": "立体光刻成形",
+     "en": "Stereolithography",
+     "year": 1984,
+     "note": "赫尔以紫外激光逐层固化液态光敏树脂并申请专利，奠定光固化3D打印基础。",
+     "deps": [
+      "photopolymer_layered_prototype",
+      "lasers"
+     ]
+    },
+    {
+     "id": "solid_ground_curing",
+     "name": "实体地面固化",
+     "en": "Solid ground curing",
+     "year": 1987,
+     "note": "以掩模整层曝光固化树脂并置换蜡支撑，是早期整层固化的光固化工艺。",
+     "deps": [
+      "photopolymer_layered_prototype"
+     ]
+    },
+    {
+     "id": "microstereolithography",
+     "name": "微立体光刻",
+     "en": "Micro-stereolithography",
+     "year": 1993,
+     "note": "把光固化精度推进到微米级制造微型三维结构，是微纳增材的开端。",
+     "deps": [
+      "stereolithography"
+     ]
+    },
+    {
+     "id": "castable_sla_pattern",
+     "name": "光固化失蜡铸造模样",
+     "en": "Castable stereolithography patterns",
+     "year": 1996,
+     "note": "以可烧失光敏树脂打印熔模铸造模样，支撑首饰与精铸件快速定制。",
+     "deps": [
+      "stereolithography"
+     ]
+    },
+    {
+     "id": "two_photon_polymerization",
+     "name": "双光子聚合光固化",
+     "en": "Two-photon polymerization",
+     "year": 1997,
+     "note": "飞秒激光双光子吸收在焦点处聚合树脂，可制造亚微米分辨率的复杂结构。",
+     "deps": [
+      "stereolithography",
+      "lasers"
+     ]
+    },
+    {
+     "id": "projection_stereolithography",
+     "name": "数字投影光固化",
+     "en": "Projection stereolithography",
+     "year": 1998,
+     "note": "以动态掩模整层投影曝光取代逐点扫描，一次固化整层截面，效率大增。",
+     "deps": [
+      "stereolithography",
+      "ic"
+     ]
+    },
+    {
+     "id": "digital_light_processing_am",
+     "name": "数字光处理光固化打印",
+     "en": "DLP 3D printing",
+     "year": 2001,
+     "note": "借数字微镜器件逐层投影光固化树脂，精度与速度兼得，成为主流光固化路线。",
+     "deps": [
+      "projection_stereolithography",
+      "ic"
+     ]
+    },
+    {
+     "id": "ceramic_stereolithography",
+     "name": "陶瓷浆料光固化打印",
+     "en": "Ceramic stereolithography",
+     "year": 2002,
+     "note": "高固含量陶瓷浆料逐层光固化成形生坯，再脱脂烧结得到陶瓷零件。",
+     "deps": [
+      "stereolithography"
+     ]
+    },
+    {
+     "id": "bottom_up_stereolithography",
+     "name": "下照式光固化成形",
+     "en": "Bottom-up stereolithography",
+     "year": 2003,
+     "note": "投影自下而上透过窗口固化，逐层抬升成形，树脂用量少且速度快。",
+     "deps": [
+      "digital_light_processing_am"
+     ]
+    },
+    {
+     "id": "ceramic_digital_light_processing",
+     "name": "陶瓷数字光固化打印",
+     "en": "Lithography-based ceramic manufacturing",
+     "year": 2011,
+     "note": "以数字投影固化高固含量陶瓷浆料，近净成形氧化锆与羟基磷灰石件。",
+     "deps": [
+      "digital_light_processing_am"
+     ]
+    },
+    {
+     "id": "continuous_liquid_interface_production",
+     "name": "连续液面成形",
+     "en": "Continuous liquid interface production",
+     "year": 2015,
+     "note": "以氧气抑制窗口区固化，实现无分层连续光固化，表面光滑且速度快。",
+     "deps": [
+      "digital_light_processing_am",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "lcd_masked_stereolithography",
+     "name": "LCD掩膜光固化打印",
+     "en": "LCD masked stereolithography",
+     "year": 2016,
+     "note": "以液晶屏作动态掩膜整层曝光，成本低，推动桌面光固化普及。",
+     "deps": [
+      "digital_light_processing_am"
+     ]
+    },
+    {
+     "id": "volumetric_computed_lithography",
+     "name": "体积光固化打印",
+     "en": "Computed axial lithography",
+     "year": 2019,
+     "note": "旋转树脂桶并投射多角度光场实现立体一次固化，无需分层支撑，已在研究装置上验证。",
+     "deps": [
+      "continuous_liquid_interface_production"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "材料挤出增材制造技术",
+   "items": [
+    {
+     "id": "fused_deposition_modeling",
+     "name": "熔融沉积成形",
+     "en": "Fused deposition modeling",
+     "year": 1989,
+     "note": "克伦普以加热喷嘴挤出热塑性丝材逐层堆积成形，是最普及的3D打印方式。",
+     "deps": [
+      "computer",
+      "plastics"
+     ]
+    },
+    {
+     "id": "soluble_support_printing",
+     "name": "可溶支撑材料打印",
+     "en": "Water-soluble support printing",
+     "year": 1995,
+     "note": "第二喷头挤出可水溶或可剥离支撑材料，成形复杂悬空结构后易于去除。",
+     "deps": [
+      "fused_deposition_modeling"
+     ]
+    },
+    {
+     "id": "direct_ink_writing",
+     "name": "墨水直写成形",
+     "en": "Direct ink writing",
+     "year": 1996,
+     "note": "膏状墨水经细针头挤出逐层堆叠，可打印陶瓷、金属与功能胶体材料。",
+     "deps": [
+      "chemistry",
+      "computer"
+     ]
+    },
+    {
+     "id": "fused_deposition_ceramics",
+     "name": "陶瓷丝材熔融沉积打印",
+     "en": "Fused deposition of ceramics",
+     "year": 1997,
+     "note": "含陶瓷粉的高分子丝材按熔融沉积成形生坯再烧结，是早期陶瓷增材路线。",
+     "deps": [
+      "fused_deposition_modeling"
+     ]
+    },
+    {
+     "id": "fdm_lost_pattern_casting",
+     "name": "熔融沉积可烧失铸模",
+     "en": "FDM lost-pattern casting",
+     "year": 1998,
+     "note": "以熔融沉积成形蜡或塑料模样用于熔模铸造，实现无模具单件铸件。",
+     "deps": [
+      "fused_deposition_modeling"
+     ]
+    },
+    {
+     "id": "multimaterial_extrusion",
+     "name": "多材料熔融沉积打印",
+     "en": "Multi-material material extrusion",
+     "year": 2009,
+     "note": "多喷头或多路送丝在同一零件内切换不同材料，实现软硬与色彩渐变。",
+     "deps": [
+      "fused_deposition_modeling"
+     ]
+    },
+    {
+     "id": "large_format_granule_printing",
+     "name": "大幅面颗粒料挤出打印",
+     "en": "Large-format pellet extrusion AM",
+     "year": 2014,
+     "note": "直接以塑料颗粒进料经螺杆挤出大幅面堆积，成型速度远超丝材打印。",
+     "deps": [
+      "fused_deposition_modeling"
+     ]
+    },
+    {
+     "id": "robotic_arm_extrusion_printing",
+     "name": "机械臂自由曲面挤出打印",
+     "en": "Robotic arm extrusion printing",
+     "year": 2014,
+     "note": "六轴机械臂带动挤出装置按空间轨迹打印，摆脱三轴分层限制。",
+     "deps": [
+      "fused_deposition_modeling",
+      "robot"
+     ]
+    },
+    {
+     "id": "continuous_fiber_composite_printing",
+     "name": "连续纤维增强复合打印",
+     "en": "Continuous fiber reinforced printing",
+     "year": 2014,
+     "note": "挤出喷嘴内同步浸渍并铺放连续碳纤维或玻纤，显著提高打印件强度。",
+     "deps": [
+      "fused_deposition_modeling",
+      "composites"
+     ]
+    },
+    {
+     "id": "multicolor_extrusion_printing",
+     "name": "多色熔融沉积打印",
+     "en": "Multi-color filament printing",
+     "year": 2015,
+     "note": "多路丝材切换或混色挤出逐层打印，实现零件与模型的多彩外观。",
+     "deps": [
+      "fused_deposition_modeling"
+     ]
+    },
+    {
+     "id": "clay_ceramic_extrusion_printing",
+     "name": "陶土膏料挤出打印",
+     "en": "Clay extrusion 3D printing",
+     "year": 2015,
+     "note": "以膏状陶土或陶瓷浆料经喷嘴逐层堆叠成形，烧成后得陶艺与构件。",
+     "deps": [
+      "direct_ink_writing"
+     ]
+    },
+    {
+     "id": "flexible_elastomer_printing",
+     "name": "柔性弹性体熔融打印",
+     "en": "Flexible filament extrusion printing",
+     "year": 2015,
+     "note": "以TPU等柔性热塑性丝材挤出打印弹性部件，用于鞋材与密封件。",
+     "deps": [
+      "fused_deposition_modeling"
+     ]
+    },
+    {
+     "id": "high_temperature_polymer_printing",
+     "name": "高温工程塑料挤出打印",
+     "en": "High-temperature polymer extrusion",
+     "year": 2016,
+     "note": "在高温恒温腔中挤出聚醚醚酮等高性能塑料，用于航空与医疗部件。",
+     "deps": [
+      "fused_deposition_modeling"
+     ]
+    },
+    {
+     "id": "bound_metal_deposition",
+     "name": "金属丝料挤出打印",
+     "en": "Bound metal deposition",
+     "year": 2017,
+     "note": "高金属含量丝材按FDM方式成形生坯，经脱脂烧结得到致密金属件。",
+     "deps": [
+      "fused_deposition_modeling"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "粉末床熔融增材制造技术",
+   "items": [
+    {
+     "id": "selective_laser_sintering",
+     "name": "选择性激光烧结",
+     "en": "Selective laser sintering",
+     "year": 1986,
+     "note": "德卡德以激光扫描烧结粉末颗粒逐层成形，高分子粉末床打印由此发端。",
+     "deps": [
+      "lasers",
+      "computer"
+     ]
+    },
+    {
+     "id": "wax_laser_sintering",
+     "name": "蜡粉激光烧结成形",
+     "en": "Wax laser sintering",
+     "year": 1988,
+     "note": "以蜡粉激光烧结制作铸造模样，是选择性激光烧结最早应用的材料体系。",
+     "deps": [
+      "selective_laser_sintering"
+     ]
+    },
+    {
+     "id": "nylon_laser_sintering",
+     "name": "尼龙粉末激光烧结成形",
+     "en": "Polyamide laser sintering",
+     "year": 1992,
+     "note": "聚酰胺粉末激光烧结件强度韧性好，率先进入功能性塑料零件量产。",
+     "deps": [
+      "selective_laser_sintering"
+     ]
+    },
+    {
+     "id": "direct_metal_laser_sintering",
+     "name": "金属激光直接烧结",
+     "en": "Direct metal laser sintering",
+     "year": 1995,
+     "note": "直接烧结金属粉末成形致密件，由EOS等实现工业化，无需中间粘结剂。",
+     "deps": [
+      "selective_laser_sintering",
+      "lasers"
+     ]
+    },
+    {
+     "id": "selective_laser_melting",
+     "name": "选区激光熔化",
+     "en": "Selective laser melting",
+     "year": 1995,
+     "note": "弗劳恩霍夫研究所提出以高能激光完全熔化金属粉层，获得近全致密金属件。",
+     "deps": [
+      "lasers",
+      "computer"
+     ]
+    },
+    {
+     "id": "electron_beam_melting",
+     "name": "电子束熔融成形",
+     "en": "Electron beam melting",
+     "year": 1997,
+     "note": "以电子束在真空中熔化金属粉末成形，残余应力小，适合钛合金件。",
+     "deps": [
+      "computer",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "stainless_powder_bed_printing",
+     "name": "不锈钢粉末床打印",
+     "en": "Stainless steel powder bed fusion",
+     "year": 2000,
+     "note": "不锈钢是最早普及的金属粉末床打印材料，用于工装与功能件。",
+     "deps": [
+      "selective_laser_melting"
+     ]
+    },
+    {
+     "id": "titanium_powder_bed_printing",
+     "name": "钛合金粉末床打印",
+     "en": "Titanium alloy powder bed fusion",
+     "year": 2002,
+     "note": "钛合金粉末床熔融成形航空航天与植入体件，材料利用率高。",
+     "deps": [
+      "selective_laser_melting",
+      "electron_beam_melting"
+     ]
+    },
+    {
+     "id": "tool_steel_powder_bed_printing",
+     "name": "模具钢粉末床打印",
+     "en": "Tool steel powder bed fusion",
+     "year": 2003,
+     "note": "模具钢粉末床打印成形注塑模镶件并加工随形冷却水道。",
+     "deps": [
+      "selective_laser_melting"
+     ]
+    },
+    {
+     "id": "cobalt_chrome_powder_bed_printing",
+     "name": "钴铬合金粉末床打印",
+     "en": "Cobalt-chromium powder bed fusion",
+     "year": 2005,
+     "note": "钴铬合金打印牙冠与关节植入体，生物相容且耐磨。",
+     "deps": [
+      "selective_laser_melting"
+     ]
+    },
+    {
+     "id": "nickel_superalloy_powder_bed_printing",
+     "name": "镍基高温合金粉末床打印",
+     "en": "Nickel superalloy powder bed fusion",
+     "year": 2008,
+     "note": "镍基高温合金打印航空发动机复杂构件，实现减重与快速迭代。",
+     "deps": [
+      "selective_laser_melting"
+     ]
+    },
+    {
+     "id": "precious_metal_laser_printing",
+     "name": "贵金属粉末床打印",
+     "en": "Precious metal laser printing",
+     "year": 2010,
+     "note": "金银等贵金属粉末激光成形首饰与工艺品，替代传统失蜡铸造。",
+     "deps": [
+      "direct_metal_laser_sintering"
+     ]
+    },
+    {
+     "id": "aluminum_powder_bed_printing",
+     "name": "铝合金粉末床打印",
+     "en": "Aluminum powder bed fusion",
+     "year": 2012,
+     "note": "铝合金粉末床熔融用于轻量化结构件，打印工艺对激光控制要求高。",
+     "deps": [
+      "selective_laser_melting"
+     ]
+    },
+    {
+     "id": "refractory_powder_bed_printing",
+     "name": "难熔金属粉末床打印",
+     "en": "Refractory metal powder bed fusion",
+     "year": 2015,
+     "note": "钨钼等高熔点金属粉末激光成形试验件，面向高温与核工业应用研究。",
+     "deps": [
+      "selective_laser_melting"
+     ]
+    },
+    {
+     "id": "copper_powder_bed_printing",
+     "name": "铜合金粉末床打印",
+     "en": "Copper powder bed fusion",
+     "year": 2016,
+     "note": "高导电高反射铜材料实现粉末床打印，用于热交换与电机绕组件。",
+     "deps": [
+      "selective_laser_melting"
+     ]
+    },
+    {
+     "id": "multi_jet_fusion",
+     "name": "多射流熔融成形",
+     "en": "Multi jet fusion",
+     "year": 2016,
+     "note": "喷墨头选择性喷洒助熔剂与细化剂，再红外辐照熔融粉末成形，速度快。",
+     "deps": [
+      "selective_laser_sintering",
+      "ic"
+     ]
+    },
+    {
+     "id": "multi_laser_powder_bed",
+     "name": "多激光并行粉末床打印",
+     "en": "Multi-laser powder bed fusion",
+     "year": 2017,
+     "note": "多束激光分区并行扫描大幅面粉末床，成倍提高金属打印产能。",
+     "deps": [
+      "selective_laser_melting"
+     ]
+    },
+    {
+     "id": "tpu_powder_laser_sintering",
+     "name": "热塑性聚氨酯粉末激光烧结",
+     "en": "TPU powder laser sintering",
+     "year": 2016,
+     "note": "弹性体粉末激光烧结成形柔韧部件，用于缓冲结构与人机接触件。",
+     "deps": [
+      "nylon_laser_sintering"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "定向能量沉积与薄片叠合增材制造技术",
+   "items": [
+    {
+     "id": "laser_cladding_repair",
+     "name": "激光熔覆修复",
+     "en": "Laser cladding repair",
+     "year": 1981,
+     "note": "激光熔化同步送入的金属粉末在磨损面逐层堆敷，修复模具与叶片。",
+     "deps": [
+      "lasers",
+      "iron"
+     ]
+    },
+    {
+     "id": "cold_spray_deposition",
+     "name": "冷喷涂沉积增材",
+     "en": "Cold spray additive deposition",
+     "year": 1985,
+     "note": "高速固态颗粒撞击基体塑性变形结合成涂层与结构，可修复低温敏感件。",
+     "deps": [
+      "iron",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "laminated_object_manufacturing",
+     "name": "分层实体制造",
+     "en": "Laminated object manufacturing",
+     "year": 1991,
+     "note": "激光逐层切割箔材并经热辊辊压粘结成实体，是最早的叠层增材工艺。",
+     "deps": [
+      "lasers",
+      "computer"
+     ]
+    },
+    {
+     "id": "sprayformed_tooling",
+     "name": "喷涂成形工具",
+     "en": "Sprayformed tooling",
+     "year": 1995,
+     "note": "把金属喷涂到母模表面堆积成壳并背衬成形模具，快速制造注塑与冲压模。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "laser_engineered_net_shaping",
+     "name": "激光近净成形",
+     "en": "Laser engineered net shaping",
+     "year": 1996,
+     "note": "同轴送粉激光熔化逐层沉积金属，可成形与修复高性能合金零件。",
+     "deps": [
+      "laser_cladding_repair"
+     ]
+    },
+    {
+     "id": "electron_beam_wire_additive",
+     "name": "电子束送丝增材成形",
+     "en": "Electron beam wire-feed additive",
+     "year": 2002,
+     "note": "真空电子束熔化金属丝逐层堆敷大型结构，早期用于航天试验件。",
+     "deps": [
+      "semiconductors",
+      "computer"
+     ]
+    },
+    {
+     "id": "laser_wire_deposition",
+     "name": "激光送丝增材成形",
+     "en": "Laser wire-feed deposition",
+     "year": 2003,
+     "note": "以金属丝材为原料经激光熔化逐层堆敷，材料利用率高、无粉末飞溅。",
+     "deps": [
+      "lasers"
+     ]
+    },
+    {
+     "id": "ultrasonic_additive_manufacturing",
+     "name": "超声固相叠层增材",
+     "en": "Ultrasonic additive manufacturing",
+     "year": 2003,
+     "note": "超声振动使金属箔层间固相焊合后数控铣削轮廓，可内嵌传感元件。",
+     "deps": [
+      "electricity",
+      "cnc"
+     ]
+    },
+    {
+     "id": "paper_sheet_lamination_printing",
+     "name": "纸张叠层彩色打印",
+     "en": "Selective deposition lamination",
+     "year": 2005,
+     "note": "逐层粘合彩色纸张并按截面切割成形，制作低成本彩色立体模型。",
+     "deps": [
+      "laminated_object_manufacturing",
+      "computer"
+     ]
+    },
+    {
+     "id": "wire_arc_additive_manufacturing",
+     "name": "电弧增材制造",
+     "en": "Wire arc additive manufacturing",
+     "year": 2007,
+     "note": "以熔化极电弧为热源逐层堆敷丝材成形大型金属件，沉积率高、成本低。",
+     "deps": [
+      "electricity",
+      "iron"
+     ]
+    },
+    {
+     "id": "hybrid_additive_subtractive_machine",
+     "name": "增减材复合加工",
+     "en": "Hybrid additive-subtractive manufacturing",
+     "year": 2012,
+     "note": "沉积成形与铣削精加工集成于一台机床，兼顾成形效率与表面精度。",
+     "deps": [
+      "laser_engineered_net_shaping",
+      "cnc"
+     ]
+    },
+    {
+     "id": "plasma_arc_additive_forming",
+     "name": "等离子弧堆敷增材",
+     "en": "Plasma arc additive forming",
+     "year": 2012,
+     "note": "等离子弧熔化焊丝或粉末逐层堆敷成形大型件，沉积效率高。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "friction_stir_additive_deposition",
+     "name": "搅拌摩擦沉积增材",
+     "en": "Additive friction stir deposition",
+     "year": 2014,
+     "note": "旋转摩擦热使填充棒料塑性流动沉积成形，组织细密、无熔化缺陷。",
+     "deps": [
+      "electricity",
+      "iron"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "粘合剂喷射与材料喷射增材制造技术",
+   "items": [
+    {
+     "id": "binder_jetting_3dp",
+     "name": "粘合剂喷射成形",
+     "en": "Binder jetting (3DP)",
+     "year": 1993,
+     "note": "麻省理工萨克斯团队喷墨头喷洒粘结剂把粉层粘合成形，粉床间接成形鼻祖。",
+     "deps": [
+      "ic",
+      "computer"
+     ]
+    },
+    {
+     "id": "direct_shell_production_casting",
+     "name": "直接制壳铸造",
+     "en": "Direct shell production casting",
+     "year": 1994,
+     "note": "喷墨打印陶瓷壳型直接浇铸金属件，实现无模具精密铸造。",
+     "deps": [
+      "binder_jetting_3dp"
+     ]
+    },
+    {
+     "id": "sand_mold_core_printing",
+     "name": "铸造砂型砂芯打印",
+     "en": "Sand mold and core printing",
+     "year": 1995,
+     "note": "喷射树脂把型砂逐层粘结成形砂型砂芯，取代木模实现无模铸造。",
+     "deps": [
+      "binder_jetting_3dp"
+     ]
+    },
+    {
+     "id": "wax_multijet_printing",
+     "name": "喷蜡打印成形",
+     "en": "Multi-jet wax printing",
+     "year": 1996,
+     "note": "喷墨头喷射可熔蜡滴逐层凝固成模样，直接用于失蜡铸造。",
+     "deps": [
+      "ic"
+     ]
+    },
+    {
+     "id": "full_color_plaster_printing",
+     "name": "全彩石膏粉打印",
+     "en": "Color plaster powder printing",
+     "year": 1997,
+     "note": "彩色墨水与粘结剂同步喷印石膏粉，制造全彩立体模型与雕塑。",
+     "deps": [
+      "binder_jetting_3dp"
+     ]
+    },
+    {
+     "id": "photopolymer_inkjet_printing",
+     "name": "光敏树脂喷墨打印",
+     "en": "PolyJet material jetting",
+     "year": 2000,
+     "note": "喷头逐滴喷射光敏树脂并立即紫外固化，层层叠加成形高精度树脂件。",
+     "deps": [
+      "ic",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "multimaterial_inkjet_printing",
+     "name": "多材料喷墨打印",
+     "en": "Multi-material jetting",
+     "year": 2007,
+     "note": "多种光敏材料按像素喷射混合，一次成形软硬渐变与彩色数字化材料。",
+     "deps": [
+      "photopolymer_inkjet_printing"
+     ]
+    },
+    {
+     "id": "casting_wax_pattern_jetting",
+     "name": "铸造蜡模喷墨打印",
+     "en": "Investment casting pattern jetting",
+     "year": 2004,
+     "note": "喷墨打印熔模铸造用树脂蜡模样，支撑首饰与精铸行业快速制模。",
+     "deps": [
+      "photopolymer_inkjet_printing"
+     ]
+    },
+    {
+     "id": "ceramic_core_printing",
+     "name": "陶瓷型芯喷射打印",
+     "en": "Ceramic core binder jetting",
+     "year": 2008,
+     "note": "打印复杂陶瓷型芯供航空叶片精密铸造，突破传统压制芯的构型限制。",
+     "deps": [
+      "binder_jetting_3dp"
+     ]
+    },
+    {
+     "id": "bone_ceramic_jetting",
+     "name": "骨修复陶瓷支架打印",
+     "en": "Binder jetted bone ceramic scaffolds",
+     "year": 2012,
+     "note": "粘合剂喷射成形多孔磷酸钙支架，用于骨缺损修复实验与小规模临床。",
+     "deps": [
+      "binder_jetting_3dp"
+     ]
+    },
+    {
+     "id": "droplet_metal_jetting",
+     "name": "液态金属微滴打印",
+     "en": "Droplet-based metal jetting",
+     "year": 2012,
+     "note": "按需喷射低熔点合金液滴逐层凝固成形，属金属喷射增材研究路线。",
+     "deps": [
+      "ic"
+     ]
+    },
+    {
+     "id": "metal_binder_jetting",
+     "name": "金属粘合剂喷射打印",
+     "en": "Metal binder jetting",
+     "year": 2016,
+     "note": "金属粉层喷射粘结剂成形生坯后烧结致密，适合大批量小金属件。",
+     "deps": [
+      "binder_jetting_3dp"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "生物、医学与食品增材制造技术",
+   "items": [
+    {
+     "id": "anatomical_model_printing",
+     "name": "医学解剖模型打印",
+     "en": "Printed anatomical models",
+     "year": 1994,
+     "note": "基于医学影像打印病灶与骨骼模型，辅助术前规划与医患沟通。",
+     "deps": [
+      "stereolithography",
+      "medical_imaging"
+     ]
+    },
+    {
+     "id": "hearing_aid_shell_printing",
+     "name": "助听器外壳增材制造",
+     "en": "3D printed hearing aid shells",
+     "year": 2001,
+     "note": "按耳道扫描数据批量打印定制助听器外壳，成为最早大规模量产应用。",
+     "deps": [
+      "stereolithography"
+     ]
+    },
+    {
+     "id": "aligner_model_printing",
+     "name": "隐形矫治牙模打印",
+     "en": "Printed orthodontic aligner models",
+     "year": 2001,
+     "note": "批量打印矫治器牙颌模型再热压成型透明牙套，支撑隐形正畸产业。",
+     "deps": [
+      "stereolithography"
+     ]
+    },
+    {
+     "id": "tissue_scaffold_printing",
+     "name": "组织工程支架打印",
+     "en": "3D printed tissue scaffolds",
+     "year": 2002,
+     "note": "可降解聚合物与陶瓷打印成多孔支架，引导骨与软骨组织再生。",
+     "deps": [
+      "fused_deposition_modeling",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "inkjet_cell_printing",
+     "name": "喷墨细胞打印",
+     "en": "Inkjet-based cell printing",
+     "year": 2003,
+     "note": "喷墨喷嘴按图案沉积含细胞液滴，是最早的细胞级生物打印方式。",
+     "deps": [
+      "ic",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "laser_assisted_bioprinting",
+     "name": "激光辅助生物打印",
+     "en": "Laser-assisted bioprinting",
+     "year": 2004,
+     "note": "激光脉冲把含细胞墨水从供体膜转移至基板，实现高精度无喷嘴打印。",
+     "deps": [
+      "lasers"
+     ]
+    },
+    {
+     "id": "surgical_guide_printing",
+     "name": "手术导板增材打印",
+     "en": "3D printed surgical guides",
+     "year": 2005,
+     "note": "按患者解剖定制打印截骨与钻孔导板，提高手术精度并缩短时间。",
+     "deps": [
+      "anatomical_model_printing"
+     ]
+    },
+    {
+     "id": "dental_metal_printing",
+     "name": "牙科金属打印",
+     "en": "Dental metal 3D printing",
+     "year": 2006,
+     "note": "钴铬与钛粉末床打印牙冠、固定桥与支架，替代传统铸造。",
+     "deps": [
+      "cobalt_chrome_powder_bed_printing"
+     ]
+    },
+    {
+     "id": "hip_cup_implant_printing",
+     "name": "髋臼假体增材制造",
+     "en": "3D printed acetabular cups",
+     "year": 2007,
+     "note": "电子束熔融打印多孔髋臼杯，骨长入界面佳，成为骨科植入体先例。",
+     "deps": [
+      "electron_beam_melting"
+     ]
+    },
+    {
+     "id": "extrusion_bioprinting",
+     "name": "挤出式生物打印",
+     "en": "Extrusion-based bioprinting",
+     "year": 2008,
+     "note": "气动或螺杆挤出含水凝胶与细胞逐层堆叠，构建复杂三维细胞结构。",
+     "deps": [
+      "direct_ink_writing",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "microvalve_bioprinting",
+     "name": "微阀液滴生物打印",
+     "en": "Microvalve-based bioprinting",
+     "year": 2008,
+     "note": "电磁微阀按需喷射高黏度含细胞墨水，兼顾细胞活性与通量。",
+     "deps": [
+      "ic"
+     ]
+    },
+    {
+     "id": "vascular_tissue_bioprinting",
+     "name": "血管结构生物打印",
+     "en": "Vascularized tissue bioprinting",
+     "year": 2009,
+     "note": "打印可灌注血管网络并嵌入细胞基质，是无支架血管构建的研究装置。",
+     "deps": [
+      "extrusion_bioprinting"
+     ]
+    },
+    {
+     "id": "chocolate_3d_printing",
+     "name": "巧克力3D打印",
+     "en": "Chocolate 3D printing",
+     "year": 2011,
+     "note": "温控挤出巧克力熔体逐层成形复杂造型，进入甜品定制应用。",
+     "deps": [
+      "direct_ink_writing"
+     ]
+    },
+    {
+     "id": "food_paste_printing",
+     "name": "食品浆料3D打印",
+     "en": "Food paste 3D printing",
+     "year": 2012,
+     "note": "挤出土豆泥等可食用浆料逐层成形，面向吞咽障碍与定制营养餐。",
+     "deps": [
+      "direct_ink_writing"
+     ]
+    },
+    {
+     "id": "mandible_implant_printing",
+     "name": "下颌骨植入体打印",
+     "en": "3D printed mandible implant",
+     "year": 2012,
+     "note": "定制钛合金下颌骨植入体成功植入患者，标志定制化颌面重建落地。",
+     "deps": [
+      "titanium_powder_bed_printing"
+     ]
+    },
+    {
+     "id": "tracheal_splint_printing",
+     "name": "气管外支架打印",
+     "en": "3D printed tracheal splint",
+     "year": 2012,
+     "note": "可降解材料打印气管外支架植入患儿，保持气道通畅后逐步吸收。",
+     "deps": [
+      "tissue_scaffold_printing"
+     ]
+    },
+    {
+     "id": "cranial_implant_printing",
+     "name": "颅骨修复体打印",
+     "en": "3D printed cranial implants",
+     "year": 2013,
+     "note": "按颅骨缺损定制打印钛或PEEK修复体，外形匹配且缩短手术时间。",
+     "deps": [
+      "titanium_powder_bed_printing"
+     ]
+    },
+    {
+     "id": "prosthetic_socket_printing",
+     "name": "假肢接受腔打印",
+     "en": "3D printed prosthetic sockets",
+     "year": 2014,
+     "note": "扫描残肢数据打印定制假肢接受腔，快速低成本地服务截肢者。",
+     "deps": [
+      "fused_deposition_modeling"
+     ]
+    },
+    {
+     "id": "orthotic_brace_printing",
+     "name": "3D打印矫形支具",
+     "en": "3D printed orthoses",
+     "year": 2014,
+     "note": "个性化打印腕手、踝足矫形支具，透气轻量且贴合度高。",
+     "deps": [
+      "fused_deposition_modeling"
+     ]
+    },
+    {
+     "id": "pelvic_implant_printing",
+     "name": "骨盆假体打印",
+     "en": "3D printed pelvic implants",
+     "year": 2014,
+     "note": "定制多孔钛骨盆假体重建肿瘤切除后的骨盆缺损，恢复承重功能。",
+     "deps": [
+      "titanium_powder_bed_printing"
+     ]
+    },
+    {
+     "id": "drug_3d_printing",
+     "name": "药物3D打印",
+     "en": "3D printed pharmaceuticals",
+     "year": 2015,
+     "note": "粘合剂喷射打印多孔药片获美国FDA批准，实现高载药速溶制剂。",
+     "deps": [
+      "binder_jetting_3dp",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "titanium_mesh_printing",
+     "name": "钛网修补体打印",
+     "en": "3D printed titanium mesh",
+     "year": 2015,
+     "note": "定制多孔钛网用于骨缺损与胸壁修补，外形贴合并引导组织长入。",
+     "deps": [
+      "titanium_powder_bed_printing"
+     ]
+    },
+    {
+     "id": "sternum_implant_printing",
+     "name": "胸骨植入体打印",
+     "en": "3D printed sternum implant",
+     "year": 2015,
+     "note": "定制钛合金胸骨与肋骨一体化植入体，用于胸壁肿瘤切除重建。",
+     "deps": [
+      "titanium_powder_bed_printing"
+     ]
+    },
+    {
+     "id": "denture_base_printing",
+     "name": "义齿基托打印",
+     "en": "3D printed denture bases",
+     "year": 2016,
+     "note": "打印树脂义齿基托并配合打印牙列，实现全流程数字化修复。",
+     "deps": [
+      "stereolithography"
+     ]
+    },
+    {
+     "id": "ocular_prosthesis_printing",
+     "name": "义眼打印",
+     "en": "3D printed ocular prostheses",
+     "year": 2016,
+     "note": "按眼眶结构打印定制义眼，外观仿真度高并缩短制作周期。",
+     "deps": [
+      "stereolithography"
+     ]
+    },
+    {
+     "id": "peripheral_nerve_guide_printing",
+     "name": "神经导管打印",
+     "en": "3D printed nerve guidance conduits",
+     "year": 2016,
+     "note": "打印可降解微通道神经导管引导周围神经再生，处于临床前与转化阶段。",
+     "deps": [
+      "tissue_scaffold_printing"
+     ]
+    },
+    {
+     "id": "spinal_fusion_cage_printing",
+     "name": "椎间融合器增材打印",
+     "en": "3D printed spinal cages",
+     "year": 2016,
+     "note": "多孔钛椎间融合器打印并通过监管认证，用于脊柱融合手术。",
+     "deps": [
+      "titanium_powder_bed_printing"
+     ]
+    },
+    {
+     "id": "in_situ_skin_bioprinting",
+     "name": "原位皮肤生物打印",
+     "en": "In situ skin bioprinting",
+     "year": 2018,
+     "note": "扫描伤口后直接在创面打印细胞凝胶敷料，加速烧伤皮肤修复。",
+     "deps": [
+      "extrusion_bioprinting"
+     ]
+    },
+    {
+     "id": "cornea_bioprinting",
+     "name": "角膜打印",
+     "en": "3D bioprinted cornea",
+     "year": 2018,
+     "note": "以角膜干细胞墨水打印同心圆结构角膜基质，研究性人工角膜原型。",
+     "deps": [
+      "extrusion_bioprinting"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "建筑与大型结构增材制造技术",
+   "items": [
+    {
+     "id": "contour_crafting",
+     "name": "轮廓工艺",
+     "en": "Contour crafting",
+     "year": 1996,
+     "note": "科什内维斯提出挤出成形墙体并自动抹平表面，混凝土房屋打印的先导。",
+     "deps": [
+      "robot",
+      "cement"
+     ]
+    },
+    {
+     "id": "d_shape_printing",
+     "name": "D形建筑喷射打印",
+     "en": "D-Shape printing",
+     "year": 2006,
+     "note": "喷头喷洒粘结剂固化砂层逐层成形大型石质结构，打印亭台等构筑物。",
+     "deps": [
+      "binder_jetting_3dp",
+      "cement"
+     ]
+    },
+    {
+     "id": "gantry_concrete_printing",
+     "name": "龙门式混凝土打印",
+     "en": "Gantry concrete 3D printing",
+     "year": 2012,
+     "note": "龙门桁架带动挤出头按切片轨迹堆敷砂浆，是现场打印房屋的常用构型。",
+     "deps": [
+      "contour_crafting",
+      "cement"
+     ]
+    },
+    {
+     "id": "onsite_house_printing",
+     "name": "现场整体打印住宅",
+     "en": "On-site printed houses",
+     "year": 2014,
+     "note": "整层连续挤出混凝土打印墙体并现场组装成住宅，实现建筑无模化。",
+     "deps": [
+      "gantry_concrete_printing"
+     ]
+    },
+    {
+     "id": "robotic_arm_concrete_printing",
+     "name": "机械臂混凝土打印",
+     "en": "Robotic arm concrete printing",
+     "year": 2014,
+     "note": "机械臂按六轴轨迹挤出打印曲面墙体与自由造型，突破龙门尺寸限制。",
+     "deps": [
+      "contour_crafting",
+      "robot"
+     ]
+    },
+    {
+     "id": "concrete_bridge_printing",
+     "name": "混凝土桥打印",
+     "en": "3D printed concrete bridge",
+     "year": 2016,
+     "note": "打印预制混凝土节段拼装成人行桥，完成结构级建筑打印工程验证。",
+     "deps": [
+      "gantry_concrete_printing"
+     ]
+    },
+    {
+     "id": "printed_public_building",
+     "name": "整体打印公共建筑",
+     "en": "3D printed public building",
+     "year": 2016,
+     "note": "模块化打印墙体并现场组装的办公建筑投入使用，展示打印建造可行性。",
+     "deps": [
+      "onsite_house_printing"
+     ]
+    },
+    {
+     "id": "prefab_element_printing",
+     "name": "预制构件工厂打印",
+     "en": "Prefabricated element 3D printing",
+     "year": 2017,
+     "note": "工厂内连续打印装饰与结构预制件再运至现场安装，利于质量控制。",
+     "deps": [
+      "robotic_arm_concrete_printing"
+     ]
+    },
+    {
+     "id": "in_situ_metal_bridge_printing",
+     "name": "现场机器人打印金属桥",
+     "en": "Robotically printed steel bridge",
+     "year": 2018,
+     "note": "六轴机械臂现场电弧增材打印不锈钢桥并完成载荷验证。",
+     "deps": [
+      "wire_arc_additive_manufacturing",
+      "robot"
+     ]
+    },
+    {
+     "id": "lunar_regolith_printing",
+     "name": "月壤原位打印研究",
+     "en": "Lunar regolith additive printing",
+     "year": 2019,
+     "note": "以模拟月壤为原料开展激光与粘结剂打印试验，探索地外基建成形。",
+     "deps": [
+      "d_shape_printing",
+      "lasers"
+     ]
+    },
+    {
+     "id": "printed_wind_tower_base",
+     "name": "风机塔筒基础打印",
+     "en": "3D printed wind turbine tower base",
+     "year": 2022,
+     "note": "现场打印风电塔筒底座环形结构，免模具浇筑并加快施工。",
+     "deps": [
+      "gantry_concrete_printing"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "电子、微纳与特种功能增材制造技术",
+   "items": [
+    {
+     "id": "aerosol_jet_printing",
+     "name": "气溶胶喷射打印",
+     "en": "Aerosol jet printing",
+     "year": 2003,
+     "note": "气溶胶聚焦喷射导电墨水书写精细线路，可在曲面基材打印电子功能层。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "inkjet_printed_electronics",
+     "name": "喷墨打印电子电路",
+     "en": "Inkjet printed electronics",
+     "year": 2004,
+     "note": "喷墨沉积银等导电墨水制成电极与线路，柔性电子低成本化的关键。",
+     "deps": [
+      "semiconductors",
+      "ic"
+     ]
+    },
+    {
+     "id": "conformal_cooling_mold_printing",
+     "name": "随形冷却水道模具打印",
+     "en": "Conformal cooling channel tooling",
+     "year": 2005,
+     "note": "金属打印注塑模具并加工贴近型腔的随形水道，显著缩短冷却周期。",
+     "deps": [
+      "tool_steel_powder_bed_printing"
+     ]
+    },
+    {
+     "id": "am_part_hip_treatment",
+     "name": "增材件热等静压处理",
+     "en": "Hot isostatic pressing of AM parts",
+     "year": 2006,
+     "note": "粉末床金属打印件经热等静压消除内部孔隙，疲劳性能接近锻件。",
+     "deps": [
+      "selective_laser_melting"
+     ]
+    },
+    {
+     "id": "conformal_antenna_printing",
+     "name": "共形天线打印",
+     "en": "Printed conformal antennas",
+     "year": 2010,
+     "note": "在飞机蒙皮等曲面直接打印天线电路，改善气动与电性能。",
+     "deps": [
+      "aerosol_jet_printing"
+     ]
+    },
+    {
+     "id": "in_process_monitoring_am",
+     "name": "增材过程在线监控",
+     "en": "In-process monitoring for AM",
+     "year": 2010,
+     "note": "以熔池相机、高温计与光谱实时监测打印缺陷，支撑金属打印质量控制。",
+     "deps": [
+      "selective_laser_melting",
+      "camera"
+     ]
+    },
+    {
+     "id": "four_d_printing",
+     "name": "4D打印研究",
+     "en": "4D printing",
+     "year": 2013,
+     "note": "打印形状记忆或吸水变形结构随环境时间变化自重构，处于研究演示阶段。",
+     "deps": [
+      "multimaterial_extrusion",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "printed_microbattery",
+     "name": "3D打印微型电池",
+     "en": "3D printed microbattery",
+     "year": 2013,
+     "note": "直写打印叉指电极的微型锂离子电池，在哈佛实验室演示成功。",
+     "deps": [
+      "direct_ink_writing",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "embedded_electronics_printing",
+     "name": "内嵌电子元件打印",
+     "en": "Printing embedded electronics",
+     "year": 2014,
+     "note": "多材料打印结构的同时嵌入导电走线与元件，实现结构电子一体化。",
+     "deps": [
+      "fused_deposition_modeling",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "additive_lattice_structure",
+     "name": "增材点阵结构",
+     "en": "Additively manufactured lattice structures",
+     "year": 2014,
+     "note": "以点阵胞元替代实体填充，打印件在减重的同时保持吸能与刚度。",
+     "deps": [
+      "selective_laser_melting"
+     ]
+    },
+    {
+     "id": "zero_gravity_3d_printing",
+     "name": "空间站零重力打印",
+     "en": "Zero-gravity 3D printing",
+     "year": 2014,
+     "note": "国际空间站安装熔融沉积打印机，实现在轨制造工具与备件。",
+     "deps": [
+      "fused_deposition_modeling"
+     ]
+    },
+    {
+     "id": "am_surface_finishing",
+     "name": "打印件表面光整",
+     "en": "Surface finishing for AM parts",
+     "year": 2015,
+     "note": "以化学、电解或磨料流方法光整金属打印件，改善表面质量与疲劳寿命。",
+     "deps": [
+      "selective_laser_melting"
+     ]
+    },
+    {
+     "id": "am_heat_treatment",
+     "name": "打印件专用热处理",
+     "en": "Dedicated heat treatment for AM",
+     "year": 2015,
+     "note": "针对打印态组织制定去应力、固溶与时效制度，恢复零件力学性能。",
+     "deps": [
+      "selective_laser_melting"
+     ]
+    },
+    {
+     "id": "microfluidic_chip_printing",
+     "name": "微流控芯片3D打印",
+     "en": "3D printed microfluidics",
+     "year": 2015,
+     "note": "光固化逐层成形透明微通道芯片，快速迭代实验室器件。",
+     "deps": [
+      "stereolithography"
+     ]
+    },
+    {
+     "id": "molten_glass_3d_printing",
+     "name": "熔融玻璃3D打印",
+     "en": "Molten glass 3D printing",
+     "year": 2015,
+     "note": "高温坩埚挤出熔融玻璃逐层堆叠退火成形，制造光学与艺术构件。",
+     "deps": [
+      "direct_ink_writing",
+      "electricity"
+     ]
+    },
+    {
+     "id": "rf_microwave_part_printing",
+     "name": "射频微波器件打印",
+     "en": "3D printed RF and microwave components",
+     "year": 2016,
+     "note": "金属打印波导与馈电器件，轻量化并简化航天通信系统装配。",
+     "deps": [
+      "aluminum_powder_bed_printing"
+     ]
+    },
+    {
+     "id": "electromagnetic_metamaterial_printing",
+     "name": "电磁超材料打印",
+     "en": "3D printed electromagnetic metamaterials",
+     "year": 2016,
+     "note": "打印三维微结构超材料单元实现人工电磁响应，处于研究与样件验证阶段。",
+     "deps": [
+      "two_photon_polymerization"
+     ]
+    },
+    {
+     "id": "large_metal_structural_printing",
+     "name": "大型金属结构增材制造",
+     "en": "Large-scale metal structural AM",
+     "year": 2016,
+     "note": "电弧与电子束工艺打印船用螺旋桨等米级金属构件，进入工程应用。",
+     "deps": [
+      "wire_arc_additive_manufacturing"
+     ]
+    },
+    {
+     "id": "functionally_gradient_printing",
+     "name": "功能梯度材料打印",
+     "en": "Functionally graded material printing",
+     "year": 2018,
+     "note": "按位置连续调配成分打印梯度材料，缓解界面失配，处于研究验证阶段。",
+     "deps": [
+      "direct_ink_writing",
+      "chemistry"
+     ]
+    }
+   ]
+  }
+ ]
+}

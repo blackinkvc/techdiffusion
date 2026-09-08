@@ -1,0 +1,1670 @@
+{
+ "cat": "basic",
+ "catName": "科学基础与方法",
+ "sub": "earthsci",
+ "subName": "地球科学",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "astronomy",
+  "mathematics",
+  "physics",
+  "chemistry",
+  "optics",
+  "scientific_method",
+  "photography",
+  "electromagnetism",
+  "radio",
+  "telegraph",
+  "computer",
+  "satellite",
+  "camera",
+  "lasers",
+  "gps"
+ ],
+ "families": [
+  {
+   "name": "测绘与地理信息",
+   "items": [
+    {
+     "id": "clay_tablet_cartography",
+     "name": "泥板地图",
+     "en": "Clay tablet maps",
+     "year": -2300,
+     "note": "古巴比伦以泥板刻画城市与水道，是最早保存下来的地形图绘载体。",
+     "deps": [
+      "mathematics",
+      "writing"
+     ]
+    },
+    {
+     "id": "cadastral_survey",
+     "name": "地籍丈量",
+     "en": "Cadastral land surveying",
+     "year": -2500,
+     "note": "古埃及以绳尺丈量尼罗河洪泛后的田界，形成按地界征税的测量制度。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "cardinal_direction_system",
+     "name": "方位与罗盘定向",
+     "en": "Compass-based orientation",
+     "year": 1100,
+     "note": "以磁针定向结合风位图绘制海图，使远洋航线记录成为可能。",
+     "deps": [
+      "magnets",
+      "mathematics"
+     ]
+    },
+    {
+     "id": "portolan_chart",
+     "name": "波特兰海图",
+     "en": "Portolan chart",
+     "year": 1300,
+     "note": "以罗盘方位线和实测距离连绘海岸，是近代精确航海图的先驱。",
+     "deps": [
+      "cardinal_direction_system"
+     ]
+    },
+    {
+     "id": "graticule_mapping",
+     "name": "经纬网格地图投影",
+     "en": "Latitude-longitude grid mapping",
+     "year": 150,
+     "note": "托勒密系统用经纬度定位并设计圆锥投影，奠定坐标化制图传统。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "triangulation_survey",
+     "name": "三角测量",
+     "en": "Triangulation survey",
+     "year": 1615,
+     "note": "斯涅尔以基线与三角形网推算远距坐标，成为大地测量与地形图控制基础。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "meridian_arc_measure",
+     "name": "子午线弧度实测",
+     "en": "Meridian arc measurement",
+     "year": 1736,
+     "note": "拉普兰与秘鲁考察队测子午线弧长，确证地球扁率并确立米制长度标准。",
+     "deps": [
+      "triangulation_survey"
+     ]
+    },
+    {
+     "id": "geodetic_survey_network",
+     "name": "国家大地测量网",
+     "en": "National geodetic network",
+     "year": 1791,
+     "note": "以天文经纬与三角锁布设全国控制网，统一地图基准与地籍框架。",
+     "deps": [
+      "triangulation_survey"
+     ]
+    },
+    {
+     "id": "contour_mapping",
+     "name": "等高线地形图",
+     "en": "Contour mapping",
+     "year": 1791,
+     "note": "以等高线表示起伏的测绘表示法，使地形三维信息可用二维图精确传达。"
+    },
+    {
+     "id": "plane_table_topography",
+     "name": "平板仪地形测图",
+     "en": "Plane table surveying",
+     "year": 1770,
+     "note": "照准仪配合平板当场绘图的野外测法，为近代大比例尺地形图的主力手段。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "isogonic_map",
+     "name": "磁偏角等值线图",
+     "en": "Isogonic chart",
+     "year": 1701,
+     "note": "哈雷绘制大西洋磁偏角等值线，将罗盘修正系统化并指示磁图应用。",
+     "deps": [
+      "cardinal_direction_system",
+      "mathematics"
+     ]
+    },
+    {
+     "id": "photogrammetry",
+     "name": "摄影测量",
+     "en": "Photogrammetry",
+     "year": 1858,
+     "note": "从空中与地面照片重建立体几何并测图，取代部分野外逐点实测。",
+     "deps": [
+      "photography",
+      "optics"
+     ]
+    },
+    {
+     "id": "aerial_survey_mapping",
+     "name": "航空摄影测量",
+     "en": "Aerial photogrammetry",
+     "year": 1915,
+     "note": "飞机搭载相机连续摄影后立体测图，实现大面积地形快速测绘。",
+     "deps": [
+      "photogrammetry",
+      "airplane"
+     ]
+    },
+    {
+     "id": "electronic_distance_measurement",
+     "name": "电磁波测距",
+     "en": "Electronic distance measurement",
+     "year": 1947,
+     "note": "以光波或微波相位法直接测距，取代钢尺基线使测距精度大幅提高。",
+     "deps": [
+      "electromagnetism",
+      "optics"
+     ]
+    },
+    {
+     "id": "remote_sensing_satellite",
+     "name": "对地观测卫星遥感",
+     "en": "Earth observation satellite remote sensing",
+     "year": 1972,
+     "note": "陆地卫星等以多光谱扫描定期成像地表，实现资源与环境的全球监测。",
+     "deps": [
+      "satellite"
+     ]
+    },
+    {
+     "id": "synthetic_aperture_radar",
+     "name": "合成孔径雷达",
+     "en": "Synthetic aperture radar",
+     "year": 1978,
+     "note": "以卫星雷达多次回波合成高分辨地面图像，能穿云透雨全天候观测。",
+     "deps": [
+      "satellite",
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "lidar_terrain_mapping",
+     "name": "激光雷达地形测绘",
+     "en": "LiDAR terrain mapping",
+     "year": 1995,
+     "note": "机载激光扫描直接获取地表三维点云，可穿透植被成图。",
+     "deps": [
+      "lasers",
+      "airplane"
+     ]
+    },
+    {
+     "id": "geographic_information_system",
+     "name": "地理信息系统",
+     "en": "Geographic information system",
+     "year": 1963,
+     "note": "以计算机叠合管理空间与属性数据，支撑制图、规划与空间分析。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "satellite_positioning_survey",
+     "name": "卫星定位测量",
+     "en": "GNSS surveying",
+     "year": 1991,
+     "note": "以全球导航卫星系统作控制测量，厘米级定位使传统测量流程大幅简化。",
+     "deps": [
+      "gps"
+     ]
+    },
+    {
+     "id": "digital_cartography",
+     "name": "数字化制图与电子地图",
+     "en": "Digital and web cartography",
+     "year": 1985,
+     "note": "把地图转为矢量与栅格数据，经屏幕发布与导航软件向公众普及。",
+     "deps": [
+      "computer",
+      "internet"
+     ]
+    },
+    {
+     "id": "sea_level_tide_gauge",
+     "name": "验潮站",
+     "en": "Tide gauge station",
+     "year": 1831,
+     "note": "连续记录潮位升降的岸站，为海图深度基准与海平面变化研究提供数据。",
+     "deps": [
+      "mathematics"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "矿物学与岩石学",
+   "items": [
+    {
+     "id": "mineral_streak_test",
+     "name": "条痕与硬度鉴定",
+     "en": "Mineral streak and hardness testing",
+     "year": 1700,
+     "note": "以刻划与条痕板等简易手段区分矿物，是野外识矿的基础方法。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "mohs_scale",
+     "name": "莫氏硬度计",
+     "en": "Mohs hardness scale",
+     "year": 1812,
+     "note": "莫斯以十种标准矿物排列硬度阶，成为矿物比对的通用标尺。",
+     "deps": [
+      "mineral_streak_test"
+     ]
+    },
+    {
+     "id": "polarizing_microscope",
+     "name": "偏光显微镜",
+     "en": "Polarizing microscope",
+     "year": 1828,
+     "note": "尼科尔以冰洲石偏光镜观测矿物光性，岩石薄片鉴定由此成为岩矿研究手段。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "thin_section",
+     "name": "岩石薄片技术",
+     "en": "Rock thin section technique",
+     "year": 1850,
+     "note": "把岩石磨至零点零三毫米薄片透光观察，矿物组合与结构得以系统描述。",
+     "deps": [
+      "polarizing_microscope"
+     ]
+    },
+    {
+     "id": "igneous_rock_classification",
+     "name": "岩浆岩分类学",
+     "en": "Igneous rock classification",
+     "year": 1880,
+     "note": "按矿物组成与结晶程度划分侵入喷出岩类，奠定岩石学命名体系。",
+     "deps": [
+      "thin_section"
+     ]
+    },
+    {
+     "id": "metamorphic_grade",
+     "name": "变质程度标定",
+     "en": "Metamorphic grade concept",
+     "year": 1880,
+     "note": "以特征矿物组合划分变质相与变质带，重建岩石变质历史。",
+     "deps": [
+      "thin_section",
+      "thermodynamics"
+     ]
+    },
+    {
+     "id": "sedimentary_texture",
+     "name": "沉积结构构造分析",
+     "en": "Sedimentary texture analysis",
+     "year": 1870,
+     "note": "据层理波痕与粒度等恢复沉积环境，为地层对比提供成因标志。",
+     "deps": [
+      "thin_section"
+     ]
+    },
+    {
+     "id": "xray_diffraction_mineralogy",
+     "name": "X射线衍射矿物分析",
+     "en": "X-ray diffraction mineralogy",
+     "year": 1913,
+     "note": "以晶体衍射谱鉴定矿物物相与结构，使矿物学建立在原子周期之上。",
+     "deps": [
+      "electromagnetism",
+      "physics"
+     ]
+    },
+    {
+     "id": "electron_microprobe",
+     "name": "电子探针微区分析",
+     "en": "Electron microprobe analysis",
+     "year": 1951,
+     "note": "以聚焦电子束激发特征X射线测微区化学成分，是矿物原位定量分析利器。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "fluid_inclusion",
+     "name": "流体包裹体测温",
+     "en": "Fluid inclusion microthermometry",
+     "year": 1858,
+     "note": "加热观察矿物包裹体内气泡消失温度，反推成矿流体温度压力。",
+     "deps": [
+      "polarizing_microscope"
+     ]
+    },
+    {
+     "id": "ore_prospecting_geochem",
+     "name": "化探找矿",
+     "en": "Geochemical prospecting",
+     "year": 1930,
+     "note": "系统采样分析土壤水系沉积物金属异常，圈定矿化远景区。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "heavy_mineral_analysis",
+     "name": "重砂矿物分析",
+     "en": "Heavy mineral analysis",
+     "year": 1850,
+     "note": "以重液淘洗分离碎屑重矿物找金铂锡等，同时用于物源示踪。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "mineral_blowpipe_test",
+     "name": "吹管分析",
+     "en": "Blowpipe analysis",
+     "year": 1750,
+     "note": "以吹管火焰烧试矿物判别元素，是十九世纪野外化学鉴矿的常备手段。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "gem_testing",
+     "name": "宝石鉴定",
+     "en": "Gemstone testing",
+     "year": 1800,
+     "note": "综合折射率比重与光谱特征区分天然合成与优化处理宝石。",
+     "deps": [
+      "optics",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "petrographic_quantitative",
+     "name": "岩石定量分类",
+     "en": "Quantitative petrography",
+     "year": 1900,
+     "note": "以镜下点计数法定量矿物体积比，为岩石命名提供可重复统计依据。",
+     "deps": [
+      "igneous_rock_classification"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "地层学与地质年代",
+   "items": [
+    {
+     "id": "superposition_principle",
+     "name": "地层叠覆律",
+     "en": "Law of superposition",
+     "year": 1669,
+     "note": "斯泰诺提出下老上新原则，成为地层相对新老判定的第一法则。",
+     "deps": [
+      "scientific_method"
+     ]
+    },
+    {
+     "id": "original_horizontality",
+     "name": "原始水平律与切割律",
+     "en": "Principles of horizontality and cross-cutting",
+     "year": 1669,
+     "note": "判定沉积岩成层水平与后期构造切割顺序，补充地层解译逻辑。"
+    },
+    {
+     "id": "fossil_succession",
+     "name": "化石层序律",
+     "en": "Law of faunal succession",
+     "year": 1799,
+     "note": "史密斯发现不同地层含不同化石，以化石组合跨区对比地层时代。",
+     "deps": [
+      "superposition_principle"
+     ]
+    },
+    {
+     "id": "index_fossil",
+     "name": "标准化石",
+     "en": "Index fossils",
+     "year": 1815,
+     "note": "选用分布广时限短的化石作时代标志，极大提高地层对比精度。",
+     "deps": [
+      "fossil_succession"
+     ]
+    },
+    {
+     "id": "geological_mapping",
+     "name": "地质填图",
+     "en": "Geological mapping",
+     "year": 1815,
+     "note": "史密斯编制英格兰地质图，把岩性时代落到空间，建立现代地质调查范式。",
+     "deps": [
+      "fossil_succession",
+      "contour_mapping"
+     ]
+    },
+    {
+     "id": "uniformitarianism",
+     "name": "将今论古原理",
+     "en": "Uniformitarianism",
+     "year": 1785,
+     "note": "赫顿以今测古解释地史过程，确立地质研究的时间观与方法论基石。",
+     "deps": [
+      "scientific_method"
+     ]
+    },
+    {
+     "id": "stratigraphic_column",
+     "name": "综合地层柱",
+     "en": "Composite stratigraphic column",
+     "year": 1840,
+     "note": "把区域地层按新老叠成柱状序列，成为地质年代划分与编图基础。",
+     "deps": [
+      "geological_mapping"
+     ]
+    },
+    {
+     "id": "geologic_time_scale",
+     "name": "地质年代表",
+     "en": "Geologic time scale",
+     "year": 1841,
+     "note": "以古生代中生代新生代为主干建立相对年代框架，沿用至今并不断校准。",
+     "deps": [
+      "stratigraphic_column"
+     ]
+    },
+    {
+     "id": "lithostratigraphy",
+     "name": "岩石地层单位",
+     "en": "Lithostratigraphy",
+     "year": 1900,
+     "note": "以岩性划分群组段层等正式单位，统一野外填图与描述语言。",
+     "deps": [
+      "geological_mapping"
+     ]
+    },
+    {
+     "id": "biostratigraphy",
+     "name": "生物地层带",
+     "en": "Biostratigraphic zones",
+     "year": 1850,
+     "note": "以化石属种的首现与末现延限划分生物带，可精细约束海相地层的相对时代对比。",
+     "deps": [
+      "index_fossil"
+     ]
+    },
+    {
+     "id": "radiometric_dating",
+     "name": "放射性同位素测年",
+     "en": "Radiometric dating",
+     "year": 1905,
+     "note": "据矿物中衰变母子体比值计算绝对年龄，首次给地球岩石以数字年代。",
+     "deps": [
+      "chemistry",
+      "physics"
+     ]
+    },
+    {
+     "id": "uranium_lead_dating",
+     "name": "铀铅法测年",
+     "en": "Uranium-lead dating",
+     "year": 1953,
+     "note": "以锆石铀铅双衰变系交叉定年，精度高，用于最古老岩石与陨石年龄。",
+     "deps": [
+      "radiometric_dating"
+     ]
+    },
+    {
+     "id": "potassium_argon_dating",
+     "name": "钾氩法测年",
+     "en": "Potassium-argon dating",
+     "year": 1948,
+     "note": "测火山岩钾氩比值定第四纪与更老地层年龄，火山灰层由此可精确定年。",
+     "deps": [
+      "radiometric_dating"
+     ]
+    },
+    {
+     "id": "radiocarbon_dating",
+     "name": "碳十四测年",
+     "en": "Radiocarbon dating",
+     "year": 1949,
+     "note": "利比建立放射性碳测年，为五万年以内考古与地质样品提供绝对年龄。",
+     "deps": [
+      "radiometric_dating",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "dendrochronology",
+     "name": "树木年轮定年",
+     "en": "Dendrochronology",
+     "year": 1904,
+     "note": "按年轮宽窄序列交叉定年，并可校正碳十四并重建古气候。"
+    },
+    {
+     "id": "varve_dating",
+     "name": "纹泥定年",
+     "en": "Varve chronology",
+     "year": 1878,
+     "note": "据冰川湖夏季年层计数定年，冰缘沉积物得以逐年排列。"
+    },
+    {
+     "id": "paleomagnetic_stratigraphy",
+     "name": "磁性地层学",
+     "en": "Magnetostratigraphy",
+     "year": 1963,
+     "note": "以岩层记录的地磁极性倒转序列对比定年，为海相与陆相地层提供全球时钟。"
+    },
+    {
+     "id": "chemostratigraphy",
+     "name": "化学地层学",
+     "en": "Chemostratigraphy",
+     "year": 1980,
+     "note": "据碳氧锶同位素与元素比值曲线跨区对比地层，识别事件界面。"
+    },
+    {
+     "id": "stratotype_section",
+     "name": "层型剖面",
+     "en": "Stratotype sections",
+     "year": 1880,
+     "note": "为每个年代地层单位指定标准剖面与点位，保证地层界线的全球可比性。",
+     "deps": [
+      "stratigraphic_column"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "构造地质与地球动力学",
+   "items": [
+    {
+     "id": "fold_fault_analysis",
+     "name": "褶皱断层构造解析",
+     "en": "Fold and fault structural analysis",
+     "year": 1850,
+     "note": "野外量测褶皱轴面与断层面要素，重建地壳变形几何与运动学。",
+     "deps": [
+      "geological_mapping"
+     ]
+    },
+    {
+     "id": "continental_drift_theory",
+     "name": "大陆漂移说",
+     "en": "Continental drift theory",
+     "year": 1912,
+     "note": "魏格纳据海岸形态与化石古气候证据提出大陆曾连合漂移，冲击固定论。",
+     "deps": [
+      "geological_mapping",
+      "fossil_succession"
+     ]
+    },
+    {
+     "id": "isostasy_principle",
+     "name": "地壳均衡原理",
+     "en": "Principle of isostasy",
+     "year": 1855,
+     "note": "普拉特与艾里以浮力平衡解释山地重力异常，刻画地壳垂向调整机制。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "geosyncline_theory",
+     "name": "地槽学说",
+     "en": "Geosyncline theory",
+     "year": 1859,
+     "note": "霍尔与丹纳以巨厚沉积槽盆解释造山带，为板块说之前的经典地史模型。",
+     "deps": [
+      "stratigraphic_column"
+     ]
+    },
+    {
+     "id": "geomagnetic_reversal_record",
+     "name": "地磁极性倒转记录",
+     "en": "Geomagnetic polarity reversal record",
+     "year": 1906,
+     "note": "布容发现熔岩剩磁方向反转，后经岩石序列建立极性倒转年表。",
+     "deps": [
+      "physics",
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "paleomagnetic_continent_reconstruction",
+     "name": "古地磁大陆重建",
+     "en": "Paleomagnetic continental reconstruction",
+     "year": 1954,
+     "note": "以岩石剩磁方向恢复古纬度并勾画极移曲线，为大陆漂移提供定量证据。",
+     "deps": [
+      "geomagnetic_reversal_record"
+     ]
+    },
+    {
+     "id": "seafloor_spreading",
+     "name": "海底扩张说",
+     "en": "Seafloor spreading",
+     "year": 1960,
+     "note": "赫斯以洋中脊新生洋壳解释洋底年龄对称，成为板块运动的机制雏形。",
+     "deps": [
+      "paleomagnetic_continent_reconstruction"
+     ]
+    },
+    {
+     "id": "transform_fault",
+     "name": "转换断层",
+     "en": "Transform fault",
+     "year": 1965,
+     "note": "威尔逊界定洋中脊间的剪切错动断层，统一了海洋磁条带与地震分布解释。",
+     "deps": [
+      "seafloor_spreading"
+     ]
+    },
+    {
+     "id": "plate_tectonics",
+     "name": "板块构造学说",
+     "en": "Plate tectonics",
+     "year": 1968,
+     "note": "麦肯齐等以刚性板块与扩张俯冲边界整合地质地球物理证据，成为现代地学纲领。",
+     "deps": [
+      "transform_fault",
+      "seafloor_spreading"
+     ]
+    },
+    {
+     "id": "subduction_zone_model",
+     "name": "俯冲带模型",
+     "en": "Subduction zone model",
+     "year": 1970,
+     "note": "以贝尼奥夫震源带与火山弧约束洋壳消减过程，解释岛弧与岩浆成因。",
+     "deps": [
+      "plate_tectonics"
+     ]
+    },
+    {
+     "id": "seafloor_magnetic_anomaly",
+     "name": "海底磁条带",
+     "en": "Seafloor magnetic lineations",
+     "year": 1963,
+     "note": "航磁测量发现洋脊两侧对称磁异常条带，直接支持海底扩张说。",
+     "deps": [
+      "geomagnetic_reversal_record",
+      "seafloor_spreading"
+     ]
+    },
+    {
+     "id": "hotspot_track",
+     "name": "热点轨迹",
+     "en": "Hotspot track",
+     "year": 1963,
+     "note": "威尔逊以夏威夷-皇帝海山链提出地幔柱与板块移动留下的线状火山轨迹。",
+     "deps": [
+      "seafloor_spreading"
+     ]
+    },
+    {
+     "id": "continental_rift",
+     "name": "大陆裂谷研究",
+     "en": "Continental rift studies",
+     "year": 1970,
+     "note": "以东非裂谷等为实例分析大陆张裂成盆过程，理解超大陆解体。",
+     "deps": [
+      "plate_tectonics"
+     ]
+    },
+    {
+     "id": "orogeny_model",
+     "name": "造山带构造模型",
+     "en": "Orogenic belt models",
+     "year": 1975,
+     "note": "以陆陆碰撞与增生楔等模型重新解释造山带，取代地槽式认识。",
+     "deps": [
+      "subduction_zone_model"
+     ]
+    },
+    {
+     "id": "strike_slip_tectonics",
+     "name": "走滑断裂构造",
+     "en": "Strike-slip tectonics",
+     "year": 1970,
+     "note": "识别大型平移断层及其拉分盆地，用于理解大陆内部变形与地震。",
+     "deps": [
+      "fold_fault_analysis",
+      "plate_tectonics"
+     ]
+    },
+    {
+     "id": "structural_kinematics",
+     "name": "构造变形运动学",
+     "en": "Structural kinematics",
+     "year": 1980,
+     "note": "以应变分析与平衡剖面复原变形量，检验构造解释的几何自洽性。",
+     "deps": [
+      "fold_fault_analysis"
+     ]
+    },
+    {
+     "id": "basin_analysis",
+     "name": "盆地分析",
+     "en": "Sedimentary basin analysis",
+     "year": 1960,
+     "note": "综合沉降史、沉积相与构造样式重建盆地的形成演化，是油气与成矿远景评价的基础。",
+     "deps": [
+      "stratigraphic_column"
+     ]
+    },
+    {
+     "id": "microtectonics",
+     "name": "显微构造学",
+     "en": "Microtectonics",
+     "year": 1970,
+     "note": "镜下测石英光轴与亚颗粒定向，恢复岩石变形温度与运动方向。",
+     "deps": [
+      "polarizing_microscope"
+     ]
+    },
+    {
+     "id": "metamorphic_core_complex",
+     "name": "变质核杂岩",
+     "en": "Metamorphic core complex",
+     "year": 1979,
+     "note": "识别拆离断层上盘的伸展核杂岩，标志对地壳伸展构造的新认识。",
+     "deps": [
+      "continental_rift"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "地震学与地球物理探测",
+   "items": [
+    {
+     "id": "zhangheng_seismoscope",
+     "name": "候风地动仪",
+     "en": "Zhang Heng's seismoscope",
+     "year": 132,
+     "note": "张衡制八龙吐丸验震器，可感知远处地震方位，为世界最早验震装置。"
+    },
+    {
+     "id": "pendulum_seismograph",
+     "name": "摆式地震仪",
+     "en": "Pendulum seismograph",
+     "year": 1880,
+     "note": "米尔恩等研制记录地面振动的摆式仪器，地震学进入定量记录时代。",
+     "deps": [
+      "zhangheng_seismoscope"
+     ]
+    },
+    {
+     "id": "body_wave_identification",
+     "name": "纵波横波识别",
+     "en": "P-wave and S-wave identification",
+     "year": 1900,
+     "note": "奥尔德姆从地震图区分压缩波与剪切波，据此推算震中距与地内传播。",
+     "deps": [
+      "pendulum_seismograph",
+      "physics"
+     ]
+    },
+    {
+     "id": "seismic_phase_nomenclature",
+     "name": "震相命名体系",
+     "en": "Seismic phase nomenclature",
+     "year": 1914,
+     "note": "以字母组合命名地壳地幔内外核的折射反射震相，规范走时表解读。",
+     "deps": [
+      "body_wave_identification"
+     ]
+    },
+    {
+     "id": "mohorovicic_discontinuity",
+     "name": "莫霍洛维奇不连续面",
+     "en": "Mohorovičić discontinuity",
+     "year": 1909,
+     "note": "莫霍洛维奇发现地壳地幔界面的折射震相，首揭地球内部分层界面。",
+     "deps": [
+      "body_wave_identification"
+     ]
+    },
+    {
+     "id": "seismic_inner_core",
+     "name": "地球内核发现",
+     "en": "Discovery of Earth's inner core",
+     "year": 1936,
+     "note": "莱曼据深震震相推断液态外核内存在固态内核，完善地内圈层结构。",
+     "deps": [
+      "seismic_phase_nomenclature"
+     ]
+    },
+    {
+     "id": "seismograph_network",
+     "name": "全球地震台网",
+     "en": "Global seismographic network",
+     "year": 1900,
+     "note": "多台同步记录统一震级震源，构成地震监测与核试验监测骨干。",
+     "deps": [
+      "pendulum_seismograph"
+     ]
+    },
+    {
+     "id": "richtter_magnitude",
+     "name": "里氏震级",
+     "en": "Richter magnitude scale",
+     "year": 1935,
+     "note": "里克特以伍德-安德森仪振幅定义地方性震级，为震级测定确立标准。",
+     "deps": [
+      "seismograph_network"
+     ]
+    },
+    {
+     "id": "moment_magnitude",
+     "name": "矩震级",
+     "en": "Moment magnitude scale",
+     "year": 1977,
+     "note": "由地震矩直接定义震级，对大震不饱和，成为现代通用震级。",
+     "deps": [
+      "richtter_magnitude"
+     ]
+    },
+    {
+     "id": "elastic_rebound_theory",
+     "name": "弹性回跳理论",
+     "en": "Elastic rebound theory",
+     "year": 1910,
+     "note": "里德用断层弹性应变积累释放解释地震成因，奠定发震机制模型。",
+     "deps": [
+      "pendulum_seismograph"
+     ]
+    },
+    {
+     "id": "focal_mechanism",
+     "name": "震源机制解",
+     "en": "Focal mechanism solution",
+     "year": 1935,
+     "note": "以P波初动分布确定断层面走向滑动，把地震与构造应力联系。",
+     "deps": [
+      "seismograph_network"
+     ]
+    },
+    {
+     "id": "seismic_tomography",
+     "name": "地震层析成像",
+     "en": "Seismic tomography",
+     "year": 1984,
+     "note": "像医学CT一样反演震波速度异常，三维呈现地幔对流与俯冲板片。",
+     "deps": [
+      "plate_tectonics",
+      "computer"
+     ]
+    },
+    {
+     "id": "ambient_noise_tomography",
+     "name": "背景噪声成像",
+     "en": "Ambient noise tomography",
+     "year": 2000,
+     "note": "从地脉动互相关提取面波信号，无需天然地震即可浅层成像。",
+     "deps": [
+      "seismic_tomography"
+     ]
+    },
+    {
+     "id": "reflection_seismology",
+     "name": "地震反射勘探",
+     "en": "Reflection seismology",
+     "year": 1921,
+     "note": "人工震源激发并接收地下界面反射波，油气勘探与地壳结构研究的主力。",
+     "deps": [
+      "body_wave_identification"
+     ]
+    },
+    {
+     "id": "refraction_seismology",
+     "name": "地震折射勘探",
+     "en": "Refraction seismology",
+     "year": 1906,
+     "note": "沿界面滑行波首波测定基岩深度与层速度，多用于工程地质调查。",
+     "deps": [
+      "body_wave_identification"
+     ]
+    },
+    {
+     "id": "earthquake_intensity_scale",
+     "name": "烈度表",
+     "en": "Earthquake intensity scale",
+     "year": 1902,
+     "note": "麦卡利烈度表按破坏与感受分十二度，用于无仪器地区的灾情评估。",
+     "deps": [
+      "scientific_method"
+     ]
+    },
+    {
+     "id": "intensity_zoning_map",
+     "name": "地震区划图",
+     "en": "Seismic zoning map",
+     "year": 1960,
+     "note": "按历史震害与构造活动划定设防烈度分区，为工程抗震提供依据。",
+     "deps": [
+      "earthquake_intensity_scale"
+     ]
+    },
+    {
+     "id": "earthquake_early_warning",
+     "name": "地震预警系统",
+     "en": "Earthquake early warning",
+     "year": 1990,
+     "note": "以首波到达抢先向远区发布警报，日本等部署实现秒级预警。",
+     "deps": [
+      "seismograph_network",
+      "telegraph"
+     ]
+    },
+    {
+     "id": "strong_motion_recording",
+     "name": "强震观测",
+     "en": "Strong motion recording",
+     "year": 1930,
+     "note": "近场强震仪记录大震地面运动时程，支撑抗震设计谱制定。",
+     "deps": [
+      "pendulum_seismograph"
+     ]
+    },
+    {
+     "id": "seafloor_seismometer",
+     "name": "海底地震仪",
+     "en": "Ocean bottom seismometer",
+     "year": 1960,
+     "note": "投放在海底的密封地震仪，用于海洋地震监测与洋壳结构探测。",
+     "deps": [
+      "seismograph_network"
+     ]
+    },
+    {
+     "id": "geomagnetic_observatory",
+     "name": "地磁观测台站",
+     "en": "Geomagnetic observatory",
+     "year": 1834,
+     "note": "高斯建立连续记录地磁场要素的台站网，开启地磁学系统观测。"
+    },
+    {
+     "id": "magnetometer",
+     "name": "磁力仪",
+     "en": "Magnetometer",
+     "year": 1833,
+     "note": "高斯发明绝对磁力测量方法，配合便携磁力仪用于磁测与勘探。"
+    },
+    {
+     "id": "airborne_magnetic_survey",
+     "name": "航空磁测",
+     "en": "Aeromagnetic survey",
+     "year": 1944,
+     "note": "飞机拖曳磁力仪快速普查磁场异常，广泛用于区域地质与找矿。",
+     "deps": [
+      "magnetometer",
+      "airplane"
+     ]
+    },
+    {
+     "id": "gravity_meter",
+     "name": "重力仪",
+     "en": "Gravimeter",
+     "year": 1930,
+     "note": "以弹簧或超导悬浮测量重力微变，用于勘探与大地水准面研究。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "gravity_survey",
+     "name": "重力勘探",
+     "en": "Gravity exploration",
+     "year": 1900,
+     "note": "据重力异常推断地下密度体，用于盐丘找油与基底构造研究。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "magnetotelluric_sounding",
+     "name": "大地电磁测深",
+     "en": "Magnetotelluric sounding",
+     "year": 1953,
+     "note": "利用天然电磁场变化测深部电阻率，探测地壳流体与地热系统。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "induced_polarization_survey",
+     "name": "激发极化法",
+     "en": "Induced polarization survey",
+     "year": 1920,
+     "note": "测地下充电放电的极化效应圈定金属硫化物与地下水体。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "resistivity_tomography",
+     "name": "电阻率层析成像",
+     "en": "Electrical resistivity tomography",
+     "year": 1970,
+     "note": "多点电极阵列反演二维三维电阻率剖面，广泛用于工程环境勘察。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "ground_penetrating_radar",
+     "name": "探地雷达",
+     "en": "Ground-penetrating radar",
+     "year": 1970,
+     "note": "以高频电磁脉冲测浅表介质界面，探测管线洞穴与冰层结构。",
+     "deps": [
+      "electromagnetism",
+      "radio"
+     ]
+    },
+    {
+     "id": "well_logging",
+     "name": "钻孔地球物理测井",
+     "en": "Well logging",
+     "year": 1927,
+     "note": "斯伦贝谢在井内连续测电阻率曲线，地层油气识别进入定量时代。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "isotope_mass_spectrometry",
+     "name": "同位素质谱分析",
+     "en": "Isotope ratio mass spectrometry",
+     "year": 1940,
+     "note": "高精度测同位素比值，支撑测年与示踪、古气候与来源研究。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "heat_flow_probe",
+     "name": "海底热流探针",
+     "en": "Seafloor heat flow probe",
+     "year": 1950,
+     "note": "把带温度传感器的探针贯入海底沉积测量地温梯度与热导率，估算岩石圈热状态。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "insar_deformation",
+     "name": "合成孔径雷达干涉测量",
+     "en": "InSAR deformation monitoring",
+     "year": 1993,
+     "note": "以重复雷达影像相位差测地表形变，毫米级监测地震火山与沉降。",
+     "deps": [
+      "synthetic_aperture_radar"
+     ]
+    },
+    {
+     "id": "volcano_monitoring",
+     "name": "火山监测系统",
+     "en": "Volcano monitoring system",
+     "year": 1975,
+     "note": "综合地震形变气体与热红外手段监测火山活动，为喷发预警提供依据。",
+     "deps": [
+      "seismograph_network",
+      "gravity_survey"
+     ]
+    },
+    {
+     "id": "geodetic_gnss_network",
+     "name": "地壳形变GNSS台网",
+     "en": "Crustal deformation GNSS network",
+     "year": 1994,
+     "note": "以高密度连续卫星定位台网测地壳运动，直接度量板块现今运动。",
+     "deps": [
+      "gps",
+      "satellite_positioning_survey"
+     ]
+    },
+    {
+     "id": "geothermal_prospecting",
+     "name": "地热勘探",
+     "en": "Geothermal prospecting",
+     "year": 1904,
+     "note": "以热流、地温与地球化学手段圈定地热田，意大利拉德瑞罗首次发电。",
+     "deps": [
+      "chemistry"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "气象观测与大气科学",
+   "items": [
+    {
+     "id": "rain_gauge",
+     "name": "雨量器",
+     "en": "Rain gauge",
+     "year": 1442,
+     "note": "以标准口径容器承接并量度降水，朝鲜世宗朝颁制统一雨量器，使雨量观测走向标准化。"
+    },
+    {
+     "id": "mercury_barometer",
+     "name": "水银气压计",
+     "en": "Mercury barometer",
+     "year": 1643,
+     "note": "托里拆利以水银柱测大气压，为天气分析与高度测量提供基本仪器。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "aneroid_barometer",
+     "name": "空盒气压表",
+     "en": "Aneroid barometer",
+     "year": 1843,
+     "note": "维迪以弹性真空盒测压，便携无须液柱，广泛用于野外与航空测高。",
+     "deps": [
+      "mercury_barometer"
+     ]
+    },
+    {
+     "id": "thermometer_screen",
+     "name": "百叶箱测温",
+     "en": "Instrument shelter thermometry",
+     "year": 1860,
+     "note": "在标准通风百叶箱内测温，避免太阳辐射干扰，统一气温观测口径。",
+     "deps": [
+      "scientific_method"
+     ]
+    },
+    {
+     "id": "hygrometer",
+     "name": "毛发湿度计",
+     "en": "Hair hygrometer",
+     "year": 1783,
+     "note": "德索叙尔以脱脂人发伸缩测相对湿度，实现连续湿度记录。",
+     "deps": [
+      "scientific_method"
+     ]
+    },
+    {
+     "id": "cup_anemometer",
+     "name": "风杯风速计",
+     "en": "Cup anemometer",
+     "year": 1846,
+     "note": "鲁宾逊转杯式风速计将风速转为转速，成为台站测风标准器。",
+     "deps": [
+      "scientific_method"
+     ]
+    },
+    {
+     "id": "weather_map",
+     "name": "天气图分析",
+     "en": "Synoptic weather map",
+     "year": 1820,
+     "note": "布兰德斯把同期气压气温标绘成图识别天气系统，开天气学先河。",
+     "deps": [
+      "mercury_barometer"
+     ]
+    },
+    {
+     "id": "telegraph_weather_network",
+     "name": "电报气象网",
+     "en": "Telegraph weather reporting network",
+     "year": 1849,
+     "note": "借助电报汇集各地观测并集中绘图，使天气预报具备即时基础。",
+     "deps": [
+      "telegraph",
+      "weather_map"
+     ]
+    },
+    {
+     "id": "isobar_analysis",
+     "name": "等压线分析",
+     "en": "Isobaric analysis",
+     "year": 1860,
+     "note": "以等压线勾画高底气旋分布并据地转风推断风场，完善天气图语言。",
+     "deps": [
+      "weather_map"
+     ]
+    },
+    {
+     "id": "cloud_classification",
+     "name": "云分类系统",
+     "en": "Cloud classification",
+     "year": 1802,
+     "note": "霍华德把云按外形与高度归为积云层云卷云等十属，统一了全球云观测的描述语言。",
+     "deps": [
+      "scientific_method"
+     ]
+    },
+    {
+     "id": "air_mass_front_theory",
+     "name": "气团与锋面理论",
+     "en": "Air mass and frontal theory",
+     "year": 1919,
+     "note": "卑尔根学派以气团锋面解释中纬度天气演变，确立天气学核心概念。",
+     "deps": [
+      "weather_map"
+     ]
+    },
+    {
+     "id": "radiosonde",
+     "name": "无线电探空仪",
+     "en": "Radiosonde",
+     "year": 1930,
+     "note": "气球携带传感器以无线电回传温压湿垂直廓线，填补高空观测空白。",
+     "deps": [
+      "radio"
+     ]
+    },
+    {
+     "id": "weather_balloon_network",
+     "name": "高空观测网",
+     "en": "Upper-air observation network",
+     "year": 1938,
+     "note": "全球定时施放探空气球形成三维观测网，为数值模式提供初始场。",
+     "deps": [
+      "radiosonde"
+     ]
+    },
+    {
+     "id": "numerical_weather_prediction",
+     "name": "数值天气预报",
+     "en": "Numerical weather prediction",
+     "year": 1950,
+     "note": "查尼小组在计算机上积分大气方程试算，开创以物理方程预报天气。",
+     "deps": [
+      "computer",
+      "physics"
+     ]
+    },
+    {
+     "id": "atmospheric_circulation_model",
+     "name": "大气环流模式",
+     "en": "General circulation model",
+     "year": 1955,
+     "note": "菲利普斯以两层次模式再现气旋波动，为全球模式与气候模拟奠基。",
+     "deps": [
+      "numerical_weather_prediction"
+     ]
+    },
+    {
+     "id": "weather_satellite",
+     "name": "气象卫星",
+     "en": "Meteorological satellite",
+     "year": 1960,
+     "note": "泰罗斯一号传回首张云图，人类首次从太空俯瞰天气系统。",
+     "deps": [
+      "satellite"
+     ]
+    },
+    {
+     "id": "geostationary_weather_satellite",
+     "name": "静止气象卫星",
+     "en": "Geostationary meteorological satellite",
+     "year": 1966,
+     "note": "在赤道上空定点连续拍摄云图，为台风监测与短临预报提供高频资料。",
+     "deps": [
+      "weather_satellite"
+     ]
+    },
+    {
+     "id": "weather_radar",
+     "name": "天气雷达",
+     "en": "Weather radar",
+     "year": 1941,
+     "note": "用雷达探测降水回波强度与位置，可连续追踪雨带与雷暴单体。",
+     "deps": [
+      "electromagnetism",
+      "radio"
+     ]
+    },
+    {
+     "id": "doppler_weather_radar",
+     "name": "多普勒天气雷达",
+     "en": "Doppler weather radar",
+     "year": 1970,
+     "note": "测回波多普勒频移获取径向风场，可识别龙卷涡旋与风切变。",
+     "deps": [
+      "weather_radar",
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "cloud_seeding",
+     "name": "人工增雨",
+     "en": "Cloud seeding",
+     "year": 1946,
+     "note": "谢弗以干冰和碘化银播撒冷云促使降水，开辟人工影响天气实践。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "jet_stream_discovery",
+     "name": "高空急流探测",
+     "en": "Jet stream detection",
+     "year": 1939,
+     "note": "飞行与探空发现对流层顶窄带强风，理解大气环流与航路设计的关键。",
+     "deps": [
+      "radiosonde"
+     ]
+    },
+    {
+     "id": "ozone_hole_monitoring",
+     "name": "臭氧层监测",
+     "en": "Ozone layer monitoring",
+     "year": 1978,
+     "note": "以地面与卫星观测平流层臭氧总量，揭示并跟踪南极臭氧洞变化。",
+     "deps": [
+      "weather_satellite",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "weather_ensemble_forecast",
+     "name": "集合预报",
+     "en": "Ensemble weather forecasting",
+     "year": 1992,
+     "note": "以多初值扰动的概率预报量化不确定性，延伸可预报时效。",
+     "deps": [
+      "numerical_weather_prediction",
+      "computer"
+     ]
+    },
+    {
+     "id": "wind_profile_radar",
+     "name": "风廓线雷达",
+     "en": "Wind profiler",
+     "year": 1985,
+     "note": "以指向天顶的雷达连续测大气垂直风廓线，弥补探空时间分辨率不足。",
+     "deps": [
+      "doppler_weather_radar"
+     ]
+    },
+    {
+     "id": "atmospheric_chemistry_observing",
+     "name": "大气成分观测站网",
+     "en": "Atmospheric chemistry monitoring",
+     "year": 1957,
+     "note": "国际协调的背景站网长期观测温室气体与气溶胶，服务于气候与空气质量研究。",
+     "deps": [
+      "chemistry"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "海洋与极地观测",
+   "items": [
+    {
+     "id": "deep_sea_sounding",
+     "name": "深海测深绳",
+     "en": "Deep-sea sounding line",
+     "year": 1770,
+     "note": "以铅锤与测深绳放至海底量取深度，绘出早期大洋深度剖面，为海洋测深奠基。",
+     "deps": [
+      "sail"
+     ]
+    },
+    {
+     "id": "echo_sounder",
+     "name": "回声测深仪",
+     "en": "Echo sounder",
+     "year": 1920,
+     "note": "由声波往返时测算水深并连续成图，取代缓慢的测深绳。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "side_scan_sonar",
+     "name": "侧扫声呐",
+     "en": "Side-scan sonar",
+     "year": 1950,
+     "note": "拖体向两侧发射扇束声波成像海底微地貌，用于管线与沉物搜索。",
+     "deps": [
+      "echo_sounder"
+     ]
+    },
+    {
+     "id": "multibeam_bathymetry",
+     "name": "多波束测深",
+     "en": "Multibeam echosounder",
+     "year": 1976,
+     "note": "一次发射数百条波束宽幅扫测海底地形，效率与分辨率远超单波束测深。",
+     "deps": [
+      "echo_sounder"
+     ]
+    },
+    {
+     "id": "scientific_ocean_expedition",
+     "name": "海洋科学考察",
+     "en": "Scientific ocean expeditions",
+     "year": 1872,
+     "note": "挑战者号环球考察系统采集生物水深沉积资料，奠基海洋学。",
+     "deps": [
+      "deep_sea_sounding",
+      "sail"
+     ]
+    },
+    {
+     "id": "bottle_water_sampler",
+     "name": "采水瓶",
+     "en": "Nansen bottle water sampler",
+     "year": 1894,
+     "note": "南森设计可定深翻转采水的瓶子，分层海水化学分析由此可行。",
+     "deps": [
+      "scientific_ocean_expedition"
+     ]
+    },
+    {
+     "id": "reversing_thermometer",
+     "name": "颠倒温度计",
+     "en": "Reversing thermometer",
+     "year": 1874,
+     "note": "到设定深度翻转断汞柱锁定温度，用于精确测深层水温。",
+     "deps": [
+      "scientific_ocean_expedition"
+     ]
+    },
+    {
+     "id": "ctd_profiler",
+     "name": "温盐深剖面仪",
+     "en": "CTD profiler",
+     "year": 1960,
+     "note": "连续下放测电导率温度深度得盐度剖面，成为物理海洋标准观测。",
+     "deps": [
+      "bottle_water_sampler"
+     ]
+    },
+    {
+     "id": "ocean_current_meter",
+     "name": "海流计",
+     "en": "Ocean current meter",
+     "year": 1880,
+     "note": "以旋桨与罗盘记录流速流向，锚系投放可获海流时间序列。",
+     "deps": [
+      "scientific_ocean_expedition"
+     ]
+    },
+    {
+     "id": "acoustic_doppler_current_profiler",
+     "name": "声学多普勒海流剖面仪",
+     "en": "Acoustic Doppler current profiler",
+     "year": 1980,
+     "note": "以声波多普勒频移一次测多层流速，广泛用于船载与锚系测流。",
+     "deps": [
+      "doppler_weather_radar",
+      "ocean_current_meter"
+     ]
+    },
+    {
+     "id": "drift_buoy",
+     "name": "漂流浮标",
+     "en": "Drifting buoy",
+     "year": 1970,
+     "note": "随流漂移并回传位置与水温，实现表层洋流大范围追踪。",
+     "deps": [
+      "satellite",
+      "radio"
+     ]
+    },
+    {
+     "id": "argo_float",
+     "name": "阿戈自动剖面浮标",
+     "en": "Argo profiling float",
+     "year": 1999,
+     "note": "全球数千浮标自动下潜测温盐并上浮回传，构成实时海洋观测网。",
+     "deps": [
+      "drift_buoy",
+      "satellite"
+     ]
+    },
+    {
+     "id": "moored_observatory",
+     "name": "锚系海洋观测站",
+     "en": "Moored ocean observatory",
+     "year": 1985,
+     "note": "以深系泊系统长期连续观测多层海流与温盐，用于厄尔尼诺监测。",
+     "deps": [
+      "ctd_profiler"
+     ]
+    },
+    {
+     "id": "sediment_coring",
+     "name": "海底沉积物取芯",
+     "en": "Sediment coring",
+     "year": 1947,
+     "note": "以重力或活塞取芯器采集海底长柱样，记录古海洋与古气候档案。",
+     "deps": [
+      "scientific_ocean_expedition"
+     ]
+    },
+    {
+     "id": "deep_sea_drilling",
+     "name": "深海钻探计划",
+     "en": "Deep Sea Drilling Project",
+     "year": 1968,
+     "note": "格洛玛·挑战者号在深海钻取洋壳岩芯，直接验证海底扩张与板块学说。",
+     "deps": [
+      "sediment_coring"
+     ]
+    },
+    {
+     "id": "submersible_observation",
+     "name": "深海载人潜器",
+     "en": "Manned deep-sea submersibles",
+     "year": 1960,
+     "note": "的里雅斯特号下潜万米海沟，载人潜器使深海直接观察成为可能。",
+     "deps": [
+      "echo_sounder",
+      "steel"
+     ]
+    },
+    {
+     "id": "remotely_operated_vehicle",
+     "name": "遥控无人潜器",
+     "en": "Remotely operated vehicle",
+     "year": 1953,
+     "note": "脐带缆供电控制的水下机器人，广泛用于深海作业与科考取样。",
+     "deps": [
+      "echo_sounder"
+     ]
+    },
+    {
+     "id": "autonomous_underwater_vehicle",
+     "name": "自治水下潜器",
+     "en": "Autonomous underwater vehicle",
+     "year": 1990,
+     "note": "按程序自主巡航的水下机器人，可大面积测绘海冰下与深海环境。",
+     "deps": [
+      "remotely_operated_vehicle",
+      "computer"
+     ]
+    },
+    {
+     "id": "seafloor_observatory",
+     "name": "海底观测网络",
+     "en": "Seafloor observatory network",
+     "year": 2005,
+     "note": "以海底光电缆连接长期观测节点，实时监测地震海啸与深海生态。",
+     "deps": [
+      "moored_observatory"
+     ]
+    },
+    {
+     "id": "tsunami_warning_system",
+     "name": "海啸预警系统",
+     "en": "Tsunami warning system",
+     "year": 1949,
+     "note": "以地震定位与潮位校验发布环太平洋海啸警报，后并入深海压力计。",
+     "deps": [
+      "sea_level_tide_gauge"
+     ]
+    },
+    {
+     "id": "isotope_paleothermometry",
+     "name": "氧同位素古温度计",
+     "en": "Oxygen isotope paleothermometry",
+     "year": 1953,
+     "note": "以海洋生物壳与冰芯的氧同位素比值反演古水温，开创定量古气候。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "ice_core_drilling",
+     "name": "深冰芯钻取",
+     "en": "Deep ice core drilling",
+     "year": 1966,
+     "note": "在南极格陵兰钻透冰盖取连续冰芯，重建数十万年气候记录。",
+     "deps": [
+      "isotope_paleothermometry"
+     ]
+    },
+    {
+     "id": "paleomagnetic_ocean_chronology",
+     "name": "洋底磁年代学",
+     "en": "Marine magnetic chronology",
+     "year": 1968,
+     "note": "以地磁倒转年表给洋壳定年，海盆年龄图由此绘成并支持板块运动速率。",
+     "deps": [
+      "seafloor_magnetic_anomaly"
+     ]
+    },
+    {
+     "id": "glacial_isostasy",
+     "name": "冰后回弹测量",
+     "en": "Glacial isostatic adjustment",
+     "year": 1970,
+     "note": "测隆升海岸阶地与重力变化反演地幔粘性，检验冰期负荷模型。",
+     "deps": [
+      "plate_tectonics"
+     ]
+    },
+    {
+     "id": "antarctic_station_network",
+     "name": "极地科学站网",
+     "en": "Polar research station network",
+     "year": 1957,
+     "note": "国际地球物理年推动在南极建立常年站，支撑冰盖与大气长期观测。",
+     "deps": [
+      "scientific_method"
+     ]
+    }
+   ]
+  }
+ ]
+}

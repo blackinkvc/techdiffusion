@@ -1,0 +1,1770 @@
+{
+ "meta": {
+  "nodes": 13392,
+  "edges": 17837,
+  "computed_at": "2026-09-06T05:52:36",
+  "communities": 3088,
+  "articulation_points": 1859,
+  "longest_chain_len": 211
+ },
+ "pagerank_top": [
+  {
+   "id": "chemistry",
+   "name": "化学",
+   "category": "basic",
+   "score": 0.012861
+  },
+  {
+   "id": "computer",
+   "name": "电子计算机",
+   "category": "info",
+   "score": 0.01092
+  },
+  {
+   "id": "electricity",
+   "name": "电力系统",
+   "category": "energy",
+   "score": 0.01064
+  },
+  {
+   "id": "steel",
+   "name": "钢铁",
+   "category": "material",
+   "score": 0.007383
+  },
+  {
+   "id": "semiconductors",
+   "name": "半导体材料",
+   "category": "material",
+   "score": 0.004687
+  },
+  {
+   "id": "iron",
+   "name": "铁器",
+   "category": "material",
+   "score": 0.00468
+  },
+  {
+   "id": "mathematics",
+   "name": "数学",
+   "category": "basic",
+   "score": 0.004438
+  },
+  {
+   "id": "plastics",
+   "name": "塑料",
+   "category": "material",
+   "score": 0.003805
+  },
+  {
+   "id": "cement",
+   "name": "水泥与混凝土",
+   "category": "material",
+   "score": 0.00374
+  },
+  {
+   "id": "internal_combustion",
+   "name": "内燃机",
+   "category": "energy",
+   "score": 0.003345
+  },
+  {
+   "id": "physics",
+   "name": "经典力学",
+   "category": "basic",
+   "score": 0.003274
+  },
+  {
+   "id": "optics",
+   "name": "光学",
+   "category": "basic",
+   "score": 0.003227
+  },
+  {
+   "id": "agriculture",
+   "name": "农业",
+   "category": "life",
+   "score": 0.003137
+  },
+  {
+   "id": "internet",
+   "name": "互联网",
+   "category": "info",
+   "score": 0.003092
+  },
+  {
+   "id": "steam_engine",
+   "name": "蒸汽机",
+   "category": "energy",
+   "score": 0.002868
+  },
+  {
+   "id": "fire",
+   "name": "用火",
+   "category": "energy",
+   "score": 0.002814
+  },
+  {
+   "id": "ic",
+   "name": "集成电路",
+   "category": "info",
+   "score": 0.002629
+  },
+  {
+   "id": "radio",
+   "name": "无线电",
+   "category": "info",
+   "score": 0.002614
+  },
+  {
+   "id": "lasers",
+   "name": "激光器",
+   "category": "info",
+   "score": 0.002477
+  },
+  {
+   "id": "hearth_stove",
+   "name": "火塘与灶",
+   "category": "energy",
+   "score": 0.002423
+  },
+  {
+   "id": "scientific_method",
+   "name": "科学方法",
+   "category": "basic",
+   "score": 0.002323
+  },
+  {
+   "id": "satellite",
+   "name": "人造卫星",
+   "category": "transport",
+   "score": 0.002258
+  },
+  {
+   "id": "tank",
+   "name": "坦克",
+   "category": "military",
+   "score": 0.00221
+  },
+  {
+   "id": "composites",
+   "name": "复合材料",
+   "category": "material",
+   "score": 0.002172
+  },
+  {
+   "id": "electric_motor",
+   "name": "电动机",
+   "category": "energy",
+   "score": 0.002098
+  },
+  {
+   "id": "airplane",
+   "name": "飞机",
+   "category": "transport",
+   "score": 0.002011
+  },
+  {
+   "id": "smart_mower",
+   "name": "智能割草机器人",
+   "category": "life",
+   "score": 0.001929
+  },
+  {
+   "id": "drone",
+   "name": "无人机",
+   "category": "transport",
+   "score": 0.001872
+  },
+  {
+   "id": "bld_romanconc",
+   "name": "罗马混凝土",
+   "category": "build",
+   "score": 0.001867
+  },
+  {
+   "id": "dna",
+   "name": "遗传学 / DNA",
+   "category": "life",
+   "score": 0.001838
+  }
+ ],
+ "authority_top": [
+  {
+   "id": "computer",
+   "name": "电子计算机",
+   "category": "info",
+   "score": 0.001843
+  },
+  {
+   "id": "complexity",
+   "name": "计算复杂性",
+   "category": "basic",
+   "score": 0.001748
+  },
+  {
+   "id": "fractal",
+   "name": "分形几何",
+   "category": "basic",
+   "score": 0.001745
+  },
+  {
+   "id": "inf_recommend2",
+   "name": "协同过滤",
+   "category": "info",
+   "score": 0.001674
+  },
+  {
+   "id": "it_alg_0",
+   "name": "快速傅里叶变换",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_1",
+   "name": "离散余弦变换",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_2",
+   "name": "小波变换",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_3",
+   "name": "哈希算法",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_4",
+   "name": "一致性哈希",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_5",
+   "name": "布隆过滤器",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_6",
+   "name": "跳表",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_7",
+   "name": "并查集",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_8",
+   "name": "线段树",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_9",
+   "name": "后缀数组",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_10",
+   "name": "字典树",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_11",
+   "name": "基数树",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_12",
+   "name": "红黑树",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_13",
+   "name": "B 树",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_14",
+   "name": "LSM 树",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_15",
+   "name": "跳表索引",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_16",
+   "name": "倒排索引",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_17",
+   "name": "位图索引",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_18",
+   "name": "列存索引",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_19",
+   "name": "向量索引",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_20",
+   "name": "近似最近邻",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_21",
+   "name": "最小哈希",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_22",
+   "name": "局部敏感哈希",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_23",
+   "name": " PageRank 算法",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_25",
+   "name": "矩阵分解推荐",
+   "category": "info",
+   "score": 0.001629
+  },
+  {
+   "id": "it_alg_26",
+   "name": "深度学习推荐",
+   "category": "info",
+   "score": 0.001629
+  }
+ ],
+ "hub_top": [
+  {
+   "id": "mathematics",
+   "name": "数学",
+   "category": "basic",
+   "score": 0.139901
+  },
+  {
+   "id": "statistics",
+   "name": "统计学",
+   "category": "basic",
+   "score": 0.056232
+  },
+  {
+   "id": "chemistry",
+   "name": "化学",
+   "category": "basic",
+   "score": 0.04666
+  },
+  {
+   "id": "computer",
+   "name": "电子计算机",
+   "category": "info",
+   "score": 0.03311
+  },
+  {
+   "id": "algorithm",
+   "name": "算法理论",
+   "category": "basic",
+   "score": 0.032339
+  },
+  {
+   "id": "optimization",
+   "name": "最优化/线性规划",
+   "category": "basic",
+   "score": 0.031264
+  },
+  {
+   "id": "numerical",
+   "name": "数值分析",
+   "category": "basic",
+   "score": 0.030764
+  },
+  {
+   "id": "writing",
+   "name": "文字",
+   "category": "info",
+   "score": 0.021655
+  },
+  {
+   "id": "physics",
+   "name": "经典力学",
+   "category": "basic",
+   "score": 0.019226
+  },
+  {
+   "id": "electronics",
+   "name": "电子学",
+   "category": "info",
+   "score": 0.008282
+  },
+  {
+   "id": "rocket",
+   "name": "火箭",
+   "category": "transport",
+   "score": 0.007024
+  },
+  {
+   "id": "internet",
+   "name": "互联网",
+   "category": "info",
+   "score": 0.006569
+  },
+  {
+   "id": "electricity",
+   "name": "电力系统",
+   "category": "energy",
+   "score": 0.006273
+  },
+  {
+   "id": "mat_2d",
+   "name": "二维材料",
+   "category": "material",
+   "score": 0.006245
+  },
+  {
+   "id": "battery",
+   "name": "电池",
+   "category": "energy",
+   "score": 0.006133
+  },
+  {
+   "id": "surgery",
+   "name": "无菌外科",
+   "category": "life",
+   "score": 0.0061
+  },
+  {
+   "id": "molecular_bio",
+   "name": "分子生物学",
+   "category": "basic",
+   "score": 0.005665
+  },
+  {
+   "id": "mat_mof",
+   "name": "金属有机框架",
+   "category": "material",
+   "score": 0.005479
+  },
+  {
+   "id": "ene_leadacid",
+   "name": "铅酸电池",
+   "category": "energy",
+   "score": 0.004777
+  },
+  {
+   "id": "ene_borehole",
+   "name": "井式地热",
+   "category": "energy",
+   "score": 0.003508
+  },
+  {
+   "id": "ene_fuelcellcar",
+   "name": "燃料电池汽车",
+   "category": "energy",
+   "score": 0.003173
+  },
+  {
+   "id": "mat_laserclad",
+   "name": "激光熔覆",
+   "category": "material",
+   "score": 0.003017
+  },
+  {
+   "id": "mat_selfheal",
+   "name": "自修复材料",
+   "category": "material",
+   "score": 0.00289
+  },
+  {
+   "id": "ene_tribo",
+   "name": "摩擦纳米发电",
+   "category": "energy",
+   "score": 0.002807
+  },
+  {
+   "id": "ene_dishstirling",
+   "name": "碟式斯特林",
+   "category": "energy",
+   "score": 0.002777
+  },
+  {
+   "id": "ene_liquidair",
+   "name": "液态空气储能",
+   "category": "energy",
+   "score": 0.002597
+  },
+  {
+   "id": "ene_hydrothermal",
+   "name": "水热型地热",
+   "category": "energy",
+   "score": 0.00259
+  },
+  {
+   "id": "mat_hydrogenstorage",
+   "name": "储氢合金",
+   "category": "material",
+   "score": 0.002585
+  },
+  {
+   "id": "mat_foammetal",
+   "name": "泡沫金属",
+   "category": "material",
+   "score": 0.002445
+  },
+  {
+   "id": "ene_salinity",
+   "name": "盐差能",
+   "category": "energy",
+   "score": 0.002445
+  }
+ ],
+ "depth_top": [
+  {
+   "id": "bio_cgm",
+   "name": "连续血糖监测",
+   "category": "life",
+   "layer": 211
+  },
+  {
+   "id": "bio_ctdna",
+   "name": "循环肿瘤",
+   "category": "life",
+   "layer": 210
+  },
+  {
+   "id": "bio_liquidbiopsy",
+   "name": "液体活检",
+   "category": "life",
+   "layer": 209
+  },
+  {
+   "id": "bio_precisionmed",
+   "name": "精准医疗",
+   "category": "life",
+   "layer": 208
+  },
+  {
+   "id": "bio_organonchip",
+   "name": "器官芯片",
+   "category": "life",
+   "layer": 207
+  },
+  {
+   "id": "bio_spatialtrans",
+   "name": "空间转录组",
+   "category": "life",
+   "layer": 206
+  },
+  {
+   "id": "bio_medicalai",
+   "name": "医疗影像",
+   "category": "life",
+   "layer": 205
+  },
+  {
+   "id": "bio_cart",
+   "name": "CAR-T 疗法",
+   "category": "life",
+   "layer": 204
+  },
+  {
+   "id": "bio_immunotherapy",
+   "name": "免疫治疗",
+   "category": "life",
+   "layer": 203
+  },
+  {
+   "id": "bio_singlecell",
+   "name": "单细胞测序",
+   "category": "life",
+   "layer": 202
+  },
+  {
+   "id": "bio_organoid",
+   "name": "类器官",
+   "category": "life",
+   "layer": 201
+  },
+  {
+   "id": "bio_pharmacogen",
+   "name": "药物基因组学",
+   "category": "life",
+   "layer": 200
+  },
+  {
+   "id": "bio_antimicrobialpep",
+   "name": "抗菌肽",
+   "category": "life",
+   "layer": 199
+  },
+  {
+   "id": "bio_newantibiotic",
+   "name": "新型抗生素",
+   "category": "life",
+   "layer": 198
+  },
+  {
+   "id": "bio_metabolomics",
+   "name": "代谢组学",
+   "category": "life",
+   "layer": 197
+  },
+  {
+   "id": "bio_vaccineplatform",
+   "name": "疫苗平台",
+   "category": "life",
+   "layer": 196
+  },
+  {
+   "id": "bio_lipidnp",
+   "name": "脂质纳米粒",
+   "category": "life",
+   "layer": 195
+  },
+  {
+   "id": "bio_nanomed",
+   "name": "纳米药物",
+   "category": "life",
+   "layer": 194
+  },
+  {
+   "id": "bio_microbiome",
+   "name": "微生物组",
+   "category": "life",
+   "layer": 193
+  },
+  {
+   "id": "gene_circuit",
+   "name": "基因电路",
+   "category": "life",
+   "layer": 193
+  },
+  {
+   "id": "bio_synbio",
+   "name": "合成生物学",
+   "category": "life",
+   "layer": 192
+  },
+  {
+   "id": "bio_bio3dp",
+   "name": "生物",
+   "category": "life",
+   "layer": 191
+  },
+  {
+   "id": "bio_bioniceye",
+   "name": "仿生眼",
+   "category": "life",
+   "layer": 190
+  },
+  {
+   "id": "mil_loyalwingman",
+   "name": "忠诚僚机",
+   "category": "military",
+   "layer": 189
+  },
+  {
+   "id": "bio_exoskeleton",
+   "name": "外骨骼",
+   "category": "life",
+   "layer": 189
+  },
+  {
+   "id": "tr_reusablerocket",
+   "name": "可回收火箭",
+   "category": "transport",
+   "layer": 188
+  },
+  {
+   "id": "bio_reharobot",
+   "name": "康复机器人",
+   "category": "life",
+   "layer": 188
+  },
+  {
+   "id": "tr_hyperloop",
+   "name": "真空管道列车",
+   "category": "transport",
+   "layer": 187
+  },
+  {
+   "id": "bld_carbonconc",
+   "name": "碳纤维混凝土",
+   "category": "build",
+   "layer": 187
+  },
+  {
+   "id": "bio_surgerobot",
+   "name": "手术机器人",
+   "category": "life",
+   "layer": 187
+  }
+ ],
+ "articulation_top": [
+  {
+   "id": "chemistry",
+   "name": "化学",
+   "category": "basic",
+   "degree": 848
+  },
+  {
+   "id": "mathematics",
+   "name": "数学",
+   "category": "basic",
+   "degree": 784
+  },
+  {
+   "id": "computer",
+   "name": "电子计算机",
+   "category": "info",
+   "degree": 643
+  },
+  {
+   "id": "electricity",
+   "name": "电力系统",
+   "category": "energy",
+   "degree": 488
+  },
+  {
+   "id": "physics",
+   "name": "经典力学",
+   "category": "basic",
+   "degree": 387
+  },
+  {
+   "id": "steel",
+   "name": "钢铁",
+   "category": "material",
+   "degree": 313
+  },
+  {
+   "id": "semiconductors",
+   "name": "半导体材料",
+   "category": "material",
+   "degree": 259
+  },
+  {
+   "id": "internet",
+   "name": "互联网",
+   "category": "info",
+   "degree": 226
+  },
+  {
+   "id": "internal_combustion",
+   "name": "内燃机",
+   "category": "energy",
+   "degree": 185
+  },
+  {
+   "id": "rocket",
+   "name": "火箭",
+   "category": "transport",
+   "degree": 182
+  },
+  {
+   "id": "iron",
+   "name": "铁器",
+   "category": "material",
+   "degree": 178
+  },
+  {
+   "id": "engineering",
+   "name": "工程学",
+   "category": "basic",
+   "degree": 168
+  },
+  {
+   "id": "masonry",
+   "name": "砌筑",
+   "category": "build",
+   "degree": 166
+  },
+  {
+   "id": "writing",
+   "name": "文字",
+   "category": "info",
+   "degree": 159
+  },
+  {
+   "id": "battery",
+   "name": "电池",
+   "category": "energy",
+   "degree": 158
+  },
+  {
+   "id": "automobile",
+   "name": "汽车",
+   "category": "transport",
+   "degree": 151
+  },
+  {
+   "id": "cement",
+   "name": "水泥与混凝土",
+   "category": "material",
+   "degree": 150
+  },
+  {
+   "id": "fermentation",
+   "name": "发酵",
+   "category": "life",
+   "degree": 134
+  },
+  {
+   "id": "surgery",
+   "name": "无菌外科",
+   "category": "life",
+   "degree": 129
+  },
+  {
+   "id": "agriculture",
+   "name": "农业",
+   "category": "life",
+   "degree": 123
+  },
+  {
+   "id": "gps",
+   "name": "全球卫星定位 GNSS",
+   "category": "transport",
+   "degree": 118
+  },
+  {
+   "id": "plastics",
+   "name": "塑料",
+   "category": "material",
+   "degree": 118
+  },
+  {
+   "id": "electric_motor",
+   "name": "电动机",
+   "category": "energy",
+   "degree": 102
+  },
+  {
+   "id": "optics",
+   "name": "光学",
+   "category": "basic",
+   "degree": 100
+  },
+  {
+   "id": "materials",
+   "name": "材料科学",
+   "category": "basic",
+   "degree": 95
+  },
+  {
+   "id": "steam_engine",
+   "name": "蒸汽机",
+   "category": "energy",
+   "degree": 89
+  },
+  {
+   "id": "radio",
+   "name": "无线电",
+   "category": "info",
+   "degree": 87
+  },
+  {
+   "id": "ic",
+   "name": "集成电路",
+   "category": "info",
+   "degree": 85
+  },
+  {
+   "id": "lasers",
+   "name": "激光器",
+   "category": "info",
+   "degree": 79
+  },
+  {
+   "id": "scientific_method",
+   "name": "科学方法",
+   "category": "basic",
+   "degree": 78
+  }
+ ],
+ "longest_chain": [
+  {
+   "id": "famille_rose",
+   "name": "粉彩瓷"
+  },
+  {
+   "id": "falangcai_enamel",
+   "name": "珐琅彩瓷"
+  },
+  {
+   "id": "doucai_porcelain",
+   "name": "斗彩"
+  },
+  {
+   "id": "qinghua_blue_white",
+   "name": "青花瓷"
+  },
+  {
+   "id": "gaoling_porcelain_stone_body",
+   "name": "瓷石高岭二元配方"
+  },
+  {
+   "id": "proto_porcelain",
+   "name": "原始瓷"
+  },
+  {
+   "id": "ash_glaze_highfire",
+   "name": "草木灰高温釉"
+  },
+  {
+   "id": "fire",
+   "name": "用火"
+  },
+  {
+   "id": "hearth_stove",
+   "name": "火塘与灶"
+  },
+  {
+   "id": "open_firing",
+   "name": "露天烧陶"
+  },
+  {
+   "id": "mat_pottery",
+   "name": "陶器"
+  },
+  {
+   "id": "brick",
+   "name": "砖与砌筑"
+  },
+  {
+   "id": "mat_copper",
+   "name": "红铜冶炼"
+  },
+  {
+   "id": "mat_gold",
+   "name": "黄金加工"
+  },
+  {
+   "id": "mat_silver",
+   "name": "白银加工"
+  },
+  {
+   "id": "mat_casting",
+   "name": "铸造"
+  },
+  {
+   "id": "bronze",
+   "name": "青铜"
+  },
+  {
+   "id": "mat_bronze",
+   "name": "青铜合金"
+  },
+  {
+   "id": "mat_lead",
+   "name": "铅冶炼"
+  },
+  {
+   "id": "mat_tin",
+   "name": "锡冶炼"
+  },
+  {
+   "id": "mat_solder",
+   "name": "软钎料"
+  },
+  {
+   "id": "mat_sinter",
+   "name": "烧结"
+  },
+  {
+   "id": "mat_forging",
+   "name": "锻造"
+  },
+  {
+   "id": "mat_cement",
+   "name": "水泥"
+  },
+  {
+   "id": "mat_glass",
+   "name": "玻璃"
+  },
+  {
+   "id": "mat_brass",
+   "name": "黄铜"
+  },
+  {
+   "id": "mat_mercury",
+   "name": "汞冶炼"
+  },
+  {
+   "id": "mat_stoneware",
+   "name": "炻器"
+  },
+  {
+   "id": "mat_concrete",
+   "name": "混凝土"
+  },
+  {
+   "id": "mat_refractory",
+   "name": "耐火材料"
+  },
+  {
+   "id": "iron",
+   "name": "铁器"
+  },
+  {
+   "id": "steel",
+   "name": "钢铁"
+  },
+  {
+   "id": "mat_wrought",
+   "name": "熟铁"
+  },
+  {
+   "id": "mat_heat",
+   "name": "热处理"
+  },
+  {
+   "id": "mat_quench",
+   "name": "淬火"
+  },
+  {
+   "id": "mat_temper",
+   "name": "回火"
+  },
+  {
+   "id": "mat_anneal",
+   "name": "退火"
+  },
+  {
+   "id": "mat_castiron",
+   "name": "铸铁"
+  },
+  {
+   "id": "mat_zinc",
+   "name": "锌冶炼"
+  },
+  {
+   "id": "mat_carburize",
+   "name": "渗碳"
+  },
+  {
+   "id": "mat_blastfurnace",
+   "name": "高炉炼铁"
+  },
+  {
+   "id": "mat_flatglass",
+   "name": "平板玻璃"
+  },
+  {
+   "id": "mat_steel2",
+   "name": "坩埚钢"
+  },
+  {
+   "id": "mat_porcelain",
+   "name": "瓷器"
+  },
+  {
+   "id": "mat_drawing",
+   "name": "拉拔"
+  },
+  {
+   "id": "mat_rolling",
+   "name": "轧制"
+  },
+  {
+   "id": "mat_opticalglass",
+   "name": "光学玻璃"
+  },
+  {
+   "id": "mat_zeolite",
+   "name": "沸石分子筛"
+  },
+  {
+   "id": "mat_malleable",
+   "name": "可锻铸铁"
+  },
+  {
+   "id": "mat_cobalt",
+   "name": "钴"
+  },
+  {
+   "id": "mat_galv",
+   "name": "热浸镀锌"
+  },
+  {
+   "id": "mat_platinum",
+   "name": "铂族金属"
+  },
+  {
+   "id": "mat_manganese2",
+   "name": "锰"
+  },
+  {
+   "id": "mat_molybdenum",
+   "name": "钼"
+  },
+  {
+   "id": "mat_tungsten",
+   "name": "钨"
+  },
+  {
+   "id": "mat_zirconium",
+   "name": "锆"
+  },
+  {
+   "id": "mat_chromium",
+   "name": "铬"
+  },
+  {
+   "id": "mat_beryllium",
+   "name": "铍"
+  },
+  {
+   "id": "mat_powder",
+   "name": "粉末冶金"
+  },
+  {
+   "id": "mat_extrusion",
+   "name": "挤压成形"
+  },
+  {
+   "id": "mat_casehard",
+   "name": "表面硬化"
+  },
+  {
+   "id": "mat_plywood",
+   "name": "胶合板"
+  },
+  {
+   "id": "mat_insulation",
+   "name": "隔热材料"
+  },
+  {
+   "id": "mat_cupola",
+   "name": "冲天炉"
+  },
+  {
+   "id": "mat_inductionmelt",
+   "name": "感应熔炼"
+  },
+  {
+   "id": "mat_vanadium",
+   "name": "钒"
+  },
+  {
+   "id": "mat_tantalum",
+   "name": "钽"
+  },
+  {
+   "id": "mat_plating",
+   "name": "电镀"
+  },
+  {
+   "id": "mat_thermoelec",
+   "name": "热电材料"
+  },
+  {
+   "id": "mat_alu",
+   "name": "铝冶炼"
+  },
+  {
+   "id": "mat_babbitt",
+   "name": "巴氏合金"
+  },
+  {
+   "id": "mat_vulcan",
+   "name": "硫化橡胶"
+  },
+  {
+   "id": "mat_continuouscast",
+   "name": "连续铸造"
+  },
+  {
+   "id": "mat_reconcrete",
+   "name": "钢筋混凝土"
+  },
+  {
+   "id": "mat_woodmetal",
+   "name": "伍德合金"
+  },
+  {
+   "id": "mat_niobium",
+   "name": "铌"
+  },
+  {
+   "id": "mat_toolsteel",
+   "name": "工具钢"
+  },
+  {
+   "id": "mat_tempered",
+   "name": "钢化玻璃"
+  },
+  {
+   "id": "mat_piezo",
+   "name": "压电材料"
+  },
+  {
+   "id": "mat_manganese",
+   "name": "锰钢"
+  },
+  {
+   "id": "mat_prestress",
+   "name": "预应力混凝土"
+  },
+  {
+   "id": "mat_ge",
+   "name": "锗"
+  },
+  {
+   "id": "mat_sic",
+   "name": "碳化硅"
+  },
+  {
+   "id": "mat_hss",
+   "name": "高速钢"
+  },
+  {
+   "id": "mat_phenolic",
+   "name": "酚醛树脂"
+  },
+  {
+   "id": "mat_ito",
+   "name": "透明导电膜"
+  },
+  {
+   "id": "mat_alalloy",
+   "name": "硬铝合金"
+  },
+  {
+   "id": "mat_ferrite",
+   "name": "铁氧体"
+  },
+  {
+   "id": "mat_ltsc",
+   "name": "低温超导"
+  },
+  {
+   "id": "mat_stainless",
+   "name": "不锈钢"
+  },
+  {
+   "id": "mat_siliconw",
+   "name": "单晶硅"
+  },
+  {
+   "id": "mat_zirconia",
+   "name": "氧化锆陶瓷"
+  },
+  {
+   "id": "mat_anodize",
+   "name": "阳极氧化"
+  },
+  {
+   "id": "mat_wc",
+   "name": "碳化钨"
+  },
+  {
+   "id": "mat_pvc",
+   "name": "聚氯乙烯"
+  },
+  {
+   "id": "mat_sbr",
+   "name": "丁苯橡胶"
+  },
+  {
+   "id": "mat_mgalloy",
+   "name": "镁合金"
+  },
+  {
+   "id": "mat_glassfiber",
+   "name": "玻璃纤维"
+  },
+  {
+   "id": "mat_ps",
+   "name": "聚苯乙烯"
+  },
+  {
+   "id": "mat_polyester",
+   "name": "聚酯"
+  },
+  {
+   "id": "mat_frp",
+   "name": "玻璃钢"
+  },
+  {
+   "id": "mat_aerogel",
+   "name": "气凝胶"
+  },
+  {
+   "id": "mat_nbr",
+   "name": "丁腈橡胶"
+  },
+  {
+   "id": "mat_pe",
+   "name": "聚乙烯"
+  },
+  {
+   "id": "mat_pmma",
+   "name": "有机玻璃"
+  },
+  {
+   "id": "mat_nylon",
+   "name": "尼龙"
+  },
+  {
+   "id": "mat_gan2",
+   "name": "氧化锌半导体"
+  },
+  {
+   "id": "mat_epoxy",
+   "name": "环氧树脂"
+  },
+  {
+   "id": "mat_pu",
+   "name": "聚氨酯"
+  },
+  {
+   "id": "mat_ptfe",
+   "name": "聚四氟乙烯"
+  },
+  {
+   "id": "mat_pa",
+   "name": "聚酰胺"
+  },
+  {
+   "id": "mat_silicone",
+   "name": "硅橡胶"
+  },
+  {
+   "id": "mat_polysi",
+   "name": "多晶硅"
+  },
+  {
+   "id": "mat_honeycomb",
+   "name": "蜂窝夹层"
+  },
+  {
+   "id": "mat_esr",
+   "name": "电渣重熔"
+  },
+  {
+   "id": "mfg_chemill",
+   "name": "化学铣切"
+  },
+  {
+   "id": "mfg_servo",
+   "name": "伺服系统"
+  },
+  {
+   "id": "mfg_linearmotor",
+   "name": "直线电机"
+  },
+  {
+   "id": "mfg_kanban",
+   "name": "看板管理"
+  },
+  {
+   "id": "tr_transponder",
+   "name": "应答机"
+  },
+  {
+   "id": "missile",
+   "name": "导弹"
+  },
+  {
+   "id": "mat_ductile",
+   "name": "球墨铸铁"
+  },
+  {
+   "id": "mat_abs",
+   "name": "ABS 树脂"
+  },
+  {
+   "id": "mat_tialloy",
+   "name": "钛合金"
+  },
+  {
+   "id": "mat_sin",
+   "name": "氮化硅陶瓷"
+  },
+  {
+   "id": "mat_uhmwpe",
+   "name": "超高分子量聚乙烯"
+  },
+  {
+   "id": "mat_inp",
+   "name": "磷化铟"
+  },
+  {
+   "id": "mat_stealth",
+   "name": "吸波隐身材料"
+  },
+  {
+   "id": "mat_foammetal",
+   "name": "泡沫金属"
+  },
+  {
+   "id": "mat_floatglass",
+   "name": "浮法玻璃"
+  },
+  {
+   "id": "mat_pc",
+   "name": "聚碳酸酯"
+  },
+  {
+   "id": "mat_pp",
+   "name": "聚丙烯"
+  },
+  {
+   "id": "mat_cf",
+   "name": "碳纤维"
+  },
+  {
+   "id": "mat_metglass",
+   "name": "非晶合金"
+  },
+  {
+   "id": "mat_hydrogel",
+   "name": "水凝胶"
+  },
+  {
+   "id": "mat_gaas",
+   "name": "砷化镓"
+  },
+  {
+   "id": "mat_cfrp",
+   "name": "碳纤维复合材料"
+  },
+  {
+   "id": "mat_mmc",
+   "name": "金属基复合材料"
+  },
+  {
+   "id": "mat_pcm",
+   "name": "相变材料"
+  },
+  {
+   "id": "mat_softmag",
+   "name": "非晶软磁"
+  },
+  {
+   "id": "mat_biomat",
+   "name": "生物材料"
+  },
+  {
+   "id": "mat_sps",
+   "name": "放电等离子烧结"
+  },
+  {
+   "id": "mat_pi",
+   "name": "聚酰亚胺"
+  },
+  {
+   "id": "mat_shapemem",
+   "name": "形状记忆合金"
+  },
+  {
+   "id": "mat_aramid",
+   "name": "芳纶"
+  },
+  {
+   "id": "mat_gan",
+   "name": "氮化镓"
+  },
+  {
+   "id": "mat_foamceramic",
+   "name": "泡沫陶瓷"
+  },
+  {
+   "id": "mat_perovskite",
+   "name": "钙钛矿材料"
+  },
+  {
+   "id": "mat_cmc",
+   "name": "陶瓷基复合材料"
+  },
+  {
+   "id": "mat_hydrogenstorage",
+   "name": "储氢合金"
+  },
+  {
+   "id": "inf_rdbms",
+   "name": "关系型数据库"
+  },
+  {
+   "id": "inf_fiber",
+   "name": "光纤通信"
+  },
+  {
+   "id": "inf_lan",
+   "name": "局域网"
+  },
+  {
+   "id": "inf_wan",
+   "name": "广域网"
+  },
+  {
+   "id": "inf_microprocessor",
+   "name": "微处理器"
+  },
+  {
+   "id": "inf_floppy",
+   "name": "软盘"
+  },
+  {
+   "id": "inf_email",
+   "name": "电子邮件"
+  },
+  {
+   "id": "inf_pl_c",
+   "name": "C 语言"
+  },
+  {
+   "id": "recombinant_dna",
+   "name": "重组DNA技术"
+  },
+  {
+   "id": "gene_cloning",
+   "name": "基因克隆"
+  },
+  {
+   "id": "genetic_engineering",
+   "name": "基因工程"
+  },
+  {
+   "id": "bio_mri",
+   "name": "核磁共振"
+  },
+  {
+   "id": "bio_transgenic",
+   "name": "转基因"
+  },
+  {
+   "id": "bio_monoclonal",
+   "name": "单克隆抗体"
+  },
+  {
+   "id": "bio_seq",
+   "name": "基因测序"
+  },
+  {
+   "id": "bio_cochlear",
+   "name": "人工耳蜗"
+  },
+  {
+   "id": "bio_ivf",
+   "name": "试管婴儿"
+  },
+  {
+   "id": "bio_stent",
+   "name": "血管支架"
+  },
+  {
+   "id": "bio_tissueeng",
+   "name": "组织工程"
+  },
+  {
+   "id": "bio_artskin",
+   "name": "人工皮肤"
+  },
+  {
+   "id": "bio_poc",
+   "name": "快速检测"
+  },
+  {
+   "id": "bio_neuromod",
+   "name": "神经调控"
+  },
+  {
+   "id": "bio_proteineng",
+   "name": "蛋白质工程"
+  },
+  {
+   "id": "bio_epigenetics",
+   "name": "表观遗传学"
+  },
+  {
+   "id": "bio_pcr",
+   "name": "聚合酶链反应"
+  },
+  {
+   "id": "bio_dbs",
+   "name": "深部脑刺激"
+  },
+  {
+   "id": "bio_mrnavax",
+   "name": "mRNA 疫苗"
+  },
+  {
+   "id": "bio_targeted",
+   "name": "靶向治疗"
+  },
+  {
+   "id": "bio_genetherapy",
+   "name": "基因治疗"
+  },
+  {
+   "id": "bio_directedevo",
+   "name": "定向进化"
+  },
+  {
+   "id": "bio_metabeng",
+   "name": "代谢工程"
+  },
+  {
+   "id": "bio_artliver",
+   "name": "人工肝"
+  },
+  {
+   "id": "bio_artlung",
+   "name": "人工肺"
+  },
+  {
+   "id": "bio_proteomics2",
+   "name": "蛋白组学"
+  },
+  {
+   "id": "bio_clone",
+   "name": "克隆技术"
+  },
+  {
+   "id": "bio_celltherapy",
+   "name": "细胞治疗"
+  },
+  {
+   "id": "bio_wearable",
+   "name": "可穿戴健康"
+  },
+  {
+   "id": "bio_surgerobot",
+   "name": "手术机器人"
+  },
+  {
+   "id": "bio_reharobot",
+   "name": "康复机器人"
+  },
+  {
+   "id": "bio_exoskeleton",
+   "name": "外骨骼"
+  },
+  {
+   "id": "bio_bioniceye",
+   "name": "仿生眼"
+  },
+  {
+   "id": "bio_bio3dp",
+   "name": "生物"
+  },
+  {
+   "id": "bio_synbio",
+   "name": "合成生物学"
+  },
+  {
+   "id": "bio_microbiome",
+   "name": "微生物组"
+  },
+  {
+   "id": "bio_nanomed",
+   "name": "纳米药物"
+  },
+  {
+   "id": "bio_lipidnp",
+   "name": "脂质纳米粒"
+  },
+  {
+   "id": "bio_vaccineplatform",
+   "name": "疫苗平台"
+  },
+  {
+   "id": "bio_metabolomics",
+   "name": "代谢组学"
+  },
+  {
+   "id": "bio_newantibiotic",
+   "name": "新型抗生素"
+  },
+  {
+   "id": "bio_antimicrobialpep",
+   "name": "抗菌肽"
+  },
+  {
+   "id": "bio_pharmacogen",
+   "name": "药物基因组学"
+  },
+  {
+   "id": "bio_organoid",
+   "name": "类器官"
+  },
+  {
+   "id": "bio_singlecell",
+   "name": "单细胞测序"
+  },
+  {
+   "id": "bio_immunotherapy",
+   "name": "免疫治疗"
+  },
+  {
+   "id": "bio_cart",
+   "name": "CAR-T 疗法"
+  },
+  {
+   "id": "bio_medicalai",
+   "name": "医疗影像"
+  },
+  {
+   "id": "bio_spatialtrans",
+   "name": "空间转录组"
+  },
+  {
+   "id": "bio_organonchip",
+   "name": "器官芯片"
+  },
+  {
+   "id": "bio_precisionmed",
+   "name": "精准医疗"
+  },
+  {
+   "id": "bio_liquidbiopsy",
+   "name": "液体活检"
+  },
+  {
+   "id": "bio_ctdna",
+   "name": "循环肿瘤"
+  },
+  {
+   "id": "bio_cgm",
+   "name": "连续血糖监测"
+  }
+ ]
+}

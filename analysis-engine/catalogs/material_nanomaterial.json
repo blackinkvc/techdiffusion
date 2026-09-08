@@ -1,0 +1,1385 @@
+{
+ "cat": "material",
+ "catName": "材料",
+ "sub": "nanomaterial",
+ "subName": "纳米与微结构材料",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "chemistry",
+  "physics",
+  "semiconductors",
+  "composites",
+  "magnets",
+  "plastics",
+  "lasers",
+  "electricity",
+  "optics",
+  "relativity_qm"
+ ],
+ "families": [
+  {
+   "name": "纳米颗粒与粉体",
+   "items": [
+    {
+     "id": "lampblack_pigment",
+     "name": "灯黑",
+     "en": "Lampblack",
+     "year": -1000,
+     "note": "油脂不完全燃烧制得的纳米碳颗粒，中国古代即用于制墨与着色，是最早人工纳米粉。",
+     "deps": [
+      "fire"
+     ]
+    },
+    {
+     "id": "industrial_carbon_black",
+     "name": "工业炭黑",
+     "en": "Furnace carbon black",
+     "year": 1904,
+     "note": "以烃类不完全燃烧规模化生产的纳米级炭黑，用于橡胶补强，催生了汽车轮胎工业。",
+     "deps": [
+      "petroleum"
+     ]
+    },
+    {
+     "id": "fumed_silica",
+     "name": "气相二氧化硅",
+     "en": "Fumed silica",
+     "year": 1941,
+     "note": "四氯化硅高温水解制得纳米二氧化硅粉，作橡胶补强、涂料增稠与载体用。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "precipitated_silica",
+     "name": "沉淀白炭黑",
+     "en": "Precipitated silica",
+     "year": 1930,
+     "note": "水玻璃酸沉制得的无定形二氧化硅粉，用于鞋底与硅橡胶补强。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "carbonyl_iron_powder",
+     "name": "羰基铁粉",
+     "en": "Carbonyl iron powder",
+     "year": 1925,
+     "note": "热解五羰基铁制得的球形细铁粉，作高频磁芯与粉末冶金原料。",
+     "deps": [
+      "chemistry",
+      "iron"
+     ]
+    },
+    {
+     "id": "nanoscale_titania",
+     "name": "纳米二氧化钛",
+     "en": "Nanoscale titanium dioxide",
+     "year": 1990,
+     "note": "粒径数十纳米的二氧化钛粉体，具光催化与紫外屏蔽性，用于自洁涂层与防晒。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "nano_zinc_oxide",
+     "name": "纳米氧化锌",
+     "en": "Zinc oxide nanoparticles",
+     "year": 1995,
+     "note": "纳米氧化锌粉体具紫外吸收与抗菌活性，用于橡胶、化妆品与抗菌材料。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "nano_calcium_carbonate",
+     "name": "纳米碳酸钙",
+     "en": "Nano calcium carbonate",
+     "year": 1990,
+     "note": "碳化法制得立方纳米碳酸钙，填充塑料与涂料改善刚性与光泽。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "nano_silver_antibacterial",
+     "name": "纳米银抗菌剂",
+     "en": "Nano-silver antimicrobial",
+     "year": 2000,
+     "note": "缓释银离子的纳米银颗粒，抗菌谱广，用于敷料、塑料与纺织品抗菌。"
+    },
+    {
+     "id": "nano_hydroxyapatite",
+     "name": "纳米羟基磷灰石",
+     "en": "Nanoscale hydroxyapatite",
+     "year": 1995,
+     "note": "仿骨成分的纳米钙磷陶瓷粉，用于骨修复填充与齿科材料。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "nano_alumina_powder",
+     "name": "纳米氧化铝粉",
+     "en": "Alumina nanopowder",
+     "year": 1990,
+     "note": "高纯纳米氧化铝粉广泛用于精密磨料、结构陶瓷与锂电池隔膜涂覆。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "nano_zirconia_powder",
+     "name": "纳米氧化锆粉",
+     "en": "Zirconia nanopowder",
+     "year": 1990,
+     "note": "纳米氧化锆粉烧结成高强韧陶瓷，用于齿科修复与结构陶瓷。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "metal_nanopowder_combustion",
+     "name": "金属纳米粉",
+     "en": "Metal nanopowder",
+     "year": 2000,
+     "note": "铝等金属纳米粉具高反应活性，用作含能材料与固体推进剂添加剂。",
+     "deps": [
+      "explosives"
+     ]
+    },
+    {
+     "id": "gas_phase_condensation",
+     "name": "惰性气体冷凝制粉",
+     "en": "Inert gas condensation",
+     "year": 1963,
+     "note": "在惰性气氛中蒸发金属并冷凝收集纳米粒子，是最早的纳米粉制备方法之一。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "sol_gel_powder",
+     "name": "溶胶-凝胶法制粉",
+     "en": "Sol-gel powder synthesis",
+     "year": 1930,
+     "note": "由前驱体水解缩聚成溶胶凝胶再煅烧成粉，可控合成氧化物纳米粒子。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "hydrothermal_synthesis",
+     "name": "水热法合成",
+     "en": "Hydrothermal synthesis",
+     "year": 1950,
+     "note": "在密闭高温水体系中生长晶体与纳米粉，广泛用于压电与电池材料制备。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "plasma_synthesis_powder",
+     "name": "等离子体制粉",
+     "en": "Plasma synthesis of nanopowders",
+     "year": 1980,
+     "note": "以热等离子体蒸发物料快速冷凝成纳米粉，适用于高熔点难熔材料。",
+     "deps": [
+      "physics",
+      "electricity"
+     ]
+    },
+    {
+     "id": "cmp_slurry",
+     "name": "化学机械抛光液",
+     "en": "CMP slurry",
+     "year": 1985,
+     "note": "纳米二氧化硅或氧化铈颗粒悬浮液，用于芯片晶圆表面抛光平坦化。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "colorant_nanopigment",
+     "name": "纳米颜料分散体",
+     "en": "Nanopigment dispersion",
+     "year": 2000,
+     "note": "研磨至纳米级的高着色力颜料分散液，用于喷墨墨水和涂料。"
+    },
+    {
+     "id": "nano_oxide_ceramic_processing",
+     "name": "纳米陶瓷成型",
+     "en": "Nanoceramic processing",
+     "year": 1990,
+     "note": "以纳米粉低温烧结获得细晶致密陶瓷，可提升透明性与力学性能。"
+    },
+    {
+     "id": "nanoparticle_drug_excipient",
+     "name": "纳米药物晶体",
+     "en": "Nano drug crystal",
+     "year": 2000,
+     "note": "将难溶药物研磨成纳米晶体以提高溶出度，用于口服与注射给药。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "stober_silica",
+     "name": "Stöber单分散二氧化硅",
+     "en": "Stöber process silica",
+     "year": 1968,
+     "note": "以氨催化正硅酸乙酯水解制得粒径均一的二氧化硅球，是胶体科学经典方法。",
+     "deps": [
+      "sol_gel_powder"
+     ]
+    },
+    {
+     "id": "superparamagnetic_iron_oxide",
+     "name": "超顺磁氧化铁纳米粒",
+     "en": "Superparamagnetic iron oxide nanoparticles",
+     "year": 1985,
+     "note": "纳米氧化铁具超顺磁性，用作磁共振对比剂与肿瘤磁热疗材料。",
+     "deps": [
+      "chemistry",
+      "medical_imaging"
+     ]
+    },
+    {
+     "id": "nano_zero_valent_iron",
+     "name": "纳米零价铁",
+     "en": "Nano zero-valent iron",
+     "year": 1997,
+     "note": "高活性纳米铁颗粒注入地下修复氯代烃污染，是环境纳米技术的典型应用。",
+     "deps": [
+      "iron",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "nano_ceria_powder",
+     "name": "纳米氧化铈",
+     "en": "Nanoscale ceria",
+     "year": 1995,
+     "note": "纳米氧化铈用于玻璃与晶圆抛光，也作柴油机尾气催化与紫外吸收剂。",
+     "deps": [
+      "chemistry"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "碳纳米材料",
+   "items": [
+    {
+     "id": "fullerene_c60",
+     "name": "富勒烯",
+     "en": "Fullerene C60",
+     "year": 1985,
+     "note": "克罗托等发现笼状碳分子C60，开辟零维碳纳米材料研究领域。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "fullerene_mass_production",
+     "name": "电弧法富勒烯量产",
+     "en": "Arc-discharge fullerene production",
+     "year": 1990,
+     "note": "克雷奇默与赫夫曼以电弧蒸发石墨实现C60克量级制备，推动富勒烯研究。",
+     "deps": [
+      "fullerene_c60",
+      "electricity"
+     ]
+    },
+    {
+     "id": "carbon_nanotube",
+     "name": "碳纳米管",
+     "en": "Carbon nanotube",
+     "year": 1991,
+     "note": "饭岛澄男在电弧产物中发现多层卷曲石墨管，碳纳米管具超高强与导电性。",
+     "deps": [
+      "fullerene_c60"
+     ]
+    },
+    {
+     "id": "single_wall_nanotube",
+     "name": "单壁碳纳米管",
+     "en": "Single-walled carbon nanotube",
+     "year": 1993,
+     "note": "IBM与 NEC分别合成金属性或半导体性单壁管，奠定碳纳米电子学基础。",
+     "deps": [
+      "carbon_nanotube"
+     ]
+    },
+    {
+     "id": "cnt_vapor_growth",
+     "name": "化学气相沉积生长碳管",
+     "en": "CVD growth of carbon nanotubes",
+     "year": 1996,
+     "note": "以过渡金属催化剂分解碳源气生长取向碳管，实现可控批量制备。",
+     "deps": [
+      "carbon_nanotube"
+     ]
+    },
+    {
+     "id": "carbon_nanofiber",
+     "name": "气相生长碳纳米纤维",
+     "en": "Vapor-grown carbon nanofiber",
+     "year": 1980,
+     "note": "烃气在金属颗粒上催化生长的微米级石墨纤维，作导电填料与增强纤维。"
+    },
+    {
+     "id": "graphene",
+     "name": "石墨烯",
+     "en": "Graphene",
+     "year": 2004,
+     "note": "诺沃肖洛夫与盖姆以胶带剥离出单层石墨，其电学力学性能优异。",
+     "deps": [
+      "carbon_nanotube"
+     ]
+    },
+    {
+     "id": "graphene_cvd",
+     "name": "化学气相沉积石墨烯",
+     "en": "CVD graphene film",
+     "year": 2009,
+     "note": "在铜箔上催化生长大尺寸单层石墨烯，为透明电极与电子应用提供路线。",
+     "deps": [
+      "graphene"
+     ]
+    },
+    {
+     "id": "graphene_oxide",
+     "name": "氧化石墨烯",
+     "en": "Graphene oxide",
+     "year": 1859,
+     "note": "以强氧化剂插层剥离石墨制得含氧官能团单层，可溶液加工再还原。"
+    },
+    {
+     "id": "carbon_dots",
+     "name": "碳量子点",
+     "en": "Carbon dots",
+     "year": 2004,
+     "note": "数纳米碳基荧光颗粒，制备简便、低毒，用于荧光标记与传感。"
+    },
+    {
+     "id": "nanodiamond",
+     "name": "纳米金刚石",
+     "en": "Nanodiamond",
+     "year": 1960,
+     "note": "以负氧炸药爆轰合成数纳米金刚石颗粒，用于抛光与荧光生物标记。",
+     "deps": [
+      "explosives"
+     ]
+    },
+    {
+     "id": "carbon_nanoonion",
+     "name": "碳纳米洋葱",
+     "en": "Carbon nano-onion",
+     "year": 1992,
+     "note": "同心封闭的多层石墨球状结构，导电导热良好，用于润滑与储能添加。",
+     "deps": [
+      "fullerene_c60"
+     ]
+    },
+    {
+     "id": "cnt_fiber_assembly",
+     "name": "碳纳米管纤维",
+     "en": "Carbon nanotube fiber",
+     "year": 2000,
+     "note": "将碳管纺丝成宏观连续纤维，强度密度比高，用于轻质导线与复合材料。",
+     "deps": [
+      "carbon_nanotube"
+     ]
+    },
+    {
+     "id": "doped_diamond_electrode",
+     "name": "掺硼金刚石电极",
+     "en": "Boron-doped diamond electrode",
+     "year": 1990,
+     "note": "以CVD在基体上生长的导电金刚石膜，作电化学分析电极与废水氧化阳极。",
+     "deps": [
+      "nanodiamond"
+     ]
+    },
+    {
+     "id": "carbon_catalyst_support",
+     "name": "碳载体催化剂材料",
+     "en": "Carbon-supported catalyst",
+     "year": 1960,
+     "note": "以炭黑与石墨材料负载铂等金属颗粒，是燃料电池与催化加氢的核心材料。",
+     "deps": [
+      "industrial_carbon_black",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "graphene_nanoplatelet",
+     "name": "石墨烯纳米片",
+     "en": "Graphene nanoplatelet",
+     "year": 2010,
+     "note": "低成本多层石墨烯粉体，作涂料、塑料与锂电导电导热添加剂实现批量应用。",
+     "deps": [
+      "graphene"
+     ]
+    },
+    {
+     "id": "cnt_conductive_paste",
+     "name": "碳纳米管导电浆料",
+     "en": "Carbon nanotube conductive paste",
+     "year": 2005,
+     "note": "碳管分散浆料作锂电正极导电剂与透明电极原料，是碳管较早的产业化形态。",
+     "deps": [
+      "carbon_nanotube",
+      "battery"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "量子点与一维纳米结构",
+   "items": [
+    {
+     "id": "semiconductor_quantum_dot",
+     "name": "半导体量子点",
+     "en": "Semiconductor quantum dot",
+     "year": 1981,
+     "note": "埃基莫夫在玻璃中析出硫化铜等纳米晶，观察到随尺寸变化的量子限域效应。",
+     "deps": [
+      "semiconductors",
+      "relativity_qm"
+     ]
+    },
+    {
+     "id": "colloidal_cdse_quantum_dot",
+     "name": "胶体硒化镉量子点",
+     "en": "Colloidal CdSe quantum dots",
+     "year": 1993,
+     "note": "穆雷等建立高温配体法合成尺寸均一CdSe量子点，推动其发光应用。",
+     "deps": [
+      "semiconductor_quantum_dot"
+     ]
+    },
+    {
+     "id": "cadmium_free_quantum_dot",
+     "name": "铟磷量子点",
+     "en": "InP quantum dot",
+     "year": 2010,
+     "note": "无镉的铟磷量子点发光覆盖可见光，用于显示色转换层以符合环保要求。",
+     "deps": [
+      "colloidal_cdse_quantum_dot"
+     ]
+    },
+    {
+     "id": "perovskite_quantum_dot",
+     "name": "钙钛矿量子点",
+     "en": "Perovskite quantum dot",
+     "year": 2015,
+     "note": "卤化铅钙钛矿纳米晶发光纯度高、色域广，用于高色域显示研究。",
+     "deps": [
+      "colloidal_cdse_quantum_dot"
+     ]
+    },
+    {
+     "id": "quantum_dot_display",
+     "name": "量子点背光膜",
+     "en": "Quantum dot enhancement film",
+     "year": 2013,
+     "note": "以量子点膜将蓝光转为红绿光，使液晶显示色域显著提升并实现商用。",
+     "deps": [
+      "colloidal_cdse_quantum_dot",
+      "television"
+     ]
+    },
+    {
+     "id": "quantum_dot_solar_enhancement",
+     "name": "量子点光转换",
+     "en": "Quantum dot photon conversion",
+     "year": 2010,
+     "note": "利用量子点下转换提升光伏组件长波响应，属增能型组件技术。",
+     "deps": [
+      "colloidal_cdse_quantum_dot",
+      "solar"
+     ]
+    },
+    {
+     "id": "silicon_nanowire",
+     "name": "硅纳米线",
+     "en": "Silicon nanowire",
+     "year": 1964,
+     "note": "瓦格纳以气-液-固机制生长硅晶须，是最早的一维半导体纳米结构制备法。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "zinc_oxide_nanowire",
+     "name": "氧化锌纳米线",
+     "en": "Zinc oxide nanowire",
+     "year": 2001,
+     "note": "气相法生长取向氧化锌纳米线，具压电与紫外发光性能，用于传感器阵列。",
+     "deps": [
+      "hydrothermal_synthesis"
+     ]
+    },
+    {
+     "id": "silver_nanowire",
+     "name": "银纳米线",
+     "en": "Silver nanowire",
+     "year": 2002,
+     "note": "多元醇法合成高长径比银纳米线，制成透明导电膜用于触屏与柔性电极。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "gold_nanorod",
+     "name": "金纳米棒",
+     "en": "Gold nanorod",
+     "year": 2001,
+     "note": "表面等离子体共振可调的金纳米棒，用于生物检测与光热治疗研究。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "silver_nanoparticle_plasmon",
+     "name": "银纳米立方体",
+     "en": "Silver nanocube",
+     "year": 2002,
+     "note": "单晶银纳米立方体具局域等离子体增强效应，用于表面增强光谱衬底。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "molybdenum_disulfide_nanosheet",
+     "name": "二硫化钼纳米片",
+     "en": "MoS2 nanosheet",
+     "year": 2010,
+     "note": "层状二硫化钼剥离为单层后具直接带隙，用于晶体管与催化析氢。",
+     "deps": [
+      "graphene"
+     ]
+    },
+    {
+     "id": "hexagonal_boron_nitride",
+     "name": "六方氮化硼纳米片",
+     "en": "h-BN nanosheet",
+     "year": 2010,
+     "note": "绝缘的类石墨烯层状材料，作介电衬底与导热绝缘填料。",
+     "deps": [
+      "graphene"
+     ]
+    },
+    {
+     "id": "boron_nitride_nanotube",
+     "name": "氮化硼纳米管",
+     "en": "Boron nitride nanotube",
+     "year": 1995,
+     "note": "绝缘且抗氧化性强的类碳管结构，用于复合材料增强与中子防护。",
+     "deps": [
+      "carbon_nanotube"
+     ]
+    },
+    {
+     "id": "semiconductor_nanorod",
+     "name": "半导体纳米棒阵列",
+     "en": "Semiconductor nanorod array",
+     "year": 2000,
+     "note": "取向生长的纳米棒阵列增加受光面积，用于光催化与光电器件。",
+     "deps": [
+      "silicon_nanowire"
+     ]
+    },
+    {
+     "id": "metal_semiconductor_heterostructure",
+     "name": "金属-半导体异质纳米结构",
+     "en": "Metal-semiconductor nano heterostructure",
+     "year": 2005,
+     "note": "金或铂与半导体复合的核壳结构，实现电荷分离用于光催化制氢。",
+     "deps": [
+      "gold_nanorod"
+     ]
+    },
+    {
+     "id": "electrospinning",
+     "name": "静电纺丝",
+     "en": "Electrospinning",
+     "year": 1934,
+     "note": "以高压电场拉伸聚合物溶液成纳米纤维，可批量制取纤维膜。",
+     "deps": [
+      "electricity",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "cellulose_nanocrystal",
+     "name": "纤维素纳米晶",
+     "en": "Cellulose nanocrystal",
+     "year": 1955,
+     "note": "酸水解纤维素得到的棒状纳米晶，高强度低密度，用于复合增强与光子材料。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "coreshell_quantum_dot",
+     "name": "核壳量子点",
+     "en": "Core-shell quantum dot",
+     "year": 1996,
+     "note": "以宽禁带壳层包裹发光核抑制表面缺陷，显著提高量子点发光效率。",
+     "deps": [
+      "colloidal_cdse_quantum_dot"
+     ]
+    },
+    {
+     "id": "black_silicon",
+     "name": "黑硅",
+     "en": "Black silicon",
+     "year": 1999,
+     "note": "激光或刻蚀在硅表面形成纳米针结构，吸光率近于全黑，用于光探测与光伏。",
+     "deps": [
+      "semiconductors",
+      "lasers"
+     ]
+    },
+    {
+     "id": "upconversion_nanoparticle",
+     "name": "上转换纳米颗粒",
+     "en": "Upconversion nanoparticle",
+     "year": 2004,
+     "note": "稀土掺杂纳米晶可将近红外光上转换为可见光，用于生物成像与防伪。"
+    },
+    {
+     "id": "tio2_nanotube_array",
+     "name": "二氧化钛纳米管阵列",
+     "en": "TiO2 nanotube array",
+     "year": 2001,
+     "note": "阳极氧化钛片制得取向纳米管阵列，用于光电催化与传感器电极。",
+     "deps": [
+      "nanoscale_titania"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "气凝胶与多孔纳米材料",
+   "items": [
+    {
+     "id": "silica_aerogel",
+     "name": "二氧化硅气凝胶",
+     "en": "Silica aerogel",
+     "year": 1931,
+     "note": "基斯特勒以超临界干燥去除凝胶溶剂，制得孔隙率逾九成的极轻固体。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "supercritical_drying",
+     "name": "超临界干燥",
+     "en": "Supercritical drying",
+     "year": 1931,
+     "note": "在临界点以上排除溶剂以避免毛细坍塌，是制备气凝胶的核心工艺。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "carbon_aerogel",
+     "name": "碳气凝胶",
+     "en": "Carbon aerogel",
+     "year": 1989,
+     "note": "间苯二酚-甲醛凝胶碳化制得的导电多孔碳，用于超级电容器电极。",
+     "deps": [
+      "silica_aerogel"
+     ]
+    },
+    {
+     "id": "graphene_aerogel",
+     "name": "石墨烯气凝胶",
+     "en": "Graphene aerogel",
+     "year": 2013,
+     "note": "以氧化石墨烯水凝胶还原干燥制得超轻导电网络，用于吸附与储能。",
+     "deps": [
+      "graphene",
+      "silica_aerogel"
+     ]
+    },
+    {
+     "id": "aerogel_blanket",
+     "name": "气凝胶毡",
+     "en": "Aerogel blanket",
+     "year": 1999,
+     "note": "把气凝胶灌入纤维毡中制得柔性隔热卷材，用于管道与工业保温。",
+     "deps": [
+      "silica_aerogel"
+     ]
+    },
+    {
+     "id": "aerogel_window_insulation",
+     "name": "气凝胶采光材料",
+     "en": "Aerogel glazing insulation",
+     "year": 2000,
+     "note": "透明气凝胶填充采光构件，透光同时大幅降低热损，用于建筑节能。",
+     "deps": [
+      "silica_aerogel"
+     ]
+    },
+    {
+     "id": "mesoporous_silica_mcm41",
+     "name": "介孔二氧化硅",
+     "en": "Mesoporous silica MCM-41",
+     "year": 1992,
+     "note": "以表面活性剂模板合成孔径均匀的介孔二氧化硅，为纳米孔材料奠基。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "sba15_ordered_mesoporous",
+     "name": "有序介孔二氧化硅SBA-15",
+     "en": "SBA-15 mesoporous silica",
+     "year": 1998,
+     "note": "以嵌段共聚物为模板制得大孔径有序介孔材料，用于催化与药物负载。",
+     "deps": [
+      "mesoporous_silica_mcm41"
+     ]
+    },
+    {
+     "id": "ordered_mesoporous_carbon",
+     "name": "有序介孔碳",
+     "en": "Ordered mesoporous carbon",
+     "year": 1999,
+     "note": "以介孔二氧化硅为模板复制出孔径规整的介孔碳，作电极与吸附材料。",
+     "deps": [
+      "mesoporous_silica_mcm41"
+     ]
+    },
+    {
+     "id": "metal_organic_framework",
+     "name": "金属有机框架",
+     "en": "Metal-organic framework",
+     "year": 1995,
+     "note": "金属节点与有机配体自组装的多孔晶体，比表面积极高，用于储气与分离。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "zeolitic_imidazolate_framework",
+     "name": "沸石咪唑酯框架",
+     "en": "Zeolitic imidazolate framework",
+     "year": 2006,
+     "note": "拓扑似沸石的MOF子类，热稳定性好，用于气体分离膜与催化。",
+     "deps": [
+      "metal_organic_framework"
+     ]
+    },
+    {
+     "id": "covalent_organic_framework",
+     "name": "共价有机框架",
+     "en": "Covalent organic framework",
+     "year": 2005,
+     "note": "轻元素以共价键构成的晶态多孔聚合物，用于吸附与分离研究。",
+     "deps": [
+      "metal_organic_framework"
+     ]
+    },
+    {
+     "id": "nanoporous_gold",
+     "name": "纳米多孔金",
+     "en": "Nanoporous gold",
+     "year": 2000,
+     "note": "脱合金腐蚀金银合金制得连通纳米孔金，作传感与催化骨架材料。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "anodic_alumina_membrane",
+     "name": "阳极氧化铝纳米孔模板",
+     "en": "Anodic alumina template",
+     "year": 1995,
+     "note": "铝阳极氧化形成有序六角纳米孔阵列，常用作纳米线与纳米柱生长模板。",
+     "deps": [
+      "chemistry",
+      "electricity"
+     ]
+    },
+    {
+     "id": "zeolite_molecular_sieve_adsorb",
+     "name": "介孔分子筛催化材料",
+     "en": "Mesoporous molecular sieve catalyst",
+     "year": 1992,
+     "note": "介孔材料负载活性组分用于大分子催化裂化，弥补微孔沸石孔道限制。"
+    },
+    {
+     "id": "porous_silicon",
+     "name": "多孔硅",
+     "en": "Porous silicon",
+     "year": 1956,
+     "note": "电化学腐蚀硅片形成纳米孔层，具发光与载药特性，用于传感器与缓释。",
+     "deps": [
+      "semiconductors",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "microcellular_foam",
+     "name": "微孔发泡材料",
+     "en": "Microcellular foam",
+     "year": 1980,
+     "note": "以超临界流体在聚合物中形成微米级泡孔，减重同时保持力学性能。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "hollow_mesoporous_silica",
+     "name": "中空介孔二氧化硅",
+     "en": "Hollow mesoporous silica",
+     "year": 2004,
+     "note": "介孔壳层包裹空腔的核壳结构，载药量高，用于药物缓释与隔热。",
+     "deps": [
+      "mesoporous_silica_mcm41"
+     ]
+    },
+    {
+     "id": "mesoporous_titania",
+     "name": "介孔二氧化钛",
+     "en": "Mesoporous titania",
+     "year": 2005,
+     "note": "介孔结构提高二氧化钛比表面积，增强光催化活性与染料吸附能力。",
+     "deps": [
+      "nanoscale_titania"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "纳米分散体系与流体",
+   "items": [
+    {
+     "id": "colloidal_gold_sol",
+     "name": "胶体金",
+     "en": "Colloidal gold",
+     "year": 1857,
+     "note": "法拉第制备金溶胶并研究其光学性质，是最早被系统研究的纳米胶体。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "ferrofluid",
+     "name": "铁磁流体",
+     "en": "Ferrofluid",
+     "year": 1965,
+     "note": "纳米磁性颗粒稳定分散于载液的胶体，可被磁场驱动，用于密封与扬声器。",
+     "deps": [
+      "chemistry",
+      "magnets"
+     ]
+    },
+    {
+     "id": "electrorheological_fluid",
+     "name": "电流变液",
+     "en": "Electrorheological fluid",
+     "year": 1947,
+     "note": "电场下黏度剧变的纳米颗粒悬浮液，用于可控阻尼器件研究。",
+     "deps": [
+      "electricity",
+      "physics"
+     ]
+    },
+    {
+     "id": "magnetorheological_fluid",
+     "name": "磁流变液",
+     "en": "Magnetorheological fluid",
+     "year": 1948,
+     "note": "微米磁性颗粒在磁场中成链使流变特性突变，用于汽车减振器。",
+     "deps": [
+      "magnets",
+      "automobile"
+     ]
+    },
+    {
+     "id": "nanofluid_heat_transfer",
+     "name": "纳米流体传热介质",
+     "en": "Nanofluid coolant",
+     "year": 1995,
+     "note": "以低浓度纳米颗粒悬浮液增强流体导热，用于电子冷却与热管理。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "nanoemulsion",
+     "name": "纳米乳液",
+     "en": "Nanoemulsion",
+     "year": 1990,
+     "note": "液滴尺寸在百纳米以下的乳状液，透明稳定，用于化妆品与药物递送。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "quantum_dot_ink",
+     "name": "量子点墨水",
+     "en": "Quantum dot ink",
+     "year": 2015,
+     "note": "可印刷的量子点分散墨水，用于喷墨制造量子点色转换与显示器件。",
+     "deps": [
+      "colloidal_cdse_quantum_dot"
+     ]
+    },
+    {
+     "id": "nano_lubricant_additive",
+     "name": "纳米润滑添加剂",
+     "en": "Nanoparticle lubricant additive",
+     "year": 2010,
+     "note": "纳米二硫化钨或石墨烯作润滑油添加剂，降低摩擦磨损并修复表面。",
+     "deps": [
+      "graphene",
+      "chemistry"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "纳米涂层与纳米复合材料",
+   "items": [
+    {
+     "id": "titanium_nitride_coating",
+     "name": "氮化钛硬质涂层",
+     "en": "Titanium nitride hard coating",
+     "year": 1980,
+     "note": "PVD法沉积的金黄色硬膜，显著延长刀具寿命，是最早广泛应用的纳米涂层之一。",
+     "deps": [
+      "physics",
+      "lathe"
+     ]
+    },
+    {
+     "id": "nanocomposite_hard_coating",
+     "name": "纳米复合硬质涂层",
+     "en": "Nanocomposite hard coating",
+     "year": 1995,
+     "note": "纳米晶与非晶相复合的超硬涂层，用于高速切削刀具表面防护。",
+     "deps": [
+      "titanium_nitride_coating"
+     ]
+    },
+    {
+     "id": "photocatalytic_selfcleaning_coating",
+     "name": "光催化自洁涂层",
+     "en": "Photocatalytic self-cleaning coating",
+     "year": 2001,
+     "note": "纳米二氧化钛膜在紫外下分解污垢并亲水自洁，用于外墙与玻璃。",
+     "deps": [
+      "nanoscale_titania"
+     ]
+    },
+    {
+     "id": "superhydrophobic_coating",
+     "name": "超疏水涂层",
+     "en": "Superhydrophobic coating",
+     "year": 2005,
+     "note": "仿荷叶微纳粗糙结构与低表面能结合，使水滴滚落，用于防污防冰。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "nano_antireflection_coating",
+     "name": "纳米减反射涂层",
+     "en": "Nano antireflection coating",
+     "year": 2003,
+     "note": "多孔纳米结构降低界面反射，用于光伏玻璃与光学镜头增透。",
+     "deps": [
+      "optics",
+      "solar"
+     ]
+    },
+    {
+     "id": "nanoclay_polymer_composite",
+     "name": "黏土纳米复合材料",
+     "en": "Polymer-clay nanocomposite",
+     "year": 1991,
+     "note": "丰田以插层蒙脱土增强尼龙，少量填料即显著提升强度与阻燃，开启纳米复材时代。",
+     "deps": [
+      "plastics",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "cnt_reinforced_composite",
+     "name": "碳纳米管增强复合材料",
+     "en": "Carbon nanotube reinforced composite",
+     "year": 1995,
+     "note": "碳管掺入树脂或金属基体提升导电与力学性能，用于体育器材与航空件。",
+     "deps": [
+      "carbon_nanotube",
+      "composites"
+     ]
+    },
+    {
+     "id": "graphene_reinforced_composite",
+     "name": "石墨烯增强复合材料",
+     "en": "Graphene reinforced composite",
+     "year": 2008,
+     "note": "石墨烯填料改善聚合物导热导电与强度，用于电池导热与功能涂层。",
+     "deps": [
+      "graphene",
+      "composites"
+     ]
+    },
+    {
+     "id": "electromagnetic_shielding_paint",
+     "name": "纳米电磁屏蔽涂料",
+     "en": "Nano EMI shielding coating",
+     "year": 2005,
+     "note": "含纳米碳或金属粉的导电涂料，喷涂成膜屏蔽电磁干扰。",
+     "deps": [
+      "carbon_nanotube",
+      "electricity"
+     ]
+    },
+    {
+     "id": "conductive_transparent_film",
+     "name": "纳米透明导电膜",
+     "en": "Nanostructured transparent conductor",
+     "year": 2010,
+     "note": "银纳米线或碳纳米管网络替代氧化铟锡，具柔性，用于触屏与薄膜电池。",
+     "deps": [
+      "silver_nanowire"
+     ]
+    },
+    {
+     "id": "sintering_nano_silver_paste",
+     "name": "纳米银烧结膏",
+     "en": "Nano-silver sintering paste",
+     "year": 2005,
+     "note": "纳米银浆低温烧结形成高可靠连接层，用于功率电子芯片封装。",
+     "deps": [
+      "nano_silver_antibacterial",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "anticorrosion_nanocoating",
+     "name": "纳米防腐涂层",
+     "en": "Nanoparticle anticorrosion coating",
+     "year": 2000,
+     "note": "含纳米缓蚀与疏水填料的涂层体系，延长钢构与船舶防腐寿命。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "thermal_spray_nanocoating",
+     "name": "热喷涂纳米结构涂层",
+     "en": "Thermal spray nanostructured coating",
+     "year": 2000,
+     "note": "以纳米粉喂料热喷涂制得细晶涂层，用于耐磨与热障防护。"
+    },
+    {
+     "id": "nanolaminate_coating",
+     "name": "纳米多层膜",
+     "en": "Nanolaminate coating",
+     "year": 1970,
+     "note": "两种材料交替沉积的纳米周期多层膜，用于X射线反射与耐磨超硬膜。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "sol_gel_nanocoating",
+     "name": "溶胶凝胶功能膜",
+     "en": "Sol-gel functional coating",
+     "year": 1960,
+     "note": "浸涂或旋涂溶胶固化制薄膜，用于金属防蚀与光学改性。",
+     "deps": [
+      "sol_gel_powder"
+     ]
+    },
+    {
+     "id": "selfhealing_microcapsule_coating",
+     "name": "自修复微胶囊涂层",
+     "en": "Microencapsulated self-healing coating",
+     "year": 2001,
+     "note": "微胶囊破裂释放修复剂自动愈合涂层裂纹，已用于航天与防腐涂层。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "graphene_heating_film",
+     "name": "石墨烯电热膜",
+     "en": "Graphene heating film",
+     "year": 2015,
+     "note": "石墨烯导电膜通电发热均匀，用于地暖与理疗产品的量产加热元件。",
+     "deps": [
+      "graphene",
+      "electricity"
+     ]
+    },
+    {
+     "id": "nano_heat_insulation_coating",
+     "name": "纳米透明隔热涂层",
+     "en": "Nanoparticle heat-insulating coating",
+     "year": 2005,
+     "note": "氧化铟锡等纳米浆料涂膜阻隔红外透过可见光，用于玻璃隔热与自清洁窗膜。",
+     "deps": [
+      "nano_alumina_powder",
+      "optics"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "纳米电子与微纳结构",
+   "items": [
+    {
+     "id": "scanning_tunneling_microscope",
+     "name": "扫描隧道显微镜",
+     "en": "Scanning tunneling microscope",
+     "year": 1981,
+     "note": "宾尼希与罗雷尔发明，以隧道电流实现原子级成像与操纵，为纳米科技关键工具。",
+     "deps": [
+      "relativity_qm",
+      "electricity"
+     ]
+    },
+    {
+     "id": "atomic_force_microscope",
+     "name": "原子力显微镜",
+     "en": "Atomic force microscope",
+     "year": 1986,
+     "note": "以探针悬臂受力成像，可测绝缘体表面，纳米材料表征的常用仪器。",
+     "deps": [
+      "scanning_tunneling_microscope"
+     ]
+    },
+    {
+     "id": "self_assembled_monolayer",
+     "name": "自组装单分子膜",
+     "en": "Self-assembled monolayer",
+     "year": 1983,
+     "note": "长链分子在表面自发排列成有序单层，用于防粘连与分子器件界面。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "dna_nanotechnology",
+     "name": "DNA纳米结构",
+     "en": "DNA nanostructure",
+     "year": 1982,
+     "note": "以碱基互补配对构筑纳米几何结构，2006年DNA折纸实现可编程组装。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "photonic_crystal",
+     "name": "光子晶体",
+     "en": "Photonic crystal",
+     "year": 1987,
+     "note": "介电常数周期性排列产生光子带隙，用于控制光的传播。",
+     "deps": [
+      "optics"
+     ]
+    },
+    {
+     "id": "photonic_crystal_fiber",
+     "name": "光子晶体光纤",
+     "en": "Photonic-crystal fiber",
+     "year": 1996,
+     "note": "以空气孔阵列包层导光的光纤，可宽带传光并实现高非线性。",
+     "deps": [
+      "photonic_crystal",
+      "optics"
+     ]
+    },
+    {
+     "id": "negative_index_metamaterial",
+     "name": "负折射超材料",
+     "en": "Negative-index metamaterial",
+     "year": 2001,
+     "note": "史密斯等以开口环阵列实现微波负折射，属实验室已实现的人工电磁结构。",
+     "deps": [
+      "photonic_crystal",
+      "physics"
+     ]
+    },
+    {
+     "id": "invisibility_cloak_research",
+     "name": "电磁隐身斗篷",
+     "en": "Transformation-optics cloak",
+     "year": 2006,
+     "note": "利用坐标变换与超材料引导电磁波绕行，2006年实现微波段样机。",
+     "deps": [
+      "negative_index_metamaterial"
+     ]
+    },
+    {
+     "id": "optical_metasurface",
+     "name": "光学超表面",
+     "en": "Optical metasurface",
+     "year": 2011,
+     "note": "亚波长单元阵列调控光相位振幅，可制成超薄透镜与全息器件。",
+     "deps": [
+      "photonic_crystal"
+     ]
+    },
+    {
+     "id": "single_electron_transistor_device",
+     "name": "单电子晶体管",
+     "en": "Single-electron transistor",
+     "year": 1987,
+     "note": "以库仑阻塞控制单电子隧穿的纳米器件，实验室实现并用于超高灵敏探测。",
+     "deps": [
+      "semiconductors",
+      "relativity_qm"
+     ]
+    },
+    {
+     "id": "cnt_field_effect_transistor",
+     "name": "碳纳米管晶体管",
+     "en": "Carbon nanotube transistor",
+     "year": 1998,
+     "note": "以单根碳纳米管为沟道制作场效应管，演示了后摩尔器件潜力。",
+     "deps": [
+      "single_wall_nanotube",
+      "transistor"
+     ]
+    },
+    {
+     "id": "graphene_field_effect_device",
+     "name": "石墨烯场效应器件",
+     "en": "Graphene field-effect transistor",
+     "year": 2007,
+     "note": "石墨烯载流子迁移率极高，用于射频晶体管与传感器的原型研究。",
+     "deps": [
+      "graphene",
+      "transistor"
+     ]
+    },
+    {
+     "id": "giant_magnetoresistance_multilayer",
+     "name": "巨磁阻多层膜",
+     "en": "GMR multilayer",
+     "year": 1988,
+     "note": "费尔与格林贝格尔发现铁/铬多层膜磁电阻剧变，成为硬盘读头核心材料。",
+     "deps": [
+      "magnets",
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "tunneling_magnetoresistance_junction",
+     "name": "隧穿磁阻磁性隧道结",
+     "en": "Magnetic tunnel junction",
+     "year": 1995,
+     "note": "两磁性层夹绝缘层结构，室温隧穿磁阻显著，用于磁性随机存储器。",
+     "deps": [
+      "giant_magnetoresistance_multilayer"
+     ]
+    },
+    {
+     "id": "phase_change_chalcogenide",
+     "name": "相变存储材料",
+     "en": "Phase-change chalcogenide",
+     "year": 1968,
+     "note": "硫系玻璃在晶态与非晶态间可逆切换，用于光盘与相变存储器。",
+     "deps": [
+      "semiconductors",
+      "lasers"
+     ]
+    },
+    {
+     "id": "flash_nanocrystal_memory",
+     "name": "纳米晶浮栅存储",
+     "en": "Nanocrystal floating-gate memory",
+     "year": 1996,
+     "note": "以硅纳米晶作离散电荷存储层，改善闪存漏电与扩展性。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "quantum_well_infrared_detector",
+     "name": "量子阱红外探测器",
+     "en": "Quantum well infrared photodetector",
+     "year": 1987,
+     "note": "以子带间跃迁实现红外探测的半导体器件，用于焦平面成像。",
+     "deps": [
+      "semiconductors",
+      "relativity_qm"
+     ]
+    },
+    {
+     "id": "surface_enhanced_raman_substrate",
+     "name": "表面增强拉曼衬底",
+     "en": "SERS substrate",
+     "year": 1977,
+     "note": "粗糙金银纳米结构增强拉曼信号，可痕量检测分子与生物标志物。"
+    },
+    {
+     "id": "nanoimprint_technology",
+     "name": "纳米压印光刻",
+     "en": "Nanoimprint lithography",
+     "year": 1995,
+     "note": "以模具机械压印复制纳米图形，可批量制造光盘与生物芯片结构。",
+     "deps": [
+      "semiconductors",
+      "cnc"
+     ]
+    },
+    {
+     "id": "block_copolymer_lithography",
+     "name": "嵌段共聚物纳米图形化",
+     "en": "Block-copolymer nanopatterning",
+     "year": 1995,
+     "note": "嵌段共聚物自组装成周期纳米图案，作为刻蚀掩模用于磁盘介质。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "molecular_machine",
+     "name": "分子机器",
+     "en": "Molecular machine",
+     "year": 1994,
+     "note": "索维奇与斯托达特合成可受控运动的分子轮轴与梭，2016年获诺贝尔化学奖。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "nanotwinned_copper",
+     "name": "纳米孪晶铜",
+     "en": "Nanotwinned copper",
+     "year": 2004,
+     "note": "以脉冲电沉积制得高密度孪晶界的铜，兼具超高强度与导电性。",
+     "deps": [
+      "bronze",
+      "electricity"
+     ]
+    },
+    {
+     "id": "carbon_sponge",
+     "name": "碳纳米管海绵",
+     "en": "Carbon nanotube sponge",
+     "year": 2010,
+     "note": "碳管自支撑三维网络，可压缩回弹并吸油，用于油污清除与压阻传感。",
+     "deps": [
+      "carbon_nanotube"
+     ]
+    }
+   ]
+  }
+ ]
+}

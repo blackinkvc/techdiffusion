@@ -1,0 +1,1381 @@
+{
+ "cat": "manufact",
+ "catName": "制造与工具",
+ "sub": "machinetool",
+ "subName": "工业母机与装备",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "steel",
+  "iron",
+  "electricity",
+  "computer",
+  "lathe",
+  "cnc",
+  "robot",
+  "interchangeable_parts",
+  "steam_engine",
+  "assembly_line",
+  "lasers"
+ ],
+ "families": [
+  {
+   "name": "车床家族",
+   "items": [
+    {
+     "id": "screw_cutting_lathe",
+     "name": "螺纹车床",
+     "en": "Screw-cutting lathe",
+     "year": 1800,
+     "note": "莫兹利把丝杠进给与主轴联动，实现机械车削螺纹，机床精密化起点。",
+     "deps": [
+      "lathe"
+     ]
+    },
+    {
+     "id": "engine_lathe",
+     "name": "卧式车床",
+     "en": "Engine lathe",
+     "year": 1830,
+     "note": "带丝杠光杠进给箱的通用车床，可车外圆端面与螺纹，机械厂主力。",
+     "deps": [
+      "screw_cutting_lathe"
+     ]
+    },
+    {
+     "id": "turret_lathe",
+     "name": "转塔车床",
+     "en": "Turret lathe",
+     "year": 1845,
+     "note": "多刀位转塔快速换刀，减少装夹与对刀时间，批量轴套类零件利器。",
+     "deps": [
+      "engine_lathe"
+     ]
+    },
+    {
+     "id": "swiss_type_lathe",
+     "name": "瑞士型纵切自动车床",
+     "en": "Swiss-type automatic lathe",
+     "year": 1873,
+     "note": "棒料随导套纵向送进、刀具径向切削，精密加工钟表小轴类件。",
+     "deps": [
+      "engine_lathe"
+     ]
+    },
+    {
+     "id": "single_spindle_automatic_lathe",
+     "name": "单轴自动车床",
+     "en": "Single-spindle automatic lathe",
+     "year": 1873,
+     "note": "以凸轮控制各工位动作自动完成车削循环，批量小零件无人值守加工。",
+     "deps": [
+      "turret_lathe"
+     ]
+    },
+    {
+     "id": "vertical_turning_lathe",
+     "name": "立式车床",
+     "en": "Vertical turning lathe",
+     "year": 1890,
+     "note": "工件水平放置于回转工作台，适合大型盘类与壳体件的车削。",
+     "deps": [
+      "engine_lathe"
+     ]
+    },
+    {
+     "id": "multi_spindle_automatic_lathe",
+     "name": "多轴自动车床",
+     "en": "Multi-spindle automatic lathe",
+     "year": 1898,
+     "note": "多主轴同时装夹棒料并轮流到各工位加工，一次循环完成多工序。",
+     "deps": [
+      "single_spindle_automatic_lathe"
+     ]
+    },
+    {
+     "id": "face_lathe",
+     "name": "落地车床",
+     "en": "Face lathe",
+     "year": 1900,
+     "note": "大直径花盘卧置主轴，车削大型端盖飞轮与壳体端面。",
+     "deps": [
+      "engine_lathe"
+     ]
+    },
+    {
+     "id": "instrument_lathe",
+     "name": "仪表车床",
+     "en": "Instrument lathe",
+     "year": 1900,
+     "note": "小型高精度车床，加工仪表与光学小件，操作灵活。",
+     "deps": [
+      "engine_lathe"
+     ]
+    },
+    {
+     "id": "copy_turning_lathe",
+     "name": "仿形车床",
+     "en": "Copy turning lathe",
+     "year": 1935,
+     "note": "靠模控制刀架随形车削阶梯轴与曲面，大批量成形轴件。",
+     "deps": [
+      "engine_lathe"
+     ]
+    },
+    {
+     "id": "railway_wheel_lathe",
+     "name": "轮对车床",
+     "en": "Railway wheelset lathe",
+     "year": 1940,
+     "note": "不落轮修复列车轮对踏面与轮缘，保障行车安全。",
+     "deps": [
+      "engine_lathe"
+     ]
+    },
+    {
+     "id": "roll_turning_lathe",
+     "name": "轧辊车床",
+     "en": "Roll turning lathe",
+     "year": 1950,
+     "note": "重型车床修整车辊与大型轴件，配备磨削随动修整。",
+     "deps": [
+      "face_lathe"
+     ]
+    },
+    {
+     "id": "crankshaft_lathe",
+     "name": "曲轴车床",
+     "en": "Crankshaft lathe",
+     "year": 1950,
+     "note": "专用车床加工曲轴主轴颈与连杆颈，支持内燃机批量制造。",
+     "deps": [
+      "engine_lathe"
+     ]
+    },
+    {
+     "id": "cnc_lathe",
+     "name": "数控车床",
+     "en": "CNC lathe",
+     "year": 1962,
+     "note": "数控系统控制刀架自动车削，换刀柔性高，适合小批量复杂轴件。",
+     "deps": [
+      "cnc",
+      "engine_lathe"
+     ]
+    },
+    {
+     "id": "turning_center",
+     "name": "车削中心",
+     "en": "Turning center",
+     "year": 1980,
+     "note": "数控车床配置动力刀具与C轴，一次装夹完成车铣钻攻复合加工。",
+     "deps": [
+      "cnc_lathe"
+     ]
+    },
+    {
+     "id": "vertical_turning_center",
+     "name": "立式车削中心",
+     "en": "Vertical turning center",
+     "year": 1990,
+     "note": "立式布局数控车削并配动力刀具，加工大型回转壳体与法兰。",
+     "deps": [
+      "turning_center",
+      "vertical_turning_lathe"
+     ]
+    },
+    {
+     "id": "subspindle_turning_machine",
+     "name": "双主轴车削中心",
+     "en": "Twin-spindle turning machine",
+     "year": 1990,
+     "note": "主副主轴对接交换工件，正反两序一次完成，无人化加工核心。",
+     "deps": [
+      "turning_center"
+     ]
+    },
+    {
+     "id": "gap_bed_lathe",
+     "name": "马鞍车床",
+     "en": "Gap-bed lathe",
+     "year": 1900,
+     "note": "床身中部设可卸马鞍增大加工直径，兼顾常规与大盘类件。",
+     "deps": [
+      "engine_lathe"
+     ]
+    },
+    {
+     "id": "cnc_sliding_headstock_lathe",
+     "name": "数控纵切自动车床",
+     "en": "CNC sliding headstock lathe",
+     "year": 1975,
+     "note": "导套式主轴箱移动进给，配合多动力刀具，一次成形精密细长件。",
+     "deps": [
+      "cnc_lathe"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "铣床、刨床与镗床家族",
+   "items": [
+    {
+     "id": "wilkinson_boring_machine",
+     "name": "炮筒镗床",
+     "en": "Wilkinson boring machine",
+     "year": 1775,
+     "note": "威尔金森为蒸汽机汽缸制造的镗孔机床，奠定大缸精密加工基础。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "planing_machine",
+     "name": "龙门刨床",
+     "en": "Planing machine",
+     "year": 1817,
+     "note": "工件随工作台往复作刨削直线运动，加工机床导轨等大平面。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "milling_machine_origin",
+     "name": "铣床",
+     "en": "Milling machine",
+     "year": 1818,
+     "note": "旋转多齿铣刀加工平面与型面，1818年出现首台铣床雏形。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "shaper_machine",
+     "name": "牛头刨床",
+     "en": "Shaper",
+     "year": 1836,
+     "note": "滑枕带动刨刀往复切削，加工中小件的平面与键槽。",
+     "deps": [
+      "planing_machine"
+     ]
+    },
+    {
+     "id": "slotting_machine",
+     "name": "插床",
+     "en": "Slotting machine",
+     "year": 1840,
+     "note": "立式往复插刀加工内孔键槽与花键，属刨削类机床。",
+     "deps": [
+      "planing_machine"
+     ]
+    },
+    {
+     "id": "universal_milling_machine",
+     "name": "万能铣床",
+     "en": "Universal milling machine",
+     "year": 1861,
+     "note": "布朗-夏普公司开发，主轴头与工作台可多向回转，型面加工能力强。",
+     "deps": [
+      "milling_machine_origin"
+     ]
+    },
+    {
+     "id": "vertical_milling_machine",
+     "name": "立式铣床",
+     "en": "Vertical milling machine",
+     "year": 1880,
+     "note": "主轴竖直布置，便于端铣与模具型腔加工，通用性广。",
+     "deps": [
+      "universal_milling_machine"
+     ]
+    },
+    {
+     "id": "horizontal_milling_machine",
+     "name": "卧式铣床",
+     "en": "Horizontal milling machine",
+     "year": 1890,
+     "note": "水平主轴带动圆柱铣刀加工平面，配合分度头铣削花键与齿槽。",
+     "deps": [
+      "universal_milling_machine"
+     ]
+    },
+    {
+     "id": "pantograph_die_sinking_machine",
+     "name": "仿形雕刻铣床",
+     "en": "Pantograph die-sinking machine",
+     "year": 1905,
+     "note": "靠模仿形驱动铣刀雕刻模具型腔与文字，早期制模关键设备。",
+     "deps": [
+      "vertical_milling_machine"
+     ]
+    },
+    {
+     "id": "horizontal_boring_milling_machine",
+     "name": "卧式镗铣床",
+     "en": "Horizontal boring-milling machine",
+     "year": 1910,
+     "note": "水平镗轴可镗孔可铣面，配回转工作台加工箱体件各面。",
+     "deps": [
+      "wilkinson_boring_machine"
+     ]
+    },
+    {
+     "id": "planer_type_milling_machine",
+     "name": "龙门铣床",
+     "en": "Planer-type milling machine",
+     "year": 1920,
+     "note": "多铣头在龙门框架上加工大型平面与型面，重型零件主力。",
+     "deps": [
+      "planing_machine",
+      "milling_machine_origin"
+     ]
+    },
+    {
+     "id": "floor_type_boring_milling_machine",
+     "name": "落地镗铣床",
+     "en": "Floor-type boring-milling machine",
+     "year": 1960,
+     "note": "镗铣箱在落地床身移动，加工发电与重型机械超大箱体。",
+     "deps": [
+      "horizontal_boring_milling_machine"
+     ]
+    },
+    {
+     "id": "gantry_milling_machine",
+     "name": "动梁龙门铣床",
+     "en": "Moving-gantry milling machine",
+     "year": 1970,
+     "note": "龙门架整体移动、工作台不动，适合超大零件的五面加工。",
+     "deps": [
+      "planer_type_milling_machine"
+     ]
+    },
+    {
+     "id": "cnc_ram_boring_milling_machine",
+     "name": "数控刨台式镗铣床",
+     "en": "CNC table-type boring-milling machine",
+     "year": 1985,
+     "note": "刨台式工作台配数控系统，箱体多面加工工序集中。",
+     "deps": [
+      "horizontal_boring_milling_machine",
+      "cnc"
+     ]
+    },
+    {
+     "id": "broaching_machine",
+     "name": "拉床",
+     "en": "Broaching machine",
+     "year": 1850,
+     "note": "拉刀一次行程切出内孔键槽与外表面成形，效率高表面好。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "cnc_milling_machine",
+     "name": "数控铣床",
+     "en": "CNC milling machine",
+     "year": 1958,
+     "note": "数控系统控制三轴联动铣削复杂曲面，模具与型面加工主流。",
+     "deps": [
+      "milling_machine_origin",
+      "cnc"
+     ]
+    },
+    {
+     "id": "fine_boring_machine",
+     "name": "金刚镗床",
+     "en": "Fine boring machine",
+     "year": 1945,
+     "note": "高速精镗孔并配金刚石刀，缸孔连杆孔高光洁加工。",
+     "deps": [
+      "horizontal_boring_milling_machine"
+     ]
+    },
+    {
+     "id": "bed_type_milling_machine",
+     "name": "床身式铣床",
+     "en": "Bed-type milling machine",
+     "year": 1950,
+     "note": "立柱与床身刚性一体，工作台只作纵横移动，重型铣削稳定。",
+     "deps": [
+      "milling_machine_origin"
+     ]
+    },
+    {
+     "id": "ram_type_milling_machine",
+     "name": "滑枕式铣床",
+     "en": "Ram-type milling machine",
+     "year": 1970,
+     "note": "滑枕伸出行程长且主轴箱轻，适合深腔模具铣削。",
+     "deps": [
+      "bed_type_milling_machine"
+     ]
+    },
+    {
+     "id": "face_and_center_machine",
+     "name": "铣端面钻中心孔机床",
+     "en": "Face and center drilling machine",
+     "year": 1970,
+     "note": "铣削轴端面并钻打中心孔，为后续车磨提供定位基准。",
+     "deps": [
+      "milling_machine_origin"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "钻床与孔加工机床",
+   "items": [
+    {
+     "id": "upright_drilling_machine",
+     "name": "立式钻床",
+     "en": "Upright drilling machine",
+     "year": 1850,
+     "note": "主轴垂直进给钻孔，结构简单，是通用制孔设备。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "radial_drilling_machine",
+     "name": "摇臂钻床",
+     "en": "Radial drilling machine",
+     "year": 1862,
+     "note": "摇臂带动主轴箱绕立柱回转定位，加工大中型工件任意位置孔。",
+     "deps": [
+      "upright_drilling_machine"
+     ]
+    },
+    {
+     "id": "bench_drilling_machine",
+     "name": "台式钻床",
+     "en": "Bench drilling machine",
+     "year": 1900,
+     "note": "小型台式钻床用于小件钻孔攻丝，广泛配备于车间。",
+     "deps": [
+      "upright_drilling_machine"
+     ]
+    },
+    {
+     "id": "gang_drilling_machine",
+     "name": "排式钻床",
+     "en": "Gang drilling machine",
+     "year": 1910,
+     "note": "多主轴并排依次加工不同工序孔，工件一次装夹完成多孔。",
+     "deps": [
+      "upright_drilling_machine"
+     ]
+    },
+    {
+     "id": "gun_drilling_machine",
+     "name": "枪钻深孔钻床",
+     "en": "Gun drilling machine",
+     "year": 1920,
+     "note": "高压切削液经枪钻内孔排屑，加工细长深孔，源于枪管制造。",
+     "deps": [
+      "upright_drilling_machine"
+     ]
+    },
+    {
+     "id": "deep_hole_boring_lathe",
+     "name": "深孔钻镗床",
+     "en": "Deep-hole drilling and boring machine",
+     "year": 1950,
+     "note": "BTA与喷吸钻方式加工油缸与炮管类超长深孔，直线度高。",
+     "deps": [
+      "gun_drilling_machine"
+     ]
+    },
+    {
+     "id": "tapping_machine",
+     "name": "攻丝机",
+     "en": "Tapping machine",
+     "year": 1930,
+     "note": "主轴正反旋转自动攻制内螺纹，提高螺纹孔加工效率。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "multi_spindle_drilling_head",
+     "name": "多轴钻孔头",
+     "en": "Multi-spindle drilling head",
+     "year": 1940,
+     "note": "单主轴驱动多轴齿轮箱同时钻孔，适配批量孔系加工。",
+     "deps": [
+      "upright_drilling_machine"
+     ]
+    },
+    {
+     "id": "cnc_drilling_machine",
+     "name": "数控钻床",
+     "en": "CNC drilling machine",
+     "year": 1970,
+     "note": "数控定位自动钻削板类与桁架结构孔系，点位精度高。",
+     "deps": [
+      "cnc",
+      "upright_drilling_machine"
+     ]
+    },
+    {
+     "id": "drill_tap_center",
+     "name": "钻攻中心",
+     "en": "Drill-tap center",
+     "year": 1995,
+     "note": "高速换刀的小型立式加工中心，专攻孔系与螺纹加工。",
+     "deps": [
+      "cnc_drilling_machine"
+     ]
+    },
+    {
+     "id": "rotary_index_machine",
+     "name": "回转式组合机床",
+     "en": "Rotary index transfer machine",
+     "year": 1955,
+     "note": "工件在回转工作台各工位轮转加工，节拍快于直线组合机床。",
+     "deps": [
+      "assembly_line"
+     ]
+    },
+    {
+     "id": "magnetic_base_drill",
+     "name": "磁座钻",
+     "en": "Magnetic base drilling machine",
+     "year": 1985,
+     "note": "电磁底座吸附于钢结构上钻孔攻丝，现场施工灵活。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "pcb_drilling_machine",
+     "name": "PCB数控钻床",
+     "en": "CNC PCB drilling machine",
+     "year": 1995,
+     "note": "高速主轴密集群钻电路板微孔，配视觉定位自动换刀。",
+     "deps": [
+      "cnc_drilling_machine"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "磨床与精密光整装备",
+   "items": [
+    {
+     "id": "cylindrical_grinder",
+     "name": "外圆磨床",
+     "en": "Cylindrical grinding machine",
+     "year": 1874,
+     "note": "砂轮高速磨削外圆表面，精度高，加工淬硬轴类件。",
+     "deps": [
+      "lathe"
+     ]
+    },
+    {
+     "id": "surface_grinder",
+     "name": "平面磨床",
+     "en": "Surface grinding machine",
+     "year": 1876,
+     "note": "砂轮周边或端面磨削工件平面，获得高平面度与低粗糙度。",
+     "deps": [
+      "cylindrical_grinder"
+     ]
+    },
+    {
+     "id": "internal_grinder",
+     "name": "内圆磨床",
+     "en": "Internal grinding machine",
+     "year": 1905,
+     "note": "小直径砂轮磨削内孔，消除钻镗后的热处理变形。",
+     "deps": [
+      "cylindrical_grinder"
+     ]
+    },
+    {
+     "id": "tool_and_cutter_grinder",
+     "name": "工具磨床",
+     "en": "Tool and cutter grinder",
+     "year": 1910,
+     "note": "磨削铣刀钻头等刀具刃面，维持刀具几何精度。",
+     "deps": [
+      "cylindrical_grinder"
+     ]
+    },
+    {
+     "id": "centerless_grinder",
+     "name": "无心磨床",
+     "en": "Centerless grinding machine",
+     "year": 1917,
+     "note": "工件在导轮与托板间无心支撑通过磨削，大批量磨削销轴。",
+     "deps": [
+      "cylindrical_grinder"
+     ]
+    },
+    {
+     "id": "crankshaft_grinder",
+     "name": "曲轴磨床",
+     "en": "Crankshaft grinding machine",
+     "year": 1930,
+     "note": "偏心定位磨削曲轴轴颈，保证圆度与位置度。",
+     "deps": [
+      "cylindrical_grinder"
+     ]
+    },
+    {
+     "id": "camshaft_grinder",
+     "name": "凸轮磨床",
+     "en": "Camshaft grinding machine",
+     "year": 1935,
+     "note": "随凸轮升程曲线摆动磨削凸轮型面，控制配气相位。",
+     "deps": [
+      "cylindrical_grinder"
+     ]
+    },
+    {
+     "id": "form_grinder",
+     "name": "成形磨床",
+     "en": "Form grinding machine",
+     "year": 1950,
+     "note": "砂轮修整成所需型面切入磨削，加工齿形与转子槽型。",
+     "deps": [
+      "cylindrical_grinder"
+     ]
+    },
+    {
+     "id": "guideway_grinder",
+     "name": "导轨磨床",
+     "en": "Guideway grinding machine",
+     "year": 1955,
+     "note": "磨削机床导轨成形面，直线度决定主机精度，故称母机之母。",
+     "deps": [
+      "surface_grinder"
+     ]
+    },
+    {
+     "id": "bearing_ring_grinder",
+     "name": "轴承套圈磨床",
+     "en": "Bearing ring grinding machine",
+     "year": 1960,
+     "note": "自动磨削轴承内外套圈滚道与挡边，支撑轴承批量生产。",
+     "deps": [
+      "internal_grinder"
+     ]
+    },
+    {
+     "id": "rotary_surface_grinder",
+     "name": "立轴圆台平面磨床",
+     "en": "Rotary table surface grinder",
+     "year": 1965,
+     "note": "立轴砂轮端面磨削旋转工作台上的工件，适合批量环形件。",
+     "deps": [
+      "surface_grinder"
+     ]
+    },
+    {
+     "id": "cnc_tool_grinder",
+     "name": "数控工具磨床",
+     "en": "CNC tool grinder",
+     "year": 1975,
+     "note": "多轴联动磨削整体硬质合金刀具，自动成形复杂刃形。",
+     "deps": [
+      "tool_and_cutter_grinder",
+      "cnc"
+     ]
+    },
+    {
+     "id": "cnc_cylindrical_grinder",
+     "name": "数控外圆磨床",
+     "en": "CNC cylindrical grinder",
+     "year": 1980,
+     "note": "数控插补控制切入与纵向磨削循环，多台阶轴一次成形。",
+     "deps": [
+      "cylindrical_grinder",
+      "cnc"
+     ]
+    },
+    {
+     "id": "belt_grinding_machine",
+     "name": "砂带磨床",
+     "en": "Belt grinding machine",
+     "year": 1950,
+     "note": "环形砂带高速磨削，柔性好，用于叶片与大型件的抛光磨削。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "centerless_infeed_grinder",
+     "name": "切入式无心磨床",
+     "en": "Infeed centerless grinder",
+     "year": 1945,
+     "note": "导轮进给切入磨削台阶与锥形件，保持无心磨高刚性。",
+     "deps": [
+      "centerless_grinder"
+     ]
+    },
+    {
+     "id": "double_disc_grinder",
+     "name": "双端面磨床",
+     "en": "Double-disc grinder",
+     "year": 1960,
+     "note": "两侧砂轮同时磨削工件两端面，保证厚度与平行度。",
+     "deps": [
+      "surface_grinder"
+     ]
+    },
+    {
+     "id": "creep_feed_grinder",
+     "name": "缓进给强力磨床",
+     "en": "Creep-feed grinding machine",
+     "year": 1965,
+     "note": "大切深低速进给一次成形沟槽型面，用于燃气轮机叶片榫槽。",
+     "deps": [
+      "form_grinder"
+     ]
+    },
+    {
+     "id": "blade_belt_grinder",
+     "name": "叶片砂带磨床",
+     "en": "Blade belt grinding machine",
+     "year": 1985,
+     "note": "柔性砂带贴合叶片型面磨抛，数控抛光复杂曲面。",
+     "deps": [
+      "belt_grinding_machine"
+     ]
+    },
+    {
+     "id": "cnc_surface_grinder",
+     "name": "数控平面磨床",
+     "en": "CNC surface grinder",
+     "year": 1990,
+     "note": "数控控制磨削循环与砂轮修整，精密平面自动加工。",
+     "deps": [
+      "surface_grinder",
+      "cnc"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "齿轮与螺纹加工机床",
+   "items": [
+    {
+     "id": "gear_shaper",
+     "name": "插齿机",
+     "en": "Gear shaper",
+     "year": 1897,
+     "note": "插齿刀往复插削同时展成滚动，加工内外齿轮与带台肩齿轮。",
+     "deps": []
+    },
+    {
+     "id": "gear_hobbing_machine",
+     "name": "滚齿机",
+     "en": "Gear hobbing machine",
+     "year": 1897,
+     "note": "滚刀与工件展成滚切圆柱齿轮，是齿轮加工主力机床。",
+     "deps": []
+    },
+    {
+     "id": "gear_grinding_machine",
+     "name": "磨齿机",
+     "en": "Gear grinding machine",
+     "year": 1914,
+     "note": "展成法磨削淬硬齿轮齿面，纠正热处理变形保证精度等级。",
+     "deps": [
+      "gear_hobbing_machine"
+     ]
+    },
+    {
+     "id": "bevel_gear_generator",
+     "name": "弧齿锥齿轮铣齿机",
+     "en": "Spiral bevel gear generator",
+     "year": 1913,
+     "note": "格里森机床按展成法铣削螺旋锥齿轮，支撑汽车差速器制造。",
+     "deps": [
+      "gear_hobbing_machine"
+     ]
+    },
+    {
+     "id": "gear_shaving_machine",
+     "name": "剃齿机",
+     "en": "Gear shaving machine",
+     "year": 1930,
+     "note": "剃齿刀与工件交错轴啮合剃除微层，精整未淬硬齿轮。",
+     "deps": [
+      "gear_hobbing_machine"
+     ]
+    },
+    {
+     "id": "gear_honing_machine",
+     "name": "齿轮珩齿机",
+     "en": "Gear honing machine",
+     "year": 1950,
+     "note": "金刚石珩磨轮对淬硬齿轮齿面光整，降低噪声改善接触。",
+     "deps": [
+      "gear_shaving_machine"
+     ]
+    },
+    {
+     "id": "spline_shaft_grinder",
+     "name": "花键轴磨床",
+     "en": "Spline shaft grinding machine",
+     "year": 1960,
+     "note": "成形砂轮磨削花键侧面，保证传动副精度与互换。",
+     "deps": [
+      "form_grinder"
+     ]
+    },
+    {
+     "id": "cnc_gear_hobbing_machine",
+     "name": "数控滚齿机",
+     "en": "CNC gear hobbing machine",
+     "year": 1985,
+     "note": "数控轴联动柔性滚切齿轮，换产快、干切效率高。",
+     "deps": [
+      "gear_hobbing_machine",
+      "cnc"
+     ]
+    },
+    {
+     "id": "worm_wheel_hobbing_machine",
+     "name": "蜗轮滚齿机",
+     "en": "Worm wheel hobbing machine",
+     "year": 1920,
+     "note": "径向进给滚切蜗轮，保证蜗杆副共轭啮合精度。",
+     "deps": [
+      "gear_hobbing_machine"
+     ]
+    },
+    {
+     "id": "thread_grinding_machine",
+     "name": "螺纹磨床",
+     "en": "Thread grinding machine",
+     "year": 1902,
+     "note": "成形砂轮展成磨削精密螺纹与丝杠，达到高精度高表面质量。",
+     "deps": [
+      "cylindrical_grinder"
+     ]
+    },
+    {
+     "id": "thread_milling_machine",
+     "name": "螺纹铣床",
+     "en": "Thread milling machine",
+     "year": 1910,
+     "note": "盘形或旋风铣刀铣削大螺距螺纹与蜗杆，效率高于车削。",
+     "deps": [
+      "lathe"
+     ]
+    },
+    {
+     "id": "cnc_gear_grinding_machine",
+     "name": "数控成形磨齿机",
+     "en": "CNC profile gear grinding machine",
+     "year": 1995,
+     "note": "成形砂轮数控磨削齿轮，磨削效率高，用于车桥风电齿轮。",
+     "deps": [
+      "gear_grinding_machine",
+      "cnc"
+     ]
+    },
+    {
+     "id": "straight_bevel_gear_planer",
+     "name": "直齿锥齿轮刨齿机",
+     "en": "Straight bevel gear planer",
+     "year": 1910,
+     "note": "两刨刀展成刨削直齿锥齿轮，用于差速器行星轮制造。",
+     "deps": [
+      "gear_shaper"
+     ]
+    },
+    {
+     "id": "thread_whirling_machine",
+     "name": "螺纹旋风铣床",
+     "en": "Thread whirling machine",
+     "year": 1945,
+     "note": "刀盘偏心高速旋转切削螺纹，一次成形大导程螺杆。",
+     "deps": [
+      "thread_milling_machine"
+     ]
+    },
+    {
+     "id": "gear_skiving_machine",
+     "name": "刮齿机",
+     "en": "Power skiving machine",
+     "year": 2010,
+     "note": "交叉轴展成滚切内齿与外齿，效率高于插齿，齿轮加工新主流。",
+     "deps": [
+      "cnc_gear_hobbing_machine"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "数控机床、加工中心与柔性制造",
+   "items": [
+    {
+     "id": "numerically_controlled_machine",
+     "name": "数控机床",
+     "en": "Numerically controlled machine tool",
+     "year": 1952,
+     "note": "麻省理工学院以穿孔带控制三轴铣床，开启机床数字化时代。",
+     "deps": [
+      "computer",
+      "cnc"
+     ]
+    },
+    {
+     "id": "automatic_tool_changer",
+     "name": "自动换刀装置",
+     "en": "Automatic tool changer",
+     "year": 1958,
+     "note": "刀库与机械手自动更换主轴刀具，是加工中心的关键机构。",
+     "deps": [
+      "numerically_controlled_machine"
+     ]
+    },
+    {
+     "id": "machining_center",
+     "name": "加工中心",
+     "en": "Machining center",
+     "year": 1959,
+     "note": "凯尼与特雷克推出带刀库的数控铣床，一次装夹完成多工序。",
+     "deps": [
+      "automatic_tool_changer"
+     ]
+    },
+    {
+     "id": "flexible_manufacturing_system",
+     "name": "柔性制造系统",
+     "en": "Flexible manufacturing system",
+     "year": 1968,
+     "note": "多台数控机床经物流与计算机集成，自动加工多种工件。",
+     "deps": [
+      "machining_center",
+      "computer"
+     ]
+    },
+    {
+     "id": "vertical_machining_center",
+     "name": "立式加工中心",
+     "en": "Vertical machining center",
+     "year": 1980,
+     "note": "主轴竖直的三轴加工中心，模具板件加工的主力机型。",
+     "deps": [
+      "machining_center"
+     ]
+    },
+    {
+     "id": "horizontal_machining_center",
+     "name": "卧式加工中心",
+     "en": "Horizontal machining center",
+     "year": 1970,
+     "note": "主轴水平并配回转托盘，箱体零件四面加工工序集中。",
+     "deps": [
+      "machining_center"
+     ]
+    },
+    {
+     "id": "flexible_manufacturing_cell",
+     "name": "柔性制造单元",
+     "en": "Flexible manufacturing cell",
+     "year": 1975,
+     "note": "单台加工中心配托盘库与机器人组成的自动化加工单元。",
+     "deps": [
+      "flexible_manufacturing_system"
+     ]
+    },
+    {
+     "id": "five_axis_machining_center",
+     "name": "五轴联动加工中心",
+     "en": "Five-axis machining center",
+     "year": 1985,
+     "note": "三直线轴与双回转轴联动，一次装夹加工叶片叶轮等复杂曲面。",
+     "deps": [
+      "machining_center",
+      "cnc"
+     ]
+    },
+    {
+     "id": "high_speed_machining_center",
+     "name": "高速加工中心",
+     "en": "High-speed machining center",
+     "year": 1990,
+     "note": "高速电主轴配合高加减速进给，实现硬态快速铣削模具。",
+     "deps": [
+      "vertical_machining_center"
+     ]
+    },
+    {
+     "id": "parallel_kinematic_machine",
+     "name": "并联运动机床",
+     "en": "Parallel kinematic machine tool",
+     "year": 1994,
+     "note": "六杆并联驱动主轴平台运动，刚度高响应快，用于高速铣削。",
+     "deps": [
+      "machining_center",
+      "computer"
+     ]
+    },
+    {
+     "id": "multitasking_turn_mill",
+     "name": "车铣复合加工中心",
+     "en": "Multitasking turn-mill center",
+     "year": 1990,
+     "note": "车削主轴与铣削主轴复合，一次装夹完成车铣钻五面加工。",
+     "deps": [
+      "turning_center",
+      "machining_center"
+     ]
+    },
+    {
+     "id": "unmanned_machining_cell",
+     "name": "无人化加工单元",
+     "en": "Unmanned machining cell",
+     "year": 2000,
+     "note": "加工中心配自动上下料与在线检测，实现长时间无人值守加工。",
+     "deps": [
+      "flexible_manufacturing_cell",
+      "robot"
+     ]
+    },
+    {
+     "id": "gantry_five_axis_machining_center",
+     "name": "五轴龙门加工中心",
+     "en": "Five-axis gantry machining center",
+     "year": 2000,
+     "note": "龙门结构五轴联动加工飞机壁板与模具大型曲面件。",
+     "deps": [
+      "five_axis_machining_center",
+      "gantry_milling_machine"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "特种加工机床与重型装备",
+   "items": [
+    {
+     "id": "edm_sinking_machine",
+     "name": "电火花成形机床",
+     "en": "Electrical discharge machining machine",
+     "year": 1943,
+     "note": "拉扎连科发明放电蚀除加工，成形淬硬钢模具型腔。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "wire_edm_machine",
+     "name": "电火花线切割机床",
+     "en": "Wire-cut EDM machine",
+     "year": 1969,
+     "note": "移动电极丝按程序轨迹放电切割，加工冲模与异形轮廓。",
+     "deps": [
+      "edm_sinking_machine"
+     ]
+    },
+    {
+     "id": "electrochemical_machining_machine",
+     "name": "电解加工机床",
+     "en": "Electrochemical machining machine",
+     "year": 1960,
+     "note": "阳极溶解去除材料，无工具损耗，加工叶片型面与深孔膛线。",
+     "deps": [
+      "electricity",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "electrochemical_grinding",
+     "name": "电解磨削",
+     "en": "Electrochemical grinding",
+     "year": 1955,
+     "note": "电解作用结合砂轮刮除钝化膜，磨削硬质合金等难加工材料。",
+     "deps": [
+      "electricity",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "ultrasonic_machining_machine",
+     "name": "超声加工机床",
+     "en": "Ultrasonic machining machine",
+     "year": 1950,
+     "note": "超声振动工具带动磨料冲击工件，加工玻璃陶瓷等硬脆材料。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "plasma_cutting_machine",
+     "name": "等离子切割机",
+     "en": "Plasma cutting machine",
+     "year": 1957,
+     "note": "压缩电弧等离子弧熔化切割金属板材，速度快于火焰切割。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "laser_cutting_machine",
+     "name": "激光切割机",
+     "en": "Laser cutting machine",
+     "year": 1970,
+     "note": "高能激光束熔化汽化切割板材，切口窄、可切割复杂轮廓。",
+     "deps": [
+      "lasers"
+     ]
+    },
+    {
+     "id": "waterjet_cutting_machine",
+     "name": "水射流切割机",
+     "en": "Waterjet cutting machine",
+     "year": 1983,
+     "note": "超高压水加磨料射流冷切割，无热影响区，切割任意材料。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "abrasive_flow_machining_machine",
+     "name": "磨料流加工机床",
+     "en": "Abrasive flow machining machine",
+     "year": 1970,
+     "note": "半固态磨料在压力下挤过内腔抛光去毛刺，用于交叉孔与型腔。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "transfer_machine_line",
+     "name": "组合机床",
+     "en": "Transfer machine",
+     "year": 1930,
+     "note": "动力头按工位顺序自动完成多工序加工，汽车缸体等大批量制造。",
+     "deps": [
+      "assembly_line"
+     ]
+    },
+    {
+     "id": "cnc_edm_forming_machine",
+     "name": "数控电火花成形机",
+     "en": "CNC EDM machine",
+     "year": 1980,
+     "note": "数控伺服控制电极运动，多轴联动放电加工复杂型腔。",
+     "deps": [
+      "edm_sinking_machine",
+      "cnc"
+     ]
+    },
+    {
+     "id": "heavy_duty_gantry_machining_center",
+     "name": "重型龙门加工中心",
+     "en": "Heavy-duty gantry machining center",
+     "year": 1990,
+     "note": "大型龙门五面体加工核电与船舶零件，属国家工业母机能力标志。",
+     "deps": [
+      "gantry_milling_machine"
+     ]
+    },
+    {
+     "id": "precision_boring_lathe_heavy",
+     "name": "重型卧式车床",
+     "en": "Heavy-duty engine lathe",
+     "year": 1950,
+     "note": "加工汽轮机转子与大型轴类零件，承载数十吨回转体。",
+     "deps": [
+      "engine_lathe"
+     ]
+    },
+    {
+     "id": "honing_machine_engine",
+     "name": "立式珩磨机",
+     "en": "Vertical honing machine",
+     "year": 1930,
+     "note": "珩磨头回转往复精整缸孔，汽车发动机缸体制造标配。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "edm_small_hole_machine",
+     "name": "电火花高速小孔机",
+     "en": "EDM small-hole drilling machine",
+     "year": 1985,
+     "note": "细长电极管高速旋转穿孔，加工喷油孔与冷却孔。",
+     "deps": [
+      "edm_sinking_machine"
+     ]
+    },
+    {
+     "id": "rotary_ultrasonic_machining_machine",
+     "name": "旋转超声加工机床",
+     "en": "Rotary ultrasonic machining machine",
+     "year": 1995,
+     "note": "金刚石工具超声旋转复合加工，钻削碳纤维与陶瓷孔。",
+     "deps": [
+      "ultrasonic_machining_machine"
+     ]
+    },
+    {
+     "id": "diamond_wire_saw_machine",
+     "name": "金刚石线锯机床",
+     "en": "Diamond wire saw machine",
+     "year": 2008,
+     "note": "金刚石线锯往复切割硅棒与硬脆材料，切片效率高损耗小。",
+     "deps": [
+      "iron"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "机床核心功能部件",
+   "items": [
+    {
+     "id": "morse_taper_shank",
+     "name": "莫氏锥柄",
+     "en": "Morse taper shank",
+     "year": 1864,
+     "note": "自锁锥面快速连接刀具与主轴，锥度标准沿用至今。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "three_jaw_chuck",
+     "name": "三爪卡盘",
+     "en": "Three-jaw chuck",
+     "year": 1870,
+     "note": "螺旋盘联动三爪自定心夹持工件，车床通用夹具。",
+     "deps": [
+      "lathe"
+     ]
+    },
+    {
+     "id": "dividing_head",
+     "name": "分度头",
+     "en": "Dividing head",
+     "year": 1880,
+     "note": "蜗轮副精确分度，配合铣床加工齿轮花键与等分表面。",
+     "deps": [
+      "milling_machine_origin"
+     ]
+    },
+    {
+     "id": "linear_motion_guideway",
+     "name": "滚动直线导轨",
+     "en": "Linear rolling guideway",
+     "year": 1932,
+     "note": "滚珠在导轨与滑块滚道间滚动，摩擦小定位准，数控机床标配。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "nc_tool_turret",
+     "name": "数控刀塔",
+     "en": "NC tool turret",
+     "year": 1970,
+     "note": "伺服分度多刀位刀塔，数控车床自动换刀提高效率。",
+     "deps": [
+      "cnc_lathe"
+     ]
+    },
+    {
+     "id": "motorized_high_speed_spindle",
+     "name": "高速电主轴",
+     "en": "Motorized high-speed spindle",
+     "year": 1985,
+     "note": "电机转子与主轴一体，转速达数万转，高速加工核心部件。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "hsk_toolholder",
+     "name": "HSK刀柄系统",
+     "en": "HSK toolholder",
+     "year": 1990,
+     "note": "空心短锥双面夹紧刀柄，高速高刚性，数控机床主流接口。",
+     "deps": [
+      "morse_taper_shank"
+     ]
+    },
+    {
+     "id": "automatic_pallet_changer",
+     "name": "自动托盘交换装置",
+     "en": "Automatic pallet changer",
+     "year": 1980,
+     "note": "在机外装夹工件并通过托盘交换缩短辅助时间，支撑无人化。",
+     "deps": [
+      "flexible_manufacturing_cell"
+     ]
+    },
+    {
+     "id": "cnc_machine_control_system",
+     "name": "数控装置",
+     "en": "CNC control unit",
+     "year": 1965,
+     "note": "插补运算与伺服控制的数控系统核心，硬件数控后的软件化演进。",
+     "deps": [
+      "cnc",
+      "computer"
+     ]
+    },
+    {
+     "id": "ball_screw_feed_system",
+     "name": "滚珠丝杠进给系统",
+     "en": "Ball screw feed system",
+     "year": 1955,
+     "note": "滚珠丝杠把旋转运动转为精密直线进给，数控机床定位关键。",
+     "deps": [
+      "cnc"
+     ]
+    },
+    {
+     "id": "tool_setting_gauge",
+     "name": "对刀仪",
+     "en": "Tool presetter",
+     "year": 1980,
+     "note": "机外测量刀具长度直径并回填刀补，减少试切调机时间。",
+     "deps": [
+      "machining_center"
+     ]
+    },
+    {
+     "id": "workholding_power_chuck",
+     "name": "动力卡盘",
+     "en": "Power chuck",
+     "year": 1970,
+     "note": "液压或气动夹紧卡盘，配合自动线实现工件快速装夹。",
+     "deps": [
+      "three_jaw_chuck"
+     ]
+    },
+    {
+     "id": "nc_rotary_table",
+     "name": "数控回转工作台",
+     "en": "NC rotary table",
+     "year": 1995,
+     "note": "伺服驱动的回转轴工作台，实现四轴加工与圆周分度。",
+     "deps": [
+      "cnc"
+     ]
+    },
+    {
+     "id": "torque_motor_direct_drive_table",
+     "name": "力矩电机直驱转台",
+     "en": "Torque-motor direct-drive table",
+     "year": 2005,
+     "note": "力矩电机直接驱动回转台，无传动间隙且转速精度高。",
+     "deps": [
+      "electricity",
+      "magnets"
+     ]
+    }
+   ]
+  }
+ ]
+}

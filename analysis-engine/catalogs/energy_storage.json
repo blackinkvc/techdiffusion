@@ -1,0 +1,1510 @@
+{
+ "cat": "energy",
+ "catName": "能源",
+ "sub": "storage",
+ "subName": "储能技术",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "electricity",
+  "power_grid",
+  "electric_motor",
+  "generator",
+  "battery",
+  "chemistry",
+  "physics",
+  "magnets",
+  "internal_combustion",
+  "mathematics"
+ ],
+ "families": [
+  {
+   "name": "水力与机械储能",
+   "items": [
+    {
+     "id": "pumped_hydro",
+     "name": "抽水蓄能",
+     "en": "Pumped-storage hydropower",
+     "year": 1890,
+     "note": "利用电网低谷电把水抽到高位水库，高峰放水发电，是目前规模最大的储能方式。",
+     "deps": [
+      "electric_motor",
+      "generator",
+      "power_grid"
+     ]
+    },
+    {
+     "id": "reversible_pump_turbine",
+     "name": "可逆式水泵水轮机",
+     "en": "Reversible pump-turbine",
+     "year": 1930,
+     "note": "同一台机组双向运行，兼作水泵与发电机水轮机，简化抽蓄电站布置。",
+     "deps": [
+      "pumped_hydro"
+     ]
+    },
+    {
+     "id": "variable_speed_pumped",
+     "name": "变速抽水蓄能",
+     "en": "Variable-speed pumped storage",
+     "year": 1993,
+     "note": "通过变频器调节机组转速，使抽水工况功率可调，提升电网调频能力。",
+     "deps": [
+      "reversible_pump_turbine",
+      "power_grid"
+     ]
+    },
+    {
+     "id": "seawater_pumped",
+     "name": "海水抽水蓄能",
+     "en": "Seawater pumped storage",
+     "year": 1999,
+     "note": "以海洋为下库的抽水蓄能，无需淡水与大型下库建设。",
+     "deps": [
+      "pumped_hydro"
+     ]
+    },
+    {
+     "id": "compressed_air_storage",
+     "name": "压缩空气储能",
+     "en": "Compressed air energy storage",
+     "year": 1978,
+     "note": "利用盐穴或压力容器储气，释能时驱动透平发电，德国洪托夫电站为首座商业电站。",
+     "deps": [
+      "electricity",
+      "internal_combustion"
+     ]
+    },
+    {
+     "id": "adiabatic_caes",
+     "name": "绝热压缩空气储能",
+     "en": "Adiabatic CAES",
+     "year": 2010,
+     "note": "回收压缩热并回用于发电，摆脱对燃气补燃的依赖，实现近零碳循环。",
+     "deps": [
+      "compressed_air_storage"
+     ]
+    },
+    {
+     "id": "liquid_air_storage",
+     "name": "液态空气储能",
+     "en": "Liquid air energy storage",
+     "year": 2010,
+     "note": "将空气液化储存，释能时汽化驱动透平，能量密度高于常压气态储能。",
+     "deps": [
+      "compressed_air_storage",
+      "physics"
+     ]
+    },
+    {
+     "id": "flywheel_storage",
+     "name": "飞轮储能",
+     "en": "Flywheel energy storage",
+     "year": 1974,
+     "note": "以高速旋转飞轮储存动能，响应快、循环寿命长，多用于调频与UPS。",
+     "deps": [
+      "electric_motor",
+      "magnets"
+     ]
+    },
+    {
+     "id": "gravity_storage",
+     "name": "重力储能",
+     "en": "Gravity energy storage",
+     "year": 2018,
+     "note": "提升重物蓄能、下放发电，模块化部署于山地或废弃矿井。",
+     "deps": [
+      "electric_motor",
+      "power_grid"
+     ]
+    },
+    {
+     "id": "rail_gravity_storage",
+     "name": "轨道重力储能",
+     "en": "Advanced rail energy storage",
+     "year": 2012,
+     "note": "重载机车沿斜坡轨道上下运行动能-势能转换的规模化储能方案。",
+     "deps": [
+      "electric_motor",
+      "power_grid"
+     ]
+    },
+    {
+     "id": "spring_drive",
+     "name": "发条储能",
+     "en": "Mainspring energy storage",
+     "year": 1400,
+     "note": "以卷簧储存弹性势能，是钟表、发条玩具与机械计时器的动力核心。",
+     "deps": [
+      "steel"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "电化学电池",
+   "items": [
+    {
+     "id": "lead_acid_battery",
+     "name": "铅酸蓄电池",
+     "en": "Lead-acid battery",
+     "year": 1859,
+     "note": "普朗特发明，迄今最成熟的蓄电池，广泛用于汽车启动与备用电源。",
+     "deps": [
+      "battery",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "gel_lead_acid",
+     "name": "胶体铅酸电池",
+     "en": "Gel battery",
+     "year": 1957,
+     "note": "以胶体电解质替代液态硫酸，免维护且可任意方位安装。",
+     "deps": [
+      "lead_acid_battery"
+     ]
+    },
+    {
+     "id": "agm_battery",
+     "name": "AGM铅酸电池",
+     "en": "Absorbent glass mat battery",
+     "year": 1972,
+     "note": "玻璃纤维隔板吸附电解液，内阻低、抗震好，用于启停车辆与储能。",
+     "deps": [
+      "lead_acid_battery"
+     ]
+    },
+    {
+     "id": "nickel_iron_battery",
+     "name": "镍铁电池",
+     "en": "Nickel-iron battery",
+     "year": 1901,
+     "note": "爱迪生发明，耐过充过放、寿命极长，用于牵引与矿灯。",
+     "deps": [
+      "battery",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "nickel_cadmium_battery",
+     "name": "镍镉电池",
+     "en": "Nickel-cadmium battery",
+     "year": 1899,
+     "note": "尤格纳发明，循环寿命长，曾主宰便携电动工具与航空电池市场。",
+     "deps": [
+      "battery",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "nickel_zinc_battery",
+     "name": "镍锌电池",
+     "en": "Nickel-zinc battery",
+     "year": 1901,
+     "note": "高功率密度与环保特性，用于电动工具与储能示范。",
+     "deps": [
+      "battery",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "nickel_hydrogen_battery",
+     "name": "镍氢蓄电池",
+     "en": "Nickel-hydrogen battery",
+     "year": 1977,
+     "note": "以高压氢气为负极活性物质，寿命长，长期用于航天卫星储能。",
+     "deps": [
+      "nickel_cadmium_battery"
+     ]
+    },
+    {
+     "id": "nimh_battery",
+     "name": "镍氢电池",
+     "en": "Nickel-metal hydride battery",
+     "year": 1989,
+     "note": "储氢合金负极的镍氢电池，曾广泛用于混合动力汽车。",
+     "deps": [
+      "nickel_cadmium_battery",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "sodium_sulfur_battery",
+     "name": "钠硫电池",
+     "en": "Sodium-sulfur battery",
+     "year": 1966,
+     "note": "高温钠硫电化学体系，能量密度高，用于电网侧大规模储能。",
+     "deps": [
+      "battery",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "zebra_battery",
+     "name": "钠氯化镍电池",
+     "en": "ZEBRA battery",
+     "year": 1985,
+     "note": "工作温度适中的钠盐高温电池，用于电动车与储能示范。",
+     "deps": [
+      "sodium_sulfur_battery"
+     ]
+    },
+    {
+     "id": "lithium_ion_battery",
+     "name": "锂离子电池",
+     "en": "Lithium-ion battery",
+     "year": 1991,
+     "note": "索尼率先量产，凭高能量密度与长循环成为消费电子、电动车与储能的主流电池。",
+     "deps": [
+      "lco_battery"
+     ]
+    },
+    {
+     "id": "lco_battery",
+     "name": "钴酸锂电池",
+     "en": "Lithium cobalt oxide battery",
+     "year": 1980,
+     "note": "古迪纳夫发现钴酸锂可作为锂离子电池正极材料，为可充电锂电奠定电极化学基础。",
+     "deps": [
+      "battery",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "lmo_battery",
+     "name": "锰酸锂电池",
+     "en": "Lithium manganese oxide battery",
+     "year": 1996,
+     "note": "低成本、倍率性能好的锂电正极体系，用于电动工具与早期电动车。",
+     "deps": [
+      "lithium_ion_battery"
+     ]
+    },
+    {
+     "id": "lfp_battery",
+     "name": "磷酸铁锂电池",
+     "en": "Lithium iron phosphate battery",
+     "year": 1997,
+     "note": "高安全、长寿命的低成本锂电体系，主导储能与电动客车市场。",
+     "deps": [
+      "lithium_ion_battery"
+     ]
+    },
+    {
+     "id": "nmc_battery",
+     "name": "镍钴锰三元锂电池",
+     "en": "NMC lithium battery",
+     "year": 2008,
+     "note": "兼顾能量密度与成本的复合正极锂电，广泛用于乘用车与储能。",
+     "deps": [
+      "lithium_ion_battery"
+     ]
+    },
+    {
+     "id": "nca_battery",
+     "name": "镍钴铝酸锂电池",
+     "en": "NCA lithium battery",
+     "year": 2009,
+     "note": "高比能正极体系，曾用于特斯拉早期电动车的18650电池。",
+     "deps": [
+      "lithium_ion_battery"
+     ]
+    },
+    {
+     "id": "lto_battery",
+     "name": "钛酸锂电池",
+     "en": "Lithium titanate battery",
+     "year": 2008,
+     "note": "钛酸锂负极实现超快充与超长循环，用于公交快充与调频。",
+     "deps": [
+      "lithium_ion_battery"
+     ]
+    },
+    {
+     "id": "sodium_ion_battery",
+     "name": "钠离子电池",
+     "en": "Sodium-ion battery",
+     "year": 2021,
+     "note": "资源丰富、成本低的钠电体系，2021年实现量产，适合大储。",
+     "deps": [
+      "sodium_sulfur_battery",
+      "lithium_ion_battery"
+     ]
+    },
+    {
+     "id": "solid_state_battery",
+     "name": "固态锂电池",
+     "en": "Solid-state lithium battery",
+     "year": 2023,
+     "note": "以固态电解质替代液态电解液，安全性高、能量密度潜力大，正处于产业化前夜。",
+     "deps": [
+      "lithium_ion_battery"
+     ]
+    },
+    {
+     "id": "lithium_sulfur_battery",
+     "name": "锂硫电池",
+     "en": "Lithium-sulfur battery",
+     "year": 2009,
+     "note": "理论能量密度极高的下一代电池体系，仍处研发与试制阶段。",
+     "deps": [
+      "lithium_ion_battery"
+     ]
+    },
+    {
+     "id": "zinc_air_battery",
+     "name": "锌空气电池",
+     "en": "Zinc-air battery",
+     "year": 1878,
+     "note": "以空气中的氧为正极活性物质的金属空气电池，用于助听器与储备电源。",
+     "deps": [
+      "battery",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "aluminum_air_battery",
+     "name": "铝空气电池",
+     "en": "Aluminium-air battery",
+     "year": 1960,
+     "note": "高比能金属燃料型电池，换电式用于备用电源与增程。",
+     "deps": [
+      "zinc_air_battery"
+     ]
+    },
+    {
+     "id": "supercapacitor",
+     "name": "超级电容器",
+     "en": "Supercapacitor",
+     "year": 1957,
+     "note": "基于双电层或赝电容储电，功率密度高、寿命极长，用于制动能量回收。",
+     "deps": [
+      "battery",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "lithium_ion_capacitor",
+     "name": "锂离子电容器",
+     "en": "Lithium-ion capacitor",
+     "year": 2001,
+     "note": "介于电池与超级电容之间的混合储能器件，兼顾能量与功率密度。",
+     "deps": [
+      "supercapacitor",
+      "lithium_ion_battery"
+     ]
+    },
+    {
+     "id": "vanadium_flow_battery",
+     "name": "全钒液流电池",
+     "en": "Vanadium redox flow battery",
+     "year": 1986,
+     "note": "以钒离子价态变化储能的液流电池，循环寿命极长，用于大规模长时储能。",
+     "deps": [
+      "battery",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "zinc_bromine_flow",
+     "name": "锌溴液流电池",
+     "en": "Zinc-bromine flow battery",
+     "year": 1970,
+     "note": "锌溴体系液流电池，能量密度较高，用于工商业储能。",
+     "deps": [
+      "battery",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "iron_chromium_flow",
+     "name": "铁铬液流电池",
+     "en": "Iron-chromium flow battery",
+     "year": 1974,
+     "note": "NASA早期开发的低成本液流电池体系，近年重启示范。",
+     "deps": [
+      "battery",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "zinc_iron_flow",
+     "name": "锌铁液流电池",
+     "en": "Zinc-iron flow battery",
+     "year": 2012,
+     "note": "锌铁体系液流电池，原材料廉价，面向长时储能应用。",
+     "deps": [
+      "iron_chromium_flow"
+     ]
+    },
+    {
+     "id": "organic_flow_battery",
+     "name": "有机液流电池",
+     "en": "Organic redox flow battery",
+     "year": 2014,
+     "note": "以有机分子为活性物质的液流电池，避开稀有金属依赖。",
+     "deps": [
+      "vanadium_flow_battery"
+     ]
+    },
+    {
+     "id": "smes",
+     "name": "超导磁储能",
+     "en": "Superconducting magnetic energy storage",
+     "year": 1983,
+     "note": "以超导线圈储存磁场能量，响应毫秒级，用于电能质量治理。",
+     "deps": [
+      "magnets",
+      "electricity"
+     ]
+    },
+    {
+     "id": "seawater_activated_battery",
+     "name": "海水激活电池",
+     "en": "Seawater battery",
+     "year": 1943,
+     "note": "以海水为电解液激活的镁银电池，二战起用于救生电台与鱼雷电源。",
+     "deps": [
+      "battery",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "thermal_battery",
+     "name": "热激活电池",
+     "en": "Thermal battery",
+     "year": 1942,
+     "note": "以熔盐电解质加热激活的一次电池，长期用于导弹与引信电源。",
+     "deps": [
+      "battery",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "silver_zinc_battery",
+     "name": "银锌蓄电池",
+     "en": "Silver-zinc battery",
+     "year": 1950,
+     "note": "高比能银锌电化学体系，曾为航天与鱼雷提供高功率电源。",
+     "deps": [
+      "battery",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "lithium_thionyl_chloride",
+     "name": "锂亚硫酰氯电池",
+     "en": "Lithium thionyl chloride battery",
+     "year": 1970,
+     "note": "比能量极高的锂一次电池，自放电小，用于计量表与长期无人值守设备。",
+     "deps": [
+      "battery",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "lead_carbon_battery",
+     "name": "铅炭电池",
+     "en": "Lead-carbon battery",
+     "year": 2005,
+     "note": "以炭材料抑制负极硫酸盐化的改良铅酸电池，适应频繁部分荷电循环。",
+     "deps": [
+      "lead_acid_battery"
+     ]
+    },
+    {
+     "id": "sodium_metal_chloride",
+     "name": "钠金属氯化物电池",
+     "en": "Sodium metal chloride battery",
+     "year": 1985,
+     "note": "以氯化镍或氯化铁为正极的高温钠电池，用于电网储能示范。",
+     "deps": [
+      "battery",
+      "chemistry"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "氢能与燃料储能",
+   "items": [
+    {
+     "id": "water_electrolysis",
+     "name": "水电解制氢",
+     "en": "Water electrolysis",
+     "year": 1800,
+     "note": "尼科尔森与卡莱尔实现水的电解分解，奠定电制氢的化学基础。",
+     "deps": [
+      "battery",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "alkaline_electrolyzer",
+     "name": "碱性电解槽",
+     "en": "Alkaline electrolyzer",
+     "year": 1900,
+     "note": "以氢氧化钾水溶液为电解质的制氢设备，技术成熟、成本较低。",
+     "deps": [
+      "water_electrolysis"
+     ]
+    },
+    {
+     "id": "pem_electrolyzer",
+     "name": "质子交换膜电解槽",
+     "en": "PEM electrolyzer",
+     "year": 1966,
+     "note": "通用电气开发，电流密度高、响应快，适配可再生能源波动制氢。",
+     "deps": [
+      "alkaline_electrolyzer"
+     ]
+    },
+    {
+     "id": "soec_electrolyzer",
+     "name": "固体氧化物电解槽",
+     "en": "Solid oxide electrolyzer",
+     "year": 1980,
+     "note": "高温电解效率高，可共电解水与二氧化碳制合成气。",
+     "deps": [
+      "alkaline_electrolyzer"
+     ]
+    },
+    {
+     "id": "hydrogen_cylinder",
+     "name": "高压气态储氢",
+     "en": "High-pressure hydrogen storage",
+     "year": 1885,
+     "note": "以高压钢瓶储氢，是最普遍的小规模储氢方式。",
+     "deps": [
+      "chemistry",
+      "steel"
+     ]
+    },
+    {
+     "id": "composite_h2_tank",
+     "name": "复合材料储氢瓶",
+     "en": "Composite hydrogen tank",
+     "year": 2000,
+     "note": "碳纤维缠绕的IV型瓶，实现70MPa车载储氢，支撑燃料电池汽车。",
+     "deps": [
+      "hydrogen_cylinder",
+      "composites"
+     ]
+    },
+    {
+     "id": "liquid_hydrogen",
+     "name": "液氢储运",
+     "en": "Liquid hydrogen storage",
+     "year": 1898,
+     "note": "杜瓦首次液化氢，液氢密度高，用于航天推进与重型储运。",
+     "deps": [
+      "physics",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "metal_hydride_storage",
+     "name": "金属氢化物储氢",
+     "en": "Metal hydride hydrogen storage",
+     "year": 1970,
+     "note": "镧镍合金等可逆吸放氢，体积储氢密度高、安全性好。",
+     "deps": [
+      "chemistry",
+      "physics"
+     ]
+    },
+    {
+     "id": "lohc_storage",
+     "name": "液态有机氢载体储氢",
+     "en": "LOHC hydrogen storage",
+     "year": 1980,
+     "note": "借助甲基环己烷-甲苯等有机载体实现常温常压储运氢。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "ammonia_carrier",
+     "name": "氨载氢储运",
+     "en": "Ammonia hydrogen carrier",
+     "year": 2014,
+     "note": "以氨作为无碳氢载体，合成与裂解技术成熟，适合远洋运输。",
+     "deps": [
+      "water_electrolysis",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "alkaline_fuel_cell",
+     "name": "碱性燃料电池",
+     "en": "Alkaline fuel cell",
+     "year": 1939,
+     "note": "培根研制成功，曾为阿波罗登月飞船提供电源。",
+     "deps": [
+      "water_electrolysis",
+      "battery"
+     ]
+    },
+    {
+     "id": "pem_fuel_cell",
+     "name": "质子交换膜燃料电池",
+     "en": "PEM fuel cell",
+     "year": 1961,
+     "note": "通用电气为双子星飞船开发，现为车用燃料电池主流路线。",
+     "deps": [
+      "alkaline_fuel_cell",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "phosphoric_fuel_cell",
+     "name": "磷酸燃料电池",
+     "en": "Phosphoric acid fuel cell",
+     "year": 1967,
+     "note": "技术成熟度高的固定式燃料电池，用于分布式热电联供。",
+     "deps": [
+      "water_electrolysis"
+     ]
+    },
+    {
+     "id": "mcfc_fuel_cell",
+     "name": "熔融碳酸盐燃料电池",
+     "en": "Molten carbonate fuel cell",
+     "year": 1950,
+     "note": "高温燃料电池，可直接利用碳氢燃料并实现热电联供。",
+     "deps": [
+      "water_electrolysis"
+     ]
+    },
+    {
+     "id": "sofc_fuel_cell",
+     "name": "固体氧化物燃料电池",
+     "en": "Solid oxide fuel cell",
+     "year": 1937,
+     "note": "全固态高温燃料电池，效率高，适用于固定电站与船舶辅助电源。",
+     "deps": [
+      "water_electrolysis",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "dmfc_fuel_cell",
+     "name": "直接甲醇燃料电池",
+     "en": "Direct methanol fuel cell",
+     "year": 1990,
+     "note": "以甲醇直接供料的低温燃料电池，用于便携电源。",
+     "deps": [
+      "pem_fuel_cell"
+     ]
+    },
+    {
+     "id": "e_fuel",
+     "name": "电制合成燃料",
+     "en": "E-fuel / Power-to-liquid",
+     "year": 2012,
+     "note": "用绿电制氢并合成烃类燃料，为航空航运提供碳中和液体燃料。",
+     "deps": [
+      "water_electrolysis",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "hydrogen_pipeline",
+     "name": "输氢管道",
+     "en": "Hydrogen pipeline",
+     "year": 1938,
+     "note": "长距离输送氢气的钢质管道网络，德国鲁尔区为早期商业案例。",
+     "deps": [
+      "hydrogen_cylinder"
+     ]
+    },
+    {
+     "id": "membrane_h2_compressor",
+     "name": "膜式氢气压缩机",
+     "en": "Diaphragm hydrogen compressor",
+     "year": 2000,
+     "note": "以金属膜片往复增压氢气的压缩机，满足加氢站高压需求。",
+     "deps": [
+      "hydrogen_cylinder"
+     ]
+    },
+    {
+     "id": "hydrogen_refueling_station",
+     "name": "加氢站",
+     "en": "Hydrogen refueling station",
+     "year": 2003,
+     "note": "为燃料电池汽车储罐充注高压氢气的加注设施，含压缩机与预冷设备。",
+     "deps": [
+      "composite_h2_tank"
+     ]
+    },
+    {
+     "id": "power_to_gas",
+     "name": "电转气系统",
+     "en": "Power-to-gas",
+     "year": 2010,
+     "note": "把富余电力制氢并注入燃气网或储存的系统，实现电力到燃气的转换。",
+     "deps": [
+      "alkaline_electrolyzer"
+     ]
+    },
+    {
+     "id": "aem_electrolyzer",
+     "name": "阴离子交换膜电解槽",
+     "en": "AEM electrolyzer",
+     "year": 2013,
+     "note": "以阴离子交换膜为电解质的制氢设备，兼顾效率与低成本催化剂。",
+     "deps": [
+      "alkaline_electrolyzer"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "热储能",
+   "items": [
+    {
+     "id": "steam_accumulator",
+     "name": "蒸汽蓄热器",
+     "en": "Steam accumulator",
+     "year": 1913,
+     "note": "鲁特斯发明，储存蒸汽以平抑工业用汽波动。",
+     "deps": [
+      "steam_engine"
+     ]
+    },
+    {
+     "id": "hot_water_tank",
+     "name": "蓄热水箱",
+     "en": "Hot water storage tank",
+     "year": 1900,
+     "note": "以热水显热储热的简单可靠方式，用于太阳能热水与供暖系统。",
+     "deps": [
+      "chemistry",
+      "brick"
+     ]
+    },
+    {
+     "id": "molten_salt_storage",
+     "name": "熔盐储热",
+     "en": "Molten salt thermal storage",
+     "year": 1996,
+     "note": "以硝酸盐熔体储存光热电站热量，实现夜间连续发电。",
+     "deps": [
+      "chemistry",
+      "electricity"
+     ]
+    },
+    {
+     "id": "ice_thermal_storage",
+     "name": "冰蓄冷",
+     "en": "Ice thermal storage",
+     "year": 1930,
+     "note": "夜间制冰蓄冷、白天释冷供空调，移峰填谷的成熟冷储能。",
+     "deps": [
+      "electricity",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "pcm_storage",
+     "name": "相变储热",
+     "en": "Phase change thermal storage",
+     "year": 1970,
+     "note": "利用材料固液相变潜热储热，能量密度高于显热储热。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "pit_thermal_storage",
+     "name": "水池跨季储热",
+     "en": "Pit thermal energy storage",
+     "year": 1995,
+     "note": "大型地下水池储存夏季太阳能供冬季供暖，实现跨季节储热。",
+     "deps": [
+      "hot_water_tank"
+     ]
+    },
+    {
+     "id": "borehole_thermal_storage",
+     "name": "钻孔跨季储热",
+     "en": "Borehole thermal energy storage",
+     "year": 1980,
+     "note": "通过地埋管阵列把余热储入岩土体，跨季取用。",
+     "deps": [
+      "hot_water_tank"
+     ]
+    },
+    {
+     "id": "aquifer_thermal_storage",
+     "name": "含水层储热",
+     "en": "Aquifer thermal energy storage",
+     "year": 1985,
+     "note": "把热能注入地下含水层储存，需保持地下水文平衡。",
+     "deps": [
+      "hot_water_tank"
+     ]
+    },
+    {
+     "id": "thermochemical_storage",
+     "name": "热化学储热",
+     "en": "Thermochemical energy storage",
+     "year": 1980,
+     "note": "借助可逆化学反应储热，理论能量密度高，处于研发示范阶段。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "electric_thermal_storage",
+     "name": "固体电蓄热",
+     "en": "Electric thermal storage",
+     "year": 1985,
+     "note": "谷电加热固体蓄热体，按需放热供暖，用于弃风弃光消纳。",
+     "deps": [
+      "power_grid",
+      "electricity"
+     ]
+    },
+    {
+     "id": "packed_bed_storage",
+     "name": "填充床储热",
+     "en": "Packed-bed thermal storage",
+     "year": 1980,
+     "note": "以卵石或陶瓷球床储热的装置，用于压缩空气储能与太阳能热系统。",
+     "deps": [
+      "hot_water_tank"
+     ]
+    },
+    {
+     "id": "concrete_thermal_storage",
+     "name": "混凝土储热块",
+     "en": "Concrete thermal storage",
+     "year": 2016,
+     "note": "以混凝土块显热储热的规模化装置，成本低可现场浇筑。",
+     "deps": [
+      "hot_water_tank"
+     ]
+    },
+    {
+     "id": "sand_battery_heating",
+     "name": "砂基储热装置",
+     "en": "Sand battery",
+     "year": 2022,
+     "note": "以加热砂体跨月储热的装置，芬兰示范项目为区域供热蓄能。",
+     "deps": [
+      "hot_water_tank"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "储能系统应用",
+   "items": [
+    {
+     "id": "ups",
+     "name": "不间断电源",
+     "en": "Uninterruptible power supply",
+     "year": 1965,
+     "note": "市电中断时瞬间接管供电，保护关键负载。",
+     "deps": [
+      "battery",
+      "power_grid"
+     ]
+    },
+    {
+     "id": "bess_plant",
+     "name": "电池储能电站",
+     "en": "Battery energy storage station",
+     "year": 2008,
+     "note": "兆瓦级锂离子电池储能电站并网，承担调频、调峰与新能源消纳。",
+     "deps": [
+      "lithium_ion_battery",
+      "power_grid"
+     ]
+    },
+    {
+     "id": "container_bess",
+     "name": "集装箱式储能系统",
+     "en": "Containerized energy storage system",
+     "year": 2015,
+     "note": "把电池簇、PCS与消防集成于标准集装箱，实现模块化快速部署。",
+     "deps": [
+      "bess_plant"
+     ]
+    },
+    {
+     "id": "home_storage",
+     "name": "户用储能系统",
+     "en": "Home energy storage",
+     "year": 2015,
+     "note": "搭配户用光伏的家庭电池储能，提高自用率与供电韧性。",
+     "deps": [
+      "lithium_ion_battery",
+      "power_grid"
+     ]
+    },
+    {
+     "id": "v2g",
+     "name": "车网互动",
+     "en": "Vehicle-to-grid",
+     "year": 2012,
+     "note": "电动车向电网反向送电，把海量车电池聚合为分布式储能资源。",
+     "deps": [
+      "lithium_ion_battery",
+      "power_grid",
+      "internet"
+     ]
+    },
+    {
+     "id": "battery_second_life",
+     "name": "动力电池梯次利用",
+     "en": "Battery second-life application",
+     "year": 2015,
+     "note": "退役动力电池经检测重组用于储能，延长全生命周期价值。",
+     "deps": [
+      "lithium_ion_battery",
+      "bess_plant"
+     ]
+    },
+    {
+     "id": "microgrid_storage",
+     "name": "微电网储能",
+     "en": "Microgrid energy storage",
+     "year": 2005,
+     "note": "离网或并网微电网中的核心储能单元，保障孤岛运行与电压稳定。",
+     "deps": [
+      "power_grid",
+      "lithium_ion_battery"
+     ]
+    },
+    {
+     "id": "storage_pcs",
+     "name": "储能变流器",
+     "en": "Battery power conversion system",
+     "year": 2008,
+     "note": "电池与电网间双向变换能量的功率变流器，实现充放电控制与并网。",
+     "deps": [
+      "semiconductors",
+      "battery"
+     ]
+    },
+    {
+     "id": "storage_energy_management",
+     "name": "储能能量管理系统",
+     "en": "Storage energy management system",
+     "year": 2010,
+     "note": "对储能电站电池簇与变流器统筹调度、参与电网服务的上位控制系统。",
+     "deps": [
+      "bess_plant",
+      "computer"
+     ]
+    },
+    {
+     "id": "pv_storage_hybrid_system",
+     "name": "光储一体化系统",
+     "en": "PV-plus-storage system",
+     "year": 2015,
+     "note": "光伏与储能共享逆变器或协同控制的系统，提高自发自用率。",
+     "deps": [
+      "solar",
+      "battery"
+     ]
+    },
+    {
+     "id": "liquid_cooled_bess",
+     "name": "液冷电池储能系统",
+     "en": "Liquid-cooled BESS",
+     "year": 2020,
+     "note": "以冷却液对电芯降温的储能系统，提升倍率性能与寿命。",
+     "deps": [
+      "container_bess"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "电池部件、制造工艺与管理系统",
+   "items": [
+    {
+     "id": "microporous_separator",
+     "name": "微孔聚合物隔膜",
+     "en": "Microporous separator",
+     "year": 1970,
+     "note": "以聚乙烯或聚丙烯制成的微孔膜，隔离正负极并允许锂离子通过。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "conductive_carbon",
+     "name": "导电炭黑",
+     "en": "Conductive carbon black",
+     "year": 1980,
+     "note": "提高电极导电性的炭系添加剂，降低内阻并改善倍率性能。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "current_collector_foil",
+     "name": "集流体箔材",
+     "en": "Current collector foil",
+     "year": 1980,
+     "note": "承载电极涂层的铜箔与铝箔，汇集电流并连接外部回路。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "graphite_anode_material",
+     "name": "石墨负极材料",
+     "en": "Graphite anode material",
+     "year": 1983,
+     "note": "以石墨层间可逆嵌锂作负极的材料体系，为锂离子电池主流负极。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "li_hexafluorophosphate",
+     "name": "六氟磷酸锂电解液",
+     "en": "LiPF6 electrolyte",
+     "year": 1990,
+     "note": "以六氟磷酸锂溶于碳酸酯溶剂的电解液，支撑锂离子电池商业化。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "electrode_coating",
+     "name": "极片涂布工艺",
+     "en": "Electrode coating",
+     "year": 1990,
+     "note": "把浆料均匀涂敷在集流体上的电极制造首道工艺，决定一致性与容量。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "electrode_calendering",
+     "name": "极片辊压工艺",
+     "en": "Electrode calendering",
+     "year": 1990,
+     "note": "辊压致密化电极涂层的工艺，提高体积能量密度与附着强度。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "cylindrical_cell",
+     "name": "圆柱电芯",
+     "en": "Cylindrical cell",
+     "year": 1991,
+     "note": "钢壳卷绕的圆柱形电芯结构，索尼率先量产，广泛用于电动车与储能。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "electrolyte_filling",
+     "name": "注液工艺",
+     "en": "Electrolyte filling",
+     "year": 1991,
+     "note": "向干燥电芯定量注入电解液的工序，须在低露点环境下完成。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "battery_formation",
+     "name": "化成工艺",
+     "en": "Battery formation",
+     "year": 1991,
+     "note": "首次充放电使负极表面生成固体电解质膜的工艺，影响电池寿命。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "protection_circuit_board",
+     "name": "电池保护板",
+     "en": "Battery protection board",
+     "year": 1993,
+     "note": "监控过充过放与短路的保护电路板，保障电芯安全使用。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "battery_management_system",
+     "name": "电池管理系统",
+     "en": "Battery management system",
+     "year": 1995,
+     "note": "监测电压电流温度并均衡电芯、保护电池组的电子控制系统。",
+     "deps": [
+      "computer",
+      "battery"
+     ]
+    },
+    {
+     "id": "prismatic_cell",
+     "name": "方形电芯",
+     "en": "Prismatic cell",
+     "year": 1995,
+     "note": "铝壳或钢壳方形电芯结构，成组效率高，用于动力与储能电池包。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "cell_testing_equipment",
+     "name": "电池分容检测设备",
+     "en": "Cell testing equipment",
+     "year": 1995,
+     "note": "对电芯进行充放电分容与内阻筛选的自动化检测装备。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "pouch_cell",
+     "name": "软包电芯",
+     "en": "Pouch cell",
+     "year": 1996,
+     "note": "铝塑膜封装的软包电芯，轻薄可弯曲，能量密度高。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "soc_estimation",
+     "name": "荷电状态估算技术",
+     "en": "State-of-charge estimation",
+     "year": 1998,
+     "note": "依开路电压与安时积分等方法估计电池剩余电量的算法技术。",
+     "deps": [
+      "battery_management_system"
+     ]
+    },
+    {
+     "id": "stacking_cell",
+     "name": "叠片电芯",
+     "en": "Stacked cell",
+     "year": 2002,
+     "note": "正负极片交替叠合的电芯结构，内阻低、散热均匀。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "battery_balancer",
+     "name": "电池均衡器",
+     "en": "Battery balancer",
+     "year": 2005,
+     "note": "主动或被动均衡电芯间荷电量的装置，延长串联电池组可用容量。",
+     "deps": [
+      "battery_management_system"
+     ]
+    },
+    {
+     "id": "ceramic_coated_separator",
+     "name": "陶瓷涂覆隔膜",
+     "en": "Ceramic-coated separator",
+     "year": 2005,
+     "note": "表面涂覆氧化铝的隔膜，抗热收缩并提高安全性。",
+     "deps": [
+      "microporous_separator"
+     ]
+    },
+    {
+     "id": "battery_thermal_management",
+     "name": "电池热管理系统",
+     "en": "Battery thermal management",
+     "year": 2008,
+     "note": "以风冷或液冷维持电池工作温度的系统，保障性能与安全。",
+     "deps": [
+      "battery_management_system"
+     ]
+    },
+    {
+     "id": "module_laser_welding",
+     "name": "模组激光焊接",
+     "en": "Module laser welding",
+     "year": 2008,
+     "note": "以激光焊接连接电芯极耳与汇流排的自动化工艺。",
+     "deps": [
+      "lasers"
+     ]
+    },
+    {
+     "id": "battery_pack_enclosure",
+     "name": "电池包箱体",
+     "en": "Battery pack enclosure",
+     "year": 2008,
+     "note": "承载电芯模组并防护外力的金属或复合材料箱体结构。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "battery_pack_assembly",
+     "name": "电池包总装线",
+     "en": "Battery pack assembly line",
+     "year": 2010,
+     "note": "把模组、BMS、热管理集成装配为电池包的全自动产线。",
+     "deps": [
+      "battery_management_system"
+     ]
+    },
+    {
+     "id": "liquid_cooling_plate",
+     "name": "液冷板",
+     "en": "Liquid cooling plate",
+     "year": 2015,
+     "note": "内部流道通冷却液为电芯换热的平板散热部件。",
+     "deps": [
+      "battery_thermal_management"
+     ]
+    },
+    {
+     "id": "dry_electrode",
+     "name": "干法电极工艺",
+     "en": "Dry electrode process",
+     "year": 2019,
+     "note": "无需溶剂、直接辊压干粉成膜的电极制造工艺，降低能耗与成本。",
+     "deps": [
+      "electrode_coating"
+     ]
+    },
+    {
+     "id": "battery_cloud_diagnosis",
+     "name": "电池云诊断",
+     "en": "Cloud-based battery diagnosis",
+     "year": 2020,
+     "note": "基于云端数据的电池健康评估与预警技术，服务规模化储能运维。",
+     "deps": [
+      "battery_management_system",
+      "internet"
+     ]
+    },
+    {
+     "id": "electrode_slitting",
+     "name": "极片分切工艺",
+     "en": "Electrode slitting",
+     "year": 1990,
+     "note": "把宽幅涂布极片分切成设计宽度的连续工序，边缘质量影响电芯安全。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "vacuum_drying",
+     "name": "极片真空烘烤",
+     "en": "Vacuum drying",
+     "year": 1990,
+     "note": "高温真空去除电极水分与残余溶剂的工序，防止电解液分解。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "cell_vent_valve",
+     "name": "电芯防爆阀",
+     "en": "Cell vent valve",
+     "year": 1995,
+     "note": "电池壳体上的定向泄压阀，热失控时排放气体防止壳体爆裂。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "battery_cell_sampling",
+     "name": "电芯电压采样线束",
+     "en": "Cell sampling harness",
+     "year": 1995,
+     "note": "连接各电芯与电池管理系统的电压温度采样线束。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "insulation_film",
+     "name": "电池绝缘膜",
+     "en": "Battery insulation film",
+     "year": 1995,
+     "note": "包裹电芯或模组的绝缘薄膜，防止短路并增强爬电距离。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "pouch_sealing",
+     "name": "软包封装工艺",
+     "en": "Pouch cell sealing",
+     "year": 1996,
+     "note": "热封铝塑膜形成软包电芯的封装工序，须控制水汽进入。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "cell_aging_test",
+     "name": "电池老化测试",
+     "en": "Cell aging test",
+     "year": 1995,
+     "note": "对电芯进行静置与容量衰减筛选的出厂测试工序。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "tab_welding",
+     "name": "极耳焊接设备",
+     "en": "Tab welding",
+     "year": 2008,
+     "note": "把电芯极耳与汇流排可靠连接的自动焊接装备。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "thermal_interface_material",
+     "name": "导热界面材料",
+     "en": "Thermal interface material",
+     "year": 2008,
+     "note": "填充电芯与冷板间缝隙、降低接触热阻的导热材料。",
+     "deps": [
+      "battery"
+     ]
+    },
+    {
+     "id": "electrode_laser_cutting",
+     "name": "极片激光切割",
+     "en": "Electrode laser cutting",
+     "year": 2010,
+     "note": "以激光切割极片外形与极耳的工艺，边缘光整无毛刺。",
+     "deps": [
+      "module_laser_welding"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "新型与示范储能装置",
+   "items": [
+    {
+     "id": "underground_hydrogen_storage",
+     "name": "地下盐穴储氢",
+     "en": "Underground hydrogen storage",
+     "year": 1972,
+     "note": "利用盐穴大规模储氢的方式，英国蒂赛德为早期商业案例。",
+     "deps": [
+      "hydrogen_cylinder"
+     ]
+    },
+    {
+     "id": "thermal_oil_storage",
+     "name": "导热油储热系统",
+     "en": "Thermal oil storage",
+     "year": 1990,
+     "note": "以导热油为载热储热介质的系统，用于光热电站传热与储热。",
+     "deps": [
+      "hot_water_tank"
+     ]
+    },
+    {
+     "id": "rock_bed_storage",
+     "name": "岩石床储热",
+     "en": "Rock-bed thermal storage",
+     "year": 2000,
+     "note": "以碎石堆积床蓄热的高温热能储存方式，适用于太阳能热发电。",
+     "deps": [
+      "hot_water_tank"
+     ]
+    },
+    {
+     "id": "isothermal_caes",
+     "name": "等温压缩空气储能",
+     "en": "Isothermal CAES",
+     "year": 2014,
+     "note": "压缩热即时回收、近似等温过程的压缩空气储能示范装置。",
+     "deps": [
+      "compressed_air_storage"
+     ]
+    },
+    {
+     "id": "iron_air_battery",
+     "name": "铁空气电池",
+     "en": "Iron-air battery",
+     "year": 2021,
+     "note": "以铁负极与空气正极构成的长时储能电池，面向多日放电需求。",
+     "deps": [
+      "zinc_air_battery"
+     ]
+    },
+    {
+     "id": "liquid_co2_storage",
+     "name": "液态二氧化碳储能",
+     "en": "Liquid CO2 energy storage",
+     "year": 2022,
+     "note": "把二氧化碳压缩液化储能、释能发电的示范装置，中国建成首套。",
+     "deps": [
+      "liquid_air_storage"
+     ]
+    },
+    {
+     "id": "aqueous_organic_flow",
+     "name": "水系有机液流电池",
+     "en": "Aqueous organic flow battery",
+     "year": 2017,
+     "note": "以水溶性有机分子为活性物质的长时储能电池，材料来源广泛。",
+     "deps": [
+      "organic_flow_battery"
+     ]
+    },
+    {
+     "id": "hydrogen_fc_backup_power",
+     "name": "燃料电池备用电源",
+     "en": "Fuel cell backup power",
+     "year": 2000,
+     "note": "以燃料电池与储氢为电信与数据中心提供长时备电的电源系统。",
+     "deps": [
+      "pem_fuel_cell"
+     ]
+    },
+    {
+     "id": "off_grid_pv_storage",
+     "name": "离网光伏储能系统",
+     "en": "Off-grid PV storage",
+     "year": 2005,
+     "note": "由光伏与电池组成、独立供电无电地区的发电储电系统。",
+     "deps": [
+      "solar"
+     ]
+    },
+    {
+     "id": "underwater_caes",
+     "name": "水下压缩空气储能",
+     "en": "Underwater CAES",
+     "year": 2015,
+     "note": "以水下恒压储气方式运行的压缩空气储能系统，加拿大率先示范。",
+     "deps": [
+      "compressed_air_storage"
+     ]
+    },
+    {
+     "id": "portable_power_station",
+     "name": "便携储能电源",
+     "en": "Portable power station",
+     "year": 2018,
+     "note": "集成电池与逆变器的移动电源，供户外与应急用电。",
+     "deps": [
+      "home_storage"
+     ]
+    }
+   ]
+  }
+ ]
+}

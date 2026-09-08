@@ -1,0 +1,1104 @@
+{
+ "cat": "info",
+ "catName": "信息与通信",
+ "sub": "datastore",
+ "subName": "数据存储",
+ "anchors": [
+  "paper",
+  "writing",
+  "computer",
+  "ic",
+  "transistor",
+  "semiconductors",
+  "internet",
+  "magnets",
+  "lasers",
+  "plastics",
+  "electricity"
+ ],
+ "families": [
+  {
+   "name": "早期记录介质",
+   "items": [
+    {
+     "id": "store_jacquard_card",
+     "name": "雅卡尔提花卡",
+     "en": "Jacquard card",
+     "year": 1804,
+     "note": "以穿孔卡片控制织机花纹，是信息自动化记录的先声。",
+     "deps": ["paper"]
+    },
+    {
+     "id": "store_punch_card",
+     "name": "穿孔卡片",
+     "en": "Punched card",
+     "year": 1890,
+     "note": "在纸卡上以孔洞编码数据，制表与早期计算机的主要输入介质。",
+     "deps": ["paper"]
+    },
+    {
+     "id": "store_punch_tape",
+     "name": "穿孔纸带",
+     "en": "Punched tape",
+     "year": 1846,
+     "note": "以纸带上孔洞序列记录信息的长带，用于电报与早期计算机。",
+     "deps": ["paper"]
+    },
+    {
+     "id": "store_edge_punch_card",
+     "name": "边缘打孔卡",
+     "en": "Edge-notched card",
+     "year": 1900,
+     "note": "在卡片边缘切口、以探针分类检索的纸质数据卡。",
+     "deps": ["store_punch_card"]
+    },
+    {
+     "id": "store_mark_sense",
+     "name": "标记阅读卡",
+     "en": "Mark sense card",
+     "year": 1950,
+     "note": "以铅笔填涂、光学识别录入数据的卡片。",
+     "deps": ["store_punch_card"]
+    },
+    {
+     "id": "store_paper_tape_reader",
+     "name": "纸带读取机",
+     "en": "Paper tape reader",
+     "year": 1950,
+     "note": "读取穿孔纸带作为计算机输入的早期外设。",
+     "deps": ["store_punch_tape", "computer"]
+    },
+    {
+     "id": "store_unit_record",
+     "name": "单元记录设备",
+     "en": "Unit record equipment",
+     "year": 1920,
+     "note": "对穿孔卡片排序、制表、复制的机电数据处理设备。",
+     "deps": ["store_punch_card"]
+    },
+    {
+     "id": "store_magnetic_stripe_card",
+     "name": "磁条卡",
+     "en": "Magnetic stripe card",
+     "year": 1960,
+     "note": "在塑料卡上以磁条记录账户信息的便携介质。",
+     "deps": ["magnets", "plastics"]
+    },
+    {
+     "id": "store_punch_card_encoder",
+     "name": "键控穿孔机",
+     "en": "Keypunch",
+     "year": 1920,
+     "note": "以打字方式将数据编码为卡片孔洞的录入设备。",
+     "deps": ["store_punch_card"]
+    },
+    {
+     "id": "store_microfilm",
+     "name": "缩微胶片",
+     "en": "Microfilm",
+     "year": 1928,
+     "note": "将文档缩印于胶片以长期保存的模拟存储方式。",
+     "deps": ["paper"]
+    },
+    {
+     "id": "store_tab_card_sort",
+     "name": "卡片分类机",
+     "en": "Card sorter",
+     "year": 1920,
+     "note": "按列孔洞对穿孔卡片自动分拣的机电装置。",
+     "deps": ["store_punch_card"]
+    },
+    {
+     "id": "store_collator",
+     "name": "卡片校对整理机",
+     "en": "Collator",
+     "year": 1930,
+     "note": "比对、合并多路卡片流的单元记录设备。",
+     "deps": ["store_unit_record"]
+    },
+    {
+     "id": "store_keypunch2",
+     "name": "电动穿孔机",
+     "en": "Electric keypunch",
+     "year": 1930,
+     "note": "以电机驱动提升穿孔效率的卡片录入设备。",
+     "deps": ["store_punch_card"]
+    },
+    {
+     "id": "store_microfiche",
+     "name": "缩微平片",
+     "en": "Microfiche",
+     "year": 1940,
+     "note": "单张缩印多页文档的平片式缩微胶片。",
+     "deps": ["store_microfilm"]
+    },
+    {
+     "id": "store_80col_card",
+     "name": "80列卡片",
+     "en": "80-column card",
+     "year": 1928,
+     "note": "IBM标准化的80列穿孔卡片，成为数据处理通用介质。",
+     "deps": ["store_punch_card"]
+    },
+    {
+     "id": "store_paper_tape_punch",
+     "name": "纸带穿孔机",
+     "en": "Tape punch",
+     "year": 1950,
+     "note": "将计算机输出以孔洞打到纸带上的设备。",
+     "deps": ["store_punch_tape"]
+    },
+    {
+     "id": "store_aperture_card",
+     "name": "开窗卡片",
+     "en": "Aperture card",
+     "year": 1955,
+     "note": "嵌有缩微胶片窗、便于检索的工程图纸卡。",
+     "deps": ["store_microfilm"]
+    },
+    {
+     "id": "store_punched_tag",
+     "name": "穿孔标签",
+     "en": "Punched tag",
+     "year": 1960,
+     "note": "附于商品与文档、以孔洞标识属性的检索标签。",
+     "deps": ["store_punch_card"]
+    },
+    {
+     "id": "store_computer_output_microfilm",
+     "name": "计算机输出缩微",
+     "en": "COM",
+     "year": 1955,
+     "note": "将数字数据直接输出为缩微胶片的技术。",
+     "deps": ["store_microfilm", "computer"]
+    }
+   ]
+  },
+  {
+   "name": "磁存储",
+   "items": [
+    {
+     "id": "store_magnetic_drum",
+     "name": "磁鼓存储器",
+     "en": "Magnetic drum",
+     "year": 1947,
+     "note": "高速旋转磁表面构成的主存储器，早期计算机常用。",
+     "deps": ["computer"]
+    },
+    {
+     "id": "store_magnetic_core",
+     "name": "磁芯存储器",
+     "en": "Magnetic core memory",
+     "year": 1951,
+     "note": "以磁环阵列构成、可随机读写的非易失主存储器。",
+     "deps": ["store_magnetic_drum"]
+    },
+    {
+     "id": "store_magnetic_tape",
+     "name": "磁带机",
+     "en": "Magnetic tape drive",
+     "year": 1951,
+     "note": "在磁带上进行串行读写的海量存储，长期备份主力。",
+     "deps": ["magnets", "computer"]
+    },
+    {
+     "id": "store_hard_disk",
+     "name": "硬盘驱动器",
+     "en": "Hard disk drive",
+     "year": 1956,
+     "note": "以旋转磁盘与磁头实现随机访问的大容量块存储。",
+     "deps": ["store_magnetic_drum", "magnets"]
+    },
+    {
+     "id": "store_floppy_disk",
+     "name": "软盘",
+     "en": "Floppy disk",
+     "year": 1971,
+     "note": "可移动柔性磁盘介质，个人计算机时代标准载体。",
+     "deps": ["store_magnetic_tape", "ic"]
+    },
+    {
+     "id": "store_tape_library",
+     "name": "磁带库",
+     "en": "Tape library",
+     "year": 1985,
+     "note": "以机械臂自动装卸磁带的归档存储系统。",
+     "deps": ["store_magnetic_tape"]
+    },
+    {
+     "id": "store_winchester",
+     "name": "温彻斯特磁盘",
+     "en": "Winchester disk",
+     "year": 1973,
+     "note": "磁头盘片密封为一体的硬盘工艺标准，提升可靠性。",
+     "deps": ["store_hard_disk"]
+    },
+    {
+     "id": "store_rll_encoding",
+     "name": "磁盘编码RLL",
+     "en": "Run-length limited",
+     "year": 1985,
+     "note": "改进调制编码以提升磁盘面密度的记录方式。",
+     "deps": ["store_hard_disk"]
+    },
+    {
+     "id": "store_amr_head",
+     "name": "磁阻磁头",
+     "en": "Magnetoresistive head",
+     "year": 1990,
+     "note": "以磁阻效应读取信号、提升密度的硬盘磁头。",
+     "deps": ["store_hard_disk", "magnets"]
+    },
+    {
+     "id": "store_thin_film_head",
+     "name": "薄膜磁头",
+     "en": "Thin-film head",
+     "year": 1990,
+     "note": "以薄膜工艺制造、精度更高的硬盘读写头。",
+     "deps": ["store_hard_disk"]
+    },
+    {
+     "id": "store_zone_bit_recording",
+     "name": "区位记录",
+     "en": "Zone bit recording",
+     "year": 1990,
+     "note": "外圈磁道存放更多数据的密度优化技术。",
+     "deps": ["store_hard_disk"]
+    },
+    {
+     "id": "store_gmr_head",
+     "name": "巨磁阻磁头",
+     "en": "GMR head",
+     "year": 1991,
+     "note": "以巨磁阻效应大幅提升读取灵敏度与面密度。",
+     "deps": ["store_hard_disk", "magnets"]
+    },
+    {
+     "id": "store_prml",
+     "name": "PRML读取",
+     "en": "PRML",
+     "year": 1995,
+     "note": "以信号处理与维特比译码提升密度的读取技术。",
+     "deps": ["store_hard_disk"]
+    },
+    {
+     "id": "store_removable_disk",
+     "name": "可移动磁盘盒",
+     "en": "Removable disk pack",
+     "year": 1995,
+     "note": "可整体抽换的硬盘模块，便于数据与系统迁移。",
+     "deps": ["store_hard_disk"]
+    },
+    {
+     "id": "store_tape_cartridge",
+     "name": "盒式磁带",
+     "en": "Tape cartridge",
+     "year": 1970,
+     "note": "卡式封装的磁带介质，便于保管与流转。",
+     "deps": ["store_magnetic_tape"]
+    },
+    {
+     "id": "store_perpendicular_recording",
+     "name": "垂直磁记录",
+     "en": "Perpendicular recording",
+     "year": 2005,
+     "note": "以垂直取向磁化提升磁盘面密度的记录方式。",
+     "deps": ["store_hard_disk"]
+    },
+    {
+     "id": "store_smr",
+     "name": "叠瓦式磁记录",
+     "en": "Shingled magnetic recording",
+     "year": 2013,
+     "note": "磁道部分重叠以进一步提升面密度的硬盘技术。",
+     "deps": ["store_hard_disk"]
+    },
+    {
+     "id": "store_helium_drive",
+     "name": "充氦硬盘",
+     "en": "Helium-filled drive",
+     "year": 2013,
+     "note": "充氦降低阻力、实现更高盘片密度的磁盘驱动器。",
+     "deps": ["store_hard_disk"]
+    },
+    {
+     "id": "store_scsi_disk",
+     "name": "SCSI磁盘",
+     "en": "SCSI disk",
+     "year": 1983,
+     "note": "以SCSI接口连接、面向服务器的高性能硬盘。",
+     "deps": ["store_hard_disk"]
+    },
+    {
+     "id": "store_cold_hdd",
+     "name": "近线硬盘",
+     "en": "Nearline HDD",
+     "year": 2010,
+     "note": "低转速、大容量的近线磁盘，用于温冷数据层。",
+     "deps": ["store_hard_disk"]
+    }
+   ]
+  },
+  {
+   "name": "光存储",
+   "items": [
+    {
+     "id": "store_cd_rom",
+     "name": "光盘CD-ROM",
+     "en": "CD-ROM",
+     "year": 1982,
+     "note": "以激光读取的只读紧凑光盘，早期软件与数据载体。",
+     "deps": ["lasers", "computer"]
+    },
+    {
+     "id": "store_cd_r",
+     "name": "可刻录光盘CD-R",
+     "en": "CD-R",
+     "year": 1988,
+     "note": "可一次性写入、长期保存的光盘介质。",
+     "deps": ["store_cd_rom"]
+    },
+    {
+     "id": "store_cd_rw",
+     "name": "可重写光盘CD-RW",
+     "en": "CD-RW",
+     "year": 1997,
+     "note": "以相变层实现可逆重写的光盘介质。",
+     "deps": ["store_cd_r"]
+    },
+    {
+     "id": "store_dvd",
+     "name": "DVD数字多功能光盘",
+     "en": "DVD",
+     "year": 1995,
+     "note": "比CD更高容量的光存储格式，用于影音与数据。",
+     "deps": ["store_cd_rom"]
+    },
+    {
+     "id": "store_blu_ray",
+     "name": "蓝光光盘",
+     "en": "Blu-ray Disc",
+     "year": 2002,
+     "note": "以蓝紫激光实现高容量的下一代光存储。",
+     "deps": ["store_dvd", "lasers"]
+    },
+    {
+     "id": "store_mo_disk",
+     "name": "磁光盘",
+     "en": "Magneto-optical disk",
+     "year": 1985,
+     "note": "结合磁与光实现可逆记录的可移除存储介质。",
+     "deps": ["lasers", "magnets"]
+    },
+    {
+     "id": "store_mini_disc",
+     "name": "MiniDisc",
+     "en": "MiniDisc",
+     "year": 1992,
+     "note": "小型磁光音频存储介质，用于便携录音。",
+     "deps": ["store_mo_disk"]
+    },
+    {
+     "id": "store_optical_jukebox",
+     "name": "光盘库",
+     "en": "Optical jukebox",
+     "year": 1995,
+     "note": "自动换盘、阵列化管理的光存储系统。",
+     "deps": ["store_cd_rom"]
+    },
+    {
+     "id": "store_hddvd",
+     "name": "HD DVD",
+     "en": "HD DVD",
+     "year": 2006,
+     "note": "与蓝光竞争的高清光格式，后退出市场。",
+     "deps": ["store_dvd"]
+    },
+    {
+     "id": "store_worm_optical",
+     "name": "一次写光盘WORM",
+     "en": "WORM optical disc",
+     "year": 1985,
+     "note": "不可改写、用于防篡改归档的光存储。",
+     "deps": ["store_cd_rom"]
+    },
+    {
+     "id": "store_dvd_r",
+     "name": "可刻录DVD",
+     "en": "DVD-R / DVD+R",
+     "year": 1997,
+     "note": "可写入的DVD介质，用于分发与备份。",
+     "deps": ["store_dvd"]
+    },
+    {
+     "id": "store_dvd_ram",
+     "name": "DVD-RAM",
+     "en": "DVD-RAM",
+     "year": 1998,
+     "note": "可随机重写、具纠错能力的可重写DVD。",
+     "deps": ["store_dvd"]
+    },
+    {
+     "id": "store_udf",
+     "name": "通用光盘格式",
+     "en": "UDF",
+     "year": 1996,
+     "note": "面向可重写光盘的文件系统格式。",
+     "deps": ["store_dvd"]
+    },
+    {
+     "id": "store_archival_disc",
+     "name": "归档蓝光",
+     "en": "Archival Blu-ray",
+     "year": 2014,
+     "note": "面向长期冷归档、抗老化的专业蓝光介质。",
+     "deps": ["store_blu_ray"]
+    }
+   ]
+  },
+  {
+   "name": "固态与闪存",
+   "items": [
+    {
+     "id": "store_eprom",
+     "name": "可擦可编程只读存储器",
+     "en": "EPROM",
+     "year": 1971,
+     "note": "以紫外光擦除、可反复编程的芯片存储。",
+     "deps": ["ic", "semiconductors"]
+    },
+    {
+     "id": "store_eeprom",
+     "name": "电可擦可编程存储器",
+     "en": "EEPROM",
+     "year": 1978,
+     "note": "以电信号逐字节擦写的小容量非易失存储。",
+     "deps": ["store_eprom"]
+    },
+    {
+     "id": "store_nor_flash",
+     "name": "NOR闪存",
+     "en": "NOR flash",
+     "year": 1984,
+     "note": "可字节寻址、适合存放代码的闪存类型。",
+     "deps": ["store_eprom"]
+    },
+    {
+     "id": "store_nand_flash",
+     "name": "NAND闪存",
+     "en": "NAND flash",
+     "year": 1987,
+     "note": "以块擦除、高密度非易失存储，固态存储基石。",
+     "deps": ["store_eeprom", "ic"]
+    },
+    {
+     "id": "store_embedded_flash",
+     "name": "嵌入式闪存",
+     "en": "Embedded flash",
+     "year": 1990,
+     "note": "集成于微控制器内的非易失程序存储。",
+     "deps": ["store_eeprom"]
+    },
+    {
+     "id": "store_ssd",
+     "name": "固态硬盘",
+     "en": "Solid-state drive",
+     "year": 1991,
+     "note": "以闪存替代磁盘、无机械部件的高速存储驱动器。",
+     "deps": ["store_nand_flash"]
+    },
+    {
+     "id": "store_memory_card",
+     "name": "存储卡",
+     "en": "Memory card",
+     "year": 1999,
+     "note": "相机与便携设备使用的小型可移除闪存卡。",
+     "deps": ["store_nand_flash"]
+    },
+    {
+     "id": "store_sd_card",
+     "name": "SD存储卡",
+     "en": "SD card",
+     "year": 2000,
+     "note": "安全数字存储卡标准，广泛用于便携设备。",
+     "deps": ["store_memory_card"]
+    },
+    {
+     "id": "store_usb_drive",
+     "name": "U盘",
+     "en": "USB flash drive",
+     "year": 2000,
+     "note": "以USB接口即插即用的可移动闪存盘。",
+     "deps": ["store_nand_flash"]
+    },
+    {
+     "id": "store_flash_controller",
+     "name": "闪存控制器",
+     "en": "Flash controller",
+     "year": 2005,
+     "note": "管理磨损均衡、坏块与纠错的闪存控制芯片。",
+     "deps": ["store_nand_flash"]
+    },
+    {
+     "id": "store_tlc_nand",
+     "name": "TLC闪存",
+     "en": "TLC NAND",
+     "year": 2009,
+     "note": "每单元存储三比特、提升容量的闪存类型。",
+     "deps": ["store_nand_flash"]
+    },
+    {
+     "id": "store_eMMC",
+     "name": "嵌入式多媒体卡",
+     "en": "eMMC",
+     "year": 2007,
+     "note": "将闪存与控制芯片封装一体的嵌入式存储。",
+     "deps": ["store_memory_card"]
+    },
+    {
+     "id": "store_nvme",
+     "name": "NVMe协议",
+     "en": "NVMe",
+     "year": 2011,
+     "note": "面向PCIe闪存的高并发低延迟访问协议。",
+     "deps": ["store_ssd"]
+    },
+    {
+     "id": "store_ufs",
+     "name": "通用闪存存储UFS",
+     "en": "UFS",
+     "year": 2011,
+     "note": "面向移动设备的高速串行闪存接口。",
+     "deps": ["store_eMMC"]
+    },
+    {
+     "id": "store_3d_nand",
+     "name": "3D NAND",
+     "en": "3D NAND",
+     "year": 2014,
+     "note": "垂直堆叠存储单元、突破平面密度极限的闪存。",
+     "deps": ["store_nand_flash"]
+    },
+    {
+     "id": "store_flash_file_system",
+     "name": "闪存文件系统",
+     "en": "Flash file system",
+     "year": 1995,
+     "note": "针对擦写特性与磨损均衡优化的文件系统。",
+     "deps": ["store_nand_flash"]
+    },
+    {
+     "id": "store_qlc_nand",
+     "name": "QLC NAND",
+     "en": "QLC NAND",
+     "year": 2018,
+     "note": "每单元四比特、面向大容量低成本存储的闪存。",
+     "deps": ["store_3d_nand"]
+    },
+    {
+     "id": "store_nvme_fabrics",
+     "name": "NVMe over Fabrics",
+     "en": "NVMe-oF",
+     "year": 2016,
+     "note": "跨网络远程访问NVMe存储、逼近本地性能的技术。",
+     "deps": ["store_nvme"]
+    }
+   ]
+  },
+  {
+   "name": "内存技术",
+   "items": [
+    {
+     "id": "store_sram",
+     "name": "静态随机存储器",
+     "en": "SRAM",
+     "year": 1970,
+     "note": "以锁存电路构成、无需刷新的高速易失存储。",
+     "deps": ["ic", "transistor"]
+    },
+    {
+     "id": "store_dram",
+     "name": "动态随机存储器",
+     "en": "DRAM",
+     "year": 1970,
+     "note": "以电容电荷存储、需定时刷新的主存技术。",
+     "deps": ["ic", "transistor"]
+    },
+    {
+     "id": "store_fpm_dram",
+     "name": "快页模式DRAM",
+     "en": "FPM DRAM",
+     "year": 1985,
+     "note": "以页模式加速连续访问的动态内存。",
+     "deps": ["store_dram"]
+    },
+    {
+     "id": "store_sdram",
+     "name": "同步DRAM",
+     "en": "SDRAM",
+     "year": 1993,
+     "note": "与系统时钟同步、提升带宽的动态内存。",
+     "deps": ["store_dram"]
+    },
+    {
+     "id": "store_ecc_memory",
+     "name": "ECC内存",
+     "en": "ECC memory",
+     "year": 1985,
+     "note": "带校验与纠正、提升可靠性的服务器内存。",
+     "deps": ["store_dram"]
+    },
+    {
+     "id": "store_memory_module",
+     "name": "内存条",
+     "en": "Memory module",
+     "year": 1982,
+     "note": "将多颗粒内存集成于电路板的插拔式模组。",
+     "deps": ["store_dram"]
+    },
+    {
+     "id": "store_cache_sram",
+     "name": "高速缓存SRAM",
+     "en": "Cache SRAM",
+     "year": 1985,
+     "note": "用作CPU外部高速缓存的静态存储器。",
+     "deps": ["store_sram"]
+    },
+    {
+     "id": "store_memory_banks",
+     "name": "内存交错",
+     "en": "Memory interleaving",
+     "year": 1985,
+     "note": "多存储体交替访问以提升内存带宽的技术。",
+     "deps": ["store_dram"]
+    },
+    {
+     "id": "store_edram",
+     "name": "嵌入式DRAM",
+     "en": "eDRAM",
+     "year": 1995,
+     "note": "集成于处理器芯片内的动态内存缓存。",
+     "deps": ["store_dram"]
+    },
+    {
+     "id": "store_rdram",
+     "name": "Rambus内存",
+     "en": "RDRAM",
+     "year": 1999,
+     "note": "以高速串行接口提升带宽的内存技术。",
+     "deps": ["store_dram"]
+    },
+    {
+     "id": "store_ddr",
+     "name": "DDR SDRAM",
+     "en": "DDR SDRAM",
+     "year": 2000,
+     "note": "双倍数据率同步动态内存的第一代代际。",
+     "deps": ["store_dram"]
+    },
+    {
+     "id": "store_gddr",
+     "name": "图形DDR",
+     "en": "GDDR",
+     "year": 2001,
+     "note": "面向显卡高频带宽需求的内存类型。",
+     "deps": ["store_ddr"]
+    },
+    {
+     "id": "store_lpddr",
+     "name": "低功耗DDR",
+     "en": "LPDDR",
+     "year": 2008,
+     "note": "面向移动设备的低功耗内存代际。",
+     "deps": ["store_ddr"]
+    },
+    {
+     "id": "store_ddr2",
+     "name": "DDR2",
+     "en": "DDR2 SDRAM",
+     "year": 2003,
+     "note": "更低电压、更高频率的内存第二代。",
+     "deps": ["store_ddr"]
+    },
+    {
+     "id": "store_ddr3",
+     "name": "DDR3",
+     "en": "DDR3 SDRAM",
+     "year": 2007,
+     "note": "进一步降耗提频的内存第三代。",
+     "deps": ["store_ddr2"]
+    },
+    {
+     "id": "store_ddr4",
+     "name": "DDR4",
+     "en": "DDR4 SDRAM",
+     "year": 2014,
+     "note": "高密度、低电压的主流服务器内存代际。",
+     "deps": ["store_ddr3"]
+    },
+    {
+     "id": "store_ddr5",
+     "name": "DDR5",
+     "en": "DDR5 SDRAM",
+     "year": 2020,
+     "note": "更高带宽与容量的下一代内存代际。",
+     "deps": ["store_ddr4"]
+    },
+    {
+     "id": "store_vram",
+     "name": "显存",
+     "en": "Video RAM",
+     "year": 1985,
+     "note": "专用于图形帧缓冲的高速存储器。",
+     "deps": ["store_dram"]
+    }
+   ]
+  },
+  {
+   "name": "存储系统与架构",
+   "items": [
+    {
+     "id": "store_das",
+     "name": "直连存储",
+     "en": "DAS",
+     "year": 1985,
+     "note": "服务器直接挂接的本地磁盘存储方式。",
+     "deps": ["store_hard_disk"]
+    },
+    {
+     "id": "store_jbod",
+     "name": "磁盘簇JBOD",
+     "en": "JBOD",
+     "year": 1995,
+     "note": "简单串联多块磁盘以扩展容量的装置。",
+     "deps": ["store_hard_disk"]
+    },
+    {
+     "id": "store_raid",
+     "name": "独立冗余磁盘阵列",
+     "en": "RAID",
+     "year": 1988,
+     "note": "以多盘条带与冗余提升性能与可靠性的技术。",
+     "deps": ["store_hard_disk"]
+    },
+    {
+     "id": "store_fibre_channel",
+     "name": "光纤通道",
+     "en": "Fibre Channel",
+     "year": 1994,
+     "note": "面向存储的高速串行网络，连接服务器与磁盘。",
+     "deps": ["store_raid", "lasers"]
+    },
+    {
+     "id": "store_san",
+     "name": "存储区域网络",
+     "en": "SAN",
+     "year": 1995,
+     "note": "以专用网络向服务器提供块级存储资源。",
+     "deps": ["store_fibre_channel"]
+    },
+    {
+     "id": "store_nas",
+     "name": "网络附加存储",
+     "en": "NAS",
+     "year": 1995,
+     "note": "以网络文件共享方式提供存储的设备。",
+     "deps": ["store_raid", "internet"]
+    },
+    {
+     "id": "store_iscsi",
+     "name": "iSCSI",
+     "en": "iSCSI",
+     "year": 2003,
+     "note": "以IP网络承载块级存储的SAN协议。",
+     "deps": ["store_san"]
+    },
+    {
+     "id": "store_tape_archive",
+     "name": "磁带归档库",
+     "en": "Tape archive",
+     "year": 1985,
+     "note": "以磁带库长期保存冷数据的归档系统。",
+     "deps": ["store_magnetic_tape"]
+    },
+    {
+     "id": "store_backup_software",
+     "name": "备份系统",
+     "en": "Backup system",
+     "year": 1985,
+     "note": "定期复制与保护数据的软件体系。",
+     "deps": ["store_magnetic_tape"]
+    },
+    {
+     "id": "store_hsm",
+     "name": "分层存储管理",
+     "en": "HSM",
+     "year": 1995,
+     "note": "自动在快慢介质间迁移冷热数据的策略系统。",
+     "deps": ["store_tape_archive"]
+    },
+    {
+     "id": "store_snapshot",
+     "name": "存储快照",
+     "en": "Snapshot",
+     "year": 1996,
+     "note": "记录数据在某一时刻一致状态的副本。",
+     "deps": ["store_nas"]
+    },
+    {
+     "id": "store_dedup",
+     "name": "数据重删",
+     "en": "Data deduplication",
+     "year": 2005,
+     "note": "消除重复数据块以节省存储空间的技术。",
+     "deps": ["store_nas"]
+    },
+    {
+     "id": "store_storage_virtualization",
+     "name": "存储虚拟化",
+     "en": "Storage virtualization",
+     "year": 2003,
+     "note": "抽象整合异构存储、统一资源池化。",
+     "deps": ["store_san"]
+    },
+    {
+     "id": "store_tiering",
+     "name": "冷热分层",
+     "en": "Storage tiering",
+     "year": 2008,
+     "note": "按访问频度在SSD、磁盘、磁带间迁移数据。",
+     "deps": ["store_snapshot"]
+    },
+    {
+     "id": "store_erasure_code",
+     "name": "纠删码",
+     "en": "Erasure coding",
+     "year": 2010,
+     "note": "以冗余编码降低存储开销的容错技术。",
+     "deps": ["store_raid"]
+    },
+    {
+     "id": "store_unified_storage",
+     "name": "统一存储",
+     "en": "Unified storage",
+     "year": 2008,
+     "note": "同时提供文件与块访问的融合存储系统。",
+     "deps": ["store_nas", "store_san"]
+    },
+    {
+     "id": "store_storage_appliance",
+     "name": "存储一体机",
+     "en": "Storage appliance",
+     "year": 2010,
+     "note": "集成计算与磁盘的专用存储设备。",
+     "deps": ["store_nas"]
+    },
+    {
+     "id": "store_storage_qos",
+     "name": "存储服务质量",
+     "en": "Storage QoS",
+     "year": 2012,
+     "note": "对存储IOPS与时延进行保障与隔离的机制。",
+     "deps": ["store_san"]
+    },
+    {
+     "id": "store_storage_pool",
+     "name": "存储资源池",
+     "en": "Storage pool",
+     "year": 2005,
+     "note": "将异构存储汇为统一可调度资源池的抽象。",
+     "deps": ["store_storage_virtualization"]
+    },
+    {
+     "id": "store_inline_dedup",
+     "name": "在线重删",
+     "en": "Inline deduplication",
+     "year": 2008,
+     "note": "数据写入时实时消除重复块以节省空间。",
+     "deps": ["store_dedup"]
+    }
+   ]
+  },
+  {
+   "name": "分布式、云与新兴存储",
+   "items": [
+    {
+     "id": "store_distributed_fs",
+     "name": "分布式文件系统",
+     "en": "Distributed file system",
+     "year": 1984,
+     "note": "跨多节点统一命名与存取的文件系统（如NFS）。",
+     "deps": ["computer", "internet"]
+    },
+    {
+     "id": "store_nfs",
+     "name": "网络文件系统NFS",
+     "en": "NFS",
+     "year": 1985,
+     "note": "在UNIX网络上共享文件的标准协议。",
+     "deps": ["store_distributed_fs"]
+    },
+    {
+     "id": "store_log_structured",
+     "name": "日志结构文件系统",
+     "en": "Log-structured FS",
+     "year": 1992,
+     "note": "以追加日志优化写吞吐的文件系统思想。",
+     "deps": ["store_distributed_fs"]
+    },
+    {
+     "id": "store_object_storage",
+     "name": "对象存储",
+     "en": "Object storage",
+     "year": 1995,
+     "note": "以唯一标识存取非结构化数据的扁平存储模型。",
+     "deps": ["internet"]
+    },
+    {
+     "id": "store_glusterfs",
+     "name": "GlusterFS",
+     "en": "GlusterFS",
+     "year": 2005,
+     "note": "可横向扩展的分布式网络文件系统。",
+     "deps": ["store_distributed_fs"]
+    },
+    {
+     "id": "store_hdfs",
+     "name": "分布式文件系统HDFS",
+     "en": "HDFS",
+     "year": 2006,
+     "note": "面向海量数据、分块多副本的分布式文件系统。",
+     "deps": ["store_distributed_fs"]
+    },
+    {
+     "id": "store_ceph",
+     "name": "Ceph分布式存储",
+     "en": "Ceph",
+     "year": 2008,
+     "note": "统一对象、块与文件接口的分布式存储系统。",
+     "deps": ["store_object_storage"]
+    },
+    {
+     "id": "store_cloud_storage",
+     "name": "云存储",
+     "en": "Cloud storage",
+     "year": 2007,
+     "note": "按需弹性租用的网络存储服务。",
+     "deps": ["store_object_storage", "internet"]
+    },
+    {
+     "id": "store_block_storage",
+     "name": "云块存储",
+     "en": "Cloud block storage",
+     "year": 2008,
+     "note": "在云中提供可挂载块级卷的存储服务。",
+     "deps": ["store_cloud_storage"]
+    },
+    {
+     "id": "store_file_sync",
+     "name": "文件同步云",
+     "en": "File sync cloud",
+     "year": 2008,
+     "note": "多端自动同步的网盘类存储服务。",
+     "deps": ["store_cloud_storage"]
+    },
+    {
+     "id": "store_cold_storage",
+     "name": "冷存储",
+     "en": "Cold storage",
+     "year": 2012,
+     "note": "极低频访问、低成本的大规模归档云存储。",
+     "deps": ["store_cloud_storage"]
+    },
+    {
+     "id": "store_data_lake",
+     "name": "数据湖",
+     "en": "Data lake",
+     "year": 2012,
+     "note": "集中存放多格式原始数据的存储架构。",
+     "deps": ["store_cloud_storage"]
+    },
+    {
+     "id": "store_pcm",
+     "name": "相变存储器",
+     "en": "Phase-change memory",
+     "year": 2005,
+     "note": "以硫系材料相变实现非易失存储的技术。",
+     "deps": ["store_nand_flash"]
+    },
+    {
+     "id": "store_mram",
+     "name": "磁阻随机存储器",
+     "en": "MRAM",
+     "year": 2006,
+     "note": "以磁隧道结实现非易失、高速的存储。",
+     "deps": ["magnets", "store_sram"]
+    },
+    {
+     "id": "store_reram",
+     "name": "阻变存储器",
+     "en": "ReRAM",
+     "year": 2010,
+     "note": "以忆阻性可变电阻实现的非易失存储。",
+     "deps": ["store_pcm"]
+    },
+    {
+     "id": "store_3d_xpoint",
+     "name": "3D XPoint",
+     "en": "3D XPoint",
+     "year": 2015,
+     "note": "交叉点结构、兼具速度与持久性的存储介质。",
+     "deps": ["store_pcm"]
+    },
+    {
+     "id": "store_storage_class_memory",
+     "name": "存储级内存",
+     "en": "Storage-class memory",
+     "year": 2015,
+     "note": "介于内存与存储之间的持久内存层级。",
+     "deps": ["store_pcm"]
+    },
+    {
+     "id": "store_persistent_memory_fs",
+     "name": "持久内存文件系统",
+     "en": "PMem file system",
+     "year": 2018,
+     "note": "面向持久内存优化的低延迟文件系统。",
+     "deps": ["store_storage_class_memory"]
+    },
+    {
+     "id": "store_computational_storage",
+     "name": "计算存储",
+     "en": "Computational storage",
+     "year": 2018,
+     "note": "在存储驱动器内就近处理数据的架构。",
+     "deps": ["store_ssd"]
+    },
+    {
+     "id": "store_cxl_memory",
+     "name": "CXL内存扩展",
+     "en": "CXL memory expansion",
+     "year": 2020,
+     "note": "以高速互连池化与扩展内存资源。",
+     "deps": ["store_dram"]
+    },
+    {
+     "id": "store_zns_ssd",
+     "name": "分区命名空间SSD",
+     "en": "ZNS SSD",
+     "year": 2020,
+     "note": "以分区接口降低写放大的新型固态硬盘。",
+     "deps": ["store_ssd"]
+    },
+    {
+     "id": "store_nvdimm",
+     "name": "NVDIMM",
+     "en": "NVDIMM",
+     "year": 2016,
+     "note": "带断电保护、兼具内存速度与持久性的存储模组。",
+     "deps": ["store_storage_class_memory"]
+    }
+   ]
+  }
+ ]
+}

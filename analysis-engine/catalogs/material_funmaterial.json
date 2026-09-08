@@ -1,0 +1,1359 @@
+{
+ "cat": "material",
+ "catName": "材料",
+ "sub": "funmaterial",
+ "subName": "功能材料",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)，缺省自动取族上游；year 均取真实关键时点。",
+ "anchors": [
+  "chemistry",
+  "physics",
+  "electromagnetism",
+  "magnets",
+  "semiconductors",
+  "battery",
+  "electricity",
+  "thermodynamics",
+  "relativity_qm",
+  "steel"
+ ],
+ "families": [
+  {
+   "name": "永磁与软磁材料",
+   "items": [
+    {
+     "id": "alloy_magnet_steel",
+     "name": "合金磁钢",
+     "en": "Alloy magnet steel",
+     "year": 1900,
+     "note": "以钨、铬等合金化提高碳钢磁矫顽力的早期永磁材料，用于仪表与电话。",
+     "deps": [
+      "steel",
+      "magnets"
+     ]
+    },
+    {
+     "id": "ks_magnet_steel",
+     "name": "KS磁钢",
+     "en": "KS magnet steel",
+     "year": 1917,
+     "note": "本多光太郎研制含钴磁钢，矫顽力突破当时磁钢记录，奠定日本磁学研究。",
+     "deps": [
+      "alloy_magnet_steel"
+     ]
+    },
+    {
+     "id": "alnico_magnet",
+     "name": "铝镍钴永磁",
+     "en": "Alnico magnet",
+     "year": 1931,
+     "note": "三岛德七发明铁-铝-镍-钴铸造磁体，居里温度高，用于扬声器与仪表。",
+     "deps": [
+      "ks_magnet_steel"
+     ]
+    },
+    {
+     "id": "barium_ferrite_magnet",
+     "name": "钡铁氧体永磁",
+     "en": "Barium ferrite magnet",
+     "year": 1952,
+     "note": "菲利普斯研制的钡铁氧体陶瓷磁体，廉价抗退磁，广泛用于电机与密封条。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "strontium_ferrite_magnet",
+     "name": "锶铁氧体永磁",
+     "en": "Strontium ferrite magnet",
+     "year": 1960,
+     "note": "以锶取代钡的六角铁氧体，磁性能更高，成为产量最大的永磁铁氧体。",
+     "deps": [
+      "barium_ferrite_magnet"
+     ]
+    },
+    {
+     "id": "smco5_magnet",
+     "name": "钐钴1:5永磁",
+     "en": "SmCo5 magnet",
+     "year": 1966,
+     "note": "斯特纳特研制钐钴金属间化合物磁体，磁能积远超铁氧体，用于精密器件。",
+     "deps": [
+      "alnico_magnet"
+     ]
+    },
+    {
+     "id": "sm2co17_magnet",
+     "name": "钐钴2:17永磁",
+     "en": "Sm2Co17 magnet",
+     "year": 1977,
+     "note": "富铁钐钴体系磁能积进一步突破，工作温度高，用于航空与电机。",
+     "deps": [
+      "smco5_magnet"
+     ]
+    },
+    {
+     "id": "sintered_ndfeb",
+     "name": "烧结钕铁硼永磁",
+     "en": "Sintered NdFeB magnet",
+     "year": 1983,
+     "note": "佐川真人发明钕铁硼磁体，磁能积创纪录，是电机与消费电子的核心永磁。",
+     "deps": [
+      "smco5_magnet"
+     ]
+    },
+    {
+     "id": "bonded_ndfeb",
+     "name": "粘结钕铁硼磁体",
+     "en": "Bonded NdFeB magnet",
+     "year": 1984,
+     "note": "快淬磁粉与树脂粘结成形，可制成薄壁异形件，用于小型精密电机。",
+     "deps": [
+      "sintered_ndfeb",
+      "plastics"
+     ]
+    },
+    {
+     "id": "electrical_silicon_steel",
+     "name": "电工硅钢",
+     "en": "Electrical silicon steel",
+     "year": 1903,
+     "note": "哈德菲尔德发现加硅降低铁损，硅钢片此后成为电机变压器核心软磁材料。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "grain_oriented_steel",
+     "name": "取向硅钢",
+     "en": "Grain-oriented silicon steel",
+     "year": 1934,
+     "note": "高斯发明的二次冷轧织构工艺使晶粒取向一致，显著降低变压器铁损。",
+     "deps": [
+      "electrical_silicon_steel"
+     ]
+    },
+    {
+     "id": "permalloy",
+     "name": "坡莫合金",
+     "en": "Permalloy",
+     "year": 1914,
+     "note": "贝尔实验室研制的镍铁高磁导合金，用于海底电缆增感与磁屏蔽。",
+     "deps": [
+      "iron",
+      "electricity"
+     ]
+    },
+    {
+     "id": "supermalloy",
+     "name": "超坡莫合金",
+     "en": "Supermalloy",
+     "year": 1940,
+     "note": "镍铁钼三元合金经热处理初始磁导率达十万级，用于高灵敏磁测量。",
+     "deps": [
+      "permalloy"
+     ]
+    },
+    {
+     "id": "sendust_alloy",
+     "name": "铁硅铝粉芯",
+     "en": "Sendust powder core",
+     "year": 1936,
+     "note": "日本增本量研制的铁硅铝合金，磁导率高损耗低，后制粉芯用于电感。",
+     "deps": [
+      "iron"
+     ]
+    },
+    {
+     "id": "carbonyl_iron_core",
+     "name": "羰基铁粉芯",
+     "en": "Carbonyl iron powder core",
+     "year": 1925,
+     "note": "以羰基铁球形微粉压制成的软磁芯，高频稳定，用于射频电感与滤波器。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "manganese_zinc_ferrite",
+     "name": "锰锌铁氧体",
+     "en": "MnZn ferrite",
+     "year": 1946,
+     "note": "斯诺克在菲利普斯研制的软磁铁氧体，高频低损耗，开关电源磁芯的主力。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "nickel_zinc_ferrite",
+     "name": "镍锌铁氧体",
+     "en": "NiZn ferrite",
+     "year": 1950,
+     "note": "电阻率高适用于甚高频，用作天线磁棒与高频变压器磁芯。",
+     "deps": [
+      "manganese_zinc_ferrite"
+     ]
+    },
+    {
+     "id": "amorphous_magnetic_ribbon",
+     "name": "非晶合金带材",
+     "en": "Amorphous magnetic ribbon",
+     "year": 1974,
+     "note": "急冷凝固制得的铁基非晶薄带，铁损仅为硅钢数分之一，用于配电变压器。",
+     "deps": [
+      "electrical_silicon_steel"
+     ]
+    },
+    {
+     "id": "nanocrystalline_soft_magnet",
+     "name": "纳米晶软磁合金",
+     "en": "Nanocrystalline soft magnetic alloy",
+     "year": 1988,
+     "note": "铁基纳米晶合金Finemet兼得高磁导与低损耗，用于共模电感与电流互感器。",
+     "deps": [
+      "amorphous_magnetic_ribbon"
+     ]
+    },
+    {
+     "id": "terfenol_magnetostrictor",
+     "name": "铽镝铁磁致伸缩合金",
+     "en": "Terfenol-D magnetostrictor",
+     "year": 1975,
+     "note": "稀土铁合金在磁场中应变巨大，用于水声换能器与精密致动器。",
+     "deps": [
+      "smco5_magnet"
+     ]
+    },
+    {
+     "id": "soft_magnetic_composite",
+     "name": "软磁复合材料",
+     "en": "Soft magnetic composite",
+     "year": 1995,
+     "note": "绝缘包覆铁粉模压成形，三维各向同性且易制成复杂磁芯，用于车用电机。",
+     "deps": [
+      "iron",
+      "plastics"
+     ]
+    },
+    {
+     "id": "ferrite_magnetic_fluid_seal",
+     "name": "磁性液体密封件",
+     "en": "Ferrofluid seal",
+     "year": 1975,
+     "note": "磁场把磁性液体固定在轴隙形成液体密封，用于硬盘主轴与真空转轴。",
+     "deps": [
+      "chemistry",
+      "magnets"
+     ]
+    },
+    {
+     "id": "sintered_ferrite_ring",
+     "name": "永磁铁氧体电机磁环",
+     "en": "Ferrite motor magnet ring",
+     "year": 1970,
+     "note": "径向充磁铁氧体磁环大量用于家用电机，以低成本支撑家电永磁化。",
+     "deps": [
+      "strontium_ferrite_magnet"
+     ]
+    },
+    {
+     "id": "mpp_powder_core",
+     "name": "铁镍钼磁粉芯",
+     "en": "MPP powder core",
+     "year": 1948,
+     "note": "钼坡莫合金粉绝缘压制的磁芯，磁导率稳定，用于高Q滤波电感。",
+     "deps": [
+      "permalloy"
+     ]
+    },
+    {
+     "id": "ferrite_emi_bead",
+     "name": "铁氧体磁珠",
+     "en": "Ferrite EMI bead",
+     "year": 1970,
+     "note": "管状铁氧体磁珠套在导线上抑制高频噪声，是电子线路常用EMI元件。",
+     "deps": [
+      "manganese_zinc_ferrite"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "压电铁电与电功能材料",
+   "items": [
+    {
+     "id": "rochelle_salt_piezo",
+     "name": "罗谢尔盐压电晶体",
+     "en": "Rochelle salt piezoelectric crystal",
+     "year": 1880,
+     "note": "居里兄弟在罗谢尔盐上发现压电效应，是首个被确证压电性的材料。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "quartz_piezo_crystal",
+     "name": "压电石英晶体",
+     "en": "Piezoelectric quartz",
+     "year": 1880,
+     "note": "石英压电效应被用于稳频振荡，成为钟表与无线电频率标准的核心材料。"
+    },
+    {
+     "id": "adp_crystal",
+     "name": "磷酸二氢铵晶体",
+     "en": "ADP crystal",
+     "year": 1943,
+     "note": "二战期间用于水下声呐换能器，兼作非线性光学与电光晶体。",
+     "deps": [
+      "rochelle_salt_piezo"
+     ]
+    },
+    {
+     "id": "barium_titanate_ferroelectric",
+     "name": "钛酸钡铁电陶瓷",
+     "en": "Barium titanate ferroelectric",
+     "year": 1942,
+     "note": "美苏同期发现钛酸钡的高介电与铁电性，是MLCC与压电陶瓷的先导材料。",
+     "deps": [
+      "physics",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "pzt_piezoceramic",
+     "name": "锆钛酸铅压电陶瓷",
+     "en": "PZT piezoceramic",
+     "year": 1952,
+     "note": "贾菲研制的PZT压电系数远高于钛酸钡，主导换能器、点火与喷墨领域。",
+     "deps": [
+      "barium_titanate_ferroelectric"
+     ]
+    },
+    {
+     "id": "lithium_niobate_crystal",
+     "name": "铌酸锂晶体",
+     "en": "Lithium niobate crystal",
+     "year": 1965,
+     "note": "人工生长的铌酸锂具强压电与声光效应，用于声表面波滤波器与光调制。",
+     "deps": [
+      "pzt_piezoceramic"
+     ]
+    },
+    {
+     "id": "pvdf_piezofilm",
+     "name": "聚偏氟乙烯压电膜",
+     "en": "PVDF piezoelectric film",
+     "year": 1969,
+     "note": "极化后的PVDF具柔性压电性，用于传感器、水听器与能量采集。",
+     "deps": [
+      "plastics",
+      "physics"
+     ]
+    },
+    {
+     "id": "pmnpt_single_crystal",
+     "name": "PMN-PT压电单晶",
+     "en": "PMN-PT piezoelectric single crystal",
+     "year": 1997,
+     "note": "弛豫铁电单晶压电系数远超PZT，用于医疗超声探头提升分辨力。",
+     "deps": [
+      "pzt_piezoceramic"
+     ]
+    },
+    {
+     "id": "knn_leadfree_piezo",
+     "name": "铌酸钾钠无铅压电陶瓷",
+     "en": "KNN lead-free piezoceramic",
+     "year": 2004,
+     "note": "为规避铅污染而发展的无铅压电体系，用于高温与环保压电器件。",
+     "deps": [
+      "pzt_piezoceramic"
+     ]
+    },
+    {
+     "id": "nichrome_heating_alloy",
+     "name": "镍铬电热合金",
+     "en": "Nichrome heating alloy",
+     "year": 1906,
+     "note": "镍铬合金电阻率高且抗氧化，是电炉丝与电热器具的主要发热材料。",
+     "deps": [
+      "steel",
+      "electricity"
+     ]
+    },
+    {
+     "id": "constantan_resistance_alloy",
+     "name": "康铜精密电阻合金",
+     "en": "Constantan resistance alloy",
+     "year": 1890,
+     "note": "铜镍合金电阻温度系数近零且热电势小，用于标准电阻与精密应变片。"
+    },
+    {
+     "id": "tungsten_oxide_electrochromic",
+     "name": "氧化钨电致变色材料",
+     "en": "Tungsten oxide electrochromic material",
+     "year": 1969,
+     "note": "氧化钨膜在电场下颜色可逆变化，用于智能调光玻璃与防眩后视镜。",
+     "deps": [
+      "electricity",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "vanadium_dioxide_thermochromic",
+     "name": "二氧化钒热致变色材料",
+     "en": "VO2 thermochromic material",
+     "year": 1959,
+     "note": "二氧化钒在六十八摄氏度附近发生金属-绝缘体相变而变色，用于智能窗研究。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "indium_tin_oxide_conductive",
+     "name": "氧化铟锡透明导电材料",
+     "en": "Indium tin oxide",
+     "year": 1951,
+     "note": "ITO膜同时透明且导电，是液晶屏、触屏与薄膜电池的电极标准材料。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "plzt_electrooptic_ceramic",
+     "name": "PLZT电光陶瓷",
+     "en": "PLZT electro-optic ceramic",
+     "year": 1970,
+     "note": "掺镧锆钛酸铅透明陶瓷具电光效应，用于光开关与护目镜。",
+     "deps": [
+      "pzt_piezoceramic"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "热电与热管理材料",
+   "items": [
+    {
+     "id": "bismuth_telluride_thermoelectric",
+     "name": "碲化铋热电材料",
+     "en": "Bismuth telluride thermoelectric",
+     "year": 1954,
+     "note": "碲化铋室温热电优值领先，用于半导体制冷片与深空探测器发电。",
+     "deps": [
+      "semiconductors",
+      "thermodynamics"
+     ]
+    },
+    {
+     "id": "lead_telluride_thermoelectric",
+     "name": "碲化铅热电材料",
+     "en": "Lead telluride thermoelectric",
+     "year": 1955,
+     "note": "中温区热电性能优良，用于汽车废热与空间放射性同位素发电。",
+     "deps": [
+      "bismuth_telluride_thermoelectric"
+     ]
+    },
+    {
+     "id": "silicon_germanium_thermoelectric",
+     "name": "硅锗合金热电材料",
+     "en": "SiGe thermoelectric alloy",
+     "year": 1965,
+     "note": "高温稳定性好的热电合金，旅行者号等深空探测器即用其热电转换。",
+     "deps": [
+      "lead_telluride_thermoelectric"
+     ]
+    },
+    {
+     "id": "skutterudite_thermoelectric",
+     "name": "方钴矿热电材料",
+     "en": "Skutterudite thermoelectric",
+     "year": 1990,
+     "note": "笼状结构可填充原子散射声子，热电性能提升，处示范应用阶段。",
+     "deps": [
+      "bismuth_telluride_thermoelectric"
+     ]
+    },
+    {
+     "id": "half_heusler_thermoelectric",
+     "name": "半赫斯勒热电合金",
+     "en": "Half-Heusler thermoelectric",
+     "year": 2005,
+     "note": "机械强度高、耐高温的绿色热电材料，用于汽车废热回收原型器件。",
+     "deps": [
+      "lead_telluride_thermoelectric"
+     ]
+    },
+    {
+     "id": "ntc_thermistor_ceramic",
+     "name": "负温度系数热敏陶瓷",
+     "en": "NTC thermistor ceramic",
+     "year": 1930,
+     "note": "锰镍氧化物陶瓷电阻随温度下降，用于测温与浪涌抑制。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "ptc_thermistor_ceramic",
+     "name": "正温度系数热敏陶瓷",
+     "en": "PTC thermistor ceramic",
+     "year": 1955,
+     "note": "施主掺杂钛酸钡在居里点附近电阻剧增，用作自限温发热与过流保护。",
+     "deps": [
+      "barium_titanate_ferroelectric"
+     ]
+    },
+    {
+     "id": "paraffin_phase_change",
+     "name": "石蜡相变储热材料",
+     "en": "Paraffin phase-change material",
+     "year": 1960,
+     "note": "固液相变潜热大且无腐蚀，用于航天温控与建筑蓄热，1960年代起系统研究。",
+     "deps": [
+      "thermodynamics"
+     ]
+    },
+    {
+     "id": "hydrated_salt_pcm",
+     "name": "结晶水合盐相变材料",
+     "en": "Hydrated salt phase-change material",
+     "year": 1970,
+     "note": "无机盐结晶水合物相变储热密度高、价格低，用于温室与蓄冷应用。",
+     "deps": [
+      "paraffin_phase_change"
+     ]
+    },
+    {
+     "id": "microencapsulated_pcm",
+     "name": "微胶囊相变材料",
+     "en": "Microencapsulated PCM",
+     "year": 1980,
+     "note": "把相变芯材包封于微囊可抑制泄漏，掺入纺织品与建材实现调温。",
+     "deps": [
+      "paraffin_phase_change"
+     ]
+    },
+    {
+     "id": "thermal_barrier_coating",
+     "name": "热障涂层",
+     "en": "Thermal barrier coating",
+     "year": 1970,
+     "note": "钇稳定氧化锆陶瓷层阻隔热流，使航空涡轮叶片可承受更高燃气温度。",
+     "deps": [
+      "steel",
+      "thermodynamics"
+     ]
+    },
+    {
+     "id": "aluminum_nitride_substrate",
+     "name": "氮化铝陶瓷基板",
+     "en": "Aluminum nitride substrate",
+     "year": 1980,
+     "note": "氮化铝导热系数接近氧化铍且绝缘，用于大功率LED与功率模块散热。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "thermal_interface_material",
+     "name": "导热界面材料",
+     "en": "Thermal interface material",
+     "year": 1990,
+     "note": "硅脂、相变片与导热垫填补芯片散热器间隙，是电子散热的关键材料。",
+     "deps": [
+      "plastics",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "pyrolytic_graphite_sheet",
+     "name": "人工石墨导热膜",
+     "en": "Pyrolytic graphite sheet",
+     "year": 2010,
+     "note": "高取向石墨膜面内导热极佳，用于智能手机与5G设备均热散热。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "yttria_zirconia_ceramic",
+     "name": "钇稳定氧化锆电解质",
+     "en": "YSZ solid electrolyte",
+     "year": 1899,
+     "note": "奈恩斯特发现其高温氧离子导电性，成为固体氧化物电池与氧传感器电解质。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "diamond_heat_spreader",
+     "name": "金刚石热沉",
+     "en": "CVD diamond heat spreader",
+     "year": 1990,
+     "note": "化学气相沉积金刚石导热率极高且绝缘，用于大功率激光器与芯片散热。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "shape_stable_pcm",
+     "name": "定形相变材料",
+     "en": "Shape-stabilized PCM",
+     "year": 1995,
+     "note": "石蜡吸附于多孔支撑体保持固态形态，便于封装用于建筑与电池热管理。",
+     "deps": [
+      "paraffin_phase_change"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "光电与发光材料",
+   "items": [
+    {
+     "id": "selenium_photoconductor",
+     "name": "硒光电导材料",
+     "en": "Selenium photoconductor",
+     "year": 1873,
+     "note": "史密斯发现硒遇光电阻下降，据此制成最早的光电池与曝光表。",
+     "deps": [
+      "photography"
+     ]
+    },
+    {
+     "id": "lead_sulfide_detector",
+     "name": "硫化铅红外探测器材料",
+     "en": "Lead sulfide infrared detector",
+     "year": 1940,
+     "note": "硫化铅薄膜对近红外敏感，二战用于夜间侦察与导弹导引头。"
+    },
+    {
+     "id": "indium_antimonide",
+     "name": "锑化铟红外材料",
+     "en": "Indium antimonide",
+     "year": 1955,
+     "note": "窄禁带半导体锑化铟用于中红外探测，是热像仪早期核心材料。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "mercury_cadmium_telluride",
+     "name": "碲镉汞红外材料",
+     "en": "HgCdTe infrared material",
+     "year": 1959,
+     "note": "禁带可调的汞镉碲固溶体覆盖大气红外窗口，主导高性能红外焦平面阵列。",
+     "deps": [
+      "indium_antimonide"
+     ]
+    },
+    {
+     "id": "amorphous_selenium_photoreceptor",
+     "name": "非晶硒感光体",
+     "en": "Amorphous selenium photoreceptor",
+     "year": 1950,
+     "note": "非晶硒充放电成像支撑静电复印机，是首个大规模商用的光电导材料。",
+     "deps": [
+      "selenium_photoconductor"
+     ]
+    },
+    {
+     "id": "zinc_sulfide_phosphor",
+     "name": "硫化锌荧光粉",
+     "en": "Zinc sulfide phosphor",
+     "year": 1938,
+     "note": "硫化锌掺铜绿粉等是黑白电视与荧光灯的基础发光材料。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "rare_earth_crt_phosphor",
+     "name": "稀土阴极射线荧光粉",
+     "en": "Rare-earth CRT phosphor",
+     "year": 1965,
+     "note": "铕激活的钇氧硫化物红粉取代硫化物，提升彩电亮度与色纯。",
+     "deps": [
+      "zinc_sulfide_phosphor",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "yag_ce_phosphor",
+     "name": "钇铝石榴石荧光粉",
+     "en": "YAG:Ce phosphor",
+     "year": 1996,
+     "note": "蓝光激发铈掺杂YAG发出黄光合成白光，成为白光LED照明核心方案。",
+     "deps": [
+      "rare_earth_crt_phosphor",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "nitride_red_phosphor",
+     "name": "氮化物红色荧光粉",
+     "en": "Nitride red phosphor",
+     "year": 2006,
+     "note": "氮化硅铝铕红色荧光粉补足LED光谱红光，提升照明显色指数。",
+     "deps": [
+      "yag_ce_phosphor"
+     ]
+    },
+    {
+     "id": "long_persistence_phosphor",
+     "name": "铝酸锶长余辉发光材料",
+     "en": "SrAl2O4 long-afterglow phosphor",
+     "year": 1996,
+     "note": "铕镝共掺杂铝酸锶余辉达数小时，取代硫化物用于夜光标识。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "nai_tl_scintillator",
+     "name": "碘化钠铊闪烁晶体",
+     "en": "NaI:Tl scintillator",
+     "year": 1948,
+     "note": "霍夫施塔特研制碘化钠铊晶体，把射线转为可见光，用于核探测。",
+     "deps": [
+      "chemistry",
+      "relativity_qm"
+     ]
+    },
+    {
+     "id": "bgo_scintillator",
+     "name": "锗酸铋闪烁晶体",
+     "en": "BGO scintillator",
+     "year": 1973,
+     "note": "锗酸铋密度大、无潮解，广泛用于正电子断层扫描与高能物理量能器。",
+     "deps": [
+      "nai_tl_scintillator"
+     ]
+    },
+    {
+     "id": "lyso_scintillator",
+     "name": "硅酸钇镥闪烁晶体",
+     "en": "LYSO scintillator",
+     "year": 1995,
+     "note": "快衰减高光产的掺铈硅酸钇镥晶体，成为现代PET成像主流闪烁体。",
+     "deps": [
+      "bgo_scintillator"
+     ]
+    },
+    {
+     "id": "ruby_laser_crystal",
+     "name": "红宝石激光晶体",
+     "en": "Ruby laser crystal",
+     "year": 1960,
+     "note": "掺铬氧化铝单晶实现人类第一台激光器，开启了固体激光材料时代。",
+     "deps": [
+      "lasers",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "ndyag_laser_crystal",
+     "name": "钕钇铝石榴石激光晶体",
+     "en": "Nd:YAG laser crystal",
+     "year": 1964,
+     "note": "掺钕钇铝石榴石增益介质效率高，广泛用于工业加工与医疗激光器。",
+     "deps": [
+      "ruby_laser_crystal"
+     ]
+    },
+    {
+     "id": "titanium_sapphire_crystal",
+     "name": "钛蓝宝石激光晶体",
+     "en": "Ti:sapphire crystal",
+     "year": 1982,
+     "note": "钛掺杂蓝宝石带宽极宽，支撑飞秒锁模激光与超快光学研究。",
+     "deps": [
+      "ruby_laser_crystal"
+     ]
+    },
+    {
+     "id": "kdp_nonlinear_crystal",
+     "name": "磷酸二氢钾电光晶体",
+     "en": "KDP electro-optic crystal",
+     "year": 1944,
+     "note": "KDP大晶体用于电光开关与倍频，是惯性约束聚变装置的光学元件。",
+     "deps": [
+      "adp_crystal"
+     ]
+    },
+    {
+     "id": "bbo_lbo_nonlinear_crystal",
+     "name": "偏硼酸钡与三硼酸锂晶体",
+     "en": "BBO and LBO nonlinear crystals",
+     "year": 1989,
+     "note": "中国学者发明的紫外非线性晶体，用于激光变频，获国际广泛应用。",
+     "deps": [
+      "kdp_nonlinear_crystal"
+     ]
+    },
+    {
+     "id": "periodically_poled_lithium_niobate",
+     "name": "周期极化铌酸锂晶体",
+     "en": "PPLN crystal",
+     "year": 1995,
+     "note": "铁电畴周期反转实现准相位匹配，高效产生中红外与可见激光。",
+     "deps": [
+      "lithium_niobate_crystal"
+     ]
+    },
+    {
+     "id": "csi_scintillator",
+     "name": "碘化铯闪烁材料",
+     "en": "CsI scintillator",
+     "year": 1990,
+     "note": "碘化铯针状膜与闪烁屏用于医用X射线数字摄影与安全检查。",
+     "deps": [
+      "nai_tl_scintillator"
+     ]
+    },
+    {
+     "id": "liquid_crystal_material",
+     "name": "液晶材料",
+     "en": "Liquid crystal material",
+     "year": 1888,
+     "note": "莱尼策发现胆甾醇苯甲酸酯的液晶态，二十世纪后期成为显示技术核心材料。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "electroluminescent_phosphor",
+     "name": "电致发光荧光粉",
+     "en": "Electroluminescent phosphor",
+     "year": 1936,
+     "note": "德斯特里奥以硫化锌铜粉观察本征电致发光，后用于EL面板与指示灯。"
+    },
+    {
+     "id": "cds_photoconductor",
+     "name": "硫化镉光敏电阻材料",
+     "en": "CdS photoconductive material",
+     "year": 1948,
+     "note": "硫化镉可见光灵敏度高，广泛用于相机测光与路灯光控开关。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "silver_oxygen_cesium_photocathode",
+     "name": "银氧铯光电阴极",
+     "en": "Ag-O-Cs photocathode",
+     "year": 1934,
+     "note": "库别茨基研制银氧铯阴极并制出光电倍增管，开启微弱光探测技术。",
+     "deps": [
+      "relativity_qm"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "超导材料",
+   "items": [
+    {
+     "id": "mercury_superconductivity",
+     "name": "汞超导电性",
+     "en": "Superconductivity in mercury",
+     "year": 1911,
+     "note": "昂内斯液化氦后发现汞在四点二开电阻突降为零，开启超导研究。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "niobium_superconducting_element",
+     "name": "铌超导元素",
+     "en": "Niobium superconductor",
+     "year": 1930,
+     "note": "铌转变温度约九开且可加工，成为低温超导磁体与超导腔的基础金属。",
+     "deps": [
+      "mercury_superconductivity"
+     ]
+    },
+    {
+     "id": "nb3sn_superconductor",
+     "name": "铌三锡超导化合物",
+     "en": "Nb3Sn superconductor",
+     "year": 1954,
+     "note": "铌锡金属间化合物上临界场高，用于高场磁体与托卡马克线圈。",
+     "deps": [
+      "niobium_superconducting_element"
+     ]
+    },
+    {
+     "id": "nbti_superconducting_wire",
+     "name": "铌钛超导线材",
+     "en": "NbTi superconducting wire",
+     "year": 1961,
+     "note": "铌钛合金延展性好，多芯复合线材成为核磁共振与加速器磁体主力。",
+     "deps": [
+      "niobium_superconducting_element"
+     ]
+    },
+    {
+     "id": "nb3ge_superconductor",
+     "name": "铌三锗超导体",
+     "en": "Nb3Ge superconductor",
+     "year": 1973,
+     "note": "溅射铌三锗把临界温度纪录提到二十三点二开，保持A15体系纪录。",
+     "deps": [
+      "nb3sn_superconductor"
+     ]
+    },
+    {
+     "id": "ybco_superconductor",
+     "name": "钇钡铜氧高温超导",
+     "en": "YBCO high-temperature superconductor",
+     "year": 1987,
+     "note": "朱经武与赵忠贤等发现钇钡铜氧超导转变突破液氮温区，掀起高温超导热潮。",
+     "deps": [
+      "nbti_superconducting_wire"
+     ]
+    },
+    {
+     "id": "bismuth_strontium_calcium_cuprate",
+     "name": "铋锶钙铜氧超导体",
+     "en": "BSCCO superconductor",
+     "year": 1988,
+     "note": "迈达等发现铋系超导，其层状结构易制成银包套带材，率先产业化。",
+     "deps": [
+      "ybco_superconductor"
+     ]
+    },
+    {
+     "id": "mgb2_superconductor",
+     "name": "二硼化镁超导体",
+     "en": "MgB2 superconductor",
+     "year": 2001,
+     "note": "金属性二硼化镁临界温度三十九开，成本低，用于磁共振与电流引线。",
+     "deps": [
+      "bismuth_strontium_calcium_cuprate"
+     ]
+    },
+    {
+     "id": "iron_based_superconductor",
+     "name": "铁基超导体",
+     "en": "Iron-based superconductor",
+     "year": 2008,
+     "note": "日本学者发现铁砷化物超导，突破磁有序元素不能超导的传统观念。",
+     "deps": [
+      "mgb2_superconductor"
+     ]
+    },
+    {
+     "id": "bscco_firstgen_tape",
+     "name": "一代高温超导带材",
+     "en": "First-generation HTS tape",
+     "year": 1995,
+     "note": "银包套铋系带材可盘绕成缆，用于故障限流器与电缆示范工程。",
+     "deps": [
+      "bismuth_strontium_calcium_cuprate"
+     ]
+    },
+    {
+     "id": "ybco_coated_conductor",
+     "name": "二代钇钡铜氧涂层导体",
+     "en": "YBCO coated conductor",
+     "year": 2000,
+     "note": "在织构基带上外延沉积超导层的带材，磁场下载流能力强，用于紧凑聚变。",
+     "deps": [
+      "ybco_superconductor"
+     ]
+    },
+    {
+     "id": "superconducting_nb_cavity",
+     "name": "铌超导加速腔",
+     "en": "Niobium superconducting cavity",
+     "year": 1980,
+     "note": "纯铌射频腔品质因数极高，是大型粒子对撞机直线加速的核心部件。",
+     "deps": [
+      "niobium_superconducting_element"
+     ]
+    },
+    {
+     "id": "thallium_cuprate_superconductor",
+     "name": "铊系高温超导体",
+     "en": "Tl-based cuprate superconductor",
+     "year": 1988,
+     "note": "盛正直等发现铊钡钙铜氧，临界温度一度达一百二十五开，刷新纪录。"
+    }
+   ]
+  },
+  {
+   "name": "吸波与电磁屏蔽材料",
+   "items": [
+    {
+     "id": "wartime_radar_absorbent",
+     "name": "战用雷达吸波材料",
+     "en": "Wartime radar-absorbent material",
+     "year": 1944,
+     "note": "德国为潜艇通气管涂覆炭基吸波层以对抗盟军雷达，是吸波材料早期应用。"
+    },
+    {
+     "id": "jaumann_absorber",
+     "name": "若曼多层吸波体",
+     "en": "Jaumann absorber",
+     "year": 1914,
+     "note": "多层电阻膜与介质间隔构成宽带吸波结构，是早期经典吸波体设计。",
+     "deps": [
+      "physics"
+     ]
+    },
+    {
+     "id": "ferrite_tile_absorber",
+     "name": "铁氧体吸波贴片",
+     "en": "Ferrite tile absorber",
+     "year": 1950,
+     "note": "烧结铁氧体薄片在低频强吸波，用于微波暗室地面与基站干扰抑制。",
+     "deps": [
+      "manganese_zinc_ferrite"
+     ]
+    },
+    {
+     "id": "anechoic_pyramid_absorber",
+     "name": "尖劈吸波材料",
+     "en": "Anechoic chamber absorber",
+     "year": 1960,
+     "note": "含炭聚氨酯海绵制成尖劈阵列，构建低反射微波暗室用于天线测量。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "structural_stealth_absorbing",
+     "name": "结构型吸波复合材料",
+     "en": "Structural radar-absorbing composite",
+     "year": 1980,
+     "note": "蜂窝或纤维增强结构内嵌吸波层，兼顾承载与隐身，用于隐身战机蒙皮。",
+     "deps": [
+      "composites"
+     ]
+    },
+    {
+     "id": "stealth_coating_material",
+     "name": "隐身吸波涂料",
+     "en": "Stealth radar-absorbing coating",
+     "year": 1985,
+     "note": "含铁氧体与导电填料的涂料，使飞行器在特定频段减小雷达反射截面。",
+     "deps": [
+      "structural_stealth_absorbing"
+     ]
+    },
+    {
+     "id": "conductive_rubber_emi",
+     "name": "导电橡胶",
+     "en": "Conductive elastomer gasket",
+     "year": 1960,
+     "note": "导电填料填充橡胶制成的弹性屏蔽条，用于电子机箱缝隙电磁密封。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "emi_shielding_coating",
+     "name": "电磁屏蔽导电涂料",
+     "en": "EMI shielding paint",
+     "year": 1980,
+     "note": "镍或铜填料涂料喷涂壳体即获屏蔽效能，用于塑料电子设备外壳。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "hexaferrite_microwave_absorber",
+     "name": "六角铁氧体微波吸波材料",
+     "en": "Hexaferrite microwave absorber",
+     "year": 1990,
+     "note": "磁铅石型六角铁氧体天然铁磁共振频率高，用于L至S波段吸波。",
+     "deps": [
+      "strontium_ferrite_magnet"
+     ]
+    },
+    {
+     "id": "frequency_selective_surface",
+     "name": "频率选择表面",
+     "en": "Frequency selective surface",
+     "year": 1985,
+     "note": "周期金属单元阵列透过或反射特定频段，用于天线罩与隐身窗口设计。",
+     "deps": [
+      "electromagnetism"
+     ]
+    },
+    {
+     "id": "radome_lowloss_material",
+     "name": "天线罩透波材料",
+     "en": "Radome dielectric material",
+     "year": 1950,
+     "note": "低介电低损耗的纤维增强复合材料保护雷达天线并保证透波。",
+     "deps": [
+      "plastics"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "吸附分离、储氢与智能材料",
+   "items": [
+    {
+     "id": "activated_carbon",
+     "name": "活性炭",
+     "en": "Activated carbon",
+     "year": 1911,
+     "note": "高温活化的多孔碳比表面巨大，用于净水、防毒面具与溶剂回收。",
+     "deps": [
+      "fire",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "silica_gel_desiccant",
+     "name": "硅胶干燥剂",
+     "en": "Silica gel desiccant",
+     "year": 1919,
+     "note": "多孔二氧化硅吸水性强，用作包装干燥剂与气体干燥介质。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "activated_alumina",
+     "name": "活性氧化铝",
+     "en": "Activated alumina",
+     "year": 1930,
+     "note": "多孔氧化铝球吸附水与氟离子，用于干燥、净水与催化剂载体。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "synthetic_zeolite",
+     "name": "合成沸石分子筛",
+     "en": "Synthetic zeolite molecular sieve",
+     "year": 1954,
+     "note": "结晶微孔硅铝酸盐按分子尺寸筛分气体，用于制氧、石油催化与洗涤。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "ion_exchange_resin",
+     "name": "离子交换树脂",
+     "en": "Ion-exchange resin",
+     "year": 1935,
+     "note": "高分子骨架接枝活性基团可交换离子，用于水软化与金属提取。",
+     "deps": [
+      "plastics",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "perfluorosulfonic_membrane",
+     "name": "全氟磺酸离子膜",
+     "en": "Nafion perfluorosulfonic membrane",
+     "year": 1966,
+     "note": "杜邦Nafion膜选择传导质子，是燃料电池与氯碱电解的隔膜材料。",
+     "deps": [
+      "plastics",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "reverse_osmosis_membrane",
+     "name": "反渗透膜材料",
+     "en": "Reverse osmosis membrane",
+     "year": 1960,
+     "note": "洛布与苏里拉简制醋酸纤维素非对称膜，使海水淡化成为现实。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "ion_exchange_membrane",
+     "name": "离子交换膜",
+     "en": "Ion-exchange membrane",
+     "year": 1950,
+     "note": "选择透过离子的高分子膜用于电渗析脱盐，后发展出全氟磺酸体系。",
+     "deps": [
+      "ion_exchange_resin"
+     ]
+    },
+    {
+     "id": "gas_separation_membrane",
+     "name": "高分子气体分离膜",
+     "en": "Polymer gas separation membrane",
+     "year": 1970,
+     "note": "中空纤维膜按渗透速率分离氢气、氮气与二氧化碳，用于天然气与合成气处理。",
+     "deps": [
+      "reverse_osmosis_membrane"
+     ]
+    },
+    {
+     "id": "lanthanum_nickel_hydride",
+     "name": "镧镍储氢合金",
+     "en": "LaNi5 hydrogen storage alloy",
+     "year": 1969,
+     "note": "菲利普斯发现镧镍五在室温可逆吸放氢，成为镍氢电池负极材料基础。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "fetitanium_hydride_alloy",
+     "name": "钛铁储氢合金",
+     "en": "FeTi hydrogen storage alloy",
+     "year": 1974,
+     "note": "美国布鲁克海文实验室研制钛铁合金，室温吸氢压力平台低且价廉。",
+     "deps": [
+      "lanthanum_nickel_hydride"
+     ]
+    },
+    {
+     "id": "nitinol_shape_memory",
+     "name": "镍钛形状记忆合金",
+     "en": "Nitinol shape memory alloy",
+     "year": 1962,
+     "note": "美国海军实验室发现镍钛诺形状记忆与超弹性，用于支架与驱动器。",
+     "deps": [
+      "steel"
+     ]
+    },
+    {
+     "id": "copper_shape_memory_alloy",
+     "name": "铜基形状记忆合金",
+     "en": "Cu-based shape memory alloy",
+     "year": 1968,
+     "note": "铜锌铝与铜铝镍合金记忆效应价廉，用于温控与管道接头。",
+     "deps": [
+      "nitinol_shape_memory"
+     ]
+    },
+    {
+     "id": "tin_oxide_gas_sensor",
+     "name": "氧化锡气敏材料",
+     "en": "SnO2 gas-sensing material",
+     "year": 1962,
+     "note": "田口尚义发现氧化锡吸附气体改变电导，据此制成家用燃气报警器。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "zinc_oxide_varistor",
+     "name": "氧化锌压敏电阻材料",
+     "en": "ZnO varistor ceramic",
+     "year": 1968,
+     "note": "氧化锌晶界势垒在过压下击穿导通，用于电力系统防雷与过压保护。",
+     "deps": [
+      "semiconductors",
+      "electricity"
+     ]
+    },
+    {
+     "id": "strain_gauge_resistive_alloy",
+     "name": "应变电阻合金",
+     "en": "Strain-gauge alloy",
+     "year": 1950,
+     "note": "康铜与卡玛合金把机械应变转为电阻变化，是测力与称重传感器基础。",
+     "deps": [
+      "constantan_resistance_alloy"
+     ]
+    },
+    {
+     "id": "molecularly_imprinted_polymer",
+     "name": "分子印迹聚合物",
+     "en": "Molecularly imprinted polymer",
+     "year": 1993,
+     "note": "模板分子在聚合物中留下识别空穴，用于固相萃取与仿生传感。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "supramolecular_hydrogel",
+     "name": "智能水凝胶",
+     "en": "Stimuli-responsive hydrogel",
+     "year": 1970,
+     "note": "对温度pH响应溶胀收缩的交联高分子凝胶，用于药物释放与软致动器。",
+     "deps": [
+      "plastics"
+     ]
+    },
+    {
+     "id": "conducting_polymer_plastic",
+     "name": "导电高分子材料",
+     "en": "Conducting polymer",
+     "year": 1977,
+     "note": "掺杂聚乙烯膜电导接近金属，黑格等三人凭此获2000年诺贝尔化学奖。",
+     "deps": [
+      "plastics",
+      "chemistry"
+     ]
+    },
+    {
+     "id": "betabeta_alumina_electrolyte",
+     "name": "β氧化铝固体电解质",
+     "en": "Beta-alumina solid electrolyte",
+     "year": 1967,
+     "note": "福特公司发现β氧化铝钠离子导体，据此研制高温钠硫电池。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "electrochromic_device_layer",
+     "name": "电致变色智能玻璃",
+     "en": "Electrochromic smart glass",
+     "year": 1990,
+     "note": "氧化钨基电致变色器件调节透光率，用于飞机舷窗与建筑幕墙。",
+     "deps": [
+      "tungsten_oxide_electrochromic"
+     ]
+    },
+    {
+     "id": "self_lubricating_solid",
+     "name": "固体润滑材料",
+     "en": "Solid lubricant",
+     "year": 1950,
+     "note": "二硫化钼与石墨润滑涂层用于高温真空摩擦副，支撑航天机械运转。",
+     "deps": [
+      "chemistry"
+     ]
+    },
+    {
+     "id": "ultrafiltration_membrane",
+     "name": "超滤膜材料",
+     "en": "Ultrafiltration membrane",
+     "year": 1965,
+     "note": "孔径纳米级的高分子膜分离大分子与微粒，用于净水与生物制药浓缩。",
+     "deps": [
+      "reverse_osmosis_membrane"
+     ]
+    },
+    {
+     "id": "nanofiltration_membrane",
+     "name": "纳滤膜材料",
+     "en": "Nanofiltration membrane",
+     "year": 1980,
+     "note": "介于反渗透与超滤间的荷电膜，可除硬度与有机物，用于饮用水处理。",
+     "deps": [
+      "reverse_osmosis_membrane"
+     ]
+    },
+    {
+     "id": "heat_shrinkable_tubing",
+     "name": "辐照交联热缩材料",
+     "en": "Heat-shrinkable tubing",
+     "year": 1965,
+     "note": "辐照交联聚乙烯加热收缩包覆线缆接头，提供绝缘与密封防护。",
+     "deps": [
+      "plastics"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1437 @@
+{
+ "cat": "info",
+ "catName": "信息通信",
+ "sub": "compute",
+ "subName": "计算设备",
+ "schemaNote": "catalog v1：任务域级真实技术目录。anchors 为本域可引用的全局上游锚点；families[].items[] 为真实技术；item.deps 仅写域内/族间额外依赖(可选)。已存在条目(computer/ic/transistor/smartphone/quantum_computer 等)不入目录，由生成器做存量打标。",
+ "anchors": [
+  "mathematics",
+  "electricity",
+  "transistor",
+  "ic",
+  "semiconductors",
+  "computer",
+  "internet",
+  "writing",
+  "paper",
+  "chemistry",
+  "ai"
+ ],
+ "families": [
+  {
+   "name": "手算与机械计算",
+   "items": [
+    {
+     "id": "counting_rod",
+     "name": "算筹",
+     "en": "Counting rods",
+     "year": -400,
+     "note": "以竹木筹棒摆列进行十进制位值计算，是中国古代主要计算工具。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "suanpan_abacus",
+     "name": "珠算盘",
+     "en": "Suanpan abacus",
+     "year": 1300,
+     "note": "以算珠拨动完成四则运算，沿用至今的成熟手算器具。",
+     "deps": [
+      "counting_rod"
+     ]
+    },
+    {
+     "id": "napier_bones",
+     "name": "纳皮尔算筹",
+     "en": "Napier's bones",
+     "year": 1617,
+     "note": "纳皮尔设计的一套刻数骨筹，把乘除化为查表与加法。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "slide_rule",
+     "name": "计算尺",
+     "en": "Slide rule",
+     "year": 1622,
+     "note": "基于对数刻度的模拟计算工具，工程计算的主导器具直到电子计算器普及。",
+     "deps": [
+      "mathematics",
+      "napier_bones"
+     ]
+    },
+    {
+     "id": "pascaline",
+     "name": "帕斯卡加法器",
+     "en": "Pascaline",
+     "year": 1642,
+     "note": "帕斯卡发明的齿轮式加法器，是最早的机械计算器之一。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "stepped_reckoner",
+     "name": "步进计算器",
+     "en": "Stepped reckoner",
+     "year": 1672,
+     "note": "莱布尼茨设计的可做四则运算的步进鼓轮计算机。",
+     "deps": [
+      "pascaline"
+     ]
+    },
+    {
+     "id": "arithmometer",
+     "name": "商用机械计算器",
+     "en": "Arithmometer",
+     "year": 1820,
+     "note": "托马斯·德·科尔马量产的四则运算机，成为第一台商用计算器。",
+     "deps": [
+      "stepped_reckoner"
+     ]
+    },
+    {
+     "id": "difference_engine",
+     "name": "差分机",
+     "en": "Difference engine",
+     "year": 1822,
+     "note": "巴贝奇设计的用差分法计算多项式数值的机械计算装置。",
+     "deps": [
+      "arithmometer",
+      "mathematics"
+     ]
+    },
+    {
+     "id": "analytical_engine",
+     "name": "分析机",
+     "en": "Analytical engine",
+     "year": 1837,
+     "note": "巴贝奇设计的可编程通用机械计算机，奠定存储程序思想。",
+     "deps": [
+      "difference_engine"
+     ]
+    },
+    {
+     "id": "tabulating_machine",
+     "name": "制表机",
+     "en": "Tabulating machine",
+     "year": 1890,
+     "note": "霍勒里斯用穿孔卡片制表的机电统计设备，开启数据自动化处理。",
+     "deps": [
+      "electricity",
+      "mathematics"
+     ]
+    },
+    {
+     "id": "compute_roman_abacus",
+     "name": "罗马算盘",
+     "en": "Roman abacus",
+     "year": 100,
+     "note": "古罗马青铜槽珠算盘，用于商业与税赋的位值运算。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "compute_soroban",
+     "name": "日本算盘",
+     "en": "Soroban",
+     "year": 1600,
+     "note": "由中式算盘演变而来的日本珠算器具，沿用至今。",
+     "deps": [
+      "suanpan_abacus"
+     ]
+    },
+    {
+     "id": "compute_schoty",
+     "name": "俄罗斯算盘",
+     "en": "Schoty",
+     "year": 1700,
+     "note": "横杆串珠的俄式算盘，至今仍用于教学与电算辅助。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "compute_log_table",
+     "name": "对数表与数表",
+     "en": "Logarithmic tables",
+     "year": 1614,
+     "note": "纳皮尔对数催生的预计算数值表，是机械计算的前置工具。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "compute_comptometer",
+     "name": "列式计算器",
+     "en": "Comptometer",
+     "year": 1887,
+     "note": "多列按键式机械计算器，最早的实用键盘加法机之一。",
+     "deps": [
+      "arithmometer"
+     ]
+    },
+    {
+     "id": "compute_monroe_calculator",
+     "name": "门罗计算器",
+     "en": "Monroe calculator",
+     "year": 1911,
+     "note": "旋转鼓轮式商用计算器，广泛用于事务所与会计。",
+     "deps": [
+      "arithmometer"
+     ]
+    },
+    {
+     "id": "compute_curta_calculator",
+     "name": "库塔袖珍计算器",
+     "en": "Curta calculator",
+     "year": 1948,
+     "note": "圆柱齿轮式便携机械计算器，被誉为掌上计算机。",
+     "deps": [
+      "arithmometer"
+     ]
+    },
+    {
+     "id": "compute_electric_calculator",
+     "name": "电动机械计算器",
+     "en": "Electric calculator",
+     "year": 1950,
+     "note": "电机驱动的商用计算器，电子计算器普及前办公主力。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "compute_difference_engine_replica",
+     "name": "差分机二号复原",
+     "en": "Difference Engine No. 2 replica",
+     "year": 1991,
+     "note": "伦敦科学博物馆依巴贝奇图纸建成的可运行复制品。",
+     "deps": [
+      "difference_engine"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "电子计算机先驱",
+   "items": [
+    {
+     "id": "differential_analyzer",
+     "name": "微分分析机",
+     "en": "Differential analyzer",
+     "year": 1931,
+     "note": "布什研制的大型模拟计算机，以机械积分器求解微分方程。",
+     "deps": [
+      "electric_motor",
+      "electricity"
+     ]
+    },
+    {
+     "id": "z3_relay_computer",
+     "name": "Z3 继电器计算机",
+     "en": "Z3 computer",
+     "year": 1941,
+     "note": "楚泽建成的首台可编程自动机电计算机，采用二进制浮点。",
+     "deps": [
+      "electricity",
+      "mathematics"
+     ]
+    },
+    {
+     "id": "colossus_computer",
+     "name": "巨像计算机",
+     "en": "Colossus computer",
+     "year": 1943,
+     "note": "二战密码破译用电子管计算机，可编程逻辑运算的开端。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "eniac_computer",
+     "name": "ENIAC",
+     "en": "ENIAC",
+     "year": 1945,
+     "note": "首台通用电子数字计算机，用于弹道计算，标志电子计算时代。",
+     "deps": [
+      "electricity",
+      "mathematics"
+     ]
+    },
+    {
+     "id": "stored_program_computer",
+     "name": "存储程序计算机",
+     "en": "Stored-program computer",
+     "year": 1948,
+     "note": "冯·诺依曼体系落地，程序与数据同存内存，1948年曼彻斯特小机首次运行。",
+     "deps": [
+      "eniac_computer"
+     ]
+    },
+    {
+     "id": "univac_computer",
+     "name": "UNIVAC I",
+     "en": "UNIVAC I",
+     "year": 1951,
+     "note": "首台商用电子计算机，交付美国人口普查局。",
+     "deps": [
+      "stored_program_computer",
+      "eniac_computer"
+     ]
+    },
+    {
+     "id": "compute_abc_computer",
+     "name": "Atanasoff–Berry计算机",
+     "en": "ABC computer",
+     "year": 1942,
+     "note": "首台电子数字计算装置，采用二进制与电容存储。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "compute_harvard_mark1",
+     "name": "哈佛马克一号",
+     "en": "Harvard Mark I",
+     "year": 1944,
+     "note": "艾肯研制的机电式自动计算器，受差分分析机启发。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "compute_stored_program_concept",
+     "name": "存储程序概念",
+     "en": "Stored-program concept",
+     "year": 1945,
+     "note": "冯·诺依曼报告提出程序与数据同存内存的可编程思想。",
+     "deps": [
+      "mathematics"
+     ]
+    },
+    {
+     "id": "compute_edvac",
+     "name": "EDVAC",
+     "en": "EDVAC",
+     "year": 1949,
+     "note": "按存储程序思想落地的二进制电子计算机。",
+     "deps": [
+      "eniac_computer"
+     ]
+    },
+    {
+     "id": "compute_edsac",
+     "name": "EDSAC",
+     "en": "EDSAC",
+     "year": 1949,
+     "note": "剑桥建成首台实用存储程序计算机，投入科研服务。",
+     "deps": [
+      "eniac_computer"
+     ]
+    },
+    {
+     "id": "compute_whirlwind",
+     "name": "旋风计算机",
+     "en": "Whirlwind",
+     "year": 1949,
+     "note": "实时交互计算的先驱，率先采用磁芯存储与显示器。",
+     "deps": [
+      "eniac_computer"
+     ]
+    },
+    {
+     "id": "compute_ibm701",
+     "name": "IBM 701",
+     "en": "IBM 701",
+     "year": 1952,
+     "note": "IBM 首款商用科学电子计算机，批量交付科研与军工。",
+     "deps": [
+      "stored_program_computer"
+     ]
+    },
+    {
+     "id": "compute_first_generation_vacuum",
+     "name": "电子管计算机",
+     "en": "Vacuum-tube computer",
+     "year": 1950,
+     "note": "以真空管为逻辑元件的第一代计算机代际。",
+     "deps": [
+      "eniac_computer"
+     ]
+    },
+    {
+     "id": "compute_transistor_computer",
+     "name": "晶体管计算机",
+     "en": "Transistor computer",
+     "year": 1955,
+     "note": "以晶体管取代真空管、体积与功耗大减的第二代计算机。",
+     "deps": [
+      "transistor"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "计算机形态谱系",
+   "items": [
+    {
+     "id": "mainframe_computer",
+     "name": "大型机",
+     "en": "Mainframe computer",
+     "year": 1964,
+     "note": "IBM System/360 确立的通用大型计算机，支撑银行、政务等关键业务。",
+     "deps": [
+      "transistor",
+      "ic"
+     ]
+    },
+    {
+     "id": "minicomputer",
+     "name": "小型机",
+     "en": "Minicomputer",
+     "year": 1965,
+     "note": "PDP-8 开启的小型计算机，使计算走进实验室与工业现场。",
+     "deps": [
+      "transistor"
+     ]
+    },
+    {
+     "id": "microcomputer",
+     "name": "微型计算机",
+     "en": "Microcomputer",
+     "year": 1975,
+     "note": "以微处理器为核心的个人可及计算机，Altair 8800 为其起点。",
+     "deps": [
+      "microprocessor"
+     ]
+    },
+    {
+     "id": "home_computer",
+     "name": "家用电脑",
+     "en": "Home computer",
+     "year": 1977,
+     "note": "Apple II、Commodore 64 等推动电脑进入家庭与教育。",
+     "deps": [
+      "microcomputer"
+     ]
+    },
+    {
+     "id": "personal_computer",
+     "name": "个人计算机",
+     "en": "Personal computer",
+     "year": 1981,
+     "note": "IBM PC 确立开放架构的通用个人电脑，成为办公与家庭标配。",
+     "deps": [
+      "microcomputer",
+      "microprocessor"
+     ]
+    },
+    {
+     "id": "workstation_computer",
+     "name": "工作站",
+     "en": "Workstation",
+     "year": 1984,
+     "note": "面向工程与图形设计的高性能桌面计算设备，Sun、HP 主导。",
+     "deps": [
+      "microcomputer",
+      "ic"
+     ]
+    },
+    {
+     "id": "portable_computer",
+     "name": "便携式计算机",
+     "en": "Portable computer",
+     "year": 1981,
+     "note": "Osborne 1 等可搬移计算机，是笔记本的前身。",
+     "deps": [
+      "microcomputer"
+     ]
+    },
+    {
+     "id": "laptop_computer",
+     "name": "笔记本电脑",
+     "en": "Laptop computer",
+     "year": 1991,
+     "note": "翻盖折叠、电池供电的便携电脑，PowerBook 确立现代形态。",
+     "deps": [
+      "portable_computer",
+      "personal_computer"
+     ]
+    },
+    {
+     "id": "pda_device",
+     "name": "掌上电脑",
+     "en": "Personal digital assistant",
+     "year": 1993,
+     "note": "Apple Newton 与 Palm 推动的个人数字助理，移动计算的先驱。",
+     "deps": [
+      "personal_computer"
+     ]
+    },
+    {
+     "id": "tablet_computer",
+     "name": "平板电脑",
+     "en": "Tablet computer",
+     "year": 2010,
+     "note": "iPad 定义的全触屏平板形态，介于手机与笔记本之间。",
+     "deps": [
+      "personal_computer",
+      "touchscreen"
+     ]
+    },
+    {
+     "id": "smartwatch",
+     "name": "智能手表",
+     "en": "Smartwatch",
+     "year": 2015,
+     "note": "集健康监测与通知于一体的腕上计算机，Apple Watch 为代表。",
+     "deps": [
+      "smartphone",
+      "touchscreen"
+     ]
+    },
+    {
+     "id": "compute_electronic_calculator",
+     "name": "电子计算器",
+     "en": "Electronic calculator",
+     "year": 1970,
+     "note": "集成芯片的掌上计算装置，取代计算尺与机械计算器。",
+     "deps": [
+      "ic"
+     ]
+    },
+    {
+     "id": "compute_game_console",
+     "name": "电子游戏机",
+     "en": "Video game console",
+     "year": 1972,
+     "note": "面向电子游戏的交互式计算娱乐设备。",
+     "deps": [
+      "ic"
+     ]
+    },
+    {
+     "id": "compute_single_board_computer",
+     "name": "单板计算机",
+     "en": "Single-board computer",
+     "year": 1976,
+     "note": "将全部部件集成于单块电路板的微型计算机。",
+     "deps": [
+      "microcomputer"
+     ]
+    },
+    {
+     "id": "compute_industrial_computer",
+     "name": "工业计算机",
+     "en": "Industrial computer",
+     "year": 1980,
+     "note": "抗干扰加固的工业控制计算机，用于产线与测控。",
+     "deps": [
+      "embedded_computer"
+     ]
+    },
+    {
+     "id": "compute_desktop_pc",
+     "name": "台式个人电脑",
+     "en": "Desktop PC",
+     "year": 1985,
+     "note": "固定桌面的通用计算机形态，长期作为办公主力。",
+     "deps": [
+      "personal_computer"
+     ]
+    },
+    {
+     "id": "compute_server",
+     "name": "服务器",
+     "en": "Server",
+     "year": 1982,
+     "note": "为网络提供共享计算与数据服务的高可靠计算机。",
+     "deps": [
+      "mainframe_computer"
+     ]
+    },
+    {
+     "id": "compute_rack_server",
+     "name": "机架式服务器",
+     "en": "Rack server",
+     "year": 1990,
+     "note": "标准机柜安装的服务器形态，数据中心主流。",
+     "deps": [
+      "compute_server"
+     ]
+    },
+    {
+     "id": "compute_thin_client",
+     "name": "瘦客户机",
+     "en": "Thin client",
+     "year": 1990,
+     "note": "依赖服务器运算的简易终端，降低本地配置负担。",
+     "deps": [
+      "compute_server"
+     ]
+    },
+    {
+     "id": "compute_vector_supercomputer",
+     "name": "向量超级计算机",
+     "en": "Vector supercomputer",
+     "year": 1976,
+     "note": "以向量指令批量处理数据流的超级计算机（如Cray架构）。",
+     "deps": [
+      "supercomputer"
+     ]
+    },
+    {
+     "id": "compute_dev_board",
+     "name": "微型开发板",
+     "en": "Development board",
+     "year": 2006,
+     "note": "低成本教学用单板机，推动创客与物联网文化。",
+     "deps": [
+      "compute_single_board_computer"
+     ]
+    },
+    {
+     "id": "compute_netbook",
+     "name": "上网本",
+     "en": "Netbook",
+     "year": 2007,
+     "note": "轻量低功耗便携电脑，面向联网应用。",
+     "deps": [
+      "laptop_computer"
+     ]
+    },
+    {
+     "id": "compute_all_in_one",
+     "name": "一体机",
+     "en": "All-in-one PC",
+     "year": 1998,
+     "note": "屏幕与主机一体的台式计算机，节省空间。",
+     "deps": [
+      "compute_desktop_pc"
+     ]
+    },
+    {
+     "id": "compute_blade_server",
+     "name": "刀片服务器",
+     "en": "Blade server",
+     "year": 2000,
+     "note": "高密度薄型服务器模块，共享背板与供电。",
+     "deps": [
+      "compute_rack_server"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "处理器与芯片",
+   "items": [
+    {
+     "id": "microprocessor",
+     "name": "微处理器",
+     "en": "Microprocessor",
+     "year": 1971,
+     "note": "Intel 4004 把中央处理器集成到单芯片，开启个人计算时代。",
+     "deps": [
+      "ic",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "microcontroller",
+     "name": "单片机",
+     "en": "Microcontroller",
+     "year": 1974,
+     "note": "集 CPU、存储与外设于单芯片的控制器，嵌入家电与工业设备。",
+     "deps": [
+      "microprocessor"
+     ]
+    },
+    {
+     "id": "risc_architecture",
+     "name": "精简指令集计算",
+     "en": "RISC architecture",
+     "year": 1980,
+     "note": "帕特森与亨尼西提出，简化指令集以提升流水线效率，主导移动与服务器芯片。",
+     "deps": [
+      "microprocessor"
+     ]
+    },
+    {
+     "id": "arm_processor",
+     "name": "ARM 处理器",
+     "en": "ARM processor",
+     "year": 1985,
+     "note": "低功耗 RISC 芯片架构，统治智能手机与嵌入式设备。",
+     "deps": [
+      "risc_architecture"
+     ]
+    },
+    {
+     "id": "dsp_processor",
+     "name": "数字信号处理器",
+     "en": "Digital signal processor",
+     "year": 1982,
+     "note": "TI TMS320 开创的专用实时信号处理芯片，用于通信与音频。",
+     "deps": [
+      "microprocessor",
+      "ic"
+     ]
+    },
+    {
+     "id": "gpu_processor",
+     "name": "图形处理器",
+     "en": "Graphics processing unit",
+     "year": 1999,
+     "note": "面向并行图形渲染的处理器，后演化为通用并行计算加速器。",
+     "deps": [
+      "ic",
+      "computer"
+     ]
+    },
+    {
+     "id": "gpgpu_computing",
+     "name": "通用 GPU 计算",
+     "en": "General-purpose GPU computing",
+     "year": 2006,
+     "note": "CUDA 让 GPU 承担通用并行计算，催生大规模科学计算与 AI 训练。",
+     "deps": [
+      "gpu_processor"
+     ]
+    },
+    {
+     "id": "fpga_chip",
+     "name": "现场可编程门阵列",
+     "en": "FPGA",
+     "year": 1985,
+     "note": "Xilinx 推出的可重构逻辑芯片，硬件可现场编程，用于原型与加速。",
+     "deps": [
+      "ic"
+     ]
+    },
+    {
+     "id": "asic_chip",
+     "name": "专用集成电路",
+     "en": "Application-specific IC",
+     "year": 1980,
+     "note": "为特定用途定制的集成电路，性能与功耗优于通用芯片。",
+     "deps": [
+      "ic"
+     ]
+    },
+    {
+     "id": "soc_chip",
+     "name": "片上系统",
+     "en": "System on a chip",
+     "year": 2000,
+     "note": "把处理器、存储、基带等集成于单芯片，智能手机的核心形态。",
+     "deps": [
+      "microprocessor",
+      "ic"
+     ]
+    },
+    {
+     "id": "ai_accelerator",
+     "name": "AI 加速器",
+     "en": "AI accelerator",
+     "year": 2016,
+     "note": "面向神经网络推理与训练的专业芯片，Google TPU 为代表。",
+     "deps": [
+      "ai",
+      "gpu_processor",
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "compute_pipeline",
+     "name": "指令流水线",
+     "en": "Instruction pipeline",
+     "year": 1975,
+     "note": "将指令执行拆分为多级重叠以提升吞吐的硬件机制。",
+     "deps": [
+      "microprocessor"
+     ]
+    },
+    {
+     "id": "compute_superscalar",
+     "name": "超标量处理器",
+     "en": "Superscalar processor",
+     "year": 1989,
+     "note": "单周期发射多条指令以提升指令级并行的处理器。",
+     "deps": [
+      "risc_architecture"
+     ]
+    },
+    {
+     "id": "compute_vliw",
+     "name": "超长指令字",
+     "en": "VLIW",
+     "year": 1989,
+     "note": "以显式并行指令包提升硬件利用率的架构思路。",
+     "deps": [
+      "risc_architecture"
+     ]
+    },
+    {
+     "id": "compute_branch_prediction",
+     "name": "分支预测",
+     "en": "Branch prediction",
+     "year": 1991,
+     "note": "预测分支走向以减少流水线停顿的硬件机制。",
+     "deps": [
+      "compute_superscalar"
+     ]
+    },
+    {
+     "id": "compute_ooo_execution",
+     "name": "乱序执行",
+     "en": "Out-of-order execution",
+     "year": 1993,
+     "note": "由调度器重排指令执行以隐藏停顿、提升利用率。",
+     "deps": [
+      "compute_superscalar"
+     ]
+    },
+    {
+     "id": "compute_simd",
+     "name": "单指令多数据",
+     "en": "SIMD",
+     "year": 1996,
+     "note": "一条指令并行处理向量数据的扩展（如MMX/SSE）。",
+     "deps": [
+      "microprocessor"
+     ]
+    },
+    {
+     "id": "compute_smt",
+     "name": "同步多线程",
+     "en": "Simultaneous multithreading",
+     "year": 2002,
+     "note": "单核心以多硬件线程共享执行单元（如超线程）。",
+     "deps": [
+      "compute_superscalar"
+     ]
+    },
+    {
+     "id": "compute_multicore",
+     "name": "多核处理器",
+     "en": "Multi-core processor",
+     "year": 2005,
+     "note": "单芯片集成多个独立核心，提升并行与能效。",
+     "deps": [
+      "microprocessor"
+     ]
+    },
+    {
+     "id": "compute_network_processor",
+     "name": "网络处理器",
+     "en": "Network processor",
+     "year": 1998,
+     "note": "专司数据包转发与协议处理的NPU芯片。",
+     "deps": [
+      "microprocessor",
+      "internet"
+     ]
+    },
+    {
+     "id": "compute_isa_x86",
+     "name": "x86指令集",
+     "en": "x86 instruction set",
+     "year": 1978,
+     "note": "Intel 8086 确立的CISC指令集架构，PC生态基石。",
+     "deps": [
+      "microprocessor"
+     ]
+    },
+    {
+     "id": "compute_isa_riscv",
+     "name": "RISC-V指令集",
+     "en": "RISC-V",
+     "year": 2014,
+     "note": "开放指令集架构，推动定制化处理器生态。",
+     "deps": [
+      "risc_architecture"
+     ]
+    },
+    {
+     "id": "compute_fpga_soc",
+     "name": "可编程片上系统",
+     "en": "FPGA SoC",
+     "year": 2010,
+     "note": "融合FPGA逻辑与处理器子系统的可重构单芯片。",
+     "deps": [
+      "fpga_chip",
+      "soc_chip"
+     ]
+    },
+    {
+     "id": "compute_neural_processor",
+     "name": "神经网络处理器",
+     "en": "Neural processing unit",
+     "year": 2017,
+     "note": "端侧神经网络推理的专用NPU，集成于手机SoC。",
+     "deps": [
+      "ai_accelerator"
+     ]
+    },
+    {
+     "id": "compute_chiplet",
+     "name": "小芯片封装",
+     "en": "Chiplet",
+     "year": 2018,
+     "note": "多裸片异构集成的先进封装范式，提升良率与灵活性。",
+     "deps": [
+      "ic",
+      "soc_chip"
+     ]
+    },
+    {
+     "id": "compute_heterogeneous_computing",
+     "name": "异构计算",
+     "en": "Heterogeneous computing",
+     "year": 2010,
+     "note": "CPU与GPU/加速器协同分工的计算范式。",
+     "deps": [
+      "gpu_processor",
+      "soc_chip"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "计算系统与范式",
+   "items": [
+    {
+     "id": "supercomputer",
+     "name": "超级计算机",
+     "en": "Supercomputer",
+     "year": 1964,
+     "note": "CDC 6600 起冲击算力巅峰的顶级计算机，用于气象、国防与科研。",
+     "deps": [
+      "transistor",
+      "ic"
+     ]
+    },
+    {
+     "id": "mpp_computer",
+     "name": "大规模并行计算机",
+     "en": "Massively parallel processor",
+     "year": 1985,
+     "note": "成千上万处理器并行求解，Thinking Machines 与 Cray T3D 为代表。",
+     "deps": [
+      "supercomputer",
+      "ic"
+     ]
+    },
+    {
+     "id": "cluster_computing",
+     "name": "集群计算",
+     "en": "Computer cluster",
+     "year": 1994,
+     "note": "Beowulf 用商用机互联构成高性能集群，大幅降低超算成本。",
+     "deps": [
+      "computer",
+      "internet"
+     ]
+    },
+    {
+     "id": "grid_computing",
+     "name": "网格计算",
+     "en": "Grid computing",
+     "year": 1998,
+     "note": "跨机构聚合闲置算力的分布式计算范式，SETI@home 为公众范例。",
+     "deps": [
+      "cluster_computing",
+      "internet"
+     ]
+    },
+    {
+     "id": "cloud_computing",
+     "name": "云计算",
+     "en": "Cloud computing",
+     "year": 2006,
+     "note": "AWS EC2 开启按需租用的计算服务，算力成为像水电一样的公共资源。",
+     "deps": [
+      "internet",
+      "computer"
+     ]
+    },
+    {
+     "id": "edge_computing",
+     "name": "边缘计算",
+     "en": "Edge computing",
+     "year": 2015,
+     "note": "把计算下沉到网络边缘与终端，降低时延与带宽压力。",
+     "deps": [
+      "cloud_computing",
+      "internet"
+     ]
+    },
+    {
+     "id": "embedded_computer",
+     "name": "嵌入式计算机",
+     "en": "Embedded computer",
+     "year": 1970,
+     "note": "隐藏于设备内部专司控制的计算系统，构成工业与消费电子的神经末梢。",
+     "deps": [
+      "ic",
+      "transistor"
+     ]
+    },
+    {
+     "id": "compute_realtime_system",
+     "name": "实时操作系统",
+     "en": "Real-time operating system",
+     "year": 1968,
+     "note": "保证在限定时延内响应的系统与调度（如航空控制）。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "compute_fault_tolerant",
+     "name": "容错计算",
+     "en": "Fault-tolerant computing",
+     "year": 1975,
+     "note": "通过冗余与检测维持故障下连续运行的计算范式。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "compute_virtualization",
+     "name": "虚拟化",
+     "en": "Virtualization",
+     "year": 1972,
+     "note": "以软件抽象硬件、单物理机运行多虚拟机的机制。",
+     "deps": [
+      "mainframe_computer"
+     ]
+    },
+    {
+     "id": "compute_smp",
+     "name": "对称多处理",
+     "en": "Symmetric multiprocessing",
+     "year": 1985,
+     "note": "多处理器共享内存、平等访问总线的多处理架构。",
+     "deps": [
+      "supercomputer"
+     ]
+    },
+    {
+     "id": "compute_numa",
+     "name": "非一致内存访问",
+     "en": "NUMA",
+     "year": 1995,
+     "note": "多处理器共享内存但访问时延不等的架构。",
+     "deps": [
+      "compute_smp"
+     ]
+    },
+    {
+     "id": "compute_distributed_system",
+     "name": "分布式系统",
+     "en": "Distributed system",
+     "year": 1980,
+     "note": "多节点协作完成共同任务的系统（如分布式数据库）。",
+     "deps": [
+      "internet"
+     ]
+    },
+    {
+     "id": "compute_hpc",
+     "name": "高性能计算",
+     "en": "High-performance computing",
+     "year": 1976,
+     "note": "以并行与向量技术求解大规模科学问题的计算范式。",
+     "deps": [
+      "supercomputer"
+     ]
+    },
+    {
+     "id": "compute_container",
+     "name": "容器技术",
+     "en": "Container",
+     "year": 2013,
+     "note": "轻量隔离的应用运行环境，加速微服务部署。",
+     "deps": [
+      "cloud_computing"
+     ]
+    },
+    {
+     "id": "compute_serverless",
+     "name": "无服务器计算",
+     "en": "Serverless computing",
+     "year": 2014,
+     "note": "按调用计费、无需管理服务器的云执行模型。",
+     "deps": [
+      "cloud_computing"
+     ]
+    },
+    {
+     "id": "compute_orchestration",
+     "name": "容器编排",
+     "en": "Container orchestration",
+     "year": 2014,
+     "note": "大规模容器调度与管理的系统（如Kubernetes）。",
+     "deps": [
+      "compute_container"
+     ]
+    },
+    {
+     "id": "compute_bigdata",
+     "name": "大数据处理",
+     "en": "Big data processing",
+     "year": 2004,
+     "note": "以分布式批处理框架（如MapReduce）处理海量数据。",
+     "deps": [
+      "compute_distributed_system"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "计算机组成",
+   "items": [
+    {
+     "id": "compute_instruction_set",
+     "name": "指令集架构",
+     "en": "Instruction set architecture",
+     "year": 1948,
+     "note": "规定CPU可识别指令与寻址方式的软硬件接口。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "compute_register",
+     "name": "寄存器",
+     "en": "Processor register",
+     "year": 1948,
+     "note": "CPU内部用于暂存操作数与地址的高速存储单元。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "compute_clock_signal",
+     "name": "时钟与同步",
+     "en": "Clock signal",
+     "year": 1950,
+     "note": "以时钟节拍协调数字电路时序的全局信号。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "compute_interrupt",
+     "name": "中断机制",
+     "en": "Interrupt",
+     "year": 1955,
+     "note": "外设异步通知CPU请求服务的硬件机制。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "compute_io_channel",
+     "name": "输入输出通道",
+     "en": "I/O channel",
+     "year": 1964,
+     "note": "独立处理外设I/O的专用控制器，解放CPU。",
+     "deps": [
+      "transistor"
+     ]
+    },
+    {
+     "id": "compute_virtual_memory",
+     "name": "虚拟内存",
+     "en": "Virtual memory",
+     "year": 1962,
+     "note": "以地址映射与换页扩展逻辑内存空间的机制。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "compute_cache",
+     "name": "高速缓存",
+     "en": "Cache memory",
+     "year": 1965,
+     "note": "介于CPU与主存间的快速缓冲，缓解速度差。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "compute_dma",
+     "name": "直接内存访问",
+     "en": "DMA",
+     "year": 1965,
+     "note": "外设不经CPU直接读写内存的传输机制。",
+     "deps": [
+      "compute_interrupt"
+     ]
+    },
+    {
+     "id": "compute_cache_hierarchy",
+     "name": "多级缓存",
+     "en": "Cache hierarchy",
+     "year": 1990,
+     "note": "L1/L2/L3分层缓存，平衡速度与容量。",
+     "deps": [
+      "compute_cache"
+     ]
+    },
+    {
+     "id": "compute_mmu",
+     "name": "内存管理单元",
+     "en": "MMU",
+     "year": 1985,
+     "note": "负责地址翻译与保护的硬件单元。",
+     "deps": [
+      "compute_virtual_memory"
+     ]
+    },
+    {
+     "id": "compute_chipset",
+     "name": "芯片组",
+     "en": "Chipset",
+     "year": 1985,
+     "note": "协调CPU、内存与外设的配套逻辑芯片组。",
+     "deps": [
+      "microprocessor"
+     ]
+    },
+    {
+     "id": "compute_bus_isa",
+     "name": "总线标准ISA",
+     "en": "ISA bus",
+     "year": 1981,
+     "note": "IBM PC的工业标准架构总线，扩展外设接口。",
+     "deps": [
+      "microcomputer"
+     ]
+    },
+    {
+     "id": "compute_pci_bus",
+     "name": "PCI总线",
+     "en": "PCI bus",
+     "year": 1992,
+     "note": "外设部件互连总线，取代ISA成为主流。",
+     "deps": [
+      "compute_bus_isa"
+     ]
+    },
+    {
+     "id": "compute_usb",
+     "name": "通用串行总线",
+     "en": "USB",
+     "year": 1996,
+     "note": "统一外设接口标准，支持即插即用。",
+     "deps": [
+      "compute_pci_bus"
+     ]
+    },
+    {
+     "id": "compute_bios_firmware",
+     "name": "固件与BIOS",
+     "en": "Firmware / BIOS",
+     "year": 1975,
+     "note": "开机自检与硬件初始化的底层固化软件。",
+     "deps": [
+      "microprocessor"
+     ]
+    },
+    {
+     "id": "compute_error_correction",
+     "name": "内存纠错",
+     "en": "ECC memory",
+     "year": 1975,
+     "note": "以校验码检测并纠正内存位错的机制。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "compute_power_management",
+     "name": "电源管理",
+     "en": "Power management",
+     "year": 1990,
+     "note": "动态调频与功耗控制的硬件机制，延长续航。",
+     "deps": [
+      "ic"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "高性能互联",
+   "items": [
+    {
+     "id": "compute_interconnect_topology",
+     "name": "互连拓扑",
+     "en": "Interconnect topology",
+     "year": 1985,
+     "note": "处理器/节点间的网格、环面等连接结构。",
+     "deps": [
+      "supercomputer"
+     ]
+    },
+    {
+     "id": "compute_torus_mesh",
+     "name": "环面与网格网络",
+     "en": "Torus / mesh network",
+     "year": 1985,
+     "note": "大规模并行机常用的近邻通信拓扑结构。",
+     "deps": [
+      "supercomputer"
+     ]
+    },
+    {
+     "id": "compute_switch_fabric",
+     "name": "交换矩阵",
+     "en": "Switch fabric",
+     "year": 1990,
+     "note": "多端口无阻塞交换结构，构成计算互连骨干。",
+     "deps": [
+      "supercomputer"
+     ]
+    },
+    {
+     "id": "compute_infiniband",
+     "name": "InfiniBand",
+     "en": "InfiniBand",
+     "year": 1999,
+     "note": "低延迟高带宽的服务器互连，主导HPC与存储。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "compute_pci_express",
+     "name": "PCI Express",
+     "en": "PCI Express",
+     "year": 2003,
+     "note": "点对点串行互连，取代并行PCI。",
+     "deps": [
+      "compute_pci_bus"
+     ]
+    },
+    {
+     "id": "compute_optical_interconnect",
+     "name": "光互连",
+     "en": "Optical interconnect",
+     "year": 2005,
+     "note": "以光信号替代电互连的板级与片间通信。",
+     "deps": [
+      "lasers"
+     ]
+    },
+    {
+     "id": "compute_mpi",
+     "name": "消息传递接口",
+     "en": "MPI",
+     "year": 1994,
+     "note": "并行程序间通信的标准库规范。",
+     "deps": [
+      "mpp_computer"
+     ]
+    },
+    {
+     "id": "compute_ethernet_fabric",
+     "name": "以太网矩阵",
+     "en": "Ethernet fabric",
+     "year": 2010,
+     "note": "以以太网承载数据中心计算互连（如RoCE）。",
+     "deps": [
+      "internet"
+     ]
+    },
+    {
+     "id": "compute_nvlink",
+     "name": "芯片间高速互连",
+     "en": "NVLink",
+     "year": 2014,
+     "note": "GPU间高带宽互连，支撑大模型训练。",
+     "deps": [
+      "gpu_processor"
+     ]
+    },
+    {
+     "id": "compute_shared_memory_interconnect",
+     "name": "共享内存互连",
+     "en": "Shared-memory interconnect",
+     "year": 1995,
+     "note": "连接多处理器内存模块的互连（如ccNUMA）。",
+     "deps": [
+      "compute_smp"
+     ]
+    },
+    {
+     "id": "compute_rapidio",
+     "name": "串行RapidIO",
+     "en": "Serial RapidIO",
+     "year": 2001,
+     "note": "面向嵌入式与通信的串行互连标准。",
+     "deps": [
+      "embedded_computer"
+     ]
+    },
+    {
+     "id": "compute_coherency_protocol",
+     "name": "缓存一致性协议",
+     "en": "Cache coherence protocol",
+     "year": 1995,
+     "note": "多核/多处理器间维护缓存一致的协议（如MESI）。",
+     "deps": [
+      "compute_cache_hierarchy"
+     ]
+    },
+    {
+     "id": "compute_hypertransport",
+     "name": "HyperTransport",
+     "en": "HyperTransport",
+     "year": 2001,
+     "note": "AMD推出的高带宽处理器互连技术。",
+     "deps": [
+      "compute_pci_bus"
+     ]
+    },
+    {
+     "id": "compute_qpi",
+     "name": "快速通道互连",
+     "en": "Intel QPI / UPI",
+     "year": 2008,
+     "note": "Intel的处理器间高带宽互连技术。",
+     "deps": [
+      "compute_hypertransport"
+     ]
+    },
+    {
+     "id": "compute_cxl",
+     "name": "CXL互连",
+     "en": "CXL",
+     "year": 2019,
+     "note": "面向CPU/加速器/内存一致互连的开放标准。",
+     "deps": [
+      "compute_pci_express"
+     ]
+    },
+    {
+     "id": "compute_network_on_chip",
+     "name": "片上网络",
+     "en": "Network on chip",
+     "year": 2000,
+     "note": "以分组交换组织多核间通信的片上互连。",
+     "deps": [
+      "ic"
+     ]
+    }
+   ]
+  }
+ ]
+}

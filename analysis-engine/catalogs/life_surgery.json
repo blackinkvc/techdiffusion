@@ -1,0 +1,199 @@
+{
+ "cat": "life",
+ "catName": "生命与健康",
+ "sub": "surgery",
+ "subName": "外科手术",
+ "schemaNote": "life_surgery 任务域真实技术目录。anchors 为可引用的全局上游锚点；families 覆盖外科主要技术谱系；item.deps 仅引 _ANCHORS 或本文件更早条目。",
+ "anchors": [
+  "anesthesia",
+  "surgery",
+  "medical_imaging",
+  "scientific_method",
+  "chemistry",
+  "electricity",
+  "lasers",
+  "computer",
+  "internet"
+ ],
+ "families": [
+  {
+   "name": "古代外科",
+   "items": [
+    { "id": "surg_trepanation", "name": "环钻术", "en": "Trepanation", "year": -3000, "note": "以石刃在颅骨开窗减压，史前即存在的开颅技术。", "deps": [] },
+    { "id": "surg_suture", "name": "缝合术", "en": "Suturing", "year": -1000, "note": "以线材缝合伤口关闭创面的基本外科操作。", "deps": [] },
+    { "id": "surg_cautery", "name": "烧灼止血", "en": "Cautery hemostasis", "year": -2000, "note": "以热或药灼烧止血并封闭创面。", "deps": [] },
+    { "id": "surg_ligation", "name": "结扎止血", "en": "Ligation", "year": -500, "note": "以绳线结扎血管阻断出血。", "deps": [] },
+    { "id": "surg_amputation", "name": "截肢术", "en": "Amputation", "year": -1000, "note": "去除坏死或创伤肢体以保命的早期处置。", "deps": [] },
+    { "id": "surg_fracture_splint", "name": "骨折夹板固定", "en": "Fracture splinting", "year": -2000, "note": "以木石夹板固定骨折恢复对位。", "deps": [] },
+    { "id": "surg_cataract_couching", "name": "白内障针拨术", "en": "Cataract couching", "year": -800, "note": "以针将混浊晶状体拨离视轴的 ancient 复明术。", "deps": [] },
+    { "id": "surg_hernia_repair", "name": "疝修补术", "en": "Hernia repair", "year": -100, "note": "以缝合或压迫处理腹壁疝的古老技术。", "deps": [] },
+    { "id": "surg_tooth_extraction", "name": "拔牙术", "en": "Tooth extraction", "year": -3000, "note": "以器械拔除病齿的口腔外科操作。", "deps": [] },
+    { "id": "surg_lithotomy", "name": "膀胱取石术", "en": "Lithotomy", "year": -1000, "note": "经会阴切开取除膀胱结石。", "deps": [] },
+    { "id": "surg_tracheostomy", "name": "气管切开术", "en": "Tracheostomy", "year": -1000, "note": "切开气管建立气道的外科操作。", "deps": [] },
+    { "id": "surg_cesarean", "name": "剖宫产术", "en": "Cesarean section", "year": -100, "note": "经腹取出胎儿的产科手术尝试。", "deps": [] },
+    { "id": "surg_circumcision", "name": "包皮环切", "en": "Circumcision", "year": -3000, "note": "切除包皮的仪式性与治疗性操作。", "deps": [] },
+    { "id": "surg_tumor_excision", "name": "体表肿物切除", "en": "Superficial tumor excision", "year": -1000, "note": "切除体表肿物与赘生物的简单手术。", "deps": [] },
+    { "id": "surg_arrow_wound", "name": "箭伤取出", "en": "Arrow wound extraction", "year": -2000, "note": "取出体内箭镞等异物并处理创道。", "deps": [] }
+   ]
+  },
+  {
+   "name": "近代革命",
+   "items": [
+    { "id": "surg_surgery_under_anesthesia", "name": "麻醉下手术", "en": "Surgery under anesthesia", "year": 1846, "note": "乙醚麻醉使无痛长时手术成为可能。", "deps": ["anesthesia"] },
+    { "id": "surg_carbolic_antisepsis", "name": "石炭酸消毒法", "en": "Carbolic antisepsis", "year": 1867, "note": "李斯特以石炭酸喷洒消毒，大幅降低术后感染。", "deps": ["surgery"] },
+    { "id": "surg_aseptic_barrier", "name": "无菌屏障技术", "en": "Aseptic barrier technique", "year": 1880, "note": "以无菌巾单建立手术无菌区域防污染。", "deps": ["surgery"] },
+    { "id": "surg_rubber_glove", "name": "橡胶手套", "en": "Rubber surgical glove", "year": 1890, "note": "霍尔斯特德引入橡胶手套减少创口感染。", "deps": ["surgery"] },
+    { "id": "surg_surgical_handwash", "name": "外科洗手法", "en": "Surgical hand antisepsis", "year": 1867, "note": "以消毒液刷手降低术者带菌负荷。", "deps": ["surgery"] },
+    { "id": "surg_instrument_sterilization", "name": "手术器械灭菌", "en": "Surgical instrument sterilization", "year": 1880, "note": "以热力与化学法灭菌器械避免交叉感染。", "deps": ["surgery"] },
+    { "id": "surg_modern_or", "name": "现代手术室", "en": "Modern operating room", "year": 1890, "note": "专用无菌照明手术间替代普通房间手术。", "deps": ["surgery"] },
+    { "id": "surg_bloodless_field", "name": "止血带手术应用", "en": "Tourniquet in surgery", "year": 1870, "note": "止血带创造无血术野便于精细操作。", "deps": [] },
+    { "id": "surg_operating_table", "name": "手术台", "en": "Operating table", "year": 1880, "note": "可调体位手术台提升操作便利与安全。", "deps": ["surgery"] },
+    { "id": "surg_surgical_mask", "name": "外科口罩", "en": "Surgical mask", "year": 1890, "note": "口罩阻隔术者飞沫污染创口。", "deps": ["surgery"] },
+    { "id": "surg_sterile_gown", "name": "无菌手术衣", "en": "Sterile surgical gown", "year": 1880, "note": "无菌手术衣建立术者隔离屏障。", "deps": ["surgery"] },
+    { "id": "surg_instrument_tray", "name": "器械台", "en": "Instrument tray", "year": 1880, "note": "专用器械台分类摆放无菌器械。", "deps": ["surgery"] },
+    { "id": "surg_alcohol_antisepsis", "name": "手术部位酒精消毒", "en": "Alcohol antisepsis", "year": 1880, "note": "以乙醇擦拭皮肤消毒手术区域。", "deps": ["surgery"] },
+    { "id": "surg_boiling_sterilize", "name": "煮沸灭菌", "en": "Boiling sterilization", "year": 1880, "note": "煮沸器械实现简易可靠灭菌。", "deps": ["surgery"] }
+   ]
+  },
+  {
+   "name": "血管与移植",
+   "items": [
+    { "id": "surg_vascular_suture", "name": "血管缝合", "en": "Vascular suture", "year": 1880, "note": "以精细缝线吻合血管壁恢复血流。", "deps": [] },
+    { "id": "surg_blood_vessel_graft", "name": "血管移植", "en": "Blood vessel grafting", "year": 1890, "note": "以自身静脉替代病变血管。", "deps": [] },
+    { "id": "surg_artificial_vessel", "name": "人工血管", "en": "Artificial blood vessel", "year": 1950, "note": "以合成材料构建血管替代物。", "deps": ["chemistry"] },
+    { "id": "surg_end_to_end_anastomosis", "name": "端端吻合", "en": "End-to-end anastomosis", "year": 1900, "note": "将两段管腔器官对端缝合连通。", "deps": [] },
+    { "id": "surg_coronary_bypass", "name": "冠脉搭桥", "en": "Coronary artery bypass", "year": 1964, "note": "以自体血管绕过狭窄冠脉恢复心肌供血。", "deps": [] },
+    { "id": "surg_kidney_transplant", "name": "肾移植", "en": "Kidney transplantation", "year": 1954, "note": "以同种异体肾替代衰竭肾脏功能。", "deps": [] },
+    { "id": "surg_liver_transplant", "name": "肝移植", "en": "Liver transplantation", "year": 1967, "note": "以整肝移植治疗终末期肝病。", "deps": [] },
+    { "id": "surg_heart_transplant", "name": "心脏移植", "en": "Heart transplantation", "year": 1967, "note": "以同种心脏替代终末期心衰。", "deps": [] },
+    { "id": "surg_bone_marrow_transplant", "name": "骨髓移植", "en": "Bone marrow transplantation", "year": 1956, "note": "以造血干细胞重建血液与免疫系统。", "deps": [] },
+    { "id": "surg_immunosuppressant", "name": "免疫抑制剂", "en": "Immunosuppressants", "year": 1960, "note": "硫唑嘌呤等抑制移植排斥反应。", "deps": [] },
+    { "id": "surg_rejection_treatment", "name": "排斥反应治疗", "en": "Rejection treatment", "year": 1961, "note": "以药物与监测控制移植排斥。", "deps": ["surg_immunosuppressant"] },
+    { "id": "surg_cyclosporine", "name": "环孢素", "en": "Cyclosporine", "year": 1978, "note": "环孢素显著提升器官移植存活率。", "deps": ["surg_immunosuppressant"] },
+    { "id": "surg_lymphatic_repair", "name": "淋巴管吻合", "en": "Lymphatic anastomosis", "year": 1960, "note": "显微吻合淋巴管治疗淋巴水肿。", "deps": [] },
+    { "id": "surg_nerve_graft", "name": "神经移植", "en": "Nerve grafting", "year": 1900, "note": "以移植神经桥接修复神经缺损。", "deps": [] },
+    { "id": "surg_corneal_transplant", "name": "角膜移植", "en": "Corneal transplantation", "year": 1905, "note": "以供体角膜置换混浊角膜恢复视力。", "deps": [] }
+   ]
+  },
+  {
+   "name": "神经外科",
+   "items": [
+    { "id": "surg_craniotomy", "name": "开颅术", "en": "Craniotomy", "year": 1880, "note": "麻醉与无菌下系统开颅处理颅内病变。", "deps": [] },
+    { "id": "surg_brain_abscess_drain", "name": "脑脓肿引流", "en": "Brain abscess drainage", "year": 1890, "note": "穿刺或切开引流颅内脓肿。", "deps": [] },
+    { "id": "surg_epilepsy_resection", "name": "癫痫灶切除", "en": "Epileptic focus resection", "year": 1886, "note": "切除致痫灶控制难治性癫痫。", "deps": [] },
+    { "id": "surg_aneurysm_clip", "name": "颅内动脉瘤夹闭", "en": "Aneurysm clipping", "year": 1937, "note": "以动脉瘤夹阻断瘤颈防止破裂出血。", "deps": [] },
+    { "id": "surg_lobectomy", "name": "脑叶切除", "en": "Lobectomy", "year": 1930, "note": "切除病变脑叶治疗肿瘤与癫痫。", "deps": [] },
+    { "id": "surg_spinal_decomp", "name": "脊髓减压", "en": "Spinal decompression", "year": 1900, "note": "解除椎管压迫保护脊髓功能。", "deps": [] },
+    { "id": "surg_ventriculostomy", "name": "脑室穿刺", "en": "Ventriculostomy", "year": 1910, "note": "穿刺脑室引流脑脊液降颅压。", "deps": [] },
+    { "id": "surg_pituitary_surgery", "name": "垂体瘤手术", "en": "Pituitary tumor surgery", "year": 1909, "note": "经鼻或开颅切除垂体腺瘤。", "deps": [] },
+    { "id": "surg_brain_tumor_resection", "name": "脑肿瘤切除", "en": "Brain tumor resection", "year": 1900, "note": "切除胶质瘤等颅内占位病变。", "deps": [] },
+    { "id": "surg_carotid_endarterectomy", "name": "颈动脉内膜切除", "en": "Carotid endarterectomy", "year": 1954, "note": "清除颈动脉斑块预防脑卒中。", "deps": [] },
+    { "id": "surg_stereotactic", "name": "脑立体定向", "en": "Stereotactic neurosurgery", "year": 1947, "note": "以三维坐标精准定位颅内靶点。", "deps": [] },
+    { "id": "surg_acoustic_nerve", "name": "听神经瘤切除", "en": "Acoustic neuroma resection", "year": 1960, "note": "显微镜下切除桥小脑角肿瘤。", "deps": [] },
+    { "id": "surg_micro_neurosurg", "name": "显微神经外科", "en": "Microscopic neurosurgery", "year": 1960, "note": "显微镜下放大脑结构完成精细操作。", "deps": [] },
+    { "id": "surg_awake_craniotomy", "name": "唤醒开颅", "en": "Awake craniotomy", "year": 1990, "note": "术中唤醒保护功能区避免神经缺损。", "deps": [] },
+    { "id": "surg_deep_brain_stim", "name": "脑深部电刺激", "en": "Deep brain stimulation", "year": 1987, "note": "植入电极调控核团治疗帕金森等。", "deps": [] }
+   ]
+  },
+  {
+   "name": "心胸",
+   "items": [
+    { "id": "surg_thoracotomy", "name": "开胸术", "en": "Thoracotomy", "year": 1890, "note": "进入胸腔处理肺与纵隔病变。", "deps": [] },
+    { "id": "surg_heart_valve_surgery", "name": "心脏瓣膜手术", "en": "Cardiac valve surgery", "year": 1923, "note": "切开心脏修复狭窄或关闭不全瓣膜。", "deps": [] },
+    { "id": "surg_blue_baby", "name": "先心矫治(体肺分流)", "en": "Blalock-Taussig shunt", "year": 1944, "note": "体肺分流改善青紫型先心缺氧。", "deps": [] },
+    { "id": "surg_cardiopulmonary_bypass", "name": "体外循环", "en": "Cardiopulmonary bypass", "year": 1953, "note": "人工心肺机暂代心泵与氧合完成心内直视。", "deps": [] },
+    { "id": "surg_valve_replacement", "name": "瓣膜置换", "en": "Valve replacement", "year": 1960, "note": "以机械或生物瓣替换病变心脏瓣膜。", "deps": [] },
+    { "id": "surg_pacemaker_implant", "name": "起搏器植入", "en": "Pacemaker implantation", "year": 1958, "note": "植入起搏器纠正缓慢性心律失常。", "deps": [] },
+    { "id": "surg_lvad", "name": "左室辅助装置", "en": "Left ventricular assist device", "year": 1963, "note": "机械泵辅助衰竭心脏泵血。", "deps": [] },
+    { "id": "surg_congenital_repair", "name": "复杂先心修复", "en": "Complex congenital repair", "year": 1954, "note": "直视下修补房缺室缺等心脏畸形。", "deps": ["surg_blue_baby"] },
+    { "id": "surg_aortic_graft", "name": "主动脉瘤修复", "en": "Aortic aneurysm repair", "year": 1950, "note": "以人工血管置换瘤样扩张主动脉。", "deps": [] },
+    { "id": "surg_pericardectomy", "name": "心包切除", "en": "Pericardiectomy", "year": 1900, "note": "切除缩窄心包恢复心脏充盈。", "deps": [] },
+    { "id": "surg_patent_ductus", "name": "动脉导管结扎", "en": "Patent ductus ligation", "year": 1938, "note": "结扎未闭动脉导管治疗先心分流。", "deps": [] },
+    { "id": "surg_mitral_commissurotomy", "name": "二尖瓣交界分离", "en": "Mitral commissurotomy", "year": 1948, "note": "分离狭窄二尖瓣交界改善血流。", "deps": [] },
+    { "id": "surg_fallot_repair", "name": "法洛四联症矫治", "en": "Tetralogy of Fallot repair", "year": 1954, "note": "综合矫治四联畸形恢复双室循环。", "deps": ["surg_blue_baby"] },
+    { "id": "surg_aortic_valve_replacement", "name": "主动脉瓣置换", "en": "Aortic valve replacement", "year": 1960, "note": "替换狭窄或反流的主动脉瓣。", "deps": [] },
+    { "id": "surg_total_artificial_heart", "name": "全人工心脏", "en": "Total artificial heart", "year": 1982, "note": "以机械装置完全替代双心室泵血。", "deps": [] }
+   ]
+  },
+  {
+   "name": "显微与微创",
+   "items": [
+    { "id": "surg_operating_microscope", "name": "手术显微镜", "en": "Operating microscope", "year": 1921, "note": "双目手术显微镜放大脑细微结构。", "deps": [] },
+    { "id": "surg_laparoscopy", "name": "腹腔镜手术", "en": "Laparoscopic surgery", "year": 1910, "note": "经腹壁小孔置入内镜完成腹腔手术。", "deps": [] },
+    { "id": "surg_microvascular", "name": "显微血管吻合", "en": "Microvascular anastomosis", "year": 1960, "note": "显微镜下缝合细小血管实现再植。", "deps": ["surg_operating_microscope"] },
+    { "id": "surg_limb_replantation", "name": "断肢再植", "en": "Limb replantation", "year": 1963, "note": "吻合血管神经再植离断肢体恢复功能。", "deps": [] },
+    { "id": "surg_endoscopic_surgery", "name": "内镜手术", "en": "Endoscopic surgery", "year": 1970, "note": "经自然腔道或戳孔完成腔内手术。", "deps": [] },
+    { "id": "surg_thoracoscopy", "name": "胸腔镜", "en": "Thoracoscopy", "year": 1970, "note": "经胸壁小孔行肺与胸膜微创手术。", "deps": [] },
+    { "id": "surg_arthroscopy", "name": "关节镜", "en": "Arthroscopy", "year": 1970, "note": "经关节小切口诊治关节内病变。", "deps": [] },
+    { "id": "surg_flexible_ureteroscopy", "name": "输尿管镜", "en": "Flexible ureteroscopy", "year": 1980, "note": "经尿道软镜碎石处理上尿路结石。", "deps": [] },
+    { "id": "surg_endoscopic_spine", "name": "内镜脊柱手术", "en": "Endoscopic spine surgery", "year": 1990, "note": "微创入路处理椎间盘与椎管病变。", "deps": [] },
+    { "id": "surg_robotic_surgery", "name": "机器人手术系统", "en": "Robotic surgery system", "year": 2000, "note": "主从机械臂提供三维放大与精细操作。", "deps": [] },
+    { "id": "surg_robotic_urology", "name": "机器人泌尿外科", "en": "Robotic urologic surgery", "year": 2005, "note": "机器人辅助前列腺根治等泌尿外科手术。", "deps": ["surg_robotic_surgery"] },
+    { "id": "surg_notes", "name": "经自然腔道内镜", "en": "NOTES", "year": 2000, "note": "经口或阴道等自然孔道行腔内手术。", "deps": ["surg_laparoscopy"] },
+    { "id": "surg_single_port", "name": "单孔腹腔镜", "en": "Single-port laparoscopy", "year": 2010, "note": "单一戳孔置入多通道器械完成手术。", "deps": ["surg_laparoscopy"] },
+    { "id": "surg_3d_laparoscopy", "name": "3D腹腔镜", "en": "3D laparoscopy", "year": 2010, "note": "三维成像提升腹腔镜操作深度感。", "deps": ["surg_laparoscopy"] },
+    { "id": "surg_sils", "name": "单孔机器人", "en": "Single-site robotic surgery", "year": 2010, "note": "单孔入路机器人手术进一步减少创伤。", "deps": ["surg_robotic_surgery"] }
+   ]
+  },
+  {
+   "name": "创伤急救",
+   "items": [
+    { "id": "surg_tourniquet", "name": "止血带", "en": "Tourniquet", "year": 1600, "note": "绑扎肢体近端控制大出血。", "deps": [] },
+    { "id": "surg_trauma_triage", "name": "创伤分级", "en": "Trauma triage", "year": 1850, "note": "按伤情轻重排序救治优先次序。", "deps": [] },
+    { "id": "surg_blood_typing", "name": "血型鉴定", "en": "Blood typing", "year": 1900, "note": "兰德施泰纳发现ABO血型指导输血。", "deps": [] },
+    { "id": "surg_crossmatch", "name": "交叉配血", "en": "Cross-matching", "year": 1907, "note": "受供者血清与红细胞配型防溶血。", "deps": ["surg_blood_typing"] },
+    { "id": "surg_blood_bank", "name": "血库", "en": "Blood bank", "year": 1937, "note": "采集储存分发血液保障输血供应。", "deps": ["surg_crossmatch"] },
+    { "id": "surg_shock_treatment", "name": "休克复苏", "en": "Shock resuscitation", "year": 1910, "note": "以补液与止血纠正创伤休克。", "deps": [] },
+    { "id": "surg_field_surgery", "name": "战地外科", "en": "Field surgery", "year": 1850, "note": "前线条件下紧急清创与止血。", "deps": [] },
+    { "id": "surg_damage_control", "name": "损伤控制外科", "en": "Damage control surgery", "year": 1980, "note": "分期手术控制出血感染挽救重伤。", "deps": [] },
+    { "id": "surg_fracture_traction", "name": "骨折牵引", "en": "Fracture traction", "year": 1800, "note": "以重力牵引复位维持骨折对位。", "deps": [] },
+    { "id": "surg_wound_debridement", "name": "清创术", "en": "Wound debridement", "year": 1800, "note": "清除坏死组织与异物防感染。", "deps": [] },
+    { "id": "surg_burn_treatment", "name": "烧伤处理", "en": "Burn management", "year": 1900, "note": "清创植皮与补液治疗大面积烧伤。", "deps": [] },
+    { "id": "surg_amputation_trauma", "name": "战伤截肢", "en": "Traumatic amputation", "year": 1850, "note": "战伤无法保留肢体时的挽救性截肢。", "deps": [] },
+    { "id": "surg_resuscitation_airway", "name": "气道管理", "en": "Airway management", "year": 1900, "note": "插管与通气维持创伤患者氧合。", "deps": [] },
+    { "id": "surg_mass_casualty", "name": "批量伤员救治", "en": "Mass casualty management", "year": 1940, "note": "灾害战争中统筹资源分批救治。", "deps": [] },
+    { "id": "surg_prehospital", "name": "院前急救", "en": "Prehospital care", "year": 1960, "note": "现场与转运途中稳定伤情并快速后送。", "deps": [] }
+   ]
+  },
+  {
+   "name": "专科",
+   "items": [
+    { "id": "surg_cataract_iol", "name": "白内障人工晶状体", "en": "Cataract IOL", "year": 1949, "note": "摘除混浊晶状体并植入人工晶状体。", "deps": [] },
+    { "id": "surg_lasik", "name": "准分子激光角膜切削", "en": "LASIK", "year": 1990, "note": "激光切削角膜基质矫正近视。", "deps": ["lasers"] },
+    { "id": "surg_fracture_internal", "name": "骨折内固定", "en": "Fracture internal fixation", "year": 1900, "note": "以钢板螺钉固定骨折段促愈合。", "deps": [] },
+    { "id": "surg_joint_replacement", "name": "关节置换", "en": "Joint replacement", "year": 1962, "note": "以人工关节替代毁损髋膝关节。", "deps": [] },
+    { "id": "surg_tumor_radical", "name": "肿瘤根治术", "en": "Radical tumor resection", "year": 1880, "note": "整块切除肿瘤及区域淋巴结。", "deps": [] },
+    { "id": "surg_thyroidectomy", "name": "甲状腺切除", "en": "Thyroidectomy", "year": 1900, "note": "切除甲状腺肿物或腺体治疗疾病。", "deps": [] },
+    { "id": "surg_mastectomy", "name": "乳腺切除", "en": "Mastectomy", "year": 1890, "note": "切除乳腺治疗乳腺肿瘤。", "deps": [] },
+    { "id": "surg_gastrectomy", "name": "胃切除", "en": "Gastrectomy", "year": 1880, "note": "部分或全胃切除治疗溃疡与癌。", "deps": [] },
+    { "id": "surg_colostomy", "name": "肠造口", "en": "Colostomy", "year": 1800, "note": "肠管开口于腹壁行粪便转流。", "deps": [] },
+    { "id": "surg_prostatectomy", "name": "前列腺切除", "en": "Prostatectomy", "year": 1900, "note": "切除增生或癌变前列腺组织。", "deps": [] },
+    { "id": "surg_spinal_fusion", "name": "脊柱融合", "en": "Spinal fusion", "year": 1910, "note": "植骨内固定融合椎体稳定脊柱。", "deps": [] },
+    { "id": "surg_endovascular", "name": "血管内介入治疗", "en": "Endovascular intervention", "year": 1980, "note": "经导管栓塞支架治疗血管病变。", "deps": [] },
+    { "id": "surg_cleft_repair", "name": "唇腭裂修复", "en": "Cleft lip/palate repair", "year": 1800, "note": "整复唇腭裂畸形恢复外形与功能。", "deps": [] },
+    { "id": "surg_plastic_skin_graft", "name": "皮片移植", "en": "Skin graft", "year": 1880, "note": "移植自体皮片覆盖创面。", "deps": [] },
+    { "id": "surg_reconstructive_flap", "name": "皮瓣修复", "en": "Flap reconstruction", "year": 1900, "note": "带血管皮瓣修复缺损与重建外形。", "deps": [] }
+   ]
+  },
+  {
+   "name": "手术支持",
+   "items": [
+    { "id": "surg_surgical_lamp", "name": "无影灯", "en": "Surgical shadowless lamp", "year": 1850, "note": "多光源无影照明保障术野清晰。", "deps": [] },
+    { "id": "surg_anesthesia_machine", "name": "麻醉机", "en": "Anesthesia machine", "year": 1910, "note": "可控供给麻醉气体并管理呼吸。", "deps": [] },
+    { "id": "surg_surgical_suction", "name": "手术吸引器", "en": "Surgical suction", "year": 1900, "note": "吸除血液与渗出保持术野洁净。", "deps": [] },
+    { "id": "surg_electrocautery", "name": "电凝止血", "en": "Electrocautery", "year": 1920, "note": "以高频电流凝血与切割组织。", "deps": ["electricity"] },
+    { "id": "surg_surgical_drill", "name": "骨钻", "en": "Surgical drill", "year": 1900, "note": "钻孔接骨与开颅的骨科神经外科工具。", "deps": [] },
+    { "id": "surg_intraop_monitor", "name": "术中监测", "en": "Intraoperative monitoring", "year": 1960, "note": "监护生命体征与神经功能保安全。", "deps": [] },
+    { "id": "surg_laminar_flow_or", "name": "层流手术室", "en": "Laminar flow operating room", "year": 1961, "note": "层流净化空气降低创口感染率。", "deps": [] },
+    { "id": "surg_patient_warming", "name": "术中保温", "en": "Intraoperative warming", "year": 1980, "note": "主动保温减少低体温并发症。", "deps": [] },
+    { "id": "surg_cautery_bipolar", "name": "双极电凝", "en": "Bipolar cautery", "year": 1940, "note": "双极钳精准凝固减少组织损伤。", "deps": ["electricity"] },
+    { "id": "surg_surgical_navigation", "name": "手术导航", "en": "Surgical navigation", "year": 1990, "note": "影像配准实时引导器械空间定位。", "deps": ["computer", "medical_imaging"] },
+    { "id": "surg_surgical_energy", "name": "超声刀", "en": "Ultrasonic scalpel", "year": 1990, "note": "超声振动切割凝血减少热损伤。", "deps": [] },
+    { "id": "surg_ligasure", "name": "血管闭合", "en": "Vessel sealing", "year": 1990, "note": "能量平台闭合血管免缝合。", "deps": [] },
+    { "id": "surg_cold_light", "name": "冷光源", "en": "Cold light source", "year": 1980, "note": "光纤导光提供腔内无热照明。", "deps": [] },
+    { "id": "surg_surgical_count", "name": "器械清点", "en": "Surgical count", "year": 1950, "note": "术前术后清点器械敷料防遗留。", "deps": [] },
+    { "id": "surg_sterile_pack", "name": "无菌敷料包", "en": "Sterile dressing pack", "year": 1880, "note": "预灭菌敷料包即用保持无菌。", "deps": ["surgery"] }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1388 @@
+{
+ "cat": "info",
+ "catName": "信息与通信",
+ "sub": "interface",
+ "subName": "人机交互与显示",
+ "schemaNote": "catalog v1：人机交互与显示域真实技术目录。触摸屏/电视/智能手机等锚点不重复收录，以电阻式、投射电容式等细分名区分；语音识别算法归人工智能域，本域收语音用户界面。",
+ "anchors": [
+  "gesture_comm",
+  "writing",
+  "computer",
+  "television",
+  "semiconductors",
+  "lasers",
+  "camera",
+  "touchscreen",
+  "smartphone"
+ ],
+ "families": [
+  {
+   "name": "终端与文本交互",
+   "items": [
+    {
+     "id": "iface_punch_card_io",
+     "name": "穿孔卡片交互",
+     "en": "Punched card interaction",
+     "year": 1928,
+     "note": "IBM 八十列卡片成为人与计算机间的主要输入载体，数据以孔位组合表达。",
+     "deps": [
+      "writing"
+     ]
+    },
+    {
+     "id": "iface_teleprinter_terminal",
+     "name": "电传打字终端",
+     "en": "Teleprinter terminal",
+     "year": 1930,
+     "note": "由电报技术演化的纸页式终端，成为早期计算机远程输入输出的标准设备。",
+     "deps": [
+      "telegraph"
+     ]
+    },
+    {
+     "id": "iface_machine_console",
+     "name": "计算机控制台",
+     "en": "Computer operator console",
+     "year": 1953,
+     "note": "以指示灯、开关与打字机组成的操作台，供操作员监控与干预主机运行。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_serial_terminal",
+     "name": "串行终端接口",
+     "en": "Serial terminal interface",
+     "year": 1960,
+     "note": "RS-232 串行标准定义终端与主机的电气协议，主导终端接入数十年。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_jcl_batch",
+     "name": "批处理作业控制语言",
+     "en": "Job control language",
+     "year": 1962,
+     "note": "以控制卡片描述作业步骤与资源需求的语言，OS/360 使其成为经典形态。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_crt_terminal",
+     "name": "CRT 显示终端",
+     "en": "CRT video terminal",
+     "year": 1964,
+     "note": "以阴极射线管显示替代纸页的视频终端，IBM 2260 为早期代表。",
+     "deps": [
+      "television",
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_command_line",
+     "name": "命令行界面",
+     "en": "Command-line interface",
+     "year": 1969,
+     "note": "以键入命令与系统应答为核心的交互方式，至今仍是专业用户的效率工具。",
+     "deps": [
+      "computer",
+      "iface_serial_terminal"
+     ]
+    },
+    {
+     "id": "iface_smart_terminal",
+     "name": "智能字符终端",
+     "en": "Intelligent character terminal",
+     "year": 1975,
+     "note": "内置处理器支持光标定位与局部编辑的终端，VT 系列成为事实标准。",
+     "deps": [
+      "iface_crt_terminal"
+     ]
+    },
+    {
+     "id": "iface_front_panel",
+     "name": "前面板开关交互",
+     "en": "Front panel switches",
+     "year": 1975,
+     "note": "以拨动开关与指示灯直接读写内存与寄存器，微机爱好者时代的编程方式。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_escape_sequence",
+     "name": "终端转义序列",
+     "en": "Terminal escape sequences",
+     "year": 1978,
+     "note": "以转义符序列控制光标、颜色与清屏的协议，沿显示终端协议沿用至今。",
+     "deps": [
+      "iface_smart_terminal"
+     ]
+    },
+    {
+     "id": "iface_tui",
+     "name": "文本用户界面",
+     "en": "Text user interface",
+     "year": 1985,
+     "note": "在字符屏幕上以边框菜单与快捷键构建全屏应用的界面形态。",
+     "deps": [
+      "iface_smart_terminal"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "图形显示与渲染",
+   "items": [
+    {
+     "id": "iface_vector_display",
+     "name": "矢量显示器",
+     "en": "Vector display",
+     "year": 1951,
+     "note": "以电子束直接绘制线段的显示装置，旋风计算机与雷达显示为其源头。",
+     "deps": [
+      "computer",
+      "television"
+     ]
+    },
+    {
+     "id": "iface_bresenham_line",
+     "name": "直线光栅化算法",
+     "en": "Line rasterization algorithm",
+     "year": 1962,
+     "note": "布雷斯纳姆的整数增量算法高效把几何线段转换为像素序列。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_scanline_render",
+     "name": "扫描线渲染算法",
+     "en": "Scanline rendering",
+     "year": 1970,
+     "note": "逐行处理可见面的隐藏面消除算法，成为实时图形渲染的基本方法。",
+     "deps": [
+      "iface_bresenham_line"
+     ]
+    },
+    {
+     "id": "iface_frame_buffer",
+     "name": "位图显示与帧缓冲",
+     "en": "Bitmap display and frame buffer",
+     "year": 1973,
+     "note": "以像素阵列内存驱动屏幕，阿尔托位图屏与超级画板奠定现代图形界面。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_z_buffer",
+     "name": "深度缓冲消隐",
+     "en": "Z-buffering",
+     "year": 1974,
+     "note": "以逐像素深度比较解决隐藏面的技术，成为三维渲染硬件的基本机制。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_texture_mapping",
+     "name": "纹理映射",
+     "en": "Texture mapping",
+     "year": 1974,
+     "note": "卡特穆尔把图像贴合到三维表面的技术，极大提升渲染真实感。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_polygon_clipping",
+     "name": "多边形裁剪算法",
+     "en": "Polygon clipping algorithm",
+     "year": 1974,
+     "note": "萨瑟兰-霍奇曼裁剪算法规范地裁切视口外几何，图形管线的必备环节。",
+     "deps": [
+      "iface_bresenham_line"
+     ]
+    },
+    {
+     "id": "iface_bitblt",
+     "name": "位块传送图形操作",
+     "en": "Bit block transfer",
+     "year": 1975,
+     "note": "矩形像素块快速搬运与组合的图形原语，窗口系统与界面绘制的基础。",
+     "deps": [
+      "iface_frame_buffer"
+     ]
+    },
+    {
+     "id": "iface_phong_lighting",
+     "name": "局部光照模型",
+     "en": "Phong lighting model",
+     "year": 1975,
+     "note": " phong 以法线插值与镜面高光模拟物体明暗，实时着色的经典模型。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_color_display",
+     "name": "彩色图形显示",
+     "en": "Color graphics display",
+     "year": 1977,
+     "note": "以调色板与彩色帧缓冲在个人计算机上呈现彩色图形，推动多媒体时代到来。",
+     "deps": [
+      "iface_frame_buffer"
+     ]
+    },
+    {
+     "id": "iface_crtc_chip",
+     "name": "显示控制与字符发生芯片",
+     "en": "Display controller chip",
+     "year": 1977,
+     "note": "以专用芯片产生扫描时序与字符点阵，使终端与微机显示廉价化。",
+     "deps": [
+      "iface_smart_terminal"
+     ]
+    },
+    {
+     "id": "iface_anti_aliasing",
+     "name": "图形反走样",
+     "en": "Anti-aliasing",
+     "year": 1978,
+     "note": "克罗揭示锯齿成因并以滤波与过采样平滑斜线与边缘的显示质量。",
+     "deps": [
+      "iface_bresenham_line"
+     ]
+    },
+    {
+     "id": "iface_shadow_mapping",
+     "name": "阴影贴图",
+     "en": "Shadow mapping",
+     "year": 1978,
+     "note": "威廉斯以深度图快速生成阴影的技术，游戏与动画渲染的主流方案。",
+     "deps": [
+      "iface_z_buffer"
+     ]
+    },
+    {
+     "id": "iface_bump_mapping",
+     "name": "凹凸贴图",
+     "en": "Bump mapping",
+     "year": 1978,
+     "note": "布林以扰动法线在光滑表面制造起伏细节，低代价提升表面真实感。",
+     "deps": [
+      "iface_texture_mapping"
+     ]
+    },
+    {
+     "id": "iface_ray_tracing",
+     "name": "光线追踪渲染",
+     "en": "Ray tracing",
+     "year": 1980,
+     "note": "惠特德沿视线反向追踪光线求交的渲染算法，精确模拟反射折射。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_3d_pipeline",
+     "name": "三维图形渲染管线",
+     "en": "3D graphics pipeline",
+     "year": 1981,
+     "note": "以几何引擎硬件化变换裁剪投影流程，确立几何与光栅两级管线架构。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_mipmap_texture",
+     "name": "多级纹理映射",
+     "en": "Mipmap texture filtering",
+     "year": 1983,
+     "note": "威廉斯预生成多分辨率纹理避免走样与闪烁，纹理采样的标准方法。",
+     "deps": [
+      "iface_texture_mapping"
+     ]
+    },
+    {
+     "id": "iface_particle_system",
+     "name": "粒子系统渲染",
+     "en": "Particle system",
+     "year": 1983,
+     "note": "里夫斯以大量简单粒子模拟火焰水流等模糊物体，影视特效的通用工具。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_radiosity",
+     "name": "辐射度全局光照",
+     "en": "Radiosity",
+     "year": 1984,
+     "note": "以能量交换计算间接漫反射光照的方法，建筑渲染的重要技术。",
+     "deps": [
+      "iface_ray_tracing"
+     ]
+    },
+    {
+     "id": "iface_2d_accelerator",
+     "name": "二维图形加速器",
+     "en": "2D graphics accelerator",
+     "year": 1985,
+     "note": "以位块传送引擎分担图形绘制，工作站与家用机的显示标配。",
+     "deps": [
+      "iface_frame_buffer"
+     ]
+    },
+    {
+     "id": "iface_outline_font",
+     "name": "轮廓字体渲染",
+     "en": "Outline font rendering",
+     "year": 1991,
+     "note": "以贝塞尔轮廓与提示技术缩放字形，屏幕文字从此任意尺寸清晰可读。",
+     "deps": [
+      "iface_frame_buffer"
+     ]
+    },
+    {
+     "id": "iface_3d_graphics_api",
+     "name": "三维图形编程接口",
+     "en": "3D graphics API",
+     "year": 1992,
+     "note": "跨平台的三维图形接口标准，使三维程序免于直面各异硬件。",
+     "deps": [
+      "iface_3d_pipeline"
+     ]
+    },
+    {
+     "id": "iface_3d_accel_card",
+     "name": "三维图形加速卡",
+     "en": "3D graphics accelerator card",
+     "year": 1996,
+     "note": "面向消费级计算机的三维渲染扩展卡，多媒体接口卡由此普及。",
+     "deps": [
+      "iface_3d_pipeline"
+     ]
+    },
+    {
+     "id": "iface_tiled_rendering",
+     "name": "分块式图形渲染",
+     "en": "Tiled rendering",
+     "year": 1997,
+     "note": "把画面划分为图块逐块渲染以省带宽的架构，移动图形芯片的主流设计。",
+     "deps": [
+      "iface_3d_accel_card"
+     ]
+    },
+    {
+     "id": "iface_subpixel_font",
+     "name": "亚像素字体渲染",
+     "en": "Subpixel font rendering",
+     "year": 1998,
+     "note": "利用液晶水平三色子像素提升文字清晰度的技术，移动阅读体验的功臣。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_shader_programmable",
+     "name": "可编程着色器",
+     "en": "Programmable shader",
+     "year": 2001,
+     "note": "以小程序自定义顶点与像素处理，渲染效果从固定管线彻底解放。",
+     "deps": [
+      "iface_3d_accel_card"
+     ]
+    },
+    {
+     "id": "iface_realtime_raytracing",
+     "name": "实时光线追踪",
+     "en": "Real-time ray tracing",
+     "year": 2018,
+     "note": "以专用硬件单元在游戏帧率内执行光线追踪，电影级光影进入交互场景。",
+     "deps": [
+      "iface_shader_programmable",
+      "iface_ray_tracing"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "输入与指点设备",
+   "items": [
+    {
+     "id": "iface_alt_keyboard_layout",
+     "name": "替代键盘布局",
+     "en": "Alternative keyboard layouts",
+     "year": 1936,
+     "note": "德沃夏克布局重新排列字母减少手指移动，开创键盘人因优化研究。",
+     "deps": []
+    },
+    {
+     "id": "iface_computer_keyboard",
+     "name": "计算机键盘",
+     "en": "Computer keyboard",
+     "year": 1949,
+     "note": "由打字机键盘演化的计算机主输入设备，机械结构历经薄膜与薄膜键革新。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_trackball",
+     "name": "轨迹球",
+     "en": "Trackball",
+     "year": 1952,
+     "note": "以滚动球控制屏幕光标的指点设备，源自雷达控制台，早于鼠标问世。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_light_pen",
+     "name": "光笔",
+     "en": "Light pen",
+     "year": 1955,
+     "note": "以感光笔尖直接点选屏幕的光电输入设备，画板系统的关键交互工具。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_image_scanner",
+     "name": "图像扫描仪",
+     "en": "Image scanner",
+     "year": 1957,
+     "note": "科什在标准电子计算机上扫描首张数字图像，开启文档与照片数字化。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_joystick",
+     "name": "操纵杆",
+     "en": "Joystick",
+     "year": 1963,
+     "note": "源自飞行操纵杆的多向杆式输入装置，游戏与工业控制的通用器件。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_digitizer_tablet",
+     "name": "数字化图形板",
+     "en": "Digitizing tablet",
+     "year": 1964,
+     "note": "兰德公司平板以笔位置数字化输入，工程制图与交互绘图的基础设备。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_mouse",
+     "name": "鼠标",
+     "en": "Computer mouse",
+     "year": 1968,
+     "note": "恩格尔巴特演示的机械鼠标，后经滚球与光电结构成为标准指点设备。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_omr_reader",
+     "name": "光标阅读输入技术",
+     "en": "Optical mark recognition",
+     "year": 1962,
+     "note": "识别卡片涂黑位置的批量读入技术，阅卷与选票统计沿用至今。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_paddle_knob",
+     "name": "旋钮式控制器",
+     "en": "Paddle controller",
+     "year": 1972,
+     "note": "以电位器旋钮控制屏幕对象横移的输入器，早期游戏机的标准操纵件。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_light_gun",
+     "name": "光枪输入设备",
+     "en": "Light gun",
+     "year": 1972,
+     "note": "以光电感应对准屏幕目标触发的游戏输入装置，家用游戏早期外设。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_barcode_scanner",
+     "name": "条码扫描技术",
+     "en": "Barcode scanning",
+     "year": 1974,
+     "note": "以激光读取黑白条纹编码的自动识别技术，零售结算与物流的基石。",
+     "deps": [
+      "lasers"
+     ]
+    },
+    {
+     "id": "iface_racing_wheel",
+     "name": "游戏方向盘控制器",
+     "en": "Racing wheel controller",
+     "year": 1977,
+     "note": "仿车辆方向盘与踏板的模拟输入设备，竞速游戏与驾驶训练使用。",
+     "deps": [
+      "iface_joystick"
+     ]
+    },
+    {
+     "id": "iface_gamepad",
+     "name": "游戏手柄",
+     "en": "Gamepad",
+     "year": 1983,
+     "note": "以方向键与多按键组合握持操作的控制器，游戏交互的标志性设备。",
+     "deps": [
+      "iface_joystick"
+     ]
+    },
+    {
+     "id": "iface_shape_input_method",
+     "name": "汉字形码输入法",
+     "en": "Shape-based Chinese input method",
+     "year": 1983,
+     "note": "王永民五笔字型按字形拆分编码，解决西文键盘输入汉字的难题。",
+     "deps": [
+      "iface_computer_keyboard"
+     ]
+    },
+    {
+     "id": "iface_graphics_tablet",
+     "name": "数位绘画板",
+     "en": "Graphics drawing tablet",
+     "year": 1984,
+     "note": "电磁感应定位的无源笔输入板，数字绘画与图像修饰的专业工具。",
+     "deps": [
+      "iface_digitizer_tablet"
+     ]
+    },
+    {
+     "id": "iface_data_glove",
+     "name": "数据手套",
+     "en": "Data glove",
+     "year": 1987,
+     "note": "以柔性传感测量手指弯曲的手部输入装置，虚拟现实与动作捕捉的利器。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_stylus_input",
+     "name": "触控笔",
+     "en": "Stylus",
+     "year": 1989,
+     "note": "在触敏屏面书写的笔形输入器，掌上电脑与平板的主力交互工具。",
+     "deps": [
+      "touchscreen"
+     ]
+    },
+    {
+     "id": "iface_wireless_input",
+     "name": "无线输入设备",
+     "en": "Wireless input devices",
+     "year": 1991,
+     "note": "以射频与红外链路摆脱线缆的键盘鼠标，改善桌面操作自由度。",
+     "deps": [
+      "radio",
+      "iface_mouse"
+     ]
+    },
+    {
+     "id": "iface_pointing_stick",
+     "name": "指点杆",
+     "en": "Pointing stick",
+     "year": 1992,
+     "note": "嵌于键盘中央以压力控制光标的微型指点器，笔记本紧凑输入方案。",
+     "deps": [
+      "iface_computer_keyboard"
+     ]
+    },
+    {
+     "id": "iface_six_dof_controller",
+     "name": "六自由度控制器",
+     "en": "Six-degree-of-freedom controller",
+     "year": 1993,
+     "note": "可同时平移旋转控制的桌面输入器，三维设计软件的专用操纵件。",
+     "deps": [
+      "iface_mouse"
+     ]
+    },
+    {
+     "id": "iface_touchpad",
+     "name": "触控板",
+     "en": "Touchpad",
+     "year": 1994,
+     "note": "以电容感应手指移动的板状指点器，笔记本的内置标准输入设备。",
+     "deps": [
+      "touchscreen"
+     ]
+    },
+    {
+     "id": "iface_ergonomic_keyboard",
+     "name": "人体工学键盘",
+     "en": "Ergonomic keyboard",
+     "year": 1994,
+     "note": "以分体与波形布局减少腕部劳损的键盘设计，职业健康的输入方案。",
+     "deps": [
+      "iface_computer_keyboard"
+     ]
+    },
+    {
+     "id": "iface_qr_code",
+     "name": "二维码技术",
+     "en": "QR code",
+     "year": 1994,
+     "note": "电装公司发明的高密度矩阵条码，大容量编码支撑移动支付与追溯。",
+     "deps": [
+      "iface_barcode_scanner"
+     ]
+    },
+    {
+     "id": "iface_wheel_mouse",
+     "name": "滚轮鼠标",
+     "en": "Scroll wheel mouse",
+     "year": 1996,
+     "note": "在鼠标中键加入滚轮以快速翻页缩放，成为浏览长文档的默认操作。",
+     "deps": [
+      "iface_mouse"
+     ]
+    },
+    {
+     "id": "iface_pinyin_input",
+     "name": "智能拼音输入法",
+     "en": "Intelligent pinyin input method",
+     "year": 1997,
+     "note": "以词句级统计模型自动选字的拼音输入，中文键盘输入的主流方案。",
+     "deps": [
+      "iface_shape_input_method"
+     ]
+    },
+    {
+     "id": "iface_optical_mouse",
+     "name": "光电鼠标",
+     "en": "Optical mouse",
+     "year": 1999,
+     "note": "以图像传感直接追踪桌面纹理的鼠标，免维护取代机械滚球结构。",
+     "deps": [
+      "iface_mouse"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "触控与手势交互",
+   "items": [
+    {
+     "id": "iface_resistive_touch",
+     "name": "电阻式触摸屏",
+     "en": "Resistive touchscreen",
+     "year": 1977,
+     "note": "以受压时两层导电膜接触定位的触控技术，低成本且适应笔尖操作。",
+     "deps": [
+      "touchscreen"
+     ]
+    },
+    {
+     "id": "iface_ir_touchscreen",
+     "name": "红外式触摸屏",
+     "en": "Infrared touchscreen",
+     "year": 1983,
+     "note": "以边框红外对射网格检测遮挡定位的触控方案，透光好且耐刮擦。",
+     "deps": [
+      "touchscreen"
+     ]
+    },
+    {
+     "id": "iface_multitouch",
+     "name": "多点触控技术",
+     "en": "Multi-touch technology",
+     "year": 1984,
+     "note": "同时追踪多个触点的电容传感技术，双指缩放等手势由此成为可能。",
+     "deps": [
+      "touchscreen"
+     ]
+    },
+    {
+     "id": "iface_eye_tracking",
+     "name": "眼动追踪技术",
+     "en": "Eye tracking",
+     "year": 1989,
+     "note": "以红外摄像测量注视点的技术，用于可用性研究与眼控交互。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_gesture_recognition",
+     "name": "手势识别",
+     "en": "Gesture recognition",
+     "year": 1990,
+     "note": "以视觉或传感识别手部动作命令的技术，与人类最古老的交流方式同源。",
+     "deps": [
+      "gesture_comm",
+      "camera"
+     ]
+    },
+    {
+     "id": "iface_handwriting_input",
+     "name": "联机手写识别",
+     "en": "Online handwriting recognition",
+     "year": 1993,
+     "note": "在笔迹书写过程中实时认字的输入技术，掌上电脑与手机广泛使用。",
+     "deps": [
+      "iface_stylus_input"
+     ]
+    },
+    {
+     "id": "iface_projected_capacitive",
+     "name": "投射电容式触控",
+     "en": "Projected capacitive touch",
+     "year": 1999,
+     "note": "以电极阵列感应手指耦合电容的触控方案，智能手机玻璃面板的主流。",
+     "deps": [
+      "touchscreen"
+     ]
+    },
+    {
+     "id": "iface_midair_gesture",
+     "name": "隔空手势交互",
+     "en": "Mid-air gesture interaction",
+     "year": 2013,
+     "note": "以小型传感器追踪指尖实现无接触操作，隔空翻页与手势控制设备。",
+     "deps": [
+      "iface_gesture_recognition"
+     ]
+    },
+    {
+     "id": "iface_pressure_touch",
+     "name": "压力感应触控",
+     "en": "Force-sensitive touch",
+     "year": 2014,
+     "note": "感知按压力度并区分轻重按压的触控技术，为界面增加压感维度。",
+     "deps": [
+      "touchscreen",
+      "smartphone"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "显示器与投影技术",
+   "items": [
+    {
+     "id": "iface_nixie_display",
+     "name": "辉光数码管显示",
+     "en": "Nixie tube display",
+     "year": 1955,
+     "note": "以气体放电辉光叠层显示数字的电子管器件，早期仪表与计算机的读出件。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "iface_storage_tube",
+     "name": "存储管显示器",
+     "en": "Storage tube display",
+     "year": 1962,
+     "note": "泰克存储示波管使图形无需刷新即可驻留屏面，早期图形终端的主力。",
+     "deps": [
+      "iface_vector_display"
+     ]
+    },
+    {
+     "id": "iface_plasma_display",
+     "name": "等离子显示器",
+     "en": "Plasma display panel",
+     "year": 1964,
+     "note": "伊利诺伊大学为教学系统发明的惰性气体放电平板显示，后成大屏电视方案。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_vfd_display",
+     "name": "真空荧光显示",
+     "en": "Vacuum fluorescent display",
+     "year": 1967,
+     "note": "以荧光体发光的低位数显示器件，家电与仪表数码显示的常青树。",
+     "deps": [
+      "electricity"
+     ]
+    },
+    {
+     "id": "iface_lcd_display",
+     "name": "液晶显示器",
+     "en": "Liquid crystal display",
+     "year": 1968,
+     "note": "以液晶光电效应调光的平板显示，从电子表到电视全面取代显像管。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "iface_hmd_display",
+     "name": "头戴显示器",
+     "en": "Head-mounted display",
+     "year": 1968,
+     "note": "萨瑟兰的达摩克利斯之剑开创佩戴式双目显示，虚拟现实的起点。",
+     "deps": [
+      "iface_vector_display",
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_seven_segment",
+     "name": "七段数码显示",
+     "en": "Seven-segment display",
+     "year": 1970,
+     "note": "以七条发光段组合数字的显示制式，计算器与仪表的通用读出单元。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "iface_active_matrix_lcd",
+     "name": "有源矩阵液晶显示",
+     "en": "Active-matrix LCD",
+     "year": 1972,
+     "note": "以薄膜晶体管逐点驱动液晶的平板显示结构，高分辨率显示的根基。",
+     "deps": [
+      "iface_lcd_display"
+     ]
+    },
+    {
+     "id": "iface_led_screen",
+     "name": "发光二极管显示屏",
+     "en": "LED display screen",
+     "year": 1980,
+     "note": "以发光二极管像素阵列构成的超大屏幕，体育场馆与户外显示的主力。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "iface_pc_monitor",
+     "name": "个人计算机显示器",
+     "en": "Personal computer monitor",
+     "year": 1981,
+     "note": "随个人计算机独立配套的显示外设，形成显示器的标准产品形态。",
+     "deps": [
+      "iface_crt_terminal"
+     ]
+    },
+    {
+     "id": "iface_oled_display",
+     "name": "有机发光二极管显示",
+     "en": "OLED display",
+     "year": 1987,
+     "note": "以有机薄膜自发光的显示技术，高对比度与可柔性的显示新路线。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "iface_dmd_projection",
+     "name": "数字微镜投影技术",
+     "en": "Digital micromirror device projection",
+     "year": 1987,
+     "note": "以数百万微镜反射调制光线的投影芯片，影院与商用投影的核心器件。",
+     "deps": [
+      "semiconductors",
+      "television"
+     ]
+    },
+    {
+     "id": "iface_video_projector",
+     "name": "视频投影机",
+     "en": "Video projector",
+     "year": 1988,
+     "note": "以液晶光阀投射视频的整机技术，家庭影院与会议演示的普及设备。",
+     "deps": [
+      "television"
+     ]
+    },
+    {
+     "id": "iface_color_management",
+     "name": "色彩管理系统",
+     "en": "Color management system",
+     "year": 1993,
+     "note": "以标准描述文件跨设备保持色彩一致的体系，印刷与显示的桥梁。",
+     "deps": [
+      "iface_lcd_display"
+     ]
+    },
+    {
+     "id": "iface_epaper_display",
+     "name": "电子纸显示",
+     "en": "Electronic paper display",
+     "year": 1997,
+     "note": "以微胶囊电泳粒子成像的反射式显示，双稳态实现静态显示零功耗。",
+     "deps": [
+      "semiconductors"
+     ]
+    },
+    {
+     "id": "iface_digital_display_if",
+     "name": "数字显示接口标准",
+     "en": "Digital display interface",
+     "year": 1999,
+     "note": "取代模拟视频的数字面板接口标准，保证数字显示无损传输。",
+     "deps": [
+      "iface_lcd_display"
+     ]
+    },
+    {
+     "id": "iface_flexible_display",
+     "name": "柔性显示屏",
+     "en": "Flexible display",
+     "year": 2013,
+     "note": "以柔性基板承载发光像素的可弯折屏幕，开创可穿戴与折叠形态。",
+     "deps": [
+      "iface_oled_display"
+     ]
+    },
+    {
+     "id": "iface_microled_display",
+     "name": "微发光二极管显示",
+     "en": "Micro-LED display",
+     "year": 2018,
+     "note": "以微米级发光二极管阵列直显的技术，高亮长效的新一代显示路线。",
+     "deps": [
+      "iface_led_screen",
+      "semiconductors"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "打印与音频输出",
+   "items": [
+    {
+     "id": "iface_line_printer",
+     "name": "行式打印机",
+     "en": "Line printer",
+     "year": 1953,
+     "note": "一次击打整行字符的高速打印设备，批量报表时代的计算机输出主力。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_pen_plotter",
+     "name": "笔式绘图仪",
+     "en": "Pen plotter",
+     "year": 1959,
+     "note": "以笔在纸上精确移动绘制图形的输出设备，工程图纸时代的必需品。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_dot_matrix_printer",
+     "name": "点阵打印机",
+     "en": "Dot matrix printer",
+     "year": 1970,
+     "note": "以针阵击打色带打印点阵的击打式打印，票据与多层复写仍在使用。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_thermal_printer",
+     "name": "热敏打印机",
+     "en": "Thermal printer",
+     "year": 1971,
+     "note": "以热敏纸受热显影的打印技术，收银小票与标签打印的主流方案。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_laser_printer",
+     "name": "激光打印机",
+     "en": "Laser printer",
+     "year": 1971,
+     "note": "斯塔克韦瑟以激光扫描感光鼓成像的打印机，办公室高速打印之王。",
+     "deps": [
+      "lasers",
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_daisy_wheel_printer",
+     "name": "菊花轮打印机",
+     "en": "Daisy wheel printer",
+     "year": 1972,
+     "note": "以字模轮击打输出印刷级字体的打印设备，八十年代文字处理的配置。",
+     "deps": [
+      "iface_line_printer"
+     ]
+    },
+    {
+     "id": "iface_fm_synthesis",
+     "name": "调频声音合成",
+     "en": "FM synthesis",
+     "year": 1973,
+     "note": "乔宁以相位调频合成复杂音色，合成器与声卡音源的经典算法。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_inkjet_printer",
+     "name": "喷墨打印机",
+     "en": "Inkjet printer",
+     "year": 1976,
+     "note": "以微滴喷出墨水的非击打打印技术，家庭彩色图文打印的普及方案。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_thermal_transfer",
+     "name": "热转印打印技术",
+     "en": "Thermal transfer printing",
+     "year": 1977,
+     "note": "以加热碳带转印到普通纸的打印方法，耐久条码标签的标准工艺。",
+     "deps": [
+      "iface_thermal_printer"
+     ]
+    },
+    {
+     "id": "iface_wavetable_synthesis",
+     "name": "波表声音合成",
+     "en": "Wavetable synthesis",
+     "year": 1981,
+     "note": "以采样波形表合成的音源技术，电子乐器与电脑音效的真实感来源。",
+     "deps": [
+      "iface_fm_synthesis"
+     ]
+    },
+    {
+     "id": "iface_midi_interface",
+     "name": "乐器数字接口",
+     "en": "Musical instrument digital interface",
+     "year": 1983,
+     "note": "连接电子乐器与计算机的串行协议标准，音乐制作的通用语言。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_page_description",
+     "name": "页面描述语言",
+     "en": "Page description language",
+     "year": 1984,
+     "note": "以程序描述版面图文的打印语言，实现所见即所得的印刷输出。",
+     "deps": [
+      "iface_laser_printer"
+     ]
+    },
+    {
+     "id": "iface_dye_sublimation",
+     "name": "热升华打印",
+     "en": "Dye-sublimation printing",
+     "year": 1986,
+     "note": "以染料升华渗透介质的连续色调打印，照片证件打印的优选工艺。",
+     "deps": [
+      "iface_thermal_printer"
+     ]
+    },
+    {
+     "id": "iface_sound_card",
+     "name": "声卡与音源芯片",
+     "en": "Sound card",
+     "year": 1987,
+     "note": "为计算机增加音频合成与录放的扩展卡，多媒体电脑的声音引擎。",
+     "deps": [
+      "semiconductors",
+      "iface_fm_synthesis"
+     ]
+    },
+    {
+     "id": "iface_spatial_audio",
+     "name": "空间音频渲染",
+     "en": "Spatial audio rendering",
+     "year": 1997,
+     "note": "以双耳线索合成三维声场的技术，沉浸式体验的声音支柱。",
+     "deps": [
+      "iface_sound_card"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "交互范式与扩展现实",
+   "items": [
+    {
+     "id": "iface_gui",
+     "name": "图形用户界面",
+     "en": "Graphical user interface",
+     "year": 1973,
+     "note": "施乐阿尔托实现窗口图标鼠标的界面范式，图形化操作取代命令记忆。",
+     "deps": [
+      "computer",
+      "iface_mouse"
+     ]
+    },
+    {
+     "id": "iface_eeg_interface",
+     "name": "脑电信号接口",
+     "en": "EEG brain-computer interface",
+     "year": 1973,
+     "note": "维达尔演示以头皮脑电控制屏幕光标，脑机接口研究的开端。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_wysiwyg",
+     "name": "所见即所得编辑",
+     "en": "WYSIWYG editing",
+     "year": 1974,
+     "note": "布拉沃编辑器让屏幕呈现与最终打印一致，文档编辑的范式转变。",
+     "deps": [
+      "iface_gui"
+     ]
+    },
+    {
+     "id": "iface_clipboard",
+     "name": "剪贴板交互",
+     "en": "Clipboard interaction",
+     "year": 1975,
+     "note": "以暂存缓冲区与复制粘贴命令在文档间搬运内容，界面通用操作基石。",
+     "deps": [
+      "iface_gui"
+     ]
+    },
+    {
+     "id": "iface_magnetic_tracking",
+     "name": "电磁位置追踪",
+     "en": "Magnetic position tracking",
+     "year": 1978,
+     "note": "以交变磁场感知接收器位姿的追踪技术，虚拟现实与医疗导航的定位器。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_motion_capture",
+     "name": "动作捕捉技术",
+     "en": "Motion capture",
+     "year": 1980,
+     "note": "以标记点追踪记录人体运动并映射到数字角色，影视与动画的工艺革新。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_wimp_paradigm",
+     "name": "WIMP 交互范式",
+     "en": "WIMP paradigm",
+     "year": 1981,
+     "note": "视窗图标菜单指针的完整界面体系，由施乐之星定型并统治桌面计算。",
+     "deps": [
+      "iface_gui"
+     ]
+    },
+    {
+     "id": "iface_direct_manipulation",
+     "name": "直接操纵界面",
+     "en": "Direct manipulation",
+     "year": 1983,
+     "note": "施奈德曼总结的可见对象连续操作范式，界面可用性的核心原则。",
+     "deps": [
+      "iface_gui"
+     ]
+    },
+    {
+     "id": "iface_window_system",
+     "name": "窗口系统",
+     "en": "Windowing system",
+     "year": 1984,
+     "note": "管理重叠窗口输入路由的基础软件层，网络透明窗口协议为代表。",
+     "deps": [
+      "iface_gui"
+     ]
+    },
+    {
+     "id": "iface_drag_drop",
+     "name": "拖放式交互",
+     "en": "Drag and drop",
+     "year": 1984,
+     "note": "以抓取拖动物体直接完成操作的交互手法，图形界面的标志性动作。",
+     "deps": [
+      "iface_gui"
+     ]
+    },
+    {
+     "id": "iface_screen_reader",
+     "name": "屏幕阅读器",
+     "en": "Screen reader",
+     "year": 1986,
+     "note": "以语音与盲文输出界面内容的技术，视障者使用图形界面的通道。",
+     "deps": [
+      "iface_tui"
+     ]
+    },
+    {
+     "id": "iface_ar_tech",
+     "name": "增强现实技术",
+     "en": "Augmented reality",
+     "year": 1992,
+     "note": "将计算机图形叠加到真实视野的技术，波音工程师定名并用于装配指引。",
+     "deps": [
+      "iface_hmd_display"
+     ]
+    },
+    {
+     "id": "iface_cave_vr",
+     "name": "洞穴式虚拟环境",
+     "en": "CAVE automatic virtual environment",
+     "year": 1992,
+     "note": "以多面投影环绕使用者的沉浸空间，群体协同可视化的重要形态。",
+     "deps": [
+      "iface_video_projector"
+     ]
+    },
+    {
+     "id": "iface_haptic_device",
+     "name": "力反馈触觉设备",
+     "en": "Force-feedback haptic device",
+     "year": 1993,
+     "note": "以机械臂向手部回馈作用力的设备，使虚拟物体可被触摸感知。",
+     "deps": [
+      "computer"
+     ]
+    },
+    {
+     "id": "iface_vibration_feedback",
+     "name": "振动反馈技术",
+     "en": "Vibration feedback",
+     "year": 1997,
+     "note": "以偏心马达产生振动提示的触觉技术，手柄与手机无处不在。",
+     "deps": [
+      "iface_gamepad"
+     ]
+    },
+    {
+     "id": "iface_implant_bci",
+     "name": "植入式脑机接口",
+     "en": "Implantable brain-computer interface",
+     "year": 1998,
+     "note": "以皮层微电极解码运动意图，患者意念控制光标与机械臂的已验证技术。",
+     "deps": [
+      "iface_eeg_interface"
+     ]
+    },
+    {
+     "id": "iface_marker_ar",
+     "name": "标记式增强现实",
+     "en": "Marker-based augmented reality",
+     "year": 2000,
+     "note": "以平面图案标定姿态叠加三维模型的开源方案，移动端早期普及。",
+     "deps": [
+      "iface_ar_tech"
+     ]
+    },
+    {
+     "id": "iface_motion_controller",
+     "name": "体感控制器",
+     "en": "Motion-sensing controller",
+     "year": 2006,
+     "note": "以加速度计与红外传感感知肢体动作的家用控制器，全家体感游戏。",
+     "deps": [
+      "iface_gamepad"
+     ]
+    },
+    {
+     "id": "iface_nui",
+     "name": "自然用户界面",
+     "en": "Natural user interface",
+     "year": 2010,
+     "note": "以触摸手势语音体感等本能行为驱动的界面总纲，免学习的交互追求。",
+     "deps": [
+      "smartphone",
+      "iface_multitouch"
+     ]
+    },
+    {
+     "id": "iface_vui",
+     "name": "语音用户界面",
+     "en": "Voice user interface",
+     "year": 2011,
+     "note": "以对话完成任务的免接触界面，智能语音助手随智能手机进入日常。",
+     "deps": [
+      "smartphone"
+     ]
+    },
+    {
+     "id": "iface_vr_headset",
+     "name": "虚拟现实头显",
+     "en": "VR head-mounted display",
+     "year": 2012,
+     "note": "以宽视角低延迟头显与定位追踪的沉浸系统，二零一六年消费级普及。",
+     "deps": [
+      "iface_hmd_display"
+     ]
+    },
+    {
+     "id": "iface_smart_glasses",
+     "name": "智能眼镜",
+     "en": "Smart glasses",
+     "year": 2013,
+     "note": "佩戴于镜架的平视显示与语音交互设备，免手持信息呈现的尝试。",
+     "deps": [
+      "iface_ar_tech"
+     ]
+    },
+    {
+     "id": "iface_ultrasonic_haptics",
+     "name": "超声空中触觉反馈",
+     "en": "Ultrasonic mid-air haptics",
+     "year": 2015,
+     "note": "以超声阵列在空中聚焦产生触感的免穿戴反馈技术，隔空触摸界面。",
+     "deps": [
+      "iface_haptic_device"
+     ]
+    },
+    {
+     "id": "iface_mixed_reality",
+     "name": "混合现实",
+     "en": "Mixed reality",
+     "year": 2016,
+     "note": "虚实物体实时交互并锚定融合的显示形态，空间计算的先声。",
+     "deps": [
+      "iface_ar_tech"
+     ]
+    },
+    {
+     "id": "iface_vr_controller",
+     "name": "虚拟现实控制器",
+     "en": "VR motion controller",
+     "year": 2016,
+     "note": "六自由度追踪与扳机握持反馈的专用手柄，沉浸场景的操纵件。",
+     "deps": [
+      "iface_motion_controller",
+      "iface_vr_headset"
+     ]
+    }
+   ]
+  }
+ ]
+}
