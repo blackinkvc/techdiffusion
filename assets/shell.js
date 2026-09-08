@@ -20,7 +20,8 @@
     { file: "analysis", label: "关系网分析" },
     { file: "tree_full", label: "全量科技树" },
     { file: "research", label: "文献谱系" },
-    { file: "changelog", label: "版本迭代" }
+    { file: "changelog", label: "版本迭代" },
+    { file: "correction", label: "纠错总结" }
   ];
 
   function currentFile() {

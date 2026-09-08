@@ -18633,10 +18633,10 @@
    "category": "build",
    "era": "intelligent",
    "date": "2015 年",
-   "year": 2015,
-   "people": "",
-   "place": "",
-   "summary": "无人机测绘在 2015 年 前后成形，依托 二维材料、工业 4.0、摩擦纳米发电 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 混凝土 3D 打印 等后续技术。",
+   "year": 2010,
+   "people": "大疆(DJI)等消费级无人机厂商、开源飞控社区(ArduPilot、PX4)、摄影测量软件社区(Pix4D、OpenDroneMap)",
+   "place": "中国、美国、瑞士",
+   "summary": "以无人机为飞行平台，结合 GNSS 定位、数码相机/图像传感器、飞控系统与摄影测量/计算机视觉算法，快速获取地表影像并生成正射影像、地形模型或三维点云的技术。2010 年前后随多旋翼无人机、MEMS 云台与消费级飞控普及而商品化，广泛应用于工程测量、城市规划、建筑巡检与农业监测。",
    "tier": null,
    "applications": [
     "房屋营建",
@@ -41676,16 +41676,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "llm",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "llm",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "llm",
    "type": "dependency"
@@ -42412,16 +42402,6 @@
   },
   {
    "source": "internet",
-   "target": "transformer_arch",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "transformer_arch",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
    "target": "transformer_arch",
    "type": "dependency"
   },
@@ -46636,22 +46616,12 @@
    "type": "dependency"
   },
   {
-   "source": "mat_selfheal",
-   "target": "mat_graphene",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_2d",
    "type": "dependency"
   },
   {
    "source": "physics",
-   "target": "mat_2d",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_selfheal",
    "target": "mat_2d",
    "type": "dependency"
   },
@@ -50826,11 +50796,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_selfheal",
-   "target": "mfg_digitaltwin",
-   "type": "dependency"
-  },
-  {
    "source": "ene_borehole",
    "target": "mfg_digitaltwin",
    "type": "dependency"
@@ -51116,11 +51081,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "mfg_industry40",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "mfg_industry40",
    "type": "dependency"
@@ -51201,11 +51161,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "mfg_hybridm",
-   "type": "dependency"
-  },
-  {
    "source": "ene_liquidair",
    "target": "mfg_hybridm",
    "type": "dependency"
@@ -51258,11 +51213,6 @@
   {
    "source": "mfg_mes",
    "target": "mfg_toolmonitor",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_selfheal",
-   "target": "mfg_cryogenicm",
    "type": "dependency"
   },
   {
@@ -51321,11 +51271,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_selfheal",
-   "target": "mfg_visionguide",
-   "type": "dependency"
-  },
-  {
    "source": "ene_borehole",
    "target": "mfg_visionguide",
    "type": "dependency"
@@ -51341,11 +51286,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "mfg_digitalshop",
-   "type": "dependency"
-  },
-  {
    "source": "ene_liquidair",
    "target": "mfg_digitalshop",
    "type": "dependency"
@@ -51358,11 +51298,6 @@
   {
    "source": "mfg_hybridm",
    "target": "mfg_digitalshop",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "mfg_darkfactory",
    "type": "dependency"
   },
   {
@@ -52301,21 +52236,6 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_industry40",
-   "target": "tr_hoverboard",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "tr_hoverboard",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "tr_hoverboard",
-   "type": "dependency"
-  },
-  {
    "source": "tr_passdrone",
    "target": "tr_hoverboard",
    "type": "dependency"
@@ -52901,11 +52821,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_selfheal",
-   "target": "tr_charging",
-   "type": "dependency"
-  },
-  {
    "source": "space_station",
    "target": "tr_charging",
    "type": "dependency"
@@ -52917,11 +52832,6 @@
   },
   {
    "source": "ene_liquidair",
-   "target": "tr_v2x",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
    "target": "tr_v2x",
    "type": "dependency"
   },
@@ -53111,21 +53021,6 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_industry40",
-   "target": "tr_hyperloop",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "tr_hyperloop",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "tr_hyperloop",
-   "type": "dependency"
-  },
-  {
    "source": "tr_hoverboard",
    "target": "tr_hyperloop",
    "type": "dependency"
@@ -53161,11 +53056,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "tr_fcevtruck",
-   "type": "dependency"
-  },
-  {
    "source": "tr_v2x",
    "target": "tr_fcevtruck",
    "type": "dependency"
@@ -53177,11 +53067,6 @@
   },
   {
    "source": "ene_liquidair",
-   "target": "tr_personalair",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
    "target": "tr_personalair",
    "type": "dependency"
   },
@@ -53261,11 +53146,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "tr_cargo_drone",
-   "type": "dependency"
-  },
-  {
    "source": "tr_personalair",
    "target": "tr_cargo_drone",
    "type": "dependency"
@@ -53281,28 +53161,8 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "tr_passdrone",
-   "type": "dependency"
-  },
-  {
    "source": "tr_cargo_drone",
    "target": "tr_passdrone",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_industry40",
-   "target": "tr_reusablerocket",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "tr_reusablerocket",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "tr_reusablerocket",
    "type": "dependency"
   },
   {
@@ -53791,11 +53651,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_selfheal",
-   "target": "inf_usb",
-   "type": "dependency"
-  },
-  {
    "source": "ene_borehole",
    "target": "inf_usb",
    "type": "dependency"
@@ -53986,11 +53841,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_selfheal",
-   "target": "inf_nosql",
-   "type": "dependency"
-  },
-  {
    "source": "ene_borehole",
    "target": "inf_nosql",
    "type": "dependency"
@@ -54091,11 +53941,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_selfheal",
-   "target": "inf_social",
-   "type": "dependency"
-  },
-  {
    "source": "ene_borehole",
    "target": "inf_social",
    "type": "dependency"
@@ -54151,16 +53996,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "inf_5g",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "inf_5g",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_5g",
    "type": "dependency"
@@ -54168,16 +54003,6 @@
   {
    "source": "transformer_arch",
    "target": "inf_5g",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "inf_6g",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "inf_6g",
    "type": "dependency"
   },
   {
@@ -54348,11 +54173,6 @@
   {
    "source": "inf_im",
    "target": "inf_vpn",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "inf_blockchain",
    "type": "dependency"
   },
   {
@@ -54531,11 +54351,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_selfheal",
-   "target": "inf_edge",
-   "type": "dependency"
-  },
-  {
    "source": "ene_borehole",
    "target": "inf_edge",
    "type": "dependency"
@@ -54551,11 +54366,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_selfheal",
-   "target": "inf_cloud",
-   "type": "dependency"
-  },
-  {
    "source": "ene_borehole",
    "target": "inf_cloud",
    "type": "dependency"
@@ -54568,11 +54378,6 @@
   {
    "source": "inf_edge",
    "target": "inf_cloud",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "inf_fog",
    "type": "dependency"
   },
   {
@@ -54651,11 +54456,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "inf_dl",
-   "type": "dependency"
-  },
-  {
    "source": "ene_borehole",
    "target": "inf_dl",
    "type": "dependency"
@@ -54713,11 +54513,6 @@
   {
    "source": "inf_gis",
    "target": "inf_expert",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "inf_knowledge",
    "type": "dependency"
   },
   {
@@ -55131,11 +54926,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_selfheal",
-   "target": "inf_sdn",
-   "type": "dependency"
-  },
-  {
    "source": "ene_borehole",
    "target": "inf_sdn",
    "type": "dependency"
@@ -55143,11 +54933,6 @@
   {
    "source": "mathematics",
    "target": "inf_sdn",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_selfheal",
-   "target": "inf_container",
    "type": "dependency"
   },
   {
@@ -55166,11 +54951,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "inf_microservice",
-   "type": "dependency"
-  },
-  {
    "source": "ene_liquidair",
    "target": "inf_microservice",
    "type": "dependency"
@@ -55183,11 +54963,6 @@
   {
    "source": "inf_fog",
    "target": "inf_microservice",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "inf_lowcode",
    "type": "dependency"
   },
   {
@@ -55206,11 +54981,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "inf_devops",
-   "type": "dependency"
-  },
-  {
    "source": "ene_liquidair",
    "target": "inf_devops",
    "type": "dependency"
@@ -55226,11 +54996,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "inf_cicd",
-   "type": "dependency"
-  },
-  {
    "source": "ene_liquidair",
    "target": "inf_cicd",
    "type": "dependency"
@@ -55243,11 +55008,6 @@
   {
    "source": "inf_devops",
    "target": "inf_cicd",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_selfheal",
-   "target": "inf_agile",
    "type": "dependency"
   },
   {
@@ -55303,11 +55063,6 @@
   {
    "source": "inf_pl_c",
    "target": "inf_git",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_selfheal",
-   "target": "inf_api",
    "type": "dependency"
   },
   {
@@ -55406,11 +55161,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_selfheal",
-   "target": "inf_graphdb",
-   "type": "dependency"
-  },
-  {
    "source": "ene_borehole",
    "target": "inf_graphdb",
    "type": "dependency"
@@ -55426,11 +55176,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_selfheal",
-   "target": "inf_timeseries",
-   "type": "dependency"
-  },
-  {
    "source": "ene_borehole",
    "target": "inf_timeseries",
    "type": "dependency"
@@ -55443,11 +55188,6 @@
   {
    "source": "inf_graphdb",
    "target": "inf_timeseries",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "inf_vector_db",
    "type": "dependency"
   },
   {
@@ -55501,16 +55241,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "inf_diffusion",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "inf_diffusion",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_diffusion",
    "type": "dependency"
@@ -55541,16 +55271,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "inf_gan",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "inf_gan",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_gan",
    "type": "dependency"
@@ -55558,11 +55278,6 @@
   {
    "source": "computer_vision",
    "target": "inf_gan",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "inf_rpa",
    "type": "dependency"
   },
   {
@@ -55581,11 +55296,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_selfheal",
-   "target": "inf_alloptical",
-   "type": "dependency"
-  },
-  {
    "source": "ene_borehole",
    "target": "inf_alloptical",
    "type": "dependency"
@@ -55598,11 +55308,6 @@
   {
    "source": "inf_timeseries",
    "target": "inf_alloptical",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "inf_400g",
    "type": "dependency"
   },
   {
@@ -55621,11 +55326,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "inf_leo",
-   "type": "dependency"
-  },
-  {
    "source": "ene_liquidair",
    "target": "inf_leo",
    "type": "dependency"
@@ -55638,16 +55338,6 @@
   {
    "source": "inf_400g",
    "target": "inf_leo",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "inf_quantuminternet",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "inf_quantuminternet",
    "type": "dependency"
   },
   {
@@ -55673,11 +55363,6 @@
   {
    "source": "computer",
    "target": "inf_quantuminternet",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "inf_homomorphic",
    "type": "dependency"
   },
   {
@@ -55716,16 +55401,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "inf_multimodal",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "inf_multimodal",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_multimodal",
    "type": "dependency"
@@ -55733,16 +55408,6 @@
   {
    "source": "inf_quantuminternet",
    "target": "inf_multimodal",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "inf_agent",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "inf_agent",
    "type": "dependency"
   },
   {
@@ -55756,16 +55421,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "inf_worldmodel",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "inf_worldmodel",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_worldmodel",
    "type": "dependency"
@@ -55773,11 +55428,6 @@
   {
    "source": "inf_agent",
    "target": "inf_worldmodel",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "inf_embedding",
    "type": "dependency"
   },
   {
@@ -55796,11 +55446,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "inf_vectorsearch",
-   "type": "dependency"
-  },
-  {
    "source": "ene_liquidair",
    "target": "inf_vectorsearch",
    "type": "dependency"
@@ -55816,16 +55461,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "inf_rag",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "inf_rag",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_rag",
    "type": "dependency"
@@ -55833,16 +55468,6 @@
   {
    "source": "inf_worldmodel",
    "target": "inf_rag",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "inf_alignment",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "inf_alignment",
    "type": "dependency"
   },
   {
@@ -55876,16 +55501,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "inf_digitalhuman",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "inf_digitalhuman",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_digitalhuman",
    "type": "dependency"
@@ -55893,16 +55508,6 @@
   {
    "source": "inf_alignment",
    "target": "inf_digitalhuman",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "inf_edgeai",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "inf_edgeai",
    "type": "dependency"
   },
   {
@@ -55931,16 +55536,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "inf_aisearch",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "inf_aisearch",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_aisearch",
    "type": "dependency"
@@ -55948,16 +55543,6 @@
   {
    "source": "inf_digitalhuman",
    "target": "inf_aisearch",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "inf_codegen",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "inf_codegen",
    "type": "dependency"
   },
   {
@@ -59321,11 +58906,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "bld_3dpb",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_darkfactory",
    "target": "bld_3dpb",
    "type": "dependency"
@@ -59396,11 +58976,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_selfheal",
-   "target": "bld_zeroenergy",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_visionguide",
    "target": "bld_zeroenergy",
    "type": "dependency"
@@ -59413,11 +58988,6 @@
   {
    "source": "bld_verticalgreen",
    "target": "bld_zeroenergy",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_selfheal",
-   "target": "bld_smartb",
    "type": "dependency"
   },
   {
@@ -59493,11 +59063,6 @@
   {
    "source": "bld_survey2",
    "target": "bld_underground",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_selfheal",
-   "target": "bld_sponge",
    "type": "dependency"
   },
   {
@@ -59636,11 +59201,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "bld_robotbrick",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_darkfactory",
    "target": "bld_robotbrick",
    "type": "dependency"
@@ -59671,26 +59231,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "bld_dronesurvey",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_industry40",
-   "target": "bld_dronesurvey",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "bld_dronesurvey",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "bld_smartcity",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_darkfactory",
    "target": "bld_smartcity",
    "type": "dependency"
@@ -59703,11 +59243,6 @@
   {
    "source": "bld_robotbrick",
    "target": "bld_smartcity",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "bld_variabletbm",
    "type": "dependency"
   },
   {
@@ -59726,11 +59261,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "bld_frpbridge",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_darkfactory",
    "target": "bld_frpbridge",
    "type": "dependency"
@@ -59746,11 +59276,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "bld_selfhealconc",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_darkfactory",
    "target": "bld_selfhealconc",
    "type": "dependency"
@@ -59763,11 +59288,6 @@
   {
    "source": "bld_frpbridge",
    "target": "bld_selfhealconc",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "bld_carbonconc",
    "type": "dependency"
   },
   {
@@ -61451,21 +60971,6 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_industry40",
-   "target": "mil_loyalwingman",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tribo",
-   "target": "mil_loyalwingman",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
-   "target": "mil_loyalwingman",
-   "type": "dependency"
-  },
-  {
    "source": "tr_reusablerocket",
    "target": "mil_loyalwingman",
    "type": "dependency"
@@ -61481,11 +60986,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "mil_swarm",
-   "type": "dependency"
-  },
-  {
    "source": "tr_passdrone",
    "target": "mil_swarm",
    "type": "dependency"
@@ -61497,11 +60997,6 @@
   },
   {
    "source": "ene_liquidair",
-   "target": "mil_aiwar",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
    "target": "mil_aiwar",
    "type": "dependency"
   },
@@ -61596,22 +61091,12 @@
    "type": "dependency"
   },
   {
-   "source": "mat_selfheal",
-   "target": "mil_railgun",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_darkfactory",
    "target": "mil_hypersonicm",
    "type": "dependency"
   },
   {
    "source": "ene_liquidair",
-   "target": "mil_hypersonicm",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
    "target": "mil_hypersonicm",
    "type": "dependency"
   },
@@ -61631,11 +61116,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_2d",
-   "target": "mil_glider",
-   "type": "dependency"
-  },
-  {
    "source": "tr_passdrone",
    "target": "mil_glider",
    "type": "dependency"
@@ -61647,11 +61127,6 @@
   },
   {
    "source": "ene_liquidair",
-   "target": "mil_smartmunition",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_2d",
    "target": "mil_smartmunition",
    "type": "dependency"
   },
@@ -62696,11 +62171,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_selfheal",
-   "target": "big_data",
-   "type": "dependency"
-  },
-  {
    "source": "ene_borehole",
    "target": "big_data",
    "type": "dependency"
@@ -62907,11 +62377,6 @@
   },
   {
    "source": "ene_borehole",
-   "target": "hypersonic",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_selfheal",
    "target": "hypersonic",
    "type": "dependency"
   },
@@ -81757,148 +81222,39 @@
    "support": 2
   },
   {
-   "source": "math_normal_distribution",
-   "target": "math_hypothesis_testing",
-   "type": "dependency",
-   "provenance": "phase3_linkpredict",
-   "confidence": 1.0,
-   "support": 2
-  },
-  {
-   "source": "metric_system",
-   "target": "si_system",
-   "type": "dependency",
-   "provenance": "phase3_linkpredict",
-   "confidence": 1.0,
-   "support": 2
-  },
-  {
-   "source": "optics",
-   "target": "laser_interferometer_measurement",
-   "type": "dependency",
-   "provenance": "phase3_linkpredict",
-   "confidence": 1.0,
-   "support": 2
-  },
-  {
-   "source": "plan_road_hierarchy",
-   "target": "plan_slow_traffic",
-   "type": "dependency",
-   "provenance": "phase3_linkpredict",
-   "confidence": 1.0,
-   "support": 2
-  },
-  {
-   "source": "electricity",
-   "target": "microprocessor_based_protection",
-   "type": "dependency",
-   "provenance": "phase3_linkpredict",
-   "confidence": 1.0,
-   "support": 2
-  },
-  {
-   "source": "electricity",
-   "target": "distribution_automation",
-   "type": "dependency",
-   "provenance": "phase3_linkpredict",
-   "confidence": 1.0,
-   "support": 2
-  },
-  {
-   "source": "electricity",
-   "target": "digital_substation",
-   "type": "dependency",
-   "provenance": "phase3_linkpredict",
-   "confidence": 1.0,
-   "support": 2
-  },
-  {
-   "source": "electricity",
-   "target": "cascade_dispatch",
-   "type": "dependency",
-   "provenance": "phase3_linkpredict",
-   "confidence": 1.0,
-   "support": 2
-  },
-  {
-   "source": "electricity",
-   "target": "hydroelectricity_cogeneration",
-   "type": "dependency",
-   "provenance": "phase3_linkpredict",
-   "confidence": 1.0,
-   "support": 2
-  },
-  {
-   "source": "microcomputer",
-   "target": "laptop_computer",
-   "type": "dependency",
-   "provenance": "phase3_linkpredict",
-   "confidence": 1.0,
-   "support": 2
-  },
-  {
-   "source": "ic",
-   "target": "compute_fpga_soc",
-   "type": "dependency",
-   "provenance": "phase3_linkpredict",
-   "confidence": 1.0,
-   "support": 2
-  },
-  {
-   "source": "ic",
-   "target": "compute_heterogeneous_computing",
-   "type": "dependency",
-   "provenance": "phase3_linkpredict",
-   "confidence": 1.0,
-   "support": 2
+   "source": "gps",
+   "target": "bld_dronesurvey",
+   "type": "dependency"
   },
   {
    "source": "computer",
-   "target": "sw_office_suite",
-   "type": "dependency",
-   "provenance": "phase3_linkpredict",
-   "confidence": 1.0,
-   "support": 2
+   "target": "bld_dronesurvey",
+   "type": "dependency"
   },
   {
-   "source": "agriculture",
-   "target": "agr_paddy_upland_rotation",
-   "type": "dependency",
-   "provenance": "phase3_linkpredict",
-   "confidence": 1.0,
-   "support": 2
+   "source": "drone",
+   "target": "bld_dronesurvey",
+   "type": "dependency"
   },
   {
-   "source": "gunpowder",
-   "target": "gun_folangji",
-   "type": "dependency",
-   "provenance": "phase3_linkpredict",
-   "confidence": 1.0,
-   "support": 2
+   "source": "camera",
+   "target": "bld_dronesurvey",
+   "type": "dependency"
   },
   {
-   "source": "gunpowder",
-   "target": "gun_recoilless",
-   "type": "dependency",
-   "provenance": "phase3_linkpredict",
-   "confidence": 1.0,
-   "support": 2
+   "source": "photography",
+   "target": "bld_dronesurvey",
+   "type": "dependency"
   },
   {
-   "source": "cannon",
-   "target": "navy_broadside",
-   "type": "dependency",
-   "provenance": "phase3_linkpredict",
-   "confidence": 1.0,
-   "support": 2
+   "source": "uav_controller",
+   "target": "bld_dronesurvey",
+   "type": "dependency"
   },
   {
-   "source": "satellite",
-   "target": "space_gps_receiver_sat",
-   "type": "dependency",
-   "provenance": "phase3_linkpredict",
-   "confidence": 1.0,
-   "support": 2
+   "source": "multicopter",
+   "target": "bld_dronesurvey",
+   "type": "dependency"
   }
  ]
 }

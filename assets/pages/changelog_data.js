@@ -271,6 +271,46 @@ window.CHANGELOG = {
         "重跑 build_full_dataset.js 刷新 data_full.js（dependency 17837→17862）；重跑 forecast_engine.js 预测分档不变（L2=105 / L3=60 / L5=10）。"
       ],
       files: ["analysis-engine/phase3_linkpredict.py", "analysis-engine/phase3_eval.py", "analysis-engine/data/phase3_eval.json", "analysis-engine/data/graph.json", "analysis-engine/data/backup/graph.json.pre-phase3-20260908.bak", "analysis-engine/data/phase3_results.json", "analysis-engine/data/phase3_inferred_edges.json", "analysis-engine/data/phase3_report.md", "assets/data_full.js"]
+    },
+    {
+      version: "v0.9.10",
+      date: "2026-09-09",
+      type: "fix",
+      title: "依赖关系纠错：修正「无人机测绘」前因并新增「纠错总结」页",
+      summary: "审计发现「无人机测绘」的直接上游被误设为二维材料 / 工业 4.0 / 摩擦纳米发电，修正为 GPS / 计算机 / 无人机 / 相机 / 摄影 / 飞控 / 多旋翼；同步新增「纠错总结」页专录此类质量事件。",
+      treeChange: {
+        scope: "依赖网：修正 bld_dronesurvey 入边（删 3 条错误 + 加 7 条正确），data_full.js 同步",
+        reason: "原 graph.json 中 bld_dronesurvey 的入边是 catalog 合并环节产生的错误因果（二维材料 / 工业 4.0 / 摩擦纳米发电均非其前置技术），导致来龙去脉页生成「这些技术汇聚使其商品化」的荒谬文案，并回溯出 65 项含大量无关节点的上游列表。修正直接前因才能使依赖网可信。",
+        detail: "year 2015→2010 与 catalog 对齐；重写 summary、补 people/place；app.js 代际标签由「第 N 代（更早）」改为「直接上游 / 第 N 代上游」。"
+      },
+      changes: [
+        "graph.json：bld_dronesurvey 入边由 {mat_2d, mfg_industry40, ene_tribo} 修正为 {gps, computer, drone, camera, photography, uav_controller, multicopter}。",
+        "graph.json：year 2015→2010；重写 summary；补 people/place（DJI / 开源飞控 / Pix4D 等）。",
+        "assets/app.js：renderLineageSide 代际标签改为「直接上游 / 第 N 代上游」；顶部 prose 改为克制因果表述。",
+        "新增 correction.html + assets/pages/correction_data.js + correction.js：专录依赖关系 / 前因后果 / 归属类纠错事件，并内置全库自检方法论与待检清单。",
+        "shell.js 导航新增「纠错总结」入口；style.css 补 .cr-* 样式。",
+        "运行 build_full_dataset.js 重建 assets/data_full.js，bld_dronesurvey 上游已更新。"
+      ],
+      files: ["analysis-engine/data/graph.json", "assets/app.js", "correction.html", "assets/pages/correction_data.js", "assets/pages/correction.js", "assets/shell.js", "assets/style.css", "assets/data_full.js"]
+    },
+    {
+      version: "v0.9.11",
+      date: "2026-09-09",
+      type: "fix",
+      title: "依赖关系纠错（续）：清理枢纽节点误接下游与悬空边",
+      summary: "延续无人机测绘案例做全库自检：删除二维材料 / 工业 4.0 / 摩擦纳米发电 / 自修复材料 4 个枢纽节点的全部 104 条误接下游边，并清理 21 条指向不存在节点的悬空边；保留石墨烯→二维材料这一条语义正确的边。",
+      treeChange: {
+        scope: "依赖网：删除 4 枢纽节点 104 条误接下游边 + 21 条悬空边，data_full.js 同步重建",
+        reason: "Phase 3 链接预测 / catalog 合并阶段对通用技术名做了过度泛化的前因推断，把二维材料等当作万能前置注入一批共享模板下游（transport/build/info/military），导致来龙去脉页大量无关上游；另有部分边引用了合并后已消失的节点 id。无人机测绘案例是这一系统性偏差的可见症状。",
+        detail: "mat_2d(56) / mfg_industry40(4) / ene_tribo(20) / mat_selfheal(24) 下游全清；保留 mat_graphene→mat_2d（石墨烯催生二维材料研究，语义正确）。全库边数 8397→8275。"
+      },
+      changes: [
+        "graph.json：删除 mat_2d 全部 56 条、mfg_industry40 全部 4 条、ene_tribo 全部 20 条、mat_selfheal 全部 24 条下游误接边，合计 104 条。",
+        "graph.json：删除 21 条悬空依赖边（18 条 target 缺失 + 3 条 source 缺失）。",
+        "graph.json：保留 mat_graphene→mat_2d（核验正确）。",
+        "运行 build_full_dataset.js 重建 assets/data_full.js，全库边数 8397→8275。"
+      ],
+      files: ["analysis-engine/data/graph.json", "assets/data_full.js", "assets/pages/correction_data.js"]
     }
   ]
 };

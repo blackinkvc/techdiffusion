@@ -472,7 +472,7 @@ function renderLineageSide(root, L) {
   const directUp = Object.keys(L.upGen).filter(u => L.upGen[u] === 1).map(u => techMap[u]);
   let prose;
   if (directUp.length) {
-    prose = `「${esc(root.name)}」并非凭空出现，而是当多条技术线索在同一时点成熟后汇聚而成：<b>${directUp.map(t => esc(t.name)).join("、")}</b>。正是这些上游技术同时就位，才让它从设想变为可商品化的现实。`;
+    prose = `「${esc(root.name)}」建立在若干前置技术之上：<b>${directUp.map(t => esc(t.name)).join("、")}</b>。这些技术分别提供了飞行平台、精确定位、影像获取或数据处理等基础能力，使其从设想走向可落地的应用。`;
   } else {
     prose = `「${esc(root.name)}」位于技术图谱的起点，尚无已收录的上游前置技术——它本身就是后续一切的根源。`;
   }
@@ -485,7 +485,8 @@ function renderLineageSide(root, L) {
     for (let d = 1; d <= L.maxUp; d++) {
       const arr = Object.keys(L.upGen).filter(u => L.upGen[u] === d);
       if (!arr.length) continue;
-      html += `<div style="font-size:11.5px;color:var(--ink-soft);margin:4px 0 2px">第 ${d} 代（更早）</div>`;
+      const genLabel = d === 1 ? "直接上游" : `第 ${d} 代上游`;
+      html += `<div style="font-size:11.5px;color:var(--ink-soft);margin:4px 0 2px">${genLabel}</div>`;
       arr.sort((a, b) => techMap[a].year - techMap[b].year).forEach(u => {
         html += `<span class="lg-item" data-id="${u}"><span class="lg-gen">${esc(catName(techMap[u].category))}</span>${esc(techMap[u].name)}<span class="lg-date">${esc(techMap[u].date)}</span></span>`;
       });
