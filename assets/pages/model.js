@@ -182,6 +182,11 @@
     </div>`).join("");
   }
 
+  // 硬件分级分布速览（由 ADV_MODELS 实时统计，随模型增减自动更新）
+  const hwCount = ADV_MODELS.reduce((acc, m) => { acc[m.hwcls] = (acc[m.hwcls] || 0) + 1; return acc; }, {});
+  const HW_LABEL = { cpu: "CPU 可跑", gpu: "GPU", tpu: "TPU 集群" };
+  const hwSummary = ["cpu", "gpu", "tpu"].map(c => `<span class="hw ${c}">${HW_LABEL[c]} · ${hwCount[c] || 0}</span>`).join(" ");
+
   // ============================================================
   //  渲染
   // ============================================================
@@ -368,6 +373,7 @@
   <h2 class="mh" id="s9">九、十种进阶数学模型（隐性参数 · 神经网络 · 专用硬件）</h2>
   <p>前述五个构想均可被人工阅读、可逐参数对应到人类世界变量。下面十种模型<b>不再受此约束</b>：参数多为<b>隐性（latent）</b>——由模型自行学到、人类无法逐一命名或映射到具体世界的量；部分模型本身就是多重神经网络、扩散过程或贝叶斯非参数过程，不解释「为什么」，只追求在语料上给出可复现的预测或生成。</p>
   <p class="mut">硬件图例：<span class="hw cpu">CPU 可跑</span> 普通笔记本/服务器即可；<span class="hw gpu">GPU</span> 需 CUDA 显卡、训练较快；<span class="hw tpu">TPU 集群</span> 需云端张量处理单元（Google Cloud TPU / 昇腾集群），用于超大规模训练。每张卡片标注其<b>所需硬件</b>与<b>后续实现路径</b>（库与脚本），让模型从「纸面」到「可跑」。</p>
+  <p class="mut">硬件分布：${hwSummary}</p>
   ${renderAdvModels()}
   <div class="note"><b>与构想的衔接：</b>这十种模型是构想 A–E 的「计算化身」——M1/M2/M3 把结构学成连续表征；M4/M5/M6 把构想 B/C 的预测从统计分布升级为动态学习；M7 把构想 C 的组合生成化为采样；M8/M10 用概率/因果框架揭示隐性结构；M9 用物理约束把构想 A 的 λ 学成可解释场。它们共同构成「先有可解释构想、再用隐性模型扩张能力」的双层建模路线。</div>
   `;
