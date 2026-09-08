@@ -98,6 +98,15 @@
   });
   const emiShareI = eraOrder.map(id => ({ id, name: eraMap[id].name, share: emiTot[id] ? +(100 * emiCount.I[id] / emiTot[id]).toFixed(1) : 0 }));
 
+  // 信息流速度 v_i(t) 的量化代理：各时期信息类技术涌现速率（项/百年）
+  const ERA_YEARS = { prehistoric:[-3300000,-3500], ancient:[-3500,-500], classical:[-500,500], medieval:[500,1500], earlymodern:[1500,1750], industrial:[1750,1900], electrical:[1900,1950], info:[1950,2000], intelligent:[2000,2026], future:[2026,2200] };
+  const infoByEra = {}; eraOrder.forEach(id => infoByEra[id] = 0);
+  TECHS.forEach(t => { if (t.category === "info" && infoByEra[t.era] != null) infoByEra[t.era]++; });
+  const infoRate = eraOrder.map(id => {
+    const yrs = Math.max(1, (ERA_YEARS[id][1] - ERA_YEARS[id][0]) / 100); // 以百年为单位
+    return { id, name: eraMap[id].name, rate: +(infoByEra[id] / yrs).toFixed(2) };
+  });
+
   // 分类共生 lift（来自 core.js NET.catLift）
   const cats = CATEGORIES;
   const liftMat = cats.map(c => cats.map(c2 => ({
@@ -114,7 +123,9 @@
     { v: "v0.3", date: "（规划中）", title: "样本外验证与未来投影",
       body: "留出最近 20% 技术作样本外，用模型 B/C 预测其涌现年并与真实年比较（MAE/RMSE）；与 forecast_engine.js 联动，把模型方法扩展到未来方向的可信区间推演。" },
     { v: "v0.4", date: "2026-09-09", title: "十种进阶数学模型（隐性参数·神经网络·专用硬件）",
-      body: "新增第九节：10 个不要求人类可读的进阶模型（M1 潜空间嵌入 / M2 GCN 分类 / M3 VAE 表征 / M4 图自编码器链路预测 / M5 时空图网络 / M6 Transformer 序列 / M7 图扩散生成 / M8 IBP 贝叶斯非参数 / M9 PINN 物理约束 / M10 NOTEARS 潜在因果发现）。参数多为隐性（嵌入矩阵、隐向量、注意力权重、无限维特征、潜在混杂变量等），人类不可命名；明确标注所需硬件（CPU/GPU/TPU 集群）与后续实现库（PyTorch Geometric / DGL / HuggingFace / DiGress / Pyro·NumPyro / gcastle），并说明其作为构想 A–E 的「计算化身」的衔接关系。" }
+      body: "新增第九节：10 个不要求人类可读的进阶模型（M1 潜空间嵌入 / M2 GCN 分类 / M3 VAE 表征 / M4 图自编码器链路预测 / M5 时空图网络 / M6 Transformer 序列 / M7 图扩散生成 / M8 IBP 贝叶斯非参数 / M9 PINN 物理约束 / M10 NOTEARS 潜在因果发现）。参数多为隐性（嵌入矩阵、隐向量、注意力权重、无限维特征、潜在混杂变量等），人类不可命名；明确标注所需硬件（CPU/GPU/TPU 集群）与后续实现库（PyTorch Geometric / DGL / HuggingFace / DiGress / Pyro·NumPyro / gcastle），并说明其作为构想 A–E 的「计算化身」的衔接关系。" },
+    { v: "v0.5", date: "2026-09-09", title: "第九节打磨：代价标注 · 信息流量化 · 选用速查",
+      body: "第九节三处增强：① 每个进阶模型补「代价/局限」一行（M1 嵌入不可解释、M7 需 TPU 集群成本最高等，独立 ADV_COST 映射）；② 构想 A 的「信息流速度 v_i(t)」从占比代理升级为量化指标——以「各时期信息类技术涌现速率（项/百年）」度量（由语料实算，内置 ERA_YEARS 起止年），第六节图表改绘该速率；③ 新增「模型选用速查表」（任务→推荐模型 M1–M10）。" }
   ];
 
   // ---------- 十种进阶数学模型（隐性参数 · 神经网络 · 专用硬件） ----------
@@ -170,6 +181,20 @@
       explains: "从观测中区分「相关（lift）」与「因果」，找出跨类催生的真实因果链，纠正共生指数 ℒ 的虚高。",
       impl: "gcastle / causal-learn 跑 NOTEARS；隐变量扩展用 latent-variable SEM。输出因果 DAG 可作 M2/M5 的训练先验。" }
   ];
+
+  // 各模型代价/局限（与 ADV_MODELS 的 id 对应）
+  const ADV_COST = {
+    M1: "嵌入空间不可解释，相似度≠因果；随机游走向偏置敏感需调参；类内聚合可能掩盖细粒度差异。",
+    M2: "深层 GCN 易过平滑（over-smoothing）；依赖已知标签，弱监督泛化有限；大图显存开销高。",
+    M3: "隐因子无语义、后验崩塌风险；KL 退火敏感；重建质量依赖属性定义。",
+    M4: "内积解码对无标度图有度偏置；负采样策略影响精度；难捕捉高阶结构。",
+    M5: "需按年代切分快照、标注成本高；时空注意力对长跨度预测仍受限；训练重。",
+    M6: "自回归误差累积（易产出错误年份）；长序列算力开销大；需海量序列样本防过拟合。",
+    M7: "训练成本最高（TPU 集群）；条件可控性难保证；生成图可能违背 DAG 无环。",
+    M8: "MCMC 收敛慢、可伸缩性差；后验对先验敏感；结果需人工归纳解释。",
+    M9: "physics loss 权重 λ_c 难调；高维 λ(t,c) 表达受限；数据稀疏时物理约束被噪声主导。",
+    M10: "假定线性/半参数 SEM，非线性因果易漏；潜在变量数需预设；大规模优化耗时。"
+  };
   function renderAdvModels() {
     return ADV_MODELS.map(m => `
     <div class="mcard">
@@ -178,6 +203,7 @@
       <div class="eq">${m.eq}</div>
       <div class="mrow"><span class="mlbl">解释力</span><span class="mval">${m.explains}</span></div>
       <div class="mrow"><span class="mlbl">后续实现</span><span class="mval">${m.impl}</span></div>
+      <div class="mrow"><span class="mlbl">代价/局限</span><span class="mval">${ADV_COST[m.id]}</span></div>
       <div class="mhw">硬件：<span class="hw ${m.hwcls}">${esc(m.hw)}</span></div>
     </div>`).join("");
   }
@@ -186,6 +212,23 @@
   const hwCount = ADV_MODELS.reduce((acc, m) => { acc[m.hwcls] = (acc[m.hwcls] || 0) + 1; return acc; }, {});
   const HW_LABEL = { cpu: "CPU 可跑", gpu: "GPU", tpu: "TPU 集群" };
   const hwSummary = ["cpu", "gpu", "tpu"].map(c => `<span class="hw ${c}">${HW_LABEL[c]} · ${hwCount[c] || 0}</span>`).join(" ");
+
+  // 模型选用速查表（任务 → 推荐模型）
+  const SELECT_GUIDE = [
+    { task: "找结构近邻 / 补全隐含前置", m: "M1" },
+    { task: "预测技术类别 / 年代 / 可行性档", m: "M2" },
+    { task: "生成技术连续表征 / 潜空间插值", m: "M3" },
+    { task: "补全缺失依赖边（链路预测）", m: "M4" },
+    { task: "预测下一批涌现技术 + 年份", m: "M5" },
+    { task: "建模技术演进「语言」、预测下一个技术", m: "M6" },
+    { task: "生成合理的未来技术网络（what-if）", m: "M7" },
+    { task: "自动发现无限维隐性本质特征", m: "M8" },
+    { task: "学出受物理约束的涌现率场 λ", m: "M9" },
+    { task: "区分相关与因果、找真实因果链", m: "M10" }
+  ];
+  function renderSelectGuide() {
+    return `<div class="chart-card"><div class="ctitle">模型选用速查（任务 → 推荐模型）</div><table class="ptable"><thead><tr><th>任务</th><th>推荐模型</th></tr></thead><tbody>${SELECT_GUIDE.map(r => `<tr><td>${esc(r.task)}</td><td><b>${esc(r.m)}</b></td></tr>`).join("")}</tbody></table></div>`;
+  }
 
   // ============================================================
   //  渲染
@@ -276,6 +319,7 @@
     <span class="fb">更多技术 ⇒ 更优信息工具 ⇒ v<sub>i</sub> 再 ↑</span>
   </div>
   <p class="mut">能量/物质流速度上升也会经「能力提升 ⇒ 更多技术 ⇒ 更快流动」形成并行正反馈。这就是近代技术涌现呈<b>超线性爆发</b>的结构性原因：一旦信息流越过阈值，λ 自我加速，不再由外部人口/资源线性决定。</p>
+  <p class="mut">信息流速度 v_i(t) 现已<b>量化</b>：以「各时期信息类技术涌现速率（项/百年）」作可计算代理（见第六节图表）——它把方程里的抽象驱动量 v_i 落到可由语料实算的数值，使「信息流加速→λ 再加速」正反馈具备可观测的量化指纹。</p>
 
   <div class="chart-card">
     <div class="ctitle">实证锚点 · 有效滞后 Δ 极短（前提齐备即涌现）<span class="verdict pass">支持正反馈</span></div>
@@ -341,11 +385,11 @@
   <h2 class="mh" id="s6">六、构想 E · 物质 / 能量 / 信息流动三元</h2>
   <p>把每条技术按主类归入其承载的流动：<b>物质流 M</b>（材料/建造/交通/制造/生命/军事及科学基础）、<b>能量流 E</b>（能源类）、<b>信息流 I</b>（信息通信类）。技术进步的实质，是三条流的速度与容量被持续推高；而<b>信息流</b>的加速是近代爆发的主因。</p>
   <div class="chart-card">
-    <div class="ctitle">信息流技术占比随时期变化（I 流速度代理）<span class="verdict pass">近代跃升</span></div>
-    <div class="csub">信息类技术占比从史前—近代的近 0% 攀升，电气时代 11%、信息时代达 22%（智能/未来约 8–20%）——与近代技术涌现爆发同步，印证信息流加速是主导加速器。</div>
+    <div class="ctitle">信息流速度（量化）：各时期信息类技术涌现速率（项/百年）<span class="verdict pass">数量级跃升</span></div>
+    <div class="csub">把「信息流速度 v_i(t)」从占比代理升级为量化指标：以「该时期新增信息类技术数 ÷ 时期年数 ×100」度量（项/百年，由语料实算）。速率在电气/信息/智能时代呈数量级跃升，与近代技术涌现爆发同步，印证信息流加速是主导加速器；占比（结构位移）仍为其派生视图。</div>
     <div id="ch-emi"></div>
   </div>
-  <p class="mut">注：每条技术按主类单一归入 M/E/I 三元之一（信息类=信息流，能源类=能量流，其余=物质流）。此处用<b>信息流占比</b>刻画结构位移——它随时期显著跃升，而非用绝对量。</p>
+  <p class="mut">注：每条技术按主类单一归入 M/E/I 三元之一（信息类=信息流，能源类=能量流，其余=物质流）。此处以<b>涌现速率（项/百年）</b>作 v_i(t) 的可计算量化代理；若需映射真实物理吞吐（比特率/时延），须引入外部史料数据集（电报~10² bit/s、同轴电缆、光纤、互联网带宽序列），本页暂以网络派生速率代替。</p>
 
   <h2 class="mh" id="s7">七、验证总览</h2>
   <table class="ptable">
@@ -375,6 +419,7 @@
   <p class="mut">硬件图例：<span class="hw cpu">CPU 可跑</span> 普通笔记本/服务器即可；<span class="hw gpu">GPU</span> 需 CUDA 显卡、训练较快；<span class="hw tpu">TPU 集群</span> 需云端张量处理单元（Google Cloud TPU / 昇腾集群），用于超大规模训练。每张卡片标注其<b>所需硬件</b>与<b>后续实现路径</b>（库与脚本），让模型从「纸面」到「可跑」。</p>
   <p class="mut">硬件分布：${hwSummary}</p>
   ${renderAdvModels()}
+  ${renderSelectGuide()}
   <div class="note"><b>与构想的衔接：</b>这十种模型是构想 A–E 的「计算化身」——M1/M2/M3 把结构学成连续表征；M4/M5/M6 把构想 B/C 的预测从统计分布升级为动态学习；M7 把构想 C 的组合生成化为采样；M8/M10 用概率/因果框架揭示隐性结构；M9 用物理约束把构想 A 的 λ 学成可解释场。它们共同构成「先有可解释构想、再用隐性模型扩张能力」的双层建模路线。</div>
   `;
 
@@ -385,7 +430,7 @@
   drawHeat("#ch-heat", cats, liftMat);
   drawBars("#ch-imp", eraComp.map(e => ({ label: e.name, value: +(e.med).toFixed(3), sub: e.n })), { yLabel: "中位 x_i", zero: false });
   drawBars("#ch-ind", indBars, { yLabel: "平均年代", zero: true });
-  drawLine("#ch-emi", emiShareI.map(e => ({ label: e.name, value: e.share })), { yLabel: "I 流占比 %", yMin: 0, yMax: 25 });
+  drawLine("#ch-emi", infoRate.map(e => ({ label: e.name, value: e.rate })), { yLabel: "信息流速率（项/百年）", yMin: 0 });
 
   // ============================================================
   //  D3 图表助手
