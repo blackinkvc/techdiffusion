@@ -361,6 +361,27 @@ window.CHANGELOG = {
         "数学模型页：第九节新增「⚠ Phase 3 待硬件」提醒框 + 折叠详情（M1 node2vec / M2 PyG-GCN / M4 PyG-GAEn 最小可运行脚本方案、算力量级设计估算、速查表将补数据需求量列、验收协议）；MODEL_METHOD 方法日志加 v0.8。"
       ],
       files: ["assets/techs_extra.js", "assets/techs_more.js", "assets/data.js", "assets/pages/correction_data.js", "assets/pages/model.js"]
+    },
+    {
+      version: "v0.9.15",
+      date: "2026-09-09",
+      type: "fix",
+      title: "网络年份/概念关系修正 + 二阶枢纽逐节点核验结案 + 量子两项研判",
+      summary: "处理 v0.9.14 遗留的三类报告项：① 4 处年倒挂——科学方法/热力学/量子科技等「后发学科/方法」依赖降级为概念影响并移除硬边，年份/纪元修正（engineering→前 3000、propulsion→1960，纪元纠偏 5 处）；② 二阶枢纽（CR-2026-0909-hub2nd）24 节点逐一下游抽样核验，证其为「同纪元模板整批注入」，删除 590 条确认污染边并保留真实下游；③ 量子纠缠/量子科技两项研判（纠缠＝已实验证实并工程化为 QKD/隐形传态资源的物理基础，量子科技＝对技术有直接推动），修正量子簇 3 条虚假下游与摘要。主管线边 7938→7341（−597），yearInv 归零。",
+      treeChange: {
+        scope: "主管线技术网络：边 7938→7341（删 4 条概念影响化硬边 + 3 条量子簇虚假下游 + 590 条二阶枢纽污染边）；年份/纪元修正涉及 engineering / propulsion / rocket / scientific_method / physics / chemistry / quantum_entanglement；节点不变 2289",
+        reason: "v0.9.14 将 4 处年倒挂与二阶枢纽列为报告项待人工定夺。用户裁定：① 年份必须改对并全库自查；② 这 4 条把「后发学科/方法」当技术前置的依赖降级为「概念影响」（站内 _upConcept 承接科学解释类关系）；③ 二阶枢纽逐个核验、删污染留真实后结案。本轮逐一落地：概念影响化移除硬边、年份/纪元修正、24 枢纽逐节点核验（实证为同纪元模板整批注入：每个枢纽下游几乎同一年、横跨五类，对照半导体材料的真实异年下游即可识别）、量子两项 web 研判后修正量子簇。目的：消除 DAG 时间倒挂与批量模板污染，恢复滞后/下游/共生统计与来龙去脉页可信度。",
+        detail: "① 概念影响降级 4 条 + 量子簇清除 3 条虚假下游（λ演算/计算机科学←纠缠、蛋白质组学←量子信息）；② 年份修正：engineering 1500→-3000、propulsion 1900→1960；纪元纠偏：scientific_method/physics/chemistry→earlymodern、rocket→electrical、quantum_entanglement→electrical；③ 二阶枢纽删除污染 590 条，保留真实下游 semiconductors 8（太阳能光伏/晶体管/集成电路/激光器/相机图像传感器/内存/卫星/激光雷达）、mat_cf 2（碳纤维复合材料/金属基复合材料）、electric_motor 8（无刷电机/工业机器人/真空吸尘器/汽车电气/自动驾驶/割草·吸尘执行机构/多旋翼）；④ 量子研判落地：纠缠保留为真实基础节点（Bell 实验验证 + 2022 诺奖 + QKD 组网/墨子号/京沪干线为已实现技术资源），量子科技保留（对技术进步有直接推动），重写 6 处模板摘要。复核：yearInv 0、dupEdge 0、无自环/环/悬空；模型页 dry-run RENDER OK。"
+      },
+      changes: [
+        "年份/概念：4 条倒挂硬依赖（engineering←scientific_method、propulsion←rocket、combustion←thermodynamics、quantum_entanglement←quantum）降级为「概念影响」并移除硬边（摘要注明）；年份修正 engineering→-3000(ancient)、propulsion→1960(info)；纪元纠偏 scientific_method/physics/chemistry→earlymodern、rocket→electrical、quantum_entanglement→electrical。",
+        "量子两项研判（web 检索佐证）：① 量子纠缠(1935)非「可能性强的理论」——1980 年代起经 Bell 实验反复证实、2022 年获诺贝尔物理学奖，并已作为量子密钥分发/量子隐形传态的工程化资源（量子通信已进入实用化：京沪干线/城域 QKD 网商用、墨子号星地 1200km QKD、2025 国际量子科技年）；② 量子科技(1980)非「仅教育意义」——对技术进步有直接推动（量子密钥分发商用组网、量子计算「优越性」实验与云服务、量子传感用于心磁图/电网/管道探伤等）。据此两者均保留为真实基础节点。",
+        "量子簇修正：清除 λ演算、计算机科学 ← 量子纠缠 与 蛋白质组学 ← 量子信息 共 3 条虚假下游；重写 quantum_entanglement / quantum / quantum_info / engineering / propulsion / combustion 六处模板化/重复摘要。",
+        "二阶枢纽结案（CR-2026-0909-hub2nd → 已修正）：24 节点共删除 590 条确认污染下游引用（明细见纠错页），保留 semiconductors 8 / mat_cf 2 / electric_motor 8 条真实下游；污染枢纽下游归零。",
+        "全库年份自查：正年口径 yearInv 4→0；era-vs-year 失配 59→52；另发现 12 处古早纪年噪声（含负年，如 masonry←mortar 等 18 节点）列入待核清单未擅改。",
+        "复核：主管线 edges 7938→7341；dupEdge=0；无自环/环/悬空 dependsOn；模型页 dry-run RENDER OK（P 弹性 1.33/R²=0.875、K 弹性 2.03/R²=0.933 渲染与独立复算一致）。"
+      ],
+      files: ["assets/techs_extra.js", "assets/techs_extend.js", "assets/data.js", "assets/pages/correction_data.js"]
     }
   ]
 };

@@ -23,12 +23,34 @@ window.CORRECTIONS = {
       "步骤 6 · 重建与登记：node analysis-engine/build_full_dataset.js 重建 data_full.js，记录进本页与《版本迭代》。"
     ],
     pendingQueue: [
-      "二阶枢纽污染（二阶自检）：液态空气储能(ene_liquidair,31)、井式地热(ene_borehole,27)、余热回收(ene_wasteheat,50)、调峰电站(ene_peaker,41)、感应熔炼(mat_inductionmelt,46)、金属有机框架(mat_mof,39)、热处理炉(mfg_furnace,38)、激光熔覆(mat_laserclad,27)、渗硼(mat_boriding,27)、燃料电池汽车(ene_fuelcellcar,26)、泡沫金属(mat_foammetal,25)、盐差能(ene_salinity,25)、碟式斯特林(ene_dishstirling,25)、水热地热(ene_hydrothermal,24)、储氢合金(mat_hydrogenstorage,23)、可燃冰(ene_clathrate,23)、风力(ene_wind,22)、切削液(mfg_coolant,21)、放电等离子烧结(mat_sps,19)、电动机(electric_motor,17)、半导体材料(semiconductors,16)、碳纤维(mat_cf,15)、砂轮(mfg_grindingwheel,15) 等约 24 个材料/能源/制造节点，其下游多为 transport/build/info/military 模板，疑似同类链接预测污染，待逐节点人工核验（勿盲目批量删，需区分真实下游后再修）。",
       "report.txt 中全部「同名已存在，改为打标」节点是否丢失了 catalog deps（持续核查）。",
       "悬空边已修复（见 CR-2026-0909-orphan）；建议复核这些被引用却缺失的节点（math_hypothesis_testing、laptop_computer、compute_fpga_soc、si_system 等）是否应补建，或确属废弃引用。"
     ]
   },
   entries: [
+    {
+      id: "CR-2026-0909-yearinv",
+      date: "2026-09-09",
+      node: "engineering / scientific_method / propulsion / rocket / combustion / thermodynamics / quantum_entanglement / quantum",
+      nodeName: "4 处年倒挂依赖：降级为概念影响 + 年份/纪元修正 + 量子两项研判",
+      category: "meta",
+      severity: "中",
+      status: "已修正",
+      problem: "v0.9.14 审计保留的 4 条硬依赖形成「子技术年早于前置年」倒挂：engineering(1500)←scientific_method(1600)、propulsion(1900)←rocket(1926)、combustion(1800)←thermodynamics(1824)、quantum_entanglement(1935)←quantum(1980)。人工核验结论：① 这 4 条实为「后发的学科/方法」被当成了技术硬前置——工程不建立在 1600 年的科学方法之上（经验工程远早于此）、推进不依赖 1926 年的火箭（火箭是推进的实例）、燃烧不依赖 1824 年才成形热力学学科、1935 年的纠缠不依赖 1980 年才出现的量子科技——语义上属「科学解释/概念影响」，并非可参与滞后统计的技术谱系硬边；② 部分年份为「世纪占位年」（engineering 1500、propulsion 1900），与其真实年代和下游年代（工程下游含公元前 3000 年建筑等）明显偏离；③ 伴随纪元标注错误（科学方法 1600 标 classical、火箭 1926 标 industrial、纠缠 1935 标 info、物理 1687/化学 1661 标 classical 等）。",
+      rootCause: "生成阶段把学科/方法类概念当作「缺失前置」补入大枢纽（engineering/combustion/propulsion/entanglement）的 dependsOn，并用整纪元的占位年作为 hub year，既违背时间顺序又把「解释关系」误建成「依赖关系」；纪元字段由旧口径自动打标未随年份校对。",
+      fix: "① 4 条硬依赖按用户裁定降级为「概念影响」：移除 dependsOn 硬边，并在节点摘要中显式注明该关系为概念性影响（站内 _upConcept 机制用于承接未建节点的概念引用，对已建节点以「摘要注明 + 移除硬边」落实同义语义）；② 年份修正：engineering 1500→-3000（古代，与下游建筑/桥梁谱系一致）、propulsion 1900→1960（信息时代，先进推进工程化起点，其下游均为 2050+ 未来推进）；③ 纪元纠偏：scientific_method/physics/chemistry→earlymodern，rocket→electrical，quantum_entanglement→electrical，engineering→ancient（共 7 处，era-year mismatch 59→52，余项经逐条甄别多为「语义纪元」合理保留或古早纪年噪声另列）；④ 量子两项 web 研判落地（见 problem/fix 注）：纠缠系经 Bell 实验反复证实（2022 诺贝尔物理学奖）并已工程化为量子密钥分发/隐形传态资源的物理事实，量子科技对技术进步有直接推动（QKD 组网商用、量子计算优越性实验、量子传感医疗/电网应用）——二者均保留为真实基础节点，不改建成「纯理论/仅教育」；据此同时清除量子簇 3 条虚假下游硬边（λ演算、计算机科学 ←量子纠缠；蛋白质组学 ←量子信息）并重写 6 处模板化/重复摘要。",
+      badUpstream: ["scientific_method 科学方法(1600)→工程(概念影响)", "rocket 火箭(1926)→推进(概念影响)", "thermodynamics 热力学(1824)→燃烧(概念影响)", "quantum 量子科技(1980)→量子纠缠(概念影响)"],
+      goodUpstream: ["engineering 现仅依赖 mathematics", "propulsion 现仅依赖 thermodynamics", "combustion 现仅依赖 chemistry", "quantum_entanglement 现仅依赖 relativity_qm（相对论与量子力学，1905）"],
+      changes: [
+        "硬边移除 4 条（降级为概念影响，摘要注明）：engineering 去 scientific_method、propulsion 去 rocket、combustion 去 thermodynamics、quantum_entanglement 去 quantum。",
+        "量子簇虚假下游清除 3 条：λ演算/计算机科学 dependsOn 去 quantum_entanglement、蛋白质组学 dependsOn 去 quantum_info（并修正 quantum_info 摘要中「蛋白质组学」错误表述）。",
+        "年份修正 2 处：engineering 1500→-3000（date/era 同步）、propulsion 1900→1960（date/era 同步）；纪元纠偏 5 处：scientific_method/physics/chemistry→earlymodern、rocket→electrical、quantum_entanglement→electrical。",
+        "摘要重写 6 处（去重复 token 与虚假下游声明，注明概念影响与真实依据）：engineering / propulsion / combustion / quantum_entanglement / quantum / quantum_info。",
+        "全库年份自查：yearInv（正年口径）4→0；含负年全量口径另发现 12 处古早纪年噪声（如 masonry(-5000)←mortar(-3000)、metallurgy(-5000)←charcoal(-4000) 等 18 节点），非本轮四例同类、需考古口径逐例定夺，已列入待核清单未擅改。",
+        "复核：主管线 edges 7938→7931（本项 −7），无自环/环/悬空；模型页 dry-run RENDER OK（P 弹性 1.33/R²=0.875，K 弹性 2.03/R²=0.933 实时渲染与复算一致）。"
+      ],
+      files: ["assets/techs_extend.js", "assets/techs_extra.js", "assets/data.js"]
+    },
     {
       id: "CR-2026-0909-dronesurvey",
       date: "2026-09-09",
@@ -98,17 +120,21 @@ window.CORRECTIONS = {
       nodeName: "二阶枢纽污染（链接预测残留）",
       category: "meta",
       severity: "高",
-      status: "待修正",
+      status: "已修正（主管线；全量管线 graph.json 待镜像同步）",
       problem: "Phase 3（链接预测 / catalog 合并）阶段把「通用技术名」过度泛化成万能前置，批量注入到 transport/build/info/military 等共享模板下游。一阶已修（v0.9.11，已修正）：删掉 4 个明显枢纽——二维材料 mat_2d、工业 4.0 mfg_industry40、摩擦纳米发电 ene_tribo、自修复材料 mat_selfheal 的 104 条误接下游边（保留 mat_graphene→mat_2d，语义正确）。二阶（本次遗留）：同因、更隐蔽的残留——还有约 24 个材料/能源/制造节点，下游数量异常大（15–50 条）且大多指向 transport/build/info/military 模板，疑似同类污染。",
       rootCause: "与一阶同源：链接预测 / catalog 合并阶段对通用技术名做了过度泛化的前因推断，把它们当作万能前置注入一批共享模板下游，而非依据真实技术谱系。无人机测绘案例是可见症状；一阶清理暴露了 4 个显眼枢纽，二阶是同一机制在更多中频节点上的分散残留。",
-      fix: "要求逐节点人工核验、不能盲目批量删（要先区分真实下游与模板污染边后再修）。核验方法见 meta.method：抽样来龙去脉页 → 溯源 catalog 原始 deps → 比对合并缺口 → 修正 graph.json 入/出边 → 全库自检 → 重建 data_full.js。",
+      fix: "逐节点抽样核验已完成并落地：对 24 个二阶枢纽逐一检查其下游，发现它们并非「含真实下游+混入模板边」，而是整批由「同纪元模板」注入——每个枢纽的全部下游几乎都以该枢纽 year 为锚、同一年份横跨 build/info/manufact/military/transport 五类（例：余热回收 ene_wasteheat 的 50 条下游全部为 1800 年工业纪元 cohort——框架/桁架/钢桥、刨床/磨床/冲压、来复枪/水雷/军事后勤、蒸汽船/铁路/缆车等，无一以余热回收为前提；液态空气储能 ene_liquidair 的 31 条全为 2010 智能纪元 cohort；盐差能/泡沫金属全为 1950 cohort；金属有机框架/燃料电池汽车全为 1990 cohort……）。结论：这些下游是链接预测阶段整批生成的模板污染，不是真实技术谱系；真实枢纽（对照：半导体材料 semiconductors）的下游应异类异年（晶体管/集成电路/激光器/卫星）。处置：删除确认污染的 590 条下游引用（含一批枢纽间互相误接，如热处理炉/切削液/量子通信等条目 dependsOn 中的余热回收、碟式斯特林、激光熔覆、渗硼、调峰电站引用），保留核验为真实的下游（semiconductors 8：太阳能光伏/晶体管/集成电路/激光器/数码相机图像传感器/内存/人造卫星/激光雷达；mat_cf 2：碳纤维复合材料/金属基复合材料；electric_motor 8：无刷电机/工业机器人/真空吸尘器/汽车电气系统/自动驾驶/割草·吸尘执行机构/多旋翼构型）。修正后：主管线边 7938→7341（−597，其中本项 −590），yearInv=0，DAG 无环不变。",
       badUpstream: [],
       goodUpstream: [],
       changes: [
-        "待检清单（括号内=下游条数，合计约 622 条疑似污染边）：液态空气储能 ene_liquidair(31)、井式地热 ene_borehole(27)、余热回收 ene_wasteheat(50)、调峰电站 ene_peaker(41)、感应熔炼 mat_inductionmelt(46)、金属有机框架 mat_mof(39)、热处理炉 mfg_furnace(38)、激光熔覆 mat_laserclad(27)、渗硼 mat_boriding(27)、燃料电池汽车 ene_fuelcellcar(26)、泡沫金属 mat_foammetal(25)、盐差能 ene_salinity(25)、碟式斯特林 ene_dishstirling(25)、水热地热 ene_hydrothermal(24)、储氢合金 mat_hydrogenstorage(23)、可燃冰 ene_clathrate(23)、风力 ene_wind(22)、切削液 mfg_coolant(21)、放电等离子烧结 mat_sps(19)、电动机 electric_motor(17)、半导体材料 semiconductors(16)、碳纤维 mat_cf(15)、砂轮 mfg_grindingwheel(15)。",
-        "处置原则：逐节点区分真实下游 vs 模板污染边后再删，避免误删真实技术谱系边。"
+        "逐节点核验方法：列出每个枢纽的完整下游 → 逐条比对 name/category/year（模板特征＝同纪元整批 + 跨 5 类）→ 抽样查看下游条目 dependsOn 全文与摘要 → 分类「真实 / 污染」。",
+        "删除确认污染的 590 条下游引用（24 枢纽明细：余热回收 50 / 感应熔炼 46 / 调峰电站 41 / 金属有机框架 38 / 热处理炉 38 / 液态空气储能 31 / 激光熔覆 27 / 渗硼 27 / 燃料电池汽车 26 / 盐差能 25 / 碟式斯特林 25 / 泡沫金属 25 / 井式地热 25 / 水热地热 24 / 储氢合金 23 / 可燃冰 23 / 风力 22 / 切削液 21 / 放电等离子烧结 19 / 砂轮 15 / 碳纤维 13 / 电动机 4 / 地热利用 1 / 半导体材料 1）。",
+        "保留真实下游：semiconductors 8 项、mat_cf 2 项（碳纤维复合材料/金属基复合材料）、electric_motor 8 项。",
+        "污染枢纽清除后下游归零：ene_wasteheat / ene_liquidair / ene_borehole / ene_salinity / ene_dishstirling / ene_hydrothermal / ene_clathrate / ene_peaker / ene_wind / ene_fuelcellcar / mat_inductionmelt / mat_mof / mat_laserclad / mat_boriding / mat_foammetal / mat_sps / mat_hydrogenstorage / mfg_furnace / mfg_coolant / mfg_grindingwheel / ene_geothermal。",
+        "修正复核：主管线边 7938→7341（−597，其中二阶枢纽 −590）；dupEdge=0、无自环/环/悬空 dependsOn、yearInv=0。",
+        "范围说明：本项在主管线数组源头（assets/techs_extra.js / data.js / techs_extend.js）落地；全量管线 analysis-engine/data/graph.json 的同类约 622 条污染边仍待镜像同步（单独批次）。"
       ],
-      files: ["analysis-engine/data/graph.json", "assets/data_full.js"]
+      files: ["assets/techs_extra.js", "assets/data.js", "assets/techs_extend.js", "assets/pages/correction_data.js", "analysis-engine/data/graph.json(待镜像)"]
     },
     {
       id: "CR-2026-0909-tierb",
@@ -137,7 +163,7 @@ window.CORRECTIONS = {
       nodeName: "主管线网络全量遍历审计：一阶枢纽残留 + 重复依赖边",
       category: "meta",
       severity: "高",
-      status: "已修正（一阶+去重；二阶继续挂起待人工核验）",
+      status: "已修正（一阶+去重+二阶结案；年份/概念处理见 CR-2026-0909-yearinv、CR-2026-0909-hub2nd）",
       problem: "此前 v0.9.10–11 的枢纽清理只改了全量管线 graph.json / data_full.js，未改主管线数组源头（assets/techs_extra.js 等），导致模型页/分析页所用的 2289 节点网络仍残留同一批污染。本轮对主管线全网络遍历审计（2289 节点 / 8129 条真实依赖边）：无重复 id、无自环、无环、无悬空 dependsOn（结构健康）；但一阶枢纽误接下仍存在——mat_2d(57) / ene_tribo(21) / mat_selfheal(22) / mfg_industry40(5)；另有 86 条「同节点重复依赖」（如 solar、genetics 在 dependsOn 中被列两次，污染下游统计），以及 4 处「子技术年早于前置年」倒挂。",
       rootCause: "① 清理没有回写到主管线数组源头（生成的 techs_extra.js 由 gen_run/gen_1000 注入共享模板下游），主/全量两套数据源出现分叉；② 生成器对部分通用根节点（solar/genetics 等）在 dependsOn 中追加了两次。",
       fix: "对数组源头执行镜像修正：移除 4 个已定论枢纽（mat_2d/mfg_industry40/ene_tribo/mat_selfheal）在 techs_extra.js + data.js 的全部下游引用（105 条，主管线中无 mat_graphene→mat_2d 特例可保留），并把 dependsOn/enables 重复元素去重（86 条）。修正后主管线边 8129→7938，四个枢纽下游归零、重复依赖归零，DAG 无环不变。",
@@ -148,7 +174,7 @@ window.CORRECTIONS = {
         "techs_more.js：85 个条目去重（solar/genetics 等被列两次的重复依赖）。",
         "data.js：2 个 AI/大模型基础条目移除 mat_2d、ene_tribo 依赖（共 4 条误接边）。",
         "修复后复核：edges 8129→7938；mat_2d/mfg_industry40/ene_tribo/mat_selfheal 下游 0；dupEdge 0；无自环/环/悬空。",
-        "保留未动：4 处年倒挂（engineering←scientific_method、propulsion←rocket、combustion←thermodynamics、quantum_entanglement←quantum）判定为年代标注噪声而非网络错误，列入报告待人工定夺；二阶枢纽 ~24 节点（ene_wasteheat 50 / ene_liquidair 31 / ene_borehole 25 / ene_salinity 25 / ene_dishstirling 25 / mfg_grindingwheel 15 等）继续挂起，关联 CR-2026-0909-hub2nd 待人工核验。"
+        "后续处理（v0.9.15）：4 处年倒挂降级为概念影响并修正年份/纪元 → CR-2026-0909-yearinv；二阶枢纽 ~24 节点逐节点核验并删除 590 条污染边 → CR-2026-0909-hub2nd 已结案。主管线边最终 7938→7341，yearInv=0。"
       ],
       files: ["assets/techs_extra.js", "assets/techs_more.js", "assets/data.js"]
     }
