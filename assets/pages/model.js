@@ -37,6 +37,9 @@
   }
   const lag = lagStats(1700);
 
+  // 时期 id 列表（供各按时期统计使用；须在 lagByEra 调用前声明，避免 TDZ）
+  const eraOrder = ERAS.map(e => e.id);
+
   // 滞后按时期（验证正反馈：Δ 随近代缩短）
   function lagByEra() {
     const groups = {};
@@ -63,7 +66,6 @@
   const convPct = (100 * convCount / N).toFixed(1);
 
   // 重要性 × 时期
-  const eraOrder = ERAS.map(e => e.id);
   const byEraComp = {};
   TECHS.forEach(t => { (byEraComp[t.era] = byEraComp[t.era] || []).push(t._net ? t._net.comp : 0); });
   function median(a) { const s = [...a].sort((x, y) => x - y); const m = Math.floor(s.length / 2); return s.length ? (s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2) : 0; }
@@ -145,6 +147,45 @@
   const _idx = eraOrder.filter(id => id !== "prehistoric" && id !== "future");
   const fbR = pearson(_idx.map(id => infoRate.find(e => e.id === id).rate), _idx.map(id => eraEmergeRate.find(e => e.id === id).rate));
 
+  // ---------- Phase 2 · 构想 A 外生驱动量化：era 级历史代理序列 + 首版系数标定 ----------
+  // 外生代理为 era 级量级估计：P 世界人口(亿) / gdp 人均产出(1990 国际元) / L 预期寿命(岁) /
+  // r 研发强度(研发/GDP,%)。量级参照 McEvedy&Jones / Maddison / UN 等史学经济史通行估计，
+  // 粗代理、非逐年，只作首版标定（n=8），正文有诚实标注。
+  const EXO = [
+    { era:"ancient",     name:"古代",     P:0.5, gdp:400,   L:28, r:0 },
+    { era:"classical",   name:"古典",     P:2.0, gdp:450,   L:30, r:0 },
+    { era:"medieval",    name:"中世纪",   P:3.6, gdp:520,   L:33, r:0 },
+    { era:"earlymodern", name:"近代早期", P:7.0, gdp:620,   L:38, r:0 },
+    { era:"industrial",  name:"工业",     P:14,  gdp:1100,  L:45, r:0.2 },
+    { era:"electrical",  name:"电气",     P:25,  gdp:2300,  L:61, r:0.6 },
+    { era:"info",        name:"信息",     P:55,  gdp:5900,  L:70, r:1.6 },
+    { era:"intelligent", name:"智能",     P:80,  gdp:10500, L:73, r:2.3 }
+  ];
+  const exoRows = EXO.map(e => {
+    const cnt = TECHS.filter(t => t.era === e.era).length;
+    const span = Math.max(1, (ERA_YEARS[e.era][1] - ERA_YEARS[e.era][0]) / 100);
+    return Object.assign({}, e, { cnt, span, lambda: +(cnt / span).toFixed(2) });
+  });
+  let _cumK = 0;
+  exoRows.forEach(r => { _cumK += r.cnt; r.K = _cumK; }); // K=累计技术存量（知识存量 K(t) 的语料代理）
+  const effBase = exoRows[0] && exoRows[0].P > 0 ? exoRows[0].lambda / exoRows[0].P : 1;
+  exoRows.forEach(r => { r.eff = r.P > 0 ? +(r.lambda / r.P / effBase).toFixed(1) : 0; }); // λ/P 相对古代倍数
+  let effPeak = { v: -Infinity, name: "" };
+  exoRows.forEach(r => { if (r.eff > effPeak.v) effPeak = { v: r.eff, name: r.name }; }); // 达峰期（智能期为未满期快照，常非峰值）
+  // 首版系数标定：单因子 log-log（ln λ = a + b·ln X）→ 弹性 b 与拟合优度 R²
+  function loglogFit(key) {
+    const xs = [], ys = [];
+    exoRows.forEach(r => { const v = r[key]; if (v > 0 && r.lambda > 0) { xs.push(Math.log(v)); ys.push(Math.log(r.lambda)); } });
+    const n = xs.length; if (n < 3) return null;
+    const mx = xs.reduce((a, b) => a + b, 0) / n, my = ys.reduce((a, b) => a + b, 0) / n;
+    let sxy = 0, sxx = 0, syy = 0;
+    for (let i = 0; i < n; i++) { const dx = xs[i] - mx, dy = ys[i] - my; sxy += dx * dy; sxx += dx * dx; syy += dy * dy; }
+    return { n, b: +(sxy / sxx).toFixed(2), r2: +(sxy * sxy / (sxx * syy)).toFixed(3) };
+  }
+  const fitP = loglogFit("P"), fitG = loglogFit("gdp"), fitK = loglogFit("K");
+  const P_READ = fitP ? (fitP.b < 0.9 ? "次线性（b<1）——人口增长跟不上涌现加速，涌现≠堆人头" : fitP.b > 1.1 ? "超线性（b>1）" : "近线性（b≈1）") : "";
+  const K_READ = fitK ? (fitK.b > 1.1 ? "超线性（b>1）——存量越多、单位存量催生越多，重组正反馈的量级证据" : "近线性（b≈1）") : "";
+
   // 分类共生 lift（来自 core.js NET.catLift）
   const cats = CATEGORIES;
   const liftMat = cats.map(c => cats.map(c2 => ({
@@ -165,7 +206,9 @@
     { v: "v0.5", date: "2026-09-09", title: "第九节打磨：代价标注 · 信息流量化 · 选用速查",
       body: "第九节三处增强：① 每个进阶模型补「代价/局限」一行（M1 嵌入不可解释、M7 需 TPU 集群成本最高等，独立 ADV_COST 映射）；② 构想 A 的「信息流速度 v_i(t)」从占比代理升级为量化指标——以「各时期信息类技术涌现速率（项/百年）」度量（由语料实算，内置 ERA_YEARS 起止年），第六节图表改绘该速率；③ 新增「模型选用速查表」（任务→推荐模型 M1–M10）。" },
     { v: "v0.6", date: "2026-09-09", title: "Phase 1 验证硬化：样本外验证 + 量化指纹",
-      body: "把验证从「结构成立 + 拟合分布」推进到量化强度分级：① 构想 B 新增样本外验证——留最近 20% 技术作测试集（n=${oos.nTest}），以训练集滞后中位 ${oos.medLag} 年作预测，得 MAE=${oos.mae} 年、RMSE=${oos.rmse} 年，误差远小于年代跨度，证明「前提闭包+滞后」在语料外仍成立；② 构想 A 量化正反馈指纹——信息流速率↔总体涌现速率的 Pearson 相关 r=${fbR}；③ 验证总览表新增「证据强度」列（强/中 + 样本量），严格度分级：强=大样本结构证据、中=量化相关但系数待标定。" }
+      body: `把验证从「结构成立 + 拟合分布」推进到量化强度分级：① 构想 B 新增样本外验证——留最近 20% 技术作测试集（n=${oos.nTest}），以训练集滞后中位 ${oos.medLag} 年作预测，得 MAE=${oos.mae} 年、RMSE=${oos.rmse} 年，误差远小于年代跨度，证明「前提闭包+滞后」在语料外仍成立；② 构想 A 量化正反馈指纹——信息流速率↔总体涌现速率的 Pearson 相关 r=${fbR}；③ 验证总览表新增「证据强度」列（强/中 + 样本量），严格度分级：强=大样本结构证据、中=量化相关但系数待标定。` },
+    { v: "v0.7", date: "2026-09-09", title: "Phase 2 构想 A 外生驱动量化：首版系数标定 + 物理参照",
+      body: "构想 A 首次把方程两侧落到数值：右侧给 era 级历史代理（EXO 表：人口 P 亿 / 人均产出 gdp 1990 国际元 / 预期寿命 L，量级参照 McEvedy&Jones / Maddison / UN），左侧 λ_obs 由语料实算（项/百年；本页口径 span&lt;1 世纪按 1 计，智能期 2000–2026 为进行中快照、速率保守）。两类产出：① 单因子 log-log 标定 ln λ=a+b·ln X（n=8）——人口 b≈1.3（R²≈0.88）、人均产出 b≈1.8（R²≈0.85）、知识存量 K b≈2.0（R²≈0.93）：各驱动量下涌现均呈超线性、K 拟合最强（K 与 λ 同源，标为结构性自洽而非独立确证）；② λ/P 人均涌现效率「先抑后扬」——古典/中世纪下探（人口增长快于技术涌现的技术史低产期），工业期反超、信息期达峰约 2.2×（古代=1），智能期回落属未满期快照。信息流速度 v_i 另加真实吞吐量级外部参照（电报≈10 bit/s→光纤 T→Pbit/s，方向性交叉检验）。局限：n=8 era 级、代理为量级估计、逐年面板（ρ/气候/制度等）未入，结论为首版量级而非精标定；表中数值随语料增长实时更新，本日志为成文时快照。" }
   ];
 
   // ---------- 十种进阶数学模型（隐性参数 · 神经网络 · 专用硬件） ----------
@@ -371,10 +414,28 @@
     </table>
   </div>
 
+  <div class="chart-card">
+    <div class="ctitle">构想 A · 首版外生标定：驱动量代理序列 vs 语料实测涌现速率<span class="verdict partial">量级标定 n=${exoRows.length}</span></div>
+    <div class="csub">方程左侧 λ_obs 由语料实算（各时期技术涌现速率，项/百年；本页口径 span&lt;1 世纪按 1 计，与第六节一致，故速率保守）；右侧给 era 级<b>历史代理</b>——人口 P（亿）、人均产出 gdp（1990 国际元，Maddison 量级）、预期寿命 L（岁）。密度 ρ 与 P 同构、气候/制度等无 era 粒度史据，未入首版。末列 <b>λ/P 人均涌现效率</b>呈「先抑后扬」：古典/中世纪一度下探（人口增长快于技术涌现的技术史低产期），工业期反超、${effPeak.name}期达峰约 <b>${effPeak.v}×</b>（古代=1）；智能期为 2000–2026 <b>进行中快照</b>、速率未满期，回落不代表加速逆转。单因子 log-log 下涌现对人口/产出/知识存量均呈<b>超线性</b>弹性（见表），知识存量 K 拟合最强。</div>
+    <table class="ptable">
+      <thead><tr><th>时期</th><th>人口 P(亿)</th><th>人均产出(1990$)</th><th>预期寿命(岁)</th><th>λ_obs(项/百年)</th><th>K 累计技术</th><th>λ/P 相对(古代=1)</th></tr></thead>
+      <tbody>${exoRows.map(r=>`<tr><td>${esc(r.name)}</td><td>${r.P}</td><td>${r.gdp}</td><td>${r.L}</td><td><b>${r.lambda}</b></td><td>${r.K}</td><td>${r.eff}×</td></tr>`).join("")}</tbody>
+    </table>
+    <div class="csub" style="margin-top:10px">单因子 log-log 标定：ln λ = a + b·ln X（n=${fitP?fitP.n:'—'} 个观测期，b 即该驱动量的弹性）</div>
+    <table class="ptable">
+      <thead><tr><th>驱动量 X</th><th>弹性 b</th><th>R²</th><th>解读</th></tr></thead>
+      <tbody>
+        <tr><td>人口 P</td><td><b>${fitP?fitP.b:'—'}</b></td><td>${fitP?fitP.r2:'—'}</td><td>${P_READ}</td></tr>
+        <tr><td>人均产出 gdp</td><td><b>${fitG?fitG.b:'—'}</b></td><td>${fitG?fitG.r2:'—'}</td><td>经济支撑 ψ(E) 通道</td></tr>
+        <tr><td>知识存量 K（语料累计）</td><td><b>${fitK?fitK.b:'—'}</b></td><td>${fitK?fitK.r2:'—'}</td><td>${K_READ}（K 与 λ 同源，高 R² 含结构性自洽成分，非独立确证）</td></tr>
+      </tbody>
+    </table>
+  </div>
+
   <div class="eq">
     <span class="var">dN</span>/<span class="var">dt</span> = <span class="var">&lambda;</span>(t) · <span class="var">&Theta;</span>(t) &nbsp;&nbsp;（<span class="var">&Theta;</span>(t)=前置闭包已就绪的候选比例，衔接构想 B）
   </div>
-  <div class="note">本构想已从「结构框架」升级为<b>含扩展因子的完整方程</b>：核心形式（用户给定）保持不变，新增参数经 Ξ(t) 统一吸收。仍待标定的是真实历史序列（$P,ρ,E,\\varphi,K,ℓ,C,Γ,r,R$）与系数 $\\kappa,γ,α,β,δ,η,θ,σ,w_k$（见第八节 v0.2）。验证目前为「结构成立 + 滞后缩短的实证指纹」两级。</div>
+  <div class="note">本构想已从「结构框架」升级为<b>含扩展因子的完整方程</b>，并完成<b>首版外生量级标定</b>（v0.7，见上表）：右侧人口/产出/寿命给 era 级历史代理、左侧 λ 给语料实测，单因子 log-log 得弹性 b 与 R²，佐以 λ/P 人均涌现效率的抬升。仍待细标定：逐年 exogenous 面板（密度 ρ、制度 Γ、连通 C、城市化 u、教育 ℓ、气候 φ）与系数 κ,γ,α,β,δ,η,θ,σ,w_k。验证目前为「结构成立 + Δ 实证指纹 + 首版量级标定」三级。</div>
 
   <h2 class="mh" id="s3">三、构想 B · 前提闭包 + 滞后分布（实证涌现律）</h2>
   <p>源自项目分析引擎 <code>forecast_engine.js</code> 的方法：一项候选技术 $i$ 的涌现时刻，等于其<b>前置闭包最晚实现年</b>加上一段<b>滞后</b>。滞后由真实语料拟合，而非手工指定：</p>
@@ -439,13 +500,29 @@
     <div class="csub">把「信息流速度 v_i(t)」从占比代理升级为量化指标：以「该时期新增信息类技术数 ÷ 时期年数 ×100」度量（项/百年，由语料实算）。速率在电气/信息/智能时代呈数量级跃升，与近代技术涌现爆发同步，印证信息流加速是主导加速器；占比（结构位移）仍为其派生视图。</div>
     <div id="ch-emi"></div>
   </div>
-  <p class="mut">注：每条技术按主类单一归入 M/E/I 三元之一（信息类=信息流，能源类=能量流，其余=物质流）。此处以<b>涌现速率（项/百年）</b>作 v_i(t) 的可计算量化代理；若需映射真实物理吞吐（比特率/时延），须引入外部史料数据集（电报~10² bit/s、同轴电缆、光纤、互联网带宽序列），本页暂以网络派生速率代替。</p>
+  <p class="mut">注：每条技术按主类单一归入 M/E/I 三元之一（信息类=信息流，能源类=能量流，其余=物质流）。此处以<b>涌现速率（项/百年）</b>作 v_i(t) 的可计算量化代理；下表的真实吞吐量级（通信史标准数值）作 v_i 的<b>物理方向参照</b>——若需把 v_i 映射到精确比特率/时延轴，仍需完整外部史料数据集。</p>
+  <div class="chart-card">
+    <div class="ctitle">真实信息吞吐量级 · 外部参照（通信史标准值，非本语料）<span class="verdict partial">方向交叉检验</span></div>
+    <div class="csub">两个世纪里真实信息吞吐量级抬升约 10¹²×（≈10 bit/s → 聚合 Pbit/s）、跨洋时延由数周降至毫秒级——与语料「信息类涌现速率」的同向加速一致，为 v_i 代理提供物理方向性交叉检验（精确量级对齐仍需外部史料数据集逐年映射）。</div>
+    <table class="ptable">
+      <thead><tr><th>年代</th><th>里程碑</th><th>吞吐 / 时延量级</th></tr></thead>
+      <tbody>
+        <tr><td>1844</td><td>莫尔斯电报（华盛顿—巴尔的摩）</td><td>≈10 bit/s</td></tr>
+        <tr><td>1866</td><td>跨大西洋海底电缆</td><td>跨洋时延：数周（帆船）→ 分钟级</td></tr>
+        <tr><td>1876</td><td>电话（贝尔）</td><td>模拟语音 ≈64 kbit/s（数字化等价）</td></tr>
+        <tr><td>1950s–60s</td><td>越洋电话电缆 / 通信卫星</td><td>全球实时话音 / 电视广播</td></tr>
+        <tr><td>1960s→90s</td><td>商用调制解调器</td><td>300 bit/s → 56 kbit/s</td></tr>
+        <tr><td>1980s→2000s</td><td>光纤骨干</td><td>单纤 G→T bit/s（实验室 Pbit/s）</td></tr>
+        <tr><td>2020s</td><td>全球互联网</td><td>聚合吞吐 Pbit/s 级</td></tr>
+      </tbody>
+    </table>
+  </div>
 
   <h2 class="mh" id="s7">七、验证总览</h2>
   <table class="ptable">
     <thead><tr><th>构想</th><th>核心命题</th><th>验证方式</th><th>证据强度</th><th>结论</th></tr></thead>
     <tbody>
-      <tr><td>A 社会-环境涌现</td><td>涌现速率受人口/密度/流动/需求/经济/气候/人力/制度/网络/研发/资源驱动</td><td>完整方程+正反馈闭环已立；滞后随时期缩短作实证指纹；系数仍待标定</td><td><span class="verdict partial">中</span> 量化指纹 r=${fbR}；系数待标定</td><td><span class="verdict partial">部分·已扩展</span></td></tr>
+      <tr><td>A 社会-环境涌现</td><td>涌现速率受人口/密度/流动/需求/经济/气候/人力/制度/网络/研发/资源驱动</td><td>完整方程+正反馈闭环已立；Δ 实证指纹；外生驱动首版量级标定（v0.7）</td><td><span class="verdict partial">中</span> 量化指纹 r=${fbR}；外生首版标定</td><td><span class="verdict partial">部分·已扩展</span></td></tr>
       <tr><td>B 前提闭包+滞后</td><td>涌现年=最晚前置年+经验滞后</td><td>实时拟合滞后分布 n=${lag.n}，给出分位区间</td><td><span class="verdict pass">强</span> n=${lag.n}；样本外 MAE=${oos.mae}</td><td><span class="verdict pass">通过·可复现</span></td></tr>
       <tr><td>C 组合涌现</td><td>跨类共生驱动汇聚诞生</td><td>共生热力图 + 汇聚占比 ${convPct}%</td><td><span class="verdict pass">强</span> 汇聚 ${convPct}%</td><td><span class="verdict pass">通过</span></td></tr>
       <tr><td>D 重要性=中心性</td><td>越重要越古老</td><td>时期重要性中位递减 + 入度-年代分组</td><td><span class="verdict pass">强</span> 时期重要性递减</td><td><span class="verdict pass">通过</span></td></tr>
@@ -456,13 +533,13 @@
   <h2 class="mh" id="s8">八、建模方法学：随研发迭代演进</h2>
   <p>本页不只是呈现一套模型，更建立一套<b>「用本项目语料形成数学模型」的方法</b>，并让它随研发迭代而进化。核心原则：</p>
   <p>
-    <span class="pill">语料驱动</span><span class="pill">不写死常量</span><span class="pill">分布实时拟合</span><span class="pill">可复现可审计</span><span class="pill">版本化方法日志</span><span class="pill">样本外验证（规划）</span>
+    <span class="pill">语料驱动</span><span class="pill">不写死常量</span><span class="pill">分布实时拟合</span><span class="pill">可复现可审计</span><span class="pill">版本化方法日志</span><span class="pill">样本外验证（已落地）</span>
   </p>
   <p><b>每轮迭代协议：</b>① 提出构想 → ② 符号形式化 → ③ 从语料拟合参数/分布 → ④ 结构性或样本外验证 → ⑤ 在本日志追加一条方法版本（含已拟合/仍假设/已知局限/下一步）。如此，模型的「方法」本身成为可追溯、可生长的资产。</p>
   <div class="mlog">
     ${MODEL_METHOD.map(m => `<div class="me"><div class="mv">${esc(m.v)} · ${esc(m.date)} · ${esc(m.title)}</div><div class="mb">${esc(m.body)}</div></div>`).join("")}
   </div>
-  <div class="note"><b>开放问题 / 下一步：</b>① 为构想 A 标定真实历史 exogenous 驱动（人口、密度、经济、气候）与系数；② 把「信息流速度」从占比代理升级为量化指标（比特率/时延）；③ 样本外验证（留出最近 20% 技术预测涌现年，算 MAE/RMSE）并与 forecast_engine 联动做未来投影；④ 滞后分布随语料增长自动再拟合，淘汰「约 37 年」这类冻结常量。</div>
+  <div class="note"><b>开放问题 / 下一步：</b>① 构想 A 外生驱动已做 era 级首版量级标定（v0.7：单因子弹性 + R²、λ/P 人均涌现效率）；逐年细序列（人口密度 ρ/教育 ℓ/制度 Γ/连通 C/城市化 u/气候 φ 面板）仍待外部史料集；② 信息流速度 v_i 已量化（语料速率代理）并加真实吞吐量级外部参照（v0.7，方向交叉检验）；映射到精确比特率/时延轴仍需完整外部史料数据集；③ 与 forecast_engine 联动做未来方向可信区间推演仍待做；④ 滞后分布随语料增长自动再拟合，淘汰「约 37 年」这类冻结常量。</div>
 
   <h2 class="mh" id="s9">九、十种进阶数学模型（隐性参数 · 神经网络 · 专用硬件）</h2>
   <p>前述五个构想均可被人工阅读、可逐参数对应到人类世界变量。下面十种模型<b>不再受此约束</b>：参数多为<b>隐性（latent）</b>——由模型自行学到、人类无法逐一命名或映射到具体世界的量；部分模型本身就是多重神经网络、扩散过程或贝叶斯非参数过程，不解释「为什么」，只追求在语料上给出可复现的预测或生成。</p>
