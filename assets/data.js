@@ -933,10 +933,10 @@ const TECHS = [
     significance:"分子育种的现实应用。" },
 
   // ---------------- 建筑建造 ----------------
-  { id:"arch", name:"拱与穹顶", en:"Arch & Dome", category:"build", era:"classical", date:"约 公元前 100 年", year:-100,
+  { id:"arch", name:"拱与穹顶", en:"Arch & Dome", category:"build", era:"ancient", date:"约 公元前 1800 年", year:-1800,
     people:"古罗马工程师", place:"罗马",
     summary:"以拱形分散压力，使大跨度、高大空间成为可能，是桥梁、水渠与穹顶的结构关键。",
-    dependsOn: ["brick","cement"], enables:["aqueduct","dome","bridge"],
+    dependsOn: ["brick"], enables:["aqueduct","dome","bridge"],
     applications:["桥梁","水渠","剧场","神庙"],
     views:[{period:"古典",text:"罗马拱被视为帝国工程美学的标志。"},
            {period:"现代",text:"仍是大跨结构的经典解法，启发现代壳体结构。"}],

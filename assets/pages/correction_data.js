@@ -24,10 +24,35 @@ window.CORRECTIONS = {
     ],
     pendingQueue: [
       "report.txt 中全部「同名已存在，改为打标」节点是否丢失了 catalog deps（持续核查）。",
-      "悬空边已修复（见 CR-2026-0909-orphan）；建议复核这些被引用却缺失的节点（math_hypothesis_testing、laptop_computer、compute_fpga_soc、si_system 等）是否应补建，或确属废弃引用。"
+      "悬空边已修复（见 CR-2026-0909-orphan）；建议复核这些被引用却缺失的节点（math_hypothesis_testing、laptop_computer、compute_fpga_soc、si_system 等）是否应补建，或确属废弃引用。",
+      "新发现（v0.9.16 审计）：ml_uav_1..126 等 126 个模板化「军用无人机衍生」节点仍同构依赖 rocket/algorithm/electronics（同为链接预测整批生成的 cohort，与二阶枢纽污染同源但主体在主管线主库与新条目语料中）——待下一轮批量甄别是「拆成真实子技术」还是删除，勿与 590 条二阶污染混淆。"
     ]
   },
   entries: [
+    {
+      id: "CR-2026-0910-mirror-ancient",
+      date: "2026-09-10",
+      node: "(全量管线镜像) graph.json / data_full.js / bld_dronesurvey / 12 处负年倒挂（18 节点）",
+      nodeName: "全量管线镜像同步 + 无人机测绘主库漏修 + 史前/上古 12 处负年倒挂考古修正",
+      category: "meta",
+      severity: "中",
+      status: "已修正",
+      problem: "① 全量管线（analysis-engine/data/graph.json + assets/data_full.js）与主管线长期分叉：graph.json 是 2026-09-04 由主管线导出，v0.9.10–15 对主管线的全部清理未镜像过去（残留约 622 条同源污染依赖边，且缺 22 个史前/上古新增节点）；② 反向也有主管线漏修：bld_dronesurvey（无人机测绘）当年 CR-2026-0909-dronesurvey 只修了 graph.json/data_full，主管线数组仍为旧错误态（year 2015、dependsOn/enables 空、摘要仍是「依托二维材料/工业 4.0/摩擦纳米发电」模板）；③ 12 处含负年的年份倒挂（masonry←mortar、metallurgy←charcoal/bellows、bridge/aqueduct←arch、hafting←rope/woodworking、loom←textile、smithing←iron/bellows、fire_making←rope 等，涉及 18 节点）此前只登记未修正；④ 顺带发现 build_full_dataset.js 把 graph.json 的 dependency 边（存为 被依赖者→依赖者）与 new_techs 边（依赖者→被依赖者）两种相反方向混写入 EDGES_FULL，全量科技树按单一方向解释导致部分边渲染反向。",
+      rootCause: "① 多套数据源的导出/重建脚本（dump_data.js / build_full_dataset.js）缺少「改主管线后必须重导出」的门禁，历史清理只改局部文件；② bld_dronesurvey 纠错当年以 graph.json 为唯一入口，未写回主管线数组源头；③ 史前/上古批次的 year 为生成占位值且互相矛盾，且 rope 等「通用早期技术」被当整批 cohort 的万能前置注入（与二阶枢纽同型的模板注入，发生在史前层）；④ build_full_dataset.js 建边时直接拷贝 graph.json 边而未做方向归一。",
+      fix: "① 全量镜像：先修 bld_dronesurvey 主库条目（对齐 graph.json 正确版：year 2010、dependsOn=gps/computer/drone/camera/photography/uav_controller/multicopter 共 7 条、补 people/place、重写 summary/views/significance 去除模板污染），再以 dump_data.js 从主管线重导出 graph.json（654 条 graph-only 陈旧边清除、110 条主库新增边补入，graph 与主管线双向 0 差异）；② build_full_dataset.js 修正 dependency 边方向（graph 边转置为 依赖者→被依赖者，与 new_techs 及全量科技树解释一致），重建 data_full.js（节点 13392→13413，补入 21 个此前仅存在于主管线的节点；边 18048→17503）；③ 12 处负年倒挂考古修正（详见 changes：绳索 4.1–5.2 万年前直证、装柄复合工具≥20 万年前、木作 30 万年前 Schöningen 木矛、铜冶金/砌筑 约 公元前 5000 年、锻造取铁器时代约 公元前 1000 年、织机 约 前 4000 年、拱 约 公元前 1800 年 美索不达米亚砖拱），并对「后发的专化技术/材料被当领域起源前置」的 7 条依赖做概念影响降级移除硬边；④ 52 项 era-vs-year 语义纪元逐条复核后维持原判（era 承担领域/预测档位语义，非时间桶标签，不改数据）；⑤ README/tree_full 全量数声明 13392→13413。复核：主管线负年 yearInv 12→0、edges 7348→7340；graph.json 镜像 0 差异；data_full 污染枢纽（mat_2d/ene_wasteheat/mat_selfheal/ene_liquidair 等）被依赖数归零；模型页 dry-run RENDER OK（拟合值因年份/纪元修订微移：P b=1.33/R²≈0.874、K b≈2.04/R²≈0.932，实时渲染无硬编码）；check_docs 门禁 OK。",
+      badUpstream: ["(全量管线陈旧边) 二阶枢纽模板污染约 622 条 + 量子簇残留 + bld_dronesurvey 旧模板文本", "(负年倒挂 7 条概念化硬边) rope→woodworking/hafting/fire_making、mortar→masonry、arch→bridge、bellows·charcoal→metallurgy、cement→arch"],
+      goodUpstream: ["graph.json / data_full.js 与主管线 0 差异；bld_dronesurvey 对齐 7 真实前置", "考古年份修正：rope -45000 / woodworking -300000 / hafting -200000 / arch -1800(ancient) / smithing -1000 / loom -4000 等；7 条非必要前置降级为概念影响（摘要注明）"],
+      changes: [
+        "全量镜像：dump_data.js 重导出 graph.json（技术节点 2289、dependency 7340 与主库完全一致，断链 0）；build_full_dataset.js 修复 dependency 边方向归一后重建 data_full.js：TECHS_FULL 13392→13413（+21 主库独有节点进入全量，多为史前/上古真实技术：木炭/独木舟/绳索/锻造/木作等）、EDGES_FULL 18048→17503，全量科技树（tree_full）边方向统一为 依赖者→被依赖者、反向重复对归零。",
+        "bld_dronesurvey 主库漏修补齐（techs_extra.js）：year 2015→2010、dependsOn 由空补为 7 条真实前置、摘要/views/significance 重写，删除「二维材料/工业 4.0/摩擦纳米发电/混凝土 3D 打印」模板语句；与 graph.json 既有修正态一致。",
+        "12 处负年倒挂（18 节点）考古修正——年份/日期/纪元：rope -28000→-45000（约 4.5 万年前，法国 Abri du Maras 尼安德特纤维绳直证 4.1–5.2 万年前）、woodworking -50000→-300000（约 30 万年前，Schöningen 木矛）、hafting -60000→-200000（约 20 万年前，粘合装柄证据）、arch -100(classical)→-1800(ancient)（约 公元前 1800 年，美索不达米亚砖拱）、smithing -3000→-1000（铁器时代锻造普及口径）、loom -5000→-4000；metallurgy/masonry 维持约 公元前 5000 年（铜冶金/砌筑实证起点），aqueduct/bellows/charcoal/textile 等相应保持。",
+        "7 条「专化使能当起源前置」硬边做概念影响降级（摘要注明）：rope 移出 woodworking/hafting/fire_making 的 dependsOn（装柄可用粘合剂与革筋、摩擦取火不需绳、木作不需绳）；mortar 移出 masonry（早期干砌/泥浆砌筑）；arch 移出 bridge（木梁/石梁桥早于拱桥，拱桥为后起形式）；bellows·charcoal 移出 metallurgy（铜冶金起源不需风箱/木炭，二者是青铜/铁高温冶炼阶段使能）；cement 移出 arch（罗马水泥远晚于砖拱）。",
+        "52 项 era-vs-year 语义纪元逐条复核：全部维持原判、不改数据——含「上古延伸」（era=ancient 但年份在公元前 3500 年前，如 brick/kiln/masonry/metallurgy/textile/mining/charcoal 等约 14 项）、「领域纪元」（era 按学科/技术域语义取 electrical/info/intelligent/industrial 而非时间桶，如 electricity 1879=electrical、lasers 1960=electrical、plastics 1907=industrial 等）、「预测档位」（crispr/mrna_vaccine/reusable_rocket era=future、year 2025 为预期成熟锚）。",
+        "新发现登记：ml_uav_1..126 模板 cohort 仍同构依赖 rocket/algorithm/electronics（主库 + new_techs 双份），与二阶枢纽污染同源但属「衍生分支生成物」，已列入 pendingQueue 待下轮批量甄别（本轮未动，非 622 条镜像范围）。",
+        "数据声明同步：README.md / tree_full.html 全量节点 13,392→13,413、依赖/赋能边约 1.8 万→约 1.75 万；模型页实时拟合值随年份/纪元修订微移（P 弹性 1.33/R²≈0.874、K 弹性 2.04/R²≈0.932，页面实时计算、无硬编码）。"
+      ],
+      files: ["assets/techs_extra.js", "assets/techs_extend.js", "assets/data.js", "analysis-engine/data/graph.json", "assets/data_full.js", "analysis-engine/build_full_dataset.js", "assets/pages/correction_data.js", "README.md", "tree_full.html"]
+    },
     {
       id: "CR-2026-0909-yearinv",
       date: "2026-09-09",

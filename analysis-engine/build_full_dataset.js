@@ -66,7 +66,9 @@ for (const id in scores) {
   }
 }
 
-// 5) 重建边：原库边(graph.json) + 新条目 dependsOn/enables；方向 依赖者->被依赖者 / 赋能者->被赋能者
+// 5) 重建边：原库边(graph.json) + 新条目 dependsOn/enables
+//    全量边方向统一为：dependency = 依赖者 -> 被依赖者；enables = 赋能者 -> 被赋能者
+//    （graph.json 导出的 dependency 存为 被依赖者->依赖者，需转置后再合并，避免两种相反方向混存）
 const ids = new Set(byId.keys());
 const edges = [];
 const ekey = new Set();
@@ -77,7 +79,10 @@ function addEdge(src, tgt, type) {
   ekey.add(k);
   edges.push({ source: src, target: tgt, type });
 }
-(gj.edges || []).forEach(e => addEdge(e.source, e.target, e.type || 'dependency'));
+(gj.edges || []).forEach(e => {
+  if ((e.type || 'dependency') === 'enables') addEdge(e.source, e.target, 'enables');
+  else addEdge(e.target, e.source, 'dependency'); // 转置：graph.json 的 (前置->依赖者) -> (依赖者->前置)
+});
 for (const [id, node] of byId) {
   (node.dependsOn || []).forEach(d => addEdge(id, d, 'dependency'));
   (node.enables || []).forEach(e => addEdge(id, e, 'enables'));

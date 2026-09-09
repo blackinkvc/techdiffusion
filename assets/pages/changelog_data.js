@@ -382,6 +382,28 @@ window.CHANGELOG = {
         "复核：主管线 edges 7938→7341；dupEdge=0；无自环/环/悬空 dependsOn；模型页 dry-run RENDER OK（P 弹性 1.33/R²=0.875、K 弹性 2.03/R²=0.933 渲染与独立复算一致）。"
       ],
       files: ["assets/techs_extra.js", "assets/techs_extend.js", "assets/data.js", "assets/pages/correction_data.js"]
+    },
+    {
+      version: "v0.9.16",
+      date: "2026-09-10",
+      type: "fix",
+      title: "全量管线镜像同步 + 无人机测绘主库漏修 + 史前/上古 12 处负年倒挂考古修正",
+      summary: "把 v0.9.15 的主管线修正镜像到全量管线（graph.json/data_full.js），补修主管线漏修的 bld_dronesurvey，并对 12 处含负年年份倒挂（18 节点）做考古修正（负年 yearInv 12→0）；顺带修复 build_full_dataset.js 的 dependency 边方向混写 bug，使全量科技树边方向统一。全量数据集节点 13392→13413、边 18048→17503。",
+      treeChange: {
+        scope: "主管线技术网络：边 7348→7340（删 7 条「专化使能当起源前置」概念化硬边 + arch 去 cement 1 条）；年份修正 7 节点（rope/woodworking/hafting/arch/smithing/loom + bld_dronesurvey 2015→2010）；全量管线 graph.json 与主管线双向 0 差异；data_full.js 节点 13392→13413、边 18048→17503",
+        reason: "v0.9.15 的清理只落在主管线数组源头，graph.json/data_full.js 仍残留同源约 622 条陈旧污染边；反向地，bld_dronesurvey 当年的纠错只修了 graph.json，主管线仍是旧模板错误态。两套数据源已分叉且互为镜像对象。另：12 处含负年的倒挂此前仅登记未修正，属「史前/上古批次 year 占位值互相矛盾 + rope 等通用早期技术被当整批 cohort 万能前置注入」，需按考古证据逐例定夺。",
+        detail: "① 先修 bld_dronesurvey 主库条目（对齐 graph.json：year 2010、7 条真实前置、重写模板摘要），再以 dump_data.js 重导出 graph.json（清 654 条陈旧边、补 110 条主库新增边，与主管线 0 差异）；② build_full_dataset.js 将 graph 的 dependency 边由「被依赖者→依赖者」转置为「依赖者→被依赖者」与 new_techs/全量科技树方向统一，重建 data_full.js；③ 12 处负年倒挂考古修正：rope→约 4.5 万年前（Abri du Maras 直证）、woodworking→约 30 万年前（Schöningen 木矛）、hafting→约 20 万年前（粘合装柄）、arch→约 公元前 1800 年(ancient)、smithing→约 公元前 1000 年（铁器时代）、loom→约 前 4000 年；并对 7 条「后发专化使能/材料被当领域起源前置」依赖做概念影响降级（rope 出 woodworking/hafting/fire_making、mortar 出 masonry、arch 出 bridge、bellows/charcoal 出 metallurgy、cement 出 arch）；④ 52 项 era-vs-year 语义纪元逐条复核维持原判（era 承担领域/预测档位语义）。复核：负年 yearInv 12→0、graph 镜像 0 差异、data_full 污染枢纽被依赖归零、模型页 dry-run RENDER OK、docs 门禁 OK（TOTAL_FULL 13413）。"
+      },
+      changes: [
+        "全量镜像：dump_data.js 重导出 graph.json（2289 技术节点 / dependency 7340 与主库一致，断链 0、镜像 0 差异）；build_full_dataset.js 修 dependency 方向混写后重建 data_full.js（TECHS_FULL 13392→13413，+21 主库独有史前/上古节点；EDGES_FULL 18048→17503，反向重复对归零）。",
+        "bld_dronesurvey 主库漏修补齐（techs_extra.js）：year 2015→2010、dependsOn 空→7 条真实前置（gps/computer/drone/camera/photography/uav_controller/multicopter）、补 people/place、summary/views/significance 重写去模板。",
+        "史前/上古 12 处负年倒挂考古修正（含 18 节点）：见 correction 页 CR-2026-0910-mirror-ancient 的逐节点明细（年份/日期/纪元 + 考古依据：绳索/装柄/木作/砖拱/铁器锻造/织机等）；负年口径 yearInv 12→0。",
+        "7 条概念影响降级（摘要注明）：rope←woodworking/hafting/fire_making、mortar←masonry、arch←bridge、bellows/charcoal←metallurgy、cement←arch 的硬依赖移除。",
+        "52 项 era-vs-year「语义纪元」逐条复核：全部维持原判（上古延伸/领域纪元/预测档位三类），数据不改。",
+        "登记新遗留：ml_uav_1..126 模板 cohort（主库+new_techs 同构依赖 rocket/algorithm/electronics）列入 pendingQueue 待下轮批量甄别（本轮未动）。",
+        "数据声明同步：README.md/tree_full.html 13,392→13,413 节点、约 1.8 万→约 1.75 万边；模型页实时拟合值微移（P 1.33/R²≈0.874、K 2.04/R²≈0.932，无硬编码）。"
+      ],
+      files: ["assets/techs_extra.js", "assets/techs_extend.js", "assets/data.js", "analysis-engine/data/graph.json", "assets/data_full.js", "analysis-engine/build_full_dataset.js", "assets/pages/correction_data.js", "README.md", "tree_full.html"]
     }
   ]
 };
