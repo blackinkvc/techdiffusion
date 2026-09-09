@@ -129,6 +129,28 @@ window.CORRECTIONS = {
         "进度：首批 29 个地标已回填（graph.json people/place + 重建 data_full.js），gap 1944→1915。"
       ],
       files: ["analysis-engine/data/tierB_gap.json", "analysis-engine/data/graph.json", "assets/data_full.js"]
+    },
+    {
+      id: "CR-2026-0909-mainline-audit",
+      date: "2026-09-09",
+      node: "主管线技术网络（2289 节点依赖 DAG，模型页/分析页数据源）",
+      nodeName: "主管线网络全量遍历审计：一阶枢纽残留 + 重复依赖边",
+      category: "meta",
+      severity: "高",
+      status: "已修正（一阶+去重；二阶继续挂起待人工核验）",
+      problem: "此前 v0.9.10–11 的枢纽清理只改了全量管线 graph.json / data_full.js，未改主管线数组源头（assets/techs_extra.js 等），导致模型页/分析页所用的 2289 节点网络仍残留同一批污染。本轮对主管线全网络遍历审计（2289 节点 / 8129 条真实依赖边）：无重复 id、无自环、无环、无悬空 dependsOn（结构健康）；但一阶枢纽误接下仍存在——mat_2d(57) / ene_tribo(21) / mat_selfheal(22) / mfg_industry40(5)；另有 86 条「同节点重复依赖」（如 solar、genetics 在 dependsOn 中被列两次，污染下游统计），以及 4 处「子技术年早于前置年」倒挂。",
+      rootCause: "① 清理没有回写到主管线数组源头（生成的 techs_extra.js 由 gen_run/gen_1000 注入共享模板下游），主/全量两套数据源出现分叉；② 生成器对部分通用根节点（solar/genetics 等）在 dependsOn 中追加了两次。",
+      fix: "对数组源头执行镜像修正：移除 4 个已定论枢纽（mat_2d/mfg_industry40/ene_tribo/mat_selfheal）在 techs_extra.js + data.js 的全部下游引用（105 条，主管线中无 mat_graphene→mat_2d 特例可保留），并把 dependsOn/enables 重复元素去重（86 条）。修正后主管线边 8129→7938，四个枢纽下游归零、重复依赖归零，DAG 无环不变。",
+      badUpstream: [],
+      goodUpstream: [],
+      changes: [
+        "techs_extra.js：78 个条目去污染/去重，移除 101 条枢纽下游引用 + 1 处重复。",
+        "techs_more.js：85 个条目去重（solar/genetics 等被列两次的重复依赖）。",
+        "data.js：2 个 AI/大模型基础条目移除 mat_2d、ene_tribo 依赖（共 4 条误接边）。",
+        "修复后复核：edges 8129→7938；mat_2d/mfg_industry40/ene_tribo/mat_selfheal 下游 0；dupEdge 0；无自环/环/悬空。",
+        "保留未动：4 处年倒挂（engineering←scientific_method、propulsion←rocket、combustion←thermodynamics、quantum_entanglement←quantum）判定为年代标注噪声而非网络错误，列入报告待人工定夺；二阶枢纽 ~24 节点（ene_wasteheat 50 / ene_liquidair 31 / ene_borehole 25 / ene_salinity 25 / ene_dishstirling 25 / mfg_grindingwheel 15 等）继续挂起，关联 CR-2026-0909-hub2nd 待人工核验。"
+      ],
+      files: ["assets/techs_extra.js", "assets/techs_more.js", "assets/data.js"]
     }
   ]
 };

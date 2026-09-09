@@ -3286,7 +3286,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "黄铜约 公元前 2000 年 成熟，建立在 用火、玻璃、玻璃 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 汞冶炼、炻器 的发展铺平了道路。",
-    "dependsOn": ["mat_glass","mat_glass"],
+    "dependsOn": ["mat_glass"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6706,7 +6706,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "石墨烯在 2004 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 二维材料 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_selfheal"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6736,7 +6736,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "二维材料在 2004 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 工业 4.0、增减材混合制造、数字化车间 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_selfheal","mat_graphene"],
+    "dependsOn": ["chemistry","physics","mat_graphene"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -13098,7 +13098,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "数字孪生在 2000 年 前后成形，依托 自修复材料、井式地热、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 低温切削 等后续技术。",
-    "dependsOn": ["mat_selfheal","ene_borehole","mathematics","mfg_cobot","simulation","cad"],
+    "dependsOn": ["ene_borehole","mathematics","mfg_cobot","simulation","cad"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -13518,7 +13518,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "工业 4.0在 2011 年 前后成形，依托 二维材料、液态空气储能、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 平衡车、真空管道列车、可回收火箭 等后续技术。",
-    "dependsOn": ["mat_2d","mathematics"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -13638,7 +13638,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "增减材混合制造约 2010 年 成熟，建立在 二维材料、液态空气储能、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 数字化车间 的发展铺平了道路。",
-    "dependsOn": ["mat_2d","ene_liquidair","mathematics","mfg_visionguide","lathe","robot","electronics","automation"],
+    "dependsOn": ["ene_liquidair","mathematics","mfg_visionguide","lathe","robot","electronics","automation"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -13698,7 +13698,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "低温切削在 2000 年 前后成形，依托 自修复材料、井式地热、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 视觉引导装配 等后续技术。",
-    "dependsOn": ["mat_selfheal","ene_borehole","mathematics","mfg_digitaltwin"],
+    "dependsOn": ["ene_borehole","mathematics","mfg_digitaltwin"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -13788,7 +13788,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "视觉引导装配在 2000 年 前后成形，依托 自修复材料、井式地热、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 增减材混合制造、充电站、高超声速飞行 等后续技术。",
-    "dependsOn": ["mat_selfheal","ene_borehole","mathematics","mfg_cryogenicm"],
+    "dependsOn": ["ene_borehole","mathematics","mfg_cryogenicm"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -13818,7 +13818,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "数字化车间在 2010 年 前后成形，依托 二维材料、液态空气储能、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 无人化工厂 等后续技术。",
-    "dependsOn": ["mat_2d","ene_liquidair","mathematics","mfg_hybridm"],
+    "dependsOn": ["ene_liquidair","mathematics","mfg_hybridm"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -13848,7 +13848,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "无人化工厂在 2010 年 前后成形，依托 二维材料、液态空气储能、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 工业 4.0、车路协同、燃料电池卡车 等后续技术。",
-    "dependsOn": ["mat_2d","ene_liquidair","mathematics","mfg_digitalshop"],
+    "dependsOn": ["ene_liquidair","mathematics","mfg_digitalshop"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -15291,7 +15291,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "平衡车在 2013 年 前后成形，依托 工业 4.0、摩擦纳米发电、二维材料 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 真空管道列车 等后续技术。",
-    "dependsOn": ["mfg_industry40","ene_tribo","mat_2d","tr_passdrone"],
+    "dependsOn": ["tr_passdrone"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16191,7 +16191,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "充电站约 2000 年 成熟，建立在 视觉引导装配、井式地热、自修复材料 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 高超声速飞行 的发展铺平了道路。",
-    "dependsOn": ["mfg_visionguide","ene_borehole","mat_selfheal","space_station"],
+    "dependsOn": ["mfg_visionguide","ene_borehole","space_station"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16221,7 +16221,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "车路协同在 2010 年 前后成形，依托 无人化工厂、液态空气储能、二维材料 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 燃料电池卡车 等后续技术。",
-    "dependsOn": ["mfg_darkfactory","ene_liquidair","mat_2d","drone","automobile","internal_combustion","gps","combustion"],
+    "dependsOn": ["mfg_darkfactory","ene_liquidair","drone","automobile","internal_combustion","gps","combustion"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16491,7 +16491,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "真空管道列车在 2013 年 前后成形，依托 工业 4.0、摩擦纳米发电、二维材料 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 可回收火箭 等后续技术。",
-    "dependsOn": ["mfg_industry40","ene_tribo","mat_2d","tr_hoverboard"],
+    "dependsOn": ["tr_hoverboard"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16551,7 +16551,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "燃料电池卡车约 2010 年 成熟，建立在 无人化工厂、液态空气储能、二维材料 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 个人飞行器 的发展铺平了道路。",
-    "dependsOn": ["mfg_darkfactory","ene_liquidair","mat_2d","tr_v2x"],
+    "dependsOn": ["mfg_darkfactory","ene_liquidair","tr_v2x"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16581,7 +16581,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "个人飞行器在 2010 年 前后成形，依托 无人化工厂、液态空气储能、二维材料 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 无人机货运 等后续技术。",
-    "dependsOn": ["mfg_darkfactory","ene_liquidair","mat_2d","tr_fcevtruck"],
+    "dependsOn": ["mfg_darkfactory","ene_liquidair","tr_fcevtruck"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16701,7 +16701,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "无人机货运约 2010 年 成熟，建立在 无人化工厂、液态空气储能、二维材料 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 载人无人机 的发展铺平了道路。",
-    "dependsOn": ["mfg_darkfactory","ene_liquidair","mat_2d","tr_personalair"],
+    "dependsOn": ["mfg_darkfactory","ene_liquidair","tr_personalair"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16731,7 +16731,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "载人无人机约 2010 年 成熟，建立在 无人化工厂、液态空气储能、二维材料 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 平衡车、无人机蜂群、军事人工智能 的发展铺平了道路。",
-    "dependsOn": ["mfg_darkfactory","ene_liquidair","mat_2d","tr_cargo_drone"],
+    "dependsOn": ["mfg_darkfactory","ene_liquidair","tr_cargo_drone"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16762,7 +16762,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "可回收火箭约 2015 年 成熟，建立在 工业 4.0、摩擦纳米发电、二维材料 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 忠诚僚机 的发展铺平了道路。",
-    "dependsOn": ["mfg_industry40","ene_tribo","mat_2d","tr_hyperloop"],
+    "dependsOn": ["tr_hyperloop"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -17515,7 +17515,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "U 盘约 2000 年 成熟，建立在 自修复材料、井式地热、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 NoSQL 的发展铺平了道路。",
-    "dependsOn": ["mat_selfheal","ene_borehole","mathematics"],
+    "dependsOn": ["ene_borehole","mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17815,7 +17815,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "NoSQL在 2000 年 前后成形，依托 自修复材料、井式地热、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 社交网络 等后续技术。",
-    "dependsOn": ["mat_selfheal","ene_borehole","mathematics","inf_usb"],
+    "dependsOn": ["ene_borehole","mathematics","inf_usb"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17965,7 +17965,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "社交网络在 2000 年 前后成形，依托 自修复材料、井式地热、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 边缘计算 等后续技术。",
-    "dependsOn": ["mat_selfheal","ene_borehole","mathematics","inf_nosql"],
+    "dependsOn": ["ene_borehole","mathematics","inf_nosql"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18055,7 +18055,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "5G约 2018 年 成熟，建立在 二维材料、摩擦纳米发电、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 大语言模型 的发展铺平了道路。",
-    "dependsOn": ["mat_2d","ene_tribo","mathematics","transformer_arch"],
+    "dependsOn": ["mathematics","transformer_arch"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18085,7 +18085,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "6G在 2020 年 前后成形，依托 二维材料、摩擦纳米发电、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 量子互联网 等后续技术。",
-    "dependsOn": ["mat_2d","ene_tribo","mathematics","llm"],
+    "dependsOn": ["mathematics","llm"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18355,7 +18355,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "区块链约 2008 年 成熟，建立在 二维材料、井式地热、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 同态加密 的发展铺平了道路。",
-    "dependsOn": ["mat_2d","ene_borehole","mathematics","inf_knowledge"],
+    "dependsOn": ["ene_borehole","mathematics","inf_knowledge"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18626,7 +18626,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "边缘计算在 2000 年 前后成形，依托 自修复材料、井式地热、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 云计算 等后续技术。",
-    "dependsOn": ["mat_selfheal","ene_borehole","mathematics","inf_social"],
+    "dependsOn": ["ene_borehole","mathematics","inf_social"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18656,7 +18656,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "云计算在 2000 年 前后成形，依托 自修复材料、井式地热、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 大数据 等后续技术。",
-    "dependsOn": ["mat_selfheal","ene_borehole","mathematics","inf_edge"],
+    "dependsOn": ["ene_borehole","mathematics","inf_edge"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18686,7 +18686,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "雾计算约 2010 年 成熟，建立在 二维材料、液态空气储能、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 微服务 的发展铺平了道路。",
-    "dependsOn": ["mat_2d","ene_liquidair","mathematics","inf_homomorphic"],
+    "dependsOn": ["ene_liquidair","mathematics","inf_homomorphic"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18806,7 +18806,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "深度学习约 2006 年 出现，建立在 二维材料、井式地热、数学 之上；它把 信息记录、远程传输 变成可稳定复现的能力，是 信息通信 中从经验走向方法的关键一步。",
-    "dependsOn": ["mat_2d","ene_borehole","mathematics","inf_agile"],
+    "dependsOn": ["ene_borehole","mathematics","inf_agile"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18896,7 +18896,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "知识图谱约 2007 年 成熟，建立在 二维材料、井式地热、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 区块链 的发展铺平了道路。",
-    "dependsOn": ["mat_2d","ene_borehole","mathematics","smartphone"],
+    "dependsOn": ["ene_borehole","mathematics","smartphone"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -19467,7 +19467,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "软件定义网络在 2000 年 前后成形，依托 自修复材料、井式地热、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 容器技术 等后续技术。",
-    "dependsOn": ["mat_selfheal","ene_borehole","mathematics"],
+    "dependsOn": ["ene_borehole","mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -19497,7 +19497,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "容器技术在 2000 年 前后成形，依托 自修复材料、井式地热、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 应用程序接口 等后续技术。",
-    "dependsOn": ["mat_selfheal","ene_borehole","mathematics","inf_sdn"],
+    "dependsOn": ["ene_borehole","mathematics","inf_sdn"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -19527,7 +19527,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "微服务在 2010 年 前后成形，依托 二维材料、液态空气储能、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 低代码 等后续技术。",
-    "dependsOn": ["mat_2d","ene_liquidair","mathematics","inf_fog"],
+    "dependsOn": ["ene_liquidair","mathematics","inf_fog"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -19557,7 +19557,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "低代码在 2010 年 前后成形，依托 二维材料、液态空气储能、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 DevOps 等后续技术。",
-    "dependsOn": ["mat_2d","ene_liquidair","mathematics","inf_microservice"],
+    "dependsOn": ["ene_liquidair","mathematics","inf_microservice"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -19587,7 +19587,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "DevOps在 2010 年 前后成形，依托 二维材料、液态空气储能、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 持续集成 等后续技术。",
-    "dependsOn": ["mat_2d","ene_liquidair","mathematics","inf_lowcode"],
+    "dependsOn": ["ene_liquidair","mathematics","inf_lowcode"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -19617,7 +19617,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "持续集成在 2010 年 前后成形，依托 二维材料、液态空气储能、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 向量数据库 等后续技术。",
-    "dependsOn": ["mat_2d","ene_liquidair","mathematics","inf_devops"],
+    "dependsOn": ["ene_liquidair","mathematics","inf_devops"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -19647,7 +19647,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "敏捷开发约 2001 年 成熟，建立在 自修复材料、井式地热、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 深度学习 的发展铺平了道路。",
-    "dependsOn": ["mat_selfheal","ene_borehole","mathematics","inf_alloptical"],
+    "dependsOn": ["ene_borehole","mathematics","inf_alloptical"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -19737,7 +19737,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "应用程序接口约 2000 年 成熟，建立在 自修复材料、井式地热、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 图数据库 的发展铺平了道路。",
-    "dependsOn": ["mat_selfheal","ene_borehole","mathematics","inf_container"],
+    "dependsOn": ["ene_borehole","mathematics","inf_container"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -19887,7 +19887,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "图数据库约 2000 年 成熟，建立在 自修复材料、井式地热、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 时序数据库 的发展铺平了道路。",
-    "dependsOn": ["mat_selfheal","ene_borehole","mathematics","inf_api"],
+    "dependsOn": ["ene_borehole","mathematics","inf_api"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -19917,7 +19917,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "时序数据库约 2000 年 成熟，建立在 自修复材料、井式地热、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 全光网络 的发展铺平了道路。",
-    "dependsOn": ["mat_selfheal","ene_borehole","mathematics","inf_graphdb"],
+    "dependsOn": ["ene_borehole","mathematics","inf_graphdb"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -19947,7 +19947,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "向量数据库约 2010 年 成熟，建立在 二维材料、液态空气储能、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 机器人流程自动化 的发展铺平了道路。",
-    "dependsOn": ["mat_2d","ene_liquidair","mathematics","inf_cicd"],
+    "dependsOn": ["ene_liquidair","mathematics","inf_cicd"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20009,7 +20009,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "扩散模型在 2015 年 前后成形，依托 二维材料、摩擦纳米发电、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 边缘智能 等后续技术。",
-    "dependsOn": ["mat_2d","ene_tribo","mathematics","inf_gan"],
+    "dependsOn": ["mathematics","inf_gan"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20069,7 +20069,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "生成对抗网络约 2014 年 成熟，建立在 二维材料、摩擦纳米发电、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 扩散模型 的发展铺平了道路。",
-    "dependsOn": ["mat_2d","ene_tribo","mathematics","computer_vision"],
+    "dependsOn": ["mathematics","computer_vision"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20099,7 +20099,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "机器人流程自动化在 2010 年 前后成形，依托 二维材料、液态空气储能、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 高速光模块 等后续技术。",
-    "dependsOn": ["mat_2d","ene_liquidair","mathematics","inf_vector_db"],
+    "dependsOn": ["ene_liquidair","mathematics","inf_vector_db"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20129,7 +20129,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "全光网络在 2000 年 前后成形，依托 自修复材料、井式地热、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 敏捷开发 等后续技术。",
-    "dependsOn": ["mat_selfheal","ene_borehole","mathematics","inf_timeseries"],
+    "dependsOn": ["ene_borehole","mathematics","inf_timeseries"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20159,7 +20159,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "高速光模块在 2010 年 前后成形，依托 二维材料、液态空气储能、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 低轨卫星星座 等后续技术。",
-    "dependsOn": ["mat_2d","ene_liquidair","mathematics","inf_rpa"],
+    "dependsOn": ["ene_liquidair","mathematics","inf_rpa"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20189,7 +20189,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "低轨卫星星座约 2010 年 成熟，建立在 二维材料、液态空气储能、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 嵌入模型 的发展铺平了道路。",
-    "dependsOn": ["mat_2d","ene_liquidair","mathematics","inf_400g"],
+    "dependsOn": ["ene_liquidair","mathematics","inf_400g"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20219,7 +20219,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "量子互联网约 2020 年 成熟，建立在 二维材料、摩擦纳米发电、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 多模态大模型 的发展铺平了道路。",
-    "dependsOn": ["mat_2d","ene_tribo","mathematics","inf_6g","ai","quantum","computer"],
+    "dependsOn": ["mathematics","inf_6g","ai","quantum","computer"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20249,7 +20249,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "同态加密在 2009 年 前后成形，依托 二维材料、井式地热、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 雾计算 等后续技术。",
-    "dependsOn": ["mat_2d","ene_borehole","mathematics","inf_blockchain"],
+    "dependsOn": ["ene_borehole","mathematics","inf_blockchain"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20309,7 +20309,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "多模态大模型约 2020 年 成熟，建立在 二维材料、摩擦纳米发电、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 智能体 的发展铺平了道路。",
-    "dependsOn": ["mat_2d","ene_tribo","mathematics","inf_quantuminternet"],
+    "dependsOn": ["mathematics","inf_quantuminternet"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20339,7 +20339,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "智能体在 2020 年 前后成形，依托 二维材料、摩擦纳米发电、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 世界模型 等后续技术。",
-    "dependsOn": ["mat_2d","ene_tribo","mathematics","inf_multimodal"],
+    "dependsOn": ["mathematics","inf_multimodal"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20369,7 +20369,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "世界模型在 2020 年 前后成形，依托 二维材料、摩擦纳米发电、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 检索增强生成 等后续技术。",
-    "dependsOn": ["mat_2d","ene_tribo","mathematics","inf_agent"],
+    "dependsOn": ["mathematics","inf_agent"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20399,7 +20399,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "嵌入模型在 2010 年 前后成形，依托 二维材料、液态空气储能、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 向量检索 等后续技术。",
-    "dependsOn": ["mat_2d","ene_liquidair","mathematics","inf_leo"],
+    "dependsOn": ["ene_liquidair","mathematics","inf_leo"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20429,7 +20429,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "向量检索约 2010 年 出现，建立在 二维材料、液态空气储能、数学 之上；它把 信息记录、远程传输 变成可稳定复现的能力，是 信息通信 中从经验走向方法的关键一步。",
-    "dependsOn": ["mat_2d","ene_liquidair","mathematics","inf_embedding"],
+    "dependsOn": ["ene_liquidair","mathematics","inf_embedding"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20459,7 +20459,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "检索增强生成约 2020 年 成熟，建立在 二维材料、摩擦纳米发电、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 大模型对齐 的发展铺平了道路。",
-    "dependsOn": ["mat_2d","ene_tribo","mathematics","inf_worldmodel"],
+    "dependsOn": ["mathematics","inf_worldmodel"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20489,7 +20489,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "大模型对齐在 2020 年 前后成形，依托 二维材料、摩擦纳米发电、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 数字人 等后续技术。",
-    "dependsOn": ["mat_2d","ene_tribo","mathematics","inf_rag"],
+    "dependsOn": ["mathematics","inf_rag"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20549,7 +20549,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "数字人在 2020 年 前后成形，依托 二维材料、摩擦纳米发电、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 AI 搜索 等后续技术。",
-    "dependsOn": ["mat_2d","ene_tribo","mathematics","inf_alignment"],
+    "dependsOn": ["mathematics","inf_alignment"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20579,7 +20579,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "边缘智能约 2015 年 出现，建立在 二维材料、摩擦纳米发电、数学 之上；它把 信息记录、远程传输 变成可稳定复现的能力，是 信息通信 中从经验走向方法的关键一步。",
-    "dependsOn": ["mat_2d","ene_tribo","mathematics","inf_diffusion","ai","iot","soc"],
+    "dependsOn": ["mathematics","inf_diffusion","ai","iot","soc"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20609,7 +20609,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "AI 搜索约 2020 年 成熟，建立在 二维材料、摩擦纳米发电、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 代码生成模型 的发展铺平了道路。",
-    "dependsOn": ["mat_2d","ene_tribo","mathematics","inf_digitalhuman"],
+    "dependsOn": ["mathematics","inf_digitalhuman"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20639,7 +20639,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "代码生成模型约 2020 年 出现，建立在 二维材料、摩擦纳米发电、数学 之上；它把 信息记录、远程传输 变成可稳定复现的能力，是 信息通信 中从经验走向方法的关键一步。",
-    "dependsOn": ["mat_2d","ene_tribo","mathematics","inf_aisearch"],
+    "dependsOn": ["mathematics","inf_aisearch"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -25562,7 +25562,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "3D 打印建筑约 2010 年 成熟，建立在 二维材料、无人化工厂、液态空气储能 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 砌砖机器人 的发展铺平了道路。",
-    "dependsOn": ["mat_2d","mfg_darkfactory","ene_liquidair","bld_sponge"],
+    "dependsOn": ["mfg_darkfactory","ene_liquidair","bld_sponge"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -25652,7 +25652,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "零能耗建筑在 2000 年 前后成形，依托 自修复材料、视觉引导装配、井式地热 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 智能建筑 等后续技术。",
-    "dependsOn": ["mat_selfheal","mfg_visionguide","ene_borehole","bld_verticalgreen"],
+    "dependsOn": ["mfg_visionguide","ene_borehole","bld_verticalgreen"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -25682,7 +25682,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "智能建筑约 2000 年 成熟，建立在 自修复材料、视觉引导装配、井式地热 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 海绵城市 的发展铺平了道路。",
-    "dependsOn": ["mat_selfheal","mfg_visionguide","ene_borehole","bld_zeroenergy"],
+    "dependsOn": ["mfg_visionguide","ene_borehole","bld_zeroenergy"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -25802,7 +25802,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "海绵城市在 2000 年 前后成形，依托 自修复材料、视觉引导装配、井式地热 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 3D 打印建筑 等后续技术。",
-    "dependsOn": ["mat_selfheal","mfg_visionguide","ene_borehole","bld_smartb"],
+    "dependsOn": ["mfg_visionguide","ene_borehole","bld_smartb"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -26012,7 +26012,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "砌砖机器人约 2010 年 成熟，建立在 二维材料、无人化工厂、液态空气储能 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 智慧城市 的发展铺平了道路。",
-    "dependsOn": ["mat_2d","mfg_darkfactory","ene_liquidair","bld_3dpb","masonry","architecture","engineering"],
+    "dependsOn": ["mfg_darkfactory","ene_liquidair","bld_3dpb","masonry","architecture","engineering"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -26042,7 +26042,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "无人机测绘在 2015 年 前后成形，依托 二维材料、工业 4.0、摩擦纳米发电 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 混凝土 3D 打印 等后续技术。",
-    "dependsOn": ["mat_2d","mfg_industry40","ene_tribo"],
+    "dependsOn": [],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -26072,7 +26072,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "智慧城市在 2010 年 前后成形，依托 二维材料、无人化工厂、液态空气储能 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 可变径盾构 等后续技术。",
-    "dependsOn": ["mat_2d","mfg_darkfactory","ene_liquidair","bld_robotbrick"],
+    "dependsOn": ["mfg_darkfactory","ene_liquidair","bld_robotbrick"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -26102,7 +26102,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "可变径盾构约 2010 年 成熟，建立在 二维材料、无人化工厂、液态空气储能 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 复材桥梁 的发展铺平了道路。",
-    "dependsOn": ["mat_2d","mfg_darkfactory","ene_liquidair","bld_smartcity"],
+    "dependsOn": ["mfg_darkfactory","ene_liquidair","bld_smartcity"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -26132,7 +26132,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "复材桥梁约 2010 年 成熟，建立在 二维材料、无人化工厂、液态空气储能 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 自修复混凝土 的发展铺平了道路。",
-    "dependsOn": ["mat_2d","mfg_darkfactory","ene_liquidair","bld_variabletbm"],
+    "dependsOn": ["mfg_darkfactory","ene_liquidair","bld_variabletbm"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -26163,7 +26163,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "自修复混凝土约 2010 年 成熟，建立在 二维材料、无人化工厂、液态空气储能 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 碳纤维混凝土 的发展铺平了道路。",
-    "dependsOn": ["mat_2d","mfg_darkfactory","ene_liquidair","bld_frpbridge"],
+    "dependsOn": ["mfg_darkfactory","ene_liquidair","bld_frpbridge"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -26193,7 +26193,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "碳纤维混凝土在 2010 年 前后成形，依托 二维材料、无人化工厂、液态空气储能 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 无人机测绘 等后续技术。",
-    "dependsOn": ["mat_2d","mfg_darkfactory","ene_liquidair","bld_selfhealconc"],
+    "dependsOn": ["mfg_darkfactory","ene_liquidair","bld_selfhealconc"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -28776,7 +28776,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "忠诚僚机约 2020 年 出现，建立在 工业 4.0、摩擦纳米发电、二维材料 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_industry40","ene_tribo","mat_2d","tr_reusablerocket"],
+    "dependsOn": ["tr_reusablerocket"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28806,7 +28806,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "无人机蜂群约 2010 年 出现，建立在 无人化工厂、液态空气储能、二维材料 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_darkfactory","ene_liquidair","mat_2d","tr_passdrone"],
+    "dependsOn": ["mfg_darkfactory","ene_liquidair","tr_passdrone"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28836,7 +28836,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "军事人工智能约 2010 年 出现，建立在 无人化工厂、液态空气储能、二维材料 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_darkfactory","ene_liquidair","mat_2d","tr_passdrone"],
+    "dependsOn": ["mfg_darkfactory","ene_liquidair","tr_passdrone"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28956,7 +28956,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "电磁轨道炮约 2000 年 出现，建立在 视觉引导装配、井式地热、自修复材料 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_visionguide","ene_borehole","mat_selfheal"],
+    "dependsOn": ["mfg_visionguide","ene_borehole"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28986,7 +28986,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "高超声速导弹约 2010 年 出现，建立在 无人化工厂、液态空气储能、二维材料 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_darkfactory","ene_liquidair","mat_2d","tr_passdrone"],
+    "dependsOn": ["mfg_darkfactory","ene_liquidair","tr_passdrone"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -29016,7 +29016,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "高超滑翔体约 2010 年 出现，建立在 无人化工厂、液态空气储能、二维材料 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_darkfactory","ene_liquidair","mat_2d","tr_passdrone"],
+    "dependsOn": ["mfg_darkfactory","ene_liquidair","tr_passdrone"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -29046,7 +29046,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "智能弹药约 2010 年 出现，建立在 无人化工厂、液态空气储能、二维材料 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_darkfactory","ene_liquidair","mat_2d","tr_passdrone","rocket","algorithm","electronics"],
+    "dependsOn": ["mfg_darkfactory","ene_liquidair","tr_passdrone","rocket","algorithm","electronics"],
     "enables": [],
     "applications": [
       "防御工事",

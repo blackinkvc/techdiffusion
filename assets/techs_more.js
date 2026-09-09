@@ -101,7 +101,7 @@ const MORE_TECHS = [
     "era": "future",
     "date": "约 2035 年（L2）",
     "year": 2035,
-    "dependsOn": ["solar","solar"],
+    "dependsOn": ["solar"],
     "purpose": "氘氚聚变持续净输出并入电网，提供近乎无限的低碳基荷",
     "tier": "L2",
     "summary": "以太阳能光伏、太阳能光伏为基，可控核聚变电站专攻氘氚聚变持续净输出并入电网，提供近乎无限的低碳基荷，把能源的能力边界再往前推一步。"
@@ -114,7 +114,7 @@ const MORE_TECHS = [
     "era": "future",
     "date": "约 2038 年（L2）",
     "year": 2038,
-    "dependsOn": ["solar","solar"],
+    "dependsOn": ["solar"],
     "purpose": "以聚变能电解海水大规模制氢， closes 能源-原料循环",
     "tier": "L2",
     "summary": "以太阳能光伏、太阳能光伏为基，聚变-海水制氢专攻以聚变能电解海水大规模制氢， closes 能源-原料循环，把能源的能力边界再往前推一步。"
@@ -127,7 +127,7 @@ const MORE_TECHS = [
     "era": "future",
     "date": "约 2040 年（L2）",
     "year": 2040,
-    "dependsOn": ["solar","solar"],
+    "dependsOn": ["solar"],
     "purpose": "地球同步轨道巨型光伏阵微波传能回地面，全天候清洁供电",
     "tier": "L2",
     "summary": "空间太阳能电站把太阳能光伏、太阳能光伏的成果用于地球同步轨道巨型光伏阵微波传能回地面，全天候清洁供电，让能源从原理走向可部署的工程现实。"
@@ -270,7 +270,7 @@ const MORE_TECHS = [
     "era": "future",
     "date": "约 2040 年（L2）",
     "year": 2040,
-    "dependsOn": ["solar","solar"],
+    "dependsOn": ["solar"],
     "purpose": "就地利用小行星的水、金属与挥发分支撑太空经济",
     "tier": "L2",
     "summary": "在太阳能光伏、太阳能光伏之上，小行星采矿聚焦于就地利用小行星的水、金属与挥发分支撑太空经济，是能源走向更精细、更可控的关键环节。"
@@ -309,7 +309,7 @@ const MORE_TECHS = [
     "era": "future",
     "date": "约 2040 年（L3）",
     "year": 2040,
-    "dependsOn": ["materials","materials"],
+    "dependsOn": ["materials"],
     "purpose": "损伤后自主愈合并恢复力学性能的活性结构材料",
     "tier": "L3",
     "summary": "以材料科学、材料科学为基，自我修复材料专攻损伤后自主愈合并恢复力学性能的活性结构材料，把材料的能力边界再往前推一步。"
@@ -361,7 +361,7 @@ const MORE_TECHS = [
     "era": "future",
     "date": "约 2050 年（L3）",
     "year": 2050,
-    "dependsOn": ["solar","solar"],
+    "dependsOn": ["solar"],
     "purpose": "千米级空间电站编队，向地面任意点无线供能",
     "tier": "L3",
     "summary": "承接太阳能光伏、太阳能光伏，轨道太阳能阵列解决千米级空间电站编队，向地面任意点无线供能，填补了能源在未来展望的一项具体空白。"
@@ -439,7 +439,7 @@ const MORE_TECHS = [
     "era": "future",
     "date": "约 2100 年（L4）",
     "year": 2100,
-    "dependsOn": ["solar","solar"],
+    "dependsOn": ["solar"],
     "purpose": "以大量卫星逐步包覆恒星收集其全部辐射",
     "tier": "L4",
     "summary": "以太阳能光伏、太阳能光伏为基，戴森群专攻以大量卫星逐步包覆恒星收集其全部辐射，把能源的能力边界再往前推一步。"
@@ -517,7 +517,7 @@ const MORE_TECHS = [
     "era": "future",
     "date": "约 2160 年（L5）",
     "year": 2160,
-    "dependsOn": ["solar","solar"],
+    "dependsOn": ["solar"],
     "purpose": "以受控奇点提取能量的终极能源构造",
     "tier": "L5",
     "summary": "以太阳能光伏、太阳能光伏为基，奇点发动机专攻以受控奇点提取能量的终极能源构造，把能源的能力边界再往前推一步。"
@@ -1660,7 +1660,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以mRNA 疫苗平台应用推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，mRNA 疫苗平台应用专攻以mRNA 疫苗平台应用推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },
@@ -1672,7 +1672,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以病毒载体疫苗推进药物、疗法与生物制造的精准化与规模化",
     "summary": "病毒载体疫苗把遗传学、免疫学、遗传学、发酵的成果用于以病毒载体疫苗推进药物、疗法与生物制造的精准化与规模化，让生命与医疗从原理走向可部署的工程现实。"
   },
@@ -1684,7 +1684,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以DNA 疫苗推进药物、疗法与生物制造的精准化与规模化",
     "summary": "在遗传学、免疫学、遗传学、发酵之上，DNA 疫苗聚焦于以DNA 疫苗推进药物、疗法与生物制造的精准化与规模化，是生命与医疗走向更精细、更可控的关键环节。"
   },
@@ -1696,7 +1696,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以重组蛋白疫苗推进药物、疗法与生物制造的精准化与规模化",
     "summary": "承接遗传学、免疫学、遗传学、发酵，重组蛋白疫苗解决以重组蛋白疫苗推进药物、疗法与生物制造的精准化与规模化，填补了生命与医疗在智能时代的一项具体空白。"
   },
@@ -1708,7 +1708,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以亚单位疫苗推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，亚单位疫苗专攻以亚单位疫苗推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },
@@ -1720,7 +1720,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以多糖结合疫苗推进药物、疗法与生物制造的精准化与规模化",
     "summary": "多糖结合疫苗把遗传学、免疫学、遗传学、发酵的成果用于以多糖结合疫苗推进药物、疗法与生物制造的精准化与规模化，让生命与医疗从原理走向可部署的工程现实。"
   },
@@ -1732,7 +1732,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以减毒活疫苗推进药物、疗法与生物制造的精准化与规模化",
     "summary": "在遗传学、免疫学、遗传学、发酵之上，减毒活疫苗聚焦于以减毒活疫苗推进药物、疗法与生物制造的精准化与规模化，是生命与医疗走向更精细、更可控的关键环节。"
   },
@@ -1744,7 +1744,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以灭活疫苗推进药物、疗法与生物制造的精准化与规模化",
     "summary": "承接遗传学、免疫学、遗传学、发酵，灭活疫苗解决以灭活疫苗推进药物、疗法与生物制造的精准化与规模化，填补了生命与医疗在智能时代的一项具体空白。"
   },
@@ -1756,7 +1756,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以鼻喷疫苗推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，鼻喷疫苗专攻以鼻喷疫苗推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },
@@ -1768,7 +1768,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以口服疫苗推进药物、疗法与生物制造的精准化与规模化",
     "summary": "口服疫苗把遗传学、免疫学、遗传学、发酵的成果用于以口服疫苗推进药物、疗法与生物制造的精准化与规模化，让生命与医疗从原理走向可部署的工程现实。"
   },
@@ -1780,7 +1780,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以自扩增 RNA 疫苗推进药物、疗法与生物制造的精准化与规模化",
     "summary": "承接遗传学、免疫学、遗传学、发酵，自扩增 RNA 疫苗解决以自扩增 RNA 疫苗推进药物、疗法与生物制造的精准化与规模化，填补了生命与医疗在智能时代的一项具体空白。"
   },
@@ -1792,7 +1792,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以多价疫苗推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，多价疫苗专攻以多价疫苗推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },
@@ -1804,7 +1804,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以通用流感疫苗推进药物、疗法与生物制造的精准化与规模化",
     "summary": "通用流感疫苗把遗传学、免疫学、遗传学、发酵的成果用于以通用流感疫苗推进药物、疗法与生物制造的精准化与规模化，让生命与医疗从原理走向可部署的工程现实。"
   },
@@ -1816,7 +1816,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以通用冠状病毒疫苗推进药物、疗法与生物制造的精准化与规模化",
     "summary": "在遗传学、免疫学、遗传学、发酵之上，通用冠状病毒疫苗聚焦于以通用冠状病毒疫苗推进药物、疗法与生物制造的精准化与规模化，是生命与医疗走向更精细、更可控的关键环节。"
   },
@@ -1828,7 +1828,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以肿瘤疫苗推进药物、疗法与生物制造的精准化与规模化",
     "summary": "承接遗传学、免疫学、遗传学、发酵，肿瘤疫苗解决以肿瘤疫苗推进药物、疗法与生物制造的精准化与规模化，填补了生命与医疗在智能时代的一项具体空白。"
   },
@@ -1840,7 +1840,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以治疗性疫苗推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，治疗性疫苗专攻以治疗性疫苗推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },
@@ -1852,7 +1852,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以个性化新抗原疫苗推进药物、疗法与生物制造的精准化与规模化",
     "summary": "个性化新抗原疫苗把遗传学、免疫学、遗传学、发酵的成果用于以个性化新抗原疫苗推进药物、疗法与生物制造的精准化与规模化，让生命与医疗从原理走向可部署的工程现实。"
   },
@@ -1864,7 +1864,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以树突状细胞疫苗推进药物、疗法与生物制造的精准化与规模化",
     "summary": "在遗传学、免疫学、遗传学、发酵之上，树突状细胞疫苗聚焦于以树突状细胞疫苗推进药物、疗法与生物制造的精准化与规模化，是生命与医疗走向更精细、更可控的关键环节。"
   },
@@ -1876,7 +1876,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以肽疫苗推进药物、疗法与生物制造的精准化与规模化",
     "summary": "承接遗传学、免疫学、遗传学、发酵，肽疫苗解决以肽疫苗推进药物、疗法与生物制造的精准化与规模化，填补了生命与医疗在智能时代的一项具体空白。"
   },
@@ -1888,7 +1888,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以合成肽疫苗推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，合成肽疫苗专攻以合成肽疫苗推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },
@@ -1900,7 +1900,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以抗体药物偶联物推进药物、疗法与生物制造的精准化与规模化",
     "summary": "在遗传学、免疫学、遗传学、发酵之上，抗体药物偶联物聚焦于以抗体药物偶联物推进药物、疗法与生物制造的精准化与规模化，是生命与医疗走向更精细、更可控的关键环节。"
   },
@@ -1912,7 +1912,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以双特异性抗体推进药物、疗法与生物制造的精准化与规模化",
     "summary": "承接遗传学、免疫学、遗传学、发酵，双特异性抗体解决以双特异性抗体推进药物、疗法与生物制造的精准化与规模化，填补了生命与医疗在智能时代的一项具体空白。"
   },
@@ -1924,7 +1924,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以多特异性抗体推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，多特异性抗体专攻以多特异性抗体推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },
@@ -1936,7 +1936,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以单域抗体推进药物、疗法与生物制造的精准化与规模化",
     "summary": "单域抗体把遗传学、免疫学、遗传学、发酵的成果用于以单域抗体推进药物、疗法与生物制造的精准化与规模化，让生命与医疗从原理走向可部署的工程现实。"
   },
@@ -1948,7 +1948,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以纳米抗体推进药物、疗法与生物制造的精准化与规模化",
     "summary": "在遗传学、免疫学、遗传学、发酵之上，纳米抗体聚焦于以纳米抗体推进药物、疗法与生物制造的精准化与规模化，是生命与医疗走向更精细、更可控的关键环节。"
   },
@@ -1960,7 +1960,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以全人源抗体推进药物、疗法与生物制造的精准化与规模化",
     "summary": "承接遗传学、免疫学、遗传学、发酵，全人源抗体解决以全人源抗体推进药物、疗法与生物制造的精准化与规模化，填补了生命与医疗在智能时代的一项具体空白。"
   },
@@ -1972,7 +1972,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以人源化抗体推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，人源化抗体专攻以人源化抗体推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },
@@ -1984,7 +1984,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以重组抗体推进药物、疗法与生物制造的精准化与规模化",
     "summary": "重组抗体把遗传学、免疫学、遗传学、发酵的成果用于以重组抗体推进药物、疗法与生物制造的精准化与规模化，让生命与医疗从原理走向可部署的工程现实。"
   },
@@ -1996,7 +1996,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以抗体工程推进药物、疗法与生物制造的精准化与规模化",
     "summary": "在遗传学、免疫学、遗传学、发酵之上，抗体工程聚焦于以抗体工程推进药物、疗法与生物制造的精准化与规模化，是生命与医疗走向更精细、更可控的关键环节。"
   },
@@ -2008,7 +2008,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以噬菌体展示推进药物、疗法与生物制造的精准化与规模化",
     "summary": "承接遗传学、免疫学、遗传学、发酵，噬菌体展示解决以噬菌体展示推进药物、疗法与生物制造的精准化与规模化，填补了生命与医疗在智能时代的一项具体空白。"
   },
@@ -2020,7 +2020,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以酵母展示推进药物、疗法与生物制造的精准化与规模化",
     "summary": "酵母展示把遗传学、免疫学、遗传学、发酵的成果用于以酵母展示推进药物、疗法与生物制造的精准化与规模化，让生命与医疗从原理走向可部署的工程现实。"
   },
@@ -2032,7 +2032,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以哺乳动物细胞表达推进药物、疗法与生物制造的精准化与规模化",
     "summary": "在遗传学、免疫学、遗传学、发酵之上，哺乳动物细胞表达聚焦于以哺乳动物细胞表达推进药物、疗法与生物制造的精准化与规模化，是生命与医疗走向更精细、更可控的关键环节。"
   },
@@ -2044,7 +2044,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以CHO 细胞表达推进药物、疗法与生物制造的精准化与规模化",
     "summary": "承接遗传学、免疫学、遗传学、发酵，CHO 细胞表达解决以CHO 细胞表达推进药物、疗法与生物制造的精准化与规模化，填补了生命与医疗在智能时代的一项具体空白。"
   },
@@ -2056,7 +2056,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以大肠杆菌表达推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，大肠杆菌表达专攻以大肠杆菌表达推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },
@@ -2068,7 +2068,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以无细胞蛋白合成推进药物、疗法与生物制造的精准化与规模化",
     "summary": "无细胞蛋白合成把遗传学、免疫学、遗传学、发酵的成果用于以无细胞蛋白合成推进药物、疗法与生物制造的精准化与规模化，让生命与医疗从原理走向可部署的工程现实。"
   },
@@ -2080,7 +2080,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以连续生物制造推进药物、疗法与生物制造的精准化与规模化",
     "summary": "在遗传学、免疫学、遗传学、发酵之上，连续生物制造聚焦于以连续生物制造推进药物、疗法与生物制造的精准化与规模化，是生命与医疗走向更精细、更可控的关键环节。"
   },
@@ -2092,7 +2092,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以灌流培养推进药物、疗法与生物制造的精准化与规模化",
     "summary": "承接遗传学、免疫学、遗传学、发酵，灌流培养解决以灌流培养推进药物、疗法与生物制造的精准化与规模化，填补了生命与医疗在智能时代的一项具体空白。"
   },
@@ -2104,7 +2104,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以一次性生物反应器推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，一次性生物反应器专攻以一次性生物反应器推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },
@@ -2116,7 +2116,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以微载体培养推进药物、疗法与生物制造的精准化与规模化",
     "summary": "微载体培养把遗传学、免疫学、遗传学、发酵的成果用于以微载体培养推进药物、疗法与生物制造的精准化与规模化，让生命与医疗从原理走向可部署的工程现实。"
   },
@@ -2128,7 +2128,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以固定化细胞推进药物、疗法与生物制造的精准化与规模化",
     "summary": "在遗传学、免疫学、遗传学、发酵之上，固定化细胞聚焦于以固定化细胞推进药物、疗法与生物制造的精准化与规模化，是生命与医疗走向更精细、更可控的关键环节。"
   },
@@ -2140,7 +2140,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以酶固定化推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，酶固定化专攻以酶固定化推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },
@@ -2152,7 +2152,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以酶制剂推进药物、疗法与生物制造的精准化与规模化",
     "summary": "酶制剂把遗传学、免疫学、遗传学、发酵的成果用于以酶制剂推进药物、疗法与生物制造的精准化与规模化，让生命与医疗从原理走向可部署的工程现实。"
   },
@@ -2164,7 +2164,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以工业酶推进药物、疗法与生物制造的精准化与规模化",
     "summary": "在遗传学、免疫学、遗传学、发酵之上，工业酶聚焦于以工业酶推进药物、疗法与生物制造的精准化与规模化，是生命与医疗走向更精细、更可控的关键环节。"
   },
@@ -2176,7 +2176,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以饲料酶推进药物、疗法与生物制造的精准化与规模化",
     "summary": "承接遗传学、免疫学、遗传学、发酵，饲料酶解决以饲料酶推进药物、疗法与生物制造的精准化与规模化，填补了生命与医疗在智能时代的一项具体空白。"
   },
@@ -2188,7 +2188,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以洗涤酶推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，洗涤酶专攻以洗涤酶推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },
@@ -2200,7 +2200,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以食品加工酶推进药物、疗法与生物制造的精准化与规模化",
     "summary": "食品加工酶把遗传学、免疫学、遗传学、发酵的成果用于以食品加工酶推进药物、疗法与生物制造的精准化与规模化，让生命与医疗从原理走向可部署的工程现实。"
   },
@@ -2212,7 +2212,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以诊断酶推进药物、疗法与生物制造的精准化与规模化",
     "summary": "在遗传学、免疫学、遗传学、发酵之上，诊断酶聚焦于以诊断酶推进药物、疗法与生物制造的精准化与规模化，是生命与医疗走向更精细、更可控的关键环节。"
   },
@@ -2224,7 +2224,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以手性化合物生物制造推进药物、疗法与生物制造的精准化与规模化",
     "summary": "承接遗传学、免疫学、遗传学、发酵，手性化合物生物制造解决以手性化合物生物制造推进药物、疗法与生物制造的精准化与规模化，填补了生命与医疗在智能时代的一项具体空白。"
   },
@@ -2236,7 +2236,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以天然产物生物合成推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，天然产物生物合成专攻以天然产物生物合成推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },
@@ -2248,7 +2248,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以微生物发酵推进药物、疗法与生物制造的精准化与规模化",
     "summary": "微生物发酵把遗传学、免疫学、遗传学、发酵的成果用于以微生物发酵推进药物、疗法与生物制造的精准化与规模化，让生命与医疗从原理走向可部署的工程现实。"
   },
@@ -2260,7 +2260,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以固态发酵推进药物、疗法与生物制造的精准化与规模化",
     "summary": "承接遗传学、免疫学、遗传学、发酵，固态发酵解决以固态发酵推进药物、疗法与生物制造的精准化与规模化，填补了生命与医疗在智能时代的一项具体空白。"
   },
@@ -2272,7 +2272,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以液态发酵推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，液态发酵专攻以液态发酵推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },
@@ -2284,7 +2284,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以厌氧发酵推进药物、疗法与生物制造的精准化与规模化",
     "summary": "厌氧发酵把遗传学、免疫学、遗传学、发酵的成果用于以厌氧发酵推进药物、疗法与生物制造的精准化与规模化，让生命与医疗从原理走向可部署的工程现实。"
   },
@@ -2296,7 +2296,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以好氧发酵推进药物、疗法与生物制造的精准化与规模化",
     "summary": "在遗传学、免疫学、遗传学、发酵之上，好氧发酵聚焦于以好氧发酵推进药物、疗法与生物制造的精准化与规模化，是生命与医疗走向更精细、更可控的关键环节。"
   },
@@ -2308,7 +2308,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以补料分批发酵推进药物、疗法与生物制造的精准化与规模化",
     "summary": "承接遗传学、免疫学、遗传学、发酵，补料分批发酵解决以补料分批发酵推进药物、疗法与生物制造的精准化与规模化，填补了生命与医疗在智能时代的一项具体空白。"
   },
@@ -2320,7 +2320,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以连续发酵推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，连续发酵专攻以连续发酵推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },
@@ -2332,7 +2332,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以合成生物学底盘推进药物、疗法与生物制造的精准化与规模化",
     "summary": "合成生物学底盘把遗传学、免疫学、遗传学、发酵的成果用于以合成生物学底盘推进药物、疗法与生物制造的精准化与规模化，让生命与医疗从原理走向可部署的工程现实。"
   },
@@ -2344,7 +2344,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以基因线路推进药物、疗法与生物制造的精准化与规模化",
     "summary": "在遗传学、免疫学、遗传学、发酵之上，基因线路聚焦于以基因线路推进药物、疗法与生物制造的精准化与规模化，是生命与医疗走向更精细、更可控的关键环节。"
   },
@@ -2357,7 +2357,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以途径工程推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，途径工程专攻以途径工程推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },
@@ -2369,7 +2369,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以蛋白表达优化推进药物、疗法与生物制造的精准化与规模化",
     "summary": "在遗传学、免疫学、遗传学、发酵之上，蛋白表达优化聚焦于以蛋白表达优化推进药物、疗法与生物制造的精准化与规模化，是生命与医疗走向更精细、更可控的关键环节。"
   },
@@ -2381,7 +2381,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以密码子优化推进药物、疗法与生物制造的精准化与规模化",
     "summary": "承接遗传学、免疫学、遗传学、发酵，密码子优化解决以密码子优化推进药物、疗法与生物制造的精准化与规模化，填补了生命与医疗在智能时代的一项具体空白。"
   },
@@ -2393,7 +2393,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以基因组精简推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，基因组精简专攻以基因组精简推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },
@@ -2405,7 +2405,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以基因组重排推进药物、疗法与生物制造的精准化与规模化",
     "summary": "基因组重排把遗传学、免疫学、遗传学、发酵的成果用于以基因组重排推进药物、疗法与生物制造的精准化与规模化，让生命与医疗从原理走向可部署的工程现实。"
   },
@@ -2417,7 +2417,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以定向进化应用推进药物、疗法与生物制造的精准化与规模化",
     "summary": "在遗传学、免疫学、遗传学、发酵之上，定向进化应用聚焦于以定向进化应用推进药物、疗法与生物制造的精准化与规模化，是生命与医疗走向更精细、更可控的关键环节。"
   },
@@ -2429,7 +2429,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以高通量筛选应用推进药物、疗法与生物制造的精准化与规模化",
     "summary": "承接遗传学、免疫学、遗传学、发酵，高通量筛选应用解决以高通量筛选应用推进药物、疗法与生物制造的精准化与规模化，填补了生命与医疗在智能时代的一项具体空白。"
   },
@@ -2441,7 +2441,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以自动化克隆筛选推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，自动化克隆筛选专攻以自动化克隆筛选推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },
@@ -2453,7 +2453,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以微流控筛选推进药物、疗法与生物制造的精准化与规模化",
     "summary": "微流控筛选把遗传学、免疫学、遗传学、发酵的成果用于以微流控筛选推进药物、疗法与生物制造的精准化与规模化，让生命与医疗从原理走向可部署的工程现实。"
   },
@@ -2465,7 +2465,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以液滴微流控推进药物、疗法与生物制造的精准化与规模化",
     "summary": "在遗传学、免疫学、遗传学、发酵之上，液滴微流控聚焦于以液滴微流控推进药物、疗法与生物制造的精准化与规模化，是生命与医疗走向更精细、更可控的关键环节。"
   },
@@ -2477,7 +2477,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以干细胞的定向分化推进药物、疗法与生物制造的精准化与规模化",
     "summary": "承接遗传学、免疫学、遗传学、发酵，干细胞的定向分化解决以干细胞的定向分化推进药物、疗法与生物制造的精准化与规模化，填补了生命与医疗在智能时代的一项具体空白。"
   },
@@ -2489,7 +2489,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以类器官分化推进药物、疗法与生物制造的精准化与规模化",
     "summary": "类器官分化把遗传学、免疫学、遗传学、发酵的成果用于以类器官分化推进药物、疗法与生物制造的精准化与规模化，让生命与医疗从原理走向可部署的工程现实。"
   },
@@ -2501,7 +2501,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以类器官培养推进药物、疗法与生物制造的精准化与规模化",
     "summary": "在遗传学、免疫学、遗传学、发酵之上，类器官培养聚焦于以类器官培养推进药物、疗法与生物制造的精准化与规模化，是生命与医疗走向更精细、更可控的关键环节。"
   },
@@ -2513,7 +2513,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以器官芯片灌流推进药物、疗法与生物制造的精准化与规模化",
     "summary": "承接遗传学、免疫学、遗传学、发酵，器官芯片灌流解决以器官芯片灌流推进药物、疗法与生物制造的精准化与规模化，填补了生命与医疗在智能时代的一项具体空白。"
   },
@@ -2525,7 +2525,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以3D 生物打印应用推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，3D 生物打印应用专攻以3D 生物打印应用推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },
@@ -2537,7 +2537,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以生物墨水推进药物、疗法与生物制造的精准化与规模化",
     "summary": "生物墨水把遗传学、免疫学、遗传学、发酵的成果用于以生物墨水推进药物、疗法与生物制造的精准化与规模化，让生命与医疗从原理走向可部署的工程现实。"
   },
@@ -2549,7 +2549,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以水凝胶支架推进药物、疗法与生物制造的精准化与规模化",
     "summary": "在遗传学、免疫学、遗传学、发酵之上，水凝胶支架聚焦于以水凝胶支架推进药物、疗法与生物制造的精准化与规模化，是生命与医疗走向更精细、更可控的关键环节。"
   },
@@ -2561,7 +2561,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以脱细胞基质推进药物、疗法与生物制造的精准化与规模化",
     "summary": "承接遗传学、免疫学、遗传学、发酵，脱细胞基质解决以脱细胞基质推进药物、疗法与生物制造的精准化与规模化，填补了生命与医疗在智能时代的一项具体空白。"
   },
@@ -2573,7 +2573,7 @@ const MORE_TECHS = [
     "era": "intelligent",
     "date": "21 世纪",
     "year": 2000,
-    "dependsOn": ["genetics","immunology","genetics","fermentation"],
+    "dependsOn": ["genetics","immunology","fermentation"],
     "purpose": "以支架材料推进药物、疗法与生物制造的精准化与规模化",
     "summary": "以遗传学、免疫学、遗传学、发酵为基，支架材料专攻以支架材料推进药物、疗法与生物制造的精准化与规模化，把生命与医疗的能力边界再往前推一步。"
   },

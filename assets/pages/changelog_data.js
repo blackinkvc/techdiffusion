@@ -341,6 +341,26 @@ window.CHANGELOG = {
         "配套建立文档时效门禁 tools/check_docs.js（运行时算 TOTAL=2289 / TOTAL_FULL=13392，扫描正文写死数字）+ 挂 .git/hooks/pre-commit 自动拦截过期数字。"
       ],
       files: ["model.html", "assets/pages/model.js", "assets/shell.js", "assets/style.css", "tools/check_docs.js", ".git/hooks/pre-commit"]
+    },
+    {
+      version: "v0.9.14",
+      date: "2026-09-09",
+      type: "fix",
+      title: "主管线网络审计修正 + 模型页 Phase3 待硬件暂存",
+      summary: "对模型页/分析页所用的主管线 2289 节点网络做全量遍历审计并修正：清除 4 个已定论枢纽在数组源头残留的 105 条误接下游边与 86 条重复依赖边（主管线边 8129→7938）；并把 Phase 3（进阶模型可运行化）方案以「待硬件」提醒框 + 折叠详情形式存入数学模型页。",
+      treeChange: {
+        scope: "主管线技术网络：边 8129→7938（删 105 条枢纽误接边 + 去重 86 条重复依赖），节点不变",
+        reason: "v0.9.10–11 的枢纽清理只改了全量管线 graph.json / data_full.js，未写回主管线数组源头（techs_extra.js / data.js / techs_more.js），导致模型页与分析页所读的主管线网络仍残留同一批「万能前置」误接与重复依赖，统计（滞后、下游、共生）被污染。",
+        detail: "移除 mat_2d / mfg_industry40 / ene_tribo / mat_selfheal 的全部下游引用（techs_extra 101 条 + data.js 4 条；主管线无 graphene→2d 特例）；dependsOn/enables 重复元素去重（techs_extra 1 + techs_more 85）。修正后四枢纽下游归零、dupEdge=0、仍无自环/环/悬空。二阶枢纽约 24 节点（ene_wasteheat 50 / ene_liquidair 31 等）维持挂起待人工核验（关联 CR-2026-0909-hub2nd）。"
+      },
+      changes: [
+        "网络遍历审计结论：2289 节点无重复 id、无自环、无环、无悬空 dependsOn；结构健康。残留问题：一阶枢纽误接（mat_2d 57 / ene_tribo 21 / mat_selfheal 22 / mfg_industry40 5）、同节点重复依赖 86 条、年倒挂 4 处。",
+        "techs_extra.js：78 个条目去污染/去重，移除 101 条枢纽下游引用 + 1 处重复；techs_more.js：85 个条目去重；data.js：2 个 AI/大模型条目移除 mat_2d、ene_tribo 依赖（4 条误接边）。",
+        "修复复核：edges 8129→7938；四枢纽下游=0；dupEdge=0；DAG 无环不变。",
+        "保留未动（报告项）：4 处年倒挂（engineering←scientific_method 等）判定为年代标注噪声；二阶枢纽 ~24 节点继续挂起（CR-2026-0909-hub2nd）。",
+        "数学模型页：第九节新增「⚠ Phase 3 待硬件」提醒框 + 折叠详情（M1 node2vec / M2 PyG-GCN / M4 PyG-GAEn 最小可运行脚本方案、算力量级设计估算、速查表将补数据需求量列、验收协议）；MODEL_METHOD 方法日志加 v0.8。"
+      ],
+      files: ["assets/techs_extra.js", "assets/techs_more.js", "assets/data.js", "assets/pages/correction_data.js", "assets/pages/model.js"]
     }
   ]
 };
