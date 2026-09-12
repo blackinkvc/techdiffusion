@@ -184,26 +184,36 @@ function buildDetailHTML(t) {
 
   html += `<div class="m-row"><div class="m-label">↑ 前置技术（本技术建立于其上）</div><div class="m-tags">`;
   const _T = (typeof window !== "undefined") ? window.THEORY : null;
-  const _dkMap = (_T && _T.deps && _T.deps[t.id]) || null;
   const _dkDef = (_T && _T.meta && _T.meta.depKinds) || null;
+  const _catMap = (_T && _T.meta && _T.meta.kindByCat) || null;
+  const _kinds = (_T && _T.kinds) || null;
+  const _rels = (_T && _T.edgeRels) || null;
   const _dkUsed = [];
+  const _badge = (k) => {
+    const base = k.split(".")[0];
+    const def = (_dkDef && _dkDef[base]) || null;
+    if (!def) return "";
+    const lat = /\.latent$/.test(k);
+    if (_dkUsed.indexOf(k) < 0) _dkUsed.push(k);
+    return `<i class="dk dk-${base}${lat ? " latent" : ""}" title="${esc(def.long)}">${esc(def.short)}</i>`;
+  };
   if (t._up.length) t._up.forEach(u => {
-    let badge = "";
-    const k = _dkMap ? _dkMap[u] : null;
-    const def = (k && _dkDef && _dkDef[k]) ? _dkDef[k] : null;
-    if (def) {
-      badge = `<i class="dk dk-${k}" title="${esc(def.long)}">${esc(def.short)}</i>`;
-      if (_dkUsed.indexOf(k) < 0) _dkUsed.push(k);
-    }
-    html += `<span class="m-tag linkable" data-id="${u}">${esc(techMap[u].name)}${badge}</span>`;
+    const rel = _rels ? _rels[t.id + "|" + u] : null;
+    let ks = rel ? [rel] : (_kinds && _kinds[u]);
+    if (!ks) ks = (_catMap && _catMap[(techMap[u] && techMap[u].category) || ""]) || [];
+    html += `<span class="m-tag linkable" data-id="${u}">${esc(techMap[u].name)}${ks.map(_badge).join("")}</span>`;
   });
   else html += `<span class="m-tag">（文明起点，无前置技术）</span>`;
   if (t._upConcept.length) t._upConcept.forEach(c => html += `<span class="m-tag concept">${esc(humanize(c))}</span>`);
   html += `</div>`;
   if (_dkUsed.length) {
-    html += `<div class="dk-legend">` + _dkUsed.map(k =>
-      `<span class="dk dk-${k}">${esc(_dkDef[k].short)}</span><span class="dk-lg">${esc(_dkDef[k].long.replace(/^[^—]*——/, ""))}</span>`
+    const _seen = [];
+    let _lat = false;
+    _dkUsed.forEach(k => { const b = k.split(".")[0]; if (_seen.indexOf(b) < 0) _seen.push(b); if (/\.latent$/.test(k)) _lat = true; });
+    html += `<div class="dk-legend">` + _seen.map(b =>
+      `<span class="dk dk-${b}">${esc(_dkDef[b].short)}</span><span class="dk-lg">${esc(_dkDef[b].long.replace(/^[^—]*——/, ""))}</span>`
     ).join("") + `</div>`;
+    if (_lat) html += `<div class="dk-note">虚边徽章 = 潜在支撑（背景性学理，非直接造物所需）</div>`;
   }
   html += `</div>`;
 

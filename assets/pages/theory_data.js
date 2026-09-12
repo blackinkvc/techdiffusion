@@ -27,14 +27,32 @@ window.THEORY = {
       parallel: "并行互促（经验与理论同期演进）",
       revised: "解释被修正（旧理论被新理论取代）"
     },
-    /* 前置边的「性质」5 类：解决 dependsOn 把材料/工艺/学理/符号/互补混装成一锅的问题 */
+    /* 前置的「性质」6 类（v2 · 2026-09-13）。
+       前 4 类是「这个技术本身是什么性质的东西」，挂在前置节点上、**可多值**
+       （工具钢 = 工艺 + 材料，一句话说清，不必在每条边上纠结）；
+       后 2 类是「边的关系性质」，只在关系特殊时才覆盖。
+       —— 一条边显示什么徽章 = 该前置节点的 kinds（或 edgeRels 覆盖），可同时多枚。 */
     depKinds: {
       material: { short: "材料", long: "材料 · 物质——造它所用之物（含消耗品与部件）" },
       craft: { short: "工艺", long: "工艺 · 装备——造它所需之具，或同类技术装置" },
-      theory: { short: "学理", long: "学理 · 知识——解释它为何可行" },
+      theory: { short: "学理", long: "学理 · 知识——解释它为何可行（多为潜在支撑，非直接造物所需）" },
+      power: { short: "动力", long: "动力 · 能源——为它提供运转所需的能量或原动力" },
       symbol: { short: "符号", long: "符号 · 文化——因它才被需要（需求侧，非造物所需）" },
       complement: { short: "互补", long: "互补 · 搭档——与它配套使用，而非因果关系" }
-    }
+    },
+    /* 兜底规则：节点未在 kinds 里逐条标注时，按其 cat 推导 —— 有了它，
+       全库 2288 个节点默认就有徽章，kinds 只用来「覆盖 / 细化」少数关键节点。 */
+    kindByCat: {
+      material: ["material"],
+      energy: ["power"],
+      manufact: ["craft"], info: ["craft"], transport: ["craft"],
+      build: ["craft"], military: ["craft"],
+      basic: ["theory"], life: ["theory"]
+    },
+    /* 「潜在学理」修饰：kinds 里写成 "theory.latent" —— 纯形式学科
+       （数学 / 统计 / 概率 / 逻辑 / 信息论 / 计算理论）对具体技术多数只是
+       背景性支撑，不提供任何具体的物质、工具或动力形态。徽章显示为虚边淡色。 */
+    latentNote: "虚边徽章 = 潜在支撑（背景性学理，非直接造物所需）"
   },
 
   /* ---------- ① 节点层标注 ---------- */
@@ -160,22 +178,45 @@ window.THEORY = {
     bld_bim: { layer: "tech", field: "工程软件", note: "建筑信息模型是工具产物，非理论" }
   },
 
-  /* ---------- ③ 前置边的性质（v0.9.21 新增 · 只读标注，不改 dependsOn） ----------
-     背景：dependsOn 是扁平数组，把性质完全不同的前置混在一起。以钢笔为例——
-       writing 文字   = 符号 · 文化（有文字才需要钢笔，属需求侧）
-       paper 造纸     = 互补 · 搭档（笔的搭档，非笔的原料）
-       mat_toolsteel  = 材料（笔尖的钢）
-       mat_vulcan     = 材料（储墨的硫化橡胶）
-     四者在数据里长得一模一样。本段为每条前置追加 kind，供详情页「前置技术」
-     逐条显示徽章；不改动任何 dependsOn / enables，也不改节点字段。
-     分类口径见 meta.depKinds（5 类：材料 / 工艺 / 学理 / 符号 / 互补）。
+  /* ---------- ③ 前置的性质（v0.9.21 新增 · v2 改「节点多值」· 只读标注，不改 dependsOn） ----------
+     背景：dependsOn 是扁平数组，把性质完全不同的前置混在一起。以钢笔(1884)为例——
+       writing 文字   = 符号 · 文化   （有文字才需要钢笔，属需求侧）
+       paper 造纸     = 互补 · 搭档   （笔的搭档，非笔的原料；由 edgeRels 覆盖）
+       mat_toolsteel  = 工艺 + 材料   （笔尖的钢：既是材料，也要靠金属加工）
+       mat_vulcan     = 工艺 + 材料   （储墨的硫化橡胶）
+     四者在数据里长得一模一样。
+
+     v2 的关键改动：**把性质挂在前置节点上、允许一节点多类**，而不是在边上二选一。
+       —— 用户裁定：「工具钢的上层是金属工艺和材料两类就好了」，一句解决。
+       —— 另一裁定：「内燃机不是造运河所需之具，而是挖泥机械的动力来源」→ 增设「动力」类。
+     于是徽章可多枚：工具钢→钢笔 显示「工艺」「材料」两枚；内燃机→运河 显示「动力」。
+
+     渲染优先级：edgeRels[边] > kinds[前置节点] > meta.kindByCat[前置节点的 cat]。
+     最后一级兜底意味着**全库 2288 节点默认即有徽章**，kinds 只用于覆盖与细化。
      状态：先在 5 个修复样本上试点（对应 CR-2026-0913-positional-template）。 */
-  deps: {
-    inf_pen: { writing: "symbol", paper: "complement", mat_toolsteel: "material", mat_vulcan: "material" },
-    control_theory: { mathematics: "theory", info_theory: "theory", statistics: "theory", neuroscience: "theory" },
-    tr_panama: { explosives: "material", internal_combustion: "craft", mat_reconcrete: "material", steel_frame: "material" },
-    inf_fax: { telegraph: "craft", photography: "craft", chemistry: "theory", electrochem: "theory" },
-    tr_pneumatictire: { chemistry: "theory", mat_rubber: "material", mat_vulcan: "material" }
+  kinds: {
+    writing: ["symbol"],
+    paper: ["craft", "material"],
+    mat_toolsteel: ["craft", "material"],
+    mat_vulcan: ["craft", "material"],
+    mathematics: ["theory.latent"],
+    statistics: ["theory.latent"],
+    info_theory: ["theory"],
+    neuroscience: ["theory"],
+    explosives: ["material"],
+    internal_combustion: ["power"],
+    mat_reconcrete: ["material"],
+    steel_frame: ["craft"],
+    telegraph: ["craft"],
+    photography: ["craft"],
+    chemistry: ["theory"],
+    electrochem: ["theory"],
+    mat_rubber: ["material"]
+  },
+  /* 边的关系性质覆盖（"依赖者|前置" → kind）。只在「不是因果前置」时才需要，
+     因为「是材料还是工艺」已由前置节点自身回答，不必逐条重述。 */
+  edgeRels: {
+    "inf_pen|paper": "complement"
   },
 
   /* ---------- ② 事后解释（技术先行、科学解释后至） ----------
