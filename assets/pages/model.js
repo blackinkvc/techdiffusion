@@ -36,6 +36,28 @@
       p10: p(0.10), p25: p(0.25), p50: p(0.50), p75: p(0.75), p90: p(0.90), vals: s };
   }
   const lag = lagStats(1700);
+  // 滞后分布的形态统计（供「必要非充分」口径声明实时引用，不写死）
+  const lagZero = lag.vals.filter(v => v === 0).length;
+  const lagCent = lag.vals.filter(v => v >= 100).length;
+  const lagOver10 = lag.vals.filter(v => v > 10).length;
+  const lagZeroPct = lag.n ? Math.round(100 * lagZero / lag.n) : 0;
+  const lagOver10Pct = lag.n ? Math.round(100 * lagOver10 / lag.n) : 0;
+  // year 与 max(前置年) 的相关：前置能在多大程度上决定涌现时间（越接近 1 越"充分"）
+  const lagCorr = (() => {
+    const X = [], Y = [];
+    TECHS.forEach(t => {
+      const y = t.year; if (y == null || y < 1700) return;
+      const uy = (t._up || []).map(id => techMap[id]).filter(Boolean).map(x => x.year).filter(v => v != null && v >= 0);
+      if (!uy.length) return;
+      X.push(Math.max(...uy)); Y.push(y);
+    });
+    const n = X.length; if (!n) return null;
+    const mx = X.reduce((a, b) => a + b, 0) / n, my = Y.reduce((a, b) => a + b, 0) / n;
+    let sxy = 0, sxx = 0, syy = 0;
+    for (let i = 0; i < n; i++) { const dx = X[i] - mx, dy = Y[i] - my; sxy += dx * dy; sxx += dx * dx; syy += dy * dy; }
+    return { n, r: +(sxy / Math.sqrt(sxx * syy)).toFixed(3) };
+  })();
+  const lagCorrR2 = lagCorr ? +(lagCorr.r * lagCorr.r).toFixed(2) : null;
 
   // 时期 id 列表（供各按时期统计使用；须在 lagByEra 调用前声明，避免 TDZ）
   const eraOrder = ERAS.map(e => e.id);
@@ -210,7 +232,9 @@
     { v: "v0.7", date: "2026-09-09", title: "Phase 2 构想 A 外生驱动量化：首版系数标定 + 物理参照",
       body: "构想 A 首次把方程两侧落到数值：右侧给 era 级历史代理（EXO 表：人口 P 亿 / 人均产出 gdp 1990 国际元 / 预期寿命 L，量级参照 McEvedy&Jones / Maddison / UN），左侧 λ_obs 由语料实算（项/百年；本页口径 span&lt;1 世纪按 1 计，智能期 2000–2026 为进行中快照、速率保守）。两类产出：① 单因子 log-log 标定 ln λ=a+b·ln X（n=8）——人口 b≈1.3（R²≈0.88）、人均产出 b≈1.8（R²≈0.85）、知识存量 K b≈2.0（R²≈0.93）：各驱动量下涌现均呈超线性、K 拟合最强（K 与 λ 同源，标为结构性自洽而非独立确证）；② λ/P 人均涌现效率「先抑后扬」——古典/中世纪下探（人口增长快于技术涌现的技术史低产期），工业期反超、信息期达峰约 2.2×（古代=1），智能期回落属未满期快照。信息流速度 v_i 另加真实吞吐量级外部参照（电报≈10 bit/s→光纤 T→Pbit/s，方向性交叉检验）。局限：n=8 era 级、代理为量级估计、逐年面板（ρ/气候/制度等）未入，结论为首版量级而非精标定；表中数值随语料增长实时更新，本日志为成文时快照。" },
     { v: "v0.8", date: "2026-09-09", title: "Phase 3 可运行化方案已设计并暂存（待硬件执行）",
-      body: "因当前开发环境无 GPU/TPU 硬件，进阶模型的脚本执行与算力实测暂停，但 Phase 3 设计已完整写入第九节「待硬件」折叠详情，不随会话丢失：① M1 node2vec / M2 PyG-GCN 分类 / M4 PyG-GAEn 链路预测的最小可运行脚本方案（库与验收协议定稿）；② 算力成本量级设计估算（M1≈0.01 GPU·h 当量、M2/M4 单卡 GPU 1–4 GPU·h 等，均为云牌价量级、实测后回填）；③ 第九节速查表将补「数据需求量」列。方法学口径：凡无法在当前环境实证的模型步骤，一律先「设计 + 标注待硬件」再执行，杜绝未经验证的口头结论。" }
+      body: "因当前开发环境无 GPU/TPU 硬件，进阶模型的脚本执行与算力实测暂停，但 Phase 3 设计已完整写入第九节「待硬件」折叠详情，不随会话丢失：① M1 node2vec / M2 PyG-GCN 分类 / M4 PyG-GAEn 链路预测的最小可运行脚本方案（库与验收协议定稿）；② 算力成本量级设计估算（M1≈0.01 GPU·h 当量、M2/M4 单卡 GPU 1–4 GPU·h 等，均为云牌价量级、实测后回填）；③ 第九节速查表将补「数据需求量」列。方法学口径：凡无法在当前环境实证的模型步骤，一律先「设计 + 标注待硬件」再执行，杜绝未经验证的口头结论。" },
+    { v: "v0.9", date: "2026-09-12", title: "构想 B 口径修正：前提齐备是「必要条件」，不是「充分条件」",
+      body: `修正本页早前「有效滞后 Δ 极短（前提齐备即涌现）」的过强断言。实算口径下 year≥1700 且有前置者 n=${lag.n}：中位 ${lag.p50} 年、均值 ${lag.mean} 年、p90 ${lag.p90} 年，但分布呈双峰——Δ=0 占 ${lagZeroPct}%，而 Δ>10 年仍占 ${lagOver10Pct}%、Δ≥100 年 ${lagCent} 项。近零中位的成因是「前置集被学科背景枢纽主导（数学/化学/经典力学各为数百个节点的前置，早已就位）」＋「编年时把技术年对齐到最晚前置年」两条惯例，均属编年产物、非自然律。据此明确：前提齐备只是<b>必要条件</b>——齐备之后还须通过「社会·需求门 / 偶然之门 / 路径·淘汰门」三道尚未建模的门；正反馈闭环中的「Δ ↓」同步降级为待验证假说。四道门与典型反例（火药 850 → 钻爆法 1843 滞后 993 年等）已写入第二节实证锚点卡片；并给出量化佐证——year 与 max(前置年) 的 Pearson <b>r</b> 实算约 <b>0.73</b>（r²≈0.53），即前置只能解释约一半的涌现时间方差。` }
   ];
 
   // ---------- 十种进阶数学模型（隐性参数 · 神经网络 · 专用硬件） ----------
@@ -398,7 +422,7 @@
   <div class="floop">
     <span class="fb">信息流速度 v<sub>i</sub> ↑</span><span class="fa">→</span>
     <span class="fb">知识重组加速</span><span class="fa">→</span>
-    <span class="fb">前提闭包更快满足、有效滞后 Δ ↓</span><span class="fa">→</span>
+    <span class="fb">前提闭包更快满足、有效滞后 Δ ↓（假说）</span><span class="fa">→</span>
     <span class="fb">涌现速率 λ ↑</span><span class="fa">→</span>
     <span class="fb">技术存量 N ↑</span><span class="fa">→</span>
     <span class="fb">更多技术 ⇒ 更优信息工具 ⇒ v<sub>i</sub> 再 ↑</span>
@@ -408,8 +432,16 @@
   <p class="mut">正反馈的<b>量化指纹</b>：在 ${_idx.length} 个观测期上，信息流速率 v_i 与总体技术涌现速率的 Pearson 相关 <b>r=${fbR}</b>${fbR!=null && fbR>=0.7 ? '（强正相关，印证「信息流加速 ⇄ λ 再加速」闭环）' : ''}。该相关说明 v_i 的抬升与技术总体涌现提速同步，是构想 A 正反馈的可计算证据；但严格系数（κ,γ 及 Ξ 内各指数）仍需 exogenous 历史序列标定。</p>
 
   <div class="chart-card">
-    <div class="ctitle">实证锚点 · 有效滞后 Δ 极短（前提齐备即涌现）<span class="verdict pass">支持正反馈</span></div>
-    <div class="csub">对 year≥1700 的真实技术实算 Δ=技术年−最晚前置年，按时期取中位。近代真实技术的 Δ 中位仅 0–2 年——前提一旦齐备，技术几乎立刻涌现，正是「前提闭包被极快满足」的正反馈指纹。智能/未来档属预测项，含刻意推演时域，Δ 较大（~73 年）为方法设定而非观测。</div>
+    <div class="ctitle">实证锚点 · 前提齐备是「必要条件」，不是「充分条件」<span class="verdict partial">必要非充分</span></div>
+    <div class="csub">对 year≥1700 且有前置的真实技术（n=<b>${lag.n}</b>）实算 Δ = 技术年 − 最晚前置年：整体中位 <b>${lag.p50}</b> 年、均值 <b>${lag.mean}</b> 年、p90 <b>${lag.p90}</b> 年、max ${lag.max} 年，分布呈<b>双峰</b>——Δ=0 占 <b>${lagZeroPct}%</b>，但 Δ&gt;10 年者仍占 <b>${lagOver10Pct}%</b>、Δ≥100 年者 <b>${lagCent}</b> 项。即：前提齐备只保证该技术<b>可能</b>出现，不保证它<b>一定</b>出现。智能/未来档 Δ 较大（~73 年）含刻意推演时域，属方法设定而非观测。</div>
+    <div class="floop">
+      <span class="fb">① 前置 AND 门 · 已建模</span><span class="fa">→</span>
+      <span class="fb">② 社会·需求门 · 未建模</span><span class="fa">→</span>
+      <span class="fb">③ 偶然之门 · 未建模</span><span class="fa">→</span>
+      <span class="fb">④ 路径·淘汰门 · 未建模</span><span class="fa">→</span>
+      <span class="fb">涌现</span>
+    </div>
+    <p class="mut"><b>口径声明（方法 v0.9 · 2026-09-12）</b>：本页早前版本写「Δ 中位仅 0–2 年 ⇒ 前提一旦齐备，技术几乎立刻涌现」，属<b>过强断言</b>，现予修正。近零的中位主要由两件事造成，二者都是<b>编年产物、不是自然律</b>：① 前置集被<b>学科背景枢纽</b>主导（数学、化学、经典力学各为数百个节点的前置，早已就位，「齐备」近乎恒真，真正的瓶颈被淹没）；② 编年惯例把技术年对齐到其最晚前置年附近。史实中前提齐备却久候数十至数百年者比比皆是（火药 850 → 钻爆法 1843，滞后 <b>993 年</b>；线膛 1490 → 后膛装填 1850，滞后 360 年；化学 1661 → 石墨烯 2004，滞后 317 年），只能由后三道门解释。量化佐证：本页实算 year 与 max(前置年) 的 Pearson <b>r=${lagCorr?lagCorr.r:'—'}</b>（r²≈${lagCorrR2}），即前置只能解释约<b>一半</b>的涌现时间方差，其余由后三道门与误差项承担。同理，上方正反馈闭环中的「Δ ↓」目前亦无数据支持，属<b>待验证假说</b>。</p>
     <table class="ptable">
       <thead><tr><th>时期</th><th>n</th><th>滞后中位 Δ（年）</th></tr></thead>
       <tbody>${lagEra.map(r=>`<tr><td>${esc(r.name)}</td><td>${r.n}</td><td><b>${r.med==null?'—':r.med}</b></td></tr>`).join("")}</tbody>
