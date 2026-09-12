@@ -101,6 +101,60 @@ function goto(view, params) {
 }
 
 // ============================================================
+//  理论与解释（覆盖层标注，数据见 assets/pages/theory_data.js）
+//  只读 window.THEORY，不改动主数据；未标注的节点返回空串
+// ============================================================
+function buildTheoryBlock(t) {
+  const T = typeof window !== "undefined" ? window.THEORY : null;
+  if (!T || !t) return "";
+  const ann = (T.nodes || {})[t.id];
+  const retro = (T.retro || {})[t.id];
+  if (!ann && !retro) return "";
+  const L = (T.meta && T.meta.layers) || {};
+  const neg = v => String(v).replace("-", "−");
+  let h = "";
+
+  if (ann) {
+    h += `<div class="th-layer"><span class="th-badge th-lay-${esc(ann.layer)}">${esc(L[ann.layer] || ann.layer)}</span>`;
+    if (ann.field) h += `<span class="th-field">${esc(ann.field)}</span>`;
+    h += `</div>`;
+    if (ann.note) h += `<p class="th-note">${esc(ann.note)}</p>`;
+  }
+
+  if (retro) {
+    const useYear = (typeof retro.useYear === "number") ? retro.useYear : null;
+    const at = (retro.explain && typeof retro.explain.at === "number") ? retro.explain.at : null;
+    const gap = (useYear != null && at != null) ? (at - useYear) : null;
+    const gapTxt = gap == null ? "—" : (gap >= 1000 ? "≈" + (Math.round(gap / 10) * 10) + " 年" : "≈" + gap + " 年");
+    const baTxt = useYear == null ? "" : (useYear < 0 ? "约 " + neg(useYear) : neg(useYear));
+    h += `<div class="th-rel"><span class="th-badge th-lay-retro">事后解释</span><span class="th-rel-t">技术先用，科学解释后至——不是前置，而是补齐</span></div>`;
+    h += `<div class="th-row3">`;
+    h += `<div class="th-cell"><div class="th-k">开始使用</div><div class="th-v">${esc(retro.useSince || (useYear == null ? "—" : neg(useYear)))}</div></div>`;
+    h += `<div class="th-cell"><div class="th-k">首次科学解释</div><div class="th-v">${at == null ? "—" : neg(at)}</div><div class="th-sub">${esc((retro.explain && retro.explain.label) || "")}</div></div>`;
+    h += `<div class="th-cell"><div class="th-k">无科学解释期</div><div class="th-v">${gapTxt}</div></div>`;
+    h += `</div>`;
+    h += `<div class="th-bar"><span class="th-ba">${esc(baTxt)}</span><div class="th-track"></div><span class="th-bb">${at == null ? "" : neg(at)}</span></div>`;
+    if (retro.folk && retro.folk.length) {
+      h += `<div class="th-folk"><span class="th-folk-k">期间的朴素解释</span>`;
+      retro.folk.forEach(f => {
+        let spanTxt = "";
+        if (f.from && f.to) spanTxt = neg(f.from) + "–" + neg(f.to);
+        else if (f.to) spanTxt = neg(f.to) + " 前";
+        else if (f.from) spanTxt = neg(f.from) + " 起";
+        h += `<span class="th-chip">${esc(f.idea)}`;
+        if (spanTxt) h += `<span class="th-span">${esc(spanTxt)}</span>`;
+        if (f.superseded) h += `<span class="th-sup">→ ${esc(f.superseded)}</span>`;
+        h += `</span>`;
+      });
+      h += `</div>`;
+    }
+    if (retro.useNote) h += `<p class="th-note">${esc(retro.useNote)}</p>`;
+    if (retro.note) h += `<p class="th-note">${esc(retro.note)}</p>`;
+  }
+  return h;
+}
+
+// ============================================================
 //  详情弹窗（本页浮层，不写历史；刷新页面会丢失弹窗，符合多页预期）
 // ============================================================
 // 技术详情完整 HTML（弹窗与整页详情共用，单数据源）
@@ -154,6 +208,11 @@ function buildDetailHTML(t) {
   const relExp = buildRelationExplanation(t);
   if (relExp) {
     html += `<div class="m-row"><div class="m-label">🔗 关系解说</div><div class="m-relexp">${relExp}</div></div>`;
+  }
+
+  const thBlock = buildTheoryBlock(t);
+  if (thBlock) {
+    html += `<div class="m-row"><div class="m-label">理论与解释</div><div class="m-theory">${thBlock}</div></div>`;
   }
 
   if (t.views && t.views.length) {
