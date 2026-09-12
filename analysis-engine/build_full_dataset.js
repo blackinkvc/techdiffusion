@@ -18,13 +18,18 @@ function set(id, obj) {
   if (byId.has(id)) Object.assign(byId.get(id), obj);
   else byId.set(id, obj);
 }
+// 概念占位节点（graph.json 中 enables 断链目标，kind:"concept" / category:"(concept)"）
+// 不是真实技术，禁止进入站点全量数据集——否则会以灰色虚框标签长期残留在图上。
+const isConcept = n => n && (n.kind === 'concept' || n.category === '(concept)');
+let skippedConcepts = 0;
 gj.nodes.forEach(n => {
+  if (isConcept(n)) { skippedConcepts++; return; }
   set(n.id, Object.assign({ subcategory: n.category || '', dependsOn: [], enables: [], views: [], applications: [], significance: '' }, n));
 });
 
 // 2) 新条目富字段（new_techs，含 subcategory/dependsOn/enables/views/significance/summary）
 newt.forEach(t => {
-  if (!t.id) return;
+  if (!t.id || isConcept(t)) return;
   if (byId.has(t.id)) {
     const c = byId.get(t.id);
     for (const k in t) if (t[k] !== '' && t[k] != null && (c[k] == null || c[k] === '' || (Array.isArray(c[k]) && c[k].length === 0))) c[k] = t[k];
@@ -44,7 +49,7 @@ for (const [id, node] of byId) {
     node.layer = sc.layer;
     scoredNodes++;
   }
-  if (!node.category && sc) node.category = sc.category;
+  if (!node.category && sc && sc.category !== '(concept)') node.category = sc.category;
   if (node.year == null && sc) node.year = sc.year;
   if (sc && sc.name && !node.name) node.name = sc.name;
   if (!node.subcategory) node.subcategory = (sc && sc.category) ? sc.category : (node.category || '');
@@ -56,6 +61,7 @@ for (const [id, node] of byId) {
 for (const id in scores) {
   if (!byId.has(id)) {
     const sc = scores[id];
+    if (isConcept(sc)) { skippedConcepts++; continue; } // 陈旧概念占位评分条目，剔除
     byId.set(id, {
       id, name: sc.name, category: sc.category, year: sc.year,
       score: sc.score, tier: sc.tier, D1: sc.D1, D2: sc.D2, D3: sc.D3, D4: sc.D4, D5: sc.D5, layer: sc.layer,
@@ -114,4 +120,5 @@ console.log('withSummary:', withSummary, '(' + (100 * withSummary / nodes.length
 const dep = edges.filter(e => e.type === 'dependency').length;
 const ena = edges.filter(e => e.type === 'enables').length;
 console.log('edges -> dependency:', dep, '| enables:', ena);
+console.log('skipped concept placeholders:', skippedConcepts);
 console.log('data_full.js size MB:', (out.length / 1048576).toFixed(2));

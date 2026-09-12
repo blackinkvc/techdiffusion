@@ -30652,9 +30652,7 @@ const EXTRA_TECHS = [
       "fire"
     ],
     "enables": [
-      "pottery",
-      "fire_drill",
-      "cooking"
+      "fire_drill"
     ],
     "applications": [
       "烹饪",
@@ -30776,9 +30774,7 @@ const EXTRA_TECHS = [
     "dependsOn": [
       "hearth_stove"
     ],
-    "enables": [
-      "pottery"
-    ],
+    "enables": [],
     "applications": [
       "陶器烧成",
       "低温陶瓷"

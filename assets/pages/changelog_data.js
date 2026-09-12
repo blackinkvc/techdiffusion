@@ -404,6 +404,31 @@ window.CHANGELOG = {
         "数据声明同步：README.md/tree_full.html 13,392→13,413 节点、约 1.8 万→约 1.75 万边；模型页实时拟合值微移（P 1.33/R²≈0.874、K 2.04/R²≈0.932，无硬编码）。"
       ],
       files: ["assets/techs_extra.js", "assets/techs_extend.js", "assets/data.js", "analysis-engine/data/graph.json", "assets/data_full.js", "analysis-engine/build_full_dataset.js", "assets/pages/correction_data.js", "README.md", "tree_full.html"]
+    },
+    {
+      version: "v0.9.17",
+      date: "2026-09-12",
+      type: "fix",
+      title: "enables 语义错误批量修正：95 个「灰色概念」占位清零（主库 + 全量镜像）+ 正式甄别表落档",
+      summary: "对 enables 字段的系统性语义错误做批量修正：把「技术带来的社会影响/应用」误当「技术催生技术」的 95 个断链目标（即前端渲染为灰色虚框标签的「灰色概念」）从主库清理（data.js 60 处 + techs_extra.js 2 处，移除 83 条断链引用）；并发现与修复全量镜像层同源残留（phase2_scores.json 96 条 (concept) 占位经 build_full_dataset.js 评分分支进入 data_full.js，为该层灰节点的真正来源），主管线概念占位 95→11、全量集概念节点 96→0（TECHS_FULL 13413→13319）。脏 id calendar(agri)/mars(未来) 清理，顺带修正 gunpowder/optics 的 algorithm 错挂依赖。95 项正式甄别表（三分类 + 逐条处置建议）落为纠错页 meta.enablesAudit，可逐条勾选。",
+      treeChange: {
+        scope: "主管线技术网络：enables 断链引用移除 83 条（data.js 60 处 + techs_extra.js 2 处）、概念占位 95→11；dependsOn 修正 2 条（gunpowder / optics 去 algorithm），依赖边 7342→7340；节点不变 2289。全量管线：graph.json enables 304→206、断链 12；data_full.js 节点 13413→13319、边 17503→17394、概念节点 96→0",
+        reason: "enables 字段长期混写「技术催生技术」与「技术带来的社会影响/应用」两类语义，且自动生成批次按 summary 关键词机械提取下游，把「重塑社会结构」「推动书籍发展」等描述句名词当成使能目标（典型：trade←帆船/道路/马具、social←互联网/万维网/智能手机、books←造纸/印刷、cooking←用火、hunting←弓箭/火器）。这些指向不存在 id 的断链被 dump_data.js 一并登记为 kind=concept 占位节点，在前端 core.js 因映射不到实体而渲染成灰色虚框标签，即「95 个灰色概念」。另一同源残留藏在全量镜像层：phase2_scores.json 内 (concept) 占位评分条目经 build_full_dataset.js「评分独有节点」分支进入 data_full.js。",
+        detail: "① 主库逐条移除 ②③ 类 enables 引用，脏 id calendar(agri)→calendar_agri、mars(未来)→mars_colony（接上真实节点「火星殖民」）；② dump_data.js 重导出 graph.json：概念占位 95→11、enables 边 304→206、断链 enables 12；③ build_full_dataset.js 增加 isConcept 过滤（graph 节点 / new_techs / score 条目三处 + category 回填守卫）并重建：TECHS_FULL 13413→13319、EDGES_FULL 17503→17394、概念节点 0（移除的 94 项经逐 id 比对确认全为概念占位，无真实节点误伤、无新增）；④ 修正 gunpowder / optics 的 algorithm 错挂依赖。"
+      },
+      changes: [
+        "主库 enables 清理：assets/data.js 60 处 + assets/techs_extra.js 2 处，共移除 83 条指向灰色概念的断链引用；真实技术边（如 sail→navigation）保留不动。",
+        "graph.json 重导出（dump_data.js）：概念占位 95→11、enables 边 304→206、断链 enables 12（= 11 个待实体化概念，icbm 被 rocket 与 missile 双处引用）；技术节点 2289 / dependency 7340 / 悬空 0 / 年份倒挂 0。",
+        "全量镜像同源残留修复：定位到 phase2_scores.json 残留 96 条 (concept) 占位评分条目（经「评分独有节点」分支进入 data_full.js，是该层灰节点长期存在的真正原因）；加固 build_full_dataset.js 的 isConcept 过滤后重建，TECHS_FULL 13413→13319、概念节点 96→0。",
+        "脏 id 清理：calendar(agri)→calendar_agri（仍属待建真技术缺口）、mars(未来)→mars_colony（直接接上既有真实节点）；全库复扫含括号 id / 引用 = 0。",
+        "顺带修正 algorithm 错挂依赖：gunpowder（火药 850）、optics（光学 1000）的 dependsOn 移除 algorithm（算法理论 825）。全库 216 个 algorithm 下游中 213 个属信息/智能时代（AI/ML 合理），仅 3 个非 AI 时代，前两者已修；mil_depthcharge 属自动生成 stub 捏造依赖链，另案登记。",
+        "正式甄别表落档：95 项灰色概念三分类（真技术物 33 / 抽象现象 56 / 应用·上下位 6）+ 逐条处置建议（待实体化 11 / 去重 21 / 降为广义影响 63）落为纠错页 meta.enablesAudit；纠错页新增可勾选渲染（correction.js + style.css），勾选状态本地记忆、可一键清除。",
+        "新增纠错记录 CR-2026-0912-enables-semantics（severity 高）；pendingQueue 追加本轮甄别表与新发现两条。",
+        "新发现登记（本轮未动）：自动生成 stub 存在捏造依赖链——mil_depthcharge（深水炸弹 1910）dependsOn 含 vacuum_cleaner（真空吸尘器）/ mat_ferrite / tr_simulator，summary 亦写「建立在 真空吸尘器、调峰电站、铁氧体 之上」；techs_more.js 另约 209 条同构 dependsOn（[rocket,algorithm,electronics] 与 [mathematics,computer,statistics,algorithm] 两族）疑为模板注入，待专项甄别。",
+        "数据声明同步：README.md（2 处）/ tree_full.html 全量节点 13,413→13,319、依赖/赋能边约 1.75 万→约 1.74 万；check_docs 门禁 OK；纠错页 dry-run 95 行勾选表渲染正常；模型页 dry-run RENDER OK。"
+      ],
+      files: ["assets/data.js", "assets/techs_extra.js", "analysis-engine/data/graph.json", "analysis-engine/build_full_dataset.js", "assets/data_full.js", "assets/pages/correction_data.js", "assets/pages/correction.js", "assets/style.css", "README.md", "tree_full.html"]
     }
+
   ]
 };

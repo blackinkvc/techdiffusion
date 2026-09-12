@@ -1,15 +1,15 @@
 # 阶段0 · 数据质量报告
 
-导出时间：2026-09-09T18:42:43.835Z
+导出时间：2026-09-12T13:18:36.874Z
 
 ## 总览
 
 | 指标 | 数值 |
 |---|---|
 | 技术节点总数 | 2289 |
-| 显式关系边总数 | 7644 |
+| 显式关系边总数 | 7546 |
 | dependsOn 引用 | 7340（断链 0） |
-| enables 引用 | 304（断链 111） |
+| enables 引用 | 206（断链 12） |
 | 重复 id | 0 |
 
 ## 分类分布
@@ -59,35 +59,16 @@
 ## 断链明细（前 30 条）
 
 ```
-[enables] astronomy -> calendar(agri)
-[enables] evolution -> medicine
-[enables] fire -> pottery
-[enables] fire -> cooking
-[enables] cement -> reinforced_concrete
-[enables] paper -> books
-[enables] plastics -> consumer
-[enables] waterwheel -> mills
-[enables] waterwheel -> industrial_precursor
-[enables] coal_mining -> pollution
-[enables] steam_engine -> factory
-[enables] battery -> portable_elec
-[enables] battery -> electromobile
-[enables] electricity -> lighting
-[enables] power_grid -> modern_industry
-[enables] power_grid -> electrification
-[enables] nuclear_fission -> nuclear_power
-[enables] solar -> renewable
-[enables] solar -> space_power
-[enables] nuclear_fusion -> abundant_energy
-[enables] bronze_casting -> mold_tech
-[enables] iron_smelting -> tools
+[enables] astronomy -> calendar_agri
 [enables] wheel -> pottery_wheel
-[enables] wheel -> machinery
 [enables] lathe -> ic_tooling
-[enables] printing -> books
-[enables] printing -> literacy
-[enables] assembly_line -> mass_production
-[enables] assembly_line -> consumer
-[enables] cnc -> precision_industry
-… 共 111 条
+[enables] railway -> time_standard
+[enables] rocket -> icbm
+[enables] satellite -> comsat
+[enables] satellite -> earth_obs
+[enables] photography -> film
+[enables] llm -> copilot
+[enables] fermentation -> food_preserve
+[enables] gmo -> precision_breeding
+[enables] missile -> icbm
 ```

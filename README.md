@@ -15,7 +15,7 @@
 - 量化每项技术的**成熟度五维评分**（物理可行 / 时间成熟 / 依赖深度 / 系统织密 / 跨域辐射）；
 - **推演未来**：基于网络本身的前提闭包与「前提齐备律」，推导技术何时、在什么条件下涌现（严肃科学，非科幻臆测）。
 
-当前数据规模：**13,413 个技术节点 + 约 1.75 万条依赖/赋能边**。
+当前数据规模：**13,319 个技术节点 + 约 1.74 万条依赖/赋能边**。
 
 ---
 
@@ -112,7 +112,7 @@ open http://localhost:8000/
 <a id="english"></a>
 ## English
 
-**techdiffusion** is a static, offline-browsable visualization database of human technology evolution. It connects ~13,413 technologies through their real historical dependencies into a single evolution network, paired with a deterministic analysis engine that:
+**techdiffusion** is a static, offline-browsable visualization database of human technology evolution. It connects ~13,319 technologies through their real historical dependencies into a single evolution network, paired with a deterministic analysis engine that:
 
 - maps prerequisite dependencies between technologies,
 - scores each technology on five first-principles maturity dimensions (D1–D5 → L1–L5 tiers),

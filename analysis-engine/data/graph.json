@@ -1,12 +1,12 @@
 {
  "meta": {
-  "exportedAt": "2026-09-09T18:42:43.807Z",
+  "exportedAt": "2026-09-12T13:18:36.842Z",
   "totalTechs": 2289,
-  "totalConceptNodes": 95,
-  "totalNodes": 2384,
-  "totalEdges": 7644,
+  "totalConceptNodes": 11,
+  "totalNodes": 2300,
+  "totalEdges": 7546,
   "depEdges": 7340,
-  "enaEdges": 304,
+  "enaEdges": 206,
   "source": "assets/data.js + techs_{extra,extend,more,midtech}.js"
  },
  "nodes": [
@@ -38764,8 +38764,8 @@
    "kind": "tech"
   },
   {
-   "id": "calendar(agri)",
-   "name": "calendar(agri)",
+   "id": "calendar_agri",
+   "name": "calendar_agri",
    "en": "",
    "category": "(concept)",
    "era": "",
@@ -38779,338 +38779,8 @@
    "kind": "concept"
   },
   {
-   "id": "medicine",
-   "name": "medicine",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 evolution 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "pottery",
-   "name": "pottery",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 fire、hearth_stove、open_firing 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "cooking",
-   "name": "cooking",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 fire、hearth_stove 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "reinforced_concrete",
-   "name": "reinforced_concrete",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 cement 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "books",
-   "name": "books",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 paper、printing 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "consumer",
-   "name": "consumer",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 plastics、assembly_line 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "mills",
-   "name": "mills",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 waterwheel 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "industrial_precursor",
-   "name": "industrial_precursor",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 waterwheel 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "pollution",
-   "name": "pollution",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 coal_mining 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "factory",
-   "name": "factory",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 steam_engine 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "portable_elec",
-   "name": "portable_elec",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 battery 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "electromobile",
-   "name": "electromobile",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 battery 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "lighting",
-   "name": "lighting",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 electricity 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "modern_industry",
-   "name": "modern_industry",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 power_grid 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "electrification",
-   "name": "electrification",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 power_grid 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "nuclear_power",
-   "name": "nuclear_power",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 nuclear_fission 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "renewable",
-   "name": "renewable",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 solar 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "space_power",
-   "name": "space_power",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 solar 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "abundant_energy",
-   "name": "abundant_energy",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 nuclear_fusion 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "mold_tech",
-   "name": "mold_tech",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 bronze_casting 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "tools",
-   "name": "tools",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 iron_smelting 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
    "id": "pottery_wheel",
    "name": "pottery_wheel",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 wheel 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "machinery",
-   "name": "machinery",
    "en": "",
    "category": "(concept)",
    "era": "",
@@ -39139,171 +38809,6 @@
    "kind": "concept"
   },
   {
-   "id": "literacy",
-   "name": "literacy",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 printing 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "mass_production",
-   "name": "mass_production",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 assembly_line 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "precision_industry",
-   "name": "precision_industry",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 cnc 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "3d_printing",
-   "name": "3d_printing",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 cnc 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "smart_factory",
-   "name": "smart_factory",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 robot 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "exploration",
-   "name": "exploration",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 sail 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "trade",
-   "name": "trade",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 sail、road、horse_gear 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "empire",
-   "name": "empire",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 road 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "post",
-   "name": "post",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 road 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "cavalry",
-   "name": "cavalry",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 horse_gear 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "mass_transport",
-   "name": "mass_transport",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 railway 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
    "id": "time_standard",
    "name": "time_standard",
    "en": "",
@@ -39314,126 +38819,6 @@
    "people": "",
    "place": "",
    "summary": "概念占位节点：被技术 railway 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "modern_city",
-   "name": "modern_city",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 railway、steel_frame、skyscraper 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "global_trade",
-   "name": "global_trade",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 steam_ship 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "canal",
-   "name": "canal",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 steam_ship 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "suburb",
-   "name": "suburb",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 automobile 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "oil_economy",
-   "name": "oil_economy",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 automobile 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "logistics",
-   "name": "logistics",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 automobile 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "aviation",
-   "name": "aviation",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 airplane 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "globalization",
-   "name": "globalization",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 airplane 记为影响去向，但不在技术库中实体化。",
    "tier": null,
    "applications": [],
    "kind": "concept"
@@ -39484,81 +38869,6 @@
    "kind": "concept"
   },
   {
-   "id": "space_economy",
-   "name": "space_economy",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 space_station 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "mars(未来)",
-   "name": "mars(未来)",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 space_station 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "law",
-   "name": "law",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 writing 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "global_news",
-   "name": "global_news",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 telegraph 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "network",
-   "name": "network",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 telephone 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
    "id": "film",
    "name": "film",
    "en": "",
@@ -39569,156 +38879,6 @@
    "people": "",
    "place": "",
    "summary": "概念占位节点：被技术 photography 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "surveillance",
-   "name": "surveillance",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 photography 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "radar",
-   "name": "radar",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 radio 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "broadcast",
-   "name": "broadcast",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 television 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "media",
-   "name": "media",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 television 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "social",
-   "name": "social",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 internet、www、smartphone 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "ecommerce",
-   "name": "ecommerce",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 www 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "search",
-   "name": "search",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 www 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "app_economy",
-   "name": "app_economy",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 smartphone 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "mobile_ai",
-   "name": "mobile_ai",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 smartphone 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "agent",
-   "name": "agent",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 llm 记为影响去向，但不在技术库中实体化。",
    "tier": null,
    "applications": [],
    "kind": "concept"
@@ -39739,96 +38899,6 @@
    "kind": "concept"
   },
   {
-   "id": "knowledge_work",
-   "name": "knowledge_work",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 llm 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "city",
-   "name": "city",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 agriculture、irrigation 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "population",
-   "name": "population",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 agriculture、fertilizer 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "surplus",
-   "name": "surplus",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 irrigation 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "civilization",
-   "name": "civilization",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 irrigation 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "intensive_farming",
-   "name": "intensive_farming",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 plow 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
    "id": "food_preserve",
    "name": "food_preserve",
    "en": "",
@@ -39844,141 +38914,6 @@
    "kind": "concept"
   },
   {
-   "id": "green_revolution",
-   "name": "green_revolution",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 fertilizer 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "public_health",
-   "name": "public_health",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 vaccination 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "eradication",
-   "name": "eradication",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 vaccination 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "complex_op",
-   "name": "complex_op",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 anesthesia 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "transplant",
-   "name": "transplant",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 surgery 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "modern_medicine",
-   "name": "modern_medicine",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 surgery 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "diagnosis",
-   "name": "diagnosis",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 medical_imaging 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "radiology",
-   "name": "radiology",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 medical_imaging 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "synthetic_bio",
-   "name": "synthetic_bio",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 genetic_engineering 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
    "id": "precision_breeding",
    "name": "precision_breeding",
    "en": "",
@@ -39989,201 +38924,6 @@
    "people": "",
    "place": "",
    "summary": "概念占位节点：被技术 gmo 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "vertical_life",
-   "name": "vertical_life",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 skyscraper 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "metro",
-   "name": "metro",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 tunnel 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "highspeed_rail",
-   "name": "highspeed_rail",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 tunnel 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "hunting",
-   "name": "hunting",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 bow_arrow、firearm 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "military_rev",
-   "name": "military_rev",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 firearm 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "fortification_change",
-   "name": "fortification_change",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 cannon 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "naval_war",
-   "name": "naval_war",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 cannon 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "blitzkrieg",
-   "name": "blitzkrieg",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 tank 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "mechanized_war",
-   "name": "mechanized_war",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 tank 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "precision_strike",
-   "name": "precision_strike",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 missile 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "deterrence",
-   "name": "deterrence",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 nuclear_weapon 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "cold_war",
-   "name": "cold_war",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 nuclear_weapon 记为影响去向，但不在技术库中实体化。",
-   "tier": null,
-   "applications": [],
-   "kind": "concept"
-  },
-  {
-   "id": "electric_vehicle",
-   "name": "electric_vehicle",
-   "en": "",
-   "category": "(concept)",
-   "era": "",
-   "date": "",
-   "year": null,
-   "people": "",
-   "place": "",
-   "summary": "概念占位节点：被技术 electric_motor、brushless_motor 记为影响去向，但不在技术库中实体化。",
    "tier": null,
    "applications": [],
    "kind": "concept"
@@ -40242,7 +38982,7 @@
   },
   {
    "source": "astronomy",
-   "target": "calendar(agri)",
+   "target": "calendar_agri",
    "type": "enables"
   },
   {
@@ -40421,11 +39161,6 @@
    "type": "enables"
   },
   {
-   "source": "evolution",
-   "target": "medicine",
-   "type": "enables"
-  },
-  {
    "source": "physics",
    "target": "relativity_qm",
    "type": "dependency"
@@ -40462,11 +39197,6 @@
   },
   {
    "source": "fire",
-   "target": "pottery",
-   "type": "enables"
-  },
-  {
-   "source": "fire",
    "target": "bronze",
    "type": "enables"
   },
@@ -40478,11 +39208,6 @@
   {
    "source": "fire",
    "target": "steel",
-   "type": "enables"
-  },
-  {
-   "source": "fire",
-   "target": "cooking",
    "type": "enables"
   },
   {
@@ -40597,11 +39322,6 @@
   },
   {
    "source": "cement",
-   "target": "reinforced_concrete",
-   "type": "enables"
-  },
-  {
-   "source": "cement",
    "target": "road",
    "type": "enables"
   },
@@ -40621,11 +39341,6 @@
    "type": "enables"
   },
   {
-   "source": "paper",
-   "target": "books",
-   "type": "enables"
-  },
-  {
    "source": "chemistry",
    "target": "plastics",
    "type": "dependency"
@@ -40638,11 +39353,6 @@
   {
    "source": "plastics",
    "target": "electronics",
-   "type": "enables"
-  },
-  {
-   "source": "plastics",
-   "target": "consumer",
    "type": "enables"
   },
   {
@@ -40726,16 +39436,6 @@
    "type": "dependency"
   },
   {
-   "source": "waterwheel",
-   "target": "mills",
-   "type": "enables"
-  },
-  {
-   "source": "waterwheel",
-   "target": "industrial_precursor",
-   "type": "enables"
-  },
-  {
    "source": "mining",
    "target": "coal_mining",
    "type": "dependency"
@@ -40748,11 +39448,6 @@
   {
    "source": "coal_mining",
    "target": "electricity",
-   "type": "enables"
-  },
-  {
-   "source": "coal_mining",
-   "target": "pollution",
    "type": "enables"
   },
   {
@@ -40797,11 +39492,6 @@
   },
   {
    "source": "steam_engine",
-   "target": "factory",
-   "type": "enables"
-  },
-  {
-   "source": "steam_engine",
    "target": "generator",
    "type": "enables"
   },
@@ -40834,16 +39524,6 @@
    "source": "chemistry",
    "target": "battery",
    "type": "dependency"
-  },
-  {
-   "source": "battery",
-   "target": "portable_elec",
-   "type": "enables"
-  },
-  {
-   "source": "battery",
-   "target": "electromobile",
-   "type": "enables"
   },
   {
    "source": "battery",
@@ -40897,11 +39577,6 @@
   },
   {
    "source": "electricity",
-   "target": "lighting",
-   "type": "enables"
-  },
-  {
-   "source": "electricity",
    "target": "electronics",
    "type": "enables"
   },
@@ -40926,16 +39601,6 @@
    "type": "dependency"
   },
   {
-   "source": "power_grid",
-   "target": "modern_industry",
-   "type": "enables"
-  },
-  {
-   "source": "power_grid",
-   "target": "electrification",
-   "type": "enables"
-  },
-  {
    "source": "relativity_qm",
    "target": "nuclear_fission",
    "type": "dependency"
@@ -40944,11 +39609,6 @@
    "source": "chemistry",
    "target": "nuclear_fission",
    "type": "dependency"
-  },
-  {
-   "source": "nuclear_fission",
-   "target": "nuclear_power",
-   "type": "enables"
   },
   {
    "source": "nuclear_fission",
@@ -40964,16 +39624,6 @@
    "source": "relativity_qm",
    "target": "solar",
    "type": "dependency"
-  },
-  {
-   "source": "solar",
-   "target": "renewable",
-   "type": "enables"
-  },
-  {
-   "source": "solar",
-   "target": "space_power",
-   "type": "enables"
   },
   {
    "source": "relativity_qm",
@@ -41006,11 +39656,6 @@
    "type": "dependency"
   },
   {
-   "source": "nuclear_fusion",
-   "target": "abundant_energy",
-   "type": "enables"
-  },
-  {
    "source": "bronze",
    "target": "bronze_casting",
    "type": "dependency"
@@ -41018,11 +39663,6 @@
   {
    "source": "bronze_casting",
    "target": "iron_smelting",
-   "type": "enables"
-  },
-  {
-   "source": "bronze_casting",
-   "target": "mold_tech",
    "type": "enables"
   },
   {
@@ -41046,11 +39686,6 @@
    "type": "enables"
   },
   {
-   "source": "iron_smelting",
-   "target": "tools",
-   "type": "enables"
-  },
-  {
    "source": "wheel",
    "target": "cart",
    "type": "enables"
@@ -41063,11 +39698,6 @@
   {
    "source": "wheel",
    "target": "waterwheel",
-   "type": "enables"
-  },
-  {
-   "source": "wheel",
-   "target": "machinery",
    "type": "enables"
   },
   {
@@ -41107,16 +39737,6 @@
   },
   {
    "source": "printing",
-   "target": "books",
-   "type": "enables"
-  },
-  {
-   "source": "printing",
-   "target": "literacy",
-   "type": "enables"
-  },
-  {
-   "source": "printing",
    "target": "scientific_method",
    "type": "enables"
   },
@@ -41137,17 +39757,7 @@
   },
   {
    "source": "assembly_line",
-   "target": "mass_production",
-   "type": "enables"
-  },
-  {
-   "source": "assembly_line",
    "target": "automobile",
-   "type": "enables"
-  },
-  {
-   "source": "assembly_line",
-   "target": "consumer",
    "type": "enables"
   },
   {
@@ -41159,16 +39769,6 @@
    "source": "lathe",
    "target": "cnc",
    "type": "dependency"
-  },
-  {
-   "source": "cnc",
-   "target": "precision_industry",
-   "type": "enables"
-  },
-  {
-   "source": "cnc",
-   "target": "3d_printing",
-   "type": "enables"
   },
   {
    "source": "computer",
@@ -41188,11 +39788,6 @@
   {
    "source": "robot",
    "target": "automation",
-   "type": "enables"
-  },
-  {
-   "source": "robot",
-   "target": "smart_factory",
    "type": "enables"
   },
   {
@@ -41222,16 +39817,6 @@
   },
   {
    "source": "sail",
-   "target": "exploration",
-   "type": "enables"
-  },
-  {
-   "source": "sail",
-   "target": "trade",
-   "type": "enables"
-  },
-  {
-   "source": "sail",
    "target": "navigation",
    "type": "enables"
   },
@@ -41241,38 +39826,13 @@
    "type": "dependency"
   },
   {
-   "source": "road",
-   "target": "trade",
-   "type": "enables"
-  },
-  {
-   "source": "road",
-   "target": "empire",
-   "type": "enables"
-  },
-  {
-   "source": "road",
-   "target": "post",
-   "type": "enables"
-  },
-  {
    "source": "wheel",
    "target": "horse_gear",
    "type": "dependency"
   },
   {
    "source": "horse_gear",
-   "target": "cavalry",
-   "type": "enables"
-  },
-  {
-   "source": "horse_gear",
    "target": "plow",
-   "type": "enables"
-  },
-  {
-   "source": "horse_gear",
-   "target": "trade",
    "type": "enables"
   },
   {
@@ -41297,17 +39857,7 @@
   },
   {
    "source": "railway",
-   "target": "mass_transport",
-   "type": "enables"
-  },
-  {
-   "source": "railway",
    "target": "time_standard",
-   "type": "enables"
-  },
-  {
-   "source": "railway",
-   "target": "modern_city",
    "type": "enables"
   },
   {
@@ -41326,16 +39876,6 @@
    "type": "dependency"
   },
   {
-   "source": "steam_ship",
-   "target": "global_trade",
-   "type": "enables"
-  },
-  {
-   "source": "steam_ship",
-   "target": "canal",
-   "type": "enables"
-  },
-  {
    "source": "internal_combustion",
    "target": "automobile",
    "type": "dependency"
@@ -41349,21 +39889,6 @@
    "source": "chassis",
    "target": "automobile",
    "type": "dependency"
-  },
-  {
-   "source": "automobile",
-   "target": "suburb",
-   "type": "enables"
-  },
-  {
-   "source": "automobile",
-   "target": "oil_economy",
-   "type": "enables"
-  },
-  {
-   "source": "automobile",
-   "target": "logistics",
-   "type": "enables"
   },
   {
    "source": "automobile",
@@ -41394,16 +39919,6 @@
    "source": "landing_gear",
    "target": "airplane",
    "type": "dependency"
-  },
-  {
-   "source": "airplane",
-   "target": "aviation",
-   "type": "enables"
-  },
-  {
-   "source": "airplane",
-   "target": "globalization",
-   "type": "enables"
   },
   {
    "source": "airplane",
@@ -41507,12 +40022,7 @@
   },
   {
    "source": "space_station",
-   "target": "space_economy",
-   "type": "enables"
-  },
-  {
-   "source": "space_station",
-   "target": "mars(未来)",
+   "target": "mars_colony",
    "type": "enables"
   },
   {
@@ -41533,11 +40043,6 @@
   {
    "source": "writing",
    "target": "printing",
-   "type": "enables"
-  },
-  {
-   "source": "writing",
-   "target": "law",
    "type": "enables"
   },
   {
@@ -41567,11 +40072,6 @@
   },
   {
    "source": "telegraph",
-   "target": "global_news",
-   "type": "enables"
-  },
-  {
-   "source": "telegraph",
    "target": "telephone",
    "type": "dependency"
   },
@@ -41593,11 +40093,6 @@
   {
    "source": "telephone",
    "target": "radio",
-   "type": "enables"
-  },
-  {
-   "source": "telephone",
-   "target": "network",
    "type": "enables"
   },
   {
@@ -41626,11 +40121,6 @@
    "type": "enables"
   },
   {
-   "source": "photography",
-   "target": "surveillance",
-   "type": "enables"
-  },
-  {
    "source": "electromagnetism",
    "target": "radio",
    "type": "dependency"
@@ -41643,11 +40133,6 @@
   {
    "source": "radio",
    "target": "television",
-   "type": "enables"
-  },
-  {
-   "source": "radio",
-   "target": "radar",
    "type": "enables"
   },
   {
@@ -41689,16 +40174,6 @@
    "source": "mathematics",
    "target": "television",
    "type": "dependency"
-  },
-  {
-   "source": "television",
-   "target": "broadcast",
-   "type": "enables"
-  },
-  {
-   "source": "television",
-   "target": "media",
-   "type": "enables"
   },
   {
    "source": "semiconductors",
@@ -41842,11 +40317,6 @@
   },
   {
    "source": "internet",
-   "target": "social",
-   "type": "enables"
-  },
-  {
-   "source": "internet",
    "target": "www",
    "type": "dependency"
   },
@@ -41864,21 +40334,6 @@
    "source": "web_server",
    "target": "www",
    "type": "dependency"
-  },
-  {
-   "source": "www",
-   "target": "ecommerce",
-   "type": "enables"
-  },
-  {
-   "source": "www",
-   "target": "social",
-   "type": "enables"
-  },
-  {
-   "source": "www",
-   "target": "search",
-   "type": "enables"
   },
   {
    "source": "ic",
@@ -41914,21 +40369,6 @@
    "source": "camera_module",
    "target": "smartphone",
    "type": "dependency"
-  },
-  {
-   "source": "smartphone",
-   "target": "app_economy",
-   "type": "enables"
-  },
-  {
-   "source": "smartphone",
-   "target": "social",
-   "type": "enables"
-  },
-  {
-   "source": "smartphone",
-   "target": "mobile_ai",
-   "type": "enables"
   },
   {
    "source": "computer",
@@ -41987,17 +40427,7 @@
   },
   {
    "source": "llm",
-   "target": "agent",
-   "type": "enables"
-  },
-  {
-   "source": "llm",
    "target": "copilot",
-   "type": "enables"
-  },
-  {
-   "source": "llm",
-   "target": "knowledge_work",
    "type": "enables"
   },
   {
@@ -42032,33 +40462,8 @@
   },
   {
    "source": "agriculture",
-   "target": "city",
-   "type": "enables"
-  },
-  {
-   "source": "agriculture",
-   "target": "population",
-   "type": "enables"
-  },
-  {
-   "source": "agriculture",
    "target": "irrigation",
    "type": "dependency"
-  },
-  {
-   "source": "irrigation",
-   "target": "surplus",
-   "type": "enables"
-  },
-  {
-   "source": "irrigation",
-   "target": "city",
-   "type": "enables"
-  },
-  {
-   "source": "irrigation",
-   "target": "civilization",
-   "type": "enables"
   },
   {
    "source": "agriculture",
@@ -42068,11 +40473,6 @@
   {
    "source": "plow",
    "target": "fertilizer",
-   "type": "enables"
-  },
-  {
-   "source": "plow",
-   "target": "intensive_farming",
    "type": "enables"
   },
   {
@@ -42106,16 +40506,6 @@
    "type": "dependency"
   },
   {
-   "source": "fertilizer",
-   "target": "green_revolution",
-   "type": "enables"
-  },
-  {
-   "source": "fertilizer",
-   "target": "population",
-   "type": "enables"
-  },
-  {
    "source": "chemistry",
    "target": "vaccination",
    "type": "dependency"
@@ -42124,16 +40514,6 @@
    "source": "microbiology",
    "target": "vaccination",
    "type": "dependency"
-  },
-  {
-   "source": "vaccination",
-   "target": "public_health",
-   "type": "enables"
-  },
-  {
-   "source": "vaccination",
-   "target": "eradication",
-   "type": "enables"
   },
   {
    "source": "chemistry",
@@ -42157,11 +40537,6 @@
   },
   {
    "source": "anesthesia",
-   "target": "complex_op",
-   "type": "enables"
-  },
-  {
-   "source": "anesthesia",
    "target": "surgery",
    "type": "dependency"
   },
@@ -42169,16 +40544,6 @@
    "source": "microbiology",
    "target": "surgery",
    "type": "dependency"
-  },
-  {
-   "source": "surgery",
-   "target": "transplant",
-   "type": "enables"
-  },
-  {
-   "source": "surgery",
-   "target": "modern_medicine",
-   "type": "enables"
   },
   {
    "source": "photography",
@@ -42189,16 +40554,6 @@
    "source": "electricity",
    "target": "medical_imaging",
    "type": "dependency"
-  },
-  {
-   "source": "medical_imaging",
-   "target": "diagnosis",
-   "type": "enables"
-  },
-  {
-   "source": "medical_imaging",
-   "target": "radiology",
-   "type": "enables"
   },
   {
    "source": "evolution",
@@ -42257,11 +40612,6 @@
   },
   {
    "source": "genetic_engineering",
-   "target": "synthetic_bio",
-   "type": "enables"
-  },
-  {
-   "source": "genetic_engineering",
    "target": "gmo",
    "type": "dependency"
   },
@@ -42312,11 +40662,6 @@
   },
   {
    "source": "steel_frame",
-   "target": "modern_city",
-   "type": "enables"
-  },
-  {
-   "source": "steel_frame",
    "target": "skyscraper",
    "type": "dependency"
   },
@@ -42329,16 +40674,6 @@
    "source": "elevator",
    "target": "skyscraper",
    "type": "dependency"
-  },
-  {
-   "source": "skyscraper",
-   "target": "modern_city",
-   "type": "enables"
-  },
-  {
-   "source": "skyscraper",
-   "target": "vertical_life",
-   "type": "enables"
   },
   {
    "source": "steel",
@@ -42361,16 +40696,6 @@
    "type": "dependency"
   },
   {
-   "source": "tunnel",
-   "target": "metro",
-   "type": "enables"
-  },
-  {
-   "source": "tunnel",
-   "target": "highspeed_rail",
-   "type": "enables"
-  },
-  {
    "source": "mil_bow",
    "target": "bow_arrow",
    "type": "dependency"
@@ -42383,11 +40708,6 @@
   {
    "source": "bow_arrow",
    "target": "firearm",
-   "type": "enables"
-  },
-  {
-   "source": "bow_arrow",
-   "target": "hunting",
    "type": "enables"
   },
   {
@@ -42441,16 +40761,6 @@
    "type": "enables"
   },
   {
-   "source": "firearm",
-   "target": "military_rev",
-   "type": "enables"
-  },
-  {
-   "source": "firearm",
-   "target": "hunting",
-   "type": "enables"
-  },
-  {
    "source": "gunpowder",
    "target": "cannon",
    "type": "dependency"
@@ -42479,16 +40789,6 @@
    "source": "tr_horseshoe",
    "target": "cannon",
    "type": "dependency"
-  },
-  {
-   "source": "cannon",
-   "target": "fortification_change",
-   "type": "enables"
-  },
-  {
-   "source": "cannon",
-   "target": "naval_war",
-   "type": "enables"
   },
   {
    "source": "internal_combustion",
@@ -42521,16 +40821,6 @@
    "type": "dependency"
   },
   {
-   "source": "tank",
-   "target": "blitzkrieg",
-   "type": "enables"
-  },
-  {
-   "source": "tank",
-   "target": "mechanized_war",
-   "type": "enables"
-  },
-  {
    "source": "rocket",
    "target": "missile",
    "type": "dependency"
@@ -42556,11 +40846,6 @@
    "type": "enables"
   },
   {
-   "source": "missile",
-   "target": "precision_strike",
-   "type": "enables"
-  },
-  {
    "source": "nuclear_fission",
    "target": "nuclear_weapon",
    "type": "dependency"
@@ -42569,16 +40854,6 @@
    "source": "rocket",
    "target": "nuclear_weapon",
    "type": "dependency"
-  },
-  {
-   "source": "nuclear_weapon",
-   "target": "deterrence",
-   "type": "enables"
-  },
-  {
-   "source": "nuclear_weapon",
-   "target": "cold_war",
-   "type": "enables"
   },
   {
    "source": "petroleum",
@@ -42733,11 +41008,6 @@
   {
    "source": "electric_motor",
    "target": "vacuum_cleaner",
-   "type": "enables"
-  },
-  {
-   "source": "electric_motor",
-   "target": "electric_vehicle",
    "type": "enables"
   },
   {
@@ -42968,11 +41238,6 @@
   {
    "source": "brushless_motor",
    "target": "robot_vacuum",
-   "type": "enables"
-  },
-  {
-   "source": "brushless_motor",
-   "target": "electric_vehicle",
    "type": "enables"
   },
   {
@@ -58957,17 +57222,7 @@
   },
   {
    "source": "hearth_stove",
-   "target": "pottery",
-   "type": "enables"
-  },
-  {
-   "source": "hearth_stove",
    "target": "fire_drill",
-   "type": "enables"
-  },
-  {
-   "source": "hearth_stove",
-   "target": "cooking",
    "type": "enables"
   },
   {
@@ -59009,11 +57264,6 @@
    "source": "hearth_stove",
    "target": "open_firing",
    "type": "dependency"
-  },
-  {
-   "source": "open_firing",
-   "target": "pottery",
-   "type": "enables"
   },
   {
    "source": "woodworking",
