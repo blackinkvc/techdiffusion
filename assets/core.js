@@ -183,10 +183,29 @@ function buildDetailHTML(t) {
   }
 
   html += `<div class="m-row"><div class="m-label">↑ 前置技术（本技术建立于其上）</div><div class="m-tags">`;
-  if (t._up.length) t._up.forEach(u => html += `<span class="m-tag linkable" data-id="${u}">${esc(techMap[u].name)}</span>`);
+  const _T = (typeof window !== "undefined") ? window.THEORY : null;
+  const _dkMap = (_T && _T.deps && _T.deps[t.id]) || null;
+  const _dkDef = (_T && _T.meta && _T.meta.depKinds) || null;
+  const _dkUsed = [];
+  if (t._up.length) t._up.forEach(u => {
+    let badge = "";
+    const k = _dkMap ? _dkMap[u] : null;
+    const def = (k && _dkDef && _dkDef[k]) ? _dkDef[k] : null;
+    if (def) {
+      badge = `<i class="dk dk-${k}" title="${esc(def.long)}">${esc(def.short)}</i>`;
+      if (_dkUsed.indexOf(k) < 0) _dkUsed.push(k);
+    }
+    html += `<span class="m-tag linkable" data-id="${u}">${esc(techMap[u].name)}${badge}</span>`;
+  });
   else html += `<span class="m-tag">（文明起点，无前置技术）</span>`;
   if (t._upConcept.length) t._upConcept.forEach(c => html += `<span class="m-tag concept">${esc(humanize(c))}</span>`);
-  html += `</div></div>`;
+  html += `</div>`;
+  if (_dkUsed.length) {
+    html += `<div class="dk-legend">` + _dkUsed.map(k =>
+      `<span class="dk dk-${k}">${esc(_dkDef[k].short)}</span><span class="dk-lg">${esc(_dkDef[k].long.replace(/^[^—]*——/, ""))}</span>`
+    ).join("") + `</div>`;
+  }
+  html += `</div>`;
 
   const desc = computeDescendants(t.id);
   const directDown = [], indirectDown = [];

@@ -885,3 +885,14 @@ main{max-width:var(--maxw);margin:0 auto;padding:30px 24px 70px}
 .th-chip .th-sup{font-size:10.5px;color:#854F0B;margin-left:5px}
 .th-note{font-size:12px;color:var(--ink-soft);margin:4px 0 0;line-height:1.7}
 @media(max-width:720px){.th-row3{grid-template-columns:1fr}}
+
+/* 前置边「性质」徽章（theory_data.js · meta.depKinds / deps） */
+.m-tag .dk{font-size:10px;font-style:normal;font-weight:600;line-height:1.5;padding:0 5px;margin-left:6px;border-radius:8px;vertical-align:1px;letter-spacing:.3px}
+.dk-material{background:#EFE6D2;border:1px solid #D6C79A;color:#6B5418}
+.dk-craft{background:#E4EAF1;border:1px solid #C3CFDD;color:#34495E}
+.dk-theory{background:#EDE8F2;border:1px solid #D4CBE0;color:#4B3A63}
+.dk-symbol{background:#F7E8EC;border:1px solid #E7C9D3;color:#7A3350}
+.dk-complement{background:#E3EFE9;border:1px solid #C4DCD0;color:#2E5B48}
+.dk-legend{display:flex;flex-wrap:wrap;gap:4px 10px;margin-top:7px;padding-top:7px;border-top:1px dashed var(--line-light)}
+.dk-legend .dk{margin:0 4px 0 0}
+.dk-lg{font-size:11px;color:var(--ink-soft)}

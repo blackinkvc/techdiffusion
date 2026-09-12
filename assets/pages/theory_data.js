@@ -26,6 +26,14 @@ window.THEORY = {
       retro: "事后解释（技术先用，理论后至）",
       parallel: "并行互促（经验与理论同期演进）",
       revised: "解释被修正（旧理论被新理论取代）"
+    },
+    /* 前置边的「性质」5 类：解决 dependsOn 把材料/工艺/学理/符号/互补混装成一锅的问题 */
+    depKinds: {
+      material: { short: "材料", long: "材料 · 物质——造它所用之物（含消耗品与部件）" },
+      craft: { short: "工艺", long: "工艺 · 装备——造它所需之具，或同类技术装置" },
+      theory: { short: "学理", long: "学理 · 知识——解释它为何可行" },
+      symbol: { short: "符号", long: "符号 · 文化——因它才被需要（需求侧，非造物所需）" },
+      complement: { short: "互补", long: "互补 · 搭档——与它配套使用，而非因果关系" }
     }
   },
 
@@ -150,6 +158,24 @@ window.THEORY = {
     positional: { layer: "tech", field: "符号系统", note: "位值制是记数技术" },
     data_science: { layer: "method", field: "方法" },
     bld_bim: { layer: "tech", field: "工程软件", note: "建筑信息模型是工具产物，非理论" }
+  },
+
+  /* ---------- ③ 前置边的性质（v0.9.21 新增 · 只读标注，不改 dependsOn） ----------
+     背景：dependsOn 是扁平数组，把性质完全不同的前置混在一起。以钢笔为例——
+       writing 文字   = 符号 · 文化（有文字才需要钢笔，属需求侧）
+       paper 造纸     = 互补 · 搭档（笔的搭档，非笔的原料）
+       mat_toolsteel  = 材料（笔尖的钢）
+       mat_vulcan     = 材料（储墨的硫化橡胶）
+     四者在数据里长得一模一样。本段为每条前置追加 kind，供详情页「前置技术」
+     逐条显示徽章；不改动任何 dependsOn / enables，也不改节点字段。
+     分类口径见 meta.depKinds（5 类：材料 / 工艺 / 学理 / 符号 / 互补）。
+     状态：先在 5 个修复样本上试点（对应 CR-2026-0913-positional-template）。 */
+  deps: {
+    inf_pen: { writing: "symbol", paper: "complement", mat_toolsteel: "material", mat_vulcan: "material" },
+    control_theory: { mathematics: "theory", info_theory: "theory", statistics: "theory", neuroscience: "theory" },
+    tr_panama: { explosives: "material", internal_combustion: "craft", mat_reconcrete: "material", steel_frame: "material" },
+    inf_fax: { telegraph: "craft", photography: "craft", chemistry: "theory", electrochem: "theory" },
+    tr_pneumatictire: { chemistry: "theory", mat_rubber: "material", mat_vulcan: "material" }
   },
 
   /* ---------- ② 事后解释（技术先行、科学解释后至） ----------
