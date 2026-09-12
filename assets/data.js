@@ -1006,7 +1006,7 @@ const TECHS = [
   { id:"tank", name:"坦克", en:"Tank", category:"military", era:"electrical", date:"1916 年", year:1916,
     people:"英国（马克 I 型）", place:"英国",
     summary:"装甲+履带+火炮的陆地堡垒，突破堑壕僵局，开启机械化战争。",
-    dependsOn: ["internal_combustion","steel","cannon","assembly_line","mat_stainless","tr_panama"], enables:[],
+    dependsOn: ["internal_combustion","steel","cannon","assembly_line","mat_stainless"], enables:[],
     applications:["突破堑壕","支援步兵","机动作战"],
     views:[{period:"近代",text:"‘陆战之王’被视为打破一战僵局的答案。"},
            {period:"当代",text:"无人机与反坦克导弹让其‘无敌神话’受挑战。"}],

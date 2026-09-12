@@ -1,13 +1,15 @@
 {
  "meta": {
   "exportedAt": "2026-09-12T13:18:36.842Z",
-  "totalTechs": 2289,
+  "totalTechs": 2288,
   "totalConceptNodes": 11,
-  "totalNodes": 2300,
-  "totalEdges": 7546,
-  "depEdges": 7340,
+  "totalNodes": 2299,
+  "totalEdges": 7539,
+  "depEdges": 7333,
   "enaEdges": 206,
-  "source": "assets/data.js + techs_{extra,extend,more,midtech}.js"
+  "source": "assets/data.js + techs_{extra,extend,more,midtech}.js",
+  "patchedAt": "2026-09-12T17:36:27.152Z",
+  "patchNote": "v0.9.20 · 合并重名节点：退役 qft（量子场论 1948），权威条目为 quantum_field；同步删除 7 条相关边。"
  },
  "nodes": [
   {
@@ -3057,25 +3059,6 @@
    "people": "",
    "place": "",
    "summary": "量子力学在 1925 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 粒子物理学 等后续技术。",
-   "tier": null,
-   "applications": [
-    "理论建模",
-    "实验测量",
-    "工程计算"
-   ],
-   "kind": "tech"
-  },
-  {
-   "id": "qft",
-   "name": "量子场论",
-   "en": "Quantum Field Theory",
-   "category": "basic",
-   "era": "electrical",
-   "date": "1948 年",
-   "year": 1948,
-   "people": "",
-   "place": "",
-   "summary": "量子场论在 1948 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 控制论 等后续技术。",
    "tier": null,
    "applications": [
     "理论建模",
@@ -42216,36 +42199,6 @@
    "type": "dependency"
   },
   {
-   "source": "optimization",
-   "target": "qft",
-   "type": "dependency"
-  },
-  {
-   "source": "writing",
-   "target": "qft",
-   "type": "dependency"
-  },
-  {
-   "source": "mathematics",
-   "target": "qft",
-   "type": "dependency"
-  },
-  {
-   "source": "info_theory",
-   "target": "qft",
-   "type": "dependency"
-  },
-  {
-   "source": "relativity_qm",
-   "target": "qft",
-   "type": "dependency"
-  },
-  {
-   "source": "particle_physics",
-   "target": "qft",
-   "type": "dependency"
-  },
-  {
    "source": "writing",
    "target": "standard_model",
    "type": "dependency"
@@ -43022,11 +42975,6 @@
   },
   {
    "source": "mathematics",
-   "target": "control_theory",
-   "type": "dependency"
-  },
-  {
-   "source": "qft",
    "target": "control_theory",
    "type": "dependency"
   },

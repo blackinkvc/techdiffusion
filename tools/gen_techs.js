@@ -132,7 +132,6 @@ basic: [
   ["special_rel", "狭义相对论", "Special Relativity", 1905],
   ["general_rel", "广义相对论", "General Relativity", 1915],
   ["quantum_mech", "量子力学", "Quantum Mechanics", 1925],
-  ["qft", "量子场论", "Quantum Field Theory", 1948],
   ["standard_model", "标准模型", "Standard Model", 1970],
   ["particle_phys", "粒子物理学", "Particle Physics", 1932],
   ["nuclear_phys", "核物理", "Nuclear Physics", 1911],

@@ -32,7 +32,8 @@ window.CORRECTIONS = {
       "【v0.9.19 · 占位清理】bx_math_* / bx_phys_* / bx_chem_* 共 160 个填充节点（year 全为 1950、下游 0、各挂 4 个模板前置，占 basic 的 53%）属凑数量产物，建议整批清理；清理前须确认无真实节点引用它们。",
       "【v0.9.19 · 结构改造（较大）】依赖网需引入 rel=\"retro\" 事后解释边类型：允许理论年 > 技术年（当前 yearInv=0 门禁会判为非法），并让 yearInv 检查按 rel 放行。这是让「技术先用、理论后到」成为一等公民的前提；在此之前只能靠 theory_data.js 覆盖层标注。",
       "【v0.9.19 · 待逐条复核】theory_data.js 首版 55 个节点层 + 20 条事后解释；至 v0.9.19-b3 节点层已扩至 117 项（theory 98 / method 9 / tech 10，批次 2 数学簇 35 + 批次 3 物理化学簇 27）。年份按学界通行说法填写，待逐条核对，重点四条：① vaccination 的免疫学成熟年取 1890 还是詹纳 1798；② airplane 的边界层理论 1904；③ compass 的电磁学解释 1865；④ valence 取 1852（弗兰克兰）还是 1916（路易斯电子对键）。",
-      "【v0.9.19 · 新发现 · 重复节点】qft（1948，量子场论）与 quantum_field（1950，量子场论）**同名同义，疑为重复条目**，二者在 basic 中并存且各有下游。建议合并为一条（保留 qft，把 quantum_field 的引用改指 qft）或明确二者分工；处理前先在 theory_data.js 各自字段内标注，未动语料。"
+      "【v0.9.20 · 已处置 · 重复节点】qft（1948，量子场论）与 quantum_field（1950，量子场论）已合并：保留 quantum_field（语义与正文均正确），退役 qft 并同步删除 7 条边（详见 CR-2026-0913-positional-template）。**但同名节点还有 22 组未处理**：ic/chip（集成电路 1958）、mat_forging/smithing（锻造）、ene_charcoal/charcoal（木炭 −4000）、tr_canoe/canoe（独木舟 −10000）、dome/bld_dome（穹顶）、mat_selfheal/self_healing（自修复材料）、ene_solidstate/solid_state_battery（固态电池）、ene_satpower/space_solar（空间太阳能）、ene_wpt/wireless_power（无线输电）、mfg_digitaltwin/digital_twin（数字孪生）、inf_nn/neural_network（神经网络）、inf_ar/ar、inf_vr/vr、inf_edgeai/edge_ai、bio_pharmacology/pharmacology、bio_tissueeng/tissue_engineering、bio_mrnavax/mrna_vaccine、bio_genetherapy/gene_therapy、bio_bci/bci、bio_synbio/synthetic_biology、bio_organonchip/organs_on_chip、bio_precisionmed/personalized_medicine、mil_directedenergy/directed_energy。系「早期 inf_*/bio_* 前缀批次」与「未来脊柱短名批次」独立生成同一概念，待逐组裁定保留哪一条。",
+      "【v0.9.20 · 生成式依赖网全量重建（大工程，待批）】CR-2026-0913-positional-template 已定位：位置式模板边 787 条（10.7%）、模板文案 1027 条（44.9%）、纯模板依赖节点 37 个、同年份退化链 512 条 / 61 组。已修 5 例样本待用户审核；审核通过后按序执行：① 按分类「语义白名单」重建位置边（不再用时间最近）；② 重写 1027 条模板文案（不绑定具体边）；③ 拆同年份退化链；④ 给 tools/gen_techs.js · gen_run.js · upgrade_stubs.js 加语义硬约束，防止再生。**口径**：年份仅作参考，以本质与逻辑为准。"
     ],
     enablesAudit: {
       title: "enables 语义错误 · 95 项灰色概念甄别表",
@@ -142,6 +143,61 @@ window.CORRECTIONS = {
     },
   },
   entries: [
+    {
+      id: "CR-2026-0913-positional-template",
+      date: "2026-09-13",
+      node: "inf_pen（钢笔）为触发样本；缺陷源 = tools/gen_techs.js · tools/gen_run.js · tools/upgrade_stubs.js 三段生成/改写脚本；影响全库 2288 词条",
+      nodeName: "「位置最近前驱」模板织网污染：无语义依赖边 + 把假边讲成史实的文案（806 条位置边 / 1027 条模板文案）",
+      category: "meta",
+      severity: "高",
+      status: "进行中（已修 5 例样本 + 重名合并；全库重建待批）",
+      problem: "用户报「钢笔」词条的依赖全不相干（蒸汽轮机、数学、电话交换机、锰钢），并举例「锰钢 → 金属材料基础 → 钢笔」太牵强。审计确认这不是孤例，而是生成管线的系统性缺陷，共四层：① **依赖边无语义**——tools/gen_techs.js 第 28–38 行的 PREREQ 表给每个分类写死「前提分类」槽位（info: 材料·能源·数学；basic: 语言·文字·数学；transport: 制造·能源·材料 等），tools/gen_run.js 第 42–76 行的 nearestEarlier(cat, key) **只按「时间上最近」取该分类的最近一个节点当前驱，零语义判断**，槽位 = ［材料最近 · 能源最近 · mathematics · 同分类最近×2］截断为 4 条。钢笔（1884）因此得到 ［锰钢(1882), 蒸汽轮机(1884), 数学, 电话交换机(1878)］——实为「当时最新的材料 / 能源 / 信息条目」。佐证：全库依赖蒸汽轮机的节点恰为 钢笔、机枪、无烟火药、变压器，全为 1884/1885。② **文案把假边讲成史实**——tools/upgrade_stubs.js 第 26、53–80 行以 dependsOn 生成「依托 X」、以反向索引 downMap 生成「催生了 Y」，第 70 行模板即钢笔那句话的逐字来源；该脚本注释自称「不引用外部未经验证的事实」，在边本身不可信时反而把错误放大为可信的中文断言。钢笔 enables 为空，正文却写「直接支撑了 天线」——因天线同属该模板，其 dependsOn 含 inf_pen。③ **同年份退化链**——year 被批量填为圆整数（2000 年 419 个、1950 年 267 个、1800 年 73 个、1900 年 55 个），nearestEarlier 退化为「上一个条目」，产出伪因果长链：缆车→巡洋舰→挖泥船→实心轮胎→悬挂系统→转向系统→制动系统（全 1800）、动车组→机场跑道→立交桥→加油站→滚装船→高铁桥梁→单轨铁路（全 1900）。④ **文案与边漂移**——后续清理改过边而未重写文案，48 条（6%）文案里的上游名与当前 dependsOn 完全不相交、571 条部分不相交。量化：位置式边 806/7339（11.0%）、指向 mathematics 的固定槽位边 648、dependsOn 100% 为模板边的节点 37、upgrade_stubs 三段模板文案命中 1027/2289（44.9%）、文案声称「催生/支撑了…」的节点 927、同分类同年份组内互连边 512 条 / 61 组。⑤ 附带发现 **23 组同名节点**（qft/quantum_field、ic/chip、mat_forging/smithing、ene_charcoal/charcoal、tr_canoe/canoe、dome/bld_dome、bio_* 与未来脊柱同名 等），系两批次独立生成同一概念。",
+      rootCause: "① 织网器把「先后」当「因果」：gen_run.js 的规则只有时间序（为严格偏序、保证 DAG 无环），没有任何语义白名单或领域约束，于是「同分类里时间最近的那个」被当成「前置」；v0.9.16 的 yearInv=0 门禁又把这条时间序固化为硬约束。② 文案器把「结构」当「事实」：upgrade_stubs.js 的设计原则是「仅依据该条技术真实存在的 dependsOn / _down / applications / era 合成文本，不引用外部未经验证的事实」——在边本身不可信的前提下，这条原则反而把错误放大成自然语言断言，并借「不编造人物/地点」的合规姿态获得可信度。③ 批量生成先于语义校验：1000+ 条 stub 一次性织网，只校验「无环 / 非孤立」，未校验「依赖是否成立」。④ year 字段被当作占位符批量填值，使时间序信息本身失真，进一步加剧 ① 的退化。",
+      fix: "本条目先做审计与样本修复（用户要求「先修 5 个样本，审核后再全量」）。已完成三件事：① 审计定位到具体脚本与行号并给出量化指标；② **重名合并**——保留语义与正文均正确的 quantum_field，退役重复节点 qft（量子场论 1948），同步删除其 7 条边并更新 graph.json / data_full.js / 生成器源 / theory_data.js；③ **5 个样本修复**——钢笔、控制论、巴拿马运河、传真机、充气轮胎，依赖改为语义可解释的真实前置、正文重写为不绑定伪造边的叙述，并删除 9 条对应的反向伪边。未做（待审核后执行）：806 条位置边的全量重建、1027 条模板文案重写、37 个纯模板依赖节点、512 条同年份退化链、其余 22 组同名节点去重。**口径记录**：年份/时间线仅具参考价值，不作为绝对判据，修复一律以「本质与逻辑」为准。",
+      badUpstream: [
+        "（结构）dependsOn 语义被硬编码为「前置」+ yearInv=0 → 「技术先用、理论后至」无法建边（另见 CR-2026-0912-theory-layer）",
+        "（织网规则）tools/gen_techs.js:28-38 PREREQ 分类槽位表；tools/gen_run.js:42-76 nearestEarlier() 只按时间最近选前驱，零语义判断",
+        "（触发样本）inf_pen 钢笔(1884) dependsOn = ［mat_manganese 锰钢(1882), ene_steamturbine 蒸汽轮机(1884), mathematics, inf_switchboard 电话交换机(1878)］——即「当时最新的材料 / 能源 / 信息条目」",
+        "（模板签名）圆珠笔(1938)=［尼龙, 喷气发动机, 数学, 相控阵］；铅笔(1795)=［锆, 蒸汽机, 数学, 印刷］；打字机(1868)=［工具钢, 铅酸电池, 数学, 海底电缆］；天线(1888)=［锗, 交流电, 数学, 钢笔］",
+        "（同年份退化链）缆车→巡洋舰→挖泥船→实心轮胎→悬挂系统→转向系统→制动系统（year 全 1800）；动车组→机场跑道→立交桥→加油站→滚装船→高铁桥梁→单轨铁路（year 全 1900）",
+        "（文案放大）tools/upgrade_stubs.js:26,53-80 以 dependsOn 生成「依托」、以反向边生成「催生了」；:70 即钢笔那句的逐字模板",
+        "（荒诞样本）充气轮胎(1845)←砂轮/燃料电池/连续铸造 → 「支撑了 飞艇、硝化甘油」；苏伊士运河(1869)←砂轮/铅酸电池/工具钢 → 「为 风洞 铺平了道路」；巴拿马运河(1914)←流水线/调峰电站/不锈钢 → 「支撑了 叉车、坦克、战斗机」；土坯砖(−9000)←陶器/钻/用火",
+        "（重名）23 组同名节点：qft/quantum_field、ic/chip、mat_forging/smithing、ene_charcoal/charcoal、tr_canoe/canoe、dome/bld_dome、bio_* 与未来脊柱同名 等"
+      ],
+      goodUpstream: [
+        "控制论 control_theory(1948)：［optimization, writing, mathematics, qft］ → ［数学, 信息论(1948), 统计学, 神经科学］（反馈原理的真实思想来源）",
+        "钢笔 inf_pen(1884)：［锰钢, 蒸汽轮机, 数学, 电话交换机］ → ［文字, 造纸(105), 工具钢(1868), 硫化橡胶(1839)］（书写 + 纸 + 金属笔尖 + 硬橡胶储墨件）",
+        "巴拿马运河 tr_panama(1914)：［流水线, 不锈钢, 自动驾驶仪］ → ［现代炸药(1867), 内燃机(1876), 钢筋混凝土(1849), 钢结构(1885)］（开凿 + 机械挖运 + 闸门结构）",
+        "传真机 inf_fax(1843)：［连续铸造, 燃料电池, 数学, 摄影］ → ［电报(1837), 摄影(1839), 化学(1661), 电化学(1800)］（贝恩化学电报的真实技术底座）",
+        "充气轮胎 tr_pneumatictire(1845)：［燃料电池, 连续铸造, 螺旋桨］ → ［化学(1661), 天然橡胶, 硫化橡胶(1839)］（橡胶 + 硫化工艺）",
+        "（反向伪边一并删除）inf_antenna←inf_pen、bigbang←control_theory、tank / tr_forklift / mil_fighter / mil_helmet←tr_panama、inf_cable←inf_fax、tr_airship / mil_ng←tr_pneumatictire"
+      ],
+      changes: [
+        "审计定位：缺陷源为 tools/ 下三段脚本（gen_techs.js → gen_run.js → upgrade_stubs.js），逐行可查；已给出量化指标与最荒诞样本，供全量修复时做回归用例。",
+        "重名合并：保留 quantum_field（dep = ［相对论与量子力学, 粒子物理］，正文正确），退役 qft（dep 含 最优化 / 文字 / 数学 / 信息论 等模板垃圾）；同步删除 graph.json 与 data_full.js 中 7 条相关边；生成器源 tools/gen_techs.js 移除 qft 目录条目（防再生成）；theory_data.js 删 qft 标注并把 quantum_field 标为唯一权威条目。",
+        "计数变动：主站点语料 2289 → 2288；全量数据集 13319 → 13318；graph.json nodes 2300→2299、edges 7546→7539（depEdges 7340→7333）。README.md 与 tree_full.html 中写死的 13,319 已同步为 13,318（由 tools/check_docs.js 门禁捕获）。",
+        "样本 1/5 控制论：dep 改 ［数学, 信息论, 统计学, 神经科学］；正文重写为「把反馈从机械/生物/社会中抽象为同一原理」，删除「直接催生了大爆炸宇宙论」。",
+        "样本 2/5 钢笔：dep 改 ［文字, 造纸, 工具钢, 硫化橡胶］；正文重写为「金属笔尖 + 硬橡胶储墨件 + 毛细导流」，删除「依托 锰钢、蒸汽轮机、数学」与「直接支撑了 天线」。",
+        "样本 3/5 巴拿马运河：dep 改 ［现代炸药, 内燃机, 钢筋混凝土, 钢结构］；正文重写为「炸药开凿 + 机械挖运 + 闸门结构」，删除「支撑了 叉车、坦克、战斗机」。",
+        "样本 4/5 传真机：dep 改 ［电报, 摄影, 化学, 电化学］；正文重写为「逐点扫描—传输—重建」范式，删除「依托 连续铸造、燃料电池」与「催生了 通信电缆」。",
+        "样本 5/5 充气轮胎：dep 改 ［化学, 天然橡胶, 硫化橡胶］；正文重写为「硫化橡胶气囊把刚性滚动换成弹性缓冲」，删除「支撑了 飞艇、硝化甘油」。",
+        "反向伪边清理：9 个依赖者（inf_antenna / bigbang / tank / tr_forklift / mil_fighter / mil_helmet / inf_cable / tr_airship / mil_ng）中指向 5 个样本的边全部删除；仅删除、不另造前置（这些节点自身的模板依赖留待全量重建）。",
+        "口径记录（用户明确）：年份 / 时间线仅具参考价值（很多年份本就不明确），不作为绝对判据；修复一律以「本质与逻辑」为准，不以 year 先后为理由保留或否定一条依赖。",
+        "效果：位置式模板边 806 → 787（10.7%）；全库 dependsOn 悬空引用 0 条（原 1 条 qft 已随重名合并清除）；门禁 tools/check_docs.js 通过；理论层干跑 nodes 117→116、id 全部命中。",
+        "待办（未做，待用户审核后执行）：① 按分类语义白名单重建 787 条位置边；② 重写 1027 条模板文案；③ 修 37 个「100% 模板依赖」节点；④ 拆 512 条同年份退化链；⑤ 其余 22 组同名节点去重；⑥ 复核 12 条 enables 悬空引用（本轮未动）。"
+      ],
+      files: [
+        "assets/techs_extra.js",
+        "assets/data.js",
+        "assets/pages/theory_data.js",
+        "assets/pages/correction_data.js",
+        "assets/data_full.js",
+        "analysis-engine/data/graph.json",
+        "tools/gen_techs.js",
+        "README.md",
+        "tree_full.html"
+      ]
+    },
     {
       id: "CR-2026-0912-theory-layer",
       date: "2026-09-12",

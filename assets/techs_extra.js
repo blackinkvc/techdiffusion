@@ -1444,36 +1444,6 @@ const EXTRA_TECHS = [
     "significance": "量子力学把 语言 与 理论建模 连接起来，是 科学基础与方法 中从「可能」走向「可用」的关键节点，并直接催生了 粒子物理学。"
   },
 {
-    "id": "qft",
-    "name": "量子场论",
-    "en": "Quantum Field Theory",
-    "category": "basic",
-    "era": "electrical",
-    "date": "1948 年",
-    "year": 1948,
-    "people": "",
-    "place": "",
-    "summary": "量子场论在 1948 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 控制论 等后续技术。",
-    "dependsOn": ["optimization","writing","mathematics","info_theory","relativity_qm","particle_physics"],
-    "enables": [],
-    "applications": [
-      "理论建模",
-      "实验测量",
-      "工程计算"
-    ],
-    "views": [
-      {
-        "period": "电气时代",
-        "text": "量子场论在 1948 年 前后出现，依托 语言 解决了 科学基础与方法 中的具体难题，使相关能力第一次可被稳定复现。"
-      },
-      {
-        "period": "当代",
-        "text": "今天，量子场论仍是 理论建模 的底层支撑，并持续影响 控制论。"
-      }
-    ],
-    "significance": "量子场论把 语言 与 理论建模 连接起来，是 科学基础与方法 中从「可能」走向「可用」的关键节点，并直接催生了 控制论。"
-  },
-{
     "id": "standard_model",
     "name": "标准模型",
     "en": "Standard Model",
@@ -2385,7 +2355,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "大爆炸宇宙论约 1949 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 数值分析 的发展铺平了道路。",
-    "dependsOn": ["info_theory","writing","mathematics","control_theory"],
+    "dependsOn": ["info_theory","writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -2804,8 +2774,8 @@ const EXTRA_TECHS = [
     "year": 1948,
     "people": "",
     "place": "",
-    "summary": "控制论在 1948 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 大爆炸宇宙论 等后续技术。",
-    "dependsOn": ["optimization","writing","mathematics","qft"],
+    "summary": "控制论由维纳在 1948 年提出，把「反馈」从机械、生物与社会系统中抽象为同一条原理，让调节与目的性第一次可被统一描述；它奠基于数学、信息论、统计学与神经科学，是自动控制、人工智能与系统科学的共同源头。",
+    "dependsOn": ["mathematics","info_theory","statistics","neuroscience"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -2815,14 +2785,14 @@ const EXTRA_TECHS = [
     "views": [
       {
         "period": "电气时代",
-        "text": "控制论在 1948 年 前后出现，依托 语言 解决了 科学基础与方法 中的具体难题，使相关能力第一次可被稳定复现。"
+        "text": "控制论在 1948 年 前后出现，把机械的伺服、生物的调节与社会的组织收进同一条反馈原理，使「目的性行为」第一次可被工程化地描述。"
       },
       {
         "period": "当代",
-        "text": "今天，控制论仍是 理论建模 的底层支撑，并持续影响 大爆炸宇宙论。"
+        "text": "今天，控制论的思想仍是自动化、机器人与人工智能的底层语法，并主要以「系统科学」的形态持续发挥作用。"
       }
     ],
-    "significance": "控制论把 语言 与 理论建模 连接起来，是 科学基础与方法 中从「可能」走向「可用」的关键节点，并直接催生了 大爆炸宇宙论。"
+    "significance": "控制论把「反馈」确立为独立概念，是自动化与系统科学从零散工程走向统一理论的转折点。"
   },
 {
     "id": "systems_theory",
@@ -14090,7 +14060,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "飞艇在 1852 年 前后成形，依托 砂轮、热泵、钢筋混凝土 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 电梯 等后续技术。",
-    "dependsOn": ["ene_heatpump","mat_reconcrete","tr_pneumatictire"],
+    "dependsOn": ["ene_heatpump","mat_reconcrete"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14871,7 +14841,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "叉车约 1917 年 成熟，建立在 流水线、调峰电站、不锈钢 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 航空母舰 的发展铺平了道路。",
-    "dependsOn": ["assembly_line","mat_stainless","tr_panama"],
+    "dependsOn": ["assembly_line","mat_stainless"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15440,8 +15410,8 @@ const EXTRA_TECHS = [
     "year": 1845,
     "people": "",
     "place": "",
-    "summary": "充气轮胎在 1845 年 前后成形，依托 砂轮、燃料电池、连续铸造 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 飞艇、硝化甘油 等后续技术。",
-    "dependsOn": ["ene_fuelcell","mat_continuouscast","tr_screwprop"],
+    "summary": "充气轮胎在 1845 年由汤姆逊取得专利，用硫化橡胶做成可充气的密闭气囊，把轮与地之间的刚性滚动换成弹性缓冲；它建立在天然橡胶与硫化工艺之上，是车辆提速与乘坐舒适性的前提。",
+    "dependsOn": ["chemistry","mat_rubber","mat_vulcan"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15451,14 +15421,14 @@ const EXTRA_TECHS = [
     "views": [
       {
         "period": "工业革命",
-        "text": "充气轮胎在 1845 年 前后出现，依托 砂轮 解决了 交通运载 中的具体难题，使相关能力第一次可被稳定复现。"
+        "text": "充气轮胎在 1845 年 前后出现，靠硫化橡胶的弹性与气密性把路面冲击从车体上隔开，使车辆得以在更高速度下保持稳定。"
       },
       {
         "period": "当代",
-        "text": "今天，充气轮胎仍是 人员位移 的底层支撑，并持续影响 飞艇、硝化甘油。"
+        "text": "今天，充气轮胎仍是绝大多数车辆与飞机与地面接触的唯一界面，其橡胶配方与结构仍在持续演化。"
       }
     ],
-    "significance": "充气轮胎把 砂轮 与 人员位移 连接起来，是 交通运载 中从「可能」走向「可用」的关键节点，并直接催生了 飞艇、硝化甘油。"
+    "significance": "充气轮胎把「滚动」从刚性接触变成弹性缓冲，是交通工具提速与舒适化的关键前提。"
   },
 {
     "id": "tr_solidtire",
@@ -16040,8 +16010,8 @@ const EXTRA_TECHS = [
     "year": 1914,
     "people": "",
     "place": "",
-    "summary": "巴拿马运河在 1914 年 前后成形，依托 流水线、调峰电站、不锈钢 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 叉车、坦克、战斗机 等后续技术。",
-    "dependsOn": ["assembly_line","mat_stainless","tr_autopilot"],
+    "summary": "巴拿马运河于 1914 年通航，用炸药开凿、内燃机械挖运，并以钢筋混凝土与钢结构闸门克服地峡落差，把两大洋之间的航程缩短数千海里；它是「以工程改造地理」的标志性个案。",
+    "dependsOn": ["explosives","internal_combustion","mat_reconcrete","steel_frame"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16051,14 +16021,14 @@ const EXTRA_TECHS = [
     "views": [
       {
         "period": "电气时代",
-        "text": "巴拿马运河在 1914 年 前后出现，依托 流水线 解决了 交通运载 中的具体难题，使相关能力第一次可被稳定复现。"
+        "text": "巴拿马运河在 1914 年 前后建成，用炸药与内燃机械在山地与雨林中开凿航道，再靠闸门把两大洋抬到同一水面，使船舶不必绕行南美南端。"
       },
       {
         "period": "当代",
-        "text": "今天，巴拿马运河仍是 人员位移 的底层支撑，并持续影响 叉车、坦克、战斗机。"
+        "text": "今天，巴拿马运河仍是全球贸易的关键瓶颈与枢纽，闸门与航道已多次扩建以适应更大型的船舶。"
       }
     ],
-    "significance": "巴拿马运河把 流水线 与 人员位移 连接起来，是 交通运载 中从「可能」走向「可用」的关键节点，并直接催生了 叉车、坦克、战斗机。"
+    "significance": "巴拿马运河把开凿、机械与结构工程合成一套「改造地理」的能力，是运输从绕行走向改道的转折点。"
   },
 {
     "id": "tr_tunnel2",
@@ -16851,8 +16821,8 @@ const EXTRA_TECHS = [
     "year": 1884,
     "people": "",
     "place": "",
-    "summary": "钢笔在 1884 年 前后成形，依托 锰钢、蒸汽轮机、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 天线 等后续技术。",
-    "dependsOn": ["mat_manganese","ene_steamturbine","mathematics","inf_switchboard"],
+    "summary": "钢笔在 1884 年 前后成形，用金属笔尖、硬橡胶储墨件与毛细导流把「随身书写」变成可靠工具；它建立在文字、造纸、工具钢与硫化橡胶之上，使蘸水笔「写几字就要蘸墨」的断续书写第一次变成连续书写。",
+    "dependsOn": ["writing","paper","mat_toolsteel","mat_vulcan"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -16862,14 +16832,14 @@ const EXTRA_TECHS = [
     "views": [
       {
         "period": "工业革命",
-        "text": "钢笔在 1884 年 前后出现，依托 锰钢 解决了 信息通信 中的具体难题，使相关能力第一次可被稳定复现。"
+        "text": "钢笔在 1884 年 前后出现，用金属笔尖与橡胶储墨件解决了蘸水笔须频频蘸墨的痛点，使连续书写第一次可被稳定复现。"
       },
       {
         "period": "当代",
-        "text": "今天，钢笔仍是 信息记录 的底层支撑，并持续影响 天线。"
+        "text": "今天，钢笔的书写职能已被更廉价的笔类接替，但「随身记录」这一能力仍是信息社会最日常的底层动作。"
       }
     ],
-    "significance": "钢笔把 锰钢 与 信息记录 连接起来，是 信息通信 中从「可能」走向「可用」的关键节点，并直接催生了 天线。"
+    "significance": "钢笔把书写从案头动作变成随身能力，是文字使用日常化、信息得以随手记录的关键一环。"
   },
 {
     "id": "inf_ballpoint",
@@ -17031,8 +17001,8 @@ const EXTRA_TECHS = [
     "year": 1843,
     "people": "",
     "place": "",
-    "summary": "传真机在 1843 年 前后成形，依托 连续铸造、燃料电池、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 通信电缆 等后续技术。",
-    "dependsOn": ["mat_continuouscast","ene_fuelcell","mathematics","photography"],
+    "summary": "传真机把「图像」变成可沿电报线传输的信号——1843 年贝恩的化学电报是它的雏形，此后靠电化学记录与摄影制版，使远方图像的即时复制第一次成为可能。",
+    "dependsOn": ["telegraph","photography","chemistry","electrochem"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17042,14 +17012,14 @@ const EXTRA_TECHS = [
     "views": [
       {
         "period": "工业革命",
-        "text": "传真机在 1843 年 前后出现，依托 连续铸造 解决了 信息通信 中的具体难题，使相关能力第一次可被稳定复现。"
+        "text": "传真机在 1843 年 前后出现，借电报线路与电化学记录，把扫描到的图像逐点转成电信号再还原，使图像第一次能沿着线路远行。"
       },
       {
         "period": "当代",
-        "text": "今天，传真机仍是 信息记录 的底层支撑，并持续影响 通信电缆。"
+        "text": "今天，传真机在办公场景中已被网络传输取代，但「逐点扫描—传输—重建」这一范式正是后来扫描仪、电视与数字图像的共同起点。"
       }
     ],
-    "significance": "传真机把 连续铸造 与 信息记录 连接起来，是 信息通信 中从「可能」走向「可用」的关键节点，并直接催生了 通信电缆。"
+    "significance": "传真机把电报从「传字」扩展到「传图」，是信息技术从符号走向图像的第一步。"
   },
 
 
@@ -17094,7 +17064,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "通信电缆在 1850 年 前后成形，依托 钢筋混凝土、燃料乙醇、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 海底电缆 等后续技术。",
-    "dependsOn": ["mat_reconcrete","ene_ethanol","mathematics","inf_fax"],
+    "dependsOn": ["mat_reconcrete","ene_ethanol","mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -19407,7 +19377,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "天线约 1888 年 出现，建立在 锗、交流电系统、数学 之上；它把 信息记录、远程传输 变成可稳定复现的能力，是 信息通信 中从经验走向方法的关键一步。",
-    "dependsOn": ["mat_ge","ene_ac","mathematics","inf_pen"],
+    "dependsOn": ["mat_ge","ene_ac","mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -26922,7 +26892,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "硝化甘油约 1847 年 出现，建立在 砂轮、燃料电池、连续铸造 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["ene_fuelcell","mat_continuouscast","tr_pneumatictire"],
+    "dependsOn": ["ene_fuelcell","mat_continuouscast"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28034,7 +28004,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "战斗机约 1915 年 出现，建立在 流水线、调峰电站、不锈钢 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["assembly_line","mat_stainless","tr_panama"],
+    "dependsOn": ["assembly_line","mat_stainless"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28244,7 +28214,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "钢盔约 1914 年 出现，建立在 流水线、调峰电站、不锈钢 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["assembly_line","mat_stainless","tr_panama"],
+    "dependsOn": ["assembly_line","mat_stainless"],
     "enables": [],
     "applications": [
       "防御工事",
