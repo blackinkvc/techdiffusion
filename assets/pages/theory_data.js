@@ -69,7 +69,7 @@ window.THEORY = {
     chaos: { layer: "theory", field: "动力系统" },
     fractal: { layer: "theory", field: "几何学" },
     /* ——— 物理簇 · 批次 3 补（16 条，逐条标 theory）——— */
-    celestial_mech: { layer: "theory", field: "天体力學", note: "牛顿《原理》1687 的天体部分；语料年份与 physics 同源" },
+    celestial_mech: { layer: "theory", field: "天体力学", note: "牛顿《原理》1687 的天体部分；语料年份与 physics 同源" },
     lagrangian: { layer: "theory", field: "分析力学", note: "拉格朗日 1788《分析力学》；与 newton 力学同源、互为重述" },
     em_theory: { layer: "theory", field: "电磁学", note: "麦克斯韦方程组 1865；语料记 1865" },
     wave_optics: { layer: "theory", field: "光学", note: "惠更斯-菲涅耳 1678/1818；波动说与粒子说之争见 optics" },
