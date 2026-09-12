@@ -211,12 +211,15 @@ window.THEORY = {
     photography: ["craft"],
     chemistry: ["theory"],
     electrochem: ["theory"],
-    mat_rubber: ["material"]
+    mat_rubber: ["material"],
+    inf_cable: ["material"]
   },
   /* 边的关系性质覆盖（"依赖者|前置" → kind）。只在「不是因果前置」时才需要，
-     因为「是材料还是工艺」已由前置节点自身回答，不必逐条重述。 */
+     因为「是材料还是工艺」已由前置节点自身回答，不必逐条重述。
+     telephone→交换机 = 配套使用（交换机因电话而存在），非因果前置。 */
   edgeRels: {
-    "inf_pen|paper": "complement"
+    "inf_pen|paper": "complement",
+    "inf_switchboard|telephone": "complement"
   },
 
   /* ---------- ② 事后解释（技术先行、科学解释后至） ----------

@@ -12047,8 +12047,8 @@ const EXTRA_TECHS = [
     "year": 1872,
     "people": "",
     "place": "",
-    "summary": "注塑约 1872 年 成熟，建立在 工具钢、铅酸电池、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 电阻焊、自动喷淋 的发展铺平了道路。",
-    "dependsOn": ["mat_toolsteel","ene_leadacid","mathematics"],
+    "summary": "注塑在 1872 年 前后出现，把熔融的塑性材料高压注入闭合模具，一次成形出形状复杂的零件。它依赖模具这一成形母体、工具钢制成的模腔，以及车床等精密加工手段。",
+    "dependsOn": ["mfg_mold","mat_toolsteel","mfg_lathe"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12065,7 +12065,7 @@ const EXTRA_TECHS = [
         "text": "今天，注塑仍是 零件加工 的底层支撑，并持续影响 电阻焊、自动喷淋。"
       }
     ],
-    "significance": "注塑把 工具钢 与 零件加工 连接起来，是 制造与工具 中从「可能」走向「可用」的关键节点，并直接催生了 电阻焊、自动喷淋。"
+    "significance": "注塑把成形从「去除材料」变成「填充型腔」：只要做出模具，同一零件就能被无限次复制——这是批量生产在塑料时代的形态。",
   },
 {
     "id": "mfg_blow",
@@ -14690,8 +14690,8 @@ const EXTRA_TECHS = [
     "year": 1800,
     "people": "",
     "place": "",
-    "summary": "缆车约 1800 年 成熟，建立在 热处理炉、余热回收、感应熔炼 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 巡洋舰 的发展铺平了道路。",
-    "dependsOn": ["tr_paddlesteamer"],
+    "summary": "缆车在 1800 年 前后出现，用一条由蒸汽机驱动的钢缆牵引车厢沿轨道升降，把「动力留在上端、车厢只做承载」这一分工变成现实。它接续索道的悬索牵引思路，并以钢铁材料与蒸汽动力为条件。",
+    "dependsOn": ["tr_ropeway","steam_engine","steel"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14708,7 +14708,7 @@ const EXTRA_TECHS = [
         "text": "今天，缆车仍是 人员位移 的底层支撑，并持续影响 巡洋舰。"
       }
     ],
-    "significance": "缆车把 热处理炉 与 人员位移 连接起来，是 交通运载 中从「可能」走向「可用」的关键节点，并直接催生了 巡洋舰。"
+    "significance": "缆车的意义在于把牵引与承载分离：动力不必随车移动，陡坡运输因而成立——这一思路后来成为电梯、索道与自动扶梯的共同基础。",
   },
 {
     "id": "tr_ropeway",
@@ -15980,8 +15980,8 @@ const EXTRA_TECHS = [
     "year": 1869,
     "people": "",
     "place": "",
-    "summary": "苏伊士运河约 1869 年 成熟，建立在 砂轮、铅酸电池、工具钢 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 风洞 的发展铺平了道路。",
-    "dependsOn": ["ene_leadacid","mat_toolsteel","tr_trafficsignal"],
+    "summary": "苏伊士运河在 1869 年 通航，在海平面高度挖通地中海与红海，使欧亚航程缩短数千海里。它依靠挖掘机与挖泥船的大规模土方作业、现代炸药的硬岩爆破，以及水泥构筑的防波堤与码头。",
+    "dependsOn": ["tr_excavator","tr_dredger","explosives","mat_cement"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15998,7 +15998,7 @@ const EXTRA_TECHS = [
         "text": "今天，苏伊士运河仍是 人员位移 的底层支撑，并持续影响 风洞。"
       }
     ],
-    "significance": "苏伊士运河把 砂轮 与 人员位移 连接起来，是 交通运载 中从「可能」走向「可用」的关键节点，并直接催生了 风洞。"
+    "significance": "苏伊士运河证明了「用工程改写地理」的可行性：不换船、不换装，一条人工水道即可改变全球航运格局，也把运河工程确立为独立的技术门类。",
   },
 {
     "id": "tr_panama",
@@ -17033,8 +17033,8 @@ const EXTRA_TECHS = [
     "year": 1878,
     "people": "",
     "place": "",
-    "summary": "电话交换机约 1878 年 成熟，建立在 钢化玻璃、区域供冷供热、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 钢笔 的发展铺平了道路。",
-    "dependsOn": ["mat_tempered","ene_district","mathematics","inf_vinyl"],
+    "summary": "电话交换机在 1878 年 前后成形，用插塞、塞孔与塞绳把任意两条线路按需接通，使电话从「一对线两个人」变成可任意互连的网络。它建立在电报的电路与信号范式、通信电缆这一线路载体，以及电话这一服务对象之上。",
+    "dependsOn": ["telegraph","telephone","inf_cable"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17051,7 +17051,7 @@ const EXTRA_TECHS = [
         "text": "今天，电话交换机仍是 信息记录 的底层支撑，并持续影响 钢笔。"
       }
     ],
-    "significance": "电话交换机把 钢化玻璃 与 信息记录 连接起来，是 信息通信 中从「可能」走向「可用」的关键节点，并直接催生了 钢笔。"
+    "significance": "交换机的本质是「连接」：把线缆的物理连通变成可调度的关系。它让电话网从点对点扩展为任意拓扑，是通信由「线路」走向「网络」的转折点。",
   },
 {
     "id": "inf_cable",
@@ -17964,8 +17964,8 @@ const EXTRA_TECHS = [
     "year": 1997,
     "people": "",
     "place": "",
-    "summary": "Wi-Fi在 1997 年 前后成形，依托 金属有机框架、锂聚合物电池、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 统一建模语言 等后续技术。",
-    "dependsOn": ["ene_lipoly","mathematics","inf_vpn"],
+    "summary": "Wi-Fi 在 1997 年 前后标准化，用无线电波在局域网内传输分组数据，使终端摆脱网线。它建立在无线电的电磁波通信原理、集成电路的射频收发能力，以及局域网与 TCP/IP 的组网协议之上。",
+    "dependsOn": ["radio","ic","inf_lan","tcpip"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17982,7 +17982,7 @@ const EXTRA_TECHS = [
         "text": "今天，Wi-Fi仍是 信息记录 的底层支撑，并持续影响 统一建模语言。"
       }
     ],
-    "significance": "Wi-Fi把 金属有机框架 与 信息记录 连接起来，是 信息通信 中从「可能」走向「可用」的关键节点，并直接催生了 统一建模语言。"
+    "significance": "Wi-Fi 把「接入」从物理位置里解放出来：网络端口不再只是墙上的插座，而成为空间本身——这是移动互联网得以成立的前提。",
   },
 {
     "id": "inf_bluetooth",
