@@ -458,7 +458,7 @@ window.CHANGELOG = {
       summary: "用户指出有些技术在刚使用时没有科学解释（或长期靠朴素哲理/神话解释），后来才有科学解释、且解释本身还会被修正。复核发现现有依赖网把 dependsOn 硬编码为「前置」并强制 yearInv=0（前置年 ≤ 技术年），「技术先用、理论后到」在结构上无法表达。本轮不动任何现有边，新增独立覆盖层 theory_data.js 把这层语义抽出来标注，并在详情页渲染「理论与解释」区块。",
       changes: [
         "新增 assets/pages/theory_data.js（覆盖层，只读标注，不改动任何 dependsOn / enables / 节点字段）：meta（层定义与关系四型）+ nodes（节点层）+ retro（事后解释）。",
-        "节点层 55 项：theory 理论与解释 37 / method 方法·制度·工具 7 / tech 明确属技术却误挂「基础」11；覆盖承担 1982 条「基础→技术」依赖边的 30 个枢纽中的全部。",
+        "节点层 55 项（首版）：theory 理论与解释 36 / method 方法·制度·工具 9 / tech 明确属技术却误挂「基础」10；覆盖承担 1982 条「基础→技术」依赖边的 30 个枢纽中的全部。",
         "事后解释 20 条（metallurgy / mat_pottery / fermentation / mat_cement / mat_glass / gunpowder / compass / clock / bio_glasses / telescope / steam_engine / vaccination / airplane / bow_arrow / waterwheel / ene_wind / arch / bio_surgery / wheel / textile），每条记 useYear（实际开始使用）/ explain.at（首次科学解释）/ folk（期间朴素解释）/ note。",
         "「无科学解释期」由页面实时计算 explain.at − useYear，不写死：冶金 ≈6660 年、发酵 ≈8860 年、火药 ≈810 年、蒸汽机 ≈112 年、疫苗 ≈94 年、望远镜 ≈58 年。",
         "朴素解释标注（带起止年与「被谁取代」）：四元素说、燃素说（1667–1777 → 氧化说）、自然发生说（→ 微生物致病说）、瘴气说·体液说（→ 微生物致病说）、风水·天人感应（→ 地磁说 → 电磁学）、视觉射线说。",
@@ -467,7 +467,8 @@ window.CHANGELOG = {
         "16 个页面挂载 assets/pages/theory_data.js；core.js 与 style.css 版本串统一为 20260912t。",
         "范围声明：全库 2289 节点中 74 个会显示该区块；节点数、依赖边数与任何现有关系均未变动。",
         "纠错页同步登记 CR-2026-0912-theory-layer（severity 中 / status 进行中）：把本次审计出的三类问题留档——① 依赖网结构上无法表达「技术先用、理论后到」（dependsOn 硬编码前置 + yearInv=0）；② basic 分类混装 24 个非理论节点（仪器 / 技能·符号 / 材料 / 方法·制度 / 领域·未来项）；③ 160 个 bx_* 填充占位（year 全为 1950、下游 0、占 basic 的 53%）；并附带记录全库 summary 无「偶然 / 意外 / 巧合」、无朴素解释标注、淘汰侧不建模三项缺口。",
-        "pendingQueue 新增 4 条待办：basic 144 真节点人工重挂（含 24 个明显非理论者）、160 个 bx_* 占位清理、依赖网引入 rel=\"retro\" 事后解释边类型（允许理论年 > 技术年并让 yearInv 按 rel 放行）、55+20 条标注逐条复核（重点 vaccination 1890 / airplane 1904 / compass 1865 三条口径）。"
+        "pendingQueue 新增 4 条待办：basic 144 真节点人工重挂（含 24 个明显非理论者）、160 个 bx_* 占位清理、依赖网引入 rel=\"retro\" 事后解释边类型（允许理论年 > 技术年并让 yearInv 按 rel 放行）、55+20 条标注逐条复核（重点 vaccination 1890 / airplane 1904 / compass 1865 三条口径）。",
+        "自查修正：节点层分层计数先前误记为 theory 37 / method 7 / tech 11，经逐层实点为 **36 / 9 / 10**（合计 55 不变），已在本条目、《版本迭代》与纠错页三处同步更正。"
       ],
       files: ["assets/pages/theory_data.js", "assets/core.js", "assets/style.css", "assets/pages/correction_data.js", "detail.html", "tree.html", "browse.html", "lineage.html", "analysis.html", "model.html", "tree_full.html", "changelog.html", "correction.html", "method.html", "midtech.html", "progress.html", "research.html", "sop.html", "timeline.html", "worldview.html", "index.html"]
     }
