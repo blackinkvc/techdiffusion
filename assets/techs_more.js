@@ -11304,7 +11304,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以透明陶瓷满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "透明陶瓷把材料科学、窑、用火的成果用于以透明陶瓷满足高温、耐磨、透波或生物相容等极端服役需求，让材料从原理走向可部署的工程现实。"
   },
@@ -11317,7 +11317,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以氮化硼陶瓷满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "承接材料科学、窑、用火，氮化硼陶瓷解决以氮化硼陶瓷满足高温、耐磨、透波或生物相容等极端服役需求，填补了材料在信息时代的一项具体空白。"
   },
@@ -11329,7 +11329,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以碳化硅陶瓷应用满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "以材料科学、窑、用火为基，碳化硅陶瓷应用专攻以碳化硅陶瓷应用满足高温、耐磨、透波或生物相容等极端服役需求，把材料的能力边界再往前推一步。"
   },
@@ -11341,7 +11341,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以氧化铝陶瓷应用满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "氧化铝陶瓷应用把材料科学、窑、用火的成果用于以氧化铝陶瓷应用满足高温、耐磨、透波或生物相容等极端服役需求，让材料从原理走向可部署的工程现实。"
   },
@@ -11353,7 +11353,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以氧化锆陶瓷应用满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "在材料科学、窑、用火之上，氧化锆陶瓷应用聚焦于以氧化锆陶瓷应用满足高温、耐磨、透波或生物相容等极端服役需求，是材料走向更精细、更可控的关键环节。"
   },
@@ -11365,7 +11365,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以赛隆陶瓷满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "承接材料科学、窑、用火，赛隆陶瓷解决以赛隆陶瓷满足高温、耐磨、透波或生物相容等极端服役需求，填补了材料在信息时代的一项具体空白。"
   },
@@ -11377,7 +11377,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以硼化锆陶瓷满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "以材料科学、窑、用火为基，硼化锆陶瓷专攻以硼化锆陶瓷满足高温、耐磨、透波或生物相容等极端服役需求，把材料的能力边界再往前推一步。"
   },
@@ -11389,7 +11389,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以二硅化钼陶瓷满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "二硅化钼陶瓷把材料科学、窑、用火的成果用于以二硅化钼陶瓷满足高温、耐磨、透波或生物相容等极端服役需求，让材料从原理走向可部署的工程现实。"
   },
@@ -11401,7 +11401,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以磷酸盐陶瓷满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "在材料科学、窑、用火之上，磷酸盐陶瓷聚焦于以磷酸盐陶瓷满足高温、耐磨、透波或生物相容等极端服役需求，是材料走向更精细、更可控的关键环节。"
   },
@@ -11413,7 +11413,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以生物活性陶瓷满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "在材料科学、窑、用火之上，生物活性陶瓷聚焦于以生物活性陶瓷满足高温、耐磨、透波或生物相容等极端服役需求，是材料走向更精细、更可控的关键环节。"
   },
@@ -11425,7 +11425,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以骨水泥满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "承接材料科学、窑、用火，骨水泥解决以骨水泥满足高温、耐磨、透波或生物相容等极端服役需求，填补了材料在信息时代的一项具体空白。"
   },
@@ -11437,7 +11437,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以牙科陶瓷满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "以材料科学、窑、用火为基，牙科陶瓷专攻以牙科陶瓷满足高温、耐磨、透波或生物相容等极端服役需求，把材料的能力边界再往前推一步。"
   },
@@ -11449,7 +11449,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以微晶玻璃满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "微晶玻璃把材料科学、窑、用火的成果用于以微晶玻璃满足高温、耐磨、透波或生物相容等极端服役需求，让材料从原理走向可部署的工程现实。"
   },
@@ -11461,7 +11461,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以乳浊玻璃满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "在材料科学、窑、用火之上，乳浊玻璃聚焦于以乳浊玻璃满足高温、耐磨、透波或生物相容等极端服役需求，是材料走向更精细、更可控的关键环节。"
   },
@@ -11473,7 +11473,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以光致变色玻璃满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "承接材料科学、窑、用火，光致变色玻璃解决以光致变色玻璃满足高温、耐磨、透波或生物相容等极端服役需求，填补了材料在信息时代的一项具体空白。"
   },
@@ -11485,7 +11485,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以电致变色玻璃满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "以材料科学、窑、用火为基，电致变色玻璃专攻以电致变色玻璃满足高温、耐磨、透波或生物相容等极端服役需求，把材料的能力边界再往前推一步。"
   },
@@ -11497,7 +11497,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以硫系玻璃满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "硫系玻璃把材料科学、窑、用火的成果用于以硫系玻璃满足高温、耐磨、透波或生物相容等极端服役需求，让材料从原理走向可部署的工程现实。"
   },
@@ -11509,7 +11509,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以氟化物玻璃满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "在材料科学、窑、用火之上，氟化物玻璃聚焦于以氟化物玻璃满足高温、耐磨、透波或生物相容等极端服役需求，是材料走向更精细、更可控的关键环节。"
   },
@@ -11521,7 +11521,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以抗辐射玻璃满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "承接材料科学、窑、用火，抗辐射玻璃解决以抗辐射玻璃满足高温、耐磨、透波或生物相容等极端服役需求，填补了材料在信息时代的一项具体空白。"
   },
@@ -11533,7 +11533,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以激光玻璃满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "激光玻璃把材料科学、窑、用火的成果用于以激光玻璃满足高温、耐磨、透波或生物相容等极端服役需求，让材料从原理走向可部署的工程现实。"
   },
@@ -11545,7 +11545,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以闪烁玻璃满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "在材料科学、窑、用火之上，闪烁玻璃聚焦于以闪烁玻璃满足高温、耐磨、透波或生物相容等极端服役需求，是材料走向更精细、更可控的关键环节。"
   },
@@ -11557,7 +11557,7 @@ const MORE_TECHS = [
     "era": "info",
     "date": "20 世纪",
     "year": 1950,
-    "dependsOn": ["materials","kiln","mat_abs"],
+    "dependsOn": ["materials","kiln"],
     "purpose": "以低介电玻璃满足高温、耐磨、透波或生物相容等极端服役需求",
     "summary": "承接材料科学、窑、用火，低介电玻璃解决以低介电玻璃满足高温、耐磨、透波或生物相容等极端服役需求，填补了材料在信息时代的一项具体空白。"
   },

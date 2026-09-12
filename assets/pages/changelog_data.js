@@ -472,6 +472,32 @@ window.CHANGELOG = {
       ],
       files: ["assets/pages/theory_data.js", "assets/core.js", "assets/style.css", "assets/pages/correction_data.js", "detail.html", "tree.html", "browse.html", "lineage.html", "analysis.html", "model.html", "tree_full.html", "changelog.html", "correction.html", "method.html", "midtech.html", "progress.html", "research.html", "sop.html", "timeline.html", "worldview.html", "index.html"]
     }
+,
+    {
+      version: "v0.9.20",
+      date: "2026-09-13",
+      type: "fix",
+      title: "依赖网全量重建：生成器「位置式模板伪边」三变体清零（处置 1,142 条 / 删 1,015 条）",
+      summary: "承接 v0.9.19 的样本修复，本轮把生成管线遗留的模板伪边按「本质与逻辑」全量过一遍：先复核严格「时间最近」变体（778 条）→ 顺藤发现同年份变体（287 条）→ 再发现跨分类同年「前沿并列」变体（97 条），三族合计 1,142 条逐条判定。删 1,015 条、保留核验通过的 152 条、为 97 个被清空的节点补写真实前置。依赖边 7,328 → 6,549（净 −779），节点 2,288 不变，环 0、年份倒挂 0、悬空引用 0。",
+      treeChange: {
+        scope: "主管线技术网络（模型页 / 分析页 / 来龙去脉页所读）：依赖边 7,328 → 6,549（删 1,015 / 加 236 / 净 −779）；节点 2,288 不变；被删边的节点 647 个、被加边的节点 115 个；位置式模板边 806 → 152（保留者全部逐条核验通过）；无前置节点 9 → 8。",
+        reason: "v0.9.19 之后用户裁定按「本质与逻辑」全量重建，并要求「把剩下的所有都过一遍，不要遗漏」。审计显示 tools/gen_run.js 的 nearestEarlier() 只按时间序取前驱，该规则实际产出三族同源伪边：① 严格「时间最近」（B 是 B 所属分类中 year < A.year 的最后一个节点，778 条）；② 同年份变体（B.year == A.year，287 条——此前审计用严格小于比较，整族漏检）；③ 跨分类同年「前沿并列」变体（B 与 A 同年且 B 是该分类截至 A.year 的最新年份节点之一，97 条——因并列年 tie-break 不同而未被 ② 捕获）。三族本质相同：把「当时最新的材料 / 能源 / 信息条目」当成前置，必须清零，否则滞后 / 下游 / 共生统计与来龙去脉页的因果关系持续失真。",
+        detail: "① 严格变体 778 条：保留 106 条、删 672 条；复核删边时发现 1 处误伤（rope←stone_tools，属唯一候选槽位且节点简介明写「建立在石器之上」）已恢复。② 同年变体 287 条：保留 29 条、删 258 条；保留者以「系统←自身部件」为主（www←web_server、llm←transformer_arch、smartphone←camera_module）。③ 前沿并列变体 97 条：保留 17 条、删 80 条；此族暴露「人工选取的最新相关节点」与「生成器槽位」会撞车（本轮手写的 mil_assaultbridge←bld_steelbridge 即被同规则命中），故以已裁定的人工边做排除集。④ 被清空节点整表重写 97 个（52 + 38 + 7）。⑤ 环根因：mat_brass 补入的 mat_zinc 经 mat_castiron→…→mat_refractory←mat_brass 制造 8 个环，改回只留 [mat_copper] 后环 0。⑥ 全部改动仅落在 dependsOn 行（621 插入 / 624 删除，无格式噪声）。"
+      },
+      changes: [
+        "① 严格「时间最近」变体（778 条）：逐条过账后保留 106 条、删除 672 条。保留者按三档分类——同分类 75 条（本领域上一节点，如 steam_engine←boiler、mat_wrought←mat_iron、gunpowder←mil_blackpowder）、跨界·材料槽 15 条（如 mfg_bolt/mfg_thread/tr_crane←mat_blastfurnace、inf_mimeograph/tr_windtunnel/mfg_injection←mat_toolsteel）、跨界·其他 16 条（如算术/天文学/数学族←文字、agriculture←stone_hoe、mil_aweapon←ene_nuclear）。",
+        "② 同年份变体（287 条）：此前审计用严格小于比较，整族漏检。保留 29 条、删除 258 条。保留者以「系统←自身部件」为主：www←web_server、internet←packet_switch、computer←eniac、llm←transformer_arch、smartphone←camera_module、tunnel←drill_blast、internal_combustion←otto_cycle、genetic_engineering←gene_cloning；跨界 9 条为真实关系：airplane←aircraft_engine、tr_rocket / liquid_rocket←ene_rocketengine、tr_helicopter←ene_gasturbine、mfg_sandcast / mfg_lostwax←mat_casting、mfg_rolling2←mat_rolling、mfg_wiredraw←mat_drawing、architecture←engineering。",
+        "③ 跨分类同年「前沿并列」变体（97 条）：保留 17 条、删除 80 条。此族含大量同一模板签名，如 mil_sword 的 [研磨, 渡轮]、mil_sam / mil_cruise / mil_inertial 的 [超声加工, 遥控潜水器]、bld_green / bld_passive / bld_verticalgreen 的 [在机测量]；保留 17 条含 transistor←semiconductors、inf_ram←semiconductors、bld_dronesurvey←drone、bld_bim←mfg_cam、tr_trolley←ene_hydroplant。",
+        "④ 被清空节点补写真实前置：整表重写 97 个节点（同年变体 52 + 前沿并列变体 38 + 第三类抽检 7）。示例：tr_metro←[tr_steamloco 蒸汽机车, tr_tunnel2 交通隧道]；tr_maglev←[直线电机, 低温超导]；tr_submarine / tr_train / tr_bicycle / tr_glider / tr_shuttle / tr_reusablerocket 等按「推进 + 结构」两类重挂；mil_rifle←[滑膛枪, 镗床]、mil_machinegun←[来复枪, 铣床, 钢铁]、mil_ballistic←[火箭, 制导技术]、mil_hweapon←[原子弹, 核裂变反应堆]、mil_nuclearsub←[潜艇, 核裂变反应堆]、mil_aewc←[飞机, 雷达, 无线电]、mil_thermal←[夜视仪, 半导体材料]；bld_immersed←[钢筋混凝土, 挖泥船]、bld_pump←[钢筋混凝土, 内燃机, 起重机]、bld_zeroenergy←[太阳能光伏, 太阳能热利用, 地源热泵建筑]；bld_curtain 由浮法玻璃（1952，晚于节点 1950）改为钢化玻璃以消除年份倒挂。",
+        "⑤ 第三类抽检（本轮新发现）：mat_brass 原前置 mat_glass 属位置边被删后补入 [红铜冶炼, 锌冶炼]，其中 mat_zinc 经 mat_castiron→mat_anneal…→mat_refractory←mat_brass 形成 8 个环；改为只保留 [红铜冶炼]（黄铜＝铜＋锌矿，金属锌出现晚于黄铜）后环归零。同时清理 mat_refractory←黄铜、mat_stoneware←汞/黄铜、mat_mercury←黄铜、mat_concrete←炻器/汞 等「黄铜 / 汞」系无意义前置；sail 由 [轮子, 木炭] 改为 [桨, 编织, 木作]；polymer_chem 去「证明论」；mil_torpedo 由 [现代炸药(1867), 螺旋桨] 改为 [螺旋桨, 硝化甘油, 雷管]，消除全库唯一一处年份倒挂。",
+        "⑥ 计数与校验：依赖边 7,328 → 6,549（删 1,015 / 加 236 / 净 −779）；节点 2,288 不变；重边 0、自环 0、悬空前置 0、年份倒挂 0、环 0；无前置节点 9 → 8（rope←stone_tools 恢复；其余 8 个为 language / stone_tools / fire / wheel / mfg_stone / fire_drill / gesture_comm / magnet，均属文明起点）。全量校验链：tools/check_docs.js [OK]（TOTAL 2288 / TOTAL_FULL 13318）、模型页 runtime 干跑无残留模板串、前置性质渲染干跑（钢笔 6 枚 / 控制论 4 枚含 2 枚虚边 / 巴拿马运河 4 枚）、纠错页干跑 9/9。",
+        "⑦ 方法论存疑记录（重要）：位置式判定规则只能作**筛查信号**，不能作判据。新采用的前置里只有极少数恰好命中「时间最近」启发式，而正确边（如 电话→电话交换机）会被该启发式误判；同理「同年」也不能当判据——全库同分类同年的 654 条边属正常「系统←自身部件」关系（www←http、smartphone←soc、tunnel←盾构机）。",
+        "⑧ 改动形态：仅改写 dependsOn 行，621 插入 / 624 删除，无格式噪声；compact 格式（assets/data.js，元素不带引号、是 JS 标识符引用）与多行数组均按原 token 文本处理，不重新加引号（曾因重新加引号触发 ReferenceError: mathematics is not defined，已回滚改用原文本保留）。",
+        "⑨ 纠错页同步：CR-2026-0913-positional-template 状态由「进行中」更新为「已修正（全量）」，补记三族判定与补前置明细；纠错页 pendingQueue 中「生成式依赖网全量重建」一条标记为已执行，余下待办收敛为 1027 条模板文案重写与 22 组同名节点去重。",
+        "⑩ 遗留（本轮未动）：1027 条 upgrade_stubs 三段模板文案（与本轮改边无关，需另批按新前置重写）；22 组同名节点去重；12 条 enables 悬空引用（icbm / comsat / film / copilot 等，已在纠错页 enablesAudit 逐条列明）。"
+      ],
+      files: ["assets/techs_extra.js", "assets/techs_more.js", "assets/techs_extend.js", "assets/data.js", "assets/pages/changelog_data.js", "assets/pages/correction_data.js", "版本迭代日志.md", "index.html", "tree.html", "tree_full.html", "browse.html", "detail.html", "lineage.html", "analysis.html", "model.html", "changelog.html", "correction.html", "method.html", "midtech.html", "progress.html", "research.html", "sop.html", "timeline.html", "worldview.html"]
+    }
 
   ]
 };

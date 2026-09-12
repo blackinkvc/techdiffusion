@@ -285,11 +285,7 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 3000 年",
     "year": -3000,
-    "dependsOn": [
-      "masonry",
-      "engineering",
-      "mathematics"
-    ],
+    "dependsOn": ["masonry", "engineering"],
     "summary": "统筹结构、空间与材料以满足人居，是建造活动的系统知识，依托砌筑、工程学、数学，它在上古（约 前 3000 年）把相关能力从经验推向方法，成为建筑建造中承上启下的一环，直接催生了保温隔热、模块化建筑、装配式建筑等发展。"
   },
   {
@@ -443,11 +439,7 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 3000 年",
     "year": -3000,
-    "dependsOn": [
-      "canoe",
-      "sail",
-      "astronomy"
-    ],
+    "dependsOn": ["canoe", "sail"],
     "summary": "以天体与海流定位航向，使跨海远航与全球贸易成为可能，它建立在独木舟、帆船、天文学之上，约 约 前 3000 年 出现于上古，把交通运载的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
@@ -1002,7 +994,6 @@ const EXTEND_TECHS = [
     "date": "1990 年",
     "year": 1990,
     "dependsOn": [
-      "quantum",
       "quantum_entanglement",
       "computer"
     ],
@@ -2535,11 +2526,7 @@ const EXTEND_TECHS = [
     "date": "设想（L5·仅在该世界观）",
     "year": 2150,
     "tier": "L5",
-    "dependsOn": [
-      "spacetime",
-      "exotic_matter",
-      "general_relativity"
-    ],
+    "dependsOn": ["spacetime", "general_relativity"],
     "summary": "压缩前方、膨胀后方的时空泡，使表观超光速航行而不违背局域光速，需负能量支撑，依托时空、奇异物质、广义相对论，它在未来/科幻（设想（L5·仅在该世界观））把相关能力从经验推向方法，成为交通运载中承上启下的一环，直接催生了超光速通讯等发展。"
   },
   {
@@ -2567,11 +2554,7 @@ const EXTEND_TECHS = [
     "date": "设想（L5·仅在该世界观）",
     "year": 2150,
     "tier": "L5",
-    "dependsOn": [
-      "quantum_entanglement",
-      "spacetime",
-      "warp_drive"
-    ],
+    "dependsOn": ["quantum_entanglement", "spacetime"],
     "summary": "借纠缠或非局域通道瞬时传递信息，绕开光速延迟，依赖该世界观的特殊规则，依托量子纠缠、时空、曲速引擎，它在未来/科幻（设想（L5·仅在该世界观））解决了信息通信中的具体难题，使相应能力得以被反复复用。"
   },
   {

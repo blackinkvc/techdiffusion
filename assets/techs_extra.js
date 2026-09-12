@@ -131,7 +131,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "零的概念在 500 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 位值制计数法 等后续技术。",
-    "dependsOn": ["writing","mathematics","trigonometry"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -251,7 +251,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "十进制小数在 1200 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 日心说 等后续技术。",
-    "dependsOn": ["writing","mathematics","optics"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -311,7 +311,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "对数约 1614 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 解析几何 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","kepler_laws"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -341,7 +341,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "解析几何约 1637 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 组合数学 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","logarithms"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -371,7 +371,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "微积分约 1687 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 天体力学 的发展铺平了道路。",
-    "dependsOn": ["wave_optics","writing","mathematics","physics"],
+    "dependsOn": ["writing","mathematics","physics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -431,7 +431,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "复数在 1572 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 显微镜 等后续技术。",
-    "dependsOn": ["writing","mathematics","heliocentrism"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -491,7 +491,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "线性代数约 1858 年 出现，建立在 语言、文字、数学 之上；它把 理论建模、实验测量 变成可稳定复现的能力，是 科学基础与方法 中从经验走向方法的关键一步。",
-    "dependsOn": ["writing","mathematics","math_logic"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -551,7 +551,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "傅里叶分析约 1807 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 统计学 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","atomic_theory"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -581,7 +581,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "统计学在 1809 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 分子学说 等后续技术。",
-    "dependsOn": ["writing","mathematics","fourier"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -611,7 +611,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "非欧几何在 1829 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 群论 等后续技术。",
-    "dependsOn": ["writing","mathematics","organic_chem"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -641,7 +641,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "群论在 1832 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 细胞学说 等后续技术。",
-    "dependsOn": ["writing","mathematics","noneuclid"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -671,7 +671,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "拓扑学在 1860 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 纽结理论 等后续技术。",
-    "dependsOn": ["writing","mathematics","evolution"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -701,7 +701,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "集合论约 1874 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 物理化学 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","stat_mech"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -731,7 +731,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "图论约 1736 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 分析化学 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","taxonomy"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -761,7 +761,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "组合数学在 1650 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 概率论 等后续技术。",
-    "dependsOn": ["writing","mathematics","analytic_geom"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -791,7 +791,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "数理逻辑在 1854 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 线性代数 等后续技术。",
-    "dependsOn": ["writing","mathematics","valence"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -821,7 +821,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "张量在 1900 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 证明论 等后续技术。",
-    "dependsOn": ["biochem","writing","mathematics","neuroscience"],
+    "dependsOn": ["biochem","writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -881,7 +881,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "公理化概率在 1933 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 λ演算 等后续技术。",
-    "dependsOn": ["particle_phys","writing","mathematics","radio_astron"],
+    "dependsOn": ["particle_phys","writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -941,7 +941,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "分形几何在 1975 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 数论密码 等后续技术。",
-    "dependsOn": ["writing","mathematics","complexity","numerical","statistics","optimization"],
+    "dependsOn": ["writing","mathematics","numerical","statistics","optimization"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -971,7 +971,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "博弈论约 1944 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 范畴论 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","systems_theory"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1001,7 +1001,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "信息论约 1948 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 量子场论 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","optimization"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1031,7 +1031,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "范畴论约 1945 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 最优化/线性规划 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","game_theory"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1061,7 +1061,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "数值分析约 1950 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 材料科学 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","bigbang","statistics","optimization"],
+    "dependsOn": ["writing","mathematics","statistics","optimization"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1091,7 +1091,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "最优化/线性规划在 1947 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 信息论 等后续技术。",
-    "dependsOn": ["writing","mathematics","category_theory"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1121,7 +1121,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "纽结理论约 1860 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 微生物致病说 的发展铺平了道路。",
-    "dependsOn": ["evolution","writing","mathematics","topology"],
+    "dependsOn": ["writing","mathematics","topology"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1211,7 +1211,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "突变理论约 1960 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 混沌理论 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","atomic_clock"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1241,7 +1241,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "天体力学约 1687 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 经典力学 的发展铺平了道路。",
-    "dependsOn": ["wave_optics","writing","mathematics","calculus"],
+    "dependsOn": ["writing","mathematics","calculus"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1272,7 +1272,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "分析力学约 1788 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 计量学 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","crystallography"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1303,7 +1303,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "统计力学约 1872 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 集合论 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","periodic_table"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1333,7 +1333,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "电磁理论约 1865 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 遗传学 的发展铺平了道路。",
-    "dependsOn": ["germ_theory","writing","mathematics","electromagnetism"],
+    "dependsOn": ["writing","mathematics","electromagnetism"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1363,7 +1363,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "波动光学约 1678 年 出现，建立在 语言、文字、数学 之上；它把 理论建模、实验测量 变成可稳定复现的能力，是 科学基础与方法 中从经验走向方法的关键一步。",
-    "dependsOn": ["writing","mathematics","microbiology"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1393,7 +1393,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "狭义相对论在 1905 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 核物理 等后续技术。",
-    "dependsOn": ["measure_theory","writing","mathematics","relativity_qm"],
+    "dependsOn": ["writing","mathematics","relativity_qm"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1454,7 +1454,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "标准模型在 1970 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 认知科学 等后续技术。",
-    "dependsOn": ["writing","mathematics","chaos"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1484,7 +1484,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "粒子物理学在 1932 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 射电天文学 等后续技术。",
-    "dependsOn": ["particle_physics","writing","mathematics","quantum_mech"],
+    "dependsOn": ["writing","mathematics","quantum_mech"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1574,7 +1574,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "分子学说约 1811 年 出现，建立在 语言、文字、数学 之上；它把 理论建模、实验测量 变成可稳定复现的能力，是 科学基础与方法 中从经验走向方法的关键一步。",
-    "dependsOn": ["writing","mathematics","statistics"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1604,7 +1604,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "晶体学约 1780 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 分析力学 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","fluid_mech"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1664,7 +1664,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "元素周期律约 1869 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 统计力学 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","ecology"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1694,7 +1694,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "化学键/价键约 1852 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 数理逻辑 的发展铺平了道路。",
-    "dependsOn": ["thermo_chem","writing","mathematics","photochemistry"],
+    "dependsOn": ["thermo_chem","writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1724,7 +1724,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "有机化学在 1828 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 非欧几何 等后续技术。",
-    "dependsOn": ["writing","mathematics","thermodynamics"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1754,7 +1754,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "无机化学约 1700 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 固体力学 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","diff_eq"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1784,7 +1784,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "物理化学在 1887 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 生物化学 等后续技术。",
-    "dependsOn": ["writing","mathematics","set_theory"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1814,7 +1814,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "分析化学约 1750 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 流体力学 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","graph_theory"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1874,7 +1874,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "高分子化学约 1900 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 可重复实验 的发展铺平了道路。",
-    "dependsOn": ["biochem","writing","mathematics","proof_theory"],
+    "dependsOn": ["biochem", "writing", "mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1904,7 +1904,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "电化学在 1800 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 光谱学 等后续技术。",
-    "dependsOn": ["writing","mathematics","standards_units"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1934,7 +1934,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "细胞学说约 1838 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 热化学 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","group_theory"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1964,7 +1964,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "微生物致病说约 1861 年 出现，建立在 语言、文字、数学 之上；它把 理论建模、实验测量 变成可稳定复现的能力，是 科学基础与方法 中从经验走向方法的关键一步。",
-    "dependsOn": ["topology","writing","mathematics","knot_theory"],
+    "dependsOn": ["topology","writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -1995,7 +1995,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "遗传学约 1865 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 生态学 的发展铺平了道路。",
-    "dependsOn": ["germ_theory","writing","mathematics","em_theory"],
+    "dependsOn": ["writing","mathematics","em_theory"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -2085,7 +2085,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "微生物学在 1670 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 疫苗、无菌外科、波动光学 等后续技术。",
-    "dependsOn": ["writing","mathematics","peer_review"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -2115,7 +2115,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "免疫学约 1798 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 标准单位制 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","metrology"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -2145,7 +2145,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "神经科学在 1890 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 张量 等后续技术。",
-    "dependsOn": ["physical_chem","writing","mathematics","biochem"],
+    "dependsOn": ["writing","mathematics","biochem"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -2205,7 +2205,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "生物分类学在 1735 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 图论 等后续技术。",
-    "dependsOn": ["inorganic_chem","writing","mathematics","acoustics"],
+    "dependsOn": ["inorganic_chem","writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -2235,7 +2235,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "日心说约 1543 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 复数 的发展铺平了道路。",
-    "dependsOn": ["engineering","writing","mathematics","decimal"],
+    "dependsOn": ["engineering","writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -2295,7 +2295,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "射电天文学在 1932 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 公理化概率 等后续技术。",
-    "dependsOn": ["particle_physics","writing","mathematics","particle_phys"],
+    "dependsOn": ["writing","mathematics","particle_phys"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -2385,7 +2385,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "实测天文学在 1600 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 望远镜 等后续技术。",
-    "dependsOn": ["microscope","writing","mathematics","scientific_method"],
+    "dependsOn": ["writing","mathematics","scientific_method"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -2445,7 +2445,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "显微镜约 1590 年 出现，建立在 语言、文字、数学 之上；它把 理论建模、实验测量 变成可稳定复现的能力，是 科学基础与方法 中从经验走向方法的关键一步。",
-    "dependsOn": ["writing","mathematics","complex_num"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -2475,7 +2475,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "同行评审制度在 1665 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 微生物学 等后续技术。",
-    "dependsOn": ["writing","mathematics","chemistry"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -2535,7 +2535,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "计量学约 1790 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 免疫学 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","lagrangian"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -2565,7 +2565,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "标准单位制约 1799 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 电化学 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","immunology"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -2715,7 +2715,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "计算复杂性约 1971 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 分形几何 的发展铺平了道路。",
-    "dependsOn": ["standard_model","writing","mathematics","cognition","numerical","statistics","optimization"],
+    "dependsOn": ["standard_model","writing","mathematics","numerical","statistics","optimization"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -2745,7 +2745,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "数论密码约 1976 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 基因组学 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","fractal"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -2805,7 +2805,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "系统论约 1940 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 博弈论 的发展铺平了道路。",
-    "dependsOn": ["lambda_calc","writing","mathematics","computer_sci"],
+    "dependsOn": ["lambda_calc","writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -2835,7 +2835,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "流体力学约 1752 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 晶体学 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","analytical_chem"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -2925,7 +2925,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "热化学在 1840 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 光化学 等后续技术。",
-    "dependsOn": ["writing","mathematics","cell_theory"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -2955,7 +2955,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "光化学约 1840 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 化学键/价键 的发展铺平了道路。",
-    "dependsOn": ["cell_theory","writing","mathematics","thermo_chem"],
+    "dependsOn": ["writing","mathematics","thermo_chem"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -3015,7 +3015,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "基因组学在 1977 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 纳米科学 等后续技术。",
-    "dependsOn": ["writing","mathematics","math_crypto"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -3075,7 +3075,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "纳米科学约 1980 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 蛋白质组学 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","genomics"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -3106,7 +3106,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "数据科学约 2000 年 出现，建立在 语言、文字、数学 之上；它把 理论建模、实验测量 变成可稳定复现的能力，是 科学基础与方法 中从经验走向方法的关键一步。",
-    "dependsOn": ["writing","mathematics","network_sci"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -3136,7 +3136,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "网络科学约 1998 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 数据科学 的发展铺平了道路。",
-    "dependsOn": ["writing","mathematics","proteomics"],
+    "dependsOn": ["writing","mathematics"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -3166,7 +3166,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "认知科学约 1970 年 成熟，建立在 语言、文字、数学 之上完成关键突破；其能力延伸到 理论建模、实验测量，并为 计算复杂性 的发展铺平了道路。",
-    "dependsOn": ["chaos","writing","mathematics","standard_model"],
+    "dependsOn": ["writing","mathematics","standard_model"],
     "enables": [],
     "applications": [
       "理论建模",
@@ -3196,7 +3196,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "红铜冶炼约 公元前 5000 年 成熟，建立在 用火、砖与砌筑、陶器 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 黄金加工、白银加工、锯 的发展铺平了道路。",
-    "dependsOn": ["brick","mat_pottery"],
+    "dependsOn": ["mat_pottery"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3256,7 +3256,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "黄铜约 公元前 2000 年 成熟，建立在 用火、玻璃、玻璃 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 汞冶炼、炻器 的发展铺平了道路。",
-    "dependsOn": ["mat_glass"],
+    "dependsOn": ["mat_copper"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3286,7 +3286,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "块炼铁在 公元前 1200 年 前后成形，依托 用火、铁器、天然橡胶 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 熟铁 等后续技术。",
-    "dependsOn": ["mat_refractory","iron","mat_rubber"],
+    "dependsOn": ["mat_refractory","iron"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3346,7 +3346,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "铸铁约 公元前 500 年 成熟，建立在 用火、永磁材料、退火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 锌冶炼、渗碳 的发展铺平了道路。",
-    "dependsOn": ["magnets","mat_anneal"],
+    "dependsOn": ["mat_anneal"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3376,7 +3376,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "坩埚钢约 500 年 成熟，建立在 用火、造纸、平板玻璃 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 拉拔、瓷器 的发展铺平了道路。",
-    "dependsOn": ["paper","mat_flatglass"],
+    "dependsOn": ["mat_flatglass"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3406,7 +3406,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "球墨铸铁在 1943 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 电火花加工、导弹、原子弹 等后续技术。",
-    "dependsOn": ["chemistry","physics","missile","mat_esr"],
+    "dependsOn": ["chemistry","physics","missile"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3436,7 +3436,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "可锻铸铁约 1722 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 钴 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_zeolite"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3496,7 +3496,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "锰钢约 1882 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 预应力混凝土、精密轴承、无轨电车 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_piezo"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3526,7 +3526,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "工具钢约 1868 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 钢化玻璃、注塑、交通信号灯 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_niobium"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3556,7 +3556,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "高速钢在 1900 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 模具钢 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_sic"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3586,7 +3586,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "模具钢在 1900 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 硅钢 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_sic","mat_hss"],
+    "dependsOn": ["chemistry","physics","mat_hss"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3616,7 +3616,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "硅钢在 1900 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 镍合金 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_sic","mat_die"],
+    "dependsOn": ["chemistry","physics","mat_die"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3646,7 +3646,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "铝冶炼在 1825 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 巴氏合金、压铸、螺旋桨 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_thermoelec"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3676,7 +3676,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "硬铝合金在 1909 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 铁氧体 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_phenolic","mat_ito"],
+    "dependsOn": ["chemistry","physics","mat_phenolic"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3706,7 +3706,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "钛合金在 1950 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 氮化硅陶瓷 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_abs"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3736,7 +3736,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "镁合金约 1930 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 玻璃纤维 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_sbr"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3766,7 +3766,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "镍合金在 1900 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 氧化铝陶瓷 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_sic","mat_siliconsteel"],
+    "dependsOn": ["chemistry","physics","mat_siliconsteel"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3796,7 +3796,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "锌冶炼在 公元前 500 年 前后成形，依托 用火、铸铁、永磁材料 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 渗碳、高炉炼铁 等后续技术。",
-    "dependsOn": ["mat_castiron","magnets"],
+    "dependsOn": ["mat_castiron"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3826,7 +3826,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "铅冶炼在 公元前 3000 年 前后成形，依托 用火、青铜合金、青铜 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 锡冶炼、软钎料 等后续技术。",
-    "dependsOn": ["mat_bronze","bronze"],
+    "dependsOn": ["bronze"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3856,7 +3856,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "锡冶炼约 公元前 3000 年 成熟，建立在 用火、铅冶炼、青铜合金 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 软钎料、烧结 的发展铺平了道路。",
-    "dependsOn": ["bronze","mat_lead","mat_bronze"],
+    "dependsOn": ["bronze","mat_lead"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3886,7 +3886,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "汞冶炼约 公元前 2000 年 成熟，建立在 用火、黄铜、玻璃 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 炻器、混凝土 的发展铺平了道路。",
-    "dependsOn": ["mat_brass","mat_glass"],
+    "dependsOn": ["kiln", "mat_pottery"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -3976,7 +3976,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "铂族金属在 1750 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 锰、履带 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_galv"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4006,7 +4006,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "钨在 1783 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 锆、热气球 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_molybdenum"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4036,7 +4036,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "铬在 1797 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 铍 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_zirconium"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4066,7 +4066,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "锰约 1774 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 钼 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_platinum"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4096,7 +4096,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "钴约 1735 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 热浸镀锌 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_malleable"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4126,7 +4126,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "钼在 1781 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 钨 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_manganese2"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4186,7 +4186,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "钽在 1802 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 电镀、铁路列车 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_vanadium"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4216,7 +4216,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "铌约 1864 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 工具钢、炸药、鱼雷 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_woodmetal"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4246,7 +4246,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "锆在 1789 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 铬、铅笔 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_tungsten"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4276,7 +4276,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "铍约 1798 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 粉末冶金 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_chromium"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4336,7 +4336,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "巴氏合金在 1839 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 硫化橡胶 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_alu"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4366,7 +4366,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "伍德合金在 1860 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 铌、地铁、油轮 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_reconcrete"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4396,7 +4396,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "形状记忆合金在 1962 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 芳纶、高速铁路 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_pi"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4456,7 +4456,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "粉末冶金约 1800 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 挤压成形 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_beryllium"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4606,7 +4606,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "拉拔在 1200 年 前后成形，依托 用火、瓷器、坩埚钢 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 轧制、光学玻璃、拉丝 等后续技术。",
-    "dependsOn": ["optics","mat_porcelain","mat_steel2"],
+    "dependsOn": ["mat_steel2"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4636,7 +4636,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "挤压成形约 1800 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 表面硬化 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_beryllium","mat_powder"],
+    "dependsOn": ["chemistry","physics","mat_powder"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4786,7 +4786,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "渗碳约 公元前 500 年 成熟，建立在 用火、锌冶炼、铸铁 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 高炉炼铁 的发展铺平了道路。",
-    "dependsOn": ["magnets","mat_zinc","mat_castiron"],
+    "dependsOn": ["mat_zinc","mat_castiron"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4816,7 +4816,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "表面硬化约 1800 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 胶合板 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_beryllium","mat_extrusion"],
+    "dependsOn": ["chemistry","physics","mat_extrusion"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4846,7 +4846,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "电镀约 1805 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 热电材料、铣床、刨床 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_tantalum"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4876,7 +4876,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "阳极氧化在 1923 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 碳化钨 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_zirconia"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4906,7 +4906,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "热浸镀锌在 1742 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 铂族金属 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_cobalt"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4966,7 +4966,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "瓷器约 600 年 成熟，建立在 用火、坩埚钢、造纸 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 轧制、拉拔、肋拱 的发展铺平了道路。",
-    "dependsOn": ["mat_steel2","paper"],
+    "dependsOn": ["paper"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -4996,7 +4996,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "炻器在 公元前 2000 年 前后成形，依托 用火、汞冶炼、黄铜 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 混凝土、耐火材料 等后续技术。",
-    "dependsOn": ["mat_glass","mat_mercury","mat_brass"],
+    "dependsOn": ["kiln", "mat_pottery"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5026,7 +5026,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "玻璃在 公元前 2500 年 前后成形，依托 用火、玻璃、水泥 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 黄铜、汞冶炼 等后续技术。",
-    "dependsOn": ["mat_lead","mat_cement","mat_pottery"],
+    "dependsOn": ["mat_lead","mat_pottery"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5056,7 +5056,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "平板玻璃约 100 年 成熟，建立在 用火、水泥与混凝土、高炉炼铁 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 坩埚钢 的发展铺平了道路。",
-    "dependsOn": ["cement","mat_blastfurnace"],
+    "dependsOn": ["mat_blastfurnace"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5116,7 +5116,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "钢化玻璃在 1874 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 压电材料、电阻焊、电话 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_toolsteel"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5146,7 +5146,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "光学玻璃在 1600 年 前后成形，依托 用火、轧制、拉拔 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 沸石分子筛、潜艇、索道 等后续技术。",
-    "dependsOn": ["mat_rolling","mat_drawing"],
+    "dependsOn": ["mat_drawing"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5176,7 +5176,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "玻璃纤维在 1930 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 聚苯乙烯 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_sbr","mat_mgalloy"],
+    "dependsOn": ["chemistry","physics","mat_mgalloy"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5236,7 +5236,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "混凝土约 公元前 2000 年 成熟，建立在 用火、炻器、汞冶炼 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 耐火材料、天然橡胶、铆接 的发展铺平了道路。",
-    "dependsOn": ["mat_glass","mat_stoneware","mat_mercury"],
+    "dependsOn": ["lime", "mat_stoneware"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5266,7 +5266,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "钢筋混凝土在 1849 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 伍德合金、飞艇、滑翔机 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_continuouscast"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5296,7 +5296,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "预应力混凝土约 1886 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 锗 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_manganese"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5326,7 +5326,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "耐火材料约 公元前 1500 年 成熟，建立在 用火、混凝土、炻器 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 天然橡胶 的发展铺平了道路。",
-    "dependsOn": ["mat_brass","mat_concrete","mat_stoneware"],
+    "dependsOn": ["mat_stoneware", "kiln"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5356,7 +5356,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "碳化硅约 1891 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 高速钢、滚珠丝杠、公共汽车 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_prestress","mat_ge"],
+    "dependsOn": ["chemistry","physics","mat_prestress"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5386,7 +5386,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "氧化铝陶瓷约 1900 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 热喷涂 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_sic","mat_nialloy"],
+    "dependsOn": ["chemistry","physics","mat_nialloy"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5416,7 +5416,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "氧化锆陶瓷约 1920 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 阳极氧化、装载机、服务区 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_siliconw"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5446,7 +5446,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "氮化硅陶瓷在 1950 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 超高分子量聚乙烯 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_abs","mat_tialloy","materials","kiln"],
+    "dependsOn": ["chemistry","physics","mat_tialloy","materials","kiln"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5476,7 +5476,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "碳化钨在 1923 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 聚氯乙烯、统计过程控制、旋翼机 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_zirconia","mat_anodize"],
+    "dependsOn": ["chemistry","physics","mat_anodize"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5506,7 +5506,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "泡沫陶瓷约 1970 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 钙钛矿材料 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_gan"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5536,7 +5536,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "气凝胶约 1931 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 丁腈橡胶 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_mgalloy","mat_frp"],
+    "dependsOn": ["chemistry","physics","mat_mgalloy"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5566,7 +5566,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "天然橡胶在 公元前 1500 年 前后成形，依托 用火、耐火材料、混凝土 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 块炼铁 等后续技术。",
-    "dependsOn": ["mat_brass","mat_refractory","mat_concrete"],
+    "dependsOn": ["mat_brass","mat_refractory"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5596,7 +5596,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "硫化橡胶约 1839 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 连续铸造 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_alu","mat_babbitt"],
+    "dependsOn": ["chemistry","physics","mat_babbitt"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5656,7 +5656,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "尼龙在 1935 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 氧化锌半导体 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_pe","mat_pmma"],
+    "dependsOn": ["chemistry","physics","mat_pe"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5686,7 +5686,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "聚乙烯约 1933 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 有机玻璃 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_aerogel","mat_nbr"],
+    "dependsOn": ["chemistry","physics","mat_aerogel"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5716,7 +5716,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "聚丙烯在 1954 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 碳纤维、热等静压、谐波减速器 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_pc"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5746,7 +5746,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "聚氯乙烯约 1926 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 丁苯橡胶、运载火箭、电视 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_anodize","mat_wc"],
+    "dependsOn": ["chemistry","physics","mat_anodize"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5776,7 +5776,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "聚苯乙烯约 1930 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 聚酯 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_sbr","mat_glassfiber"],
+    "dependsOn": ["chemistry","physics","mat_glassfiber"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5806,7 +5806,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "聚四氟乙烯约 1938 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 聚酰胺 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_pu"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5836,7 +5836,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "聚酯约 1930 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 玻璃钢 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_sbr","mat_ps"],
+    "dependsOn": ["chemistry","physics","mat_ps"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5866,7 +5866,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "聚氨酯约 1937 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 聚四氟乙烯 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_epoxy"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5896,7 +5896,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "环氧树脂约 1936 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 聚氨酯 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_nylon","mat_gan2"],
+    "dependsOn": ["chemistry","physics","mat_nylon"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -5956,7 +5956,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "丁苯橡胶约 1929 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 镁合金 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_pvc"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6016,7 +6016,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "硅橡胶在 1940 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 多晶硅 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_ptfe","mat_pa"],
+    "dependsOn": ["chemistry","physics","mat_ptfe"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6076,7 +6076,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "聚碳酸酯约 1953 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 聚丙烯、自动导引车、彩色电视 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_floatglass"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6106,7 +6106,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "聚酰胺约 1938 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 硅橡胶、直升机、圆珠笔 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_pu","mat_ptfe"],
+    "dependsOn": ["chemistry","physics","mat_ptfe"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6166,7 +6166,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "聚醚醚酮约 1978 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 碳化硅半导体、防抱死制动 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_conductingpoly"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6196,7 +6196,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "碳纤维约 1958 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 加工中心、电子束焊、调制解调器 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_pp"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6226,7 +6226,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "芳纶在 1965 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 氮化镓、激光切割、可编程逻辑控制器 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_shapemem"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6256,7 +6256,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "超高分子量聚乙烯在 1950 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 磷化铟 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_abs","mat_sin"],
+    "dependsOn": ["chemistry","physics","mat_sin"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6346,7 +6346,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "锗在 1886 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 碳化硅、感应加热、驱逐舰 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_manganese","mat_prestress"],
+    "dependsOn": ["chemistry","physics","mat_prestress"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6376,7 +6376,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "单晶硅在 1918 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 氧化锆陶瓷、冲锋枪、装甲运兵车 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_stainless"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6466,7 +6466,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "氮化镓在 1969 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 泡沫陶瓷、超音速客机 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_aramid"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6496,7 +6496,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "碳化硅半导体约 1980 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 有机半导体 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_peek"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6556,7 +6556,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "磷化铟约 1950 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 吸波隐身材料 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_abs","mat_uhmwpe"],
+    "dependsOn": ["chemistry","physics","mat_uhmwpe"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6616,7 +6616,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "钙钛矿材料在 1970 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 陶瓷基复合材料 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_gan","mat_foamceramic"],
+    "dependsOn": ["chemistry","physics","mat_foamceramic"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6646,7 +6646,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "有机半导体在 1980 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 可降解材料 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_peek","mat_sicsemi"],
+    "dependsOn": ["chemistry","physics","mat_sicsemi"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6736,7 +6736,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "胶合板在 1800 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 隔热材料 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_beryllium","mat_casehard"],
+    "dependsOn": ["chemistry","physics","mat_casehard"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6796,7 +6796,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "玻璃钢在 1930 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 气凝胶、吹塑、喷丸 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_sbr","mat_polyester"],
+    "dependsOn": ["chemistry","physics","mat_polyester"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6856,7 +6856,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "金属基复合材料约 1960 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 相变材料 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_cf","mat_cfrp","materials","metallurgy","steel","mat_alalloy"],
+    "dependsOn": ["chemistry","physics","mat_cfrp","materials","metallurgy","steel","mat_alalloy"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6886,7 +6886,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "陶瓷基复合材料约 1970 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 储氢合金 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_gan","mat_perovskite","materials","metallurgy","steel","mat_alalloy"],
+    "dependsOn": ["chemistry","physics","mat_perovskite","materials","metallurgy","steel","mat_alalloy"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -6916,7 +6916,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "低温超导在 1911 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 不锈钢、内燃机车、自动驾驶仪 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_alalloy","mat_ferrite"],
+    "dependsOn": ["chemistry","physics","mat_alalloy"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7006,7 +7006,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "储氢合金约 1970 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 导电聚合物、水射流切割、金属注射成形 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_gan","mat_cmc","materials","metallurgy","steel","mat_alalloy"],
+    "dependsOn": ["chemistry","physics","mat_cmc","materials","metallurgy","steel","mat_alalloy"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7066,7 +7066,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "热电材料在 1821 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 铝冶炼 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_plating"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7096,7 +7096,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "压电材料约 1880 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 锰钢、电弧焊 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_tempered"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7216,7 +7216,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "仿生材料在 1990 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 金属 3D 打印 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_ybco"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7276,7 +7276,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "可降解材料约 1980 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 冷喷涂 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_peek","mat_orgsc"],
+    "dependsOn": ["chemistry","physics","mat_orgsc"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7306,7 +7306,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "吸波隐身材料约 1950 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 泡沫金属 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_abs","mat_inp"],
+    "dependsOn": ["chemistry","physics","mat_inp"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7336,7 +7336,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "隔热材料在 1800 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 冲天炉 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_beryllium","mat_plywood"],
+    "dependsOn": ["chemistry","physics","mat_plywood"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7366,7 +7366,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "泡沫金属在 1950 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 浮法玻璃、等离子切割、真空炉 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_abs","mat_stealth"],
+    "dependsOn": ["chemistry","physics","mat_stealth"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7396,7 +7396,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "高炉炼铁在 公元前 500 年 前后成形，依托 用火、渗碳、锌冶炼 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 平板玻璃、螺纹连接、螺纹 等后续技术。",
-    "dependsOn": ["magnets","mat_carburize","mat_zinc"],
+    "dependsOn": ["mat_carburize","mat_zinc"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7426,7 +7426,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "冲天炉在 1800 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 感应熔炼 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_beryllium","mat_insulation"],
+    "dependsOn": ["chemistry","physics","mat_insulation"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7456,7 +7456,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "感应熔炼约 1800 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 钒、磨床、钻床 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_beryllium","mat_cupola"],
+    "dependsOn": ["chemistry","physics","mat_cupola"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7486,7 +7486,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "连续铸造在 1840 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 钢筋混凝土、砂轮、充气轮胎 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_babbitt","mat_vulcan"],
+    "dependsOn": ["chemistry","physics","mat_babbitt"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7546,7 +7546,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "金属在 1990 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 粘结剂喷射 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_ybco","mat_bioinspired"],
+    "dependsOn": ["chemistry","physics","mat_bioinspired"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7576,7 +7576,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "粘结剂喷射约 1990 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 定向能量沉积 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_ybco","mat_metal3dp"],
+    "dependsOn": ["chemistry","physics","mat_metal3dp"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7606,7 +7606,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "定向能量沉积约 1990 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 电子束熔融 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_ybco","mat_binderjet"],
+    "dependsOn": ["chemistry","physics","mat_binderjet"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7636,7 +7636,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "冷喷涂约 1980 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 超音速火焰喷涂 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_peek","mat_degradable"],
+    "dependsOn": ["chemistry","physics","mat_degradable"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7666,7 +7666,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "热喷涂在 1900 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 渗氮 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_sic","mat_alumina"],
+    "dependsOn": ["chemistry","physics","mat_alumina"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7696,7 +7696,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "超音速火焰喷涂约 1980 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 激光熔覆 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_peek","mat_coldspray"],
+    "dependsOn": ["chemistry","physics","mat_coldspray"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7726,7 +7726,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "激光熔覆约 1980 年 成熟，建立在 化学、经典力学、用火 之上完成关键突破；其能力延伸到 工具制造、结构件，并为 高温超导、车铣复合、3D 打印 的发展铺平了道路。",
-    "dependsOn": ["chemistry","physics","mat_peek","mat_hvof"],
+    "dependsOn": ["chemistry","physics","mat_hvof"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7756,7 +7756,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "渗氮在 1900 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 渗硼 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_sic","mat_thermalspray"],
+    "dependsOn": ["chemistry","physics","mat_thermalspray"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7786,7 +7786,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "渗硼在 1900 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 气焊、装配线、刀柄 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_sic","mat_nitriding"],
+    "dependsOn": ["chemistry","physics","mat_nitriding"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7816,7 +7816,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "电子束熔融在 1990 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 金属有机框架 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_ybco","mat_ded"],
+    "dependsOn": ["chemistry","physics","mat_ded"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7876,7 +7876,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "金属有机框架在 1990 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 自修复材料、搅拌摩擦焊、纳米压印 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_ybco","mat_ebm"],
+    "dependsOn": ["chemistry","physics","mat_ebm"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7906,7 +7906,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "沸石分子筛在 1700 年 前后成形，依托 化学、经典力学、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 可锻铸铁、交通隧道、避雷 等后续技术。",
-    "dependsOn": ["chemistry","physics","mat_opticalglass"],
+    "dependsOn": ["chemistry","physics"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7966,7 +7966,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "煤炭开采约 公元前 1000 年 成熟，建立在 用火、水力利用、木炭 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 水车、车床、灯塔 的发展铺平了道路。",
-    "dependsOn": ["ene_hydro","ene_charcoal"],
+    "dependsOn": ["ene_charcoal"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -8026,7 +8026,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "石油开采在 1850 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 燃料乙醇 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_fuelcell"],
+    "dependsOn": ["physics","chemistry"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -8056,7 +8056,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "天然气利用在 1820 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 水轮机 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_stirling"],
+    "dependsOn": ["physics","chemistry"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -8146,7 +8146,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "燃料乙醇约 1850 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 热泵、通信电缆 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","ene_fuelcell","ene_oil"],
+    "dependsOn": ["physics","chemistry","ene_oil"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -8236,7 +8236,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "水力利用在 公元前 3000 年 前后成形，依托 用火、木炭 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 煤炭开采、水车、铆接 等后续技术。",
-    "dependsOn": ["cart","ene_charcoal"],
+    "dependsOn": ["ene_charcoal"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -8267,7 +8267,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "水轮机在 1820 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 热电发电 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_stirling","ene_natgas"],
+    "dependsOn": ["physics","chemistry","ene_natgas"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -8387,7 +8387,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "潮汐能在 1960 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 氢燃料电池 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_supercap"],
+    "dependsOn": ["physics","chemistry"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -8417,7 +8417,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "波浪能约 1970 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 液流电池 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","ene_tokamak","ene_satpower"],
+    "dependsOn": ["physics","chemistry","ene_tokamak"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -8477,7 +8477,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "光伏电池在 1954 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 沸水堆、机器翻译、核潜艇 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_pwr","solar"],
+    "dependsOn": ["physics","chemistry","solar"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -8537,7 +8537,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "蒸汽轮机约 1884 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 变压器、钢笔、机枪 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","substation","ene_hydroplant"],
+    "dependsOn": ["physics","chemistry","ene_hydroplant"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -8627,7 +8627,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "喷气发动机约 1937 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 燃气轮机、圆珠笔、复印机 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","ene_zincair","jet_compressor","jet_turbine"],
+    "dependsOn": ["physics","chemistry","jet_compressor","jet_turbine"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -8657,7 +8657,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "火箭发动机在 1926 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 锌空气电池、吹塑、喷丸 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_synfuel"],
+    "dependsOn": ["physics","chemistry"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -8687,7 +8687,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "铅酸电池约 1859 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 注塑、地铁、交通信号灯 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","ene_heatpump","petroleum"],
+    "dependsOn": ["physics","chemistry","petroleum"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -8717,7 +8717,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "镍镉电池在 1899 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 氨燃料 等后续技术。",
-    "dependsOn": ["physics","chemistry","diesel_engine","ene_wpt"],
+    "dependsOn": ["physics","chemistry","ene_wpt"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -8747,7 +8747,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "镍氢电池在 1989 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 电池储能系统 等后续技术。",
-    "dependsOn": ["physics","chemistry","brushless_motor"],
+    "dependsOn": ["physics","chemistry"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -8927,7 +8927,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "氢燃料电池约 1960 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 重水堆 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","ene_supercap","ene_tidal"],
+    "dependsOn": ["physics","chemistry","ene_tidal"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -8957,7 +8957,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "锌空气电池在 1932 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 喷气发动机、雷达 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_rocketengine","battery","ene_leadacid","electricity"],
+    "dependsOn": ["physics","chemistry","battery","ene_leadacid","electricity"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9017,7 +9017,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "超级电容约 1957 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 潮汐能、加工中心、电子束焊 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","ene_bwr"],
+    "dependsOn": ["physics","chemistry"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9047,7 +9047,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "飞轮储能在 1950 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 核聚变 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_caes"],
+    "dependsOn": ["physics","chemistry"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9107,7 +9107,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "压缩空气储能在 1949 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 飞轮储能、数控机床、对称加密 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_nuclear"],
+    "dependsOn": ["physics","chemistry"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9197,7 +9197,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "变压器约 1885 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 风力发电机、摩托车 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","ene_steamturbine","generator"],
+    "dependsOn": ["physics","chemistry","generator"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9227,7 +9227,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "电力传输在 1882 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 燃煤发电 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_otec","power_grid"],
+    "dependsOn": ["physics","chemistry","power_grid"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9257,7 +9257,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "交流电系统在 1888 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 生物柴油、天线 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_windturbine"],
+    "dependsOn": ["physics","chemistry"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9317,7 +9317,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "智能电网约 2000 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 微电网 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","ene_lipoly"],
+    "dependsOn": ["physics","chemistry"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9377,7 +9377,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "压水堆约 1953 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 自动导引车、彩色电视、哈希函数 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","nuclear_fusion"],
+    "dependsOn": ["physics","chemistry"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9407,7 +9407,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "沸水堆约 1955 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 超级电容、热等静压、谐波减速器 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","ene_pv"],
+    "dependsOn": ["physics","chemistry"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9437,7 +9437,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "重水堆约 1960 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 惯性约束聚变 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","ene_supercap","ene_h2fc"],
+    "dependsOn": ["physics","chemistry","ene_h2fc"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9528,7 +9528,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "惯性约束聚变在 1960 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 可燃冰 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_supercap","ene_phwr"],
+    "dependsOn": ["physics","chemistry","ene_phwr"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9618,7 +9618,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "热电发电在 1821 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 挖掘机、盾构法 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_natgas","ene_waterturbine"],
+    "dependsOn": ["physics","chemistry","ene_natgas"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9648,7 +9648,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "压电发电在 1880 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 海洋温差能 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_district","electricity"],
+    "dependsOn": ["physics","chemistry","ene_district"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9738,7 +9738,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "合成燃料在 1920 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 火箭发动机、统计过程控制、旋翼机 等后续技术。",
-    "dependsOn": ["physics","chemistry","turbocharger"],
+    "dependsOn": ["physics","chemistry"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9768,7 +9768,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "氨燃料在 1900 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 甲醇燃料 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_nicd"],
+    "dependsOn": ["physics","chemistry"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9798,7 +9798,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "可燃冰在 1960 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 托卡马克、激光切割、线切割 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_supercap","ene_icf"],
+    "dependsOn": ["physics","chemistry","ene_icf"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9858,7 +9858,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "海洋温差能约 1881 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 电弧焊 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","ene_piezoelectric"],
+    "dependsOn": ["physics","chemistry"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9888,7 +9888,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "盐差能约 1950 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 快中子增殖堆、等离子切割、真空炉 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","ene_caes"],
+    "dependsOn": ["physics","chemistry"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9918,7 +9918,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "甲醇燃料在 1900 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 燃气发电 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_nicd","ene_ammonia"],
+    "dependsOn": ["physics","chemistry","ene_ammonia"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -9978,7 +9978,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "燃煤发电约 1882 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 水力发电站 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","ene_otec","ene_transmission"],
+    "dependsOn": ["physics","chemistry","ene_transmission"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -10008,7 +10008,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "燃气发电约 1900 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 调峰电站 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","ene_nicd","ene_methanol"],
+    "dependsOn": ["physics","chemistry","ene_methanol"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -10038,7 +10038,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "水力发电站约 1882 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 蒸汽轮机、精密轴承、无轨电车 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","ene_otec","ene_coalfired"],
+    "dependsOn": ["physics","chemistry","ene_coalfired"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -10158,7 +10158,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "微电网在 2000 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 车网互动 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_lipoly","ene_smartgrid"],
+    "dependsOn": ["physics","chemistry","ene_smartgrid"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -10188,7 +10188,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "车网互动约 2000 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 离网供电 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","ene_lipoly","ene_microgrid"],
+    "dependsOn": ["physics","chemistry","ene_microgrid"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -10218,7 +10218,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "热泵在 1852 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 飞艇、滑翔机、电梯 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_oil","ene_ethanol"],
+    "dependsOn": ["physics","chemistry","ene_oil"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -10308,7 +10308,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "燃料电池汽车在 1990 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 锂离子电池、自组装、仿生制造 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_nimh","ene_batteryev","automobile","internal_combustion","gps","combustion"],
+    "dependsOn": ["physics", "chemistry", "ene_batteryev", "automobile", "internal_combustion", "combustion"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -10338,7 +10338,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "调峰电站在 1900 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 合成燃料、气焊、装配线 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_nicd","ene_gasfired"],
+    "dependsOn": ["physics","chemistry","ene_gasfired"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -10368,7 +10368,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "离网供电约 2000 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 重力储能 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","ene_lipoly","ene_v2g"],
+    "dependsOn": ["physics","chemistry","ene_v2g"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -10428,7 +10428,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "重力储能在 2000 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 光伏建筑一体化 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_lipoly","ene_island"],
+    "dependsOn": ["physics","chemistry","ene_island"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -10518,7 +10518,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "光伏建筑一体化约 2000 年 成熟，建立在 经典力学、化学、用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 线性菲涅尔 的发展铺平了道路。",
-    "dependsOn": ["physics","chemistry","ene_lipoly","ene_gravity"],
+    "dependsOn": ["physics","chemistry","ene_gravity"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -10608,7 +10608,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "线性菲涅尔在 2000 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 井式地热 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_lipoly","ene_bipv"],
+    "dependsOn": ["physics","chemistry","ene_bipv"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -10668,7 +10668,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "井式地热在 2000 年 前后成形，依托 经典力学、化学、用火 把 动力输出、照明加热 落到实处，并成为 能量形式 中承上启下的一环，直接支撑了 钠离子电池、数字孪生、低温切削 等后续技术。",
-    "dependsOn": ["physics","chemistry","ene_lipoly","ene_linearfresnel"],
+    "dependsOn": ["physics","chemistry","ene_linearfresnel"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -10698,7 +10698,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "石器打制约 约 260 万年前 成熟，建立在 石器 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 手斧、刀具 的发展铺平了道路。",
-    "dependsOn": ["stone_tools"],
+    "dependsOn": [],
     "enables": [],
     "applications": [
       "零件加工",
@@ -10818,7 +10818,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "锤在 约 5 万年前 前后成形，依托 石器、用火、刀具 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 凿、斧 等后续技术。",
-    "dependsOn": ["hafting","bone_tools","mfg_knife"],
+    "dependsOn": ["hafting","mfg_knife"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -10848,7 +10848,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "斧在 约 5 万年前 前后成形，依托 石器、用火、锤 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 凿、钻 等后续技术。",
-    "dependsOn": ["hafting","bone_tools","mfg_hammer","mfg_knife"],
+    "dependsOn": ["hafting","mfg_hammer","mfg_knife"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -10878,7 +10878,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "锯约 公元前 5000 年 成熟，建立在 红铜冶炼、用火、钻 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 砂型铸造、磨料 的发展铺平了道路。",
-    "dependsOn": ["mat_copper","kiln","mfg_drill","mfg_chisel"],
+    "dependsOn": ["mfg_drill", "mfg_chisel"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -10908,7 +10908,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "钻约 约 1 万年前 成熟，建立在 陶器、用火、凿 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 锯、磨料、独木舟 的发展铺平了道路。",
-    "dependsOn": ["mat_pottery","mfg_chisel","mfg_axe"],
+    "dependsOn": ["mfg_chisel", "mfg_axe"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -10938,7 +10938,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "车床在 公元前 1000 年 前后成形，依托 退火、煤炭开采、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 螺纹连接、灯塔、斗拱 等后续技术。",
-    "dependsOn": ["mat_anneal","ene_coal","mathematics","iron_smelting"],
+    "dependsOn": ["mathematics", "iron_smelting"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -10968,7 +10968,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "镗床约 1500 年 成熟，建立在 轧制、风车、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 压延 的发展铺平了道路。",
-    "dependsOn": ["mat_rolling","mathematics","mfg_wiredraw"],
+    "dependsOn": ["mathematics", "mfg_wiredraw"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -10998,7 +10998,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "铣床在 1818 年 前后成形，依托 电镀、斯特林发动机、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 压铸、螺旋桨、有轨电车 等后续技术。",
-    "dependsOn": ["mat_plating","ene_stirling","mathematics","mfg_planer"],
+    "dependsOn": ["mathematics","mfg_planer"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -11028,7 +11028,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "刨床在 1810 年 前后成形，依托 电镀、余热回收、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 铣床、自行车、蒸汽机车 等后续技术。",
-    "dependsOn": ["mat_plating","mathematics"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -11118,7 +11118,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "数控机床在 1949 年 前后成形，依托 ABS 树脂、压缩空气储能、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 等离子切割 等后续技术。",
-    "dependsOn": ["mat_abs","ene_caes","mathematics","mfg_edm"],
+    "dependsOn": ["mathematics", "mfg_edm"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -11148,7 +11148,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "加工中心在 1958 年 前后成形，依托 碳纤维、超级电容、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 电子束焊 等后续技术。",
-    "dependsOn": ["ene_supercap","mathematics","mfg_harmonic"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -11208,7 +11208,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "3D 打印约 1984 年 成熟，建立在 激光熔覆、碟式斯特林、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 磁悬浮列车 的发展铺平了道路。",
-    "dependsOn": ["mathematics","mfg_robotgripper","cnc","computer"],
+    "dependsOn": ["mathematics","cnc","computer"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -11238,7 +11238,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "增材制造在 1986 年 前后成形，依托 高温超导、无刷电机、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 六西格玛 等后续技术。",
-    "dependsOn": ["mat_htsc","brushless_motor","mathematics","mfg_3dp"],
+    "dependsOn": ["mathematics", "mfg_3dp"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -11268,7 +11268,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "激光切割约 1965 年 成熟，建立在 芳纶、可燃冰、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 柔性制造系统 的发展铺平了道路。",
-    "dependsOn": ["mat_aramid","mathematics","robot"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -11298,7 +11298,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "水射流切割在 1970 年 前后成形，依托 储氢合金、水热型地热、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 金属注射成形 等后续技术。",
-    "dependsOn": ["mathematics","mfg_plc"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -11328,7 +11328,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "等离子切割在 1950 年 前后成形，依托 泡沫金属、盐差能、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 真空炉 等后续技术。",
-    "dependsOn": ["mathematics","mfg_cnc"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -11358,7 +11358,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "电火花加工在 1943 年 前后成形，依托 球墨铸铁、核裂变反应堆、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 数控机床、导弹、原子弹 等后续技术。",
-    "dependsOn": ["mat_ductile","ene_nuclear","mathematics","mfg_kanban"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -11388,7 +11388,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "线切割约 1960 年 成熟，建立在 放电等离子烧结、可燃冰、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 激光焊 的发展铺平了道路。",
-    "dependsOn": ["mathematics","mfg_ebw"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -11478,7 +11478,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "压铸约 1838 年 成熟，建立在 铝冶炼、电动机、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 砂轮 的发展铺平了道路。",
-    "dependsOn": ["mat_alu","mathematics","mfg_mill"],
+    "dependsOn": ["mathematics","mfg_mill"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -11598,7 +11598,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "铆接在 公元前 2000 年 前后成形，依托 混凝土、水力利用、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 钎焊 等后续技术。",
-    "dependsOn": ["mat_concrete","ene_hydro","mathematics","mfg_lapp"],
+    "dependsOn": ["mathematics", "mfg_lapp"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -11628,7 +11628,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "电弧焊在 1881 年 前后成形，依托 压电材料、海洋温差能、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 精密轴承、无轨电车 等后续技术。",
-    "dependsOn": ["mat_piezo","ene_otec","mathematics","mfg_resistweld"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -11658,7 +11658,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "气焊约 1900 年 成熟，建立在 渗硼、调峰电站、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 装配线 的发展铺平了道路。",
-    "dependsOn": ["mathematics","mfg_ballscrew"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -11688,7 +11688,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "电阻焊在 1877 年 前后成形，依托 钢化玻璃、区域供冷供热、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 电弧焊 等后续技术。",
-    "dependsOn": ["mat_tempered","ene_district","mathematics","mfg_injection"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -11748,7 +11748,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "搅拌摩擦焊在 1991 年 前后成形，依托 金属有机框架、锂离子电池、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 纳米压印 等后续技术。",
-    "dependsOn": ["ene_liion","mathematics","mfg_onmachinem"],
+    "dependsOn": ["mathematics", "mfg_onmachinem"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -11778,7 +11778,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "电子束焊在 1958 年 前后成形，依托 碳纤维、超级电容、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 线切割、战略导弹潜艇 等后续技术。",
-    "dependsOn": ["ene_supercap","mathematics","mfg_mc"],
+    "dependsOn": ["mathematics","mfg_mc"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -11808,7 +11808,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "钎焊在 公元前 2000 年 前后成形，依托 混凝土、水力利用、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 胶接 等后续技术。",
-    "dependsOn": ["mat_concrete","ene_hydro","mathematics","mfg_rivet"],
+    "dependsOn": ["mathematics", "mfg_rivet"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -11838,7 +11838,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "胶接约 公元前 2000 年 成熟，建立在 混凝土、水力利用、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 量具 的发展铺平了道路。",
-    "dependsOn": ["mat_concrete","ene_hydro","mathematics","mfg_braze"],
+    "dependsOn": ["mathematics", "mfg_braze"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12018,7 +12018,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "模具在 公元前 3000 年 前后成形，依托 水泥、水力利用、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 抛光 等后续技术。",
-    "dependsOn": ["mat_cement","ene_hydro","mathematics","bronze_casting"],
+    "dependsOn": ["bronze_casting"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12078,7 +12078,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "吹塑在 1930 年 前后成形，依托 玻璃钢、火箭发动机、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 喷丸 等后续技术。",
-    "dependsOn": ["mat_frp","ene_rocketengine","mathematics","mfg_spcc"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12258,7 +12258,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "感应加热约 1887 年 成熟，建立在 锗、风力发电机、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 滚珠丝杠、公共汽车、卡车 的发展铺平了道路。",
-    "dependsOn": ["mat_ge","ene_windturbine","mathematics","mfg_precisionbearing"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12288,7 +12288,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "喷丸在 1930 年 前后成形，依托 玻璃钢、火箭发动机、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 化学铣切、直升机、雷达 等后续技术。",
-    "dependsOn": ["mat_frp","ene_rocketengine","mathematics","mfg_blow"],
+    "dependsOn": ["mathematics", "mfg_blow"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12318,7 +12318,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "抛光约 公元前 3000 年 成熟，建立在 水泥、水力利用、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 研磨 的发展铺平了道路。",
-    "dependsOn": ["mat_cement","ene_hydro","mathematics","mfg_mold"],
+    "dependsOn": ["mfg_mold"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12348,7 +12348,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "研磨约 公元前 3000 年 成熟，建立在 水泥、水力利用、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 铆接、港口、渡轮 的发展铺平了道路。",
-    "dependsOn": ["mat_cement","ene_hydro","mathematics","mfg_polish"],
+    "dependsOn": ["mfg_polish"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12408,7 +12408,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "微细加工在 1950 年 前后成形，依托 泡沫金属、盐差能、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 电解加工 等后续技术。",
-    "dependsOn": ["mathematics","mfg_vacfurnace","lathe","electronics","automation"],
+    "dependsOn": ["mathematics", "mfg_vacfurnace", "lathe", "electronics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12438,7 +12438,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "纳米压印约 1995 年 成熟，建立在 金属有机框架、锂离子电池、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 协作机器人 的发展铺平了道路。",
-    "dependsOn": ["ene_liion","mathematics","mfg_fsw"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12498,7 +12498,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "化学铣切在 1940 年 前后成形，依托 电渣重熔、燃气轮机、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 伺服系统 等后续技术。",
-    "dependsOn": ["mat_esr","ene_gasturbine","mathematics","mfg_shotblast"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12558,7 +12558,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "热等静压约 1955 年 成熟，建立在 聚丙烯、沸水堆、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 谐波减速器 的发展铺平了道路。",
-    "dependsOn": ["mat_pp","ene_bwr","mathematics","mfg_agv"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12648,7 +12648,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "可编程逻辑控制器约 1968 年 成熟，建立在 芳纶、空间太阳能、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 水射流切割、超音速客机 的发展铺平了道路。",
-    "dependsOn": ["mat_aramid","ene_satpower","mathematics","mfg_fms"],
+    "dependsOn": ["mathematics", "mfg_fms"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12678,7 +12678,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "伺服系统约 1940 年 成熟，建立在 电渣重熔、燃气轮机、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 直线电机 的发展铺平了道路。",
-    "dependsOn": ["mat_esr","ene_gasturbine","mathematics","mfg_chemill"],
+    "dependsOn": ["mathematics", "mfg_chemill"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12708,7 +12708,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "滚珠丝杠约 1898 年 成熟，建立在 碳化硅、无线输电、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 气焊 的发展铺平了道路。",
-    "dependsOn": ["mat_sic","ene_wpt","mathematics","mfg_induction"],
+    "dependsOn": ["ene_wpt","mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12738,7 +12738,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "直线电机在 1940 年 前后成形，依托 电渣重熔、燃气轮机、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 看板管理 等后续技术。",
-    "dependsOn": ["mat_esr","ene_gasturbine","mathematics","mfg_servo"],
+    "dependsOn": ["mathematics", "mfg_servo"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12768,7 +12768,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "谐波减速器约 1955 年 成熟，建立在 聚丙烯、沸水堆、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 加工中心、破冰船、气垫船 的发展铺平了道路。",
-    "dependsOn": ["mat_pp","ene_bwr","mathematics","mfg_hip"],
+    "dependsOn": ["mathematics", "mfg_hip"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12798,7 +12798,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "精密轴承在 1883 年 前后成形，依托 锰钢、水力发电站、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 感应加热、摩托车、机枪 等后续技术。",
-    "dependsOn": ["mat_manganese","ene_hydroplant","mathematics","mfg_welding"],
+    "dependsOn": ["ene_hydroplant","mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12828,7 +12828,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "量具约 公元前 2000 年 成熟，建立在 混凝土、水力利用、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 航海导航、桩基础、工程兵 的发展铺平了道路。",
-    "dependsOn": ["mat_concrete","ene_hydro","mathematics","mfg_adhesive"],
+    "dependsOn": ["mathematics", "mfg_adhesive"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12858,7 +12858,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "统计过程控制约 1924 年 成熟，建立在 碳化钨、合成燃料、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 吹塑、运载火箭 的发展铺平了道路。",
-    "dependsOn": ["mat_wc","ene_synfuel","mathematics","assembly_line"],
+    "dependsOn": ["mathematics","assembly_line"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12888,7 +12888,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "六西格玛约 1986 年 成熟，建立在 高温超导、无刷电机、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 自组装 的发展铺平了道路。",
-    "dependsOn": ["mat_htsc","brushless_motor","mathematics","mfg_additive"],
+    "dependsOn": ["mathematics", "mfg_additive"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -12948,7 +12948,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "看板管理约 1940 年 成熟，建立在 电渣重熔、燃气轮机、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 电火花加工、应答机、弹道导弹 的发展铺平了道路。",
-    "dependsOn": ["mat_esr","ene_gasturbine","mathematics","mfg_linearmotor"],
+    "dependsOn": ["mathematics", "mfg_linearmotor"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -13008,7 +13008,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "柔性制造系统在 1967 年 前后成形，依托 芳纶、可燃冰、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 可编程逻辑控制器 等后续技术。",
-    "dependsOn": ["mat_aramid","mathematics","mfg_lasercut"],
+    "dependsOn": ["mathematics","mfg_lasercut"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -13068,7 +13068,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "数字孪生在 2000 年 前后成形，依托 自修复材料、井式地热、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 低温切削 等后续技术。",
-    "dependsOn": ["mathematics","mfg_cobot","simulation","cad"],
+    "dependsOn": ["mathematics","simulation","cad"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -13098,7 +13098,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "协作机器人约 1996 年 成熟，建立在 金属有机框架、锂聚合物电池、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 数字孪生 的发展铺平了道路。",
-    "dependsOn": ["ene_lipoly","mathematics","mfg_nanoimprint"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -13188,7 +13188,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "砂轮约 1840 年 成熟，建立在 连续铸造、燃料电池、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 注塑、飞艇、滑翔机 的发展铺平了道路。",
-    "dependsOn": ["mat_continuouscast","ene_fuelcell","mathematics","mfg_diecast"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -13218,7 +13218,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "磨料约 公元前 5000 年 成熟，建立在 红铜冶炼、用火、锯 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 砂型铸造、失蜡法、雪橇 的发展铺平了道路。",
-    "dependsOn": ["mat_copper","kiln","mfg_saw","mfg_drill"],
+    "dependsOn": ["mfg_saw", "mfg_drill"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -13368,7 +13368,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "自动导引车在 1953 年 前后成形，依托 聚碳酸酯、压水堆、数学 把 零件加工、批量制造 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 热等静压、核潜艇 等后续技术。",
-    "dependsOn": ["mat_pc","ene_pwr","mathematics","cnc"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -13548,7 +13548,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "超声加工约 1950 年 成熟，建立在 泡沫金属、盐差能、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 喷气背包、滑板、飞行记录器 的发展铺平了道路。",
-    "dependsOn": ["mathematics","mfg_quality","lathe","electronics","automation"],
+    "dependsOn": ["mathematics", "mfg_quality", "lathe", "electronics"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -13608,7 +13608,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "增减材混合制造约 2010 年 成熟，建立在 二维材料、液态空气储能、数学 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 数字化车间 的发展铺平了道路。",
-    "dependsOn": ["mathematics","mfg_visionguide","lathe","robot","electronics","automation"],
+    "dependsOn": ["mathematics","lathe","robot","electronics","automation"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -13848,7 +13848,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "独木舟在 约 1 万年前 前后成形，依托 钻、用火、陶器 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 木筏 等后续技术。",
-    "dependsOn": ["mfg_drill","mat_pottery","woodworking"],
+    "dependsOn": ["woodworking"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -13878,7 +13878,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "木筏约 约 1 万年前 成熟，建立在 钻、用火、陶器 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 桨 的发展铺平了道路。",
-    "dependsOn": ["mfg_drill","mat_pottery","tr_canoe"],
+    "dependsOn": ["tr_canoe"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -13908,7 +13908,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "桨在 公元前 8000 年 前后成形，依托 钻、用火、陶器 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 雪橇 等后续技术。",
-    "dependsOn": ["mfg_drill","mat_pottery","tr_raft"],
+    "dependsOn": ["tr_raft"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -13939,7 +13939,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "明轮船约 1800 年 成熟，建立在 热处理炉、余热回收、感应熔炼 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 缆车 的发展铺平了道路。",
-    "dependsOn": ["tr_balloon"],
+    "dependsOn": ["steam_engine","tr_paddle"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -13970,7 +13970,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "螺旋桨约 1836 年 成熟，建立在 铣床、发电机与电动机、铝冶炼 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 充气轮胎、左轮手枪 的发展铺平了道路。",
-    "dependsOn": ["mfg_mill","generator","mat_alu","tr_combine"],
+    "dependsOn": ["generator"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14000,7 +14000,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "潜艇在 1620 年 前后成形，依托 压延、风车、光学玻璃 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 交通隧道 等后续技术。",
-    "dependsOn": ["mfg_rolling2","mat_opticalglass","tr_ropeway"],
+    "dependsOn": ["tr_paddle","mfg_rivet"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14030,7 +14030,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "热气球约 1783 年 成熟，建立在 车床与精密加工、蒸汽机、钨 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 明轮船 的发展铺平了道路。",
-    "dependsOn": ["lathe","steam_engine","mat_tungsten","tr_track"],
+    "dependsOn": ["steam_engine"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14060,7 +14060,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "飞艇在 1852 年 前后成形，依托 砂轮、热泵、钢筋混凝土 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 电梯 等后续技术。",
-    "dependsOn": ["ene_heatpump","mat_reconcrete"],
+    "dependsOn": ["tr_balloon", "steam_engine"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14090,7 +14090,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "滑翔机约 1853 年 成熟，建立在 砂轮、热泵、钢筋混凝土 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 油轮 的发展铺平了道路。",
-    "dependsOn": ["ene_heatpump","mat_reconcrete","tr_elevator"],
+    "dependsOn": ["tr_balloon","mfg_planer"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14120,7 +14120,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "直升机约 1939 年 成熟，建立在 喷丸、燃气轮机、聚酰胺 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 应答机 的发展铺平了道路。",
-    "dependsOn": ["mfg_shotblast","ene_gasturbine","mat_pa","tr_radar2"],
+    "dependsOn": ["ene_gasturbine"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14150,7 +14150,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "喷气客机约 1952 年 成熟，建立在 数控加工、核聚变、浮法玻璃 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 气垫船、核潜艇、氢弹 的发展铺平了道路。",
-    "dependsOn": ["cnc","nuclear_fusion","mat_floatglass","tr_rov"],
+    "dependsOn": ["tr_rov"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14180,7 +14180,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "超音速客机约 1969 年 成熟，建立在 可编程逻辑控制器、空间太阳能、氮化镓 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 空间站、隐身技术、低可探测 的发展铺平了道路。",
-    "dependsOn": ["mfg_plc","ene_satpower","mat_gan","tr_hsr"],
+    "dependsOn": ["tr_jetliner", "ene_jet"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14210,7 +14210,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "旋翼机在 1923 年 前后成形，依托 流水线、合成燃料、碳化钨 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 推土机 等后续技术。",
-    "dependsOn": ["assembly_line","ene_synfuel","mat_wc","tr_servicearea"],
+    "dependsOn": ["airplane", "aircraft_engine"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14240,7 +14240,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "运载火箭在 1926 年 前后成形，依托 统计过程控制、火箭发动机、聚氯乙烯 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 雷达、夜视仪、自行火炮 等后续技术。",
-    "dependsOn": ["mfg_spcc","ene_rocketengine","mat_pvc","rocket"],
+    "dependsOn": ["ene_rocketengine", "rocket"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14270,7 +14270,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "航天飞机约 1981 年 成熟，建立在 机器人夹爪、碟式斯特林、激光熔覆 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 磁悬浮列车 的发展铺平了道路。",
-    "dependsOn": ["mfg_robotgripper","tr_abs"],
+    "dependsOn": ["tr_rocket","mat_cf"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14301,7 +14301,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "高速铁路约 1964 年 成熟，建立在 工业机器人、可燃冰、形状记忆合金 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 超音速客机 的发展铺平了道路。",
-    "dependsOn": ["robot","mat_shapemem","tr_lunarlander"],
+    "dependsOn": ["tr_lunarlander"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14331,7 +14331,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "磁悬浮列车约 1984 年 出现，建立在 3D 打印、碟式斯特林、激光熔覆 之上；它把 人员位移、物资运输 变成可稳定复现的能力，是 交通运载 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_3dp","tr_shuttle"],
+    "dependsOn": ["mfg_linearmotor", "mat_ltsc"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14361,7 +14361,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "地铁约 1863 年 成熟，建立在 砂轮、铅酸电池、伍德合金 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 交通信号灯、炸药、TNT 的发展铺平了道路。",
-    "dependsOn": ["ene_leadacid","mat_woodmetal","tr_bulktanker"],
+    "dependsOn": ["tr_steamloco","tr_tunnel2"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14391,7 +14391,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "有轨电车在 1832 年 前后成形，依托 铣床、发电机与电动机、铝冶炼 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 联合收割机 等后续技术。",
-    "dependsOn": ["mfg_mill","generator","mat_alu","tr_excavator"],
+    "dependsOn": ["generator","tr_excavator"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14421,7 +14421,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "无轨电车约 1882 年 成熟，建立在 电弧焊、水力发电站、锰钢 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 摩托车、机枪、无烟火药 的发展铺平了道路。",
-    "dependsOn": ["mfg_welding","ene_hydroplant","mat_manganese","tr_windtunnel"],
+    "dependsOn": ["ene_hydroplant"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14451,7 +14451,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "公共汽车在 1895 年 前后成形，依托 感应加热、无线输电、碳化硅 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 卡车 等后续技术。",
-    "dependsOn": ["mfg_induction","ene_wpt","mat_sic","tr_tractor"],
+    "dependsOn": ["ene_wpt"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14481,7 +14481,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "卡车约 1896 年 成熟，建立在 感应加热、无线输电、碳化硅 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 动车组 的发展铺平了道路。",
-    "dependsOn": ["mfg_induction","ene_wpt","mat_sic","tr_bus"],
+    "dependsOn": ["ene_wpt"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14511,7 +14511,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "摩托车约 1885 年 出现，建立在 精密轴承、变压器、锰钢 之上；它把 人员位移、物资运输 变成可稳定复现的能力，是 交通运载 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_precisionbearing","ene_transformer","mat_manganese","tr_trolley"],
+    "dependsOn": ["tr_bicycle", "internal_combustion", "steel"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14541,7 +14541,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "自行车约 1817 年 出现，建立在 刨床、斯特林发动机、电镀 之上；它把 人员位移、物资运输 变成可稳定复现的能力，是 交通运载 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_planer","ene_stirling","mat_plating","tr_steamloco"],
+    "dependsOn": ["cart","mfg_planer","mfg_thread"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14571,7 +14571,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "铁路列车约 1804 年 出现，建立在 热处理炉、余热回收、钽 之上；它把 人员位移、物资运输 变成可稳定复现的能力，是 交通运载 中从经验走向方法的关键一步。",
-    "dependsOn": ["mat_tantalum","tr_pipeline"],
+    "dependsOn": ["steam_engine","mfg_rolling2"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14601,7 +14601,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "蒸汽机车约 1814 年 成熟，建立在 刨床、余热回收、电镀 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 自行车 的发展铺平了道路。",
-    "dependsOn": ["mfg_planer","mat_plating","steam_ship"],
+    "dependsOn": ["steam_ship"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14631,7 +14631,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "内燃机车约 1912 年 成熟，建立在 真空吸尘器、调峰电站、低温超导 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 自动驾驶仪 的发展铺平了道路。",
-    "dependsOn": ["vacuum_cleaner","mat_ltsc","tr_simulator"],
+    "dependsOn": ["mat_ltsc","tr_simulator"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14661,7 +14661,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "动车组约 1900 年 成熟，建立在 切削液、调峰电站、渗硼 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 机场跑道 的发展铺平了道路。",
-    "dependsOn": ["tr_truck"],
+    "dependsOn": ["tr_train","electric_motor"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14721,7 +14721,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "索道约 1600 年 成熟，建立在 压延、风车、光学玻璃 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 潜艇、燧发枪 的发展铺平了道路。",
-    "dependsOn": ["mfg_rolling2","mat_opticalglass","tr_horseshoe"],
+    "dependsOn": ["tr_horseshoe"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14751,7 +14751,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "电梯在 1852 年 前后成形，依托 砂轮、热泵、钢筋混凝土 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 滑翔机 等后续技术。",
-    "dependsOn": ["ene_heatpump","mat_reconcrete","tr_airship"],
+    "dependsOn": ["tr_airship"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14781,7 +14781,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "自动扶梯在 1891 年 前后成形，依托 感应加热、无线输电、碳化硅 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 拖拉机 等后续技术。",
-    "dependsOn": ["mfg_induction","ene_wpt","mat_sic","tr_destroyer"],
+    "dependsOn": ["tr_destroyer"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14811,7 +14811,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "起重机约 公元前 300 年 成熟，建立在 螺纹、水车、高炉炼铁 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 马镫 的发展铺平了道路。",
-    "dependsOn": ["mfg_thread","mat_blastfurnace","road"],
+    "dependsOn": ["mat_blastfurnace", "road"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14841,7 +14841,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "叉车约 1917 年 成熟，建立在 流水线、调峰电站、不锈钢 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 航空母舰 的发展铺平了道路。",
-    "dependsOn": ["assembly_line","mat_stainless"],
+    "dependsOn": ["internal_combustion","tr_crane"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14871,7 +14871,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "推土机约 1923 年 出现，建立在 流水线、合成燃料、碳化钨 之上；它把 人员位移、物资运输 变成可稳定复现的能力，是 交通运载 中从经验走向方法的关键一步。",
-    "dependsOn": ["assembly_line","ene_synfuel","mat_wc","tr_autogyro"],
+    "dependsOn": ["tr_autogyro"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14901,7 +14901,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "挖掘机约 1830 年 成熟，建立在 铣床、热电发电、铝冶炼 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 有轨电车 的发展铺平了道路。",
-    "dependsOn": ["mfg_mill","ene_thermoelectric","mat_alu","railway"],
+    "dependsOn": ["railway"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14931,7 +14931,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "装载机约 1920 年 成熟，建立在 流水线、合成燃料、氧化锆陶瓷 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 服务区 的发展铺平了道路。",
-    "dependsOn": ["assembly_line","ene_synfuel","mat_zirconia","tr_aircraftcarrier"],
+    "dependsOn": ["tr_tractor", "internal_combustion"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14961,7 +14961,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "拖拉机约 1892 年 成熟，建立在 感应加热、无线输电、碳化硅 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 公共汽车 的发展铺平了道路。",
-    "dependsOn": ["mfg_induction","ene_wpt","mat_sic","tr_escalator"],
+    "dependsOn": ["internal_combustion","tr_track"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -14991,7 +14991,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "联合收割机约 1834 年 成熟，建立在 铣床、发电机与电动机、铝冶炼 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 螺旋桨 的发展铺平了道路。",
-    "dependsOn": ["mfg_mill","generator","mat_alu","tr_tram"],
+    "dependsOn": ["generator"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15021,7 +15021,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "航空母舰在 1917 年 前后成形，依托 流水线、调峰电站、不锈钢 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 装载机、冲锋枪、声纳 等后续技术。",
-    "dependsOn": ["assembly_line","mat_stainless","tr_forklift"],
+    "dependsOn": ["tr_forklift"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15051,7 +15051,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "驱逐舰约 1890 年 成熟，建立在 感应加热、无线输电、锗 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 自动扶梯 的发展铺平了道路。",
-    "dependsOn": ["mfg_induction","ene_wpt","mat_ge","automobile"],
+    "dependsOn": ["automobile"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15111,7 +15111,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "破冰船约 1957 年 成熟，建立在 谐波减速器、超级电容、聚丙烯 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 地效飞行器、战略导弹潜艇 的发展铺平了道路。",
-    "dependsOn": ["mfg_harmonic","ene_supercap","mat_pp","satellite"],
+    "dependsOn": ["satellite"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15171,7 +15171,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "气垫船在 1956 年 前后成形，依托 谐波减速器、沸水堆、聚丙烯 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 集装箱船 等后续技术。",
-    "dependsOn": ["mfg_harmonic","ene_bwr","mat_pp","tr_jetliner"],
+    "dependsOn": ["internal_combustion","ene_gasturbine"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15201,7 +15201,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "地效飞行器约 1960 年 成熟，建立在 电解磨削、可燃冰、放电等离子烧结 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 自主水下航行器 的发展铺平了道路。",
-    "dependsOn": ["mfg_ecmg","tr_icebreaker"],
+    "dependsOn": ["tr_icebreaker"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15231,7 +15231,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "喷气背包在 1950 年 前后成形，依托 超声加工、盐差能、泡沫金属 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 滑板 等后续技术。",
-    "dependsOn": ["mfg_ultrasonicm","tr_transponder"],
+    "dependsOn": ["ene_jet", "rocket"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15291,7 +15291,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "滑板在 1950 年 前后成形，依托 超声加工、盐差能、泡沫金属 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 飞行记录器 等后续技术。",
-    "dependsOn": ["mfg_ultrasonicm","tr_jetpack"],
+    "dependsOn": ["tr_jetpack"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15321,7 +15321,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "雪橇在 公元前 5000 年 前后成形，依托 磨料、用火、红铜冶炼 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 运河 等后续技术。",
-    "dependsOn": ["mfg_abrasive","mat_copper","tr_paddle"],
+    "dependsOn": ["woodworking", "stone_tools"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15351,7 +15351,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "马镫约 300 年 成熟，建立在 螺纹、水车、造纸 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 马蹄铁 的发展铺平了道路。",
-    "dependsOn": ["mfg_thread","waterwheel","paper","tr_crane"],
+    "dependsOn": ["mfg_thread"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15381,7 +15381,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "马蹄铁在 300 年 前后成形，依托 螺纹、水车、造纸 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 索道、板甲、火绳枪 等后续技术。",
-    "dependsOn": ["mfg_thread","waterwheel","paper","tr_stirrup"],
+    "dependsOn": ["mfg_thread","tr_stirrup"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15471,7 +15471,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "履带约 1770 年 成熟，建立在 车床与精密加工、蒸汽机、铂族金属 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 热气球 的发展铺平了道路。",
-    "dependsOn": ["lathe","steam_engine","mat_platinum","tr_tunnel2"],
+    "dependsOn": ["steam_engine"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15591,7 +15591,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "防抱死制动在 1978 年 前后成形，依托 计算机辅助制造、水热型地热、聚醚醚酮 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 航天飞机、巡飞弹、指挥控制系统 等后续技术。",
-    "dependsOn": ["mfg_cam","mat_peek"],
+    "dependsOn": ["mfg_cam"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15621,7 +15621,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "航海导航在 公元前 2000 年 前后成形，依托 量具、水力利用、混凝土 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 灯塔、工程兵 等后续技术。",
-    "dependsOn": ["mfg_gauge","ene_hydro","mat_concrete","horse_gear"],
+    "dependsOn": ["horse_gear"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15651,7 +15651,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "自动驾驶仪约 1912 年 成熟，建立在 真空吸尘器、调峰电站、低温超导 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 巴拿马运河 的发展铺平了道路。",
-    "dependsOn": ["vacuum_cleaner","mat_ltsc","tr_diesel loco"],
+    "dependsOn": ["mat_ltsc","tr_diesel loco"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15681,7 +15681,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "交通信号灯约 1868 年 成熟，建立在 砂轮、铅酸电池、工具钢 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 苏伊士运河 的发展铺平了道路。",
-    "dependsOn": ["ene_leadacid","mat_toolsteel","tr_metro"],
+    "dependsOn": ["railway_signal"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15711,7 +15711,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "灯塔在 公元前 1000 年 前后成形，依托 车床、煤炭开采、退火 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 弩、投石机、锁子甲 等后续技术。",
-    "dependsOn": ["mfg_lathe","ene_coal","mat_anneal","tr_navigation"],
+    "dependsOn": ["tr_navigation"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15741,7 +15741,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "雷达在 1935 年 前后成形，依托 喷丸、锌空气电池、氧化锌半导体 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 直升机 等后续技术。",
-    "dependsOn": ["mfg_shotblast","ene_zincair","mat_gan2","tr_rocket"],
+    "dependsOn": ["tr_rocket"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15771,7 +15771,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "应答机在 1940 年 前后成形，依托 看板管理、燃气轮机、电渣重熔 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 喷气背包、导弹、弹道导弹 等后续技术。",
-    "dependsOn": ["mfg_kanban","ene_gasturbine","mat_esr","tr_helicopter"],
+    "dependsOn": ["radio", "tr_radar2"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15801,7 +15801,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "飞行记录器在 1950 年 前后成形，依托 超声加工、盐差能、泡沫金属 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 遥控潜水器 等后续技术。",
-    "dependsOn": ["mfg_ultrasonicm","tr_skateboard"],
+    "dependsOn": ["tr_skateboard"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15831,7 +15831,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "飞行模拟器在 1910 年 前后成形，依托 真空吸尘器、调峰电站、铁氧体 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 内燃机车、深水炸弹 等后续技术。",
-    "dependsOn": ["vacuum_cleaner","mat_ferrite","airplane"],
+    "dependsOn": ["airplane"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15861,7 +15861,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "风洞在 1871 年 前后成形，依托 砂轮、铅酸电池、工具钢 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 无轨电车 等后续技术。",
-    "dependsOn": ["ene_leadacid","mat_toolsteel","tr_suez"],
+    "dependsOn": ["mat_toolsteel"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15921,7 +15921,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "港口约 公元前 3000 年 成熟，建立在 研磨、水力利用、水泥 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 渡轮 的发展铺平了道路。",
-    "dependsOn": ["mfg_lapp","ene_hydro","mat_cement","sail"],
+    "dependsOn": ["sail"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -15951,7 +15951,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "运河约 公元前 4000 年 出现，建立在 磨料、木炭、白银加工 之上；它把 人员位移、物资运输 变成可稳定复现的能力，是 交通运载 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_abrasive","ene_charcoal","mat_silver","tr_sled"],
+    "dependsOn": ["stone_hoe", "tr_raft"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16041,7 +16041,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "交通隧道在 1700 年 前后成形，依托 压延、太阳能热利用、沸石分子筛 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 履带、榴弹炮、护卫舰 等后续技术。",
-    "dependsOn": ["mfg_rolling2","ene_solarthermal","mat_zeolite","tr_submarine"],
+    "dependsOn": ["bld_arch", "masonry"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16101,7 +16101,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "服务区在 1920 年 前后成形，依托 流水线、合成燃料、氧化锆陶瓷 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 旋翼机、空中加油机、军用运输机 等后续技术。",
-    "dependsOn": ["assembly_line","ene_synfuel","mat_zirconia","tr_loader"],
+    "dependsOn": ["tr_loader"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16161,7 +16161,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "充电站约 2000 年 成熟，建立在 视觉引导装配、井式地热、自修复材料 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 高超声速飞行 的发展铺平了道路。",
-    "dependsOn": ["mfg_visionguide","space_station"],
+    "dependsOn": ["power_grid", "ene_liion", "electric_motor"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16191,7 +16191,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "车路协同在 2010 年 前后成形，依托 无人化工厂、液态空气储能、二维材料 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 燃料电池卡车 等后续技术。",
-    "dependsOn": ["mfg_darkfactory","drone","automobile","internal_combustion","gps","combustion"],
+    "dependsOn": ["drone", "automobile", "internal_combustion", "gps", "combustion"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16221,7 +16221,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "集装箱船约 1956 年 出现，建立在 谐波减速器、沸水堆、聚丙烯 之上；它把 人员位移、物资运输 变成可稳定复现的能力，是 交通运载 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_harmonic","ene_bwr","mat_pp","tr_hovercraft"],
+    "dependsOn": ["tr_hovercraft"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16251,7 +16251,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "油轮约 1860 年 成熟，建立在 砂轮、铅酸电池、伍德合金 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 地铁 的发展铺平了道路。",
-    "dependsOn": ["ene_leadacid","mat_woodmetal","tr_glider"],
+    "dependsOn": ["steam_engine", "steel", "petroleum"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16311,7 +16311,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "渡轮在 公元前 3000 年 前后成形，依托 研磨、水力利用、水泥 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 剑、盾、盔甲 等后续技术。",
-    "dependsOn": ["mfg_lapp","ene_hydro","mat_cement","tr_port"],
+    "dependsOn": ["tr_port"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16491,7 +16491,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "电动汽车约 1990 年 成熟，建立在 在机测量、燃料电池汽车、金属有机框架 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 电动船 的发展铺平了道路。",
-    "dependsOn": ["mfg_onmachinem","gps"],
+    "dependsOn": ["gps"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16521,7 +16521,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "燃料电池卡车约 2010 年 成熟，建立在 无人化工厂、液态空气储能、二维材料 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 个人飞行器 的发展铺平了道路。",
-    "dependsOn": ["mfg_darkfactory","tr_v2x"],
+    "dependsOn": ["tr_v2x"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16551,7 +16551,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "个人飞行器在 2010 年 前后成形，依托 无人化工厂、液态空气储能、二维材料 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 无人机货运 等后续技术。",
-    "dependsOn": ["mfg_darkfactory","tr_fcevtruck"],
+    "dependsOn": ["tr_fcevtruck"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16581,7 +16581,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "电动船约 1990 年 成熟，建立在 在机测量、燃料电池汽车、金属有机框架 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 网络战、高功率微波武器 的发展铺平了道路。",
-    "dependsOn": ["mfg_onmachinem","tr_evcar"],
+    "dependsOn": ["tr_evcar"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16611,7 +16611,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "自主水下航行器在 1960 年 前后成形，依托 电解磨削、可燃冰、放电等离子烧结 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 月球着陆器 等后续技术。",
-    "dependsOn": ["mfg_ecmg","tr_ekranoplan"],
+    "dependsOn": ["tr_ekranoplan"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16641,7 +16641,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "遥控潜水器约 1950 年 成熟，建立在 超声加工、盐差能、泡沫金属 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 喷气客机、巡航导弹、防空导弹 的发展铺平了道路。",
-    "dependsOn": ["mfg_ultrasonicm","tr_blackbox"],
+    "dependsOn": ["tr_blackbox"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16671,7 +16671,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "无人机货运约 2010 年 成熟，建立在 无人化工厂、液态空气储能、二维材料 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 载人无人机 的发展铺平了道路。",
-    "dependsOn": ["mfg_darkfactory","tr_personalair"],
+    "dependsOn": ["tr_personalair"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16701,7 +16701,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "载人无人机约 2010 年 成熟，建立在 无人化工厂、液态空气储能、二维材料 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 平衡车、无人机蜂群、军事人工智能 的发展铺平了道路。",
-    "dependsOn": ["mfg_darkfactory","tr_cargo_drone"],
+    "dependsOn": ["tr_cargo_drone"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16732,7 +16732,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "可回收火箭约 2015 年 成熟，建立在 工业 4.0、摩擦纳米发电、二维材料 之上完成关键突破；其能力延伸到 人员位移、物资运输，并为 忠诚僚机 的发展铺平了道路。",
-    "dependsOn": ["tr_hyperloop"],
+    "dependsOn": ["tr_rocket","mat_cf"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16762,7 +16762,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "月球着陆器在 1960 年 前后成形，依托 电解磨削、可燃冰、放电等离子烧结 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 高速铁路、反坦克导弹、激光制导 等后续技术。",
-    "dependsOn": ["mfg_ecmg","tr_auv"],
+    "dependsOn": ["tr_auv"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16792,7 +16792,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "铅笔在 1795 年 前后成形，依托 锆、蒸汽机、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 复写纸 等后续技术。",
-    "dependsOn": ["mat_zirconium","steam_engine","mathematics","printing"],
+    "dependsOn": ["steam_engine","mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -16852,7 +16852,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "圆珠笔在 1938 年 前后成形，依托 聚酰胺、喷气发动机、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 复印机 等后续技术。",
-    "dependsOn": ["mat_pa","ene_jet","mathematics","inf_phasedarray"],
+    "dependsOn": ["ene_jet", "mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -16882,7 +16882,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "打字机在 1868 年 前后成形，依托 工具钢、铅酸电池、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 油印 等后续技术。",
-    "dependsOn": ["mat_toolsteel","ene_leadacid","mathematics","inf_submarine_cable"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -16942,7 +16942,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "油印约 1870 年 出现，建立在 工具钢、铅酸电池、数学 之上；它把 信息记录、远程传输 变成可稳定复现的能力，是 信息通信 中从经验走向方法的关键一步。",
-    "dependsOn": ["mat_toolsteel","ene_leadacid","mathematics","inf_typewriter"],
+    "dependsOn": ["mat_toolsteel","mathematics","inf_typewriter"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -16972,7 +16972,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "复印机约 1938 年 成熟，建立在 聚酰胺、喷气发动机、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 微波中继 的发展铺平了道路。",
-    "dependsOn": ["mat_pa","ene_jet","mathematics","inf_ballpoint"],
+    "dependsOn": ["ene_jet", "mathematics", "inf_ballpoint"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17064,7 +17064,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "通信电缆在 1850 年 前后成形，依托 钢筋混凝土、燃料乙醇、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 海底电缆 等后续技术。",
-    "dependsOn": ["mat_reconcrete","ene_ethanol","mathematics"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17094,7 +17094,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "海底电缆约 1858 年 成熟，建立在 钢筋混凝土、热泵、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 打字机 的发展铺平了道路。",
-    "dependsOn": ["mat_reconcrete","ene_heatpump","mathematics","inf_cable"],
+    "dependsOn": ["mathematics","inf_cable"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17155,7 +17155,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "黑白电视约 1927 年 成熟，建立在 聚氯乙烯、火箭发动机、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 磁带 的发展铺平了道路。",
-    "dependsOn": ["mat_pvc","ene_rocketengine","mathematics","television"],
+    "dependsOn": ["mathematics","television"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17185,7 +17185,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "彩色电视约 1953 年 成熟，建立在 聚碳酸酯、压水堆、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 哈希函数 的发展铺平了道路。",
-    "dependsOn": ["mat_pc","ene_pwr","mathematics","inf_asr"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17215,7 +17215,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "录像机在 1956 年 前后成形，依托 聚丙烯、沸水堆、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 硬盘 等后续技术。",
-    "dependsOn": ["mat_pp","ene_bwr","mathematics","ai"],
+    "dependsOn": ["mathematics","ai"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17245,7 +17245,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "摄像机约 1980 年 成熟，建立在 激光熔覆、碟式斯特林、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 闪存 的发展铺平了道路。",
-    "dependsOn": ["mathematics","inf_digitalsig"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17275,7 +17275,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "黑胶唱片约 1877 年 成熟，建立在 钢化玻璃、区域供冷供热、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 电话交换机 的发展铺平了道路。",
-    "dependsOn": ["mat_tempered","ene_district","mathematics","telephone"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17305,7 +17305,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "磁带约 1928 年 成熟，建立在 聚氯乙烯、火箭发动机、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 相控阵 的发展铺平了道路。",
-    "dependsOn": ["mat_pvc","ene_rocketengine","mathematics","inf_bw_tv"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17365,7 +17365,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "内存约 1947 年 成熟，建立在 半导体材料、核裂变反应堆、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 条形码 的发展铺平了道路。",
-    "dependsOn": ["semiconductors","ene_nuclear","mathematics","transistor"],
+    "dependsOn": ["semiconductors","mathematics","transistor"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17395,7 +17395,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "硬盘约 1956 年 成熟，建立在 聚丙烯、沸水堆、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 Fortran 的发展铺平了道路。",
-    "dependsOn": ["mat_pp","ene_bwr","mathematics","inf_vcr"],
+    "dependsOn": ["mathematics","inf_vcr"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17515,7 +17515,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "固态硬盘约 1991 年 成熟，建立在 金属有机框架、锂离子电池、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 Python 的发展铺平了道路。",
-    "dependsOn": ["ene_liion","mathematics","www"],
+    "dependsOn": ["mathematics", "www"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17545,7 +17545,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "操作系统约 1950 年 成熟，建立在 泡沫金属、盐差能、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 自然语言处理 的发展铺平了道路。",
-    "dependsOn": ["mathematics","inf_ecc"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17575,7 +17575,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "编译器在 1952 年 前后成形，依托 浮法玻璃、核聚变、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 语音识别 等后续技术。",
-    "dependsOn": ["mat_floatglass","nuclear_fusion","mathematics","inf_rl"],
+    "dependsOn": ["mathematics", "inf_rl"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17605,7 +17605,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "Fortran约 1957 年 出现，建立在 聚丙烯、超级电容、数学 之上；它把 信息记录、远程传输 变成可稳定复现的能力，是 信息通信 中从经验走向方法的关键一步。",
-    "dependsOn": ["mat_pp","ene_supercap","mathematics","inf_hdd"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17635,7 +17635,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "C 语言约 1972 年 成熟，建立在 储氢合金、水热型地热、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 版本控制 的发展铺平了道路。",
-    "dependsOn": ["mathematics","inf_email"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17665,7 +17665,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "Python在 1991 年 前后成形，依托 金属有机框架、锂离子电池、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 协同过滤 等后续技术。",
-    "dependsOn": ["ene_liion","mathematics","inf_ssd"],
+    "dependsOn": ["mathematics", "inf_ssd"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17755,7 +17755,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "SQL约 1974 年 出现，建立在 储氢合金、水热型地热、数学 之上；它把 信息记录、远程传输 变成可稳定复现的能力，是 信息通信 中从经验走向方法的关键一步。",
-    "dependsOn": ["mathematics","inf_git"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17815,7 +17815,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "搜索引擎约 1990 年 成熟，建立在 金属有机框架、燃料电池汽车、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 网页浏览器 的发展铺平了道路。",
-    "dependsOn": ["mathematics","inf_zeroknowledge"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17905,7 +17905,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "即时通讯约 1996 年 成熟，建立在 金属有机框架、锂聚合物电池、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 虚拟专网 的发展铺平了道路。",
-    "dependsOn": ["ene_lipoly","mathematics","inf_qrcode"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -17995,7 +17995,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "蓝牙约 1994 年 成熟，建立在 金属有机框架、锂离子电池、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 二维码 的发展铺平了道路。",
-    "dependsOn": ["ene_liion","mathematics","inf_recommend2"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18025,7 +18025,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "5G约 2018 年 成熟，建立在 二维材料、摩擦纳米发电、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 大语言模型 的发展铺平了道路。",
-    "dependsOn": ["mathematics","transformer_arch"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18115,7 +18115,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "微波中继约 1940 年 出现，建立在 电渣重熔、燃气轮机、数学 之上；它把 信息记录、远程传输 变成可稳定复现的能力，是 信息通信 中从经验走向方法的关键一步。",
-    "dependsOn": ["mat_esr","ene_gasturbine","mathematics","inf_photocopier"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18145,7 +18145,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "调制解调器约 1958 年 成熟，建立在 碳纤维、超级电容、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 神经网络 的发展铺平了道路。",
-    "dependsOn": ["ene_supercap","mathematics","ic"],
+    "dependsOn": ["mathematics","ic"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18295,7 +18295,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "虚拟专网约 1996 年 成熟，建立在 金属有机框架、锂聚合物电池、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 Wi-Fi 的发展铺平了道路。",
-    "dependsOn": ["ene_lipoly","mathematics","inf_im"],
+    "dependsOn": ["mathematics", "inf_im"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18385,7 +18385,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "对称加密在 1949 年 前后成形，依托 ABS 树脂、压缩空气储能、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 纠错码 等后续技术。",
-    "dependsOn": ["mat_abs","ene_caes","mathematics","inf_rfid"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18415,7 +18415,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "哈希函数约 1953 年 成熟，建立在 聚碳酸酯、压水堆、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 机器翻译 的发展铺平了道路。",
-    "dependsOn": ["mat_pc","ene_pwr","mathematics","inf_color_tv"],
+    "dependsOn": ["mathematics", "inf_color_tv"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18475,7 +18475,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "二维码约 1994 年 成熟，建立在 金属有机框架、锂离子电池、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 即时通讯 的发展铺平了道路。",
-    "dependsOn": ["ene_liion","mathematics","inf_bluetooth"],
+    "dependsOn": ["mathematics","inf_bluetooth"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18505,7 +18505,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "条形码约 1948 年 成熟，建立在 ABS 树脂、核裂变反应堆、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 射频识别 的发展铺平了道路。",
-    "dependsOn": ["mat_abs","ene_nuclear","mathematics","inf_ram"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18535,7 +18535,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "射频识别在 1948 年 前后成形，依托 ABS 树脂、核裂变反应堆、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 对称加密 等后续技术。",
-    "dependsOn": ["mat_abs","ene_nuclear","mathematics","inf_barcode"],
+    "dependsOn": ["mathematics", "inf_barcode"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18656,7 +18656,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "雾计算约 2010 年 成熟，建立在 二维材料、液态空气储能、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 微服务 的发展铺平了道路。",
-    "dependsOn": ["mathematics","inf_homomorphic"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18746,7 +18746,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "机器学习约 1959 年 出现，建立在 碳纤维、超级电容、数学 之上；它把 信息记录、远程传输 变成可稳定复现的能力，是 信息通信 中从经验走向方法的关键一步。",
-    "dependsOn": ["ene_supercap","mathematics","inf_nn"],
+    "dependsOn": ["mathematics","inf_nn"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18806,7 +18806,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "神经网络约 1958 年 成熟，建立在 碳纤维、超级电容、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 机器学习 的发展铺平了道路。",
-    "dependsOn": ["ene_supercap","mathematics","inf_modem","ai"],
+    "dependsOn": ["mathematics","inf_modem","ai"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18836,7 +18836,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "专家系统约 1965 年 出现，建立在 芳纶、可燃冰、数学 之上；它把 信息记录、远程传输 变成可稳定复现的能力，是 信息通信 中从经验走向方法的关键一步。",
-    "dependsOn": ["mat_aramid","mathematics","inf_gis"],
+    "dependsOn": ["mathematics", "inf_gis"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18926,7 +18926,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "语音识别约 1952 年 成熟，建立在 浮法玻璃、核聚变、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 彩色电视 的发展铺平了道路。",
-    "dependsOn": ["mat_floatglass","nuclear_fusion","mathematics","inf_compiler"],
+    "dependsOn": ["mathematics", "inf_compiler"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -18956,7 +18956,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "机器翻译约 1954 年 出现，建立在 聚丙烯、光伏电池、数学 之上；它把 信息记录、远程传输 变成可稳定复现的能力，是 信息通信 中从经验走向方法的关键一步。",
-    "dependsOn": ["mat_pp","ene_pv","mathematics","inf_hash"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -19257,7 +19257,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "纠错码在 1949 年 前后成形，依托 ABS 树脂、压缩空气储能、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 操作系统 等后续技术。",
-    "dependsOn": ["mat_abs","ene_caes","mathematics","inf_symenc"],
+    "dependsOn": ["mathematics", "inf_symenc"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -19377,7 +19377,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "天线约 1888 年 出现，建立在 锗、交流电系统、数学 之上；它把 信息记录、远程传输 变成可稳定复现的能力，是 信息通信 中从经验走向方法的关键一步。",
-    "dependsOn": ["mat_ge","ene_ac","mathematics"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -19407,7 +19407,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "相控阵约 1930 年 成熟，建立在 玻璃钢、火箭发动机、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 圆珠笔 的发展铺平了道路。",
-    "dependsOn": ["mat_frp","ene_rocketengine","mathematics","inf_tape"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -19617,7 +19617,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "敏捷开发约 2001 年 成熟，建立在 自修复材料、井式地热、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 深度学习 的发展铺平了道路。",
-    "dependsOn": ["mathematics","inf_alloptical"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -19647,7 +19647,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "统一建模语言约 1997 年 成熟，建立在 金属有机框架、锂聚合物电池、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 物联网 的发展铺平了道路。",
-    "dependsOn": ["ene_lipoly","mathematics","inf_wifi"],
+    "dependsOn": ["mathematics","inf_wifi"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -19947,7 +19947,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "协同过滤约 1992 年 成熟，建立在 金属有机框架、锂离子电池、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 蓝牙 的发展铺平了道路。",
-    "dependsOn": ["ene_liion","mathematics","inf_pl_python","computer","statistics","algorithm"],
+    "dependsOn": ["mathematics","inf_pl_python","computer","statistics","algorithm"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20039,7 +20039,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "生成对抗网络约 2014 年 成熟，建立在 二维材料、摩擦纳米发电、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 扩散模型 的发展铺平了道路。",
-    "dependsOn": ["mathematics","computer_vision"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20219,7 +20219,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "同态加密在 2009 年 前后成形，依托 二维材料、井式地热、数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 雾计算 等后续技术。",
-    "dependsOn": ["mathematics","inf_blockchain"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20249,7 +20249,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "零知识证明约 1985 年 成熟，建立在 激光熔覆、无刷电机、数学 之上完成关键突破；其能力延伸到 信息记录、远程传输，并为 搜索引擎 的发展铺平了道路。",
-    "dependsOn": ["brushless_motor","mathematics","inf_qkd"],
+    "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -20639,7 +20639,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "草药学约 公元前 5000 年 成熟，建立在 灌溉、发酵 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 牙科 的发展铺平了道路。",
-    "dependsOn": ["irrigation","fermentation"],
+    "dependsOn": ["fermentation"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -20669,7 +20669,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "针灸约 公元前 2000 年 成熟，建立在 数学、牙科、犁 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 方剂学、缝合 的发展铺平了道路。",
-    "dependsOn": ["mathematics","bio_dentistry","plow"],
+    "dependsOn": ["mathematics","plow"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -20699,7 +20699,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "解剖学约 公元前 300 年 成熟，建立在 数学、义齿、外科学 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 生理学、蒸馏制药 的发展铺平了道路。",
-    "dependsOn": ["mathematics","bio_denture","bio_surgery"],
+    "dependsOn": ["mathematics","bio_surgery"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -20729,7 +20729,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "生理学约 公元前 300 年 成熟，建立在 数学、解剖学、义齿 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 蒸馏制药、眼镜 的发展铺平了道路。",
-    "dependsOn": ["mathematics","bio_anatomy","bio_denture"],
+    "dependsOn": ["mathematics","bio_anatomy"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -20759,7 +20759,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "药理学在 1800 年 前后成形，依托 化学、数学、牛痘接种 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 骨科、内窥镜 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_smallpox","vaccination","microbiology"],
+    "dependsOn": ["chemistry","mathematics","vaccination","microbiology"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -20789,7 +20789,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "方剂学在 公元前 2000 年 前后成形，依托 数学、针灸、牙科 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 缝合、假肢 等后续技术。",
-    "dependsOn": ["mathematics","bio_acupuncture","bio_dentistry"],
+    "dependsOn": ["mathematics","bio_acupuncture"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -20819,7 +20819,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "蒸馏制药约 800 年 成熟，建立在 数学、生理学、解剖学 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 眼镜 的发展铺平了道路。",
-    "dependsOn": ["mathematics","bio_physiology","bio_anatomy"],
+    "dependsOn": ["mathematics","bio_anatomy"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -20849,7 +20849,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "阿司匹林在 1897 年 前后成形，依托 化学、数学、X 射线 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 激素疗法、助听器 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_xray","medical_imaging"],
+    "dependsOn": ["chemistry","mathematics","medical_imaging"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -20879,7 +20879,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "青霉素约 1928 年 成熟，建立在 化学、数学、胰岛素 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 抗生素、生物反应器 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","bio_insulin","bio_bcg"],
+    "dependsOn": ["chemistry","mathematics","bio_bcg"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -20909,7 +20909,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "抗生素在 1928 年 前后成形，依托 化学、数学、青霉素 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 生物反应器、血液制品 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_penicillin","bio_insulin"],
+    "dependsOn": ["chemistry","mathematics","bio_penicillin"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -20939,7 +20939,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "牛痘接种在 1796 年 前后成形，依托 化学、数学、疫苗 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 药理学、骨科 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","vaccination","bio_glasses"],
+    "dependsOn": ["chemistry","mathematics","vaccination"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -20969,7 +20969,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "卡介苗在 1921 年 前后成形，依托 化学、数学、噬菌体疗法 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 青霉素、胰岛素 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_phage","bio_vitamin"],
+    "dependsOn": ["chemistry","mathematics","bio_vitamin"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -20999,7 +20999,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "胰岛素在 1921 年 前后成形，依托 化学、数学、卡介苗 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 青霉素、抗生素 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_bcg","bio_phage"],
+    "dependsOn": ["chemistry","mathematics","bio_bcg"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21029,7 +21029,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "激素疗法在 1900 年 前后成形，依托 化学、数学、助听器 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 神经外科、心血管外科 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_hearingaid","bio_aspirin"],
+    "dependsOn": ["chemistry","mathematics","bio_aspirin"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21119,7 +21119,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "血型在 1901 年 前后成形，依托 化学、数学、放射治疗 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 维生素、噬菌体疗法 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_radiotherapy","bio_chemo"],
+    "dependsOn": ["chemistry","mathematics","bio_chemo"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21180,7 +21180,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "外科学约 公元前 500 年 成熟，建立在 数学、假肢、缝合 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 解剖学、义齿 的发展铺平了道路。",
-    "dependsOn": ["mathematics","bio_prosthesis","bio_suture"],
+    "dependsOn": ["mathematics","bio_suture"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21240,7 +21240,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "骨科在 1800 年 前后成形，依托 化学、数学、药理学 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 内窥镜、流行病学 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_pharmacology","bio_smallpox"],
+    "dependsOn": ["chemistry","mathematics","bio_pharmacology"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21270,7 +21270,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "神经外科在 1900 年 前后成形，依托 化学、数学、激素疗法 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 心血管外科、腹腔镜 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_hormone","bio_hearingaid"],
+    "dependsOn": ["chemistry","mathematics","bio_hormone"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21330,7 +21330,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "器官移植约 1954 年 成熟，建立在 化学、数学、遗传学 / DNA 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 心脏起搏器、干扰素 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","dna","bio_inhaler"],
+    "dependsOn": ["chemistry","mathematics","bio_inhaler"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21420,7 +21420,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "心脏起搏器约 1958 年 成熟，建立在 化学、数学、干扰素 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 抗病毒药、人工关节 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","bio_interferon","bio_transplant"],
+    "dependsOn": ["chemistry","mathematics","bio_transplant"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21450,7 +21450,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "血管支架在 1980 年 前后成形，依托 化学、数学、试管婴儿 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 组织工程、人工皮肤 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_ivf","bio_cochlear"],
+    "dependsOn": ["chemistry","mathematics","bio_cochlear"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21540,7 +21540,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "超声诊断约 1950 年 成熟，建立在 化学、数学、人工晶体 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 核医学、酶工程 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","bio_iol","bio_artkidney"],
+    "dependsOn": ["chemistry","mathematics","bio_artkidney"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21570,7 +21570,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "CT 扫描约 1971 年 成熟，建立在 化学、数学、基因递送载体 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 体外膜肺氧合 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","bio_genevector","bio_transdermal"],
+    "dependsOn": ["chemistry","mathematics","bio_transdermal"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21600,7 +21600,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "核磁共振在 1973 年 前后成形，依托 化学、数学、基因工程 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 转基因、单克隆抗体 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","genetic_engineering","bio_ecmo"],
+    "dependsOn": ["chemistry","mathematics","genetic_engineering"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21630,7 +21630,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "X 射线在 1895 年 前后成形，依托 化学、数学、医学影像 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 阿司匹林、助听器 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","medical_imaging","bio_contactlens"],
+    "dependsOn": ["chemistry","mathematics","medical_imaging"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21660,7 +21660,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "核医学约 1950 年 成熟，建立在 化学、数学、超声诊断 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 酶工程、体外诊断 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","bio_ultrasound","bio_iol"],
+    "dependsOn": ["chemistry","mathematics","bio_ultrasound"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21690,7 +21690,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "正电子成像约 1970 年 成熟，建立在 化学、数学、干细胞 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 电子病历、脑机接口 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","stem_cells","bio_arthroplasty"],
+    "dependsOn": ["chemistry","mathematics","bio_arthroplasty"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21720,7 +21720,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "基因测序约 1977 年 成熟，建立在 化学、数学、单克隆抗体 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 试管婴儿、人工耳蜗 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","bio_monoclonal","bio_transgenic"],
+    "dependsOn": ["chemistry","mathematics","bio_transgenic"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21750,7 +21750,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "聚合酶链反应约 1983 年 成熟，建立在 化学、数学、表观遗传学 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 mRNA 疫苗、深部脑刺激 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","bio_epigenetics","bio_proteineng"],
+    "dependsOn": ["chemistry","mathematics","bio_proteineng"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21811,7 +21811,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "克隆技术约 1996 年 成熟，建立在 化学、数学、蛋白组学 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 细胞治疗、可穿戴健康 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","bio_proteomics2","gmo"],
+    "dependsOn": ["chemistry","mathematics","gmo"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21841,7 +21841,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "试管婴儿约 1978 年 成熟，建立在 化学、数学、人工耳蜗 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 血管支架、组织工程 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","bio_cochlear","bio_seq"],
+    "dependsOn": ["chemistry","mathematics","bio_seq"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21872,7 +21872,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "组织工程约 1980 年 成熟，建立在 化学、数学、血管支架 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 人工皮肤、快速检测 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","bio_stent","bio_ivf","biotech","stem_cells","materials"],
+    "dependsOn": ["chemistry","mathematics","bio_stent","biotech","stem_cells","materials"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21962,7 +21962,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "助听器在 1898 年 前后成形，依托 化学、数学、阿司匹林 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 激素疗法、神经外科 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_aspirin","bio_xray"],
+    "dependsOn": ["chemistry","mathematics","bio_xray"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -21992,7 +21992,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "眼镜在 1280 年 前后成形，依托 数学、蒸馏制药、生理学 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 牛痘接种 等后续技术。",
-    "dependsOn": ["mathematics","bio_distill","bio_physiology"],
+    "dependsOn": ["mathematics","bio_physiology"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -22022,7 +22022,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "隐形眼镜在 1888 年 前后成形，依托 化学、数学、无菌术 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 X 射线 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_aseptic","surgery"],
+    "dependsOn": ["chemistry","mathematics","surgery"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -22052,7 +22052,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "人工晶体在 1949 年 前后成形，依托 化学、数学、人工肾 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 超声诊断、核医学 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_artkidney","bio_dialysis"],
+    "dependsOn": ["chemistry","mathematics","bio_dialysis"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -22112,7 +22112,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "牙科在 公元前 3000 年 前后成形，依托 数学、犁、草药学 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 针灸、方剂学 等后续技术。",
-    "dependsOn": ["mathematics","plow","bio_herb"],
+    "dependsOn": ["plow"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -22322,7 +22322,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "生物反应器在 1940 年 前后成形，依托 化学、数学、抗生素 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 血液透析、血液制品 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_antibiotic","bio_penicillin"],
+    "dependsOn": ["chemistry","mathematics","bio_penicillin"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -22382,7 +22382,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "干扰素在 1957 年 前后成形，依托 化学、数学、器官移植 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 心脏起搏器、抗病毒药 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_transplant","dna"],
+    "dependsOn": ["chemistry","mathematics","dna"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -22412,7 +22412,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "mRNA 疫苗约 1990 年 成熟，建立在 化学、数学、深部脑刺激 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 靶向治疗、基因治疗 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","bio_dbs","bio_pcr","dna","nanotech","immunology"],
+    "dependsOn": ["chemistry","mathematics","bio_pcr","dna","nanotech","immunology"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -22442,7 +22442,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "抗病毒药在 1960 年 前后成形，依托 化学、数学、心脏起搏器 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 干细胞、人工关节 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_pacemaker","bio_interferon"],
+    "dependsOn": ["chemistry","mathematics","bio_interferon"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -22532,7 +22532,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "靶向治疗在 1990 年 前后成形，依托 化学、数学、mRNA 疫苗 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 基因治疗、定向进化 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_mrnavax","bio_dbs"],
+    "dependsOn": ["chemistry","mathematics","bio_mrnavax"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -22562,7 +22562,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "免疫治疗在 2010 年 前后成形，依托 化学、数学、单细胞测序 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 CAR-T 疗法、医疗影像 AI 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_singlecell","bio_organoid"],
+    "dependsOn": ["chemistry","mathematics","bio_organoid"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -22622,7 +22622,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "细胞治疗约 2000 年 成熟，建立在 化学、数学、克隆技术 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 可穿戴健康、手术机器人 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","bio_clone","bio_proteomics2"],
+    "dependsOn": ["chemistry","mathematics","bio_proteomics2"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -22652,7 +22652,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "CAR-T 疗法在 2010 年 前后成形，依托 化学、数学、免疫治疗 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 医疗影像 AI、空间转录组 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_immunotherapy","bio_singlecell"],
+    "dependsOn": ["chemistry","mathematics","bio_immunotherapy"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -22682,7 +22682,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "血液制品约 1940 年 成熟，建立在 化学、数学、生物反应器 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 血液透析、人工肾 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","bio_bioreactor","bio_antibiotic"],
+    "dependsOn": ["chemistry","mathematics","bio_bioreactor"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -22772,7 +22772,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "可穿戴健康约 2000 年 成熟，建立在 化学、数学、细胞治疗 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 手术机器人、康复机器人 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","bio_celltherapy","bio_clone"],
+    "dependsOn": ["chemistry","mathematics","bio_celltherapy"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -22832,7 +22832,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "电子病历约 1970 年 成熟，建立在 化学、数学、正电子成像 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 脑机接口、透皮给药 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","bio_pet","stem_cells"],
+    "dependsOn": ["chemistry","mathematics","bio_pet"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -23042,7 +23042,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "深部脑刺激约 1987 年 成熟，建立在 化学、数学、聚合酶链反应 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 mRNA 疫苗、靶向治疗 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","bio_pcr","bio_epigenetics"],
+    "dependsOn": ["chemistry","mathematics","bio_epigenetics"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -23102,7 +23102,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "人工耳蜗约 1977 年 成熟，建立在 化学、数学、基因测序 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 血管支架、试管婴儿 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","bio_seq","bio_monoclonal"],
+    "dependsOn": ["chemistry","mathematics","bio_seq"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -23342,7 +23342,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "噬菌体疗法约 1920 年 成熟，建立在 化学、数学、维生素 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 卡介苗、胰岛素 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","bio_vitamin","bio_bloodtype"],
+    "dependsOn": ["chemistry","mathematics","bio_bloodtype"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -23672,7 +23672,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "蛋白组学约 1995 年 成熟，建立在 化学、数学、转基因作物 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 克隆技术、细胞治疗 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","gmo","bio_artlung"],
+    "dependsOn": ["chemistry","mathematics","bio_artlung"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -24062,7 +24062,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "体外膜肺氧合在 1972 年 前后成形，依托 化学、数学、CT 扫描 把 疾病治疗、健康维持 落到实处，并成为 生命与医疗 中承上启下的一环，直接支撑了 核磁共振 等后续技术。",
-    "dependsOn": ["chemistry","mathematics","bio_ct","bio_genevector"],
+    "dependsOn": ["chemistry","mathematics","bio_genevector"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -24152,7 +24152,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "人工关节约 1960 年 成熟，建立在 化学、数学、抗病毒药 之上完成关键突破；其能力延伸到 疾病治疗、健康维持，并为 正电子成像、干细胞 的发展铺平了道路。",
-    "dependsOn": ["chemistry","mathematics","bio_antiviral","bio_pacemaker"],
+    "dependsOn": ["chemistry","mathematics","bio_antiviral"],
     "enables": [],
     "applications": [
       "疾病治疗",
@@ -24182,7 +24182,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "夯土在 约 1 万年前 前后成形，依托 陶器、钻、用火 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 土坯砖 等后续技术。",
-    "dependsOn": ["mat_pottery","mfg_drill"],
+    "dependsOn": ["stone_tools"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -24212,7 +24212,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "土坯砖约 公元前 9000 年 成熟，建立在 陶器、钻、用火 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 烧砖 的发展铺平了道路。",
-    "dependsOn": ["mat_pottery","mfg_drill","bld_rammed"],
+    "dependsOn": ["mat_pottery","bld_rammed"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -24242,7 +24242,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "烧砖约 公元前 5000 年 成熟，建立在 红铜冶炼、磨料、用火 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 木构建筑 的发展铺平了道路。",
-    "dependsOn": ["mat_copper","mfg_abrasive","bld_adobe"],
+    "dependsOn": ["bld_adobe"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -24272,7 +24272,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "瓦在 公元前 3000 年 前后成形，依托 水泥、研磨、水力利用 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 石构建筑 等后续技术。",
-    "dependsOn": ["mat_cement","mfg_lapp","ene_hydro","bld_mortise"],
+    "dependsOn": ["bld_mortise"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -24302,7 +24302,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "木构建筑约 公元前 5000 年 成熟，建立在 红铜冶炼、磨料、用火 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 榫卯 的发展铺平了道路。",
-    "dependsOn": ["mat_copper","mfg_abrasive","bld_adobe","bld_brick"],
+    "dependsOn": ["bld_brick"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -24332,7 +24332,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "榫卯约 公元前 5000 年 成熟，建立在 红铜冶炼、磨料、用火 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 瓦 的发展铺平了道路。",
-    "dependsOn": ["mat_copper","mfg_abrasive","bld_adobe","bld_timber"],
+    "dependsOn": ["bld_timber"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -24362,7 +24362,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "斗拱约 公元前 500 年 出现，建立在 高炉炼铁、车床、煤炭开采 之上；它把 房屋营建、桥梁隧道 变成可稳定复现的能力，是 建筑建造 中从经验走向方法的关键一步。",
-    "dependsOn": ["mat_blastfurnace","mfg_lathe","ene_coal","bld_arch"],
+    "dependsOn": ["mfg_lathe", "bld_arch"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -24392,7 +24392,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "石构建筑约 公元前 3000 年 成熟，建立在 水泥、研磨、水力利用 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 桩基础 的发展铺平了道路。",
-    "dependsOn": ["mat_cement","mfg_lapp","ene_hydro","bld_tile"],
+    "dependsOn": ["bld_tile"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -24422,7 +24422,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "拱在 公元前 1000 年 前后成形，依托 退火、车床、煤炭开采 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 斗拱 等后续技术。",
-    "dependsOn": ["mat_anneal","mfg_lathe","ene_coal","bld_pile"],
+    "dependsOn": ["bld_pile"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -24482,7 +24482,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "肋拱约 1100 年 成熟，建立在 瓷器、螺纹、风车 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 飞扶壁 的发展铺平了道路。",
-    "dependsOn": ["mat_porcelain","mfg_thread","bld_romanconc"],
+    "dependsOn": ["mfg_thread","bld_romanconc"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -24512,7 +24512,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "飞扶壁约 1100 年 成熟，建立在 瓷器、螺纹、风车 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 哥特结构 的发展铺平了道路。",
-    "dependsOn": ["mat_porcelain","mfg_thread","bld_ribvault"],
+    "dependsOn": ["mfg_thread","bld_ribvault"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -24542,7 +24542,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "哥特结构在 1100 年 前后成形，依托 瓷器、螺纹、风车 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 避雷 等后续技术。",
-    "dependsOn": ["mat_porcelain","mfg_thread","bld_flying"],
+    "dependsOn": ["mfg_thread","bld_flying"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -24602,7 +24602,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "框架结构在 1800 年 前后成形，依托 感应熔炼、热处理炉、余热回收 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 悬索桥 等后续技术。",
-    "dependsOn": ["bld_lightning"],
+    "dependsOn": ["steel","mfg_rolling2"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -24632,7 +24632,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "剪力墙约 1900 年 成熟，建立在 渗硼、切削液、调峰电站 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 空调系统 的发展铺平了道路。",
-    "dependsOn": ["bld_immersed"],
+    "dependsOn": ["mat_reconcrete","bld_framing"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -24662,7 +24662,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "筒体结构在 1960 年 前后成形，依托 放电等离子烧结、电解磨削、可燃冰 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 爬模 等后续技术。",
-    "dependsOn": ["mfg_ecmg","bld_cablestay"],
+    "dependsOn": ["steel_frame", "mat_reconcrete"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -24692,7 +24692,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "斜拉桥在 1955 年 前后成形，依托 聚丙烯、谐波减速器、沸水堆 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 筒体结构 等后续技术。",
-    "dependsOn": ["mat_pp","mfg_harmonic","ene_bwr","bld_curtain"],
+    "dependsOn": ["bld_steelbridge", "steel_frame"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -24842,7 +24842,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "盾构法约 1825 年 出现，建立在 铝冶炼、铣床、热电发电 之上；它把 房屋营建、桥梁隧道 变成可稳定复现的能力，是 建筑建造 中从经验走向方法的关键一步。",
-    "dependsOn": ["mat_alu","mfg_mill","ene_thermoelectric","bld_underground"],
+    "dependsOn": ["bld_underground"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -24872,7 +24872,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "沉管隧道在 1890 年 前后成形，依托 锗、感应加热、无线输电 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 剪力墙 等后续技术。",
-    "dependsOn": ["mat_ge","mfg_induction","ene_wpt","skyscraper"],
+    "dependsOn": ["mat_reconcrete", "tr_dredger"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -24902,7 +24902,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "桩基础在 公元前 2000 年 前后成形，依托 混凝土、量具、水力利用 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 拱 等后续技术。",
-    "dependsOn": ["mat_concrete","mfg_gauge","ene_hydro","bld_stone"],
+    "dependsOn": ["bld_stone"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -25082,7 +25082,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "玻璃幕墙在 1950 年 前后成形，依托 泡沫金属、超声加工、盐差能 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 斜拉桥 等后续技术。",
-    "dependsOn": ["mfg_ultrasonicm","bld_pump"],
+    "dependsOn": ["mat_tempered", "steel_frame"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -25322,7 +25322,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "自动喷淋约 1874 年 出现，建立在 钢化玻璃、注塑、铅酸电池 之上；它把 房屋营建、桥梁隧道 变成可稳定复现的能力，是 建筑建造 中从经验走向方法的关键一步。",
-    "dependsOn": ["mat_tempered","mfg_injection","ene_leadacid","elevator"],
+    "dependsOn": ["bld_fireprotect", "tr_pipeline"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -25352,7 +25352,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "避雷在 1700 年 前后成形，依托 沸石分子筛、压延、太阳能热利用 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 框架结构 等后续技术。",
-    "dependsOn": ["mat_zeolite","mfg_rolling2","ene_solarthermal","bld_gothic"],
+    "dependsOn": ["mat_copper", "mat_iron"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -25412,7 +25412,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "隔震在 1970 年 前后成形，依托 储氢合金、计算机辅助制造、水热型地热 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 建筑信息模型 等后续技术。",
-    "dependsOn": ["mfg_cam","bld_climbform"],
+    "dependsOn": ["mat_rubber", "steel_frame"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -25532,7 +25532,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "3D 打印建筑约 2010 年 成熟，建立在 二维材料、无人化工厂、液态空气储能 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 砌砖机器人 的发展铺平了道路。",
-    "dependsOn": ["mfg_darkfactory","bld_sponge"],
+    "dependsOn": ["bld_sponge"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -25562,7 +25562,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "绿色建筑约 1990 年 成熟，建立在 金属有机框架、在机测量、燃料电池汽车 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 被动房 的发展铺平了道路。",
-    "dependsOn": ["mfg_onmachinem","bld_aluform"],
+    "dependsOn": ["solar", "ene_solarthermal"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -25592,7 +25592,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "被动房约 1990 年 成熟，建立在 金属有机框架、在机测量、燃料电池汽车 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 垂直绿化 的发展铺平了道路。",
-    "dependsOn": ["mfg_onmachinem","bld_green","masonry","architecture","engineering"],
+    "dependsOn": ["bld_green", "masonry", "architecture", "engineering"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -25622,7 +25622,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "零能耗建筑在 2000 年 前后成形，依托 自修复材料、视觉引导装配、井式地热 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 智能建筑 等后续技术。",
-    "dependsOn": ["mfg_visionguide","bld_verticalgreen"],
+    "dependsOn": ["solar", "ene_solarthermal", "bld_geothermal2"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -25652,7 +25652,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "智能建筑约 2000 年 成熟，建立在 自修复材料、视觉引导装配、井式地热 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 海绵城市 的发展铺平了道路。",
-    "dependsOn": ["mfg_visionguide","bld_zeroenergy"],
+    "dependsOn": ["bld_zeroenergy"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -25772,7 +25772,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "海绵城市在 2000 年 前后成形，依托 自修复材料、视觉引导装配、井式地热 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 3D 打印建筑 等后续技术。",
-    "dependsOn": ["mfg_visionguide","bld_smartb"],
+    "dependsOn": ["bld_smartb"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -25802,7 +25802,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "垂直绿化约 1990 年 成熟，建立在 金属有机框架、在机测量、燃料电池汽车 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 零能耗建筑 的发展铺平了道路。",
-    "dependsOn": ["mfg_onmachinem","bld_passive"],
+    "dependsOn": ["bld_passive"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -25832,7 +25832,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "地源热泵建筑在 1980 年 前后成形，依托 激光熔覆、机器人夹爪、碟式斯特林 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 铝模板 等后续技术。",
-    "dependsOn": ["mfg_robotgripper","bld_bim"],
+    "dependsOn": ["bld_bim"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -25892,7 +25892,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "混凝土泵车在 1920 年 前后成形，依托 氧化锆陶瓷、流水线、合成燃料 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 玻璃幕墙 等后续技术。",
-    "dependsOn": ["mat_zirconia","assembly_line","ene_synfuel","bld_towercrane"],
+    "dependsOn": ["mat_reconcrete", "internal_combustion", "tr_crane"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -25922,7 +25922,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "爬模约 1960 年 成熟，建立在 放电等离子烧结、电解磨削、可燃冰 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 隔震 的发展铺平了道路。",
-    "dependsOn": ["mfg_ecmg","bld_tube"],
+    "dependsOn": ["bld_tube"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -25952,7 +25952,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "铝模板在 1980 年 前后成形，依托 激光熔覆、机器人夹爪、碟式斯特林 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 绿色建筑 等后续技术。",
-    "dependsOn": ["mfg_robotgripper","bld_geothermal2"],
+    "dependsOn": ["bld_geothermal2"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -25982,7 +25982,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "砌砖机器人约 2010 年 成熟，建立在 二维材料、无人化工厂、液态空气储能 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 智慧城市 的发展铺平了道路。",
-    "dependsOn": ["mfg_darkfactory","bld_3dpb","masonry","architecture","engineering"],
+    "dependsOn": ["bld_3dpb", "masonry", "architecture", "engineering"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -26050,7 +26050,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "智慧城市在 2010 年 前后成形，依托 二维材料、无人化工厂、液态空气储能 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 可变径盾构 等后续技术。",
-    "dependsOn": ["mfg_darkfactory","bld_robotbrick"],
+    "dependsOn": ["bld_robotbrick"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -26080,7 +26080,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "可变径盾构约 2010 年 成熟，建立在 二维材料、无人化工厂、液态空气储能 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 复材桥梁 的发展铺平了道路。",
-    "dependsOn": ["mfg_darkfactory","bld_smartcity"],
+    "dependsOn": ["bld_smartcity"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -26110,7 +26110,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "复材桥梁约 2010 年 成熟，建立在 二维材料、无人化工厂、液态空气储能 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 自修复混凝土 的发展铺平了道路。",
-    "dependsOn": ["mfg_darkfactory","bld_variabletbm"],
+    "dependsOn": ["bld_variabletbm"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -26141,7 +26141,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "自修复混凝土约 2010 年 成熟，建立在 二维材料、无人化工厂、液态空气储能 之上完成关键突破；其能力延伸到 房屋营建、桥梁隧道，并为 碳纤维混凝土 的发展铺平了道路。",
-    "dependsOn": ["mfg_darkfactory","bld_frpbridge"],
+    "dependsOn": ["bld_frpbridge"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -26171,7 +26171,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "碳纤维混凝土在 2010 年 前后成形，依托 二维材料、无人化工厂、液态空气储能 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 无人机测绘 等后续技术。",
-    "dependsOn": ["mfg_darkfactory","bld_selfhealconc"],
+    "dependsOn": ["bld_selfhealconc"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -26261,7 +26261,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "弩约 公元前 1000 年 出现，建立在 车床、煤炭开采、退火 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_lathe","ene_coal","mat_anneal","tr_lighthouse"],
+    "dependsOn": ["mil_bow", "mat_bronze"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26291,7 +26291,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "投石机约 公元前 400 年 出现，建立在 车床、煤炭开采、高炉炼铁 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_lathe","ene_coal","mat_blastfurnace","tr_lighthouse"],
+    "dependsOn": ["mfg_lathe"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26381,7 +26381,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "剑约 公元前 3000 年 出现，建立在 研磨、水力利用、水泥 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_lapp","ene_hydro","mat_cement","tr_ferry"],
+    "dependsOn": ["mat_bronze", "mat_casting"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26411,7 +26411,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "盾约 公元前 3000 年 出现，建立在 研磨、水力利用、水泥 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_lapp","ene_hydro","mat_cement","tr_ferry"],
+    "dependsOn": ["woodworking", "mat_bronze"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26441,7 +26441,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "盔甲约 公元前 3000 年 出现，建立在 研磨、水力利用、水泥 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_lapp","ene_hydro","mat_cement","tr_ferry"],
+    "dependsOn": ["mat_bronze", "mat_casting"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26471,7 +26471,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "锁子甲约 公元前 500 年 出现，建立在 车床、煤炭开采、高炉炼铁 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_lathe","ene_coal","mat_blastfurnace","tr_lighthouse"],
+    "dependsOn": ["mfg_lathe"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26501,7 +26501,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "板甲约 1300 年 出现，建立在 拉丝、风车、拉拔 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_wiredraw","mat_drawing","tr_horseshoe"],
+    "dependsOn": ["tr_horseshoe"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26531,7 +26531,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "火绳枪约 1500 年 出现，建立在 压延、风车、轧制 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_rolling2","mat_rolling","tr_horseshoe"],
+    "dependsOn": ["tr_horseshoe"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26561,7 +26561,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "燧发枪约 1600 年 出现，建立在 压延、风车、光学玻璃 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_rolling2","mat_opticalglass","tr_ropeway"],
+    "dependsOn": ["mil_matchlock", "gunpowder", "steel"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26591,7 +26591,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "滑膛枪约 1500 年 出现，建立在 压延、风车、轧制 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_rolling2","mat_rolling","tr_horseshoe"],
+    "dependsOn": ["tr_horseshoe"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26621,7 +26621,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "来复枪约 1800 年 出现，建立在 热处理炉、余热回收、感应熔炼 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_pipeline"],
+    "dependsOn": ["mil_musket", "mfg_boring"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26651,7 +26651,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "机枪约 1884 年 出现，建立在 精密轴承、蒸汽轮机、锰钢 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_precisionbearing","ene_steamturbine","mat_manganese","tr_trolley"],
+    "dependsOn": ["mil_rifle", "mfg_mill", "steel"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26681,7 +26681,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "冲锋枪约 1918 年 出现，建立在 流水线、调峰电站、单晶硅 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["assembly_line","mat_siliconw","tr_aircraftcarrier"],
+    "dependsOn": ["mil_machinegun", "steel"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26711,7 +26711,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "狙击步枪约 1800 年 出现，建立在 热处理炉、余热回收、感应熔炼 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_pipeline"],
+    "dependsOn": ["mil_rifle", "optics"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26741,7 +26741,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "手枪约 1500 年 出现，建立在 压延、风车、轧制 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_rolling2","mat_rolling","tr_horseshoe"],
+    "dependsOn": ["tr_horseshoe"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26771,7 +26771,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "左轮手枪约 1836 年 出现，建立在 铣床、发电机与电动机、铝冶炼 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_mill","generator","mat_alu","tr_screwprop"],
+    "dependsOn": ["generator"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26802,7 +26802,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "黑火药约 800 年 出现，建立在 螺纹、水车、瓷器 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_thread","waterwheel","mat_porcelain","tr_horseshoe"],
+    "dependsOn": ["mfg_thread"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26832,7 +26832,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "无烟火药约 1884 年 出现，建立在 精密轴承、蒸汽轮机、锰钢 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_precisionbearing","ene_steamturbine","mat_manganese","tr_trolley"],
+    "dependsOn": ["mil_blackpowder", "chemistry"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26862,7 +26862,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "炸药约 1867 年 出现，建立在 砂轮、铅酸电池、铌 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["ene_leadacid","mat_niobium","tr_metro"],
+    "dependsOn": ["mil_ng","chemistry"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26892,7 +26892,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "硝化甘油约 1847 年 出现，建立在 砂轮、燃料电池、连续铸造 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["ene_fuelcell","mat_continuouscast"],
+    "dependsOn": ["chemistry"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26922,7 +26922,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "TNT约 1863 年 出现，建立在 砂轮、铅酸电池、伍德合金 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["ene_leadacid","mat_woodmetal","tr_metro"],
+    "dependsOn": ["chemistry", "organic_chem"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26952,7 +26952,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "雷管约 1863 年 出现，建立在 砂轮、铅酸电池、伍德合金 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["ene_leadacid","mat_woodmetal","tr_metro"],
+    "dependsOn": ["mil_ng", "chemistry"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26982,7 +26982,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "地雷约 1200 年 出现，建立在 拉丝、风车、拉拔 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_wiredraw","mat_drawing","tr_horseshoe"],
+    "dependsOn": ["tr_horseshoe"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27012,7 +27012,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "水雷约 1800 年 出现，建立在 热处理炉、余热回收、感应熔炼 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_pipeline"],
+    "dependsOn": ["mil_landmine", "gunpowder"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27042,7 +27042,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "手榴弹约 1400 年 出现，建立在 拉丝、风车、拉拔 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_wiredraw","mat_drawing","tr_horseshoe"],
+    "dependsOn": ["mfg_wiredraw","tr_horseshoe"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27072,7 +27072,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "火箭弹约 1200 年 出现，建立在 拉丝、风车、拉拔 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_wiredraw","mat_drawing","tr_horseshoe"],
+    "dependsOn": ["tr_horseshoe"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27103,7 +27103,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "弹道导弹约 1942 年 出现，建立在 看板管理、核裂变反应堆、电渣重熔 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_kanban","ene_nuclear","mat_esr","tr_transponder"],
+    "dependsOn": ["rocket", "mil_guidance"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27133,7 +27133,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "巡航导弹约 1950 年 出现，建立在 超声加工、盐差能、泡沫金属 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_ultrasonicm","tr_rov"],
+    "dependsOn": ["mil_ballistic", "ene_jet"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27163,7 +27163,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "防空导弹约 1950 年 出现，建立在 超声加工、盐差能、泡沫金属 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_ultrasonicm","tr_rov"],
+    "dependsOn": ["mil_ballistic", "tr_radar2"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27193,7 +27193,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "反坦克导弹约 1960 年 出现，建立在 电解磨削、可燃冰、放电等离子烧结 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_ecmg","tr_lunarlander"],
+    "dependsOn": ["mil_guidance", "mil_sam"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27223,7 +27223,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "制导技术约 1940 年 出现，建立在 看板管理、燃气轮机、电渣重熔 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_kanban","ene_gasturbine","mat_esr","tr_transponder"],
+    "dependsOn": ["radio", "tr_radar2"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27253,7 +27253,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "惯性制导约 1950 年 出现，建立在 超声加工、盐差能、泡沫金属 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_ultrasonicm","tr_rov"],
+    "dependsOn": ["mil_guidance", "control_theory"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27283,7 +27283,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "激光制导约 1960 年 出现，建立在 电解磨削、可燃冰、放电等离子烧结 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_ecmg","tr_lunarlander"],
+    "dependsOn": ["mil_guidance", "tr_radar2"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27313,7 +27313,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "红外制导约 1950 年 出现，建立在 超声加工、盐差能、泡沫金属 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_ultrasonicm","tr_rov"],
+    "dependsOn": ["mil_guidance", "mil_nightvision"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27343,7 +27343,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "相控阵雷达约 1960 年 出现，建立在 电解磨削、可燃冰、放电等离子烧结 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_ecmg","tr_lunarlander"],
+    "dependsOn": ["tr_radar2", "semiconductors"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27373,7 +27373,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "声纳约 1917 年 出现，建立在 流水线、调峰电站、不锈钢 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["assembly_line","mat_stainless","tr_aircraftcarrier"],
+    "dependsOn": ["acoustics", "electronics"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27403,7 +27403,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "夜视仪约 1930 年 出现，建立在 喷丸、火箭发动机、玻璃钢 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_shotblast","ene_rocketengine","mat_frp","tr_rocket"],
+    "dependsOn": ["tr_rocket"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27433,7 +27433,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "热成像约 1950 年 出现，建立在 超声加工、盐差能、泡沫金属 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_ultrasonicm","tr_rov"],
+    "dependsOn": ["mil_nightvision", "semiconductors"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27463,7 +27463,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "侦察技术约 1800 年 出现，建立在 热处理炉、余热回收、感应熔炼 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_pipeline"],
+    "dependsOn": ["tr_balloon", "cartography"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27493,7 +27493,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "巡飞弹约 1980 年 出现，建立在 机器人夹爪、碟式斯特林、激光熔覆 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_robotgripper","tr_abs"],
+    "dependsOn": ["mil_cruise", "mil_guidance"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27523,7 +27523,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "电子战约 1900 年 出现，建立在 切削液、调峰电站、渗硼 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_monorail"],
+    "dependsOn": ["radio", "telegraph"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27553,7 +27553,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "干扰约 1900 年 出现，建立在 切削液、调峰电站、渗硼 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_monorail"],
+    "dependsOn": ["radio", "telegraph"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27583,7 +27583,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "隐身技术约 1970 年 出现，建立在 计算机辅助制造、水热型地热、储氢合金 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_cam","tr_supersonic"],
+    "dependsOn": ["tr_radar2", "composites"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27613,7 +27613,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "低可探测约 1970 年 出现，建立在 计算机辅助制造、水热型地热、储氢合金 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_cam","tr_supersonic"],
+    "dependsOn": ["composites", "tr_radar2"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27644,7 +27644,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "装甲运兵车约 1918 年 出现，建立在 流水线、调峰电站、单晶硅 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["assembly_line","mat_siliconw","tr_aircraftcarrier"],
+    "dependsOn": ["mil_armor", "internal_combustion", "automobile"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27674,7 +27674,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "自行火炮约 1930 年 出现，建立在 喷丸、火箭发动机、玻璃钢 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_shotblast","ene_rocketengine","mat_frp","tr_rocket"],
+    "dependsOn": ["tr_rocket"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27704,7 +27704,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "火箭炮约 1930 年 出现，建立在 喷丸、火箭发动机、玻璃钢 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_shotblast","ene_rocketengine","mat_frp","tr_rocket"],
+    "dependsOn": ["tr_rocket"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27734,7 +27734,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "榴弹炮约 1700 年 出现，建立在 压延、太阳能热利用、沸石分子筛 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_rolling2","ene_solarthermal","mat_zeolite","tr_tunnel2"],
+    "dependsOn": ["cannon", "gunpowder"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27764,7 +27764,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "加农炮约 1200 年 出现，建立在 拉丝、风车、拉拔 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_wiredraw","mat_drawing","tr_horseshoe"],
+    "dependsOn": ["tr_horseshoe"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27794,7 +27794,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "高射炮约 1900 年 出现，建立在 切削液、调峰电站、渗硼 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_monorail"],
+    "dependsOn": ["cannon", "steel"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27824,7 +27824,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "鱼雷约 1866 年 出现，建立在 砂轮、铅酸电池、铌 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["ene_leadacid","mat_niobium","tr_metro"],
+    "dependsOn": ["tr_screwprop", "mil_ng", "mil_detonator"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27854,7 +27854,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "深水炸弹约 1910 年 出现，建立在 真空吸尘器、调峰电站、铁氧体 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["vacuum_cleaner","mat_ferrite","tr_simulator","algorithm","electronics"],
+    "dependsOn": ["algorithm", "electronics"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27884,7 +27884,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "核潜艇约 1954 年 出现，建立在 自动导引车、光伏电池、聚丙烯 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_agv","ene_pv","mat_pp","tr_jetliner"],
+    "dependsOn": ["tr_submarine", "ene_nuclear"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27914,7 +27914,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "护卫舰约 1700 年 出现，建立在 压延、太阳能热利用、沸石分子筛 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_rolling2","ene_solarthermal","mat_zeolite","tr_tunnel2"],
+    "dependsOn": ["sail", "cannon"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27944,7 +27944,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "战略导弹潜艇约 1959 年 出现，建立在 电子束焊、超级电容、碳纤维 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_ebw","ene_supercap","tr_icebreaker"],
+    "dependsOn": ["tr_icebreaker"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27974,7 +27974,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "战略轰炸机约 1940 年 出现，建立在 看板管理、燃气轮机、电渣重熔 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_kanban","ene_gasturbine","mat_esr","tr_transponder"],
+    "dependsOn": ["airplane", "aircraft_engine"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28004,7 +28004,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "战斗机约 1915 年 出现，建立在 流水线、调峰电站、不锈钢 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["assembly_line","mat_stainless"],
+    "dependsOn": ["airplane","internal_combustion","mil_machinegun"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28034,7 +28034,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "预警机约 1970 年 出现，建立在 计算机辅助制造、水热型地热、储氢合金 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_cam","tr_supersonic"],
+    "dependsOn": ["airplane", "tr_radar2", "radio"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28064,7 +28064,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "空中加油机约 1920 年 出现，建立在 流水线、合成燃料、氧化锆陶瓷 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["assembly_line","ene_synfuel","mat_zirconia","tr_servicearea"],
+    "dependsOn": ["airplane", "aircraft_engine"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28094,7 +28094,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "军用运输机约 1920 年 出现，建立在 流水线、合成燃料、氧化锆陶瓷 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["assembly_line","ene_synfuel","mat_zirconia","tr_servicearea"],
+    "dependsOn": ["airplane", "aircraft_engine"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28124,7 +28124,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "空降兵约 1940 年 出现，建立在 看板管理、燃气轮机、电渣重熔 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_kanban","ene_gasturbine","mat_esr","tr_transponder"],
+    "dependsOn": ["airplane", "mil_transportac"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28154,7 +28154,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "防弹衣约 1500 年 出现，建立在 压延、风车、轧制 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_rolling2","mat_rolling","tr_horseshoe"],
+    "dependsOn": ["tr_horseshoe"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28184,7 +28184,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "凯夫拉护具约 1970 年 出现，建立在 计算机辅助制造、水热型地热、储氢合金 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_cam","tr_supersonic"],
+    "dependsOn": ["mat_aramid", "mil_bodyarmor"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28214,7 +28214,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "钢盔约 1914 年 出现，建立在 流水线、调峰电站、不锈钢 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["assembly_line","mat_stainless"],
+    "dependsOn": ["steel","mfg_stamping"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28244,7 +28244,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "三防装备约 1940 年 出现，建立在 看板管理、燃气轮机、电渣重熔 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_kanban","ene_gasturbine","mat_esr","tr_transponder"],
+    "dependsOn": ["chemistry", "mil_bodyarmor"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28274,7 +28274,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "指挥控制系统约 1980 年 出现，建立在 机器人夹爪、碟式斯特林、激光熔覆 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_robotgripper","tr_abs"],
+    "dependsOn": ["computer", "radio", "sensor"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28304,7 +28304,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "卫星侦察约 1960 年 出现，建立在 电解磨削、可燃冰、放电等离子烧结 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_ecmg","tr_lunarlander"],
+    "dependsOn": ["satellite", "tr_radar2"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28334,7 +28334,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "原子弹约 1945 年 出现，建立在 电火花加工、核裂变反应堆、球墨铸铁 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_edm","ene_nuclear","mat_ductile","tr_transponder"],
+    "dependsOn": ["ene_nuclear"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28364,7 +28364,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "氢弹约 1952 年 出现，建立在 数控加工、核聚变、浮法玻璃 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["cnc","nuclear_fusion","mat_floatglass","tr_jetliner"],
+    "dependsOn": ["mil_aweapon", "ene_nuclear"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28394,7 +28394,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "中子弹约 1960 年 出现，建立在 电解磨削、可燃冰、放电等离子烧结 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_ecmg","tr_lunarlander"],
+    "dependsOn": ["mil_hweapon", "ene_nuclear"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28424,7 +28424,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "核三位一体约 1960 年 出现，建立在 电解磨削、可燃冰、放电等离子烧结 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_ecmg","tr_lunarlander"],
+    "dependsOn": ["mil_ballistic", "tr_submarine"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28454,7 +28454,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "导弹防御约 1980 年 出现，建立在 机器人夹爪、碟式斯特林、激光熔覆 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_robotgripper","tr_abs"],
+    "dependsOn": ["mil_sam", "mil_guidance"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28484,7 +28484,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "网络战约 1990 年 出现，建立在 在机测量、燃料电池汽车、金属有机框架 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_onmachinem","tr_electricboat"],
+    "dependsOn": ["internet", "computer"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28514,7 +28514,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "心理战约 1900 年 出现，建立在 切削液、调峰电站、渗硼 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_monorail"],
+    "dependsOn": ["printing", "radio"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28544,7 +28544,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "军事后勤约 1800 年 出现，建立在 热处理炉、余热回收、感应熔炼 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_pipeline"],
+    "dependsOn": ["cart", "tr_canal"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28574,7 +28574,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "战地医疗约 1800 年 出现，建立在 热处理炉、余热回收、感应熔炼 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_pipeline"],
+    "dependsOn": ["bio_surgery", "bio_herb"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28604,7 +28604,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "工程兵约 公元前 2000 年 出现，建立在 量具、水力利用、混凝土 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_gauge","ene_hydro","mat_concrete","tr_navigation"],
+    "dependsOn": ["masonry", "mat_concrete"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28634,7 +28634,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "扫雷约 1900 年 出现，建立在 切削液、调峰电站、渗硼 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_monorail"],
+    "dependsOn": ["mil_landmine", "mil_seamine"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28664,7 +28664,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "舟桥约 1800 年 出现，建立在 热处理炉、余热回收、感应熔炼 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_pipeline"],
+    "dependsOn": ["bld_steelbridge", "tr_paddlesteamer"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28694,7 +28694,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "伪装迷彩约 1800 年 出现，建立在 热处理炉、余热回收、感应熔炼 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_pipeline"],
+    "dependsOn": ["optics", "weaving"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28724,7 +28724,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "假目标约 1900 年 出现，建立在 切削液、调峰电站、渗硼 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_monorail"],
+    "dependsOn": ["mil_camo", "mil_recon"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28754,7 +28754,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "忠诚僚机约 2020 年 出现，建立在 工业 4.0、摩擦纳米发电、二维材料 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_reusablerocket"],
+    "dependsOn": ["drone","mil_stealth2"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28784,7 +28784,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "无人机蜂群约 2010 年 出现，建立在 无人化工厂、液态空气储能、二维材料 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_darkfactory","tr_passdrone"],
+    "dependsOn": ["drone", "mil_guidance"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28814,7 +28814,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "军事人工智能约 2010 年 出现，建立在 无人化工厂、液态空气储能、二维材料 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_darkfactory","tr_passdrone"],
+    "dependsOn": ["computer", "mil_c4isr"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28844,7 +28844,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "定向能武器约 1980 年 出现，建立在 机器人夹爪、碟式斯特林、激光熔覆 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_robotgripper","tr_abs","laser","battery","optics"],
+    "dependsOn": ["laser", "battery", "optics"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28874,7 +28874,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "激光武器约 1980 年 出现，建立在 机器人夹爪、碟式斯特林、激光熔覆 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_robotgripper","tr_abs"],
+    "dependsOn": ["mil_laserguid", "mil_directedenergy"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28904,7 +28904,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "高功率微波武器约 1990 年 出现，建立在 在机测量、燃料电池汽车、金属有机框架 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_onmachinem","tr_electricboat"],
+    "dependsOn": ["electromagnetism", "mil_directedenergy"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28934,7 +28934,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "电磁轨道炮约 2000 年 出现，建立在 视觉引导装配、井式地热、自修复材料 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_visionguide"],
+    "dependsOn": ["electromagnetism", "ene_supercap"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28964,7 +28964,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "高超声速导弹约 2010 年 出现，建立在 无人化工厂、液态空气储能、二维材料 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_darkfactory","tr_passdrone"],
+    "dependsOn": ["mil_ballistic", "hypersonic"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28994,7 +28994,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "高超滑翔体约 2010 年 出现，建立在 无人化工厂、液态空气储能、二维材料 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_darkfactory","tr_passdrone"],
+    "dependsOn": ["hypersonic", "mil_ballistic"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -29024,7 +29024,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "智能弹药约 2010 年 出现，建立在 无人化工厂、液态空气储能、二维材料 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_darkfactory","tr_passdrone","rocket","algorithm","electronics"],
+    "dependsOn": ["rocket", "algorithm", "electronics"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -29367,7 +29367,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "变电站约 1883 年 出现，建立在 变压器 之上；它把 能量形式 变成可稳定复现的能力，是 能量形式 中从经验走向方法的关键一步。",
-    "dependsOn": ["power_grid","ene_transmission","mat_manganese"],
+    "dependsOn": ["power_grid","ene_transmission"],
     "enables": [],
     "applications": [],
     "views": [
@@ -29471,7 +29471,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "变速箱约 1890 年 出现，建立在 内燃机、底盘 之上；它把 交通运载 变成可稳定复现的能力，是 交通运载 中从经验走向方法的关键一步。",
-    "dependsOn": ["internal_combustion","chassis"],
+    "dependsOn": ["internal_combustion"],
     "enables": [],
     "applications": [],
     "views": [
@@ -30019,7 +30019,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "重组DNA技术约 1973 年 出现，建立在 既有技术积累 之上；它把 生命与医疗 变成可稳定复现的能力，是 生命与医疗 中从经验走向方法的关键一步。",
-    "dependsOn": ["bio_ecmo","bio_ct","inf_pl_c"],
+    "dependsOn": ["bio_ct","inf_pl_c"],
     "enables": [],
     "applications": [],
     "views": [
@@ -30357,7 +30357,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "熔融沉积成型在 1988 年 前后成形，依托 既有技术积累 把 制造与工具 落到实处，并成为 制造与工具 中承上启下的一环，直接支撑了 3D 打印 等后续技术。",
-    "dependsOn": ["mfg_3dp","mfg_additive","mat_ybco"],
+    "dependsOn": ["mfg_3dp","mfg_additive"],
     "enables": [],
     "applications": [],
     "views": [
@@ -30650,7 +30650,6 @@ const EXTRA_TECHS = [
     "place": "全球",
     "summary": "以钻杆高速摩擦木料生热的取火装置，使人类第一次摆脱对天然火源的依赖、按需主动生火，是能源自主的开端。",
     "dependsOn": [
-      "hearth_stove"
     ],
     "enables": [
       "fire_making"
