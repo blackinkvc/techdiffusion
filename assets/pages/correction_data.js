@@ -27,7 +27,11 @@ window.CORRECTIONS = {
       "悬空边已修复（见 CR-2026-0909-orphan）；建议复核这些被引用却缺失的节点（math_hypothesis_testing、laptop_computer、compute_fpga_soc、si_system 等）是否应补建，或确属废弃引用。",
       "新发现（v0.9.16 审计）：ml_uav_1..126 等 126 个模板化「军用无人机衍生」节点仍同构依赖 rocket/algorithm/electronics（同为链接预测整批生成的 cohort，与二阶枢纽污染同源但主体在主管线主库与新条目语料中）——待下一轮批量甄别是「拆成真实子技术」还是删除，勿与 590 条二阶污染混淆。",
       "【本轮 · 95 项灰色概念甄别表】已随 v0.9.17 落入下方 meta.enablesAudit（逐条可勾选）：待实体化 11（calendar_agri / comsat / copilot / earth_obs / film / food_preserve / ic_tooling / icbm / pottery_wheel / precision_breeding / time_standard，其中 icbm 被 rocket 与 missile 双处引用）需补建真实节点或降级；去重 21 已指向既有实体节点（删除断链引用即可，含改名后接上真实节点的 mars_colony）；降为广义影响 63 已移除断链引用。请逐条核对处置建议，未勾选者视为待议。",
-      "新发现（v0.9.17）：自动生成 stub 存在捏造依赖链——mil_depthcharge（深水炸弹）dependsOn 竟含 vacuum_cleaner（真空吸尘器）/ mat_ferrite / tr_simulator，summary 亦写「建立在 真空吸尘器、调峰电站、铁氧体 之上」；同型可疑条目（techs_more.js 约 209 条同构 dependsOn=[rocket,algorithm,electronics] 等）待专项甄别，本轮未动。"
+      "新发现（v0.9.17）：自动生成 stub 存在捏造依赖链——mil_depthcharge（深水炸弹）dependsOn 竟含 vacuum_cleaner（真空吸尘器）/ mat_ferrite / tr_simulator，summary 亦写「建立在 真空吸尘器、调峰电站、铁氧体 之上」；同型可疑条目（techs_more.js 约 209 条同构 dependsOn=[rocket,algorithm,electronics] 等）待专项甄别，本轮未动。",
+      "【v0.9.19 · 理论/技术分层】basic 分类 144 个真节点中 24 个明显非理论（显微镜 / 望远镜 / 原子钟为仪器；语言 / 人工取火 / 计数 / 数字符号系统 / 位值制计数法为技能·符号；天然磁石为材料；制图学 / 测量学 / 科学方法 / 同行评审制度 / 可重复实验为方法·制度；数据科学 / 气候科学 / 气候工程 / 气候工程部署 / 时空工程 / 虫洞 / 奇异物质 / AI 科学家 / AI 数学家 / 数字孪生地球为领域·未来项）需重挂分类；其余 120 个待复核 theory / method / tech 归属。",
+      "【v0.9.19 · 占位清理】bx_math_* / bx_phys_* / bx_chem_* 共 160 个填充节点（year 全为 1950、下游 0、各挂 4 个模板前置，占 basic 的 53%）属凑数量产物，建议整批清理；清理前须确认无真实节点引用它们。",
+      "【v0.9.19 · 结构改造（较大）】依赖网需引入 rel=\"retro\" 事后解释边类型：允许理论年 > 技术年（当前 yearInv=0 门禁会判为非法），并让 yearInv 检查按 rel 放行。这是让「技术先用、理论后到」成为一等公民的前提；在此之前只能靠 theory_data.js 覆盖层标注。",
+      "【v0.9.19 · 待逐条复核】theory_data.js 的 55 个节点层 + 20 条事后解释为首版，年份按学界通行说法填写，待逐条核对（重点：vaccination 的免疫学成熟年 1890、airplane 的边界层 1904、compass 的电磁学 1865 三条口径）。"
     ],
     enablesAudit: {
       title: "enables 语义错误 · 95 项灰色概念甄别表",
@@ -137,6 +141,32 @@ window.CORRECTIONS = {
     },
   },
   entries: [
+    {
+      id: "CR-2026-0912-theory-layer",
+      date: "2026-09-12",
+      node: "(全库 / basic 分类 304) microscope · telescope · atomic_clock · language · fire_making · magnet · counting · scientific_method · peer_review 等 24 个非理论节点；bx_math_* / bx_phys_* / bx_chem_* 160 个填充占位；依赖网 yearInv=0 口径",
+      nodeName: "「理论 vs 技术」分层审计：basic 分类混装 + 160 个填充占位 + 依赖网无法表达「理论后至」",
+      category: "meta",
+      severity: "中",
+      status: "进行中",
+      problem: "用户指出：有些技术在刚使用时没有科学解释——可能完全没有，也可能长期使用朴素哲理或神话解释，后来才有科学解释，且解释本身还会被修正；要求把「理论型」内容抽离出来并合理标注。审计发现四类问题：① **依赖网在结构上无法表达「技术先用、理论后到」**——dependsOn 的语义被硬编码为「前置」，且自 v0.9.16 起 yearInv=0 强制「前置年 ≤ 技术年」，故理论晚于技术时无从建边。实测：steam_engine（1769）的 dependsOn 为 煤炭/铁器/钢铁/纽科门机/瓦特机/锅炉，**不含热力学（1824）**；metallurgy（−5000）为 采矿/用火，**不含化学（1661）**；mat_glass（−2500）、fermentation（−7000）、vaccination（1796，不含更晚的免疫学）同样。② **basic 分类是混装桶**——304 个里真节点仅 144，其中 24 个明显不属理论/基础：显微镜、望远镜、原子钟为仪器；语言、人工取火、计数、数字符号系统、位值制计数法为技能/符号系统；天然磁石为材料；制图学、测量学、科学方法、同行评审制度、可重复实验为方法·制度；数据科学、气候科学、气候工程、气候工程部署、时空工程、虫洞、奇异物质、AI 科学家、AI 数学家、数字孪生地球为领域或未来项。③ **另有 160 个 bx_math_* / bx_phys_* / bx_chem_* 填充占位节点**（全部 year=1950、下游 0、各挂 4 个前置），占 basic 的 53%。④ 关联缺口：全库 2289 条 summary 命中「偶然/意外/巧合」= **0 条**，无一条标注「长期靠朴素解释」；分支淘汰仅 4 条 summary 且均为赢家视角。规模佐证：「basic→非basic」依赖边 **1982 条全部由 30 个 basic 节点承担**（占全库 7340 边的 27%），Top10 占 1909 条：数学 435 / 化学 421 / 经典力学 220 / 算法理论 215 / 工程学 169 / 分子生物学 94 / 材料科学 92 / 遗传学 89 / 免疫学 88 / 统计学 86。",
+      rootCause: "① dependsOn 一个字段同时承载「因果前置」与「学理支撑」两种语义，而 v0.9.16 的 yearInv 门禁以「前置年 ≤ 技术年」为硬约束，把「理论后来才解释技术」这一真实历史形态判成非法，只能靠不落边来回避；② 生成批次把「基础/通用」当兜底分类，凡归不进其他类的都塞进 basic，仪器、方法、制度、未来项因此混入理论层；③ 填充批次为凑节点数量生成 bx_* 占位（year 统一 1950、无下游、前置为模板），只进图、不参与任何推理；④ 全库文案与标注体系从建立之初就没有「解释史」维度（何时开始用 / 何时被解释 / 中间靠什么解释），故偶然性、朴素解释、淘汰侧全部缺席。",
+      fix: "v0.9.19 以「**只加标注、不动现有边**」的方式先补上解释史维度：新增覆盖层 assets/pages/theory_data.js（window.THEORY，**只读**，不改动任何 dependsOn / enables / 节点字段），含 ① nodes 55 项节点层（theory 37 / method 7 / tech 11）；② retro 20 条事后解释（冶金、陶器、发酵、水泥、玻璃、火药、指南针、机械钟、眼镜、望远镜、蒸汽机、疫苗、飞机、弓箭、水车、风车、拱、外科、轮、纺织），每条记 useYear / explain.at / explain.by / folk（含起止年与「被谁取代」）/ note，「无科学解释期」由页面**实时计算** explain.at − useYear（冶金 ≈6660 年、发酵 ≈8860、火药 ≈810、蒸汽机 ≈112、疫苗 ≈94、望远镜 ≈58）；core.js 新增 buildTheoryBlock 挂入 buildDetailHTML（弹窗与整页详情共用单数据源）；style.css 新增 .th-*。**未处置**：basic 分类重挂、160 个 bx_* 占位清理、依赖网引入 retro 边类型——三项均登记 pendingQueue 待办，本轮未动，故本条 status 记为「进行中」。",
+      badUpstream: ["（结构盲区）dependsOn 硬编码为前置 + yearInv=0 → 理论晚于技术时无法建边", "steam_engine（1769）缺 热力学（1824）；metallurgy（−5000）缺 化学（1661）；mat_glass（−2500）、fermentation（−7000）、vaccination（1796）同样", "（分类归属）basic 混装 24 个非理论节点：显微镜 / 望远镜 / 原子钟（仪器），语言 / 人工取火 / 计数 / 数字符号系统 / 位值制计数法（技能·符号），天然磁石（材料），制图学 / 测量学 / 科学方法 / 同行评审制度 / 可重复实验（方法·制度），数据科学 / 气候科学 / 气候工程 / 气候工程部署 / 时空工程 / 虫洞 / 奇异物质 / AI 科学家 / AI 数学家 / 数字孪生地球（领域·未来项）", "（占位污染）bx_math_* / bx_phys_* / bx_chem_* 共 160 个填充节点，year 全为 1950、下游 0、各挂 4 个模板前置", "（缺口）全库 summary 无「偶然 / 意外 / 巧合」；无「朴素解释」标注；淘汰侧不建模"],
+      goodUpstream: ["新增覆盖层 theory_data.js：55 个节点层 + 20 条事后解释，不改任何现有边", "「无科学解释期」由页面实时计算，不写死", "朴素解释带起止年与取代关系：四元素说 / 燃素说（1667–1777 → 氧化说）/ 自然发生说（→ 微生物致病说）/ 瘴气说·体液说（→ 微生物致病说）/ 风水·天人感应（→ 地磁说 → 电磁学）/ 视觉射线说", "全库 74/2289 节点显示「理论与解释」区块；节点数与依赖边数不变"],
+      changes: [
+        "新增 assets/pages/theory_data.js——**覆盖层**，只读标注，不改动任何 dependsOn / enables / 节点字段；以 id 为键追加 nodes（节点层）与 retro（事后解释）两层。",
+        "节点层 55 项：theory 理论与解释 37 / method 方法·制度·工具 7 / tech 明确属技术却误挂「基础」11；覆盖承担 1982 条「基础→技术」依赖边的 30 个枢纽中的全部。",
+        "事后解释 20 条，含 useYear（实际开始使用）/ explain.at（首次科学解释）/ explain.by / folk（期间朴素解释）/ note；语料年份与实际起点不一致处已注明（如 steam_engine 语料记 1769，实际起点为纽科门机 1712）。",
+        "「无科学解释期」由页面实时算 explain.at − useYear：冶金 ≈6660 年、发酵 ≈8860 年、火药 ≈810 年、蒸汽机 ≈112 年、疫苗 ≈94 年、望远镜 ≈58 年。",
+        "core.js 新增 buildTheoryBlock(t)，挂入 buildDetailHTML（弹窗与整页详情共用单数据源），位于「关系解说」之后；两层皆无标注的节点返回空串。",
+        "style.css 新增 .th-* 样式（层徽章三色 / 三格指标 / 斜纹空白条 / 朴素解释 chips）。",
+        "16 个页面挂载 assets/pages/theory_data.js；core.js 与 style.css 版本串统一为 20260912t（原先 4 种版本串混用）。",
+        "复核：/tmp/run_theory.js 干跑——覆盖层 id 全部命中真实节点、explain.by 全部存在、无残留模板占位串；全库 74/2289 节点渲染该区块；node --check 全绿；check_docs 门禁 OK；模型页与纠错页干跑未受影响。",
+        "待办登记（本轮未动）：① basic 144 真节点的人工重挂（含上述 24 个明显非理论者）；② 160 个 bx_* 填充占位的清理；③ 依赖网引入 rel=\"retro\" 边类型（允许理论年 > 技术年）并让 yearInv 检查放行该类型，使「事后解释」成为一等公民；④ 55 + 20 条标注首版待逐条复核。"
+      ],
+      files: ["assets/pages/theory_data.js", "assets/core.js", "assets/style.css", "assets/pages/correction_data.js", "assets/pages/changelog_data.js", "版本迭代日志.md"]
+    },
     {
       id: "CR-2026-0912-enables-semantics",
       date: "2026-09-12",

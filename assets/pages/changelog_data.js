@@ -465,9 +465,11 @@ window.CHANGELOG = {
         "core.js 新增 buildTheoryBlock(t)，挂入 buildDetailHTML（弹窗与整页详情共用单数据源），位置在「关系解说」之后、「不同时期人们的期待与看法」之前；两层皆无标注的节点返回空串。",
         "style.css 新增 .th-* 样式（层徽章三色 / 三格指标 / 斜纹空白条 / 朴素解释 chips），沿用档案卷宗视觉体系。",
         "16 个页面挂载 assets/pages/theory_data.js；core.js 与 style.css 版本串统一为 20260912t。",
-        "范围声明：全库 2289 节点中 74 个会显示该区块；节点数、依赖边数与任何现有关系均未变动。"
+        "范围声明：全库 2289 节点中 74 个会显示该区块；节点数、依赖边数与任何现有关系均未变动。",
+        "纠错页同步登记 CR-2026-0912-theory-layer（severity 中 / status 进行中）：把本次审计出的三类问题留档——① 依赖网结构上无法表达「技术先用、理论后到」（dependsOn 硬编码前置 + yearInv=0）；② basic 分类混装 24 个非理论节点（仪器 / 技能·符号 / 材料 / 方法·制度 / 领域·未来项）；③ 160 个 bx_* 填充占位（year 全为 1950、下游 0、占 basic 的 53%）；并附带记录全库 summary 无「偶然 / 意外 / 巧合」、无朴素解释标注、淘汰侧不建模三项缺口。",
+        "pendingQueue 新增 4 条待办：basic 144 真节点人工重挂（含 24 个明显非理论者）、160 个 bx_* 占位清理、依赖网引入 rel=\"retro\" 事后解释边类型（允许理论年 > 技术年并让 yearInv 按 rel 放行）、55+20 条标注逐条复核（重点 vaccination 1890 / airplane 1904 / compass 1865 三条口径）。"
       ],
-      files: ["assets/pages/theory_data.js", "assets/core.js", "assets/style.css", "detail.html", "tree.html", "browse.html", "lineage.html", "analysis.html", "model.html", "tree_full.html", "changelog.html", "correction.html", "method.html", "midtech.html", "progress.html", "research.html", "sop.html", "timeline.html", "worldview.html", "index.html"]
+      files: ["assets/pages/theory_data.js", "assets/core.js", "assets/style.css", "assets/pages/correction_data.js", "detail.html", "tree.html", "browse.html", "lineage.html", "analysis.html", "model.html", "tree_full.html", "changelog.html", "correction.html", "method.html", "midtech.html", "progress.html", "research.html", "sop.html", "timeline.html", "worldview.html", "index.html"]
     }
 
   ]
