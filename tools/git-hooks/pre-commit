@@ -1,0 +1,35 @@
+#!/bin/sh
+# 一致性自检门禁（三道，均为 ERROR 级，任一不过即阻断提交）
+#   1) 文档/数据一致性（tools/check_docs.js）：正文写死的语料总数须与真实数据一致
+#   2) 派生文案不动点（tools/regen_text.js --check）：节点文案须与当前依赖网络一致
+#      —— 文案是「生成时刻」dependsOn 与反图的快照，网络改动后必须同步重算
+#   3) 结构指标不劣化（tools/audit_net.js --check）：对照 audit/baseline.json，
+#      环/自环/重复边/断链/年份倒挂须为 0，A/E/F 族与重名、孤立数不得上升
+# 作用：让「文档没及时更新」「文案与网络脱节」「结构劣化」在提交时即被发现，
+#       而不是靠人工复查。确需跳过时： git commit --no-verify
+ROOT="$(git rev-parse --show-toplevel)"
+
+node "$ROOT/tools/check_docs.js" || {
+  echo ""
+  echo "✗ 文档一致性自检未通过：请修正上述 ERROR 后再提交。"
+  echo "  若确认无误需跳过本门禁，可执行： git commit --no-verify"
+  exit 1
+}
+
+node "$ROOT/tools/regen_text.js" --check >/dev/null 2>&1 || {
+  echo ""
+  echo "✗ 派生文案自检未通过：存在与当前依赖网络不一致的节点文案。"
+  echo "  执行 node tools/regen_text.js --apply 重算后重新提交。"
+  echo "  若确认无误需跳过本门禁，可执行： git commit --no-verify"
+  exit 1
+}
+
+node "$ROOT/tools/audit_net.js" --check >/dev/null 2>&1 || {
+  echo ""
+  echo "✗ 结构指标自检未通过：结构相对 audit/baseline.json 出现劣化。"
+  echo "  执行 node tools/audit_net.js 查看明细。"
+  echo "  若确认无误需跳过本门禁，可执行： git commit --no-verify"
+  exit 1
+}
+
+exit 0

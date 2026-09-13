@@ -38,8 +38,11 @@ window.CORRECTIONS = {
       "【v0.9.20 · 已处置 · 重复节点】qft（1948，量子场论）与 quantum_field（1950，量子场论）已合并：保留 quantum_field（语义与正文均正确），退役 qft 并同步删除 7 条边（详见 CR-2026-0913-positional-template）。**但同名节点还有 22 组未处理**：ic/chip（集成电路 1958）、mat_forging/smithing（锻造）、ene_charcoal/charcoal（木炭 −4000）、tr_canoe/canoe（独木舟 −10000）、dome/bld_dome（穹顶）、mat_selfheal/self_healing（自修复材料）、ene_solidstate/solid_state_battery（固态电池）、ene_satpower/space_solar（空间太阳能）、ene_wpt/wireless_power（无线输电）、mfg_digitaltwin/digital_twin（数字孪生）、inf_nn/neural_network（神经网络）、inf_ar/ar、inf_vr/vr、inf_edgeai/edge_ai、bio_pharmacology/pharmacology、bio_tissueeng/tissue_engineering、bio_mrnavax/mrna_vaccine、bio_genetherapy/gene_therapy、bio_bci/bci、bio_synbio/synthetic_biology、bio_organonchip/organs_on_chip、bio_precisionmed/personalized_medicine、mil_directedenergy/directed_energy。系「早期 inf_*/bio_* 前缀批次」与「未来脊柱短名批次」独立生成同一概念，待逐组裁定保留哪一条。",
       "【v0.9.20–21 · 已执行 · 生成式依赖网全量重建】v0.9.20 清「时间最近」三族位置式伪边（处置 1,142 / 删 1,015 / 留 152 / 97 节点补前置）；v0.9.21 改用「生成器复现 + 逐边 diff」确定性方法收口同分类槽位边（处置 719 / 删 549 / 留 170 / 95 节点补前置 / 95 节点模板文案重写）。**仍未做**：ⓐ 264 个「仅剩泛化枢纽」节点补领域前置（v0.9.21 新增，首要）ⓑ 重写 1027 条 upgrade_stubs 三段模板文案 ⓒ 给生成器加语义硬约束防再生 ⓓ 22 组同名节点去重 ⓔ 12 条 enables 悬空引用",
       "【v0.9.22 · 状态更新与新增待办】上条 ⓒ 部分完成（tools/gen_run.js 已加 --no-write 干跑开关 + 同分类槽位边上限断言 + 写前备份，语义硬约束仍待设计）、ⓓ 已完成（23 组同名节点合并，见 CR-2026-0913-structure-audit）；ⓐ ⓑ ⓔ 仍待执行。**新增待办（《技术网络检修计划.md》阶段 2–5）**：⓵ 阶段 2 —— 96 条中间技术（techs_midtech.js，无 category / dependsOn，仅挂 midtech.html）分五批入网（basic + material / energy + transport / manufact + build / life + military / info），优先插入阶段 1 登记的断链位置，目标 Ch 族 267 → 120 以下；⓶ 阶段 3 —— 前置补齐，E 族 173 → 0（info 91、manufact 68、其余 14，重点是制造类机床族与焊接族前置一律写作「数学」）、A 族 563 → 150 以下（分 basic 176 / material 96 + life 80 / info 92 + manufact 68 + energy 48 三批，现全部真实前置仅落在 14 个泛化学理枢纽内，数学一个节点被 637 个节点依赖）；⓷ 阶段 4 —— 结构与元数据治理（覆盖矩阵空缺逐格判定、纪元体系统一并校对、近现代占比评估、反向索引与反图对齐）；⓸ 阶段 5 —— 全量对齐与收口（按主管线重建 graph.json 并清 11 个独占节点含脏 id calendar_agri、重写 1,027 条 upgrade_stubs 模板文案、生成器语义硬约束、全量回归与上线）。每批次以 tools/audit_net.js --check 对照 audit/baseline.json 做回归门禁，判定台账写入 audit/ledger.json。",
-      "【v0.9.23 · 阶段 2 重裁定】上条 ⓵ 阶段 2 的「96 条中间技术入网」经前提核查**撤销**：96 条条目全部已在主管线中，属案例视图而非新技术（详见 CR-2026-0913-midtech-misread）。已修库内重复条目（96 → 95）、gen_midtech.js 已加护栏。**待办顺延与新增**：⓵ Ch 族目标（260 → 120 以下）并入阶段 3，新增批次 3e；⓶ 「中间技术库与主管线对齐」（重建 95 条 backgrounds + 重写 69 条摘要前置枚举句）列为阶段 5d，须在阶段 3 / 4 结构定稿后执行；⓷ 生成器口径修订（原候选门槛 dependsOn >= 4 已不适用，当前仅能选出 32 条）同为阶段 5d 前置事项；⓸ **系统性风险提示**：凡由主管线派生的数据（中间技术库 backgrounds、节点摘要文案、反向索引）都缺少「来源版本标记 + 变更后重新生成」机制，会静默过期——建议在阶段 5 统一建立同步与校验。**下一批：阶段 3.1 —— E 族前置补齐（建议首批取 manufact 68 的机床 / 焊接族）。**"
-    ],
+      "【v0.9.23 · 阶段 2 重裁定】上条 ⓵ 阶段 2 的「96 条中间技术入网」经前提核查**撤销**：96 条条目全部已在主管线中，属案例视图而非新技术（详见 CR-2026-0913-midtech-misread）。已修库内重复条目（96 → 95）、gen_midtech.js 已加护栏。**待办顺延与新增**：⓵ Ch 族目标（260 → 120 以下）并入阶段 3，新增批次 3e；⓶ 「中间技术库与主管线对齐」（重建 95 条 backgrounds + 重写 69 条摘要前置枚举句）列为阶段 5d，须在阶段 3 / 4 结构定稿后执行；⓷ 生成器口径修订（原候选门槛 dependsOn >= 4 已不适用，当前仅能选出 32 条）同为阶段 5d 前置事项；⓸ **系统性风险提示**：凡由主管线派生的数据（中间技术库 backgrounds、节点摘要文案、反向索引）都缺少「来源版本标记 + 变更后重新生成」机制，会静默过期——建议在阶段 5 统一建立同步与校验。**下一批：阶段 3.1 —— E 族前置补齐（建议首批取 manufact 68 的机床 / 焊接族）。**",
+      "【v0.9.25 · 批次 5.2 待审核 · 全量管线第三份文案副本】assets/data_full.js 对 2,265 个与主管线共有的节点持有**独立的一份 summary 文案**（非引用），其中 971 条与当前主管线不一致。例：geometry_euclid 在全量侧仍写「依托 语言、文字、数学 把 … 落到实处 … 直接支撑了 数论 等后续技术」，而主管线已改为「约 公元前 300 年 出现，建立在 语言、文字、数学 之上」（下游归零）；zero_concept 全量侧多出已删的「语言」；algebra 全量侧多出「语言」且下游少一项。另有 11,053 个全量独占节点（不在主管线中），其中 7 条带 deepen（填补了早期能力图谱的空白）/ summarize（的成果用于）同型文案（如 canoe、dome）。**须先裁定权威关系**：该侧文本来自 analysis-engine 导出链（含 phase2_scores.json）与主管线合并，若判「主管线为权威」则应同步 971 条并安顿 11,053 独占节点；若判「该侧独立」则须查清其文本来源是否另有真值。与已登记的批次 5.1d（全量管线 1,127 条边未被主管线承认：yearInv 29 + 位置式签名 705 + 其他 393）同属该侧，建议合并为一个批次统一处置。本轮只取证登记、不修改。",
+      "【v0.9.25 · 报告项 · views[].period 与纪元名不符 99 处】节点 views[0].period 由 era 字段派生（生成器取 ERAS 表的 name），实测 99 处与 ERAS 表当前名不符，如 language 的 period 为「史前」而 era=prehistoric 对应名为「史前时代」、mathematics 为「古代」而应为「古代文明」、scientific_method 为「近代」而应为「近代早期」。性质判为命名口径不一致（非结构错误、非派生漂移）。建议并入「纪元体系统一」批次，与既有的 52 项 era-vs-year 不匹配同批处理，避免两处口径各自演化。本轮只统计不修改。",
+      "【v0.9.25 · 方法学待办 · 「以规则识别 + 重写」类工具的完备性检验】v0.9.24 的校验链（重跑不动点 + 逐字写入断言 + 渲染抽验）全部是同一算法内部的自洽性检验，因而未能发现识别器本身的盲区（槽位通配误排空白字符 → 含空格名称的句子被静默跳过）。本轮之所以能发现，是靠一条**与识别器不同源的独立断言**（「模板句枚举的下游是否真存在于当前反图」）。**待办**：为每条规则补一条不依赖该规则的抽查断言并纳入 --check —— 族 A 已有「下游必须在反图中」（本轮由 12 处降为 0，可固化）；族 B / 族 C 尚无对应断言，需补「上游名串必须在 dependsOn 名集中」。原则：**不动点不是完备性证明**。"
+],
     enablesAudit: {
       title: "enables 语义错误 · 95 项灰色概念甄别表",
       intro: "graph.json 把技术条目 enables 字段中指向不存在 id 的断链目标登记为 kind=concept 占位节点（共 95 个），前端因映射不到实体而以灰色虚框标签呈现，故称「灰色概念」。本表按语义三分类 + 逐条处置建议给出正式甄别结论，供逐条勾选核对。三类语义错误：①方向/归属（概念实为宿主的上位成果）；②应用/上下位（概念只是宿主的用途，非催生关系）；③抽象现象（非技术的社会/经济/军事现象被当作技术实体）。处置三档：待实体化（真技术物但缺节点，需补建）/ 去重（已有等价实体节点，移除断链引用即可）/ 降为广义影响（非技术实体，改为 applications 或删除）。",
@@ -148,6 +151,69 @@ window.CORRECTIONS = {
     },
   },
   entries: [
+    {
+      "id": "CR-2026-0913-derived-text-recognizer",
+      "date": "2026-09-13",
+      "node": "派生文案层（家族 A assets/techs_extra.js 38 节点 108 处 · 家族 B assets/techs_extend.js 34 处 · 家族 C assets/techs_more.js 389 处）· assets/techs_midtech.js 摘要拷贝 15 条 · 工具 tools/regen_text.js 与新增 tools/derived_text_rules.js",
+      "nodeName": "「是否模板句」的判定式排除了空白字符，使名称含空格的句子被误判为手写散文而永不重算；同时另两条文案生成链（extend_net.deepen、gen_1000.summarize）根本未被纳入同步范围",
+      "category": "meta",
+      "severity": "高",
+      "status": "已修正（三族合计 531 处 / 461 节点）· 全量管线第三份文案副本 971 条列为批次 5.2 待审核 · views[0].period 99 处列为报告项",
+      "problem": "v0.9.24 已把「派生文案重算」工具化（tools/regen_text.js，改 3,313 处并宣称重跑为不动点），但该不动点是**假不动点**：它只能证明「工具识别到的句子不再需要改」，无法证明「所有该改的句子都被识别到了」。本轮以独立断言复核暴露两个缺口。**缺口一（识别器盲区）**：判定「这一句是否生成器模板句、可否安全重写」的槽位通配写作 `[^\\s，。；、（）()「」]{1,28}`，第一个字符类排除了空白字符；而库内存在大量名称内部含空格的节点 —— 「ABS 树脂」（mat_abs）、「工业 4.0」（mfg_industry40）、「遗传学 / DNA」、「金属 3D 打印」、「摩擦纳米发电」等。凡枚举中含有此类名称的句子，整句骨架匹配失败，被判为「手写散文」而进入保护分支、永不重算。复核命中的 12 处不一致全部属此类型，例：`mfg_cnc`（数控机床）`dependsOn` 仅 `[mathematics]`，文案却写「依托 **ABS 树脂**、压缩空气储能、数学」并声称「直接支撑了 **等离子切割** 等后续技术」（该节点当前下游 0 条）；`inf_barcode` 写「并为 **射频识别** 的发展铺平了道路」，而 `inf_rfid` 的前置实为 `mathematics`；`bio_transplant` 写「并为 **心脏起搏器**、干扰素 的发展铺平了道路」，`bio_pacemaker` 前置实为 `[chemistry, mathematics]`。此类失真的危害在于：**判定结论在最显眼的位置被反向呈现**——读者在详情页读到的是「数控机床催生了等离子切割」，而网络层已判定此关系不存在。**缺口二（生成器家族未穷举）**：v0.9.24 只覆盖了 `techs_extra.js`（生成器 `upgrade_stubs.js` / `disassemble.js`），未覆盖另两条同样以 `dependsOn` 与反图为输入、因而同样会过期的独立文案链 —— `assets/techs_extend.js`（`tools/extend_net.js:400-425 deepen()` 在逐条手写简介后追加深化句）与 `assets/techs_more.js`（`tools/gen_1000.js:344-358 summarize()` 按「上游名 + 用途」整句合成）。二者合计 1,124 条文案从未被任何重算工具覆盖。实测失真：`bd_civ_1` 文案枚举上游含已删除的「物联网」；`lf_bio_0` 含重复的「遗传学」；`fut_controllable_fusion_plant` 含「太阳能光伏、太阳能光伏」（生成时刻同名多 id，v0.9.23 合并 23 组重名后消失）；`bone_tools`（B 族）号称支撑「锤、斧、锤」，`cart` 号称支撑「水力利用、水力利用」。**残留规模**：族 A 108 处 / 38 节点、族 B 34 处、族 C 389 处，合计 531 处 / 461 节点。",
+      "rootCause": "① **「不动点」被误当作「完备性证明」（方法论根因）**。不动点只能证「工具所识别的集合已被修完」，不能证「该集合是全集」。v0.9.24 的校验链（重跑为不动点 + 逐字写入断言 + 渲染抽验）全部是**同一算法内部的自洽性检验**，没有一条独立断言去问「有没有漏」。本轮之所以能发现，是因为换了一个**外部视角**的断言 ——「模板句枚举的下游是否真存在于当前反图」—— 它不依赖识别器，直接对全库文本提问，因而能指认识别器的盲区。**教训：工具的完备性必须用与工具不同源的断言来检验。** ② **通配式把「格式约束」与「语义约束」混在一起**。槽位通配本意是「匹配一个名称」，却附带排除了空白字符；这个约束对生成器产出（名称来自数据字段，可含空格）不成立。属典型的「用词法规则表达语义假设」，且因为失败方向是**静默跳过**（而非报错），缺陷没有任何暴露窗口。③ **同构生成链未做系统盘点**：项目内共有三条独立文案生成链（`upgrade_stubs`/`disassemble`、`extend_net.deepen`、`gen_1000.summarize`），v0.9.24 只按「文件」而非「生成链」清点，因此漏掉两条。正确口径应是「凡以 `dependsOn` 与反图为输入者，皆属派生文案，须一律纳入」。④ **公式散落多处**：重算器原先把生成器公式**复制**一份（DOMAIN 表、模板串各自一份），存在二处分叉风险；本轮已抽为 `tools/derived_text_rules.js` 单一真相源，并把 B 族映射表混用会产生的假阳性（`ancient` 在 B 族为「上古」、在族 A 语境为「古代文明」）作为注释固化在文件头。⑤ **派生链顺序未定义**：中间技术库 `summary` 是主管线摘要的拷贝，本轮文案改写使其连带漂移 15 条 —— 说明多级派生存在先决次序，未定义顺序则每次改动都会在下游制造二次漂移（v0.9.24 时该链恰好为不动点，掩盖了这一依赖）。",
+      "fix": "**① 修识别器（改判据，不改数据）**：槽位通配改为 `[^\\n，。；、（）()「」]{1,40}` —— 仅排除换行与句读符号，保留空白字符。修正后族 A 新增识别 128 处（手写跳过由 1,714 降为 1,586），其中需改写 108 处 / 38 节点；性质为删去已不存在的下游子句 79 处、上游枚举与句式变体变化 29 处。**② 补齐另两族**：为 `extend_net.deepen` 实现「先按 add 前缀定位分割点、再要求尾段完整匹配五种骨架之一」的识别（从而只重写追加的深化句、手写 base 逐字保留），为 `gen_1000.summarize` 实现 4 变体骨架识别；两族分别改 34 处与 389 处。**③ 抽规则库**：新建 `tools/derived_text_rules.js`，收录三族公式、映射表（含族 A 的 `DOMAIN_A`；族 B 专用 `ERA_NAME_B` / `DOMAIN_B`）与全部句子骨架，`regen_text.js` 改为 require 共用；`regen_text.js` 升级为三族三文件并新增 `--check`。**④ 写盘器扩为三文件**（三者均为「字段 4 空格缩进、对象以两空格 + `},` 收尾、views 多行」，同一套对象作用域行替换通用），逐节点断言 id 锚点唯一、字段现值与预期逐字相符、views 行数等于节点 views 长度，写后重载校验条目数不变。**⑤ 补派生链顺序**：先重算主管线文案、再重算中间库文案，`regen_midtech.js` 归零（15 → 0）。**⑥ 把完备性检验固化为门禁**：`.git/hooks/pre-commit` 由 1 道扩为 3 道（文档一致性 / 派生文案不动点 / 结构指标不劣化），任一不过即阻断提交。**⑦ 登记未决项**：全量管线 `data_full.js` 第三份文案副本与 `views[0].period` 命名口径分别列为批次 5.2 与报告项，不在本轮处理。",
+      "badUpstream": [
+        "ABS 树脂 mat_abs（mfg_cnc 的旧前置）",
+        "压缩空气储能（mfg_cnc 的旧前置）",
+        "用火（mat_2d / mat_bioinspired / mat_laserclad / ene_liquidair / ene_dishstirling 的旧前置）",
+        "3D 打印 / 碟式斯特林 / 激光熔覆（tr_maglev 的旧前置）",
+        "工业 4.0 mfg_industry40（tr_hoverboard / mfg_darkfactory 的旧前置）",
+        "摩擦纳米发电 ene_tribo（tr_reusablerocket 的旧前置）",
+        "物联网（bd_civ_* 的旧前置，已被删）",
+        "遗传学（lf_bio_* 文案中的重复项）",
+        "太阳能光伏（重复项：生成时刻同名多 id，v0.9.23 已合并）"
+      ],
+      "goodUpstream": [
+        "数学 mathematics",
+        "石墨烯 mat_graphene",
+        "直线电机 mfg_linearmotor",
+        "低温超导 mat_ltsc",
+        "超音速火焰喷涂 mat_hvof",
+        "智能电网 ene_smartgrid",
+        "波浪能 mat_wave",
+        "无人机 drone",
+        "隐身技术 mil_stealth2",
+        "砌筑 / 建筑学 / 工程学（去掉已删的物联网后）"
+      ],
+      "changes": [
+        "① 修复槽位通配：`[^\\s，。；、（）()「」]{1,28}` → `[^\\n，。；、（）()「」]{1,40}`（tools/derived_text_rules.js，并加历史修正注释说明盲区成因）。族 A 手写跳过由 1,714 降为 1,586。",
+        "② 族 A 改写 108 处 / 38 节点（assets/techs_extra.js）：按字段 summary 38 + significance 35 + views[1].text 25 + views[0].text 10。样例：mat_2d 由「依托 化学、经典力学、用火 … 直接支撑了 工业 4.0、增减材混合制造、数字化车间」改为「约 2004 年 出现，建立在 化学、经典力学、石墨烯 之上」（上游换为 mat_graphene、下游归零后切变体）；mfg_cnc 由「依托 ABS 树脂、压缩空气储能、数学」改为「建立在 数学 之上」；tr_maglev 由「建立在 3D 打印、碟式斯特林、激光熔覆 之上」改为「建立在 直线电机、低温超导 之上」。",
+        "③ 族 B 改写 34 处（assets/techs_extend.js）：151 条中识别「手写简介 + 生成器深化句」134 条、纯手写 17 条。仅替换追加的深化句，手写 base 逐字保留。样例：bone_tools 下游由「锤、斧、锤」按当前反图归零（切至「出现于…」变体）；weaving 由「篮篓编织、纺织、纺锤」改为「帆船、伪装迷彩、篮篓编织」；cart 由「水力利用、水力利用」改为「自行车、军事后勤」。",
+        "④ 族 C 改写 389 处（assets/techs_more.js）：973 条全为合成句，病因统一为「文本枚举的上游名已不在 dependsOn 中」——8 条为文本内同名重复（fut_controllable_fusion_plant 的「太阳能光伏、太阳能光伏」等，源自生成时刻同名多 id，v0.9.23 合并 23 组重名后消失），其余为节点被删或改前置（bd_civ_* 的「物联网」、lf_bio_* 的重复「遗传学」）。",
+        "⑤ 规则库抽取：新建 tools/derived_text_rules.js（三族公式 + 映射表 + 句子骨架），tools/regen_text.js 改为 require 共用；regen_text.js 由单族单文件扩为三族三文件并新增 --check。写盘器逐节点断言 id 锚点唯一、字段现值逐字相符、views 行数等于节点 views 长度，写后重载校验条目数（1,033 / 151 / 973）不变。",
+        "⑥ 派生链顺序补正：中间技术库 summary 为「生成时刻主管线摘要的拷贝」，本轮文案改写使其漂移 15 条，重跑 tools/regen_midtech.js 归零（95/95 不动点）。保留退化句 3 条（steam_engine / automobile / rocket）——主管线摘要不足 40 字，按 gen_midtech.js 原口径即用兜底文案，非漂移。**顺序约定：主管线文案必须先于中间库文案重算。**",
+        "⑦ 门禁加固：.git/hooks/pre-commit 由 1 道扩为 3 道（check_docs / regen_text --check / audit_net --check），任一不过即阻断提交，确需跳过用 --no-verify；原钩子已备份至 /tmp/pre-commit.bak.*。",
+        "⑧ 校验链（全部通过）：regen_text 重跑不动点（531 → 0 处）；regen_midtech 重跑不动点（95/95）；audit_net --check [OK]；check_docs [OK]；全量 runtime 干跑 29 个脚本无错、TECHS = 2,265；渲染校验 —— 976 个改动节点全部调用 buildDetailHTML，summary 与 views[].text 均进入渲染输出、无异常；**语义断言 —— 全库模板句枚举的下游由 12 处不一致降为 0**；门禁演练退出码 0。",
+        "⑨ 方法学教训（写入本条以便复用）：**「不动点」不是「完备性证明」**。v0.9.24 的校验链全部是同一算法内部的自洽性检验，无法发现识别器本身的盲区；本轮能发现，是因为引入了一条**与识别器不同源的独立断言**（直接对全库文本提问「文案声称的下游是否真存在于反图」）。此后凡交付「以规则识别 + 重写」为基础的工具，必须附带至少一条不依赖该规则的抽查断言。",
+        "⑩ 未改动：主管线网络结构（节点 2,265 / 依赖边 6,091）、全量管线节点与边集合、中间技术库案例集合、全部手写散文（族 A 1,586 处 + 族 B 17 条）。本轮不新增或删除任何依赖关系判定。",
+        "⑪ 待审批次 5.2（新登记）：全量管线 assets/data_full.js 对 2,265 个共有节点持有第三份独立文案副本，971 条与主管线不一致（geometry_euclid 在全量侧仍写「依托 语言、文字、数学 … 直接支撑了 数论」）；全量独占 11,053 节点中另有 7 条带 deepen / summarize 同型文案。因该侧文本来源（analysis-engine 导出链，含 phase2_scores.json）与主管线的权威关系尚未裁定，且与批次 5.1d（1,127 条边）同属该侧，本轮只取证登记。",
+        "⑫ 报告项（本轮不改）：views[0].period 与 ERAS 表纪元名不符 99 处（language 的 period「史前」vs era=prehistoric 应对应「史前时代」；mathematics「古代」vs「古代文明」）。判为命名口径不一致，与既有 52 项 era-vs-year 不匹配同归「纪元体系统一」批次。"
+      ],
+      "files": [
+        "assets/techs_extra.js",
+        "assets/techs_extend.js",
+        "assets/techs_more.js",
+        "assets/techs_midtech.js",
+        "tools/derived_text_rules.js",
+        "tools/regen_text.js",
+        "assets/pages/correction_data.js",
+        "assets/pages/changelog_data.js",
+        "版本迭代日志.md",
+        "技术网络检修计划.md",
+        "audit/ledger.json",
+        ".git/hooks/pre-commit"
+      ]
+    },
     {
       id: "CR-2026-0913-derived-snapshot",
       date: "2026-09-13",

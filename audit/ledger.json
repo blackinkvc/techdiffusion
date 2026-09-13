@@ -1143,6 +1143,185 @@
     "decided": 0,
     "dataChanged": 0
    }
+  },
+  "5.2a": {
+   "date": "2026-09-13",
+   "family": "DERIVED-TEXT",
+   "status": "已完成",
+   "scope": "三族节点派生文案与当前依赖网络对齐 —— 族 A techs_extra.js（summary / significance / views[].text）、族 B techs_extend.js（deepen 追加深化句）、族 C techs_more.js（summarize 整句合成）",
+   "background": [
+    "v0.9.24（批次 5.1a）已把派生文案重算工具化，但其「重跑为不动点」是假不动点 —— 只能证「工具已识别的句子不再需要改」，不能证「所有该改的句子都被识别到」。",
+    "以与识别器不同源的断言复核（直接对全库文本问「文案声称催生的下游是否真存在于当前反图」），命中 12 处不一致，暴露两个缺口。"
+   ],
+   "findings": {
+    "gapA": {
+     "name": "槽位通配误排空白字符",
+     "detail": "判定模板句的槽位通配原为 [^\\s，。；、（）()「」]{1,28}，排除空白字符；库内存在「ABS 树脂」「工业 4.0」「遗传学 / DNA」「金属 3D 打印」等名称内部含空格的节点，凡枚举含此类名称的句子整体失配、被判为手写散文静默跳过（不报错，无暴露窗口）。",
+     "evidence": [
+      "mfg_cnc（数控机床）：dependsOn 仅 [mathematics]，文案写「依托 ABS 树脂、压缩空气储能、数学」并声称「直接支撑了 等离子切割」，而该节点当前下游 0 条。",
+      "inf_barcode：文案写「为 射频识别 的发展铺平了道路」，而 inf_rfid 前置实为 mathematics。",
+      "bio_transplant：文案写「为 心脏起搏器、干扰素 的发展铺平了道路」，而 bio_pacemaker 前置实为 [chemistry, mathematics]。"
+     ],
+     "fixedBy": "槽位通配改为 [^\\n，。；、（）()「」]{1,40}；族 A 手写跳过 1,714 → 1,586。"
+    },
+    "gapB": {
+     "name": "同构生成链未穷举",
+     "detail": "项目内共三条独立文案生成链，v0.9.24 按「文件」而非「生成链」清点，只覆盖第一条。",
+     "chains": [
+      "族 A assets/techs_extra.js ← upgrade_stubs.js:50-84 / disassemble.js:50-76（v0.9.24 已覆盖，本轮补 108 处）",
+      "族 B assets/techs_extend.js ← extend_net.js:400-425 deepen()（此前完全未覆盖）",
+      "族 C assets/techs_more.js ← gen_1000.js:344-358 summarize()（此前完全未覆盖）"
+     ],
+     "caution": "族 B 的映射表与族 A 不同：extend_net.js 自带 ERA_NAME（ancient=上古 / classical=古典 / medieval=中古 / future=未来/科幻）与 DOMAIN（多一个 future 键）。混用会产生假阳性（复核初期误用族 A 表，出现 80 处「应为古代文明」的假命中）。"
+    }
+   },
+   "method": {
+    "tool": "tools/regen_text.js（升级为三族三文件 + --check）",
+    "rules": "tools/derived_text_rules.js（新建，三族公式、映射表与句子骨架的单一真相源）",
+    "familyA": "upsStr = dependsOn 前 3 项 name；downsStr = 反图 children 前 3 项 name；模板选择 = hash(id) % 2 与 downs 是否为空。只替换被完整骨架识别的句子。",
+    "familyB": "两步识别：先按 add 前缀（它建立在 / 依托 / 它约 / 其成熟让）定位分割点，再要求尾段完整匹配五种骨架之一（含可选尾句）。命中后只重写尾段，手写 base 逐字保留。仅在 base.length < 80 时才存在追加句。",
+    "familyC": "4 变体按 hash(id) % 4 选择；上游名串取全部 dependsOn 名（无 slice(0,3) 截断，与族 A 不同）；purpose / 分类名 / 纪元名为槽位。",
+    "safety": "写盘为对象作用域行替换：id 锚点唯一 + 字段现值逐字相符 + views 文本行数等于节点 views 长度；写后重载校验条目数不变（1,033 / 151 / 973）。",
+    "chainOrder": "派生链顺序：主管线文案 → 中间库文案（中间库 summary 是主管线摘要的拷贝，逆序或跨级会在下游制造二次漂移）。"
+   },
+   "counts": {
+    "changed": 531,
+    "affectedNodes": 461,
+    "byFamily": {
+     "A": {
+      "file": "assets/techs_extra.js",
+      "changed": 108,
+      "nodes": 38,
+      "byField": {
+       "summary": 38,
+       "significance": 35,
+       "views[1].text": 25,
+       "views[0].text": 10
+      }
+     },
+     "B": {
+      "file": "assets/techs_extend.js",
+      "changed": 34,
+      "nodes": 34,
+      "recognized": 134,
+      "handWritten": 17
+     },
+     "C": {
+      "file": "assets/techs_more.js",
+      "changed": 389,
+      "nodes": 389,
+      "recognized": 973,
+      "handWritten": 0
+     }
+    },
+    "familyAKinds": {
+     "dropDeadDownstreamClause": 79,
+     "upstreamEnumOrVariantChange": 29
+    },
+    "familyCRootCauses": {
+     "duplicateNameInText": 8,
+     "nodeDeletedOrReparented": "其余"
+    },
+    "downstreamPropagation": {
+     "file": "assets/techs_midtech.js",
+     "summaryCopiedFromMain": 15,
+     "retainedFallbackIntentionally": [
+      "steam_engine",
+      "automobile",
+      "rocket"
+     ]
+    }
+   },
+   "verification": [
+    "regen_text.js 重跑为不动点：531 → 0 处",
+    "regen_midtech.js 重跑为不动点：95/95 未变",
+    "tools/audit_net.js --check [OK]：结构指标未劣化",
+    "tools/check_docs.js [OK]",
+    "全量 runtime 干跑 29 个脚本无错、TECHS = 2,265",
+    "渲染校验：976 个改动节点全部调用 buildDetailHTML，summary 与 views[].text 均进入渲染输出",
+    "语义断言（与识别器不同源）：12 处不一致 → 0",
+    "逐文件 git diff 行数等于改动数 × 2（216 / 68 / 778），行数结构未变",
+    "pre-commit 三道门禁演练退出码 0"
+   ],
+   "verdicts": [
+    {
+     "id": "*",
+     "verdict": "repoint",
+     "reason": "派生文案以当前主管线网络为准重算；不改动任何因果结构判定"
+    }
+   ],
+   "gates": [
+    "tools/regen_text.js --check 已纳入 .git/hooks/pre-commit（阻断「文案与网络脱节」）",
+    "tools/audit_net.js --check 已纳入 .git/hooks/pre-commit（阻断「结构劣化」）"
+   ],
+   "summary": {
+    "changed": 531,
+    "nodes": 461,
+    "dataStructureChanged": 0,
+    "regeneratorsFixedPoint": true
+   },
+   "reportItems": [
+    "views[0].period 与 ERAS 表纪元名不符 99 处（如 language period「史前」vs era=prehistoric 对应「史前时代」；mathematics「古代」vs「古代文明」）。判为命名口径不一致，并入「纪元体系统一」批次，与既有 52 项 era-vs-year 不匹配同批处理。",
+    "方法学待办：为族 B / 族 C 补「上游名串必须在 dependsOn 名集中」这一不依赖识别器的抽查断言，纳入 --check。族 A 的「下游必须在反图中」断言本轮已由 12 处降为 0，可固化。"
+   ]
+  },
+  "5.2b": {
+   "date": "2026-09-13",
+   "family": "FULL-PIPELINE-TEXT",
+   "status": "取证完成 · 待审核",
+   "scope": "全量管线的第二份（对主管线共有节点）与自有文案 —— assets/data_full.js 的 summary 字段",
+   "background": [
+    "5.1c 只从全量管线移除了 576 条已判定删除的边（有节点与边，未触及文案）。",
+    "本轮比对发现：data_full.js 对 2,265 个共有节点持有独立的一份 summary（非引用），其中 971 条与当前主管线不一致；另有 11,053 个全量独占节点。"
+   ],
+   "counts": {
+    "sharedNodes": 2265,
+    "summaryIdenticalToMainline": 1294,
+    "summaryStaleVsMainline": 971,
+    "fullOnlyNodes": 11053,
+    "fullOnlyWithTemplateText": 7,
+    "fullTotal": {
+     "nodes": 13318,
+     "edges": 16811
+    }
+   },
+   "samples": [
+    {
+     "id": "geometry_euclid",
+     "fullText": "几何学在 公元前 300 年 前后成形，依托 语言、文字、数学 把 理论建模、实验测量 落到实处，并成为 科学基础与方法 中承上启下的一环，直接支撑了 数论 等后续技术。",
+     "mainText": "几何学约 公元前 300 年 出现，建立在 语言、文字、数学 之上；它把 理论建模、实验测量 变成可稳定复现的能力，是 科学基础与方法 中从经验走向方法的关键一步。"
+    },
+    {
+     "id": "zero_concept",
+     "note": "全量侧多出已删的「语言」"
+    },
+    {
+     "id": "algebra",
+     "note": "全量侧多出「语言」，且下游枚举少一项"
+    },
+    {
+     "id": "canoe / dome",
+     "note": "全量独占节点，带 extend_net.deepen 同型文案（如「填补了早期能力图谱的空白」）"
+    }
+   ],
+   "openQuestion": "该侧文案的来源（analysis-engine 导出链，含 phase2_scores.json）与主管线之间的权威关系尚未裁定：若判「主管线为权威」，则应同步 971 条并为 11,053 个独占节点单列处置；若判「该侧独立」，须先查清其文本是否另有真值来源。",
+   "proposedDisposition": [
+    "① 先裁定权威关系（需用户确认），再决定同步方向；",
+    "② 与批次 5.1d（全量管线 1,127 条边未被主管线承认：yearInv 29 + 位置式签名 705 + 其他 393）合并为一个批次统一处置，避免同侧数据两次改动；",
+    "③ 11,053 个全量独占节点应单列性质说明（是否属另一语料），不宜与共有节点混同处理。"
+   ],
+   "verdicts": [
+    {
+     "id": "*",
+     "verdict": "keep",
+     "reason": "本轮只取证登记、不修改；权威关系未裁定前不动该侧文案"
+    }
+   ],
+   "summary": {
+    "candidates": 971,
+    "dispositionApplied": 0,
+    "status": "待审核"
+   }
   }
  }
 }
