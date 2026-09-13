@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-09-13",
+ "updated": "2026-09-14",
  "criterion": [
   "必要性",
   "排他性",
@@ -1118,7 +1118,7 @@
    "classes": [
     {
      "name": "yearInv（29 条，全部为 enables 类型）",
-     "assessment": "对应已知的「技术先行、理论后至」结构类，父节点年份晚于子节点，如 蒸汽机(1769) → 热力学(1824)、发电机(1831) → 电磁学(1865)、计算机 → 半导体材料。",
+     "assessment": "对应已知的「技术先行、理论后至」结构类，父节点年份晚于子节点，如 蒸汽机(1769) → 热力学(1824)、发电机(1831) → 电磁学(1865)、计算机 → 半导体材料。 【2026-09-14 复核】29 条已逐条列出并核实，见 yearInvAudit。",
      "proposedDisposition": "不按伪边删除。主管线 yearInv=0 是硬约束所致（「前置年 ≤ 本节点年」）；全量管线的 enables 语义更宽，可表达「某技术催生了后至的理论」。须另行设计表达方式（如 rel:\"retro\" 边类型），属独立批次。"
     },
     {
@@ -1133,15 +1133,67 @@
     }
    ],
    "proposedDisposition": [
-    "①先做生成器复现（把 gen_techs.js + gen_run.js 复制到 /tmp、锚点源换成 assets/data.before_disasm.js 复跑），对 1,127 条逐边比对来源标签，把「可归因于生成器槽位规则」的子集确定性判定为删除；",
+    "①先做生成器复现（把 gen_techs.js + gen_run.js 复制到 /tmp、锚点源换成 assets/data.before_disasm.js 复跑），对 1,127 条逐边比对来源标签，把「可归因于生成器槽位规则」的子集确定性判定为删除； 【2026-09-14 修订】未承认边的口径须先统一为「dependsOn ∪ enables」再复算（见 recount）。",
     "②余下按四标准逐条判定，写入本批 verdicts 后再执行；",
     "③若阶段 3/4 会大幅改动主管线 dependsOn，则 5a 的「按主管线重建」应排在其后，避免重复工作。"
    ],
    "verdicts": [],
    "summary": {
-    "remaining": 1127,
+    "remaining": 1116,
     "decided": 0,
-    "dataChanged": 0
+    "dataChanged": 0,
+    "note": "已复核更正：未承认边实测 1,116（dependsOn ∪ enables 口径）/ 1,207（仅 dependsOn）；原记 1,127。29 条年份倒挂经逐条核实全部语义成立，不删。"
+   },
+   "revised": "2026-09-14",
+   "recount": {
+    "measuredOn": "graph.json 6,963 条边 vs 主管线 dependsOn",
+    "byDependsOnOnly": 1207,
+    "byDependsOnPlusEnables": 1116,
+    "planDocumentFigure": 1127,
+    "note": "口径差异：主管线另有 91 个节点带非空 enables 声明，若把 enables 声明也计入「已承认」，未承认数由 1,207 降至 1,116。计划文档所记 1,127 落在两口径之间，需在正式判定时统一以「dependsOn ∪ enables」为准并复算。"
+   },
+   "yearInvAudit": {
+    "count": 29,
+    "typeAllEnables": true,
+    "detail": [
+     "explosives 现代炸药(1867) → mining 采矿(-5000)",
+     "gunpowder 火药(850) → mining 采矿(-5000)",
+     "scientific_method 科学方法(1600) → engineering 工程学(-3000)",
+     "chemistry 化学(1661) → steel 钢铁(-1000)",
+     "chemistry 化学(1661) → magnets 永磁材料(-600)",
+     "iron 铁器(-1200) → plow 犁(-3000)",
+     "iron_smelting 冶铁(-1200) → plow 犁(-3000)",
+     "cement 水泥与混凝土(-200) → arch 拱与穹顶(-1800)",
+     "horse_gear 马具与马车(-2000) → plow 犁(-3000)",
+     "astronomy 天文学(-3000) → sail 帆船(-3500)",
+     "cement 水泥与混凝土(-200) → road 道路与驿道(-300)",
+     "transistor 晶体管(1947) → electronics 电子学(1883)",
+     "composites 复合材料(1960) → airplane 飞机(1903)",
+     "thermodynamics 热力学(1824) → steam_engine 蒸汽机(1769)",
+     "electromagnetism 电磁学(1865) → generator 发电机与电动机(1831)",
+     "electromagnetism 电磁学(1865) → electric_motor 电动机(1837)",
+     "assembly_line 流水线(1913) → automobile 汽车(1886)",
+     "plastics 塑料(1907) → electronics 电子学(1883)",
+     "explosives 现代炸药(1867) → tunnel 隧道与地下工程(1843)",
+     "internet 互联网(1969) → ai 人工智能(1956)",
+     "ic 集成电路(1958) → computer 电子计算机(1946)",
+     "robot 工业机器人(1961) → automation 自动化(1950)",
+     "computer_vision 计算机视觉(2012) → robot_vacuum 家用扫地机器人(2002)",
+     "ai 人工智能(1956) → automation 自动化(1950)",
+     "composites 复合材料(1960) → spacecraft 航天器(1957)",
+     "computer_vision 计算机视觉(2012) → autonomous_driving 自动驾驶(2009)",
+     "ic 集成电路(1958) → ai 人工智能(1956)",
+     "semiconductors 半导体材料(1947) → computer 电子计算机(1946)",
+     "transistor 晶体管(1947) → computer 电子计算机(1946)"
+    ],
+    "finding": "逐条核查 29 条：全部可解读为「该技术的后期阶段吸收了源技术」——采矿用现代炸药爆破、犁用铁器、拱与穹顶用水泥、帆船用天文导航、发电机/电动机用电磁学、电子学用晶体管、电子计算机用集成电路/半导体、自动化用工业机器人与 AI、飞机与航天器用复合材料、扫地机器人与自动驾驶用计算机视觉。故 29 条均非方向性错误。",
+    "rootCause": "冲突在建模口径而非史实：节点 year 取「该技术的最早实例」，而边描述的是该技术后期阶段的演进。主管线 yearInv=0（前置年 ≤ 本节点年）为硬约束，结构上无法表达「同节点跨阶段」与「理论后至」。",
+    "disposition": "全部 29 条保留语义、不删（经用户 2026-09-14 确认）。",
+    "options": [
+     "① 新增边类型 rel:\"retro\"（或 feedback），允许年份倒挂，前端以虚线渲染；须同步改 yearInv 检查放行逻辑与两套管线产物。",
+     "② 不建边，改在 theory_data.js 覆盖层以文字标注「该阶段的演进由 X 促成」——与既有「只读覆盖层、不动网络」模式一致，改动面最小、无需改检查器。",
+     "③ 拆节点为阶段（如「钢铁（块炼铁）」「钢铁（转炉钢）」分设年份），使年序自然成立；表达最精确，但节点数与两套登记需整体重算。"
+    ]
    }
   },
   "5.2a": {
@@ -1272,17 +1324,30 @@
    "scope": "全量管线的第二份（对主管线共有节点）与自有文案 —— assets/data_full.js 的 summary 字段",
    "background": [
     "5.1c 只从全量管线移除了 576 条已判定删除的边（有节点与边，未触及文案）。",
-    "本轮比对发现：data_full.js 对 2,265 个共有节点持有独立的一份 summary（非引用），其中 971 条与当前主管线不一致；另有 11,053 个全量独占节点。"
+    "本轮比对发现：data_full.js 对 2,265 个共有节点持有独立的一份 summary（非引用），其中 971 条与当前主管线不一致；另有 11,053 个全量独占节点。",
+    "【2026-09-14 复核】原记「971 条」系对照 v0.9.24 主管线文案的口径；v0.9.25 又改写了 531 处主管线文案，该数值随之作废。现行口径实测为 1,429 条，详见 forensics。"
    ],
    "counts": {
     "sharedNodes": 2265,
-    "summaryIdenticalToMainline": 1294,
-    "summaryStaleVsMainline": 971,
+    "summaryIdenticalToMainline": 836,
+    "summaryStaleVsMainline": 1429,
     "fullOnlyNodes": 11053,
-    "fullOnlyWithTemplateText": 7,
+    "fullOnlyWithTemplateText": 21,
     "fullTotal": {
      "nodes": 13318,
      "edges": 16811
+    },
+    "fullOnlySameNameAsMainline": 23,
+    "graphJsonVsDataFullMismatch": 1,
+    "fullTotalAfter": {
+     "nodes": 13318,
+     "edges": 16811
+    },
+    "oldFigures": {
+     "summaryStaleVsMainline": 971,
+     "summaryIdenticalToMainline": 1294,
+     "fullOnlyWithTemplateText": 7,
+     "basis": "对照 v0.9.24 主管线；关键词粗筛计独占节点模板文案"
     }
    },
    "samples": [
@@ -1304,23 +1369,42 @@
      "note": "全量独占节点，带 extend_net.deepen 同型文案（如「填补了早期能力图谱的空白」）"
     }
    ],
-   "openQuestion": "该侧文案的来源（analysis-engine 导出链，含 phase2_scores.json）与主管线之间的权威关系尚未裁定：若判「主管线为权威」，则应同步 971 条并为 11,053 个独占节点单列处置；若判「该侧独立」，须先查清其文本是否另有真值来源。",
+   "openQuestion": "原「须先裁定权威关系」对共有节点已由取证裁定（主管线为权威，见 authorityRuling）；剩余未决项为 11,053 个独占节点的语料性质与 23 条 id 变体的处置。",
    "proposedDisposition": [
-    "① 先裁定权威关系（需用户确认），再决定同步方向；",
-    "② 与批次 5.1d（全量管线 1,127 条边未被主管线承认：yearInv 29 + 位置式签名 705 + 其他 393）合并为一个批次统一处置，避免同侧数据两次改动；",
-    "③ 11,053 个全量独占节点应单列性质说明（是否属另一语料），不宜与共有节点混同处理。"
+    "① 共有 2,265 个节点的文案：以主管线为权威，方向为「按主管线重算全量侧文案」；因主管线文案仍会随阶段 3/4 变化，应与 5.1d 的边处置、以及 5a 的「按主管线重建」合并为同一次操作，避免同一文件多轮改写；",
+    "② 23 条 id 变体重复（canoe/chip/neural_network …）单列，先裁定是「加别名映射到主管线 id」还是「保留为独立节点」，再决定其文案来源；",
+    "③ 11,053 个独占节点（≈11,030 来自 new_techs.json）单列性质说明，不并入本次同步。"
    ],
    "verdicts": [
     {
      "id": "*",
      "verdict": "keep",
-     "reason": "本轮只取证登记、不修改；权威关系未裁定前不动该侧文案"
+     "reason": "本轮（2026-09-14）只复核更正计数与裁定证据，仍未修改任何该侧文案——须先由用户确认处置方向。"
     }
    ],
    "summary": {
-    "candidates": 971,
+    "candidates": 1429,
     "dispositionApplied": 0,
-    "status": "待审核"
+    "status": "取证已复核 · 待用户确认处置方向"
+   },
+   "revised": "2026-09-14",
+   "forensics": [
+    "graph.json 与 data_full.js 对共有节点的 summary 仅 1 条（2,289 中）不同 → 两侧是同一份拷贝（data_full.js 由 build_full_dataset.js 自 graph.json 导出），不是两份独立语料。",
+    "对照主管线各历史版本：v0.9.23 / origin-main 不一致 105 条；v0.9.24 不一致 971 条；v0.9.25（HEAD）不一致 1,429 条 → 全量侧文案 = 主管线在 v0.9.23 时点的快照；此后每一轮主管线文案清理都使差距扩大。",
+    "SCORE_META.generatedAt = 2026-09-12T13:23:39Z，与 v0.9.23 快照时点吻合。",
+    "11,053 个全量独占节点中，23 条与主管线节点同名，属 id 变体重复：canoe=tr_canoe、dome=bld_dome、charcoal=ene_charcoal、smithing=mat_forging、chip=ic、pharmacology=bio_pharmacology、tissue_engineering=bio_tissueeng、neural_network=inf_nn、edge_ai=inf_edgeai、digital_twin=mfg_digitaltwin、ar=inf_ar、vr=inf_vr、gene_therapy=bio_genetherapy、synthetic_biology=bio_synbio、organs_on_chip=bio_organonchip 等。",
+    "按 extend_net.deepen 的五种骨架精确匹配：全量独占节点中 21 条带同型生成文本（canoe / dome / chip / pharmacology / tissue_engineering / neural_network / edge_ai / digital_twin …），与上述 23 条 id 变体基本重合；原记「7 条」系关键词粗筛口径。",
+    "其余约 11,030 条独占节点来自 analysis-engine/data/subcat/new_techs.json（11,031 条），属另一语料，与共有节点的陈旧拷贝性质不同。"
+   ],
+   "authorityRuling": {
+    "question": "全量管线文案与主管线的权威关系",
+    "rulingOnSharedNodes": "主管线为权威。共有节点的全量侧 summary 是主管线旧快照的拷贝，不存在独立真值来源（graph.json 的 2,265 个真实节点即自主管线导出，节点数与主管线一致；其 summary 与 data_full.js 仅 1 条不同）。",
+    "stillOpen": "11,053 个独占节点另属 new_techs.json 语料，须单列「性质与权威」说明（是否纳入站点全量图、以何为权威），与本批次的共有节点文案同步解耦。",
+    "basis": [
+     "counts.graphJsonVsDataFullMismatch=1",
+     "forensics[1] 快照时点=v0.9.23",
+     "forensics[5] 独占节点来源=new_techs.json"
+    ]
    }
   }
  }
