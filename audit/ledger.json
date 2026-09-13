@@ -543,6 +543,239 @@
         "generatorsGuarded": 1,
         "planStagesRescoped": 1
       }
+    },
+    "3.1a": {
+      "date": "2026-09-13",
+      "family": "E-manufact",
+      "status": "draft（候选集已建立，逐条判定待填写；未写盘）",
+      "scope": "E 族 manufact 68 条中的首批 27 条——机床族（17）与焊接 / 连接族（10）",
+      "criterion": "§2 判定四标准：① 必要性（去掉该前置，本技术是否仍能按史实出现）② 排他性（是否该环节最直接的先行者）③ 时序性（前置年 ≤ 本节点年）④ 域内优先（跨域须有明确传导机制）。处置四档：保留 / 改前置 / 删边 / 降级为概念影响。",
+      "observation": "E 族 manufact 68 条的当前前置**全部为同一条 mathematics**，无一条例外——即同一槽位被批量赋值，病灶完全同构。本批先取机床族与焊接 / 连接族，共 27 条。",
+      "availableNodes": [
+        "mfg_lathe 车床(-1000)",
+        "lathe 车床与精密加工(1751)",
+        "mfg_grinder 磨床(1800)",
+        "mfg_knife 刀具(-100000)",
+        "iron_smelting 冶铁(-1200)",
+        "mat_iron 块炼铁(-1200)",
+        "steel 钢铁(-1000)",
+        "bronze 青铜(-3300)",
+        "mat_copper 红铜冶炼(-5000)",
+        "mat_toolsteel 工具钢(1868)",
+        "kiln 窑(-6000)",
+        "mfg_thread 螺纹(-300)",
+        "mfg_bolt 螺纹连接(-300)",
+        "mfg_handaxe 手斧(-1700000)",
+        "mfg_stone 石器打制(-2600000)",
+        "steam_engine 蒸汽机(1769)",
+        "electricity 电力系统(1879)",
+        "electronics 电子学(1883)",
+        "computer 电子计算机(1946)",
+        "ic 集成电路(1958)",
+        "mfg_servo 伺服系统(1940)",
+        "laser 激光(1960)"
+      ],
+      "candidates": [
+        {
+          "id": "mfg_gauge",
+          "name": "量具",
+          "year": -2000,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_boring",
+          "name": "镗床",
+          "year": 1500,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_drillpress",
+          "name": "钻床",
+          "year": 1800,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_planer",
+          "name": "刨床",
+          "year": 1810,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_grindingwheel",
+          "name": "砂轮",
+          "year": 1840,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_toolholder",
+          "name": "刀柄",
+          "year": 1900,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_coolant",
+          "name": "切削液",
+          "year": 1900,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_edm",
+          "name": "电火花加工",
+          "year": 1943,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_cnc",
+          "name": "数控机床",
+          "year": 1949,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_mc",
+          "name": "加工中心",
+          "year": 1958,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_wedm",
+          "name": "线切割",
+          "year": 1960,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_edmwire",
+          "name": "电火花线切割机",
+          "year": 1960,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_turnmill",
+          "name": "车铣复合",
+          "year": 1980,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_cmm",
+          "name": "三坐标测量",
+          "year": 1950,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_onmachinem",
+          "name": "在机测量",
+          "year": 1990,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_toolmonitor",
+          "name": "刀具状态监控",
+          "year": 1990,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_cryogenicm",
+          "name": "低温切削",
+          "year": 2000,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_rivet",
+          "name": "铆接",
+          "year": -2000,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_braze",
+          "name": "钎焊",
+          "year": -2000,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_adhesive",
+          "name": "胶接",
+          "year": -2000,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_resistweld",
+          "name": "电阻焊",
+          "year": 1877,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_welding",
+          "name": "电弧焊",
+          "year": 1881,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_gasweld",
+          "name": "气焊",
+          "year": 1900,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_ebw",
+          "name": "电子束焊",
+          "year": 1958,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_laserweld",
+          "name": "激光焊",
+          "year": 1960,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_fsw",
+          "name": "搅拌摩擦焊",
+          "year": 1991,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        },
+        {
+          "id": "mfg_roboticweld",
+          "name": "焊接机器人",
+          "year": 1980,
+          "category": "manufact",
+          "currentParent": "mathematics"
+        }
+      ],
+      "verdicts": [],
+      "notes": [
+        "候选筛选已断言：27 条全部满足「单前置且前置 = mathematics」，任一不符即抛错，不会把非 E 族节点混入。",
+        "判定完成后填入 verdicts（每条 verdict / newParent / reason），并断言 keep + repoint + delete + concept = 27。",
+        "时序性门槛提醒：执行器会强制「前置年 ≤ 本节点年」。部分节点年份偏早（如 mfg_resistweld 电阻焊 1877 早于 electricity 电力系统 1879），需据此选择更早的合法前置，或先在阶段 4 校正年份。用户口径：年份仅具参考价值，以本质与逻辑为准。"
+      ],
+      "summary": {
+        "candidates": 27,
+        "verdicts": 0
+      }
     }
   }
 }
