@@ -551,5 +551,30 @@ window.CHANGELOG = {
       ],
       files: ["assets/techs_extra.js", "assets/techs_extend.js", "assets/techs_more.js", "assets/data.js", "技术网络检修计划.md", "tools/audit_net.js", "tools/apply_ledger.js", "tools/merge_dups.js", "tools/gen_run.js", "audit/ledger.json", "audit/baseline.json", "assets/pages/changelog_data.js", "assets/pages/correction_data.js", "版本迭代日志.md", "index.html", "tree.html", "tree_full.html", "browse.html", "detail.html", "lineage.html", "analysis.html", "model.html", "changelog.html", "correction.html", "method.html", "midtech.html", "progress.html", "research.html", "sop.html", "timeline.html", "worldview.html"]
     }
+
+,
+    {
+      version: "v0.9.23",
+      date: "2026-09-13",
+      type: "fix",
+      title: "阶段 2 重新裁定：原「96 条中间技术入网」前提核查后撤销（96/96 已在主管线）＋ 修复中间技术库重复条目与生成器护栏",
+      summary: "执行阶段 2 前先做前提核查，确认原方案不成立：中间技术库的 96 条条目 id 与名称全部已在主管线中（连 data.js 的 4 条手工案例也在），它们是 tools/gen_midtech.js 按「跨领域汇聚」口径从主管线筛出的案例视图，而非待入网的新技术——按原方案执行会新增 96 个重复节点。据此撤销「入网」，改为「性质核查与防再生」：修复库内重复条目 mil_smartmunition（96 → 95 条）、给 gen_midtech.js 加护栏（重复 id / 断链背景即中止、--no-write 干跑、写前备份、漂移报告）、把「重建 backgrounds + 重写 69 条摘要枚举句」移交阶段 5、并把 Ch 族目标并入阶段 3。本轮未改动网络数据（节点 2,265 / 依赖边 6,091 不变）。",
+      treeChange: {
+        scope: "无（阶段 2 未改动主管线网络数据：节点 2,265 / 依赖边 6,091 与阶段 1 完成后一致）。仅改动 assets/techs_midtech.js（96 → 95 条）与 tools/gen_midtech.js；变更的是检修框架的阶段划分与本项目对中间技术库性质的认定。",
+        reason: "原阶段 2 的设计基于一条错误认定——把「中间技术库」当成「96 条未入网的技术」。核查发现该库的每一条 id 都已在主管线中，其缺少 category / dependsOn 只是因为该视图层只携带展示所需字段；gen_midtech.js 的头部注释（「从已有技术按跨领域汇聚口径筛选」）与数据源（TECHS）都指向这一点。若不做前置核查而直接执行，会向主管线注入 96 个重复节点，正是阶段 1c 刚清理掉的缺陷类型；同时其 backgrounds 取自生成时刻的旧 dependsOn，与清理后的网络已偏离 85/96。据此撤销原方案并把对齐工作推到结构定稿之后，避免同一批文案改写两遍。",
+        detail: "核查证据：① 重叠 96/96（0 条独立新技术，手工 4 例亦在内）；② 库内 mil_smartmunition 重复登记两次（index 50 / 57），两条 date / summary / backgrounds 完全不同；③ backgrounds 与当前 dependsOn 对比：完全一致 11 条、含已删前置 44 条、缺新前置 1 条、双向偏离 40 条；④ 95 个唯一 id 中 69 条的摘要含前置枚举句且与当前前置不符（依托 X 把…36 条、建立在 X 之上 36 条、承接 X，5 条、族 E 的在 X 之上 / 以 X 为基若干），其中多数属 A / E 族（前置待阶段 3 补齐）；⑤ 以当前数据重跑 gen_midtech.js 只产出 32 条（候选门槛 dependsOn >= 4 在清理后大部分节点已不满足），即原库无法按原口径复现。处置：修复重复条目（保留 index 50）、新增 tools/fix_midtech_dup.js、gen_midtech.js 加护栏、批次结论写入 audit/ledger.json 的 batches[2.1]、计划文档 §1.8 更正误读并重排阶段 2 与阶段 5d。"
+      },
+      changes: [
+        "① 前提核查（本批关键）：执行前先验证方案假设，而非直接动手。结论为原「96 条中间技术入网」撤销——96 条条目全部已在主管线中（同 id、同名称），0 条为独立新技术。",
+        "② 误读更正：计划文档 §1.8 原写「无 category、无 dependsOn，未进入主管线」，改用准确表述——该库是主管线的案例视图，缺字段只是视图层设计；并补记其 backgrounds 与当前 dependsOn 的偏离统计。",
+        "③ 库内重复修复：mil_smartmunition（智能弹药）登记两次（index 50「2010 年」与 index 57「21 世纪」，summary 句式亦不同），保留与主管线 date 一致的首次出现者，条目 96 → 95，唯一 id 95/95；执行器 tools/fix_midtech_dup.js（干跑 + --apply + 写后唯一性断言）。",
+        "④ 生成器护栏：tools/gen_midtech.js 在写出前断言重复条目 = 0、断链背景 = 0（原代码只计数不中止，故重复条目得以留存）；新增 --no-write 干跑开关、写前自动备份到 /tmp、以及与现有文件的 backgrounds 漂移报告（干跑实测漂移 23 / 32）。",
+        "⑤ 生成器不可复现（新发现）：以当前数据重跑 gen_midtech.js 的候选集从 96 条塌缩为 32 条（material 2 / energy 3 / manufact 3 / transport 6 / info 2 / life 14 / build 2），原因是候选门槛 dependsOn.length >= 4 在 v0.9.20 / v0.9.21 清理后已不适用；原库的 96 条是在清理前的网络状态下选出的。生成器口径修订列为阶段 5d。",
+        "⑥ 阶段划分调整：原寄望「中间技术入网」压低 Ch 族（267 → 120）的目标并入阶段 3——Ch 族的成因是「无下游」，只能靠补 / 改前置解决（阶段 1a / 1b 已验证有效），无法靠新增节点解决；「中间技术库与主管线对齐」移入阶段 5d，在结构定稿后一次性执行。",
+        "⑦ 台账：批次结论写入 audit/ledger.json 的 batches[2.1]（family = SCOPE，verdict = 撤销（前提不成立），6 条 findings + 4 条 actions），供回溯与审核。",
+        "⑧ 本轮不动网络：节点 2,265 / 依赖边 6,091 与阶段 1 完成后一致；回归门禁 audit_net --check [OK]，文档门禁 check_docs [OK]（TOTAL 2265）。"
+      ],
+      files: ["assets/techs_midtech.js", "tools/gen_midtech.js", "tools/fix_midtech_dup.js", "audit/ledger.json", "技术网络检修计划.md", "assets/pages/changelog_data.js", "assets/pages/correction_data.js", "版本迭代日志.md", "index.html", "tree.html", "tree_full.html", "browse.html", "detail.html", "lineage.html", "analysis.html", "model.html", "changelog.html", "correction.html", "method.html", "midtech.html", "progress.html", "research.html", "sop.html", "timeline.html", "worldview.html"]
+    }
   ]
 };

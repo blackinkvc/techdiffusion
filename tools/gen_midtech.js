@@ -210,8 +210,44 @@ items.forEach(it => {
 console.log("自动生成案例数:", items.length, "| 与手工重复:", dup, "| 断链背景:", badDep);
 console.log("分类配额:", JSON.stringify(used));
 
-// 写出
+// 护栏：重复 id 或断链背景一律中止
+//   历史事故：mil_smartmunition 曾被登记两次，且该文件被后续批次部分重写、与生成器产物不一致。
+if (dup > 0) {
+  console.error("[FAIL] 出现 " + dup + " 处重复条目（含与手工案例重复），已中止写出。");
+  process.exit(1);
+}
+if (badDep > 0) {
+  console.error("[FAIL] 出现 " + badDep + " 处断链背景，已中止写出。");
+  process.exit(1);
+}
+
+// 漂移报告：与现有文件对比 backgrounds 变化量（揭示主管线清理后的过期程度）
+const OUTFILE = "assets/techs_midtech.js";
+let drift = 0; const driftSamples = [];
+try {
+  const prev = (new Function(fs.readFileSync(OUTFILE, "utf8") + "\nreturn MIDTECHS_EXTRA;"))();
+  const prevMap = {}; prev.forEach(p => (prevMap[p.id] = (p.backgrounds || []).map(b => b.tech).join(",")));
+  items.forEach(it => {
+    const now = it.backgrounds.map(b => b.tech).join(",");
+    if (prevMap[it.id] !== now) {
+      drift++;
+      if (driftSamples.length < 5) driftSamples.push(it.id + " 旧=[" + prevMap[it.id] + "] 新=[" + now + "]");
+    }
+  });
+} catch (e) { console.log("[warn] 无法读取现有文件做漂移对比：" + e.message); }
+console.log("漂移（backgrounds 与现有文件不同）:", drift, "/", items.length);
+driftSamples.forEach(s => console.log("   " + s));
+
+if (process.argv.slice(2).includes("--no-write")) { console.error("\n[DRY-RUN] --no-write，未写盘。"); process.exit(0); }
+
+// 写出（先备份）
+if (fs.existsSync(OUTFILE)) {
+  const bak = "/tmp/gen_midtech_bak_" + Date.now();
+  fs.mkdirSync(bak, { recursive: true });
+  fs.copyFileSync(OUTFILE, bak + "/techs_midtech.js");
+  console.error("[BAK] 原文件已备份 → " + bak + "/techs_midtech.js");
+}
 const head = "// 自动生成：中间技术案例（从已有技术按「跨领域汇聚」口径筛选）\n// 生成于 2026-08-26，由 tools/gen_midtech.js 产出，与 data.js 手工 4 例合并为 100 例。\n";
 const body = "const MIDTECHS_EXTRA = " + JSON.stringify(items, null, 2) + ";\n\nif (typeof module !== \"undefined\" && module.exports) {\n  module.exports = { MIDTECHS_EXTRA };\n}\n";
-fs.writeFileSync("assets/techs_midtech.js", head + body);
-console.log("已写出 assets/techs_midtech.js");
+fs.writeFileSync(OUTFILE, head + body);
+console.log("已写出 " + OUTFILE);

@@ -1552,32 +1552,6 @@ const MIDTECHS_EXTRA = [
     ]
   },
   {
-    "id": "mil_smartmunition",
-    "name": "智能弹药",
-    "en": "Smart Munition",
-    "date": "21 世纪",
-    "summary": "承接自动驾驶 / 汽车智能、火箭、算法理论、电子学，智能弹药解决以智能弹药提升侦察、打击、防护或保障的无人化与智能化水平，填补了军事在智能时代的一项具体空白。",
-    "born": "智能弹药之所以在 21 世纪 前后成为可能，是因为以下关键技术恰好同时越过了「可用、便宜、可靠」的临界点：",
-    "backgrounds": [
-      {
-        "tech": "rocket",
-        "note": "火箭提供挣脱引力的动力"
-      },
-      {
-        "tech": "algorithm",
-        "note": "算法把问题转化为可执行的计算步骤"
-      },
-      {
-        "tech": "electronics",
-        "note": "电子学把微弱信号变成可控的系统行为"
-      },
-      {
-        "tech": "autonomous_driving",
-        "note": "自动驾驶 / 汽车智能：提供移动、运输与平台能力"
-      }
-    ]
-  },
-  {
     "id": "mat_foamceramic",
     "name": "泡沫陶瓷",
     "en": "Foam Ceramic",

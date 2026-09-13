@@ -516,6 +516,33 @@
         "dome": 1,
         "directed_energy": 1
       }
+    },
+    "2.1": {
+      "date": "2026-09-13",
+      "family": "SCOPE",
+      "scope": "阶段 2 原定义「96 条中间技术入网」的前提核查与重新裁定",
+      "originalPlan": "《技术网络检修计划.md》阶段 2 原写：为 assets/techs_midtech.js 的 96 条中间技术各补 category / era / year / dependsOn，作为真实节点并入主管线，优先插入阶段 1 登记的断链位置，目标 Ch 族 267 → 120 以下。",
+      "verdict": "撤销（前提不成立）",
+      "findings": [
+        "① 重叠度：96 条中间技术条目全部已存在于主管线（同 id、同名称），0 条为独立新技术；连 data.js 中的 4 条手工案例（smart_mower / smartphone / drone / autonomous_driving）也均在主管线内。tools/gen_midtech.js 第 1-3 行的头部注释即写明其口径为「从已有 2342 项技术中按跨领域汇聚口径筛选」，第 20-23 行的 crossSelf() 与第 189-201 行的 items 映射均以 TECHS 为数据源。故「并入主管线」若执行，将新增 96 个重复节点，属阶段 1c 刚清理掉的缺陷类型。",
+        "② 库内重复条目：mil_smartmunition（智能弹药）登记两次（index 50 / 57），两条的 date（2010 年 / 21 世纪）、summary（「建立在…之上」句 / 「承接…」句）、backgrounds（无人化工厂系 / 火箭系）完全不同，说明该文件在生成之后被另一批次部分重写过。",
+        "③ backgrounds 为旧快照：tools/gen_midtech.js 第 190-195 行把 t.dependsOn 原样搬入 backgrounds，故中间库继承的是 2026-08-26 生成时刻的主管线前置。与当前 dependsOn 对比：完全一致 11 条、含已删前置 44 条、主管线有新前置而库中缺 1 条、双向偏离 40 条（共 96 条，即 85/96 已偏离）。",
+        "④ 卡片自洽性的方向：中间库的 summary 与 backgrounds 同源于那份旧快照，故卡片内部是自洽的；当前真正自相矛盾的是主管线详情页（summary 陈旧、dependsOn 已清理）。若此时只重建 backgrounds，会把矛盾复制到中间库。",
+        "⑤ 改写时序：95 个唯一 id 中，69 条的摘要含前置枚举句且与当前 dependsOn 不符（「依托 X、Y 把…」36 条、「建立在 X、Y 之上」36 条、「承接 X、Y，」5 条、族 E 的「在 X 之上，/以 X 为基，」若干；另 25 条无枚举句）。其中多数 id 属 A / E 族（前置仍待阶段 3 补齐），现在改写会在阶段 3 之后重写第二遍。",
+        "⑥ 生成器不可复现：以当前数据重跑 tools/gen_midtech.js，候选集从 96 条塌缩为 32 条（分类配额 material 2 / energy 3 / manufact 3 / transport 6 / info 2 / life 14 / build 2），原因是候选门槛 dependsOn.length >= 4 在 v0.9.20 / v0.9.21 清理后大部分节点已不满足；且新候选集中的 ene_satpower / camera 等并不在原库内。即中间库无法按原口径复现，其 96 条是在清理前的网络状态下选出的。"
+      ],
+      "actions": [
+        "A1 · 修复库内重复条目：保留首次出现者 mil_smartmunition[50]（date 与主管线一致），删除 [57]；条目 96 → 95，唯一 id 95/95。执行器 tools/fix_midtech_dup.js（干跑默认 + --apply + 写后唯一性断言）。",
+        "A2 · 生成器加护栏：tools/gen_midtech.js 在写出前断言重复条目 = 0、断链背景 = 0（违反即非零退出，原代码只计数不中止）；新增 --no-write 干跑开关、写前自动备份到 /tmp、以及与现有文件的 backgrounds 漂移报告。",
+        "A3 · 阶段 2 重新裁定：原「96 条入网」撤销；「中间技术库与主管线对齐」（重建 backgrounds + 重写 95 条摘要枚举句）**移入阶段 5**，在阶段 3 / 4 结构定稿后一次性执行，避免同一批文案改写两遍；生成器的口径修订（dependsOn >= 4 门槛已不适用，且库不可复现）亦列为阶段 5 的前置事项。",
+        "A4 · Ch 族目标的承接方改判：原计划寄望「中间技术入网」压低 Ch 族（267 → 120）。因无新技术可入网，Ch 族只能靠「补/改前置」解决（阶段 1a / 1b 已证明该机制有效），故 Ch 族目标并入阶段 3，与 A / E 族同批推进。"
+      ],
+      "summary": {
+        "newTechsAvailable": 0,
+        "dupEntriesFixed": 1,
+        "generatorsGuarded": 1,
+        "planStagesRescoped": 1
+      }
     }
   }
 }

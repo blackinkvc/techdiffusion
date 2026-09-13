@@ -34,7 +34,8 @@ window.CORRECTIONS = {
       "【v0.9.19 · 待逐条复核】theory_data.js 首版 55 个节点层 + 20 条事后解释；至 v0.9.19-b3 节点层已扩至 117 项（theory 98 / method 9 / tech 10，批次 2 数学簇 35 + 批次 3 物理化学簇 27）。年份按学界通行说法填写，待逐条核对，重点四条：① vaccination 的免疫学成熟年取 1890 还是詹纳 1798；② airplane 的边界层理论 1904；③ compass 的电磁学解释 1865；④ valence 取 1852（弗兰克兰）还是 1916（路易斯电子对键）。",
       "【v0.9.20 · 已处置 · 重复节点】qft（1948，量子场论）与 quantum_field（1950，量子场论）已合并：保留 quantum_field（语义与正文均正确），退役 qft 并同步删除 7 条边（详见 CR-2026-0913-positional-template）。**但同名节点还有 22 组未处理**：ic/chip（集成电路 1958）、mat_forging/smithing（锻造）、ene_charcoal/charcoal（木炭 −4000）、tr_canoe/canoe（独木舟 −10000）、dome/bld_dome（穹顶）、mat_selfheal/self_healing（自修复材料）、ene_solidstate/solid_state_battery（固态电池）、ene_satpower/space_solar（空间太阳能）、ene_wpt/wireless_power（无线输电）、mfg_digitaltwin/digital_twin（数字孪生）、inf_nn/neural_network（神经网络）、inf_ar/ar、inf_vr/vr、inf_edgeai/edge_ai、bio_pharmacology/pharmacology、bio_tissueeng/tissue_engineering、bio_mrnavax/mrna_vaccine、bio_genetherapy/gene_therapy、bio_bci/bci、bio_synbio/synthetic_biology、bio_organonchip/organs_on_chip、bio_precisionmed/personalized_medicine、mil_directedenergy/directed_energy。系「早期 inf_*/bio_* 前缀批次」与「未来脊柱短名批次」独立生成同一概念，待逐组裁定保留哪一条。",
       "【v0.9.20–21 · 已执行 · 生成式依赖网全量重建】v0.9.20 清「时间最近」三族位置式伪边（处置 1,142 / 删 1,015 / 留 152 / 97 节点补前置）；v0.9.21 改用「生成器复现 + 逐边 diff」确定性方法收口同分类槽位边（处置 719 / 删 549 / 留 170 / 95 节点补前置 / 95 节点模板文案重写）。**仍未做**：ⓐ 264 个「仅剩泛化枢纽」节点补领域前置（v0.9.21 新增，首要）ⓑ 重写 1027 条 upgrade_stubs 三段模板文案 ⓒ 给生成器加语义硬约束防再生 ⓓ 22 组同名节点去重 ⓔ 12 条 enables 悬空引用",
-      "【v0.9.22 · 状态更新与新增待办】上条 ⓒ 部分完成（tools/gen_run.js 已加 --no-write 干跑开关 + 同分类槽位边上限断言 + 写前备份，语义硬约束仍待设计）、ⓓ 已完成（23 组同名节点合并，见 CR-2026-0913-structure-audit）；ⓐ ⓑ ⓔ 仍待执行。**新增待办（《技术网络检修计划.md》阶段 2–5）**：⓵ 阶段 2 —— 96 条中间技术（techs_midtech.js，无 category / dependsOn，仅挂 midtech.html）分五批入网（basic + material / energy + transport / manufact + build / life + military / info），优先插入阶段 1 登记的断链位置，目标 Ch 族 267 → 120 以下；⓶ 阶段 3 —— 前置补齐，E 族 173 → 0（info 91、manufact 68、其余 14，重点是制造类机床族与焊接族前置一律写作「数学」）、A 族 563 → 150 以下（分 basic 176 / material 96 + life 80 / info 92 + manufact 68 + energy 48 三批，现全部真实前置仅落在 14 个泛化学理枢纽内，数学一个节点被 637 个节点依赖）；⓷ 阶段 4 —— 结构与元数据治理（覆盖矩阵空缺逐格判定、纪元体系统一并校对、近现代占比评估、反向索引与反图对齐）；⓸ 阶段 5 —— 全量对齐与收口（按主管线重建 graph.json 并清 11 个独占节点含脏 id calendar_agri、重写 1,027 条 upgrade_stubs 模板文案、生成器语义硬约束、全量回归与上线）。每批次以 tools/audit_net.js --check 对照 audit/baseline.json 做回归门禁，判定台账写入 audit/ledger.json。"
+      "【v0.9.22 · 状态更新与新增待办】上条 ⓒ 部分完成（tools/gen_run.js 已加 --no-write 干跑开关 + 同分类槽位边上限断言 + 写前备份，语义硬约束仍待设计）、ⓓ 已完成（23 组同名节点合并，见 CR-2026-0913-structure-audit）；ⓐ ⓑ ⓔ 仍待执行。**新增待办（《技术网络检修计划.md》阶段 2–5）**：⓵ 阶段 2 —— 96 条中间技术（techs_midtech.js，无 category / dependsOn，仅挂 midtech.html）分五批入网（basic + material / energy + transport / manufact + build / life + military / info），优先插入阶段 1 登记的断链位置，目标 Ch 族 267 → 120 以下；⓶ 阶段 3 —— 前置补齐，E 族 173 → 0（info 91、manufact 68、其余 14，重点是制造类机床族与焊接族前置一律写作「数学」）、A 族 563 → 150 以下（分 basic 176 / material 96 + life 80 / info 92 + manufact 68 + energy 48 三批，现全部真实前置仅落在 14 个泛化学理枢纽内，数学一个节点被 637 个节点依赖）；⓷ 阶段 4 —— 结构与元数据治理（覆盖矩阵空缺逐格判定、纪元体系统一并校对、近现代占比评估、反向索引与反图对齐）；⓸ 阶段 5 —— 全量对齐与收口（按主管线重建 graph.json 并清 11 个独占节点含脏 id calendar_agri、重写 1,027 条 upgrade_stubs 模板文案、生成器语义硬约束、全量回归与上线）。每批次以 tools/audit_net.js --check 对照 audit/baseline.json 做回归门禁，判定台账写入 audit/ledger.json。",
+      "【v0.9.23 · 阶段 2 重裁定】上条 ⓵ 阶段 2 的「96 条中间技术入网」经前提核查**撤销**：96 条条目全部已在主管线中，属案例视图而非新技术（详见 CR-2026-0913-midtech-misread）。已修库内重复条目（96 → 95）、gen_midtech.js 已加护栏。**待办顺延与新增**：⓵ Ch 族目标（260 → 120 以下）并入阶段 3，新增批次 3e；⓶ 「中间技术库与主管线对齐」（重建 95 条 backgrounds + 重写 69 条摘要前置枚举句）列为阶段 5d，须在阶段 3 / 4 结构定稿后执行；⓷ 生成器口径修订（原候选门槛 dependsOn >= 4 已不适用，当前仅能选出 32 条）同为阶段 5d 前置事项；⓸ **系统性风险提示**：凡由主管线派生的数据（中间技术库 backgrounds、节点摘要文案、反向索引）都缺少「来源版本标记 + 变更后重新生成」机制，会静默过期——建议在阶段 5 统一建立同步与校验。**下一批：阶段 3.1 —— E 族前置补齐（建议首批取 manufact 68 的机床 / 焊接族）。**"
     ],
     enablesAudit: {
       title: "enables 语义错误 · 95 项灰色概念甄别表",
@@ -144,6 +145,45 @@ window.CORRECTIONS = {
     },
   },
   entries: [
+    {
+      id: "CR-2026-0913-midtech-misread",
+      date: "2026-09-13",
+      node: "assets/techs_midtech.js（中间技术库，96 条）· tools/gen_midtech.js · 检修计划阶段 2 的方案设计",
+      nodeName: "「中间技术库 = 96 条未入网技术」的认定错误：实为已有技术的案例视图，附 backgrounds 过期与库内重复条目",
+      category: "meta",
+      severity: "高",
+      status: "已修正（方案撤销 + 重复条目修复 + 生成器护栏）· 对齐工作移交阶段 5d",
+      problem: "检修计划阶段 2 原写：「为 assets/techs_midtech.js 的 96 条中间技术各补 category / era / year / dependsOn，作为真实节点并入主管线，优先插入阶段 1 登记的断链位置，目标 Ch 族 267 → 120 以下」。执行前做前提核查，发现该方案建立在一条错误认定上：① **重叠 96/96** —— 中间技术库每一条的 id 与名称都已存在于主管线中（连 data.js 的 4 条手工案例 smart_mower / smartphone / drone / autonomous_driving 也都在），0 条为独立新技术；按原方案执行会向主管线注入 96 个重复节点，与刚完成的阶段 1c（合并 23 组同名重复节点）方向相反。缺失 category / dependsOn 只因该视图层只携带展示所需字段，不代表这些技术不在网中。② **库内重复条目** —— mil_smartmunition（智能弹药）在本库登记两次（index 50 与 57），两条的 date（2010 年 / 21 世纪）、summary（「建立在…之上」句 / 「承接…」句）、backgrounds（无人化工厂系 / 火箭系）完全不同，说明该文件在生成之后被另一批次部分重写过。③ **backgrounds 已过期** —— 与当前 dependsOn 对比：完全一致仅 11 条、含已删前置 44 条、缺新前置 1 条、双向偏离 40 条（即 85/96 偏离）。④ **生成器不可复现** —— 以当前数据重跑 tools/gen_midtech.js，候选集从 96 条塌缩为 32 条，原库无法按原口径重建。⑤ **改写时序风险** —— 95 个唯一 id 中 69 条的摘要含前置枚举句且与当前前置不符，其中多数属 A / E 族（前置仍待阶段 3 补齐），此时改写会在阶段 3 之后重写第二遍。",
+      rootCause: "① **结构性误读**：把「视图层缺字段」等同于「不在数据集中」。中间技术库的定位写在 tools/gen_midtech.js 第 1-3 行的头部注释里——「从已有 2342 项技术中，按『跨领域汇聚』口径筛选」；第 20-23 行的 crossSelf() 与第 189-201 行的 items 映射均直接以 TECHS 为数据源。仅凭 techs_midtech.js 的表头字段（id / name / en / date / summary / born / backgrounds）推断其「未入网」，未回溯生成器与数据源，也未做最直接的重叠度核查（id 是否已存在），而这一步只需一次集合求交。② **派生数据缺少同步机制**：gen_midtech.js 第 190-195 行把 t.dependsOn 原样搬入 backgrounds，产物是生成时刻的快照，却没有标记来源版本、也没有在主管线变更后重新生成；主管线经 v0.9.20 / v0.9.21 两轮清理后，两套数据即静默分叉。③ **生成器只计数不中止**：原 gen_midtech.js 的校验段把重复条目累加到 dup 变量后仅打印日志、不中止写出，故重复条目得以留存于产物中。④ **候选门槛与清理脱钩**：候选条件 dependsOn.length >= 4 是在前置数普遍偏多的旧网络状态下设定的；v0.9.20 / v0.9.21 清理后多数节点前置降至 3 条以内，该门槛已失去意义，生成器因此无法复现原库。",
+      fix: "本轮先把不成立的部分停下、把成立的部分做完，并重排阶段划分。① **方案撤销**：阶段 2 原「96 条入网」撤销，结论与证据写入 audit/ledger.json 的 batches[2.1]（family = SCOPE，verdict = 撤销（前提不成立），6 条 findings + 4 条 actions）。② **重复条目修复**：保留与主管线 date 一致的首次出现者 mil_smartmunition[50]，删除 [57]，条目 96 → 95、唯一 id 95/95；新增执行器 tools/fix_midtech_dup.js（干跑默认 + --apply + 写后唯一性断言）。③ **生成器护栏**：tools/gen_midtech.js 写出前断言重复条目 = 0、断链背景 = 0（违反即非零退出）；新增 --no-write 干跑开关、写前自动备份到 /tmp、与现有文件的 backgrounds 漂移报告。④ **对齐移交**：把「重建 95 条 backgrounds（= 当前 dependsOn）+ 重写 69 条摘要前置枚举句 + 修订生成器口径」列入阶段 5d，在阶段 3 / 4 结构定稿后一次性执行，避免同一批文案改写两遍。⑤ **目标改挂**：原寄望于本批压低 Ch 族（267 → 120）的目标并入阶段 3——Ch 族成因为「无下游」，只能靠补 / 改前置解决（阶段 1a / 1b 已验证有效），无法靠新增节点解决。⑥ **文档更正**：计划文档 §1.8 由「未进入主管线」更正为准确表述，并补记 backgrounds 的偏离统计；阶段 2 章节重写为「性质核查与防再生」，批次总览与阶段 5 同步调整。⑦ 本轮不动网络数据：节点 2,265 / 依赖边 6,091 不变。",
+      badUpstream: [
+        "（错误认定）检修计划阶段 2：「96 条中间技术未入网，需补 category / dependsOn 后并入主管线」",
+        "（误读依据）assets/techs_midtech.js 表头只有 id / name / en / date / summary / born / backgrounds，无 category / dependsOn —— 据此推断「未入网」，未回溯生成器与数据源",
+        "（真实定位）tools/gen_midtech.js 第 1-3 行：「从已有 2342 项技术中，按『跨领域汇聚』口径筛选」；第 20-23 行 crossSelf() 与第 189-201 行 items 映射均以 TECHS 为数据源",
+        "（库内重复）mil_smartmunition 登记两次：[50] date=2010 年、summary「智能弹药约 2010 年 出现，建立在 无人化工厂、液态空气储能、二维材料 之上…」；[57] date=21 世纪、summary「承接自动驾驶 / 汽车智能、火箭、算法理论、电子学…」",
+        "（过期 backgrounds 实例）mat_graphene 旧=[chemistry,physics,fire,mat_selfheal]；inf_usb 旧=[mathematics,mat_selfheal,ene_borehole,iot]；mil_loyalwingman 旧=[mfg_industry40,ene_tribo,mat_2d,tr_reusablerocket]；bld_3dpb 旧=[mat_2d,mfg_darkfactory,ene_liquidair,bld_sponge]",
+        "（生成器只计数不中止）原 tools/gen_midtech.js 校验段：items.forEach(... if (ids.has(it.id)) dup++ ...) 后仅 console.log，未 process.exit",
+        "（候选门槛失效）原候选条件 dependsOn.length >= 4；以当前数据重跑仅得 32 条（material 2 / energy 3 / manufact 3 / transport 6 / info 2 / life 14 / build 2）"
+      ],
+      goodUpstream: [
+        "（重叠度核查）中间技术库 96 条 id 与主管线 TECHS 求交 → 96/96 命中，0 条独立；手工 4 例（smart_mower / smartphone / drone / autonomous_driving）亦在主管线内",
+        "（backgrounds 偏离统计）与当前 dependsOn 对比：完全一致 11 条 / 含已删前置 44 条 / 缺新前置 1 条 / 双向偏离 40 条",
+        "（摘要枚举句统计）95 个唯一 id 中：需改写 69 条、已一致 1 条、无枚举句 25 条（「依托 X 把…」36、「建立在 X 之上」36、「承接 X，」5、族 E 的「在 X 之上 / 以 X 为基」若干）",
+        "（修复后）assets/techs_midtech.js 条目 96 → 95，唯一 id 95/95；mil_smartmunition 保留 [50]（与主管线 date 一致者）",
+        "（新护栏）tools/gen_midtech.js：dup > 0 或 badDep > 0 即 process.exit(1)；新增 --no-write、写前备份 /tmp/gen_midtech_bak_*、漂移报告",
+        "（新执行器）tools/fix_midtech_dup.js：干跑去重 + --apply 写出 + 写后唯一性断言",
+        "（台账存证）audit/ledger.json batches[2.1]：family = SCOPE、verdict = 撤销（前提不成立）、6 条 findings + 4 条 actions",
+        "（计划重排）阶段 2 改为「性质核查与防再生」（2.1–2.4，其中 2.4 移交阶段 5）；Ch 族目标并入阶段 3（新增批次 3e）；对齐工作列为阶段 5d"
+      ],
+      changes: [
+        "① 建立「执行前先做前提核查」的流程：本批是本项目首次在动手前系统性验证方案假设，并因核查结果撤销了原方案——避免了向主管线注入 96 个重复节点。",
+        "② 明确中间技术库的性质：它是主管线的「跨领域汇聚」案例视图，不是独立技术集合；其缺字段是视图层设计而非数据缺失。此认定写入计划文档 §1.8。",
+        "③ 修复库内重复条目（96 → 95）并新增专用执行器；生成器加护栏（重复 / 断链即中止、--no-write、写前备份、漂移报告），杜绝同类产物问题再生。",
+        "④ 识别出「派生数据缺少来源版本标记与同步机制」这一系统性风险：凡由主管线派生的数据（中间技术库 backgrounds、节点摘要文案、反向索引）都可能静默过期，需在阶段 5 一并建立同步与校验。",
+        "⑤ 重排阶段划分：Ch 族目标移交阶段 3，中间技术库对齐移交阶段 5d，使「文案改写」不早于「结构定稿」，避免重复劳动。"
+      ],
+      files: ["assets/techs_midtech.js", "tools/gen_midtech.js", "tools/fix_midtech_dup.js", "audit/ledger.json", "技术网络检修计划.md", "assets/pages/changelog_data.js", "assets/pages/correction_data.js", "版本迭代日志.md"]
+    },
     {
       id: "CR-2026-0913-structure-audit",
       date: "2026-09-13",
