@@ -3,6 +3,8 @@
 > 人类技术演化网络 2.0 · 规律挖掘与未来涌现推演
 > Humanity Technology Evolution Network — mapping the dependencies, patterns, and future emergence of human technology.
 
+**在线浏览（GitHub Pages）：<https://blackinkvc.github.io/techdiffusion/>**
+
 [English below](#english)
 
 ---
