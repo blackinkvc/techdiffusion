@@ -547,7 +547,7 @@
   "3.1a": {
    "date": "2026-09-13",
    "family": "E-manufact",
-   "status": "draft-ready（27 条判定草案已写入，待用户逐条审核；未写盘主管线）",
+   "status": "applied（27 条判定已写盘主管线并完成收尾；v0.9.28 / 2026-09-14）",
    "scope": "E 族 manufact 68 条中的首批 27 条——机床族（17）与焊接 / 连接族（10）",
    "criterion": "§2 判定四标准：① 必要性（去掉该前置，本技术是否仍能按史实出现）② 排他性（是否该环节最直接的先行者）③ 时序性（前置年 ≤ 本节点年）④ 域内优先（跨域须有明确传导机制）。处置四档：保留 / 改前置 / 删边 / 降级为概念影响。",
    "observation": "E 族 manufact 68 条的当前前置**全部为同一条 mathematics**，无一条例外——即同一槽位被批量赋值，病灶完全同构。本批先取机床族与焊接 / 连接族，共 27 条。",
@@ -1178,7 +1178,16 @@
     "delete": 24,
     "concept": 0,
     "backfill": 27
-   }
+   },
+   "verification": [
+    "写盘前：候选筛选断言通过（27 条全部为「单前置且前置 = mathematics」）；台账断言通过（keep 2 + repoint 1 + delete 24 + concept 0 = candidates 27、backfills 27 相符）。",
+    "写盘：tools/apply_ledger.js --batch 3.1a --apply —— 定位节点 27 / 27、失败 0、逐节点断言「现值 === 预期旧值」全部通过；写前备份 /tmp/bak_3.1a_1789328792963（data.js / techs_extra.js / techs_extend.js / techs_more.js 四文件）；节点总数 2266 → 2266 不变。",
+    "边增减：删除 24 条（全部 parent = mathematics）+ 改指 1 条（mfg_gauge: mathematics → numerals，边数不变）+ 保留 2 条（mfg_cnc / mfg_cmm 的 mathematics，必要性成立）+ 补前置 backfills 27 条共新增 56 条边（涉及 37 个不同前置 id）→ 依赖边 6,094 → 6,126（净 +32）。",
+    "派生链（按序不可颠倒）：tools/regen_text.js --apply 应用 45 节点 136 处（A 族 43 节点 134 处 = summary 43 / significance 43 / views[0] 25 / views[1] 23；B 族 2 节点 2 处）；复跑 --check 为不动点 0 处。tools/regen_midtech.js --apply 应用 3 条（mfg_cryogenicm / mfg_mc / mfg_turnmill 的 summary 与 backgrounds）；复跑 95/95 不动点。",
+    "结构：节点 2,266 / 边 6,126；环 0 / 自环 0 / 重复边 0 / 悬空前置 0 / 年份倒挂 0 / 零前置 4（不变）。结构问题族下降：A 562 → 535、E 173 → 146、Ch 260 → 252（其中 Ch.manufact 29 → 23）、A.manufact 68 → 41；F 8 不变。mathematics 作为前置的节点 636 → 611。",
+    "门禁三道全绿：check_docs.js [OK]（TOTAL 2266 由 {{TOTAL}} 占位与实时计算承接，无需写死）；regen_text.js --check 0 处；audit_net.js --check [OK]（对照刷新后的 audit/baseline.json：N 2266 / edges 6126 / A_total 535 / E_total 146 / Ch_total 252 / chemistry.down 431 / physics.down 290 / era.info 744）。",
+    "全量管线未改动（graph.json 2,299 / 6,963；data_full.js 13,318 / 16,811）—— 依 v0.9.26 裁定不逐条打补丁，本批 27 条前置改动随阶段 5e「按主管线单向重建」带入。"
+   ]
   },
   "5.0": {
    "date": "2026-09-13",

@@ -47,6 +47,8 @@ window.CORRECTIONS = {
       "【v0.9.26 · 上条取代】上条待办中的「全量管线 1,127 条边未被主管线承认」计数与口径已更正：并入主管线 enables 声明后为 1,116 条（仅按 dependsOn 为 1,207），且这 1,116 条不再逐条判定，随 5.2b 裁定的「按主管线重建」一并消解（重建产物只保留主管线承认的边；重建后须与现有两文件逐边 diff，确认删除集合全部来自主管线不承认的边、且无新增）。其中 29 条年份倒挂的处置档已定为「降级为概念影响」——重建前须先写入 theory_data.js 覆盖层，否则重建时信息丢失。",
       "【v0.9.26 · 待定 · 扩充语料视图】全量管线 11,053 个独占节点中约 11,030 条来自 analysis-engine/data/subcat/new_techs.json（11,031 条），已裁定判为独立语料、不并入主管线。待办：① 数据层加 provenance（mainline-derived / new_techs）；② tree_full.html 给出图例说明来源，避免读者把未经验证的扩充语料与已校订的主管线等同看待；③ 是否对扩充语料另设独立视图（单列一批，不在 5e 内展开）。",
       "【v0.9.27 · 已补建 · 后续待补】材料类缺失节点「玄武岩纤维」(mat_basaltfiber) 已补建：material / 1985 / info，前置 chemistry + physics + mat_glassfiber（工艺母体），节点 2,265 → 2,266、边 6,091 → 6,094。**后续一侧仍是缺口**：现有网络中无任何节点的必要性要求玄武岩纤维（mat_glassfiber 零下游；mat_frp 仅 1 条下游；bld_frpbridge / bld_carbonconc / bd_civ_130 分别以玻璃钢、碳纤维为对象，改接必要性不成立；year ≥ 1985 的 material/build/transport/energy 共 417 个节点中无纤维增强下游），经用户裁定本轮不新建下游。若要接上「后续」，按网络自身范式应新建「玄武岩纤维复合材料」（对齐 mat_cfrp 碳纤维复合材料）与/或「玄武岩纤维混凝土」（对齐 bld_carbonconc），并注意二者会再次改动节点数与 TOTAL。另：新节点的四个文案字段由 regen_text 族 A 公式生成、已验不动点，但**全量管线两个文件未含该节点**（依 v0.9.26 裁定不逐条打补丁），须在阶段 5e 重建时确认带入。"
+,
+      "【v0.9.28 · 已执行 · 顺延】批次 3.1a（E 族 manufact 首批 27 条「`mathematics` 单前置」判定）已写盘：保留 2 / 改前置 1 / 删边 24 / 降级 0，补前置 27 条共新增 56 条边，依赖边 6,094 → 6,126（节点 2,266 不变）；派生文案 45 节点 136 处 + 中间库 3 条，均验不动点；结构问题族 A 562 → 535、E 173 → 146、Ch 260 → 252。**顺延与新增**：① E 族 manufact 其余 41 条前置同样一律为 `mathematics`，处置规则 R1–R4 可直接沿用（阶段 3.1b 起）；② **根治手段在阶段 5c** —— 只要生成器的「同分类槽位批量挂通用枢纽」逻辑不加语义硬约束，同类边会在重跑时再生，本批属事后清理、非源头修复；③ `mfg_resistweld` 电阻焊标注 1877 年早于 `electricity` 电力系统 1879（通行说法为 1886 年 Thomson 专利），本批已改用 `generator` / `battery` 绕开，年份本身留待阶段 4 统一校订；④ 本批 27 条的 `applications` 全部为同一组模板值（零件加工 / 批量制造 / 精密装配）且无 `purpose` / `people` / `place`，与 `techs_more.js` 同构 stub 特征一致，建议并入「stub 甄别」批次；⑤ 同义重复节点对（`mfg_wedm` 线切割 / `mfg_edmwire` 电火花线切割机、`laser` / `lasers`、`mfg_lathe` / `lathe`）属节点级问题，本批未处置，建议另立批次（注意合并会改节点数与 `check_docs` / `tree_full.html` 的写死数字）；⑥ 缺失节点（补节点候选，累计 3 项）：深冷介质 / 液氮、乙炔或工业气体、真空技术（`mfg_ebw` 电子束焊需高真空环境，现以 `mfg_vacfurnace` 真空炉代位，语义不等价）。"
     ],
     enablesAudit: {
       title: "enables 语义错误 · 95 项灰色概念甄别表",
@@ -156,6 +158,53 @@ window.CORRECTIONS = {
     },
   },
   entries: [
+    {
+      "id": "CR-2026-0914-manufact-math-hub",
+      "date": "2026-09-14",
+      "node": "E 族 manufact 68 个节点的前置被批量赋值为通用学理枢纽「数学」（`mathematics`）—— 首批 27 条（机床族 17 + 焊接 / 连接族 10）已逐条判定并写盘，其余 41 条待续",
+      "nodeName": "制造类节点的直接前因一律写作「数学」：学科级枢纽被当作具体机械工艺的直接前置，同一槽位批量赋值，`mathematics` 作为前置一度覆盖 636 个节点、跨越全部领域",
+      "category": "前因误置 · 通用枢纽泛化挂边",
+      "severity": "中",
+      "status": "已修正（首批 27 条；其余 41 条待续）",
+      "problem": "① **同一槽位批量赋值**：E 族 manufact 68 个节点的前置**全部为同一条 `mathematics`**，无一条例外——判定依据不是逐条语义分析，而是对「数学为一切定量科学之基」这一泛化命题的机械外推。② **无排他性、无域内传导**：机床与焊接类是具体机械工艺，其必要前提是同族的加工母体与关键部件（车床、钻具、伺服、刀柄、切削液），学科级「数学」既不是该环节最直接的先行者，也没有从数学到某台机床的明确传导机制。③ **真正的必要条件反而缺席**：如镗床须先有车床与钻孔工艺、钻床须以机床结构为母体，这些边在网络中均不存在，却挂着一条泛化的「数学」入边。④ **量级**：`mathematics` 作为前置的节点一度达 636 个，覆盖材料、能源、制造、信息等全部领域，属典型的枢纽泛化污染，与项目此前清理的位置式伪边、二阶枢纽污染同源。",
+      "rootCause": "节点前置由生成器对同槽位批量赋值（沿用「通用学理枢纽」填充逻辑），流程中缺少「域内优先」与「排他性」两道校验：只要节点属于某分类，就统一挂上该分类的默认枢纽，而不检查该枢纽是否为这一具体技术的直接先行者。因此病灶不随个案修复而消失——只要生成器重跑，同类赋值会再次产生，这也是本批在阶段 5c「生成器语义硬约束」中被单列的原因。",
+      "fix": "按项目四标准（必要性 / 排他性 / 时序性 / 域内优先）逐条判定首批 27 条，落四档处置：保留 2 条（`mfg_cnc` 数控——以程序指令控制机床运动，插补与坐标计算属其定义性构成；`mfg_cmm` 三坐标测量——以坐标系表述并解算几何量）、改前置 1 条（`mfg_gauge` 量具 → `numerals` 数字符号系统——刻线即数值尺度，比学科级「数学」更贴近且更早）、删边 24 条（`mathematics` 对机床 / 焊接类不构成必要前提）、降级为概念影响 0 条。删边的同时按同族可考事实补入前置 27 条（共新增 56 条边，涉及 37 个不同前置 id），避免「只删不补」造成零前置。判定与理由逐条登记于 `audit/ledger.json` 的 `batches[\"3.1a\"]`，写盘由 `tools/apply_ledger.js --batch 3.1a --apply` 执行（定位 27 / 27、逐节点断言「现值 === 预期旧值」全部通过、写前备份）；派生文案按序重算（`regen_text` → `regen_midtech`）并验证为不动点；`audit_net --snapshot` 刷新回归基线。",
+      "badUpstream": [
+        "把学科级通用枢纽 `mathematics` 登记为机床 / 焊接类具体工艺的直接前置（无排他性、无域内传导机制）",
+        "以「数学是制造的基础」为由保留该边（这属于泛化影响，不是直接前因；四标准明确要求排他性与域内优先）",
+        "为补前置而按位置、编号或年份邻近做推断（会重演本项目正在清理的位置式伪边）",
+        "删边而不补前置（会使节点变成零前置，把「错误前置」换成「无前置」，两种都不可用）",
+        "把 `mfg_gauge` 的量具刻线依据仍指向学科级「数学」而不下沉到 `numerals` 数字符号系统"
+      ],
+      "goodUpstream": [
+        "前置取同族可考事实而非泛化枢纽：加工母体（`mfg_lathe` 车床、`mfg_drill` 钻孔、`mfg_mill` 铣床）、关键部件（`mfg_servo` 伺服、`mfg_toolholder` 刀柄）、工艺前提（`cryogenics` 低温工程 + `mfg_coolant` 切削液之于低温切削；`hafting` 装柄 + `fire` 火之于胶接的早期形态）",
+        "保留确有必要性者并写明理由（`mfg_cnc` 的插补与坐标解算、`mfg_cmm` 的几何量解算），改指更贴近且满足时序者（`mfg_gauge` → `numerals`）",
+        "改前置后由执行器逐节点断言「现值 === 预期旧值」，并复跑环检测与年份倒挂校验（前置年 ≤ 本节点年）",
+        "派生文案一律交由 `regen_text` / `regen_midtech` 按序重算并验证为不动点，不手工改写模板句",
+        "判定与理由逐条入台账（`edges` + `backfills` + `findings` + `verification`），并让**补前置**与**删边**在同一批次内闭环"
+      ],
+      "changes": [
+        "① 病灶确认：E 族 manufact 68 条的当前前置全部为同一条 `mathematics`，无一条例外；本批先取机床族 17 条与焊接 / 连接族 10 条，共 27 条。",
+        "② 判定结果：保留 2 条（`mfg_cnc` / `mfg_cmm`）、改前置 1 条（`mfg_gauge` → `numerals`）、删边 24 条、降级为概念影响 0 条。",
+        "③ 补前置 27 条共新增 56 条边、涉及 37 个不同前置 id。抽样：`mfg_gauge` → `mfg_chisel` + `woodworking`；`mfg_boring` → `mfg_lathe` + `mfg_drill`；`mfg_drillpress` → `mfg_drill` + `mfg_lathe`；`mfg_cryogenicm` → `cryogenics` + `mfg_coolant`；`mfg_adhesive` → `hafting` + `fire`；`mfg_mc` → `mfg_cnc` + `mfg_toolholder`；`mfg_turnmill` → `mfg_cnc` + `mfg_lathe` + `mfg_mill`。",
+        "④ 边增减核账：删 24 条（全部 parent = `mathematics`）+ 改指 1 条（边数不变）+ 保留 2 条 + 补前置 56 条 → 依赖边 6,094 → 6,126（净 +32）；节点总数 2,266 不变。",
+        "⑤ 派生文案重算（按序不可颠倒）：`regen_text.js --apply` 应用 45 节点 136 处（A 族 43 节点 134 处、B 族 2 节点 2 处）；`regen_midtech.js --apply` 应用 3 条（`mfg_cryogenicm` / `mfg_mc` / `mfg_turnmill` 的 `summary` 与 `backgrounds`，其 `backgrounds` 由占位的「数学提供了所有定量科学的语言与工具」改为真实域内前置）。两者复跑均为不动点（0 处 / 95-95）。",
+        "⑥ 结构问题族下降：A 562 → 535、E 173 → 146、Ch 260 → 252（其中 `Ch.manufact` 29 → 23）、`A.manufact` 68 → 41、`F` 8 不变；`mathematics` 作为前置的节点 636 → 611。环 0 / 自环 0 / 重复边 0 / 悬空前置 0 / 年份倒挂 0 / 零前置 4（不变）。",
+        "⑦ 门禁与基线：三道门禁全绿；`audit/baseline.json` 按合法改进刷新 12 项（`edges` 6,126、`A_total` 535、`E_total` 146、`Ch_total` 252 等）。",
+        "⑧ 未改动与顺延：全量管线 `graph.json` 与 `assets/data_full.js` 依 v0.9.26 裁定不逐条打补丁（随阶段 5e 重建带入）；E 族 manufact 其余 41 条前置同样一律为 `mathematics`，本批处置规则 R1–R4 可直接沿用；`mfg_resistweld` 年份存疑（1877 早于 `electricity` 1879，通行说法为 1886 年 Thomson 专利）留待阶段 4，本批已改用它条合法前置绕开。"
+      ],
+      "files": [
+        "assets/techs_extra.js",
+        "assets/techs_extend.js",
+        "assets/techs_midtech.js",
+        "audit/ledger.json",
+        "audit/baseline.json",
+        "assets/pages/correction_data.js",
+        "assets/pages/changelog_data.js",
+        "技术网络检修计划.md",
+        "版本迭代日志.md"
+      ]
+    },
     {
       "id": "CR-2026-0914-basaltfiber-missing",
       "date": "2026-09-14",

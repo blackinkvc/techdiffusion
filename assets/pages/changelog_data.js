@@ -749,6 +749,43 @@ window.CHANGELOG = {
         "技术网络检修计划.md",
         "版本迭代日志.md"
       ]
+    },
+    {
+      "version": "v0.9.28",
+      "date": "2026-09-14",
+      "type": "data",
+      "title": "批次 3.1a 写盘：E 族 manufact 首批 27 条「mathematics 单前置」判定落地，依赖边 6,094 → 6,126 条",
+      "summary": "阶段 3 的第一批前置补齐（批次 3.1a）写盘。病灶同构且明确：E 族 manufact 68 个节点的前置**全部为同一条 `mathematics`**（网络内被它依赖的节点一度达 636 个），系生成器对同一槽位批量赋值所致，非逐条语义判定。本批取机床族 17 条与焊接 / 连接族 10 条共 27 条，按四标准（必要性 / 排他性 / 时序性 / 域内优先）逐条判定：保留 2 条（`mfg_cnc` 数控与 `mfg_cmm` 三坐标测量 —— 插补、坐标解算属其定义性构成，数学为必要前提）、改前置 1 条（`mfg_gauge` 量具改指 `numerals` 数字符号系统 —— 刻线即数值尺度，`numerals`(−3500) 比学科级「数学」更贴近该环节且早于量具 −2000）、删边 24 条（`mathematics` 对机床 / 焊接类不构成必要前提，去掉后这些技术仍可按史实出现）、降级为概念影响 0 条。删除 24 条 + 补前置 27 条（共新增 56 条边，涉及 37 个不同前置 id），依赖边 6,094 → 6,126（净 +32），节点总数 2,266 不变。补入的前置取自同族可考事实而非位置推断，例：`mfg_boring` 镗床 → `mfg_lathe` 车床 + `mfg_drill`；`mfg_cryogenicm` 低温切削 → `cryogenics` 低温工程 + `mfg_coolant`；`mfg_adhesive` 胶接 → `hafting` 装柄 + `fire` 火（天然胶粘剂的早期形态）。派生链按序重算：`regen_text --apply` 应用 45 节点 136 处（A 族 43 节点 134 处、B 族 2 节点 2 处），复跑为不动点 0 处；`regen_midtech --apply` 应用 3 条（`mfg_cryogenicm` / `mfg_mc` / `mfg_turnmill` 的 `summary` 与 `backgrounds`），复跑 95/95 不动点。结构问题族同步下降：A 562 → 535、E 173 → 146、Ch 260 → 252（其中 `Ch.manufact` 29 → 23）、`A.manufact` 68 → 41、`F` 8 不变；`mathematics` 作为前置的节点 636 → 611。全量管线依 v0.9.26 裁定未逐条打补丁，本批改动随阶段 5e「按主管线单向重建」带入。",
+      "treeChange": {
+        "scope": "主管线依赖网络：依赖边 6,094 → 6,126（删 24 条 `mathematics` 入边 + 改指 1 条 + 补前置 27 条共新增 56 条边）；节点总数 2,266 不变。涉及 `assets/techs_extra.js`（27 个节点的 `dependsOn` 与派生文案）、`assets/techs_extend.js`（2 节点的 B 族文案）、`assets/techs_midtech.js`（3 条中间技术库 `summary` / `backgrounds`）。全量管线 `graph.json`（2,299 / 6,963）与 `assets/data_full.js`（13,318 / 16,811）本轮未改动。",
+        "reason": "E 族 manufact 68 条的前置被生成器按同一槽位批量赋值为通用的 `mathematics`——该节点作为前置一度覆盖 636 个节点，跨越材料、能源、制造等全部领域，属「通用学理枢纽泛化挂边」，与项目此前清理的位置式伪边、二阶枢纽污染同源。机床与焊接类是具体机械工艺，其必要前提是同族的加工母体与部件（车床、钻具、伺服、夹持等），把学科级「数学」登记为其直接前因，既无排他性也无域内传导机制；反过来，真正的必要条件（如车床之于镗床）在网络里反而缺席。",
+        "detail": "① **候选与断言**：候选筛选在脚本内硬断言「单前置且前置 == mathematics」，27 条全部满足，任一不符即抛错，不会把非 E 族节点混入。② **四标准判定**：保留 2（`mfg_cnc` / `mfg_cmm`）、改前置 1（`mfg_gauge` → `numerals`）、删边 24、降级 0。③ **补前置**：27 条 `backfills` 共新增 56 条边、涉及 37 个前置 id，全部取自同族可考事实（如 `mfg_boring` → `mfg_lathe` + `mfg_drill`、`mfg_planer` 与 `mfg_grindingwheel` 的母体与磨具关系、`mfg_gasweld` 气焊的燃烧与金属熔接前提、`mfg_resistweld` 电阻焊改用 `generator`(1831) / `battery`(1800) 作合法前置而非存疑的 1877 年份）。④ **台账与执行器**：判定与理由逐条登记于 `audit/ledger.json` 的 `batches[\"3.1a\"]`（`edges` 27 + `backfills` 27 + `findings` 7 + `verification` 7）；写盘由 `tools/apply_ledger.js --batch 3.1a --apply` 执行，定位节点 27 / 27、失败 0、逐节点断言「现值 === 预期旧值」全部通过，写前备份至 `/tmp/bak_3.1a_1789328792963`。⑤ **派生链（按序不可颠倒）**：`regen_text.js --apply`（主管线文案，45 节点 136 处）→ `regen_midtech.js --apply`（中间库文案，3 条），两者复跑均为不动点。⑥ **结构下降**：A 族 562 → 535、E 族 173 → 146、Ch 族 260 → 252、`A.manufact` 68 → 41、`Ch.manufact` 29 → 23；`mathematics` 前置数 636 → 611。⑦ **门禁**：`check_docs [OK]`（TOTAL 2,266 由 `{{TOTAL}}` 占位承接）、`regen_text --check` 0 处、`audit_net --check [OK]`；`audit/baseline.json` 按合法改进刷新。⑧ **全量管线**：依 v0.9.26 裁定不逐条打补丁，本批前置改动随阶段 5e 重建一并带入。"
+      },
+      "changes": [
+        "① 病灶确认：E 族 manufact 68 条的当前前置**全部为同一条 `mathematics`**，无一条例外——同一槽位被批量赋值，病灶完全同构。本批先取机床族 17 条与焊接 / 连接族 10 条，共 27 条。",
+        "② 判定结果：保留 2 条（`mfg_cnc` 数控——以程序指令控制机床运动，插补与坐标计算属定义性构成；`mfg_cmm` 三坐标测量——以坐标系表述并解算几何量，几何与数值解算属定义性构成）、改前置 1 条（`mfg_gauge` 量具 → `numerals` 数字符号系统）、删边 24 条、降级为概念影响 0 条。",
+        "③ 改前置理由：量具的本质是把长度数值化并与基准比对，其刻线即数值尺度；`numerals`(−3500) 比学科级「数学」更贴近该环节（排他性），且早于量具(−2000)（时序性）。",
+        "④ 删边理由：机床与焊接类是具体机械工艺，去掉「数学」这一前置后仍可按史实出现（例如镗床、钻床、刨床、砂轮、气焊、钎焊），数学不构成其必要前提；其必要条件是同族加工母体与部件，而这些在网络中反而缺席。",
+        "⑤ 补前置 27 条共新增 56 条边、涉及 37 个不同前置 id，全部取自同族可考事实。抽样：`mfg_gauge` → `mfg_chisel` 凿 + `woodworking` 木作（刻线与木质直杆尺身）；`mfg_boring` → `mfg_lathe` 车床 + `mfg_drill` 钻孔（内圆扩孔的母体）；`mfg_drillpress` → `mfg_drill` + `mfg_lathe`；`mfg_cryogenicm` 低温切削 → `cryogenics` 低温工程 + `mfg_coolant` 切削液；`mfg_adhesive` 胶接 → `hafting` 装柄 + `fire` 火（天然胶粘剂的早期形态）；`mfg_mc` 加工中心 → `mfg_cnc` + `mfg_toolholder`；`mfg_turnmill` 车铣复合 → `mfg_cnc` + `mfg_lathe` + `mfg_mill`。",
+        "⑥ 年份存疑（本批已绕开、留待阶段 4）：`mfg_resistweld` 电阻焊标注 1877 年，早于 `electricity` 电力系统 1879，工程史通行说法为 1886 年 Thomson 专利；本批改用 `generator`(1831) / `battery`(1800) 作为合法前置，年份本身未动。",
+        "⑦ 写盘执行：`tools/apply_ledger.js --batch 3.1a --apply` —— 定位节点 27 / 27、失败 0、逐节点断言「现值 === 预期旧值」全部通过；写前备份 `/tmp/bak_3.1a_1789328792963`；节点总数 2,266 → 2,266 不变。",
+        "⑧ 边增减核账：删 24 条（全部 parent = `mathematics`）+ 改指 1 条（边数不变）+ 保留 2 条 + 补前置新增 56 条 → 依赖边 6,094 → 6,126（净 +32）。",
+        "⑨ 派生文案重算（按序）：`regen_text.js --apply` 应用 45 节点 136 处（A 族 43 节点 134 处 = `summary` 43 / `significance` 43 / `views[0]` 25 / `views[1]` 23；B 族 2 节点 2 处）；复跑 `--check` 为不动点 0 处。`regen_midtech.js --apply` 应用 3 条（`mfg_cryogenicm` / `mfg_mc` / `mfg_turnmill` 的 `summary` 与 `backgrounds`，其 `backgrounds` 由占位的「数学提供了所有定量科学的语言与工具」改为真实域内前置 + 域内模板注释）；复跑 95/95 不动点。",
+        "⑩ 结构问题族下降：A 562 → 535、E 173 → 146、Ch 260 → 252（其中 `Ch.manufact` 29 → 23）、`A.manufact` 68 → 41、`F` 8 不变；`mathematics` 作为前置的节点 636 → 611。环 0 / 自环 0 / 重复边 0 / 悬空前置 0 / 年份倒挂 0 / 零前置 4（不变）。",
+        "⑪ 门禁与基线：`check_docs.js [OK]`（TOTAL 2,266）、`regen_text.js --check` 0 处、`audit_net.js --check [OK]`；`audit/baseline.json` 按合法改进刷新，共 12 项变化 —— `edges` 6,094 → 6,126、`A_total` 562 → 535、`E_total` 173 → 146、`Ch_total` 260 → 252、`A.manufact` 68 → 41、`E.manufact` 68 → 41、`Ch.manufact` 29 → 23、`Ch.basic` 40 → 39、`Ch.energy` 34 → 33、`generic` 首项 `mathematics` 下游 636 → 611、`dual.onlyInGraphJson` 1,204 → 1,229、`dual.onlyInMain` 451 → 508。",
+        "⑫ 未改动：全量管线 `graph.json` 与 `assets/data_full.js`（依 v0.9.26 裁定不逐条打补丁，本批前置改动随阶段 5e 重建带入）、`theory_data.js` 覆盖层、其余 2,239 个节点的依赖关系与手写散文。E 族 manufact 其余 41 条前置同样一律为 `mathematics`，本批处置规则 R1–R4 可直接沿用。"
+      ],
+      "files": [
+        "assets/techs_extra.js",
+        "assets/techs_extend.js",
+        "assets/techs_midtech.js",
+        "audit/ledger.json",
+        "audit/baseline.json",
+        "assets/pages/changelog_data.js",
+        "assets/pages/correction_data.js",
+        "技术网络检修计划.md",
+        "版本迭代日志.md"
+      ]
     }
 ]
 };

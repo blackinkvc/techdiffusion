@@ -1,6 +1,6 @@
 {
  "N": 2266,
- "edges": 6094,
+ "edges": 6126,
  "selfLoop": 0,
  "dupEdge": 0,
  "danglingDep": 0,
@@ -11,45 +11,45 @@
  "isolated": 0,
  "dupGroups": 0,
  "F": 8,
- "A_total": 562,
+ "A_total": 535,
  "A": {
   "basic": 176,
   "material": 95,
   "energy": 48,
   "info": 92,
   "life": 80,
-  "manufact": 68,
+  "manufact": 41,
   "military": 1,
   "build": 2
  },
- "E_total": 173,
+ "E_total": 146,
  "E": {
   "basic": 2,
   "material": 2,
   "energy": 2,
-  "manufact": 68,
+  "manufact": 41,
   "info": 91,
   "life": 5,
   "military": 1,
   "build": 2
  },
- "Ch_total": 260,
+ "Ch_total": 252,
  "Ch": {
   "transport": 33,
   "life": 22,
   "build": 25,
   "military": 24,
-  "basic": 40,
+  "basic": 39,
   "material": 43,
-  "energy": 34,
-  "manufact": 29,
+  "energy": 33,
+  "manufact": 23,
   "info": 10
  },
  "generic": [
   {
    "id": "mathematics",
    "name": "数学",
-   "down": 636
+   "down": 611
   },
   {
    "id": "chemistry",
@@ -145,7 +145,7 @@
   "edges": 6963
  },
  "dual": {
-  "onlyInGraphJson": 1204,
-  "onlyInMain": 451
+  "onlyInGraphJson": 1229,
+  "onlyInMain": 508
  }
 }
