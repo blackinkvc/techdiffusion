@@ -1,0 +1,521 @@
+{
+  "version": 1,
+  "updated": "2026-09-13",
+  "criterion": [
+    "必要性",
+    "排他性",
+    "时序性",
+    "域内优先"
+  ],
+  "verdictEnum": [
+    "keep",
+    "repoint",
+    "delete",
+    "concept"
+  ],
+  "note": "verdict=keep 表示保留原边；repoint 表示改前置（newParent 取代 parent）；delete 表示删边；concept 表示降级为概念影响（不写入 dependsOn）。backfills 为补充前置（追加语义，已存在则跳过）。",
+  "batches": {
+    "1a": {
+      "date": "2026-09-13",
+      "family": "F",
+      "scope": "跨分类、年份跨度 > 800 年、两端均非泛化枢纽的边（共 27 条）",
+      "candidates": 27,
+      "edges": [
+        {
+          "child": "inf_pen",
+          "parent": "paper",
+          "verdict": "delete",
+          "reason": "钢笔的构成要件为钢质笔尖、硬橡胶笔杆与书写面；造纸提供书写载体，非钢笔本体前提。必要性不成立。"
+        },
+        {
+          "child": "bld_daylight",
+          "parent": "mat_flatglass",
+          "verdict": "keep",
+          "reason": "玻璃窗为建筑采光设计的实现手段，传导机制明确；另补域内前置 architecture。"
+        },
+        {
+          "child": "mil_matchlock",
+          "parent": "tr_horseshoe",
+          "verdict": "delete",
+          "reason": "马蹄铁为马匹护具，与火绳枪的点火机构及枪管制造无任何传导关系。"
+        },
+        {
+          "child": "mil_musket",
+          "parent": "tr_horseshoe",
+          "verdict": "delete",
+          "reason": "同 mil_matchlock，跨域无传导机制。"
+        },
+        {
+          "child": "mil_pistol",
+          "parent": "tr_horseshoe",
+          "verdict": "delete",
+          "reason": "同 mil_matchlock，跨域无传导机制。"
+        },
+        {
+          "child": "mil_bodyarmor",
+          "parent": "tr_horseshoe",
+          "verdict": "delete",
+          "reason": "同 mil_matchlock，跨域无传导机制。"
+        },
+        {
+          "child": "mil_grenade",
+          "parent": "tr_horseshoe",
+          "verdict": "delete",
+          "reason": "同 mil_matchlock，跨域无传导机制。"
+        },
+        {
+          "child": "cannon",
+          "parent": "tr_horseshoe",
+          "verdict": "delete",
+          "reason": "同 mil_matchlock，跨域无传导机制。"
+        },
+        {
+          "child": "mil_plate",
+          "parent": "tr_horseshoe",
+          "verdict": "delete",
+          "reason": "同 mil_matchlock，跨域无传导机制。"
+        },
+        {
+          "child": "mil_landmine",
+          "parent": "tr_horseshoe",
+          "verdict": "delete",
+          "reason": "同 mil_matchlock，跨域无传导机制。"
+        },
+        {
+          "child": "mil_rocket2",
+          "parent": "tr_horseshoe",
+          "verdict": "delete",
+          "reason": "同 mil_matchlock，跨域无传导机制。"
+        },
+        {
+          "child": "mil_cannon",
+          "parent": "tr_horseshoe",
+          "verdict": "delete",
+          "reason": "同 mil_matchlock，跨域无传导机制。"
+        },
+        {
+          "child": "rocket",
+          "parent": "gunpowder",
+          "verdict": "keep",
+          "reason": "火药即固体火箭推进剂，跨域传导机制明确。"
+        },
+        {
+          "child": "drill_blast",
+          "parent": "gunpowder",
+          "verdict": "keep",
+          "reason": "黑火药为钻爆掘进工法的核心前提。"
+        },
+        {
+          "child": "bld_tunnel3",
+          "parent": "gunpowder",
+          "verdict": "keep",
+          "reason": "黑火药为隧道钻爆的前提。"
+        },
+        {
+          "child": "printing",
+          "parent": "paper",
+          "verdict": "keep",
+          "reason": "造纸为印刷的载体前提。"
+        },
+        {
+          "child": "watermill",
+          "parent": "waterwheel",
+          "verdict": "keep",
+          "reason": "水磨＝水车＋磨盘，同域直接演进。"
+        },
+        {
+          "child": "mil_psyop",
+          "parent": "printing",
+          "verdict": "keep",
+          "reason": "印刷品为心理战的信息载体（传单/宣传品），跨域传导明确。"
+        },
+        {
+          "child": "holography",
+          "parent": "optics",
+          "verdict": "repoint",
+          "newParent": "wave_optics",
+          "reason": "全息成像依赖干涉与衍射，属波动光学范畴；optics 为学科级泛化前置，排他性上 wave_optics 更贴近。"
+        },
+        {
+          "child": "led",
+          "parent": "optics",
+          "verdict": "repoint",
+          "newParent": "quantum_mech",
+          "reason": "发光二极管的电致发光属固体发光机制（量子范畴）；optics 为学科级泛化前置。"
+        },
+        {
+          "child": "lasers",
+          "parent": "optics",
+          "verdict": "repoint",
+          "newParent": "quantum_mech",
+          "reason": "激光原理为受激辐射，属量子力学范畴。"
+        },
+        {
+          "child": "laser",
+          "parent": "optics",
+          "verdict": "repoint",
+          "newParent": "quantum_mech",
+          "reason": "同上。"
+        },
+        {
+          "child": "metamaterial",
+          "parent": "optics",
+          "verdict": "delete",
+          "reason": "超材料为人工电磁结构，electromagnetism 已覆盖其前提；optics 为学科级泛化前置。"
+        },
+        {
+          "child": "directed_energy",
+          "parent": "optics",
+          "verdict": "delete",
+          "reason": "已有 laser 覆盖光学前提，optics 冗余。"
+        },
+        {
+          "child": "mil_directedenergy",
+          "parent": "optics",
+          "verdict": "delete",
+          "reason": "已有 laser 覆盖光学前提，optics 冗余。"
+        },
+        {
+          "child": "display",
+          "parent": "optics",
+          "verdict": "delete",
+          "reason": "已有 semiconductor 覆盖电光转换前提，optics 冗余。"
+        },
+        {
+          "child": "camera",
+          "parent": "optics",
+          "verdict": "keep",
+          "reason": "镜头成像依赖几何光学，库内无更贴近的成像光学节点，排他性成立。"
+        }
+      ],
+      "backfills": [
+        {
+          "child": "mil_plate",
+          "add": [
+            "steel",
+            "smithing"
+          ],
+          "reason": "板甲＝钢铁材料＋锻造工艺，原仅有被删的马蹄铁。"
+        },
+        {
+          "child": "mil_matchlock",
+          "add": [
+            "gunpowder",
+            "iron",
+            "mfg_thread"
+          ],
+          "reason": "火绳枪＝火药推进＋铁质枪管＋螺纹与机件加工。"
+        },
+        {
+          "child": "mil_musket",
+          "add": [
+            "gunpowder",
+            "iron",
+            "mfg_thread"
+          ],
+          "reason": "滑膛枪＝火药推进＋铁质枪管＋机件加工。"
+        },
+        {
+          "child": "mil_pistol",
+          "add": [
+            "gunpowder",
+            "iron",
+            "mfg_thread"
+          ],
+          "reason": "手枪＝火药推进＋铁质枪管＋小型机件加工。"
+        },
+        {
+          "child": "mil_bodyarmor",
+          "add": [
+            "mil_plate",
+            "steel"
+          ],
+          "reason": "防弹衣的早期形态为板甲类金属防护具，承接板甲与钢铁材料。"
+        },
+        {
+          "child": "mil_landmine",
+          "add": [
+            "gunpowder",
+            "iron"
+          ],
+          "reason": "地雷＝火药爆炸装置＋铁质壳体。"
+        },
+        {
+          "child": "mil_rocket2",
+          "add": [
+            "gunpowder",
+            "mil_arrow"
+          ],
+          "reason": "早期火箭弹（火药箭）＝火药＋箭。"
+        },
+        {
+          "child": "mil_cannon",
+          "add": [
+            "gunpowder",
+            "bronze_casting"
+          ],
+          "reason": "早期加农炮为青铜铸造炮身＋火药发射。"
+        },
+        {
+          "child": "mil_grenade",
+          "add": [
+            "gunpowder"
+          ],
+          "reason": "手榴弹以火药为装药，原前置缺失。"
+        },
+        {
+          "child": "bld_daylight",
+          "add": [
+            "architecture"
+          ],
+          "reason": "自然采光的设计前提为建筑学（域内前置）。"
+        }
+      ],
+      "summary": {
+        "keep": 8,
+        "repoint": 4,
+        "delete": 15,
+        "concept": 0,
+        "backfill": 10
+      }
+    },
+    "1b": {
+      "date": "2026-09-13",
+      "family": "ROOT",
+      "scope": "8 个零前置起点与 2 个孤立节点复核",
+      "candidates": 0,
+      "edges": [],
+      "backfills": [
+        {
+          "child": "wheel",
+          "add": [
+            "woodworking"
+          ],
+          "reason": "轮子为成形木质构件（轮盘＋车轴），必要前提为木作。原为零前置起点，起点地位不成立。"
+        },
+        {
+          "child": "mfg_stone",
+          "add": [
+            "stone_tools"
+          ],
+          "reason": "石器打制是石器器物的加工技艺；其自身摘要即写明「建立在石器之上」。原为零前置起点，起点地位不成立。"
+        },
+        {
+          "child": "fire_drill",
+          "add": [
+            "stone_tools",
+            "fire"
+          ],
+          "reason": "钻木取火需要石器加工钻具，且以既有的控火经验与需求为前提。原为孤立节点（无前置且无下游），至此补齐前置。"
+        },
+        {
+          "child": "language",
+          "add": [
+            "gesture_comm"
+          ],
+          "reason": "手势交流为其自身摘要所述的「语言演化前奏」，传承认知成立。此举同时消除手势交流的孤立状态。"
+        }
+      ],
+      "notes": [
+        "保留为起点（4 个）：石器 stone_tools、用火 fire、手势交流 gesture_comm、天然磁石 magnet。",
+        "天然磁石 magnet 判定保留为起点：其摘要载明为「磁现象的第一笔记录」，属自然现象的最早观察，无人类技术前提，必要性上成立。",
+        "语言 language 由起点转为 gesture_comm 的下游。",
+        "起点由 8 个收敛为 4 个：石器、用火、手势交流、天然磁石。"
+      ],
+      "summary": {
+        "keep": 0,
+        "repoint": 0,
+        "delete": 0,
+        "concept": 0,
+        "backfill": 4
+      }
+    },
+    "1c": {
+      "date": "2026-09-13",
+      "family": "DUP",
+      "scope": "23 组同名重复节点合并（冗余项全部位于 techs_extend.js）",
+      "keepRule": "保留规则：优先保留具备 views 与 applications 富字段的条目（详情卡依赖该字段）；该类条目的年份均不晚于同名冗余项。",
+      "merges": [
+        {
+          "keep": "ic",
+          "drop": "chip",
+          "add": [],
+          "reason": "集成电路。保留 ic（下游 14 条引用、被 enables 引用 3 次、含 views 与 applications）；chip 的 2 条前置为 ic 前置的子集。"
+        },
+        {
+          "keep": "mat_forging",
+          "drop": "smithing",
+          "add": [
+            "fire",
+            "bellows",
+            "ene_charcoal"
+          ],
+          "reason": "锻造。保留 mat_forging（material，-3000）。并入 smithing 独有且时序成立的前置：用火、风箱、木炭（木炭 id 同期由 charcoal 归并为 ene_charcoal）。铁器(-1200) 晚于 -3000，按第三条标准剔除。"
+        },
+        {
+          "keep": "mat_selfheal",
+          "drop": "self_healing",
+          "add": [],
+          "reason": "自修复材料。冗余项前置为保留项前置的子集，无需并入。"
+        },
+        {
+          "keep": "ene_charcoal",
+          "drop": "charcoal",
+          "add": [
+            "fire"
+          ],
+          "reason": "木炭。并入冗余项独有的用火（木炭依赖对燃烧的控制）。"
+        },
+        {
+          "keep": "ene_solidstate",
+          "drop": "solid_state_battery",
+          "add": [],
+          "reason": "固态电池。冗余项前置为保留项前置的子集。"
+        },
+        {
+          "keep": "ene_satpower",
+          "drop": "space_solar",
+          "add": [],
+          "reason": "空间太阳能。冗余项前置为保留项前置的子集；保留项年份 1968 与 Glaser 空间太阳能提案同年。"
+        },
+        {
+          "keep": "ene_wpt",
+          "drop": "wireless_power",
+          "add": [],
+          "reason": "无线输电。冗余项独有前置微波(1940) 晚于保留项 1890，按第三条标准剔除。"
+        },
+        {
+          "keep": "mfg_digitaltwin",
+          "drop": "digital_twin",
+          "add": [],
+          "reason": "数字孪生。冗余项独有前置物联网(2010) 晚于保留项 2000，按第三条标准剔除；两者分类不一致（manufact 与 info），本条按保留项计 manufact。"
+        },
+        {
+          "keep": "tr_canoe",
+          "drop": "canoe",
+          "add": [
+            "fire",
+            "stone_tools"
+          ],
+          "reason": "独木舟。并入冗余项独有的用火（火焚挖空）与石器（加工工具）。"
+        },
+        {
+          "keep": "inf_nn",
+          "drop": "neural_network",
+          "add": [],
+          "reason": "神经网络。冗余项前置为保留项前置的子集。"
+        },
+        {
+          "keep": "inf_ar",
+          "drop": "ar",
+          "add": [],
+          "reason": "增强现实。冗余项前置为保留项前置的子集。"
+        },
+        {
+          "keep": "inf_vr",
+          "drop": "vr",
+          "add": [],
+          "reason": "虚拟现实。冗余项前置为保留项前置的子集。"
+        },
+        {
+          "keep": "inf_edgeai",
+          "drop": "edge_ai",
+          "add": [],
+          "reason": "边缘智能。冗余项前置为保留项前置的子集。"
+        },
+        {
+          "keep": "bio_pharmacology",
+          "drop": "pharmacology",
+          "add": [],
+          "reason": "药理学。冗余项前置为保留项前置的子集。"
+        },
+        {
+          "keep": "bio_tissueeng",
+          "drop": "tissue_engineering",
+          "add": [],
+          "reason": "组织工程。冗余项前置为保留项前置的子集。"
+        },
+        {
+          "keep": "bio_mrnavax",
+          "drop": "mrna_vaccine",
+          "add": [],
+          "reason": "mRNA 疫苗。冗余项前置为保留项前置的子集；保留项 1990 与 mRNA 递送平台起源同年。"
+        },
+        {
+          "keep": "bio_genetherapy",
+          "drop": "gene_therapy",
+          "add": [],
+          "reason": "基因治疗。冗余项独有前置基因编辑(2025) 晚于保留项 1990，按第三条标准剔除。冗余项被 2 个节点的 enables 引用，已改指。"
+        },
+        {
+          "keep": "bio_bci",
+          "drop": "bci",
+          "add": [],
+          "reason": "脑机接口。冗余项前置为保留项前置的子集；两者分类不一致（life 与 info），本条按保留项计 life。"
+        },
+        {
+          "keep": "bio_synbio",
+          "drop": "synthetic_biology",
+          "add": [],
+          "reason": "合成生物学。冗余项前置为保留项前置的子集。"
+        },
+        {
+          "keep": "bio_organonchip",
+          "drop": "organs_on_chip",
+          "add": [],
+          "reason": "器官芯片。冗余项前置为保留项前置的子集。"
+        },
+        {
+          "keep": "bio_precisionmed",
+          "drop": "personalized_medicine",
+          "add": [],
+          "reason": "精准医疗。冗余项前置为保留项前置的子集。"
+        },
+        {
+          "keep": "bld_dome",
+          "drop": "dome",
+          "add": [],
+          "reason": "穹顶。冗余项前置为保留项前置的子集；冗余项被 1 个节点的 enables 引用，已改指。"
+        },
+        {
+          "keep": "mil_directedenergy",
+          "drop": "directed_energy",
+          "add": [],
+          "reason": "定向能武器。两者前置完全相同（laser、battery），保留含富字段者。"
+        }
+      ],
+      "notes": [
+        "23 组冗余节点均位于 techs_extend.js；保留项位于 techs_extra.js 或 data.js。",
+        "已并入独有前置的 3 组：mat_forging（用火、风箱、木炭）、ene_charcoal（用火）、tr_canoe（用火、石器）。",
+        "因时序性剔除的并入项 4 条：iron→mat_forging、microwave→ene_wpt、iot→mfg_digitaltwin、crispr→bio_genetherapy。",
+        "分类不一致待议 2 组：数字孪生（manufact 与 info）、脑机接口（life 与 info），本条按保留项分类计，分类归属另在阶段 4 复核。",
+        "techs_extend.js 头部标注为 tools/extend_net.js 生成；本次为直接编辑，生成器侧的同步留待阶段 5c。"
+      ],
+      "summary": {
+        "chip": 1,
+        "smithing": 1,
+        "self_healing": 1,
+        "charcoal": 1,
+        "solid_state_battery": 1,
+        "space_solar": 1,
+        "wireless_power": 1,
+        "digital_twin": 1,
+        "canoe": 1,
+        "neural_network": 1,
+        "ar": 1,
+        "vr": 1,
+        "edge_ai": 1,
+        "pharmacology": 1,
+        "tissue_engineering": 1,
+        "mrna_vaccine": 1,
+        "gene_therapy": 1,
+        "bci": 1,
+        "synthetic_biology": 1,
+        "organs_on_chip": 1,
+        "personalized_medicine": 1,
+        "dome": 1,
+        "directed_energy": 1
+      }
+    }
+  }
+}

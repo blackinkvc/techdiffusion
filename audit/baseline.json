@@ -1,0 +1,151 @@
+{
+ "N": 2265,
+ "edges": 6091,
+ "selfLoop": 0,
+ "dupEdge": 0,
+ "danglingDep": 0,
+ "danglingEn": 12,
+ "yearInv": 0,
+ "cycles": 0,
+ "zeroDep": 4,
+ "isolated": 0,
+ "dupGroups": 0,
+ "F": 8,
+ "A_total": 562,
+ "A": {
+  "basic": 176,
+  "material": 95,
+  "energy": 48,
+  "info": 92,
+  "life": 80,
+  "manufact": 68,
+  "military": 1,
+  "build": 2
+ },
+ "E_total": 173,
+ "E": {
+  "basic": 2,
+  "material": 2,
+  "energy": 2,
+  "manufact": 68,
+  "info": 91,
+  "life": 5,
+  "military": 1,
+  "build": 2
+ },
+ "Ch_total": 260,
+ "Ch": {
+  "transport": 33,
+  "life": 22,
+  "build": 25,
+  "military": 24,
+  "basic": 40,
+  "material": 43,
+  "energy": 34,
+  "manufact": 29,
+  "info": 10
+ },
+ "generic": [
+  {
+   "id": "mathematics",
+   "name": "数学",
+   "down": 636
+  },
+  {
+   "id": "chemistry",
+   "name": "化学",
+   "down": 430
+  },
+  {
+   "id": "physics",
+   "name": "经典力学",
+   "down": 289
+  },
+  {
+   "id": "algorithm",
+   "name": "算法理论",
+   "down": 214
+  },
+  {
+   "id": "statistics",
+   "name": "统计学",
+   "down": 192
+  },
+  {
+   "id": "engineering",
+   "name": "工程学",
+   "down": 170
+  },
+  {
+   "id": "writing",
+   "name": "文字",
+   "down": 114
+  },
+  {
+   "id": "numerical",
+   "name": "数值分析",
+   "down": 105
+  },
+  {
+   "id": "optimization",
+   "name": "最优化/线性规划",
+   "down": 105
+  },
+  {
+   "id": "molecular_bio",
+   "name": "分子生物学",
+   "down": 94
+  },
+  {
+   "id": "materials",
+   "name": "材料科学",
+   "down": 90
+  },
+  {
+   "id": "genetics",
+   "name": "遗传学",
+   "down": 86
+  },
+  {
+   "id": "immunology",
+   "name": "免疫学",
+   "down": 86
+  },
+  {
+   "id": "language",
+   "name": "语言",
+   "down": 12
+  }
+ ],
+ "era": {
+  "prehistoric": 52,
+  "ancient": 92,
+  "earlymodern": 46,
+  "industrial": 262,
+  "electrical": 211,
+  "classical": 28,
+  "intelligent": 685,
+  "info": 743,
+  "medieval": 29,
+  "future": 117
+ },
+ "cats": [
+  "basic",
+  "build",
+  "energy",
+  "info",
+  "life",
+  "manufact",
+  "material",
+  "military",
+  "transport"
+ ],
+ "graphJson": {
+  "nodes": 2299,
+  "edges": 7539
+ },
+ "dual": {
+  "onlyInGraphJson": 1779,
+  "onlyInMain": 448
+ }
+}

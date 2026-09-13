@@ -94,22 +94,7 @@ const EXTEND_TECHS = [
     ],
     "summary": "以植物条编织容器，其涂泥耐火的雏形直接催生了陶器工艺，依托编织，它在史前（约 1.8 万年前）解决了制造与工具中的具体难题，使相应能力得以被反复复用。其成熟让制造与工具从零散尝试走向可复用的方法。"
   },
-  {
-    "id": "canoe",
-    "name": "独木舟",
-    "en": "Dugout Canoe",
-    "category": "transport",
-    "era": "prehistoric",
-    "date": "约 1 万年前",
-    "year": -10000,
-    "dependsOn": [
-      "woodworking",
-      "fire",
-      "stone_tools"
-    ],
-    "summary": "刳木为舟，把水面从屏障变为通道，扩展了渔猎与迁徙的地理半径，它建立在木作、用火、石器之上，约 约 1 万年前 成形于史前，把交通运载中的关键能力落到实处，并直接支撑了航海术等后续技术。"
-  },
-  {
+    {
     "id": "fire_making",
     "name": "人工取火",
     "en": "Fire-making",
@@ -220,21 +205,7 @@ const EXTEND_TECHS = [
     ],
     "summary": "以规整块材叠砌承重墙，是大型永久建筑的基础工艺，约 公元前 5000 年已见于近东的泥砖与石砌建筑。早期砌筑用干砌或泥浆粘结；石灰砂浆是其后千年的粘结升级（概念影响），并非砌筑起源的技术前置。"
   },
-  {
-    "id": "dome",
-    "name": "穹顶",
-    "en": "Dome",
-    "category": "build",
-    "era": "classical",
-    "date": "约 100 年",
-    "year": 100,
-    "dependsOn": [
-      "arch",
-      "masonry"
-    ],
-    "summary": "拱绕轴旋转成壳，覆盖圆形大空间，成就万神殿式殿堂，依托拱与穹顶、砌筑，它在古典（约 100 年）解决了建筑建造中的具体难题，使相应能力得以被反复复用。其成熟让建筑建造从零散尝试走向可复用的方法。"
-  },
-  {
+    {
     "id": "bridge",
     "name": "桥梁",
     "en": "Bridge",
@@ -324,10 +295,7 @@ const EXTEND_TECHS = [
     "era": "medieval",
     "date": "约 1000 年",
     "year": 1000,
-    "dependsOn": [
-      "waterwheel",
-      "gearing"
-    ],
+    "dependsOn": ["waterwheel","gearing"],
     "summary": "把水能转为研磨与锻打的动力，是工厂机械化的先声，依托水车、齿轮，它在中古（约 1000 年）解决了制造与工具中的具体难题，使相应能力得以被反复复用。其成熟让制造与工具从零散尝试走向可复用的方法。"
   },
   {
@@ -358,38 +326,7 @@ const EXTEND_TECHS = [
     ],
     "summary": "最早被还原利用的金属，延展易锻，开启了金属时代，依托冶金、采矿，它在上古（约 前 5000 年）解决了材料体系中的具体难题，使相应能力得以被反复复用。其成熟让材料体系从零散尝试走向可复用的方法。"
   },
-  {
-    "id": "charcoal",
-    "name": "木炭",
-    "en": "Charcoal",
-    "category": "energy",
-    "era": "ancient",
-    "date": "约 前 4000 年",
-    "year": -4000,
-    "dependsOn": [
-      "fire",
-      "woodworking",
-      "kiln"
-    ],
-    "summary": "隔绝空气闷烧木材得炭，提供远高于薪柴的还原温度。依托用火、木作与窑，它是青铜/铁时代炉冶与锻造的核心燃料，比薪柴更耐烧、温控更稳定。"
-  },
-  {
-    "id": "smithing",
-    "name": "锻造",
-    "en": "Smithing",
-    "category": "manufact",
-    "era": "ancient",
-    "date": "约 公元前 1000 年",
-    "year": -1000,
-    "dependsOn": [
-      "iron",
-      "fire",
-      "bellows",
-      "charcoal"
-    ],
-    "summary": "趁热锤打金属成形，把材料性能转化为可用的器物与机件。铁器锻造随铁器时代展开（约 公元前 1200 年起，此处取约 公元前 1000 年 的普及口径），依托铁器、用火、风箱与木炭，是农具与兵器量产的关键工艺。"
-  },
-  {
+      {
     "id": "textile",
     "name": "纺织",
     "en": "Textile",
@@ -439,7 +376,7 @@ const EXTEND_TECHS = [
     "era": "ancient",
     "date": "约 前 3000 年",
     "year": -3000,
-    "dependsOn": ["canoe", "sail"],
+    "dependsOn": ["tr_canoe","sail"],
     "summary": "以天体与海流定位航向，使跨海远航与全球贸易成为可能，它建立在独木舟、帆船、天文学之上，约 约 前 3000 年 出现于上古，把交通运载的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
   {
@@ -572,10 +509,7 @@ const EXTEND_TECHS = [
     "era": "electrical",
     "date": "1960 年",
     "year": 1960,
-    "dependsOn": [
-      "optics",
-      "electromagnetism"
-    ],
+    "dependsOn": ["quantum_mech","electromagnetism"],
     "summary": "受激辐射产生相干单色光，是精密测量、通信、加工与医疗的通用工具，依托光学、电磁学，它在电气时代（1960 年）把相关能力从经验推向方法，成为信息通信中承上启下的一环，直接催生了定向能武器、定向能武器、量子加密等发展。"
   },
   {
@@ -593,21 +527,7 @@ const EXTEND_TECHS = [
     ],
     "summary": "导电性可控的材料，是晶体管、芯片与一切现代电子的基石，依托化学、经典力学、材料科学，它在电气时代（1947 年）把相关能力从经验推向方法，成为材料体系中承上启下的一环，直接催生了集成电路、集成电路、显示技术等发展。"
   },
-  {
-    "id": "chip",
-    "name": "集成电路",
-    "en": "Integrated Circuit",
-    "category": "info",
-    "era": "electrical",
-    "date": "1958 年",
-    "year": 1958,
-    "dependsOn": [
-      "semiconductor",
-      "electronics"
-    ],
-    "summary": "在单片半导体上集成大量器件，使计算与控制在掌中成为现实，它建立在半导体、电子学之上，约 1958 年 成形于电气时代，把信息通信中的关键能力落到实处，并直接支撑了神经形态计算等后续技术。"
-  },
-  {
+    {
     "id": "sensor",
     "name": "传感器",
     "en": "Sensor",
@@ -629,10 +549,7 @@ const EXTEND_TECHS = [
     "era": "electrical",
     "date": "约 1960 年",
     "year": 1960,
-    "dependsOn": [
-      "semiconductor",
-      "optics"
-    ],
+    "dependsOn": ["semiconductor"],
     "summary": "把电信号还原为可见光图像，是人机交互的最终输出端，它建立在半导体、光学之上，约 约 1960 年 成形于电气时代，把信息通信中的关键能力落到实处，并直接支撑了增强现实、虚拟现实、增强现实等后续技术。"
   },
   {
@@ -707,21 +624,7 @@ const EXTEND_TECHS = [
     ],
     "summary": "在封闭环境中维持温、氧、水、食的循环，使人得以离开地球生存，它建立在工程学、化学、生物技术之上，约 约 1960 年 成形于信息时代，把生命与医疗中的关键能力落到实处，并直接支撑了居住舱、人造子宫、火星殖民等后续技术。"
   },
-  {
-    "id": "pharmacology",
-    "name": "药理学",
-    "en": "Pharmacology",
-    "category": "life",
-    "era": "classical",
-    "date": "约 1800 年",
-    "year": 1800,
-    "dependsOn": [
-      "chemistry",
-      "microbiology"
-    ],
-    "summary": "研究药物与机体的相互作用，使治疗从经验方剂走向机理设计，它建立在化学、微生物学之上，约 约 1800 年 成形于古典，把生命与医疗中的关键能力落到实处，并直接支撑了纳米医药、衰老干预等后续技术。"
-  },
-  {
+    {
     "id": "stem_cells",
     "name": "干细胞",
     "en": "Stem Cells",
@@ -735,22 +638,7 @@ const EXTEND_TECHS = [
     ],
     "summary": "具自我更新与分化潜能的细胞，是再生医学与器官构建的种子，依托遗传学、生物技术，它在信息时代（1960 年）把相关能力从经验推向方法，成为生命与医疗中承上启下的一环，直接催生了正电子成像、组织工程、电子病历等发展。"
   },
-  {
-    "id": "tissue_engineering",
-    "name": "组织工程",
-    "en": "Tissue Engineering",
-    "category": "life",
-    "era": "info",
-    "date": "1990 年",
-    "year": 1990,
-    "dependsOn": [
-      "biotech",
-      "stem_cells",
-      "materials"
-    ],
-    "summary": "以支架与细胞在体外培育功能组织，弥补移植供体的短缺，依托生物技术、干细胞、材料科学，它在信息时代（1990 年）把相关能力从经验推向方法，成为生命与医疗中承上启下的一环，直接催生了干细胞治疗、人造子宫等发展。"
-  },
-  {
+    {
     "id": "microfluidics",
     "name": "微流控",
     "en": "Microfluidics",
@@ -861,21 +749,7 @@ const EXTEND_TECHS = [
     ],
     "summary": "在海量异构数据上挖掘规律，是智能决策与模型训练的燃料，依托电子计算机、互联网，它在智能时代（2005 年）把相关能力从经验推向方法，成为信息通信中承上启下的一环，直接催生了精准医疗、精准医疗、通用人工智能等发展。"
   },
-  {
-    "id": "neural_network",
-    "name": "神经网络",
-    "en": "Neural Network",
-    "category": "info",
-    "era": "intelligent",
-    "date": "2010 年",
-    "year": 2010,
-    "dependsOn": [
-      "ai",
-      "mathematics"
-    ],
-    "summary": "以多层非线性变换拟合复杂映射，是当代人工智能的主干，它建立在人工智能、数学之上，约 2010 年 成形于智能时代，把信息通信中的关键能力落到实处，并直接支撑了通用人工智能等后续技术。"
-  },
-  {
+    {
     "id": "microwave",
     "name": "微波",
     "en": "Microwave",
@@ -1049,10 +923,7 @@ const EXTEND_TECHS = [
     "era": "electrical",
     "date": "1962 年",
     "year": 1962,
-    "dependsOn": [
-      "semiconductor",
-      "optics"
-    ],
+    "dependsOn": ["semiconductor","quantum_mech"],
     "summary": "半导体电致发光，以极低功耗重塑了照明与显示，依托半导体、光学，它在电气时代（1962 年）把相关能力从经验推向方法，成为信息通信中承上启下的一环，直接催生了垂直农业等发展。"
   },
   {
@@ -1166,7 +1037,7 @@ const EXTEND_TECHS = [
     "tier": "L2",
     "dependsOn": [
       "ai",
-      "neural_network",
+      "inf_nn",
       "big_data"
     ],
     "summary": "在广泛任务上达到或超越人类水平的通用智能，是后续多数科幻设想的共同前提，依托人工智能、神经网络、大数据，它在未来/科幻（约 2040 年（L2·目前技术可实现））把相关能力从经验推向方法，成为信息通信中承上启下的一环，直接催生了数字生命、冯·诺依曼探测器等发展。",
@@ -1192,7 +1063,7 @@ const EXTEND_TECHS = [
     "tier": "L2",
     "dependsOn": [
       "ai",
-      "chip",
+      "ic",
       "neuroscience"
     ],
     "summary": "以脉冲神经元仿脑结构布线，极低功耗下做感知与决策，是边缘智能的候选架构，依托人工智能、集成电路、神经科学，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了信息通信中的具体难题，使相应能力得以被反复复用。"
@@ -1229,72 +1100,7 @@ const EXTEND_TECHS = [
     ],
     "summary": "以不可克隆定理分发密钥，任何窃听都会留下痕迹，提供信息论级安全，依托量子纠缠、激光、互联网，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了信息通信中的具体难题，使相应能力得以被反复复用。"
   },
-  {
-    "id": "edge_ai",
-    "name": "边缘智能",
-    "en": "Edge AI",
-    "category": "info",
-    "era": "future",
-    "date": "约 2030 年（L2·目前技术可实现）",
-    "year": 2030,
-    "tier": "L2",
-    "dependsOn": [
-      "ai",
-      "iot",
-      "soc"
-    ],
-    "summary": "把模型下沉到终端与网关，低时延、隐私友好地就地决策，是自主设备的大脑，它建立在人工智能、物联网、手机系统级芯片之上，约 约 2030 年（L2·目前技术可实现） 出现于未来/科幻，把信息通信的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
-  },
-  {
-    "id": "digital_twin",
-    "name": "数字孪生",
-    "en": "Digital Twin",
-    "category": "info",
-    "era": "future",
-    "date": "约 2030 年（L2·目前技术可实现）",
-    "year": 2030,
-    "tier": "L2",
-    "dependsOn": [
-      "simulation",
-      "iot",
-      "cad"
-    ],
-    "summary": "为实体建立实时同步的虚拟副本，在比特世界先试错再动真格，依托仿真、物联网、计算机辅助设计，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了信息通信中的具体难题，使相应能力得以被反复复用。"
-  },
-  {
-    "id": "ar",
-    "name": "增强现实",
-    "en": "Augmented Reality",
-    "category": "info",
-    "era": "future",
-    "date": "约 2030 年（L2·目前技术可实现）",
-    "year": 2030,
-    "tier": "L2",
-    "dependsOn": [
-      "display",
-      "camera",
-      "ai",
-      "sensor"
-    ],
-    "summary": "把数字信息叠加到真实视野，重塑维修、导航与协作的人机界面，依托显示技术、数码相机 / 图像传感器、人工智能，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了信息通信中的具体难题，使相应能力得以被反复复用。"
-  },
-  {
-    "id": "vr",
-    "name": "虚拟现实",
-    "en": "Virtual Reality",
-    "category": "info",
-    "era": "future",
-    "date": "约 2030 年（L2·目前技术可实现）",
-    "year": 2030,
-    "tier": "L2",
-    "dependsOn": [
-      "display",
-      "computer",
-      "sensor"
-    ],
-    "summary": "以头显构建沉浸式虚拟环境，是训练、社交与娱乐的新载体，它建立在显示技术、电子计算机、传感器之上，约 约 2030 年（L2·目前技术可实现） 成形于未来/科幻，把信息通信中的关键能力落到实处，并直接支撑了虚拟世界等后续技术。"
-  },
-  {
+          {
     "id": "holography",
     "name": "全息显示",
     "en": "Holographic Display",
@@ -1303,11 +1109,7 @@ const EXTEND_TECHS = [
     "date": "约 2035 年（L2·目前技术可实现）",
     "year": 2035,
     "tier": "L2",
-    "dependsOn": [
-      "laser",
-      "display",
-      "optics"
-    ],
+    "dependsOn": ["laser","display","wave_optics"],
     "summary": "以干涉记录重建真三维光场，无需眼镜即可裸眼观看悬浮影像，依托激光、显示技术、光学，它在未来/科幻（约 2035 年（L2·目前技术可实现））解决了信息通信中的具体难题，使相应能力得以被反复复用。"
   },
   {
@@ -1425,39 +1227,7 @@ const EXTEND_TECHS = [
     ],
     "summary": "以分子剪刀定点改写基因组，使遗传疾病治疗与作物改良进入可编程时代，依托遗传学 / DNA、遗传学、重组DNA技术，它在未来/科幻（约 2025 年（L2·目前技术可实现））把相关能力从经验推向方法，成为生命与医疗中承上启下的一环，直接催生了基因治疗、基因电路等发展。"
   },
-  {
-    "id": "gene_therapy",
-    "name": "基因治疗",
-    "en": "Gene Therapy",
-    "category": "life",
-    "era": "future",
-    "date": "约 2030 年（L2·目前技术可实现）",
-    "year": 2030,
-    "tier": "L2",
-    "dependsOn": [
-      "crispr",
-      "genetics",
-      "immunology"
-    ],
-    "summary": "把正确基因递送进细胞以根治病因，而非仅缓解症状，已用于部分遗传病，依托基因编辑、遗传学、免疫学，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了生命与医疗中的具体难题，使相应能力得以被反复复用。"
-  },
-  {
-    "id": "synthetic_biology",
-    "name": "合成生物学",
-    "en": "Synthetic Biology",
-    "category": "life",
-    "era": "future",
-    "date": "约 2030 年（L2·目前技术可实现）",
-    "year": 2030,
-    "tier": "L2",
-    "dependsOn": [
-      "genetics",
-      "biotech",
-      "dna"
-    ],
-    "summary": "像搭电路一样设计规范生物部件，让细胞工厂生产药物、材料与燃料，依托遗传学、生物技术、遗传学 / DNA，它在未来/科幻（约 2030 年（L2·目前技术可实现））把相关能力从经验推向方法，成为生命与医疗中承上启下的一环，直接催生了基因电路等发展。"
-  },
-  {
+      {
     "id": "stem_cell_therapy",
     "name": "干细胞治疗",
     "en": "Stem Cell Therapy",
@@ -1468,59 +1238,11 @@ const EXTEND_TECHS = [
     "tier": "L2",
     "dependsOn": [
       "stem_cells",
-      "tissue_engineering"
+      "bio_tissueeng"
     ],
     "summary": "以干细胞替换受损组织，为帕金森、脊髓损伤等退行性疾病提供修复路径，它建立在干细胞、组织工程之上，约 约 2035 年（L2·目前技术可实现） 出现于未来/科幻，把生命与医疗的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
-  {
-    "id": "organs_on_chip",
-    "name": "器官芯片",
-    "en": "Organs-on-Chip",
-    "category": "life",
-    "era": "future",
-    "date": "约 2030 年（L2·目前技术可实现）",
-    "year": 2030,
-    "tier": "L2",
-    "dependsOn": [
-      "microfluidics",
-      "stem_cells",
-      "biotech"
-    ],
-    "summary": "在微流控上复刻器官微环境，以人源模型替代动物试验、加速药筛，依托微流控、干细胞、生物技术，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了生命与医疗中的具体难题，使相应能力得以被反复复用。"
-  },
-  {
-    "id": "personalized_medicine",
-    "name": "精准医疗",
-    "en": "Personalized Medicine",
-    "category": "life",
-    "era": "future",
-    "date": "约 2030 年（L2·目前技术可实现）",
-    "year": 2030,
-    "tier": "L2",
-    "dependsOn": [
-      "genetics",
-      "ai",
-      "big_data"
-    ],
-    "summary": "按个体基因组与生活方式定制预防与用药，把统计医学转为针对个人的医学，依托遗传学、人工智能、大数据，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了生命与医疗中的具体难题，使相应能力得以被反复复用。"
-  },
-  {
-    "id": "mrna_vaccine",
-    "name": "mRNA 疫苗",
-    "en": "mRNA Vaccine",
-    "category": "life",
-    "era": "future",
-    "date": "约 2025 年（L2·目前技术可实现）",
-    "year": 2025,
-    "tier": "L2",
-    "dependsOn": [
-      "dna",
-      "nanotech",
-      "immunology"
-    ],
-    "summary": "以脂质纳米粒递送指令让细胞自产抗原，几周内即可迭代应对新病原，它建立在遗传学 / DNA、纳米技术、免疫学之上，约 约 2025 年（L2·目前技术可实现） 出现于未来/科幻，把生命与医疗的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
-  },
-  {
+        {
     "id": "fusion_power",
     "name": "聚变发电",
     "en": "Fusion Power",
@@ -1552,54 +1274,7 @@ const EXTEND_TECHS = [
     ],
     "summary": "以零电阻线圈产生强稳磁场，是聚变、磁悬浮与高能加速器的核心部件，它建立在超导体、低温工程、电磁学之上，约 约 2030 年（L2·目前技术可实现） 出现于未来/科幻，把能量形式的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
-  {
-    "id": "solid_state_battery",
-    "name": "固态电池",
-    "en": "Solid-state Battery",
-    "category": "energy",
-    "era": "future",
-    "date": "约 2030 年（L2·目前技术可实现）",
-    "year": 2030,
-    "tier": "L2",
-    "dependsOn": [
-      "battery",
-      "materials",
-      "chemistry"
-    ],
-    "summary": "以固体电解质替代易燃液体，兼顾高能量密度与本质安全，是电动车的下一站，依托电池、材料科学、化学，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了能量形式中的具体难题，使相应能力得以被反复复用。"
-  },
-  {
-    "id": "space_solar",
-    "name": "空间太阳能",
-    "en": "Space-based Solar Power",
-    "category": "energy",
-    "era": "future",
-    "date": "约 2045 年（L2·目前技术可实现）",
-    "year": 2045,
-    "tier": "L2",
-    "dependsOn": [
-      "solar",
-      "satellite",
-      "microwave"
-    ],
-    "summary": "在轨道收集阳光并以微波束传回地面，摆脱昼夜与天气的间歇，它建立在太阳能光伏、人造卫星、微波之上，约 约 2045 年（L2·目前技术可实现） 出现于未来/科幻，把能量形式的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
-  },
-  {
-    "id": "wireless_power",
-    "name": "无线输电",
-    "en": "Wireless Power Transmission",
-    "category": "energy",
-    "era": "future",
-    "date": "约 2035 年（L2·目前技术可实现）",
-    "year": 2035,
-    "tier": "L2",
-    "dependsOn": [
-      "electromagnetism",
-      "microwave"
-    ],
-    "summary": "以微波或谐振耦合远距离送电，为无人机、月面与偏远节点解除线缆束缚，它建立在电磁学、微波之上，约 约 2035 年（L2·目前技术可实现） 出现于未来/科幻，把能量形式的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
-  },
-  {
+        {
     "id": "grid_storage",
     "name": "电网级储能",
     "en": "Grid-scale Storage",
@@ -1655,11 +1330,7 @@ const EXTEND_TECHS = [
     "date": "约 2030 年（L2·目前技术可实现）",
     "year": 2030,
     "tier": "L2",
-    "dependsOn": [
-      "materials",
-      "electromagnetism",
-      "optics"
-    ],
+    "dependsOn": ["materials","electromagnetism"],
     "summary": "以亚波长结构而非成分定制响应，可造负折射、隐身与超透镜，它建立在材料科学、电磁学、光学之上，约 约 2030 年（L2·目前技术可实现） 成形于未来/科幻，把材料体系中的关键能力落到实处，并直接支撑了可编程物质等后续技术。"
   },
   {
@@ -1678,22 +1349,7 @@ const EXTEND_TECHS = [
     ],
     "summary": "无需极低温即零电阻，将重塑输电、磁体与计算，若证实影响深远，依托超导体、材料科学、经典力学，它在未来/科幻（约 2040 年（L2·目前技术可实现））解决了材料体系中的具体难题，使相应能力得以被反复复用。"
   },
-  {
-    "id": "self_healing",
-    "name": "自修复材料",
-    "en": "Self-healing Material",
-    "category": "material",
-    "era": "future",
-    "date": "约 2035 年（L2·目前技术可实现）",
-    "year": 2035,
-    "tier": "L2",
-    "dependsOn": [
-      "materials",
-      "chemistry"
-    ],
-    "summary": "微胶囊或可逆键在损伤处自行愈合，延长结构寿命、降低维护，依托材料科学、化学，它在未来/科幻（约 2035 年（L2·目前技术可实现））解决了材料体系中的具体难题，使相应能力得以被反复复用。"
-  },
-  {
+    {
     "id": "high_entropy_alloy",
     "name": "高熵合金",
     "en": "High-entropy Alloy",
@@ -1883,23 +1539,7 @@ const EXTEND_TECHS = [
     ],
     "summary": "在层架与人工光下全年密集种植，把农田搬进城市、贴近消费端，依托自动化、发光二极管、农业，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了建筑建造中的具体难题，使相应能力得以被反复复用。"
   },
-  {
-    "id": "directed_energy",
-    "name": "定向能武器",
-    "en": "Directed-energy Weapon",
-    "category": "military",
-    "era": "future",
-    "date": "约 2030 年（L2·目前技术可实现）",
-    "year": 2030,
-    "tier": "L2",
-    "dependsOn": [
-      "laser",
-      "battery",
-      "optics"
-    ],
-    "summary": "以高能激光或微波束在光速尺度毁伤目标，重塑防空与反导，依托激光、电池、光学，它在未来/科幻（约 2030 年（L2·目前技术可实现））解决了军事技术中的具体难题，使相应能力得以被反复复用。"
-  },
-  {
+    {
     "id": "hypersonic_weapon",
     "name": "高超声速武器",
     "en": "Hypersonic Weapon",
@@ -1988,7 +1628,7 @@ const EXTEND_TECHS = [
     "year": 2050,
     "tier": "L3",
     "dependsOn": [
-      "synthetic_biology",
+      "bio_synbio",
       "crispr"
     ],
     "summary": "在活细胞内布设逻辑门与计数器，使细胞按环境自行决策、定时释药，依托合成生物学、基因编辑，它在未来/科幻（约 2050 年（L3·未来可能实现））解决了生命与医疗中的具体难题，使相应能力得以被反复复用。"
@@ -2020,7 +1660,7 @@ const EXTEND_TECHS = [
     "tier": "L3",
     "dependsOn": [
       "nanotech",
-      "pharmacology",
+      "bio_pharmacology",
       "biotech"
     ],
     "summary": "以纳米颗粒精准递送、成像与治疗，在分子尺度区分敌我，它建立在纳米技术、药理学、生物技术之上，约 约 2050 年（L3·未来可能实现） 成形于未来/科幻，把生命与医疗中的关键能力落到实处，并直接支撑了纳米机器人等后续技术。"
@@ -2052,7 +1692,7 @@ const EXTEND_TECHS = [
     "tier": "L3",
     "dependsOn": [
       "genetics",
-      "pharmacology"
+      "bio_pharmacology"
     ],
     "summary": "选择性清除功能失调的衰老细胞，延缓多种年龄相关疾病的发作，依托遗传学、药理学，它在未来/科幻（约 2045 年（L3·未来可能实现））把相关能力从经验推向方法，成为生命与医疗中承上启下的一环，直接催生了寿命延长等发展。"
   },
@@ -2068,7 +1708,7 @@ const EXTEND_TECHS = [
     "dependsOn": [
       "stem_cells",
       "life_support",
-      "tissue_engineering"
+      "bio_tissueeng"
     ],
     "summary": "以生物反应器模拟妊娠环境，为早产儿与生育选择提供新路径，它建立在干细胞、生命保障、组织工程之上，约 约 2055 年（L3·未来可能实现） 出现于未来/科幻，把生命与医疗的相关能力第一次稳定下来，是后来技术谱系的基础环节。"
   },
@@ -2082,29 +1722,13 @@ const EXTEND_TECHS = [
     "year": 2045,
     "tier": "L3",
     "dependsOn": [
-      "vr",
+      "inf_vr",
       "ai",
       "simulation"
     ],
     "summary": "由智能体持续演化的沉浸式社会空间，模糊娱乐、工作与现实的边界，它建立在虚拟现实、人工智能、仿真之上，约 约 2045 年（L3·未来可能实现） 成形于未来/科幻，把信息通信中的关键能力落到实处，并直接支撑了数字生命等后续技术。"
   },
-  {
-    "id": "bci",
-    "name": "脑机接口",
-    "en": "Brain-Computer Interface",
-    "category": "info",
-    "era": "future",
-    "date": "约 2040 年（L3·未来可能实现）",
-    "year": 2040,
-    "tier": "L3",
-    "dependsOn": [
-      "neuroscience",
-      "electronics",
-      "ai"
-    ],
-    "summary": "在神经与机器间建立双向通道，恢复瘫痪者运动、并探索认知增强，它建立在神经科学、电子学、人工智能之上，约 约 2040 年（L3·未来可能实现） 成形于未来/科幻，把信息通信中的关键能力落到实处，并直接支撑了意识上传、记忆提取等后续技术。"
-  },
-  {
+    {
     "id": "space_elevator",
     "name": "太空电梯",
     "en": "Space Elevator",
@@ -2306,7 +1930,7 @@ const EXTEND_TECHS = [
     "tier": "L4",
     "dependsOn": [
       "brain_emulation",
-      "bci",
+      "bio_bci",
       "computer"
     ],
     "summary": "把心智的结构与状态转入载体，使人格脱离生物脑存续，伦理与同一性存疑，它建立在大脑仿真、脑机接口、电子计算机之上，约 约 2090 年（L4·未来较难实现） 成形于未来/科幻，把信息通信中的关键能力落到实处，并直接支撑了数字生命等后续技术。"
@@ -2482,7 +2106,7 @@ const EXTEND_TECHS = [
     "dependsOn": [
       "neuroscience",
       "brain_emulation",
-      "bci"
+      "bio_bci"
     ],
     "summary": "以高分辨读脑还原特定记忆片段，可用于取证、治疗，亦威胁内心私密，依托神经科学、大脑仿真、脑机接口，它在未来/科幻（约 2090 年（L4·未来较难实现））解决了信息通信中的具体难题，使相应能力得以被反复复用。"
   },

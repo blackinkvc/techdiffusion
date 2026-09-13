@@ -4516,7 +4516,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "锻造在 公元前 3000 年 前后成形，依托 青铜、木炭 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 水泥 等后续技术。",
-    "dependsOn": ["bronze","ene_charcoal"],
+    "dependsOn": ["bronze","ene_charcoal","fire","bellows"],
     "enables": [],
     "applications": [
       "工具制造",
@@ -7936,7 +7936,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "木炭约 公元前 4000 年 成熟，建立在 用火 之上完成关键突破；其能力延伸到 动力输出、照明加热，并为 煤炭开采、水力利用、砂型铸造 的发展铺平了道路。",
-    "dependsOn": ["woodworking","kiln"],
+    "dependsOn": ["woodworking","kiln","fire"],
     "enables": [],
     "applications": [
       "动力输出",
@@ -10698,7 +10698,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "石器打制约 约 260 万年前 成熟，建立在 石器 之上完成关键突破；其能力延伸到 零件加工、批量制造，并为 手斧、刀具 的发展铺平了道路。",
-    "dependsOn": [],
+    "dependsOn": ["stone_tools"],
     "enables": [],
     "applications": [
       "零件加工",
@@ -13848,7 +13848,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "独木舟在 约 1 万年前 前后成形，依托 钻、用火、陶器 把 人员位移、物资运输 落到实处，并成为 交通运载 中承上启下的一环，直接支撑了 木筏 等后续技术。",
-    "dependsOn": ["woodworking"],
+    "dependsOn": ["woodworking","fire","stone_tools"],
     "enables": [],
     "applications": [
       "人员位移",
@@ -16822,7 +16822,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "钢笔在 1884 年 前后成形，用金属笔尖、硬橡胶储墨件与毛细导流把「随身书写」变成可靠工具；它建立在文字、造纸、工具钢与硫化橡胶之上，使蘸水笔「写几字就要蘸墨」的断续书写第一次变成连续书写。",
-    "dependsOn": ["writing","paper","mat_toolsteel","mat_vulcan"],
+    "dependsOn": ["writing","mat_toolsteel","mat_vulcan"],
     "enables": [],
     "applications": [
       "信息记录",
@@ -25112,7 +25112,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "自然采光在 1800 年 前后成形，依托 感应熔炼、热处理炉、余热回收 把 房屋营建、桥梁隧道 落到实处，并成为 建筑建造 中承上启下的一环，直接支撑了 通风系统 等后续技术。",
-    "dependsOn": ["mat_flatglass"],
+    "dependsOn": ["mat_flatglass","architecture"],
     "enables": [],
     "applications": [
       "房屋营建",
@@ -26501,7 +26501,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "板甲约 1300 年 出现，建立在 拉丝、风车、拉拔 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_horseshoe"],
+    "dependsOn": ["steel","mat_forging"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26531,7 +26531,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "火绳枪约 1500 年 出现，建立在 压延、风车、轧制 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_horseshoe"],
+    "dependsOn": ["gunpowder","iron","mfg_thread"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26591,7 +26591,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "滑膛枪约 1500 年 出现，建立在 压延、风车、轧制 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_horseshoe"],
+    "dependsOn": ["gunpowder","iron","mfg_thread"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26741,7 +26741,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "手枪约 1500 年 出现，建立在 压延、风车、轧制 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_horseshoe"],
+    "dependsOn": ["gunpowder","iron","mfg_thread"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -26982,7 +26982,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "地雷约 1200 年 出现，建立在 拉丝、风车、拉拔 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_horseshoe"],
+    "dependsOn": ["gunpowder","iron"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27042,7 +27042,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "手榴弹约 1400 年 出现，建立在 拉丝、风车、拉拔 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["mfg_wiredraw","tr_horseshoe"],
+    "dependsOn": ["mfg_wiredraw","gunpowder"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27072,7 +27072,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "火箭弹约 1200 年 出现，建立在 拉丝、风车、拉拔 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_horseshoe"],
+    "dependsOn": ["gunpowder","mil_arrow"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -27764,7 +27764,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "加农炮约 1200 年 出现，建立在 拉丝、风车、拉拔 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_horseshoe"],
+    "dependsOn": ["gunpowder","bronze_casting"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28154,7 +28154,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "防弹衣约 1500 年 出现，建立在 压延、风车、轧制 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["tr_horseshoe"],
+    "dependsOn": ["mil_plate","steel"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28514,7 +28514,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "心理战约 1900 年 出现，建立在 切削液、调峰电站、渗硼 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["printing", "radio"],
+    "dependsOn": ["printing","radio"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -28844,7 +28844,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "定向能武器约 1980 年 出现，建立在 机器人夹爪、碟式斯特林、激光熔覆 之上；它把 防御工事、火力打击 变成可稳定复现的能力，是 军事技术 中从经验走向方法的关键一步。",
-    "dependsOn": ["laser", "battery", "optics"],
+    "dependsOn": ["laser","battery"],
     "enables": [],
     "applications": [
       "防御工事",
@@ -30649,8 +30649,7 @@ const EXTRA_TECHS = [
     "people": "晚期直立人 / 早期智人",
     "place": "全球",
     "summary": "以钻杆高速摩擦木料生热的取火装置，使人类第一次摆脱对天然火源的依赖、按需主动生火，是能源自主的开端。",
-    "dependsOn": [
-    ],
+    "dependsOn": ["stone_tools","fire"],
     "enables": [
       "fire_making"
     ],

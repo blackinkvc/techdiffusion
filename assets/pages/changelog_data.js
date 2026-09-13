@@ -524,5 +524,32 @@ window.CHANGELOG = {
       ],
       files: ["assets/techs_extra.js", "assets/pages/changelog_data.js", "assets/pages/correction_data.js", "版本迭代日志.md", "index.html", "tree.html", "tree_full.html", "browse.html", "detail.html", "lineage.html", "analysis.html", "model.html", "changelog.html", "correction.html", "method.html", "midtech.html", "progress.html", "research.html", "sop.html", "timeline.html", "worldview.html"]
     }
+
+,
+    {
+      version: "v0.9.22",
+      date: "2026-09-13",
+      type: "fix",
+      title: "结构体检与分步检修（一）：四类结构问题基线量化 + 阶段 0/1 执行（F 族 27→8、同名重复 23→0、零前置 8→4）",
+      summary: "建立可复跑的结构体检器与逐条判定台账，把全库结构问题量化为 A / E / Ch / F 四族（基线 563 / 173 / 267 / 27）并据此编制《技术网络检修计划》（含编制日期与逐批状态栏），随后执行阶段 0（工具与门禁）与阶段 1（止血三批）：F 族 27 条边处置为删 15 / 改前置 4 / 保留 8，并补真实前置 10 条；零前置节点 8 → 4、孤立节点 2 → 0；23 组同名重复节点合并。节点 2,288 → 2,265，依赖边 6,139 → 6,091；环 0 / 自环 0 / 重复边 0 / 悬空前置 0 / 年份倒挂 0。",
+      treeChange: {
+        scope: "主管线技术网络（模型页 / 分析页 / 来龙去脉页所读）：节点 2,288 → 2,265（合并 23 组同名重复节点）；依赖边 6,139 → 6,091；F 族（跨分类且年份跨度 > 800 年）27 → 8；同名重复组 23 → 0；零前置节点 8 → 4（石器 / 用火 / 手势交流 / 天然磁石）；孤立节点 2 → 0；A 族（全部真实前置仅落在泛化学理枢纽内）563 → 562；Ch 族（下游依赖 = 0 且 year < 1900）267 → 260。新增文件 tools/audit_net.js / tools/apply_ledger.js / tools/merge_dups.js、audit/ledger.json / audit/baseline.json、技术网络检修计划.md。",
+        reason: "用户要求按严谨科学研究口径做结构体检与分步检修，不以主观印象为据，即先有可复核的量化基线、再按统一判定标准逐条处置、全程留痕。体检确认四类系统性结构问题：① A 族 563 个节点的全部真实前置都落在 14 个泛化学理枢纽内（数学 / 化学 / 经典力学 / 算法理论 / 统计学 / 工程学 / 文字 / 数值分析 / 最优化 / 分子生物学 / 材料科学 / 遗传学 / 免疫学 / 语言），下游集中度极高——数学一个节点被 637 个节点依赖；② E 族 173 个节点仅有 1 条真实前置且该前置即为泛化枢纽，其中 68 个属制造类（该族最大子类），病灶形态为机床族与焊接族前置一律写作「数学」；③ Ch 族 267 个节点的下游依赖数为 0 且年份早于 1900，属历史断链，其中 basic 类 42 个——三角学 / 对数 / 群论 / 集合论 / 图论等数学分支全为叶子，表明分支间依赖链缺失；④ F 族 27 条边跨分类且年份跨度超过 800 年，其中「马蹄铁(300)」指向 10 个军事节点一节无任何成立机制。四类问题同源：出自「时间就近取前驱」的生成规则与后续批量改写，故须按统一的四条判定标准逐条复核。",
+        detail: "阶段 0（工具与门禁）：新建 tools/audit_net.js 体检器，输出完整性六项（环 / 自环 / 重复边 / 悬空前置 / 悬空 enables / 年份倒挂）与结构问题族（A / E / Ch / F / 重名组 / 零前置 / 孤立 + 分类明细 + 双管线差异），支持 --json / --snapshot 写基线 / --check 对照基线，mustZero = 环 / 自环 / 重复边 / 悬空前置 / 年份倒挂，五族计数劣化即非零退出；新建 audit/ledger.json 判定台账，每批次存逐条 verdict + reason + newParent + backfills（外加 keepRule / notes / summary），驱动脚本断言「keep + repoint + delete + concept = candidates」与「backfills.length = summary.backfill」，不允许漏判；给 tools/gen_run.js 加 --no-write 干跑开关、同分类槽位边上限断言（超限拒写，实测槽位边 1,065 / 3,899 = 27.3%，默认上限 0 即拒写）与写出前自动备份到 /tmp。阶段 1（止血三批）：1a 处置 F 族 27 条边——删 15 条（inf_pen←paper，以及 10 条 mil_*←tr_horseshoe、metamaterial / directed_energy / mil_directedenergy / display←optics）、改前置 4 条（holography←wave_optics，led / lasers / laser←quantum_mech）、保留 8 条，并为因删边失去前置的节点补真实前置 10 条（板甲←钢铁 + 锻造，火绳枪 / 滑膛枪 / 手枪←火药 + 铁器 + 螺纹，防弹衣←板甲 + 钢铁，地雷←火药 + 铁器，火箭弹←火药 + 箭，加农炮←火药 + 青铜铸造，手榴弹←火药，自然采光←建筑学）；1b 为 4 个无前置的文明起点补真实前置（轮子←木作，石器打制←石器，钻木取火←石器 + 用火，语言←手势交流）；1c 合并 23 组同名重复节点，冗余项全部位于 techs_extend.js、保留项为含 views 富字段者，其中 3 组并入冗余项独有且时序成立的 7 条前置（mat_forging←用火 + 风箱 + 木炭，ene_charcoal←用火，tr_canoe←用火 + 石器），4 条并入项因时序性剔除（iron→mat_forging、microwave→ene_wpt、iot→mfg_digitaltwin、crispr→bio_genetherapy），全库 dependsOn 16 处 / enables 3 处引用同步改指，残留引用 0。全部写盘经五道门：台账完整划分断言、时序性校验、环校验、逐节点写后断言、残留引用检查，逐批通过。"
+      },
+      changes: [
+        "① 体检器（新增 tools/audit_net.js）：可复跑的全库结构体检，输出完整性六项与结构问题族，支持写入 audit/baseline.json 基线快照并用 --check 做回归门禁（mustZero = 环 / 自环 / 重复边 / 悬空前置 / 年份倒挂；A / E / F / 重名组 / 孤立五项计数不得上升）。基线快照：节点 2,288 / 依赖边 6,139、A 563 / E 173 / Ch 267 / F 27 / 重名组 23 / 零前置 8 / 孤立 2。",
+        "② 判定台账（新增 audit/ledger.json）：把「逐条判定」从对话搬进文件——每条候选边记录 verdict（保留 / 改前置 / 删边 / 降级为概念影响）+ reason + newParent，每批次记录 backfills 与 summary；驱动器断言 keep + repoint + delete + concept 恰好等于候选数、backfills 数恰好等于 summary.backfill，从机制上杜绝漏判。",
+        "③ 判定四标准（写入计划文档，作为全阶段统一口径）：新增或保留一条「A 是 B 的前置」须同时满足——必要性（去掉 A，B 是否仍能按史实出现；仅因同处一个时代或同一大类不成立）、排他性（A 是否为该环节最直接先行者）、时序性（A 年份早于 B 或同期可达）、域内优先（跨域须有明确传导机制）。",
+        "④ 阶段 1a · F 族 27 条边处置：删 15 / 改前置 4 / 保留 8，补真实前置 10 条。F 族计数 27 → 8，剩余 8 条为跨域但有明确传导机制者（如火药→火箭 / 钻爆法）。",
+        "⑤ 阶段 1b · 文明起点补前置：零前置节点 8 → 4（轮子←木作，石器打制←石器，钻木取火←石器 + 用火，语言←手势交流），孤立节点 2 → 0。收敛后的起点为石器 / 用火 / 手势交流 / 天然磁石四个。",
+        "⑥ 阶段 1c · 同名重复节点合并：23 组一次合并，节点 2,288 → 2,265，同名重复组 23 → 0。保留规则以「具备 views 与 applications 富字段」为准（详情卡依赖该字段），该类条目年份均不晚于同名冗余项；并入冗余项独有前置 7 条、按时序性剔除 4 条；dependsOn 16 处 / enables 3 处引用改指，残留引用 0。",
+        "⑦ 生成器护栏（阶段 0.3）：tools/gen_run.js 增加 --no-write 干跑开关与同分类槽位边上限断言。实测该生成器每次运行会产生槽位边 1,065 条（占 3,899 条的 27.3%）、指向 mathematics 的固定槽位边 458 条——即模板污染的再生源。默认上限为 0，任何重跑在未显式加 --allow-overflow 时一律拒写，并在写出前自动备份现有产物。",
+        "⑧ 台账驱动执行（新增 tools/apply_ledger.js / tools/merge_dups.js）：执行器从台账推导期望状态，先做完整划分 / 时序 / 环三重校验，再按「块级正则 + 引号风格回退探测」改写，写盘后重新加载数据逐节点断言。引号风格必须回退到文件级探测——当原数组为空时依据数组内容判定会失效并写出无引号 id，本轮即因此写脏过一次，已从备份回滚并修正判据。",
+        "⑨ 计划文档《技术网络检修计划.md》：补齐编制日期（2026-09-13）、最近修订、基线版本、当前状态与修订记录表；每个批次表新增日期栏与状态栏；F 族 27 条逐条列表（跨度 / 依赖者 / 前置 / 初步判定）；删除全部主观表述，改为可复核的中性数据陈述。",
+        "⑩ 后续批次（阶段 2–5，已登记待执行，详见《技术网络检修计划.md》）：阶段 2 为 96 条中间技术入网（basic + material / energy + transport / manufact + build / life + military / info 五批，优先插入阶段 1 登记的断链位置，目标 Ch 族 267 → 120 以下）；阶段 3 为前置补齐（E 族 173 → 0、A 族 563 → 150 以下，分 E 族 173 与 A 族 basic 176 / material 96 + life 80 / info 92 + manufact 68 + energy 48 四批）；阶段 4 为结构与元数据治理（覆盖矩阵空缺逐格判定、纪元体系统一并校对、近现代占比评估、反向索引与反图对齐并清 12 处 enables 悬空引用）；阶段 5 为全量对齐与收口（按主管线重建 graph.json 并清 11 个独占节点、重写 1,027 条 upgrade_stubs 模板文案、生成器语义硬约束、全量回归与上线）。"
+      ],
+      files: ["assets/techs_extra.js", "assets/techs_extend.js", "assets/techs_more.js", "assets/data.js", "技术网络检修计划.md", "tools/audit_net.js", "tools/apply_ledger.js", "tools/merge_dups.js", "tools/gen_run.js", "audit/ledger.json", "audit/baseline.json", "assets/pages/changelog_data.js", "assets/pages/correction_data.js", "版本迭代日志.md", "index.html", "tree.html", "tree_full.html", "browse.html", "detail.html", "lineage.html", "analysis.html", "model.html", "changelog.html", "correction.html", "method.html", "midtech.html", "progress.html", "research.html", "sop.html", "timeline.html", "worldview.html"]
+    }
   ]
 };
