@@ -776,6 +776,158 @@
         "candidates": 27,
         "verdicts": 0
       }
+    },
+    "5.0": {
+      "date": "2026-09-13",
+      "family": "FULL-PIPELINE",
+      "status": "取证完成，处置待批准（未改动任何数据）",
+      "scope": "用户抽检 5 条关系（石墨烯→自修复材料、3D 打印→碟式斯特林、忠诚僚机→二维材料 / 摩擦纳米发电 / 可回收火箭）的逐层核查",
+      "background": "5 条关系取自 v0.9.23 报告中「中间技术库 backgrounds 命中位置式签名」的举例。核查范围覆盖全部数据层：主管线 dependsOn、主管线反向 enables、主管线节点摘要与 views、中间技术库 backgrounds 与 summary、全量管线 graph.json 与 data_full.js、理论覆盖层。",
+      "criterionRef": "§2 判定四标准（必要性 / 排他性 / 时序性 / 域内优先）；处置四档（保留 / 改前置 / 删边 / 降级为概念影响）。",
+      "edges": [
+        {
+          "child": "mat_graphene",
+          "childName": "石墨烯",
+          "childYear": 2004,
+          "childCat": "material",
+          "parent": "mat_selfheal",
+          "parentName": "自修复材料",
+          "parentYear": 2000,
+          "parentCat": "material",
+          "positionalSignature": true,
+          "layers": {
+            "mainDependsOn": false,
+            "mainEnables": false,
+            "mainSummary": false,
+            "mainViews": false,
+            "midtechBackgrounds": true,
+            "midtechSummary": false,
+            "graphJson": false,
+            "dataFull": false
+          },
+          "verdict": "删边",
+          "reason": "自修复材料(2000) 与石墨烯(2004) 同为材料类的并列方向，不构成前置关系——自修复材料不参与石墨烯的制备或发现。石墨烯的真实前因是石墨（原料）与材料表征手段（微机械剥离依赖高定向热解石墨与光学显微表征），不存在「自修复材料是石墨烯之前置」的必要性或排他性。判定为位置式伪边（石墨烯年份 2004 时，材料类内 year 严格小于它的最后一个节点正是自修复材料，命中签名）。"
+        },
+        {
+          "child": "mfg_3dp",
+          "childName": "3D 打印",
+          "childYear": 1984,
+          "childCat": "manufact",
+          "parent": "ene_dishstirling",
+          "parentName": "碟式斯特林",
+          "parentYear": 1980,
+          "parentCat": "energy",
+          "positionalSignature": true,
+          "layers": {
+            "mainDependsOn": false,
+            "mainEnables": false,
+            "mainSummary": true,
+            "mainViews": false,
+            "midtechBackgrounds": true,
+            "midtechSummary": true,
+            "graphJson": false,
+            "dataFull": false
+          },
+          "verdict": "删边 + 摘要文本重写",
+          "reason": "碟式斯特林（一种外燃机）与 3D 打印的成型原理无任何传导机制：3D 打印的真实前因为计算机辅助设计、数控与光固化/激光+高分子体系，与斯特林循环无关。判定为位置式伪边（1984 年时能源类内 year 严格小于它的最后一个节点即碟式斯特林）。**残留位置**：主管线摘要仍写「建立在 激光熔覆、碟式斯特林、数学 之上」，而当前 dependsOn 已是 [mathematics, cnc, computer]——摘要与依赖表自相矛盾；中间技术库 backgrounds 亦保留该条。"
+        },
+        {
+          "child": "mil_loyalwingman",
+          "childName": "忠诚僚机",
+          "childYear": 2020,
+          "childCat": "military",
+          "parent": "mat_2d",
+          "parentName": "二维材料",
+          "parentYear": 2004,
+          "parentCat": "material",
+          "positionalSignature": true,
+          "layers": {
+            "mainDependsOn": false,
+            "mainEnables": false,
+            "mainSummary": true,
+            "mainViews": false,
+            "midtechBackgrounds": true,
+            "midtechSummary": true,
+            "graphJson": false,
+            "dataFull": false
+          },
+          "verdict": "删边 + 摘要文本重写",
+          "reason": "二维材料不构成忠诚僚机的前置。忠诚僚机的真实前因为无人机平台、隐身技术、自主控制/数据链。判定为位置式伪边（2020 年时材料类内 year 严格小于它的最后一个节点即二维材料）。**残留位置**：主管线摘要仍写「建立在 工业 4.0、摩擦纳米发电、二维材料 之上」，而当前 dependsOn 已是 [drone, mil_stealth2]。"
+        },
+        {
+          "child": "mil_loyalwingman",
+          "childName": "忠诚僚机",
+          "childYear": 2020,
+          "childCat": "military",
+          "parent": "ene_tribo",
+          "parentName": "摩擦纳米发电",
+          "parentYear": 2012,
+          "parentCat": "energy",
+          "positionalSignature": true,
+          "layers": {
+            "mainDependsOn": false,
+            "mainEnables": false,
+            "mainSummary": true,
+            "mainViews": false,
+            "midtechBackgrounds": true,
+            "midtechSummary": true,
+            "graphJson": false,
+            "dataFull": false
+          },
+          "verdict": "删边 + 摘要文本重写",
+          "reason": "摩擦纳米发电是微型能量采集方向，与忠诚僚机（无人作战飞机）的研制前置无传导机制。判定为位置式伪边（2020 年时能源类内 year 严格小于它的最后一个节点即摩擦纳米发电）。"
+        },
+        {
+          "child": "mil_loyalwingman",
+          "childName": "忠诚僚机",
+          "childYear": 2020,
+          "childCat": "military",
+          "parent": "tr_reusablerocket",
+          "parentName": "可回收火箭",
+          "parentYear": 2015,
+          "parentCat": "transport",
+          "positionalSignature": true,
+          "layers": {
+            "mainDependsOn": false,
+            "mainEnables": false,
+            "mainSummary": false,
+            "mainViews": false,
+            "midtechBackgrounds": true,
+            "midtechSummary": false,
+            "graphJson": true,
+            "dataFull": true
+          },
+          "verdict": "删边（主管线已删，**全量管线仍存活**）",
+          "reason": "可回收火箭与忠诚僚机的研制无前置关系（两者的共同点仅是「同期的最新运输/军事平台」，不构成因果）。判定为位置式伪边（2020 年时运输类内 year 严格小于它的最后一个节点即可回收火箭）。**残留位置（重要）**：该边在全量管线两侧均存活——data_full.js 为 mil_loyalwingman→tr_reusablerocket（type=dependency），graph.json 为 tr_reusablerocket→mil_loyalwingman（其 raw 方向与 data_full.js 相反，语义相同）。tree_full.html 因此仍会展示该关系。"
+        }
+      ],
+      "layerResidueSummary": {
+        "mainDependsOn": "0 / 5（v0.9.20、v0.9.21 已清除）",
+        "mainEnables": "0 / 5",
+        "mainNodeSummary": "3 / 5（mfg_3dp 提到「激光熔覆、碟式斯特林」；mil_loyalwingman 提到「工业 4.0、摩擦纳米发电、二维材料」；mat_graphene 提到已删前置「用火」）",
+        "midtechBackgrounds": "5 / 5",
+        "midtechSummary": "3 / 5",
+        "graphJson": "1 / 5（mil_loyalwingman → tr_reusablerocket）",
+        "dataFull": "1 / 5（同一条，raw 方向相反）"
+      },
+      "fullPipelinePositionalScan": {
+        "scannedEdges": 17387,
+        "positionalHits": 158,
+        "ratio": "0.9%",
+        "note": "对 data_full.js 全量边按「前置 = 该分类内 year 严格小于依赖者的最后一个节点」扫描的结果。该检测器有已知盲区（第 2 槽位、同年并列、排名漂移），故 158 为下界而非真值；全量管线未经过 v0.9.20 / v0.9.21 的清理，仅这一族即至少残留 158 条。"
+      },
+      "proposedDisposition": [
+        "① 主管线摘要文本（3 条实例）→ 归入阶段 5b「1,027 条 upgrade_stubs 模板文案重写」，按统一口径改写，避免为 3 条单独发明句式而与全批冲突。",
+        "② 全量管线边 mil_loyalwingman → tr_reusablerocket → 归入阶段 5a（按主管线重建 graph.json 与 data_full.js）；若需立即止血，可对两文件做单边删除（结构可安全 parse→filter→stringify）。",
+        "③ 中间技术库 backgrounds（5 条实例）→ 归入阶段 5d（重建 95 条 backgrounds）。",
+        "④ 本次核查未改动任何数据；结论已入台账留痕。"
+      ],
+      "summary": {
+        "edgesChecked": 5,
+        "positionalSignatureHits": 5,
+        "layersWithResidue": 4,
+        "dataChanged": 0
+      }
     }
   }
 }
