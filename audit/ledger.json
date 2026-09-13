@@ -1923,6 +1923,63 @@
     },
     "notChanged": "本裁定不修改任何数据：主管线 2,265 节点 / 6,091 边未变；全量管线 graph.json（2,299 / 6,963）与 data_full.js（13,318 / 16,811）未变。"
    }
+  },
+  "node-add-20260914-basaltfiber": {
+   "date": "2026-09-14",
+   "family": "补节点（用户指派，阶段序列外）",
+   "status": "applied（已写盘主管线，三道门禁通过）",
+   "scope": "主管线新增材料类节点 1 个：mat_basaltfiber 玄武岩纤维；新增前置边 3 条。",
+   "request": "用户指派：「玄武岩纤维这种材料，上网搜下，加入这种技术，并把前后的技术接上」。",
+   "forensics": [
+    "工艺：玄武岩碎料一步法 —— 破碎／磁选比重选均质化 → 1450–1500 ℃ 熔融 → 铂铑合金漏板高速拉丝；不添加配料（与玻璃纤维需配料的关键区别）；原料要求 SiO₂ > 46%、低铁。",
+    "脉络：1840 英国（威尔士）首次试制蓬松玄武岩棉；1923 法国保罗·德（Paul Dhe）获美国专利 US 1,462,446；1950 年代德、捷离心法产棉；1950–60 年代苏联全苏玻璃钢与玻璃纤维科研院乌克兰分院研制连续纤维；1985 苏联实现连续玄武岩纤维工业化；1995 解密后民用；2001–03 中国列入 863 计划。",
+    "性能：抗拉 2.8–3.1 GPa、弹性模量 85–87 GPa、密度 2.65–2.67 g/cm³、耐温 −269 至 +700 ℃；丝径 10–20 μm（可至 5 μm）。",
+    "产业：2023 中国产量约 3 万吨、占世界约 75%；2020 华蓥 2400 孔拉丝线投产。"
+   ],
+   "yearRuling": "取 1985（连续纤维工业化），不取 1840／1923。依据：① 项目内同类节点 mat_glassfiber 玻璃纤维取 1930（工业化起点）而非 1836；② 玄武岩纤维工艺沿袭玻璃纤维工业，取 1923 会使前置 mat_glassfiber(1930) 构成年份倒挂。era=info。",
+   "edges": [
+    {
+     "child": "mat_basaltfiber",
+     "parent": null,
+     "verdict": "add",
+     "newParent": null,
+     "reason": "新建节点，登记前置 3 条：chemistry（原料均质化与成分判据）、physics（熔体黏度—拉丝张力—模量控制）、mat_glassfiber（熔融—漏板拉丝工艺母体，与 mat_cfrp 碳纤维复合材料同构）。"
+    }
+   ],
+   "backfills": [
+    {
+     "child": "mat_basaltfiber",
+     "add": [
+      "chemistry",
+      "physics",
+      "mat_glassfiber"
+     ],
+     "reason": "与 mat_cfrp 碳纤维复合材料「化学＋经典力学＋母体纤维」同构的 3 条前置。"
+    }
+   ],
+   "excludedParents": [
+    "mining 采矿（-5000）：其节点语义为「从地层取矿，金属与燃料供给的起点」，用于玄武岩岩石属跨域误用；网络内无采石节点。",
+    "kiln 窑（-6000）：必要性成立但排他性不成立 —— 熔融环节已被 mat_glassfiber 覆盖；且 mat_glassfiber 自身亦未列 kiln，为保持同口径而不列。",
+    "mfg_wiredraw 拉丝（1200）：该节点为金属拉丝（拉拔），非纤维漏板拉丝，排他性不成立。"
+   ],
+   "downstreamRuling": "经前提核查，现有网络中无必要性成立的下游，经用户裁定「只加玄武岩纤维本身」，不新建下游节点；后续侧登记为待补（见 correction_data.js 的 meta.pendingQueue）。核查过程：mat_glassfiber 当前零下游；mat_frp 玻璃钢(1930) 仅 1 条下游 bld_frpbridge 复材桥梁(2010)；bld_frpbridge／bld_carbonconc 碳纤维混凝土(2010)／bd_civ_130 碳纤维加固(2000) 分别以玻璃钢、碳纤维为对象；遍历 year ≥ 1985 的 material/build/transport/energy 共 417 个节点无纤维增强下游。",
+   "summary": {
+    "keep": 0,
+    "repoint": 0,
+    "delete": 0,
+    "concept": 0,
+    "backfill": 1,
+    "nodesAdded": 1,
+    "edgesAdded": 3
+   },
+   "verification": [
+    "写盘前：前置存在性与年份 ≤ 1985 校验通过；无既有节点引用该 id；族 A 模板骨架识别断言四项全中（summary / significance / views[0] / views[1]）。",
+    "写盘后：EXTRA_TECHS 1033 → 1034；新节点 JSON 往返一致；vm 语法校验通过。",
+    "派生链：regen_text --apply 应用 3 处（新节点 3 字段 + mat_glassfiber 3 字段，合计 3 处 / 1 节点为 mat_glassfiber）；复跑 --check 不动点 0 处；regen_midtech 不动点 95/95。",
+    "门禁：check_docs [OK]（TOTAL 2266 由 {{TOTAL}} 占位与实时计算承接）；audit_net --check [OK]；audit/baseline.json 已刷新（N 2266 / edges 6094 / chemistry.down 431 / physics.down 290）。",
+    "结构：节点 2,265 → 2,266；依赖边 6,091 → 6,094；环 0 / 自环 0 / 重复边 0 / 悬空前置 0 / 年份倒挂 0 / 零前置 4（不变）。",
+    "全量管线未改动（graph.json 2,299 / 6,963；data_full.js 13,318 / 16,811）—— 依 v0.9.26 裁定不逐条打补丁，新节点随阶段 5e 重建带入。"
+   ]
   }
  }
 }

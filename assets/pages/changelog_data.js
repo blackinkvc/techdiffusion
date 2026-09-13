@@ -714,6 +714,41 @@ window.CHANGELOG = {
         "assets/pages/changelog_data.js",
         "assets/pages/correction_data.js"
       ]
+    },
+    {
+      "version": "v0.9.27",
+      "date": "2026-09-14",
+      "type": "data",
+      "title": "补建材料类缺失节点「玄武岩纤维」(mat_basaltfiber)：主管线 2,265 → 2,266 节点 / 6,091 → 6,094 条依赖边",
+      "summary": "按用户指派，经联网取证后向主管线补建材料类缺失节点「玄武岩纤维」。取证要点：玄武岩纤维以天然玄武岩碎料经一步法（破碎与均质化 → 1450–1500 ℃ 熔融 → 铂铑合金漏板高速拉丝）制成，生产过程中不添加配料，与玻璃纤维（需配料）的关键区别在此；1840 年英国首次试制蓬松玄武岩棉，1923 年法国保罗·德（Paul Dhe）获美国专利 US 1,462,446，1950 年代德、捷以离心法产棉，1950–60 年代苏联全苏玻璃钢与玻璃纤维科研院乌克兰分院研制连续纤维，1985 年苏联实现连续玄武岩纤维工业化，1995 年解密后转入民用；抗拉强度 2.8–3.1 GPa、弹性模量 85–87 GPa、密度约 2.67 g/cm³、耐温 −269 至 +700 ℃，是继碳纤维、芳纶、超高分子量聚乙烯之后的第四大高技术纤维。年份口径取 1985 年（连续纤维工业化），理由有二：一、项目内同类节点 `mat_glassfiber` 玻璃纤维取 1930 年（工业化起点）而非 1836 年；二、玄武岩纤维的整套工艺沿袭玻璃纤维工业，若取 1923 年则 `mat_glassfiber`(1930) 作前置即构成年份倒挂。前置登记 3 条（`chemistry` 化学 / `physics` 经典力学 / `mat_glassfiber` 玻璃纤维），与既有 `mat_cfrp` 碳纤维复合材料「化学＋经典力学＋母体纤维」同构；经复核排除 `mining`（该节点语义为「从地层取矿、金属与燃料供给的起点」，用于玄武岩岩石属跨域误用，且网络内无采石节点）、`kiln`（必要性成立但排他性不成立，熔融环节已被 `mat_glassfiber` 覆盖，且 `mat_glassfiber` 自身亦未列 `kiln`）、`mfg_wiredraw`（该节点为金属拉丝，非纤维漏板拉丝）。「后续」一侧经前提核查确认现有网络中无必要性成立的下游：`mat_glassfiber` 当前零下游，`mat_frp` 玻璃钢仅 1 条下游 `bld_frpbridge` 复材桥梁(2010)，最接近的 `bld_frpbridge`／`bld_carbonconc` 碳纤维混凝土／`bd_civ_130` 碳纤维加固分别以玻璃钢、碳纤维为对象，改接玄武岩纤维必要性不成立；遍历 year ≥ 1985 的 material / build / transport / energy 共 417 个节点亦无纤维增强下游节点。经用户裁定「只加玄武岩纤维本身」，后续侧登记为待补节点，不新建下游。新节点的四个文案字段由 `tools/regen_text.js` 按族 A 公式自动重算（`mat_glassfiber` 因新增下游同步重算 3 处），重跑为不动点。",
+      "treeChange": {
+        "scope": "主管线依赖网络：节点 2,265 → 2,266，依赖边 6,091 → 6,094（新增节点 1 个、新增前置边 3 条；`mat_glassfiber` 下游 0 → 1）。全量管线 `graph.json`（2,299 / 6,963）与 `assets/data_full.js`（13,318 / 16,811）本轮未改动。",
+        "reason": "主管线材料类漏收了玄武岩纤维这一已工业化、且被列为国家重点发展的高性能纤维。该技术在本网络中的位置是明确的：工艺上直接沿袭玻璃纤维工业（同一套熔融—漏板拉丝路线，差别在于玄武岩纤维不加配料、以单一玄武岩碎料直接成纤），故其前置必然包含玻璃纤维——这也决定了节点年份不能取早于玻璃纤维工业化的 1840 / 1923 年。",
+        "detail": "① **新增节点**：`mat_basaltfiber` 玄武岩纤维，category=material、era=info、year=1985、date=「1985 年」，`dependsOn` = chemistry / physics / mat_glassfiber，`applications` = 结构增强 / 耐高温防护 / 耐腐蚀构件，写入 `assets/techs_extra.js`（族 A，`EXTRA_TECHS` 1033 → 1034）。② **文案**：新节点的 `summary` / `significance` / `views[].text` 由 `tools/regen_text.js` 依 `tools/derived_text_rules.js` 的族 A 公式自动生成；因新增下游，`mat_glassfiber` 的 `summary` / `significance` / `views[1].text` 同步重算 3 处（其文案由「它把 工具制造、结构件 变成可稳定复现的能力」改为「依托 化学、经典力学 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 玄武岩纤维 等后续技术」）。③ **年份口径**：取 1985 年，不取 1840 年（首次试制蓬松玄武岩棉）或 1923 年（首个专利）；理由见 `summary` —— 同类节点 `mat_glassfiber` 取 1930 年工业化起点，且工艺沿袭关系要求节点年不早于玻璃纤维。④ **前置取舍**：收录 3 条，排除 3 条（`mining` / `kiln` / `mfg_wiredraw`），排除理由见 `summary`。⑤ **后续缺口**：现有网络中无必要性成立的下游，经用户裁定不新建下游节点，登记为待补；网络自身的范式（`mat_cf` 碳纤维 → `mat_cfrp` 碳纤维复合材料 → `bld_carbonconc` 碳纤维混凝土）提示将来若要接上「后续」，应新建「玄武岩纤维复合材料」类节点。⑥ **全量管线**：依 v0.9.26 裁定「以主管线为源单向重建、不逐条打补丁」，本轮不改动 `graph.json` 与 `data_full.js`；新节点将在阶段 5e 重建时随主管线一并带入。"
+      },
+      "changes": [
+        "① 联网取证：确认玄武岩纤维为一步法工艺（破碎与均质化 → 1450–1500 ℃ 熔融 → 铂铑合金漏板高速拉丝），过程中不添加配料；原料要求 SiO₂ > 46%、低铁；丝径常 10–20 μm（可细至 5 μm），单根长度可达万米。",
+        "② 史实脉络：1840 年英国（威尔士）首次试制蓬松玄武岩棉 → 1923 年法国保罗·德（Paul Dhe）获美国专利 US 1,462,446 → 1950 年代德、捷以离心法产棉 → 1950–60 年代苏联全苏玻璃钢与玻璃纤维科研院乌克兰分院研制连续纤维 → 1985 年苏联实现连续玄武岩纤维工业化 → 1995 年解密后转入民用 → 2001–03 年中国列入 863 计划并建厂。",
+        "③ 性能参数：抗拉强度 2.8–3.1 GPa、弹性模量 85–87 GPa、断裂延伸率约 3.15%、密度 2.65–2.67 g/cm³、耐温 −269 至 +700 ℃；耐酸碱、电绝缘、生物惰性、可降解。",
+        "④ 年份口径裁定：取 1985 年（连续纤维工业化），不取 1840 / 1923 年。依据一 —— 同类节点 `mat_glassfiber` 玻璃纤维取 1930 年（工业化起点）而非 1836 年；依据二 —— 玄武岩纤维工艺沿袭玻璃纤维工业，若取 1923 年则 `mat_glassfiber`(1930) 作前置构成年份倒挂。era=info（1950–2000）。",
+        "⑤ 新增节点 `mat_basaltfiber`（material / 1985 / info）：写入 `assets/techs_extra.js` 的 `EXTRA_TECHS`（1033 → 1034），字段与同族节点同构（`people` / `place` 为空字符串，与 `mat_glassfiber` / `mat_cf` / `mat_frp` 一致）。",
+        "⑥ 前置登记 3 条：`chemistry` 化学（原料均质化与成分判据）、`physics` 经典力学（熔体黏度—拉丝张力—模量控制）、`mat_glassfiber` 玻璃纤维（熔融—漏板拉丝工艺母体）。与 `mat_cfrp` 碳纤维复合材料「化学＋经典力学＋母体纤维」同构。",
+        "⑦ 经复核排除的前置：`mining` 采矿（其语义为「从地层取矿，金属与燃料供给的起点」，用于玄武岩岩石属跨域误用；网络内无采石节点）、`kiln` 窑（必要性成立但排他性不成立 —— 熔融环节已被 `mat_glassfiber` 覆盖，且 `mat_glassfiber` 自身亦未列 `kiln`，与其口径保持一致）、`mfg_wiredraw` 拉丝（该节点为金属拉丝，非纤维漏板拉丝）。",
+        "⑧ 后续缺口（前提核查）：现有网络中无任何节点的「必要性」要求玄武岩纤维 —— `mat_glassfiber` 当前零下游；`mat_frp` 玻璃钢(1930) 仅 1 条下游 `bld_frpbridge` 复材桥梁(2010)；最接近的 `bld_frpbridge` / `bld_carbonconc` 碳纤维混凝土(2010) / `bd_civ_130` 碳纤维加固(2000) 分别以玻璃钢、碳纤维为对象，改接玄武岩纤维必要性不成立；遍历 year ≥ 1985 的 material / build / transport / energy 共 417 个节点，无纤维增强下游节点。经用户裁定「只加玄武岩纤维本身」，后续侧登记为待补（网络自身范式提示将来应新建「玄武岩纤维复合材料」类节点）。",
+        "⑨ 文案同步：新节点的 `summary` / `significance` / `views[].text` 由 `tools/regen_text.js` 按族 A 公式生成；因新增下游，`mat_glassfiber` 同步重算 3 处（`summary` / `significance` / `views[1].text`）。重跑 `regen_text.js --check` 为不动点（0 处），`regen_midtech.js` 为不动点（95/95 未变）。",
+        "⑩ 派生数据校验（与识别器不同源的断言）：写盘前断言新节点的四个文案字段均被族 A 模板骨架识别（否则 `regen_text` 会当手写散文跳过、造成静默过期）；写盘后断言 `EXTRA_TECHS` 条目数 +1、新节点 JSON 往返一致、前置年份均 ≤ 1985。",
+        "⑪ 门禁：`check_docs [OK]`（主站点语料 TOTAL 2265 → 2266 由 `{{TOTAL}}` 占位与实时计算承接，无需改声明）、`regen_text --check [OK]`（不动点）、`audit_net --check [OK]`；`audit/baseline.json` 按合法改进刷新（N 2,265 → 2,266、edges 6,091 → 6,094、`chemistry` 下游 430 → 431、`physics` 下游 289 → 290）。",
+        "⑫ 未改动：全量管线 `graph.json` 与 `assets/data_full.js`（依 v0.9.26 裁定「以主管线为源单向重建、不逐条打补丁」，新节点随阶段 5e 重建带入）、中间技术库、`theory_data.js` 覆盖层、其余 2,265 个节点的依赖关系与手写散文。"
+      ],
+      "files": [
+        "assets/techs_extra.js",
+        "assets/pages/changelog_data.js",
+        "assets/pages/correction_data.js",
+        "audit/ledger.json",
+        "audit/baseline.json",
+        "技术网络检修计划.md",
+        "版本迭代日志.md"
+      ]
     }
 ]
 };

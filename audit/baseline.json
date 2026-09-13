@@ -1,6 +1,6 @@
 {
- "N": 2265,
- "edges": 6091,
+ "N": 2266,
+ "edges": 6094,
  "selfLoop": 0,
  "dupEdge": 0,
  "danglingDep": 0,
@@ -54,12 +54,12 @@
   {
    "id": "chemistry",
    "name": "化学",
-   "down": 430
+   "down": 431
   },
   {
    "id": "physics",
    "name": "经典力学",
-   "down": 289
+   "down": 290
   },
   {
    "id": "algorithm",
@@ -125,7 +125,7 @@
   "electrical": 211,
   "classical": 28,
   "intelligent": 685,
-  "info": 743,
+  "info": 744,
   "medieval": 29,
   "future": 117
  },
@@ -146,6 +146,6 @@
  },
  "dual": {
   "onlyInGraphJson": 1204,
-  "onlyInMain": 448
+  "onlyInMain": 451
  }
 }
