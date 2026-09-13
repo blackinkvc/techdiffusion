@@ -547,7 +547,7 @@
   "3.1a": {
    "date": "2026-09-13",
    "family": "E-manufact",
-   "status": "draft（候选集已建立，逐条判定待填写；未写盘）",
+   "status": "draft-ready（27 条判定草案已写入，待用户逐条审核；未写盘主管线）",
    "scope": "E 族 manufact 68 条中的首批 27 条——机床族（17）与焊接 / 连接族（10）",
    "criterion": "§2 判定四标准：① 必要性（去掉该前置，本技术是否仍能按史实出现）② 排他性（是否该环节最直接的先行者）③ 时序性（前置年 ≤ 本节点年）④ 域内优先（跨域须有明确传导机制）。处置四档：保留 / 改前置 / 删边 / 降级为概念影响。",
    "observation": "E 族 manufact 68 条的当前前置**全部为同一条 mathematics**，无一条例外——即同一槽位被批量赋值，病灶完全同构。本批先取机床族与焊接 / 连接族，共 27 条。",
@@ -575,7 +575,8 @@
     "mfg_servo 伺服系统(1940)",
     "laser 激光(1960)"
    ],
-   "candidates": [
+   "candidates": 27,
+   "candidateList": [
     {
      "id": "mfg_gauge",
      "name": "量具",
@@ -766,15 +767,414 @@
      "currentParent": "mathematics"
     }
    ],
-   "verdicts": [],
+   "dispositionRule": [
+    "R1 先判「mathematics 是否为本节点的必要前提」：成立则 keep（本批仅 2 条 —— mfg_cnc 数控机床、mfg_cmm 三坐标测量，二者的定义性构成即程序指令／坐标解算）。",
+    "R2 不成立则 delete。判据为四标准之必要性：凡属机械、材料或物理效应主导的工艺，去掉数学仍能按史实出现。",
+    "R3 唯一存在更贴近同族前置者用 repoint（本批 1 条 —— mfg_gauge 量具：其刻线即数值尺度，「数字符号系统」比学科级「数学」更贴近且更早）。",
+    "R4 无论 keep/delete/repoint，一律 backfill 1–3 条域内真实前置（必要性＋排他性＋时序性＋域内优先），否则删掉唯一前置会产生新的零前置节点。"
+   ],
+   "edges": [
+    {
+     "child": "mfg_gauge",
+     "parent": "mathematics",
+     "verdict": "repoint",
+     "newParent": "numerals",
+     "reason": "量具的本质是把长度数值化并与基准比对，其刻线即数值尺度。数字符号系统（numerals，-3500）比学科级「数学」更贴近该环节，且早于量具（-2000），满足排他性与时序性。"
+    },
+    {
+     "child": "mfg_boring",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "镗床为金属内圆加工机，去掉数学仍可按时史出现；数学非必要前提。"
+    },
+    {
+     "child": "mfg_drillpress",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "钻床为机械化钻具，数学非必要前提。"
+    },
+    {
+     "child": "mfg_planer",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "刨床为平面往复加工机，数学非必要前提。"
+    },
+    {
+     "child": "mfg_grindingwheel",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "砂轮为磨料固结磨具，数学非必要前提。"
+    },
+    {
+     "child": "mfg_toolholder",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "刀柄为固持刀具的接口件，数学非必要前提。"
+    },
+    {
+     "child": "mfg_coolant",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "切削液为冷却润滑介质，数学非必要前提。"
+    },
+    {
+     "child": "mfg_edm",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "电火花加工基于放电蚀除的物理效应，数学非必要前提。"
+    },
+    {
+     "child": "mfg_cnc",
+     "parent": "mathematics",
+     "verdict": "keep",
+     "reason": "数控的本质是「以程序指令控制机床运动」，插补与坐标计算是其定义性构成，数学为必要前提（必要性成立、无更贴近的替代者）。"
+    },
+    {
+     "child": "mfg_mc",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "加工中心的核心特征是自动换刀与工序集中，属数控机床之上的集成形态；数学非其自身的必要前提。"
+    },
+    {
+     "child": "mfg_wedm",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "线切割属电火花加工之分支，数学非必要前提。"
+    },
+    {
+     "child": "mfg_edmwire",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "电火花线切割机属电火花加工之分支，数学非必要前提。"
+    },
+    {
+     "child": "mfg_turnmill",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "车铣复合为数控平台上的工序集成，数学非其自身的必要前提。"
+    },
+    {
+     "child": "mfg_cmm",
+     "parent": "mathematics",
+     "verdict": "keep",
+     "reason": "三坐标测量的本质是以坐标系表述并解算几何量，几何与数值解算为定义性构成，数学为必要前提。"
+    },
+    {
+     "child": "mfg_onmachinem",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "在机测量为测量功能向机床内的迁移，数学非其自身的必要前提。"
+    },
+    {
+     "child": "mfg_toolmonitor",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "刀具状态监控以传感器信号判磨损，数学非必要前提。"
+    },
+    {
+     "child": "mfg_cryogenicm",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "低温切削为冷却介质的替换，数学非必要前提。"
+    },
+    {
+     "child": "mfg_rivet",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "铆接为金属塑性变形连接工艺，数学非必要前提。"
+    },
+    {
+     "child": "mfg_braze",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "钎焊为钎料熔化润湿的连接工艺，数学非必要前提。"
+    },
+    {
+     "child": "mfg_adhesive",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "胶接为胶粘剂连接工艺，数学非必要前提。"
+    },
+    {
+     "child": "mfg_resistweld",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "电阻焊以焦耳热实现连接，数学非必要前提。"
+    },
+    {
+     "child": "mfg_welding",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "电弧焊以电弧为热源，数学非必要前提。"
+    },
+    {
+     "child": "mfg_gasweld",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "气焊以燃气火焰为热源，数学非必要前提。"
+    },
+    {
+     "child": "mfg_ebw",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "电子束焊以聚焦电子束为热源，数学非必要前提。"
+    },
+    {
+     "child": "mfg_laserweld",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "激光焊以激光为热源，数学非必要前提。"
+    },
+    {
+     "child": "mfg_fsw",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "搅拌摩擦焊为固相摩擦连接，数学非必要前提。"
+    },
+    {
+     "child": "mfg_roboticweld",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "焊接机器人为焊接工艺与机器人的集成，数学非其自身的必要前提。"
+    }
+   ],
+   "backfills": [
+    {
+     "child": "mfg_gauge",
+     "add": [
+      "mfg_chisel",
+      "woodworking"
+     ],
+     "reason": "量具＝以等分刻线标示尺寸的基准器物；刻线靠凿刻成形，尺身以木质直杆为坯。"
+    },
+    {
+     "child": "mfg_boring",
+     "add": [
+      "mfg_lathe",
+      "mfg_drill"
+     ],
+     "reason": "镗床为车床家族的内圆加工机（工件或刀具旋转扩孔），须先有车床与钻孔工艺。"
+    },
+    {
+     "child": "mfg_drillpress",
+     "add": [
+      "mfg_drill",
+      "mfg_lathe"
+     ],
+     "reason": "钻床＝以机床结构为钻具提供定心与进给，其母体为车床。"
+    },
+    {
+     "child": "mfg_planer",
+     "add": [
+      "mfg_lathe",
+      "mat_castiron"
+     ],
+     "reason": "刨床＝在铸铁床身上以直线往复加工平面，其出现源于机床导轨自身的平面加工需求。"
+    },
+    {
+     "child": "mfg_grindingwheel",
+     "add": [
+      "mfg_abrasive",
+      "kiln"
+     ],
+     "reason": "砂轮＝磨料以结合剂固结并经烧成的旋转磨具；磨料与窑烧为前提。"
+    },
+    {
+     "child": "mfg_toolholder",
+     "add": [
+      "mfg_knife",
+      "mfg_thread"
+     ],
+     "reason": "刀柄是把刀具固持到主轴上的接口件，其夹持依赖锥面与螺纹。"
+    },
+    {
+     "child": "mfg_coolant",
+     "add": [
+      "mfg_lathe",
+      "mfg_grinder"
+     ],
+     "reason": "切削液用于金属切削与磨削区的冷却润滑，以车削、磨削工艺的存在为前提。"
+    },
+    {
+     "child": "mfg_edm",
+     "add": [
+      "electricity",
+      "electronics"
+     ],
+     "reason": "放电蚀除以可控电脉冲为前提：电力系统供电、电子学提供脉冲发生与控制。"
+    },
+    {
+     "child": "mfg_cnc",
+     "add": [
+      "computer",
+      "mfg_servo",
+      "mfg_mill"
+     ],
+     "reason": "数控＝以计算机程序指令驱动伺服进给机床运动；首台数控机床（1949）即改装铣床。"
+    },
+    {
+     "child": "mfg_mc",
+     "add": [
+      "mfg_cnc",
+      "mfg_toolholder"
+     ],
+     "reason": "加工中心＝数控机床＋自动换刀，依赖刀柄接口的标准化。"
+    },
+    {
+     "child": "mfg_wedm",
+     "add": [
+      "mfg_edm",
+      "mfg_wiredraw"
+     ],
+     "reason": "线切割＝以连续走丝作电极的电火花加工，依赖细金属丝的拉制。"
+    },
+    {
+     "child": "mfg_edmwire",
+     "add": [
+      "mfg_edm",
+      "mfg_wiredraw"
+     ],
+     "reason": "同上：电火花线切割机＝电火花加工＋走丝系统。"
+    },
+    {
+     "child": "mfg_turnmill",
+     "add": [
+      "mfg_cnc",
+      "mfg_lathe",
+      "mfg_mill"
+     ],
+     "reason": "车铣复合＝在同一数控平台上集成车削与铣削功能。"
+    },
+    {
+     "child": "mfg_cmm",
+     "add": [
+      "mfg_gauge",
+      "mfg_ballscrew"
+     ],
+     "reason": "三坐标测量＝以精密位移机构（滚珠丝杠）带动测头在坐标系中采集几何量，量具为其测量学前身。"
+    },
+    {
+     "child": "mfg_onmachinem",
+     "add": [
+      "mfg_cmm",
+      "mfg_cnc"
+     ],
+     "reason": "在机测量＝把三坐标测量功能移入数控机床，形成加工—测量闭环。"
+    },
+    {
+     "child": "mfg_toolmonitor",
+     "add": [
+      "sensor",
+      "mfg_cnc"
+     ],
+     "reason": "刀具状态监控＝以传感器采集切削力／振动／声发射并据以判定刀具磨损，运行于数控机床。"
+    },
+    {
+     "child": "mfg_cryogenicm",
+     "add": [
+      "mfg_coolant"
+     ],
+     "reason": "低温切削＝以深冷介质替代常规切削液控制切削区温度，属切削液技术的分支。（**深冷介质／液氮节点缺失，登记为补节点候选**）"
+    },
+    {
+     "child": "mfg_rivet",
+     "add": [
+      "mfg_hammer",
+      "bronze"
+     ],
+     "reason": "铆接＝以锤击使金属铆钉塑性变形而锁合，金属件与锤击为前提，与青铜时代金属连接同源。"
+    },
+    {
+     "child": "mfg_braze",
+     "add": [
+      "bronze",
+      "kiln"
+     ],
+     "reason": "钎焊＝加热使熔点较低的钎料熔化润湿母材，起源于青铜时代金工，须有可控热源（窑）。"
+    },
+    {
+     "child": "mfg_adhesive",
+     "add": [
+      "hafting",
+      "fire"
+     ],
+     "reason": "胶接的史前形态即以天然胶粘剂把石器固持于木柄（复合工具），须有胶接需求与对天然胶的加热处理。"
+    },
+    {
+     "child": "mfg_resistweld",
+     "add": [
+      "generator",
+      "battery"
+     ],
+     "reason": "电阻焊＝电流通过接触电阻生热（焦耳热）实现连接，前提为可控电流源。（**年份存疑**：节点年 1877 早于电力系统 1879，工程史通行说法为 1886 年 Thomson 电阻焊专利 → 阶段 4 校正年份）"
+    },
+    {
+     "child": "mfg_welding",
+     "add": [
+      "electricity",
+      "mat_forging"
+     ],
+     "reason": "电弧焊＝以电弧为热源的金属连接，承接锻焊（锻接）的连接需求，并以电力系统为热源前提。"
+    },
+    {
+     "child": "mfg_gasweld",
+     "add": [
+      "mfg_welding",
+      "ene_natgas"
+     ],
+     "reason": "气焊属焊接家族，以可燃气体火焰替代电弧作热源。（**乙炔／工业气体节点缺失，登记为补节点候选**）"
+    },
+    {
+     "child": "mfg_ebw",
+     "add": [
+      "electronics",
+      "mfg_vacfurnace"
+     ],
+     "reason": "电子束焊＝在真空中以聚焦电子束为热源，需电子光学与真空环境。"
+    },
+    {
+     "child": "mfg_laserweld",
+     "add": [
+      "lasers",
+      "mfg_welding"
+     ],
+     "reason": "激光焊＝以激光为热源的焊接，属焊接家族的热源替换。"
+    },
+    {
+     "child": "mfg_fsw",
+     "add": [
+      "mfg_welding",
+      "mfg_mill"
+     ],
+     "reason": "搅拌摩擦焊＝以机床主轴驱动搅拌针，在固相下靠摩擦热连接金属。"
+    },
+    {
+     "child": "mfg_roboticweld",
+     "add": [
+      "robot",
+      "mfg_welding"
+     ],
+     "reason": "焊接机器人＝工业机器人搭载焊接工艺的自动化集成。"
+    }
+   ],
+   "findings": [
+    "同义重复节点对（本批不处置，属节点级问题）：mfg_wedm「线切割」(1960) 与 mfg_edmwire「电火花线切割机」(1960) 为同一技术；laser「激光」(1960) 与 lasers「激光器」(1960)；mfg_lathe「车床」(-1000) 与 lathe「车床与精密加工」(1751)；mfg_grinder「磨床」(1800) 与 mfg_grindingwheel「砂轮」(1840)（后者为部件，非重复，仅需注意层级）。建议另立「同义重复节点」批次，并注意合并会改变节点数与 check_docs / tree_full.html 的写死数字。",
+    "年份存疑（待阶段 4）：mfg_resistweld 电阻焊 1877 早于 electricity 电力系统 1879，工程史通行说法为 1886 年 Thomson 专利。本批已改用 generator(1831)／battery(1800) 作为合法前置，年份本身未动。",
+    "缺失节点（补节点候选）：深冷介质／液氮（mfg_cryogenicm 低温切削的直接前提）、乙炔或工业气体（mfg_gasweld 气焊的直接前提）。",
+    "本批 27 条节点的 applications 全部为同一组模板值（零件加工／批量制造／精密装配），且无 purpose／people／place —— 与 techs_more.js 同构 stub 特征一致，建议并入「stub 甄别」批次评估其字段质量。",
+    "机床族与焊接族的其余 41 条（E 族 manufact 68 条减去本批 27 条）前置同样一律为 mathematics，本批的处置规则 R1–R4 可直接沿用。"
+   ],
    "notes": [
     "候选筛选已断言：27 条全部满足「单前置且前置 = mathematics」，任一不符即抛错，不会把非 E 族节点混入。",
-    "判定完成后填入 verdicts（每条 verdict / newParent / reason），并断言 keep + repoint + delete + concept = 27。",
-    "时序性门槛提醒：执行器会强制「前置年 ≤ 本节点年」。部分节点年份偏早（如 mfg_resistweld 电阻焊 1877 早于 electricity 电力系统 1879），需据此选择更早的合法前置，或先在阶段 4 校正年份。用户口径：年份仅具参考价值，以本质与逻辑为准。"
+    "结构与批次 1a 一致：edges（逐边 verdict/newParent/reason）+ backfills（child/add/reason）+ summary。执行器 tools/apply_ledger.js --batch 3.1a 会断言 keep+repoint+delete+concept = candidates、backfills 数量相符，并校验时序性与无环。",
+    "执行顺序：用户审核 → apply_ledger --batch 3.1a --apply → 按序重跑 tools/regen_text.js --apply（主管线文案）→ tools/regen_midtech.js --apply（中间库文案）→ 三道门禁。"
    ],
    "summary": {
-    "candidates": 27,
-    "verdicts": 0
+    "keep": 2,
+    "repoint": 1,
+    "delete": 24,
+    "concept": 0,
+    "backfill": 27
    }
   },
   "5.0": {
