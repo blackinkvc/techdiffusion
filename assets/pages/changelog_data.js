@@ -499,5 +499,30 @@ window.CHANGELOG = {
       files: ["assets/techs_extra.js", "assets/techs_more.js", "assets/techs_extend.js", "assets/data.js", "assets/pages/changelog_data.js", "assets/pages/correction_data.js", "版本迭代日志.md", "index.html", "tree.html", "tree_full.html", "browse.html", "detail.html", "lineage.html", "analysis.html", "model.html", "changelog.html", "correction.html", "method.html", "midtech.html", "progress.html", "research.html", "sop.html", "timeline.html", "worldview.html"]
     }
 
+,
+    {
+      version: "v0.9.21",
+      date: "2026-09-13",
+      type: "fix",
+      title: "生成器槽位边收口：「同分类最近前驱」伪边按生成器复现逐条判定（处置 719 / 删 549 / 补 95 节点真实前置）",
+      summary: "改用确定性方法收口——把 tools/gen_run.js 的依赖接线在隔离目录复跑、给每条边打来源标签，据此筛出「生成器同分类槽位边」并只取当前仍存活的 719 条，逐条语义判定后删 549 条、保留 170 条，并为因此失去全部前置的 95 个节点补写真实前置。依赖边 6,549 → 6,139（删 549 / 加 139 / 净 −410），节点 2,288 不变；环 0、年份倒挂 0、悬空前置 0、重边 0、自环 0；零前置节点维持 8 个文明起点。95 个节点的模板枚举句同步按新前置重写，残留引用 0 条。",
+      treeChange: {
+        scope: "主管线技术网络（模型页 / 分析页 / 来龙去脉页所读）：依赖边 6,549 → 6,139（删 549 / 加 139 / 净 −410）；节点 2,288 不变；受改节点 490 个；位置式同分类槽位边由 719 条压到 170 条。",
+        reason: "v0.9.20 已清掉「时间最近」三族伪边，但检测器把生成器建模成「1 个槽位 + 按年份取最近 + 用当前排名」，而 tools/gen_run.js 第 67-70 行的实际规则是「同分类最近前驱（最多 2 个，按 key = year*100000 + 插入序、在生成时刻求值）」。两处盲区导致伪边残留：① 第 2 槽位从未被扫描；② 后插入的同分类节点会把旧槽位边挤出视野（排名漂移）。用户报的「智能割草机器人 → 通用疫苗」正是 ②：smart_mower 生成时是生命类 rank 1，2026-08-25 拆解批次插入 mower_nav / mower_deck（同为 2015 年）后掉到 rank 3，从此落在检测器视野之外。",
+        detail: "① 复现：把 tools/gen_techs.js + gen_run.js 复制到隔离目录（gen_run.js 结尾会 fs.writeFileSync 覆盖 assets/techs_extra.js，绝不可在仓库内直跑），锚点源换成拆解前快照 assets/data.before_disasm.js，并在依赖分配三处插入 ORIGIN[子>前] 标签后复跑 —— 结果与原生成文件 assets/techs_extra.backup.js 完全一致（bio_universalvax 复现为 [chemistry, mathematics, smart_mower, bio_crispr]），证明可确定性还原生成器产物。复现规模 1,104 节点 / 3,900 边，来源构成 prereq（跨类前提）2,834 / slot1（同分类最近 1）989 / slot2（同分类最近 2）983；当前仍存活 1,137 / 551 / 168。② 候选集：只取同分类槽位（slot1 + slot2）且当前仍存活者 = 719 条，逐条按「A 是否真的建立于 B 之上」判定，删 549、留 170（完整划分，无越界项）。③ 补前置：删边后有 95 个节点会失去全部前置（如 牙科 原只依赖「犁」、自动扶梯 只依赖「驱逐舰」、防水 只依赖「灌浆」），逐个人工补写真实前置并经 id 存在性 + 年份不倒挂校验（95/95 通过）。④ 安全校验：应用后环 0、年份倒挂 0、悬空 0、重边 0、节点数不变；95 个补前置节点逐条断言与期望一致。⑤ 文案：96 个节点的正文仍在复述已删前置，其中 95 个属模板枚举句（「依托 A、B 把 … 落到实处」「建立在 … 之上」「依托 A 解决了 …」「把 A 与 … 连接起来」），按新 dependsOn 重写后残留 0；另 1 个（传真机）的「摄影」出现在手写史实叙述中，属误报，未改。⑥ 改动形态：仅 dependsOn 行与模板文案句，无格式噪声。"
+      },
+      changes: [
+        "① 方法论升级（本轮关键）：弃用「启发式排名检测」，改用「生成器复现 + 与当前数据逐边 diff」的确定性方法。启发式追不上排名漂移（节点陆续插入会让旧槽位掉出视野），复现则能一次性还原生成器的全部产物并给出每条边的来源标签（slot1 / slot2 / prereq）。",
+        "② 复现设施与铁律：隔离目录复跑（/tmp/repro），锚点源 = assets/data.before_disasm.js（拆解前快照，112 锚点），在 gen_run.js 依赖分配三处植入 ORIGIN 标签后输出 origin.json。铁律：绝不可在仓库内直接跑 gen_run.js —— 其结尾会覆盖 assets/techs_extra.js。",
+        "③ 候选与判定：同分类槽位边当前存活 719 条（basic 58 / build 53 / energy 67 / info 95 / life 180 / manufact 86 / material 116 / military 7 / transport 57）。判定口径 = 「A 是否真的建立于 B 之上」；仅时间相邻、或同域但互为并列（如 消毒剂←流行病学、益生菌←腹腔镜、核医学←超声诊断、inf_ssd←万维网、mat_gold←红铜）一律判删。结果：删 549、留 170。",
+        "④ 保留样例（真实前置）：counting←language、numerals←counting、cartography←arithmetic、telescope←observ_astron、kepler_laws←telescope、calculus←physics、probability←combinatorics、atomic_theory←spectroscopy、computer_sci←lambda_calc、control_theory←info_theory、bld_adobe←bld_rammed、bld_gothic←bld_flying、bld_shield←bld_underground、mfg_handaxe←mfg_stone、mfg_lostwax←mfg_sandcast、mfg_lathe←iron_smelting、mfg_thread←mfg_bolt、mat_iron←iron、mat_quench←mat_heat、mat_temper←mat_quench、mat_2d←mat_graphene、mil_arrow←mil_bow、mil_sniper←mil_rifle、tr_lighthouse←tr_navigation、tr_simulator←airplane、tr_passdrone←tr_cargo_drone。",
+        "⑤ 删除样例（位置式伪边）：农业类 bio_dentistry←犁、bio_acupuncture←犁、bio_chemotherapy←益生菌、bio_enzyme←核医学、bio_mri←基因工程；信息类 inf_ssd←万维网、inf_hash←彩色电视、inf_db←激光器、inf_compiler←强化学习、inf_cache←负载均衡；交通类 tr_escalator←驱逐舰、tr_hyperloop←平衡车、tr_icebreaker←人造卫星、tr_aircraftcarrier←叉车、tr_lunarlander←自主水下航行器；建筑类 防水←灌浆、自然采光←保温隔热、通风←自然采光、给排水←通风（1800 年退化链）；材料类 mat_porcelain←造纸、mat_lead←青铜、mat_stainless←低温超导、mat_pe←气凝胶。",
+        "⑥ 补写真实前置（95 个节点，示例）：bio_dentistry←[草药学, 石器]、bio_herb←农业、ene_hydro←轮子、ene_coal←石器、bld_timber←[木作, 土坯砖]、bld_tile←[窑, 陶器]、bld_stone←[砖石砌筑, 石器]、bld_hvac←[热力学, 铸铁]、bld_3dpb←[3D 打印, 预制构件]、bld_smartcity←[云计算, 智能建筑]、mat_gold←锤、mat_casting←陶器、mat_castiron←块炼铁、mat_blastfurnace←冶铁、mat_porcelain←[窑, 炻器]；交通类 tr_steamloco←蒸汽机、tr_destroyer←[蒸汽船, 鱼雷]、tr_radar2←[无线电, 电磁学]、tr_jetliner←喷气发动机、tr_evcar←[电池, 电动机]、tr_hyperloop←高速铁路。校验：95/95 覆盖、引用的 id 全部存在、无年份倒挂、无重复、应用后环 0。",
+        "⑦ 文案一致性：96 个节点的正文仍在复述已删前置。按句式定位后改写 95 个（模板枚举句），残留引用 0。例：牙科「依托 数学、犁、草药学 把 …」→「依托 草药学、石器 把 …」；水力利用「依托 用火、木炭 把 …」→「依托 轮子 把 …」。手写史实叙述中的同名词（如传真机的「摄影制版」）不属模板枚举句，未改。",
+        "⑧ 计数与校验：依赖边 6,549 → 6,139（删 549 / 加 139 / 净 −410）；节点 2,288 不变；重边 0、自环 0、悬空前置 0、年份倒挂 0、环 0；零前置节点 8 个（language / stone_tools / fire / wheel / mfg_stone / fire_drill / gesture_comm / magnet，均文明起点）。校验链：/tmp/check_net.js 全绿；tools/check_docs.js [OK]（TOTAL 2288 / TOTAL_FULL 13318）；模型页 runtime 干跑无残留模板串（P 1.33/R² 0.874、K 2.04/R² 0.932）；依赖徽章干跑（钢笔 6 枚 / 控制论 4 枚含 2 虚边 / 巴拿马运河 4 枚 / 传真机 3 枚 / 充气轮胎 4 枚；兜底蒸汽机 8 枚）；纠错页干跑 9/9。",
+        "⑨ 遗留（本轮未动，下一批）：① 264 个节点删边后仅剩泛化枢纽前置（数学 / 化学 / 文字），需逐个人工补写领域前置 —— 这是本轮「诚实但单薄」的代价，已登记；② 1027 条 upgrade_stubs 三段模板文案整批重写；③ 22 组同名节点去重；④ 12 条 enables 悬空引用；⑤ 部分节点的「直接催生了 X、Y」列表仍与当前反图不一致（反向索引陈旧，非本轮改动所致）。"
+      ],
+      files: ["assets/techs_extra.js", "assets/pages/changelog_data.js", "assets/pages/correction_data.js", "版本迭代日志.md", "index.html", "tree.html", "tree_full.html", "browse.html", "detail.html", "lineage.html", "analysis.html", "model.html", "changelog.html", "correction.html", "method.html", "midtech.html", "progress.html", "research.html", "sop.html", "timeline.html", "worldview.html"]
+    }
   ]
 };
