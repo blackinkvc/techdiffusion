@@ -142,10 +142,10 @@
  ],
  "graphJson": {
   "nodes": 2299,
-  "edges": 7539
+  "edges": 6963
  },
  "dual": {
-  "onlyInGraphJson": 1779,
+  "onlyInGraphJson": 1204,
   "onlyInMain": 448
  }
 }

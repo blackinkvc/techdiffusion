@@ -1,933 +1,1148 @@
 {
-  "version": 1,
-  "updated": "2026-09-13",
-  "criterion": [
-    "必要性",
-    "排他性",
-    "时序性",
-    "域内优先"
-  ],
-  "verdictEnum": [
-    "keep",
-    "repoint",
-    "delete",
-    "concept"
-  ],
-  "note": "verdict=keep 表示保留原边；repoint 表示改前置（newParent 取代 parent）；delete 表示删边；concept 表示降级为概念影响（不写入 dependsOn）。backfills 为补充前置（追加语义，已存在则跳过）。",
-  "batches": {
-    "1a": {
-      "date": "2026-09-13",
-      "family": "F",
-      "scope": "跨分类、年份跨度 > 800 年、两端均非泛化枢纽的边（共 27 条）",
-      "candidates": 27,
-      "edges": [
-        {
-          "child": "inf_pen",
-          "parent": "paper",
-          "verdict": "delete",
-          "reason": "钢笔的构成要件为钢质笔尖、硬橡胶笔杆与书写面；造纸提供书写载体，非钢笔本体前提。必要性不成立。"
-        },
-        {
-          "child": "bld_daylight",
-          "parent": "mat_flatglass",
-          "verdict": "keep",
-          "reason": "玻璃窗为建筑采光设计的实现手段，传导机制明确；另补域内前置 architecture。"
-        },
-        {
-          "child": "mil_matchlock",
-          "parent": "tr_horseshoe",
-          "verdict": "delete",
-          "reason": "马蹄铁为马匹护具，与火绳枪的点火机构及枪管制造无任何传导关系。"
-        },
-        {
-          "child": "mil_musket",
-          "parent": "tr_horseshoe",
-          "verdict": "delete",
-          "reason": "同 mil_matchlock，跨域无传导机制。"
-        },
-        {
-          "child": "mil_pistol",
-          "parent": "tr_horseshoe",
-          "verdict": "delete",
-          "reason": "同 mil_matchlock，跨域无传导机制。"
-        },
-        {
-          "child": "mil_bodyarmor",
-          "parent": "tr_horseshoe",
-          "verdict": "delete",
-          "reason": "同 mil_matchlock，跨域无传导机制。"
-        },
-        {
-          "child": "mil_grenade",
-          "parent": "tr_horseshoe",
-          "verdict": "delete",
-          "reason": "同 mil_matchlock，跨域无传导机制。"
-        },
-        {
-          "child": "cannon",
-          "parent": "tr_horseshoe",
-          "verdict": "delete",
-          "reason": "同 mil_matchlock，跨域无传导机制。"
-        },
-        {
-          "child": "mil_plate",
-          "parent": "tr_horseshoe",
-          "verdict": "delete",
-          "reason": "同 mil_matchlock，跨域无传导机制。"
-        },
-        {
-          "child": "mil_landmine",
-          "parent": "tr_horseshoe",
-          "verdict": "delete",
-          "reason": "同 mil_matchlock，跨域无传导机制。"
-        },
-        {
-          "child": "mil_rocket2",
-          "parent": "tr_horseshoe",
-          "verdict": "delete",
-          "reason": "同 mil_matchlock，跨域无传导机制。"
-        },
-        {
-          "child": "mil_cannon",
-          "parent": "tr_horseshoe",
-          "verdict": "delete",
-          "reason": "同 mil_matchlock，跨域无传导机制。"
-        },
-        {
-          "child": "rocket",
-          "parent": "gunpowder",
-          "verdict": "keep",
-          "reason": "火药即固体火箭推进剂，跨域传导机制明确。"
-        },
-        {
-          "child": "drill_blast",
-          "parent": "gunpowder",
-          "verdict": "keep",
-          "reason": "黑火药为钻爆掘进工法的核心前提。"
-        },
-        {
-          "child": "bld_tunnel3",
-          "parent": "gunpowder",
-          "verdict": "keep",
-          "reason": "黑火药为隧道钻爆的前提。"
-        },
-        {
-          "child": "printing",
-          "parent": "paper",
-          "verdict": "keep",
-          "reason": "造纸为印刷的载体前提。"
-        },
-        {
-          "child": "watermill",
-          "parent": "waterwheel",
-          "verdict": "keep",
-          "reason": "水磨＝水车＋磨盘，同域直接演进。"
-        },
-        {
-          "child": "mil_psyop",
-          "parent": "printing",
-          "verdict": "keep",
-          "reason": "印刷品为心理战的信息载体（传单/宣传品），跨域传导明确。"
-        },
-        {
-          "child": "holography",
-          "parent": "optics",
-          "verdict": "repoint",
-          "newParent": "wave_optics",
-          "reason": "全息成像依赖干涉与衍射，属波动光学范畴；optics 为学科级泛化前置，排他性上 wave_optics 更贴近。"
-        },
-        {
-          "child": "led",
-          "parent": "optics",
-          "verdict": "repoint",
-          "newParent": "quantum_mech",
-          "reason": "发光二极管的电致发光属固体发光机制（量子范畴）；optics 为学科级泛化前置。"
-        },
-        {
-          "child": "lasers",
-          "parent": "optics",
-          "verdict": "repoint",
-          "newParent": "quantum_mech",
-          "reason": "激光原理为受激辐射，属量子力学范畴。"
-        },
-        {
-          "child": "laser",
-          "parent": "optics",
-          "verdict": "repoint",
-          "newParent": "quantum_mech",
-          "reason": "同上。"
-        },
-        {
-          "child": "metamaterial",
-          "parent": "optics",
-          "verdict": "delete",
-          "reason": "超材料为人工电磁结构，electromagnetism 已覆盖其前提；optics 为学科级泛化前置。"
-        },
-        {
-          "child": "directed_energy",
-          "parent": "optics",
-          "verdict": "delete",
-          "reason": "已有 laser 覆盖光学前提，optics 冗余。"
-        },
-        {
-          "child": "mil_directedenergy",
-          "parent": "optics",
-          "verdict": "delete",
-          "reason": "已有 laser 覆盖光学前提，optics 冗余。"
-        },
-        {
-          "child": "display",
-          "parent": "optics",
-          "verdict": "delete",
-          "reason": "已有 semiconductor 覆盖电光转换前提，optics 冗余。"
-        },
-        {
-          "child": "camera",
-          "parent": "optics",
-          "verdict": "keep",
-          "reason": "镜头成像依赖几何光学，库内无更贴近的成像光学节点，排他性成立。"
-        }
-      ],
-      "backfills": [
-        {
-          "child": "mil_plate",
-          "add": [
-            "steel",
-            "smithing"
-          ],
-          "reason": "板甲＝钢铁材料＋锻造工艺，原仅有被删的马蹄铁。"
-        },
-        {
-          "child": "mil_matchlock",
-          "add": [
-            "gunpowder",
-            "iron",
-            "mfg_thread"
-          ],
-          "reason": "火绳枪＝火药推进＋铁质枪管＋螺纹与机件加工。"
-        },
-        {
-          "child": "mil_musket",
-          "add": [
-            "gunpowder",
-            "iron",
-            "mfg_thread"
-          ],
-          "reason": "滑膛枪＝火药推进＋铁质枪管＋机件加工。"
-        },
-        {
-          "child": "mil_pistol",
-          "add": [
-            "gunpowder",
-            "iron",
-            "mfg_thread"
-          ],
-          "reason": "手枪＝火药推进＋铁质枪管＋小型机件加工。"
-        },
-        {
-          "child": "mil_bodyarmor",
-          "add": [
-            "mil_plate",
-            "steel"
-          ],
-          "reason": "防弹衣的早期形态为板甲类金属防护具，承接板甲与钢铁材料。"
-        },
-        {
-          "child": "mil_landmine",
-          "add": [
-            "gunpowder",
-            "iron"
-          ],
-          "reason": "地雷＝火药爆炸装置＋铁质壳体。"
-        },
-        {
-          "child": "mil_rocket2",
-          "add": [
-            "gunpowder",
-            "mil_arrow"
-          ],
-          "reason": "早期火箭弹（火药箭）＝火药＋箭。"
-        },
-        {
-          "child": "mil_cannon",
-          "add": [
-            "gunpowder",
-            "bronze_casting"
-          ],
-          "reason": "早期加农炮为青铜铸造炮身＋火药发射。"
-        },
-        {
-          "child": "mil_grenade",
-          "add": [
-            "gunpowder"
-          ],
-          "reason": "手榴弹以火药为装药，原前置缺失。"
-        },
-        {
-          "child": "bld_daylight",
-          "add": [
-            "architecture"
-          ],
-          "reason": "自然采光的设计前提为建筑学（域内前置）。"
-        }
-      ],
-      "summary": {
-        "keep": 8,
-        "repoint": 4,
-        "delete": 15,
-        "concept": 0,
-        "backfill": 10
-      }
+ "version": 1,
+ "updated": "2026-09-13",
+ "criterion": [
+  "必要性",
+  "排他性",
+  "时序性",
+  "域内优先"
+ ],
+ "verdictEnum": [
+  "keep",
+  "repoint",
+  "delete",
+  "concept"
+ ],
+ "note": "verdict=keep 表示保留原边；repoint 表示改前置（newParent 取代 parent）；delete 表示删边；concept 表示降级为概念影响（不写入 dependsOn）。backfills 为补充前置（追加语义，已存在则跳过）。",
+ "batches": {
+  "1a": {
+   "date": "2026-09-13",
+   "family": "F",
+   "scope": "跨分类、年份跨度 > 800 年、两端均非泛化枢纽的边（共 27 条）",
+   "candidates": 27,
+   "edges": [
+    {
+     "child": "inf_pen",
+     "parent": "paper",
+     "verdict": "delete",
+     "reason": "钢笔的构成要件为钢质笔尖、硬橡胶笔杆与书写面；造纸提供书写载体，非钢笔本体前提。必要性不成立。"
     },
-    "1b": {
-      "date": "2026-09-13",
-      "family": "ROOT",
-      "scope": "8 个零前置起点与 2 个孤立节点复核",
-      "candidates": 0,
-      "edges": [],
-      "backfills": [
-        {
-          "child": "wheel",
-          "add": [
-            "woodworking"
-          ],
-          "reason": "轮子为成形木质构件（轮盘＋车轴），必要前提为木作。原为零前置起点，起点地位不成立。"
-        },
-        {
-          "child": "mfg_stone",
-          "add": [
-            "stone_tools"
-          ],
-          "reason": "石器打制是石器器物的加工技艺；其自身摘要即写明「建立在石器之上」。原为零前置起点，起点地位不成立。"
-        },
-        {
-          "child": "fire_drill",
-          "add": [
-            "stone_tools",
-            "fire"
-          ],
-          "reason": "钻木取火需要石器加工钻具，且以既有的控火经验与需求为前提。原为孤立节点（无前置且无下游），至此补齐前置。"
-        },
-        {
-          "child": "language",
-          "add": [
-            "gesture_comm"
-          ],
-          "reason": "手势交流为其自身摘要所述的「语言演化前奏」，传承认知成立。此举同时消除手势交流的孤立状态。"
-        }
-      ],
-      "notes": [
-        "保留为起点（4 个）：石器 stone_tools、用火 fire、手势交流 gesture_comm、天然磁石 magnet。",
-        "天然磁石 magnet 判定保留为起点：其摘要载明为「磁现象的第一笔记录」，属自然现象的最早观察，无人类技术前提，必要性上成立。",
-        "语言 language 由起点转为 gesture_comm 的下游。",
-        "起点由 8 个收敛为 4 个：石器、用火、手势交流、天然磁石。"
-      ],
-      "summary": {
-        "keep": 0,
-        "repoint": 0,
-        "delete": 0,
-        "concept": 0,
-        "backfill": 4
-      }
+    {
+     "child": "bld_daylight",
+     "parent": "mat_flatglass",
+     "verdict": "keep",
+     "reason": "玻璃窗为建筑采光设计的实现手段，传导机制明确；另补域内前置 architecture。"
     },
-    "1c": {
-      "date": "2026-09-13",
-      "family": "DUP",
-      "scope": "23 组同名重复节点合并（冗余项全部位于 techs_extend.js）",
-      "keepRule": "保留规则：优先保留具备 views 与 applications 富字段的条目（详情卡依赖该字段）；该类条目的年份均不晚于同名冗余项。",
-      "merges": [
-        {
-          "keep": "ic",
-          "drop": "chip",
-          "add": [],
-          "reason": "集成电路。保留 ic（下游 14 条引用、被 enables 引用 3 次、含 views 与 applications）；chip 的 2 条前置为 ic 前置的子集。"
-        },
-        {
-          "keep": "mat_forging",
-          "drop": "smithing",
-          "add": [
-            "fire",
-            "bellows",
-            "ene_charcoal"
-          ],
-          "reason": "锻造。保留 mat_forging（material，-3000）。并入 smithing 独有且时序成立的前置：用火、风箱、木炭（木炭 id 同期由 charcoal 归并为 ene_charcoal）。铁器(-1200) 晚于 -3000，按第三条标准剔除。"
-        },
-        {
-          "keep": "mat_selfheal",
-          "drop": "self_healing",
-          "add": [],
-          "reason": "自修复材料。冗余项前置为保留项前置的子集，无需并入。"
-        },
-        {
-          "keep": "ene_charcoal",
-          "drop": "charcoal",
-          "add": [
-            "fire"
-          ],
-          "reason": "木炭。并入冗余项独有的用火（木炭依赖对燃烧的控制）。"
-        },
-        {
-          "keep": "ene_solidstate",
-          "drop": "solid_state_battery",
-          "add": [],
-          "reason": "固态电池。冗余项前置为保留项前置的子集。"
-        },
-        {
-          "keep": "ene_satpower",
-          "drop": "space_solar",
-          "add": [],
-          "reason": "空间太阳能。冗余项前置为保留项前置的子集；保留项年份 1968 与 Glaser 空间太阳能提案同年。"
-        },
-        {
-          "keep": "ene_wpt",
-          "drop": "wireless_power",
-          "add": [],
-          "reason": "无线输电。冗余项独有前置微波(1940) 晚于保留项 1890，按第三条标准剔除。"
-        },
-        {
-          "keep": "mfg_digitaltwin",
-          "drop": "digital_twin",
-          "add": [],
-          "reason": "数字孪生。冗余项独有前置物联网(2010) 晚于保留项 2000，按第三条标准剔除；两者分类不一致（manufact 与 info），本条按保留项计 manufact。"
-        },
-        {
-          "keep": "tr_canoe",
-          "drop": "canoe",
-          "add": [
-            "fire",
-            "stone_tools"
-          ],
-          "reason": "独木舟。并入冗余项独有的用火（火焚挖空）与石器（加工工具）。"
-        },
-        {
-          "keep": "inf_nn",
-          "drop": "neural_network",
-          "add": [],
-          "reason": "神经网络。冗余项前置为保留项前置的子集。"
-        },
-        {
-          "keep": "inf_ar",
-          "drop": "ar",
-          "add": [],
-          "reason": "增强现实。冗余项前置为保留项前置的子集。"
-        },
-        {
-          "keep": "inf_vr",
-          "drop": "vr",
-          "add": [],
-          "reason": "虚拟现实。冗余项前置为保留项前置的子集。"
-        },
-        {
-          "keep": "inf_edgeai",
-          "drop": "edge_ai",
-          "add": [],
-          "reason": "边缘智能。冗余项前置为保留项前置的子集。"
-        },
-        {
-          "keep": "bio_pharmacology",
-          "drop": "pharmacology",
-          "add": [],
-          "reason": "药理学。冗余项前置为保留项前置的子集。"
-        },
-        {
-          "keep": "bio_tissueeng",
-          "drop": "tissue_engineering",
-          "add": [],
-          "reason": "组织工程。冗余项前置为保留项前置的子集。"
-        },
-        {
-          "keep": "bio_mrnavax",
-          "drop": "mrna_vaccine",
-          "add": [],
-          "reason": "mRNA 疫苗。冗余项前置为保留项前置的子集；保留项 1990 与 mRNA 递送平台起源同年。"
-        },
-        {
-          "keep": "bio_genetherapy",
-          "drop": "gene_therapy",
-          "add": [],
-          "reason": "基因治疗。冗余项独有前置基因编辑(2025) 晚于保留项 1990，按第三条标准剔除。冗余项被 2 个节点的 enables 引用，已改指。"
-        },
-        {
-          "keep": "bio_bci",
-          "drop": "bci",
-          "add": [],
-          "reason": "脑机接口。冗余项前置为保留项前置的子集；两者分类不一致（life 与 info），本条按保留项计 life。"
-        },
-        {
-          "keep": "bio_synbio",
-          "drop": "synthetic_biology",
-          "add": [],
-          "reason": "合成生物学。冗余项前置为保留项前置的子集。"
-        },
-        {
-          "keep": "bio_organonchip",
-          "drop": "organs_on_chip",
-          "add": [],
-          "reason": "器官芯片。冗余项前置为保留项前置的子集。"
-        },
-        {
-          "keep": "bio_precisionmed",
-          "drop": "personalized_medicine",
-          "add": [],
-          "reason": "精准医疗。冗余项前置为保留项前置的子集。"
-        },
-        {
-          "keep": "bld_dome",
-          "drop": "dome",
-          "add": [],
-          "reason": "穹顶。冗余项前置为保留项前置的子集；冗余项被 1 个节点的 enables 引用，已改指。"
-        },
-        {
-          "keep": "mil_directedenergy",
-          "drop": "directed_energy",
-          "add": [],
-          "reason": "定向能武器。两者前置完全相同（laser、battery），保留含富字段者。"
-        }
-      ],
-      "notes": [
-        "23 组冗余节点均位于 techs_extend.js；保留项位于 techs_extra.js 或 data.js。",
-        "已并入独有前置的 3 组：mat_forging（用火、风箱、木炭）、ene_charcoal（用火）、tr_canoe（用火、石器）。",
-        "因时序性剔除的并入项 4 条：iron→mat_forging、microwave→ene_wpt、iot→mfg_digitaltwin、crispr→bio_genetherapy。",
-        "分类不一致待议 2 组：数字孪生（manufact 与 info）、脑机接口（life 与 info），本条按保留项分类计，分类归属另在阶段 4 复核。",
-        "techs_extend.js 头部标注为 tools/extend_net.js 生成；本次为直接编辑，生成器侧的同步留待阶段 5c。"
-      ],
-      "summary": {
-        "chip": 1,
-        "smithing": 1,
-        "self_healing": 1,
-        "charcoal": 1,
-        "solid_state_battery": 1,
-        "space_solar": 1,
-        "wireless_power": 1,
-        "digital_twin": 1,
-        "canoe": 1,
-        "neural_network": 1,
-        "ar": 1,
-        "vr": 1,
-        "edge_ai": 1,
-        "pharmacology": 1,
-        "tissue_engineering": 1,
-        "mrna_vaccine": 1,
-        "gene_therapy": 1,
-        "bci": 1,
-        "synthetic_biology": 1,
-        "organs_on_chip": 1,
-        "personalized_medicine": 1,
-        "dome": 1,
-        "directed_energy": 1
-      }
+    {
+     "child": "mil_matchlock",
+     "parent": "tr_horseshoe",
+     "verdict": "delete",
+     "reason": "马蹄铁为马匹护具，与火绳枪的点火机构及枪管制造无任何传导关系。"
     },
-    "2.1": {
-      "date": "2026-09-13",
-      "family": "SCOPE",
-      "scope": "阶段 2 原定义「96 条中间技术入网」的前提核查与重新裁定",
-      "originalPlan": "《技术网络检修计划.md》阶段 2 原写：为 assets/techs_midtech.js 的 96 条中间技术各补 category / era / year / dependsOn，作为真实节点并入主管线，优先插入阶段 1 登记的断链位置，目标 Ch 族 267 → 120 以下。",
-      "verdict": "撤销（前提不成立）",
-      "findings": [
-        "① 重叠度：96 条中间技术条目全部已存在于主管线（同 id、同名称），0 条为独立新技术；连 data.js 中的 4 条手工案例（smart_mower / smartphone / drone / autonomous_driving）也均在主管线内。tools/gen_midtech.js 第 1-3 行的头部注释即写明其口径为「从已有 2342 项技术中按跨领域汇聚口径筛选」，第 20-23 行的 crossSelf() 与第 189-201 行的 items 映射均以 TECHS 为数据源。故「并入主管线」若执行，将新增 96 个重复节点，属阶段 1c 刚清理掉的缺陷类型。",
-        "② 库内重复条目：mil_smartmunition（智能弹药）登记两次（index 50 / 57），两条的 date（2010 年 / 21 世纪）、summary（「建立在…之上」句 / 「承接…」句）、backgrounds（无人化工厂系 / 火箭系）完全不同，说明该文件在生成之后被另一批次部分重写过。",
-        "③ backgrounds 为旧快照：tools/gen_midtech.js 第 190-195 行把 t.dependsOn 原样搬入 backgrounds，故中间库继承的是 2026-08-26 生成时刻的主管线前置。与当前 dependsOn 对比：完全一致 11 条、含已删前置 44 条、主管线有新前置而库中缺 1 条、双向偏离 40 条（共 96 条，即 85/96 已偏离）。",
-        "④ 卡片自洽性的方向：中间库的 summary 与 backgrounds 同源于那份旧快照，故卡片内部是自洽的；当前真正自相矛盾的是主管线详情页（summary 陈旧、dependsOn 已清理）。若此时只重建 backgrounds，会把矛盾复制到中间库。",
-        "⑤ 改写时序：95 个唯一 id 中，69 条的摘要含前置枚举句且与当前 dependsOn 不符（「依托 X、Y 把…」36 条、「建立在 X、Y 之上」36 条、「承接 X、Y，」5 条、族 E 的「在 X 之上，/以 X 为基，」若干；另 25 条无枚举句）。其中多数 id 属 A / E 族（前置仍待阶段 3 补齐），现在改写会在阶段 3 之后重写第二遍。",
-        "⑥ 生成器不可复现：以当前数据重跑 tools/gen_midtech.js，候选集从 96 条塌缩为 32 条（分类配额 material 2 / energy 3 / manufact 3 / transport 6 / info 2 / life 14 / build 2），原因是候选门槛 dependsOn.length >= 4 在 v0.9.20 / v0.9.21 清理后大部分节点已不满足；且新候选集中的 ene_satpower / camera 等并不在原库内。即中间库无法按原口径复现，其 96 条是在清理前的网络状态下选出的。"
-      ],
-      "actions": [
-        "A1 · 修复库内重复条目：保留首次出现者 mil_smartmunition[50]（date 与主管线一致），删除 [57]；条目 96 → 95，唯一 id 95/95。执行器 tools/fix_midtech_dup.js（干跑默认 + --apply + 写后唯一性断言）。",
-        "A2 · 生成器加护栏：tools/gen_midtech.js 在写出前断言重复条目 = 0、断链背景 = 0（违反即非零退出，原代码只计数不中止）；新增 --no-write 干跑开关、写前自动备份到 /tmp、以及与现有文件的 backgrounds 漂移报告。",
-        "A3 · 阶段 2 重新裁定：原「96 条入网」撤销；「中间技术库与主管线对齐」（重建 backgrounds + 重写 95 条摘要枚举句）**移入阶段 5**，在阶段 3 / 4 结构定稿后一次性执行，避免同一批文案改写两遍；生成器的口径修订（dependsOn >= 4 门槛已不适用，且库不可复现）亦列为阶段 5 的前置事项。",
-        "A4 · Ch 族目标的承接方改判：原计划寄望「中间技术入网」压低 Ch 族（267 → 120）。因无新技术可入网，Ch 族只能靠「补/改前置」解决（阶段 1a / 1b 已证明该机制有效），故 Ch 族目标并入阶段 3，与 A / E 族同批推进。"
-      ],
-      "summary": {
-        "newTechsAvailable": 0,
-        "dupEntriesFixed": 1,
-        "generatorsGuarded": 1,
-        "planStagesRescoped": 1
-      }
+    {
+     "child": "mil_musket",
+     "parent": "tr_horseshoe",
+     "verdict": "delete",
+     "reason": "同 mil_matchlock，跨域无传导机制。"
     },
-    "3.1a": {
-      "date": "2026-09-13",
-      "family": "E-manufact",
-      "status": "draft（候选集已建立，逐条判定待填写；未写盘）",
-      "scope": "E 族 manufact 68 条中的首批 27 条——机床族（17）与焊接 / 连接族（10）",
-      "criterion": "§2 判定四标准：① 必要性（去掉该前置，本技术是否仍能按史实出现）② 排他性（是否该环节最直接的先行者）③ 时序性（前置年 ≤ 本节点年）④ 域内优先（跨域须有明确传导机制）。处置四档：保留 / 改前置 / 删边 / 降级为概念影响。",
-      "observation": "E 族 manufact 68 条的当前前置**全部为同一条 mathematics**，无一条例外——即同一槽位被批量赋值，病灶完全同构。本批先取机床族与焊接 / 连接族，共 27 条。",
-      "availableNodes": [
-        "mfg_lathe 车床(-1000)",
-        "lathe 车床与精密加工(1751)",
-        "mfg_grinder 磨床(1800)",
-        "mfg_knife 刀具(-100000)",
-        "iron_smelting 冶铁(-1200)",
-        "mat_iron 块炼铁(-1200)",
-        "steel 钢铁(-1000)",
-        "bronze 青铜(-3300)",
-        "mat_copper 红铜冶炼(-5000)",
-        "mat_toolsteel 工具钢(1868)",
-        "kiln 窑(-6000)",
-        "mfg_thread 螺纹(-300)",
-        "mfg_bolt 螺纹连接(-300)",
-        "mfg_handaxe 手斧(-1700000)",
-        "mfg_stone 石器打制(-2600000)",
-        "steam_engine 蒸汽机(1769)",
-        "electricity 电力系统(1879)",
-        "electronics 电子学(1883)",
-        "computer 电子计算机(1946)",
-        "ic 集成电路(1958)",
-        "mfg_servo 伺服系统(1940)",
-        "laser 激光(1960)"
-      ],
-      "candidates": [
-        {
-          "id": "mfg_gauge",
-          "name": "量具",
-          "year": -2000,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_boring",
-          "name": "镗床",
-          "year": 1500,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_drillpress",
-          "name": "钻床",
-          "year": 1800,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_planer",
-          "name": "刨床",
-          "year": 1810,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_grindingwheel",
-          "name": "砂轮",
-          "year": 1840,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_toolholder",
-          "name": "刀柄",
-          "year": 1900,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_coolant",
-          "name": "切削液",
-          "year": 1900,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_edm",
-          "name": "电火花加工",
-          "year": 1943,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_cnc",
-          "name": "数控机床",
-          "year": 1949,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_mc",
-          "name": "加工中心",
-          "year": 1958,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_wedm",
-          "name": "线切割",
-          "year": 1960,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_edmwire",
-          "name": "电火花线切割机",
-          "year": 1960,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_turnmill",
-          "name": "车铣复合",
-          "year": 1980,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_cmm",
-          "name": "三坐标测量",
-          "year": 1950,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_onmachinem",
-          "name": "在机测量",
-          "year": 1990,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_toolmonitor",
-          "name": "刀具状态监控",
-          "year": 1990,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_cryogenicm",
-          "name": "低温切削",
-          "year": 2000,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_rivet",
-          "name": "铆接",
-          "year": -2000,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_braze",
-          "name": "钎焊",
-          "year": -2000,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_adhesive",
-          "name": "胶接",
-          "year": -2000,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_resistweld",
-          "name": "电阻焊",
-          "year": 1877,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_welding",
-          "name": "电弧焊",
-          "year": 1881,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_gasweld",
-          "name": "气焊",
-          "year": 1900,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_ebw",
-          "name": "电子束焊",
-          "year": 1958,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_laserweld",
-          "name": "激光焊",
-          "year": 1960,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_fsw",
-          "name": "搅拌摩擦焊",
-          "year": 1991,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        },
-        {
-          "id": "mfg_roboticweld",
-          "name": "焊接机器人",
-          "year": 1980,
-          "category": "manufact",
-          "currentParent": "mathematics"
-        }
-      ],
-      "verdicts": [],
-      "notes": [
-        "候选筛选已断言：27 条全部满足「单前置且前置 = mathematics」，任一不符即抛错，不会把非 E 族节点混入。",
-        "判定完成后填入 verdicts（每条 verdict / newParent / reason），并断言 keep + repoint + delete + concept = 27。",
-        "时序性门槛提醒：执行器会强制「前置年 ≤ 本节点年」。部分节点年份偏早（如 mfg_resistweld 电阻焊 1877 早于 electricity 电力系统 1879），需据此选择更早的合法前置，或先在阶段 4 校正年份。用户口径：年份仅具参考价值，以本质与逻辑为准。"
-      ],
-      "summary": {
-        "candidates": 27,
-        "verdicts": 0
-      }
+    {
+     "child": "mil_pistol",
+     "parent": "tr_horseshoe",
+     "verdict": "delete",
+     "reason": "同 mil_matchlock，跨域无传导机制。"
     },
-    "5.0": {
-      "date": "2026-09-13",
-      "family": "FULL-PIPELINE",
-      "status": "取证完成，处置待批准（未改动任何数据）",
-      "scope": "用户抽检 5 条关系（石墨烯→自修复材料、3D 打印→碟式斯特林、忠诚僚机→二维材料 / 摩擦纳米发电 / 可回收火箭）的逐层核查",
-      "background": "5 条关系取自 v0.9.23 报告中「中间技术库 backgrounds 命中位置式签名」的举例。核查范围覆盖全部数据层：主管线 dependsOn、主管线反向 enables、主管线节点摘要与 views、中间技术库 backgrounds 与 summary、全量管线 graph.json 与 data_full.js、理论覆盖层。",
-      "criterionRef": "§2 判定四标准（必要性 / 排他性 / 时序性 / 域内优先）；处置四档（保留 / 改前置 / 删边 / 降级为概念影响）。",
-      "edges": [
-        {
-          "child": "mat_graphene",
-          "childName": "石墨烯",
-          "childYear": 2004,
-          "childCat": "material",
-          "parent": "mat_selfheal",
-          "parentName": "自修复材料",
-          "parentYear": 2000,
-          "parentCat": "material",
-          "positionalSignature": true,
-          "layers": {
-            "mainDependsOn": false,
-            "mainEnables": false,
-            "mainSummary": false,
-            "mainViews": false,
-            "midtechBackgrounds": true,
-            "midtechSummary": false,
-            "graphJson": false,
-            "dataFull": false
-          },
-          "verdict": "删边",
-          "reason": "自修复材料(2000) 与石墨烯(2004) 同为材料类的并列方向，不构成前置关系——自修复材料不参与石墨烯的制备或发现。石墨烯的真实前因是石墨（原料）与材料表征手段（微机械剥离依赖高定向热解石墨与光学显微表征），不存在「自修复材料是石墨烯之前置」的必要性或排他性。判定为位置式伪边（石墨烯年份 2004 时，材料类内 year 严格小于它的最后一个节点正是自修复材料，命中签名）。"
-        },
-        {
-          "child": "mfg_3dp",
-          "childName": "3D 打印",
-          "childYear": 1984,
-          "childCat": "manufact",
-          "parent": "ene_dishstirling",
-          "parentName": "碟式斯特林",
-          "parentYear": 1980,
-          "parentCat": "energy",
-          "positionalSignature": true,
-          "layers": {
-            "mainDependsOn": false,
-            "mainEnables": false,
-            "mainSummary": true,
-            "mainViews": false,
-            "midtechBackgrounds": true,
-            "midtechSummary": true,
-            "graphJson": false,
-            "dataFull": false
-          },
-          "verdict": "删边 + 摘要文本重写",
-          "reason": "碟式斯特林（一种外燃机）与 3D 打印的成型原理无任何传导机制：3D 打印的真实前因为计算机辅助设计、数控与光固化/激光+高分子体系，与斯特林循环无关。判定为位置式伪边（1984 年时能源类内 year 严格小于它的最后一个节点即碟式斯特林）。**残留位置**：主管线摘要仍写「建立在 激光熔覆、碟式斯特林、数学 之上」，而当前 dependsOn 已是 [mathematics, cnc, computer]——摘要与依赖表自相矛盾；中间技术库 backgrounds 亦保留该条。"
-        },
-        {
-          "child": "mil_loyalwingman",
-          "childName": "忠诚僚机",
-          "childYear": 2020,
-          "childCat": "military",
-          "parent": "mat_2d",
-          "parentName": "二维材料",
-          "parentYear": 2004,
-          "parentCat": "material",
-          "positionalSignature": true,
-          "layers": {
-            "mainDependsOn": false,
-            "mainEnables": false,
-            "mainSummary": true,
-            "mainViews": false,
-            "midtechBackgrounds": true,
-            "midtechSummary": true,
-            "graphJson": false,
-            "dataFull": false
-          },
-          "verdict": "删边 + 摘要文本重写",
-          "reason": "二维材料不构成忠诚僚机的前置。忠诚僚机的真实前因为无人机平台、隐身技术、自主控制/数据链。判定为位置式伪边（2020 年时材料类内 year 严格小于它的最后一个节点即二维材料）。**残留位置**：主管线摘要仍写「建立在 工业 4.0、摩擦纳米发电、二维材料 之上」，而当前 dependsOn 已是 [drone, mil_stealth2]。"
-        },
-        {
-          "child": "mil_loyalwingman",
-          "childName": "忠诚僚机",
-          "childYear": 2020,
-          "childCat": "military",
-          "parent": "ene_tribo",
-          "parentName": "摩擦纳米发电",
-          "parentYear": 2012,
-          "parentCat": "energy",
-          "positionalSignature": true,
-          "layers": {
-            "mainDependsOn": false,
-            "mainEnables": false,
-            "mainSummary": true,
-            "mainViews": false,
-            "midtechBackgrounds": true,
-            "midtechSummary": true,
-            "graphJson": false,
-            "dataFull": false
-          },
-          "verdict": "删边 + 摘要文本重写",
-          "reason": "摩擦纳米发电是微型能量采集方向，与忠诚僚机（无人作战飞机）的研制前置无传导机制。判定为位置式伪边（2020 年时能源类内 year 严格小于它的最后一个节点即摩擦纳米发电）。"
-        },
-        {
-          "child": "mil_loyalwingman",
-          "childName": "忠诚僚机",
-          "childYear": 2020,
-          "childCat": "military",
-          "parent": "tr_reusablerocket",
-          "parentName": "可回收火箭",
-          "parentYear": 2015,
-          "parentCat": "transport",
-          "positionalSignature": true,
-          "layers": {
-            "mainDependsOn": false,
-            "mainEnables": false,
-            "mainSummary": false,
-            "mainViews": false,
-            "midtechBackgrounds": true,
-            "midtechSummary": false,
-            "graphJson": true,
-            "dataFull": true
-          },
-          "verdict": "删边（主管线已删，**全量管线仍存活**）",
-          "reason": "可回收火箭与忠诚僚机的研制无前置关系（两者的共同点仅是「同期的最新运输/军事平台」，不构成因果）。判定为位置式伪边（2020 年时运输类内 year 严格小于它的最后一个节点即可回收火箭）。**残留位置（重要）**：该边在全量管线两侧均存活——data_full.js 为 mil_loyalwingman→tr_reusablerocket（type=dependency），graph.json 为 tr_reusablerocket→mil_loyalwingman（其 raw 方向与 data_full.js 相反，语义相同）。tree_full.html 因此仍会展示该关系。"
-        }
-      ],
-      "layerResidueSummary": {
-        "mainDependsOn": "0 / 5（v0.9.20、v0.9.21 已清除）",
-        "mainEnables": "0 / 5",
-        "mainNodeSummary": "3 / 5（mfg_3dp 提到「激光熔覆、碟式斯特林」；mil_loyalwingman 提到「工业 4.0、摩擦纳米发电、二维材料」；mat_graphene 提到已删前置「用火」）",
-        "midtechBackgrounds": "5 / 5",
-        "midtechSummary": "3 / 5",
-        "graphJson": "1 / 5（mil_loyalwingman → tr_reusablerocket）",
-        "dataFull": "1 / 5（同一条，raw 方向相反）"
-      },
-      "fullPipelinePositionalScan": {
-        "scannedEdges": 17387,
-        "positionalHits": 158,
-        "ratio": "0.9%",
-        "note": "对 data_full.js 全量边按「前置 = 该分类内 year 严格小于依赖者的最后一个节点」扫描的结果。该检测器有已知盲区（第 2 槽位、同年并列、排名漂移），故 158 为下界而非真值；全量管线未经过 v0.9.20 / v0.9.21 的清理，仅这一族即至少残留 158 条。"
-      },
-      "proposedDisposition": [
-        "① 主管线摘要文本（3 条实例）→ 归入阶段 5b「1,027 条 upgrade_stubs 模板文案重写」，按统一口径改写，避免为 3 条单独发明句式而与全批冲突。",
-        "② 全量管线边 mil_loyalwingman → tr_reusablerocket → 归入阶段 5a（按主管线重建 graph.json 与 data_full.js）；若需立即止血，可对两文件做单边删除（结构可安全 parse→filter→stringify）。",
-        "③ 中间技术库 backgrounds（5 条实例）→ 归入阶段 5d（重建 95 条 backgrounds）。",
-        "④ 本次核查未改动任何数据；结论已入台账留痕。"
-      ],
-      "summary": {
-        "edgesChecked": 5,
-        "positionalSignatureHits": 5,
-        "layersWithResidue": 4,
-        "dataChanged": 0
-      }
+    {
+     "child": "mil_bodyarmor",
+     "parent": "tr_horseshoe",
+     "verdict": "delete",
+     "reason": "同 mil_matchlock，跨域无传导机制。"
+    },
+    {
+     "child": "mil_grenade",
+     "parent": "tr_horseshoe",
+     "verdict": "delete",
+     "reason": "同 mil_matchlock，跨域无传导机制。"
+    },
+    {
+     "child": "cannon",
+     "parent": "tr_horseshoe",
+     "verdict": "delete",
+     "reason": "同 mil_matchlock，跨域无传导机制。"
+    },
+    {
+     "child": "mil_plate",
+     "parent": "tr_horseshoe",
+     "verdict": "delete",
+     "reason": "同 mil_matchlock，跨域无传导机制。"
+    },
+    {
+     "child": "mil_landmine",
+     "parent": "tr_horseshoe",
+     "verdict": "delete",
+     "reason": "同 mil_matchlock，跨域无传导机制。"
+    },
+    {
+     "child": "mil_rocket2",
+     "parent": "tr_horseshoe",
+     "verdict": "delete",
+     "reason": "同 mil_matchlock，跨域无传导机制。"
+    },
+    {
+     "child": "mil_cannon",
+     "parent": "tr_horseshoe",
+     "verdict": "delete",
+     "reason": "同 mil_matchlock，跨域无传导机制。"
+    },
+    {
+     "child": "rocket",
+     "parent": "gunpowder",
+     "verdict": "keep",
+     "reason": "火药即固体火箭推进剂，跨域传导机制明确。"
+    },
+    {
+     "child": "drill_blast",
+     "parent": "gunpowder",
+     "verdict": "keep",
+     "reason": "黑火药为钻爆掘进工法的核心前提。"
+    },
+    {
+     "child": "bld_tunnel3",
+     "parent": "gunpowder",
+     "verdict": "keep",
+     "reason": "黑火药为隧道钻爆的前提。"
+    },
+    {
+     "child": "printing",
+     "parent": "paper",
+     "verdict": "keep",
+     "reason": "造纸为印刷的载体前提。"
+    },
+    {
+     "child": "watermill",
+     "parent": "waterwheel",
+     "verdict": "keep",
+     "reason": "水磨＝水车＋磨盘，同域直接演进。"
+    },
+    {
+     "child": "mil_psyop",
+     "parent": "printing",
+     "verdict": "keep",
+     "reason": "印刷品为心理战的信息载体（传单/宣传品），跨域传导明确。"
+    },
+    {
+     "child": "holography",
+     "parent": "optics",
+     "verdict": "repoint",
+     "newParent": "wave_optics",
+     "reason": "全息成像依赖干涉与衍射，属波动光学范畴；optics 为学科级泛化前置，排他性上 wave_optics 更贴近。"
+    },
+    {
+     "child": "led",
+     "parent": "optics",
+     "verdict": "repoint",
+     "newParent": "quantum_mech",
+     "reason": "发光二极管的电致发光属固体发光机制（量子范畴）；optics 为学科级泛化前置。"
+    },
+    {
+     "child": "lasers",
+     "parent": "optics",
+     "verdict": "repoint",
+     "newParent": "quantum_mech",
+     "reason": "激光原理为受激辐射，属量子力学范畴。"
+    },
+    {
+     "child": "laser",
+     "parent": "optics",
+     "verdict": "repoint",
+     "newParent": "quantum_mech",
+     "reason": "同上。"
+    },
+    {
+     "child": "metamaterial",
+     "parent": "optics",
+     "verdict": "delete",
+     "reason": "超材料为人工电磁结构，electromagnetism 已覆盖其前提；optics 为学科级泛化前置。"
+    },
+    {
+     "child": "directed_energy",
+     "parent": "optics",
+     "verdict": "delete",
+     "reason": "已有 laser 覆盖光学前提，optics 冗余。"
+    },
+    {
+     "child": "mil_directedenergy",
+     "parent": "optics",
+     "verdict": "delete",
+     "reason": "已有 laser 覆盖光学前提，optics 冗余。"
+    },
+    {
+     "child": "display",
+     "parent": "optics",
+     "verdict": "delete",
+     "reason": "已有 semiconductor 覆盖电光转换前提，optics 冗余。"
+    },
+    {
+     "child": "camera",
+     "parent": "optics",
+     "verdict": "keep",
+     "reason": "镜头成像依赖几何光学，库内无更贴近的成像光学节点，排他性成立。"
     }
+   ],
+   "backfills": [
+    {
+     "child": "mil_plate",
+     "add": [
+      "steel",
+      "smithing"
+     ],
+     "reason": "板甲＝钢铁材料＋锻造工艺，原仅有被删的马蹄铁。"
+    },
+    {
+     "child": "mil_matchlock",
+     "add": [
+      "gunpowder",
+      "iron",
+      "mfg_thread"
+     ],
+     "reason": "火绳枪＝火药推进＋铁质枪管＋螺纹与机件加工。"
+    },
+    {
+     "child": "mil_musket",
+     "add": [
+      "gunpowder",
+      "iron",
+      "mfg_thread"
+     ],
+     "reason": "滑膛枪＝火药推进＋铁质枪管＋机件加工。"
+    },
+    {
+     "child": "mil_pistol",
+     "add": [
+      "gunpowder",
+      "iron",
+      "mfg_thread"
+     ],
+     "reason": "手枪＝火药推进＋铁质枪管＋小型机件加工。"
+    },
+    {
+     "child": "mil_bodyarmor",
+     "add": [
+      "mil_plate",
+      "steel"
+     ],
+     "reason": "防弹衣的早期形态为板甲类金属防护具，承接板甲与钢铁材料。"
+    },
+    {
+     "child": "mil_landmine",
+     "add": [
+      "gunpowder",
+      "iron"
+     ],
+     "reason": "地雷＝火药爆炸装置＋铁质壳体。"
+    },
+    {
+     "child": "mil_rocket2",
+     "add": [
+      "gunpowder",
+      "mil_arrow"
+     ],
+     "reason": "早期火箭弹（火药箭）＝火药＋箭。"
+    },
+    {
+     "child": "mil_cannon",
+     "add": [
+      "gunpowder",
+      "bronze_casting"
+     ],
+     "reason": "早期加农炮为青铜铸造炮身＋火药发射。"
+    },
+    {
+     "child": "mil_grenade",
+     "add": [
+      "gunpowder"
+     ],
+     "reason": "手榴弹以火药为装药，原前置缺失。"
+    },
+    {
+     "child": "bld_daylight",
+     "add": [
+      "architecture"
+     ],
+     "reason": "自然采光的设计前提为建筑学（域内前置）。"
+    }
+   ],
+   "summary": {
+    "keep": 8,
+    "repoint": 4,
+    "delete": 15,
+    "concept": 0,
+    "backfill": 10
+   }
+  },
+  "1b": {
+   "date": "2026-09-13",
+   "family": "ROOT",
+   "scope": "8 个零前置起点与 2 个孤立节点复核",
+   "candidates": 0,
+   "edges": [],
+   "backfills": [
+    {
+     "child": "wheel",
+     "add": [
+      "woodworking"
+     ],
+     "reason": "轮子为成形木质构件（轮盘＋车轴），必要前提为木作。原为零前置起点，起点地位不成立。"
+    },
+    {
+     "child": "mfg_stone",
+     "add": [
+      "stone_tools"
+     ],
+     "reason": "石器打制是石器器物的加工技艺；其自身摘要即写明「建立在石器之上」。原为零前置起点，起点地位不成立。"
+    },
+    {
+     "child": "fire_drill",
+     "add": [
+      "stone_tools",
+      "fire"
+     ],
+     "reason": "钻木取火需要石器加工钻具，且以既有的控火经验与需求为前提。原为孤立节点（无前置且无下游），至此补齐前置。"
+    },
+    {
+     "child": "language",
+     "add": [
+      "gesture_comm"
+     ],
+     "reason": "手势交流为其自身摘要所述的「语言演化前奏」，传承认知成立。此举同时消除手势交流的孤立状态。"
+    }
+   ],
+   "notes": [
+    "保留为起点（4 个）：石器 stone_tools、用火 fire、手势交流 gesture_comm、天然磁石 magnet。",
+    "天然磁石 magnet 判定保留为起点：其摘要载明为「磁现象的第一笔记录」，属自然现象的最早观察，无人类技术前提，必要性上成立。",
+    "语言 language 由起点转为 gesture_comm 的下游。",
+    "起点由 8 个收敛为 4 个：石器、用火、手势交流、天然磁石。"
+   ],
+   "summary": {
+    "keep": 0,
+    "repoint": 0,
+    "delete": 0,
+    "concept": 0,
+    "backfill": 4
+   }
+  },
+  "1c": {
+   "date": "2026-09-13",
+   "family": "DUP",
+   "scope": "23 组同名重复节点合并（冗余项全部位于 techs_extend.js）",
+   "keepRule": "保留规则：优先保留具备 views 与 applications 富字段的条目（详情卡依赖该字段）；该类条目的年份均不晚于同名冗余项。",
+   "merges": [
+    {
+     "keep": "ic",
+     "drop": "chip",
+     "add": [],
+     "reason": "集成电路。保留 ic（下游 14 条引用、被 enables 引用 3 次、含 views 与 applications）；chip 的 2 条前置为 ic 前置的子集。"
+    },
+    {
+     "keep": "mat_forging",
+     "drop": "smithing",
+     "add": [
+      "fire",
+      "bellows",
+      "ene_charcoal"
+     ],
+     "reason": "锻造。保留 mat_forging（material，-3000）。并入 smithing 独有且时序成立的前置：用火、风箱、木炭（木炭 id 同期由 charcoal 归并为 ene_charcoal）。铁器(-1200) 晚于 -3000，按第三条标准剔除。"
+    },
+    {
+     "keep": "mat_selfheal",
+     "drop": "self_healing",
+     "add": [],
+     "reason": "自修复材料。冗余项前置为保留项前置的子集，无需并入。"
+    },
+    {
+     "keep": "ene_charcoal",
+     "drop": "charcoal",
+     "add": [
+      "fire"
+     ],
+     "reason": "木炭。并入冗余项独有的用火（木炭依赖对燃烧的控制）。"
+    },
+    {
+     "keep": "ene_solidstate",
+     "drop": "solid_state_battery",
+     "add": [],
+     "reason": "固态电池。冗余项前置为保留项前置的子集。"
+    },
+    {
+     "keep": "ene_satpower",
+     "drop": "space_solar",
+     "add": [],
+     "reason": "空间太阳能。冗余项前置为保留项前置的子集；保留项年份 1968 与 Glaser 空间太阳能提案同年。"
+    },
+    {
+     "keep": "ene_wpt",
+     "drop": "wireless_power",
+     "add": [],
+     "reason": "无线输电。冗余项独有前置微波(1940) 晚于保留项 1890，按第三条标准剔除。"
+    },
+    {
+     "keep": "mfg_digitaltwin",
+     "drop": "digital_twin",
+     "add": [],
+     "reason": "数字孪生。冗余项独有前置物联网(2010) 晚于保留项 2000，按第三条标准剔除；两者分类不一致（manufact 与 info），本条按保留项计 manufact。"
+    },
+    {
+     "keep": "tr_canoe",
+     "drop": "canoe",
+     "add": [
+      "fire",
+      "stone_tools"
+     ],
+     "reason": "独木舟。并入冗余项独有的用火（火焚挖空）与石器（加工工具）。"
+    },
+    {
+     "keep": "inf_nn",
+     "drop": "neural_network",
+     "add": [],
+     "reason": "神经网络。冗余项前置为保留项前置的子集。"
+    },
+    {
+     "keep": "inf_ar",
+     "drop": "ar",
+     "add": [],
+     "reason": "增强现实。冗余项前置为保留项前置的子集。"
+    },
+    {
+     "keep": "inf_vr",
+     "drop": "vr",
+     "add": [],
+     "reason": "虚拟现实。冗余项前置为保留项前置的子集。"
+    },
+    {
+     "keep": "inf_edgeai",
+     "drop": "edge_ai",
+     "add": [],
+     "reason": "边缘智能。冗余项前置为保留项前置的子集。"
+    },
+    {
+     "keep": "bio_pharmacology",
+     "drop": "pharmacology",
+     "add": [],
+     "reason": "药理学。冗余项前置为保留项前置的子集。"
+    },
+    {
+     "keep": "bio_tissueeng",
+     "drop": "tissue_engineering",
+     "add": [],
+     "reason": "组织工程。冗余项前置为保留项前置的子集。"
+    },
+    {
+     "keep": "bio_mrnavax",
+     "drop": "mrna_vaccine",
+     "add": [],
+     "reason": "mRNA 疫苗。冗余项前置为保留项前置的子集；保留项 1990 与 mRNA 递送平台起源同年。"
+    },
+    {
+     "keep": "bio_genetherapy",
+     "drop": "gene_therapy",
+     "add": [],
+     "reason": "基因治疗。冗余项独有前置基因编辑(2025) 晚于保留项 1990，按第三条标准剔除。冗余项被 2 个节点的 enables 引用，已改指。"
+    },
+    {
+     "keep": "bio_bci",
+     "drop": "bci",
+     "add": [],
+     "reason": "脑机接口。冗余项前置为保留项前置的子集；两者分类不一致（life 与 info），本条按保留项计 life。"
+    },
+    {
+     "keep": "bio_synbio",
+     "drop": "synthetic_biology",
+     "add": [],
+     "reason": "合成生物学。冗余项前置为保留项前置的子集。"
+    },
+    {
+     "keep": "bio_organonchip",
+     "drop": "organs_on_chip",
+     "add": [],
+     "reason": "器官芯片。冗余项前置为保留项前置的子集。"
+    },
+    {
+     "keep": "bio_precisionmed",
+     "drop": "personalized_medicine",
+     "add": [],
+     "reason": "精准医疗。冗余项前置为保留项前置的子集。"
+    },
+    {
+     "keep": "bld_dome",
+     "drop": "dome",
+     "add": [],
+     "reason": "穹顶。冗余项前置为保留项前置的子集；冗余项被 1 个节点的 enables 引用，已改指。"
+    },
+    {
+     "keep": "mil_directedenergy",
+     "drop": "directed_energy",
+     "add": [],
+     "reason": "定向能武器。两者前置完全相同（laser、battery），保留含富字段者。"
+    }
+   ],
+   "notes": [
+    "23 组冗余节点均位于 techs_extend.js；保留项位于 techs_extra.js 或 data.js。",
+    "已并入独有前置的 3 组：mat_forging（用火、风箱、木炭）、ene_charcoal（用火）、tr_canoe（用火、石器）。",
+    "因时序性剔除的并入项 4 条：iron→mat_forging、microwave→ene_wpt、iot→mfg_digitaltwin、crispr→bio_genetherapy。",
+    "分类不一致待议 2 组：数字孪生（manufact 与 info）、脑机接口（life 与 info），本条按保留项分类计，分类归属另在阶段 4 复核。",
+    "techs_extend.js 头部标注为 tools/extend_net.js 生成；本次为直接编辑，生成器侧的同步留待阶段 5c。"
+   ],
+   "summary": {
+    "chip": 1,
+    "smithing": 1,
+    "self_healing": 1,
+    "charcoal": 1,
+    "solid_state_battery": 1,
+    "space_solar": 1,
+    "wireless_power": 1,
+    "digital_twin": 1,
+    "canoe": 1,
+    "neural_network": 1,
+    "ar": 1,
+    "vr": 1,
+    "edge_ai": 1,
+    "pharmacology": 1,
+    "tissue_engineering": 1,
+    "mrna_vaccine": 1,
+    "gene_therapy": 1,
+    "bci": 1,
+    "synthetic_biology": 1,
+    "organs_on_chip": 1,
+    "personalized_medicine": 1,
+    "dome": 1,
+    "directed_energy": 1
+   }
+  },
+  "2.1": {
+   "date": "2026-09-13",
+   "family": "SCOPE",
+   "scope": "阶段 2 原定义「96 条中间技术入网」的前提核查与重新裁定",
+   "originalPlan": "《技术网络检修计划.md》阶段 2 原写：为 assets/techs_midtech.js 的 96 条中间技术各补 category / era / year / dependsOn，作为真实节点并入主管线，优先插入阶段 1 登记的断链位置，目标 Ch 族 267 → 120 以下。",
+   "verdict": "撤销（前提不成立）",
+   "findings": [
+    "① 重叠度：96 条中间技术条目全部已存在于主管线（同 id、同名称），0 条为独立新技术；连 data.js 中的 4 条手工案例（smart_mower / smartphone / drone / autonomous_driving）也均在主管线内。tools/gen_midtech.js 第 1-3 行的头部注释即写明其口径为「从已有 2342 项技术中按跨领域汇聚口径筛选」，第 20-23 行的 crossSelf() 与第 189-201 行的 items 映射均以 TECHS 为数据源。故「并入主管线」若执行，将新增 96 个重复节点，属阶段 1c 刚清理掉的缺陷类型。",
+    "② 库内重复条目：mil_smartmunition（智能弹药）登记两次（index 50 / 57），两条的 date（2010 年 / 21 世纪）、summary（「建立在…之上」句 / 「承接…」句）、backgrounds（无人化工厂系 / 火箭系）完全不同，说明该文件在生成之后被另一批次部分重写过。",
+    "③ backgrounds 为旧快照：tools/gen_midtech.js 第 190-195 行把 t.dependsOn 原样搬入 backgrounds，故中间库继承的是 2026-08-26 生成时刻的主管线前置。与当前 dependsOn 对比：完全一致 11 条、含已删前置 44 条、主管线有新前置而库中缺 1 条、双向偏离 40 条（共 96 条，即 85/96 已偏离）。",
+    "④ 卡片自洽性的方向：中间库的 summary 与 backgrounds 同源于那份旧快照，故卡片内部是自洽的；当前真正自相矛盾的是主管线详情页（summary 陈旧、dependsOn 已清理）。若此时只重建 backgrounds，会把矛盾复制到中间库。",
+    "⑤ 改写时序：95 个唯一 id 中，69 条的摘要含前置枚举句且与当前 dependsOn 不符（「依托 X、Y 把…」36 条、「建立在 X、Y 之上」36 条、「承接 X、Y，」5 条、族 E 的「在 X 之上，/以 X 为基，」若干；另 25 条无枚举句）。其中多数 id 属 A / E 族（前置仍待阶段 3 补齐），现在改写会在阶段 3 之后重写第二遍。",
+    "⑥ 生成器不可复现：以当前数据重跑 tools/gen_midtech.js，候选集从 96 条塌缩为 32 条（分类配额 material 2 / energy 3 / manufact 3 / transport 6 / info 2 / life 14 / build 2），原因是候选门槛 dependsOn.length >= 4 在 v0.9.20 / v0.9.21 清理后大部分节点已不满足；且新候选集中的 ene_satpower / camera 等并不在原库内。即中间库无法按原口径复现，其 96 条是在清理前的网络状态下选出的。"
+   ],
+   "actions": [
+    "A1 · 修复库内重复条目：保留首次出现者 mil_smartmunition[50]（date 与主管线一致），删除 [57]；条目 96 → 95，唯一 id 95/95。执行器 tools/fix_midtech_dup.js（干跑默认 + --apply + 写后唯一性断言）。",
+    "A2 · 生成器加护栏：tools/gen_midtech.js 在写出前断言重复条目 = 0、断链背景 = 0（违反即非零退出，原代码只计数不中止）；新增 --no-write 干跑开关、写前自动备份到 /tmp、以及与现有文件的 backgrounds 漂移报告。",
+    "A3 · 阶段 2 重新裁定：原「96 条入网」撤销；「中间技术库与主管线对齐」（重建 backgrounds + 重写 95 条摘要枚举句）**移入阶段 5**，在阶段 3 / 4 结构定稿后一次性执行，避免同一批文案改写两遍；生成器的口径修订（dependsOn >= 4 门槛已不适用，且库不可复现）亦列为阶段 5 的前置事项。",
+    "A4 · Ch 族目标的承接方改判：原计划寄望「中间技术入网」压低 Ch 族（267 → 120）。因无新技术可入网，Ch 族只能靠「补/改前置」解决（阶段 1a / 1b 已证明该机制有效），故 Ch 族目标并入阶段 3，与 A / E 族同批推进。"
+   ],
+   "summary": {
+    "newTechsAvailable": 0,
+    "dupEntriesFixed": 1,
+    "generatorsGuarded": 1,
+    "planStagesRescoped": 1
+   }
+  },
+  "3.1a": {
+   "date": "2026-09-13",
+   "family": "E-manufact",
+   "status": "draft（候选集已建立，逐条判定待填写；未写盘）",
+   "scope": "E 族 manufact 68 条中的首批 27 条——机床族（17）与焊接 / 连接族（10）",
+   "criterion": "§2 判定四标准：① 必要性（去掉该前置，本技术是否仍能按史实出现）② 排他性（是否该环节最直接的先行者）③ 时序性（前置年 ≤ 本节点年）④ 域内优先（跨域须有明确传导机制）。处置四档：保留 / 改前置 / 删边 / 降级为概念影响。",
+   "observation": "E 族 manufact 68 条的当前前置**全部为同一条 mathematics**，无一条例外——即同一槽位被批量赋值，病灶完全同构。本批先取机床族与焊接 / 连接族，共 27 条。",
+   "availableNodes": [
+    "mfg_lathe 车床(-1000)",
+    "lathe 车床与精密加工(1751)",
+    "mfg_grinder 磨床(1800)",
+    "mfg_knife 刀具(-100000)",
+    "iron_smelting 冶铁(-1200)",
+    "mat_iron 块炼铁(-1200)",
+    "steel 钢铁(-1000)",
+    "bronze 青铜(-3300)",
+    "mat_copper 红铜冶炼(-5000)",
+    "mat_toolsteel 工具钢(1868)",
+    "kiln 窑(-6000)",
+    "mfg_thread 螺纹(-300)",
+    "mfg_bolt 螺纹连接(-300)",
+    "mfg_handaxe 手斧(-1700000)",
+    "mfg_stone 石器打制(-2600000)",
+    "steam_engine 蒸汽机(1769)",
+    "electricity 电力系统(1879)",
+    "electronics 电子学(1883)",
+    "computer 电子计算机(1946)",
+    "ic 集成电路(1958)",
+    "mfg_servo 伺服系统(1940)",
+    "laser 激光(1960)"
+   ],
+   "candidates": [
+    {
+     "id": "mfg_gauge",
+     "name": "量具",
+     "year": -2000,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_boring",
+     "name": "镗床",
+     "year": 1500,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_drillpress",
+     "name": "钻床",
+     "year": 1800,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_planer",
+     "name": "刨床",
+     "year": 1810,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_grindingwheel",
+     "name": "砂轮",
+     "year": 1840,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_toolholder",
+     "name": "刀柄",
+     "year": 1900,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_coolant",
+     "name": "切削液",
+     "year": 1900,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_edm",
+     "name": "电火花加工",
+     "year": 1943,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_cnc",
+     "name": "数控机床",
+     "year": 1949,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_mc",
+     "name": "加工中心",
+     "year": 1958,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_wedm",
+     "name": "线切割",
+     "year": 1960,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_edmwire",
+     "name": "电火花线切割机",
+     "year": 1960,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_turnmill",
+     "name": "车铣复合",
+     "year": 1980,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_cmm",
+     "name": "三坐标测量",
+     "year": 1950,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_onmachinem",
+     "name": "在机测量",
+     "year": 1990,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_toolmonitor",
+     "name": "刀具状态监控",
+     "year": 1990,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_cryogenicm",
+     "name": "低温切削",
+     "year": 2000,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_rivet",
+     "name": "铆接",
+     "year": -2000,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_braze",
+     "name": "钎焊",
+     "year": -2000,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_adhesive",
+     "name": "胶接",
+     "year": -2000,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_resistweld",
+     "name": "电阻焊",
+     "year": 1877,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_welding",
+     "name": "电弧焊",
+     "year": 1881,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_gasweld",
+     "name": "气焊",
+     "year": 1900,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_ebw",
+     "name": "电子束焊",
+     "year": 1958,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_laserweld",
+     "name": "激光焊",
+     "year": 1960,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_fsw",
+     "name": "搅拌摩擦焊",
+     "year": 1991,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    },
+    {
+     "id": "mfg_roboticweld",
+     "name": "焊接机器人",
+     "year": 1980,
+     "category": "manufact",
+     "currentParent": "mathematics"
+    }
+   ],
+   "verdicts": [],
+   "notes": [
+    "候选筛选已断言：27 条全部满足「单前置且前置 = mathematics」，任一不符即抛错，不会把非 E 族节点混入。",
+    "判定完成后填入 verdicts（每条 verdict / newParent / reason），并断言 keep + repoint + delete + concept = 27。",
+    "时序性门槛提醒：执行器会强制「前置年 ≤ 本节点年」。部分节点年份偏早（如 mfg_resistweld 电阻焊 1877 早于 electricity 电力系统 1879），需据此选择更早的合法前置，或先在阶段 4 校正年份。用户口径：年份仅具参考价值，以本质与逻辑为准。"
+   ],
+   "summary": {
+    "candidates": 27,
+    "verdicts": 0
+   }
+  },
+  "5.0": {
+   "date": "2026-09-13",
+   "family": "FULL-PIPELINE",
+   "status": "取证完成；处置已在本批次 5.1 落地",
+   "scope": "用户抽检 5 条关系（石墨烯→自修复材料、3D 打印→碟式斯特林、忠诚僚机→二维材料 / 摩擦纳米发电 / 可回收火箭）的逐层核查",
+   "background": "5 条关系取自 v0.9.23 报告中「中间技术库 backgrounds 命中位置式签名」的举例。核查范围覆盖全部数据层：主管线 dependsOn、主管线反向 enables、主管线节点摘要与 views、中间技术库 backgrounds 与 summary、全量管线 graph.json 与 data_full.js、理论覆盖层。",
+   "criterionRef": "§2 判定四标准（必要性 / 排他性 / 时序性 / 域内优先）；处置四档（保留 / 改前置 / 删边 / 降级为概念影响）。",
+   "edges": [
+    {
+     "child": "mat_graphene",
+     "childName": "石墨烯",
+     "childYear": 2004,
+     "childCat": "material",
+     "parent": "mat_selfheal",
+     "parentName": "自修复材料",
+     "parentYear": 2000,
+     "parentCat": "material",
+     "positionalSignature": true,
+     "layers": {
+      "mainDependsOn": false,
+      "mainEnables": false,
+      "mainSummary": false,
+      "mainViews": false,
+      "midtechBackgrounds": true,
+      "midtechSummary": false,
+      "graphJson": false,
+      "dataFull": false
+     },
+     "verdict": "删边",
+     "reason": "自修复材料(2000) 与石墨烯(2004) 同为材料类的并列方向，不构成前置关系——自修复材料不参与石墨烯的制备或发现。石墨烯的真实前因是石墨（原料）与材料表征手段（微机械剥离依赖高定向热解石墨与光学显微表征），不存在「自修复材料是石墨烯之前置」的必要性或排他性。判定为位置式伪边（石墨烯年份 2004 时，材料类内 year 严格小于它的最后一个节点正是自修复材料，命中签名）。"
+    },
+    {
+     "child": "mfg_3dp",
+     "childName": "3D 打印",
+     "childYear": 1984,
+     "childCat": "manufact",
+     "parent": "ene_dishstirling",
+     "parentName": "碟式斯特林",
+     "parentYear": 1980,
+     "parentCat": "energy",
+     "positionalSignature": true,
+     "layers": {
+      "mainDependsOn": false,
+      "mainEnables": false,
+      "mainSummary": true,
+      "mainViews": false,
+      "midtechBackgrounds": true,
+      "midtechSummary": true,
+      "graphJson": false,
+      "dataFull": false
+     },
+     "verdict": "删边 + 摘要文本重写",
+     "reason": "碟式斯特林（一种外燃机）与 3D 打印的成型原理无任何传导机制：3D 打印的真实前因为计算机辅助设计、数控与光固化/激光+高分子体系，与斯特林循环无关。判定为位置式伪边（1984 年时能源类内 year 严格小于它的最后一个节点即碟式斯特林）。**残留位置**：主管线摘要仍写「建立在 激光熔覆、碟式斯特林、数学 之上」，而当前 dependsOn 已是 [mathematics, cnc, computer]——摘要与依赖表自相矛盾；中间技术库 backgrounds 亦保留该条。"
+    },
+    {
+     "child": "mil_loyalwingman",
+     "childName": "忠诚僚机",
+     "childYear": 2020,
+     "childCat": "military",
+     "parent": "mat_2d",
+     "parentName": "二维材料",
+     "parentYear": 2004,
+     "parentCat": "material",
+     "positionalSignature": true,
+     "layers": {
+      "mainDependsOn": false,
+      "mainEnables": false,
+      "mainSummary": true,
+      "mainViews": false,
+      "midtechBackgrounds": true,
+      "midtechSummary": true,
+      "graphJson": false,
+      "dataFull": false
+     },
+     "verdict": "删边 + 摘要文本重写",
+     "reason": "二维材料不构成忠诚僚机的前置。忠诚僚机的真实前因为无人机平台、隐身技术、自主控制/数据链。判定为位置式伪边（2020 年时材料类内 year 严格小于它的最后一个节点即二维材料）。**残留位置**：主管线摘要仍写「建立在 工业 4.0、摩擦纳米发电、二维材料 之上」，而当前 dependsOn 已是 [drone, mil_stealth2]。"
+    },
+    {
+     "child": "mil_loyalwingman",
+     "childName": "忠诚僚机",
+     "childYear": 2020,
+     "childCat": "military",
+     "parent": "ene_tribo",
+     "parentName": "摩擦纳米发电",
+     "parentYear": 2012,
+     "parentCat": "energy",
+     "positionalSignature": true,
+     "layers": {
+      "mainDependsOn": false,
+      "mainEnables": false,
+      "mainSummary": true,
+      "mainViews": false,
+      "midtechBackgrounds": true,
+      "midtechSummary": true,
+      "graphJson": false,
+      "dataFull": false
+     },
+     "verdict": "删边 + 摘要文本重写",
+     "reason": "摩擦纳米发电是微型能量采集方向，与忠诚僚机（无人作战飞机）的研制前置无传导机制。判定为位置式伪边（2020 年时能源类内 year 严格小于它的最后一个节点即摩擦纳米发电）。"
+    },
+    {
+     "child": "mil_loyalwingman",
+     "childName": "忠诚僚机",
+     "childYear": 2020,
+     "childCat": "military",
+     "parent": "tr_reusablerocket",
+     "parentName": "可回收火箭",
+     "parentYear": 2015,
+     "parentCat": "transport",
+     "positionalSignature": true,
+     "layers": {
+      "mainDependsOn": false,
+      "mainEnables": false,
+      "mainSummary": false,
+      "mainViews": false,
+      "midtechBackgrounds": true,
+      "midtechSummary": false,
+      "graphJson": true,
+      "dataFull": true
+     },
+     "verdict": "删边（主管线已删，**全量管线仍存活**）",
+     "reason": "可回收火箭与忠诚僚机的研制无前置关系（两者的共同点仅是「同期的最新运输/军事平台」，不构成因果）。判定为位置式伪边（2020 年时运输类内 year 严格小于它的最后一个节点即可回收火箭）。**残留位置（重要）**：该边在全量管线两侧均存活——data_full.js 为 mil_loyalwingman→tr_reusablerocket（type=dependency），graph.json 为 tr_reusablerocket→mil_loyalwingman（其 raw 方向与 data_full.js 相反，语义相同）。tree_full.html 因此仍会展示该关系。"
+    }
+   ],
+   "layerResidueSummary": {
+    "mainDependsOn": "0 / 5（v0.9.20、v0.9.21 已清除）",
+    "mainEnables": "0 / 5",
+    "mainNodeSummary": "3 / 5（mfg_3dp 提到「激光熔覆、碟式斯特林」；mil_loyalwingman 提到「工业 4.0、摩擦纳米发电、二维材料」；mat_graphene 提到已删前置「用火」）",
+    "midtechBackgrounds": "5 / 5",
+    "midtechSummary": "3 / 5",
+    "graphJson": "1 / 5（mil_loyalwingman → tr_reusablerocket）",
+    "dataFull": "1 / 5（同一条，raw 方向相反）"
+   },
+   "fullPipelinePositionalScan": {
+    "scannedEdges": 17387,
+    "positionalHits": 158,
+    "ratio": "0.9%",
+    "note": "对 data_full.js 全量边按「前置 = 该分类内 year 严格小于依赖者的最后一个节点」扫描的结果。该检测器有已知盲区（第 2 槽位、同年并列、排名漂移），故 158 为下界而非真值；全量管线未经过 v0.9.20 / v0.9.21 的清理，仅这一族即至少残留 158 条。"
+   },
+   "proposedDisposition": [
+    "① 主管线摘要文本（3 条实例）→ 归入阶段 5b「1,027 条 upgrade_stubs 模板文案重写」，按统一口径改写，避免为 3 条单独发明句式而与全批冲突。",
+    "② 全量管线边 mil_loyalwingman → tr_reusablerocket → 归入阶段 5a（按主管线重建 graph.json 与 data_full.js）；若需立即止血，可对两文件做单边删除（结构可安全 parse→filter→stringify）。",
+    "③ 中间技术库 backgrounds（5 条实例）→ 归入阶段 5d（重建 95 条 backgrounds）。",
+    "④ 本次核查未改动任何数据；结论已入台账留痕。"
+   ],
+   "summary": {
+    "edgesChecked": 5,
+    "positionalSignatureHits": 5,
+    "layersWithResidue": 4,
+    "dataChanged": 0
+   },
+   "dispositionApplied": {
+    "batch": "5.1",
+    "note": "取证后用户要求「把所有类似问题都改了」，5 条抽检关系涉及的三层残留均已在本批次同步（主管线摘要、中间技术库 backgrounds、全量管线边）。"
+   }
+  },
+  "5.1a": {
+   "date": "2026-09-13",
+   "family": "DERIVED-TEXT",
+   "status": "已完成",
+   "scope": "主管线节点派生文案与当前依赖网络对齐（summary / significance / views[].text）",
+   "background": [
+    "summary / significance / views[].text 是生成时刻 dependsOn 与反图的快照，公式见 tools/upgrade_stubs.js:50-84 与 tools/disassemble.js:50-76。",
+    "主管线经 v0.9.20/21（eaa086f）删除 577 条伪边后文案未同步，仍写着已删除的前置；下游子句亦指向已不存在的催生关系。"
+   ],
+   "method": {
+    "tool": "tools/regen_text.js",
+    "rule": "upsStr = dependsOn 前 3 项 name（按序）；downsStr = 反图 children 前 3 项 name（按 TECHS 序）；模板选择 = hash(id) % 2 与 downs 是否为空；summary < 60 字追加定句。",
+    "safety": "只替换被完整模板骨架识别的句子；手写散文（不匹配任何骨架）一律不动。逐节点断言：id 锚点唯一、字段现值与预期逐字相符。"
+   },
+   "counts": {
+    "nodesScanned": 2265,
+    "sentencesRecognizedAsTemplate": 3942,
+    "handWrittenSkipped": 1724,
+    "changed": 3313,
+    "byField": {
+     "summary": 953,
+     "significance": 940,
+     "views[].text": 1420
+    },
+    "affectedNodes": 977,
+    "segmentBreakdown": {
+     "upOnly": 745,
+     "downOnly": 1725,
+     "both": 712,
+     "templateSwitch": 131
+    }
+   },
+   "verification": [
+    "重跑为不动点：需改写 0 处",
+    "EXTRA_TECHS 1,033 条不变（写前写后一致）",
+    "node --check 通过；全量 runtime 干跑 29 个脚本无错、TECHS 2,265",
+    "tools/audit_net.js --check [OK] 结构指标未劣化",
+    "手写文案抽验未动（例：tr_pneumatictire「天然橡胶与硫化工艺」）"
+   ],
+   "verdicts": [
+    {
+     "id": "*",
+     "verdict": "repoint",
+     "reason": "派生文本以主管线为准重算；不改动任何因果结构"
+    }
+   ],
+   "summary": {
+    "changed": 3313,
+    "nodes": 977,
+    "dataStructureChanged": 0
+   }
+  },
+  "5.1b": {
+   "date": "2026-09-13",
+   "family": "MIDTECH-ALIGN",
+   "status": "已完成",
+   "scope": "中间技术库 95 条条目的派生字段（backgrounds / summary / born）与主管线对齐",
+   "background": [
+    "assets/techs_midtech.js 的 backgrounds 是生成时刻 dependsOn 的快照（gen_midtech.js 原样搬运），summary 是主管线节点摘要的拷贝。",
+    "批次 5.0 抽检的 5 条关系中，中间库 backgrounds 残留 5/5。"
+   ],
+   "method": {
+    "tool": "tools/regen_midtech.js",
+    "sharedRules": "tools/midtech_rules.js（FAMOUS / CAT_ABILITY / noteFor / crossSelf / chosenUps），与 gen_midtech.js 共用",
+    "rule": "backgrounds = 跨分类前置（不足 4 条则退回全部前置）→ 知名优先 → 至多 10 条；summary = 主管线节点 summary 拷贝",
+    "notDoing": "不重选案例集合。gen_midtech.js 当前重跑只能选出 32 条且 life 占 14 条，属筛选口径失效，案例集合保持人工策展。"
+   },
+   "counts": {
+    "entries": 95,
+    "backgroundsChanged": 84,
+    "summaryChanged": 69,
+    "bornChanged": 5,
+    "nameChanged": 0,
+    "unchangedEntries": 11,
+    "danglingBackgrounds": 0
+   },
+   "samples": [
+    "mat_graphene 旧=[chemistry,physics,fire,mat_selfheal] 新=[chemistry,physics]（清掉已删的 mat_selfheal）",
+    "mil_loyalwingman 旧=[mfg_industry40,ene_tribo,mat_2d,tr_reusablerocket] 新=[drone,mil_stealth2]",
+    "mfg_3dp 旧=[mathematics,mat_laserclad,ene_dishstirling,…] 新=[mathematics,cnc,computer]"
+   ],
+   "refactorNote": "FAMOUS / CAT_ABILITY / noteFor / crossSelf 由 gen_midtech.js 内联抽出为 tools/midtech_rules.js；重构后 gen_midtech.js 干跑输出与重构前逐字节一致（32 条 / 漂移 23 / 样例相同）。顺带修正 CAT_ABILITY 的键名 —— 原表用 basicscience / building，而实际分类 id 为 basic / build，导致这两类前置的注释一律退化为兜底句。",
+   "verification": [
+    "重跑为不动点：95/95 未变化",
+    "无断链背景、无重复 id"
+   ],
+   "verdicts": [
+    {
+     "id": "*",
+     "verdict": "repoint",
+     "reason": "派生字段以主管线为准重算；案例集合不变"
+    }
+   ],
+   "summary": {
+    "entries": 95,
+    "backgrounds": 84,
+    "summaries": 69,
+    "membershipUnchanged": true
+   }
+  },
+  "5.1c": {
+   "date": "2026-09-13",
+   "family": "FULL-PIPELINE",
+   "status": "已完成",
+   "scope": "把 eaa086f 已判定删除、当时未同步全量管线的伪边从 graph.json 与 data_full.js 两侧移除",
+   "background": [
+    "v0.9.20/21（eaa086f）从主管线删除 577 条位置式伪边，但未同步全量管线；tree_full.html 因此仍展示已判定为伪边的关系（批次 5.0 抽检的 mil_loyalwingman → tr_reusablerocket 即其一）。"
+   ],
+   "method": {
+    "tool": "tools/prune_full_pipeline.js",
+    "exclusionList": "audit/full_pipeline_exclusions.json（由 --derive 从 git eaa086f^ 与 HEAD 逐边 diff 生成，含来源与日期）",
+    "principle": "只做既成判定的传播，不新增任何判定",
+    "directionSemantics": {
+     "data_full.js EDGES_FULL": "type=dependency → {source:依赖者,target:前置}；type=enables → {source:前置,target:依赖者}（实测确认）",
+     "graph.json": "{source:前置, target:依赖者}"
+    }
+   },
+   "preconditions": [
+    "①清单 577 条中 576 条同时存在于 graph.json 与 data_full.js（两侧一致，互为交叉校验）",
+    "②这 576 条无一被主管线重新承认（逐条核对 child.dependsOn）",
+    "③其两端节点在 TECHS_FULL 中均存在（缺失 0）"
+   ],
+   "counts": {
+    "exclusionList": 577,
+    "removedEdgesFull": 576,
+    "removedEdgesGraphJson": 576,
+    "byType": {
+     "dependency": 575,
+     "enables": 1
+    },
+    "graphJsonEdges": "7539 → 6963",
+    "edgesFull": "17387 → 16811",
+    "nodesUnchanged": {
+     "graphJson": 2299,
+     "techsFull": 13318
+    }
+   },
+   "fixedCounters": {
+    "graph.json meta.totalTechs": "2288 → 2265（dump_data.js 口径 = 主管线 TECHS.length；1c 批次重名合并后一直未同步）",
+    "graph.json meta.totalEdges": "7539 → 6963",
+    "graph.json meta.depEdges": "7333 → 6758",
+    "graph.json meta.enaEdges": "206 → 205",
+    "SCORE_META.totalEdges": "17387 → 16811"
+   },
+   "methodologyFinding": {
+    "claim": "位置式签名启发式检测器与真实判定集合高度不重叠。",
+    "evidence": "本次移除的 576 条真实伪边中，仅 18 条同时命中「parent = parent 分类内 year 严格小于 child.year 的最后一个节点」。",
+    "conclusion": "该签名只能作筛查信号，不能作判据；确定性收口方法是「生成器复现 / 既成判定传播 + 逐边 diff」。与批次 1 的教训一致。"
+   },
+   "verification": [
+    "两侧写入前做往返序列化一致性校验（data_full.js 字节一致；graph.json 一致且保留原「末尾无换行」）",
+    "节点数不变；meta/nodes 结构逐字相同，diff 仅含删除行",
+    "tools/audit_full_pipeline.js：全量管线不承认的边 1,692 → 1,127",
+    "tools/audit_net.js --snapshot：dual.onlyInGraphJson 1,779 → 1,204；onlyInMain 448 不变；受监控指标全部未变",
+    "tools/check_docs.js [OK]；全量 runtime 干跑 [OK]"
+   ],
+   "verdicts": [
+    {
+     "id": "*",
+     "verdict": "delete",
+     "reason": "属 eaa086f 既成判定，仅补齐全量管线一侧；不新增判定"
+    }
+   ],
+   "summary": {
+    "removedTotal": 576,
+    "graphJson": 576,
+    "dataFull": 576,
+    "dataStructureChanged": 0
+   }
+  },
+  "5.1d": {
+   "date": "2026-09-13",
+   "family": "FULL-PIPELINE",
+   "status": "取证完成，处置待审核（未改动任何数据）",
+   "scope": "批次 5.1c 之后，全量管线中仍未被主管线承认的边",
+   "counts": {
+    "remaining": 1127,
+    "yearInv": 29,
+    "positionalSignature": 705,
+    "unacknowledgedOther": 393,
+    "note": "口径：两端均落在主管线 id 空间；判定依据为 child.dependsOn 是否含 parent。"
+   },
+   "classes": [
+    {
+     "name": "yearInv（29 条，全部为 enables 类型）",
+     "assessment": "对应已知的「技术先行、理论后至」结构类，父节点年份晚于子节点，如 蒸汽机(1769) → 热力学(1824)、发电机(1831) → 电磁学(1865)、计算机 → 半导体材料。",
+     "proposedDisposition": "不按伪边删除。主管线 yearInv=0 是硬约束所致（「前置年 ≤ 本节点年」）；全量管线的 enables 语义更宽，可表达「某技术催生了后至的理论」。须另行设计表达方式（如 rel:\"retro\" 边类型），属独立批次。"
+    },
+    {
+     "name": "positionalSignature（705 条）",
+     "assessment": "命中启发式签名，但该签名已被证明不能作判据（见 5.1c.methodologyFinding）。样本如 经典力学 → 波动光学、进化论 → 线性代数、用火 → 石器、水车 → 煤炭开采。",
+     "proposedDisposition": "不得据签名直接删除。须按 eaa086f 的方法（生成器复现 + 逐边 diff）或逐条语义判定处理。"
+    },
+    {
+     "name": "unacknowledgedOther（393 条）",
+     "assessment": "既不命中签名、也非年份倒挂；可能是合理的全量管线独有边，也可能是主管线缺失的边。",
+     "proposedDisposition": "逐条语义判定，分「全量管线错（删）」「主管线缺（补）」两路，出判定草案后执行。"
+    }
+   ],
+   "proposedDisposition": [
+    "①先做生成器复现（把 gen_techs.js + gen_run.js 复制到 /tmp、锚点源换成 assets/data.before_disasm.js 复跑），对 1,127 条逐边比对来源标签，把「可归因于生成器槽位规则」的子集确定性判定为删除；",
+    "②余下按四标准逐条判定，写入本批 verdicts 后再执行；",
+    "③若阶段 3/4 会大幅改动主管线 dependsOn，则 5a 的「按主管线重建」应排在其后，避免重复工作。"
+   ],
+   "verdicts": [],
+   "summary": {
+    "remaining": 1127,
+    "decided": 0,
+    "dataChanged": 0
+   }
   }
+ }
 }

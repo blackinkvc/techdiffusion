@@ -1,0 +1,2316 @@
+{
+ "generatedAt": "2026-09-13",
+ "source": "git eaa086f^ 与 HEAD 的 assets/{techs_extra,techs_extend,techs_more,data}.js 逐边 diff",
+ "provenance": "批次 eaa086f（v0.9.20/21 生成器槽位边收口）判定删除、当时未同步全量管线",
+ "count": 577,
+ "edges": [
+  {
+   "child": "cannon",
+   "parent": "tr_horseshoe"
+  },
+  {
+   "child": "lasers",
+   "parent": "optics"
+  },
+  {
+   "child": "arithmetic",
+   "parent": "astronomy"
+  },
+  {
+   "child": "algebra",
+   "parent": "positional"
+  },
+  {
+   "child": "trigonometry",
+   "parent": "negative_num"
+  },
+  {
+   "child": "negative_num",
+   "parent": "geometry_euclid"
+  },
+  {
+   "child": "negative_num",
+   "parent": "number_theory"
+  },
+  {
+   "child": "number_theory",
+   "parent": "geometry_euclid"
+  },
+  {
+   "child": "tensor_calc",
+   "parent": "biochem"
+  },
+  {
+   "child": "measure_theory",
+   "parent": "biophysics"
+  },
+  {
+   "child": "kolmogorov",
+   "parent": "particle_phys"
+  },
+  {
+   "child": "proof_theory",
+   "parent": "tensor_calc"
+  },
+  {
+   "child": "lambda_calc",
+   "parent": "kolmogorov"
+  },
+  {
+   "child": "special_rel",
+   "parent": "relativity_qm"
+  },
+  {
+   "child": "quantum_mech",
+   "parent": "cosmology"
+  },
+  {
+   "child": "spectroscopy",
+   "parent": "electrochem"
+  },
+  {
+   "child": "valence",
+   "parent": "thermo_chem"
+  },
+  {
+   "child": "germ_theory",
+   "parent": "topology"
+  },
+  {
+   "child": "genetics",
+   "parent": "em_theory"
+  },
+  {
+   "child": "dna_struct",
+   "parent": "numerical"
+  },
+  {
+   "child": "neuroscience",
+   "parent": "biochem"
+  },
+  {
+   "child": "ecology",
+   "parent": "em_theory"
+  },
+  {
+   "child": "ecology",
+   "parent": "genetics"
+  },
+  {
+   "child": "radio_astron",
+   "parent": "particle_phys"
+  },
+  {
+   "child": "bigbang",
+   "parent": "info_theory"
+  },
+  {
+   "child": "replication",
+   "parent": "polymer_chem"
+  },
+  {
+   "child": "complexity",
+   "parent": "standard_model"
+  },
+  {
+   "child": "systems_theory",
+   "parent": "lambda_calc"
+  },
+  {
+   "child": "solid_mech",
+   "parent": "inorganic_chem"
+  },
+  {
+   "child": "biophysics",
+   "parent": "replication"
+  },
+  {
+   "child": "proteomics",
+   "parent": "nanoscience"
+  },
+  {
+   "child": "cognition",
+   "parent": "standard_model"
+  },
+  {
+   "child": "mat_wrought",
+   "parent": "steel"
+  },
+  {
+   "child": "mat_castiron",
+   "parent": "mat_anneal"
+  },
+  {
+   "child": "mat_steel2",
+   "parent": "mat_flatglass"
+  },
+  {
+   "child": "mat_stainless",
+   "parent": "mat_ltsc"
+  },
+  {
+   "child": "mat_siliconsteel",
+   "parent": "mat_die"
+  },
+  {
+   "child": "mat_alalloy",
+   "parent": "mat_phenolic"
+  },
+  {
+   "child": "mat_nialloy",
+   "parent": "mat_siliconsteel"
+  },
+  {
+   "child": "mat_zinc",
+   "parent": "mat_castiron"
+  },
+  {
+   "child": "mat_lead",
+   "parent": "bronze"
+  },
+  {
+   "child": "mat_tin",
+   "parent": "mat_lead"
+  },
+  {
+   "child": "mat_gold",
+   "parent": "mat_copper"
+  },
+  {
+   "child": "mat_gold",
+   "parent": "brick"
+  },
+  {
+   "child": "mat_silver",
+   "parent": "mat_gold"
+  },
+  {
+   "child": "mat_silver",
+   "parent": "mat_copper"
+  },
+  {
+   "child": "mat_metglass",
+   "parent": "composites"
+  },
+  {
+   "child": "mat_sinter",
+   "parent": "mat_solder"
+  },
+  {
+   "child": "mat_sinter",
+   "parent": "mat_tin"
+  },
+  {
+   "child": "mat_forging",
+   "parent": "mat_sinter"
+  },
+  {
+   "child": "mat_forging",
+   "parent": "mat_solder"
+  },
+  {
+   "child": "mat_casting",
+   "parent": "mat_silver"
+  },
+  {
+   "child": "mat_casting",
+   "parent": "mat_gold"
+  },
+  {
+   "child": "mat_rolling",
+   "parent": "mat_porcelain"
+  },
+  {
+   "child": "mat_drawing",
+   "parent": "mat_steel2"
+  },
+  {
+   "child": "mat_extrusion",
+   "parent": "mat_powder"
+  },
+  {
+   "child": "mat_heat",
+   "parent": "mat_wrought"
+  },
+  {
+   "child": "mat_heat",
+   "parent": "steel"
+  },
+  {
+   "child": "mat_quench",
+   "parent": "mat_wrought"
+  },
+  {
+   "child": "mat_anneal",
+   "parent": "mat_temper"
+  },
+  {
+   "child": "mat_carburize",
+   "parent": "mat_zinc"
+  },
+  {
+   "child": "mat_casehard",
+   "parent": "mat_extrusion"
+  },
+  {
+   "child": "mat_porcelain",
+   "parent": "paper"
+  },
+  {
+   "child": "mat_flatglass",
+   "parent": "mat_blastfurnace"
+  },
+  {
+   "child": "mat_opticalglass",
+   "parent": "mat_drawing"
+  },
+  {
+   "child": "mat_glassfiber",
+   "parent": "mat_mgalloy"
+  },
+  {
+   "child": "mat_cement",
+   "parent": "mat_forging"
+  },
+  {
+   "child": "mat_concrete",
+   "parent": "mat_stoneware"
+  },
+  {
+   "child": "mat_sic",
+   "parent": "mat_prestress"
+  },
+  {
+   "child": "mat_alumina",
+   "parent": "mat_nialloy"
+  },
+  {
+   "child": "mat_sin",
+   "parent": "mat_tialloy"
+  },
+  {
+   "child": "mat_wc",
+   "parent": "mat_anodize"
+  },
+  {
+   "child": "mat_rubber",
+   "parent": "mat_refractory"
+  },
+  {
+   "child": "mat_vulcan",
+   "parent": "mat_babbitt"
+  },
+  {
+   "child": "mat_nylon",
+   "parent": "mat_pe"
+  },
+  {
+   "child": "mat_pe",
+   "parent": "mat_aerogel"
+  },
+  {
+   "child": "mat_pvc",
+   "parent": "mat_anodize"
+  },
+  {
+   "child": "mat_ps",
+   "parent": "mat_glassfiber"
+  },
+  {
+   "child": "mat_polyester",
+   "parent": "mat_ps"
+  },
+  {
+   "child": "mat_epoxy",
+   "parent": "mat_nylon"
+  },
+  {
+   "child": "mat_pmma",
+   "parent": "mat_pe"
+  },
+  {
+   "child": "mat_nbr",
+   "parent": "mat_aerogel"
+  },
+  {
+   "child": "mat_abs",
+   "parent": "mat_ductile"
+  },
+  {
+   "child": "mat_pa",
+   "parent": "mat_ptfe"
+  },
+  {
+   "child": "mat_uhmwpe",
+   "parent": "mat_sin"
+  },
+  {
+   "child": "mat_hydrogel",
+   "parent": "mat_metglass"
+  },
+  {
+   "child": "mat_ge",
+   "parent": "mat_prestress"
+  },
+  {
+   "child": "mat_polysi",
+   "parent": "mat_silicone"
+  },
+  {
+   "child": "mat_gaas",
+   "parent": "mat_hydrogel"
+  },
+  {
+   "child": "mat_gan2",
+   "parent": "mat_nylon"
+  },
+  {
+   "child": "mat_inp",
+   "parent": "mat_uhmwpe"
+  },
+  {
+   "child": "mat_ito",
+   "parent": "mat_phenolic"
+  },
+  {
+   "child": "mat_perovskite",
+   "parent": "mat_foamceramic"
+  },
+  {
+   "child": "mat_plywood",
+   "parent": "mat_casehard"
+  },
+  {
+   "child": "mat_cfrp",
+   "parent": "mat_gaas"
+  },
+  {
+   "child": "mat_honeycomb",
+   "parent": "mat_polysi"
+  },
+  {
+   "child": "mat_cmc",
+   "parent": "mat_perovskite"
+  },
+  {
+   "child": "mat_ltsc",
+   "parent": "mat_alalloy"
+  },
+  {
+   "child": "mat_hydrogenstorage",
+   "parent": "mat_cmc"
+  },
+  {
+   "child": "mat_pcm",
+   "parent": "mat_mmc"
+  },
+  {
+   "child": "mat_ferrite",
+   "parent": "mat_alalloy"
+  },
+  {
+   "child": "mat_softmag",
+   "parent": "mat_pcm"
+  },
+  {
+   "child": "mat_biomat",
+   "parent": "mat_softmag"
+  },
+  {
+   "child": "mat_degradable",
+   "parent": "mat_orgsc"
+  },
+  {
+   "child": "mat_stealth",
+   "parent": "mat_inp"
+  },
+  {
+   "child": "mat_insulation",
+   "parent": "mat_plywood"
+  },
+  {
+   "child": "mat_foammetal",
+   "parent": "mat_stealth"
+  },
+  {
+   "child": "mat_blastfurnace",
+   "parent": "mat_carburize"
+  },
+  {
+   "child": "mat_blastfurnace",
+   "parent": "mat_zinc"
+  },
+  {
+   "child": "mat_cupola",
+   "parent": "mat_insulation"
+  },
+  {
+   "child": "mat_continuouscast",
+   "parent": "mat_babbitt"
+  },
+  {
+   "child": "mat_esr",
+   "parent": "mat_honeycomb"
+  },
+  {
+   "child": "mat_metal3dp",
+   "parent": "mat_bioinspired"
+  },
+  {
+   "child": "mat_ded",
+   "parent": "mat_binderjet"
+  },
+  {
+   "child": "mat_coldspray",
+   "parent": "mat_degradable"
+  },
+  {
+   "child": "mat_thermalspray",
+   "parent": "mat_alumina"
+  },
+  {
+   "child": "mat_nitriding",
+   "parent": "mat_thermalspray"
+  },
+  {
+   "child": "mat_ebm",
+   "parent": "mat_ded"
+  },
+  {
+   "child": "mat_sps",
+   "parent": "mat_biomat"
+  },
+  {
+   "child": "mat_mof",
+   "parent": "mat_ebm"
+  },
+  {
+   "child": "ene_coal",
+   "parent": "ene_charcoal"
+  },
+  {
+   "child": "ene_oilshale",
+   "parent": "steam_engine"
+  },
+  {
+   "child": "ene_oilshale",
+   "parent": "battery"
+  },
+  {
+   "child": "ene_biofuel",
+   "parent": "ene_oilshale"
+  },
+  {
+   "child": "ene_ethanol",
+   "parent": "ene_oil"
+  },
+  {
+   "child": "ene_biodiesel",
+   "parent": "ene_ac"
+  },
+  {
+   "child": "ene_biomass",
+   "parent": "ene_biofuel"
+  },
+  {
+   "child": "ene_hydro",
+   "parent": "ene_charcoal"
+  },
+  {
+   "child": "ene_waterturbine",
+   "parent": "ene_natgas"
+  },
+  {
+   "child": "ene_wind",
+   "parent": "waterwheel"
+  },
+  {
+   "child": "ene_windturbine",
+   "parent": "ene_transformer"
+  },
+  {
+   "child": "ene_geothermal",
+   "parent": "ene_biomass"
+  },
+  {
+   "child": "mat_wave",
+   "parent": "ene_tokamak"
+  },
+  {
+   "child": "ene_solarthermal",
+   "parent": "ene_coke"
+  },
+  {
+   "child": "ene_steamturbine",
+   "parent": "ene_hydroplant"
+  },
+  {
+   "child": "ene_leadacid",
+   "parent": "petroleum"
+  },
+  {
+   "child": "ene_nicd",
+   "parent": "ene_wpt"
+  },
+  {
+   "child": "ene_liion",
+   "parent": "ene_batteryev"
+  },
+  {
+   "child": "ene_h2fc",
+   "parent": "ene_tidal"
+  },
+  {
+   "child": "ene_flow",
+   "parent": "mat_wave"
+  },
+  {
+   "child": "ene_pumped",
+   "parent": "ene_ac"
+  },
+  {
+   "child": "ene_pumped",
+   "parent": "ene_biodiesel"
+  },
+  {
+   "child": "ene_h2storage",
+   "parent": "ene_flow"
+  },
+  {
+   "child": "ene_nuclear",
+   "parent": "ene_gasturbine"
+  },
+  {
+   "child": "ene_phwr",
+   "parent": "ene_h2fc"
+  },
+  {
+   "child": "ene_icf",
+   "parent": "ene_phwr"
+  },
+  {
+   "child": "ene_satpower",
+   "parent": "ene_tokamak"
+  },
+  {
+   "child": "ene_wpt",
+   "parent": "ene_pumped"
+  },
+  {
+   "child": "ene_thermoelectric",
+   "parent": "ene_natgas"
+  },
+  {
+   "child": "ene_piezoelectric",
+   "parent": "ene_district"
+  },
+  {
+   "child": "ene_biogenic",
+   "parent": "ene_dc"
+  },
+  {
+   "child": "ene_clathrate",
+   "parent": "ene_icf"
+  },
+  {
+   "child": "ene_hotdry",
+   "parent": "ene_h2storage"
+  },
+  {
+   "child": "ene_methanol",
+   "parent": "ene_ammonia"
+  },
+  {
+   "child": "ene_hydrogenfuel",
+   "parent": "ene_biogenic"
+  },
+  {
+   "child": "ene_gasfired",
+   "parent": "ene_methanol"
+  },
+  {
+   "child": "ene_hydroplant",
+   "parent": "ene_coalfired"
+  },
+  {
+   "child": "ene_windfarm",
+   "parent": "ene_molten"
+  },
+  {
+   "child": "ene_solarfarm",
+   "parent": "ene_windfarm"
+  },
+  {
+   "child": "ene_heatpump",
+   "parent": "ene_oil"
+  },
+  {
+   "child": "ene_district",
+   "parent": "internal_combustion"
+  },
+  {
+   "child": "ene_wasteheat",
+   "parent": "ene_hydrogenfuel"
+  },
+  {
+   "child": "ene_fuelcellcar",
+   "parent": "ene_batteryev"
+  },
+  {
+   "child": "ene_peaker",
+   "parent": "ene_gasfired"
+  },
+  {
+   "child": "ene_island",
+   "parent": "ene_v2g"
+  },
+  {
+   "child": "ene_bess",
+   "parent": "ene_solidstate"
+  },
+  {
+   "child": "ene_gravity",
+   "parent": "ene_island"
+  },
+  {
+   "child": "ene_liquidair",
+   "parent": "ene_bess"
+  },
+  {
+   "child": "ene_thermalbattery",
+   "parent": "ene_solarfarm"
+  },
+  {
+   "child": "ene_bipv",
+   "parent": "ene_gravity"
+  },
+  {
+   "child": "ene_solartower",
+   "parent": "ene_thermalbattery"
+  },
+  {
+   "child": "ene_dishstirling",
+   "parent": "ene_solartower"
+  },
+  {
+   "child": "ene_linearfresnel",
+   "parent": "ene_bipv"
+  },
+  {
+   "child": "ene_hydrothermal",
+   "parent": "ene_hotdry"
+  },
+  {
+   "child": "ene_borehole",
+   "parent": "ene_linearfresnel"
+  },
+  {
+   "child": "mfg_chisel",
+   "parent": "mfg_axe"
+  },
+  {
+   "child": "mfg_chisel",
+   "parent": "mfg_hammer"
+  },
+  {
+   "child": "mfg_hammer",
+   "parent": "mfg_knife"
+  },
+  {
+   "child": "mfg_axe",
+   "parent": "mfg_knife"
+  },
+  {
+   "child": "mfg_saw",
+   "parent": "mfg_drill"
+  },
+  {
+   "child": "mfg_saw",
+   "parent": "mfg_chisel"
+  },
+  {
+   "child": "mfg_drill",
+   "parent": "mfg_chisel"
+  },
+  {
+   "child": "mfg_drill",
+   "parent": "mfg_axe"
+  },
+  {
+   "child": "mfg_boring",
+   "parent": "mfg_wiredraw"
+  },
+  {
+   "child": "mfg_drillpress",
+   "parent": "mfg_grinder"
+  },
+  {
+   "child": "mfg_cnc",
+   "parent": "mfg_edm"
+  },
+  {
+   "child": "mfg_turnmill",
+   "parent": "mfg_cam"
+  },
+  {
+   "child": "mfg_sandcast",
+   "parent": "mfg_abrasive"
+  },
+  {
+   "child": "mfg_sandcast",
+   "parent": "mfg_saw"
+  },
+  {
+   "child": "mfg_lostwax",
+   "parent": "mfg_abrasive"
+  },
+  {
+   "child": "mfg_diecast",
+   "parent": "mfg_mill"
+  },
+  {
+   "child": "mfg_forging2",
+   "parent": "mfg_drillpress"
+  },
+  {
+   "child": "mfg_rivet",
+   "parent": "mfg_lapp"
+  },
+  {
+   "child": "mfg_laserweld",
+   "parent": "mfg_wedm"
+  },
+  {
+   "child": "mfg_fsw",
+   "parent": "mfg_onmachinem"
+  },
+  {
+   "child": "mfg_ebw",
+   "parent": "mfg_mc"
+  },
+  {
+   "child": "mfg_braze",
+   "parent": "mfg_rivet"
+  },
+  {
+   "child": "mfg_adhesive",
+   "parent": "mfg_braze"
+  },
+  {
+   "child": "mfg_standard",
+   "parent": "mfg_drawing2"
+  },
+  {
+   "child": "mfg_assembly",
+   "parent": "mfg_gasweld"
+  },
+  {
+   "child": "mfg_fixture",
+   "parent": "mfg_standard"
+  },
+  {
+   "child": "mfg_extrude2",
+   "parent": "mfg_fixture"
+  },
+  {
+   "child": "mfg_rolling2",
+   "parent": "mfg_boring"
+  },
+  {
+   "child": "mfg_wiredraw",
+   "parent": "mfg_thread"
+  },
+  {
+   "child": "mfg_furnace",
+   "parent": "mfg_extrude2"
+  },
+  {
+   "child": "mfg_vacfurnace",
+   "parent": "mfg_plasma"
+  },
+  {
+   "child": "mfg_shotblast",
+   "parent": "mfg_blow"
+  },
+  {
+   "child": "mfg_polish",
+   "parent": "mfg_mold"
+  },
+  {
+   "child": "mfg_ultraprecise",
+   "parent": "mfg_laserweld"
+  },
+  {
+   "child": "mfg_micro",
+   "parent": "mfg_vacfurnace"
+  },
+  {
+   "child": "mfg_ecm",
+   "parent": "mfg_micro"
+  },
+  {
+   "child": "mfg_pim",
+   "parent": "mfg_waterjet"
+  },
+  {
+   "child": "mfg_cmm",
+   "parent": "mfg_ecm"
+  },
+  {
+   "child": "mfg_reverse",
+   "parent": "mfg_turnmill"
+  },
+  {
+   "child": "mfg_plc",
+   "parent": "mfg_fms"
+  },
+  {
+   "child": "mfg_servo",
+   "parent": "mfg_chemill"
+  },
+  {
+   "child": "mfg_harmonic",
+   "parent": "mfg_hip"
+  },
+  {
+   "child": "mfg_gauge",
+   "parent": "mfg_adhesive"
+  },
+  {
+   "child": "mfg_sixsigma",
+   "parent": "mfg_additive"
+  },
+  {
+   "child": "mfg_lean",
+   "parent": "mfg_cmm"
+  },
+  {
+   "child": "mfg_kanban",
+   "parent": "mfg_linearmotor"
+  },
+  {
+   "child": "mfg_cam",
+   "parent": "mfg_pim"
+  },
+  {
+   "child": "mfg_fms",
+   "parent": "mfg_lasercut"
+  },
+  {
+   "child": "mfg_adaptive",
+   "parent": "mfg_lean"
+  },
+  {
+   "child": "mfg_selfassemble",
+   "parent": "mfg_sixsigma"
+  },
+  {
+   "child": "mfg_bionics",
+   "parent": "mfg_selfassemble"
+  },
+  {
+   "child": "mfg_abrasive",
+   "parent": "mfg_saw"
+  },
+  {
+   "child": "mfg_abrasive",
+   "parent": "mfg_drill"
+  },
+  {
+   "child": "mfg_toolholder",
+   "parent": "mfg_assembly"
+  },
+  {
+   "child": "mfg_coolant",
+   "parent": "mfg_toolholder"
+  },
+  {
+   "child": "mfg_edmwire",
+   "parent": "mfg_ultraprecise"
+  },
+  {
+   "child": "mfg_roboticweld",
+   "parent": "mfg_reverse"
+  },
+  {
+   "child": "mfg_aps",
+   "parent": "mfg_bionics"
+  },
+  {
+   "child": "mfg_quality",
+   "parent": "mfg_adaptive"
+  },
+  {
+   "child": "mfg_ecmg",
+   "parent": "mfg_edmwire"
+  },
+  {
+   "child": "mfg_ultrasonicm",
+   "parent": "mfg_quality"
+  },
+  {
+   "child": "mfg_awj",
+   "parent": "mfg_roboticweld"
+  },
+  {
+   "child": "mfg_toolmonitor",
+   "parent": "mfg_mes"
+  },
+  {
+   "child": "mfg_cryogenicm",
+   "parent": "mfg_digitaltwin"
+  },
+  {
+   "child": "mfg_onmachinem",
+   "parent": "mfg_toolmonitor"
+  },
+  {
+   "child": "mfg_robotgripper",
+   "parent": "mfg_awj"
+  },
+  {
+   "child": "mfg_visionguide",
+   "parent": "mfg_cryogenicm"
+  },
+  {
+   "child": "mfg_digitalshop",
+   "parent": "mfg_hybridm"
+  },
+  {
+   "child": "tr_raft",
+   "parent": "tr_canoe"
+  },
+  {
+   "child": "tr_jetliner",
+   "parent": "tr_rov"
+  },
+  {
+   "child": "tr_hsr",
+   "parent": "tr_lunarlander"
+  },
+  {
+   "child": "tr_tram",
+   "parent": "tr_excavator"
+  },
+  {
+   "child": "tr_steamloco",
+   "parent": "steam_ship"
+  },
+  {
+   "child": "tr_diesel loco",
+   "parent": "tr_simulator"
+  },
+  {
+   "child": "tr_ropeway",
+   "parent": "tr_horseshoe"
+  },
+  {
+   "child": "tr_elevator",
+   "parent": "tr_airship"
+  },
+  {
+   "child": "tr_escalator",
+   "parent": "tr_destroyer"
+  },
+  {
+   "child": "tr_crane",
+   "parent": "road"
+  },
+  {
+   "child": "tr_bulldozer",
+   "parent": "tr_autogyro"
+  },
+  {
+   "child": "tr_excavator",
+   "parent": "railway"
+  },
+  {
+   "child": "tr_aircraftcarrier",
+   "parent": "tr_forklift"
+  },
+  {
+   "child": "tr_destroyer",
+   "parent": "automobile"
+  },
+  {
+   "child": "tr_cruiser",
+   "parent": "tr_cablecar"
+  },
+  {
+   "child": "tr_icebreaker",
+   "parent": "satellite"
+  },
+  {
+   "child": "tr_dredger",
+   "parent": "tr_cruiser"
+  },
+  {
+   "child": "tr_ekranoplan",
+   "parent": "tr_icebreaker"
+  },
+  {
+   "child": "tr_hoverboard",
+   "parent": "tr_passdrone"
+  },
+  {
+   "child": "tr_skateboard",
+   "parent": "tr_jetpack"
+  },
+  {
+   "child": "tr_horseshoe",
+   "parent": "tr_stirrup"
+  },
+  {
+   "child": "tr_solidtire",
+   "parent": "tr_dredger"
+  },
+  {
+   "child": "tr_suspension",
+   "parent": "tr_solidtire"
+  },
+  {
+   "child": "tr_steering",
+   "parent": "tr_suspension"
+  },
+  {
+   "child": "tr_brake",
+   "parent": "tr_steering"
+  },
+  {
+   "child": "tr_navigation",
+   "parent": "horse_gear"
+  },
+  {
+   "child": "tr_autopilot",
+   "parent": "tr_diesel loco"
+  },
+  {
+   "child": "tr_radar2",
+   "parent": "tr_rocket"
+  },
+  {
+   "child": "tr_blackbox",
+   "parent": "tr_skateboard"
+  },
+  {
+   "child": "tr_runway",
+   "parent": "tr_emu"
+  },
+  {
+   "child": "tr_interchange",
+   "parent": "tr_runway"
+  },
+  {
+   "child": "tr_servicearea",
+   "parent": "tr_loader"
+  },
+  {
+   "child": "tr_gasstation",
+   "parent": "tr_interchange"
+  },
+  {
+   "child": "tr_v2x",
+   "parent": "drone"
+  },
+  {
+   "child": "tr_containership",
+   "parent": "tr_hovercraft"
+  },
+  {
+   "child": "tr_roship",
+   "parent": "tr_gasstation"
+  },
+  {
+   "child": "tr_hsrbridge",
+   "parent": "tr_roship"
+  },
+  {
+   "child": "tr_monorail",
+   "parent": "tr_hsrbridge"
+  },
+  {
+   "child": "tr_funicular",
+   "parent": "tr_brake"
+  },
+  {
+   "child": "tr_pipeline",
+   "parent": "tr_funicular"
+  },
+  {
+   "child": "tr_hyperloop",
+   "parent": "tr_hoverboard"
+  },
+  {
+   "child": "tr_evcar",
+   "parent": "gps"
+  },
+  {
+   "child": "tr_fcevtruck",
+   "parent": "tr_v2x"
+  },
+  {
+   "child": "tr_personalair",
+   "parent": "tr_fcevtruck"
+  },
+  {
+   "child": "tr_auv",
+   "parent": "tr_ekranoplan"
+  },
+  {
+   "child": "tr_rov",
+   "parent": "tr_blackbox"
+  },
+  {
+   "child": "tr_cargo_drone",
+   "parent": "tr_personalair"
+  },
+  {
+   "child": "tr_lunarlander",
+   "parent": "tr_auv"
+  },
+  {
+   "child": "inf_pen",
+   "parent": "paper"
+  },
+  {
+   "child": "inf_carbonpaper",
+   "parent": "inf_pencil"
+  },
+  {
+   "child": "inf_mimeograph",
+   "parent": "inf_typewriter"
+  },
+  {
+   "child": "inf_photocopier",
+   "parent": "inf_ballpoint"
+  },
+  {
+   "child": "inf_fax",
+   "parent": "photography"
+  },
+  {
+   "child": "inf_vcr",
+   "parent": "ai"
+  },
+  {
+   "child": "inf_microprocessor",
+   "parent": "inf_wan"
+  },
+  {
+   "child": "inf_hdd",
+   "parent": "inf_vcr"
+  },
+  {
+   "child": "inf_floppy",
+   "parent": "inf_microprocessor"
+  },
+  {
+   "child": "inf_flash",
+   "parent": "inf_camcorder"
+  },
+  {
+   "child": "inf_ssd",
+   "parent": "www"
+  },
+  {
+   "child": "inf_compiler",
+   "parent": "inf_rl"
+  },
+  {
+   "child": "inf_pl_python",
+   "parent": "inf_ssd"
+  },
+  {
+   "child": "inf_db",
+   "parent": "lasers"
+  },
+  {
+   "child": "inf_rdbms",
+   "parent": "touchscreen"
+  },
+  {
+   "child": "inf_nosql",
+   "parent": "inf_usb"
+  },
+  {
+   "child": "inf_email",
+   "parent": "inf_floppy"
+  },
+  {
+   "child": "inf_social",
+   "parent": "inf_nosql"
+  },
+  {
+   "child": "inf_fiber",
+   "parent": "inf_rdbms"
+  },
+  {
+   "child": "inf_router",
+   "parent": "inf_flash"
+  },
+  {
+   "child": "inf_vpn",
+   "parent": "inf_im"
+  },
+  {
+   "child": "inf_blockchain",
+   "parent": "inf_knowledge"
+  },
+  {
+   "child": "inf_pubkey",
+   "parent": "camera"
+  },
+  {
+   "child": "inf_hash",
+   "parent": "inf_color_tv"
+  },
+  {
+   "child": "inf_qrcode",
+   "parent": "inf_bluetooth"
+  },
+  {
+   "child": "inf_rfid",
+   "parent": "inf_barcode"
+  },
+  {
+   "child": "inf_sensor_net",
+   "parent": "inf_net_switch"
+  },
+  {
+   "child": "inf_edge",
+   "parent": "inf_social"
+  },
+  {
+   "child": "inf_cloud",
+   "parent": "inf_edge"
+  },
+  {
+   "child": "inf_quantumcom",
+   "parent": "inf_sensor_net"
+  },
+  {
+   "child": "inf_qkd",
+   "parent": "inf_emap"
+  },
+  {
+   "child": "inf_dl",
+   "parent": "inf_agile"
+  },
+  {
+   "child": "inf_nn",
+   "parent": "inf_modem"
+  },
+  {
+   "child": "inf_expert",
+   "parent": "inf_gis"
+  },
+  {
+   "child": "inf_knowledge",
+   "parent": "smartphone"
+  },
+  {
+   "child": "inf_nlp",
+   "parent": "inf_os"
+  },
+  {
+   "child": "inf_asr",
+   "parent": "inf_compiler"
+  },
+  {
+   "child": "inf_recommend",
+   "parent": "inf_browser"
+  },
+  {
+   "child": "inf_ar",
+   "parent": "inf_recommend"
+  },
+  {
+   "child": "inf_vr",
+   "parent": "inf_quantumcom"
+  },
+  {
+   "child": "inf_dataviz",
+   "parent": "inf_vr"
+  },
+  {
+   "child": "inf_emap",
+   "parent": "inf_dataviz"
+  },
+  {
+   "child": "inf_navsoft",
+   "parent": "inf_ar"
+  },
+  {
+   "child": "inf_watermark",
+   "parent": "inf_navsoft"
+  },
+  {
+   "child": "inf_ecc",
+   "parent": "inf_symenc"
+  },
+  {
+   "child": "inf_compression",
+   "parent": "inf_nlp"
+  },
+  {
+   "child": "inf_container",
+   "parent": "inf_sdn"
+  },
+  {
+   "child": "inf_microservice",
+   "parent": "inf_fog"
+  },
+  {
+   "child": "inf_lowcode",
+   "parent": "inf_microservice"
+  },
+  {
+   "child": "inf_devops",
+   "parent": "inf_lowcode"
+  },
+  {
+   "child": "inf_uml",
+   "parent": "inf_wifi"
+  },
+  {
+   "child": "inf_middleware",
+   "parent": "inf_steg"
+  },
+  {
+   "child": "inf_cdn",
+   "parent": "inf_middleware"
+  },
+  {
+   "child": "inf_cache",
+   "parent": "inf_loadbalancer"
+  },
+  {
+   "child": "inf_graphdb",
+   "parent": "inf_api"
+  },
+  {
+   "child": "inf_timeseries",
+   "parent": "inf_graphdb"
+  },
+  {
+   "child": "inf_vector_db",
+   "parent": "inf_cicd"
+  },
+  {
+   "child": "inf_recommend2",
+   "parent": "inf_pl_python"
+  },
+  {
+   "child": "inf_rl",
+   "parent": "inf_codec"
+  },
+  {
+   "child": "inf_rpa",
+   "parent": "inf_vector_db"
+  },
+  {
+   "child": "inf_alloptical",
+   "parent": "inf_timeseries"
+  },
+  {
+   "child": "inf_400g",
+   "parent": "inf_rpa"
+  },
+  {
+   "child": "inf_leo",
+   "parent": "inf_400g"
+  },
+  {
+   "child": "inf_quantuminternet",
+   "parent": "inf_6g"
+  },
+  {
+   "child": "inf_multimodal",
+   "parent": "inf_quantuminternet"
+  },
+  {
+   "child": "inf_embedding",
+   "parent": "inf_leo"
+  },
+  {
+   "child": "inf_vectorsearch",
+   "parent": "inf_embedding"
+  },
+  {
+   "child": "inf_rag",
+   "parent": "inf_worldmodel"
+  },
+  {
+   "child": "inf_alignment",
+   "parent": "inf_rag"
+  },
+  {
+   "child": "inf_speechsyn",
+   "parent": "inf_cache"
+  },
+  {
+   "child": "inf_digitalhuman",
+   "parent": "inf_alignment"
+  },
+  {
+   "child": "inf_edgeai",
+   "parent": "inf_diffusion"
+  },
+  {
+   "child": "inf_aisearch",
+   "parent": "inf_digitalhuman"
+  },
+  {
+   "child": "inf_codegen",
+   "parent": "inf_aisearch"
+  },
+  {
+   "child": "bio_herb",
+   "parent": "fermentation"
+  },
+  {
+   "child": "bio_acupuncture",
+   "parent": "plow"
+  },
+  {
+   "child": "bio_pharmacology",
+   "parent": "vaccination"
+  },
+  {
+   "child": "bio_distill",
+   "parent": "bio_anatomy"
+  },
+  {
+   "child": "bio_aspirin",
+   "parent": "medical_imaging"
+  },
+  {
+   "child": "bio_penicillin",
+   "parent": "bio_bcg"
+  },
+  {
+   "child": "bio_bcg",
+   "parent": "bio_vitamin"
+  },
+  {
+   "child": "bio_insulin",
+   "parent": "bio_bcg"
+  },
+  {
+   "child": "bio_hormone",
+   "parent": "bio_aspirin"
+  },
+  {
+   "child": "bio_vitamin",
+   "parent": "bio_bloodtype"
+  },
+  {
+   "child": "bio_vitamin",
+   "parent": "bio_radiotherapy"
+  },
+  {
+   "child": "bio_transfusion",
+   "parent": "bio_pathogen"
+  },
+  {
+   "child": "bio_transfusion",
+   "parent": "bio_nutrition"
+  },
+  {
+   "child": "bio_bloodtype",
+   "parent": "bio_chemo"
+  },
+  {
+   "child": "bio_suture",
+   "parent": "bio_prescription"
+  },
+  {
+   "child": "bio_suture",
+   "parent": "bio_acupuncture"
+  },
+  {
+   "child": "bio_orthopedics",
+   "parent": "bio_pharmacology"
+  },
+  {
+   "child": "bio_neurosurgery",
+   "parent": "bio_hormone"
+  },
+  {
+   "child": "bio_cardiovascular",
+   "parent": "bio_neurosurgery"
+  },
+  {
+   "child": "bio_cardiovascular",
+   "parent": "bio_hormone"
+  },
+  {
+   "child": "bio_transplant",
+   "parent": "bio_inhaler"
+  },
+  {
+   "child": "bio_dialysis",
+   "parent": "bio_bioreactor"
+  },
+  {
+   "child": "bio_artkidney",
+   "parent": "bio_bloodprod"
+  },
+  {
+   "child": "bio_pacemaker",
+   "parent": "bio_transplant"
+  },
+  {
+   "child": "bio_stent",
+   "parent": "bio_cochlear"
+  },
+  {
+   "child": "bio_endoscope",
+   "parent": "bio_orthopedics"
+  },
+  {
+   "child": "bio_endoscope",
+   "parent": "bio_pharmacology"
+  },
+  {
+   "child": "bio_laparoscope",
+   "parent": "bio_cardiovascular"
+  },
+  {
+   "child": "bio_laparoscope",
+   "parent": "bio_neurosurgery"
+  },
+  {
+   "child": "bio_ultrasound",
+   "parent": "bio_artkidney"
+  },
+  {
+   "child": "bio_ct",
+   "parent": "bio_transdermal"
+  },
+  {
+   "child": "bio_mri",
+   "parent": "genetic_engineering"
+  },
+  {
+   "child": "bio_nuclear_med",
+   "parent": "bio_ultrasound"
+  },
+  {
+   "child": "bio_pet",
+   "parent": "bio_arthroplasty"
+  },
+  {
+   "child": "bio_seq",
+   "parent": "bio_transgenic"
+  },
+  {
+   "child": "bio_transgenic",
+   "parent": "bio_mri"
+  },
+  {
+   "child": "bio_clone",
+   "parent": "gmo"
+  },
+  {
+   "child": "bio_ivf",
+   "parent": "bio_seq"
+  },
+  {
+   "child": "bio_tissueeng",
+   "parent": "bio_stent"
+  },
+  {
+   "child": "bio_artskin",
+   "parent": "bio_stent"
+  },
+  {
+   "child": "bio_prosthesis",
+   "parent": "bio_suture"
+  },
+  {
+   "child": "bio_prosthesis",
+   "parent": "bio_prescription"
+  },
+  {
+   "child": "bio_hearingaid",
+   "parent": "bio_xray"
+  },
+  {
+   "child": "bio_glasses",
+   "parent": "bio_physiology"
+  },
+  {
+   "child": "bio_contactlens",
+   "parent": "surgery"
+  },
+  {
+   "child": "bio_iol",
+   "parent": "bio_dialysis"
+  },
+  {
+   "child": "bio_denture",
+   "parent": "bio_surgery"
+  },
+  {
+   "child": "bio_dentistry",
+   "parent": "plow"
+  },
+  {
+   "child": "bio_epidemiology",
+   "parent": "bio_endoscope"
+  },
+  {
+   "child": "bio_epidemiology",
+   "parent": "bio_orthopedics"
+  },
+  {
+   "child": "bio_disinfectant",
+   "parent": "bio_epidemiology"
+  },
+  {
+   "child": "bio_disinfectant",
+   "parent": "bio_endoscope"
+  },
+  {
+   "child": "bio_probiotic",
+   "parent": "bio_laparoscope"
+  },
+  {
+   "child": "bio_probiotic",
+   "parent": "bio_cardiovascular"
+  },
+  {
+   "child": "bio_nutrition",
+   "parent": "bio_disinfectant"
+  },
+  {
+   "child": "bio_nutrition",
+   "parent": "bio_epidemiology"
+  },
+  {
+   "child": "bio_enzyme",
+   "parent": "bio_nuclear_med"
+  },
+  {
+   "child": "bio_enzyme",
+   "parent": "bio_ultrasound"
+  },
+  {
+   "child": "bio_fermentation",
+   "parent": "bio_probiotic"
+  },
+  {
+   "child": "bio_fermentation",
+   "parent": "bio_laparoscope"
+  },
+  {
+   "child": "bio_monoclonal",
+   "parent": "bio_transgenic"
+  },
+  {
+   "child": "bio_monoclonal",
+   "parent": "bio_mri"
+  },
+  {
+   "child": "bio_interferon",
+   "parent": "dna"
+  },
+  {
+   "child": "bio_chemo",
+   "parent": "bio_fermentation"
+  },
+  {
+   "child": "bio_chemo",
+   "parent": "bio_probiotic"
+  },
+  {
+   "child": "bio_radiotherapy",
+   "parent": "bio_chemo"
+  },
+  {
+   "child": "bio_radiotherapy",
+   "parent": "bio_fermentation"
+  },
+  {
+   "child": "bio_targeted",
+   "parent": "bio_mrnavax"
+  },
+  {
+   "child": "bio_immunotherapy",
+   "parent": "bio_organoid"
+  },
+  {
+   "child": "bio_genetherapy",
+   "parent": "bio_mrnavax"
+  },
+  {
+   "child": "bio_celltherapy",
+   "parent": "bio_proteomics2"
+  },
+  {
+   "child": "bio_ivd",
+   "parent": "bio_nuclear_med"
+  },
+  {
+   "child": "bio_poc",
+   "parent": "bio_artskin"
+  },
+  {
+   "child": "bio_poc",
+   "parent": "bio_tissueeng"
+  },
+  {
+   "child": "bio_wearable",
+   "parent": "bio_celltherapy"
+  },
+  {
+   "child": "bio_telemed",
+   "parent": "bio_ivd"
+  },
+  {
+   "child": "bio_telemed",
+   "parent": "bio_enzyme"
+  },
+  {
+   "child": "bio_ehr",
+   "parent": "bio_pet"
+  },
+  {
+   "child": "bio_medicalai",
+   "parent": "bio_cart"
+  },
+  {
+   "child": "bio_medicalai",
+   "parent": "bio_immunotherapy"
+  },
+  {
+   "child": "bio_surgerobot",
+   "parent": "bio_wearable"
+  },
+  {
+   "child": "bio_surgerobot",
+   "parent": "bio_celltherapy"
+  },
+  {
+   "child": "bio_reharobot",
+   "parent": "bio_wearable"
+  },
+  {
+   "child": "bio_exoskeleton",
+   "parent": "bio_surgerobot"
+  },
+  {
+   "child": "bio_bci",
+   "parent": "bio_ehr"
+  },
+  {
+   "child": "bio_bci",
+   "parent": "bio_pet"
+  },
+  {
+   "child": "bio_neuromod",
+   "parent": "bio_poc"
+  },
+  {
+   "child": "bio_neuromod",
+   "parent": "bio_artskin"
+  },
+  {
+   "child": "bio_dbs",
+   "parent": "bio_epigenetics"
+  },
+  {
+   "child": "bio_bioniceye",
+   "parent": "bio_exoskeleton"
+  },
+  {
+   "child": "bio_bioniceye",
+   "parent": "bio_reharobot"
+  },
+  {
+   "child": "bio_cochlear",
+   "parent": "bio_seq"
+  },
+  {
+   "child": "bio_bio3dp",
+   "parent": "bio_bioniceye"
+  },
+  {
+   "child": "bio_bio3dp",
+   "parent": "bio_exoskeleton"
+  },
+  {
+   "child": "bio_organoid",
+   "parent": "robot_vacuum"
+  },
+  {
+   "child": "bio_organoid",
+   "parent": "bio_pharmacogen"
+  },
+  {
+   "child": "bio_synbio",
+   "parent": "bio_bio3dp"
+  },
+  {
+   "child": "bio_synbio",
+   "parent": "bio_bioniceye"
+  },
+  {
+   "child": "bio_directedevo",
+   "parent": "bio_genetherapy"
+  },
+  {
+   "child": "bio_directedevo",
+   "parent": "bio_targeted"
+  },
+  {
+   "child": "bio_proteineng",
+   "parent": "bio_neuromod"
+  },
+  {
+   "child": "bio_proteineng",
+   "parent": "bio_poc"
+  },
+  {
+   "child": "bio_metabeng",
+   "parent": "bio_genetherapy"
+  },
+  {
+   "child": "bio_microbiome",
+   "parent": "bio_synbio"
+  },
+  {
+   "child": "bio_microbiome",
+   "parent": "bio_bio3dp"
+  },
+  {
+   "child": "bio_phage",
+   "parent": "bio_bloodtype"
+  },
+  {
+   "child": "bio_drugdelivery",
+   "parent": "bio_telemed"
+  },
+  {
+   "child": "bio_drugdelivery",
+   "parent": "bio_ivd"
+  },
+  {
+   "child": "bio_nanomed",
+   "parent": "bio_microbiome"
+  },
+  {
+   "child": "bio_nanomed",
+   "parent": "bio_synbio"
+  },
+  {
+   "child": "bio_sustained",
+   "parent": "bio_telemed"
+  },
+  {
+   "child": "bio_transdermal",
+   "parent": "bio_bci"
+  },
+  {
+   "child": "bio_transdermal",
+   "parent": "bio_ehr"
+  },
+  {
+   "child": "bio_inhaler",
+   "parent": "bio_drugdelivery"
+  },
+  {
+   "child": "bio_genevector",
+   "parent": "bio_transdermal"
+  },
+  {
+   "child": "bio_genevector",
+   "parent": "bio_bci"
+  },
+  {
+   "child": "bio_lipidnp",
+   "parent": "bio_microbiome"
+  },
+  {
+   "child": "bio_vaccineplatform",
+   "parent": "bio_nanomed"
+  },
+  {
+   "child": "bio_pathogen",
+   "parent": "bio_nutrition"
+  },
+  {
+   "child": "bio_pathogen",
+   "parent": "bio_disinfectant"
+  },
+  {
+   "child": "bio_epigenetics",
+   "parent": "bio_proteineng"
+  },
+  {
+   "child": "bio_epigenetics",
+   "parent": "bio_neuromod"
+  },
+  {
+   "child": "bio_proteomics2",
+   "parent": "bio_artlung"
+  },
+  {
+   "child": "bio_metabolomics",
+   "parent": "bio_vaccineplatform"
+  },
+  {
+   "child": "bio_metabolomics",
+   "parent": "bio_lipidnp"
+  },
+  {
+   "child": "bio_spatialtrans",
+   "parent": "bio_medicalai"
+  },
+  {
+   "child": "bio_spatialtrans",
+   "parent": "bio_cart"
+  },
+  {
+   "child": "bio_singlecell",
+   "parent": "robot_vacuum"
+  },
+  {
+   "child": "bio_organonchip",
+   "parent": "bio_spatialtrans"
+  },
+  {
+   "child": "bio_organonchip",
+   "parent": "bio_medicalai"
+  },
+  {
+   "child": "bio_universalvax",
+   "parent": "smart_mower"
+  },
+  {
+   "child": "bio_newantibiotic",
+   "parent": "bio_metabolomics"
+  },
+  {
+   "child": "bio_newantibiotic",
+   "parent": "bio_vaccineplatform"
+  },
+  {
+   "child": "bio_antimicrobialpep",
+   "parent": "bio_metabolomics"
+  },
+  {
+   "child": "bio_precisionmed",
+   "parent": "bio_spatialtrans"
+  },
+  {
+   "child": "bio_pharmacogen",
+   "parent": "bio_antimicrobialpep"
+  },
+  {
+   "child": "bio_pharmacogen",
+   "parent": "bio_newantibiotic"
+  },
+  {
+   "child": "bio_liquidbiopsy",
+   "parent": "bio_organonchip"
+  },
+  {
+   "child": "bio_ctdna",
+   "parent": "bio_precisionmed"
+  },
+  {
+   "child": "bio_cgm",
+   "parent": "bio_ctdna"
+  },
+  {
+   "child": "bio_cgm",
+   "parent": "bio_liquidbiopsy"
+  },
+  {
+   "child": "bio_ecmo",
+   "parent": "bio_genevector"
+  },
+  {
+   "child": "bio_artliver",
+   "parent": "bio_metabeng"
+  },
+  {
+   "child": "bio_artliver",
+   "parent": "bio_directedevo"
+  },
+  {
+   "child": "bio_artlung",
+   "parent": "bio_artliver"
+  },
+  {
+   "child": "bio_artlung",
+   "parent": "bio_metabeng"
+  },
+  {
+   "child": "bio_arthroplasty",
+   "parent": "bio_antiviral"
+  },
+  {
+   "child": "bld_tile",
+   "parent": "bld_mortise"
+  },
+  {
+   "child": "bld_timber",
+   "parent": "bld_brick"
+  },
+  {
+   "child": "bld_stone",
+   "parent": "bld_tile"
+  },
+  {
+   "child": "bld_arch",
+   "parent": "bld_pile"
+  },
+  {
+   "child": "bld_ribvault",
+   "parent": "bld_romanconc"
+  },
+  {
+   "child": "bld_romanconc",
+   "parent": "bld_dome"
+  },
+  {
+   "child": "bld_suspension",
+   "parent": "bld_framing"
+  },
+  {
+   "child": "bld_truss",
+   "parent": "bld_suspension"
+  },
+  {
+   "child": "bld_tunnel3",
+   "parent": "bld_steelbridge"
+  },
+  {
+   "child": "bld_pile",
+   "parent": "bld_stone"
+  },
+  {
+   "child": "bld_raftfound",
+   "parent": "bld_tunnel3"
+  },
+  {
+   "child": "bld_ground",
+   "parent": "bld_raftfound"
+  },
+  {
+   "child": "bld_waterproof",
+   "parent": "bld_grouting"
+  },
+  {
+   "child": "bld_insulation2",
+   "parent": "bld_waterproof"
+  },
+  {
+   "child": "bld_daylight",
+   "parent": "bld_insulation2"
+  },
+  {
+   "child": "bld_vent",
+   "parent": "bld_daylight"
+  },
+  {
+   "child": "bld_hvac",
+   "parent": "bld_shearwall"
+  },
+  {
+   "child": "bld_plumbing",
+   "parent": "bld_vent"
+  },
+  {
+   "child": "bld_rainwater",
+   "parent": "bld_hvac"
+  },
+  {
+   "child": "bld_fireprotect",
+   "parent": "bld_sewage"
+  },
+  {
+   "child": "bld_seismic",
+   "parent": "bld_rainwater"
+  },
+  {
+   "child": "bld_modular",
+   "parent": "bld_seismic"
+  },
+  {
+   "child": "bld_3dpb",
+   "parent": "bld_sponge"
+  },
+  {
+   "child": "bld_smartb",
+   "parent": "bld_zeroenergy"
+  },
+  {
+   "child": "bld_bim",
+   "parent": "bld_isolation"
+  },
+  {
+   "child": "bld_survey2",
+   "parent": "bld_fireprotect"
+  },
+  {
+   "child": "bld_underground",
+   "parent": "bld_survey2"
+  },
+  {
+   "child": "bld_sponge",
+   "parent": "bld_smartb"
+  },
+  {
+   "child": "bld_geothermal2",
+   "parent": "bld_bim"
+  },
+  {
+   "child": "bld_climbform",
+   "parent": "bld_tube"
+  },
+  {
+   "child": "bld_aluform",
+   "parent": "bld_geothermal2"
+  },
+  {
+   "child": "bld_robotbrick",
+   "parent": "bld_3dpb"
+  },
+  {
+   "child": "bld_smartcity",
+   "parent": "bld_robotbrick"
+  },
+  {
+   "child": "bld_variabletbm",
+   "parent": "bld_smartcity"
+  },
+  {
+   "child": "bld_frpbridge",
+   "parent": "bld_variabletbm"
+  },
+  {
+   "child": "bld_selfhealconc",
+   "parent": "bld_frpbridge"
+  },
+  {
+   "child": "bld_carbonconc",
+   "parent": "bld_selfhealconc"
+  },
+  {
+   "child": "mil_javelin",
+   "parent": "mil_arrow"
+  },
+  {
+   "child": "mil_plate",
+   "parent": "tr_horseshoe"
+  },
+  {
+   "child": "mil_matchlock",
+   "parent": "tr_horseshoe"
+  },
+  {
+   "child": "mil_musket",
+   "parent": "tr_horseshoe"
+  },
+  {
+   "child": "mil_pistol",
+   "parent": "tr_horseshoe"
+  },
+  {
+   "child": "mil_landmine",
+   "parent": "tr_horseshoe"
+  },
+  {
+   "child": "mil_grenade",
+   "parent": "tr_horseshoe"
+  },
+  {
+   "child": "mil_rocket2",
+   "parent": "tr_horseshoe"
+  },
+  {
+   "child": "mil_cannon",
+   "parent": "tr_horseshoe"
+  },
+  {
+   "child": "mil_torpedo",
+   "parent": "mil_detonator"
+  },
+  {
+   "child": "mil_bodyarmor",
+   "parent": "tr_horseshoe"
+  },
+  {
+   "child": "mil_directedenergy",
+   "parent": "optics"
+  },
+  {
+   "child": "navigation",
+   "parent": "canoe"
+  },
+  {
+   "child": "laser",
+   "parent": "optics"
+  },
+  {
+   "child": "display",
+   "parent": "optics"
+  },
+  {
+   "child": "led",
+   "parent": "optics"
+  },
+  {
+   "child": "agi",
+   "parent": "neural_network"
+  },
+  {
+   "child": "neuromorphic",
+   "parent": "chip"
+  },
+  {
+   "child": "holography",
+   "parent": "optics"
+  },
+  {
+   "child": "stem_cell_therapy",
+   "parent": "tissue_engineering"
+  },
+  {
+   "child": "metamaterial",
+   "parent": "optics"
+  },
+  {
+   "child": "gene_circuit",
+   "parent": "synthetic_biology"
+  },
+  {
+   "child": "nanomedicine",
+   "parent": "pharmacology"
+  },
+  {
+   "child": "senolytics",
+   "parent": "pharmacology"
+  },
+  {
+   "child": "artificial_womb",
+   "parent": "tissue_engineering"
+  },
+  {
+   "child": "virtual_world",
+   "parent": "vr"
+  },
+  {
+   "child": "mind_upload",
+   "parent": "bci"
+  },
+  {
+   "child": "memory_extract",
+   "parent": "bci"
+  }
+ ]
+}

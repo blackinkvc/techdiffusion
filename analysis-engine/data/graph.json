@@ -1,15 +1,15 @@
 {
  "meta": {
   "exportedAt": "2026-09-12T13:18:36.842Z",
-  "totalTechs": 2288,
+  "totalTechs": 2265,
   "totalConceptNodes": 11,
   "totalNodes": 2299,
-  "totalEdges": 7539,
-  "depEdges": 7333,
-  "enaEdges": 206,
+  "totalEdges": 6963,
+  "depEdges": 6758,
+  "enaEdges": 205,
   "source": "assets/data.js + techs_{extra,extend,more,midtech}.js",
-  "patchedAt": "2026-09-12T17:36:27.152Z",
-  "patchNote": "v0.9.20 · 合并重名节点：退役 qft（量子场论 1948），权威条目为 quantum_field；同步删除 7 条相关边。"
+  "patchedAt": "2026-09-13T14:09:03.967Z",
+  "patchNote": "v0.9.24 · 同步 v0.9.20/21 已判定删除的位置式伪边（576 条）；另修正 totalTechs（1c 批次重名合并后自 2288 起未同步，现为 2265）。"
  },
  "nodes": [
   {
@@ -40769,11 +40769,6 @@
    "type": "dependency"
   },
   {
-   "source": "tr_horseshoe",
-   "target": "cannon",
-   "type": "dependency"
-  },
-  {
    "source": "internal_combustion",
    "target": "tank",
    "type": "dependency"
@@ -41005,11 +41000,6 @@
   },
   {
    "source": "optics",
-   "target": "lasers",
-   "type": "enables"
-  },
-  {
-   "source": "optics",
    "target": "camera",
    "type": "enables"
   },
@@ -41057,11 +41047,6 @@
    "source": "gps",
    "target": "smart_mower",
    "type": "enables"
-  },
-  {
-   "source": "optics",
-   "target": "lasers",
-   "type": "dependency"
   },
   {
    "source": "electromagnetism",
@@ -41434,11 +41419,6 @@
    "type": "dependency"
   },
   {
-   "source": "astronomy",
-   "target": "arithmetic",
-   "type": "dependency"
-  },
-  {
    "source": "language",
    "target": "geometry_euclid",
    "type": "dependency"
@@ -41499,22 +41479,12 @@
    "type": "dependency"
   },
   {
-   "source": "positional",
-   "target": "algebra",
-   "type": "dependency"
-  },
-  {
    "source": "writing",
    "target": "trigonometry",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "trigonometry",
-   "type": "dependency"
-  },
-  {
-   "source": "negative_num",
    "target": "trigonometry",
    "type": "dependency"
   },
@@ -41534,22 +41504,12 @@
    "type": "dependency"
   },
   {
-   "source": "geometry_euclid",
-   "target": "negative_num",
-   "type": "dependency"
-  },
-  {
    "source": "writing",
    "target": "negative_num",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "negative_num",
-   "type": "dependency"
-  },
-  {
-   "source": "number_theory",
    "target": "negative_num",
    "type": "dependency"
   },
@@ -41645,11 +41605,6 @@
   },
   {
    "source": "mathematics",
-   "target": "number_theory",
-   "type": "dependency"
-  },
-  {
-   "source": "geometry_euclid",
    "target": "number_theory",
    "type": "dependency"
   },
@@ -41819,11 +41774,6 @@
    "type": "dependency"
   },
   {
-   "source": "biochem",
-   "target": "tensor_calc",
-   "type": "dependency"
-  },
-  {
    "source": "writing",
    "target": "tensor_calc",
    "type": "dependency"
@@ -41851,16 +41801,6 @@
   {
    "source": "mathematics",
    "target": "measure_theory",
-   "type": "dependency"
-  },
-  {
-   "source": "biophysics",
-   "target": "measure_theory",
-   "type": "dependency"
-  },
-  {
-   "source": "particle_phys",
-   "target": "kolmogorov",
    "type": "dependency"
   },
   {
@@ -42044,22 +41984,12 @@
    "type": "dependency"
   },
   {
-   "source": "tensor_calc",
-   "target": "proof_theory",
-   "type": "dependency"
-  },
-  {
    "source": "writing",
    "target": "lambda_calc",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "lambda_calc",
-   "type": "dependency"
-  },
-  {
-   "source": "kolmogorov",
    "target": "lambda_calc",
    "type": "dependency"
   },
@@ -42179,22 +42109,12 @@
    "type": "dependency"
   },
   {
-   "source": "relativity_qm",
-   "target": "special_rel",
-   "type": "dependency"
-  },
-  {
    "source": "writing",
    "target": "quantum_mech",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "quantum_mech",
-   "type": "dependency"
-  },
-  {
-   "source": "cosmology",
    "target": "quantum_mech",
    "type": "dependency"
   },
@@ -42304,11 +42224,6 @@
    "type": "dependency"
   },
   {
-   "source": "electrochem",
-   "target": "spectroscopy",
-   "type": "dependency"
-  },
-  {
    "source": "writing",
    "target": "periodic_table",
    "type": "dependency"
@@ -42321,11 +42236,6 @@
   {
    "source": "ecology",
    "target": "periodic_table",
-   "type": "dependency"
-  },
-  {
-   "source": "thermo_chem",
-   "target": "valence",
    "type": "dependency"
   },
   {
@@ -42469,11 +42379,6 @@
    "type": "dependency"
   },
   {
-   "source": "topology",
-   "target": "germ_theory",
-   "type": "dependency"
-  },
-  {
    "source": "writing",
    "target": "germ_theory",
    "type": "dependency"
@@ -42501,16 +42406,6 @@
   {
    "source": "mathematics",
    "target": "genetics",
-   "type": "dependency"
-  },
-  {
-   "source": "em_theory",
-   "target": "genetics",
-   "type": "dependency"
-  },
-  {
-   "source": "numerical",
-   "target": "dna_struct",
    "type": "dependency"
   },
   {
@@ -42594,27 +42489,12 @@
    "type": "dependency"
   },
   {
-   "source": "biochem",
-   "target": "neuroscience",
-   "type": "dependency"
-  },
-  {
-   "source": "em_theory",
-   "target": "ecology",
-   "type": "dependency"
-  },
-  {
    "source": "writing",
    "target": "ecology",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "ecology",
-   "type": "dependency"
-  },
-  {
-   "source": "genetics",
    "target": "ecology",
    "type": "dependency"
   },
@@ -42689,11 +42569,6 @@
    "type": "dependency"
   },
   {
-   "source": "particle_phys",
-   "target": "radio_astron",
-   "type": "dependency"
-  },
-  {
    "source": "writing",
    "target": "cosmology",
    "type": "dependency"
@@ -42706,11 +42581,6 @@
   {
    "source": "general_relativity",
    "target": "cosmology",
-   "type": "dependency"
-  },
-  {
-   "source": "info_theory",
-   "target": "bigbang",
    "type": "dependency"
   },
   {
@@ -42805,11 +42675,6 @@
   },
   {
    "source": "mathematics",
-   "target": "replication",
-   "type": "dependency"
-  },
-  {
-   "source": "polymer_chem",
    "target": "replication",
    "type": "dependency"
   },
@@ -42914,11 +42779,6 @@
    "type": "dependency"
   },
   {
-   "source": "standard_model",
-   "target": "complexity",
-   "type": "dependency"
-  },
-  {
    "source": "writing",
    "target": "complexity",
    "type": "dependency"
@@ -42979,11 +42839,6 @@
    "type": "dependency"
   },
   {
-   "source": "lambda_calc",
-   "target": "systems_theory",
-   "type": "dependency"
-  },
-  {
    "source": "writing",
    "target": "systems_theory",
    "type": "dependency"
@@ -43025,11 +42880,6 @@
   },
   {
    "source": "mathematics",
-   "target": "solid_mech",
-   "type": "dependency"
-  },
-  {
-   "source": "inorganic_chem",
    "target": "solid_mech",
    "type": "dependency"
   },
@@ -43104,11 +42954,6 @@
    "type": "dependency"
   },
   {
-   "source": "replication",
-   "target": "biophysics",
-   "type": "dependency"
-  },
-  {
    "source": "writing",
    "target": "genomics",
    "type": "dependency"
@@ -43130,11 +42975,6 @@
   },
   {
    "source": "mathematics",
-   "target": "proteomics",
-   "type": "dependency"
-  },
-  {
-   "source": "nanoscience",
    "target": "proteomics",
    "type": "dependency"
   },
@@ -43199,11 +43039,6 @@
    "type": "dependency"
   },
   {
-   "source": "standard_model",
-   "target": "cognition",
-   "type": "dependency"
-  },
-  {
    "source": "brick",
    "target": "mat_copper",
    "type": "dependency"
@@ -43249,11 +43084,6 @@
    "type": "dependency"
   },
   {
-   "source": "steel",
-   "target": "mat_wrought",
-   "type": "dependency"
-  },
-  {
    "source": "mat_iron",
    "target": "mat_wrought",
    "type": "dependency"
@@ -43264,17 +43094,7 @@
    "type": "dependency"
   },
   {
-   "source": "mat_anneal",
-   "target": "mat_castiron",
-   "type": "dependency"
-  },
-  {
    "source": "paper",
-   "target": "mat_steel2",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_flatglass",
    "target": "mat_steel2",
    "type": "dependency"
   },
@@ -43320,11 +43140,6 @@
   },
   {
    "source": "physics",
-   "target": "mat_stainless",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_ltsc",
    "target": "mat_stainless",
    "type": "dependency"
   },
@@ -43409,11 +43224,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_die",
-   "target": "mat_siliconsteel",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_alu",
    "type": "dependency"
@@ -43435,11 +43245,6 @@
   },
   {
    "source": "physics",
-   "target": "mat_alalloy",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_phenolic",
    "target": "mat_alalloy",
    "type": "dependency"
   },
@@ -43494,16 +43299,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_siliconsteel",
-   "target": "mat_nialloy",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_castiron",
-   "target": "mat_zinc",
-   "type": "dependency"
-  },
-  {
    "source": "magnets",
    "target": "mat_zinc",
    "type": "dependency"
@@ -43515,16 +43310,6 @@
   },
   {
    "source": "bronze",
-   "target": "mat_lead",
-   "type": "dependency"
-  },
-  {
-   "source": "bronze",
-   "target": "mat_tin",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_lead",
    "target": "mat_tin",
    "type": "dependency"
   },
@@ -43541,26 +43326,6 @@
   {
    "source": "mat_glass",
    "target": "mat_mercury",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_copper",
-   "target": "mat_gold",
-   "type": "dependency"
-  },
-  {
-   "source": "brick",
-   "target": "mat_gold",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_gold",
-   "target": "mat_silver",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_copper",
-   "target": "mat_silver",
    "type": "dependency"
   },
   {
@@ -43799,11 +43564,6 @@
    "type": "dependency"
   },
   {
-   "source": "composites",
-   "target": "mat_metglass",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_powder",
    "type": "dependency"
@@ -43824,27 +43584,7 @@
    "type": "dependency"
   },
   {
-   "source": "mat_solder",
-   "target": "mat_sinter",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_tin",
-   "target": "mat_sinter",
-   "type": "dependency"
-  },
-  {
    "source": "bronze",
-   "target": "mat_forging",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_sinter",
-   "target": "mat_forging",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_solder",
    "target": "mat_forging",
    "type": "dependency"
   },
@@ -43854,22 +43594,7 @@
    "type": "dependency"
   },
   {
-   "source": "mat_silver",
-   "target": "mat_casting",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_gold",
-   "target": "mat_casting",
-   "type": "dependency"
-  },
-  {
    "source": "mat_drawing",
-   "target": "mat_rolling",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_porcelain",
    "target": "mat_rolling",
    "type": "dependency"
   },
@@ -43884,11 +43609,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_steel2",
-   "target": "mat_drawing",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_extrusion",
    "type": "dependency"
@@ -43904,22 +43624,7 @@
    "type": "dependency"
   },
   {
-   "source": "mat_powder",
-   "target": "mat_extrusion",
-   "type": "dependency"
-  },
-  {
    "source": "iron",
-   "target": "mat_heat",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_wrought",
-   "target": "mat_heat",
-   "type": "dependency"
-  },
-  {
-   "source": "steel",
    "target": "mat_heat",
    "type": "dependency"
   },
@@ -43930,11 +43635,6 @@
   },
   {
    "source": "mat_heat",
-   "target": "mat_quench",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_wrought",
    "target": "mat_quench",
    "type": "dependency"
   },
@@ -43955,11 +43655,6 @@
   },
   {
    "source": "iron",
-   "target": "mat_anneal",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_temper",
    "target": "mat_anneal",
    "type": "dependency"
   },
@@ -43970,11 +43665,6 @@
   },
   {
    "source": "magnets",
-   "target": "mat_carburize",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_zinc",
    "target": "mat_carburize",
    "type": "dependency"
   },
@@ -43995,11 +43685,6 @@
   },
   {
    "source": "mat_beryllium",
-   "target": "mat_casehard",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_extrusion",
    "target": "mat_casehard",
    "type": "dependency"
   },
@@ -44064,11 +43749,6 @@
    "type": "dependency"
   },
   {
-   "source": "paper",
-   "target": "mat_porcelain",
-   "type": "dependency"
-  },
-  {
    "source": "mat_glass",
    "target": "mat_stoneware",
    "type": "dependency"
@@ -44100,11 +43780,6 @@
   },
   {
    "source": "cement",
-   "target": "mat_flatglass",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_blastfurnace",
    "target": "mat_flatglass",
    "type": "dependency"
   },
@@ -44144,11 +43819,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_drawing",
-   "target": "mat_opticalglass",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_glassfiber",
    "type": "dependency"
@@ -44164,17 +43834,7 @@
    "type": "dependency"
   },
   {
-   "source": "mat_mgalloy",
-   "target": "mat_glassfiber",
-   "type": "dependency"
-  },
-  {
    "source": "bronze",
-   "target": "mat_cement",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_forging",
    "target": "mat_cement",
    "type": "dependency"
   },
@@ -44185,11 +43845,6 @@
   },
   {
    "source": "mat_glass",
-   "target": "mat_concrete",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_stoneware",
    "target": "mat_concrete",
    "type": "dependency"
   },
@@ -44254,11 +43909,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_prestress",
-   "target": "mat_sic",
-   "type": "dependency"
-  },
-  {
    "source": "mat_ge",
    "target": "mat_sic",
    "type": "dependency"
@@ -44275,11 +43925,6 @@
   },
   {
    "source": "mat_sic",
-   "target": "mat_alumina",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_nialloy",
    "target": "mat_alumina",
    "type": "dependency"
   },
@@ -44314,11 +43959,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_tialloy",
-   "target": "mat_sin",
-   "type": "dependency"
-  },
-  {
    "source": "materials",
    "target": "mat_sin",
    "type": "dependency"
@@ -44340,11 +43980,6 @@
   },
   {
    "source": "mat_zirconia",
-   "target": "mat_wc",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_anodize",
    "target": "mat_wc",
    "type": "dependency"
   },
@@ -44389,11 +44024,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_refractory",
-   "target": "mat_rubber",
-   "type": "dependency"
-  },
-  {
    "source": "mat_concrete",
    "target": "mat_rubber",
    "type": "dependency"
@@ -44410,11 +44040,6 @@
   },
   {
    "source": "mat_alu",
-   "target": "mat_vulcan",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_babbitt",
    "target": "mat_vulcan",
    "type": "dependency"
   },
@@ -44449,11 +44074,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_pe",
-   "target": "mat_nylon",
-   "type": "dependency"
-  },
-  {
    "source": "mat_pmma",
    "target": "mat_nylon",
    "type": "dependency"
@@ -44465,11 +44085,6 @@
   },
   {
    "source": "physics",
-   "target": "mat_pe",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_aerogel",
    "target": "mat_pe",
    "type": "dependency"
   },
@@ -44504,11 +44119,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_anodize",
-   "target": "mat_pvc",
-   "type": "dependency"
-  },
-  {
    "source": "mat_wc",
    "target": "mat_pvc",
    "type": "dependency"
@@ -44525,11 +44135,6 @@
   },
   {
    "source": "mat_sbr",
-   "target": "mat_ps",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_glassfiber",
    "target": "mat_ps",
    "type": "dependency"
   },
@@ -44564,11 +44169,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_ps",
-   "target": "mat_polyester",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_pu",
    "type": "dependency"
@@ -44594,11 +44194,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_nylon",
-   "target": "mat_epoxy",
-   "type": "dependency"
-  },
-  {
    "source": "mat_gan2",
    "target": "mat_epoxy",
    "type": "dependency"
@@ -44615,11 +44210,6 @@
   },
   {
    "source": "mat_aerogel",
-   "target": "mat_pmma",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_pe",
    "target": "mat_pmma",
    "type": "dependency"
   },
@@ -44654,11 +44244,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_aerogel",
-   "target": "mat_nbr",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_silicone",
    "type": "dependency"
@@ -44689,11 +44274,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_ductile",
-   "target": "mat_abs",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_pc",
    "type": "dependency"
@@ -44720,11 +44300,6 @@
   },
   {
    "source": "mat_pu",
-   "target": "mat_pa",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_ptfe",
    "target": "mat_pa",
    "type": "dependency"
   },
@@ -44804,11 +44379,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_sin",
-   "target": "mat_uhmwpe",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_conductingpoly",
    "type": "dependency"
@@ -44834,11 +44404,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_metglass",
-   "target": "mat_hydrogel",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_ge",
    "type": "dependency"
@@ -44850,11 +44415,6 @@
   },
   {
    "source": "mat_manganese",
-   "target": "mat_ge",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_prestress",
    "target": "mat_ge",
    "type": "dependency"
   },
@@ -44889,22 +44449,12 @@
    "type": "dependency"
   },
   {
-   "source": "mat_silicone",
-   "target": "mat_polysi",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_gaas",
    "type": "dependency"
   },
   {
    "source": "physics",
-   "target": "mat_gaas",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_hydrogel",
    "target": "mat_gaas",
    "type": "dependency"
   },
@@ -44954,11 +44504,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_nylon",
-   "target": "mat_gan2",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_inp",
    "type": "dependency"
@@ -44970,11 +44515,6 @@
   },
   {
    "source": "mat_abs",
-   "target": "mat_inp",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_uhmwpe",
    "target": "mat_inp",
    "type": "dependency"
   },
@@ -44994,11 +44534,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_phenolic",
-   "target": "mat_ito",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_perovskite",
    "type": "dependency"
@@ -45010,11 +44545,6 @@
   },
   {
    "source": "mat_gan",
-   "target": "mat_perovskite",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_foamceramic",
    "target": "mat_perovskite",
    "type": "dependency"
   },
@@ -45079,11 +44609,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_casehard",
-   "target": "mat_plywood",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_cfrp",
    "type": "dependency"
@@ -45095,11 +44620,6 @@
   },
   {
    "source": "mat_cf",
-   "target": "mat_cfrp",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_gaas",
    "target": "mat_cfrp",
    "type": "dependency"
   },
@@ -45135,11 +44655,6 @@
   },
   {
    "source": "mat_ptfe",
-   "target": "mat_honeycomb",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_polysi",
    "target": "mat_honeycomb",
    "type": "dependency"
   },
@@ -45199,11 +44714,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_perovskite",
-   "target": "mat_cmc",
-   "type": "dependency"
-  },
-  {
    "source": "materials",
    "target": "mat_cmc",
    "type": "dependency"
@@ -45230,11 +44740,6 @@
   },
   {
    "source": "physics",
-   "target": "mat_ltsc",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_alalloy",
    "target": "mat_ltsc",
    "type": "dependency"
   },
@@ -45289,11 +44794,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_cmc",
-   "target": "mat_hydrogenstorage",
-   "type": "dependency"
-  },
-  {
    "source": "materials",
    "target": "mat_hydrogenstorage",
    "type": "dependency"
@@ -45320,11 +44820,6 @@
   },
   {
    "source": "physics",
-   "target": "mat_pcm",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_mmc",
    "target": "mat_pcm",
    "type": "dependency"
   },
@@ -45374,22 +44869,12 @@
    "type": "dependency"
   },
   {
-   "source": "mat_alalloy",
-   "target": "mat_ferrite",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_softmag",
    "type": "dependency"
   },
   {
    "source": "physics",
-   "target": "mat_softmag",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_pcm",
    "target": "mat_softmag",
    "type": "dependency"
   },
@@ -45459,11 +44944,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_softmag",
-   "target": "mat_biomat",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_degradable",
    "type": "dependency"
@@ -45479,11 +44959,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_orgsc",
-   "target": "mat_degradable",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_stealth",
    "type": "dependency"
@@ -45495,11 +44970,6 @@
   },
   {
    "source": "mat_abs",
-   "target": "mat_stealth",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_inp",
    "target": "mat_stealth",
    "type": "dependency"
   },
@@ -45519,11 +44989,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_plywood",
-   "target": "mat_insulation",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_foammetal",
    "type": "dependency"
@@ -45535,11 +45000,6 @@
   },
   {
    "source": "mat_abs",
-   "target": "mat_foammetal",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_stealth",
    "target": "mat_foammetal",
    "type": "dependency"
   },
@@ -45549,16 +45009,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_carburize",
-   "target": "mat_blastfurnace",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_zinc",
-   "target": "mat_blastfurnace",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_cupola",
    "type": "dependency"
@@ -45570,11 +45020,6 @@
   },
   {
    "source": "mat_beryllium",
-   "target": "mat_cupola",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_insulation",
    "target": "mat_cupola",
    "type": "dependency"
   },
@@ -45609,11 +45054,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_babbitt",
-   "target": "mat_continuouscast",
-   "type": "dependency"
-  },
-  {
    "source": "mat_vulcan",
    "target": "mat_continuouscast",
    "type": "dependency"
@@ -45634,11 +45074,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_honeycomb",
-   "target": "mat_esr",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_metal3dp",
    "type": "dependency"
@@ -45650,11 +45085,6 @@
   },
   {
    "source": "mat_ybco",
-   "target": "mat_metal3dp",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_bioinspired",
    "target": "mat_metal3dp",
    "type": "dependency"
   },
@@ -45694,11 +45124,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_binderjet",
-   "target": "mat_ded",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_coldspray",
    "type": "dependency"
@@ -45714,11 +45139,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_degradable",
-   "target": "mat_coldspray",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_thermalspray",
    "type": "dependency"
@@ -45730,11 +45150,6 @@
   },
   {
    "source": "mat_sic",
-   "target": "mat_thermalspray",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_alumina",
    "target": "mat_thermalspray",
    "type": "dependency"
   },
@@ -45794,11 +45209,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_thermalspray",
-   "target": "mat_nitriding",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_boriding",
    "type": "dependency"
@@ -45834,22 +45244,12 @@
    "type": "dependency"
   },
   {
-   "source": "mat_ded",
-   "target": "mat_ebm",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "mat_sps",
    "type": "dependency"
   },
   {
    "source": "physics",
-   "target": "mat_sps",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_biomat",
    "target": "mat_sps",
    "type": "dependency"
   },
@@ -45865,11 +45265,6 @@
   },
   {
    "source": "mat_ybco",
-   "target": "mat_mof",
-   "type": "dependency"
-  },
-  {
-   "source": "mat_ebm",
    "target": "mat_mof",
    "type": "dependency"
   },
@@ -45900,11 +45295,6 @@
   },
   {
    "source": "ene_hydro",
-   "target": "ene_coal",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_charcoal",
    "target": "ene_coal",
    "type": "dependency"
   },
@@ -45964,16 +45354,6 @@
    "type": "dependency"
   },
   {
-   "source": "steam_engine",
-   "target": "ene_oilshale",
-   "type": "dependency"
-  },
-  {
-   "source": "battery",
-   "target": "ene_oilshale",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_biofuel",
    "type": "dependency"
@@ -45985,11 +45365,6 @@
   },
   {
    "source": "steam_engine",
-   "target": "ene_biofuel",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_oilshale",
    "target": "ene_biofuel",
    "type": "dependency"
   },
@@ -46009,22 +45384,12 @@
    "type": "dependency"
   },
   {
-   "source": "ene_oil",
-   "target": "ene_ethanol",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_biodiesel",
    "type": "dependency"
   },
   {
    "source": "chemistry",
-   "target": "ene_biodiesel",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_ac",
    "target": "ene_biodiesel",
    "type": "dependency"
   },
@@ -46044,17 +45409,7 @@
    "type": "dependency"
   },
   {
-   "source": "ene_biofuel",
-   "target": "ene_biomass",
-   "type": "dependency"
-  },
-  {
    "source": "cart",
-   "target": "ene_hydro",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_charcoal",
    "target": "ene_hydro",
    "type": "dependency"
   },
@@ -46074,16 +45429,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_natgas",
-   "target": "ene_waterturbine",
-   "type": "dependency"
-  },
-  {
-   "source": "waterwheel",
-   "target": "ene_wind",
-   "type": "dependency"
-  },
-  {
    "source": "wheel",
    "target": "ene_wind",
    "type": "dependency"
@@ -46099,11 +45444,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_transformer",
-   "target": "ene_windturbine",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_geothermal",
    "type": "dependency"
@@ -46115,11 +45455,6 @@
   },
   {
    "source": "steam_engine",
-   "target": "ene_geothermal",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_biomass",
    "target": "ene_geothermal",
    "type": "dependency"
   },
@@ -46149,11 +45484,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_tokamak",
-   "target": "mat_wave",
-   "type": "dependency"
-  },
-  {
    "source": "ene_satpower",
    "target": "mat_wave",
    "type": "dependency"
@@ -46165,11 +45495,6 @@
   },
   {
    "source": "chemistry",
-   "target": "ene_solarthermal",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_coke",
    "target": "ene_solarthermal",
    "type": "dependency"
   },
@@ -46220,11 +45545,6 @@
   },
   {
    "source": "substation",
-   "target": "ene_steamturbine",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_hydroplant",
    "target": "ene_steamturbine",
    "type": "dependency"
   },
@@ -46314,11 +45634,6 @@
    "type": "dependency"
   },
   {
-   "source": "petroleum",
-   "target": "ene_leadacid",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_nicd",
    "type": "dependency"
@@ -46330,11 +45645,6 @@
   },
   {
    "source": "diesel_engine",
-   "target": "ene_nicd",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_wpt",
    "target": "ene_nicd",
    "type": "dependency"
   },
@@ -46360,11 +45670,6 @@
   },
   {
    "source": "chemistry",
-   "target": "ene_liion",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_batteryev",
    "target": "ene_liion",
    "type": "dependency"
   },
@@ -46469,11 +45774,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_tidal",
-   "target": "ene_h2fc",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_zincair",
    "type": "dependency"
@@ -46519,11 +45819,6 @@
    "type": "dependency"
   },
   {
-   "source": "mat_wave",
-   "target": "ene_flow",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_supercap",
    "type": "dependency"
@@ -46560,16 +45855,6 @@
   },
   {
    "source": "chemistry",
-   "target": "ene_pumped",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_ac",
-   "target": "ene_pumped",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_biodiesel",
    "target": "ene_pumped",
    "type": "dependency"
   },
@@ -46620,11 +45905,6 @@
   },
   {
    "source": "ene_tokamak",
-   "target": "ene_h2storage",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_flow",
    "target": "ene_h2storage",
    "type": "dependency"
   },
@@ -46724,11 +46004,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_gasturbine",
-   "target": "ene_nuclear",
-   "type": "dependency"
-  },
-  {
    "source": "nuclear_fission",
    "target": "ene_nuclear",
    "type": "dependency"
@@ -46779,11 +46054,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_h2fc",
-   "target": "ene_phwr",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_fastbreeder",
    "type": "dependency"
@@ -46829,11 +46099,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_phwr",
-   "target": "ene_icf",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_satpower",
    "type": "dependency"
@@ -46845,11 +46110,6 @@
   },
   {
    "source": "ene_tidal",
-   "target": "ene_satpower",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_tokamak",
    "target": "ene_satpower",
    "type": "dependency"
   },
@@ -46884,11 +46144,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_pumped",
-   "target": "ene_wpt",
-   "type": "dependency"
-  },
-  {
    "source": "electromagnetism",
    "target": "ene_wpt",
    "type": "dependency"
@@ -46904,11 +46159,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_natgas",
-   "target": "ene_thermoelectric",
-   "type": "dependency"
-  },
-  {
    "source": "ene_waterturbine",
    "target": "ene_thermoelectric",
    "type": "dependency"
@@ -46920,11 +46170,6 @@
   },
   {
    "source": "chemistry",
-   "target": "ene_piezoelectric",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_district",
    "target": "ene_piezoelectric",
    "type": "dependency"
   },
@@ -46960,11 +46205,6 @@
   },
   {
    "source": "steam_engine",
-   "target": "ene_biogenic",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_dc",
    "target": "ene_biogenic",
    "type": "dependency"
   },
@@ -47014,11 +46254,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_icf",
-   "target": "ene_clathrate",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_hotdry",
    "type": "dependency"
@@ -47030,11 +46265,6 @@
   },
   {
    "source": "ene_tokamak",
-   "target": "ene_hotdry",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_h2storage",
    "target": "ene_hotdry",
    "type": "dependency"
   },
@@ -47084,11 +46314,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_ammonia",
-   "target": "ene_methanol",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_hydrogenfuel",
    "type": "dependency"
@@ -47100,11 +46325,6 @@
   },
   {
    "source": "steam_engine",
-   "target": "ene_hydrogenfuel",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_biogenic",
    "target": "ene_hydrogenfuel",
    "type": "dependency"
   },
@@ -47144,11 +46364,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_methanol",
-   "target": "ene_gasfired",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_hydroplant",
    "type": "dependency"
@@ -47164,11 +46379,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_coalfired",
-   "target": "ene_hydroplant",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_windfarm",
    "type": "dependency"
@@ -47184,11 +46394,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_molten",
-   "target": "ene_windfarm",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_solarfarm",
    "type": "dependency"
@@ -47200,11 +46405,6 @@
   },
   {
    "source": "mat_wave",
-   "target": "ene_solarfarm",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_windfarm",
    "target": "ene_solarfarm",
    "type": "dependency"
   },
@@ -47274,11 +46474,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_oil",
-   "target": "ene_heatpump",
-   "type": "dependency"
-  },
-  {
    "source": "ene_ethanol",
    "target": "ene_heatpump",
    "type": "dependency"
@@ -47290,11 +46485,6 @@
   },
   {
    "source": "chemistry",
-   "target": "ene_district",
-   "type": "dependency"
-  },
-  {
-   "source": "internal_combustion",
    "target": "ene_district",
    "type": "dependency"
   },
@@ -47314,11 +46504,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_hydrogenfuel",
-   "target": "ene_wasteheat",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_fuelcellcar",
    "type": "dependency"
@@ -47330,11 +46515,6 @@
   },
   {
    "source": "ene_nimh",
-   "target": "ene_fuelcellcar",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_batteryev",
    "target": "ene_fuelcellcar",
    "type": "dependency"
   },
@@ -47374,11 +46554,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_gasfired",
-   "target": "ene_peaker",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_island",
    "type": "dependency"
@@ -47390,11 +46565,6 @@
   },
   {
    "source": "ene_lipoly",
-   "target": "ene_island",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_v2g",
    "target": "ene_island",
    "type": "dependency"
   },
@@ -47414,11 +46584,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_solidstate",
-   "target": "ene_bess",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_gravity",
    "type": "dependency"
@@ -47430,11 +46595,6 @@
   },
   {
    "source": "ene_lipoly",
-   "target": "ene_gravity",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_island",
    "target": "ene_gravity",
    "type": "dependency"
   },
@@ -47454,11 +46614,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_bess",
-   "target": "ene_liquidair",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_thermalbattery",
    "type": "dependency"
@@ -47470,11 +46625,6 @@
   },
   {
    "source": "mat_wave",
-   "target": "ene_thermalbattery",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_solarfarm",
    "target": "ene_thermalbattery",
    "type": "dependency"
   },
@@ -47494,11 +46644,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_gravity",
-   "target": "ene_bipv",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_solartower",
    "type": "dependency"
@@ -47514,11 +46659,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_thermalbattery",
-   "target": "ene_solartower",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_dishstirling",
    "type": "dependency"
@@ -47530,11 +46670,6 @@
   },
   {
    "source": "mat_wave",
-   "target": "ene_dishstirling",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_solartower",
    "target": "ene_dishstirling",
    "type": "dependency"
   },
@@ -47550,11 +46685,6 @@
   },
   {
    "source": "ene_lipoly",
-   "target": "ene_linearfresnel",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_bipv",
    "target": "ene_linearfresnel",
    "type": "dependency"
   },
@@ -47574,11 +46704,6 @@
    "type": "dependency"
   },
   {
-   "source": "ene_hotdry",
-   "target": "ene_hydrothermal",
-   "type": "dependency"
-  },
-  {
    "source": "physics",
    "target": "ene_borehole",
    "type": "dependency"
@@ -47590,11 +46715,6 @@
   },
   {
    "source": "ene_lipoly",
-   "target": "ene_borehole",
-   "type": "dependency"
-  },
-  {
-   "source": "ene_linearfresnel",
    "target": "ene_borehole",
    "type": "dependency"
   },
@@ -47614,27 +46734,12 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_axe",
-   "target": "mfg_chisel",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_hammer",
-   "target": "mfg_chisel",
-   "type": "dependency"
-  },
-  {
    "source": "hafting",
    "target": "mfg_hammer",
    "type": "dependency"
   },
   {
    "source": "bone_tools",
-   "target": "mfg_hammer",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_knife",
    "target": "mfg_hammer",
    "type": "dependency"
   },
@@ -47650,11 +46755,6 @@
   },
   {
    "source": "mfg_hammer",
-   "target": "mfg_axe",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_knife",
    "target": "mfg_axe",
    "type": "dependency"
   },
@@ -47669,27 +46769,7 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_drill",
-   "target": "mfg_saw",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_chisel",
-   "target": "mfg_saw",
-   "type": "dependency"
-  },
-  {
    "source": "mat_pottery",
-   "target": "mfg_drill",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_chisel",
-   "target": "mfg_drill",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_axe",
    "target": "mfg_drill",
    "type": "dependency"
   },
@@ -47720,11 +46800,6 @@
   },
   {
    "source": "mathematics",
-   "target": "mfg_boring",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_wiredraw",
    "target": "mfg_boring",
    "type": "dependency"
   },
@@ -47774,11 +46849,6 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_grinder",
-   "target": "mfg_drillpress",
-   "type": "dependency"
-  },
-  {
    "source": "mat_abs",
    "target": "mfg_cnc",
    "type": "dependency"
@@ -47790,11 +46860,6 @@
   },
   {
    "source": "mathematics",
-   "target": "mfg_cnc",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_edm",
    "target": "mfg_cnc",
    "type": "dependency"
   },
@@ -47815,11 +46880,6 @@
   },
   {
    "source": "mathematics",
-   "target": "mfg_turnmill",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_cam",
    "target": "mfg_turnmill",
    "type": "dependency"
   },
@@ -47939,16 +46999,6 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_abrasive",
-   "target": "mfg_sandcast",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_saw",
-   "target": "mfg_sandcast",
-   "type": "dependency"
-  },
-  {
    "source": "mat_casting",
    "target": "mfg_lostwax",
    "type": "dependency"
@@ -47964,11 +47014,6 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_abrasive",
-   "target": "mfg_lostwax",
-   "type": "dependency"
-  },
-  {
    "source": "mat_alu",
    "target": "mfg_diecast",
    "type": "dependency"
@@ -47979,17 +47024,7 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_mill",
-   "target": "mfg_diecast",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "mfg_forging2",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_drillpress",
    "target": "mfg_forging2",
    "type": "dependency"
   },
@@ -48025,11 +47060,6 @@
   },
   {
    "source": "mathematics",
-   "target": "mfg_rivet",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_lapp",
    "target": "mfg_rivet",
    "type": "dependency"
   },
@@ -48089,22 +47119,12 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_wedm",
-   "target": "mfg_laserweld",
-   "type": "dependency"
-  },
-  {
    "source": "ene_liion",
    "target": "mfg_fsw",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "mfg_fsw",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_onmachinem",
    "target": "mfg_fsw",
    "type": "dependency"
   },
@@ -48119,11 +47139,6 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_mc",
-   "target": "mfg_ebw",
-   "type": "dependency"
-  },
-  {
    "source": "mat_concrete",
    "target": "mfg_braze",
    "type": "dependency"
@@ -48139,11 +47154,6 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_rivet",
-   "target": "mfg_braze",
-   "type": "dependency"
-  },
-  {
    "source": "mat_concrete",
    "target": "mfg_adhesive",
    "type": "dependency"
@@ -48155,11 +47165,6 @@
   },
   {
    "source": "mathematics",
-   "target": "mfg_adhesive",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_braze",
    "target": "mfg_adhesive",
    "type": "dependency"
   },
@@ -48199,27 +47204,12 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_drawing2",
-   "target": "mfg_standard",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "mfg_assembly",
    "type": "dependency"
   },
   {
-   "source": "mfg_gasweld",
-   "target": "mfg_assembly",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "mfg_fixture",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_standard",
    "target": "mfg_fixture",
    "type": "dependency"
   },
@@ -48284,22 +47274,12 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_fixture",
-   "target": "mfg_extrude2",
-   "type": "dependency"
-  },
-  {
    "source": "mat_rolling",
    "target": "mfg_rolling2",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "mfg_rolling2",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_boring",
    "target": "mfg_rolling2",
    "type": "dependency"
   },
@@ -48314,27 +47294,12 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_thread",
-   "target": "mfg_wiredraw",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "mfg_furnace",
    "type": "dependency"
   },
   {
-   "source": "mfg_extrude2",
-   "target": "mfg_furnace",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "mfg_vacfurnace",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_plasma",
    "target": "mfg_vacfurnace",
    "type": "dependency"
   },
@@ -48374,11 +47339,6 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_blow",
-   "target": "mfg_shotblast",
-   "type": "dependency"
-  },
-  {
    "source": "mat_cement",
    "target": "mfg_polish",
    "type": "dependency"
@@ -48390,11 +47350,6 @@
   },
   {
    "source": "mathematics",
-   "target": "mfg_polish",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_mold",
    "target": "mfg_polish",
    "type": "dependency"
   },
@@ -48424,11 +47379,6 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_laserweld",
-   "target": "mfg_ultraprecise",
-   "type": "dependency"
-  },
-  {
    "source": "lathe",
    "target": "mfg_ultraprecise",
    "type": "dependency"
@@ -48445,11 +47395,6 @@
   },
   {
    "source": "mathematics",
-   "target": "mfg_micro",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_vacfurnace",
    "target": "mfg_micro",
    "type": "dependency"
   },
@@ -48489,11 +47434,6 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_micro",
-   "target": "mfg_ecm",
-   "type": "dependency"
-  },
-  {
    "source": "mat_esr",
    "target": "mfg_chemill",
    "type": "dependency"
@@ -48515,11 +47455,6 @@
   },
   {
    "source": "mathematics",
-   "target": "mfg_pim",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_waterjet",
    "target": "mfg_pim",
    "type": "dependency"
   },
@@ -48549,17 +47484,7 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_ecm",
-   "target": "mfg_cmm",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "mfg_reverse",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_turnmill",
    "target": "mfg_reverse",
    "type": "dependency"
   },
@@ -48579,11 +47504,6 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_fms",
-   "target": "mfg_plc",
-   "type": "dependency"
-  },
-  {
    "source": "mat_esr",
    "target": "mfg_servo",
    "type": "dependency"
@@ -48595,11 +47515,6 @@
   },
   {
    "source": "mathematics",
-   "target": "mfg_servo",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_chemill",
    "target": "mfg_servo",
    "type": "dependency"
   },
@@ -48659,11 +47574,6 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_hip",
-   "target": "mfg_harmonic",
-   "type": "dependency"
-  },
-  {
    "source": "mat_manganese",
    "target": "mfg_precisionbearing",
    "type": "dependency"
@@ -48695,11 +47605,6 @@
   },
   {
    "source": "mathematics",
-   "target": "mfg_gauge",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_adhesive",
    "target": "mfg_gauge",
    "type": "dependency"
   },
@@ -48739,17 +47644,7 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_additive",
-   "target": "mfg_sixsigma",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "mfg_lean",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_cmm",
    "target": "mfg_lean",
    "type": "dependency"
   },
@@ -48769,17 +47664,7 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_linearmotor",
-   "target": "mfg_kanban",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "mfg_cam",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_pim",
    "target": "mfg_cam",
    "type": "dependency"
   },
@@ -48794,17 +47679,7 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_lasercut",
-   "target": "mfg_fms",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "mfg_adaptive",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_lean",
    "target": "mfg_adaptive",
    "type": "dependency"
   },
@@ -48849,17 +47724,7 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_sixsigma",
-   "target": "mfg_selfassemble",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "mfg_bionics",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_selfassemble",
    "target": "mfg_bionics",
    "type": "dependency"
   },
@@ -48894,22 +47759,7 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_saw",
-   "target": "mfg_abrasive",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_drill",
-   "target": "mfg_abrasive",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "mfg_toolholder",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_assembly",
    "target": "mfg_toolholder",
    "type": "dependency"
   },
@@ -48919,27 +47769,12 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_toolholder",
-   "target": "mfg_coolant",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "mfg_edmwire",
    "type": "dependency"
   },
   {
-   "source": "mfg_ultraprecise",
-   "target": "mfg_edmwire",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "mfg_roboticweld",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_reverse",
    "target": "mfg_roboticweld",
    "type": "dependency"
   },
@@ -48969,17 +47804,7 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_bionics",
-   "target": "mfg_aps",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "mfg_quality",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_adaptive",
    "target": "mfg_quality",
    "type": "dependency"
   },
@@ -49004,17 +47829,7 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_edmwire",
-   "target": "mfg_ecmg",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "mfg_ultrasonicm",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_quality",
    "target": "mfg_ultrasonicm",
    "type": "dependency"
   },
@@ -49035,11 +47850,6 @@
   },
   {
    "source": "mathematics",
-   "target": "mfg_awj",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_roboticweld",
    "target": "mfg_awj",
    "type": "dependency"
   },
@@ -49079,17 +47889,7 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_mes",
-   "target": "mfg_toolmonitor",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "mfg_cryogenicm",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_digitaltwin",
    "target": "mfg_cryogenicm",
    "type": "dependency"
   },
@@ -49099,17 +47899,7 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_toolmonitor",
-   "target": "mfg_onmachinem",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "mfg_robotgripper",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_awj",
    "target": "mfg_robotgripper",
    "type": "dependency"
   },
@@ -49119,17 +47909,7 @@
    "type": "dependency"
   },
   {
-   "source": "mfg_cryogenicm",
-   "target": "mfg_visionguide",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "mfg_digitalshop",
-   "type": "dependency"
-  },
-  {
-   "source": "mfg_hybridm",
    "target": "mfg_digitalshop",
    "type": "dependency"
   },
@@ -49165,11 +47945,6 @@
   },
   {
    "source": "mat_pottery",
-   "target": "tr_raft",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_canoe",
    "target": "tr_raft",
    "type": "dependency"
   },
@@ -49314,11 +48089,6 @@
    "type": "dependency"
   },
   {
-   "source": "tr_rov",
-   "target": "tr_jetliner",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_plc",
    "target": "tr_supersonic",
    "type": "dependency"
@@ -49399,11 +48169,6 @@
    "type": "dependency"
   },
   {
-   "source": "tr_lunarlander",
-   "target": "tr_hsr",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_3dp",
    "target": "tr_maglev",
    "type": "dependency"
@@ -49440,11 +48205,6 @@
   },
   {
    "source": "mat_alu",
-   "target": "tr_tram",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_excavator",
    "target": "tr_tram",
    "type": "dependency"
   },
@@ -49569,22 +48329,12 @@
    "type": "dependency"
   },
   {
-   "source": "steam_ship",
-   "target": "tr_steamloco",
-   "type": "dependency"
-  },
-  {
    "source": "vacuum_cleaner",
    "target": "tr_diesel loco",
    "type": "dependency"
   },
   {
    "source": "mat_ltsc",
-   "target": "tr_diesel loco",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_simulator",
    "target": "tr_diesel loco",
    "type": "dependency"
   },
@@ -49609,22 +48359,12 @@
    "type": "dependency"
   },
   {
-   "source": "tr_horseshoe",
-   "target": "tr_ropeway",
-   "type": "dependency"
-  },
-  {
    "source": "ene_heatpump",
    "target": "tr_elevator",
    "type": "dependency"
   },
   {
    "source": "mat_reconcrete",
-   "target": "tr_elevator",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_airship",
    "target": "tr_elevator",
    "type": "dependency"
   },
@@ -49644,22 +48384,12 @@
    "type": "dependency"
   },
   {
-   "source": "tr_destroyer",
-   "target": "tr_escalator",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_thread",
    "target": "tr_crane",
    "type": "dependency"
   },
   {
    "source": "mat_blastfurnace",
-   "target": "tr_crane",
-   "type": "dependency"
-  },
-  {
-   "source": "road",
    "target": "tr_crane",
    "type": "dependency"
   },
@@ -49694,11 +48424,6 @@
    "type": "dependency"
   },
   {
-   "source": "tr_autogyro",
-   "target": "tr_bulldozer",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_mill",
    "target": "tr_excavator",
    "type": "dependency"
@@ -49710,11 +48435,6 @@
   },
   {
    "source": "mat_alu",
-   "target": "tr_excavator",
-   "type": "dependency"
-  },
-  {
-   "source": "railway",
    "target": "tr_excavator",
    "type": "dependency"
   },
@@ -49789,11 +48509,6 @@
    "type": "dependency"
   },
   {
-   "source": "tr_forklift",
-   "target": "tr_aircraftcarrier",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_induction",
    "target": "tr_destroyer",
    "type": "dependency"
@@ -49809,16 +48524,6 @@
    "type": "dependency"
   },
   {
-   "source": "automobile",
-   "target": "tr_destroyer",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_cablecar",
-   "target": "tr_cruiser",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_harmonic",
    "target": "tr_icebreaker",
    "type": "dependency"
@@ -49831,16 +48536,6 @@
   {
    "source": "mat_pp",
    "target": "tr_icebreaker",
-   "type": "dependency"
-  },
-  {
-   "source": "satellite",
-   "target": "tr_icebreaker",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_cruiser",
-   "target": "tr_dredger",
    "type": "dependency"
   },
   {
@@ -49869,11 +48564,6 @@
    "type": "dependency"
   },
   {
-   "source": "tr_icebreaker",
-   "target": "tr_ekranoplan",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_ultrasonicm",
    "target": "tr_jetpack",
    "type": "dependency"
@@ -49884,17 +48574,7 @@
    "type": "dependency"
   },
   {
-   "source": "tr_passdrone",
-   "target": "tr_hoverboard",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_ultrasonicm",
-   "target": "tr_skateboard",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_jetpack",
    "target": "tr_skateboard",
    "type": "dependency"
   },
@@ -49949,11 +48629,6 @@
    "type": "dependency"
   },
   {
-   "source": "tr_stirrup",
-   "target": "tr_horseshoe",
-   "type": "dependency"
-  },
-  {
    "source": "ene_fuelcell",
    "target": "tr_pneumatictire",
    "type": "dependency"
@@ -49966,11 +48641,6 @@
   {
    "source": "tr_screwprop",
    "target": "tr_pneumatictire",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_dredger",
-   "target": "tr_solidtire",
    "type": "dependency"
   },
   {
@@ -49991,21 +48661,6 @@
   {
    "source": "tr_tunnel2",
    "target": "tr_track",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_solidtire",
-   "target": "tr_suspension",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_suspension",
-   "target": "tr_steering",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_steering",
-   "target": "tr_brake",
    "type": "dependency"
   },
   {
@@ -50034,22 +48689,12 @@
    "type": "dependency"
   },
   {
-   "source": "horse_gear",
-   "target": "tr_navigation",
-   "type": "dependency"
-  },
-  {
    "source": "vacuum_cleaner",
    "target": "tr_autopilot",
    "type": "dependency"
   },
   {
    "source": "mat_ltsc",
-   "target": "tr_autopilot",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_diesel loco",
    "target": "tr_autopilot",
    "type": "dependency"
   },
@@ -50104,11 +48749,6 @@
    "type": "dependency"
   },
   {
-   "source": "tr_rocket",
-   "target": "tr_radar2",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_kanban",
    "target": "tr_transponder",
    "type": "dependency"
@@ -50130,11 +48770,6 @@
   },
   {
    "source": "mfg_ultrasonicm",
-   "target": "tr_blackbox",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_skateboard",
    "target": "tr_blackbox",
    "type": "dependency"
   },
@@ -50166,11 +48801,6 @@
   {
    "source": "tr_suez",
    "target": "tr_windtunnel",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_emu",
-   "target": "tr_runway",
    "type": "dependency"
   },
   {
@@ -50264,11 +48894,6 @@
    "type": "dependency"
   },
   {
-   "source": "tr_runway",
-   "target": "tr_interchange",
-   "type": "dependency"
-  },
-  {
    "source": "assembly_line",
    "target": "tr_servicearea",
    "type": "dependency"
@@ -50284,16 +48909,6 @@
    "type": "dependency"
   },
   {
-   "source": "tr_loader",
-   "target": "tr_servicearea",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_interchange",
-   "target": "tr_gasstation",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_visionguide",
    "target": "tr_charging",
    "type": "dependency"
@@ -50305,11 +48920,6 @@
   },
   {
    "source": "mfg_darkfactory",
-   "target": "tr_v2x",
-   "type": "dependency"
-  },
-  {
-   "source": "drone",
    "target": "tr_v2x",
    "type": "dependency"
   },
@@ -50349,11 +48959,6 @@
    "type": "dependency"
   },
   {
-   "source": "tr_hovercraft",
-   "target": "tr_containership",
-   "type": "dependency"
-  },
-  {
    "source": "ene_leadacid",
    "target": "tr_bulktanker",
    "type": "dependency"
@@ -50366,11 +48971,6 @@
   {
    "source": "tr_glider",
    "target": "tr_bulktanker",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_gasstation",
-   "target": "tr_roship",
    "type": "dependency"
   },
   {
@@ -50394,57 +48994,17 @@
    "type": "dependency"
   },
   {
-   "source": "tr_roship",
-   "target": "tr_hsrbridge",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_hsrbridge",
-   "target": "tr_monorail",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_brake",
-   "target": "tr_funicular",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_funicular",
-   "target": "tr_pipeline",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_hoverboard",
-   "target": "tr_hyperloop",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_onmachinem",
    "target": "tr_evcar",
    "type": "dependency"
   },
   {
-   "source": "gps",
-   "target": "tr_evcar",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_darkfactory",
    "target": "tr_fcevtruck",
    "type": "dependency"
   },
   {
-   "source": "tr_v2x",
-   "target": "tr_fcevtruck",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_darkfactory",
-   "target": "tr_personalair",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_fcevtruck",
    "target": "tr_personalair",
    "type": "dependency"
   },
@@ -50464,27 +49024,12 @@
    "type": "dependency"
   },
   {
-   "source": "tr_ekranoplan",
-   "target": "tr_auv",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_ultrasonicm",
    "target": "tr_rov",
    "type": "dependency"
   },
   {
-   "source": "tr_blackbox",
-   "target": "tr_rov",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_darkfactory",
-   "target": "tr_cargo_drone",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_personalair",
    "target": "tr_cargo_drone",
    "type": "dependency"
   },
@@ -50505,11 +49050,6 @@
   },
   {
    "source": "mfg_ecmg",
-   "target": "tr_lunarlander",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_auv",
    "target": "tr_lunarlander",
    "type": "dependency"
   },
@@ -50599,11 +49139,6 @@
    "type": "dependency"
   },
   {
-   "source": "inf_pencil",
-   "target": "inf_carbonpaper",
-   "type": "dependency"
-  },
-  {
    "source": "mat_toolsteel",
    "target": "inf_mimeograph",
    "type": "dependency"
@@ -50615,11 +49150,6 @@
   },
   {
    "source": "mathematics",
-   "target": "inf_mimeograph",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_typewriter",
    "target": "inf_mimeograph",
    "type": "dependency"
   },
@@ -50639,11 +49169,6 @@
    "type": "dependency"
   },
   {
-   "source": "inf_ballpoint",
-   "target": "inf_photocopier",
-   "type": "dependency"
-  },
-  {
    "source": "mat_continuouscast",
    "target": "inf_fax",
    "type": "dependency"
@@ -50655,11 +49180,6 @@
   },
   {
    "source": "mathematics",
-   "target": "inf_fax",
-   "type": "dependency"
-  },
-  {
-   "source": "photography",
    "target": "inf_fax",
    "type": "dependency"
   },
@@ -50789,11 +49309,6 @@
    "type": "dependency"
   },
   {
-   "source": "ai",
-   "target": "inf_vcr",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_camcorder",
    "type": "dependency"
@@ -50849,11 +49364,6 @@
    "type": "dependency"
   },
   {
-   "source": "inf_wan",
-   "target": "inf_microprocessor",
-   "type": "dependency"
-  },
-  {
    "source": "semiconductors",
    "target": "inf_ram",
    "type": "dependency"
@@ -50889,27 +49399,12 @@
    "type": "dependency"
   },
   {
-   "source": "inf_vcr",
-   "target": "inf_hdd",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_floppy",
    "type": "dependency"
   },
   {
-   "source": "inf_microprocessor",
-   "target": "inf_floppy",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_flash",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_camcorder",
    "target": "inf_flash",
    "type": "dependency"
   },
@@ -50925,11 +49420,6 @@
   },
   {
    "source": "mathematics",
-   "target": "inf_ssd",
-   "type": "dependency"
-  },
-  {
-   "source": "www",
    "target": "inf_ssd",
    "type": "dependency"
   },
@@ -50955,11 +49445,6 @@
   },
   {
    "source": "mathematics",
-   "target": "inf_compiler",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_rl",
    "target": "inf_compiler",
    "type": "dependency"
   },
@@ -51004,27 +49489,12 @@
    "type": "dependency"
   },
   {
-   "source": "inf_ssd",
-   "target": "inf_pl_python",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_db",
    "type": "dependency"
   },
   {
-   "source": "lasers",
-   "target": "inf_db",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_rdbms",
-   "type": "dependency"
-  },
-  {
-   "source": "touchscreen",
    "target": "inf_rdbms",
    "type": "dependency"
   },
@@ -51040,11 +49510,6 @@
   },
   {
    "source": "mathematics",
-   "target": "inf_nosql",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_usb",
    "target": "inf_nosql",
    "type": "dependency"
   },
@@ -51079,11 +49544,6 @@
    "type": "dependency"
   },
   {
-   "source": "inf_floppy",
-   "target": "inf_email",
-   "type": "dependency"
-  },
-  {
    "source": "ene_lipoly",
    "target": "inf_im",
    "type": "dependency"
@@ -51100,11 +49560,6 @@
   },
   {
    "source": "mathematics",
-   "target": "inf_social",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_nosql",
    "target": "inf_social",
    "type": "dependency"
   },
@@ -51164,11 +49619,6 @@
    "type": "dependency"
   },
   {
-   "source": "inf_rdbms",
-   "target": "inf_fiber",
-   "type": "dependency"
-  },
-  {
    "source": "mat_esr",
    "target": "inf_microwave",
    "type": "dependency"
@@ -51205,11 +49655,6 @@
   },
   {
    "source": "mathematics",
-   "target": "inf_router",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_flash",
    "target": "inf_router",
    "type": "dependency"
   },
@@ -51254,27 +49699,12 @@
    "type": "dependency"
   },
   {
-   "source": "inf_im",
-   "target": "inf_vpn",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_blockchain",
    "type": "dependency"
   },
   {
-   "source": "inf_knowledge",
-   "target": "inf_blockchain",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_pubkey",
-   "type": "dependency"
-  },
-  {
-   "source": "camera",
    "target": "inf_pubkey",
    "type": "dependency"
   },
@@ -51314,11 +49744,6 @@
    "type": "dependency"
   },
   {
-   "source": "inf_color_tv",
-   "target": "inf_hash",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_digitalsig",
    "type": "dependency"
@@ -51335,11 +49760,6 @@
   },
   {
    "source": "mathematics",
-   "target": "inf_qrcode",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_bluetooth",
    "target": "inf_qrcode",
    "type": "dependency"
   },
@@ -51379,17 +49799,7 @@
    "type": "dependency"
   },
   {
-   "source": "inf_barcode",
-   "target": "inf_rfid",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_sensor_net",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_net_switch",
    "target": "inf_sensor_net",
    "type": "dependency"
   },
@@ -51399,17 +49809,7 @@
    "type": "dependency"
   },
   {
-   "source": "inf_social",
-   "target": "inf_edge",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_cloud",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_edge",
    "target": "inf_cloud",
    "type": "dependency"
   },
@@ -51429,17 +49829,7 @@
    "type": "dependency"
   },
   {
-   "source": "inf_sensor_net",
-   "target": "inf_quantumcom",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_qkd",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_emap",
    "target": "inf_qkd",
    "type": "dependency"
   },
@@ -51464,22 +49854,12 @@
    "type": "dependency"
   },
   {
-   "source": "inf_agile",
-   "target": "inf_dl",
-   "type": "dependency"
-  },
-  {
    "source": "ene_supercap",
    "target": "inf_nn",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "inf_nn",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_modem",
    "target": "inf_nn",
    "type": "dependency"
   },
@@ -51499,27 +49879,12 @@
    "type": "dependency"
   },
   {
-   "source": "inf_gis",
-   "target": "inf_expert",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_knowledge",
    "type": "dependency"
   },
   {
-   "source": "smartphone",
-   "target": "inf_knowledge",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_nlp",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_os",
    "target": "inf_nlp",
    "type": "dependency"
   },
@@ -51535,11 +49900,6 @@
   },
   {
    "source": "mathematics",
-   "target": "inf_asr",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_compiler",
    "target": "inf_asr",
    "type": "dependency"
   },
@@ -51569,17 +49929,7 @@
    "type": "dependency"
   },
   {
-   "source": "inf_browser",
-   "target": "inf_recommend",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_ar",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_recommend",
    "target": "inf_ar",
    "type": "dependency"
   },
@@ -51609,11 +49959,6 @@
    "type": "dependency"
   },
   {
-   "source": "inf_quantumcom",
-   "target": "inf_vr",
-   "type": "dependency"
-  },
-  {
    "source": "display",
    "target": "inf_vr",
    "type": "dependency"
@@ -51634,11 +49979,6 @@
    "type": "dependency"
   },
   {
-   "source": "inf_vr",
-   "target": "inf_dataviz",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_gis",
    "type": "dependency"
@@ -51654,27 +49994,12 @@
    "type": "dependency"
   },
   {
-   "source": "inf_dataviz",
-   "target": "inf_emap",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_navsoft",
    "type": "dependency"
   },
   {
-   "source": "inf_ar",
-   "target": "inf_navsoft",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_watermark",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_navsoft",
    "target": "inf_watermark",
    "type": "dependency"
   },
@@ -51704,17 +50029,7 @@
    "type": "dependency"
   },
   {
-   "source": "inf_symenc",
-   "target": "inf_ecc",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_compression",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_nlp",
    "target": "inf_compression",
    "type": "dependency"
   },
@@ -51789,17 +50104,7 @@
    "type": "dependency"
   },
   {
-   "source": "inf_sdn",
-   "target": "inf_container",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_microservice",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_fog",
    "target": "inf_microservice",
    "type": "dependency"
   },
@@ -51809,17 +50114,7 @@
    "type": "dependency"
   },
   {
-   "source": "inf_microservice",
-   "target": "inf_lowcode",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_devops",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_lowcode",
    "target": "inf_devops",
    "type": "dependency"
   },
@@ -51854,11 +50149,6 @@
    "type": "dependency"
   },
   {
-   "source": "inf_wifi",
-   "target": "inf_uml",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_git",
    "type": "dependency"
@@ -51884,17 +50174,7 @@
    "type": "dependency"
   },
   {
-   "source": "inf_steg",
-   "target": "inf_middleware",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_cdn",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_middleware",
    "target": "inf_cdn",
    "type": "dependency"
   },
@@ -51914,17 +50194,7 @@
    "type": "dependency"
   },
   {
-   "source": "inf_loadbalancer",
-   "target": "inf_cache",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_graphdb",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_api",
    "target": "inf_graphdb",
    "type": "dependency"
   },
@@ -51934,17 +50204,7 @@
    "type": "dependency"
   },
   {
-   "source": "inf_graphdb",
-   "target": "inf_timeseries",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_vector_db",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_cicd",
    "target": "inf_vector_db",
    "type": "dependency"
   },
@@ -51955,11 +50215,6 @@
   },
   {
    "source": "mathematics",
-   "target": "inf_recommend2",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_pl_python",
    "target": "inf_recommend2",
    "type": "dependency"
   },
@@ -51994,11 +50249,6 @@
    "type": "dependency"
   },
   {
-   "source": "inf_codec",
-   "target": "inf_rl",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_gan",
    "type": "dependency"
@@ -52014,17 +50264,7 @@
    "type": "dependency"
   },
   {
-   "source": "inf_vector_db",
-   "target": "inf_rpa",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_alloptical",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_timeseries",
    "target": "inf_alloptical",
    "type": "dependency"
   },
@@ -52034,27 +50274,12 @@
    "type": "dependency"
   },
   {
-   "source": "inf_rpa",
-   "target": "inf_400g",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_leo",
    "type": "dependency"
   },
   {
-   "source": "inf_400g",
-   "target": "inf_leo",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_quantuminternet",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_6g",
    "target": "inf_quantuminternet",
    "type": "dependency"
   },
@@ -52104,11 +50329,6 @@
    "type": "dependency"
   },
   {
-   "source": "inf_quantuminternet",
-   "target": "inf_multimodal",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_agent",
    "type": "dependency"
@@ -52134,17 +50354,7 @@
    "type": "dependency"
   },
   {
-   "source": "inf_leo",
-   "target": "inf_embedding",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_vectorsearch",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_embedding",
    "target": "inf_vectorsearch",
    "type": "dependency"
   },
@@ -52154,17 +50364,7 @@
    "type": "dependency"
   },
   {
-   "source": "inf_worldmodel",
-   "target": "inf_rag",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_alignment",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_rag",
    "target": "inf_alignment",
    "type": "dependency"
   },
@@ -52174,27 +50374,12 @@
    "type": "dependency"
   },
   {
-   "source": "inf_cache",
-   "target": "inf_speechsyn",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_digitalhuman",
    "type": "dependency"
   },
   {
-   "source": "inf_alignment",
-   "target": "inf_digitalhuman",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "inf_edgeai",
-   "type": "dependency"
-  },
-  {
-   "source": "inf_diffusion",
    "target": "inf_edgeai",
    "type": "dependency"
   },
@@ -52219,27 +50404,12 @@
    "type": "dependency"
   },
   {
-   "source": "inf_digitalhuman",
-   "target": "inf_aisearch",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "inf_codegen",
    "type": "dependency"
   },
   {
-   "source": "inf_aisearch",
-   "target": "inf_codegen",
-   "type": "dependency"
-  },
-  {
    "source": "irrigation",
-   "target": "bio_herb",
-   "type": "dependency"
-  },
-  {
-   "source": "fermentation",
    "target": "bio_herb",
    "type": "dependency"
   },
@@ -52250,11 +50420,6 @@
   },
   {
    "source": "bio_dentistry",
-   "target": "bio_acupuncture",
-   "type": "dependency"
-  },
-  {
-   "source": "plow",
    "target": "bio_acupuncture",
    "type": "dependency"
   },
@@ -52304,11 +50469,6 @@
    "type": "dependency"
   },
   {
-   "source": "vaccination",
-   "target": "bio_pharmacology",
-   "type": "dependency"
-  },
-  {
    "source": "microbiology",
    "target": "bio_pharmacology",
    "type": "dependency"
@@ -52339,11 +50499,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_anatomy",
-   "target": "bio_distill",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_aspirin",
    "type": "dependency"
@@ -52359,11 +50514,6 @@
    "type": "dependency"
   },
   {
-   "source": "medical_imaging",
-   "target": "bio_aspirin",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_penicillin",
    "type": "dependency"
@@ -52375,11 +50525,6 @@
   },
   {
    "source": "bio_insulin",
-   "target": "bio_penicillin",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_bcg",
    "target": "bio_penicillin",
    "type": "dependency"
   },
@@ -52439,22 +50584,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_vitamin",
-   "target": "bio_bcg",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_insulin",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_insulin",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_bcg",
    "target": "bio_insulin",
    "type": "dependency"
   },
@@ -52479,11 +50614,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_aspirin",
-   "target": "bio_hormone",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_vitamin",
    "type": "dependency"
@@ -52494,32 +50624,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_bloodtype",
-   "target": "bio_vitamin",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_radiotherapy",
-   "target": "bio_vitamin",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_transfusion",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_transfusion",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_pathogen",
-   "target": "bio_transfusion",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_nutrition",
    "target": "bio_transfusion",
    "type": "dependency"
   },
@@ -52535,11 +50645,6 @@
   },
   {
    "source": "bio_radiotherapy",
-   "target": "bio_bloodtype",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_chemo",
    "target": "bio_bloodtype",
    "type": "dependency"
   },
@@ -52584,27 +50689,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_prescription",
-   "target": "bio_suture",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_acupuncture",
-   "target": "bio_suture",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_orthopedics",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_orthopedics",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_pharmacology",
    "target": "bio_orthopedics",
    "type": "dependency"
   },
@@ -52624,11 +50714,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_hormone",
-   "target": "bio_neurosurgery",
-   "type": "dependency"
-  },
-  {
    "source": "bio_hearingaid",
    "target": "bio_neurosurgery",
    "type": "dependency"
@@ -52640,16 +50725,6 @@
   },
   {
    "source": "mathematics",
-   "target": "bio_cardiovascular",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_neurosurgery",
-   "target": "bio_cardiovascular",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_hormone",
    "target": "bio_cardiovascular",
    "type": "dependency"
   },
@@ -52669,11 +50744,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_inhaler",
-   "target": "bio_transplant",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_dialysis",
    "type": "dependency"
@@ -52685,11 +50755,6 @@
   },
   {
    "source": "bio_bloodprod",
-   "target": "bio_dialysis",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_bioreactor",
    "target": "bio_dialysis",
    "type": "dependency"
   },
@@ -52709,11 +50774,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_bloodprod",
-   "target": "bio_artkidney",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_pacemaker",
    "type": "dependency"
@@ -52725,11 +50785,6 @@
   },
   {
    "source": "bio_interferon",
-   "target": "bio_pacemaker",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_transplant",
    "target": "bio_pacemaker",
    "type": "dependency"
   },
@@ -52749,11 +50804,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_cochlear",
-   "target": "bio_stent",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_endoscope",
    "type": "dependency"
@@ -52764,32 +50814,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_orthopedics",
-   "target": "bio_endoscope",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_pharmacology",
-   "target": "bio_endoscope",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_laparoscope",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_laparoscope",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_cardiovascular",
-   "target": "bio_laparoscope",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_neurosurgery",
    "target": "bio_laparoscope",
    "type": "dependency"
   },
@@ -52809,11 +50839,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_artkidney",
-   "target": "bio_ultrasound",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_ct",
    "type": "dependency"
@@ -52829,22 +50854,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_transdermal",
-   "target": "bio_ct",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_mri",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_mri",
-   "type": "dependency"
-  },
-  {
-   "source": "genetic_engineering",
    "target": "bio_mri",
    "type": "dependency"
   },
@@ -52884,11 +50899,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_ultrasound",
-   "target": "bio_nuclear_med",
-   "type": "dependency"
-  },
-  {
    "source": "bio_iol",
    "target": "bio_nuclear_med",
    "type": "dependency"
@@ -52909,11 +50919,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_arthroplasty",
-   "target": "bio_pet",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_seq",
    "type": "dependency"
@@ -52925,11 +50930,6 @@
   },
   {
    "source": "bio_monoclonal",
-   "target": "bio_seq",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_transgenic",
    "target": "bio_seq",
    "type": "dependency"
   },
@@ -52964,11 +50964,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_mri",
-   "target": "bio_transgenic",
-   "type": "dependency"
-  },
-  {
    "source": "genetic_engineering",
    "target": "bio_transgenic",
    "type": "dependency"
@@ -52989,11 +50984,6 @@
    "type": "dependency"
   },
   {
-   "source": "gmo",
-   "target": "bio_clone",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_ivf",
    "type": "dependency"
@@ -53009,22 +50999,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_seq",
-   "target": "bio_ivf",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_tissueeng",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_tissueeng",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_stent",
    "target": "bio_tissueeng",
    "type": "dependency"
   },
@@ -53064,22 +51044,7 @@
    "type": "dependency"
   },
   {
-   "source": "bio_stent",
-   "target": "bio_artskin",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "bio_prosthesis",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_suture",
-   "target": "bio_prosthesis",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_prescription",
    "target": "bio_prosthesis",
    "type": "dependency"
   },
@@ -53099,22 +51064,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_xray",
-   "target": "bio_hearingaid",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
    "target": "bio_glasses",
    "type": "dependency"
   },
   {
    "source": "bio_distill",
-   "target": "bio_glasses",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_physiology",
    "target": "bio_glasses",
    "type": "dependency"
   },
@@ -53134,11 +51089,6 @@
    "type": "dependency"
   },
   {
-   "source": "surgery",
-   "target": "bio_contactlens",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_iol",
    "type": "dependency"
@@ -53154,17 +51104,7 @@
    "type": "dependency"
   },
   {
-   "source": "bio_dialysis",
-   "target": "bio_iol",
-   "type": "dependency"
-  },
-  {
    "source": "mathematics",
-   "target": "bio_denture",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_surgery",
    "target": "bio_denture",
    "type": "dependency"
   },
@@ -53175,11 +51115,6 @@
   },
   {
    "source": "mathematics",
-   "target": "bio_dentistry",
-   "type": "dependency"
-  },
-  {
-   "source": "plow",
    "target": "bio_dentistry",
    "type": "dependency"
   },
@@ -53199,32 +51134,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_endoscope",
-   "target": "bio_epidemiology",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_orthopedics",
-   "target": "bio_epidemiology",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_disinfectant",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_disinfectant",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_epidemiology",
-   "target": "bio_disinfectant",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_endoscope",
    "target": "bio_disinfectant",
    "type": "dependency"
   },
@@ -53239,32 +51154,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_laparoscope",
-   "target": "bio_probiotic",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_cardiovascular",
-   "target": "bio_probiotic",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_nutrition",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_nutrition",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_disinfectant",
-   "target": "bio_nutrition",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_epidemiology",
    "target": "bio_nutrition",
    "type": "dependency"
   },
@@ -53275,16 +51170,6 @@
   },
   {
    "source": "mathematics",
-   "target": "bio_enzyme",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_nuclear_med",
-   "target": "bio_enzyme",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_ultrasound",
    "target": "bio_enzyme",
    "type": "dependency"
   },
@@ -53295,16 +51180,6 @@
   },
   {
    "source": "mathematics",
-   "target": "bio_fermentation",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_probiotic",
-   "target": "bio_fermentation",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_laparoscope",
    "target": "bio_fermentation",
    "type": "dependency"
   },
@@ -53339,16 +51214,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_transgenic",
-   "target": "bio_monoclonal",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_mri",
-   "target": "bio_monoclonal",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_interferon",
    "type": "dependency"
@@ -53360,11 +51225,6 @@
   },
   {
    "source": "bio_transplant",
-   "target": "bio_interferon",
-   "type": "dependency"
-  },
-  {
-   "source": "dna",
    "target": "bio_interferon",
    "type": "dependency"
   },
@@ -53434,16 +51294,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_fermentation",
-   "target": "bio_chemo",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_probiotic",
-   "target": "bio_chemo",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_radiotherapy",
    "type": "dependency"
@@ -53454,27 +51304,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_chemo",
-   "target": "bio_radiotherapy",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_fermentation",
-   "target": "bio_radiotherapy",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_targeted",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_targeted",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_mrnavax",
    "target": "bio_targeted",
    "type": "dependency"
   },
@@ -53499,11 +51334,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_organoid",
-   "target": "bio_immunotherapy",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_genetherapy",
    "type": "dependency"
@@ -53515,11 +51345,6 @@
   },
   {
    "source": "bio_targeted",
-   "target": "bio_genetherapy",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_mrnavax",
    "target": "bio_genetherapy",
    "type": "dependency"
   },
@@ -53545,11 +51370,6 @@
   },
   {
    "source": "bio_clone",
-   "target": "bio_celltherapy",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_proteomics2",
    "target": "bio_celltherapy",
    "type": "dependency"
   },
@@ -53609,11 +51429,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_nuclear_med",
-   "target": "bio_ivd",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_poc",
    "type": "dependency"
@@ -53624,27 +51439,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_artskin",
-   "target": "bio_poc",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_tissueeng",
-   "target": "bio_poc",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_wearable",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_wearable",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_celltherapy",
    "target": "bio_wearable",
    "type": "dependency"
   },
@@ -53664,27 +51464,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_ivd",
-   "target": "bio_telemed",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_enzyme",
-   "target": "bio_telemed",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_ehr",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_ehr",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_pet",
    "target": "bio_ehr",
    "type": "dependency"
   },
@@ -53704,32 +51489,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_cart",
-   "target": "bio_medicalai",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_immunotherapy",
-   "target": "bio_medicalai",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_surgerobot",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_surgerobot",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_wearable",
-   "target": "bio_surgerobot",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_celltherapy",
    "target": "bio_surgerobot",
    "type": "dependency"
   },
@@ -53745,11 +51510,6 @@
   },
   {
    "source": "bio_surgerobot",
-   "target": "bio_reharobot",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_wearable",
    "target": "bio_reharobot",
    "type": "dependency"
   },
@@ -53769,27 +51529,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_surgerobot",
-   "target": "bio_exoskeleton",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_bci",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_bci",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_ehr",
-   "target": "bio_bci",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_pet",
    "target": "bio_bci",
    "type": "dependency"
   },
@@ -53819,16 +51564,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_poc",
-   "target": "bio_neuromod",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_artskin",
-   "target": "bio_neuromod",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_dbs",
    "type": "dependency"
@@ -53844,11 +51579,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_epigenetics",
-   "target": "bio_dbs",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_bioniceye",
    "type": "dependency"
@@ -53859,27 +51589,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_exoskeleton",
-   "target": "bio_bioniceye",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_reharobot",
-   "target": "bio_bioniceye",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_cochlear",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_cochlear",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_seq",
    "target": "bio_cochlear",
    "type": "dependency"
   },
@@ -53899,16 +51614,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_bioniceye",
-   "target": "bio_bio3dp",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_exoskeleton",
-   "target": "bio_bio3dp",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_organoid",
    "type": "dependency"
@@ -53919,32 +51624,12 @@
    "type": "dependency"
   },
   {
-   "source": "robot_vacuum",
-   "target": "bio_organoid",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_pharmacogen",
-   "target": "bio_organoid",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_synbio",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_synbio",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_bio3dp",
-   "target": "bio_synbio",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_bioniceye",
    "target": "bio_synbio",
    "type": "dependency"
   },
@@ -53974,32 +51659,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_genetherapy",
-   "target": "bio_directedevo",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_targeted",
-   "target": "bio_directedevo",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_proteineng",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_proteineng",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_neuromod",
-   "target": "bio_proteineng",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_poc",
    "target": "bio_proteineng",
    "type": "dependency"
   },
@@ -54015,11 +51680,6 @@
   },
   {
    "source": "bio_directedevo",
-   "target": "bio_metabeng",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_genetherapy",
    "target": "bio_metabeng",
    "type": "dependency"
   },
@@ -54049,16 +51709,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_synbio",
-   "target": "bio_microbiome",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_bio3dp",
-   "target": "bio_microbiome",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_phage",
    "type": "dependency"
@@ -54074,11 +51724,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_bloodtype",
-   "target": "bio_phage",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_drugdelivery",
    "type": "dependency"
@@ -54089,32 +51734,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_telemed",
-   "target": "bio_drugdelivery",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_ivd",
-   "target": "bio_drugdelivery",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_nanomed",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_nanomed",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_microbiome",
-   "target": "bio_nanomed",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_synbio",
    "target": "bio_nanomed",
    "type": "dependency"
   },
@@ -54134,27 +51759,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_telemed",
-   "target": "bio_sustained",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_transdermal",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_transdermal",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_bci",
-   "target": "bio_transdermal",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_ehr",
    "target": "bio_transdermal",
    "type": "dependency"
   },
@@ -54174,27 +51784,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_drugdelivery",
-   "target": "bio_inhaler",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_genevector",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_genevector",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_transdermal",
-   "target": "bio_genevector",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_bci",
    "target": "bio_genevector",
    "type": "dependency"
   },
@@ -54210,11 +51805,6 @@
   },
   {
    "source": "bio_nanomed",
-   "target": "bio_lipidnp",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_microbiome",
    "target": "bio_lipidnp",
    "type": "dependency"
   },
@@ -54234,11 +51824,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_nanomed",
-   "target": "bio_vaccineplatform",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_pathogen",
    "type": "dependency"
@@ -54249,32 +51834,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_nutrition",
-   "target": "bio_pathogen",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_disinfectant",
-   "target": "bio_pathogen",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_epigenetics",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_epigenetics",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_proteineng",
-   "target": "bio_epigenetics",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_neuromod",
    "target": "bio_epigenetics",
    "type": "dependency"
   },
@@ -54294,11 +51859,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_artlung",
-   "target": "bio_proteomics2",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_metabolomics",
    "type": "dependency"
@@ -54309,32 +51869,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_vaccineplatform",
-   "target": "bio_metabolomics",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_lipidnp",
-   "target": "bio_metabolomics",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_spatialtrans",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_spatialtrans",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_medicalai",
-   "target": "bio_spatialtrans",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_cart",
    "target": "bio_spatialtrans",
    "type": "dependency"
   },
@@ -54354,27 +51894,12 @@
    "type": "dependency"
   },
   {
-   "source": "robot_vacuum",
-   "target": "bio_singlecell",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_organonchip",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_organonchip",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_spatialtrans",
-   "target": "bio_organonchip",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_medicalai",
    "target": "bio_organonchip",
    "type": "dependency"
   },
@@ -54404,27 +51929,12 @@
    "type": "dependency"
   },
   {
-   "source": "smart_mower",
-   "target": "bio_universalvax",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_newantibiotic",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_newantibiotic",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_metabolomics",
-   "target": "bio_newantibiotic",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_vaccineplatform",
    "target": "bio_newantibiotic",
    "type": "dependency"
   },
@@ -54444,11 +51954,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_metabolomics",
-   "target": "bio_antimicrobialpep",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_precisionmed",
    "type": "dependency"
@@ -54460,11 +51965,6 @@
   },
   {
    "source": "bio_organonchip",
-   "target": "bio_precisionmed",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_spatialtrans",
    "target": "bio_precisionmed",
    "type": "dependency"
   },
@@ -54494,16 +51994,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_antimicrobialpep",
-   "target": "bio_pharmacogen",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_newantibiotic",
-   "target": "bio_pharmacogen",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_liquidbiopsy",
    "type": "dependency"
@@ -54515,11 +52005,6 @@
   },
   {
    "source": "bio_precisionmed",
-   "target": "bio_liquidbiopsy",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_organonchip",
    "target": "bio_liquidbiopsy",
    "type": "dependency"
   },
@@ -54559,27 +52044,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_precisionmed",
-   "target": "bio_ctdna",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_cgm",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_cgm",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_ctdna",
-   "target": "bio_cgm",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_liquidbiopsy",
    "target": "bio_cgm",
    "type": "dependency"
   },
@@ -54599,11 +52069,6 @@
    "type": "dependency"
   },
   {
-   "source": "bio_genevector",
-   "target": "bio_ecmo",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_artliver",
    "type": "dependency"
@@ -54614,32 +52079,12 @@
    "type": "dependency"
   },
   {
-   "source": "bio_metabeng",
-   "target": "bio_artliver",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_directedevo",
-   "target": "bio_artliver",
-   "type": "dependency"
-  },
-  {
    "source": "chemistry",
    "target": "bio_artlung",
    "type": "dependency"
   },
   {
    "source": "mathematics",
-   "target": "bio_artlung",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_artliver",
-   "target": "bio_artlung",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_metabeng",
    "target": "bio_artlung",
    "type": "dependency"
   },
@@ -54650,11 +52095,6 @@
   },
   {
    "source": "mathematics",
-   "target": "bio_arthroplasty",
-   "type": "dependency"
-  },
-  {
-   "source": "bio_antiviral",
    "target": "bio_arthroplasty",
    "type": "dependency"
   },
@@ -54719,11 +52159,6 @@
    "type": "dependency"
   },
   {
-   "source": "bld_mortise",
-   "target": "bld_tile",
-   "type": "dependency"
-  },
-  {
    "source": "mat_copper",
    "target": "bld_timber",
    "type": "dependency"
@@ -54735,11 +52170,6 @@
   },
   {
    "source": "bld_adobe",
-   "target": "bld_timber",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_brick",
    "target": "bld_timber",
    "type": "dependency"
   },
@@ -54799,11 +52229,6 @@
    "type": "dependency"
   },
   {
-   "source": "bld_tile",
-   "target": "bld_stone",
-   "type": "dependency"
-  },
-  {
    "source": "mat_anneal",
    "target": "bld_arch",
    "type": "dependency"
@@ -54815,11 +52240,6 @@
   },
   {
    "source": "ene_coal",
-   "target": "bld_arch",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_pile",
    "target": "bld_arch",
    "type": "dependency"
   },
@@ -54850,11 +52270,6 @@
   },
   {
    "source": "mfg_thread",
-   "target": "bld_ribvault",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_romanconc",
    "target": "bld_ribvault",
    "type": "dependency"
   },
@@ -54899,11 +52314,6 @@
    "type": "dependency"
   },
   {
-   "source": "bld_dome",
-   "target": "bld_romanconc",
-   "type": "dependency"
-  },
-  {
    "source": "bld_lightning",
    "target": "bld_framing",
    "type": "dependency"
@@ -54944,23 +52354,8 @@
    "type": "dependency"
   },
   {
-   "source": "bld_framing",
-   "target": "bld_suspension",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_suspension",
-   "target": "bld_truss",
-   "type": "dependency"
-  },
-  {
    "source": "bld_truss",
    "target": "bld_steelbridge",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_steelbridge",
-   "target": "bld_tunnel3",
    "type": "dependency"
   },
   {
@@ -55019,33 +52414,8 @@
    "type": "dependency"
   },
   {
-   "source": "bld_stone",
-   "target": "bld_pile",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_tunnel3",
-   "target": "bld_raftfound",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_raftfound",
-   "target": "bld_ground",
-   "type": "dependency"
-  },
-  {
    "source": "bld_ground",
    "target": "bld_grouting",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_grouting",
-   "target": "bld_waterproof",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_waterproof",
-   "target": "bld_insulation2",
    "type": "dependency"
   },
   {
@@ -55074,38 +52444,8 @@
    "type": "dependency"
   },
   {
-   "source": "bld_insulation2",
-   "target": "bld_daylight",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_daylight",
-   "target": "bld_vent",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_shearwall",
-   "target": "bld_hvac",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_vent",
-   "target": "bld_plumbing",
-   "type": "dependency"
-  },
-  {
    "source": "bld_plumbing",
    "target": "bld_sewage",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_hvac",
-   "target": "bld_rainwater",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_sewage",
-   "target": "bld_fireprotect",
    "type": "dependency"
   },
   {
@@ -55149,11 +52489,6 @@
    "type": "dependency"
   },
   {
-   "source": "bld_rainwater",
-   "target": "bld_seismic",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_cam",
    "target": "bld_isolation",
    "type": "dependency"
@@ -55161,11 +52496,6 @@
   {
    "source": "bld_climbform",
    "target": "bld_isolation",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_seismic",
-   "target": "bld_modular",
    "type": "dependency"
   },
   {
@@ -55210,11 +52540,6 @@
   },
   {
    "source": "mfg_darkfactory",
-   "target": "bld_3dpb",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_sponge",
    "target": "bld_3dpb",
    "type": "dependency"
   },
@@ -55269,37 +52594,12 @@
    "type": "dependency"
   },
   {
-   "source": "bld_zeroenergy",
-   "target": "bld_smartb",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_cam",
    "target": "bld_bim",
    "type": "dependency"
   },
   {
-   "source": "bld_isolation",
-   "target": "bld_bim",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_fireprotect",
-   "target": "bld_survey2",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_survey2",
-   "target": "bld_underground",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_visionguide",
-   "target": "bld_sponge",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_smartb",
    "target": "bld_sponge",
    "type": "dependency"
   },
@@ -55315,11 +52615,6 @@
   },
   {
    "source": "mfg_robotgripper",
-   "target": "bld_geothermal2",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_bim",
    "target": "bld_geothermal2",
    "type": "dependency"
   },
@@ -55354,27 +52649,12 @@
    "type": "dependency"
   },
   {
-   "source": "bld_tube",
-   "target": "bld_climbform",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_robotgripper",
    "target": "bld_aluform",
    "type": "dependency"
   },
   {
-   "source": "bld_geothermal2",
-   "target": "bld_aluform",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_darkfactory",
-   "target": "bld_robotbrick",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_3dpb",
    "target": "bld_robotbrick",
    "type": "dependency"
   },
@@ -55434,17 +52714,7 @@
    "type": "dependency"
   },
   {
-   "source": "bld_robotbrick",
-   "target": "bld_smartcity",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_darkfactory",
-   "target": "bld_variabletbm",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_smartcity",
    "target": "bld_variabletbm",
    "type": "dependency"
   },
@@ -55454,27 +52724,12 @@
    "type": "dependency"
   },
   {
-   "source": "bld_variabletbm",
-   "target": "bld_frpbridge",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_darkfactory",
    "target": "bld_selfhealconc",
    "type": "dependency"
   },
   {
-   "source": "bld_frpbridge",
-   "target": "bld_selfhealconc",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_darkfactory",
-   "target": "bld_carbonconc",
-   "type": "dependency"
-  },
-  {
-   "source": "bld_selfhealconc",
    "target": "bld_carbonconc",
    "type": "dependency"
   },
@@ -55535,11 +52790,6 @@
   },
   {
    "source": "mfg_chisel",
-   "target": "mil_javelin",
-   "type": "dependency"
-  },
-  {
-   "source": "mil_arrow",
    "target": "mil_javelin",
    "type": "dependency"
   },
@@ -55644,22 +52894,12 @@
    "type": "dependency"
   },
   {
-   "source": "tr_horseshoe",
-   "target": "mil_plate",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_rolling2",
    "target": "mil_matchlock",
    "type": "dependency"
   },
   {
    "source": "mat_rolling",
-   "target": "mil_matchlock",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_horseshoe",
    "target": "mil_matchlock",
    "type": "dependency"
   },
@@ -55685,11 +52925,6 @@
   },
   {
    "source": "mat_rolling",
-   "target": "mil_musket",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_horseshoe",
    "target": "mil_musket",
    "type": "dependency"
   },
@@ -55745,11 +52980,6 @@
   },
   {
    "source": "mat_rolling",
-   "target": "mil_pistol",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_horseshoe",
    "target": "mil_pistol",
    "type": "dependency"
   },
@@ -55884,11 +53114,6 @@
    "type": "dependency"
   },
   {
-   "source": "tr_horseshoe",
-   "target": "mil_landmine",
-   "type": "dependency"
-  },
-  {
    "source": "tr_pipeline",
    "target": "mil_seamine",
    "type": "dependency"
@@ -55904,22 +53129,12 @@
    "type": "dependency"
   },
   {
-   "source": "tr_horseshoe",
-   "target": "mil_grenade",
-   "type": "dependency"
-  },
-  {
    "source": "mfg_wiredraw",
    "target": "mil_rocket2",
    "type": "dependency"
   },
   {
    "source": "mat_drawing",
-   "target": "mil_rocket2",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_horseshoe",
    "target": "mil_rocket2",
    "type": "dependency"
   },
@@ -56209,11 +53424,6 @@
    "type": "dependency"
   },
   {
-   "source": "tr_horseshoe",
-   "target": "mil_cannon",
-   "type": "dependency"
-  },
-  {
    "source": "tr_monorail",
    "target": "mil_aagun",
    "type": "dependency"
@@ -56425,11 +53635,6 @@
   },
   {
    "source": "mat_rolling",
-   "target": "mil_bodyarmor",
-   "type": "dependency"
-  },
-  {
-   "source": "tr_horseshoe",
    "target": "mil_bodyarmor",
    "type": "dependency"
   },
@@ -56675,11 +53880,6 @@
   },
   {
    "source": "battery",
-   "target": "mil_directedenergy",
-   "type": "dependency"
-  },
-  {
-   "source": "optics",
    "target": "mil_directedenergy",
    "type": "dependency"
   },
@@ -57539,11 +54739,6 @@
    "type": "dependency"
   },
   {
-   "source": "canoe",
-   "target": "navigation",
-   "type": "dependency"
-  },
-  {
    "source": "sail",
    "target": "navigation",
    "type": "dependency"
@@ -57629,11 +54824,6 @@
    "type": "dependency"
   },
   {
-   "source": "optics",
-   "target": "laser",
-   "type": "dependency"
-  },
-  {
    "source": "electromagnetism",
    "target": "laser",
    "type": "dependency"
@@ -57675,11 +54865,6 @@
   },
   {
    "source": "semiconductor",
-   "target": "display",
-   "type": "dependency"
-  },
-  {
-   "source": "optics",
    "target": "display",
    "type": "dependency"
   },
@@ -57984,11 +55169,6 @@
    "type": "dependency"
   },
   {
-   "source": "optics",
-   "target": "led",
-   "type": "dependency"
-  },
-  {
    "source": "computer",
    "target": "automation",
    "type": "dependency"
@@ -58074,22 +55254,12 @@
    "type": "dependency"
   },
   {
-   "source": "neural_network",
-   "target": "agi",
-   "type": "dependency"
-  },
-  {
    "source": "big_data",
    "target": "agi",
    "type": "dependency"
   },
   {
    "source": "ai",
-   "target": "neuromorphic",
-   "type": "dependency"
-  },
-  {
-   "source": "chip",
    "target": "neuromorphic",
    "type": "dependency"
   },
@@ -58200,11 +55370,6 @@
   },
   {
    "source": "display",
-   "target": "holography",
-   "type": "dependency"
-  },
-  {
-   "source": "optics",
    "target": "holography",
    "type": "dependency"
   },
@@ -58360,11 +55525,6 @@
   },
   {
    "source": "stem_cells",
-   "target": "stem_cell_therapy",
-   "type": "dependency"
-  },
-  {
-   "source": "tissue_engineering",
    "target": "stem_cell_therapy",
    "type": "dependency"
   },
@@ -58530,11 +55690,6 @@
   },
   {
    "source": "electromagnetism",
-   "target": "metamaterial",
-   "type": "dependency"
-  },
-  {
-   "source": "optics",
    "target": "metamaterial",
    "type": "dependency"
   },
@@ -58819,11 +55974,6 @@
    "type": "dependency"
   },
   {
-   "source": "synthetic_biology",
-   "target": "gene_circuit",
-   "type": "dependency"
-  },
-  {
    "source": "crispr",
    "target": "gene_circuit",
    "type": "dependency"
@@ -58845,11 +55995,6 @@
   },
   {
    "source": "nanotech",
-   "target": "nanomedicine",
-   "type": "dependency"
-  },
-  {
-   "source": "pharmacology",
    "target": "nanomedicine",
    "type": "dependency"
   },
@@ -58879,11 +56024,6 @@
    "type": "dependency"
   },
   {
-   "source": "pharmacology",
-   "target": "senolytics",
-   "type": "dependency"
-  },
-  {
    "source": "stem_cells",
    "target": "artificial_womb",
    "type": "dependency"
@@ -58891,16 +56031,6 @@
   {
    "source": "life_support",
    "target": "artificial_womb",
-   "type": "dependency"
-  },
-  {
-   "source": "tissue_engineering",
-   "target": "artificial_womb",
-   "type": "dependency"
-  },
-  {
-   "source": "vr",
-   "target": "virtual_world",
    "type": "dependency"
   },
   {
@@ -59109,11 +56239,6 @@
    "type": "dependency"
   },
   {
-   "source": "bci",
-   "target": "mind_upload",
-   "type": "dependency"
-  },
-  {
    "source": "computer",
    "target": "mind_upload",
    "type": "dependency"
@@ -59270,11 +56395,6 @@
   },
   {
    "source": "brain_emulation",
-   "target": "memory_extract",
-   "type": "dependency"
-  },
-  {
-   "source": "bci",
    "target": "memory_extract",
    "type": "dependency"
   },

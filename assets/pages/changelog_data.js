@@ -575,6 +575,68 @@ window.CHANGELOG = {
         "⑧ 本轮不动网络：节点 2,265 / 依赖边 6,091 与阶段 1 完成后一致；回归门禁 audit_net --check [OK]，文档门禁 check_docs [OK]（TOTAL 2265）。"
       ],
       files: ["assets/techs_midtech.js", "tools/gen_midtech.js", "tools/fix_midtech_dup.js", "audit/ledger.json", "技术网络检修计划.md", "assets/pages/changelog_data.js", "assets/pages/correction_data.js", "版本迭代日志.md", "index.html", "tree.html", "tree_full.html", "browse.html", "detail.html", "lineage.html", "analysis.html", "model.html", "changelog.html", "correction.html", "method.html", "midtech.html", "progress.html", "research.html", "sop.html", "timeline.html", "worldview.html"]
+    },
+    {
+      "version": "v0.9.24",
+      "date": "2026-09-13",
+      "type": "fix",
+      "title": "阶段 5.1 派生数据同步：节点文案 3,313 处、中间技术库 84 + 69 条、全量管线 576 条伪边与主管线对齐",
+      "summary": "把「生成时刻快照」类的派生数据统一以当前主管线为准重算并工具化。三件事：① 主管线 977 个节点的 3,313 处模板文案（summary / significance / views）——v0.9.20/21 删除 577 条伪边后未同步，文案里仍写着已删除的前置与不存在的下游；② 中间技术库 95 条条目的 backgrounds（84 条）与摘要（69 条）——原为生成时刻 dependsOn 的快照，批次 5.0 抽检显示 5/5 残留；③ 全量管线——把该批次已判定删除的 576 条伪边从 graph.json 与 data_full.js 两侧移除（tree_full.html 此前仍在展示它们）。三项均为「派生数据重算」，不改动任何因果结构判定；重跑皆为不动点。网络本身未变：节点 2,265 / 依赖边 6,091。",
+      "treeChange": {
+        "scope": "主管线依赖网络（节点 / 依赖边）未改动：仍为 2,265 个节点 / 6,091 条依赖边。本次改动的是三类派生数据 —— ① 节点展示文案（summary / significance / views[].text）977 节点 3,313 处；② 中间技术库 assets/techs_midtech.js 的 backgrounds（84 条）与 summary（69 条）；③ 全量管线 analysis-engine/data/graph.json（边 7,539 → 6,963）与 assets/data_full.js（边 17,387 → 16,811）。全量管线节点数不变（2,299 / 13,318）。",
+        "reason": "这三类数据都是「某一时刻从依赖网络导出」的快照，而依赖网络在 v0.9.20/21 被大幅清理（删 577 条位置式伪边、95 个节点补写真实前置），快照却未重算，于是文案与背景继续把已判为错误的关系讲成史实——即「结构错 → 文案把错讲成史实」这条根因链的末端。用户抽检 5 条关系时确认：主管线 dependsOn 已 0/5 残留，但节点摘要 3/5、中间库 backgrounds 5/5、全量管线 1/5 仍有残留。因此本次不逐条打补丁，而是把「重算公式」固化为工具：文案按 tools/upgrade_stubs.js 的原公式（upsStr = dependsOn 前 3 项、downsStr = 反图前 3 项、模板选择 = hash(id) % 2）重算；中间库背景按 gen_midtech.js 的原口径重算；全量管线则只做「既成判定的传播」。三者可随时重跑，后续批次改完 dependsOn 只需重跑即归零漂移。",
+        "detail": "① 文案同步：识别为模板句者 3,942 处、手写散文 1,724 处（一律不动）；实际改写 3,313 处（summary 953 + significance 940 + views[].text 1,420），按段落归属为「仅上游段变」745、「仅下游段变」1,725、「上下游都变」712、模板切换 131。样例：mfg_3dp 由「建立在 激光熔覆、碟式斯特林、数学 之上」改为「建立在 数学、CNC、计算机 之上」；positional 由「建立在 语言、文字、数学 之上…并为 代数 的发展铺平了道路」改为「建立在 文字、数学、零的概念 之上…」（下游子句按当前反图移除）。② 中间库：backgrounds 84 条变化、summary 69 条、born 5 条，95 条目录集合不变；mat_graphene 清掉已删除的 mat_selfheal，mil_loyalwingman 由 [工业4.0, 摩擦纳米发电, 二维材料, 可重复使用火箭] 变为 [无人机, 隐身技术2]。未重选案例集合——以当前数据重跑 gen_midtech.js 只能选出 32 条且 life 占 14 条，属筛选口径失效（已登记 5d），案例集合维持人工策展。规则抽为 tools/midtech_rules.js 供生成器与本工具共用，重构后生成器干跑输出与重构前逐字节一致。③ 全量管线：以 git eaa086f^ 与当前主管线逐边 diff 得到该批次判定删除的 577 条，核验其中 576 条同时存在于 graph.json 与 data_full.js（两侧互为交叉校验）、无一被主管线重新承认、两端节点在 TECHS_FULL 中均存在，据此两侧各移除 576 条（dependency 575 + enables 1），清单存 audit/full_pipeline_exclusions.json；graph.json meta.totalTechs 一并由 2,288 修正为 2,265（1c 批次重名合并后未同步的陈旧值）。方法学结论：对全量管线使用「位置式签名」启发式扫描，上述 576 条真实伪边中仅 18 条命中该签名——印证该签名只能作筛查信号、不能作判据，确定性方法是「生成器复现 / 既成判定传播 + 逐边 diff」。"
+      },
+      "changes": [
+        "① 派生文本同步（主管线）：977 个节点 3,313 处改写，工具 tools/regen_text.js。只替换被完整模板骨架识别的句子，1,724 处手写散文全部未动（例：tr_pneumatictire 的「天然橡胶与硫化工艺」）。逐节点断言 id 锚点唯一、字段现值与预期逐字相符；写后校验 EXTRA_TECHS 仍 1,033 条。",
+        "② 改写范围（按变化性质）：删已不存在的下游子句 1,657 处、补新出现的下游 142 处、仅枚举项/顺序变化 656 处、模板切换 131 处。上游段受影响 1,457 处、下游段 2,437 处。",
+        "③ 中间技术库对齐：backgrounds 84 条、summary 69 条、born 5 条，工具 tools/regen_midtech.js。写后断言无断链背景（tech 字段全部指向存在节点，原文件存在 undefined 背景）、无重复 id、条目数 95 不变。",
+        "④ 共享规则抽出：FAMOUS / CAT_ABILITY / noteFor / crossSelf / chosenUps 由 gen_midtech.js 内联改为 tools/midtech_rules.js，生成器与同步器共用一套口径，避免二处分叉；顺带修正 CAT_ABILITY 键名（原表用 basicscience / building，而实际分类 id 为 basic / build，导致这两类前置的注释一律退化为兜底句）。重构后 gen_midtech.js 干跑输出与重构前逐字节一致（32 条 / 漂移 23 / 样例相同）。",
+        "⑤ 全量管线同步：graph.json 边 7,539 → 6,963，assets/data_full.js 边 17,387 → 16,811，两侧各移除 576 条（dependency 575 + enables 1），节点数均不变（2,299 / 13,318）。工具 tools/prune_full_pipeline.js，排除清单 audit/full_pipeline_exclusions.json（含来源提交与生成日期，可复核）。",
+        "⑥ 元数据计数修正：graph.json meta 的 totalTechs 2,288 → 2,265、totalEdges 7,539 → 6,963、depEdges 7,333 → 6,758、enaEdges 206 → 205；data_full.js SCORE_META.totalEdges 17,387 → 16,811，并按既有约定写入 patchedAt / patchNote。",
+        "⑦ 双管线分叉收窄：audit_net 的 dual 指标 onlyInGraphJson 1,779 → 1,204、onlyInMain 448 不变；受影响指标全部未变，已据此刷新 audit/baseline.json（差异仅上述两项信息性字段）。",
+        "⑧ 校验链：regen_text 重跑为不动点（0 处）；regen_midtech 重跑为不动点（95/95 未变）；audit_net --check [OK]；check_docs [OK]；全量 runtime 干跑 29 个脚本无错、TECHS 2,265；两侧写入前做往返序列化一致性校验（data_full.js 字节一致，graph.json 一致且保留原「末尾无换行」，diff 仅含删除行）。",
+        "⑨ 未改动：主管线网络结构（节点 2,265 / 依赖边 6,091）、全量管线节点集合、中间技术库案例集合。本轮不新增或删除任何依赖关系判定。",
+        "⑩ 遗留待审核（新登记批次 5.1d）：全量管线仍有 1,127 条边未被主管线承认——yearInv 29 + 位置式签名 705 + 其他 393。其中 29 条年份倒挂全为 enables 类型，对应已知的「技术先行、理论后至」结构类（如 蒸汽机(1769) → 热力学(1824)），不是本族错误、不应按伪边删除，须另行设计表达方式；其余须按 eaa086f 的方法（生成器复现 + 逐边 diff）或逐条语义判定处理，出判定草案后再执行。",
+        "⑪ 流程增补：自本批次起，「凡改动 dependsOn 的批次，收尾必须重跑 regen_text.js 与 regen_midtech.js 并确认输出为不动点」写入《技术网络检修计划.md》§五 固定动作第 4 条。这是本批次暴露的系统性风险——派生数据若不在结构定稿后重算，会再次把错误讲成史实。"
+      ],
+      "files": [
+        "assets/techs_extra.js",
+        "assets/techs_midtech.js",
+        "analysis-engine/data/graph.json",
+        "assets/data_full.js",
+        "assets/pages/changelog_data.js",
+        "assets/pages/correction_data.js",
+        "版本迭代日志.md",
+        "技术网络检修计划.md",
+        "audit/ledger.json",
+        "audit/baseline.json",
+        "audit/full_pipeline_exclusions.json",
+        "tools/regen_text.js",
+        "tools/regen_midtech.js",
+        "tools/midtech_rules.js",
+        "tools/prune_full_pipeline.js",
+        "tools/audit_full_pipeline.js",
+        "tools/gen_midtech.js",
+        "index.html",
+        "tree.html",
+        "tree_full.html",
+        "browse.html",
+        "detail.html",
+        "lineage.html",
+        "analysis.html",
+        "model.html",
+        "changelog.html",
+        "correction.html",
+        "method.html",
+        "midtech.html",
+        "progress.html",
+        "research.html",
+        "sop.html",
+        "timeline.html",
+        "worldview.html"
+      ]
     }
+
   ]
 };
