@@ -51,6 +51,8 @@ window.CORRECTIONS = {
       "【v0.9.28 · 已执行 · 顺延】批次 3.1a（E 族 manufact 首批 27 条「`mathematics` 单前置」判定）已写盘：保留 2 / 改前置 1 / 删边 24 / 降级 0，补前置 27 条共新增 56 条边，依赖边 6,094 → 6,126（节点 2,266 不变）；派生文案 45 节点 136 处 + 中间库 3 条，均验不动点；结构问题族 A 562 → 535、E 173 → 146、Ch 260 → 252。**顺延与新增**：① E 族 manufact 其余 41 条前置同样一律为 `mathematics`，处置规则 R1–R4 可直接沿用（阶段 3.1b 起）；② **根治手段在阶段 5c** —— 只要生成器的「同分类槽位批量挂通用枢纽」逻辑不加语义硬约束，同类边会在重跑时再生，本批属事后清理、非源头修复；③ `mfg_resistweld` 电阻焊标注 1877 年早于 `electricity` 电力系统 1879（通行说法为 1886 年 Thomson 专利），本批已改用 `generator` / `battery` 绕开，年份本身留待阶段 4 统一校订；④ 本批 27 条的 `applications` 全部为同一组模板值（零件加工 / 批量制造 / 精密装配）且无 `purpose` / `people` / `place`，与 `techs_more.js` 同构 stub 特征一致，建议并入「stub 甄别」批次；⑤ 同义重复节点对（`mfg_wedm` 线切割 / `mfg_edmwire` 电火花线切割机、`laser` / `lasers`、`mfg_lathe` / `lathe`）属节点级问题，本批未处置，建议另立批次（注意合并会改节点数与 `check_docs` / `tree_full.html` 的写死数字）；⑥ 缺失节点（补节点候选，累计 3 项）：深冷介质 / 液氮、乙炔或工业气体、真空技术（`mfg_ebw` 电子束焊需高真空环境，现以 `mfg_vacfurnace` 真空炉代位，语义不等价）。"
 ,
       "【v0.9.29 · 待议 · 页面层文案盲区】本轮修正「来龙去脉」页一处硬编码说明句（原文写死「飞行平台、精确定位、影像获取或数据处理」，对任意节点套用），并暴露一个**校验盲区**：`tools/regen_text.js` 与 `regen_midtech.js` 的管辖范围仅限 `techs_*.js` / `techs_midtech.js` 的数据文案，三道门禁也全部面向数据层；**页面层（`assets/app.js` 与各页渲染函数）的手写散文没有任何自动校验**，因此「写死某个案例的领域措辞」这类残留不会被任何不动点或门禁发现。待办：① 对 `assets/app.js` 与 `assets/pages/*.js` 的说明性文字做一次全站抽查，线索为「与所选节点无关的领域词」（本轮即以「无人机 / 飞行平台 / 影像获取」命中）；② 评估是否把「页面文案不得含具体案例领域词」写成一条可自动检查的断言。另：**详情页默认 id 未改** —— `assets/pages/detail.js:5` 仍为 `p.get(\"id\") || \"smart_mower\"`，本轮按用户指定范围（「来龙去脉里」）保留，待裁定是否一并替换为 `stellar_engine`（或改为随机）。"
+,
+      "【v0.9.30 · 已执行 · 顺延】批次 3.1b（E 族 manufact 余 41 条「`mathematics` 单前置」判定）已写盘：保留 0 / 改前置 3 / 删边 38 / 降级为概念影响 0，补前置 41 条目共 79 条边，依赖边 6,126 → 6,167（节点 2,266 不变）；派生文案 191 条（`summary` 65 / `significance` 58 / `views` 68）+ 中间库 95 条目，均验不动点；结构问题族 A 535 → 494、E 146 → 105（**`A.manufact` 与 `E.manufact` 均由 41 → 0，E 族 manufact 槽位清空**）、Ch 252 → 246；`mathematics` 作为前置的节点 611 → 570。**本批的判据性结论**：41 条逐条审核后**保留数为 0** —— 说明该槽位不区分必要与非必要，属生成阶段的批量赋值产物（与 `bx_*` 占位、stub 捏造链同类），而非逐条判断的结果；四标准中的**排他性**是筛出这类挂载的唯一判据，单靠时序校验（前置年 ≤ 本体年）它们会整体通过。**顺延与新增**：① 缺失节点（补节点候选，累计 5 项，本批新增 2）：高压流体加压设备（`mfg_waterjet` / `mfg_awj` 共用，现以 `jet_compressor` 代位、语义不等价）、机器视觉（`computer_vision` 标注 2012 年，晚于 `mfg_visionguide` 的 2000 年，无法作为其前置）；② 另有气动 / 抛丸设备、光刻 / 抗蚀剂两项缺口，累计 7 项；③ 同义重复节点对新增一例：`mfg_assembly`（1900）与 `assembly_line`（1913）语义重叠，与既有 `mfg_wedm` / `mfg_edmwire`、`laser` / `lasers`、`mfg_lathe` / `lathe` 同属节点级问题，建议另立批次（合并会改节点数并触发 `check_docs` / `tree_full.html` 写死数字同步）；④ **核账陷阱（本批暴露）**：新增边须按「Σ `backfills.add` + Σ(repoint 各 1 条 `newParent`)」计算 —— 本批 `backfills` 合计 79 条，另有 repoint 3 条的 `newParent` 3 条，实际新增 82 条；仅按 `backfills` 推算会得 6,164，与实测 6,167 差 3。⑤ 阶段 3 下一批：E 族 manufact 已清空，可转 E 族其余分类（现余 105 条）或 A 族（现 494 条）；**根治手段仍在阶段 5c**（生成器槽位赋值的语义硬约束）。"
     ],
     enablesAudit: {
       title: "enables 语义错误 · 95 项灰色概念甄别表",
@@ -160,6 +162,51 @@ window.CORRECTIONS = {
     },
   },
   entries: [
+    {
+      "id": "CR-2026-0914-manufact-math-hub-3.1b",
+      "date": "2026-09-14",
+      "node": "E 族 manufact 余 41 条节点（切割 / 成形 / 热处理 / 特种加工 / 生产组织与数字化），前置一律为学科级 `mathematics`",
+      "nodeName": "制造类技术的前置被系统性挂载为学科级「数学」：41 条逐条审核后无一条以数学为定义性构成",
+      "category": "依赖关系 · 系统性前置误挂（学科级泛化挂载）",
+      "severity": "中",
+      "status": "已修正（41 条判定已写盘；依赖边 6,126 → 6,167；E 族 manufact 槽位清空 41 → 0）",
+      "problem": "批次 3.1a 已完成 E 族 manufact 首批 27 条，本批处理其余 41 条 —— 其前置**同样一律**为学科级 `mathematics`。典型条目：**激光切割**的本质是「以聚焦激光束使材料局部熔化/气化并沿轨迹分离」，其定义性构成是激光器（提供能量）与数控（提供轨迹），数学既不必要（不提供该工艺成立的条件）也不排他（几乎所有定量技术都能挂数学）；**六西格玛**的本质是「以统计方法度量并压缩过程变异」，更贴近的先行者是统计学（1809）与其方法论前身统计过程控制（1924）；**水射流切割**的先行者是高压流体加压设备与数控，而非数学。这类赋值的共同后果是：把「数学是所有定量科学的语言」这一**泛化关系**当作逐条技术的具体前置，使 611 个节点的下游计数集中堆在单一学科节点上，PageRank / 下游辐射等结构指标失真；同时真正定义该技术的域内前置（激光器、模具、统计数据、机器人）反而缺失。",
+      "rootCause": "**该槽位不区分必要与非必要** —— 这是本批最重要的判据性证据：41 条逐条审核后**保留数为 0**，即没有任何一条以学科级「数学」为定义性构成。若前置是逐条判断的产物，应当出现少数「确实以数学为核心」的节点；全部落空说明该字段是被**批量赋值为学科级顶点**的（与 `bx_*` 占位、`mil_depthcharge` 的 stub 捏造链同类，属生成阶段的填充规则产物）。在 `dependsOn` 只允许指向已存在节点的约束下，学科级节点（数学、化学、物理、工程学）成为最容易被批量引用的顶点：它们必然「存在于更早时间」，因而能整体通过时序校验，却无法通过排他性判断。四标准中的**排他性**正是筛出这类挂载的判据 —— 只凭时序校验无法发现它们。",
+      "fix": "按四标准逐条处置 41 条，结果为 **保留 0 / 改前置 3 / 删边 38 / 降级为概念影响 0**。① **改前置 3 条**：`mfg_sixsigma` 六西格玛 → `statistics` + `mfg_spcc`；`mfg_adaptive` 自适应控制 → `control_theory` + `mfg_servo`；`mfg_aps` 高级计划排程 → `optimization` + `computer`。② **删边 38 条**：删除 `mathematics` 边并按域内必要性补入真实先行者（`backfills` 41 条目合计 79 条边），如 `mfg_lasercut` → `lasers` + `mfg_cnc`、`mfg_waterjet` → `jet_compressor` + `mfg_cnc`、`mfg_plasma` → `mfg_welding` + `electricity`、`mfg_diecast` → `mfg_mold` + `mat_casting`、`mfg_pim` → `mfg_injection` + `mat_powder`、`mfg_cam` → `cad` + `mfg_cnc`。③ 写盘后依赖边 6,126 → 6,167。",
+      "badUpstream": [
+        "把学科级顶点（数学 / 化学 / 物理 / 工程学）作为技术节点的具体前置 —— 它们必然满足时序校验，却无法满足排他性，等于把「泛化关系」写成「依赖关系」",
+        "用「数学是所有定量科学的语言」这类正确但无区分度的陈述充当依赖边的理由（正确 ≠ 排他）",
+        "依赖边只做时序校验（前置年 ≤ 本体年）而不做排他性判断 —— 学科级挂载可以整体通过时序校验而不被发现",
+        "以「本槽位仍有少量保留」推断批量赋值合理（本批 41 条保留数为 0，反证该槽位确实不区分必要与非必要）"
+      ],
+      "goodUpstream": [
+        "前置取「域内、定义性构成」的先行者：激光切割取激光器与数控，六西格玛取统计学与统计过程控制，热等静压取热处理炉与金属粉末",
+        "对可疑槽位做**全量候选审核**并统计保留率 —— 保留率为 0 即证该槽位属系统性填充，应整批处理而非逐条打补丁",
+        "删边时同步补入真实前置（`backfills`），避免只删不补造成上游信息净损失",
+        "边增减按写盘前备份**逐边 diff 实测**核账，不按台账条目数或 `backfills` 合计推算"
+      ],
+      "changes": [
+        "① 候选硬断言：`category === \"manufact\"` 且 `dependsOn.length === 1` 且 `dependsOn[0] === \"mathematics\"` —— 命中 41 条（3.1a 已改写的 27 条不再命中）。",
+        "② 判定：保留 0 / 改前置 3 / 删边 38 / 降级为概念影响 0；`backfills` 41 条目，合计 79 条边。",
+        "③ 写盘：`tools/apply_ledger.js --batch 3.1b --apply` —— 定位 41 / 41、失败 0、逐节点断言通过；写前备份 `/tmp/bak_3.1b_1789391013591`；节点总数 2,266 不变。",
+        "④ 边增减实测：移除 41 条（全为 `mathematics`）+ 新增 82 条 → 6,126 → **6,167**（净 +41）。新增 82 = `backfills` 79 + repoint 3 条的 `newParent` 3；仅按 `backfills` 推算会得 6,164。",
+        "⑤ 派生链（按序）：`regen_text.js --apply` 应用 191 条（`summary` 65 / `significance` 58 / `views` 68）；`regen_midtech.js --apply` 后 95 条目校验通过；两者复跑均为不动点。",
+        "⑥ 结构问题族：A 535 → 494、E 146 → 105（**`A.manufact` 与 `E.manufact` 均由 41 → 0**）、Ch 252 → 246；`mathematics` 作为前置的节点 611 → **570**；环 / 自环 / 重复边 / 悬空前置 / 年份倒挂均 0，零前置 4 不变。",
+        "⑦ 门禁与基线：三道门禁全绿；`audit/baseline.json` 刷新后逐键 diff 共 10 项变化（`edges`、`A_total`、`E_total`、`Ch_total`、`Ch.manufact`、`A.manufact`→键移除、`E.manufact`→键移除、`dual.onlyInGraphJson`、`dual.onlyInMain`、`generic`）。",
+        "⑧ 未改动：全量管线 `graph.json` 与 `assets/data_full.js`（依 v0.9.26 裁定随阶段 5e 单向重建带入）、`theory_data.js` 覆盖层。"
+      ],
+      "files": [
+        "assets/techs_extra.js",
+        "assets/techs_extend.js",
+        "assets/techs_midtech.js",
+        "audit/ledger.json",
+        "audit/baseline.json",
+        "assets/pages/correction_data.js",
+        "assets/pages/changelog_data.js",
+        "技术网络检修计划.md",
+        "版本迭代日志.md"
+      ]
+    },
     {
       "id": "CR-2026-0914-lineage-hardcoded-note",
       "date": "2026-09-14",

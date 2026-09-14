@@ -1192,7 +1192,20 @@
   "3.1b": {
    "date": "2026-09-14",
    "family": "E-manufact",
-   "status": "draft-ready（41 条判定草案已写入，待用户逐条审核；未写盘主管线）",
+   "status": "applied（41 条判定已写盘主管线并完成收尾；v0.9.30 / 2026-09-14）",
+   "verification": [
+    "写盘前（草案阶段）：候选筛选断言通过（41 条全部为「单前置且前置 = mathematics」）；判定表条数断言 41；断言 keep(0)+repoint(3)+delete(38)+concept(0) = 41。",
+    "写盘前（草案阶段）：前置存在性与年份校验 0 错；内存预演新边集后无环（0 条）、无年份倒挂；零前置维持 4。",
+    "写盘前（草案阶段）预演规模：依赖边 6,126 → 6,167（净 +41）；mathematics 作为前置的节点 611 → 570。⚠️ 该预演的规模值经写盘实测证实，但其增减构成与草案时的算式（补前置 79 − 删边 38）不同：实测为「移除 41 条 mathematics + 新增 82 条」，详见下方写盘记录第 3 条。",
+    "写盘：tools/apply_ledger.js --batch 3.1b --apply —— 干跑与写盘两轮均通过断言（台账完整划分 41 = 41、时序性、无环）；定位节点 41 / 41、失败 0、逐节点断言「现值 === 预期旧值」全部通过；写前备份 /tmp/bak_3.1b_1789391013591（data.js / techs_extra.js / techs_extend.js / techs_more.js 四文件）；节点总数 2266 → 2266 不变。",
+    "新增前的前置清单实测：41 个节点改前均只有 1 条前置且为 mathematics；改后 mfg_sixsigma → [statistics, mfg_spcc]、mfg_adaptive → [control_theory, mfg_servo]、mfg_aps → [optimization, computer] 等（repoint 3 条为 2 条新前置，delete 38 条由 backfills 给定）。",
+    "边增减（对备份逐边 diff 实测，非推算）：移除 41 条（全部 parent = mathematics）；新增 82 条 = backfills 41 条目合计 79 条 + repoint 3 条的 newParent 3 条（repoint 节点的实际新前置 = newParent 1 条 + backfills.add 1 条 = 2 条）→ 依赖边 6,126 → 6,167（净 +41）。⚠️ 仅按 backfills 合计 79 条推算会得 6,164，与实测差 3 —— 新增边必须按「Σbackfills.add + Σ(repoint 各 1 条 newParent)」计。",
+    "派生链（按序不可颠倒）：tools/regen_text.js --apply 应用 191 条（summary 65 / significance 58 / views 68），改写 assets/techs_extra.js 与 assets/techs_extend.js，另生成 /tmp/regen_changes.json；复跑 --check 为不动点（合计需改写 0 处 / 0 节点）。tools/regen_midtech.js --apply 后校验通过（无断链背景、无重复 id、条目数 95）；复跑 0 变化、95/95 未变化，为不动点。",
+    "结构：节点 2,266 / 边 6,167；环 0 / 自环 0 / 重复边 0 / 悬空前置 0 / 年份倒挂 0 / 零前置 4（不变）。结构问题族下降：A 535 → 494（A.manufact 41 → 0）、E 146 → 105（E.manufact 41 → 0）、Ch 252 → 246（Ch.manufact 23 → 17）；F 8 不变。mathematics 作为前置的节点 611 → 570。",
+    "基线刷新与逐键 diff（git show HEAD:audit/baseline.json vs 当前，共 10 项）：edges 6126 → 6167；A_total 535 → 494；E_total 146 → 105；Ch_total 252 → 246；Ch.manufact 23 → 17；A.manufact 41 → 键移除（降为 0）；E.manufact 41 → 键移除（降为 0）；dual.onlyInGraphJson 1229 → 1270；dual.onlyInMain 508 → 590；generic（mathematics.down 611 → 570，并 chemistry 431 → 433、statistics 192 → 194、optimization 105 → 106、materials 90 → 91）。",
+    "门禁三道全绿：check_docs.js [OK]（TOTAL 2266 / TOTAL_FULL 13318 均一致）；regen_text.js --check 0 处；audit_net.js --check [OK]。",
+    "全量管线未改动（graph.json 2,299 / 6,963；data_full.js 13,318 / 16,811）—— 依 v0.9.26 裁定不逐条打补丁，本批 41 条前置改动随阶段 5e「按主管线单向重建」带入。"
+   ],
    "scope": "E 族 manufact 68 条中 3.1a 之后的余 41 条（切割 / 成形 / 热处理 / 特种加工 / 生产组织与数字化）",
    "criterion": "§2 判定四标准：① 必要性（去掉该前置，本技术是否仍能按史实出现）② 排他性（是否该环节最直接的先行者）③ 时序性（前置年 ≤ 本节点年）④ 域内优先（跨域须有明确传导机制）。处置四档：保留 / 改前置 / 删边 / 降级为概念影响。",
    "observation": "3.1a 之后，E 族 manufact 内仍有 41 条节点的前置是**同一条 `mathematics`** 且无其他前置 —— 与 3.1a 同一病灶（同分类槽位批量赋值），只是分布在切割、成形、热处理、特种加工、生产组织与数字化等子族，不像机床 / 焊接族那样集中。",
@@ -2115,13 +2128,7 @@
     "delete": 38,
     "concept": 0,
     "backfill": 41
-   },
-   "verification": [
-    "写盘前（草案阶段）：候选筛选断言通过（41 条全部为「单前置且前置 = mathematics」）；判定表条数断言 41；断言 keep(0)+repoint(3)+delete(38)+concept(0) = 41。",
-    "写盘前（草案阶段）：前置存在性与年份校验 0 错；内存预演新边集后无环（0 条）、无年份倒挂；零前置维持 4。",
-    "预演规模：依赖边 6,126 → 6,167（净 +41 = 补前置 79 条 − 删边 38 条；改前置 3 条不计增减）；`mathematics` 作为前置的节点 611 → 570。",
-    "待写盘后补记：apply_ledger 定位 / 失败计数、regen_text 与 regen_midtech 应用处数、audit_net --snapshot 刷新项、三道门禁结果、三处登记计数。"
-   ]
+   }
   },
   "5.0": {
    "date": "2026-09-13",

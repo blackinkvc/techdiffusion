@@ -1,6 +1,6 @@
 {
  "N": 2266,
- "edges": 6126,
+ "edges": 6167,
  "selfLoop": 0,
  "dupEdge": 0,
  "danglingDep": 0,
@@ -11,29 +11,27 @@
  "isolated": 0,
  "dupGroups": 0,
  "F": 8,
- "A_total": 535,
+ "A_total": 494,
  "A": {
   "basic": 176,
   "material": 95,
   "energy": 48,
   "info": 92,
   "life": 80,
-  "manufact": 41,
   "military": 1,
   "build": 2
  },
- "E_total": 146,
+ "E_total": 105,
  "E": {
   "basic": 2,
   "material": 2,
   "energy": 2,
-  "manufact": 41,
   "info": 91,
   "life": 5,
   "military": 1,
   "build": 2
  },
- "Ch_total": 252,
+ "Ch_total": 246,
  "Ch": {
   "transport": 33,
   "life": 22,
@@ -42,19 +40,19 @@
   "basic": 39,
   "material": 43,
   "energy": 33,
-  "manufact": 23,
+  "manufact": 17,
   "info": 10
  },
  "generic": [
   {
    "id": "mathematics",
    "name": "数学",
-   "down": 611
+   "down": 570
   },
   {
    "id": "chemistry",
    "name": "化学",
-   "down": 431
+   "down": 433
   },
   {
    "id": "physics",
@@ -69,7 +67,7 @@
   {
    "id": "statistics",
    "name": "统计学",
-   "down": 192
+   "down": 194
   },
   {
    "id": "engineering",
@@ -82,13 +80,13 @@
    "down": 114
   },
   {
-   "id": "numerical",
-   "name": "数值分析",
-   "down": 105
-  },
-  {
    "id": "optimization",
    "name": "最优化/线性规划",
+   "down": 106
+  },
+  {
+   "id": "numerical",
+   "name": "数值分析",
    "down": 105
   },
   {
@@ -99,7 +97,7 @@
   {
    "id": "materials",
    "name": "材料科学",
-   "down": 90
+   "down": 91
   },
   {
    "id": "genetics",
@@ -145,7 +143,7 @@
   "edges": 6963
  },
  "dual": {
-  "onlyInGraphJson": 1229,
-  "onlyInMain": 508
+  "onlyInGraphJson": 1270,
+  "onlyInMain": 590
  }
 }

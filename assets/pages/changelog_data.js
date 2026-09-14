@@ -831,6 +831,43 @@ window.CHANGELOG = {
         "assets/pages/correction_data.js",
         "版本迭代日志.md"
       ]
+    },
+    {
+      "version": "v0.9.30",
+      "date": "2026-09-14",
+      "type": "data",
+      "title": "批次 3.1b 写盘：E 族 manufact 余 41 条前置由「mathematics 单前置」逐条判定（保留 0 / 改前置 3 / 删边 38 / 补前置 41），依赖边 6,126 → 6,167",
+      "summary": "承接批次 3.1a（v0.9.28），本批处理 E 族 manufact 在 3.1a 之后的余 41 条节点 —— 其前置同样一律为学科级 `mathematics`（候选硬断言：`category === \"manufact\"` 且 `dependsOn.length === 1` 且 `dependsOn[0] === \"mathematics\"`，命中 41 条，无一条被 3.1a 改写）。判定沿用四标准（必要性 / 排他性 / 时序性 / 域内优先）与四档处置，结果为 **保留 0 / 改前置 3 / 删边 38 / 降级为概念影响 0**，backfills 41 条。**保留数为 0 是本批的关键信号**：41 条中没有任何一条以学科级「数学」为定义性构成，其真实先行者均为域内设备、工艺或方法（激光器、数控、模具、统计过程控制、机器人等）—— 这反证了该槽位的赋值不区分必要与非必要，属系统性挂载。写盘后依赖边 6,126 → **6,167**（净 +41，由「移除 41 条 mathematics + 新增 82 条」构成）。结构问题族继续下降：A 535 → **494**、E 146 → **105**（**A.manufact 与 E.manufact 均由 41 降至 0**，E 族 manufact 槽位清空）、Ch 252 → **246**；`mathematics` 作为前置的节点 611 → **570**。",
+      "treeChange": {
+        "scope": "主管线依赖网络：节点 2,266 **不变**；依赖边 6,126 → **6,167**（移除 41 条 `mathematics` 前置、新增 82 条域内前置）。受影响节点 41 个，全部属 E 族 manufact 分类。全量管线 `graph.json`（2,299 / 6,963）与 `assets/data_full.js`（13,318 / 16,811）本轮未改动。",
+        "reason": "这 41 条节点的前置此前一律被赋为学科级 `mathematics`（数学），而非其真实的历史先行者。以本批的典型条目为例：激光切割的本质是「聚焦激光束使材料局部熔化/气化并沿轨迹分离」——其定义性构成是激光器（能量）与数控（轨迹），数学既非必要也非排他；六西格玛的本质是「以统计方法度量并压缩过程变异」——更贴近的先行者是统计学（1809）与其方法论前身统计过程控制（1924），而非学科级数学。这类赋值的共同特征是：把「数学是所有定量科学的语言」这一泛化关系，当作逐条技术的具体前置——它不满足排他性（几乎所有技术都能挂数学），因此在网络中不提供任何区分信息，却把 611 个节点的下游计数集中堆在单一学科节点上，使 PageRank / 下游辐射等结构指标失真。本批即按四标准逐条替换为域内真实先行者。",
+        "detail": "① **候选**：硬断言「E 族 manufact 且单前置且前置 = `mathematics`」命中 41 条（3.1a 已改写的 27 条不再命中）。② **改前置 3 条**：`mfg_sixsigma`（六西格玛）→ `statistics` + `mfg_spcc`；`mfg_adaptive`（自适应控制）→ `control_theory` + `mfg_servo`；`mfg_aps`（高级计划排程）→ `optimization` + `computer`。③ **删边 38 条并补前置**：删除 `mathematics` 边，同时按域内必要性补入真实前置，如 `mfg_lasercut` → `lasers` + `mfg_cnc`、`mfg_waterjet` → `jet_compressor` + `mfg_cnc`、`mfg_plasma` → `mfg_welding` + `electricity`、`mfg_diecast` → `mfg_mold` + `mat_casting`、`mfg_pim` → `mfg_injection` + `mat_powder`、`mfg_cam` → `cad` + `mfg_cnc`、`mfg_digitalshop` → `mfg_mes` + `mfg_plc`、`mfg_industry40` → `iot` + `mfg_digitalshop`。④ **保留 0 条**：41 条中无一条必要性成立。⑤ **写盘**：`tools/apply_ledger.js --batch 3.1b --apply`，定位节点 41 / 41、失败 0、逐节点断言全部通过，写前备份 `/tmp/bak_3.1b_1789391013591`。⑥ **派生链**：`regen_text.js --apply` 应用 191 条（`summary` 65 / `significance` 58 / `views` 68），`regen_midtech.js --apply` 后 95 条目校验通过；两者复跑均为不动点。⑦ **登记**：本条目 + `版本迭代日志.md`（表格行 + 详细章节）+ 纠错页条目；台账 `batches[\"3.1b\"]` 状态由 `draft-ready` 改为 `applied` 并补 11 条 `verification`。"
+      },
+      "changes": [
+        "① 候选与硬断言：`category === \"manufact\"` 且 `dependsOn.length === 1` 且 `dependsOn[0] === \"mathematics\"` —— 命中 41 条（3.1a 已改写的 27 条因前置已变而不再命中）；判定表条数断言 41，`keep(0) + repoint(3) + delete(38) + concept(0) = 41` 通过。",
+        "② 四标准逐条判定结果：**保留 0 / 改前置 3 / 删边 38 / 降级为概念影响 0**。保留数为 0 说明这 41 条无一以学科级「数学」为定义性构成——该槽位的赋值不区分必要与非必要，属系统性挂载而非逐条判断的产物。",
+        "③ 改前置 3 条（新前置 = `newParent` 1 条 + `backfills.add` 1 条 = 2 条）：`mfg_sixsigma` 六西格玛 → `statistics` + `mfg_spcc`；`mfg_adaptive` 自适应控制 → `control_theory` + `mfg_servo`；`mfg_aps` 高级计划排程 → `optimization` + `computer`。",
+        "④ 删边 38 条并补前置：全部删除 `mathematics` 边，按域内必要性补入真实先行者，backfills 41 条目合计 79 条边（如 `mfg_lasercut` → `lasers` + `mfg_cnc`、`mfg_ecu` 类电解加工 → `electrochem` + `electricity`、`mfg_hip` 热等静压 → `mfg_furnace` + `mat_powder`、`mfg_visionguide` 视觉引导装配 → `sensor` + `robot`）。",
+        "⑤ 写盘执行：`tools/apply_ledger.js --batch 3.1b --apply` —— 干跑与写盘两轮均通过断言（完整划分 41 = 41、时序性、无环）；定位节点 41 / 41、失败 0、逐节点断言「现值 === 预期旧值」全部通过；各文件命中 `techs_extra.js` 41 条；写前备份 `/tmp/bak_3.1b_1789391013591`；节点总数 2,266 → 2,266 不变。",
+        "⑥ **边增减复算（对备份逐边 diff 实测，非按台账推算）**：移除 41 条（全部 parent = `mathematics`）+ 新增 82 条 → 依赖边 6,126 → **6,167**（净 +41）。新增 82 条的构成为「backfills 41 条目合计 79 条 + repoint 3 条的 `newParent` 3 条」。⚠️ 仅按 `backfills` 合计 79 条推算会得 6,164，与实测差 3 —— 新增边必须按「Σ backfills.add + Σ(repoint 各 1 条 `newParent`)」计算，这是本批暴露的核账陷阱（3.1a 时的对应陷阱是 `backfills` 为数组套数组、易漏计）。",
+        "⑦ 派生文案重算（按序不可颠倒）：`node tools/regen_text.js --apply` 应用 191 条（`summary` 65 / `significance` 58 / `views` 68），改写 `assets/techs_extra.js` 与 `assets/techs_extend.js`，明细写入 `/tmp/regen_changes.json`；复跑 `--check` 为不动点（合计需改写 0 处 / 0 节点）。",
+        "⑧ 中间技术库重算：`node tools/regen_midtech.js --apply` —— 将其 `backgrounds` 中残留的 `mathematics` 占位改为真实域内前置（如 `mfg_lasercut` → `[lasers, mfg_cnc]`、`mfg_plasma` → `[electricity, mfg_welding]`）；校验通过（无断链背景、无重复 id、条目数 95）；复跑 0 变化、95/95 未变化，为不动点。",
+        "⑨ 结构问题族下降：A 535 → **494**（`A.manufact` 41 → 0）、E 146 → **105**（`E.manufact` 41 → 0）、Ch 252 → **246**（`Ch.manufact` 23 → 17）、F 8 不变；`mathematics` 作为前置的节点 611 → **570**。环 0 / 自环 0 / 重复边 0 / 悬空前置 0 / 年份倒挂 0 / 零前置 4（不变）。",
+        "⑩ 基线与门禁：`audit/baseline.json` 按合法改进刷新（`node tools/audit_net.js --snapshot`），逐键 diff 共 10 项变化 —— `edges` 6,126 → 6,167、`A_total` 535 → 494、`E_total` 146 → 105、`Ch_total` 252 → 246、`Ch.manufact` 23 → 17、`A.manufact` 41 → 键移除（降为 0）、`E.manufact` 41 → 键移除（降为 0）、`dual.onlyInGraphJson` 1,229 → 1,270、`dual.onlyInMain` 508 → 590、`generic`（`mathematics` 下游 611 → 570，另 `chemistry` 431 → 433、`statistics` 192 → 194、`optimization` 105 → 106、`materials` 90 → 91）。三道门禁全绿：`check_docs.js [OK]`、`regen_text.js --check` 0 处、`audit_net.js --check [OK]`。",
+        "⑪ 判定中发现的新缺口（已写入台账 `findings`，另立批次）：① 同义重复节点对 `mfg_assembly`（1900）与 `assembly_line`（1913）；② 高压流体加压设备缺节点（水射流 / 磨料水射流共用）；③ 机器视觉缺节点 —— `computer_vision` 标注 2012 年，晚于 `mfg_visionguide` 的 2000 年，无法作为其前置；④ 气动 / 抛丸设备缺节点；⑤ 光刻 / 抗蚀剂缺节点。",
+        "⑫ 未改动：全量管线 `graph.json` 与 `assets/data_full.js`（依 v0.9.26 裁定不逐条打补丁，本批前置改动随阶段 5e「按主管线单向重建」带入）、`theory_data.js` 覆盖层、其余 2,225 个节点的依赖关系与手写散文。E 族 manufact 槽位至此清空（41 → 0），阶段 3 下一批转向 E 族其余分类（现余 105 条）或 A 族（现 494 条）。"
+      ],
+      "files": [
+        "assets/techs_extra.js",
+        "assets/techs_extend.js",
+        "assets/techs_midtech.js",
+        "audit/ledger.json",
+        "audit/baseline.json",
+        "assets/pages/changelog_data.js",
+        "assets/pages/correction_data.js",
+        "技术网络检修计划.md",
+        "版本迭代日志.md"
+      ]
     }
 ]
 };
