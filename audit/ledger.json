@@ -1189,6 +1189,940 @@
     "全量管线未改动（graph.json 2,299 / 6,963；data_full.js 13,318 / 16,811）—— 依 v0.9.26 裁定不逐条打补丁，本批 27 条前置改动随阶段 5e「按主管线单向重建」带入。"
    ]
   },
+  "3.1b": {
+   "date": "2026-09-14",
+   "family": "E-manufact",
+   "status": "draft-ready（41 条判定草案已写入，待用户逐条审核；未写盘主管线）",
+   "scope": "E 族 manufact 68 条中 3.1a 之后的余 41 条（切割 / 成形 / 热处理 / 特种加工 / 生产组织与数字化）",
+   "criterion": "§2 判定四标准：① 必要性（去掉该前置，本技术是否仍能按史实出现）② 排他性（是否该环节最直接的先行者）③ 时序性（前置年 ≤ 本节点年）④ 域内优先（跨域须有明确传导机制）。处置四档：保留 / 改前置 / 删边 / 降级为概念影响。",
+   "observation": "3.1a 之后，E 族 manufact 内仍有 41 条节点的前置是**同一条 `mathematics`** 且无其他前置 —— 与 3.1a 同一病灶（同分类槽位批量赋值），只是分布在切割、成形、热处理、特种加工、生产组织与数字化等子族，不像机床 / 焊接族那样集中。",
+   "availableNodes": [
+    "lasers 激光器(1960)",
+    "mfg_cnc 数控机床(1949)",
+    "mfg_servo 伺服系统(1940)",
+    "mfg_mill 铣床(1818)",
+    "mfg_grinder 磨床(1800)",
+    "mfg_lathe 车床(-1000)",
+    "mfg_mold 模具(-3000)",
+    "mfg_gauge 量具(-2000)",
+    "mfg_knife 刀具(-100000)",
+    "mfg_abrasive 磨料(-5000)",
+    "mfg_grindingwheel 砂轮(1840)",
+    "mfg_polish 抛光(-3000)",
+    "mfg_injection 注塑(1872)",
+    "mfg_welding 电弧焊(1881)",
+    "mfg_edm 电火花加工(1943)",
+    "mfg_cmm 三坐标测量(1950)",
+    "mfg_3dp 3D 打印(1984)",
+    "mfg_mes 制造执行系统(1990)",
+    "mfg_plc 可编程逻辑控制器(1968)",
+    "mfg_aps 高级计划排程(1990)",
+    "mfg_spcc 统计过程控制(1924)",
+    "mfg_kanban 看板管理(1940)",
+    "mfg_standard 零件标准化(1800)",
+    "mfg_furnace 热处理炉(1800)",
+    "mfg_ecm 电解加工(1950)",
+    "mfg_waterjet 水射流切割(1970)",
+    "assembly_line 流水线(1913)",
+    "interchangeable_parts 可互换零件(1798)",
+    "mat_casting 铸造(-3500)",
+    "mat_forging 锻造(-3000)",
+    "mat_powder 粉末冶金(1800)",
+    "mat_drawing 拉拔(1200)",
+    "mat_castiron 铸铁(-500)",
+    "kiln 窑(-6000)",
+    "bellows 风箱(-1500)",
+    "gearing 齿轮(-300)",
+    "mfg_precisionbearing 精密轴承(1883)",
+    "chemistry 化学(1661)",
+    "electrochem 电化学(1800)",
+    "electromagnetism 电磁学(1865)",
+    "control_theory 控制论(1948)",
+    "statistics 统计学(1809)",
+    "optimization 最优化/线性规划(1947)",
+    "numerical 数值分析(1950)",
+    "materials 材料科学(1900)",
+    "computer 电子计算机(1946)",
+    "cad 计算机辅助设计(1960)",
+    "simulation 仿真(1950)",
+    "ai 人工智能(1956)",
+    "sensor 传感器(1950)",
+    "actuator 作动器(1950)",
+    "robot 工业机器人(1961)",
+    "automation 自动化(1950)",
+    "electric_motor 电动机(1837)",
+    "electricity 电力系统(1879)",
+    "generator 发电机与电动机(1831)",
+    "battery 电池(1800)",
+    "jet_compressor 压气机(1937)",
+    "iot 物联网(2010)",
+    "nanotech 纳米技术(1980)",
+    "mfg_digitalshop 数字化车间(2010)"
+   ],
+   "candidates": 41,
+   "candidateList": [
+    {
+     "id": "mfg_lasercut",
+     "name": "激光切割",
+     "date": "1965 年",
+     "year": 1965
+    },
+    {
+     "id": "mfg_waterjet",
+     "name": "水射流切割",
+     "date": "1970 年",
+     "year": 1970
+    },
+    {
+     "id": "mfg_plasma",
+     "name": "等离子切割",
+     "date": "1950 年",
+     "year": 1950
+    },
+    {
+     "id": "mfg_diecast",
+     "name": "压铸",
+     "date": "1838 年",
+     "year": 1838
+    },
+    {
+     "id": "mfg_forging2",
+     "name": "模锻",
+     "date": "1800 年",
+     "year": 1800
+    },
+    {
+     "id": "mfg_standard",
+     "name": "零件标准化",
+     "date": "1800 年",
+     "year": 1800
+    },
+    {
+     "id": "mfg_assembly",
+     "name": "装配线",
+     "date": "1900 年",
+     "year": 1900
+    },
+    {
+     "id": "mfg_fixture",
+     "name": "工装夹具",
+     "date": "1800 年",
+     "year": 1800
+    },
+    {
+     "id": "mfg_blow",
+     "name": "吹塑",
+     "date": "1930 年",
+     "year": 1930
+    },
+    {
+     "id": "mfg_extrude2",
+     "name": "挤出成型",
+     "date": "1800 年",
+     "year": 1800
+    },
+    {
+     "id": "mfg_furnace",
+     "name": "热处理炉",
+     "date": "1800 年",
+     "year": 1800
+    },
+    {
+     "id": "mfg_vacfurnace",
+     "name": "真空炉",
+     "date": "1950 年",
+     "year": 1950
+    },
+    {
+     "id": "mfg_induction",
+     "name": "感应加热",
+     "date": "1887 年",
+     "year": 1887
+    },
+    {
+     "id": "mfg_shotblast",
+     "name": "喷丸",
+     "date": "1930 年",
+     "year": 1930
+    },
+    {
+     "id": "mfg_nanoimprint",
+     "name": "纳米压印",
+     "date": "1995 年",
+     "year": 1995
+    },
+    {
+     "id": "mfg_ecm",
+     "name": "电解加工",
+     "date": "1950 年",
+     "year": 1950
+    },
+    {
+     "id": "mfg_chemill",
+     "name": "化学铣切",
+     "date": "1940 年",
+     "year": 1940
+    },
+    {
+     "id": "mfg_pim",
+     "name": "金属注射成形",
+     "date": "1970 年",
+     "year": 1970
+    },
+    {
+     "id": "mfg_hip",
+     "name": "热等静压",
+     "date": "1955 年",
+     "year": 1955
+    },
+    {
+     "id": "mfg_reverse",
+     "name": "逆向工程",
+     "date": "1980 年",
+     "year": 1980
+    },
+    {
+     "id": "mfg_plc",
+     "name": "可编程逻辑控制器",
+     "date": "1968 年",
+     "year": 1968
+    },
+    {
+     "id": "mfg_servo",
+     "name": "伺服系统",
+     "date": "1940 年",
+     "year": 1940
+    },
+    {
+     "id": "mfg_harmonic",
+     "name": "谐波减速器",
+     "date": "1955 年",
+     "year": 1955
+    },
+    {
+     "id": "mfg_sixsigma",
+     "name": "六西格玛",
+     "date": "1986 年",
+     "year": 1986
+    },
+    {
+     "id": "mfg_lean",
+     "name": "精益生产",
+     "date": "1950 年",
+     "year": 1950
+    },
+    {
+     "id": "mfg_kanban",
+     "name": "看板管理",
+     "date": "1940 年",
+     "year": 1940
+    },
+    {
+     "id": "mfg_cam",
+     "name": "计算机辅助制造",
+     "date": "1970 年",
+     "year": 1970
+    },
+    {
+     "id": "mfg_fms",
+     "name": "柔性制造系统",
+     "date": "1967 年",
+     "year": 1967
+    },
+    {
+     "id": "mfg_adaptive",
+     "name": "自适应控制",
+     "date": "1950 年",
+     "year": 1950
+    },
+    {
+     "id": "mfg_cobot",
+     "name": "协作机器人",
+     "date": "1996 年",
+     "year": 1996
+    },
+    {
+     "id": "mfg_selfassemble",
+     "name": "自组装",
+     "date": "1990 年",
+     "year": 1990
+    },
+    {
+     "id": "mfg_bionics",
+     "name": "仿生制造",
+     "date": "1990 年",
+     "year": 1990
+    },
+    {
+     "id": "mfg_agv",
+     "name": "自动导引车",
+     "date": "1953 年",
+     "year": 1953
+    },
+    {
+     "id": "mfg_aps",
+     "name": "高级计划排程",
+     "date": "1990 年",
+     "year": 1990
+    },
+    {
+     "id": "mfg_quality",
+     "name": "全面质量管理",
+     "date": "1950 年",
+     "year": 1950
+    },
+    {
+     "id": "mfg_industry40",
+     "name": "工业 4.0",
+     "date": "2011 年",
+     "year": 2011
+    },
+    {
+     "id": "mfg_ecmg",
+     "name": "电解磨削",
+     "date": "1960 年",
+     "year": 1960
+    },
+    {
+     "id": "mfg_awj",
+     "name": "磨料水射流",
+     "date": "1980 年",
+     "year": 1980
+    },
+    {
+     "id": "mfg_robotgripper",
+     "name": "机器人夹爪",
+     "date": "1980 年",
+     "year": 1980
+    },
+    {
+     "id": "mfg_visionguide",
+     "name": "视觉引导装配",
+     "date": "2000 年",
+     "year": 2000
+    },
+    {
+     "id": "mfg_digitalshop",
+     "name": "数字化车间",
+     "date": "2010 年",
+     "year": 2010
+    }
+   ],
+   "dispositionRule": [
+    "R1（必要性）：「数学」为定义性构成（去掉后该技术不成立/不能按史实出现）→ 保留；否则处置。",
+    "R2（排他性）：存在单一更贴近的替代者（同族或相邻更具体的学理/工程节点）→ 改前置；否则删边。",
+    "R3（域内优先）：删边后必须补入同族可考前置（加工母体 / 关键设备 / 关键材料 / 关键学理），不得只删不补（否则由「错误前置」变为「无前置」）。",
+    "R4（时序）:所有前置年 ≤ 本节点年；补入的相邻候选同批节点须做环预演。"
+   ],
+   "edges": [
+    {
+     "child": "mfg_lasercut",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "激光切割的本质是以聚焦激光束使材料局部熔化/气化并沿轨迹分离：激光器提供能量、数控提供轨迹，二者是定义性构成；学科级「数学」不是该环节最直接的先行者（排他性不成立）。"
+    },
+    {
+     "child": "mfg_waterjet",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "水射流切割的本质是以超高压水束的动能剥离材料：流体加压设备提供能量、数控提供轨迹。网络内无超高压泵/增压器节点，暂以 `jet_compressor` 压气机（流体加压设备，1937）代位（语义不等价，见 findings）。"
+    },
+    {
+     "child": "mfg_plasma",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "等离子切割由等离子焊接/等离子炬发展而来，二者共用同一电弧等离子体热源；须先有电弧焊工艺与电力系统。域内优先指向同族焊接工艺。"
+    },
+    {
+     "child": "mfg_diecast",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "压铸的本质是以金属模（区别于砂型）在压力下充型凝固，是「模具＋铸造」的组合；去掉数学仍可按史实于 1838 年出现。"
+    },
+    {
+     "child": "mfg_forging2",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "模锻的本质是用模具限制金属塑性流动的锻造，其直接前提是锻造工艺与模具本身。"
+    },
+    {
+     "child": "mfg_standard",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "零件标准化的本质是把尺寸与公差限定到统一规格：直接源自可互换零件的实践（1798），并以量具（-2000）为度量基础。"
+    },
+    {
+     "child": "mfg_assembly",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "装配线的本质是按工序顺序组织的装配作业，其前提是零件可互换与规格标准化；三者构成清晰的传导链。"
+    },
+    {
+     "child": "mfg_fixture",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "工装夹具的本质是使工件在加工中保持定位与夹紧的装置：定位基准源自量具，夹持回旋机构源自车床。"
+    },
+    {
+     "child": "mfg_blow",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "吹塑的本质是先制管状型坯再吹胀贴模；型坯由挤出或注塑得到，两条路径为并列前提。"
+    },
+    {
+     "child": "mfg_extrude2",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "挤出的本质是迫使材料连续通过模孔成形，与拉拔（mat_drawing，1200）同属「模具孔型连续变形」，模具为其成形母体。"
+    },
+    {
+     "child": "mfg_furnace",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "热处理炉的本质是可控高温腔体加强制鼓风：腔体源自窑（-6000），鼓风源自风箱（-1500）。"
+    },
+    {
+     "child": "mfg_vacfurnace",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "真空炉的本质是在低压环境中加热处理：炉体与电力为其基础。真空获得设备（真空泵）在网络中并非独立节点，见 findings。"
+    },
+    {
+     "child": "mfg_induction",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "感应加热的本质是交变磁场在导电工件内产生涡流而发热，其定义性前提是电磁学（1865）与电力系统（1879），二者均早于 1887。"
+    },
+    {
+     "child": "mfg_shotblast",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "喷丸的本质是以高速弹丸冲击表面产生残余压应力，属磨料工具族（磨料＋固结磨具）；所依赖的气动/抛丸设备在网络中缺失，见 findings。"
+    },
+    {
+     "child": "mfg_nanoimprint",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "纳米压印的本质是以纳米级模具对抗蚀剂施加压力以复制图形，是纳米技术与模具工艺的交叉；网络内无光刻/抗蚀剂节点（见 findings）。"
+    },
+    {
+     "child": "mfg_ecm",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "电解加工的本质是以电化学阳极溶解去除金属，定义性前提是电化学（1800）与电力系统（1879）。"
+    },
+    {
+     "child": "mfg_chemill",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "化学铣切的本质是以腐蚀液受控溶解金属，属化学与电化学知识的工程应用；网络内无独立蚀刻节点。"
+    },
+    {
+     "child": "mfg_pim",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "金属注射成形的本质是金属粉末与粘结剂经注射成形后脱脂烧结，是注塑工艺与粉末冶金的组合。"
+    },
+    {
+     "child": "mfg_hip",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "热等静压的本质是高温与各向等压气体共同作用下的致密化，主要用于粉末冶金件与铸件的致密化。"
+    },
+    {
+     "child": "mfg_reverse",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "逆向工程的本质是由实物测量数据重建数字模型：测量设备与建模软件为其两项构成前提。"
+    },
+    {
+     "child": "mfg_plc",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "可编程逻辑控制器的本质是以可编程逻辑替代继电器硬接线的工业控制器，前提是计算机与自动化。"
+    },
+    {
+     "child": "mfg_servo",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "伺服系统的本质是带位置/速度反馈的电动机驱动系统，前提是电动机（1837）与电子放大（1883）。"
+    },
+    {
+     "child": "mfg_harmonic",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "谐波减速器的本质是利用柔性齿圈的弹性变形实现高减速比传动，属精密齿轮传动族。"
+    },
+    {
+     "child": "mfg_sixsigma",
+     "parent": "mathematics",
+     "verdict": "repoint",
+     "newParent": "statistics",
+     "reason": "六西格玛的本质是以统计方法度量并压缩过程变异：统计学（1809）是其定义性构成，比学科级「数学」更贴近且更早（排他性成立）。同时补入其方法论前身统计过程控制（1924）。"
+    },
+    {
+     "child": "mfg_lean",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "精益生产的本质是以拉动式看板与消除浪费为方法的量产体系，前提是流水线（1913）与看板管理（1940）。"
+    },
+    {
+     "child": "mfg_kanban",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "看板的本质是以标准化容器与信号卡控制拉动式生产，前提是流水线与零件标准化。"
+    },
+    {
+     "child": "mfg_cam",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "计算机辅助制造的本质是以计算机辅助编制并执行数控加工程序，是 CAD 与 CNC 的结合。"
+    },
+    {
+     "child": "mfg_fms",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "柔性制造系统的本质是数控机床与物料搬运自动化组合而成的可变品种生产线。"
+    },
+    {
+     "child": "mfg_adaptive",
+     "parent": "mathematics",
+     "verdict": "repoint",
+     "newParent": "control_theory",
+     "reason": "自适应控制的本质是在线辨识被控对象并实时调整控制律，属控制理论的一类（1948）；较之学科级「数学」，控制论更贴近其定义性构成。同时补入伺服系统（1940）为执行前提。"
+    },
+    {
+     "child": "mfg_cobot",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "协作机器人的本质是以力/位传感实现人机共处安全的机器人，前提是工业机器人与传感。"
+    },
+    {
+     "child": "mfg_selfassemble",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "自组装的本质是分子/纳米单元自发组织成有序结构，前提是纳米技术与化学。"
+    },
+    {
+     "child": "mfg_bionics",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "仿生制造的本质是以生物结构/功能为依据进行设计与成形，材料科学与增材制造为其两项支撑。"
+    },
+    {
+     "child": "mfg_agv",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "自动导引车的本质是以导引与传感定位的电动搬运车，前提是电动机与传感器。"
+    },
+    {
+     "child": "mfg_aps",
+     "parent": "mathematics",
+     "verdict": "repoint",
+     "newParent": "optimization",
+     "reason": "高级计划排程的本质是以最优化方法求解有限产能下的排程问题：最优化/线性规划（1947）比学科级「数学」更贴近其定义性构成。同时补入计算机为运行载体。"
+    },
+    {
+     "child": "mfg_quality",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "全面质量管理的本质是以统计质量控制为核心、全员参与的质量体系，其方法前身是统计过程控制（1924）。"
+    },
+    {
+     "child": "mfg_industry40",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "工业 4.0 的本质是以物联网连接与数字化车间为基础的智能制造框架，两项前提均早于或等于 2011。"
+    },
+    {
+     "child": "mfg_ecmg",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "电解磨削的本质是电解溶解与机械磨削的复合工艺，是两项既有工艺的组合。"
+    },
+    {
+     "child": "mfg_awj",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "磨料水射流的本质是水射流与磨料颗粒的叠加，两项前提均已在网络中。"
+    },
+    {
+     "child": "mfg_robotgripper",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "机器人夹爪的本质是由作动器驱动的末端执行器，前提是工业机器人与作动器。"
+    },
+    {
+     "child": "mfg_visionguide",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "视觉引导装配的本质是以视觉传感反馈引导机器人装配；网络内「计算机视觉」（2012）晚于本节点（2000）不可用，见 findings。"
+    },
+    {
+     "child": "mfg_digitalshop",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "数字化车间的本质是以制造执行系统与可编程控制器贯通设备层与管理层，两项前提均已在网络中。"
+    }
+   ],
+   "backfills": [
+    {
+     "child": "mfg_lasercut",
+     "add": [
+      "lasers",
+      "mfg_cnc"
+     ],
+     "reason": "激光切割的本质是以聚焦激光束使材料局部熔化/气化并沿轨迹分离：激光器提供能量、数控提供轨迹，二者是定义性构成；学科级「数学」不是该环节最直接的先行者（排他性不成立）。"
+    },
+    {
+     "child": "mfg_waterjet",
+     "add": [
+      "jet_compressor",
+      "mfg_cnc"
+     ],
+     "reason": "水射流切割的本质是以超高压水束的动能剥离材料：流体加压设备提供能量、数控提供轨迹。网络内无超高压泵/增压器节点，暂以 `jet_compressor` 压气机（流体加压设备，1937）代位（语义不等价，见 findings）。"
+    },
+    {
+     "child": "mfg_plasma",
+     "add": [
+      "mfg_welding",
+      "electricity"
+     ],
+     "reason": "等离子切割由等离子焊接/等离子炬发展而来，二者共用同一电弧等离子体热源；须先有电弧焊工艺与电力系统。域内优先指向同族焊接工艺。"
+    },
+    {
+     "child": "mfg_diecast",
+     "add": [
+      "mfg_mold",
+      "mat_casting"
+     ],
+     "reason": "压铸的本质是以金属模（区别于砂型）在压力下充型凝固，是「模具＋铸造」的组合；去掉数学仍可按史实于 1838 年出现。"
+    },
+    {
+     "child": "mfg_forging2",
+     "add": [
+      "mat_forging",
+      "mfg_mold"
+     ],
+     "reason": "模锻的本质是用模具限制金属塑性流动的锻造，其直接前提是锻造工艺与模具本身。"
+    },
+    {
+     "child": "mfg_standard",
+     "add": [
+      "interchangeable_parts",
+      "mfg_gauge"
+     ],
+     "reason": "零件标准化的本质是把尺寸与公差限定到统一规格：直接源自可互换零件的实践（1798），并以量具（-2000）为度量基础。"
+    },
+    {
+     "child": "mfg_assembly",
+     "add": [
+      "interchangeable_parts",
+      "mfg_standard"
+     ],
+     "reason": "装配线的本质是按工序顺序组织的装配作业，其前提是零件可互换与规格标准化；三者构成清晰的传导链。"
+    },
+    {
+     "child": "mfg_fixture",
+     "add": [
+      "mfg_gauge",
+      "mfg_lathe"
+     ],
+     "reason": "工装夹具的本质是使工件在加工中保持定位与夹紧的装置：定位基准源自量具，夹持回旋机构源自车床。"
+    },
+    {
+     "child": "mfg_blow",
+     "add": [
+      "mfg_extrude2",
+      "mfg_injection"
+     ],
+     "reason": "吹塑的本质是先制管状型坯再吹胀贴模；型坯由挤出或注塑得到，两条路径为并列前提。"
+    },
+    {
+     "child": "mfg_extrude2",
+     "add": [
+      "mfg_mold",
+      "mat_drawing"
+     ],
+     "reason": "挤出的本质是迫使材料连续通过模孔成形，与拉拔（mat_drawing，1200）同属「模具孔型连续变形」，模具为其成形母体。"
+    },
+    {
+     "child": "mfg_furnace",
+     "add": [
+      "kiln",
+      "bellows"
+     ],
+     "reason": "热处理炉的本质是可控高温腔体加强制鼓风：腔体源自窑（-6000），鼓风源自风箱（-1500）。"
+    },
+    {
+     "child": "mfg_vacfurnace",
+     "add": [
+      "mfg_furnace",
+      "electricity"
+     ],
+     "reason": "真空炉的本质是在低压环境中加热处理：炉体与电力为其基础。真空获得设备（真空泵）在网络中并非独立节点，见 findings。"
+    },
+    {
+     "child": "mfg_induction",
+     "add": [
+      "electromagnetism",
+      "electricity"
+     ],
+     "reason": "感应加热的本质是交变磁场在导电工件内产生涡流而发热，其定义性前提是电磁学（1865）与电力系统（1879），二者均早于 1887。"
+    },
+    {
+     "child": "mfg_shotblast",
+     "add": [
+      "mfg_abrasive",
+      "mfg_grindingwheel"
+     ],
+     "reason": "喷丸的本质是以高速弹丸冲击表面产生残余压应力，属磨料工具族（磨料＋固结磨具）；所依赖的气动/抛丸设备在网络中缺失，见 findings。"
+    },
+    {
+     "child": "mfg_nanoimprint",
+     "add": [
+      "nanotech",
+      "mfg_mold"
+     ],
+     "reason": "纳米压印的本质是以纳米级模具对抗蚀剂施加压力以复制图形，是纳米技术与模具工艺的交叉；网络内无光刻/抗蚀剂节点（见 findings）。"
+    },
+    {
+     "child": "mfg_ecm",
+     "add": [
+      "electrochem",
+      "electricity"
+     ],
+     "reason": "电解加工的本质是以电化学阳极溶解去除金属，定义性前提是电化学（1800）与电力系统（1879）。"
+    },
+    {
+     "child": "mfg_chemill",
+     "add": [
+      "chemistry",
+      "electrochem"
+     ],
+     "reason": "化学铣切的本质是以腐蚀液受控溶解金属，属化学与电化学知识的工程应用；网络内无独立蚀刻节点。"
+    },
+    {
+     "child": "mfg_pim",
+     "add": [
+      "mfg_injection",
+      "mat_powder"
+     ],
+     "reason": "金属注射成形的本质是金属粉末与粘结剂经注射成形后脱脂烧结，是注塑工艺与粉末冶金的组合。"
+    },
+    {
+     "child": "mfg_hip",
+     "add": [
+      "mfg_furnace",
+      "mat_powder"
+     ],
+     "reason": "热等静压的本质是高温与各向等压气体共同作用下的致密化，主要用于粉末冶金件与铸件的致密化。"
+    },
+    {
+     "child": "mfg_reverse",
+     "add": [
+      "mfg_cmm",
+      "cad"
+     ],
+     "reason": "逆向工程的本质是由实物测量数据重建数字模型：测量设备与建模软件为其两项构成前提。"
+    },
+    {
+     "child": "mfg_plc",
+     "add": [
+      "computer",
+      "automation"
+     ],
+     "reason": "可编程逻辑控制器的本质是以可编程逻辑替代继电器硬接线的工业控制器，前提是计算机与自动化。"
+    },
+    {
+     "child": "mfg_servo",
+     "add": [
+      "electric_motor",
+      "electronics"
+     ],
+     "reason": "伺服系统的本质是带位置/速度反馈的电动机驱动系统，前提是电动机（1837）与电子放大（1883）。"
+    },
+    {
+     "child": "mfg_harmonic",
+     "add": [
+      "gearing",
+      "mfg_precisionbearing"
+     ],
+     "reason": "谐波减速器的本质是利用柔性齿圈的弹性变形实现高减速比传动，属精密齿轮传动族。"
+    },
+    {
+     "child": "mfg_sixsigma",
+     "add": [
+      "mfg_spcc"
+     ],
+     "reason": "六西格玛的本质是以统计方法度量并压缩过程变异：统计学（1809）是其定义性构成，比学科级「数学」更贴近且更早（排他性成立）。同时补入其方法论前身统计过程控制（1924）。"
+    },
+    {
+     "child": "mfg_lean",
+     "add": [
+      "assembly_line",
+      "mfg_kanban"
+     ],
+     "reason": "精益生产的本质是以拉动式看板与消除浪费为方法的量产体系，前提是流水线（1913）与看板管理（1940）。"
+    },
+    {
+     "child": "mfg_kanban",
+     "add": [
+      "assembly_line",
+      "mfg_standard"
+     ],
+     "reason": "看板的本质是以标准化容器与信号卡控制拉动式生产，前提是流水线与零件标准化。"
+    },
+    {
+     "child": "mfg_cam",
+     "add": [
+      "cad",
+      "mfg_cnc"
+     ],
+     "reason": "计算机辅助制造的本质是以计算机辅助编制并执行数控加工程序，是 CAD 与 CNC 的结合。"
+    },
+    {
+     "child": "mfg_fms",
+     "add": [
+      "mfg_cnc",
+      "robot"
+     ],
+     "reason": "柔性制造系统的本质是数控机床与物料搬运自动化组合而成的可变品种生产线。"
+    },
+    {
+     "child": "mfg_adaptive",
+     "add": [
+      "mfg_servo"
+     ],
+     "reason": "自适应控制的本质是在线辨识被控对象并实时调整控制律，属控制理论的一类（1948）；较之学科级「数学」，控制论更贴近其定义性构成。同时补入伺服系统（1940）为执行前提。"
+    },
+    {
+     "child": "mfg_cobot",
+     "add": [
+      "robot",
+      "sensor"
+     ],
+     "reason": "协作机器人的本质是以力/位传感实现人机共处安全的机器人，前提是工业机器人与传感。"
+    },
+    {
+     "child": "mfg_selfassemble",
+     "add": [
+      "nanotech",
+      "chemistry"
+     ],
+     "reason": "自组装的本质是分子/纳米单元自发组织成有序结构，前提是纳米技术与化学。"
+    },
+    {
+     "child": "mfg_bionics",
+     "add": [
+      "materials",
+      "mfg_3dp"
+     ],
+     "reason": "仿生制造的本质是以生物结构/功能为依据进行设计与成形，材料科学与增材制造为其两项支撑。"
+    },
+    {
+     "child": "mfg_agv",
+     "add": [
+      "electric_motor",
+      "sensor"
+     ],
+     "reason": "自动导引车的本质是以导引与传感定位的电动搬运车，前提是电动机与传感器。"
+    },
+    {
+     "child": "mfg_aps",
+     "add": [
+      "computer"
+     ],
+     "reason": "高级计划排程的本质是以最优化方法求解有限产能下的排程问题：最优化/线性规划（1947）比学科级「数学」更贴近其定义性构成。同时补入计算机为运行载体。"
+    },
+    {
+     "child": "mfg_quality",
+     "add": [
+      "mfg_spcc",
+      "statistics"
+     ],
+     "reason": "全面质量管理的本质是以统计质量控制为核心、全员参与的质量体系，其方法前身是统计过程控制（1924）。"
+    },
+    {
+     "child": "mfg_industry40",
+     "add": [
+      "iot",
+      "mfg_digitalshop"
+     ],
+     "reason": "工业 4.0 的本质是以物联网连接与数字化车间为基础的智能制造框架，两项前提均早于或等于 2011。"
+    },
+    {
+     "child": "mfg_ecmg",
+     "add": [
+      "mfg_ecm",
+      "mfg_grinder"
+     ],
+     "reason": "电解磨削的本质是电解溶解与机械磨削的复合工艺，是两项既有工艺的组合。"
+    },
+    {
+     "child": "mfg_awj",
+     "add": [
+      "mfg_waterjet",
+      "mfg_abrasive"
+     ],
+     "reason": "磨料水射流的本质是水射流与磨料颗粒的叠加，两项前提均已在网络中。"
+    },
+    {
+     "child": "mfg_robotgripper",
+     "add": [
+      "robot",
+      "actuator"
+     ],
+     "reason": "机器人夹爪的本质是由作动器驱动的末端执行器，前提是工业机器人与作动器。"
+    },
+    {
+     "child": "mfg_visionguide",
+     "add": [
+      "sensor",
+      "robot"
+     ],
+     "reason": "视觉引导装配的本质是以视觉传感反馈引导机器人装配；网络内「计算机视觉」（2012）晚于本节点（2000）不可用，见 findings。"
+    },
+    {
+     "child": "mfg_digitalshop",
+     "add": [
+      "mfg_mes",
+      "mfg_plc"
+     ],
+     "reason": "数字化车间的本质是以制造执行系统与可编程控制器贯通设备层与管理层，两项前提均已在网络中。"
+    }
+   ],
+   "findings": [
+    "同义/近义重复节点对（本批新增发现）：`mfg_assembly` 装配线(1900) 与 `assembly_line` 流水线(1913) 语义高度重叠，按年序装配线更早；`mfg_standard` 零件标准化(1800) 与 `interchangeable_parts` 可互换零件(1798) 相邻但层级不同（标准化是规格化，可互换是尺寸一致），非重复。建议将 `mfg_assembly` 并入「同义重复节点」批次统一处置（合并会改节点数与 `check_docs` / `tree_full.html` 的写死数字）。",
+    "缺失节点（补节点候选，累计第 3 项，与 3.1a 同一缺口）：真空获得设备（真空泵/增压器）。`mfg_vacfurnace` 真空炉 与 `mfg_ebw` 电子束焊 均以真空环境为定义性前提，全网络无独立节点。",
+    "缺失节点（补节点候选，新增）：高压流体加压设备（超高压泵/增压器）。`mfg_waterjet` 水射流切割(1970) 的定义性前提，网络内无对应节点；本批以 `jet_compressor` 压气机（energy / 1937）代位，语义不等价（压气机为燃气轮机部件，非水加压设备）。",
+    "缺失节点 / 年份存疑（补节点候选或年份校正）：机器视觉。`mfg_visionguide` 视觉引导装配(2000) 的直接前提；网络内 `computer_vision` 计算机视觉标注为 2012，晚于本节点，不能作前置。建议补建机器视觉节点（约 1980）或校正 `computer_vision` 年份。",
+    "缺失节点（补节点候选，新增）：气动/抛丸设备。`mfg_shotblast` 喷丸(1930) 的设备前提；本批以磨料族（`mfg_abrasive` / `mfg_grindingwheel`）代位，只覆盖「磨料」一侧。",
+    "缺失节点（补节点候选，新增）：光刻/抗蚀剂。`mfg_nanoimprint` 纳米压印(1995) 与之同属图形转移族，网络内无光刻节点（`semiconductor` 为材料类、`mfg_ebw` 等为加工类）。",
+    "本批 41 条节点的 `applications` 全部为同一组模板值（零件加工 / 批量制造 / 精密装配），且无 `purpose` / `people` / `place` —— 与 3.1a 的 27 条同源，属 `techs_more.js` 同构 stub 特征，建议并入「stub 甄别」批次。",
+    "本批判定中「管理 / 软件类」节点（`mfg_sixsigma` / `mfg_quality` / `mfg_lean` / `mfg_kanban` / `mfg_aps` / `mfg_industry40` / `mfg_digitalshop` / `mfg_plc` / `mfg_cam` / `mfg_fms` / `mfg_adaptive`）共 11 条：其真实前提是统计方法、控制理论、优化方法、计算设备与生产组织方法，而非学科级「数学」；其中 3 条以「改前置」收口（统计 / 控制 / 优化），其余以「删边 + 补前置」收口。",
+    "`keep` 档为 0：与 3.1a 不同，本批 41 条中没有一条以学科级「数学」为定义性构成（3.1a 的 `mfg_cnc` 插补与坐标解算、`mfg_cmm` 几何量解算属此类）。这印证了病灶性质——该槽位赋值不区分「数学为必要前提」与「非必要」，而是对同一分类统一注入。"
+   ],
+   "notes": [
+    "候选筛选已断言：41 条全部满足「单前置且前置 = mathematics」，任一不符即抛错，不会把非本批节点混入。",
+    "结构与批次 3.1a 完全一致：edges（逐边 verdict/newParent/reason）+ backfills（child/add/reason）+ summary。执行器 tools/apply_ledger.js --batch 3.1b 会断言 keep+repoint+delete+concept = candidates、backfills 数量相符，并校验时序性与无环。",
+    "执行顺序：用户逐条审核 → apply_ledger --batch 3.1b --apply → 按序重跑 tools/regen_text.js --apply（主管线文案）→ tools/regen_midtech.js --apply（中间库文案）→ audit_net.js --snapshot 刷新基线 → 三道门禁 → 三处登记。",
+    "草案已通过预演校验：前置存在性 0 错、年份倒挂 0 条、预演后无环；预计边 6,126 → 6,167（净 +41）、mathematics 前置 611 → 570、零前置 4 不变。"
+   ],
+   "summary": {
+    "keep": 0,
+    "repoint": 3,
+    "delete": 38,
+    "concept": 0,
+    "backfill": 41
+   },
+   "verification": [
+    "写盘前（草案阶段）：候选筛选断言通过（41 条全部为「单前置且前置 = mathematics」）；判定表条数断言 41；断言 keep(0)+repoint(3)+delete(38)+concept(0) = 41。",
+    "写盘前（草案阶段）：前置存在性与年份校验 0 错；内存预演新边集后无环（0 条）、无年份倒挂；零前置维持 4。",
+    "预演规模：依赖边 6,126 → 6,167（净 +41 = 补前置 79 条 − 删边 38 条；改前置 3 条不计增减）；`mathematics` 作为前置的节点 611 → 570。",
+    "待写盘后补记：apply_ledger 定位 / 失败计数、regen_text 与 regen_midtech 应用处数、audit_net --snapshot 刷新项、三道门禁结果、三处登记计数。"
+   ]
+  },
   "5.0": {
    "date": "2026-09-13",
    "family": "FULL-PIPELINE",
