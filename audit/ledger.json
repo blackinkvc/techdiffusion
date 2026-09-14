@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-09-14",
+ "updated": "2026-09-15",
  "criterion": [
   "必要性",
   "排他性",
@@ -2574,6 +2574,414 @@
     "delete": 17,
     "concept": 0,
     "backfill": 17
+   }
+  },
+  "3.1d": {
+   "date": "2026-09-15",
+   "family": "E-info",
+   "status": "draft-ready（草案，待用户逐条审核；未写盘）",
+   "verification": [
+    "写盘前（草案阶段）：候选筛选断言通过（16 条全部为 info 分类且「单前置且前置 = mathematics」）；判定表条数断言 16；断言 keep(0)+repoint(2)+delete(14)+concept(0) = 16。",
+    "写盘前（草案阶段）：前置存在性与年份校验 0 错；内存预演新边集后无环（0 条）、无年份倒挂、零前置维持 4。",
+    "写盘前（草案阶段）预演规模（以当前盘面为准，3.1c 尚未写盘）：依赖边 6,167 → 6,183（移除 16 + 新增 32，净 +16）；mathematics 作为前置的节点 570 → 554。⚠️ 新增边按「Σbackfills.add(30) + Σ(repoint 各 1 条 newParent)(2) = 32」计。若 3.1c 先写盘，则本批在其之上为 6,187 → 6,203。"
+   ],
+   "scope": "E 族 info 91 条中的信息记录、存储与音视频设备一簇 16 条（书写与记录介质 / 磁记录与存储 / 音视频设备 / 定位与可视化）",
+   "criterion": "§2 判定四标准：① 必要性 ② 排他性 ③ 时序性（前置年 ≤ 本节点年）④ 域内优先。处置四档：保留 / 改前置 / 删边 / 降级为概念影响。",
+   "observation": "与 3.1c 同源：E 族 info 节点的前置一律被批量赋为学科级 `mathematics`。本批取其中「信息记录、存储与音视频设备」一簇，其真实先行条件集中在**介质材料（纸 / 塑料）、换能原理（声学 / 电磁学）、器件（电子管 / 半导体 / 集成电路）与加工母体（精密加工 / 精密轴承）**，与「数学」无定义性关联。",
+   "availableNodes": [
+    "paper 造纸(105)",
+    "printing 印刷术(1040)",
+    "chemistry 化学(1661)",
+    "lathe 车床与精密加工(1751)",
+    "mfg_lathe 车床(-1000)",
+    "mat_toolsteel 工具钢(1868)",
+    "acoustics 声学(1700)",
+    "plastics 塑料(1907)",
+    "mat_phenolic 酚醛树脂(1907)",
+    "electromagnetism 电磁学(1865)",
+    "inf_bw_tv 黑白电视(1927)",
+    "television 电视(1927)",
+    "electronics 电子学(1883)",
+    "vacuum_tube 电子管(1904)",
+    "inf_tape 磁带(1928)",
+    "magnets 永磁材料(-600)",
+    "mfg_precisionbearing 精密轴承(1883)",
+    "inf_hdd 硬盘(1956)",
+    "camera 数码相机 / 图像传感器(1975)",
+    "semiconductor 半导体(1947)",
+    "semiconductors 半导体材料(1947)",
+    "ic 集成电路(1958)",
+    "transistor 晶体管(1947)",
+    "inf_gis 地理信息系统(1960)",
+    "computer 电子计算机(1946)",
+    "display 显示技术(1960)",
+    "statistics 统计学(1809)",
+    "gps 全球卫星定位 GNSS(1990)",
+    "satellite 人造卫星(1957)",
+    "inf_symenc 对称加密(1949)",
+    "inf_flash 闪存(1980)",
+    "inf_emap 电子地图(1980)",
+    "optics 光学(1000)",
+    "inf_microprocessor 微处理器(1971)",
+    "inf_dataviz 数据可视化(1980)",
+    "cad 计算机辅助设计(1960)",
+    "sensor 传感器(1950)"
+   ],
+   "candidates": 16,
+   "candidateList": [
+    {
+     "id": "inf_carbonpaper",
+     "name": "复写纸",
+     "date": "1800 年",
+     "year": 1800
+    },
+    {
+     "id": "inf_typewriter",
+     "name": "打字机",
+     "date": "1868 年",
+     "year": 1868
+    },
+    {
+     "id": "inf_vinyl",
+     "name": "黑胶唱片",
+     "date": "1877 年",
+     "year": 1877
+    },
+    {
+     "id": "inf_tape",
+     "name": "磁带",
+     "date": "1928 年",
+     "year": 1928
+    },
+    {
+     "id": "inf_color_tv",
+     "name": "彩色电视",
+     "date": "1953 年",
+     "year": 1953
+    },
+    {
+     "id": "inf_vcr",
+     "name": "录像机",
+     "date": "1956 年",
+     "year": 1956
+    },
+    {
+     "id": "inf_hdd",
+     "name": "硬盘",
+     "date": "1956 年",
+     "year": 1956
+    },
+    {
+     "id": "inf_floppy",
+     "name": "软盘",
+     "date": "1971 年",
+     "year": 1971
+    },
+    {
+     "id": "inf_camcorder",
+     "name": "摄像机",
+     "date": "1980 年",
+     "year": 1980
+    },
+    {
+     "id": "inf_flash",
+     "name": "闪存",
+     "date": "1980 年",
+     "year": 1980
+    },
+    {
+     "id": "inf_emap",
+     "name": "电子地图",
+     "date": "1980 年",
+     "year": 1980
+    },
+    {
+     "id": "inf_dataviz",
+     "name": "数据可视化",
+     "date": "1980 年",
+     "year": 1980
+    },
+    {
+     "id": "inf_navsoft",
+     "name": "导航软件",
+     "date": "1990 年",
+     "year": 1990
+    },
+    {
+     "id": "inf_watermark",
+     "name": "数字水印",
+     "date": "1990 年",
+     "year": 1990
+    },
+    {
+     "id": "inf_ssd",
+     "name": "固态硬盘",
+     "date": "1991 年",
+     "year": 1991
+    },
+    {
+     "id": "inf_usb",
+     "name": "U 盘",
+     "date": "2000 年",
+     "year": 2000
+    }
+   ],
+   "dispositionRule": [
+    "R1（必要性）：「数学」为定义性构成 → 保留；否则处置。",
+    "R2（排他性）：存在单一更贴近的必要前置 → 改前置（repoint，保持含该学理槽位的形态）；",
+    "R3（域内优先）：无学理级单一替身时删边，并补入领域内可考前置（介质 / 器件 / 加工母体），不得只删不补。",
+    "R4（时序）：所有前置年 ≤ 本节点年；补入的同批节点须做环预演。",
+    "本批 repoint 2 条（`inf_vinyl` → 声学、`inf_dataviz` → 统计学）—— 二者的定义性构成本身即学理（声—机械振动转换、图形编码统计关系）；其余 14 条的定义性构成是介质 / 器件 / 加工母体，故走删边 + 补前置。"
+   ],
+   "edges": [
+    {
+     "child": "inf_carbonpaper",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "复写纸的必要构成是薄纸与可转移的色料涂层；学科级「数学」不构成其定义性前置。网络内无色料/染料节点，涂层一侧以化学（1661）代位（见 findings）。"
+    },
+    {
+     "child": "inf_typewriter",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "打字机的必要构成是活字排布机构与精密金属件加工，分别源自印刷术（1040）与车床及精密加工（1751）；数学非构成要件。"
+    },
+    {
+     "child": "inf_vinyl",
+     "parent": "mathematics",
+     "verdict": "repoint",
+     "newParent": "acoustics",
+     "reason": "黑胶唱片的定义性构成是声波与机械振动的相互转换（刻纹与拾音），其必要的学理前置是声学（1700）而非学科级「数学」；同槽位改指为声学，并补入刻纹所需的精密加工（车床与精密加工，1751）。"
+    },
+    {
+     "child": "inf_tape",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "磁带的必要构成是塑料带基（1907）与电磁换能的磁记录原理（1865）；数学非构成要件。网络内无磁记录介质/磁头节点（见 findings）。"
+    },
+    {
+     "child": "inf_color_tv",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "彩色电视在黑白电视（1927）的扫描与显像体系上增加三基色分解传输，必要前置为黑白电视与电子学（1883）；数学非构成要件。"
+    },
+    {
+     "child": "inf_vcr",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "录像机的必要构成是磁带记录（1928）与视频信号处理（源自电视体系，1927）；二者缺一不可。"
+    },
+    {
+     "child": "inf_hdd",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "硬盘的必要构成是磁记录介质（磁带为其先例，1928）与磁头精密定位机构（精密轴承，1883）；数学非构成要件。"
+    },
+    {
+     "child": "inf_floppy",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "软盘是硬盘（1956）磁记录体系与塑料（1907）柔性介质结合的结果，二者为定义性构成。"
+    },
+    {
+     "child": "inf_camcorder",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "摄像机的必要构成是图像采集（数码相机 / 图像传感器，1975）与磁带介质（1928）；数学非构成要件。"
+    },
+    {
+     "child": "inf_flash",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "闪存的必要构成是半导体（1947）浮栅存储单元与集成电路（1958）工艺；数学非构成要件。"
+    },
+    {
+     "child": "inf_emap",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "电子地图的必要构成是地理信息系统（1960）的数据组织与电子计算机（1946）的渲染载体；数学非构成要件。"
+    },
+    {
+     "child": "inf_dataviz",
+     "parent": "mathematics",
+     "verdict": "repoint",
+     "newParent": "statistics",
+     "reason": "数据可视化的定义性构成是以图形编码表达数据的统计关系，其必要的学理前置是统计学（1809）而非学科级「数学」（与 3.1b 的 `mfg_sixsigma` → `statistics` 同一判据）；同槽位改指为统计学，并补入运行载体电子计算机（1946）。"
+    },
+    {
+     "child": "inf_navsoft",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "导航软件的必要构成是全球卫星定位（1990）与电子地图（1980）；数学非构成要件。前置 `gps` 与本节点同年，按「前置年 ≤ 本节点年」通过。"
+    },
+    {
+     "child": "inf_watermark",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "数字水印的必要构成是密钥化的嵌入算法（源自对称加密，1949）与数字信号处理载体（电子计算机，1946）；数学非构成要件。"
+    },
+    {
+     "child": "inf_ssd",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "固态硬盘的必要构成是闪存（1980）与集成电路（1958）控制器；数学非构成要件。"
+    },
+    {
+     "child": "inf_usb",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "U 盘的必要构成是闪存（1980）与集成电路（1958）接口控制器；数学非构成要件。"
+    }
+   ],
+   "backfills": [
+    {
+     "child": "inf_carbonpaper",
+     "add": [
+      "paper",
+      "chemistry"
+     ],
+     "reason": "复写纸的必要构成是薄纸与可转移的色料涂层；学科级「数学」不构成其定义性前置。网络内无色料/染料节点，涂层一侧以化学（1661）代位（见 findings）。"
+    },
+    {
+     "child": "inf_typewriter",
+     "add": [
+      "printing",
+      "lathe"
+     ],
+     "reason": "打字机的必要构成是活字排布机构与精密金属件加工，分别源自印刷术（1040）与车床及精密加工（1751）；数学非构成要件。"
+    },
+    {
+     "child": "inf_vinyl",
+     "add": [
+      "lathe"
+     ],
+     "reason": "黑胶唱片的定义性构成是声波与机械振动的相互转换（刻纹与拾音），其必要的学理前置是声学（1700）而非学科级「数学」；同槽位改指为声学，并补入刻纹所需的精密加工（车床与精密加工，1751）。"
+    },
+    {
+     "child": "inf_tape",
+     "add": [
+      "plastics",
+      "electromagnetism"
+     ],
+     "reason": "磁带的必要构成是塑料带基（1907）与电磁换能的磁记录原理（1865）；数学非构成要件。网络内无磁记录介质/磁头节点（见 findings）。"
+    },
+    {
+     "child": "inf_color_tv",
+     "add": [
+      "inf_bw_tv",
+      "electronics"
+     ],
+     "reason": "彩色电视在黑白电视（1927）的扫描与显像体系上增加三基色分解传输，必要前置为黑白电视与电子学（1883）；数学非构成要件。"
+    },
+    {
+     "child": "inf_vcr",
+     "add": [
+      "inf_tape",
+      "inf_bw_tv"
+     ],
+     "reason": "录像机的必要构成是磁带记录（1928）与视频信号处理（源自电视体系，1927）；二者缺一不可。"
+    },
+    {
+     "child": "inf_hdd",
+     "add": [
+      "inf_tape",
+      "mfg_precisionbearing"
+     ],
+     "reason": "硬盘的必要构成是磁记录介质（磁带为其先例，1928）与磁头精密定位机构（精密轴承，1883）；数学非构成要件。"
+    },
+    {
+     "child": "inf_floppy",
+     "add": [
+      "inf_hdd",
+      "plastics"
+     ],
+     "reason": "软盘是硬盘（1956）磁记录体系与塑料（1907）柔性介质结合的结果，二者为定义性构成。"
+    },
+    {
+     "child": "inf_camcorder",
+     "add": [
+      "camera",
+      "inf_tape"
+     ],
+     "reason": "摄像机的必要构成是图像采集（数码相机 / 图像传感器，1975）与磁带介质（1928）；数学非构成要件。"
+    },
+    {
+     "child": "inf_flash",
+     "add": [
+      "semiconductor",
+      "ic"
+     ],
+     "reason": "闪存的必要构成是半导体（1947）浮栅存储单元与集成电路（1958）工艺；数学非构成要件。"
+    },
+    {
+     "child": "inf_emap",
+     "add": [
+      "inf_gis",
+      "computer"
+     ],
+     "reason": "电子地图的必要构成是地理信息系统（1960）的数据组织与电子计算机（1946）的渲染载体；数学非构成要件。"
+    },
+    {
+     "child": "inf_dataviz",
+     "add": [
+      "computer"
+     ],
+     "reason": "数据可视化的定义性构成是以图形编码表达数据的统计关系，其必要的学理前置是统计学（1809）而非学科级「数学」（与 3.1b 的 `mfg_sixsigma` → `statistics` 同一判据）；同槽位改指为统计学，并补入运行载体电子计算机（1946）。"
+    },
+    {
+     "child": "inf_navsoft",
+     "add": [
+      "gps",
+      "inf_emap"
+     ],
+     "reason": "导航软件的必要构成是全球卫星定位（1990）与电子地图（1980）；数学非构成要件。前置 `gps` 与本节点同年，按「前置年 ≤ 本节点年」通过。"
+    },
+    {
+     "child": "inf_watermark",
+     "add": [
+      "inf_symenc",
+      "computer"
+     ],
+     "reason": "数字水印的必要构成是密钥化的嵌入算法（源自对称加密，1949）与数字信号处理载体（电子计算机，1946）；数学非构成要件。"
+    },
+    {
+     "child": "inf_ssd",
+     "add": [
+      "inf_flash",
+      "ic"
+     ],
+     "reason": "固态硬盘的必要构成是闪存（1980）与集成电路（1958）控制器；数学非构成要件。"
+    },
+    {
+     "child": "inf_usb",
+     "add": [
+      "inf_flash",
+      "ic"
+     ],
+     "reason": "U 盘的必要构成是闪存（1980）与集成电路（1958）接口控制器；数学非构成要件。"
+    }
+   ],
+   "findings": [
+    "本批 16 条**保留数为 0**，与 3.1b / 3.1c 同一结论：E 族定义（单前置且前置属泛化枢纽）本身即是「批量赋值为学科级顶点」的判别式；**排他性是筛出它们的唯一判据**。",
+    "缺失节点（补节点候选，新增）：**色料 / 染料（复写纸的转移涂层）**。`inf_carbonpaper` 复写纸(1800) 的涂层侧无对应节点，本批以 `chemistry` 化学(1661) 代位，语义偏泛。",
+    "缺失节点（补节点候选，新增）：**磁记录介质 / 磁头**。`inf_tape` 磁带(1928) 与 `inf_hdd` 硬盘(1956) 共用的定义性构成，网络内只有磁记录的应用节点（磁带 / 硬盘本身）而无介质与磁头节点，故本批以 `electromagnetism` + `plastics` 及 `inf_tape` 代位。",
+    "缺失节点（补节点候选，新增）：**图像 / 信号处理**（数字水印的嵌入与提取侧）。本批 `inf_watermark` 以 `inf_symenc` + `computer` 代位。",
+    "同年前置两处（按「前置年 ≤ 本节点年」通过）：`inf_vinyl` 黑胶唱片(1877) 与 `lathe` 车床与精密加工(1751) 不冲突；`inf_navsoft` 导航软件(1990) ← `gps` 全球卫星定位(1990) 同年，属同代技术。",
+    "本批 16 条节点的 `applications` 全部为同一组模板值（信息记录 / 远程传输 / 智能处理），`views[0].period` 亦为模板值 —— 与 3.1a / 3.1b / 3.1c 同源，属 `techs_more.js` 同构 stub 特征，建议并入「stub 甄别」批次。",
+    "本批未改动 `enables` 反向边（16 条节点的 `enables` 均为空数组）。"
+   ],
+   "notes": [
+    "候选筛选已断言：16 条全部满足「category = info 且单前置且前置 = mathematics」，任一不符即抛错。",
+    "结构与 3.1a / 3.1b / 3.1c 完全一致：edges（逐边 verdict/newParent/reason）+ backfills（child/add/reason）+ summary。执行器 tools/apply_ledger.js --batch 3.1d 会断言完整划分、backfills 数量，并校验时序性与无环。",
+    "执行顺序：用户逐条审核 → apply_ledger --batch 3.1d --apply → regen_text --apply → regen_midtech --apply（各自复跑验不动点）→ audit_net.js --snapshot → 三道门禁 → 三处登记。",
+    "与 3.1c 无交叉：两批节点集合不相交；3.1d 以 `inf_emap` / `inf_flash` / `inf_hdd` 等同批节点为前置，均满足年份时序且预演无环，故两者先写 3.1c 或先写 3.1d 均可。"
+   ],
+   "summary": {
+    "keep": 0,
+    "repoint": 2,
+    "delete": 14,
+    "concept": 0,
+    "backfill": 16
    }
   },
   "5.0": {

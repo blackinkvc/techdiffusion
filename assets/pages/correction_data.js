@@ -52,7 +52,9 @@ window.CORRECTIONS = {
 ,
       "【v0.9.29 · 待议 · 页面层文案盲区】本轮修正「来龙去脉」页一处硬编码说明句（原文写死「飞行平台、精确定位、影像获取或数据处理」，对任意节点套用），并暴露一个**校验盲区**：`tools/regen_text.js` 与 `regen_midtech.js` 的管辖范围仅限 `techs_*.js` / `techs_midtech.js` 的数据文案，三道门禁也全部面向数据层；**页面层（`assets/app.js` 与各页渲染函数）的手写散文没有任何自动校验**，因此「写死某个案例的领域措辞」这类残留不会被任何不动点或门禁发现。待办：① 对 `assets/app.js` 与 `assets/pages/*.js` 的说明性文字做一次全站抽查，线索为「与所选节点无关的领域词」（本轮即以「无人机 / 飞行平台 / 影像获取」命中）；② 评估是否把「页面文案不得含具体案例领域词」写成一条可自动检查的断言。另：**详情页默认 id 未改** —— `assets/pages/detail.js:5` 仍为 `p.get(\"id\") || \"smart_mower\"`，本轮按用户指定范围（「来龙去脉里」）保留，待裁定是否一并替换为 `stellar_engine`（或改为随机）。"
 ,
-      "【v0.9.30 · 已执行 · 顺延】批次 3.1b（E 族 manufact 余 41 条「`mathematics` 单前置」判定）已写盘：保留 0 / 改前置 3 / 删边 38 / 降级为概念影响 0，补前置 41 条目共 79 条边，依赖边 6,126 → 6,167（节点 2,266 不变）；派生文案 191 条（`summary` 65 / `significance` 58 / `views` 68）+ 中间库 95 条目，均验不动点；结构问题族 A 535 → 494、E 146 → 105（**`A.manufact` 与 `E.manufact` 均由 41 → 0，E 族 manufact 槽位清空**）、Ch 252 → 246；`mathematics` 作为前置的节点 611 → 570。**本批的判据性结论**：41 条逐条审核后**保留数为 0** —— 说明该槽位不区分必要与非必要，属生成阶段的批量赋值产物（与 `bx_*` 占位、stub 捏造链同类），而非逐条判断的结果；四标准中的**排他性**是筛出这类挂载的唯一判据，单靠时序校验（前置年 ≤ 本体年）它们会整体通过。**顺延与新增**：① 缺失节点（补节点候选，累计 5 项，本批新增 2）：高压流体加压设备（`mfg_waterjet` / `mfg_awj` 共用，现以 `jet_compressor` 代位、语义不等价）、机器视觉（`computer_vision` 标注 2012 年，晚于 `mfg_visionguide` 的 2000 年，无法作为其前置）；② 另有气动 / 抛丸设备、光刻 / 抗蚀剂两项缺口，累计 7 项；③ 同义重复节点对新增一例：`mfg_assembly`（1900）与 `assembly_line`（1913）语义重叠，与既有 `mfg_wedm` / `mfg_edmwire`、`laser` / `lasers`、`mfg_lathe` / `lathe` 同属节点级问题，建议另立批次（合并会改节点数并触发 `check_docs` / `tree_full.html` 写死数字同步）；④ **核账陷阱（本批暴露）**：新增边须按「Σ `backfills.add` + Σ(repoint 各 1 条 `newParent`)」计算 —— 本批 `backfills` 合计 79 条，另有 repoint 3 条的 `newParent` 3 条，实际新增 82 条；仅按 `backfills` 推算会得 6,164，与实测 6,167 差 3。⑤ 阶段 3 下一批：E 族 manufact 已清空，可转 E 族其余分类（现余 105 条）或 A 族（现 494 条）；**根治手段仍在阶段 5c**（生成器槽位赋值的语义硬约束）。"
+      "【v0.9.30 · 已执行 · 顺延】批次 3.1b（E 族 manufact 余 41 条「`mathematics` 单前置」判定）已写盘：保留 0 / 改前置 3 / 删边 38 / 降级为概念影响 0，补前置 41 条目共 79 条边，依赖边 6,126 → 6,167（节点 2,266 不变）；派生文案 191 条（`summary` 65 / `significance` 58 / `views` 68）+ 中间库 95 条目，均验不动点；结构问题族 A 535 → 494、E 146 → 105（**`A.manufact` 与 `E.manufact` 均由 41 → 0，E 族 manufact 槽位清空**）、Ch 252 → 246；`mathematics` 作为前置的节点 611 → 570。**本批的判据性结论**：41 条逐条审核后**保留数为 0** —— 说明该槽位不区分必要与非必要，属生成阶段的批量赋值产物（与 `bx_*` 占位、stub 捏造链同类），而非逐条判断的结果；四标准中的**排他性**是筛出这类挂载的唯一判据，单靠时序校验（前置年 ≤ 本体年）它们会整体通过。**顺延与新增**：① 缺失节点（补节点候选，累计 5 项，本批新增 2）：高压流体加压设备（`mfg_waterjet` / `mfg_awj` 共用，现以 `jet_compressor` 代位、语义不等价）、机器视觉（`computer_vision` 标注 2012 年，晚于 `mfg_visionguide` 的 2000 年，无法作为其前置）；② 另有气动 / 抛丸设备、光刻 / 抗蚀剂两项缺口，累计 7 项；③ 同义重复节点对新增一例：`mfg_assembly`（1900）与 `assembly_line`（1913）语义重叠，与既有 `mfg_wedm` / `mfg_edmwire`、`laser` / `lasers`、`mfg_lathe` / `lathe` 同属节点级问题，建议另立批次（合并会改节点数并触发 `check_docs` / `tree_full.html` 写死数字同步）；④ **核账陷阱（本批暴露）**：新增边须按「Σ `backfills.add` + Σ(repoint 各 1 条 `newParent`)」计算 —— 本批 `backfills` 合计 79 条，另有 repoint 3 条的 `newParent` 3 条，实际新增 82 条；仅按 `backfills` 推算会得 6,164，与实测 6,167 差 3。⑤ 阶段 3 下一批：E 族 manufact 已清空，可转 E 族其余分类（现余 105 条）或 A 族（现 494 条）；**根治手段仍在阶段 5c**（生成器槽位赋值的语义硬约束）。",
+      "【v0.9.31 · 草案待审核 · 阶段 3.1c】E 族 info 首批 18 条（通信、网络与标识设备）前置逐条判定已写入 `audit/ledger.json` 的 `batches[\"3.1c\"]`：保留 0 / 改前置 1（`inf_antenna` 天线 → `em_theory` 电磁理论）/ 删边 17 / 降级 0，补前置 17 条目共 37 条边；预演依赖边 6,167 → **6,187**、`mathematics` 前置 570 → 552。**未改动任何数据**，待逐条审核后由 `tools/apply_ledger.js --batch 3.1c --apply` 写盘。审核要点：① 天线改指「电磁理论」还是「电磁学」（两者皆 1865）；② `inf_rfid` 射频识别跨域以 transport 类的雷达（`tr_radar2`，1935）代位是否接受；③ `inf_cdn`(1990) ← `inf_cache`(1990) 与 ④ `inf_fiber`(1970) ← `optic_fiber`(1970) 两处同年前置；⑤ `inf_5g` 是否先补建蜂窝 / 移动通信世代节点再判。",
+      "【v0.9.31 · 草案待审核 · 阶段 3.1d】E 族 info 次批 16 条（信息记录、存储与音视频设备）前置逐条判定已写入 `batches[\"3.1d\"]`：保留 0 / 改前置 2（`inf_vinyl` 黑胶唱片 → `acoustics` 声学、`inf_dataviz` 数据可视化 → `statistics` 统计学）/ 删边 14 / 降级 0，补前置 16 条目共 30 条边；预演依赖边 6,167 → **6,183**、`mathematics` 前置 570 → 554。**未改动任何数据**，待逐条审核后由 `tools/apply_ledger.js --batch 3.1d --apply` 写盘。与 3.1c 节点集合不相交，写盘顺序不限。本批新发现三处缺失节点：色料 / 染料、磁记录介质 / 磁头、图像 / 信号处理。"
     ],
     enablesAudit: {
       title: "enables 语义错误 · 95 项灰色概念甄别表",
@@ -162,6 +164,108 @@ window.CORRECTIONS = {
     },
   },
   entries: [
+    {
+      "id": "CR-2026-0915-einfo-math-hub-3.1c",
+      "date": "2026-09-15",
+      "node": "E 族 info 首批 18 条（通信、网络与标识设备），前置一律为学科级 `mathematics`",
+      "nodeName": "通信电缆 / 天线 / 相控阵 / 微波中继 / 射频识别 / 光纤通信 / 全光网络 / 高速光模块 / 路由器 / 无线传感网 / 内容分发网络 / 蓝牙 / 虚拟专网 / 软件定义网络 / 低轨卫星星座 / 5G / 条形码 / 二维码",
+      "category": "info",
+      "severity": "中",
+      "status": "待写盘（草案已入台账 batches[\"3.1c\"]，未改动任何数据；预演依赖边 6,167 → 6,187）",
+      "problem": "E 族 info 91 条节点的前置**全部被赋为同一条学科级 `mathematics`**，无一条例外 —— 与 E 族 manufact 68 条（3.1a / 3.1b 已处置）为同一病灶：生成器对同分类槽位批量挂通用枢纽。本批取其中「通信、网络与标识设备」一簇 18 条，其真实先行条件集中在器件（电子管 / 集成电路 / 光纤 / 激光器）、材料（铜 / 硫化橡胶）与网络机制（分组交换 / 缓存 / 加密），与「数学」无定义性关联。",
+      "rootCause": "与 3.1a / 3.1b 同源：生成器的槽位赋值规则把「数学是一切定量科学之基」这一泛化命题机械外推为逐条技术的具体前置。该形态必然通过时序校验（学科级节点总是更早），却无法满足排他性（几乎所有定量技术都能挂数学），因而不提供任何区分信息，同时把数百个节点的下游计数堆在单一学科节点上，使 PageRank / 下游辐射等结构指标失真，而真正定义各技术的域内前置反而缺席。",
+      "fix": "按四标准（必要性 / 排他性 / 时序性 / 域内优先）逐条判定并写入台账草案：**保留 0 / 改前置 1 / 删边 17 / 降级为概念影响 0**，`backfills` 17 条目共 37 条边。改前置 1 条：`inf_antenna` 天线 → `em_theory` 电磁理论（其定义性构成本身即学理）。其余 17 条删去 `mathematics` 边并补入域内真实前置。**本批尚未写盘**：待用户逐条审核后执行 `tools/apply_ledger.js --batch 3.1c --apply`，随后按序重算派生链并刷新基线。",
+      "badUpstream": [
+        "mathematics（18 条节点的唯一前置，学科级泛化枢纽）"
+      ],
+      "goodUpstream": [
+        "`inf_antenna` → `em_theory` 电磁理论（1865）",
+        "`inf_cable` → `mat_copper` 红铜冶炼 + `mat_vulcan` 硫化橡胶（1839）",
+        "`inf_phasedarray` → `inf_antenna` + `electronics` 电子学（1883）",
+        "`inf_microwave` → `vacuum_tube` 电子管（1904）+ `inf_antenna`",
+        "`inf_rfid` → `tr_radar2` 雷达（1935）+ `radio` 无线电（1895）",
+        "`inf_fiber` → `optic_fiber` 光纤 + `lasers` 激光器（1960）",
+        "`inf_alloptical` → `inf_fiber` + `inf_modulation` 调制技术（1900）",
+        "`inf_400g` → `inf_fiber` + `ic` 集成电路（1958）",
+        "`inf_router` → `packet_switch` 分组交换（1969）+ `computer` 电子计算机（1946）",
+        "`inf_sensor_net` → `sensor` 传感器（1950）+ `radio` + `ic`",
+        "`inf_cdn` → `internet` 互联网（1969）+ `inf_cache` 缓存系统（1990）",
+        "`inf_bluetooth` → `radio` + `ic`",
+        "`inf_vpn` → `internet` + `tcpip` TCP/IP（1981）+ `inf_symenc` 对称加密（1949）",
+        "`inf_sdn` → `inf_router` + `inf_net_switch` 网络交换机（1980）",
+        "`inf_leo` → `satellite` 人造卫星（1957）+ `radio`",
+        "`inf_5g` → `radio` + `inf_phasedarray` 相控阵（1930）+ `inf_sdn` 软件定义网络（2000）",
+        "`inf_barcode` → `printing` 印刷术（1040）+ `electronics`",
+        "`inf_qrcode` → `inf_barcode` + `inf_ecc` 纠错码（1949）"
+      ],
+      "changes": [
+        "① 候选硬断言：`category === \"info\"` 且「单前置且前置 = `mathematics`」—— 命中 18 条；判定表条数断言 18；`keep(0) + repoint(1) + delete(17) + concept(0) = 18` 通过。",
+        "② 判定分布：**保留 0 / 改前置 1 / 删边 17 / 降级为概念影响 0**。保留数为 0 说明这 18 条无一以学科级「数学」为定义性构成。",
+        "③ repoint 判据（本批新立）：**定义性构成本身即学理**者改前置（天线＝电磁波辐射理论的物化，Hertz 1888 以天线实验验证电磁波）；构成是**器件 / 材料 / 网络机制**者删边 + 补前置。",
+        "④ 边增减核账：移除 18 条 `mathematics`、新增 38 条 = `backfills` 37 条 + repoint 的 `newParent` 1 条 → 依赖边 6,167 → **6,187**（净 +20）；`mathematics` 作为前置的节点 570 → **552**。",
+        "⑤ 预演校验：前置存在性 0 错、年份倒挂 0 条、预演后无环、零前置维持 4；构建脚本断言与执行器干跑断言双重通过。",
+        "⑥ 同年前置两处按「≤」通过并已在台账 `findings` 中给出替换方案：`inf_cdn`(1990) ← `inf_cache`(1990)、`inf_fiber`(1970) ← `optic_fiber`(1970)。",
+        "⑦ 判定取证以领域事实与库内实际可用 id 为准 —— 这 18 条节点的 `summary` / `views[].text` 全部由旧前置模板生成（「依托 数学 …」），**属派生物、不构成独立证据**。",
+        "⑧ 未改动：全部数据文件、`audit/baseline.json`、`theory_data.js`、全量管线两文件。审核要点（① 天线改指「电磁理论」还是「电磁学」；② `inf_rfid` 跨域以 transport 类雷达代位是否接受；③④ 两处同年前置；⑤ 5G 是否先补建蜂窝世代节点）已逐条列入纠错页待审队列。"
+      ],
+      "files": [
+        "audit/ledger.json",
+        "技术网络检修计划.md",
+        "assets/pages/changelog_data.js",
+        "assets/pages/correction_data.js",
+        "版本迭代日志.md"
+      ]
+    },
+    {
+      "id": "CR-2026-0915-einfo-math-hub-3.1d",
+      "date": "2026-09-15",
+      "node": "E 族 info 次批 16 条（信息记录、存储与音视频设备），前置一律为学科级 `mathematics`",
+      "nodeName": "复写纸 / 打字机 / 黑胶唱片 / 磁带 / 彩色电视 / 录像机 / 硬盘 / 软盘 / 摄像机 / 闪存 / 电子地图 / 数据可视化 / 导航软件 / 数字水印 / 固态硬盘 / U 盘",
+      "category": "info",
+      "severity": "中",
+      "status": "待写盘（草案已入台账 batches[\"3.1d\"]，未改动任何数据；预演依赖边 6,167 → 6,183）",
+      "problem": "与 3.1c 同源：E 族 info 节点的前置一律被批量赋为学科级 `mathematics`。本批取其中「信息记录、存储与音视频设备」一簇 16 条，其真实先行条件集中在介质材料（纸 / 塑料）、换能原理（声学 / 电磁学）、器件（电子管 / 半导体 / 集成电路）与加工母体（精密加工 / 精密轴承），与「数学」无定义性关联。",
+      "rootCause": "同 3.1c：生成器槽位赋值把泛化命题机械外推为逐条技术前置。该形态通过时序校验但不满足排他性，不提供区分信息，却把下游计数堆在单一学科节点上，同时真正定义该技术的域内前置缺席。",
+      "fix": "按四标准逐条判定并写入台账草案：**保留 0 / 改前置 2 / 删边 14 / 降级为概念影响 0**，`backfills` 16 条目共 30 条边。改前置 2 条：`inf_vinyl` 黑胶唱片 → `acoustics` 声学（1700）、`inf_dataviz` 数据可视化 → `statistics` 统计学（1809）。其余 14 条删去 `mathematics` 边并补入域内真实前置。**本批尚未写盘**：待用户逐条审核后执行 `tools/apply_ledger.js --batch 3.1d --apply`。与 3.1c 节点集合不相交，写盘顺序不限。",
+      "badUpstream": [
+        "mathematics（16 条节点的唯一前置，学科级泛化枢纽）"
+      ],
+      "goodUpstream": [
+        "`inf_vinyl` → `acoustics` 声学（1700）+ `lathe` 车床与精密加工（1751）",
+        "`inf_dataviz` → `statistics` 统计学（1809）+ `computer` 电子计算机（1946）",
+        "`inf_carbonpaper` → `paper` 造纸（105）+ `chemistry` 化学（1661）",
+        "`inf_typewriter` → `printing` 印刷术（1040）+ `lathe` 车床与精密加工（1751）",
+        "`inf_tape` → `plastics` 塑料（1907）+ `electromagnetism` 电磁学（1865）",
+        "`inf_color_tv` → `inf_bw_tv` 黑白电视（1927）+ `electronics` 电子学（1883）",
+        "`inf_vcr` → `inf_tape` 磁带（1928）+ `inf_bw_tv` 黑白电视",
+        "`inf_hdd` → `inf_tape` + `mfg_precisionbearing` 精密轴承（1883）",
+        "`inf_floppy` → `inf_hdd` 硬盘（1956）+ `plastics`",
+        "`inf_camcorder` → `camera` 数码相机 / 图像传感器（1975）+ `inf_tape`",
+        "`inf_flash` → `semiconductor` 半导体（1947）+ `ic` 集成电路（1958）",
+        "`inf_emap` → `inf_gis` 地理信息系统（1960）+ `computer`",
+        "`inf_navsoft` → `gps` 全球卫星定位（1990）+ `inf_emap` 电子地图（1980）",
+        "`inf_watermark` → `inf_symenc` 对称加密（1949）+ `computer`",
+        "`inf_ssd` → `inf_flash` 闪存（1980）+ `ic`",
+        "`inf_usb` → `inf_flash` + `ic`"
+      ],
+      "changes": [
+        "① 候选硬断言：`category === \"info\"` 且「单前置且前置 = `mathematics`」—— 命中 16 条；判定表条数断言 16；`keep(0) + repoint(2) + delete(14) + concept(0) = 16` 通过。",
+        "② 判定分布：**保留 0 / 改前置 2 / 删边 14 / 降级为概念影响 0**。保留数为 0，与 3.1b / 3.1c 同一结论。",
+        "③ repoint 2 条：`inf_vinyl` → `acoustics` 声学（声波—机械振动转换是其定义性构成）、`inf_dataviz` → `statistics` 统计学（与 3.1b 的 `mfg_sixsigma` → `statistics` 同一判据）；二者同时补入运行 / 加工侧前置（`lathe` / `computer`）。",
+        "④ 边增减核账：移除 16 条 `mathematics`、新增 32 条 = `backfills` 30 条 + repoint 的 `newParent` 2 条 → 依赖边 6,167 → **6,183**（净 +16）；`mathematics` 作为前置的节点 570 → **554**。",
+        "⑤ 预演校验：前置存在性 0 错、年份倒挂 0 条、预演后无环、零前置维持 4；构建脚本断言与执行器干跑断言双重通过。",
+        "⑥ 判定中新发现三处缺失节点（补节点候选累计 9 项）：色料 / 染料（复写纸的转移涂层）、磁记录介质 / 磁头（磁带与硬盘共用，本批以 `plastics` + `electromagnetism` 及 `inf_tape` 代位）、图像 / 信号处理（数字水印的嵌入与提取侧）。",
+        "⑦ 同年前置：`inf_navsoft` 导航软件(1990) ← `gps` 全球卫星定位(1990)，按「前置年 ≤ 本节点年」通过；已在台账 `findings` 中标注。",
+        "⑧ 未改动：全部数据文件、`audit/baseline.json`、`theory_data.js`、全量管线两文件。本批与 3.1c 均待用户逐条审核后写盘。"
+      ],
+      "files": [
+        "audit/ledger.json",
+        "技术网络检修计划.md",
+        "assets/pages/changelog_data.js",
+        "assets/pages/correction_data.js",
+        "版本迭代日志.md"
+      ]
+    },
     {
       "id": "CR-2026-0914-manufact-math-hub-3.1b",
       "date": "2026-09-14",
