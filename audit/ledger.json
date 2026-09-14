@@ -2984,6 +2984,452 @@
     "backfill": 16
    }
   },
+  "3.1e": {
+   "date": "2026-09-15",
+   "family": "E-info",
+   "status": "draft-ready（草案，待用户逐条审核；未写盘）",
+   "verification": [
+    "写盘前（草案阶段）：候选筛选断言通过（18 条全部为 info 分类且「单前置且前置 = mathematics」）；判定表条数断言 18；断言 keep(0)+repoint(1)+delete(17)+concept(0) = 18。",
+    "写盘前（草案阶段）：前置存在性与年份校验 0 错；内存预演新边集后无环（0 条）、无年份倒挂、零前置维持 4。",
+    "写盘前（草案阶段）预演规模（以当前盘面为准，3.1c / 3.1d 尚未写盘）：依赖边 6,167 → 6,183（移除 18 + 新增 33+1=34，净 +16）；mathematics 作为前置的节点 570 → 552；A 族 494 → 476；E 族 105 → 87；Ch 族 246 → 244。⚠️ 新增边按「Σbackfills.add(33) + Σ(repoint 各 1 条 newParent)(1) = 34」计。若 3.1c 与 3.1d 均已写盘，则本批在其之上为 6,203 → 6,219。"
+   ],
+   "scope": "E 族 info 91 条中的基础软件与数据管理一簇 18 条（操作系统与处理器 / 编程语言与编译系统 / 中间件与建模 / 数据库族 / 数据表示）",
+   "criterion": "§2 判定四标准：① 必要性 ② 排他性 ③ 时序性（前置年 ≤ 本节点年）④ 域内优先。处置四档：保留 / 改前置 / 删边 / 降级为概念影响。",
+   "observation": "与 3.1c / 3.1d 同源：E 族 info 节点的前置一律被批量赋为学科级 `mathematics`。本批取其中「基础软件与数据管理」一簇，其真实先行条件集中在**计算器件（集成电路）、载体系统（电子计算机）、网络设备（交换机 / 浏览器）与具体学理（数理逻辑 / 图论 / 信息论）**，与学科级「数学」无定义性关联。",
+   "availableNodes": [
+    "computer 电子计算机(1946)",
+    "computer_sci 计算机科学(1936)",
+    "ic 集成电路(1958)",
+    "transistor 晶体管(1947)",
+    "semiconductor 半导体(1947)",
+    "semiconductors 半导体材料(1947)",
+    "math_logic 数理逻辑(1854)",
+    "graph_theory 图论(1736)",
+    "info_theory 信息论(1948)",
+    "complexity 计算复杂性(1971)",
+    "algorithm 算法理论(825)",
+    "data_science 数据科学(2000)",
+    "inf_ram 内存(1947)",
+    "inf_hdd 硬盘(1956)",
+    "inf_tape 磁带(1928)",
+    "inf_ssd 固态硬盘(1991)",
+    "inf_browser 网页浏览器(1990)",
+    "inf_net_switch 网络交换机(1980)",
+    "inf_router 路由器(1980)",
+    "inf_os 操作系统(1950)",
+    "inf_compiler 编译器(1952)",
+    "inf_pl_c C 语言(1972)",
+    "inf_db 数据库(1960)",
+    "inf_rdbms 关系型数据库(1970)",
+    "inf_embedding 嵌入模型(2010)",
+    "inf_vectorsearch 向量检索(2010)",
+    "sensor 传感器(1950)",
+    "inf_sensor_net 无线传感网(1980)",
+    "inf_api 应用程序接口(2000)",
+    "cad 计算机辅助设计(1960)",
+    "inf_git 版本控制(1972)",
+    "llm 大语言模型(2017)",
+    "inf_ml 机器学习(1959)",
+    "it_alg_3 哈希算法(1970)",
+    "algebra 代数(820)"
+   ],
+   "candidates": 18,
+   "candidateList": [
+    {
+     "id": "inf_microprocessor",
+     "name": "微处理器",
+     "date": "1971 年",
+     "year": 1971
+    },
+    {
+     "id": "inf_os",
+     "name": "操作系统",
+     "date": "1950 年",
+     "year": 1950
+    },
+    {
+     "id": "inf_compiler",
+     "name": "编译器",
+     "date": "1952 年",
+     "year": 1952
+    },
+    {
+     "id": "inf_pl_fortran",
+     "name": "Fortran",
+     "date": "1957 年",
+     "year": 1957
+    },
+    {
+     "id": "inf_pl_c",
+     "name": "C 语言",
+     "date": "1972 年",
+     "year": 1972
+    },
+    {
+     "id": "inf_pl_python",
+     "name": "Python",
+     "date": "1991 年",
+     "year": 1991
+    },
+    {
+     "id": "inf_middleware",
+     "name": "中间件",
+     "date": "1990 年",
+     "year": 1990
+    },
+    {
+     "id": "inf_uml",
+     "name": "统一建模语言",
+     "date": "1997 年",
+     "year": 1997
+    },
+    {
+     "id": "inf_db",
+     "name": "数据库",
+     "date": "1960 年",
+     "year": 1960
+    },
+    {
+     "id": "inf_rdbms",
+     "name": "关系型数据库",
+     "date": "1970 年",
+     "year": 1970
+    },
+    {
+     "id": "inf_sql",
+     "name": "SQL",
+     "date": "1974 年",
+     "year": 1974
+    },
+    {
+     "id": "inf_nosql",
+     "name": "NoSQL",
+     "date": "2000 年",
+     "year": 2000
+    },
+    {
+     "id": "inf_graphdb",
+     "name": "图数据库",
+     "date": "2000 年",
+     "year": 2000
+    },
+    {
+     "id": "inf_timeseries",
+     "name": "时序数据库",
+     "date": "2000 年",
+     "year": 2000
+    },
+    {
+     "id": "inf_vector_db",
+     "name": "向量数据库",
+     "date": "2010 年",
+     "year": 2010
+    },
+    {
+     "id": "inf_cache",
+     "name": "缓存系统",
+     "date": "1990 年",
+     "year": 1990
+    },
+    {
+     "id": "inf_compression",
+     "name": "数据压缩",
+     "date": "1950 年",
+     "year": 1950
+    },
+    {
+     "id": "inf_hash",
+     "name": "哈希函数",
+     "date": "1953 年",
+     "year": 1953
+    }
+   ],
+   "dispositionRule": [
+    "R1（必要性）：「数学」为定义性构成 → 保留；否则处置。",
+    "R2（排他性）：存在单一更贴近的必要前置 → 改前置（repoint，保持含该学理槽位的形态）；",
+    "R3（域内优先）：无学理级单一替身时删边，并补入领域内可考前置（器件 / 载体系统 / 具体学理），不得只删不补。",
+    "R4（时序）：所有前置年 ≤ 本节点年；补入的同批节点须做环预演。",
+    "本批 repoint 1 条（`inf_compression` → 信息论）—— 其定义性构成本身即学理（按信息论原理消除冗余）；其余 17 条的定义性构成是软件系统 / 语言 / 器件，故走删边 + 补前置。"
+   ],
+   "edges": [
+    {
+     "child": "inf_microprocessor",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "微处理器的定义性构成是「把中央处理单元集成到单一芯片」，必要前置为集成电路（1958）与电子计算机（1946，体系结构来源）；学科级「数学」非构成要件。"
+    },
+    {
+     "child": "inf_os",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "操作系统是管理计算机硬件的系统程序，必要前置为电子计算机（1946）；数学非构成要件。"
+    },
+    {
+     "child": "inf_compiler",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "编译器是在计算机上把源语言程序翻译为目标语言程序的系统程序，必要载体为电子计算机（1946），其语法分析的理论根为形式语言（以数理逻辑 1854 为库内可用代位）；数学非构成要件。"
+    },
+    {
+     "child": "inf_pl_fortran",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "Fortran 是第一个被编译器实现的高级程序设计语言，必要前置为编译器（1952）与电子计算机（1946）；数学非构成要件。"
+    },
+    {
+     "child": "inf_pl_c",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "C 语言的必要构成是编译实现机制（编译器，1952）与系统编程需求（操作系统，1950，其设计目标即为重写 Unix）；数学非构成要件。"
+    },
+    {
+     "child": "inf_pl_python",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "Python 的必要前置是语言实现机制（编译器，1952）与其参考实现所依赖的 C 语言（1972，CPython 以 C 书写）；数学非构成要件。"
+    },
+    {
+     "child": "inf_middleware",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "中间件是位于操作系统与应用程序之间的分布式互操作服务层，必要前置为操作系统（1950）与网络设备体系（网络交换机，1980）；数学非构成要件。"
+    },
+    {
+     "child": "inf_uml",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "统一建模语言是面向对象软件设计的图形化记号系统，必要前置为计算机科学（1936，软件方法学的上位学科）与其主要目标语言谱系（C 语言，1972）。网络内无「软件工程 / 面向对象方法」节点（见 findings）。"
+    },
+    {
+     "child": "inf_db",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "数据库的必要构成是计算机（1946）上的持久化数据组织与直接存取存储设备（硬盘，1956）；数学非构成要件。"
+    },
+    {
+     "child": "inf_rdbms",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "关系型数据库在数据库（1960）基础上引入关系模型，后者以一阶谓词逻辑为学理根（库内以数理逻辑 1854 代位，见 findings）；数学非构成要件。"
+    },
+    {
+     "child": "inf_sql",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "SQL 是关系型数据库（1970）的查询与数据定义语言，二者为定义性构成；数学非构成要件。"
+    },
+    {
+     "child": "inf_nosql",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "NoSQL 的动因是 Web 应用对非结构化数据的横向扩展需求，必要前置为数据库（1960）与 Web 应用载体（网页浏览器，1990）；数学非构成要件。"
+    },
+    {
+     "child": "inf_graphdb",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "图数据库的必要构成是数据库（1960）的存储体系与图论（1736）的数据模型；数学非构成要件（图论为具体学理，非学科级枢纽）。"
+    },
+    {
+     "child": "inf_timeseries",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "时序数据库的必要构成是数据库（1960）的存储体系与传感器（1950）产生的时序数据源；数学非构成要件。"
+    },
+    {
+     "child": "inf_vector_db",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "向量数据库的必要构成是数据库（1960）的存储体系与嵌入模型（2010）产出的向量表示；两者同年，按「前置年 ≤ 本节点年」通过。"
+    },
+    {
+     "child": "inf_cache",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "缓存系统的必要构成是高速存储层（内存，1947）与被缓存的数据源（数据库，1960）；数学非构成要件。"
+    },
+    {
+     "child": "inf_compression",
+     "parent": "mathematics",
+     "verdict": "repoint",
+     "newParent": "info_theory",
+     "reason": "数据压缩的定义性构成是按信息论原理消除数据冗余（熵编码），其必要的学理前置是信息论（1948）而非学科级「数学」（与 3.1c 的 `inf_antenna` → 电磁理论同一判据：定义性构成本身即学理）；同槽位改指为信息论，并补入实现载体电子计算机（1946）。"
+    },
+    {
+     "child": "inf_hash",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "哈希函数的必要构成是计算机（1946）存储寻址与定长映射函数，其形式化基础为数理逻辑（1854，本批最弱一条，见 findings）；学科级「数学」非排他性前置。"
+    }
+   ],
+   "backfills": [
+    {
+     "child": "inf_microprocessor",
+     "add": [
+      "ic",
+      "computer"
+     ],
+     "reason": "微处理器的定义性构成是「把中央处理单元集成到单一芯片」，必要前置为集成电路（1958）与电子计算机（1946，体系结构来源）；学科级「数学」非构成要件。"
+    },
+    {
+     "child": "inf_os",
+     "add": [
+      "computer"
+     ],
+     "reason": "操作系统是管理计算机硬件的系统程序，必要前置为电子计算机（1946）；数学非构成要件。"
+    },
+    {
+     "child": "inf_compiler",
+     "add": [
+      "computer",
+      "math_logic"
+     ],
+     "reason": "编译器是在计算机上把源语言程序翻译为目标语言程序的系统程序，必要载体为电子计算机（1946），其语法分析的理论根为形式语言（以数理逻辑 1854 为库内可用代位）；数学非构成要件。"
+    },
+    {
+     "child": "inf_pl_fortran",
+     "add": [
+      "inf_compiler",
+      "computer"
+     ],
+     "reason": "Fortran 是第一个被编译器实现的高级程序设计语言，必要前置为编译器（1952）与电子计算机（1946）；数学非构成要件。"
+    },
+    {
+     "child": "inf_pl_c",
+     "add": [
+      "inf_compiler",
+      "inf_os"
+     ],
+     "reason": "C 语言的必要构成是编译实现机制（编译器，1952）与系统编程需求（操作系统，1950，其设计目标即为重写 Unix）；数学非构成要件。"
+    },
+    {
+     "child": "inf_pl_python",
+     "add": [
+      "inf_compiler",
+      "inf_pl_c"
+     ],
+     "reason": "Python 的必要前置是语言实现机制（编译器，1952）与其参考实现所依赖的 C 语言（1972，CPython 以 C 书写）；数学非构成要件。"
+    },
+    {
+     "child": "inf_middleware",
+     "add": [
+      "inf_os",
+      "inf_net_switch"
+     ],
+     "reason": "中间件是位于操作系统与应用程序之间的分布式互操作服务层，必要前置为操作系统（1950）与网络设备体系（网络交换机，1980）；数学非构成要件。"
+    },
+    {
+     "child": "inf_uml",
+     "add": [
+      "computer_sci",
+      "inf_pl_c"
+     ],
+     "reason": "统一建模语言是面向对象软件设计的图形化记号系统，必要前置为计算机科学（1936，软件方法学的上位学科）与其主要目标语言谱系（C 语言，1972）。网络内无「软件工程 / 面向对象方法」节点（见 findings）。"
+    },
+    {
+     "child": "inf_db",
+     "add": [
+      "computer",
+      "inf_hdd"
+     ],
+     "reason": "数据库的必要构成是计算机（1946）上的持久化数据组织与直接存取存储设备（硬盘，1956）；数学非构成要件。"
+    },
+    {
+     "child": "inf_rdbms",
+     "add": [
+      "inf_db",
+      "math_logic"
+     ],
+     "reason": "关系型数据库在数据库（1960）基础上引入关系模型，后者以一阶谓词逻辑为学理根（库内以数理逻辑 1854 代位，见 findings）；数学非构成要件。"
+    },
+    {
+     "child": "inf_sql",
+     "add": [
+      "inf_rdbms"
+     ],
+     "reason": "SQL 是关系型数据库（1970）的查询与数据定义语言，二者为定义性构成；数学非构成要件。"
+    },
+    {
+     "child": "inf_nosql",
+     "add": [
+      "inf_db",
+      "inf_browser"
+     ],
+     "reason": "NoSQL 的动因是 Web 应用对非结构化数据的横向扩展需求，必要前置为数据库（1960）与 Web 应用载体（网页浏览器，1990）；数学非构成要件。"
+    },
+    {
+     "child": "inf_graphdb",
+     "add": [
+      "inf_db",
+      "graph_theory"
+     ],
+     "reason": "图数据库的必要构成是数据库（1960）的存储体系与图论（1736）的数据模型；数学非构成要件（图论为具体学理，非学科级枢纽）。"
+    },
+    {
+     "child": "inf_timeseries",
+     "add": [
+      "inf_db",
+      "sensor"
+     ],
+     "reason": "时序数据库的必要构成是数据库（1960）的存储体系与传感器（1950）产生的时序数据源；数学非构成要件。"
+    },
+    {
+     "child": "inf_vector_db",
+     "add": [
+      "inf_db",
+      "inf_embedding"
+     ],
+     "reason": "向量数据库的必要构成是数据库（1960）的存储体系与嵌入模型（2010）产出的向量表示；两者同年，按「前置年 ≤ 本节点年」通过。"
+    },
+    {
+     "child": "inf_cache",
+     "add": [
+      "inf_ram",
+      "inf_db"
+     ],
+     "reason": "缓存系统的必要构成是高速存储层（内存，1947）与被缓存的数据源（数据库，1960）；数学非构成要件。"
+    },
+    {
+     "child": "inf_compression",
+     "add": [
+      "computer"
+     ],
+     "reason": "数据压缩的定义性构成是按信息论原理消除数据冗余（熵编码），其必要的学理前置是信息论（1948）而非学科级「数学」（与 3.1c 的 `inf_antenna` → 电磁理论同一判据：定义性构成本身即学理）；同槽位改指为信息论，并补入实现载体电子计算机（1946）。"
+    },
+    {
+     "child": "inf_hash",
+     "add": [
+      "computer",
+      "math_logic"
+     ],
+     "reason": "哈希函数的必要构成是计算机（1946）存储寻址与定长映射函数，其形式化基础为数理逻辑（1854，本批最弱一条，见 findings）；学科级「数学」非排他性前置。"
+    }
+   ],
+   "findings": [
+    "本批 18 条**保留数为 0**，与 3.1b / 3.1c / 3.1d 同一结论：E 族定义（单前置且前置属泛化枢纽）本身即是「批量赋值为学科级顶点」的判别式；**排他性是筛出它们的唯一判据**。E 族四批合计 93 条无一保留。",
+    "缺失节点（补节点候选，新增）：**软件工程 / 面向对象方法**。`inf_uml` 统一建模语言(1997) 的定义性学科来源，网络内无对应节点，本批以 `computer_sci` 计算机科学(1936) 与 `inf_pl_c` C 语言(1972) 代位，语义偏泛。",
+    "缺失节点（补节点候选，新增）：**关系代数 / 关系模型**。`inf_rdbms` 关系型数据库(1970) 的学理根，本批以 `math_logic` 数理逻辑(1854) 代位。",
+    "缺失节点（补节点候选，新增）：**汇编器 / 高级语言（作为语言节点）**。`inf_compiler` 编译器(1952) 缺「源语言」一侧的节点，本批仅以 `computer` + `math_logic` 补足。",
+    "⚠️ 本批最弱的两条：`inf_hash` 哈希函数(1953) ← `math_logic` 数理逻辑(1854)（映射函数的形式化基础，非直接先行者）；`inf_compiler` 编译器(1952) ← `math_logic`（形式语言理论的库内代位）。二者均因网络内缺「形式语言 / 自动机理论」「数论」级具体学理节点而代位。",
+    "`computer` 电子计算机(1946) 的下游度已达 214（本批前），本批另有 6 条以其为前置（`inf_microprocessor` / `inf_os` / `inf_compiler` / `inf_pl_fortran` / `inf_db` / `inf_compression` / `inf_hash` 共 7 条）。此处不构成泛化挂载：该类软件系统以计算机为**直接且不可替代的载体**（必要性成立），与「同处一时代或同一大类」不同。",
+    "同年前置一处（按「前置年 ≤ 本节点年」通过）：`inf_vector_db` 向量数据库(2010) ← `inf_embedding` 嵌入模型(2010)，属同代技术。",
+    "本批 18 条节点的 `applications` 全部为同一组模板值（信息记录 / 远程传输 / 智能处理），`views[0].period` 亦为模板值 —— 属 `techs_more.js` 同构 stub 特征，建议并入「stub 甄别」批次。",
+    "本批未改动 `enables` 反向边（18 条节点的 `enables` 均为空数组）。"
+   ],
+   "notes": [
+    "候选筛选已断言：18 条全部满足「category = info 且单前置且前置 = mathematics」，任一不符即抛错。",
+    "结构与 3.1a / 3.1b / 3.1c / 3.1d 完全一致：edges（逐边 verdict/newParent/reason）+ backfills（child/add/reason）+ summary。执行器 tools/apply_ledger.js --batch 3.1e 会断言完整划分、backfills 数量，并校验时序性与无环。",
+    "执行顺序：用户逐条审核 → apply_ledger --batch 3.1e --apply → regen_text --apply → regen_midtech --apply（各自复跑验不动点）→ audit_net.js --snapshot → 三道门禁 → 三处登记。",
+    "与 3.1c / 3.1d 无交叉：三批节点集合两两不相交。本批以同批节点（`inf_os` / `inf_compiler` / `inf_pl_c` / `inf_db` / `inf_rdbms`）为前置，均满足年份时序且预演无环，故三批写盘顺序不限。"
+   ],
+   "summary": {
+    "keep": 0,
+    "repoint": 1,
+    "delete": 17,
+    "concept": 0,
+    "backfill": 18
+   }
+  },
   "5.0": {
    "date": "2026-09-13",
    "family": "FULL-PIPELINE",
