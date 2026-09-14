@@ -472,7 +472,7 @@ function renderLineageSide(root, L) {
   const directUp = Object.keys(L.upGen).filter(u => L.upGen[u] === 1).map(u => techMap[u]);
   let prose;
   if (directUp.length) {
-    prose = `「${esc(root.name)}」建立在若干前置技术之上：<b>${directUp.map(t => esc(t.name)).join("、")}</b>。这些技术分别提供了飞行平台、精确定位、影像获取或数据处理等基础能力，使其从设想走向可落地的应用。`;
+    prose = `「${esc(root.name)}」建立在若干前置技术之上：<b>${directUp.map(t => esc(t.name)).join("、")}</b>。它们分别提供了该技术成立所必需的基础能力，使其从设想走向可落地的应用。`;
   } else {
     prose = `「${esc(root.name)}」位于技术图谱的起点，尚无已收录的上游前置技术——它本身就是后续一切的根源。`;
   }

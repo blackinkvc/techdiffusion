@@ -45,7 +45,7 @@ function computeDescendants(rootId) {
 
 // 跨视图共享的子状态（每页从 URL query 初始化）
 const state = { view: "worldview", cat: "all", era: "all", search: "" };
-const lineageState = { id: "smart_mower" };
+const lineageState = { id: "stellar_engine" }; // 来龙去脉页默认展示「恒星发动机」（stellar_engine / energy / year 2160 / tier L5）；带 ?id= 时以 query 为准
 // 关系逻辑视图模式：graph=现有依赖图 / relation=按关联类型着色的关系逻辑图
 const treeRelMode = { mode: "graph" };
 const lineageRelMode = { mode: "graph" };

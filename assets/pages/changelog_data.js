@@ -786,6 +786,51 @@ window.CHANGELOG = {
         "技术网络检修计划.md",
         "版本迭代日志.md"
       ]
+    },
+    {
+      "version": "v0.9.29",
+      "date": "2026-09-14",
+      "type": "fix",
+      "title": "「来龙去脉」页默认展示改为「恒星发动机」+ 修正该页硬编码的无人机专用说明句 + 全站缓存版本串统一升为 20260914a",
+      "summary": "用户指出「来龙去脉」页一打开固定显示「智能割草机器人」（`smart_mower`，life / 2015 / 消费类小型产品）。核查确认该默认值写死在 `assets/core.js` 的 `lineageState`（全仓 `lineageState` 共 5 处引用，默认值仅此一处；`?id=` 覆盖逻辑在 `assets/pages/init_helper.js`，行为不变）。用户指定的语义为「星际航行」，但全库检索（`星际航行` / `星际旅行` / `interstellar_travel` / `star_travel`）零命中，故呈报语义最接近的候选并按其选择改为 `stellar_engine` 恒星发动机（category energy / year 2160 / tier L5；前置 `dyson_sphere` + `space_mfg` + `propulsion`）。同时修正该页侧栏说明句中的硬编码领域措辞 —— `assets/app.js` 的 `renderLineageSide()` 原文写死「飞行平台、精确定位、影像获取或数据处理」等无人机专用表述，对任意节点都会套用（换默认对象后立即暴露），已改为中性表述。另把全站 17 个页面的缓存版本串 `?v=20260913g` 统一升为 `?v=20260914a`（33 处），确保浏览器取到新版 `core.js`。**本轮不改动任何依赖关系与节点数据：主管线 2,266 节点 / 6,126 边不变，全量管线未变。**",
+      "treeChange": {
+        "scope": "无（本轮不改动依赖网络）。主管线仍为 2,266 个节点 / 6,126 条依赖边；全量管线 `graph.json`（2,299 / 6,963）与 `assets/data_full.js`（13,318 / 16,811）未变。改动仅落在展示层三个位置：`assets/core.js`（跨视图共享子状态的默认值）、`assets/app.js`（来龙去脉页侧栏说明句）、17 个页面 html（缓存版本串）。",
+        "reason": "「来龙去脉」页的默认展示对象此前写死为 `smart_mower`。该节点是 2015 年的消费类小型产品，在网络中处于末端；更关键的是它与本项目此前清理掉的位置式伪边有直接历史关联 —— v0.9.20/21 的 `bio_universalvax ← smart_mower`（通用疫苗建立在智能割草机器人之上）正是「同分类时间最近取前驱」规则的产物，被作为该缺陷类型的代表性案例记录在纠错页与版本日志中。把这样一个节点作为「来龙去脉」页的默认展示对象，既不具代表性，也与页面「展示技术谱系」的用途不符。",
+        "detail": "① **默认值**：`assets/core.js` 的 `const lineageState = { id: \"smart_mower\" }` 改为 `{ id: \"stellar_engine\" }`，并加注该 id 的 category / year / tier 及「URL `?id=` 优先」的既有行为。已核查全仓 `lineageState` 的 5 处引用 —— `assets/core.js`（定义）、`assets/app.js:406`（`goto` 时赋值）、`assets/pages/init_helper.js:33`（`?id=` 且 id 存在时覆盖）、`assets/pages/lineage.js:8`（回填下拉选中）、`assets/pages/lineage.js:10`（调用渲染）；逻辑均未改动，仅换默认值。② **说明句**：`assets/app.js` 的 `renderLineageSide()` 中「存在直接上游」分支的说明文字原文为「…这些技术分别提供了飞行平台、精确定位、影像获取或数据处理等基础能力，使其从设想走向可落地的应用。」—— 该措辞来自无人机案例，属硬编码残留，对任意节点都会套用；改为「…它们分别提供了该技术成立所必需的基础能力，使其从设想走向可落地的应用。」该句为 UI 手写散文，不在 `tools/regen_text.js` 的管辖范围（后者只处理 `techs_*.js` 的节点文案），改动不影响派生文案不动点校验。③ **版本串**：17 个页面（`index` / `browse` / `detail` / `changelog` / `correction` / `sop` / `analysis` / `model` / `research` / `tree` / `tree_full` / `worldview` / `midtech` / `progress` / `method` / `lineage` / `timeline`）内的 `?v=20260913g` 共 33 处统一替换为 `?v=20260914a`（`style.css` 与 `core.js` 两种引用一并处理），替换后全仓 `20260913g` 零残留。④ **未改动**：详情页默认 id（`assets/pages/detail.js` 的 `p.get(\"id\") || \"smart_mower\"`）按用户本轮指定的范围（「来龙去脉里」）保留原状，并登记为待议项。⑤ 恒星发动机当前无下游，来龙去脉页「去脉」一侧为空；已确认渲染代码对 `maxDown = 0` 有兜底（`Math.max(L.maxUp, L.maxDown, 1)` 与侧栏 `if (L.maxDown > 0)`），不会报错。"
+      },
+      "changes": [
+        "① 前提核查：默认值唯一来源为 `assets/core.js:48` 的 `lineageState`；全仓 `lineageState` 共 5 处引用，除该定义外均为「`goto` 赋值 / `?id=` 覆盖 / 下拉回填 / 调用渲染」，不另含默认值。",
+        "② 「星际航行」全库无同名节点（检索 `星际航行` / `星际旅行` / `interstellar_travel` / `star_travel` 均零命中）。语义最接近的候选：`warp_drive` 曲速引擎（transport / 2150 / L5）、`stellar_engine` 恒星发动机（energy / 2160 / L5）、`fut_vn_fleet` 冯·诺依曼自复制舰队（transport / 2090 / L4）、《曲速航运网》（transport / 2100 级）。呈报候选后，用户选定 **`stellar_engine` 恒星发动机**。",
+        "③ 默认值改写：`assets/core.js` 的 `lineageState.id` 由 `smart_mower` 改为 `stellar_engine`，并附注释写明其 category（energy）/ year（2160）/ tier（L5）与「带 `?id=` 时以 query 为准」。",
+        "④ 硬编码说明句修正（附带发现，同一页面）：`assets/app.js` 的 `renderLineageSide()` 说明文字含无人机专用措辞「飞行平台、精确定位、影像获取或数据处理」，对任意节点均套用 → 改为「它们分别提供了该技术成立所必需的基础能力」。若不改，换默认对象后一打开页面即显示「戴森球、太空制造、推进…提供了飞行平台、精确定位、影像获取…」这类与节点无关的文字。",
+        "⑤ 缓存版本串统一：17 个页面 `?v=20260913g` → `?v=20260914a`，共 33 处（`style.css` 17 处 + `core.js` 16 处；`index.html` 仅引用 `style.css`）。替换后 17 个页面 html 检索 `20260913g` 零命中（本条登记文本中的旧串属叙述引用，不计入）。",
+        "⑥ 渲染安全性核查（静态）：恒星发动机无下游（全仓仅其自身定义引用该 id），来龙去脉页「去脉」为空；`renderLineage()` 的层次计算 `Math.max(L.maxUp, L.maxDown, 1)` 与侧栏 `if (L.maxDown > 0)` 均有兜底，`renderLineageSide()` 的「无直接上游」分支亦无硬编码。",
+        "⑦ 未改动：依赖网络（主管线 2,266 / 6,126；全量管线两文件）、全部节点文案与派生数据、详情页默认 id（`assets/pages/detail.js` 仍为 `smart_mower`，登记为待议）。"
+      ],
+      "files": [
+        "assets/core.js",
+        "assets/app.js",
+        "lineage.html",
+        "index.html",
+        "browse.html",
+        "detail.html",
+        "changelog.html",
+        "correction.html",
+        "sop.html",
+        "analysis.html",
+        "model.html",
+        "research.html",
+        "tree.html",
+        "tree_full.html",
+        "worldview.html",
+        "midtech.html",
+        "progress.html",
+        "method.html",
+        "timeline.html",
+        "assets/pages/changelog_data.js",
+        "assets/pages/correction_data.js",
+        "版本迭代日志.md"
+      ]
     }
 ]
 };
