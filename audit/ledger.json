@@ -4417,7 +4417,7 @@
    "dependsOn": "D0",
    "rule": "例外一律走 overrides 逐条写入，不修改兜底规则本身（保持规则的机械可复算性）",
    "findings": [
-    "缺陷 A（主要）：`category=basic` 的学理节点共 302 条，其中 **68 条** 的 field.primary 落空为 `symbol`。根因是 primary 兜底末级 `rules.cat` 无 `basic` 的学科指向，而 `symbol` 被用作默认值；这 68 条实为「学理级节点」集合（数学/物理/化学/生物/天文/方法论），其 `sub` 多数已被 taxonomy 关键词判到具体学科子域（basic/math|physics|chemistry|astronomy|earthsci|biosci），但 primary 未同步。",
+    "缺陷 A（主要，真实缺陷）：`category=basic` 的学理节点共 302 条，其中 **68 条** 的 `field.primary` 落空为 `symbol`。根因是兜底链末级 `rules.cat` 把 **`basic` 显式映射为 `symbol`**（`D.rules.cat = { basic: \"symbol\", material: \"matter\", energy: \"eng\", manufact: \"eng\", transport: \"eng\", info: \"info\", life: \"life\", build: \"eng\", military: \"mil\" }`）——**不是缺键，而是这条单一映射对跨学科分类 `basic` 不成立**（数学 / 物理 / 化学 / 天文 / 生物 / 方法论同处一类）；此外 `rules.prefix` 另有 5 条**显式** `symbol` 前缀（`scientific` / `peer` / `gesture` / `symbolic` / `none`）。该 68 条实为「学理级节点」集合，其 `sub` 多数已被 taxonomy 关键词判到具体学科子域（`basic/math` / `basic/physics` / `basic/chemistry` / `basic/astronomy` / `basic/earthsci` / `basic/biosci`），但 `primary` 未同步读取。`symbol` 落空值的**三重来源**见 `symbolBucket`。",
     "缺陷 A 的可判性：68 条中 **50 条** 可依「sub 子域 → 门类」或节点语义直接判定；**6 条** 属语言与符号本体、留 `symbol` 正确；**12 条** 无对应门类或属交界，需用户裁定。",
     "缺陷 B（非缺陷，需澄清）：`eng` 857（37.8%）**不是打标错误**。它是 `category → 门类` 映射的必然结果：`transport` 244 + `build` 242 + `energy` 215 + `manufact` 153 + 3 = 857。只要「能源 / 运输 / 建筑 / 制造」四类都归入「工程与建造」，该比例就由节点分类决定，与兜底规则无关。要改变比例必须**拆分门类**（如单设「能源」「运输」），属维度层设计变更，不属例外表。",
     "缺陷 C：两个零命中任务域的可达性 —— `manufact/food_proc` 仅有 **1 条** 可达填补者（`watermill` 水磨，现误挂 `manufact/cutting`）；`energy/animal_human`（畜力与人力）在当前分类下**不可达** —— 全库唯一的畜力节点 `animal_draft`（畜力）的 `category` 是 `transport`，与 `energy/*` **不同类**，受「sub 须与 category 同类」硬约束限制，无法落入该域。",
@@ -4856,73 +4856,181 @@
      "id": "scientific_method",
      "current": "symbol",
      "suggestion": "symbol",
-     "reason": "方法论/学术规范，无对应门类；建议留 symbol 或新设门类"
+     "reason": "方法论/学术规范，无对应门类；建议留 symbol 或新设门类",
+     "name": "科学方法",
+     "year": "1600",
+     "sub": "basic/method",
+     "via": "prefix/kw",
+     "category": "basic",
+     "group": "1-method",
+     "proposal": "symbol（保持）",
+     "evidence": "节点自述「以观察、假设、实验、可重复验证为核心的求知范式」，自称「元方法」；前置 = mathematics + writing；sub = basic/method。",
+     "needsYou": "保持 symbol，还是新设第 11 门类 method（方法论与元科学）？"
     },
     {
      "id": "peer_review",
      "current": "symbol",
      "suggestion": "symbol",
-     "reason": "同上：学术制度"
+     "reason": "同上：学术制度",
+     "name": "同行评审制度",
+     "year": "1665",
+     "sub": "basic/method",
+     "via": "prefix/kw",
+     "category": "basic",
+     "group": "1-method",
+     "proposal": "symbol（保持）",
+     "evidence": "学术制度（同行评议）；前置 = writing + mathematics；sub = basic/method；且 prefix 表显式 peer → symbol。",
+     "needsYou": "同上。"
     },
     {
      "id": "replication",
      "current": "symbol",
      "suggestion": "symbol",
-     "reason": "同上：方法学"
+     "reason": "同上：方法学",
+     "name": "可重复实验",
+     "year": "1900",
+     "sub": "basic/method",
+     "via": "cat/catSub",
+     "category": "basic",
+     "group": "1-method",
+     "proposal": "symbol（保持）",
+     "evidence": "方法学（可重复实验）；前置 = biochem + writing + mathematics；sub = basic/method。",
+     "needsYou": "同上。"
     },
     {
      "id": "metrology",
      "current": "symbol",
      "suggestion": "eng",
-     "reason": "计量学：标准与量值传递属工程实践"
+     "reason": "计量学：标准与量值传递属工程实践",
+     "name": "计量学",
+     "year": "1790",
+     "sub": "basic/measure",
+     "via": "cat/kw",
+     "category": "basic",
+     "group": "2-measure",
+     "proposal": "eng",
+     "evidence": "sub = basic/measure，而 `basic/measure`.f **已写死为 eng** → 该节点门类本就应为 eng，只是 primary 未读 sub.f。全项中唯一「机械可定」者。",
+     "needsYou": "确认按 sub.f = eng 落定（无需语义判定）。"
     },
     {
      "id": "surveying",
      "current": "symbol",
      "suggestion": "eng",
-     "reason": "测量学：大地测量属工程实践"
+     "reason": "测量学：大地测量属工程实践",
+     "name": "测量学",
+     "year": "-2000",
+     "sub": "basic/method",
+     "via": "cat/catSub",
+     "category": "basic",
+     "group": "2-measure",
+     "proposal": "eng（须连带修 sub）",
+     "evidence": "sub 现为 basic/method（关键词兜底误判）；节点自述「能力延伸到实验测量」「直接催生了几何学、工程测量」→ 与 metrology 同族。",
+     "needsYou": "确认 (a) 门类取 eng（而非 math）；(b) 连带把 sub 由 basic/method 改为 basic/measure（category=basic 同类，合法）。"
     },
     {
      "id": "microscope",
      "current": "symbol",
      "suggestion": "life",
-     "reason": "显微镜：生物学/医学观测仪器（亦可论为 phys 光学仪器）"
+     "reason": "显微镜：生物学/医学观测仪器（亦可论为 phys 光学仪器）",
+     "name": "显微镜",
+     "year": "1590",
+     "sub": "basic/method",
+     "via": "cat/kw",
+     "category": "basic",
+     "group": "3-instrument",
+     "proposal": "life",
+     "evidence": "与 A 组已定的 telescope→earth 需统一口径：科学仪器按「服务对象」归档（天文仪器→earth、生物医学仪器→life）。",
+     "needsYou": "确认仪器口径取「按服务对象」（推荐）还是「按自身原理」（若取后者，需回头把 telescope 由 earth 改为 phys）。"
     },
     {
      "id": "nanoscience",
      "current": "symbol",
      "suggestion": "matter",
-     "reason": "纳米科学：材料科学（亦可论为 phys）"
+     "reason": "纳米科学：材料科学（亦可论为 phys）",
+     "name": "纳米科学",
+     "year": "1980",
+     "sub": "basic/method",
+     "via": "cat/catSub",
+     "category": "basic",
+     "group": "3-instrument",
+     "proposal": "matter",
+     "evidence": "纳米科学主体是纳米尺度材料与结构；库内 material/* 与 mat_* 前缀节点统一归 matter。备选 phys（凝聚态）。",
+     "needsYou": "确认 matter（备选 phys）。"
     },
     {
      "id": "cognition",
      "current": "symbol",
      "suggestion": "life",
-     "reason": "认知科学：神经科学（亦可论为 info）"
+     "reason": "认知科学：神经科学（亦可论为 info）",
+     "name": "认知科学",
+     "year": "1970",
+     "sub": "basic/method",
+     "via": "cat/catSub",
+     "category": "basic",
+     "group": "3-instrument",
+     "proposal": "life",
+     "evidence": "认知科学主体是脑与神经系统；life 门类已含 molecular_bio / genetics / immunology，可容纳神经科学。备选 info（认知计算）。",
+     "needsYou": "确认 life（备选 info）。"
     },
     {
      "id": "fire_making",
      "current": "symbol",
      "suggestion": "eng",
-     "reason": "人工取火：技艺（与 energy 类节点 `fire` 用火 呼应，但无 energy 门类）"
+     "reason": "人工取火：技艺（与 energy 类节点 `fire` 用火 呼应，但无 energy 门类）",
+     "name": "人工取火",
+     "year": "-50000",
+     "sub": "basic/method",
+     "via": "cat/catSub",
+     "category": "basic",
+     "group": "4-craft",
+     "proposal": "eng",
+     "evidence": "唯一前置是 fire（用火），而 fire 的 category=energy → rules.cat.energy=eng → fire 的门类已是 eng；取火属制造/操作技艺，与 fire 同口径。10 门类中无 energy。",
+     "needsYou": "确认 eng。"
     },
     {
      "id": "magnet",
      "current": "symbol",
      "suggestion": "matter",
-     "reason": "天然磁石：天然矿物（亦可论为 phys 磁性）"
+     "reason": "天然磁石：天然矿物（亦可论为 phys 磁性）",
+     "name": "天然磁石",
+     "year": "-1000",
+     "sub": "basic/method",
+     "via": "cat/catSub",
+     "category": "basic",
+     "group": "3-instrument",
+     "proposal": "matter",
+     "evidence": "节点自述「天然磁铁矿的指向性被早期文明发现」—— 首先是矿物。注意其 category=basic 而非 material，此判按「对象实体属性」而非「按 category」。备选 phys（磁现象首条记录）。",
+     "needsYou": "确认 matter（备选 phys）。"
     },
     {
      "id": "black_hole_comp",
      "current": "symbol",
      "suggestion": "info",
-     "reason": "黑洞计算：计算物理（亦可论为 phys）"
+     "reason": "黑洞计算：计算物理（亦可论为 phys）",
+     "name": "黑洞计算",
+     "year": "2160",
+     "sub": "basic/method",
+     "via": "cat/catSub",
+     "category": "basic",
+     "group": "4-craft",
+     "proposal": "info",
+     "evidence": "节点自述「以黑洞视界附近的物理做信息加工，借极致时空曲率逼近计算与熵的极限」；前置含 quantum_info。主体行为是信息加工。备选 phys（若视作天体物理分支）。",
+     "needsYou": "判据 =「信息加工是主体还是工具」；请定 info 或 phys。"
     },
     {
      "id": "fut_spacetime_engineering",
      "current": "symbol",
      "suggestion": "phys",
-     "reason": "时空工程：相对论物理（未来情境）"
+     "reason": "时空工程：相对论物理（未来情境）",
+     "name": "时空工程",
+     "year": "2100",
+     "sub": "basic/method",
+     "via": "cat/catSub",
+     "category": "basic",
+     "group": "4-craft",
+     "proposal": "phys",
+     "evidence": "节点自述「主动塑形局部时空曲率以构建通道与引擎」＝相对论物理；未来情境不改变学科归属。",
+     "needsYou": "确认 phys。"
     }
    ],
    "subFixes": [
@@ -4954,7 +5062,8 @@
    "zeroHitDomains": {
     "manufact/food_proc": {
      "status": "可填 1 条",
-     "via": "watermill → manufact/food_proc（见 subFixes）"
+     "via": "watermill → manufact/food_proc（见 subFixes）",
+     "recommendation": "采纳（subFixes 中 watermill 改挂，唯一可达填补者）"
     },
     "energy/animal_human": {
      "status": "当前分类下不可达",
@@ -4962,7 +5071,10 @@
      "options": [
       "A（默认，本草案采用）保持零命中，登记为「已知不可达」，不改 category（D0 已声明本阶段不改 cat）",
       "B 同批把 animal_draft 的 category 由 transport 改为 energy —— 属改动节点自带字段，需单独裁定"
-     ]
+     ],
+     "recommendation": "A（保持零命中，登记为「已知不可达」）",
+     "optionBEffect": "**对 field 零影响**：rules.cat.energy 与 rules.cat.transport **同为 eng**，故 animal_draft 改 category 后 field.primary 与 field.secondary 都不变，唯一变化是 sub 徽章由「道路与陆路运输」变为「人力畜力利用」；代价 = 改动节点自带字段 category，与 D0「本阶段不改 cat」冲突。",
+     "reachableInFuture": "若将来有 category=energy 的人力/畜力节点入库，该域会自然命中。"
     }
    },
    "distributionPreview": {
@@ -4993,12 +5105,62 @@
     "note": "以 D0 实测分布为基，按本草案 50 条 override 预演（12 条待裁定项仍留 symbol）。合计 2,267 不变。symbol 69 → 19；earth 6 → 15、chem 10 → 15（两条最小门类获得主要修正）。eng 仍 857 —— 比例由节点分类决定，本批不动。"
    },
    "notIncluded": [
-    "eng 门类拆分（需门类设计裁定，不属例外表）",
+    "eng 门类拆分（建议另立批次 D4「门类粒度复核」：如拆出 energy / transport / manufact；本批只做澄清不拆分）",
     "160 条 `bx_*` 占位节点的门类复核（属另立批次）",
     "除上述 4 条以外的 sub 复核（本批不做全量 sub 复审）",
     "任何 dependsOn / 边判定（属 D2 / D3）"
    ],
-   "note": "本批只提例外表草案，**未写入 assets/pages/dimension_data.js 的 overrides**；须用户逐条审核后另行写盘。D0 的兜底规则、门类集合、维度顶点均不改。"
+   "note": "本批只提例外表草案，**未写入 assets/pages/dimension_data.js 的 overrides**；须用户逐条审核后另行写盘。D0 的兜底规则、门类集合、维度顶点均不改。**2026-09-15 补充裁定说明（见 rulingsDoc / revisions）**：四项待审已逐条给出建议与依据。",
+   "symbolBucket": {
+    "note": "`symbol`（语言与符号）本有明确含义（锚定维度顶点 writing / language），却成为落空值承担者；来源有三，各自独立。",
+    "sources": [
+     {
+      "no": 1,
+      "what": "`D.rules.cat.basic = \"symbol\"` —— 显式条目（非缺键）",
+      "where": "assets/pages/dimension_data.js → D.rules.cat",
+      "scope": "全部 302 条 category=basic 节点",
+      "observed": "50 条拟改 overridesProposed 全部走此路径（via = cat/*）"
+     },
+     {
+      "no": 2,
+      "what": "`D.rules.prefix` 中 5 条显式写成 symbol 的前缀：scientific / peer / gesture / symbolic / none",
+      "where": "assets/pages/dimension_data.js → D.rules.prefix",
+      "scope": "命中这些前缀的少数节点",
+      "observed": "12 条待定中 scientific_method / peer_review 走此路径（via = prefix/kw）"
+     },
+     {
+      "no": 3,
+      "what": "`primary = rules.cat[cat] || \"symbol\"` 的硬默认（最后保险）",
+      "where": "assets/pages/dimension_data.js → D.resolve()",
+      "scope": "任何两轴都未命中的节点",
+      "observed": "本批未观察到单独触发者（① 已先命中）"
+     }
+    ],
+    "derived": {
+     "overridesPrimaryVia": {
+      "cat": 50
+     },
+     "overridesSubVia": {
+      "kw": 30,
+      "catSub": 20
+     },
+     "pendingPrimaryVia": {
+      "cat": 10,
+      "prefix": 2
+     }
+    },
+    "implication": "来源 ② 说明 scientific_method / peer_review 落到 symbol 是既有设计中的**显式选择**，要改必须走 override；来源 ① 的修法不是「给 rules.cat 补 basic 键」（任何单一映射都不成立），而是逐条 override。"
+   },
+   "rulingDoc": "/tmp/D1_裁定说明.md（2026-09-15 生成的待裁定四项说明与建议稿；未写盘）",
+   "revisions": [
+    {
+     "date": "2026-09-15",
+     "what": "补充裁定说明（v0.9.34 之后、获批之前）：① 精确化 findings[0] 的根因表述（rules.cat 对 basic 是**显式**映射为 symbol，非缺键）；② 新增 symbolBucket 记录 symbol 落空的三重来源；③ pendingUser 12 条补齐 name/year/sub/via/group/proposal/evidence/needsYou；④ zeroHitDomains 补 recommendation 与 optionBEffect；⑤ notIncluded 增「拆分 eng 建议另立 D4」。",
+     "why": "回复用户「讲清楚一点、给出建议方案」的要求；据节点内容（summary/前置）与 dimension_data.js 源码（resolve/rules）取证。",
+     "scope": "仅台账内本批次的说明字段；**overridesProposed / keepInSymbol / subFixes 三条清单的条数与目标值未变动**；dimension_data.js 的 overrides 仍为空，dependsOn 零改动。",
+     "note": "本批仍为 draft-ready，未写盘；本次补充不构成版本级变更，故未新增 changelog / correction 条目。"
+    }
+   ]
   }
  }
 }
