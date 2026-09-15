@@ -5112,9 +5112,11 @@
     "任何 dependsOn / 边判定（属 D2 / D3）",
     "仪器类节点的批量分类规则（instrument-taxonomy）：本批只登记口径 + 关联度机制 + 持续观察条件，不逐条写 secondary",
     "basic/method 任务域的整体 f 改动（由 symbol 改 method）：该域是 catSub 兜底值、语义不纯，属规则级改动，应另立批次",
-    "method 门类的 discipline 色板 / 渲染层落地（core.js / style.css）：本批仅记录设计，写盘随获批后执行"
+    "method 门类的 discipline 色板 / 渲染层落地（core.js / style.css）：本批仅记录设计，写盘随获批后执行",
+    "横断形式科学门类的最终键名与色板（渲染层落地）：须先定选项①②③再执行",
+    "proof_theory 前置换掉 biochem（误挂）：属另一类修正，另立候选"
    ],
-   "note": "本批只提例外表草案，**未写入 assets/pages/dimension_data.js 的 overrides**；须用户逐条审核后另行写盘。D0 的兜底规则、门类集合、维度顶点均不改。**2026-09-15 补充裁定说明（见 rulingsDoc / revisions）**：四项待审已逐条给出建议与依据。 **2026-09-15 再补充**：method 门类全库审查 / eng 门类讲解 / 仪器口径与关联度（见 methodReview / engBreakdown / instrumentFollowUp / blackHoleRuling / methodEngDoc）。",
+   "note": "本批只提例外表草案，**未写入 assets/pages/dimension_data.js 的 overrides**；须用户逐条审核后另行写盘。D0 的兜底规则、门类集合、维度顶点均不改。**2026-09-15 补充裁定说明（见 rulingsDoc / revisions）**：四项待审已逐条给出建议与依据。 **2026-09-15 再补充**：method 门类全库审查 / eng 门类讲解 / 仪器口径与关联度（见 methodReview / engBreakdown / instrumentFollowUp / blackHoleRuling / methodEngDoc）。 **2026-09-15 第 5 项**：横断形式科学门类候选核对（见 formalScienceReview / formalScienceDoc）。",
    "symbolBucket": {
     "note": "`symbol`（语言与符号）本有明确含义（锚定维度顶点 writing / language），却成为落空值承担者；来源有三，各自独立。",
     "sources": [
@@ -5178,6 +5180,14 @@
      "scope": "仅台账内本批次的说明字段；**overridesProposed / keepInSymbol / subFixes 三条清单的条数与目标值未变动**；dimension_data.js 的 overrides 仍为空，dependsOn 零改动（2,267 / 6,169）。",
      "note": "本批仍为 draft-ready，未写盘；补充说明不构成版本级变更，故未新增 changelog / correction 条目。",
      "doc": "/tmp/D1_method与eng说明.md"
+    },
+    {
+     "date": "2026-09-15",
+     "what": "补充第 5 项「横断形式科学门类候选核对与范围界定」：① 逐条核对用户所列 9 条（含更正 complexity 现门类为 symbol）；② 按判据分 A档6/B档1/C档2；③ 揭示「横断 vs 数学分支」判定线不存在于库内，列出 9 条同族散落节点；④ 给出三个门类选项与成员清单 + 分布终态；⑤ 记录附带发现 proof_theory 前置含 biochem。",
+     "why": "回复用户第 5 项指令：新设 method 不只装 3 条，候选为 9 条「横断形式科学」，请核对与界定。",
+     "scope": "仅台账内本批次的说明字段；**overridesProposed / keepInSymbol / subFixes 三条清单的条数与目标值未变动**；dimension_data.js 的 overrides 仍为空，dependsOn 零改动（2,267 / 6,169）。",
+     "note": "本批仍为 draft-ready，未写盘。",
+     "doc": "/tmp/D1_method扩展_横断形式科学.md"
     }
    ],
    "decisionTables": {
@@ -5805,7 +5815,331 @@
      }
     ]
    },
-   "methodEngDoc": "/tmp/D1_method与eng说明.md"
+   "methodEngDoc": "/tmp/D1_method与eng说明.md",
+   "formalScienceReview": {
+    "question": "用户第 5 项：新设 method 门类不只装 3 条，候选是 9 条「横断形式科学」——请核对与界定范围",
+    "userStated": "control_theory 控制论 / systems_theory 系统论 / network_sci 网络科学 / complexity 计算复杂性 / data_science 数据科学（用户述：现都在 info）；info_theory 信息论 / game_theory 博弈论 / proof_theory 证明论 / category_theory 范畴论（用户述：现都在 math）",
+    "verification": {
+     "allExist": true,
+     "correction": "complexity 计算复杂性现门类为 symbol（来源 cat/catSub 兜底），**不是 info**；其余 8 条与用户所述一致（4 条 info + 4 条 math）。",
+     "commonFact": "9 条**全部**落在 basic/method（「科研方法与工具」）任务域 —— 与用户判断方向一致。",
+     "items": [
+      {
+       "id": "control_theory",
+       "zh": "控制论",
+       "en": "Control Theory",
+       "year": 1948,
+       "now": "info",
+       "sub": "basic/method"
+      },
+      {
+       "id": "systems_theory",
+       "zh": "系统论",
+       "en": "Systems Theory",
+       "year": 1940,
+       "now": "info",
+       "sub": "basic/method"
+      },
+      {
+       "id": "network_sci",
+       "zh": "网络科学",
+       "en": "Network Science",
+       "year": 1998,
+       "now": "info",
+       "sub": "basic/method"
+      },
+      {
+       "id": "complexity",
+       "zh": "计算复杂性",
+       "en": "Complexity Theory",
+       "year": 1971,
+       "now": "symbol",
+       "sub": "basic/method"
+      },
+      {
+       "id": "data_science",
+       "zh": "数据科学",
+       "en": "Data Science",
+       "year": 2000,
+       "now": "info",
+       "sub": "basic/method"
+      },
+      {
+       "id": "info_theory",
+       "zh": "信息论",
+       "en": "Information Theory",
+       "year": 1948,
+       "now": "math",
+       "sub": "basic/method"
+      },
+      {
+       "id": "game_theory",
+       "zh": "博弈论",
+       "en": "Game Theory",
+       "year": 1944,
+       "now": "math",
+       "sub": "basic/method"
+      },
+      {
+       "id": "proof_theory",
+       "zh": "证明论",
+       "en": "Proof Theory",
+       "year": 1900,
+       "now": "math",
+       "sub": "basic/method"
+      },
+      {
+       "id": "category_theory",
+       "zh": "范畴论",
+       "en": "Category Theory",
+       "year": 1945,
+       "now": "math",
+       "sub": "basic/method"
+      }
+     ]
+    },
+    "criterion": "研究对象是「抽象结构本身」（数论/代数/拓扑/泛函分析…）→ 属 math；研究对象是「系统 / 信息 / 决策 / 网络 / 数据」这类跨领域一般对象、且能同时服务 ≥3 个门类 → 属「横断形式科学」",
+    "tierA_transversal": {
+     "count": 6,
+     "ids": [
+      "control_theory 控制论/Control Theory",
+      "systems_theory 系统论/Systems Theory",
+      "network_sci 网络科学/Network Science",
+      "info_theory 信息论/Information Theory",
+      "game_theory 博弈论/Game Theory",
+      "data_science 数据科学/Data Science"
+     ],
+     "evidence": "control_theory 前置 = mathematics + info_theory + statistics + neuroscience（跨 4 门类），为「横断」的形态旁证"
+    },
+    "tierB_boundary": {
+     "count": 1,
+     "ids": [
+      "complexity 计算复杂性/Complexity Theory"
+     ],
+     "issue": "中文名「计算复杂性」偏计算理论（P/NP，本应 info）；库内却与系统论/控制论并列，取「复杂性科学」义。按名称 → info；按并列关系 → 横断门类"
+    },
+    "tierC_keepMath": {
+     "count": 2,
+     "ids": [
+      "proof_theory 证明论/Proof Theory",
+      "category_theory 范畴论/Category Theory"
+     ],
+     "why": "证明论 = 数理逻辑分支；范畴论 = 数学基础分支。均不服务多学科。库内同族皆在 basic/math：math_logic 数理逻辑 / set_theory 集合论 / model_theory 模型论 / type_theory 类型论 / bx_math_17 同伦类型论",
+     "risk": "若认为「形式科学」应含数学基础分支，则须同时纳入上述同族，否则出现「同族不同门」的新不一致"
+    },
+    "boundaryProblem": {
+     "issue": "「横断 vs 数学分支」的判定线不存在于库内，须先定判据",
+     "sameFamilyElsewhere": [
+      {
+       "id": "chaos",
+       "zh": "混沌理论",
+       "en": "Chaos Theory",
+       "year": 1963,
+       "now": "symbol"
+      },
+      {
+       "id": "catastrophe",
+       "zh": "突变理论",
+       "en": "Catastrophe Theory",
+       "year": 1960,
+       "now": "symbol"
+      },
+      {
+       "id": "cognition",
+       "zh": "认知科学",
+       "en": "Cognitive Science",
+       "year": 1970,
+       "now": "symbol"
+      },
+      {
+       "id": "bx_math_9",
+       "zh": "最优控制",
+       "en": "Optimal Control",
+       "now": "math"
+      },
+      {
+       "id": "bx_math_15",
+       "zh": "博弈论应用",
+       "en": "Game Theory Applications",
+       "now": "math"
+      },
+      {
+       "id": "bx_math_25",
+       "zh": "动力系统",
+       "en": "Dynamical Systems",
+       "now": "math"
+      },
+      {
+       "id": "bx_math_54",
+       "zh": "排队论",
+       "en": "Queueing Theory",
+       "now": "math"
+      },
+      {
+       "id": "bx_math_55",
+       "zh": "库存论",
+       "en": "Inventory Theory",
+       "now": "math"
+      },
+      {
+       "id": "bx_math_56",
+       "zh": "可靠性理论",
+       "en": "Reliability Theory",
+       "now": "math"
+      }
+     ],
+     "note": "chaos / catastrophe 亦在 D1 的 B 组 20 条内（原拟归 math）—— 若新门类成立，这两条落点应改"
+    },
+    "options": [
+     {
+      "k": "① 单门类·窄",
+      "key": "formal",
+      "name": "横断形式科学 / Formal & Cross-cutting Sciences",
+      "members": 9,
+      "detail": "control_theory / systems_theory / network_sci / complexity / data_science / info_theory / game_theory / proof_theory / category_theory",
+      "pro": "语义最纯",
+      "con": "scientific_method / peer_review / replication 三条研究规程仍留 symbol（该桶仍不纯）"
+     },
+     {
+      "k": "② 单门类·中",
+      "key": "formal",
+      "name": "横断形式科学",
+      "members": 11,
+      "detail": "①的 9 条 + chaos 混沌理论 + catastrophe 突变理论",
+      "pro": "避免「复杂性与混沌分家」；symbol 由 19→17",
+      "con": "门类内仍含 symbol 来源节点"
+     },
+     {
+      "k": "③ 两门类",
+      "key": "formal + method",
+      "name": "横断形式科学（9）+ 方法与规程（5）",
+      "members": "9 + 5 = 14",
+      "formal": "control_theory / systems_theory / network_sci / complexity / data_science / info_theory / game_theory / proof_theory / category_theory",
+      "method": "scientific_method 科学方法 / peer_review 同行评审制度 / replication 可重复实验 / positional 位值制计数法 / decimal 十进制小数",
+      "pro": "把「研究对象横断」与「做法与规范」两类语义分开，不重犯 basic/method 域语义不纯的错误",
+      "con": "门类总数 10→12，渲染层色板需扩两个"
+     }
+    ],
+    "distributionFinal": {
+     "note": "均以 D1 的 50 条 overrides 先执行为前提；合计恒为 2,267",
+     "rows": [
+      [
+       "symbol",
+       69,
+       19,
+       18,
+       17,
+       14
+      ],
+      [
+       "math",
+       126,
+       143,
+       139,
+       139,
+       139
+      ],
+      [
+       "info",
+       283,
+       285,
+       280,
+       280,
+       280
+      ],
+      [
+       "formal(新)",
+       0,
+       0,
+       9,
+       11,
+       9
+      ],
+      [
+       "method(新)",
+       0,
+       0,
+       0,
+       0,
+       5
+      ],
+      [
+       "earth",
+       6,
+       15,
+       15,
+       15,
+       15
+      ],
+      [
+       "chem",
+       10,
+       15,
+       15,
+       15,
+       15
+      ],
+      [
+       "phys",
+       90,
+       100,
+       100,
+       100,
+       100
+      ],
+      [
+       "life",
+       339,
+       346,
+       346,
+       346,
+       346
+      ],
+      [
+       "matter",
+       250,
+       250,
+       250,
+       250,
+       250
+      ],
+      [
+       "eng",
+       857,
+       857,
+       857,
+       857,
+       857
+      ],
+      [
+       "mil",
+       237,
+       237,
+       237,
+       237,
+       237
+      ]
+     ],
+     "cols": [
+      "门类",
+      "现状",
+      "D1执行后",
+      "选项①",
+      "选项②",
+      "选项③"
+     ]
+    },
+    "recommendation": [
+     "门类概念已由「方法与规程」扩为「横断形式科学」，两者语义不同 → 建议按选项③分设 formal + method，而非 14 条混装（混装即复制 basic/method 域语义不纯的错误）",
+     "proof_theory 证明论 / category_theory 范畴论 建议留 math；若纳入则须同时纳入 set_theory / math_logic / model_theory / type_theory，否则出现「同族不同门」",
+     "complexity 计算复杂性落点需用户定：按名称 → info；按并列关系 → 横断门类",
+     "chaos 混沌理论 / catastrophe 突变理论 建议随本门类一并处理"
+    ],
+    "incidentalFinding": "proof_theory 证明论的前置含 biochem 生物化学（明显误挂，与「代位」一类错误同源），记录待处理。",
+    "doc": "/tmp/D1_method扩展_横断形式科学.md",
+    "truncated": "用户第 2 条内容在发送时被截断（仅到「2.」），未收到；本轮未据此改动任何计划。"
+   },
+   "formalScienceDoc": "/tmp/D1_method扩展_横断形式科学.md"
   }
  }
 }
