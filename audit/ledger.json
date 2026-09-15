@@ -4421,7 +4421,8 @@
     "缺陷 A 的可判性：68 条中 **50 条** 可依「sub 子域 → 门类」或节点语义直接判定；**6 条** 属语言与符号本体、留 `symbol` 正确；**12 条** 无对应门类或属交界，需用户裁定。",
     "缺陷 B（非缺陷，需澄清）：`eng` 857（37.8%）**不是打标错误**。它是 `category → 门类` 映射的必然结果：`transport` 244 + `build` 242 + `energy` 215 + `manufact` 153 + 3 = 857。只要「能源 / 运输 / 建筑 / 制造」四类都归入「工程与建造」，该比例就由节点分类决定，与兜底规则无关。要改变比例必须**拆分门类**（如单设「能源」「运输」），属维度层设计变更，不属例外表。",
     "缺陷 C：两个零命中任务域的可达性 —— `manufact/food_proc` 仅有 **1 条** 可达填补者（`watermill` 水磨，现误挂 `manufact/cutting`）；`energy/animal_human`（畜力与人力）在当前分类下**不可达** —— 全库唯一的畜力节点 `animal_draft`（畜力）的 `category` 是 `transport`，与 `energy/*` **不同类**，受「sub 须与 category 同类」硬约束限制，无法落入该域。",
-    "缺陷 D（同批发现）：4 条 `sub` 明显误挂（`watermill` / `animal_draft` / `ene_tidal` / `mat_wave`），与门类判定无关，一并列出待审。"
+    "缺陷 D（同批发现）：4 条 `sub` 明显误挂（`watermill` / `animal_draft` / `ene_tidal` / `mat_wave`），与门类判定无关，一并列出待审。",
+    "口径更正（2026-09-15）：`basic/method`（科研方法与工具）任务域**全库共 58 条**，不是 37 条 —— **37 条**是「68 条门类落空节点 ∩ 该子域」的交集数（B 组 20 条从中来）。此前文档「`basic/method`（37 条）」的写法易被读成子域总量，已更正为「子域 58 条 / 其中落空 37 条」。"
    ],
    "overridesProposed": [
     {
@@ -5159,8 +5160,182 @@
      "why": "回复用户「讲清楚一点、给出建议方案」的要求；据节点内容（summary/前置）与 dimension_data.js 源码（resolve/rules）取证。",
      "scope": "仅台账内本批次的说明字段；**overridesProposed / keepInSymbol / subFixes 三条清单的条数与目标值未变动**；dimension_data.js 的 overrides 仍为空，dependsOn 零改动。",
      "note": "本批仍为 draft-ready，未写盘；本次补充不构成版本级变更，故未新增 changelog / correction 条目。"
+    },
+    {
+     "date": "2026-09-15",
+     "what": "新增 decisionTables（symbol vs method 成员对照、仪器口径两选项与库内先例、三情境门类分布终值、black_hole_comp 说明）；并在 findings 追加一处口径更正：`basic/method` 子域全库 58 条（37 条为「68 条落空 ∩ 该子域」的交集数）。",
+     "why": "回复用户「这两条分别对应哪些给我看看，我来判断」；用户同时要求列节点时给出中文名 + 英文名。",
+     "scope": "仅台账说明字段；三份清单（overridesProposed 50 / keepInSymbol 6 / subFixes 4）条数与目标值仍未变动；dimension_data.js 的 overrides 仍为空，dependsOn 零改动。",
+     "note": "对照组表全文 /tmp/D1_待定项对照表.md；符号门类终值：方案 A（保持 symbol）10 条、方案 B（新设 method）method 3 条 + symbol 7 条。"
     }
-   ]
+   ],
+   "decisionTables": {
+    "note": "2026-09-15 为回复用户「这几条分别对应哪些、我来判断」而生成的对照数据；全文见 /tmp/D1_待定项对照表.md。",
+    "methodVsSymbol": {
+     "diffNodes": [
+      "scientific_method",
+      "peer_review",
+      "replication"
+     ],
+     "optionA_keepSymbol": {
+      "symbolFinal": 10,
+      "members": [
+       {
+        "id": "positional",
+        "zh": "位值制计数法",
+        "en": "Positional Notation"
+       },
+       {
+        "id": "decimal",
+        "zh": "十进制小数",
+        "en": "Decimal Fractions"
+       },
+       {
+        "id": "replication",
+        "zh": "可重复实验",
+        "en": "Replication"
+       },
+       {
+        "id": "peer_review",
+        "zh": "同行评审制度",
+        "en": "Peer Review"
+       },
+       {
+        "id": "gesture_comm",
+        "zh": "手势交流",
+        "en": "Gesture Communication"
+       },
+       {
+        "id": "writing",
+        "zh": "文字",
+        "en": "Writing"
+       },
+       {
+        "id": "scientific_method",
+        "zh": "科学方法",
+        "en": "Scientific Method"
+       },
+       {
+        "id": "symbolic_art",
+        "zh": "符号艺术",
+        "en": "Symbolic Art"
+       },
+       {
+        "id": "counting",
+        "zh": "计数",
+        "en": "Counting"
+       },
+       {
+        "id": "language",
+        "zh": "语言",
+        "en": "Language"
+       }
+      ]
+     },
+     "optionB_newDiscipline": {
+      "methodFinal": 3,
+      "methodMembers": [
+       "scientific_method",
+       "peer_review",
+       "replication"
+      ],
+      "symbolFinal": 7,
+      "cost": "需改 4 处结构件：D.disciplines 表 / gen_dimension.js 的「门类 10 个」断言 / buildDimensionBlock 渲染 / 门类清单文档"
+     },
+     "optionC_expand": "把「横断形式科学」也收进 method 的候选：control_theory / systems_theory / network_sci / complexity / data_science（现 info）、info_theory / game_theory / proof_theory / category_theory（现 math）—— 均已写明「不推荐」，会造出第二个桶"
+    },
+    "instrumentRule": {
+     "affectedNodes": [
+      "telescope",
+      "microscope"
+     ],
+     "optionUse_服务对象": "telescope→earth（保持 A 组已定）、microscope→life",
+     "optionPrinciple_自身原理": "telescope→phys（**须回头改 A 组已定值**）、microscope→phys",
+     "inLibraryPrecedent": {
+      "服务对象": [
+       "bio_endoscope 内窥镜",
+       "bio_laparoscope 腹腔镜",
+       "bio_glasses 眼镜",
+       "mil_nightvision 夜视仪"
+      ],
+      "自身原理": [
+       "atomic_clock 原子钟（id 前缀 atomic → phys）"
+      ],
+      "制造归属": [
+       "clock 机械钟（category=manufact → eng）"
+      ],
+      "conclusion": "库内既有口径偏向「按服务对象」（4 : 1）"
+     }
+    },
+    "distributionFinal": {
+     "baseline": {
+      "symbol": 69,
+      "math": 126,
+      "phys": 90,
+      "chem": 10,
+      "matter": 250,
+      "eng": 857,
+      "info": 283,
+      "earth": 6,
+      "life": 339,
+      "mil": 237
+     },
+     "optionUse_keepSymbol": {
+      "symbol": 10,
+      "math": 143,
+      "earth": 15,
+      "phys": 101,
+      "chem": 15,
+      "life": 348,
+      "matter": 252,
+      "eng": 860,
+      "info": 286,
+      "mil": 237
+     },
+     "optionPrinciple_keepSymbol": {
+      "symbol": 10,
+      "math": 143,
+      "earth": 14,
+      "phys": 103,
+      "chem": 15,
+      "life": 347,
+      "matter": 252,
+      "eng": 860,
+      "info": 286,
+      "mil": 237
+     },
+     "optionUse_newMethod": {
+      "symbol": 7,
+      "math": 143,
+      "earth": 15,
+      "method": 3,
+      "phys": 101,
+      "chem": 15,
+      "life": 348,
+      "matter": 252,
+      "eng": 860,
+      "info": 286,
+      "mil": 237
+     },
+     "check": "三情境合计均 = 2267"
+    },
+    "blackHoleComp": {
+     "id": "black_hole_comp",
+     "zh": "黑洞计算",
+     "en": "Black-hole Computing",
+     "year": "2160（未来/推想）",
+     "category": "basic",
+     "sub": "basic/method",
+     "current": "symbol",
+     "dependsOn": [
+      "black_hole",
+      "physics",
+      "quantum_info"
+     ],
+     "readout": "库内自述「以黑洞视界附近的物理做信息加工，借极致时空曲率逼近计算与熵的极限，纯属推想」→ 主体行为是信息加工 → 建议 info（备选 phys）",
+     "sibling": "black_hole（黑洞 Black Hole，1960，天体对象）拟归 earth"
+    }
+   }
   }
  }
 }
