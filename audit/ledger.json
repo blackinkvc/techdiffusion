@@ -5116,7 +5116,7 @@
     "横断形式科学门类的最终键名与色板（渲染层落地）：须先定选项①②③再执行",
     "proof_theory 前置换掉 biochem（误挂）：属另一类修正，另立候选"
    ],
-   "note": "本批只提例外表草案，**未写入 assets/pages/dimension_data.js 的 overrides**；须用户逐条审核后另行写盘。D0 的兜底规则、门类集合、维度顶点均不改。**2026-09-15 补充裁定说明（见 rulingsDoc / revisions）**：四项待审已逐条给出建议与依据。 **2026-09-15 再补充**：method 门类全库审查 / eng 门类讲解 / 仪器口径与关联度（见 methodReview / engBreakdown / instrumentFollowUp / blackHoleRuling / methodEngDoc）。 **2026-09-15 第 5 项**：横断形式科学门类候选核对（见 formalScienceReview / formalScienceDoc）。 **2026-09-15 术语考据**：核实「形式科学」「横断科学」均为标准术语、「横断形式科学」为自拟名；揭示 field 轴层级错配（见 formalScienceReview.terminologyReview / formalScienceTerminologyDoc）。",
+   "note": "本批只提例外表草案，**未写入 assets/pages/dimension_data.js 的 overrides**；须用户逐条审核后另行写盘。D0 的兜底规则、门类集合、维度顶点均不改。**2026-09-15 补充裁定说明（见 rulingsDoc / revisions）**：四项待审已逐条给出建议与依据。 **2026-09-15 再补充**：method 门类全库审查 / eng 门类讲解 / 仪器口径与关联度（见 methodReview / engBreakdown / instrumentFollowUp / blackHoleRuling / methodEngDoc）。 **2026-09-15 第 5 项**：横断形式科学门类候选核对（见 formalScienceReview / formalScienceDoc）。 **2026-09-15 术语考据**：核实「形式科学」「横断科学」均为标准术语、「横断形式科学」为自拟名；揭示 field 轴层级错配（见 formalScienceReview.terminologyReview / formalScienceTerminologyDoc）。 **2026-09-15 分设两门类草案**：按用户裁定出 `cross`「横断科学」9 条 + `method`「方法与规程」5 条草案；决策 proof_theory 同族 6 条留 math、complexity → cross、chaos/catastrophe → cross；并更正「色板需扩两个」的说法（渲染层零改动）。见 disciplineExpansion / disciplineExpansionDoc。",
    "symbolBucket": {
     "note": "`symbol`（语言与符号）本有明确含义（锚定维度顶点 writing / language），却成为落空值承担者；来源有三，各自独立。",
     "sources": [
@@ -5195,6 +5195,13 @@
      "result": "「形式科学 / Formal Science」为标准专有术语（英文维基独立条目，Branches 明含 Mathematics、Statistics）；「横断科学 / Cross-cutting Science」亦为中文通用术语（钱学森体系九大部类之一，老三论+新三论）；「横断形式科学」为**自拟名**，非术语。",
      "extra": "识出更严重问题 —— 层级错配：形式科学的 Branches 含 Mathematics，故 formal 不能与 math 并列作第 11 门类。给出三条命名更正路线（甲 横断科学 / 乙 method 原议 / 丙 甲+乙）。",
      "doc": "/tmp/D1_method术语考据_横断形式科学.md"
+    },
+    {
+     "date": "2026-09-15",
+     "what": "批次 D1 补充「分设两门类（cross + method）」草案",
+     "result": "按用户裁定执行四条建议：① 分设 cross「横断科学」9 条 + method「方法与规程」5 条（键名由 formal 更正为 cross，理由＝形式科学的 Branches 含 Mathematics 属层级错配）；② proof_theory / category_theory 及同族 6 条全部留 math；③ complexity → cross（按并列关系）；④ chaos / catastrophe → cross。",
+     "extra": "新发现：这 9 条入边近全为 0（数学 570 / 算法 214 对照）→ 判据只能是语义判据，「跨 ≥3 门类」硬条件作废；且边的缺失属系统性，应另立批次补边。更正此前「渲染层色板需扩两个」的说法 —— 实测渲染层零改动。overrides 规模 50 → 58 条；symbol 桶 69 → 14。",
+     "doc": "/tmp/D1_method两门类方案_草案.md"
     }
    ],
    "decisionTables": {
@@ -6344,7 +6351,451 @@
     "docNote": " ⚠️ 路由补充：本轮识出「横断形式科学」为自拟名（详见 terminologyReview），三条选项的名称均待更正。"
    },
    "formalScienceDoc": "/tmp/D1_method扩展_横断形式科学.md",
-   "formalScienceTerminologyDoc": "/tmp/D1_method术语考据_横断形式科学.md"
+   "formalScienceTerminologyDoc": "/tmp/D1_method术语考据_横断形式科学.md",
+   "disciplineExpansion": {
+    "question": "用户裁定：「就按照这几个建议的来」—— ① 分设两门类（不混装 14 条）② proof_theory/category_theory 留 math（同族是否连带纳由 Agent 定）③ complexity 落点由 Agent 定 ④ chaos/catastrophe 随本门类处理",
+    "status": "draft-ready",
+    "date": "2026-09-15",
+    "terminologyAnswer": {
+     "question": "横断形式科学是什么专有名词吗？",
+     "answer": "不是。",
+     "detail": "「形式科学 Formal Science」是标准术语但其 Branches 含 Mathematics ⇒ math 是其子集 ⇒ 层级错配，不能作门类名；「横断科学 Cross-cutting Science」是标准术语且不含数学 ⇒ 层级正确可用；「横断形式科学」为自拟名。"
+    },
+    "naming": {
+     "adoptedKey": "cross",
+     "name": "横断科学",
+     "en": "Cross-cutting Sciences",
+     "rejected": {
+      "key": "formal",
+      "name": "横断形式科学 / 形式科学",
+      "why": "层级错配（形式科学的 Branches 含 Mathematics、Statistics）"
+     },
+     "note": "对「门类概念先改名」建议：实质全采纳，仅键名按术语考据更正（formal → cross）"
+    },
+    "discipline1_cross": {
+     "key": "cross",
+     "name": "横断科学",
+     "en": "Cross-cutting Sciences",
+     "heads": [],
+     "criterion": "研究对象是「系统 / 信息 / 反馈 / 网络 / 决策 / 数据 / 复杂性」这类跨领域一般对象 → cross；研究对象是抽象结构本身（数论 / 代数 / 拓扑 / 形式证明 / 对象与态射）→ math",
+     "count": 9,
+     "members": [
+      {
+       "id": "systems_theory",
+       "zh": "系统论",
+       "en": "Systems Theory",
+       "year": 1940,
+       "from": "info",
+       "basis": "老三论"
+      },
+      {
+       "id": "control_theory",
+       "zh": "控制论",
+       "en": "Control Theory",
+       "year": 1948,
+       "from": "info",
+       "basis": "老三论"
+      },
+      {
+       "id": "info_theory",
+       "zh": "信息论",
+       "en": "Information Theory",
+       "year": 1948,
+       "from": "math",
+       "basis": "老三论"
+      },
+      {
+       "id": "catastrophe",
+       "zh": "突变理论",
+       "en": "Catastrophe Theory",
+       "year": 1960,
+       "from": "symbol",
+       "basis": "新三论；原 D1 B 组拟改 math，改由本门类承接"
+      },
+      {
+       "id": "chaos",
+       "zh": "混沌理论",
+       "en": "Chaos Theory",
+       "year": 1963,
+       "from": "symbol",
+       "basis": "非线性科学 / 复杂系统；原 D1 B 组拟改 math，改由本门类承接"
+      },
+      {
+       "id": "complexity",
+       "zh": "计算复杂性",
+       "en": "Complexity Theory",
+       "year": 1971,
+       "from": "symbol",
+       "basis": "按并列关系（决策 3）；原 D1 B 组拟改 info，改由本门类承接"
+      },
+      {
+       "id": "game_theory",
+       "zh": "博弈论",
+       "en": "Game Theory",
+       "year": 1944,
+       "from": "math",
+       "basis": "系统科学学科群补列"
+      },
+      {
+       "id": "network_sci",
+       "zh": "网络科学",
+       "en": "Network Science",
+       "year": 1998,
+       "from": "info",
+       "basis": "复杂系统 / 系统科学前沿"
+      },
+      {
+       "id": "data_science",
+       "zh": "数据科学",
+       "en": "Data Science",
+       "year": 2000,
+       "from": "info",
+       "basis": "以「数据」为一般对象"
+      }
+     ],
+     "edgeEvidence": "chaos 混沌理论的前置 = writing + mathematics + catastrophe 突变理论 —— 本族在库内唯一的内部边，两条同门有边支撑"
+    },
+    "discipline2_method": {
+     "key": "method",
+     "name": "方法与规程",
+     "en": "Methods & Procedures",
+     "heads": [],
+     "criterion": "本体是「做法 / 规程 / 规范 / 记法」，不是「理论」，且不专属单一学科",
+     "count": 5,
+     "members": [
+      {
+       "id": "scientific_method",
+       "zh": "科学方法",
+       "en": "Scientific Method",
+       "year": 1600,
+       "from": "symbol"
+      },
+      {
+       "id": "peer_review",
+       "zh": "同行评审制度",
+       "en": "Peer Review",
+       "year": 1665,
+       "from": "symbol"
+      },
+      {
+       "id": "replication",
+       "zh": "可重复实验",
+       "en": "Replication",
+       "year": 1900,
+       "from": "symbol"
+      },
+      {
+       "id": "positional",
+       "zh": "位值制计数法",
+       "en": "Positional Notation",
+       "year": 600,
+       "from": "symbol"
+      },
+      {
+       "id": "decimal",
+       "zh": "十进制小数",
+       "en": "Decimal Fractions",
+       "year": 1200,
+       "from": "symbol"
+      }
+     ],
+     "pendingTierB": {
+      "ids": [
+       "metrology 计量学",
+       "surveying 测量学",
+       "standards_units 标准单位制",
+       "numerals 数字符号系统"
+      ],
+      "impact": "若纳入 → method 9 条；numerals 须从 D1 A 组 30 条移出（原拟 symbol → math）"
+     }
+    },
+    "decision2_mathLogicFamily": {
+     "userRuling": "proof_theory / category_theory 留 math（C 档）",
+     "agentDecision": "同族 6 条**一并留 math，一门不进**",
+     "sameFamily": [
+      {
+       "id": "set_theory",
+       "zh": "集合论",
+       "en": "Set Theory",
+       "now": "math"
+      },
+      {
+       "id": "math_logic",
+       "zh": "数理逻辑",
+       "en": "Mathematical Logic",
+       "now": "math"
+      },
+      {
+       "id": "bx_math_37",
+       "zh": "模型论",
+       "en": "Model Theory",
+       "now": "math"
+      },
+      {
+       "id": "bx_math_40",
+       "zh": "类型论",
+       "en": "Type Theory",
+       "now": "math"
+      },
+      {
+       "id": "bx_math_17",
+       "zh": "同伦类型论",
+       "en": "Homotopy Type Theory",
+       "now": "math"
+      },
+      {
+       "id": "bx_math_36",
+       "zh": "范畴论应用",
+       "en": "Applied Category Theory",
+       "now": "math"
+      }
+     ],
+     "reasons": [
+      "判据不允许：研究对象是抽象结构本身，不是跨领域一般对象",
+      "一致性要求：若纳入须连带重判 basic/math 全族，否则出现「同族不同门」；而重判规模使判据退化为凭感觉",
+      "库内已给应用面留独立节点（bx_math_36 范畴论应用 / bx_math_38 证明辅助 / bx_math_39 自动定理证明），留 math 不丢信息",
+      "实测：这 6 条闭包一律 2 个门类，无一条达「跨 ≥3 门类」"
+     ],
+     "incidentalFinding": "proof_theory 证明论前置含 biochem 生物化学 —— 明显误挂，与「代位」同类，记入待修族"
+    },
+    "decision3_complexity": {
+     "ruling": "complexity 计算复杂性 → cross（按并列关系）",
+     "reasons": [
+      "用户点 4 的理由：避免「复杂性与混沌分家」（chaos 已定入 cross）",
+      "「按名称 → info」那一面已由 algorithm 算法理论（入边 214）与 computer_sci 计算机科学承载，不必重复",
+      "现门类 symbol 本身是 basic category 的兜底落空值 —— 处理方式：从 D1 B 组移出（to 由 info 改 cross）"
+     ]
+    },
+    "decision4_chaosCatastrophe": {
+     "ruling": "chaos + catastrophe → cross（已采纳用户点 4）",
+     "edgeEvidence": "chaos 前置含 catastrophe（库内本族唯一内部边）",
+     "bGroupImpact": "从 D1 B 组 20 条移出，to 由 math 改 cross；B 组 20 → 17 条"
+    },
+    "hardFinding_islandNodes": {
+     "method": "/tmp/inedges.js（全库 2,267 节点反向入边计数）",
+     "data": [
+      {
+       "id": "control_theory",
+       "in": 2,
+       "srcCat": "manufact 1 / military 1"
+      },
+      {
+       "id": "info_theory",
+       "in": 1,
+       "srcCat": "basic 1"
+      },
+      {
+       "id": "catastrophe",
+       "in": 1,
+       "srcCat": "basic 1"
+      },
+      {
+       "id": "systems_theory",
+       "in": 0
+      },
+      {
+       "id": "network_sci",
+       "in": 0
+      },
+      {
+       "id": "complexity",
+       "in": 0
+      },
+      {
+       "id": "data_science",
+       "in": 0
+      },
+      {
+       "id": "game_theory",
+       "in": 0
+      },
+      {
+       "id": "chaos",
+       "in": 0
+      },
+      {
+       "id": "cognition",
+       "in": 0
+      },
+      {
+       "id": "proof_theory",
+       "in": 0
+      },
+      {
+       "id": "category_theory",
+       "in": 0
+      },
+      {
+       "id": "set_theory",
+       "in": 0
+      },
+      {
+       "id": "math_logic",
+       "in": 0
+      },
+      {
+       "id": "bx_math_37",
+       "in": 0
+      },
+      {
+       "id": "bx_math_40",
+       "in": 0
+      },
+      {
+       "id": "mathematics",
+       "in": 570
+      },
+      {
+       "id": "algorithm",
+       "in": 214
+      },
+      {
+       "id": "statistics",
+       "in": 194
+      }
+     ],
+     "implication1": "判据层面：本批只能用**语义判据**（按研究对象）；草案 §三 原提的「跨 ≥3 门类」硬条件**实测无一条达标，作废**（因 dependsOn 覆盖不完整，与批次 P1 发现同源）",
+     "implication2": "数据层面：这 9 条本该被大量技术引用（控制论被自动化/机器人/制导；信息论被通信/编码；博弈论被军事/经济），实测近全为 0 → **边的缺失是系统性的**，应另立批次补边（与 R5 同族）。本批不动边。"
+    },
+    "renderImpact": {
+     "correction": "此前记「门类 10→12，渲染层色板需扩两个」**不成立**",
+     "evidence": "core.js#buildDimensionBlock（第 271–288 行）用**固定色** .dim-primary（#EEEDFE 底 / #534AB7 边），不按门类取色；style.css 第 862–868 行只有 .dim-badge/.dim-primary/.dim-task/.dim-second 四类；tools/gen_dimension.js 第 32 行用 Object.keys(D.disciplines) 动态取键",
+     "conclusion": "dimension_data.js 只加 2 条 disciplines 记录（heads: []）；渲染层 / style.css / gen_dimension.js / 页面 html **全部零改动**"
+    },
+    "overrideScale": {
+     "before": 50,
+     "bGroup": "20 → 17（chaos/catastrophe/complexity 三条 to 改 cross，仍在 B 组内）",
+     "newCrossMoves": 6,
+     "newMethodMoves": 5,
+     "after": "A 组 30 + B 组 17 + cross 新增 6 + method 新增 5 = 58 条"
+    },
+    "distributionFinal": {
+     "baseAfterD1": {
+      "eng": 857,
+      "life": 346,
+      "info": 285,
+      "matter": 250,
+      "mil": 237,
+      "math": 143,
+      "phys": 100,
+      "symbol": 19,
+      "chem": 15,
+      "earth": 15
+     },
+     "optionC5": {
+      "eng": 857,
+      "life": 346,
+      "info": 280,
+      "matter": 250,
+      "mil": 237,
+      "math": 139,
+      "phys": 100,
+      "symbol": 14,
+      "chem": 15,
+      "earth": 15,
+      "cross": 9,
+      "method": 5
+     },
+     "optionC9": {
+      "eng": 857,
+      "life": 346,
+      "info": 280,
+      "matter": 250,
+      "mil": 237,
+      "math": 138,
+      "phys": 100,
+      "symbol": 11,
+      "chem": 15,
+      "earth": 15,
+      "cross": 9,
+      "method": 9
+     },
+     "note": "两口径合计均 2,267。symbol 桶由 69 → 14（③原口径）。"
+    },
+    "pendingTable": [
+     {
+      "id": "cognition",
+      "zh": "认知科学",
+      "en": "Cognitive Science",
+      "year": 1970,
+      "now": "symbol",
+      "advice": "可入 cross",
+      "why": "研究对象是「认知」跨领域一般对象；用户未列故不擅自纳入"
+     },
+     {
+      "id": "bx_math_9",
+      "zh": "最优控制",
+      "en": "Optimal Control",
+      "now": "math",
+      "advice": "留 math",
+      "why": "任务域 basic/math"
+     },
+     {
+      "id": "bx_math_15",
+      "zh": "博弈论应用",
+      "en": "Game Theory Applications",
+      "now": "math",
+      "advice": "留 math",
+      "why": "是应用面，非一般对象理论"
+     },
+     {
+      "id": "bx_math_25",
+      "zh": "动力系统",
+      "en": "Dynamical Systems",
+      "now": "math",
+      "advice": "留 math",
+      "why": "研究对象是微分方程的解结构"
+     },
+     {
+      "id": "bx_math_54",
+      "zh": "排队论",
+      "en": "Queueing Theory",
+      "now": "math",
+      "advice": "留 math",
+      "why": "应用概率"
+     },
+     {
+      "id": "bx_math_55",
+      "zh": "库存论",
+      "en": "Inventory Theory",
+      "now": "math",
+      "advice": "留 math",
+      "why": "运筹应用"
+     },
+     {
+      "id": "bx_math_56",
+      "zh": "可靠性理论",
+      "en": "Reliability Theory",
+      "now": "math",
+      "advice": "留 math",
+      "why": "运筹应用"
+     }
+    ],
+    "pendingUser": [
+     "① 门类名与键：采纳 cross「横断科学 / Cross-cutting Sciences」，还是坚持 formal？",
+     "② method 口径：③原口径 5 条，还是中口径 9 条（+metrology/surveying/standards_units/numerals）？",
+     "③ §pendingTable 7 条：cognition 是否入 cross？其余 6 条确认留 math？",
+     "④ cross 只装 9 条（不做全族收编）是否接受？"
+    ],
+    "notIncluded": [
+     "本批不动 dependsOn：§hardFinding 指出这 9 条入边近全为 0，属系统性的边缺失 → 补边须另立批次（与 R5 同族），本批不混入",
+     "basic/method.f = symbol 的规则级改动（会把 58 条中 21 条非同族节点拖入）→ 仍属另立批次，本批只走 overrides",
+     "basic/measure.f = eng 的规则级改动 → 另立批次",
+     "high_entropy_alloy 高熵合金误判（prefix.high = eng，应为 matter）→ 另立批次"
+    ],
+    "verification": {
+     "dataUnchanged": true,
+     "dependsOn": "2,267 节点 / 6,169 边（零改动）",
+     "overridesWritten": false,
+     "checks": "四道门禁全绿（check_docs / regen_text --check / audit_net --check / gen_dimension --check）"
+    },
+    "doc": "/tmp/D1_method两门类方案_草案.md",
+    "dependsOn": [
+     "D1.formalScienceReview",
+     "D1.methodReview",
+     "D1.overridesProposed"
+    ]
+   }
   },
   "P1": {
    "batch": "P1",
