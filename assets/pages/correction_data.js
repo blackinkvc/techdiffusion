@@ -56,7 +56,8 @@ window.CORRECTIONS = {
       "【v0.9.31 · 草案待审核 · 阶段 3.1c】E 族 info 首批 18 条（通信、网络与标识设备）前置逐条判定已写入 `audit/ledger.json` 的 `batches[\"3.1c\"]`：保留 0 / 改前置 1（`inf_antenna` 天线 → `em_theory` 电磁理论）/ 删边 17 / 降级 0，补前置 17 条目共 37 条边；预演依赖边 6,167 → **6,187**、`mathematics` 前置 570 → 552。**未改动任何数据**，待逐条审核后由 `tools/apply_ledger.js --batch 3.1c --apply` 写盘。审核要点：① 天线改指「电磁理论」还是「电磁学」（两者皆 1865）；② `inf_rfid` 射频识别跨域以 transport 类的雷达（`tr_radar2`，1935）代位是否接受；③ `inf_cdn`(1990) ← `inf_cache`(1990) 与 ④ `inf_fiber`(1970) ← `optic_fiber`(1970) 两处同年前置；⑤ `inf_5g` 是否先补建蜂窝 / 移动通信世代节点再判。",
       "【v0.9.31 · 草案待审核 · 阶段 3.1d】E 族 info 次批 16 条（信息记录、存储与音视频设备）前置逐条判定已写入 `batches[\"3.1d\"]`：保留 0 / 改前置 2（`inf_vinyl` 黑胶唱片 → `acoustics` 声学、`inf_dataviz` 数据可视化 → `statistics` 统计学）/ 删边 14 / 降级 0，补前置 16 条目共 30 条边；预演依赖边 6,167 → **6,183**、`mathematics` 前置 570 → 554。**未改动任何数据**，待逐条审核后由 `tools/apply_ledger.js --batch 3.1d --apply` 写盘。与 3.1c 节点集合不相交，写盘顺序不限。本批新发现三处缺失节点：色料 / 染料、磁记录介质 / 磁头、图像 / 信号处理。",
       "【v0.9.32 · 缺失节点类（新登记）】「以不贴切的替代充当前置」已作为一类错误定位并留档（见本页 CR-2026-0915-oop-missing-node-substitution）：**根因是节点缺失而非判定不严，解决方案为新建具体节点**。本批已新建 `inf_oop` 面向对象方法(1967)。**累计待补 17 项**：形式语言 / 自动机理论 / 可计算性（编译器的理论侧）、Algol 60 / 抽象数据类型（面向对象方法的语言谱系侧）、软件工程 / 面向对象方法以外的软件方法学、关系代数 / 关系模型、色料 / 染料、磁记录介质 / 磁头、图像 / 信号处理、光交叉连接 / 光交换设备、蜂窝或移动通信世代节点 1G–4G、深冷介质 / 液氮、乙炔或工业气体、真空技术、高压流体加压设备、机器视觉、气动 / 抛丸设备、光刻 / 抗蚀剂、机器人关节减速器。另新增判定规则 **R5：不得以学科级顶点充当替身前置**。",
-      "【v0.9.33 · 维度层（架构改造 · 大修）待执行】批次 `D0` 已写盘（骨架 + 全库机械打标，零数据改动），裁定走「删边 + 归属标签」。**三项待审草案**：① **D1 例外表** —— 机械兜底的门类分布偏斜（eng 857 = 37.8%、chem 10、earth 6）与 2 个零命中任务域（`energy/animal_human`、`manufact/food_proc`）需逐条写入 `dimension_data.js` 的 `overrides`；② **D2 维度顶点入边处置** —— 14 个泛化枢纽现存 **2,565 条**入边（`mathematics` 570 / `chemistry` 433 / `physics` 290 / `algorithm` 214 / …）须逐条在 `delete` 与 `toField` 之间判定，并裁定「枢纽自身的 `dependsOn`（`writing + mathematics`）如何落」；③ **D3 A 族 494 条按 `toField` 重判** —— 唯一成立理由是学科归属者落回维度（规则 R8），不得硬找替身前置。另需注意本批暴露的模型层冲突已裁定：`theory_data.js` 的 `theory.latent` **保边**方案与阶段 3 的**删边**不能同时成立，已收窄为「必要但背景性的学理边」，实际改写随 D2 落地。"
+      "【v0.9.33 · 维度层（架构改造 · 大修）待执行】批次 `D0` 已写盘（骨架 + 全库机械打标，零数据改动），裁定走「删边 + 归属标签」。**三项待审草案**：① **D1 例外表** —— 机械兜底的门类分布偏斜（eng 857 = 37.8%、chem 10、earth 6）与 2 个零命中任务域（`energy/animal_human`、`manufact/food_proc`）需逐条写入 `dimension_data.js` 的 `overrides`；② **D2 维度顶点入边处置** —— 14 个泛化枢纽现存 **2,565 条**入边（`mathematics` 570 / `chemistry` 433 / `physics` 290 / `algorithm` 214 / …）须逐条在 `delete` 与 `toField` 之间判定，并裁定「枢纽自身的 `dependsOn`（`writing + mathematics`）如何落」；③ **D3 A 族 494 条按 `toField` 重判** —— 唯一成立理由是学科归属者落回维度（规则 R8），不得硬找替身前置。另需注意本批暴露的模型层冲突已裁定：`theory_data.js` 的 `theory.latent` **保边**方案与阶段 3 的**删边**不能同时成立，已收窄为「必要但背景性的学理边」，实际改写随 D2 落地。",
+      "【v0.9.34 · 草案待审核 · 批次 D1】维度层例外表草案已出（**未写盘**）：`category=basic` 的 302 条学理节点中，**68 条**的 `field.primary` 被兜底为 `symbol`（语言与符号）—— 根因是 primary 兜底末级只有 `category → 门类` 一张表，而 `basic` 是跨学科分类；同一批节点的 `sub` 多已判到 `basic/math|physics|chemistry|astronomy|earthsci|biosci`，是 primary 没跟上。草案拟 **`overrides` 50 条**（A 组 30 条依 `sub` 子域定门类、B 组 20 条按语义逐条判定）、建议保留 `symbol` **6 条**、**需裁定 12 条**（方法论类 3 条无对应门类，其余 9 条为交界学科）；另列 **4 条** `sub` 明显误挂（`watermill` / `animal_draft` / `ene_tidal` / `mat_wave`）。**两个零命中任务域的结论**：`manufact/food_proc` 可由 `watermill` 填补 1 条；`energy/animal_human` 在当前分类下**不可达**（唯一畜力节点 `animal_draft` 的 category 为 transport，与 `energy/*` 不同类），列出两条出路待裁定。**澄清一项**：`eng` 857（37.8%）**不是打标错误**，而是 `category → 门类` 的必然（transport 244 + build 242 + energy 215 + manufact 153 + 3），要改比例须拆分门类。预演：`symbol` 69→19、`earth` 6→15、`chem` 10→15，合计 2,267 不变。**本草案只落在 `batches[\"D1\"]`，`dimension_data.js` 的 `overrides` 获批前保持为空**；详见 `batches[\"D1\"]`。"
     ],
     enablesAudit: {
       title: "enables 语义错误 · 95 项灰色概念甄别表",
@@ -166,6 +167,51 @@ window.CORRECTIONS = {
     },
   },
   entries: [
+    {
+      "id": "CR-2026-0915-dim-basic-fallback-symbol",
+      "date": "2026-09-15",
+      "node": "68 个 `category=basic` 学理节点的 `field.primary`（逐条清单见 `audit/ledger.json` 的 `batches[\"D1\"]`）；受此影响的兜底路径为 `category → 门类` 末级",
+      "nodeName": "维度层 · 学科归属轴（`assets/pages/dimension_data.js` → `D.resolve().field.primary`）",
+      "category": "basic（学理级节点：数学 / 物理 / 化学 / 天文 / 生物 / 方法论同处一类）",
+      "severity": "中",
+      "status": "**草案待审（批次 `D1`，`status` = `draft-ready`，未写盘）**；`assets/pages/dimension_data.js` 的 `overrides` 在本草案获批前保持为空",
+      "problem": "**维度层的 `field.primary` 兜底在 `category=basic` 上落空。** `category=basic` 共 302 条（全库学理级节点），其中 **68 条**的 `field.primary` 被兜底为 `symbol`（语言与符号）。这 68 条实为跨学科的基础学理 —— 数学（算术 / 几何 / 代数 / 微积分 / 概率 / 拓扑 / 组合数学 / 傅里叶分析 …）、物理（热力学 / 电磁学 / 光学 / 声学 / 分析力学 / 等离子体物理 / 时空 …）、化学（化学键 / 电化学 / 光化学 / 晶体学 …）、生命（进化论 / 微生物学 / 神经科学 / 基因组学 / 蛋白质组学 …）、天文（天文学 / 宇宙学 / 日心说 / 大爆炸 / 黑洞 …）、信息（计算复杂性 / AI 科学家 …）、方法论（科学方法 / 同行评审 / 可重复实验 / 计量学 / 测量学 …）—— 把它们统一挂到「语言与符号」不成立。结果 `symbol` 的 69 条里，**50 条应按 A / B 两组改正、6 条确属符号系统本体、12 条需用户裁定**。该轴是 D2 / D3 要把「归属」写进去的落点，故须先修。",
+      "rootCause": "**primary 兜底链的末级缺跨学科分支。** 兜底链为 `override → 维度顶点 → 一段前缀 → category`，末级只有一张 `category → 门类` 表；而 `basic` 是**跨学科**分类（数学 / 物理 / 化学 / 天文 / 生物 / 方法论同处一类），任何单一映射都不成立，`symbol` 因此成为落空值的实际承担者。**关键事实：`sub` 轴并未失效** —— 同一批节点的 `sub` 多已被 taxonomy 关键词判到具体学科子域（`basic/math` / `basic/physics` / `basic/chemistry` / `basic/astronomy` / `basic/earthsci` / `basic/biosci`），是 `primary` 没有利用 `sub` 已有的信息。故本批的修法是**读 `sub` 定 `primary`**，而非新增规则。",
+      "fix": "按 D0 已定的机制「**例外一律走 `overrides` 逐条写入，不修改兜底规则本身**」（保持规则的机械可复算性）：批次 **D1** 草案拟 **50 条** override（A 组 30 条依 `sub` 子域定门类、B 组 20 条按语义逐条判定）、**6 条**建议保留 `symbol`、**12 条**需用户裁定；另列出 **4 条** `sub` 明显误挂。草案只落在 `audit/ledger.json` 的 `batches[\"D1\"]`，`dimension_data.js` 的 `overrides` 获批前保持为空。预演效果：`symbol` 69 → **19**、`earth` 6 → **15**、`chem` 10 → **15**（两条最小门类获得主要修正）。",
+      "badUpstream": [
+        "把 `symbol` 当作未命中时的默认值 —— 它实际退化为 `field.primary` 的落空垃圾桶（69 条中 63 条与语言 / 符号无关）",
+        "把 `eng` 857（37.8%）当作打标缺陷 —— 实测它是 `category → 门类` 的必然结果（transport 244 + build 242 + energy 215 + manufact 153 + 3），与兜底规则无关；要改比例必须拆分门类，属设计变更",
+        "在 `rules.cat` 里给 `basic` 补一条映射 —— `basic` 跨全部学科，任何单一映射都会把一整类学理错判到另一类，只是把落空从 `symbol` 挪到别的门类",
+        "把 `energy/animal_human` 的零命中归因于关键词规则 —— 实为**节点分类阻断**：全库唯一畜力节点 `animal_draft`（畜力）的 `category` 是 `transport`，与 `energy/*` 不同类，受「`sub` 须与 `category` 同类」硬约束限制"
+      ],
+      "goodUpstream": [
+        "A 组 30 条直接读 **`sub` 已有的学科子域裁决**定门类（如 `thermodynamics` 的 `sub` 已是 `basic/physics` → 门类 `phys`），成本低且与 taxonomy 自洽",
+        "`language` / `counting` / `positional` / `decimal` / `gesture_comm` / `symbolic_art` 留 `symbol` —— 符号系统本体，D0 的兜底结论本就正确",
+        "`watermill`（水磨）既是 `manufact/food_proc` 的**唯一可达填补者**，其现挂 `manufact/cutting` 本身即误判 —— 填补零命中域与改正误挂是同一件事",
+        "`ene_tidal`（潮汐能）/ `mat_wave`（波浪能）→ `energy/geo_ocean`（该域定义即「地热与海洋能」），原挂 `energy/fossil` / `energy/power_machine` 均误",
+        "对 `energy/animal_human` 给出「当前分类下不可达」的结论并列出两条出路（保持零命中 / 改 `animal_draft` 的 category），而不强行塞入一条不成立的归属 —— 零命中本身可以是正确结论"
+      ],
+      "changes": [
+        "① 批次 **`D1`** 草案入台账（`audit/ledger.json`，`status` = `draft-ready`）：含 `findings` / `overridesProposed` 50 / `keepInSymbol` 6 / `pendingUser` 12 / `subFixes` 4 / `zeroHitDomains` / `distributionPreview` / `notIncluded`",
+        "② 取证：**缺陷 A** —— `basic` 类 68 条门类落空（本条目主体）；**缺陷 B（澄清）** —— `eng` 37.8% 非打标错误，是 `category → 门类` 的必然；**缺陷 C** —— 2 个零命中任务域的可达性；**缺陷 D** —— 4 条 `sub` 明显误挂",
+        "③ 拟 `overrides` **50 条**：A 组 30 条（`sub` 已判到具体学科子域 → 门类随之确定，如 `astronomy`→earth、`thermodynamics`→phys、`valence`→chem、`evolution`→life、`algebra`→math、`cartography`→earth）；B 组 20 条（`basic/method` 无学科指向，按语义逐条判定，如 `complexity`→info、`black_hole`→earth、`neuroscience`→life）",
+        "④ 建议保留 `symbol` **6 条**：`language` / `counting` / `positional` / `decimal` / `gesture_comm` / `symbolic_art`",
+        "⑤ **需用户裁定 12 条**（附我的建议）：`scientific_method` / `peer_review` / `replication`（方法论，无对应门类）、`metrology` / `surveying`（→eng）、`microscope`（→life）、`nanoscience`（→matter）、`cognition`（→life）、`fire_making`（→eng）、`magnet`（→matter）、`black_hole_comp`（→info）、`fut_spacetime_engineering`（→phys）",
+        "⑥ **零命中任务域结论**：`manufact/food_proc` 可由 `watermill`（水磨）填补 1 条；`energy/animal_human` 在当前分类下**不可达**（唯一畜力节点 `animal_draft` 的 category 为 transport），给出两条出路待裁定",
+        "⑦ 同批列出 **4 条 `sub` 明显误挂**：`watermill`（manufact/cutting→manufact/food_proc）、`animal_draft`（transport/water→transport/road）、`ene_tidal`（energy/fossil→energy/geo_ocean）、`mat_wave`（energy/power_machine→energy/geo_ocean）",
+        "⑧ 门类分布预演（合计 2,267 不变）：`symbol` 69→19、`earth` 6→15、`chem` 10→15、`math` 126→143、`phys` 90→100、`life` 339→346、`info` 283→285；**`eng` 857 / `matter` 250 / `mil` 237 不变**",
+        "⑨ **本批未做的事**：未改动 `assets/pages/dimension_data.js`（`overrides` 保持为空）；未改动任何 `dependsOn`（属 D2 / D3）；未拆分 `eng` 门类（属设计变更）；未复核 160 条 `bx_*` 占位节点（属另立批次）"
+      ],
+      "files": [
+        "audit/ledger.json（新增批次 D1，status = draft-ready；批次键 19 → 20）",
+        "/tmp/D1_例外表草案.md（草案全文，含逐条明细表与预演）",
+        "assets/pages/correction_data.js（本条目，entries 24 → 25；pendingQueue 30 → 31）",
+        "assets/pages/changelog_data.js（v0.9.34 条目，entries 38 → 39）",
+        "版本迭代日志.md（表格行 + 详细章节）",
+        "技术网络检修计划.md（批次总览 D1 行 / 当前状态 / 修订记录 / 当前批次 / 审核节点）",
+        "**未改动**：assets/pages/dimension_data.js（overrides 保持为空）、assets/techs_*.js、assets/techs_midtech.js、audit/baseline.json"
+      ]
+    },
     {
       "id": "CR-2026-0915-flat-graph-field-as-edge",
       "date": "2026-09-15",

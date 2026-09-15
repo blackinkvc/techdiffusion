@@ -4407,6 +4407,598 @@
     "向后兼容核对：3.1c / 3.1d / 3.1e 三批用新版执行器干跑，完整划分断言 / 时序性 / 环校验均通过"
    ],
    "note": "本批是**架构改造的第一步**，只建立承载层与打标能力，不做任何因果判定。所有语义判定（例外表、维度顶点入边处置、A 族重判）一律走「先出草案入台账 → 用户审核 → 执行器写盘」，不得自行写盘。"
+  },
+  "D1": {
+   "batch": "D1",
+   "name": "维度层例外表（overrides 逐条覆盖）",
+   "scope": "门类分布偏斜 + 2 个零命中任务域 + 同批发现的 sub 明显误挂",
+   "status": "draft-ready",
+   "date": "2026-09-15",
+   "dependsOn": "D0",
+   "rule": "例外一律走 overrides 逐条写入，不修改兜底规则本身（保持规则的机械可复算性）",
+   "findings": [
+    "缺陷 A（主要）：`category=basic` 的学理节点共 302 条，其中 **68 条** 的 field.primary 落空为 `symbol`。根因是 primary 兜底末级 `rules.cat` 无 `basic` 的学科指向，而 `symbol` 被用作默认值；这 68 条实为「学理级节点」集合（数学/物理/化学/生物/天文/方法论），其 `sub` 多数已被 taxonomy 关键词判到具体学科子域（basic/math|physics|chemistry|astronomy|earthsci|biosci），但 primary 未同步。",
+    "缺陷 A 的可判性：68 条中 **50 条** 可依「sub 子域 → 门类」或节点语义直接判定；**6 条** 属语言与符号本体、留 `symbol` 正确；**12 条** 无对应门类或属交界，需用户裁定。",
+    "缺陷 B（非缺陷，需澄清）：`eng` 857（37.8%）**不是打标错误**。它是 `category → 门类` 映射的必然结果：`transport` 244 + `build` 242 + `energy` 215 + `manufact` 153 + 3 = 857。只要「能源 / 运输 / 建筑 / 制造」四类都归入「工程与建造」，该比例就由节点分类决定，与兜底规则无关。要改变比例必须**拆分门类**（如单设「能源」「运输」），属维度层设计变更，不属例外表。",
+    "缺陷 C：两个零命中任务域的可达性 —— `manufact/food_proc` 仅有 **1 条** 可达填补者（`watermill` 水磨，现误挂 `manufact/cutting`）；`energy/animal_human`（畜力与人力）在当前分类下**不可达** —— 全库唯一的畜力节点 `animal_draft`（畜力）的 `category` 是 `transport`，与 `energy/*` **不同类**，受「sub 须与 category 同类」硬约束限制，无法落入该域。",
+    "缺陷 D（同批发现）：4 条 `sub` 明显误挂（`watermill` / `animal_draft` / `ene_tidal` / `mat_wave`），与门类判定无关，一并列出待审。"
+   ],
+   "overridesProposed": [
+    {
+     "id": "astronomy",
+     "from": "symbol",
+     "to": "earth",
+     "group": "A",
+     "basis": "basic/astronomy",
+     "reason": "sub 已判到 basic/astronomy，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "cosmology",
+     "from": "symbol",
+     "to": "earth",
+     "group": "A",
+     "basis": "basic/astronomy",
+     "reason": "sub 已判到 basic/astronomy，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "telescope",
+     "from": "symbol",
+     "to": "earth",
+     "group": "A",
+     "basis": "basic/astronomy",
+     "reason": "sub 已判到 basic/astronomy，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "thermodynamics",
+     "from": "symbol",
+     "to": "phys",
+     "group": "A",
+     "basis": "basic/physics",
+     "reason": "sub 已判到 basic/physics，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "electromagnetism",
+     "from": "symbol",
+     "to": "phys",
+     "group": "A",
+     "basis": "basic/physics",
+     "reason": "sub 已判到 basic/physics，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "optics",
+     "from": "symbol",
+     "to": "phys",
+     "group": "A",
+     "basis": "basic/physics",
+     "reason": "sub 已判到 basic/physics，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "lagrangian",
+     "from": "symbol",
+     "to": "phys",
+     "group": "A",
+     "basis": "basic/physics",
+     "reason": "sub 已判到 basic/physics，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "biophysics",
+     "from": "symbol",
+     "to": "phys",
+     "group": "A",
+     "basis": "basic/physics",
+     "reason": "sub 已判到 basic/physics，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "plasma_phys",
+     "from": "symbol",
+     "to": "phys",
+     "group": "A",
+     "basis": "basic/physics",
+     "reason": "sub 已判到 basic/physics，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "valence",
+     "from": "symbol",
+     "to": "chem",
+     "group": "A",
+     "basis": "basic/chemistry",
+     "reason": "sub 已判到 basic/chemistry，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "biochem",
+     "from": "symbol",
+     "to": "chem",
+     "group": "A",
+     "basis": "basic/chemistry",
+     "reason": "sub 已判到 basic/chemistry，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "electrochem",
+     "from": "symbol",
+     "to": "chem",
+     "group": "A",
+     "basis": "basic/chemistry",
+     "reason": "sub 已判到 basic/chemistry，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "photochemistry",
+     "from": "symbol",
+     "to": "chem",
+     "group": "A",
+     "basis": "basic/chemistry",
+     "reason": "sub 已判到 basic/chemistry，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "evolution",
+     "from": "symbol",
+     "to": "life",
+     "group": "A",
+     "basis": "basic/biosci",
+     "reason": "sub 已判到 basic/biosci，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "microbiology",
+     "from": "symbol",
+     "to": "life",
+     "group": "A",
+     "basis": "basic/biosci",
+     "reason": "sub 已判到 basic/biosci，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "ecology",
+     "from": "symbol",
+     "to": "life",
+     "group": "A",
+     "basis": "basic/biosci",
+     "reason": "sub 已判到 basic/biosci，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "taxonomy",
+     "from": "symbol",
+     "to": "life",
+     "group": "A",
+     "basis": "basic/biosci",
+     "reason": "sub 已判到 basic/biosci，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "numerals",
+     "from": "symbol",
+     "to": "math",
+     "group": "A",
+     "basis": "basic/math",
+     "reason": "sub 已判到 basic/math，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "arithmetic",
+     "from": "symbol",
+     "to": "math",
+     "group": "A",
+     "basis": "basic/math",
+     "reason": "sub 已判到 basic/math，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "geometry_euclid",
+     "from": "symbol",
+     "to": "math",
+     "group": "A",
+     "basis": "basic/math",
+     "reason": "sub 已判到 basic/math，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "algebra",
+     "from": "symbol",
+     "to": "math",
+     "group": "A",
+     "basis": "basic/math",
+     "reason": "sub 已判到 basic/math，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "calculus",
+     "from": "symbol",
+     "to": "math",
+     "group": "A",
+     "basis": "basic/math",
+     "reason": "sub 已判到 basic/math，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "probability",
+     "from": "symbol",
+     "to": "math",
+     "group": "A",
+     "basis": "basic/math",
+     "reason": "sub 已判到 basic/math，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "noneuclid",
+     "from": "symbol",
+     "to": "math",
+     "group": "A",
+     "basis": "basic/math",
+     "reason": "sub 已判到 basic/math，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "topology",
+     "from": "symbol",
+     "to": "math",
+     "group": "A",
+     "basis": "basic/math",
+     "reason": "sub 已判到 basic/math，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "combinatorics",
+     "from": "symbol",
+     "to": "math",
+     "group": "A",
+     "basis": "basic/math",
+     "reason": "sub 已判到 basic/math，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "kolmogorov",
+     "from": "symbol",
+     "to": "math",
+     "group": "A",
+     "basis": "basic/math",
+     "reason": "sub 已判到 basic/math，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "fractal",
+     "from": "symbol",
+     "to": "math",
+     "group": "A",
+     "basis": "basic/math",
+     "reason": "sub 已判到 basic/math，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "fut_ai_mathematician",
+     "from": "symbol",
+     "to": "math",
+     "group": "A",
+     "basis": "basic/math",
+     "reason": "sub 已判到 basic/math，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "cartography",
+     "from": "symbol",
+     "to": "earth",
+     "group": "A",
+     "basis": "basic/earthsci",
+     "reason": "sub 已判到 basic/earthsci，学科归属随之确定；symbol 为 primary 兜底落空值"
+    },
+    {
+     "id": "trigonometry",
+     "from": "symbol",
+     "to": "math",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "三角学：数学分支"
+    },
+    {
+     "id": "logarithms",
+     "from": "symbol",
+     "to": "math",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "对数：数学工具"
+    },
+    {
+     "id": "fourier",
+     "from": "symbol",
+     "to": "math",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "傅里叶分析：数学分析"
+    },
+    {
+     "id": "chaos",
+     "from": "symbol",
+     "to": "math",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "混沌理论：数学分支（动力系统）"
+    },
+    {
+     "id": "catastrophe",
+     "from": "symbol",
+     "to": "math",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "突变理论：数学分支（奇点理论）"
+    },
+    {
+     "id": "crystallography",
+     "from": "symbol",
+     "to": "chem",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "晶体学：经典归属为结晶化学（与物理交界，见说明）"
+    },
+    {
+     "id": "spectroscopy",
+     "from": "symbol",
+     "to": "phys",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "光谱学：经典归属为物理学（原子/分子光谱）"
+    },
+    {
+     "id": "neuroscience",
+     "from": "symbol",
+     "to": "life",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "神经科学：生命与医学"
+    },
+    {
+     "id": "heliocentrism",
+     "from": "symbol",
+     "to": "earth",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "日心说：天文学理论"
+    },
+    {
+     "id": "bigbang",
+     "from": "symbol",
+     "to": "earth",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "大爆炸宇宙论：宇宙学"
+    },
+    {
+     "id": "complexity",
+     "from": "symbol",
+     "to": "info",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "计算复杂性：计算理论"
+    },
+    {
+     "id": "acoustics",
+     "from": "symbol",
+     "to": "phys",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "声学：物理学分支"
+    },
+    {
+     "id": "genomics",
+     "from": "symbol",
+     "to": "life",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "基因组学：生命科学"
+    },
+    {
+     "id": "proteomics",
+     "from": "symbol",
+     "to": "life",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "蛋白质组学：生命科学"
+    },
+    {
+     "id": "spacetime",
+     "from": "symbol",
+     "to": "phys",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "时空：相对论物理"
+    },
+    {
+     "id": "black_hole",
+     "from": "symbol",
+     "to": "earth",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "黑洞：天文学客体"
+    },
+    {
+     "id": "wormhole",
+     "from": "symbol",
+     "to": "phys",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "虫洞：广义相对论解"
+    },
+    {
+     "id": "fut_ai_scientist",
+     "from": "symbol",
+     "to": "info",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "AI 科学家：人工智能"
+    },
+    {
+     "id": "fut_digital_twin_earth",
+     "from": "symbol",
+     "to": "earth",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "数字孪生地球：地球系统建模"
+    },
+    {
+     "id": "fut_climate_engineering_deploy",
+     "from": "symbol",
+     "to": "earth",
+     "group": "B",
+     "basis": "basic/method",
+     "reason": "气候工程部署：气候科学"
+    }
+   ],
+   "keepInSymbol": [
+    {
+     "id": "language",
+     "reason": "语言与符号：属「符号系统」本体，留 symbol 正确"
+    },
+    {
+     "id": "counting",
+     "reason": "语言与符号：属「符号系统」本体，留 symbol 正确"
+    },
+    {
+     "id": "positional",
+     "reason": "语言与符号：属「符号系统」本体，留 symbol 正确"
+    },
+    {
+     "id": "decimal",
+     "reason": "语言与符号：属「符号系统」本体，留 symbol 正确"
+    },
+    {
+     "id": "gesture_comm",
+     "reason": "语言与符号：属「符号系统」本体，留 symbol 正确"
+    },
+    {
+     "id": "symbolic_art",
+     "reason": "语言与符号：属「符号系统」本体，留 symbol 正确"
+    }
+   ],
+   "pendingUser": [
+    {
+     "id": "scientific_method",
+     "current": "symbol",
+     "suggestion": "symbol",
+     "reason": "方法论/学术规范，无对应门类；建议留 symbol 或新设门类"
+    },
+    {
+     "id": "peer_review",
+     "current": "symbol",
+     "suggestion": "symbol",
+     "reason": "同上：学术制度"
+    },
+    {
+     "id": "replication",
+     "current": "symbol",
+     "suggestion": "symbol",
+     "reason": "同上：方法学"
+    },
+    {
+     "id": "metrology",
+     "current": "symbol",
+     "suggestion": "eng",
+     "reason": "计量学：标准与量值传递属工程实践"
+    },
+    {
+     "id": "surveying",
+     "current": "symbol",
+     "suggestion": "eng",
+     "reason": "测量学：大地测量属工程实践"
+    },
+    {
+     "id": "microscope",
+     "current": "symbol",
+     "suggestion": "life",
+     "reason": "显微镜：生物学/医学观测仪器（亦可论为 phys 光学仪器）"
+    },
+    {
+     "id": "nanoscience",
+     "current": "symbol",
+     "suggestion": "matter",
+     "reason": "纳米科学：材料科学（亦可论为 phys）"
+    },
+    {
+     "id": "cognition",
+     "current": "symbol",
+     "suggestion": "life",
+     "reason": "认知科学：神经科学（亦可论为 info）"
+    },
+    {
+     "id": "fire_making",
+     "current": "symbol",
+     "suggestion": "eng",
+     "reason": "人工取火：技艺（与 energy 类节点 `fire` 用火 呼应，但无 energy 门类）"
+    },
+    {
+     "id": "magnet",
+     "current": "symbol",
+     "suggestion": "matter",
+     "reason": "天然磁石：天然矿物（亦可论为 phys 磁性）"
+    },
+    {
+     "id": "black_hole_comp",
+     "current": "symbol",
+     "suggestion": "info",
+     "reason": "黑洞计算：计算物理（亦可论为 phys）"
+    },
+    {
+     "id": "fut_spacetime_engineering",
+     "current": "symbol",
+     "suggestion": "phys",
+     "reason": "时空工程：相对论物理（未来情境）"
+    }
+   ],
+   "subFixes": [
+    {
+     "id": "watermill",
+     "from": "manufact/cutting",
+     "to": "manufact/food_proc",
+     "reason": "水磨＝谷物研磨，非切削；`manufact/food_proc` 现零命中，此为唯一可达填补者"
+    },
+    {
+     "id": "animal_draft",
+     "from": "transport/water",
+     "to": "transport/road",
+     "reason": "畜力为陆路动力，与水运无关"
+    },
+    {
+     "id": "ene_tidal",
+     "from": "energy/fossil",
+     "to": "energy/geo_ocean",
+     "reason": "潮汐能非化石能源；`energy/geo_ocean` 即「地热与海洋能」"
+    },
+    {
+     "id": "mat_wave",
+     "from": "energy/power_machine",
+     "to": "energy/geo_ocean",
+     "reason": "波浪能非动力机械；`energy/geo_ocean` 即「地热与海洋能」"
+    }
+   ],
+   "zeroHitDomains": {
+    "manufact/food_proc": {
+     "status": "可填 1 条",
+     "via": "watermill → manufact/food_proc（见 subFixes）"
+    },
+    "energy/animal_human": {
+     "status": "当前分类下不可达",
+     "blocker": "唯一畜力节点 animal_draft 的 category=transport，与 energy/* 不同类；sub 须与 category 同类（taxonomy 定义性约束）",
+     "options": [
+      "A（默认，本草案采用）保持零命中，登记为「已知不可达」，不改 category（D0 已声明本阶段不改 cat）",
+      "B 同批把 animal_draft 的 category 由 transport 改为 energy —— 属改动节点自带字段，需单独裁定"
+     ]
+    }
+   },
+   "distributionPreview": {
+    "before": {
+     "eng": 857,
+     "life": 339,
+     "info": 283,
+     "matter": 250,
+     "mil": 237,
+     "math": 126,
+     "phys": 90,
+     "symbol": 69,
+     "chem": 10,
+     "earth": 6
+    },
+    "after": {
+     "eng": 857,
+     "life": 346,
+     "info": 285,
+     "matter": 250,
+     "mil": 237,
+     "math": 143,
+     "phys": 100,
+     "symbol": 19,
+     "chem": 15,
+     "earth": 15
+    },
+    "note": "以 D0 实测分布为基，按本草案 50 条 override 预演（12 条待裁定项仍留 symbol）。合计 2,267 不变。symbol 69 → 19；earth 6 → 15、chem 10 → 15（两条最小门类获得主要修正）。eng 仍 857 —— 比例由节点分类决定，本批不动。"
+   },
+   "notIncluded": [
+    "eng 门类拆分（需门类设计裁定，不属例外表）",
+    "160 条 `bx_*` 占位节点的门类复核（属另立批次）",
+    "除上述 4 条以外的 sub 复核（本批不做全量 sub 复审）",
+    "任何 dependsOn / 边判定（属 D2 / D3）"
+   ],
+   "note": "本批只提例外表草案，**未写入 assets/pages/dimension_data.js 的 overrides**；须用户逐条审核后另行写盘。D0 的兜底规则、门类集合、维度顶点均不改。"
   }
  }
 }
