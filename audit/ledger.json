@@ -5116,7 +5116,7 @@
     "横断形式科学门类的最终键名与色板（渲染层落地）：须先定选项①②③再执行",
     "proof_theory 前置换掉 biochem（误挂）：属另一类修正，另立候选"
    ],
-   "note": "本批只提例外表草案，**未写入 assets/pages/dimension_data.js 的 overrides**；须用户逐条审核后另行写盘。D0 的兜底规则、门类集合、维度顶点均不改。**2026-09-15 补充裁定说明（见 rulingsDoc / revisions）**：四项待审已逐条给出建议与依据。 **2026-09-15 再补充**：method 门类全库审查 / eng 门类讲解 / 仪器口径与关联度（见 methodReview / engBreakdown / instrumentFollowUp / blackHoleRuling / methodEngDoc）。 **2026-09-15 第 5 项**：横断形式科学门类候选核对（见 formalScienceReview / formalScienceDoc）。",
+   "note": "本批只提例外表草案，**未写入 assets/pages/dimension_data.js 的 overrides**；须用户逐条审核后另行写盘。D0 的兜底规则、门类集合、维度顶点均不改。**2026-09-15 补充裁定说明（见 rulingsDoc / revisions）**：四项待审已逐条给出建议与依据。 **2026-09-15 再补充**：method 门类全库审查 / eng 门类讲解 / 仪器口径与关联度（见 methodReview / engBreakdown / instrumentFollowUp / blackHoleRuling / methodEngDoc）。 **2026-09-15 第 5 项**：横断形式科学门类候选核对（见 formalScienceReview / formalScienceDoc）。 **2026-09-15 术语考据**：核实「形式科学」「横断科学」均为标准术语、「横断形式科学」为自拟名；揭示 field 轴层级错配（见 formalScienceReview.terminologyReview / formalScienceTerminologyDoc）。",
    "symbolBucket": {
     "note": "`symbol`（语言与符号）本有明确含义（锚定维度顶点 writing / language），却成为落空值承担者；来源有三，各自独立。",
     "sources": [
@@ -5188,6 +5188,13 @@
      "scope": "仅台账内本批次的说明字段；**overridesProposed / keepInSymbol / subFixes 三条清单的条数与目标值未变动**；dimension_data.js 的 overrides 仍为空，dependsOn 零改动（2,267 / 6,169）。",
      "note": "本批仍为 draft-ready，未写盘。",
      "doc": "/tmp/D1_method扩展_横断形式科学.md"
+    },
+    {
+     "date": "2026-09-15",
+     "what": "术语考据：核实「横断形式科学」是否为专有常用词",
+     "result": "「形式科学 / Formal Science」为标准专有术语（英文维基独立条目，Branches 明含 Mathematics、Statistics）；「横断科学 / Cross-cutting Science」亦为中文通用术语（钱学森体系九大部类之一，老三论+新三论）；「横断形式科学」为**自拟名**，非术语。",
+     "extra": "识出更严重问题 —— 层级错配：形式科学的 Branches 含 Mathematics，故 formal 不能与 math 并列作第 11 门类。给出三条命名更正路线（甲 横断科学 / 乙 method 原议 / 丙 甲+乙）。",
+     "doc": "/tmp/D1_method术语考据_横断形式科学.md"
     }
    ],
    "decisionTables": {
@@ -5998,7 +6005,9 @@
       "members": 9,
       "detail": "control_theory / systems_theory / network_sci / complexity / data_science / info_theory / game_theory / proof_theory / category_theory",
       "pro": "语义最纯",
-      "con": "scientific_method / peer_review / replication 三条研究规程仍留 symbol（该桶仍不纯）"
+      "con": "scientific_method / peer_review / replication 三条研究规程仍留 symbol（该桶仍不纯）",
+      "nameSelfCoined": true,
+      "nameNote": "「横断形式科学」系本轮自拟名（非标准术语）→ 见 terminologyReview；最终中文名待用户选定路线后统一改。"
      },
      {
       "k": "② 单门类·中",
@@ -6007,7 +6016,9 @@
       "members": 11,
       "detail": "①的 9 条 + chaos 混沌理论 + catastrophe 突变理论",
       "pro": "避免「复杂性与混沌分家」；symbol 由 19→17",
-      "con": "门类内仍含 symbol 来源节点"
+      "con": "门类内仍含 symbol 来源节点",
+      "nameSelfCoined": true,
+      "nameNote": "「横断形式科学」系本轮自拟名（非标准术语）→ 见 terminologyReview；最终中文名待用户选定路线后统一改。"
      },
      {
       "k": "③ 两门类",
@@ -6017,7 +6028,9 @@
       "formal": "control_theory / systems_theory / network_sci / complexity / data_science / info_theory / game_theory / proof_theory / category_theory",
       "method": "scientific_method 科学方法 / peer_review 同行评审制度 / replication 可重复实验 / positional 位值制计数法 / decimal 十进制小数",
       "pro": "把「研究对象横断」与「做法与规范」两类语义分开，不重犯 basic/method 域语义不纯的错误",
-      "con": "门类总数 10→12，渲染层色板需扩两个"
+      "con": "门类总数 10→12，渲染层色板需扩两个",
+      "nameSelfCoined": true,
+      "nameNote": "「横断形式科学」系本轮自拟名（非标准术语）→ 见 terminologyReview；最终中文名待用户选定路线后统一改。"
      }
     ],
     "distributionFinal": {
@@ -6137,9 +6150,201 @@
     ],
     "incidentalFinding": "proof_theory 证明论的前置含 biochem 生物化学（明显误挂，与「代位」一类错误同源），记录待处理。",
     "doc": "/tmp/D1_method扩展_横断形式科学.md",
-    "truncated": "用户第 2 条内容在发送时被截断（仅到「2.」），未收到；本轮未据此改动任何计划。"
+    "truncated": "用户第 2 条内容在发送时被截断（仅到「2.」），未收到；本轮未据此改动任何计划。",
+    "terminologyReview": {
+     "question": "用户追问：「横断形式科学这个词是专有的常用词吗？」",
+     "verdict": {
+      "formalScience_isStandard": true,
+      "crossCuttingScience_isStandard": true,
+      "combinedPhrase_isStandard": false,
+      "note": "「横断形式科学」与英文名 \"Formal & Cross-cutting Sciences\" 均系本轮 D1_method 自拟，非既有术语，须更正。"
+     },
+     "formalScience": {
+      "zh": "形式科学",
+      "en": "Formal Science",
+      "source": "英文维基百科独立条目 `Formal science`；德语 Formalwissenschaft (1819) / 英语文献 (1860)",
+      "definition": "研究由形式系统（formal systems）描述的抽象结构之分支；不依赖经验观测，由公理与定义演绎出定理。",
+      "disciplines": [
+       "logic 逻辑学",
+       "mathematics 数学",
+       "statistics 统计学",
+       "theoretical computer science 理论计算机科学",
+       "artificial intelligence 人工智能",
+       "information theory 信息论",
+       "game theory 博弈论",
+       "systems theory 系统论",
+       "decision theory 决策论",
+       "theoretical linguistics 理论语言学"
+      ],
+      "branchesEnum": [
+       "Logic",
+       "Mathematics",
+       "Statistics",
+       "Systems science",
+       "Data science",
+       "Information theory",
+       "Computer science",
+       "Cryptography"
+      ],
+      "critical": "Branches 小节**直接列有 Mathematics 与 Statistics** → math 门类本身是「形式科学」的子集。"
+     },
+     "crossCuttingScience": {
+      "zh": "横断科学",
+      "en": "Cross-cutting (transversal) Science",
+      "source": "钱学森《现代科学技术体系》九大学科部类之一；表述为「具有普遍方法论意义的横断科学」",
+      "membersOld": [
+       "systems_theory 一般系统论 (贝塔朗菲 1937)",
+       "control_theory 控制论 (维纳 1948)",
+       "info_theory 信息论 (香农 1948)"
+      ],
+      "membersNew": [
+       "dissipative_structure 耗散结构论 (普利高津)",
+       "synergetics 协同学 (哈肯)",
+       "catastrophe 突变论 (托姆)"
+      ],
+      "membersExtended": [
+       "operations_research 运筹学",
+       "game_theory 博弈论",
+       "hypercycle 超循环论 (艾根)"
+      ],
+      "criterionNote": "判据 = 跨领域 + 具普遍方法论意义；**不要求非经验、不要求公理演绎** —— 与形式科学判据方向不同。"
+     },
+     "nonOverlap": {
+      "verdict": "两词各自成立、交集有限、互不包含；合并后无法回答「按哪个判据判入」。",
+      "examples": [
+       "data_science 数据科学 = 形式科学明列项，但**不是**横断科学（不产出普遍方法论）",
+       "complexity 计算复杂性 = 形式科学，**不是**横断科学",
+       "catastrophe 突变理论 = 横断科学（新三论），但**不是**形式科学（应用数学建模工具）"
+      ],
+      "rootCause": "本轮「判定线不存在于库内」的真实成因不是库内缺数据，而是**名称本身没给出唯一判据**。"
+     },
+     "levelMismatch": {
+      "issue": "层级错配（category mistake）：field 轴现有 10 值均为**学科**；「形式科学」的 Branches 直接包含 Mathematics 与 Statistics → 把 formal 与 math 并列 ＝ 把「科学的顶层大类」与「它自己的子集」放进同一枚举。",
+      "severity": "与 D1 已指出的「basic/method 任务域语义不纯」**同型但更严重**（任务域混装 → 层级混装）。",
+      "conclusion": "**无论取名为何，「形式科学」都不能作 field 的第 11 个值。**"
+     },
+     "libraryCheck": {
+      "found": [
+       {
+        "id": "systems_theory",
+        "zh": "系统论",
+        "now": "info",
+        "year": 1940,
+        "family": "老三论"
+       },
+       {
+        "id": "control_theory",
+        "zh": "控制论",
+        "now": "info",
+        "year": 1948,
+        "family": "老三论"
+       },
+       {
+        "id": "info_theory",
+        "zh": "信息论",
+        "now": "math",
+        "year": 1948,
+        "family": "老三论"
+       },
+       {
+        "id": "catastrophe",
+        "zh": "突变理论",
+        "now": "symbol",
+        "year": 1960,
+        "family": "新三论（库内唯一）"
+       }
+      ],
+      "optional": [
+       {
+        "id": "game_theory",
+        "zh": "博弈论",
+        "now": "math",
+        "year": 1944,
+        "why": "部分文献把博弈论列入系统科学学科群"
+       }
+      ],
+      "absent": [
+       "耗散结构论（无节点）",
+       "协同学（无节点；库内「协同」仅有 tr_v2x 车路协同 / inf_recommend2 协同过滤 / ml_uav_109 协同探测，均无关）",
+       "超循环论（无节点）",
+       "运筹学（无节点）"
+      ],
+      "countUnderCrossCutting": "按原文口径库内够格 4 条（+1 存疑 = game_theory）"
+     },
+     "namingOptions": {
+      "routeA": {
+       "name": "横断科学 / Cross-cutting Sciences",
+       "members": [
+        "systems_theory 系统论",
+        "control_theory 控制论",
+        "info_theory 信息论",
+        "catastrophe 突变理论",
+        "(存疑) game_theory 博弈论"
+       ],
+       "dropped": [
+        "network_sci 网络科学",
+        "data_science 数据科学",
+        "complexity 计算复杂性",
+        "proof_theory 证明论",
+        "category_theory 范畴论"
+       ],
+       "pro": "术语真实、成员有独立文献依据；catastrophe 由原选项②的「凑数」变为「有据」",
+       "con": "只剩 4–5 条；chaos 混沌理论不属经典新三论，纳入需另给依据"
+      },
+      "routeB": {
+       "name": "回到 method 门类原议（§4.3 中口径 9 条）",
+       "members": [
+        "scientific_method 科学方法",
+        "peer_review 同行评审制度",
+        "replication 可重复实验",
+        "positional 位值制计数法",
+        "decimal 十进制小数",
+        "metrology 计量学",
+        "surveying 测量学",
+        "standards_units 标准单位制",
+        "numerals 数字符号系统"
+       ],
+       "commonTrait": "本体都是「做法 / 规程 / 规范 / 记法」——判据单一可复核",
+       "relationToNine": "9 条形式科学候选的本体是「理论」，与 method 9 条不同族，不能混装",
+       "pro": "不引入争议术语；解决 symbol 桶（69 → 终值 5 条）"
+      },
+      "routeC": {
+       "name": "甲 + 乙 并行",
+       "members": "cross「横断科学」4–5 条 + method「科研方法与工具」9 条",
+       "cost": "门类总数 10 → 12，渲染层色板需扩两个",
+       "leftover": "其余 4–5 条（network_sci / data_science / complexity / proof_theory / category_theory）留原门类，不再另设归属"
+      },
+      "rejected": {
+       "name": "形式科学 / Formal Sciences 作门类名",
+       "why": "层级错配（math 是其子集）"
+      }
+     },
+     "pendingUser": [
+      "① 采纳哪条路线：甲（横断科学 4–5 条）/ 乙（method 9 条）/ 丙（甲+乙）？",
+      "② 若采纳甲或丙：game_theory 博弈论是否按「学科群补列」纳入？chaos 混沌理论是否纳入（非经典成员，需另给依据）？",
+      "③ 落选项（network_sci / data_science / complexity / proof_theory / category_theory）确认留原门类不另设归属？"
+     ],
+     "selfCoinedNameFlag": {
+      "flagged": [
+       "横断形式科学",
+       "Formal & Cross-cutting Sciences",
+       "键名 formal 的中文名与英文名"
+      ],
+      "affectedFiles": [
+       "audit/ledger.json（本对象 options 三条的 name 字段）",
+       "/tmp/D1_method扩展_横断形式科学.md",
+       "/tmp/D1_method术语考据_横断形式科学.md",
+       "工程手册 §9.9",
+       "MEMORY.md §4.3",
+       "2026-09-15.md §十五"
+      ],
+      "action": "本轮回填更正说明；**键名与最终中文名须待用户选定路线后再统一改**（避免二次改动）。"
+     }
+    },
+    "docNote": " ⚠️ 路由补充：本轮识出「横断形式科学」为自拟名（详见 terminologyReview），三条选项的名称均待更正。"
    },
-   "formalScienceDoc": "/tmp/D1_method扩展_横断形式科学.md"
+   "formalScienceDoc": "/tmp/D1_method扩展_横断形式科学.md",
+   "formalScienceTerminologyDoc": "/tmp/D1_method术语考据_横断形式科学.md"
   },
   "P1": {
    "batch": "P1",
