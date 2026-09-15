@@ -5109,9 +5109,12 @@
     "eng 门类拆分（建议另立批次 D4「门类粒度复核」：如拆出 energy / transport / manufact；本批只做澄清不拆分）",
     "160 条 `bx_*` 占位节点的门类复核（属另立批次）",
     "除上述 4 条以外的 sub 复核（本批不做全量 sub 复审）",
-    "任何 dependsOn / 边判定（属 D2 / D3）"
+    "任何 dependsOn / 边判定（属 D2 / D3）",
+    "仪器类节点的批量分类规则（instrument-taxonomy）：本批只登记口径 + 关联度机制 + 持续观察条件，不逐条写 secondary",
+    "basic/method 任务域的整体 f 改动（由 symbol 改 method）：该域是 catSub 兜底值、语义不纯，属规则级改动，应另立批次",
+    "method 门类的 discipline 色板 / 渲染层落地（core.js / style.css）：本批仅记录设计，写盘随获批后执行"
    ],
-   "note": "本批只提例外表草案，**未写入 assets/pages/dimension_data.js 的 overrides**；须用户逐条审核后另行写盘。D0 的兜底规则、门类集合、维度顶点均不改。**2026-09-15 补充裁定说明（见 rulingsDoc / revisions）**：四项待审已逐条给出建议与依据。",
+   "note": "本批只提例外表草案，**未写入 assets/pages/dimension_data.js 的 overrides**；须用户逐条审核后另行写盘。D0 的兜底规则、门类集合、维度顶点均不改。**2026-09-15 补充裁定说明（见 rulingsDoc / revisions）**：四项待审已逐条给出建议与依据。 **2026-09-15 再补充**：method 门类全库审查 / eng 门类讲解 / 仪器口径与关联度（见 methodReview / engBreakdown / instrumentFollowUp / blackHoleRuling / methodEngDoc）。",
    "symbolBucket": {
     "note": "`symbol`（语言与符号）本有明确含义（锚定维度顶点 writing / language），却成为落空值承担者；来源有三，各自独立。",
     "sources": [
@@ -5167,6 +5170,14 @@
      "why": "回复用户「这两条分别对应哪些给我看看，我来判断」；用户同时要求列节点时给出中文名 + 英文名。",
      "scope": "仅台账说明字段；三份清单（overridesProposed 50 / keepInSymbol 6 / subFixes 4）条数与目标值仍未变动；dimension_data.js 的 overrides 仍为空，dependsOn 零改动。",
      "note": "对照组表全文 /tmp/D1_待定项对照表.md；符号门类终值：方案 A（保持 symbol）10 条、方案 B（新设 method）method 3 条 + symbol 7 条。"
+    },
+    {
+     "date": "2026-09-15",
+     "what": "补充「method 门类全库审查 + eng 门类讲解 + 仪器口径与关联度」(第 4 项说明)：① 新增 methodReview（判定标准 / A 档 5 条 / B 档 4 条 / C 档 33 条分 4 组附理由 / 三档口径后果对照 / 接入路径）；② 新增 engBreakdown（857 拆解 / 37.8% 成因 / 与另两项局限的性质区分 / 三选项）；③ 新增 instrumentFollowUp（口径裁定 + 库内 6 条先例 + 关联度机制已存在 field.secondary + 与 dependsOn 的边界 + 持续观察条件）；④ 新增 blackHoleRuling（black_hole → earth / black_hole_comp → info）；⑤ notIncluded 追加 3 条。",
+     "why": "回复用户第 4 条指令：method 有必要增加、检查哪些应加入；eng 是什么门类要讲解；positional/decimal/replication/peer_review 应入 method；黑洞两条与 symbol 无关；仪器按使用场景 + 加关联度或放前置技术 + 持续观察。",
+     "scope": "仅台账内本批次的说明字段；**overridesProposed / keepInSymbol / subFixes 三条清单的条数与目标值未变动**；dimension_data.js 的 overrides 仍为空，dependsOn 零改动（2,267 / 6,169）。",
+     "note": "本批仍为 draft-ready，未写盘；补充说明不构成版本级变更，故未新增 changelog / correction 条目。",
+     "doc": "/tmp/D1_method与eng说明.md"
     }
    ],
    "decisionTables": {
@@ -5335,7 +5346,466 @@
      "readout": "库内自述「以黑洞视界附近的物理做信息加工，借极致时空曲率逼近计算与熵的极限，纯属推想」→ 主体行为是信息加工 → 建议 info（备选 phys）",
      "sibling": "black_hole（黑洞 Black Hole，1960，天体对象）拟归 earth"
     }
-   }
+   },
+   "methodReview": {
+    "question": "是否增设第 11 门类 method（方法与规程 / Method & Protocol）；全库哪些节点应入 method",
+    "criterion": "① 本身是一种「做法 / 规程 / 规范 / 记法」，不是对象、装置或学科本体；② 不专属单一学科（多学科共用的手段）",
+    "independentEvidence": "sub 轴与 field 轴对同一任务域判读冲突：任务域 basic/method 名为「科研方法与工具」、basic/measure 名为「测量与计量」，而 field 轴把前者映射为 symbol、后者映射为 eng —— 增设 method 是消除这条内部矛盾，不是新增主观分类。",
+    "tierA_shouldEnter": {
+     "count": 5,
+     "items": [
+      {
+       "id": "scientific_method",
+       "zh": "科学方法",
+       "en": "Scientific Method",
+       "now": "symbol",
+       "sub": "basic/method",
+       "via": "prefix/kw"
+      },
+      {
+       "id": "peer_review",
+       "zh": "同行评审制度",
+       "en": "Peer Review",
+       "now": "symbol",
+       "sub": "basic/method",
+       "via": "prefix/kw"
+      },
+      {
+       "id": "replication",
+       "zh": "可重复实验",
+       "en": "Replication",
+       "now": "symbol",
+       "sub": "basic/method",
+       "via": "cat/catSub"
+      },
+      {
+       "id": "positional",
+       "zh": "位值制计数法",
+       "en": "Positional Notation",
+       "now": "symbol",
+       "sub": "basic/method",
+       "via": "cat/catSub"
+      },
+      {
+       "id": "decimal",
+       "zh": "十进制小数",
+       "en": "Decimal Fractions",
+       "now": "symbol",
+       "sub": "basic/method",
+       "via": "cat/catSub"
+      }
+     ],
+     "note": "用户点名的 4 条（positional / decimal / replication / peer_review）全部落在本档，与用户判断一致。"
+    },
+    "tierB_boundary": {
+     "count": 4,
+     "items": [
+      {
+       "id": "metrology",
+       "zh": "计量学",
+       "en": "Metrology",
+       "now": "symbol",
+       "sub": "basic/measure",
+       "subF": "eng",
+       "issue": "method 还是 eng"
+      },
+      {
+       "id": "surveying",
+       "zh": "测量学",
+       "en": "Surveying",
+       "now": "symbol",
+       "sub": "basic/method",
+       "subF": "symbol",
+       "issue": "method 还是 eng"
+      },
+      {
+       "id": "standards_units",
+       "zh": "标准单位制",
+       "en": "Standard Units",
+       "now": "eng",
+       "sub": "basic/measure",
+       "subF": "eng",
+       "issue": "method 还是 eng"
+      },
+      {
+       "id": "numerals",
+       "zh": "数字符号系统",
+       "en": "Numerical Notation",
+       "now": "symbol",
+       "sub": "basic/math",
+       "subF": "math",
+       "issue": "method / symbol / math 三向"
+      }
+     ],
+     "keyFact": "D1 早前建议 metrology / surveying → eng，依据是 basic/measure.f 已写死 eng。该「写死」是在当时没有 method 门类前提下的权宜；method 成立后 basic/measure.f 应改 method，此 3 条即机械归 method。"
+    },
+    "tierC_shouldNotEnter": {
+     "count": 33,
+     "groups": [
+      {
+       "g": "C-1 数学分支与数学算法",
+       "n": 11,
+       "keep": "math",
+       "ids": [
+        "bx_math_1 有限元方法/FEM",
+        "bx_math_70 蒙特卡洛方法/Monte Carlo",
+        "bx_math_93 核方法/Kernel Method",
+        "bx_math_73 bootstrap 方法/Bootstrap",
+        "bx_math_60 实验设计/Experimental Design",
+        "bx_math_38 证明辅助/Proof Assistants",
+        "bx_math_39 自动定理证明/Automated Theorem Proving",
+        "bx_math_48 测度论应用/Measure Theory",
+        "bx_math_64 充分统计量/Sufficient Statistic",
+        "measure_theory 测度论/Measure Theory",
+        "proof_theory 证明论/Proof Theory"
+       ],
+       "why": "数学分支的具体内容 / 算法，归属解法是 math；「方法」之名是数学内部分类，不构成跨学科规程"
+      },
+      {
+       "g": "C-2 工程活动与构件",
+       "n": 18,
+       "keep": "eng",
+       "ids": [
+        "bld_survey2 工程测量/Engineering Survey",
+        "bld_dronesurvey 无人机测绘/Drone Surveying",
+        "bd_civ_13 测量机器人/Surveying Robot",
+        "bd_civ_95 风洞试验建筑/Wind Tunnel Test",
+        "bd_civ_96 缩尺试验/Scaled Test",
+        "bd_civ_97 足尺试验/Full-scale Test",
+        "bd_civ_98 结构试验/Structural Test",
+        "bd_civ_99 抗震试验/Seismic Test",
+        "bd_civ_100 抗火试验/Fire Test",
+        "bd_civ_101 抗爆试验/Blast Test",
+        "bd_civ_104 声学设计/Acoustic Design",
+        "bd_civ_156 实验室通风/Lab Ventilation",
+        "bld_seismic 抗震设计/Seismic Design",
+        "bld_waterproof 防水/Waterproofing",
+        "bd_civ_135 防水修缮/Waterproofing Repair",
+        "mfg_cmm 三坐标测量/CMM",
+        "mfg_onmachinem 在机测量/On-Machine Measurement",
+        "mfg_standard 零件标准化/Part Standardization"
+       ],
+       "why": "有对象、有产物的具体工程活动（风洞、缩尺构件、防水层），eng 已准确承载"
+      },
+      {
+       "g": "C-3 信息类",
+       "n": 4,
+       "keep": "info",
+       "ids": [
+        "inf_oop 面向对象方法/Object-Oriented Programming",
+        "inf_rpa 机器人流程自动化/RPA",
+        "inf_zeroknowledge 零知识证明/Zero-Knowledge Proof",
+        "it_alg_83 零知识证明应用/ZKP"
+       ],
+       "why": "编程范式 / 自动化软件 / 密码协议，属信息领域技术"
+      },
+      {
+       "g": "C-4 学科内装置与技术",
+       "n": 3,
+       "keep": "life / phys",
+       "ids": [
+        "lf_dx_3 外泌体检测/Exosome Test → life",
+        "bx_phys_24 格点规范理论/Lattice Gauge Theory → phys",
+        "standard_model 标准模型/Standard Model → phys（仅命中「标准」二字）"
+       ],
+       "why": "学科内技术，非跨学科规程"
+      }
+     ]
+    },
+    "scopeOptions": [
+     {
+      "name": "窄",
+      "members": "A 档 5 条",
+      "methodCount": 5,
+      "symbolFinal": 5,
+      "measureF": "不动（仍 eng）"
+     },
+     {
+      "name": "中（建议）",
+      "members": "A 5 + B 4",
+      "methodCount": 9,
+      "symbolFinal": 5,
+      "measureF": "改 method"
+     },
+     {
+      "name": "宽",
+      "members": "A + B + C-1 中 bx_math_60 实验设计 等",
+      "methodCount": "10+",
+      "symbolFinal": 5,
+      "measureF": "改 method"
+     }
+    ],
+    "countNote": "上表 symbol 终值 5 条，是在 D1 拟定的 50 条 overrides 全部执行之后的数（现 69 条）。若只做 method 拆分不做 50 条，symbol = 69 - 9 = 60 条。",
+    "membershipCoupling": "numerals 数字符号系统 / Numerical Notation 是 positional 与 decimal 的上位体系；若「记法 → method」，三者应同进同出。",
+    "accessPath": {
+     "recommended": "方案① 只加 overrides：method 作为第 11 门类加入 D.disciplines，逐条 overrides 落点；taskDomains 的 f 除 basic/measure 外不动",
+     "rejected": "方案② 整体改 basic/method.f = method：该任务域是 catSub 对 basic 的兜底值（全库 58 条，其中 37 条 primary=symbol），语义不纯 —— 改 f 会把 magnet 天然磁石 / microscope 显微镜 / heliocentrism 日心说 / fire_making 人工取火 等 21 条非同族节点一并拖入 method，属规则级改动、应另立批次",
+     "reason": "与 D1 一贯原则一致：读 sub 定 primary，不新增规则"
+    }
+   },
+   "engBreakdown": {
+    "discipline": "eng 工程与建造 / Engineering",
+    "definition": "人造工程物与工程系统 —— 能源动力、交通运输、加工制造、土木建筑四类「造出来给人用的东西」。与 phys/chem/math 的分界是「有没有人造物作载体」",
+    "total": 857,
+    "share": "37.8%",
+    "heads": [
+     "engineering"
+    ],
+    "headsInDegree": {
+     "engineering": 170
+    },
+    "byCategory": {
+     "transport": 244,
+     "build": 242,
+     "energy": 215,
+     "manufact": 153,
+     "basic": 2,
+     "material": 1
+    },
+    "byCategoryNote": "9 个 category 中有 4 个（energy/manufact/transport/build）全部映射到 eng，合计 854 条 = 37.7% —— 不是「没兜住」，是「兜住了但兜得太宽」",
+    "taskDomainCount": 35,
+    "topTaskDomains": [
+     [
+      "build/civil",
+      "土木与大型工程",
+      167
+     ],
+     [
+      "transport/road",
+      "道路与陆路运输",
+      148
+     ],
+     [
+      "energy/storage",
+      "储能技术",
+      97
+     ],
+     [
+      "manufact/hand_tool",
+      "手工工具",
+      69
+     ],
+     [
+      "build/building",
+      "建筑设计与营造",
+      48
+     ],
+     [
+      "energy/fossil",
+      "化石能源开采利用",
+      47
+     ],
+     [
+      "transport/urban",
+      "城市交通系统",
+      40
+     ],
+     [
+      "energy/power_machine",
+      "动力机械",
+      36
+     ]
+    ],
+    "representative": [
+     "轮子 / Wheel",
+     "拱与穹顶 / Arch & Dome",
+     "人工取火 / Control of Fire",
+     "桥梁 / Bridge",
+     "引水渠 / Aqueduct",
+     "装配式建筑 / Prefabricated Building",
+     "生命保障系统 / Life Support"
+    ],
+    "anomalies": [
+     {
+      "id": "standards_units",
+      "zh": "标准单位制",
+      "en": "Standard Units",
+      "why": "basic，走 prefix.standards = eng；属 methodReview tierB"
+     },
+     {
+      "id": "high_entropy_alloy",
+      "zh": "高熵合金",
+      "en": "High-entropy Alloy",
+      "why": "material，命中 prefix.high = eng 而误判；其任务域 material/metal_adv 的 f 已是 matter → 应为 matter"
+     }
+    ],
+    "why37": "「category → 门类」这张映射表本身成立、结果偏斜。要降占比唯一办法是拆分门类（如拆成 能源动力/交通运输/加工制造/土木建筑 四个门类），属设计变更",
+    "vsOtherLimits": "与 D0 另两项性质不同：basic 落空 = 映射表不成立（真实缺陷）；eng 偏斜 = 映射表成立且偏斜（非缺陷）；零命中域 = 半可填 / 半结构性不可达",
+    "options": [
+     {
+      "k": "A（建议）",
+      "what": "维持「eng 非缺陷、本批不动」，仅修 1 条误判 high_entropy_alloy → matter",
+      "cost": "最小"
+     },
+     {
+      "k": "B",
+      "what": "拆分 eng 为 4 门类",
+      "cost": "动 disciplines 表 + 全库重打标 + 渲染层色板扩容，属设计变更，应单独立批次（D4）"
+     },
+     {
+      "k": "C",
+      "what": "857 不变，basic 那 2 条中的 standards_units 拨入 method",
+      "cost": "见 methodReview tierB"
+     }
+    ],
+    "verification": "python3 /tmp/ev_eng.py"
+   },
+   "instrumentFollowUp": {
+    "ruling": "仪器归「使用场景（＝服务对象）」所属门类",
+    "consequence": [
+     "telescope 望远镜 / Telescope → earth（天文观测）",
+     "microscope 显微镜 / Microscope → life（观测对象为生物与医学样本）"
+    ],
+    "withdrawn": "D1 早前「按自身原理 → telescope 改 phys」的备选作废（用户已否定）",
+    "precedent": {
+     "count": 6,
+     "byUse": [
+      {
+       "id": "bio_endoscope",
+       "zh": "内窥镜",
+       "en": "Endoscope",
+       "f": "life"
+      },
+      {
+       "id": "bio_laparoscope",
+       "zh": "腹腔镜",
+       "en": "Laparoscope",
+       "f": "life"
+      },
+      {
+       "id": "bio_glasses",
+       "zh": "眼镜",
+       "en": "Eyeglasses",
+       "f": "life"
+      },
+      {
+       "id": "mil_nightvision",
+       "zh": "夜视仪",
+       "en": "Night Vision",
+       "f": "mil"
+      }
+     ],
+     "byPrinciple": [
+      {
+       "id": "atomic_clock",
+       "zh": "原子钟",
+       "en": "Atomic Clock",
+       "f": "phys"
+      }
+     ],
+     "byManufacture": [
+      {
+       "id": "clock",
+       "zh": "机械钟",
+       "en": "Mechanical Clock",
+       "f": "eng"
+      }
+     ],
+     "verdict": "按服务对象 4 : 按自身原理 1 : 按制造归属 1；两条例外成因可解释（原子钟本身即物理实验装置；机械钟被 manufact 类前缀吸入）→ 维持「按使用场景」"
+    },
+    "associationMechanism": {
+     "status": "已存在，无需新增设计",
+     "field": "field.primary（主，单值）+ field.secondary（副，多值）",
+     "autoFill": "resolve() 在未显式指定 secondary 时，自动把任务域的门类 sub.f 填入（dimension_data.js 第 335-339 行）",
+     "render": "core.js#buildDimensionBlock 已渲染第三类徽章 dim-second（详情页「维度归属」行）",
+     "conclusion": "要的「关联度」只需在仪器节点显式写 secondary: [...]，渲染层零改动",
+     "mapping": {
+      "计算机 →": "info",
+      "机械 →": "eng",
+      "数学 →": "math"
+     },
+     "examples": [
+      {
+       "id": "telescope",
+       "zh": "望远镜",
+       "en": "Telescope",
+       "primary": "earth",
+       "secondary": [
+        "phys",
+        "eng"
+       ],
+       "meaning": "观测属天文；用光学（物理）+ 精密机械（工程）"
+      },
+      {
+       "id": "microscope",
+       "zh": "显微镜",
+       "en": "Microscope",
+       "primary": "life",
+       "secondary": [
+        "phys",
+        "eng"
+       ],
+       "meaning": "服务生命科学；用光学 + 精密机械"
+      },
+      {
+       "id": "mfg_cmm",
+       "zh": "三坐标测量",
+       "en": "CMM",
+       "primary": "eng",
+       "secondary": [
+        "math",
+        "info"
+       ],
+       "meaning": "制造在用；用数学（几何）+ 计算机（控制）"
+      },
+      {
+       "id": "metrology",
+       "zh": "计量学",
+       "en": "Metrology",
+       "primary": "method",
+       "secondary": [
+        "phys",
+        "eng"
+       ],
+       "meaning": "计量规程；跨物理与工程"
+      }
+     ]
+    },
+    "vsPrerequisite": {
+     "secondary": "回答「跟哪些领域有关」= 归属关联；受维度层断言校验",
+     "dependsOn": "回答「必须先有哪个技术才做得出来」= 必要条件；受时序校验 + 排他性，三道门禁全过",
+     "boundary": "按 R6，归属不写入 dependsOn —— 「望远镜与光学有关」不能写成「望远镜依赖光学」，否则重新制造 D0 要消除的伪边。确实必要的技术前置（如 telescope ← 透镜研磨）留 dependsOn；仅领域关联写 secondary"
+    },
+    "followUp": {
+     "id": "instrument-taxonomy",
+     "title": "仪器节点的门类归属规则",
+     "status": "观察中（不本批定案）",
+     "samples": 6,
+     "rule": "按使用场景（＝服务对象）归 primary；跨学科关联写 field.secondary",
+     "whyDefer": "库内可用样本仅 6 条，不足以支撑一条可复核的分类规则；仪器难点正是同一台仪器同时服务多领域（显微镜同时服务生命/材料/化学），单值 primary 必然要做取舍，取舍规则需更多样本才稳定",
+     "trigger": "仪器类节点样本 ≥ 20 条，或 D2 完成后回头复核",
+     "writeNow": false
+    }
+   },
+   "blackHoleRuling": {
+    "user": "黑洞这两个跟 symbol 没啥关系",
+    "items": [
+     {
+      "id": "black_hole",
+      "zh": "黑洞",
+      "en": "Black Hole",
+      "year": 1960,
+      "cat": "basic",
+      "now": "symbol",
+      "sub": "basic/method",
+      "to": "earth",
+      "evidence": "简介「引力坍缩到视界之内的天体，是检验极端物理的天然实验室」；dependsOn = general_relativity + physics → 天文对象"
+     },
+     {
+      "id": "black_hole_comp",
+      "zh": "黑洞计算",
+      "en": "Black-hole Computing",
+      "year": 2160,
+      "cat": "basic",
+      "now": "symbol",
+      "sub": "basic/method",
+      "to": "info",
+      "alt": "phys",
+      "evidence": "简介「以黑洞视界附近的物理做信息加工……纯属推想」；dependsOn = black_hole + physics + quantum_info → 本体是计算范式。按仪器口径「放在使用场景下面」，其使用场景即「计算」→ 同为 info；phys 可作副维度"
+     }
+    ]
+   },
+   "methodEngDoc": "/tmp/D1_method与eng说明.md"
   }
  }
 }
