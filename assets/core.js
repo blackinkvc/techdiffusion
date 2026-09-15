@@ -239,6 +239,11 @@ function buildDetailHTML(t) {
     html += `<div class="m-row"><div class="m-label">🔗 关系解说</div><div class="m-relexp">${relExp}</div></div>`;
   }
 
+  const dimBlock = buildDimensionBlock(t);
+  if (dimBlock) {
+    html += `<div class="m-row"><div class="m-label">维度归属</div><div class="m-dim">${dimBlock}</div></div>`;
+  }
+
   const thBlock = buildTheoryBlock(t);
   if (thBlock) {
     html += `<div class="m-row"><div class="m-label">理论与解释</div><div class="m-theory">${thBlock}</div></div>`;
@@ -256,6 +261,30 @@ function buildDetailHTML(t) {
 
   html += `</div>`;
   return html;
+}
+
+// ============================================================
+//  维度归属（覆盖层，数据见 assets/pages/dimension_data.js）
+//  只读 window.DIMENSION，不改动主数据。回答「这个节点属于哪个领域、
+//  承担什么任务」，与 dependsOn（必要条件）分离。
+// ============================================================
+function buildDimensionBlock(t) {
+  const D = typeof window !== "undefined" ? window.DIMENSION : null;
+  if (!D || !t || typeof D.resolve !== "function") return "";
+  const r = D.resolve(t.id, t);
+  const dn = D.disciplines[r.field.primary];
+  const tn = D.taskDomains[r.sub];
+  let h = `<div class="dim-line">`;
+  h += `<span class="dim-badge dim-primary">${esc(dn ? dn.name : r.field.primary)}</span>`;
+  if (tn) h += `<span class="dim-badge dim-task">${esc(tn.n)}</span>`;
+  (r.field.secondary || []).forEach(s => {
+    const sd = D.disciplines[s];
+    if (sd) h += `<span class="dim-badge dim-second">${esc(sd.name)}</span>`;
+  });
+  h += `</div>`;
+  h += `<p class="dim-note">主维度取自学科归属，任务域取自技术任务体系；二者与依赖关系相互独立——` +
+       `<span class="dim-chk">归属不构成前置</span></p>`;
+  return h;
 }
 
 function renderModalBody(id, fromTree) {

@@ -39,6 +39,7 @@ T0.forEach((t) => { if (!(t.id in before)) before[t.id] = (t.dependsOn || []).sl
 // 按判定推导每个节点的期望前置列表
 const expect = {};
 const removals = {};
+const toFieldList = {};
 (batch.edges || []).forEach((e) => {
   if (!idSet.has(e.child)) throw new Error("子节点不存在: " + e.child);
   if (!idSet.has(e.parent)) throw new Error("前置不存在: " + e.parent);
@@ -55,6 +56,18 @@ const removals = {};
     if (!expect[e.child].includes(e.parent)) throw new Error("待降级边不存在: " + e.parent + "->" + e.child);
     expect[e.child] = expect[e.child].filter((d) => d !== e.parent);
     (removals[e.parent] = removals[e.parent] || []).push(e.child + "(concept)");
+  } else if (e.verdict === "toField") {
+    /* 第五档（2026-09-15 用户裁定）：删伪边 + 把归属记入维度层。
+       语义 = 该边唯一成立的解释是「学科归属」，而非「必要条件」。
+       本档与 delete 同为删边；区别在于它必须给出归属落点 e.field（维度门类 key），
+       且禁止以学科级顶点充当替身前置（规则 R7 / R8）。 */
+    if (!expect[e.child].includes(e.parent)) throw new Error("待落维度的边不存在: " + e.parent + "->" + e.child);
+    if (!e.field) throw new Error("toField 边缺少归属落点 e.field: " + e.parent + "->" + e.child);
+    expect[e.child] = expect[e.child].filter((d) => d !== e.parent);
+    (removals[e.parent] = removals[e.parent] || []).push(e.child + "(toField)");
+    (toFieldList[e.child] = toFieldList[e.child] || []).push(e.field);
+  } else if (e.verdict !== "keep") {
+    throw new Error("未知判定档位: " + e.verdict);
   }
 });
 (batch.backfills || []).forEach((b) => {
@@ -96,10 +109,15 @@ const tallies = {};
 console.log("边判定: " + JSON.stringify(tallies));
 if (batch.summary) {
   const s = batch.summary;
-  const sum = s.keep + s.repoint + s.delete + s.concept;
-  if (sum !== batch.candidates) throw new Error("台账断言失败：keep+repoint+delete+concept = " + sum + " ≠ candidates " + batch.candidates);
+  const sum = s.keep + s.repoint + s.delete + s.concept + (s.toField || 0);
+  if (sum !== batch.candidates) throw new Error("台账断言失败：keep+repoint+delete+concept+toField = " + sum + " ≠ candidates " + batch.candidates);
   if ((batch.backfills || []).length !== s.backfill) throw new Error("台账断言失败：backfills 数量不符");
+  if ((s.toField || 0) !== Object.keys(toFieldList).length) throw new Error("台账断言失败：toField 条数 = " + Object.keys(toFieldList).length + " ≠ summary.toField " + (s.toField || 0));
   console.log("[OK] 台账完整划分断言通过（" + sum + " = " + batch.candidates + "）");
+}
+if (Object.keys(toFieldList).length) {
+  console.log("[OK] toField 落维度 " + Object.keys(toFieldList).length + " 条：");
+  Object.keys(toFieldList).sort().forEach((c) => console.log("    " + c + " → " + toFieldList[c].join(" / ")));
 }
 if (yearBad.length) { console.log("[FAIL] 年份倒挂 " + yearBad.length + " 处："); yearBad.slice(0, 10).forEach((x) => console.log("   ! " + x)); process.exit(1); }
 console.log("[OK] 时序性校验通过");

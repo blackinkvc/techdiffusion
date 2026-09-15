@@ -11,9 +11,10 @@
   "keep",
   "repoint",
   "delete",
-  "concept"
+  "concept",
+  "toField"
  ],
- "note": "verdict=keep 表示保留原边；repoint 表示改前置（newParent 取代 parent）；delete 表示删边；concept 表示降级为概念影响（不写入 dependsOn）。backfills 为补充前置（追加语义，已存在则跳过）。",
+ "note": "verdict=keep 表示保留原边；repoint 表示改前置（newParent 取代 parent）；delete 表示删边；concept 表示降级为概念影响（不写入 dependsOn）；**toField 表示删边并把归属记入维度层**（第五档，2026-09-15 用户裁定新增；必须给出归属落点 e.field，禁止以学科级顶点充当替身前置，见规则 R7 / R8）。backfills 为补充前置（追加语义，已存在则跳过）。",
  "batches": {
   "1a": {
    "date": "2026-09-13",
@@ -4292,6 +4293,120 @@
     "结构：节点 2266 → 2267；依赖边 6167 → 6169；零前置维持 4（新节点有前置，不成为零前置）。",
     "全量管线未改动（graph.json 2,299 / 6,963；data_full.js 13,318 / 16,811）—— 依 v0.9.26 裁定不逐条打补丁，新节点随阶段 5e 重建带入。"
    ]
+  },
+  "D0": {
+   "date": "2026-09-15",
+   "family": "维度层（架构改造 · 第一批：骨架落地 + 全库机械打标）",
+   "status": "applied（骨架已落盘、全库打标可用、校验全通过；例外表与 toField 重判仍为待审草案）",
+   "scope": "把「归属」与「因果」分离：新增只读覆盖层 assets/pages/dimension_data.js，承载学科归属（field）与技术任务域（sub）；dependsOn 自此只承载必要条件。本批**不改动任何依赖边**——主管线仍为 2,267 节点 / 6,169 边。",
+   "request": "用户 2026-09-15 裁定六条：① 两条轴并存（sub 管技术任务域、field 管学科归属）；② 主维度单值 + 副维度多值；③ 14 个泛化枢纽全部转「维度顶点」；④ 同意「id 前缀 + category 先机械兜底，例外逐条覆盖」；⑤ 「学理」并入学科维度、不独立成维；⑥ 处置档位由四档改五档（+ 落回维度 toField）。并裁定走「删边 + 归属标签」路线（见 ruling.conflict）。",
+   "ruling": {
+    "conflict": "库内对「技术 ← 学科级顶点」的边存在两套方向相反的处理：当前批次（3.1a/3.1b 已写盘、3.1c–3.1e 草案）判**删边**（依据：dependsOn = 必需前提，学科级顶点不构成排他性）；而 assets/pages/theory_data.js 显示层已上线的是**保边 + 标 theory.latent 虚边**（注释原文「虚边徽章 = 潜在支撑（背景性学理，非直接造物所需）」）。二者不能同时成立——边删了就无法再显示为虚边。",
+    "decision": "走「**删边 + 归属标签**」。理由：dependsOn 参与 A / E / Ch 族统计与阶段 4、5 的重建，保留伪边会持续污染这些数字；显示层的 kinds 机制（含 theory.latent）留给**真正必要但背景性**的学理边（如 3.1c 已裁定保留的 inf_compression ← info_theory）。",
+    "consequences": [
+     "theory_data.js 的 kinds 机制保留，但不再承担「保边」职能；数学 / 统计两条 latent 标注的含义收窄为「必要但背景」。",
+     "14 个泛化枢纽自本批起定义上为「维度顶点」，不再作为 dependsOn 的前置（既有入边由后续 D2 批次逐条处置）。",
+     "3.1c / 3.1d / 3.1e 三批草案的删边 + 补前置结论**不受影响**（它们删的是「技术节点挂到学科级顶点」的伪边，两种模型下判定相同）。",
+     "3.1f 起，处置档位增加第五档 toField（删伪边 + 把归属记入维度），适用于「唯一成立理由是归属」的边。"
+    ]
+   },
+   "axes": {
+    "cat": {
+     "carrier": "节点自带 category",
+     "values": 9,
+     "coverage": "2,267 / 2,267 = 100%",
+     "role": "领域大类，本批不改，参与维度校验"
+    },
+    "sub": {
+     "carrier": "dimension_data.js → taskDomains",
+     "values": 88,
+     "source": "analysis-engine/data/subcategory_taxonomy_v1.json",
+     "cardinality": "单值（按 taxonomy 定义：按「完成什么任务」归入唯一子分类）",
+     "role": "技术侧归口"
+    },
+    "field": {
+     "carrier": "dimension_data.js → disciplines",
+     "values": 10,
+     "anchors": 14,
+     "cardinality": "primary 单值 + secondary 多值",
+     "role": "学理侧归属；14 个泛化枢纽转为维度顶点"
+    }
+   },
+   "artifacts": [
+    "assets/pages/dimension_data.js（新增，只读覆盖层：10 门类 / 88 任务域 / 前缀与关键词兜底 / overrides 例外表）",
+    "tools/gen_dimension.js（新增，打标与校验：注册表自检 + 全库求解 + category 同类断言 + 报表）",
+    "tools/apply_ledger.js（新增第五档 toField：删边 + 强制给出归属落点 e.field + 条数断言）",
+    "assets/core.js（新增 buildDimensionBlock，挂入 buildDetailHTML，位置在「关系解说」之后、「理论与解释」之前）",
+    "assets/style.css（新增 .m-dim / .dim-badge / .dim-primary / .dim-task / .dim-second / .dim-note）",
+    "16 个页面 html（挂载 dimension_data.js，位于 theory_data.js 之后、core.js 之前）+ 版本串 20260914a → 20260915a（33 处）"
+   ],
+   "fallback": {
+    "order": "override → 两段前缀 → 同 category 关键词 → 一段前缀（须与 category 同类）→ category 默认域",
+    "disciplineOrder": "override → 维度顶点 → 一段前缀 → category 兜底",
+    "observed": {
+     "primary": {
+      "prefix": 1838,
+      "cat": 255,
+      "prefix:bx": 160,
+      "hub-head": 14
+     },
+     "sub": {
+      "p2": 826,
+      "kw": 809,
+      "p1": 460,
+      "catSub": 172
+     }
+    }
+   },
+   "checks": [
+    "注册表：10 门类 / 88 任务域 / 14 维度顶点，14 个泛化枢纽全覆盖且不重复挂载",
+    "域集合与 subcategory_taxonomy_v1.json 逐键一致（88 域，0 缺 0 多）",
+    "全库 2,267 条：primary / sub / secondary 取值合法，secondary 不与 primary 重复",
+    "**sub 必须与节点 category 同类**（taxonomy 的定义性约束）；实测 0 例外",
+    "overrides 引用的 id 必须存在于库中（当前 0 条）",
+    "渲染校验 /tmp/render_check_0933.js 38/38 通过"
+   ],
+   "distribution": {
+    "disciplines": {
+     "eng": 857,
+     "life": 339,
+     "info": 283,
+     "matter": 250,
+     "mil": 237,
+     "math": 126,
+     "phys": 90,
+     "symbol": 69,
+     "chem": 10,
+     "earth": 6
+    },
+    "note": "门类分布偏斜（eng 37.8%、chem 0.4%、earth 0.3%）属**机械兜底的已知局限**：前缀只能定位到「工程与建造」这一层，细分由任务域承载；chem / earth 偏低是因为其关键词在 id 中罕见。零命中任务域 2 个（energy/animal_human、manufact/food_proc）。以上三类均由 D1 的例外表逐条修正，**不得据此认为打标已经准确**。"
+   },
+   "hubEdges": {
+    "total": 2565,
+    "note": "14 个维度顶点在当前平面模型下的入边合计 **2,565** 条 —— 即「学科归属被写成依赖边」的规模。其中 mathematics 570 / chemistry 433 / physics 290 / algorithm 214 / statistics 194 / engineering 170 / writing 114 / optimization 106 / numerical 105 / molecular_bio 94 / materials 91 / genetics 86 / immunology 86 / language 12。这些边由 3.1a–3.1e（已写盘 2 批 + 草案 3 批）与后续 3.1f 起逐批按 delete / toField 处置。"
+   },
+   "summary": {
+    "keep": 0,
+    "repoint": 0,
+    "delete": 0,
+    "concept": 0,
+    "toField": 0,
+    "backfill": 0,
+    "nodesAdded": 0,
+    "edgesAdded": 0
+   },
+   "drafts": [
+    "D1 · 例外表：把兜底明显不符者逐条写入 dimension_data.js 的 overrides（预计覆盖 eng/chem/earth 偏斜与 2 个零命中域），待用户审核",
+    "D2 · 14 个维度顶点的既有入边逐条处置（delete / toField），需用户裁定「枢纽自身的 dependsOn（writing + mathematics）如何落」",
+    "D3 · A 族 494 条按 toField 重判：唯一成立理由是学科归属者落回维度，而非硬找替身前置（规则 R8）"
+   ],
+   "verification": [
+    "维度层校验 tools/gen_dimension.js：4 项注册表断言 + 4 项全库断言，全部通过",
+    "渲染校验 /tmp/render_check_0933.js：38 / 38 通过（数据层 3 + 注册表 14 + 渲染 5 + 页面 4 + 样式 4 + 工具 8）",
+    "零数据改动核对：节点 2,267 / 依赖边 6,169 与 v0.9.32 一致；audit/baseline.json 未刷新（无合法改进可刷）",
+    "向后兼容核对：3.1c / 3.1d / 3.1e 三批用新版执行器干跑，完整划分断言 / 时序性 / 环校验均通过"
+   ],
+   "note": "本批是**架构改造的第一步**，只建立承载层与打标能力，不做任何因果判定。所有语义判定（例外表、维度顶点入边处置、A 族重判）一律走「先出草案入台账 → 用户审核 → 执行器写盘」，不得自行写盘。"
   }
  }
 }

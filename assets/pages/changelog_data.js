@@ -933,6 +933,45 @@ window.CHANGELOG = {
             "版本迭代日志.md（表格行 + 详细章节）",
             "技术网络检修计划.md（当前规模 / 批次表 3.1e 行与 3a 行 / §六 / 审核节点段）"
         ]
+    },
+    {
+        "version": "v0.9.33",
+        "date": "2026-09-15",
+        "type": "refactor",
+        "title": "架构改造 · 新增「维度层」：把「归属」与「因果」分离 —— 批次 D0 骨架落地 + 全库机械打标（零数据改动）；处置档位由四档改五档",
+        "summary": "**本批不改动任何依赖边** —— 主管线仍为 **2,267 节点 / 6,169 条依赖边**（与 v0.9.32 一致），`assets/techs_*.js`、`assets/techs_midtech.js`、`audit/baseline.json` 均未触碰，全量管线两文件未动。本轮解决的是一个**模型层问题**：主管线的 `dependsOn` 是单一平面的有向图，只有「前置」一个槽位，于是「这个节点属于哪个学科 / 领域」这种**归属**关系无处安放、只能被写成一条边 —— 14 个泛化学理枢纽（数学 / 化学 / 物理 / 算法 / 统计 / 工程学 / 文字 / 运筹学 / 数值分析 / 分子生物学 / 材料科学 / 遗传学 / 免疫学 / 语言）因此各自成为巨型扇入节点，入边合计 **2,565 条**（`mathematics` 一节点 570 条）。用户 2026-09-15 裁定走「**删边 + 归属标签**」，并逐条确认六项设计：两条轴并存（`sub` 管技术任务域、`field` 管学科归属）、主维度单值 + 副维度多值、14 个泛化枢纽全部转「维度顶点」、同意「id 前缀 + `category` 先机械兜底、例外逐条覆盖」、「学理」并入学科维度不独立成维、处置档位由四档改**五档**（新增 `toField`＝删伪边 + 落回维度）。本批落地的是**第一步**：新增只读覆盖层 `assets/pages/dimension_data.js`（10 门类 / 88 任务域 / 三级兜底 / 例外表）与校验工具 `tools/gen_dimension.js`，完成全库 2,267 条打标（主维度 + 任务域 + 副维度），并把第五档 `toField` 写进执行器。**例外表、维度顶点入边处置、A 族重判三项均为待审草案，本批不写盘。**",
+        "treeChange": {
+            "scope": "**依赖网络的节点与边均未变动**（2,267 节点 / 6,169 条依赖边，与 v0.9.32 一致）；`audit/baseline.json` 无需刷新。本批改变的是**网络的表达框架**：新增一个只读的「维度层」承载归属信息，并把因果判定的处置档位由四档扩为五档。改动落在新增文件 `assets/pages/dimension_data.js`（维度层覆盖层）与 `tools/gen_dimension.js`（打标与校验），以及 `tools/apply_ledger.js`（第五档）、`assets/core.js`（`buildDimensionBlock`）、`assets/style.css`（`.dim-*`）、16 个页面 html（挂载脚本 + 版本串）、`audit/ledger.json`（批次 `D0`）。",
+            "reason": "**根本原因：模型缺一层，判定再严也无法消除同类错误。** `dependsOn` 一种关系被迫承担两种语义 —— 「A 是 B 的必要前提」（判据＝必要性 + 排他性 + 时序性 + 域内优先）与「A 属于 B 领域」（判据＝它是什么领域的东西）。两种关系的判据不同，压缩进同一槽位后归属只能伪装成前置。这解释了阶段 3 已经反复遇到的现象：E 族四批 93 条逐条审核后 **保留数全为 0**，该槽位不区分必要与非必要，是批量赋值的产物；而这些边**必然通过时序校验**（学科级节点总是更早），**只能靠排他性筛出**。若只在平面模型里逐条删边，症状会减少但成因不变 —— 下一批生成的数据仍会把归属写成边。**另一个直接诱因是一处模型层内部矛盾**：库内对同一批「技术 ← 学科级顶点」的边存在两套方向相反的处理，阶段 3 判删边，而 `theory_data.js` 显示层已上线的是「保边 + 标 `theory.latent` 虚边」（注释原文「虚边徽章 = 潜在支撑（背景性学理，非直接造物所需）」）—— 二者不能同时成立，边删掉了就无法再显示为虚边。用户裁定走「删边 + 归属标签」，`kinds` 机制收窄为只标**真正必要但背景性**的学理边。",
+            "detail": "① **裁定六项（用户 2026-09-15）**：两条轴并存、主单值 + 副多值、14 枢纽转维度顶点、「前缀 + category 机械兜底 + 例外逐条」、学理并入学科维度、四档改五档。② **三条轴的定义**：`category` 9 值（节点自带，100% 覆盖，本批不改）；`sub` 技术任务域 88 域（源自 `analysis-engine/data/subcategory_taxonomy_v1.json`，按定义单值）；`field` 学科归属 10 门类（8 个锚定 14 个维度顶点，主单值 + 副多值）。③ **登记表**：`math` 数学（顶点 `mathematics` / `statistics` / `optimization` / `numerical`）、`phys` 物理、`chem` 化学、`earth` 地球与天文、`life` 生命与医学（顶点 `molecular_bio` / `genetics` / `immunology`）、`matter` 材料科学、`eng` 工程与建造、`info` 信息与计算（顶点 `algorithm`）、`symbol` 语言与符号（顶点 `writing` / `language`）、`mil` 军事技术 —— 维度顶点合计 14，与泛化枢纽清单逐项对齐、不重不漏。④ **兜底顺序**：主维度 `override → 维度顶点 → 一段前缀 → category`；任务域 `override → 两段前缀 → 同 category 关键词 → 一段前缀（须同类）→ category 默认域`。实测求解路径：主维度 prefix 1,838 / cat 255 / prefix:bx 160 / hub-head 14；任务域 p2 826 / kw 809 / p1 460 / catSub 172。⑤ **门类分布**：eng 857、life 339、info 283、matter 250、mil 237、math 126、phys 90、symbol 69、chem 10、earth 6 —— **偏斜是机械兜底的已知局限**（前缀只能定位到「工程与建造」一层，细分由任务域承载），零命中任务域 2 个（`energy/animal_human`、`manufact/food_proc`），三者均由 **D1 例外表**逐条修正，不得据此认为打标已经准确。⑥ **硬约束校验**：`sub` 必须与节点 `category` 同类（taxonomy 的定义性约束），实测 **0 例外**；88 个域与 taxonomy 文件逐键一致（0 缺 0 多）。⑦ **第五档 `toField`**：`apply_ledger.js` 中与 `delete` 同为删边，但强制要求给出归属落点 `e.field`，并计入完整划分断言；台账顶层 `verdictEnum` 由 4 值扩为 5 值。**向后兼容核对**：3.1c / 3.1d / 3.1e 三批用新版执行器干跑，完整划分断言、时序性、环校验均通过。⑧ **渲染**：`core.js` 新增 `buildDimensionBlock(t)` 挂入 `buildDetailHTML`，位置在「关系解说」之后、「理论与解释」之前，渲染主维度 + 任务域 + 副维度徽章并注明「归属不构成前置」；16 个页面挂载 `dimension_data.js`（位于 `theory_data.js` 之后、`core.js` 之前），版本串统一 `20260915a`。⑨ **待审三项**：D1 例外表、D2 维度顶点入边处置（含裁定「枢纽自身的 `dependsOn`＝`writing + mathematics` 如何落」）、D3 A 族 494 条按 `toField` 重判。"
+        },
+        "changes": [
+            "① 本条性质：**架构改造的第一步，零数据改动**。主管线仍为 2,267 节点 / 6,169 条依赖边（与 v0.9.32 一致）；`assets/techs_*.js`、`assets/techs_midtech.js`、`audit/baseline.json` 均未触碰；全量管线 `graph.json`（2,299 / 6,963）与 `assets/data_full.js`（13,318 / 16,811）未动。",
+            "② 新增 `assets/pages/dimension_data.js`（只读覆盖层）：`disciplines` 10 个学科门类（其中 8 个锚定 14 个泛化枢纽为「维度顶点」）、`taskDomains` 88 个技术任务域、`rules` 三级兜底、`overrides` 例外表（本批为空）、`resolve(id, node)` 求解器。头部写明规则 **R6（归属不写入 `dependsOn`）/ R7（学科级顶点转维度顶点）/ R8（第五档 `toField`）**。",
+            "③ 新增 `tools/gen_dimension.js`（打标与校验，**不写任何项目文件**）：4 项注册表断言（门类合法 / 维度顶点 14 个不重不漏 / 域集合同 taxonomy 逐键一致 / `overrides` 引用存在）+ 4 项全库断言（取值合法 / `sub` 与 `category` 同类 / 域不悬空 / `secondary` 不与 `primary` 重复），另附完整报表（`--report` 写 `/tmp/dimension_report.md`）。",
+            "④ **全库 2,267 条完成机械打标**：主维度求解路径 prefix 1,838 / cat 255 / prefix:bx 160 / hub-head 14；任务域路径 p2 826 / kw 809 / p1 460 / catSub 172。门类分布 eng 857（37.8%）、life 339、info 283、matter 250、mil 237、math 126、phys 90、symbol 69、chem 10、earth 6。**分布偏斜与 2 个零命中任务域（`energy/animal_human`、`manufact/food_proc`）是机械兜底的已知局限**，由 D1 例外表逐条修正。",
+            "⑤ **约束收紧（本批的两处修正）**：关键词匹配**限定在同 `category` 的域内**（跨类匹配是唯一系统性噪声源，如 material 节点命中 info 关键词），且关键词长度须 ≥ 3；一段前缀兜底也须与 `category` 同类，否则退回默认域。修正前 24 项 `sub` 与 `category` 不同类，修正后 **0 例外**。",
+            "⑥ 与既有体系的对齐：88 个任务域与 `analysis-engine/data/subcategory_taxonomy_v1.json` **逐键一致**（0 缺 0 多）—— 该 taxonomy 此前**全仓零引用**（`assets/`、`tools/`、三道门禁皆无读取），本批首次接上节点。",
+            "⑦ `tools/apply_ledger.js` 新增**第五档 `toField`**：与 `delete` 同为删边，但强制要求给出归属落点 `e.field`（缺失即抛错），并把 `toField` 计入完整划分断言（`keep+repoint+delete+concept+toField = candidates`），另加「`toField` 条数 = `summary.toField`」断言。`audit/ledger.json` 顶层 `verdictEnum` 由 `keep/repoint/delete/concept` 扩为五值，`note` 同步说明。",
+            "⑧ `assets/core.js` 新增 `buildDimensionBlock(t)`，挂入 `buildDetailHTML`（弹窗与整页详情共用单数据源），位置在「关系解说」之后、「理论与解释」之前；渲染主维度徽章 + 任务域徽章 + 副维度徽章，并注明「归属不构成前置」。`assets/style.css` 新增 `.m-dim` / `.dim-badge` / `.dim-primary` / `.dim-task` / `.dim-second` / `.dim-note`。",
+            "⑨ 16 个页面挂载 `assets/pages/dimension_data.js`（位于 `theory_data.js` 之后、`core.js` 之前）；全站缓存版本串 `?v=20260914a` → `?v=20260915a`（**33 处**）。`index.html` 无详情弹窗，不挂载。",
+            "⑩ 台账新增批次 **`D0`**（status = applied），记录六项裁定、冲突裁定（`ruling`：删边 + 归属标签 vs `theory.latent` 保边，二者不能同时成立）、三条轴定义、兜底顺序与实测分布、14 个维度顶点的入边明细（合计 **2,565**：`mathematics` 570 / `chemistry` 433 / `physics` 290 / `algorithm` 214 / `statistics` 194 / `engineering` 170 / `writing` 114 / `optimization` 106 / `numerical` 105 / `molecular_bio` 94 / `materials` 91 / `genetics` 86 / `immunology` 86 / `language` 12），以及 D1 / D2 / D3 三项待审草案。",
+            "⑪ 校验：`tools/gen_dimension.js` 全部断言通过；渲染校验 `/tmp/render_check_0933.js` **38 / 38** 通过（数据层 3 + 注册表 14 + 渲染 5 + 页面 4 + 样式 4 + 工具 8）；三道门禁全绿（`check_docs` TOTAL 2,267 / `regen_text --check` 需改写 0 处 / `audit_net --check` 结构指标未劣化）。",
+            "⑫ **本批未做的事**：未改动任何 `dependsOn`；未处置 14 个维度顶点的 2,565 条入边（D2）；未填例外表（D1）；未重判 A 族 494 条（D3）；`theory_data.js` 的 `kinds` / `latent` 标注本轮未改写（其与删边的冲突已由 `ruling.decision` 裁定，实际改写随 D2 落地）。纠错页新增 `CR-2026-0915-flat-graph-field-as-edge`（entries 23 → 24，待审队列 29 → 30）。"
+        ],
+        "files": [
+            "assets/pages/dimension_data.js（新增，维度层覆盖层）",
+            "tools/gen_dimension.js（新增，打标与校验）",
+            "tools/apply_ledger.js（新增第五档 toField + 完整划分断言扩充）",
+            "assets/core.js（新增 buildDimensionBlock 并挂入 buildDetailHTML）",
+            "assets/style.css（新增 .dim-* 样式）",
+            "audit/ledger.json（新增批次 D0；verdictEnum 与 note 扩充）",
+            "assets/pages/correction_data.js（新增 CR-2026-0915-flat-graph-field-as-edge，entries 23 → 24；pendingQueue 29 → 30）",
+            "assets/pages/changelog_data.js（本条目，entries 37 → 38）",
+            "16 个 html（挂载 dimension_data.js + 版本串 20260915a）",
+            "版本迭代日志.md（表格行 + 详细章节）",
+            "技术网络检修计划.md（修订记录 + §二 五档 + 新增阶段 6 + 批次总览 + 当前批次 / 审核节点）"
+        ]
     }
 ]
 };

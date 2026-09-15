@@ -55,7 +55,8 @@ window.CORRECTIONS = {
       "【v0.9.30 · 已执行 · 顺延】批次 3.1b（E 族 manufact 余 41 条「`mathematics` 单前置」判定）已写盘：保留 0 / 改前置 3 / 删边 38 / 降级为概念影响 0，补前置 41 条目共 79 条边，依赖边 6,126 → 6,167（节点 2,266 不变）；派生文案 191 条（`summary` 65 / `significance` 58 / `views` 68）+ 中间库 95 条目，均验不动点；结构问题族 A 535 → 494、E 146 → 105（**`A.manufact` 与 `E.manufact` 均由 41 → 0，E 族 manufact 槽位清空**）、Ch 252 → 246；`mathematics` 作为前置的节点 611 → 570。**本批的判据性结论**：41 条逐条审核后**保留数为 0** —— 说明该槽位不区分必要与非必要，属生成阶段的批量赋值产物（与 `bx_*` 占位、stub 捏造链同类），而非逐条判断的结果；四标准中的**排他性**是筛出这类挂载的唯一判据，单靠时序校验（前置年 ≤ 本体年）它们会整体通过。**顺延与新增**：① 缺失节点（补节点候选，累计 5 项，本批新增 2）：高压流体加压设备（`mfg_waterjet` / `mfg_awj` 共用，现以 `jet_compressor` 代位、语义不等价）、机器视觉（`computer_vision` 标注 2012 年，晚于 `mfg_visionguide` 的 2000 年，无法作为其前置）；② 另有气动 / 抛丸设备、光刻 / 抗蚀剂两项缺口，累计 7 项；③ 同义重复节点对新增一例：`mfg_assembly`（1900）与 `assembly_line`（1913）语义重叠，与既有 `mfg_wedm` / `mfg_edmwire`、`laser` / `lasers`、`mfg_lathe` / `lathe` 同属节点级问题，建议另立批次（合并会改节点数并触发 `check_docs` / `tree_full.html` 写死数字同步）；④ **核账陷阱（本批暴露）**：新增边须按「Σ `backfills.add` + Σ(repoint 各 1 条 `newParent`)」计算 —— 本批 `backfills` 合计 79 条，另有 repoint 3 条的 `newParent` 3 条，实际新增 82 条；仅按 `backfills` 推算会得 6,164，与实测 6,167 差 3。⑤ 阶段 3 下一批：E 族 manufact 已清空，可转 E 族其余分类（现余 105 条）或 A 族（现 494 条）；**根治手段仍在阶段 5c**（生成器槽位赋值的语义硬约束）。",
       "【v0.9.31 · 草案待审核 · 阶段 3.1c】E 族 info 首批 18 条（通信、网络与标识设备）前置逐条判定已写入 `audit/ledger.json` 的 `batches[\"3.1c\"]`：保留 0 / 改前置 1（`inf_antenna` 天线 → `em_theory` 电磁理论）/ 删边 17 / 降级 0，补前置 17 条目共 37 条边；预演依赖边 6,167 → **6,187**、`mathematics` 前置 570 → 552。**未改动任何数据**，待逐条审核后由 `tools/apply_ledger.js --batch 3.1c --apply` 写盘。审核要点：① 天线改指「电磁理论」还是「电磁学」（两者皆 1865）；② `inf_rfid` 射频识别跨域以 transport 类的雷达（`tr_radar2`，1935）代位是否接受；③ `inf_cdn`(1990) ← `inf_cache`(1990) 与 ④ `inf_fiber`(1970) ← `optic_fiber`(1970) 两处同年前置；⑤ `inf_5g` 是否先补建蜂窝 / 移动通信世代节点再判。",
       "【v0.9.31 · 草案待审核 · 阶段 3.1d】E 族 info 次批 16 条（信息记录、存储与音视频设备）前置逐条判定已写入 `batches[\"3.1d\"]`：保留 0 / 改前置 2（`inf_vinyl` 黑胶唱片 → `acoustics` 声学、`inf_dataviz` 数据可视化 → `statistics` 统计学）/ 删边 14 / 降级 0，补前置 16 条目共 30 条边；预演依赖边 6,167 → **6,183**、`mathematics` 前置 570 → 554。**未改动任何数据**，待逐条审核后由 `tools/apply_ledger.js --batch 3.1d --apply` 写盘。与 3.1c 节点集合不相交，写盘顺序不限。本批新发现三处缺失节点：色料 / 染料、磁记录介质 / 磁头、图像 / 信号处理。",
-      "【v0.9.32 · 缺失节点类（新登记）】「以不贴切的替代充当前置」已作为一类错误定位并留档（见本页 CR-2026-0915-oop-missing-node-substitution）：**根因是节点缺失而非判定不严，解决方案为新建具体节点**。本批已新建 `inf_oop` 面向对象方法(1967)。**累计待补 17 项**：形式语言 / 自动机理论 / 可计算性（编译器的理论侧）、Algol 60 / 抽象数据类型（面向对象方法的语言谱系侧）、软件工程 / 面向对象方法以外的软件方法学、关系代数 / 关系模型、色料 / 染料、磁记录介质 / 磁头、图像 / 信号处理、光交叉连接 / 光交换设备、蜂窝或移动通信世代节点 1G–4G、深冷介质 / 液氮、乙炔或工业气体、真空技术、高压流体加压设备、机器视觉、气动 / 抛丸设备、光刻 / 抗蚀剂、机器人关节减速器。另新增判定规则 **R5：不得以学科级顶点充当替身前置**。"
+      "【v0.9.32 · 缺失节点类（新登记）】「以不贴切的替代充当前置」已作为一类错误定位并留档（见本页 CR-2026-0915-oop-missing-node-substitution）：**根因是节点缺失而非判定不严，解决方案为新建具体节点**。本批已新建 `inf_oop` 面向对象方法(1967)。**累计待补 17 项**：形式语言 / 自动机理论 / 可计算性（编译器的理论侧）、Algol 60 / 抽象数据类型（面向对象方法的语言谱系侧）、软件工程 / 面向对象方法以外的软件方法学、关系代数 / 关系模型、色料 / 染料、磁记录介质 / 磁头、图像 / 信号处理、光交叉连接 / 光交换设备、蜂窝或移动通信世代节点 1G–4G、深冷介质 / 液氮、乙炔或工业气体、真空技术、高压流体加压设备、机器视觉、气动 / 抛丸设备、光刻 / 抗蚀剂、机器人关节减速器。另新增判定规则 **R5：不得以学科级顶点充当替身前置**。",
+      "【v0.9.33 · 维度层（架构改造 · 大修）待执行】批次 `D0` 已写盘（骨架 + 全库机械打标，零数据改动），裁定走「删边 + 归属标签」。**三项待审草案**：① **D1 例外表** —— 机械兜底的门类分布偏斜（eng 857 = 37.8%、chem 10、earth 6）与 2 个零命中任务域（`energy/animal_human`、`manufact/food_proc`）需逐条写入 `dimension_data.js` 的 `overrides`；② **D2 维度顶点入边处置** —— 14 个泛化枢纽现存 **2,565 条**入边（`mathematics` 570 / `chemistry` 433 / `physics` 290 / `algorithm` 214 / …）须逐条在 `delete` 与 `toField` 之间判定，并裁定「枢纽自身的 `dependsOn`（`writing + mathematics`）如何落」；③ **D3 A 族 494 条按 `toField` 重判** —— 唯一成立理由是学科归属者落回维度（规则 R8），不得硬找替身前置。另需注意本批暴露的模型层冲突已裁定：`theory_data.js` 的 `theory.latent` **保边**方案与阶段 3 的**删边**不能同时成立，已收窄为「必要但背景性的学理边」，实际改写随 D2 落地。"
     ],
     enablesAudit: {
       title: "enables 语义错误 · 95 项灰色概念甄别表",
@@ -165,6 +166,52 @@ window.CORRECTIONS = {
     },
   },
   entries: [
+    {
+      "id": "CR-2026-0915-flat-graph-field-as-edge",
+      "date": "2026-09-15",
+      "node": "全部 2,267 个节点的**归属侧**（模型层，非单条边）；受影响最重者为 14 个泛化枢纽：mathematics 570 条入边、chemistry 433、physics 290、algorithm 214、statistics 194、engineering 170、writing 114、optimization 106、numerical 105、molecular_bio 94、materials 91、genetics 86、immunology 86、language 12",
+      "nodeName": "维度层（本批新建 `assets/pages/dimension_data.js`）／数学·化学·物理·算法·统计·工程学·文字·运筹学·数值分析·分子生物学·材料科学·遗传学·免疫学·语言",
+      "category": "basic（跨全部 9 个分类）",
+      "severity": "高",
+      "status": "已裁定并落地第一步（批次 `D0`：骨架 + 全库机械打标，**零数据改动**）；例外表（D1）、维度顶点入边处置（D2）、A 族按 `toField` 重判（D3）为待审草案",
+      "problem": "**一类错误：把「学科归属」写成「依赖边」**。主管线的 `dependsOn` 是一张**单一平面的有向图**，只有「前置」一种关系的槽位；而「这个节点属于哪个学科 / 领域」本是另一种关系（归属），在同一张图上无处安放，于是被写成一条边 —— 数学、化学、物理、算法、统计、工程学、文字、运筹学、数值分析、分子生物学、材料科学、遗传学、免疫学、语言这 14 个「泛化学理枢纽」因此各自成为巨型扇入节点，入边合计 **2,565 条**（其中 `mathematics` 一节点 570 条、跨材料/能源/制造/信息全部领域）。**与已登记的「代位」错误的区别**：代位（CR-2026-0915-oop-missing-node-substitution）是**单条边挂错**，治标手段是逐条删除或新建节点；本类错误是**模型缺一层**，逐条删除只能减少症状、不能消除成因 —— 只要没有承载「归属」的层，下一批生成的数据仍会把归属写成边。**本类的可辨识特征**：这些边**必然通过时序校验**（学科级节点总是更早），**只能靠排他性筛出**（去掉「数学」，某台具体机床仍会按史实出现；反之几乎所有定量技术都能挂数学，故该边不提供任何区分信息）。阶段 3 的 E 族四批 93 条逐条审核后 **keep 全为 0**，正是「该槽位是批量赋值产物、不是逐条判断结果」的直接证据。",
+      "rootCause": "**根因是依赖模型缺一个「归属层」，而不是判定不严**。`dependsOn` 一种关系被迫承担两种语义：`A 是 B 的必要前提`（判据＝必要性 + 排他性 + 时序性 + 域内优先）与 `A 属于 B 领域`（判据＝它是什么领域的东西）。两种关系的判据不同，压缩进同一个槽位后，归属只能伪装成前置。**两个加重因素**：① 库内可作「学理级前置」的节点自身几乎全在 A 族 —— `info_theory` / `lambda_calc` / `math_logic` / `set_theory` / `number_theory` / `combinatorics` 的前置一律是 `writing + mathematics`，故「改指具体学理」不能一步跳出枢纽体系，只是往后延一站（而 `mathematics` 换成 `computer_sci` 更是同一个病换名字，即前一条 CR 的形态二）；② **三道门禁（`check_docs` / `regen_text --check` / `audit_net --check`）对边的语义正确性没有校验能力**，只能覆盖结构指标与派生文案，故这类错误只能靠逐条人工判定暴露 —— 与结构瑕疵不同，它不会让任何断言失败。**模型层的内部矛盾（本轮实测）**：库内对同一批「技术 ← 学科级顶点」的边存在两套方向相反的处理 —— 阶段 3 判**删边**（依据：`dependsOn` = 必需前提，学科级顶点不构成排他性），而 `assets/pages/theory_data.js` 显示层已上线的是**保边 + 标 `theory.latent` 虚边**（注释原文「虚边徽章 = 潜在支撑（背景性学理，非直接造物所需）」，已给 `mathematics` / `statistics` 标上）。**二者不能同时成立** —— 边删掉了就无法再显示为虚边。",
+      "fix": "按用户 2026-09-15 裁定，走「**删边 + 归属标签**」：建一个只读的**维度层**承载归属，让 `dependsOn` 回归单一语义。① **新增覆盖层** `assets/pages/dimension_data.js`：学科归属 `field`（10 个门类，8 个锚定 14 个泛化枢纽；主维度单值 + 副维度多值）与技术任务域 `sub`（88 域，源自 `analysis-engine/data/subcategory_taxonomy_v1.json`，单值），**两条轴并存**。② **14 个泛化枢纽全部转为「维度顶点」**（规则 **R7**）—— 不再作为 `dependsOn` 的前置，只作归属锚点。③ **处置档位由四档改五档**：新增 **`toField`** —— 删伪边 + 把归属记入维度，而不是硬找替身前置（规则 **R8**）；`tools/apply_ledger.js` 已实现该档并强制要求给出归属落点 `e.field`。④ 新增规则 **R6：归属不写入 `dependsOn`**。⑤ **`kinds` 机制收窄**：`theory_data.js` 的 `theory.latent` 不再承担「保边」职能，改为只标**真正必要但背景性**的学理边（如 3.1c 已裁定保留的 `inf_compression ← info_theory`）。⑥ **零数据改动**：本批（`D0`）只建承载层与打标能力，不改任何边；语义判定（例外表 D1 / 枢纽入边 D2 / A 族重判 D3）一律走「先出草案入台账 → 用户审核 → 执行器写盘」。",
+      "badUpstream": [
+        "「技术 ← `mathematics`」这类边共 2,565 条（14 个枢纽入边合计）—— 归属被当成前提；其中 `mathematics` 570 条横跨材料 / 能源 / 制造 / 信息全部领域",
+        "`theory_data.js` 的「保边 + 标 `theory.latent` 虚边」方案 —— 与阶段 3 的删边**不能同时成立**（已收窄为「必要但背景性的学理边」）",
+        "把「改指具体学理」当作通解 —— 枢纽自身也在 A 族待修名单内，只是往后延一站，未跳出枢纽体系",
+        "以另一个学科级顶点替换（`computer_sci` 顶替 `mathematics`）—— 同一个病换名字，违自洽"
+      ],
+      "goodUpstream": [
+        "`inf_compression` 数据压缩 ← `info_theory` 信息论(1948) —— **必要且具体**，保留（属「必要但背景」，标 `latent`）",
+        "`inf_anthenna` 天线 ← `em_theory` 电磁理论(1865) —— **定义性构成本身即学理**，走 `repoint` 保留",
+        "`mfg_lasercut` 激光切割 ← `lasers` + `mfg_cnc` —— 域内必要条件，走 `delete` 伪边 + 补真实前置",
+        "归属侧改由维度层承载：`数论` / `集合论` / `图论` / `λ演算` 等具体学理**归属「数学」门类**，但**不依赖「数学」**"
+      ],
+      "changes": [
+        "① 新增 `assets/pages/dimension_data.js`（只读覆盖层）：`disciplines` 10 个门类（math / phys / chem / earth / life / matter / eng / info / symbol / mil，其中 8 个锚定 14 个泛化枢纽为「维度顶点」）、`taskDomains` 88 个技术任务域、`rules` 三级兜底（两段前缀 / 同 category 关键词 / 一段前缀 / category 默认）、`overrides` 例外表（本批为空）、`resolve(id, node)` 求解器。",
+        "② 新增 `tools/gen_dimension.js`（打标与校验，不写任何项目文件）：注册表自检（门类合法 / 维度顶点 14 个不重不漏 / 域集合与 taxonomy 逐键一致）、全库求解、`sub` 与 `category` 同类断言、报表输出。",
+        "③ 全库打标结果（机械兜底）：主维度求解路径 prefix 1,838 / cat 255 / prefix:bx 160 / hub-head 14；任务域路径 p2 826 / kw 809 / p1 460 / catSub 172。门类分布 eng 857、life 339、info 283、matter 250、mil 237、math 126、phys 90、symbol 69、chem 10、earth 6。**分布偏斜是机械兜底的已知局限**（前缀只能定位到「工程与建造」一层，细分由任务域承载），零命中任务域 2 个（`energy/animal_human`、`manufact/food_proc`），均由 D1 例外表逐条修正。",
+        "④ 与 taxonomy 对齐：88 个任务域与 `analysis-engine/data/subcategory_taxonomy_v1.json` 逐键一致（0 缺 0 多）；`sub` 必须与节点 `category` 同类的约束实测 **0 例外**。",
+        "⑤ `tools/apply_ledger.js` 新增第五档 `toField`：与 `delete` 同为删边，但强制要求 `e.field` 归属落点，并把 `toField` 计入完整划分断言（`keep+repoint+delete+concept+toField = candidates`）；`audit/ledger.json` 顶层 `verdictEnum` 由 4 值扩为 5 值。**向后兼容核对**：3.1c / 3.1d / 3.1e 三批用新版执行器干跑，完整划分断言、时序性、环校验均通过。",
+        "⑥ `assets/core.js` 新增 `buildDimensionBlock(t)`，挂入 `buildDetailHTML`（弹窗与整页详情共用单数据源），位置在「关系解说」之后、「理论与解释」之前；渲染主维度徽章 + 任务域徽章 + 副维度徽章，并注明「归属不构成前置」。`assets/style.css` 新增 `.m-dim` / `.dim-badge` / `.dim-primary` / `.dim-task` / `.dim-second` / `.dim-note`。",
+        "⑦ 16 个页面挂载 `assets/pages/dimension_data.js`（位于 `theory_data.js` 之后、`core.js` 之前）；全站缓存版本串 `?v=20260914a` → `?v=20260915a`（33 处）。`index.html` 无详情弹窗，不挂载。",
+        "⑧ 台账新增批次 `D0`（status = applied），记录六条裁定、冲突裁定（`ruling`）、三条轴的定义、兜底顺序与实测分布、14 个维度顶点入边明细（合计 2,565）、以及 D1/D2/D3 三项待审草案；顶层 `verdictEnum` 与 `note` 同步扩充。",
+        "⑨ **零数据改动**：主管线仍为 **2,267 节点 / 6,169 条依赖边**（与 v0.9.32 一致）；`assets/techs_*.js`、`assets/techs_midtech.js`、`audit/baseline.json` 均未触碰，基线无需刷新；全量管线两文件未动。",
+        "⑩ 校验：`tools/gen_dimension.js` 全部断言通过；渲染校验 `/tmp/render_check_0933.js` **38 / 38** 通过（数据层 3 + 注册表 14 + 渲染 5 + 页面 4 + 样式 4 + 工具 8）；三道门禁全绿（`check_docs` TOTAL 2,267 / `regen_text --check` 需改写 0 处 / `audit_net --check` 结构指标未劣化）。",
+        "⑪ **本批未做的事**：未改动任何 `dependsOn`；未处置 14 个维度顶点的 2,565 条入边（属 D2）；未填例外表（属 D1）；未重判 A 族 494 条（属 D3）；`theory_data.js` 的 `kinds` / `latent` 标注本轮未修改（其与删边的冲突已由 `ruling.decision` 裁定，实际改写随 D2 落地）。"
+      ],
+      "files": [
+        "assets/pages/dimension_data.js（新增，维度层覆盖层）",
+        "tools/gen_dimension.js（新增，打标与校验）",
+        "tools/apply_ledger.js（新增第五档 toField）",
+        "assets/core.js（新增 buildDimensionBlock 并挂入 buildDetailHTML）",
+        "assets/style.css（新增 .dim-* 样式）",
+        "audit/ledger.json（新增批次 D0；verdictEnum 与 note 扩充）",
+        "16 个 html（挂载 dimension_data.js + 版本串 20260915a）"
+      ]
+    },
     {
       "id": "CR-2026-0915-oop-missing-node-substitution",
       "date": "2026-09-15",

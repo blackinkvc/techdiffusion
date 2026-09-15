@@ -857,6 +857,16 @@ main{max-width:var(--maxw);margin:0 auto;padding:30px 24px 70px}
 .cr-btn:hover{border-color:var(--accent);color:var(--accent)}
 @media(max-width:720px){.cr-row{grid-template-columns:20px 1fr}.cr-row-cat,.cr-row-host,.cr-row-note{grid-column:2}}
 
+/* ---------- 维度归属（详情页覆盖层 · dimension_data.js） ---------- */
+.m-dim{font-size:13.5px;line-height:1.7}
+.dim-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.dim-badge{font-size:12px;padding:3px 10px;border-radius:10px;border:1px solid var(--line-light);background:#fff;color:var(--ink-soft);white-space:nowrap}
+.dim-primary{background:#EEEDFE;border-color:#534AB7;color:#3C3489;font-weight:700}
+.dim-task{background:#E1F5EE;border-color:#0F6E56;color:#04342C}
+.dim-second{background:#F1EFE8;border-color:#B4B2A9;color:#444441}
+.dim-note{font-size:12px;color:var(--ink-soft);margin:0}
+.dim-chk{color:#0F6E56;font-weight:700}
+
 /* ---------- 理论与解释（详情页覆盖层标注 · theory_data.js） ---------- */
 .m-theory{font-size:13.5px;line-height:1.7}
 .th-layer{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
