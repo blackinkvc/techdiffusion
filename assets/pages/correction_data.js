@@ -57,7 +57,8 @@ window.CORRECTIONS = {
       "【v0.9.31 · 草案待审核 · 阶段 3.1d】E 族 info 次批 16 条（信息记录、存储与音视频设备）前置逐条判定已写入 `batches[\"3.1d\"]`：保留 0 / 改前置 2（`inf_vinyl` 黑胶唱片 → `acoustics` 声学、`inf_dataviz` 数据可视化 → `statistics` 统计学）/ 删边 14 / 降级 0，补前置 16 条目共 30 条边；预演依赖边 6,167 → **6,183**、`mathematics` 前置 570 → 554。**未改动任何数据**，待逐条审核后由 `tools/apply_ledger.js --batch 3.1d --apply` 写盘。与 3.1c 节点集合不相交，写盘顺序不限。本批新发现三处缺失节点：色料 / 染料、磁记录介质 / 磁头、图像 / 信号处理。",
       "【v0.9.32 · 缺失节点类（新登记）】「以不贴切的替代充当前置」已作为一类错误定位并留档（见本页 CR-2026-0915-oop-missing-node-substitution）：**根因是节点缺失而非判定不严，解决方案为新建具体节点**。本批已新建 `inf_oop` 面向对象方法(1967)。**累计待补 17 项**：形式语言 / 自动机理论 / 可计算性（编译器的理论侧）、Algol 60 / 抽象数据类型（面向对象方法的语言谱系侧）、软件工程 / 面向对象方法以外的软件方法学、关系代数 / 关系模型、色料 / 染料、磁记录介质 / 磁头、图像 / 信号处理、光交叉连接 / 光交换设备、蜂窝或移动通信世代节点 1G–4G、深冷介质 / 液氮、乙炔或工业气体、真空技术、高压流体加压设备、机器视觉、气动 / 抛丸设备、光刻 / 抗蚀剂、机器人关节减速器。另新增判定规则 **R5：不得以学科级顶点充当替身前置**。",
       "【v0.9.33 · 维度层（架构改造 · 大修）待执行】批次 `D0` 已写盘（骨架 + 全库机械打标，零数据改动），裁定走「删边 + 归属标签」。**三项待审草案**：① **D1 例外表** —— 机械兜底的门类分布偏斜（eng 857 = 37.8%、chem 10、earth 6）与 2 个零命中任务域（`energy/animal_human`、`manufact/food_proc`）需逐条写入 `dimension_data.js` 的 `overrides`；② **D2 维度顶点入边处置** —— 14 个泛化枢纽现存 **2,565 条**入边（`mathematics` 570 / `chemistry` 433 / `physics` 290 / `algorithm` 214 / …）须逐条在 `delete` 与 `toField` 之间判定，并裁定「枢纽自身的 `dependsOn`（`writing + mathematics`）如何落」；③ **D3 A 族 494 条按 `toField` 重判** —— 唯一成立理由是学科归属者落回维度（规则 R8），不得硬找替身前置。另需注意本批暴露的模型层冲突已裁定：`theory_data.js` 的 `theory.latent` **保边**方案与阶段 3 的**删边**不能同时成立，已收窄为「必要但背景性的学理边」，实际改写随 D2 落地。",
-      "【v0.9.34 · 草案待审核 · 批次 D1】维度层例外表草案已出（**未写盘**）：`category=basic` 的 302 条学理节点中，**68 条**的 `field.primary` 被兜底为 `symbol`（语言与符号）—— 根因是 primary 兜底末级只有 `category → 门类` 一张表，而 `basic` 是跨学科分类；同一批节点的 `sub` 多已判到 `basic/math|physics|chemistry|astronomy|earthsci|biosci`，是 primary 没跟上。草案拟 **`overrides` 50 条**（A 组 30 条依 `sub` 子域定门类、B 组 20 条按语义逐条判定）、建议保留 `symbol` **6 条**、**需裁定 12 条**（方法论类 3 条无对应门类，其余 9 条为交界学科）；另列 **4 条** `sub` 明显误挂（`watermill` / `animal_draft` / `ene_tidal` / `mat_wave`）。**两个零命中任务域的结论**：`manufact/food_proc` 可由 `watermill` 填补 1 条；`energy/animal_human` 在当前分类下**不可达**（唯一畜力节点 `animal_draft` 的 category 为 transport，与 `energy/*` 不同类），列出两条出路待裁定。**澄清一项**：`eng` 857（37.8%）**不是打标错误**，而是 `category → 门类` 的必然（transport 244 + build 242 + energy 215 + manufact 153 + 3），要改比例须拆分门类。预演：`symbol` 69→19、`earth` 6→15、`chem` 10→15，合计 2,267 不变。**本草案只落在 `batches[\"D1\"]`，`dimension_data.js` 的 `overrides` 获批前保持为空**；详见 `batches[\"D1\"]`。"
+      "【v0.9.34 · 草案待审核 · 批次 D1】维度层例外表草案已出（**未写盘**）：`category=basic` 的 302 条学理节点中，**68 条**的 `field.primary` 被兜底为 `symbol`（语言与符号）—— 根因是 primary 兜底末级只有 `category → 门类` 一张表，而 `basic` 是跨学科分类；同一批节点的 `sub` 多已判到 `basic/math|physics|chemistry|astronomy|earthsci|biosci`，是 primary 没跟上。草案拟 **`overrides` 50 条**（A 组 30 条依 `sub` 子域定门类、B 组 20 条按语义逐条判定）、建议保留 `symbol` **6 条**、**需裁定 12 条**（方法论类 3 条无对应门类，其余 9 条为交界学科）；另列 **4 条** `sub` 明显误挂（`watermill` / `animal_draft` / `ene_tidal` / `mat_wave`）。**两个零命中任务域的结论**：`manufact/food_proc` 可由 `watermill` 填补 1 条；`energy/animal_human` 在当前分类下**不可达**（唯一畜力节点 `animal_draft` 的 category 为 transport，与 `energy/*` 不同类），列出两条出路待裁定。**澄清一项**：`eng` 857（37.8%）**不是打标错误**，而是 `category → 门类` 的必然（transport 244 + build 242 + energy 215 + manufact 153 + 3），要改比例须拆分门类。预演：`symbol` 69→19、`earth` 6→15、`chem` 10→15，合计 2,267 不变。**本草案只落在 `batches[\"D1\"]`，`dimension_data.js` 的 `overrides` 获批前保持为空**；详见 `batches[\"D1\"]`。",
+      "【v0.9.35 · 批次 P1 已落地 · 指标缺口另立批次】「跨学科度」（口径丙）可用但**不可靠**，本页已按「计算预选 + 人工删补」落地，指标缺口本身转为数据层待办：① **补边批次** —— 多学科技术的真实组成技术在网络中大量缺席（`automobile` 汽车闭包仅 2 门类、直接前置 3 条；`ai` 人工智能闭包仅 3 门类、直接前置 1 条），与 D1 发现的 9 条孤岛（`control_theory` 入边 2、`info_theory`/`catastrophe` 各 1、其余 0）同因，属 `dependsOn` 边的系统性缺失、须新建具体节点（R5）或补真实前置；② **R8 违规实例待处置** —— `bio_surgerobot` 手术机器人（`chemistry` + `mathematics`）、`ene_smartgrid` 智能电网（`physics` + `chemistry`）直接前置全为学科级顶点，本页已单列提示、**未改动数据**，须随 D2 / D3 一并处置；③ **「太空旅行」节点缺失** —— 库内无同名节点，本页先用 `space_habitat` 太空居住（2065）代，节点新建属 R5 流程；④ **「跨学科度」是否升格为字段** 待定：当前为构建时计算的视图值，若后续要用于排序 / 筛选，须先解决①的覆盖不完整问题。"
     ],
     enablesAudit: {
       title: "enables 语义错误 · 95 项灰色概念甄别表",
@@ -167,6 +168,53 @@ window.CORRECTIONS = {
     },
   },
   entries: [
+    {
+      "id": "CR-2026-0915-multidisciplinary-page",
+      "date": "2026-09-15",
+      "node": "multidisciplinary.html（新增页面）；受影响指标 = 「**跨学科度**」（口径丙：沿 `dependsOn` 取上游闭包，剔除 `category=basic` 的节点与 14 个维度顶点后的学科门类数）",
+      "nodeName": "多学科技术 · 跨学科度指标的可靠性边界与「边的覆盖不完整性」",
+      "category": "页面层（新增功能）+ 指标口径（非数据改动）",
+      "severity": "中",
+      "status": "**已落地（批次 `P1`，`status` = `applied`）**；本页为只读视图，**未改动任何数据**（主管线仍 2,267 节点 / 6,169 边，`assets/pages/dimension_data.js` 的 `overrides` 仍为空）",
+      "problem": "**「跨学科度」的计算结果与直觉不一致，且差异不是判据松紧造成的。** 全库 2,267 条中，5 门类 25 条、4 门类 348、3 门类 407、2 门类 697、1 门类 156、**0 门类 634**。用户点名的技术里，`automobile` 汽车仅 **2** 门类（直接前置仅 3 条：内燃机 / 钢铁 / 底盘）、`ai` 人工智能仅 **3** 门类（直接前置仅 **1** 条：电子计算机）、`robot` 工业机器人与 `humanoid` 人形机器人各 3 门类。若以计算排名直接圈定入选，这些问题技术会被排到几百名之外。",
+      "rootCause": "**两层原因，均与「归属被写成边」同源。** ① **主管线的边覆盖不完整** —— 多学科技术的真实组成技术（汽车的内燃机/变速/橡胶、AI 的算法/芯片/数据）在网络中大量缺席，故闭包收缩、门类数被低估。这与批次 D0 的结论一致：`dependsOn` 是单一平面的「前置」槽位，「A 属于某学科」只能伪装成边，导致一边被滥用、一边被漏写。② **口径噪声** —— 若只按「闭包内出现的门类数」统计，14 个泛化学理顶点（`mathematics` 570 入边 / `algorithm` 214 / `statistics` 194 …）会把几乎全部节点抬到 5 门类以上（实测 1,063 条 ≥5 门类、20 条达 10 门类），指标随之失去区分度。",
+      "fix": "采用「**计算预选 + 人工删补**」，并把指标的可信边界写进页面与数据文件：① 口径定为**口径丙** —— 闭包内**剔除 `category=basic` 的节点与 14 个维度顶点**。剔除 `basic` 是必要的，否则剔不掉 `writing`（文字，其 `category` 是 `info`，却是 A 族模板的普遍前置）。② 入选不纯靠计算 —— 计算预选取口径丙 ≥5 门类全集 **25 条**，删 3 条、补 22 条，共 **44 项**、7 个分组。③ **核心组成为 0 的 2 项单列提示、不静默剔除** —— `bio_surgerobot` 手术机器人（`chemistry` + `mathematics`）、`ene_smartgrid` 智能电网（`physics` + `chemistry`），其直接前置全为学科级顶点，本身即 **R8 违规**（不得以学科级顶点充当替身前置）的证据。④ **统计口径改用「组成技术条数」** —— 按「是否涉及某门类」统计时 44 项对多数门类为 44/44，无区分度。⑤ 指标缺口登记为「**补边批次**」候选（与 R5 同族），不用指标本身掩盖。",
+      "badUpstream": [
+        "把「闭包内出现的全部门类数」直接当跨学科度 —— 14 个维度顶点扇入使 2,267 条中 1,063 条 ≥5 门类、20 条达 10 门类，指标无区分度",
+        "只剔 `category=basic` 而不剔 14 个维度顶点 —— 顶点扇入噪声仍在（`mathematics` 一个节点 570 条入边，横跨材料 / 能源 / 制造 / 信息全部领域）",
+        "用「是否涉及某门类」做统计 —— 44 项对多数门类为 44/44，量级差异被抹平（工程与建造 475 条 vs 地球与天文 3 条无法分辨）",
+        "把计算排名当作入选判据 —— `automobile` 仅 2 门类、`ai` 仅 3 门类（直接前置 1 条），会被排到几百名外；「门类数少」不等于「不是多学科技术」",
+        "把核心组成为 0 的节点悄悄剔除 —— 它们正是 `dependsOn` 缺少真实前置的可见症状，剔除即掩盖证据"
+      ],
+      "goodUpstream": [
+        "口径丙（剔除 `category=basic` 与 14 个维度顶点）后的分布可分辨：5 门类 25 / 4 门类 348 / 3 门类 407 / 2 门类 697 / 1 门类 156 / 0 门类 634（6 门类 0 条）",
+        "「计算预选 + 人工删补」：用计算取候选全集、由语义判定删补 —— 既不全靠直觉，也不迷信指标；删除的 3 条各有可复核理由（组件级 / 同系统重复计数 / 语义重叠）",
+        "`bio_surgerobot` 手术机器人与 `ene_smartgrid` 智能电网单列为「核心组成为 0」并附说明，不并入正常统计、也不剔除 —— 保留证据并指向 R8",
+        "统计一律用「组成技术条数」（工程与建造 475 条 vs 地球与天文 3 条），而非「是否涉及」",
+        "把指标缺口登记为「补边批次」候选（9 条孤岛节点同属此因），把问题交回数据层处理，而不是让页面层的指标将就"
+      ],
+      "changes": [
+        "① 批次 **`P1`** 由 `draft-ready` 转 `applied`（`audit/ledger.json`）：写入五项裁定执行记录、最终 44 项 / 7 分组候选清单、删除 3 条及理由、核心为 0 的 2 项、口径丙分布、浏览器验证清单与 `revisions`。",
+        "② 新增页面 `multidisciplinary.html` 与脚本 `assets/pages/multidisciplinary.js`（总览态 + 详细分析态）；新增数据文件 `assets/pages/multidisciplinary_data.js`（自动生成 57,294 字节，`window.MD_DATA`，含 `meta.criterion` / `meta.caveat` 把指标的可信边界写进数据本身）；新增构建器 `tools/gen_multidisciplinary.js`（10 条断言）。",
+        "③ `assets/shell.js` 的 `VIEWS` 15 → 16 项，新增「多学科技术」入口；**未改动任何现有页面的数据或脚本**。",
+        "④ 浏览器结构化断言全绿：总览 `kpi=5 / cards=6 / tbody=44 / thead=7 / chips=8 / sortable=4 / svg=3`；分组筛选「军事技术」→ 12 行；表头「年」双向排序；详细态 4 例（`automobile` 2/22/3/81、`ai` 3/24/1/32、`space_habitat` 5/55/3/0、`bio_surgerobot` 0/0/0/1 且 warn=1）；折叠联动与节点弹窗正常。",
+        "⑤ 修复 4 处缺陷：ⓐ TDZ —— `renderTable` 引用文件下方的 `const SORT`，顶层立即调用 `renderOverview()` 抛 `ReferenceError`，渲染静默中断（`tbody` 0 行），入口移至 IIFE 末尾；ⓑ `fmtYear` —— `automobile` 跨度显示「前 2600000」，改为 ≥10000 换算「万年」；ⓒ 被删条目 `<b>` 三元优先级（`+` 优先于 `==` 致恒假）；ⓓ `discTask(id)` 原输出英文 `sub` key，改走 `window.DIMENSION.resolve()` 输出中文域名。",
+        "⑥ **本批未做的事**：未改动任何 `dependsOn`（属 D2 / D3）；未改 `overrides`（仍为空，待 D1 获批）；未新建节点；未做跨学科度排名。"
+      ],
+      "files": [
+        "multidisciplinary.html（新增页面）",
+        "assets/pages/multidisciplinary.js（新增页面脚本：总览态 + 详细分析态）",
+        "assets/pages/multidisciplinary_data.js（新增，自动生成 57,294 字节）",
+        "tools/gen_multidisciplinary.js（新增数据构建器，10 条断言）",
+        "assets/shell.js（VIEWS 15 → 16 项）",
+        "audit/ledger.json（批次 P1：draft-ready → applied）",
+        "assets/pages/correction_data.js（本条目，entries 25 → 26；pendingQueue 31 → 32）",
+        "assets/pages/changelog_data.js（v0.9.35 条目，entries 39 → 40）",
+        "版本迭代日志.md（表格行 + 详细章节）",
+        "技术网络检修计划.md（批次总览 P1 行 / 当前状态 / 修订记录）",
+        "**未改动**：assets/techs_*.js、assets/techs_midtech.js、assets/data.js、assets/pages/dimension_data.js（overrides 仍为空）、audit/baseline.json、analysis-engine/data/graph.json、assets/data_full.js"
+      ]
+    },
     {
       "id": "CR-2026-0915-dim-basic-fallback-symbol",
       "date": "2026-09-15",

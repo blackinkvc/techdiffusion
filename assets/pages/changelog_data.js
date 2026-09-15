@@ -1000,6 +1000,41 @@ window.CHANGELOG = {
         "版本迭代日志.md（表格行 + 详细章节）",
         "技术网络检修计划.md（批次总览 D1 行 / 当前状态 / 修订记录 / 当前批次 / 审核节点）"
       ]
+    },
+    {
+      "version": "v0.9.35",
+      "date": "2026-09-15",
+      "type": "feature",
+      "title": "功能 · 新增「多学科技术」页（批次 P1 落地）：44 项 / 7 分组，按维度层门类拆解组成技术；新增 4 个文件 + 导航加一项，零数据改动",
+      "summary": "**本条不改动任何数据** —— 主管线仍为 2,267 个节点 / 6,169 条依赖边；`assets/techs_*.js`、`assets/techs_midtech.js`、`audit/baseline.json` 均未触碰；全量管线 `graph.json`（2,299 / 6,963）与 `assets/data_full.js`（13,318 / 16,811）未动；`assets/pages/dimension_data.js` 的 `overrides` 保持为空。新增页面层 4 个文件（`multidisciplinary.html` / `assets/pages/multidisciplinary.js` / `assets/pages/multidisciplinary_data.js` / `tools/gen_multidisciplinary.js`），并改 1 处既有文件（`assets/shell.js` 的 `VIEWS` 15 → 16 项）。配合登记：`audit/ledger.json` 批次 `P1` 由 `draft-ready` 转 `applied`；纠错页新增 CR-2026-0915-multidisciplinary-page（entries 25 → 26，待审队列 31 → 32）；本条目 entries 39 → 40。",
+      "changes": [
+        "① **本条性质与边界**：页面层新增功能，**零数据改动** —— 不改 `dependsOn`、不改 `overrides`、不新建节点。主管线仍 2,267 节点 / 6,169 边（与 v0.9.34 一致）。",
+        "② **新增文件**：`multidisciplinary.html`（标题「多学科技术」，结构仿 `model.html`：`site-header` + `#md-content` + `#modal` + 脚本链）；`assets/pages/multidisciplinary_data.js`（构建时算好、运行时零计算，57,294 字节，`window.MD_DATA`，**自动生成勿手改**）；`assets/pages/multidisciplinary.js`（页面脚本，总览态 + 详细分析态两态）；`tools/gen_multidisciplinary.js`（数据构建器，10 条断言，用法 `node tools/gen_multidisciplinary.js [--write]`）。",
+        "③ **唯一既有文件改动**：`assets/shell.js` 的 `VIEWS` 数组 15 → 16 项，在「关系网分析」与「数学模型」之间插入 `{ file: \"multidisciplinary\", label: \"多学科技术\" }`；`buildHeader()` 生成真实链接并按 `location.pathname` 高亮。",
+        "④ **指标口径（口径丙）**：沿 `dependsOn` 取上游闭包，**剔除 `category=basic` 的节点与 14 个维度顶点**后统计闭包内出现的学科门类数。剔除 `basic` 是必要的 —— 不剔就剔不掉 `writing`（文字，其 `category` 是 `info`，却在 A 族模板中作为普遍前置）。全库分布：5 门类 **25** / 4 门类 348 / 3 门类 407 / 2 门类 697 / 1 门类 156 / **0 门类 634**（6 门类 0 条）。",
+        "⑤ **⚠️ 该指标不可靠（本批的核心前提）**：`automobile` 汽车在口径丙下仅 **2** 门类（直接前置仅 3 条：内燃机 / 钢铁 / 底盘）、`ai` 人工智能仅 **3** 门类（直接前置仅 **1** 条：电子计算机）。这不是判据问题，而是**主管线边的覆盖本身不完整**（部分归属被写成边、部分真实前置缺失，与 D0 的结论同源）→ 入选不能纯靠计算，故采用「**计算预选 + 人工删补**」。",
+        "⑥ **候选口径（用户裁定 C）**：计算预选 = 口径丙 ≥5 门类全集 **25 条** → **删 3 条** → **补 22 条** → **44 项**。删除理由：`mil_irguid` 红外制导（组件级技术，是制导方式而非多学科技术系统，其 5 门类主要来自闭包中的材料与工程）、`mil_glider` 高超滑翔体（与 `mil_hypersonicm` 高超声速导弹构成同一武器系统的「弹 + 滑翔体」两个部件，同页并列会重复计数）、`tr_personalair` 个人飞行器（与 `flying_car` 飞行汽车语义重叠，且同属 `transport/urban` 任务域）。",
+        "⑦ **7 个分组**：交通载具 7 / 智能机器 6 / 人工智能 4 / 信息基础设施 4 / 太空与未来构想 10 / 军事技术 12 / 建造与测绘 1。用户点名的 4 项中，汽车、人工智能、机器人 3 项在列；「太空旅行」库内无同名节点（检索 `星际航行` / `星际旅行` / `interstellar_travel` / `star_travel` 均零命中），按裁定本页先用 `space_habitat` 太空居住（2065，5 门类，闭包 55），节点新建属 R5 流程、另立批次。",
+        "⑧ **军用武器（用户裁定「收」）**：军事技术组收录 12 条 —— 弹道导弹 1942 / 防空导弹 1950 / 巡航导弹 1950 / 反坦克导弹 1960 / 卫星侦察 1960 / 核三位一体 1960 / 导弹防御 1980 / 巡飞弹 1980 / 高超声速导弹 2010 / 无人机蜂群 2010 / 忠诚僚机 2020 / 自主武器 2035。`mil_aiwar` 军事人工智能按语义归入「人工智能」组，不重复计数。",
+        "⑨ **⚠️ 核心组成为 0 的 2 项单列（不静默剔除）**：`bio_surgerobot` 手术机器人（`dependsOn` = `chemistry` + `mathematics`）、`ene_smartgrid` 智能电网（`physics` + `chemistry`）—— 直接前置全部为学科级顶点 / 基本类，属 **R8 违规形态**（不得以学科级顶点充当替身前置）；页面上单列提示、不并入正常统计。（另 `inf_agent` 智能体核心仅 1 条。）",
+        "⑩ **⚠️ 统计口径陷阱**：按「是否涉及某门类」统计时，44 项对多数门类为 44/44（14 个维度顶点扇入所致），**无区分度** → 页面一律用「**组成技术条数**」（工程与建造 475 条 vs 地球与天文 3 条，量级差异可分辨）。",
+        "⑪ **页面结构**：总览态 = 5 项 KPI + 门类构成条形图 + 涉及门类数分布直方图 + 年代×门类数散点 + 可排序清单表 + 分组筛选 + 核心为 0 单列 + 被删条目与口径说明；详细分析态（`?id=`）= 基本信息 / **按门类分组的组成技术清单（中文名 + 英文名 + 年代，可点入详情页）** / 门类占比条形图 / 时间跨度 / 直接组成 / 下游。图表均为**自绘 SVG**，不引入外部图表库。",
+        "⑫ **浏览器验证（全绿）**：总览态 `kpi=5 / cards=6 / tbody=44 / thead=7 / chips=8 / sortable=4 / svg=3`；导航「多学科技术」高亮生效；分组筛选点「军事技术」→ 12 行；表头「年」双向排序（2035→1942 / 1942→2035）；详细态 4 例（`automobile` 2 门类 / 22 闭包 / 3 直接组成 / 81 下游；`ai` 3 / 24 / 1 / 32；`space_habitat` 5 / 55 / 3 / 0；`bio_surgerobot` 0 / 0 / 0 / 1，warn=1）；折叠联动与节点弹窗（`#modal`）正常。**修复 4 处缺陷**：ⓐ TDZ —— `renderTable` 引用文件下方的 `const SORT`，顶层立即调用 `renderOverview()` 抛 `ReferenceError` 致渲染静默中断（`tbody` 0 行），入口移至 IIFE 末尾；ⓑ `fmtYear` —— `automobile` 年代跨度显示「前 2600000」，改为 ≥10000 时换算「万年」（前 260 万年 – 1886）；ⓒ 被删条目的 `<b>` 三元优先级 —— `'<b>' + x == null ? \"\" : …` 因 `+` 优先于 `==` 恒为假；ⓓ `discTask(id)` 原输出英文 `sub` key，改走 `window.DIMENSION.resolve()` + `DD.taskDomains` 输出中文域名。",
+        "⑬ **本批未做的事**：未改动任何 `dependsOn`（属 D2 / D3）；未改 `dimension_data.js` 的 `overrides`（仍为空，待 D1 获批）；未新建任何节点；未做「跨学科度分数」排名（该指标不可靠）；不引入外部图表库。"
+      ],
+      "files": [
+        "multidisciplinary.html（新增页面）",
+        "assets/pages/multidisciplinary.js（新增页面脚本：总览态 + 详细分析态）",
+        "assets/pages/multidisciplinary_data.js（新增，自动生成 57,294 字节，window.MD_DATA）",
+        "tools/gen_multidisciplinary.js（新增数据构建器，10 条断言）",
+        "assets/shell.js（VIEWS 15 → 16 项，新增「多学科技术」）",
+        "audit/ledger.json（批次 P1 由 draft-ready 转 applied，补 decisions / candidateList / coreZeroSingle / statisticsCaveat / verification / revisions）",
+        "assets/pages/correction_data.js（新增 CR-2026-0915-multidisciplinary-page，entries 25 → 26；pendingQueue 31 → 32）",
+        "assets/pages/changelog_data.js（本条目，entries 39 → 40）",
+        "版本迭代日志.md（表格行 + 详细章节）",
+        "技术网络检修计划.md（批次总览 P1 行 / 当前状态 / 修订记录）",
+        "README.md（页面表补 multidisciplinary.html）"
+      ]
     }
 ]
 };

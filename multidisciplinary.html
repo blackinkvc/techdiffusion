@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>多学科技术 · 技术演化数据库</title>
+<link rel="stylesheet" href="assets/style.css?v=20260915a">
+<style>
+  /* ===== 多学科技术页专属样式（在 style.css 基础之上，不改动共享样式表） ===== */
+  .md-wrap{max-width:1000px;margin:0 auto;padding:8px 18px 60px}
+  .md-head h2{font-size:26px;margin:6px 0 4px;font-weight:900;letter-spacing:.5px}
+  .md-head h2 small{font-size:14px;font-weight:600;color:var(--ink-soft);margin-left:8px}
+  .md-head .lead{font-size:14.5px;color:var(--ink-soft);margin:0 0 4px}
+  .md-crumb{margin:0 0 6px;font-size:13px}
+  .md-kpi{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+  .md-kpiv{flex:1 1 118px;border:1px solid var(--line-light);border-radius:8px;padding:9px 11px;background:#fffdf7;text-align:center}
+  .md-kpiv b{display:block;font-size:19px;color:var(--accent);font-weight:900;line-height:1.3}
+  .md-kpiv span{font-size:11.5px;color:var(--ink-soft)}
+  .md-card{border:1px solid var(--line-light);border-radius:10px;padding:13px 15px;margin:13px 0;background:#fffdf7}
+  .md-ct{font-weight:800;font-size:14.5px;color:var(--ink);margin-bottom:2px}
+  .md-cs{font-size:12px;color:var(--ink-soft);margin-bottom:8px;line-height:1.6}
+  .md-card svg{width:100%;height:auto;display:block}
+  .md-two{display:flex;gap:13px;flex-wrap:wrap}
+  .md-two>.md-card{flex:1 1 340px;margin:13px 0}
+  .md-note{background:#fff8e8;border:1px dashed var(--accent);border-radius:8px;padding:10px 13px;margin:12px 0;font-size:12.5px;color:#5a4410;line-height:1.7}
+  .md-note code{font-family:var(--mono);font-size:12px;background:#f3ead2;padding:0 3px}
+  .md-warn{background:#fdf6f4;border-color:#c9a89c}
+  .md-warn .md-ct{color:#8a3a1e}
+  .md-chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 10px}
+  .md-chip{font:inherit;font-size:12.5px;border:1px solid var(--line-light);border-radius:16px;padding:4px 12px;background:#fff;color:var(--ink-soft);cursor:pointer}
+  .md-chip:hover{background:var(--accent-bg)}
+  .md-chip.active{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700}
+  .md-chip i{font-style:normal;opacity:.75;font-size:11.5px}
+  .md-table{width:100%;border-collapse:collapse;font-size:12.5px}
+  .md-table th,.md-table td{border-bottom:1px solid var(--line-light);padding:6px 7px;text-align:left;vertical-align:top}
+  .md-table th{background:var(--accent-bg);font-weight:700;white-space:nowrap;font-size:12px}
+  .md-table th.sortable{cursor:pointer;user-select:none}
+  .md-table th.sortable:hover{background:#efe3c0}
+  .md-table th.sortable.on{color:var(--accent)}
+  .md-table td.g{color:var(--ink-soft);white-space:nowrap;font-size:12px}
+  .md-table td.num{text-align:right;font-variant-numeric:tabular-nums}
+  .md-table .en{color:var(--ink-soft);font-size:11.5px}
+  .md-table tr:hover td{background:#fffaee}
+  .md-go{white-space:nowrap;font-size:12px;color:var(--accent);border-bottom-color:var(--accent)}
+  .md-dchip{display:inline-block;border:1px solid;border-radius:10px;padding:0 7px;font-size:11px;margin:1px 3px 1px 0;background:#fff}
+  .md-row{display:flex;gap:10px;flex-wrap:wrap;padding:6px 0;border-bottom:1px dotted var(--line-light);font-size:12.5px}
+  .md-row:last-child{border-bottom:none}
+  .md-node-warn{flex:0 0 210px;font-weight:700}
+  .md-node-warn em{font-style:normal;font-weight:400;color:var(--ink-soft);font-size:11.5px}
+  .md-node-warn b{color:var(--accent);font-weight:700;font-size:11.5px}
+  .md-why{flex:1 1 300px;color:var(--ink-soft);line-height:1.65}
+  .md-fold{border-top:1px solid var(--line-light);padding:4px 0}
+  .md-fold summary{cursor:pointer;font-size:13px;font-weight:700;padding:5px 0;list-style:none}
+  .md-fold summary::-webkit-details-marker{display:none}
+  .md-fold summary .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:middle}
+  .md-fold summary em{font-style:normal;font-weight:400;color:var(--ink-soft);font-size:11.5px}
+  .md-nodes{display:flex;flex-wrap:wrap;gap:5px;padding:4px 0 9px}
+  .md-node{display:inline-block;border:1px solid var(--line-light);border-radius:12px;padding:2px 9px;font-size:12px;background:#fff;cursor:pointer;line-height:1.6}
+  .md-node:hover{background:var(--accent-bg);border-color:var(--accent)}
+  .md-node em{font-style:normal;color:var(--ink-soft);font-size:11px}
+  .md-node b{color:var(--accent);font-size:11px;font-weight:700}
+</style>
+</head>
+<body>
+<header class="site-header"></header>
+<main id="main">
+<section class="view">
+  <div class="md-wrap" id="md-content"></div>
+</section>
+</main>
+<footer class="site-footer"></footer>
+
+<!-- 详情弹窗壳（由 shell.js 注入内容DOM，此处保证存在） -->
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card" id="modal-card"></div>
+</div>
+
+<script src="assets/d3.v7.min.js"></script>
+<script src="assets/techs_extra.js"></script>
+<script src="assets/techs_extend.js"></script>
+<script src="assets/techs_more.js"></script>
+<script src="assets/techs_midtech.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/pages/theory_data.js"></script>
+<script src="assets/pages/dimension_data.js"></script>
+<script src="assets/core.js?v=20260915a"></script>
+<script src="assets/shell.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/pages/init_helper.js"></script>
+<script src="assets/pages/multidisciplinary_data.js"></script>
+<script src="assets/pages/multidisciplinary.js"></script>
+</body>
+</html>

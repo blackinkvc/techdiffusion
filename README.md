@@ -23,7 +23,7 @@
 
 ## 站点结构（各页面用途）
 
-站点为多页应用（MPA），由 `assets/shell.js` 统一注入导航、全局搜索与详情弹窗。
+站点为多页应用（MPA），共 **18 个页面**，由 `assets/shell.js` 统一注入导航、全局搜索与详情弹窗（导航项见 `assets/shell.js` 的 `VIEWS`，共 16 项；`index.html` 为入口跳转页、`detail.html` 为详情弹窗页，二者不在导航中）。
 
 | 页面 | 用途 |
 |---|---|
@@ -35,12 +35,15 @@
 | `tree_full.html` | **全量科技树**（加载 `data_full.js`，13k 节点力导向图，按分类 / 成熟度 / 综合分着色筛选） |
 | `lineage.html` | 来龙去脉（单条技术的上下游依赖链） |
 | `analysis.html` | 关系网分析（PageRank / 中介中心性 / 组合诞生推演） |
+| `multidisciplinary.html` | 多学科技术（按维度层学科门类拆解 44 项多学科技术的组成技术；总览统计 + 逐项详细分析） |
+| `model.html` | 技术演化的数学模型（5 构想 + 十种进阶模型 + 验证门禁） |
 | `method.html` | 方法论（第一性原理五维评分体系说明） |
 | `midtech.html` | 中间技术 |
 | `progress.html` | 进度 |
 | `sop.html` | 研发 SOP（内容质量门禁） |
 | `research.html` | 文献谱系（历史相关研究，不进入技术网络） |
 | `changelog.html` | 版本迭代日志（与 `版本迭代日志.md` 同源） |
+| `correction.html` | 纠错总结（被证伪的修正事件：前因后果 / 依赖关系 / 归属） |
 | `detail.html` | 详情弹窗页（五维评分卡 + 依赖链） |
 
 更完整的构建思路与方法论见仓库内两份文档：
@@ -77,9 +80,10 @@
 
 ```
 .
-├── index.html / worldview.html / browse.html / timeline.html / tree.html / tree_full.html
-├── lineage.html / method.html / midtech.html / progress.html / sop.html
-├── analysis.html / research.html / changelog.html / detail.html
+├── index.html / worldview.html / browse.html / timeline.html / tree.html
+├── tree_full.html / lineage.html / method.html / midtech.html / progress.html
+├── sop.html / analysis.html / multidisciplinary.html / model.html
+├── research.html / changelog.html / correction.html / detail.html
 ├── assets/                 # 前端资源（style.css, shell.js, app.js, data_full.js 等）
 ├── analysis-engine/        # Python/JS 分析引擎 + catalogs/ + data/
 ├── tools/                  # 建网脚本（gen_techs / disassemble / relink_parents 等）

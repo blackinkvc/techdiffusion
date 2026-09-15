@@ -18,6 +18,7 @@
     { file: "progress", label: "进度" },
     { file: "sop", label: "研发SOP" },
     { file: "analysis", label: "关系网分析" },
+    { file: "multidisciplinary", label: "多学科技术" },
     { file: "model", label: "数学模型" },
     { file: "tree_full", label: "全量科技树" },
     { file: "research", label: "文献谱系" },
