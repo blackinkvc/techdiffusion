@@ -54,7 +54,8 @@ window.CORRECTIONS = {
 ,
       "【v0.9.30 · 已执行 · 顺延】批次 3.1b（E 族 manufact 余 41 条「`mathematics` 单前置」判定）已写盘：保留 0 / 改前置 3 / 删边 38 / 降级为概念影响 0，补前置 41 条目共 79 条边，依赖边 6,126 → 6,167（节点 2,266 不变）；派生文案 191 条（`summary` 65 / `significance` 58 / `views` 68）+ 中间库 95 条目，均验不动点；结构问题族 A 535 → 494、E 146 → 105（**`A.manufact` 与 `E.manufact` 均由 41 → 0，E 族 manufact 槽位清空**）、Ch 252 → 246；`mathematics` 作为前置的节点 611 → 570。**本批的判据性结论**：41 条逐条审核后**保留数为 0** —— 说明该槽位不区分必要与非必要，属生成阶段的批量赋值产物（与 `bx_*` 占位、stub 捏造链同类），而非逐条判断的结果；四标准中的**排他性**是筛出这类挂载的唯一判据，单靠时序校验（前置年 ≤ 本体年）它们会整体通过。**顺延与新增**：① 缺失节点（补节点候选，累计 5 项，本批新增 2）：高压流体加压设备（`mfg_waterjet` / `mfg_awj` 共用，现以 `jet_compressor` 代位、语义不等价）、机器视觉（`computer_vision` 标注 2012 年，晚于 `mfg_visionguide` 的 2000 年，无法作为其前置）；② 另有气动 / 抛丸设备、光刻 / 抗蚀剂两项缺口，累计 7 项；③ 同义重复节点对新增一例：`mfg_assembly`（1900）与 `assembly_line`（1913）语义重叠，与既有 `mfg_wedm` / `mfg_edmwire`、`laser` / `lasers`、`mfg_lathe` / `lathe` 同属节点级问题，建议另立批次（合并会改节点数并触发 `check_docs` / `tree_full.html` 写死数字同步）；④ **核账陷阱（本批暴露）**：新增边须按「Σ `backfills.add` + Σ(repoint 各 1 条 `newParent`)」计算 —— 本批 `backfills` 合计 79 条，另有 repoint 3 条的 `newParent` 3 条，实际新增 82 条；仅按 `backfills` 推算会得 6,164，与实测 6,167 差 3。⑤ 阶段 3 下一批：E 族 manufact 已清空，可转 E 族其余分类（现余 105 条）或 A 族（现 494 条）；**根治手段仍在阶段 5c**（生成器槽位赋值的语义硬约束）。",
       "【v0.9.31 · 草案待审核 · 阶段 3.1c】E 族 info 首批 18 条（通信、网络与标识设备）前置逐条判定已写入 `audit/ledger.json` 的 `batches[\"3.1c\"]`：保留 0 / 改前置 1（`inf_antenna` 天线 → `em_theory` 电磁理论）/ 删边 17 / 降级 0，补前置 17 条目共 37 条边；预演依赖边 6,167 → **6,187**、`mathematics` 前置 570 → 552。**未改动任何数据**，待逐条审核后由 `tools/apply_ledger.js --batch 3.1c --apply` 写盘。审核要点：① 天线改指「电磁理论」还是「电磁学」（两者皆 1865）；② `inf_rfid` 射频识别跨域以 transport 类的雷达（`tr_radar2`，1935）代位是否接受；③ `inf_cdn`(1990) ← `inf_cache`(1990) 与 ④ `inf_fiber`(1970) ← `optic_fiber`(1970) 两处同年前置；⑤ `inf_5g` 是否先补建蜂窝 / 移动通信世代节点再判。",
-      "【v0.9.31 · 草案待审核 · 阶段 3.1d】E 族 info 次批 16 条（信息记录、存储与音视频设备）前置逐条判定已写入 `batches[\"3.1d\"]`：保留 0 / 改前置 2（`inf_vinyl` 黑胶唱片 → `acoustics` 声学、`inf_dataviz` 数据可视化 → `statistics` 统计学）/ 删边 14 / 降级 0，补前置 16 条目共 30 条边；预演依赖边 6,167 → **6,183**、`mathematics` 前置 570 → 554。**未改动任何数据**，待逐条审核后由 `tools/apply_ledger.js --batch 3.1d --apply` 写盘。与 3.1c 节点集合不相交，写盘顺序不限。本批新发现三处缺失节点：色料 / 染料、磁记录介质 / 磁头、图像 / 信号处理。"
+      "【v0.9.31 · 草案待审核 · 阶段 3.1d】E 族 info 次批 16 条（信息记录、存储与音视频设备）前置逐条判定已写入 `batches[\"3.1d\"]`：保留 0 / 改前置 2（`inf_vinyl` 黑胶唱片 → `acoustics` 声学、`inf_dataviz` 数据可视化 → `statistics` 统计学）/ 删边 14 / 降级 0，补前置 16 条目共 30 条边；预演依赖边 6,167 → **6,183**、`mathematics` 前置 570 → 554。**未改动任何数据**，待逐条审核后由 `tools/apply_ledger.js --batch 3.1d --apply` 写盘。与 3.1c 节点集合不相交，写盘顺序不限。本批新发现三处缺失节点：色料 / 染料、磁记录介质 / 磁头、图像 / 信号处理。",
+      "【v0.9.32 · 缺失节点类（新登记）】「以不贴切的替代充当前置」已作为一类错误定位并留档（见本页 CR-2026-0915-oop-missing-node-substitution）：**根因是节点缺失而非判定不严，解决方案为新建具体节点**。本批已新建 `inf_oop` 面向对象方法(1967)。**累计待补 17 项**：形式语言 / 自动机理论 / 可计算性（编译器的理论侧）、Algol 60 / 抽象数据类型（面向对象方法的语言谱系侧）、软件工程 / 面向对象方法以外的软件方法学、关系代数 / 关系模型、色料 / 染料、磁记录介质 / 磁头、图像 / 信号处理、光交叉连接 / 光交换设备、蜂窝或移动通信世代节点 1G–4G、深冷介质 / 液氮、乙炔或工业气体、真空技术、高压流体加压设备、机器视觉、气动 / 抛丸设备、光刻 / 抗蚀剂、机器人关节减速器。另新增判定规则 **R5：不得以学科级顶点充当替身前置**。"
     ],
     enablesAudit: {
       title: "enables 语义错误 · 95 项灰色概念甄别表",
@@ -164,6 +165,44 @@ window.CORRECTIONS = {
     },
   },
   entries: [
+    {
+      "id": "CR-2026-0915-oop-missing-node-substitution",
+      "date": "2026-09-15",
+      "node": "因缺失节点而发生的「代位」前置（本页总结的第一类错误）；本批次新建 `inf_oop` 面向对象方法以消除 `inf_uml` 的代位",
+      "nodeName": "面向对象方法（本轮新建）/ 统一建模语言 / 编译器 / 哈希函数 / 数据压缩",
+      "category": "info",
+      "severity": "高",
+      "status": "已写盘（补节点批次 `node-add-20260915-oop`：节点 2,266 → 2,267、依赖边 6,167 → 6,169）；批次 3.1e 的对应改指仍为草案待审核",
+      "problem": "**一类错误：以不贴切的替代充当前置（代位）**。当依赖网络缺少某环节的**具体节点**时，该节点的前置会被赋成一个语义不符的「大名词」。本批（阶段 3.1e 复核）一次暴露三处：① `inf_uml` 统一建模语言(1997) —— 其真正来源是**面向对象方法**，网络内并无此节点，草稿一度以 `computer_sci` 计算机科学(1936) 代位；② `inf_compiler` 编译器(1952)、③ `inf_hash` 哈希函数(1953) —— 因**误以为**库内没有更对口的数学节点，草稿以 `math_logic` 数理逻辑(1854) 代位，而库内实际存在 `lambda_calc` λ演算(1936) 与 `number_theory` 数论(-300)。三种形态：**形态一** 批量退回学科级顶点（原状：`mathematics` 被赋给 570 条，不看语义、按槽位生成）；**形态二** 以一个学科级顶点替换另一个学科级顶点（把「数学」换成「计算机科学」）；**形态三** 以泛泛学理替换具体学理（以数理逻辑顶替数论 / λ演算）。",
+      "rootCause": "根因**不是判定不严，而是节点缺失** —— 该环节在库内没有对应节点，判定者只能在邻近的「大名词」里就近取一个。形态一最易识别（它连具体名词都不是），形态二、三则更隐蔽：边看起来「有具体前置」，但经不起第 2 条排他性的反问（『去掉 A，B 是否仍能按史实出现』『A 是不是该环节最直接的先行者』）。它把问题从「挂得太泛」变成「挂得不对」，反而更难被例行校验发现 —— 三道门禁只覆盖结构指标与派生文案，对边的语义正确性没有校验能力，此类错误只能靠逐条人工判定暴露。另需注意：把 `mathematics` 换成 `computer_sci` 与阶段 3 的整体目标**自相矛盾**，因为后者正是要清理「批量挂学科级顶点」这一做法本身。",
+      "fix": "按用户 2026-09-15 裁定：**解决方案是新建缺失的具体节点，而不是接受代位**。① 新建 `inf_oop` 面向对象方法（`info` / `era=info` / 1967 / 挪威·奥斯陆），经联网取证确定年份 —— Simula 67 于 1967 年首次把封装、继承 / 后绑定、动态对象生成三特征合并为同一套语言机制（不取 1961 合作开始或 1965 Simula I 运行）；批次 `node-add-20260915-oop` 已写盘。② 批次 3.1e 随之修订三处：`inf_uml` 由 `computer_sci` 改为 `inf_oop` + `inf_pl_c`；`inf_compiler` 由 `math_logic` 改为 `lambda_calc`；`inf_hash` 由 `math_logic` 改为 `number_theory`。③ 新增判定规则 **R5：不得以学科级顶点充当替身前置**，写入 3.1e 的 `dispositionRule`。④ 其余缺失节点列入补节点候选（累计 17 项），按批补建。⑤ 如实披露一条承接关系：**指向具体学理并不能一步跳出枢纽体系** —— 库内可作学理级前置的节点（`info_theory` / `lambda_calc` / `math_logic` / `number_theory` / `set_theory` / `combinatorics`）其自身前置一律是 `writing + mathematics`，故它们自己都在 A 族待修名单内，将在阶段 3b–3d 处理。",
+      "badUpstream": [
+        "`computer_sci` 计算机科学(1936) —— 学科级顶点，以学科名替换学科名（形态二），与「清理批量挂学科级顶点」的目标自相矛盾，**已弃用**",
+        "`math_logic` 数理逻辑(1854) 用于编译器与哈希函数 —— 排他性不成立（形态三）；库内实有更对口的 `lambda_calc` 与 `number_theory`",
+        "`inf_pl_c` C 语言(1972) 单条作为 UML 全部来源 —— 不足以表达「面向对象方法缺位」这一事实"
+      ],
+      "goodUpstream": [
+        "新建 `inf_oop` 面向对象方法(1967) ← `inf_compiler` 编译器(1952) + `inf_pl_fortran` Fortran(1957)",
+        "`inf_uml` 统一建模语言(1997) ← `inf_oop`(1967) + `inf_pl_c` C 语言(1972)",
+        "`inf_compiler` 编译器(1952) ← `computer` 电子计算机(1946) + `lambda_calc` λ演算(1936)",
+        "`inf_hash` 哈希函数(1953) ← `computer` 电子计算机(1946) + `number_theory` 数论(-300)",
+        "`inf_compression` 数据压缩(1950) → `info_theory` 信息论(1948)（改前置：定义性构成本身即学理）"
+      ],
+      "changes": [
+        "① 新建节点：`inf_oop` 面向对象方法（`info` / `era=info` / `year=1967` / `en=Object-Oriented Programming` / 挪威·奥斯陆 / Dahl 与 Nygaard），写入 `assets/techs_extra.js` 的 `EXTRA_TECHS`（1,034 → 1,035）。",
+        "② 规模：节点 2,266 → **2,267**；依赖边 6,167 → **6,169**（+2，均为新节点的前置边）。零前置维持 4、环 0、年份倒挂 0、重名组 0。",
+        "③ 派生链：`regen_text --apply` 应用 6 处（2 个节点 `inf_compiler` / `inf_pl_fortran` 的下游枚举，各 3 字段），复跑验不动点 0 处；`regen_midtech --apply` 95 / 95 未变化、复跑不动点。",
+        "④ 台账：新增 `batches[\"node-add-20260915-oop\"]`（applied）；并**覆盖修订** `batches[\"3.1e\"]`（draft-ready）—— ③ 处改判 + 新增规则 R5 + 预演数字更新（盘面 2,267 / 6,169，本批预演 6,169 → 6,185）。",
+        "⑤ 门禁：`check_docs [OK]`、`regen_text --check [OK]`（0 处）、`audit_net --check [OK]`；`audit/baseline.json` 按合法改进刷新（N 2,266 → 2,267、edges 6,167 → 6,169）。",
+        "⑥ 未改动：全量管线 `graph.json`（2,299 / 6,963）与 `assets/data_full.js`（13,318 / 16,811）；`inf_uml` 的实际前置（属批次 3.1e，仍待审核写盘）；`enables` 反向边。"
+      ],
+      "files": [
+        "assets/techs_extra.js（EXTRA_TECHS 1,034 → 1,035，新增 `inf_oop`；另 `inf_compiler` / `inf_pl_fortran` 派生文案 6 处）",
+        "audit/ledger.json（新增 `node-add-20260915-oop`；覆盖修订 `3.1e`）",
+        "audit/baseline.json（N 2,266 → 2,267、edges 6,167 → 6,169）",
+        "assets/pages/correction_data.js · assets/pages/changelog_data.js · 版本迭代日志.md · 技术网络检修计划.md（本条目与三处登记）"
+      ]
+    },
     {
       "id": "CR-2026-0915-einfo-math-hub-3.1c",
       "date": "2026-09-15",

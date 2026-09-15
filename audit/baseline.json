@@ -1,6 +1,6 @@
 {
- "N": 2266,
- "edges": 6167,
+ "N": 2267,
+ "edges": 6169,
  "selfLoop": 0,
  "dupEdge": 0,
  "danglingDep": 0,
@@ -123,7 +123,7 @@
   "electrical": 211,
   "classical": 28,
   "intelligent": 685,
-  "info": 744,
+  "info": 745,
   "medieval": 29,
   "future": 117
  },
@@ -144,6 +144,6 @@
  },
  "dual": {
   "onlyInGraphJson": 1270,
-  "onlyInMain": 590
+  "onlyInMain": 592
  }
 }

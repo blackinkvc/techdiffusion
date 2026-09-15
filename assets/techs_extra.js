@@ -17604,7 +17604,7 @@ const EXTRA_TECHS = [
     "year": 1952,
     "people": "",
     "place": "",
-    "summary": "编译器约 1952 年 出现，建立在 数学 之上；它把 信息记录、远程传输 变成可稳定复现的能力，是 信息通信 中从经验走向方法的关键一步。",
+    "summary": "编译器在 1952 年 前后成形，依托 数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 面向对象方法 等后续技术。",
     "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
@@ -17619,10 +17619,10 @@ const EXTRA_TECHS = [
       },
       {
         "period": "当代",
-        "text": "今天，编译器仍是 信息记录 的底层支撑，并作为 信息通信 的基础能力持续发挥作用。"
+        "text": "今天，编译器仍是 信息记录 的底层支撑，并持续影响 面向对象方法。"
       }
     ],
-    "significance": "编译器把 数学 与 信息记录 连接起来，是 信息通信 中从「可能」走向「可用」的关键节点。"
+    "significance": "编译器把 数学 与 信息记录 连接起来，是 信息通信 中从「可能」走向「可用」的关键节点，并直接催生了 面向对象方法。"
   },
 {
     "id": "inf_pl_fortran",
@@ -17634,7 +17634,7 @@ const EXTRA_TECHS = [
     "year": 1957,
     "people": "",
     "place": "",
-    "summary": "Fortran约 1957 年 出现，建立在 数学 之上；它把 信息记录、远程传输 变成可稳定复现的能力，是 信息通信 中从经验走向方法的关键一步。",
+    "summary": "Fortran在 1957 年 前后成形，依托 数学 把 信息记录、远程传输 落到实处，并成为 信息通信 中承上启下的一环，直接支撑了 面向对象方法 等后续技术。",
     "dependsOn": ["mathematics"],
     "enables": [],
     "applications": [
@@ -17649,10 +17649,10 @@ const EXTRA_TECHS = [
       },
       {
         "period": "当代",
-        "text": "今天，Fortran仍是 信息记录 的底层支撑，并作为 信息通信 的基础能力持续发挥作用。"
+        "text": "今天，Fortran仍是 信息记录 的底层支撑，并持续影响 面向对象方法。"
       }
     ],
-    "significance": "Fortran把 数学 与 信息记录 连接起来，是 信息通信 中从「可能」走向「可用」的关键节点。"
+    "significance": "Fortran把 数学 与 信息记录 连接起来，是 信息通信 中从「可能」走向「可用」的关键节点，并直接催生了 面向对象方法。"
   },
 {
     "id": "inf_pl_c",
@@ -30813,5 +30813,38 @@ const EXTRA_TECHS = [
       }
     ],
     "significance": "畜牧业萌芽的载体。"
+  },
+{
+    "id": "inf_oop",
+    "name": "面向对象方法",
+    "en": "Object-Oriented Programming",
+    "category": "info",
+    "era": "info",
+    "date": "1967 年",
+    "year": 1967,
+    "people": "Ole-Johan Dahl / Kristen Nygaard",
+    "place": "挪威 · 奥斯陆（挪威计算中心）",
+    "summary": "面向对象方法以「类」为组织单位，把数据与操作一并封装为对象：1967 年完成的 Simula 67 首次把封装、继承与动态对象生成合并为同一套语言机制，此后成为软件构造的主导范式。",
+    "dependsOn": [
+      "inf_compiler",
+      "inf_pl_fortran"
+    ],
+    "enables": [],
+    "applications": [
+      "软件构造",
+      "系统建模",
+      "程序复用"
+    ],
+    "views": [
+      {
+        "period": "信息时代",
+        "text": "1961 年 Dahl 与 Nygaard 为离散事件仿真着手设计描述语言，1967 年完成的 Simula 67 引入类、子类与虚过程，对象第一次成为可独立封装数据与行为、彼此发送消息的单元。"
+      },
+      {
+        "period": "当代",
+        "text": "此后 Smalltalk、C++、Java、Python 相继沿此路线展开，面向对象成为系统开发的主导范式，统一建模语言正是它所需的图形化记号体系。"
+      }
+    ],
+    "significance": "面向对象方法把程序从「算法加数据」变成「互相发送消息的对象集合」，是软件从一次性编码走向可复用、可扩展构造的转折点。"
   }
 ];

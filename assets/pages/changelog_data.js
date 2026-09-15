@@ -899,6 +899,40 @@ window.CHANGELOG = {
             "assets/pages/correction_data.js",
             "版本迭代日志.md"
         ]
+    },
+    {
+        "version": "v0.9.32",
+        "date": "2026-09-15",
+        "type": "data",
+        "title": "补建缺失节点「面向对象方法」(`inf_oop`)：主管线 2,266 → 2,267 节点 / 6,167 → 6,169 条依赖边；并总结「以不贴切的替代充当前置」一类错误",
+        "summary": "按用户指派补建缺失节点 `inf_oop` 面向对象方法（`info` / `era=info` / 1967 / 挪威·奥斯陆），主管线节点 **2,266 → 2,267**、依赖边 **6,167 → 6,169**（+2 条前置边：`inf_compiler` 编译器 1952 + `inf_pl_fortran` Fortran 1957）。起因是阶段 3.1e 复核：`inf_uml` 统一建模语言的真正来源是面向对象方法，而网络内无此节点，草稿一度以 `computer_sci` 计算机科学代位。**本轮把「以不贴切的替代充当前置」总结为一类错误并留档** —— 根因不是判定不严而是**节点缺失**，解决方案是**新建具体节点**而非接受代位；同时新增判定规则 **R5：不得以学科级顶点充当替身前置**。批次 3.1e 的台账草案随之修订三处（`inf_uml` → `inf_oop` + `inf_pl_c`；`inf_compiler` → `lambda_calc` λ演算；`inf_hash` → `number_theory` 数论），仍待审核未写盘。",
+        "treeChange": {
+            "scope": "主管线依赖网络：节点 **2,266 → 2,267**，依赖边 **6,167 → 6,169**（新增节点 1 个、新增前置边 2 条）。全量管线 `graph.json`（2,299 / 6,963）与 `assets/data_full.js`（13,318 / 16,811）本轮未改动。",
+            "reason": "阶段 3.1e 复核暴露：`inf_uml` 统一建模语言(1997) 的真实来源是**面向对象方法**，而网络内没有该节点，导致最初草稿以学科级 `computer_sci` 计算机科学(1936) 代位 —— 这是**与阶段 3 目标自相矛盾**的做法（后者正是要清理「批量挂学科级顶点」）。用户裁定：这类错误的原因是**缺失合适的节点**，解决方案是**新建节点**，不是接受代位。本轮据此补建 `inf_oop` 并完成取证与写盘。",
+            "detail": "① **联网取证定年**：1961 年 Ole-Johan Dahl 与 Kristen Nygaard 在挪威计算中心合作设计仿真描述语言；SIMULA I 于 1965 年 1 月在 UNIVAC 1107 上运行；1967 年 5 月二人于奥斯陆 IFIP 会议发表《Class and subclass declarations》，成为 Simula 67 的首份形式定义。**取 1967**（Simula 67 首次把封装、继承 / 后绑定、动态对象生成三特征合并为同一套语言机制），不取 1961（合作开始）或 1965（Simula I 无继承）。② **影响链**：1970 年代 Alan Kay 据 Simula 发展 Smalltalk；1980 年代 Bjarne Stroustrup 形成 C++；1990 年代 Java 沿用其对象机制。2001 年二人获 IEEE von Neumann 奖章、2002 年获 ACM 图灵奖；IEEE Milestone #181「Object-Oriented Programming, 1961-1967」于 2017-09-27 在奥斯陆大学揭牌。③ **前置 2 条**：`inf_compiler`(1952)——Dahl 的编译器经验是该语言得以实现的前提；`inf_pl_fortran`(1957)——该范式的载体是高级语言，Fortran 为库内该环节最早的可考节点。④ **排除候选**：`lambda_calc` λ演算（排他性不成立）、`set_theory` 集合论（语义偏泛）、`inf_pl_c` C 语言（1972 晚于 1967）、`computer_sci` 计算机科学（学科级顶点，禁用）。⑤ **下游**：本批只新增节点与其前置，唯一必要性成立的下游 `inf_uml` 的改指属批次 3.1e 的处置范围，故 `inf_oop` 当前零下游。⑥ **派生链**：`regen_text --apply` 应用 6 处（`inf_compiler` / `inf_pl_fortran` 的下游枚举），复跑不动点 0 处；`regen_midtech --apply` 95 / 95 未变化。⑦ **基线**：`audit/baseline.json` 按合法改进刷新（N 2,266 → 2,267、edges 6,167 → 6,169）。"
+        },
+        "changes": [
+            "① 新增节点：`inf_oop` 面向对象方法（`info` / `era=info` / `year=1967` / `date=1967 年` / `en=Object-Oriented Programming` / `people=Ole-Johan Dahl / Kristen Nygaard` / `place=挪威 · 奥斯陆（挪威计算中心）`），写入 `assets/techs_extra.js`（族 A，`EXTRA_TECHS` 1,034 → 1,035）。",
+            "② 规模：节点 2,266 → **2,267**；依赖边 6,167 → **6,169**。零前置维持 4、环 0、自环 0、重复边 0、悬空前置 0、年份倒挂 0、重名组 0。",
+            "③ 新增前置边 2 条：`inf_oop` ← `inf_compiler` 编译器(1952) + `inf_pl_fortran` Fortran(1957)。",
+            "④ 派生链重算（按序）：`regen_text --apply` **6 处 / 2 节点**（`inf_compiler` 与 `inf_pl_fortran` 的 summary / significance / views[1] —— 下游枚举新增「面向对象方法」），复跑 `--check` 不动点 0 处；`regen_midtech --apply` 95 / 95 未变化，复跑不动点。",
+            "⑤ 台账：新增 `batches[\"node-add-20260915-oop\"]`（status = applied，含 forensics / yearRuling / edges / backfills / excludedParents / downstreamRuling / verification）。",
+            "⑥ **一类错误的总结（本轮新增登记）**：以不贴切的替代充当前置（代位）。**形态一** 批量退回学科级顶点（原状：`mathematics` 被赋给 570 条，不看语义）；**形态二** 以一个学科级顶点替换另一个学科级顶点（把「数学」换成「计算机科学」）；**形态三** 以泛泛学理替换具体学理（以数理逻辑顶替数论 / λ演算）。**根因是节点缺失，不是判定不严** —— 该环节在库内没有节点，判定者只能就近取一个大名词。危害在于形态二、三更隐蔽：边看起来「有具体前置」，却过不了排他性反问，把「挂得太泛」变成「挂得不对」，而三道门禁对边的语义正确性没有校验能力。详见纠错页 `CR-2026-0915-oop-missing-node-substitution`。",
+            "⑦ **解决方案**：新建缺失的具体节点（用户裁定）。已建 `inf_oop`；其余缺失节点累计 **17 项**列入补节点候选：形式语言 / 自动机理论 / 可计算性、Algol 60 / 抽象数据类型、软件工程、关系代数 / 关系模型、色料 / 染料、磁记录介质 / 磁头、图像 / 信号处理、光交叉连接 / 光交换设备、蜂窝或移动通信世代节点 1G–4G、深冷介质 / 液氮、乙炔或工业气体、真空技术、高压流体加压设备、机器视觉、气动 / 抛丸设备、光刻 / 抗蚀剂、机器人关节减速器。",
+            "⑧ 新增判定规则 **R5：不得以学科级顶点充当替身前置**（写入批次 3.1e 的 `dispositionRule`）。",
+            "⑨ 批次 3.1e 台账草案随之**覆盖修订**（仍为 draft-ready、未写盘）：`inf_uml` 由 `computer_sci` 改为 `inf_oop` + `inf_pl_c`；`inf_compiler` 由 `math_logic` 改为 `lambda_calc` λ演算(1936)；`inf_hash` 由 `math_logic` 改为 `number_theory` 数论(-300)；`inf_compression` → `info_theory` 信息论(1948) 与 `inf_vector_db` 同年前置经用户确认；`computer` 电子计算机下游 214 → 221 经确认接受。修订后预演：盘面 2,267 / 6,169 → 本批 **6,185**（移除 18 + 新增 34）、`mathematics` 前置 570 → 552、A 族 494 → 476、E 族 105 → 87、Ch 族 246 → 243。",
+            "⑩ 门禁：`check_docs [OK]`、`regen_text --check [OK]`（合计需改写 0 处）、`audit_net --check [OK]`；`audit/baseline.json` 刷新（N 2,266 → 2,267、edges 6,167 → 6,169）。",
+            "⑪ 未改动：全量管线两文件、`assets/techs_midtech.js`（重跑无变化）、`theory_data.js`；`inf_uml` 的实际前置仍为 `mathematics`（其改指属批次 3.1e，待审核写盘）；`enables` 反向边。"
+        ],
+        "files": [
+            "assets/techs_extra.js（`EXTRA_TECHS` 1,034 → 1,035，新增 `inf_oop`；`inf_compiler` / `inf_pl_fortran` 派生文案 6 处）",
+            "audit/ledger.json（新增 `node-add-20260915-oop`；覆盖修订 `3.1e`）",
+            "audit/baseline.json（N 2,266 → 2,267、edges 6,167 → 6,169）",
+            "assets/pages/correction_data.js（新增 CR-2026-0915-oop-missing-node-substitution，entries 22 → 23；pendingQueue 28 → 29）",
+            "assets/pages/changelog_data.js（本条目，entries 36 → 37）",
+            "版本迭代日志.md（表格行 + 详细章节）",
+            "技术网络检修计划.md（当前规模 / 批次表 3.1e 行与 3a 行 / §六 / 审核节点段）"
+        ]
     }
 ]
 };
