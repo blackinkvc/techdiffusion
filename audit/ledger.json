@@ -6140,6 +6140,221 @@
     "truncated": "用户第 2 条内容在发送时被截断（仅到「2.」），未收到；本轮未据此改动任何计划。"
    },
    "formalScienceDoc": "/tmp/D1_method扩展_横断形式科学.md"
+  },
+  "P1": {
+   "batch": "P1",
+   "name": "多学科技术页（页面层新增功能）",
+   "scope": "新增 1 个页面 + 1 个数据文件 + 1 个生成工具 + 1 个渲染脚本；不改任何现有页面数据、不改 dependsOn、不改 overrides",
+   "status": "draft-ready",
+   "date": "2026-09-15",
+   "dependsOn": "D0（维度层：field 学科归属已落地）；不依赖 D1 是否获批（本页只用只读视图）",
+   "request": "用户：汽车 / 人工智能 / 机器人 / 太空旅行等涉及多种学科的技术，单独列一页，做总的简单分析与统计，点进去看单独的详细分析。",
+   "findings": [
+    {
+     "k": "口径区分度",
+     "v": "「跨学科度」用上游闭包统计，试了三口径。甲（闭包全部学科门类）区分度差 —— 2,267 条里 1,063 条 ≥5 门类、20 条达 10 门类，因 14 个学科顶点扇入。乙（剔除 category=basic）6 门类 25 / 5 门类 348 / 4 门类 393 / 3 门类 511 / 2 门类 345 / 1 门类 636。丙（**剔除 14 个维度顶点 + basic 类，采用**）5 门类 25 / 4 门类 348 / 3 门类 407 / 2 门类 697 / 1 门类 156 / 0 门类 634。",
+     "why": "乙不准的原因：symbol（语言与符号）会经 writing（文字，A 族模板前置）混进几乎所有节点闭包，属噪声"
+    },
+    {
+     "k": "计算与直觉不一致（关键）",
+     "v": "汽车 automobile 口径丙仅 2 门类（直接前置仅 3 条：内燃机/钢铁/底盘）；电动汽车 tr_evcar 2；人工智能 ai 3（直接前置仅 1 条：电子计算机）；工业机器人 robot 3；人形机器人 humanoid 3。",
+     "why": "不是判据问题，是**主管线边的覆盖本身不完整**（与 D0 结论一致：部分归属被写成边，部分真实前置缺失）→ 「哪些技术入选」不能纯靠计算"
+    },
+    {
+     "k": "核心为 0 的节点（顺带暴露待修族）",
+     "v": "bio_surgerobot 手术机器人（dependsOn = chemistry + mathematics）、ene_smartgrid 智能电网（physics + chemistry）在口径丙下核心组成为 0；inf_agent 智能体 核心仅 1 条（mathematics + inf_multimodal）。",
+     "why": "两条前置全是学科顶点 → 属 R8 违规（不得以学科级顶点充当前置）。建议页面上单列提示，不悄悄剔除"
+    },
+    {
+     "k": "统计口径的选择",
+     "v": "按「是否涉及某门类」统计时，29 项技术对 6 个门类全部为 29/29 —— 无区分度。有区分度的是**组成技术条数**（工程与建造 475 条 vs 地球与天文 3 条）。",
+     "why": "页面统计口径须用组成技术条数"
+    }
+   ],
+   "candidateList": {
+    "mode": "人工圈定（草案 29 项）+ 计算口径建议补充 25 条",
+    "note": "用户点名的 4 项已全部列入；「太空旅行」库内无同名节点，需用户裁定（见 pendingUser）",
+    "groups": [
+     {
+      "g": "交通载具",
+      "n": 10,
+      "ids": [
+       "automobile 汽车/Automobile 1886",
+       "tr_evcar 电动汽车/Electric Car 1990",
+       "autonomous_driving 自动驾驶·汽车智能/Autonomous Driving 2009",
+       "flying_car 飞行汽车/Flying Car 2045",
+       "drone 无人机/Unmanned Aerial Vehicle 2010",
+       "spacecraft 航天器/Spacecraft 1957",
+       "tr_shuttle 航天飞机/Space Shuttle 1981",
+       "space_station 空间站/Space Station 1998",
+       "tr_reusablerocket 可回收火箭/Reusable Rocket 2015",
+       "starship 巨型火箭/Super-heavy Lift Rocket 2030"
+      ]
+     },
+     {
+      "g": "智能机器",
+      "n": 6,
+      "ids": [
+       "robot 工业机器人/Industrial Robot 1961",
+       "mfg_cobot 协作机器人/Collaborative Robot 1996",
+       "humanoid 人形机器人/Humanoid Robot 2032",
+       "bio_surgerobot 手术机器人/Surgical Robot 2000",
+       "robot_vacuum 家用扫地机器人/Robot Vacuum Cleaner 2002",
+       "smart_mower 智能割草机器人/Robotic Lawn Mower 2015"
+      ]
+     },
+     {
+      "g": "人工智能",
+      "n": 4,
+      "ids": [
+       "ai 人工智能/Artificial Intelligence 1956",
+       "agi 通用人工智能/Artificial General Intelligence 2040",
+       "inf_agent 智能体/AI Agent 2020",
+       "mil_aiwar 军事人工智能/Military AI 2010"
+      ]
+     },
+     {
+      "g": "信息基础设施",
+      "n": 4,
+      "ids": [
+       "internet 互联网/Internet 1969",
+       "smartphone 智能手机/Smartphone 2007",
+       "ene_smartgrid 智能电网/Smart Grid 2000",
+       "bld_smartb 智能建筑/Smart Building 2000"
+      ]
+     },
+     {
+      "g": "太空",
+      "n": 5,
+      "ids": [
+       "space_habitat 太空居住/Space Habitat 2065",
+       "lunar_base 月球基地/Lunar Base 2040",
+       "mars_colony 火星殖民/Mars Colony 2060",
+       "dyson_sphere 戴森球/Dyson Sphere 2100",
+       "nanobot_swarm 纳米机器人/Medical Nanobot Swarm 2060"
+      ]
+     }
+    ],
+    "computedSuggest": {
+     "criterion": "口径丙门类数 ≥5",
+     "count": 25,
+     "ids": [
+      "smart_mower",
+      "flying_car",
+      "autonomous_weapon",
+      "bld_dronesurvey",
+      "mil_loyalwingman",
+      "mil_swarm",
+      "tr_passdrone",
+      "tr_personalair",
+      "tr_cargo_drone",
+      "drone",
+      "space_habitat",
+      "lunar_base",
+      "mars_colony",
+      "mil_triad",
+      "mil_loitering",
+      "mil_hypersonicm",
+      "mil_glider",
+      "mil_cruise",
+      "mil_satrec",
+      "mil_atgm",
+      "mil_irguid",
+      "mil_missiledef",
+      "mil_sam",
+      "mil_ballistic",
+      "mil_aiwar"
+     ],
+     "observation": "其中 9 条是军用武器（导弹/巡飞弹/自主武器）—— 是否收进本页属立场问题，请用户定"
+    }
+   },
+   "pageDesign": {
+    "file": "multidisciplinary.html（标题「多学科技术」）",
+    "data": "assets/pages/multidisciplinary_data.js —— 构建时算好、运行时零计算，与 dimension_data.js 同风格（只读覆盖层）",
+    "tool": "tools/gen_multidisciplinary.js（生成 + 断言：清单 id 必须全部存在；门类数可复算）",
+    "render": "assets/pages/multidisciplinary.js + assets/style.css 追加 .md-*",
+    "overview": [
+     "概览数字（入选 N 项 / 跨 K 门类 / 年代跨度）",
+     "门类构成条形图（用组成技术条数）",
+     "涉及门类数分布直方图",
+     "年代×门类数时间轴散点",
+     "清单表（可排序）",
+     "⚠️ 核心组成为 0 的节点单列"
+    ],
+    "detail": [
+     "基本信息（名称中英/年代/自身门类/任务域/简介）",
+     "**按门类分组的组成技术清单（中文名+英文名+年代，可点进详情页）**",
+     "门类占比条形图",
+     "时间跨度（最早组成技术 → 本技术）",
+     "直接组成与其门类",
+     "下游",
+     "同类共享组成（后续可加）"
+    ],
+    "boundary": [
+     "不新增数据判定：不改 dependsOn / overrides",
+     "不引入外部图表库（沿用自绘 SVG/CSS）",
+     "不改现有 16 页，只新增文件 + 导航加一项（若用户同意）"
+    ]
+   },
+   "pendingUser": [
+    {
+     "k": "候选清单口径",
+     "options": [
+      "A 纯计算（≥4 门类，373 条）",
+      "B 人工圈定 + 计算画像",
+      "C 计算预选 373 条 + 删补"
+     ],
+     "recommend": "B",
+     "why": "汽车/AI 的计算门类数只有 2–3，纯计算会把它们排到几百名外"
+    },
+    {
+     "k": "「太空旅行」库内无同名节点",
+     "options": [
+      "① 用 space_station 空间站 代",
+      "② 用 space_habitat 太空居住 / mars_colony 火星殖民 代",
+      "③ 新建节点（R5 流程，另立批次）",
+      "④ 不列"
+     ],
+     "recommend": "②+③ 分批：本页先用 space_habitat 太空居住（2065，5 门类）"
+    },
+    {
+     "k": "页面入口",
+     "options": [
+      "① 顶部导航新增一项",
+      "② 不加入导航（仅 URL 可达）"
+     ],
+     "recommend": "①"
+    },
+    {
+     "k": "详细分析放哪",
+     "options": [
+      "① 新页面内 ?id= 一页两态",
+      "② 复用现有详情页新增区块"
+     ],
+     "recommend": "①，不动现有 16 页"
+    },
+    {
+     "k": "9 条军用武器是否收进本页",
+     "options": [
+      "收",
+      "不收",
+      "单列一节"
+     ],
+     "recommend": "待定（属立场问题）"
+    }
+   ],
+   "notIncluded": [
+    "不改 dependsOn / overrides（本页为只读视图）",
+    "不改现有 16 个页面（除导航若获批）",
+    "不做「跨学科度分数」排名（§findings 已说明计算口径不可靠）",
+    "太空旅行节点新建（属 R5 流程，另立批次）"
+   ],
+   "verification": {
+    "cmd": "node /tmp/xdisc.js cat-count ; node /tmp/xdisc.js top 45 ; node /tmp/xdisc.js one <id>",
+    "baseline": "2,267 节点 / 6,169 边（本轮零改动）"
+   },
+   "doc": "/tmp/多学科技术页面_方案.md",
+   "note": "本批为**页面层新增功能**，按项目约定先出方案待用户拍板；**本轮未新增或修改任何页面文件**。获批后按 §四 实现顺序执行。"
   }
  }
 }
