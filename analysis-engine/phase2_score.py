@@ -16,11 +16,15 @@
   否则                     → L1 已实现
   成熟度 = D1*0.25 + D2*0.20 + D4*0.35 + D5*0.20
 """
-import json, time
+import json, os, time
 import networkx as nx
 from collections import Counter, defaultdict
+from pathlib import Path
 
-ROOT = "/workspace/analysis-engine/data"
+# 数据目录：默认 = 本仓库 analysis-engine/data（依 __file__ 定位，随仓库搬移）。
+# 原实现写死 "/workspace/analysis-engine/data"，克隆到其他路径后即无法运行。
+# 需要指向别处时用环境变量覆盖：TECHDIFFUSION_DATA=/path/to/data
+ROOT = os.environ.get("TECHDIFFUSION_DATA") or str(Path(__file__).resolve().parent / "data")
 CATS = ["basic", "material", "energy", "manufact", "transport",
         "info", "life", "build", "military"]
 W = {"D1": 0.25, "D2": 0.20, "D4": 0.35, "D5": 0.20}

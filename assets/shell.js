@@ -119,8 +119,19 @@
     document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
 
     // 页脚计数
+    // 站点存在两套口径不同的数据集：主管线（TECHS）与全量管线（TECHS_FULL）。
+    // tree_full.html 按设计只加载 data_full.js、不加载 techs_*.js，此时 TECHS 仅剩
+    // data.js 的基础条目（108 条），而该页正文声明 13,318 项 —— 原实现一律取
+    // TECHS.length，导致页脚显示「收录 108 项技术」，与正文自相矛盾。
+    // 现按当前页实际使用的数据集取值并标注口径。
     const fc = document.querySelector("#footer-count");
-    if (fc) fc.textContent = `收录 ${TECHS.length} 项技术 · ${CATEGORIES.length} 分类 · ${ERAS.length} 时期`;
+    if (fc) {
+      const full = window.TECHS_FULL;
+      const useFull = currentFile() === "tree_full" && Array.isArray(full) && full.length > 0;
+      const n = useFull ? full.length : (typeof TECHS !== "undefined" ? TECHS.length : 0);
+      const scope = useFull ? "全量管线" : "主管线";
+      fc.textContent = `${scope}收录 ${n.toLocaleString("en-US")} 项技术 · ${CATEGORIES.length} 分类 · ${ERAS.length} 时期`;
+    }
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", mount);

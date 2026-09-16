@@ -23,11 +23,15 @@
 输出：data/phase3_eval.json + 控制台摘要。
 用法：python3.11 analysis-engine/phase3_eval.py
 """
-import json, random, math, time
+import json, os, random, math, time
 from collections import defaultdict
+from pathlib import Path
 from phase3_linkpredict import load_full
 
-ROOT = "/workspace/analysis-engine/data"
+# 数据目录：默认 = 本仓库 analysis-engine/data（依 __file__ 定位，随仓库搬移）。
+# 原实现写死 "/workspace/analysis-engine/data"，克隆到其他路径后即无法运行。
+# 需要指向别处时用环境变量覆盖：TECHDIFFUSION_DATA=/path/to/data
+ROOT = os.environ.get("TECHDIFFUSION_DATA") or str(Path(__file__).resolve().parent / "data")
 SEED = 42
 HOLD_FRAC = 0.20
 

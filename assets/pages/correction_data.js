@@ -13,7 +13,7 @@ window.CORRECTIONS = {
     title: "纠错总结",
     subtitle: "Correction Log · 依赖关系与前因后果的质量审计",
     note: "本页专门记录「技术依赖关系、前因后果、发明者/地点归属」等被证明错误的修正事件。这类事件反映数据管道在「链接预测 / catalog 合并 / 文案生成」环节可能产生的系统性偏差，属重要质量事件，除在本页留档外，也会同步登记进《版本迭代》。每个记录附「自检方法」，便于横向复用到全库扫描。注：内置预览/自动化工具会在 HTML 标签注入 data-page-node-id 追踪属性，属工具噪声、非数据问题，请勿据此提交或修改文件。",
-    maintainer: "WorkBuddy（自主构建 Agent）",
+    maintainer: "Cherry Studio Agent · Claude 框架（模型：阿里云百炼 DashScope · DeepSeek V4.1 Flash 极致）",
     method: [
       "步骤 1 · 抽样核验：对来龙去脉页中「直接上游」明显不合理的节点（如材料/制造范式被列作某具体技术的直接前因）做人工核验。",
       "步骤 2 · 溯源 catalog：到 analysis-engine/catalogs/*.json 找该节点的原始编纂 deps，确认正确前因。",
@@ -59,6 +59,8 @@ window.CORRECTIONS = {
       "【v0.9.33 · 维度层（架构改造 · 大修）待执行】批次 `D0` 已写盘（骨架 + 全库机械打标，零数据改动），裁定走「删边 + 归属标签」。**三项待审草案**：① **D1 例外表** —— 机械兜底的门类分布偏斜（eng 857 = 37.8%、chem 10、earth 6）与 2 个零命中任务域（`energy/animal_human`、`manufact/food_proc`）需逐条写入 `dimension_data.js` 的 `overrides`；② **D2 维度顶点入边处置** —— 14 个泛化枢纽现存 **2,565 条**入边（`mathematics` 570 / `chemistry` 433 / `physics` 290 / `algorithm` 214 / …）须逐条在 `delete` 与 `toField` 之间判定，并裁定「枢纽自身的 `dependsOn`（`writing + mathematics`）如何落」；③ **D3 A 族 494 条按 `toField` 重判** —— 唯一成立理由是学科归属者落回维度（规则 R8），不得硬找替身前置。另需注意本批暴露的模型层冲突已裁定：`theory_data.js` 的 `theory.latent` **保边**方案与阶段 3 的**删边**不能同时成立，已收窄为「必要但背景性的学理边」，实际改写随 D2 落地。",
       "【v0.9.34 · 草案待审核 · 批次 D1】维度层例外表草案已出（**未写盘**）：`category=basic` 的 302 条学理节点中，**68 条**的 `field.primary` 被兜底为 `symbol`（语言与符号）—— 根因是 primary 兜底末级只有 `category → 门类` 一张表，而 `basic` 是跨学科分类；同一批节点的 `sub` 多已判到 `basic/math|physics|chemistry|astronomy|earthsci|biosci`，是 primary 没跟上。草案拟 **`overrides` 50 条**（A 组 30 条依 `sub` 子域定门类、B 组 20 条按语义逐条判定）、建议保留 `symbol` **6 条**、**需裁定 12 条**（方法论类 3 条无对应门类，其余 9 条为交界学科）；另列 **4 条** `sub` 明显误挂（`watermill` / `animal_draft` / `ene_tidal` / `mat_wave`）。**两个零命中任务域的结论**：`manufact/food_proc` 可由 `watermill` 填补 1 条；`energy/animal_human` 在当前分类下**不可达**（唯一畜力节点 `animal_draft` 的 category 为 transport，与 `energy/*` 不同类），列出两条出路待裁定。**澄清一项**：`eng` 857（37.8%）**不是打标错误**，而是 `category → 门类` 的必然（transport 244 + build 242 + energy 215 + manufact 153 + 3），要改比例须拆分门类。预演：`symbol` 69→19、`earth` 6→15、`chem` 10→15，合计 2,267 不变。**本草案只落在 `batches[\"D1\"]`，`dimension_data.js` 的 `overrides` 获批前保持为空**；详见 `batches[\"D1\"]`。",
       "【v0.9.35 · 批次 P1 已落地 · 指标缺口另立批次】「跨学科度」（口径丙）可用但**不可靠**，本页已按「计算预选 + 人工删补」落地，指标缺口本身转为数据层待办：① **补边批次** —— 多学科技术的真实组成技术在网络中大量缺席（`automobile` 汽车闭包仅 2 门类、直接前置 3 条；`ai` 人工智能闭包仅 3 门类、直接前置 1 条），与 D1 发现的 9 条孤岛（`control_theory` 入边 2、`info_theory`/`catastrophe` 各 1、其余 0）同因，属 `dependsOn` 边的系统性缺失、须新建具体节点（R5）或补真实前置；② **R8 违规实例待处置** —— `bio_surgerobot` 手术机器人（`chemistry` + `mathematics`）、`ene_smartgrid` 智能电网（`physics` + `chemistry`）直接前置全为学科级顶点，本页已单列提示、**未改动数据**，须随 D2 / D3 一并处置；③ **「太空旅行」节点缺失** —— 库内无同名节点，本页先用 `space_habitat` 太空居住（2065）代，节点新建属 R5 流程；④ **「跨学科度」是否升格为字段** 待定：当前为构建时计算的视图值，若后续要用于排序 / 筛选，须先解决①的覆盖不完整问题。"
+,
+      "【v0.9.36 · 已执行 · 批次 `G1` + `G2`】「以时代招牌技术充当前置」—— 生成器**第三条**自动接线规则（`tools/gen_run.js:78-83` 的 `prereqEdges`，取 `nearestEarlier(分类, 本节点 year)` = 该分类中年份最晚且更早者，**纯时间位置、零语义**）首次作为独立族登记并**通篇清理完毕**。**用户点名 `inf_pencil` 铅笔**：按**方案乙**补建 `mat_graphite` 石墨（约 1560，material，前置于 `mining`），铅笔前置改为 石墨 + 烧结 + 窑 + 木作（`G1`）。**同族 61 条**：2 条出自显式 node id `用火` 语义合法保留；**60 条逐条判定 keep 11 / repoint 2 / delete 47 + 补前置 40 组 58 条**（`G2`）。实测：节点 2,267 → **2,268**、依赖边 6,169 → **6,182**；`steam_engine` 前置数 24 → 23、`mathematics` 前置数 570 → 569；派生文案重算 213 处，不动点已验；四道门禁全绿。**本批暴露两条须记住的方法学结论**：① **时序性对本族完全无效** —— 60 条全部天然满足（由 `nearestEarlier` 的定义决定），唯一有效的筛子是**排他性**；年份间隔越小越可疑（圆珠笔←喷气发动机仅隔 1 年、内燃机车←低温超导仅隔 1 年）。② **删伪边会反向抬高 A/E 族计数** —— 节点删掉伪边后若只剩 `mathematics`，即落入 A 族；实测首次写盘后 A 494→497、E 105→108、孤立 0→1，回补域内真实前置后回落。**回补须同时满足两条约束**：非枢纽（防 A/E 上升）**且** 同域或跨度 ≤800（防 F 上升 —— `optics` 光学对复印机(1938)会造出跨度 938 年的跨类边，故改用 `inf_mimeograph` 油印）。**另立三批**：ⓐ **「宏大措辞模板」**（`derived_text_rules.js:76/:79/:82`，覆盖 1,300/2,268 = 57.3%：「底层支撑」1,022 /「关键节点」1,017 /「关键一步」663）—— 该措辞**不携带信息**、无法区分基石与配角，是「把配角吹成基石」的系统成因，**修铅笔的边不能修好**； **「分类样板应用词」**（`gen_techs.js:40-50` 的 `DEF[分类].app`，覆盖 967 条，铅笔的「智能处理」即由此来；`applications` 不在 `regen_text.js` 管辖，可独立修而不破门禁）； **同义重复节点对 4 对**（`mfg_rolling2`/`mat_rolling`、`mfg_wiredraw`/`mat_drawing`、`bld_romanconc`/`cement`、`mil_blackpowder`/`gunpowder`）—— 与 #13 的 22 组一并处置。**缺失节点新增 6 项**（陀螺仪 / 静电与光导材料 / 石料燧石 / 土壤制坯 / 球座与油墨 / 火山灰与石灰砂浆），累计 **21 项**。**根治手段在阶段 5c**：`nearestEarlier` 的时间邻近须改为语义约束，并对「跨分类且年份间隔 < 5 年」设告警。"
     ],
     enablesAudit: {
       title: "enables 语义错误 · 95 项灰色概念甄别表",
@@ -168,6 +170,63 @@ window.CORRECTIONS = {
     },
   },
   entries: [
+        {
+      "id": "CR-2026-0915-forward-prereq-as-background",
+      "date": "2026-09-15",
+      "node": "`inf_pencil` 铅笔（info 分类，1795 年）为首条；同族体量 = 「前提分类最近前驱」规则产生的 61 条非枢纽招牌技术前置边，覆盖 57 个节点（清单见 `audit/ledger.json` 的 `batches[\"G1\"]` / `batches[\"G2\"]`）",
+      "nodeName": "「以时代招牌技术充当前置」—— 生成器第三条自动接线规则（`prereqEdges`）从未被清理（含用户点名铅笔条目）",
+      "category": "依赖关系（生成器机械接线，非语义判定）",
+      "severity": "中",
+      "status": "**已写盘（批次 `G1` + `G2`，`status` 均为 `applied`，v0.9.36 / 2026-09-15）**。节点 2,267 → **2,268**（补建 `mat_graphite` 石墨）；依赖边 6,169 → **6,182**。四道门禁全绿，`audit/baseline.json` 按合法改进刷新。",
+      "problem": "**用户点名铅笔：其技术地位被夸大，前置「蒸汽机」是背景偷换。** 原状 `inf_pencil.dependsOn = [\"steam_engine\",\"mathematics\"]`，summary 写「建立在 蒸汽机、数学 之上；它把 信息记录、远程传输 变成可稳定复现的能力，是 信息通信 中从经验走向方法的关键一步」。用户三条反驳经数据核实**全部成立**：① 1795 年孔特法的核心是石墨黏土**手工混合与窑炉烧结**，工艺突破不依赖蒸汽机直接驱动（早期量产另走水力）；② 铅笔在电报中仅是可替代的临时记录介质（炭条／粉笔亦可留痕，墨笔曾因堵塞被弃），1850 年代听声译码普及后彻底边缘化，「关键一步」属本末倒置；③ 铅笔本质是书写绘图工具，「信息通信」归类与「远程传输」「智能处理」应用词均为分类样板。\n**复核补强（三处用户未提及、同样不成立）**：④ 铅笔 `enables` 为空、**实测零下游**，summary 却称「把 X 变成可稳定复现的能力」—— 该句由模板按 `applications` 填充、与真实反图无关；⑤ **全库 2,268 条中 1,300 条（57.3%）**带同一套宏大措辞模板（「底层支撑」1,022 /「关键节点」1,017 /「关键一步」663），该措辞**不携带信息**，这才是「把配角吹成基石」的系统成因；⑥ 铅笔的核心材料**石墨在全库不存在节点**。",
+      "rootCause": "**根因不是「判定不严」，也不是「叙事包装」，而是生成器的第三条自动接线规则从未被登记或清理。** `tools/gen_run.js:62-97` 为每个批量新增节点接**三类**前置，各带独立计数器（`:64-66`）：① **同分类最近前驱**（`slotEdges`）已由 `eaa086f` / v0.9.21「生成器槽位边收口」处置；② **指向 `mathematics` 的固定槽位边**（`mathEdges`）已并入阶段 3.1x 处置；③ **前提分类最近前驱**（`prereqEdges`）—— **此前从未作为独立族登记或清理**，本批即补此空缺。\n规则本体在 `:78-83`：对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)`；而 `nearestEarlier`（`:54-59`）的定义是「该分类中**年份最晚且早于本节点**的那一个」—— **纯时间位置，零语义**。目标分类节点稀疏时，该规则的落点必然是该分类的**招牌技术**。`inf_pencil`（1795）因此得到蒸汽机：`energy` 类中早于 1795 的最晚节点恰是蒸汽机（1769，仅隔 26 年）。**即：不是有人把铅笔「吹成基石」，而是生成器把「同年份段的著名技术」按时间邻近度自动接了上去。**\n**同族存量（生成器复现 + 逐边 diff）**：历史 **2,839** 条、现存 **1,069** 条。其中 1,006 条前置为 14 个维度顶点（属已跟踪的 A 族 / E 族）；余 **63 条**前置为非枢纽招牌技术 —— 经机制切分，**2 条**出自 `PREREQ` 显式 node id `用火`（`ene_charcoal` 木炭、`mat_forging` 锻造，语义合法、保留），**61 条**出自「分类名 → `nearestEarlier`」，即本条目处置对象。",
+      "fix": "**方案乙（用户裁定，已执行）**：依 v0.9.32 先例先补建核心材料节点 `mat_graphite` **石墨**（约 1560 年，material，前置于 `mining` 采矿），再令铅笔前置为 **石墨 + 烧结 + 窑 + 木作**。\n**通篇清理（批次 `G2`）**：61 条中除铅笔（`G1` 已处置）与 2 条合法者外，**60 条逐条按四标准判定** —— **keep 11 / repoint 2 / delete 47**，另补入 **40 组、58 条**域内前置。\n- **keep 11 条**：父节点为该技术的**真实投入**（材料／能源／核心部件／上位工艺）—— `mfg_sandcast`／`mfg_lostwax` ← `mat_casting` + `ene_charcoal`（上位工艺与熔炼燃料）、`mfg_bolt`／`mfg_thread` ← `mat_blastfurnace`（金属材料）、`mfg_injection` ← `mat_toolsteel`（模腔材料）、`tr_rocket` ← `ene_rocketengine`（定义性构成）、`tr_tram` ← `generator`（驱动部件）、`inf_ram` ← `semiconductors`（材料）、`mil_aweapon` ← `ene_nuclear`（钚路线材料来源）。\n- **repoint 2 条**：`tr_trolley` 无轨电车 ← 水力发电站 → **电动机**（1837）；`bld_bim` 建筑信息模型 ← 计算机辅助制造 → **计算机辅助设计**（1960）。\n- **delete 47 条**：全部为背景偷换，样本按荒谬度 —— 圆珠笔 ← 喷气发动机（1938←1937，**间隔 1 年**）、复印机 ← 喷气发动机、内燃机车／自动驾驶仪 ← 低温超导（1912←1911）、油印 ← 工具钢、手榴弹 ← 拉丝、夜视仪／自行火炮／火箭炮 ← 运载火箭、马／马蹄铁 ← 螺纹、肋拱／飞扶壁／哥特结构 ← 螺纹、弓／箭／标枪／长矛 ← 凿、锁子甲 ← 车床、黑火药 ← 螺纹。\n- **本批判据性结论**：60 条**全部**天然满足时序性（父年 ≤ 子年，由 `nearestEarlier` 的定义决定），故唯一有效的筛子是**排他性**；且 keep 的 11 条全部出自 `PREREQ` 显式 node id 条目、delete 的 47 条全部出自分类名条目 —— **判定结论与边的产生机制完全吻合**，这是一条不依赖判定规则的独立验证。",
+      "badUpstream": [
+        "`steam_engine` 蒸汽机（1769）→ 铅笔 —— 以「工业革命的时代背景」偷换「铅笔工艺的直接技术依赖」；孔特法动力为人力／水力，去掉蒸汽机铅笔仍按史实出现",
+        "`mathematics` 数学 → 铅笔 —— 学科级顶点，非定义性构成，依 **R8** 一律不得充当替身前置（铅笔对「书写-符号」的归属应走维度层 `field`，依 R7 不写入 `dependsOn`）",
+        "`ene_jet` 喷气发动机 → `inf_ballpoint` 圆珠笔（1938←1937，间隔 1 年）、`inf_photocopier` 复印机 —— 同类典型",
+        "`mat_ltsc` 低温超导 → `tr_diesel loco` 内燃机车（1912←1911）、`tr_autopilot` 自动驾驶仪 —— **年份越接近越可疑**",
+        "`mfg_thread` 螺纹 → `tr_stirrup` 马／`tr_horseshoe` 马蹄铁／`bld_ribvault` 肋拱／`bld_flying` 飞扶壁／`bld_gothic` 哥特结构／`mil_blackpowder` 黑火药 —— 同一招牌节点被批量接入 8 个不相干节点",
+        "`mfg_chisel` 凿 → `mil_bow` 弓／`mil_arrow` 箭／`mil_javelin` 标枪／`mil_spear` 长矛 —— same",
+        "`tr_rocket` 运载火箭 → `mil_nightvision` 夜视仪／`mil_spg` 自行火炮／`mil_mrl` 火箭炮 —— same",
+        "`mfg_lathe` 车床 → `bld_dougong` 斗拱／`mil_catapult` 投石机／`mil_chainmail` 锁子甲 —— same",
+        "**同义重复节点对 4 对**（本批发现）：`mfg_rolling2` 压延／`mat_rolling` 轧制（同为 1500）、`mfg_wiredraw` 拉丝／`mat_drawing` 拉拔（同为 1200）、`bld_romanconc` 罗马混凝土／`cement` 水泥与混凝土（上位自指）、`mil_blackpowder` 黑火药／`gunpowder` 火药 —— 这些边的成因不是背景偷换，而是**同一概念被建成两个节点后的自指**，本批只删边、**不合并节点**，登记为同义对候选",
+        "**宏大措辞模板本身**（`derived_text_rules.js:76/:79/:82`，覆盖 1,300/2,268 = 57.3%）—— 修铅笔的边**修不好**这一点，模板仍会把它称为「关键一步」",
+        "**分类样板应用词**（`gen_techs.js:40-50` 的 `DEF[分类].app`，覆盖 967 条）—— 铅笔的「智能处理」即由此来"
+      ],
+      "goodUpstream": [
+        "`mat_graphite` 石墨（约 1560，**本批补建**）—— 铅笔的核心材料；16 世纪 Borrowdale 石墨条即铅笔的直接前身（R5：新建具体节点，而非以贴切度不足的替代充数）",
+        "`mat_sinter` 烧结（-3000）—— 孔特法的定义性构成：石墨粉与黏土烧结固结成芯体",
+        "`kiln` 窑（-6000）—— 烧结的承载装置",
+        "`woodworking` 木作（-300000）—— 木质笔杆（上下木片夹持笔芯的 slat 结构）的最直接先行者",
+        "`mat_casting` / `ene_charcoal` / `mat_blastfurnace` / `mat_toolsteel` / `ene_rocketengine` / `generator` / `semiconductors` / `ene_nuclear` —— G2 中判定 keep 的 11 条边的真实投入侧",
+        "`electric_motor` 电动机（1837）取代水力发电站、`cad` 计算机辅助设计（1960）取代计算机辅助制造 —— G2 的两条 repoint",
+        "**方法本身**：「生成器复现 + 逐边 diff」确定性方法（与 v0.9.21 收口同分类槽位边时同一方法）+ **结构门禁对照基线**作为独立回归断言（见 changes ⑤）"
+      ],
+      "changes": [
+        "① **批次 `G1`（铅笔，方案乙）**：新增台账批次并写盘 —— 删 `steam_engine` / `mathematics` 2 条，补 `mat_graphite` / `mat_sinter` / `kiln` / `woodworking` 4 条；**补建新节点 `mat_graphite` 石墨**（中间库同级，年 1560，前置 `mining`），文案为**手写**（依 `regen_text.js`「不匹配模板骨架的手写散文一律不动」之设计，使其免于 A 族模板的宏大措辞）。铅笔文案（summary／significance／views）一并改为手写。",
+        "② **批次 `G2`（同族通篇清理）**：新增台账批次并写盘 —— 60 条逐条判定（keep 11 / repoint 2 / delete 47）+ 40 组补前置（58 条）。覆盖 57 个节点。",
+        "③ **实测规模**：节点 2,267 → **2,268**（+`mat_graphite`）；依赖边 6,169 → **6,182**（G1 净 +3、G2 净 +10）。`steam_engine` 作为前置的节点 24 → 23；`mathematics` 作为前置的节点 570 → 569。Ch 族 247 → 246、零前置 6 → 5、孤立节点 0。",
+        "④ **派生文案**：`regen_text --apply` 合计重算 **213 处**（G1 后 4 条 + G2 后 209 处：summary 72 / significance 68 / views 69）；`regen_midtech --apply` 后条目数 95 不变；两者复跑均为**不动点**。",
+        "⑤ **写盘后结构回归与回补（本批特有发现）**：G2 首次写盘后 `audit_net.js` 实测 **A 族 494 → 497、E 族 105 → 108、孤立节点 0 → 1**。定位后确认成因**不是边判定错误，而是「删掉伪边后节点只剩 `mathematics`」**（`mfg_rolling2` 压延／`mfg_wiredraw` 拉丝／`inf_photocopier` 复印机 三者同时落入 A / E 族；`bld_romanconc` 罗马混凝土零前置且零下游成为全库唯一孤立节点）。处置为**补入域内真实前置**（`mat_wrought` 熟铁 ×2、`optics` 光学、`masonry` 砌筑）而非放宽基线。**回补时发现第二条约束**：`optics` 光学虽落在域内且非枢纽，却会为复印机（1938）造出跨度 938 年的跨类边、触发 **F 由 8 升到 9**，故改用同域同功能位的 `inf_mimeograph` 油印（1870）。最终 A / E / F / 孤立四项全部回落至基线。",
+        "⑥ **两项另立批次的问题（修铅笔的边修不好）**： **「宏大措辞模板」** —— 铅笔的三句宏大措辞逐字来自 `tools/derived_text_rules.js:76 / :79 / :82`；全库覆盖「底层支撑」**1,022** 条、「从「可能」走向「可用」的关键节点」**1,017** 条、「从经验走向方法的关键一步」**663** 条、「走向更精细、更可控的关键环节」242、「承上启下的一环」214 —— **至少含一条者 1,300 / 2,268 = 57.3%**，该措辞不携带信息；ⓑ **「分类样板应用词」** —— 铅笔 `applications` 逐字等于 `gen_techs.js:46` 的 `DEF.info.app`，该类样板三元组全库命中 **967 条**（`applications` 不在 `regen_text.js` 管辖范围，可独立修正而不破坏文案不动点门禁）。",
+        "⑦ **缺失节点登记（延续 R5）**：删边后库内确无合适前置者登记为候选 —— 陀螺仪（自动驾驶仪）、静电／光导材料（复印机）、石料石（石器打制）、土壤／日晒制坯（土坯砖）、球座与油墨（圆珠笔）、火山灰／石灰砂浆（罗马混凝土）。**累计待补 21 项**（含既有 17 项与 G1 的 `mat_graphite` 已补建）。",
+        "⑧ **同义重复节点对 4 对**登记为候选（见 badUpstream 末段），与 `pendingQueue` #13 的 22 组一并处置；本批**只删边、不合并节点**（合并会改节点数并触发 `check_docs` / `tree_full.html` 写死数字同步）。",
+        "⑨ **根治手段（阶段 5c「生成器语义硬约束」）**：`tools/gen_run.js:78-83` 的前提分类最近前驱须由「时间邻近」改为**语义约束**，并对「退化为该分类招牌技术」的情形设断言（例：前置与依赖者年份间隔 < 5 年且跨分类时告警）。**本批属事后清理、非源头修复。**",
+        "⑩ **本批未做**：未改动铅笔的 `category`（现为 `info`；「书写工具是否应留在信息通信类」属分类体系问题，影响 A/E/F 族统计与站点配色筛选，单独立项待裁）；未改任何生成器；未合并任何节点；未动 `applications`。"
+      ],
+      "files": [
+        "audit/ledger.json（新增批次 G1 / G2，均已 applied）",
+        "assets/techs_extra.js（新增节点 mat_graphite；G1 改 inf_pencil 及其文案；G2 改 56 个节点的 dependsOn 与派生文案）",
+        "assets/techs_more.js / assets/techs_extend.js（regen_text --apply 重算涉及）",
+        "assets/techs_midtech.js（regen_midtech --apply）",
+        "audit/baseline.json（按合法改进刷新）",
+        "assets/pages/correction_data.js（本条目，entries 26 → 27；pendingQueue 32 → 33）",
+        "assets/pages/changelog_data.js（v0.9.36 条目，entries 40 → 41）",
+        "版本迭代日志.md（表格行 + 详细章节）",
+        "**未改动**：assets/data.js（除 regen 派生文案）、assets/pages/dimension_data.js、analysis-engine/data/graph.json、assets/data_full.js（依 §5.2b 裁定不逐条打补丁，随阶段 5e 重建带入）"
+      ]
+    },
     {
       "id": "CR-2026-0915-multidisciplinary-page",
       "date": "2026-09-15",

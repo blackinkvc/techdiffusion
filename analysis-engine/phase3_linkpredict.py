@@ -26,10 +26,14 @@
 写回（可选 --apply）：将高置信边注入 graph.json 的边集（打 provenance 标记），
           随后应重跑 build_full_dataset.js 刷新站点全量数据。
 """
-import json, time, math, argparse
+import json, os, time, math, argparse
 from collections import defaultdict, Counter
+from pathlib import Path
 
-ROOT = "/workspace/analysis-engine/data"
+# 数据目录：默认 = 本仓库 analysis-engine/data（依 __file__ 定位，随仓库搬移）。
+# 原实现写死 "/workspace/analysis-engine/data"，克隆到其他路径后即无法运行。
+# 需要指向别处时用环境变量覆盖：TECHDIFFUSION_DATA=/path/to/data
+ROOT = os.environ.get("TECHDIFFUSION_DATA") or str(Path(__file__).resolve().parent / "data")
 MIN_SUPPORT = 2      # B 至少被 A 的 2 个直接前提依赖
 MIN_FRAC = 0.6       # B 至少覆盖 A 的 60% 直接前提
 APPLY_FRAC = 0.8     # 写回阈值：支撑占比
@@ -254,7 +258,7 @@ def main():
     #   落库边 = (source=c.target, target=c.source) = B → A，表示「B 是 A 的前提」。
     #   （此前实现按 (A,B) 直写导致方向全反，已回滚。）
     if args.apply:
-        gj = json.load(open("/workspace/analysis-engine/data/graph.json", encoding="utf-8"))
+        gj = json.load(open(f"{ROOT}/graph.json", encoding="utf-8"))
         existing = {(e["source"], e["target"], e.get("type")) for e in gj["edges"]}
         year = lambda cid: (lambda o: o["year"] if o and o.get("year") is not None else None)(
             nodes.get(cid))
@@ -288,7 +292,7 @@ def main():
             })
             existing.add(key)
             added += 1
-        json.dump(gj, open("/workspace/analysis-engine/data/graph.json", "w", encoding="utf-8"),
+        json.dump(gj, open(f"{ROOT}/graph.json", "w", encoding="utf-8"),
                   ensure_ascii=False, indent=1)
         print(f"✅ 写回隐式前提边 {added} 条至 graph.json（已打 provenance 标记）")
         print(f"   年份门禁拦截：违反时间箭头 {skipped_year} 条 | 缺年份 {skipped_missing} 条")

@@ -1,11 +1,15 @@
 #!/usr/bin/env python3.11
 """最终全库校验：合并 graph.json(原2265) + new_techs.json(新增11031)，
 做 DAG / 断边 / 重复 / 年份序 / 连通性 校验。"""
-import json, sys
+import json, os, sys
 import networkx as nx
 from collections import Counter
+from pathlib import Path
 
-ROOT = "/workspace/analysis-engine/data"
+# 数据目录：默认 = 本仓库 analysis-engine/data（依 __file__ 定位，随仓库搬移）。
+# 原实现写死 "/workspace/analysis-engine/data"，克隆到其他路径后即无法运行。
+# 需要指向别处时用环境变量覆盖：TECHDIFFUSION_DATA=/path/to/data
+ROOT = os.environ.get("TECHDIFFUSION_DATA") or str(Path(__file__).resolve().parent / "data")
 
 def load():
     g = json.load(open(f"{ROOT}/graph.json"))

@@ -18,7 +18,12 @@ window.CHANGELOG = {
     title: "版本迭代记录",
     subtitle: "Version Changelog · 项目逐日变更档案",
     note: "本页记录「人类技术演化网络 · 规律挖掘与未来涌现推演」项目每次版本迭代所完成的工作。早期版本日期依据项目文件时间戳与开发记录重建；自 2026-09-06 建立本页起，每次变更逐条如实登记，便于回溯与协作。注：2026-09-08 校正了项目目的——从『科幻可行性评测』改为『拆解真实技术＋找规律＋推演未来涌现』。",
-    maintainer: "WorkBuddy（自主构建 Agent）",
+    maintainer: "Cherry Studio Agent · Claude 框架（模型：阿里云百炼 DashScope · DeepSeek V4.1 Flash 极致）",
+    maintainerNote: "维护主体变更须逐次登记（用户 2026-09-15 指定）。每次主体或所用模型变更时，在 maintainerHistory 追加一条并同步「版本迭代日志.md」头部；运行环境信息一并记录，便于回溯「某次改动是谁、用什么做的」。",
+    maintainerHistory: [
+      { from: "2026-08-26", to: "2026-09-15", agent: "WorkBuddy（自主构建 Agent）", note: "自主构建 Agent，覆盖 v0.1.0–v0.9.35 期间的全部批次（建网、阶段 0–5、维度层 D0 / D1、多学科页 P1）。" },
+      { from: "2026-09-15", to: null, agent: "Cherry Studio Agent · Claude 框架（模型：阿里云百炼 DashScope · DeepSeek V4.1 Flash 极致）", note: "**当前维护主体**。**切换时点经用户 2026-09-15 确认**：自 v0.9.36 起（本主体产出的首个批次为 G1 + G2「以时代招牌技术充当前置」）。。运行形态：Cherry Studio 内的 Agent，采用 Claude 框架（Claude Code / Claude Agent SDK），底层模型为阿里云百炼 DashScope · DeepSeek V4.1 Flash 极致版。" }
+    ],
     roadmap: [
       "Phase 3 · 链接预测：✅ 已完成（v0.9.9 方向修正后）——补全 25 条高可信近因前提边；v0.9.8 初版 2883 条因依赖边方向读反已回滚（详见 v0.9.9）。",
       "Phase 4 · 站点集成：✅ 已完成（v0.9.2）——全量科技树可视化。",
@@ -1034,6 +1039,66 @@ window.CHANGELOG = {
         "版本迭代日志.md（表格行 + 详细章节）",
         "技术网络检修计划.md（批次总览 P1 行 / 当前状态 / 修订记录）",
         "README.md（页面表补 multidisciplinary.html）"
+      ]
+    },
+    {
+      "version": "v0.9.36",
+      "date": "2026-09-15",
+      "type": "data",
+      "title": "数据 · 批次 `G1` + `G2`「以时代招牌技术充当前置」：补建石墨节点并改写铅笔 + 通篇清理同族 60 条（keep 11 / repoint 2 / delete 47 + 补前置 58 条）",
+      "summary": "**本条改动主管线数据。** 起因：用户 2026-09-15 点名 `inf_pencil` 铅笔条目，指出其技术地位被夸大、前置「蒸汽机」属「以工业革命背景偷换直接技术依赖」。复核确认**用户反驳成立**，并定位到根因：这是本项目生成器**三类自动接线规则中唯一从未被登记与清理的第三条**（`tools/gen_run.js:78-83` 的 `prereqEdges`）。按用户裁定执行**方案乙**（先补建核心材料节点 `mat_graphite` 石墨再改前置）并**通篇清理**同族全部同类边。实测：节点 2,267 → **2,268**；依赖边 6,169 → **6,182**；`steam_engine` 作为前置的节点 24 → 23、`mathematics` 作为前置的节点 570 → 569；Ch 族 247 → 246、零前置 6 → 5、孤立 0。派生文案重算 213 处，不动点已验；四道门禁全绿、`audit/baseline.json` 按合法改进刷新。配合登记：纠错页新增 CR-2026-0915-forward-prereq-as-background（entries 26 → 27，待审队列 32 → 33）；本条目 entries 40 → 41。全量管线 `graph.json`（2,299 / 6,963）与 `assets/data_full.js`（13,318 / 16,811）依 §5.2b 裁定**未改动**，随阶段 5e 重建带入。",
+      "treeChange": {
+        "scope": "主管线 2,267 → **2,268** 节点；依赖边 6,169 → **6,182** 边（G1 净 +3、G2 净 +10）",
+        "reason": "铅笔的「蒸汽机」前置不是判定不严，而是生成器 `tools/gen_run.js:78-83` 的「前提分类最近前驱」规则产物：对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中**年份最晚且早于本节点**的那一个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的**招牌技术**上。`inf_pencil`（1795）因此得到蒸汽机（`energy` 类中早于 1795 的最晚节点，仅隔 26 年）。**即：不是有人把铅笔「吹成基石」，而是生成器把「同年份段的著名技术」按时间邻近度自动接了上去。**",
+        "detail": "同族存量经「生成器复现 + 逐边 diff」量化：历史 **2,839** 条、现存 **1,069** 条；其中 1,006 条前置为 14 个维度顶点（属已跟踪的 A 族 / E 族），余 **63 条**前置为非枢纽招牌技术（66.7 条中 2 条出自 `PREREQ` 显式 node id `用火`、语义合法保留，**61 条**为本批对象）。"
+      },
+      "changes": [
+        "① **复核结论：用户反驳成立**。① 1795 年孔特法的核心是石墨黏土**手工混合与窑炉烧结**，动力为人力／水力，不依赖蒸汽机直接驱动；② 铅笔在电报中仅是可替代的临时记录介质（炭条／粉笔亦可留痕，墨笔曾因堵塞被弃），1850 年代听声译码普及后彻底边缘化，「关键一步」属本末倒置；③ 铅笔本质是书写绘图工具，「信息通信」归类与「远程传输」「智能处理」应用词均为分类样板。**三项均经数据核实成立。**",
+        "② **补强三处用户未提及、同样不成立者**：④ 铅笔 `enables` 为空、**实测零下游**，summary 却称「把 X 变成可稳定复现的能力」；⑤ **全库 2,268 条中 1,300 条（57.3%）**带同一套宏大措辞模板；⑥ 铅笔的核心材料**石墨在全库不存在节点**。",
+        "③ **批次 `G1`（铅笔，方案乙，已写盘）**：**补建新节点 `mat_graphite` 石墨**（约 1560 年，material，英格兰坎伯兰 Borrowdale 矿；前置 `mining` 采矿），删 `steam_engine` / `mathematics` 2 条、补 `mat_graphite` / `mat_sinter` / `kiln` / `woodworking` 4 条。**新节点与铅笔的文案均为手写**（依 `regen_text.js`「不匹配模板骨架的手写散文一律不动」之设计，使其免于 A 族模板的宏大措辞）。",
+        "④ **批次 `G2`（同族通篇清理，已写盘）**：**60 条逐条按四标准判定** —— **keep 11 / repoint 2 / delete 47**，另补入 **40 组、58 条**域内前置，覆盖 **57 个节点**。keep 的 11 条全部出自 `PREREQ` 表**显式 node id 条目**（真实投入：材料／能源／核心部件／上位工艺），delete 的 47 条全部出自**分类名条目** —— **判定结论与边的产生机制完全吻合**（一条不依赖判定规则的独立验证）。delete 样本按荒谬度：圆珠笔 ← 喷气发动机（1938←1937，**间隔 1 年**）、内燃机车／自动驾驶仪 ← 低温超导（1912←1911）、肋拱／飞扶壁／哥特结构 ← 螺纹、弓／箭／标枪／长矛 ← 凿、夜视仪／自行火炮／火箭炮 ← 运载火箭。repoint 2 条：无轨电车 ← 水力发电站 → **电动机**；建筑信息模型 ← 计算机辅助制造 → **计算机辅助设计**。",
+        "⑤ **本批的判据性结论（方法学，须记住）**：**时序性对本族完全无效** —— 60 条**全部**天然满足（父年 ≤ 子年，由 `nearestEarlier` 取「年份最晚且更早者」的定义直接决定），唯一有效的筛子是**排他性**。**年份间隔越小越可疑**：圆珠笔←喷气发动机、内燃机车←低温超导均仅隔 1 年。此与批次 3.1b 的结论同源。",
+        "⑥ **写盘后结构回归与回补（本批特有发现，值得单独记住）**：G2 首次写盘后 `audit_net.js` 实测 **A 族 494 → 497、E 族 105 → 108、孤立节点 0 → 1**。定位后确认成因**不是边判定错误，而是「删掉伪边后节点只剩 `mathematics`」**：`mfg_rolling2` 压延／`mfg_wiredraw` 拉丝（同义对被删后只剩数学）、`inf_photocopier` 复印机（喷气发动机被删后只剩数学）三者同时落入 A / E 族；`bld_romanconc` 罗马混凝土删去两条边后**零前置且零下游、成为全库唯一孤立节点**。处置为**补入域内真实前置**（`mat_wrought` 熟铁 ×2、`masonry` 砌筑）而非放宽基线。**回补时又发现第二条约束**：`optics` 光学虽落在域内且非枢纽，却会为复印机（1938）造出跨度 938 年的跨类边、触发 **F 由 8 升到 9**，故改用同域同功能位的 `inf_mimeograph` 油印（1870）。最终 A / E / F / 孤立**四项全部回落至基线**。**结论：本族回补须同时满足「非枢纽（防 A/E 上升）」与「同域或跨度 ≤800（防 F 上升）」两条约束。**",
+        "⑦ **独立断言的价值被实证**：若只验「草案内的边判定是否自洽」，上述四处结构回退**不会被发现**（边判定本身没错）；必须跑**结构门禁对照基线**这一外部指标才能暴露 —— 印证检修计划 §五第 5 条「凡规则识别 + 重写类工具，须附不依赖该规则的独立抽查断言」。**本条是该方法学首次在数据批次中生效。**",
+        "⑧ **派生文案**：`regen_text --apply` 合计重算 **213 处**（G1 后 4 条 + G2 后 209 处：summary 72 / significance 68 / views 69）；`regen_midtech --apply` 后条目数 95 不变；两者复跑均为**不动点（合计需改写 0 处）**。",
+        " **两项另立批次的问题（修铅笔的边修不好）**：⑨ⓐ **「宏大措辞模板」** —— 铅笔的三句逐字来自 `tools/derived_text_rules.js:76 / :79 / :82`；全库覆盖「底层支撑」**1,022** 条、「从「可能」走向「可用」的关键节点」**1,017** 条、「从经验走向方法的关键一步」**663** 条、「走向更精细、更可控的关键环节」242、「承上启下的一环」214 —— **至少含一条者 1,300 / 2,268 = 57.3%**，该措辞**不携带信息**（若 57.3% 的节点都同时是「关键节点」与「底层支撑」，它就无法区分基石与配角），**这才是「把配角吹成基石」的系统成因**；⑨ **「分类样板应用词」** —— 铅笔 `applications` 逐字等于 `gen_techs.js:46` 的 `DEF.info.app`，该类样板三元组全库命中 **967 条**；`applications` **不在** `regen_text.js` 管辖范围（仅管 summary / significance / views[].text），故可独立修正而不破坏文案不动点门禁。",
+        "⑩ **同义重复节点对 4 对（本批发现）**：`mfg_rolling2` 压延／`mat_rolling` 轧制（同为 1500）、`mfg_wiredraw` 拉丝／`mat_drawing` 拉拔（同为 1200）、`bld_romanconc` 罗马混凝土／`cement` 水泥与混凝土（上位自指）、`mil_blackpowder` 黑火药／`gunpowder` 火药。成因不是背景偷换，而是**同一概念被建成两个节点后的自指**；本批**只删边、不合并节点**（合并会改节点数并触发 `check_docs` / `tree_full.html` 写死数字同步），登记为候选、与 `pendingQueue` #13 的 22 组一并处置。",
+        "⑪ **缺失节点登记（延续 R5）**：陀螺仪（自动驾驶仪）、静电／光导材料（复印机）、石料石（石器打制）、土壤／日晒制坯（土坯砖）、球座与油墨（圆珠笔）、火山灰／石灰砂浆（罗马混凝土）。**累计待补 21 项**（含既有 17 项；G1 的 `mat_graphite` 已补建）。",
+        " **根治手段（阶段 5c「生成器语义硬约束」）**：`tools/gen_run.js:78-83` 的前提分类最近前驱须由「时间邻近」改为**语义约束**，并对「退化为该分类招牌技术」的情形设断言（例：**跨分类且年份间隔 < 5 年时告警**）。**本批属事后清理、非源头修复。**",
+        " **本批未做**：未改动铅笔的 `category`（现为 `info`；「书写工具是否应留在信息通信类」属分类体系问题，影响 A/E/F 族统计与站点配色筛选，单独立项待裁）；未改任何生成器；未合并任何节点；未动 `applications`；全量管线未动。"
+      ],
+      "files": [
+        "audit/ledger.json（新增批次 G1 / G2，均已 applied，含 6 项 findings / 5 项 notes / 实测 verification）",
+        "assets/techs_extra.js（新增节点 mat_graphite；G1 改 inf_pencil 及其手写文案；G2 改 56 个节点的 dependsOn 与派生文案）",
+        "assets/techs_more.js / assets/techs_extend.js（regen_text --apply 重算涉及）",
+        "assets/techs_midtech.js（regen_midtech --apply）",
+        "audit/baseline.json（按合法改进刷新）",
+        "assets/pages/correction_data.js（新增 CR-2026-0915-forward-prereq-as-background，entries 26 → 27；pendingQueue 32 → 33）",
+        "assets/pages/changelog_data.js（本条目，entries 40 → 41）",
+        "版本迭代日志.md（表格行 + 详细章节）",
+        "**未改动**：assets/pages/dimension_data.js、analysis-engine/data/graph.json、assets/data_full.js（依 §5.2b 裁定不逐条打补丁，随阶段 5e 重建带入）"
+      ]
+    },
+    {
+      "version": "v0.9.37",
+      "date": "2026-09-15",
+      "type": "docs",
+      "title": "登记 · 维护主体变更：WorkBuddy（自主构建 Agent）→ Cherry Studio Agent · Claude 框架（模型：阿里云百炼 DashScope · DeepSeek V4.1 Flash 极致）",
+      "summary": "**本条不改动任何数据** —— 主管线仍为 2,268 个节点 / 6,182 条依赖边（与 v0.9.36 一致）；`assets/techs_*.js`、`assets/techs_midtech.js`、`audit/baseline.json` 均未触碰。**用户 2026-09-15 指定：项目的维护主体已变更，须在版本档案中更新并逐次记录。** 本条把站点与文档中共 3 处写死的维护者字段更新为当前主体，并**新增「维护沿革」记录机制**（`changelog_data.js` 的 `meta.maintainerHistory`），使此后「谁、用什么模型、在哪次改动」可回溯。配合登记：`assets/pages/correction_data.js` 的 `meta.maintainer`、`assets/pages/changelog_data.js` 的 `meta.maintainer` 与新增的 `maintainerHistory`、《版本迭代日志.md》头部；本条目 entries 41 → 42。",
+      "changes": [
+        "① **变更内容**：维护主体由 **WorkBuddy（自主构建 Agent）** 变更为 **Cherry Studio Agent · Claude 框架（模型：阿里云百炼 DashScope · DeepSeek V4.1 Flash 极致）**。运行形态：在 Cherry Studio 内运行的 Agent，采用 Claude 框架（Claude Code / Claude Agent SDK），底层模型为**阿里云百炼（DashScope）· DeepSeek V4.1 Flash 极致**。**服务商经用户 2026-09-15 确认**；运行环境标识串为 `dashscope:deepseek-v4.1-flash`（`dashscope` 即阿里云百炼），已按此口径落档。",
+        "② **更新 3 处写死的维护者字段**：① `assets/pages/changelog_data.js` 的 `meta.maintainer`（版本迭代页）；② `assets/pages/correction_data.js` 的 `meta.maintainer`（纠错页）；③ `版本迭代日志.md` 头部 `> **维护**` 行。三处原值均为 `WorkBuddy（自主构建 Agent）`。",
+        "③ **新增「维护沿革」记录机制（本条的核心，供此后沿用）**：`changelog_data.js` 的 `meta` 新增两个字段 —— `maintainerNote`（记录规则：主体或所用模型变更时，须在 `maintainerHistory` 追加一条并同步《版本迭代日志.md》头部）与 `maintainerHistory`（数组，逐条记 `{from, to, agent, note}`）。首版两条：WorkBuddy 覆盖 **v0.1.0–v0.9.35**；当前主体自 **v0.9.36** 起。",
+        "④ **切换时点经用户 2026-09-15 确认：自 v0.9.36 起。** 当前主体的首个落档批次为 v0.9.36 的 `G1` + `G2`；v0.9.35（批次 `P1` 多学科技术页）及更早的落档均在 WorkBuddy 名下，`maintainerHistory` 的 `from` 时点即以此为准（原草案曾标「待考」，同日经用户确认后改为确定表述）。",
+        "⑤ **《版本迭代日志.md》头部同步**：新增 `> **维护沿革**` 行，写明 WorkBuddy 覆盖 v0.1.0–v0.9.35、当前主体自 v0.9.36 起，并加一句硬约定「此后每次维护主体或所用模型变更，均须在此处与『版本迭代』条目中同步登记」。",
+        "⑥ **登记口径（此后沿用）**：凡涉及维护主体的变更，一律按本条格式登记 —— 记明**主体名 / 框架 / 具体模型 / 生效时点**四项，并在 `maintainerHistory` 与该文件头部两处同步；不写「某 AI」这类不可回溯的泛称。",
+        "⑦ **本批未做**：未改动任何数据（节点 / 边 / 基线均未动）；未改动历史条目中的署名（v0.1.0–v0.9.35 的条目仍属 WorkBuddy，**不作追溯改写**，以保证档案的当时的真实性）。"
+      ],
+      "files": [
+        "assets/pages/changelog_data.js（meta.maintainer 更新；新增 meta.maintainerNote 与 meta.maintainerHistory；本条目 entries 41 → 42）",
+        "assets/pages/correction_data.js（meta.maintainer 更新）",
+        "版本迭代日志.md（头部「维护」行更新 + 新增「维护沿革」行 + 本条目表格行与详细章节）",
+        "**未改动**：assets/techs_*.js、assets/techs_midtech.js、assets/data.js（主管线仍 2,268 节点 / 6,182 边）、assets/pages/dimension_data.js、audit/baseline.json、audit/ledger.json、analysis-engine/data/graph.json、assets/data_full.js"
       ]
     }
 ]

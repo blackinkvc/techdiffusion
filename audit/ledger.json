@@ -7155,6 +7155,1250 @@
      "detail": "用户五项裁定（口径 C / 太空居住先行 / 导航新增 / 新页面内两态 / 收录军用武器）已执行完毕，44 项 / 7 分组。新增 4 个文件 + 改 1 个文件；**零数据改动**（2,267 节点 / 6,169 边不变，overrides 仍为空）。浏览器结构化断言与截图全部通过；修复 4 处缺陷（TDZ 入口顺序、fmtYear 万年换算、<b> 三元优先级、discTask 中文域名）。"
     }
    ]
+  },
+  "G1": {
+   "date": "2026-09-15",
+   "family": "G-生成器前提分类最近前驱（「时代招牌技术充当前置」）",
+   "status": "applied（方案乙；已写盘主管线并完成收尾；v0.9.36 / 2026-09-15）",
+   "verification": [
+    "写盘前（草案阶段）：候选筛选断言通过；判定表条数断言 2；断言 keep(0)+repoint(0)+delete(2)+concept(0)+toField(0) = 2 = candidates。",
+    "写盘前（草案阶段）：补前置存在性与年份校验 0 错；内存预演新前置集后无环、无年份倒挂。干跑输出「[OK] 台账完整划分断言通过（2 = 2）／时序性校验通过／环校验通过」。",
+    "**写盘后（实测）**：节点 2,267 → **2,268**（新增 `mat_graphite`）；依赖边 6,169 → **6,172**（移除 `steam_engine` / `mathematics` 2 条，新增 `inf_pencil` 的 4 条 + `mat_graphite` 自身的 `mining` 1 条 = 5 条）。`inf_pencil.dependsOn` = [mat_graphite, mat_sinter, kiln, woodworking]；`steam_engine` 作为前置的节点 24 → 23；`mathematics` 作为前置的节点 570 → 569。",
+    "**写盘后（实测）**：`tools/apply_ledger.js --batch G1 --apply` 报「定位节点 1 / 1，失败 0」「逐节点断言: 全部通过 (1)」。",
+    "**写盘后（实测）**：铅笔文案改为手写（摘要／意义／两条 views），`tools/regen_text.js --check` 的不动点复核显示「手写跳过 1608」，铅笔计入其中 → 门禁通过即证手写生效。",
+    "**写盘后（实测）**：`regen_text --apply` 连带重算 4 条（`mat_sinter` summary/significance/views + `mining` summary，均因新增下游「铅笔／石墨」而更新）；`regen_midtech --apply` 后条目数 95 不变；两者复跑均为不动点。",
+    "**写盘后（实测）**：四道门禁全绿；`audit/baseline.json` 按合法改进刷新。"
+   ],
+   "scope": "G 族首批 1 条：`inf_pencil` 铅笔（用户 2026-09-15 点名），**按方案乙执行** —— 补建核心材料节点 `mat_graphite` 石墨后再改前置。同族余 61 条（原记 62，经机制切分后更正：63 条中 2 条出自显式 node id `用火`、语义合法已排除）另立批次 `G2`。",
+   "criterion": "§2 判定四标准：① 必要性（去掉该前置，本技术是否仍能按史实出现）② 排他性（是否该环节最直接的先行者）③ 时序性（前置年 ≤ 本节点年）④ 域内优先（跨域须有明确传导机制）。处置五档：keep / repoint / delete / concept / toField。**规则 R8：不得以学科级顶点充当替身前置。**",
+   "observation": "**病灶不是「判定不严」，而是生成器的第三条自动接线规则从未被清理。** `tools/gen_run.js:62-97` 为每个批量新增节点接三类前置，各带独立计数器（`:64-66`）：① **同分类最近前驱**（`slotEdges`，最多 2 条）—— 已于 `eaa086f` / v0.9.21「生成器槽位边收口」处置；② **指向 `mathematics` 的固定槽位边**（`mathEdges`）—— 已并入阶段 3.1x 处置；③ **前提分类最近前驱**（`prereqEdges`，即本族）—— **从未作为独立族登记与清理**。\n规则本体在 `tools/gen_run.js:78-83`：对 `PREREQ[分类]` 中的每一项（`info` 分类为 `[\"material\",\"energy\",\"mathematics\"]`，见 `tools/gen_techs.js:28-38`），取 `nearestEarlier(该分类, 本节点 year)` —— 而 `nearestEarlier`（`gen_run.js:54-59`）的定义是「该分类中**年份最晚且早于本节点**的那一个」。即：**纯时间位置，零语义**。当目标分类节点稀疏时，该规则的落点必然是该分类的**招牌技术**。\n`inf_pencil`（info, 1795）因此得到 `dependsOn = [\"steam_engine\", \"mathematics\"]`：`energy` 分类中早于 1795 的最晚节点恰是蒸汽机（1769，与 1795 仅隔 26 年），`mathematics` 则因是真实锚点 id 而被直接命中。\n**用户的反驳成立，且根因比「叙事包装」更机械**：这不是有人把铅笔「吹成基石」，而是生成器把「同年份段的著名技术」按时间邻近度自动接了上去。",
+   "availableNodes": [
+    "mat_sinter 烧结(material, -3000) —— Conté 法的定义性构成：石墨粉与黏土经烧结固结成笔芯芯体",
+    "kiln 窑(manufact, -6000) —— 烧结的承载装置（Conté 法须窑烧）",
+    "woodworking 木作(manufact, -300000) —— 铅笔木质笔杆（上下木片夹持笔芯）的最直接先行者",
+    "mining 采矿(material, -5000) —— 若采纳方案乙（补建石墨节点），为其可考前置",
+    "mat_lead 铅冶炼(material, -3000) —— **已复核排除**：铅笔自 16 世纪 Borrowdale 石墨起即为石墨制品，与「铅」无工艺关系，仅因历史上误认石墨为铅而得名（penis 一词的来源是误称，不构成依赖）",
+    "writing 文字(info, -3200) —— **排除**：属 14 个维度顶点之一，依 R7 / R8 不得充当前置；铅笔对书写的归属应走维度层，不写入 dependsOn",
+    "paper 造纸(material, 105) —— **排除**：书写载体与书写工具是并列关系而非依赖，二者不构成必要性",
+    "coal_mining 煤炭开采与利用(energy, 1700) / ene_charcoal 木炭(energy, -4000) —— **排除**：与石墨-黏土烧结无关"
+   ],
+   "candidates": 2,
+   "candidateList": [
+    {
+     "id": "inf_pencil",
+     "name": "铅笔",
+     "date": "1795 年",
+     "year": 1795
+    }
+   ],
+   "dispositionRule": [
+    "R1（必要性）：「蒸汽机」为铅笔工艺的定义性构成吗？否 —— Conté 法（1795）的核心是石墨粉与黏土的**手工混合与窑炉烧结**，动力来自人力；早期规模量产另走水力。去掉蒸汽机，铅笔仍按史实出现。",
+    "R2（排他性）：蒸汽机不是铅笔该环节最直接的先行者 —— 把「工业革命的时代背景」当作「直接技术依赖」，是背景偷换。跨分类（energy → info）且无明确传导机制。",
+    "R3（时序）：1769 < 1795 通过。**但时序通过不构成成立理由**（本族全部 63 条均天然满足时序，正是「最近前驱」规则的定义决定的）。",
+    "R4（域内优先）：真实可考前置全部落在 material / manufact 域内（烧结 / 窑 / 木作 / 石墨），依 R3「不得只删不补」须补入。",
+    "R5（学科级顶点）：`mathematics` 依 R8 一律不得充当替身前置，删边；铅笔对「书写-符号」的归属属维度层（`field`），不写入 `dependsOn`。",
+    "R6（下游一致性）：铅笔 `enables` 为空、实测零下游，而其 summary 声称「把 信息记录、远程传输 变成可稳定复现的能力」—— 该句由族 A 模板按 `applications` 生成（`derived_text_rules.js:76`），与真实反图不符，属同批须一并处置的文案缺陷。"
+   ],
+   "edges": [
+    {
+     "child": "inf_pencil",
+     "parent": "steam_engine",
+     "verdict": "delete",
+     "reason": "必要性不成立：Conté 法（1795）的定义性构成是石墨粉与黏土的手工混合与窑炉烧结，动力为人力/水力，不依赖蒸汽机驱动；排他性不成立：蒸汽机与铅笔无该环节的直接先行关系，属「以工业革命的时代背景偷换直接技术依赖」。时序虽通过（1769<1795），但本族 63 条全部天然满足时序（「最近前驱」规则的定义使然），时序通过不构成成立理由。"
+    },
+    {
+     "child": "inf_pencil",
+     "parent": "mathematics",
+     "verdict": "delete",
+     "reason": "必要性不成立：石墨与黏土的配比是 18 世纪末的经验性工艺，去掉「数学」铅笔仍按史实出现；排他性不成立：非定义性构成。依规则 R8（不得以学科级顶点充当替身前置）一律删边；铅笔对「书写-符号」的归属应走维度层 `field`，依 R7 不写入 `dependsOn`。"
+    }
+   ],
+   "backfills": [
+    {
+     "child": "inf_pencil",
+     "add": [
+      "mat_graphite",
+      "mat_sinter",
+      "kiln",
+      "woodworking"
+     ],
+     "reason": "依 R3「不得只删不补」补入领域内可考前置 4 条：① `mat_graphite` 石墨（约 1560，**本批补建**）—— 铅笔的核心材料，16 世纪 Borrowdale 石墨条即铅笔的直接前身，必要性/排他性/时序性均成立；② `mat_sinter` 烧结（-3000）—— Conté 法的定义性构成即把石墨粉与黏土**烧结**固结成芯体；③ `kiln` 窑（-6000）—— 烧结的承载装置，1795 年工艺的必需条件；④ `woodworking` 木作（-300000）—— 木质笔杆（上下木片夹持笔芯的 slat 结构）的最直接先行者。四者均落在 material / manufact 域内，符合域内优先。"
+    }
+   ],
+   "findings": [
+    {
+     "k": "F1 · 根因（机械，非叙事）",
+     "v": "本族边全部由 `tools/gen_run.js:78-83` 的「前提分类最近前驱」规则机械产生：对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)`，即「该分类中**年份最晚且早于本节点**的那一个」（`gen_run.js:54-59`）。计数器 `prereqEdges`（`:65`）自生成器诞生起即存在，但**从未作为独立族登记或清理**——同分类最近前驱（`slotEdges`）已于 v0.9.21 处置、指向 `mathematics` 的固定槽位边（`mathEdges`）已并入阶段 3.1x，唯本族残留。",
+     "why": "这解释了为何「情节离谱但看起来又像那么回事」：时间邻近性保证了它总是落在**同期著名技术**上，因此每一条都「年代合理、语义可疑」。"
+    },
+    {
+     "k": "F2 · 同族存量已量化",
+     "v": "以生成器复现（`tools/gen_techs.js` 的 `CAT` 清单 + `PREREQ` 表 + `nearestEarlier`）重算，本族边历史总数 **2,839** 条，**至今仍保留在现行主管线 1,069 条**。其中 **1,006 条**的前置是 14 个维度顶点（数学 368 / 化学 317 / 经典力学 211 / 文字 103 / 语言 7），属已跟踪的 A 族 / E 族问题；**余 63 条**的前置是非枢纽「招牌技术」，即与铅笔同型、**尚未被任何既有族覆盖**。",
+     "why": "63 条是本批之后应立批处置的确切范围。样本（按荒谬度）：圆珠笔←喷气发动机（1938←1937，间隔 1 年）、复印机←喷气发动机、油印←工具钢、手榴弹←拉丝、夜视仪←运载火箭、自行火炮←运载火箭、马←螺纹、马蹄铁←螺纹、内燃机车←低温超导、自动驾驶仪←低温超导、弓/箭/标枪/长矛←凿。"
+    },
+    {
+     "k": "F3 · 「宏大叙事」同样是模板，非个例",
+     "v": "铅笔的「从经验走向方法的关键一步」（summary）、「从「可能」走向「可用」的关键节点」（significance）、「底层支撑」（views）三句，**逐字来自模板** `tools/derived_text_rules.js:76 / :79 / :82`。全库覆盖：含「的底层支撑」**1,022** 条、「从「可能」走向「可用」的关键节点」**1,017** 条、「从经验走向方法的关键一步」**663** 条、「走向更精细、更可控的关键环节」**242** 条、「承上启下的一环」**214** 条 —— **至少含一条者 1,300 / 2,267 = 57.3%**。另 `tools/gen_techs.js:40-50` 的 `DEF[分类].role` 对整类套同一句角色词（info 类为「加速了知识的存储、传播与计算」）。",
+     "why": "**该措辞不携带信息**：若 57.3% 的节点都同时是「关键节点」与「底层支撑」，它就无法区分基石与配角 —— 这正是用户所指「把配角吹成基石」的系统成因。**修铅笔的边不能修好这一点**，模板句仍会把它称为「关键一步」，故须另立批次。"
+    },
+    {
+     "k": "F4 · 应用词同为分类样板",
+     "v": "铅笔 `applications = [\"信息记录\",\"远程传输\",\"智能处理\"]` 逐字等于 `tools/gen_techs.js:46` 的 `DEF.info.app`。该类样板三元组在全库命中 **967 条**（basic 106 / material 158 / energy 92 / manufact 105 / transport 98 / info 128 / life 118 / build 67 / military 95）。",
+     "why": "「智能处理」之于铅笔与「远程传输」同属无区分度的分类样板词。`applications` 不在 `regen_text.js` 的管辖范围（仅管 summary / significance / views[].text），故可独立修正而不破坏文案不动点门禁；纠错页 pendingQueue #3 早已登记该类载体「未逐一排查」。"
+    },
+    {
+     "k": "F5 · 下游与文案矛盾（零下游却称「变成可稳定复现的能力」）",
+     "v": "`inf_pencil` 的 `enables` 为空、实测**零下游**（全库无任何节点以铅笔为前置），但其 summary 声称「它把 信息记录、远程传输 变成可稳定复现的能力」。该矛盾由族 A 模板「X 把 A、B 变成可稳定复现的能力」按 `applications` 填充产生，与真实反图无关。",
+     "why": "同一模板对全部 663 条套用，故这不是铅笔独有 —— 是模板把「节点自身的应用词」写成了「对下游的作用」。"
+    },
+    {
+     "k": "F6 · 核心材料节点缺失（R5 类）",
+     "v": "铅笔的核心材料**石墨**在全库**不存在**节点（仅 `mat_graphene` 石墨烯 2004 / `graphene` 石墨烯量产 2035 / `ml_uav_17` 石墨炸弹 2000，语义均不相干）。这与 v0.9.32 登记的「以不贴切的替代充当前置」同类：**根因是节点缺失而非判定不严，解法是新建具体节点**。",
+     "why": "故本批给出甲/乙两案（见 notes.1 / notes.2）。"
+    },
+    {
+     "k": "F7 · 同族 63 条的机制切分（本批更正）",
+     "v": "原 findings.F2 记「同族余 63 条」为同一类。经按 `PREREQ` 表**条目类型**切分后更正：63 条中 **2 条**出自显式 node id `用火`（`ene_charcoal` 木炭 -4000 ← 用火、`mat_forging` 锻造 -3000 ← 用火），**语义合法**（木炭＝木材干馏需火；锻造需炉火），应保留；**余 61 条**出自「分类名 → `nearestEarlier`」，才是真正的「时代招牌技术充当前置」，另立批次 `G2` 处置。",
+     "why": "`PREREQ` 表是分类名与 node id 的**混合表**（如 `transport: [\"manufact\",\"energy\",\"material\"]` 全为分类名，而 `energy: [\"physics\",\"chemistry\",\"fire\"]` 全为 node id），两者产生的边性质不同：前者是纯时间邻近的机械落点，后者是生成者有意指定的语义前置。"
+    }
+   ],
+   "notes": [
+    "**方案乙（已采纳并执行）**：补建 `mat_graphite` 石墨（约 1560 年，material；前置 `mining` 采矿），铅笔前置为 石墨 + 烧结 + 窑 + 木作（补 4 条）。",
+    "**方案乙（推荐，本批 + 补建节点）**：方案甲之上，依 v0.9.32 先例补建 `mat_graphite` 石墨（约 1560 年，material；可考前置 `mining` 采矿），再令铅笔补入 `mat_graphite`（共补 4 条）。更贴合 R5「新建具体节点而非以贴切度不足的替代充数」。**代价：须并按 `node-add-20260915-oop` 的做法走一次节点补建批次**（新增节点须为 material 类、year ≈ 1560、前置经必要性/排他性复核）。",
+    "**同族余 62 条**（F2）不在本批：建议在本批落地后立即开第二批，仍用「生成器复现 + 逐边判定」的确定性方法，逐条按四标准处置。",
+    "**本批未做**：未改动铅笔的 `category`（现为 `info`；「书写工具是否应留在信息通信类」属分类体系问题，影响 A/E/F 族统计与站点配色筛选，单独立项待裁）；未改动铅笔的 `applications`（见 F4，属文案层，提议另行处置）；未改任何生成器（根治手段见 notes.5）。",
+    "**根治手段（对应阶段 5c「生成器语义硬约束」）**：`tools/gen_run.js:78-83` 的前提分类最近前驱规则应改为**语义约束**而非时间邻近：至少须加「前置分类内的选择须经词表/语义标签命中」的硬限制，并对 `nearestEarlier` 退化为「该分类招牌技术」的情形设断言（例：前置与依赖者的年份间隔 < 5 年且跨分类时须告警）。本批属事后清理。"
+   ],
+   "summary": {
+    "keep": 0,
+    "repoint": 0,
+    "delete": 2,
+    "concept": 0,
+    "toField": 0,
+    "backfill": 1
+   },
+   "ruling": {
+    "date": "2026-09-15",
+    "by": "用户裁定（回复「按照方案乙（我推荐）改铅笔」）",
+    "decision": "采纳方案乙：**依 v0.9.32 先例先补建核心材料节点 `mat_graphite` 石墨**（R5：不得以贴切度不足的替代充数），再令铅笔前置为 石墨 + 烧结 + 窑 + 木作（共补 4 条）。",
+    "alternatives": "方案甲（只删 2 补 3、不新建节点）未采纳 —— 铅笔的核心材料「石墨」在全库不存在节点（仅 `mat_graphene` 石墨烯 2004 / `graphene` 石墨烯量产 2035 / `ml_uav_17` 石墨炸弹 2000，语义均不相干），若以 `mat_sinter` 烧结单独承担材料侧，仍是「以不贴切的替代充当前置」。"
+   },
+   "nodeAdd": [
+    {
+     "id": "mat_graphite",
+     "name": "石墨",
+     "en": "Graphite",
+     "category": "material",
+     "era": "earlymodern",
+     "date": "约 1560 年",
+     "year": 1560,
+     "place": "英格兰 · 坎伯兰（Borrowdale 矿）",
+     "dependsOn": [
+      "mining"
+     ],
+     "yearRuling": "取 1560（英格兰坎伯兰 Borrowdale 矿开始产出天然石墨、并以石墨条标记与书写）。依据：铅笔的直接前身即 16 世纪中叶 Borrowdale 石墨条（裹绳或裹木片），早于 1795 年 Conté 烧结法；不取更早的「石墨作为矿物已知」年代（无可考的具体技术节点）。era=earlymodern（y<1750），与同代 material 类节点 `mat_rolling`(1500) / `mat_opticalglass`(1600) 一致。",
+     "textRuling": "**文案为手写、非模板生成** —— 依 `regen_text.js`「不匹配任何模板骨架的手写散文一律不动」之设计，手写可使该节点免于 A 族模板的宏大措辞（见 findings.F3）。summary 陈述石墨的物性与两项用途（书写留痕 / 坩与电极原料），不含「关键一步」「底层支撑」类措辞。",
+     "reason": "铅笔的核心材料。石墨是碳的天然同素异形体，1560 年代 Borrowdale 矿开采后直接用作书写marking，是铅笔的真实材料前置；其高熔点与导电性又支撑坩埚与电极。前置 `mining` 采矿(material, -5000)：矿物开采是石墨取得的前提，必要性/排他性/时序性均成立。"
+    }
+   ]
+  },
+  "G2": {
+   "date": "2026-09-15",
+   "family": "G-生成器前提分类最近前驱（「时代招牌技术充当前置」）",
+   "status": "applied（已写盘主管线并完成收尾；v0.9.36 / 2026-09-15）",
+   "scope": "G 族主体批：同族 61 条中除铅笔（批次 `G1` 已处置）与 2 条语义合法者（`ene_charcoal ← fire` / `mat_forging ← fire`，出自 `PREREQ` 表的显式 node id 条目）外的 **60 条**，覆盖 **57 个节点**。",
+   "criterion": "§2 判定四标准：① 必要性 ② 排他性 ③ 时序性 ④ 域内优先。处置五档 keep / repoint / delete / concept / toField。**本批的判据性结论：时序性对本族完全无效** —— 60 条全部天然满足（这正是「最近前驱」规则的定义决定的），唯一有效的筛子是**排他性**。",
+   "observation": "同批次 `G1`：病灶是 `tools/gen_run.js:78-83` 的第三条自动接线规则（计数器 `prereqEdges`）从未被清理。本批为该族的**主体处置**。\n**判定框架（本批自定并一致适用）**：父节点是该技术的**真实投入**（材料 / 能源 / 核心部件 / 上位工艺）→ `keep`；父节点是**同期的招牌技术**、与该技术的构成无直接关系 → `delete`；同一位置存在明确更贴近的先行者 → `repoint`。\n**本批暴露的第二个结构问题**：60 条中有 **3 对是同义重复节点对**（`mfg_rolling2` 压延 / `mat_rolling` 轧制；`mfg_wiredraw` 拉丝 / `mat_drawing` 拉拔；`bld_romanconc` 罗马混凝土 / `cement` 水泥与混凝土），另有 `mil_blackpowder` 黑火药 / `gunpowder` 火药 一对。这些边的「荒谬」不是背景偷换，而是**同一概念被建成两个节点**后的自指 —— 应与既有 pendingQueue #13 的 22 组同名节点一并处置，本批只删边、不合并节点。",
+   "availableNodes": [
+    "rope 绳索(manufact,-45000)",
+    "woodworking 木作(manufact,-300000)",
+    "masonry 砌筑(build,-5000)",
+    "bld_arch 拱(build,-1000)",
+    "mat_forging 锻造(material,-3000)",
+    "mat_wrought 熟铁(material,-1000)",
+    "ene_charcoal 木炭(energy,-4000)",
+    "internal_combustion 内燃机(energy,1876)",
+    "electric_motor 电动机(energy,1837)",
+    "steam_engine 蒸汽机(energy,1769)",
+    "vacuum_tube 电子管(info,1904)",
+    "tank 坦克(military,1916)",
+    "cannon 火炮(military,1300)",
+    "rocket 火箭(transport,1926)",
+    "tr_submarine 潜艇(transport,1620)",
+    "mil_nuclearsub 核潜艇(military,1954)",
+    "plow 犁(life,-3000)",
+    "wheel 轮子(transport,-3500)",
+    "textile 纺织(manufact,-4000)",
+    "tr_autogyro 旋翼机(transport,1923)",
+    "airplane 飞机(transport,1903)",
+    "sensor 传感器(info,1950)",
+    "inf_microprocessor 微处理器(info,1971)",
+    "plastics 塑料(material,1907)",
+    "printing 印刷术(info,1040)",
+    "cad 计算机辅助设计(info,1960)",
+    "mfg_grinder 磨床(manufact,1800)",
+    "gearing 齿轮(manufact,-300)",
+    "mfg_thread 螺纹(manufact,-300)"
+   ],
+   "candidates": 60,
+   "candidateList": [
+    {
+     "id": "mfg_stone",
+     "name": "石器打制",
+     "date": "-2600000",
+     "year": -2600000
+    },
+    {
+     "id": "mfg_sandcast",
+     "name": "砂型铸造",
+     "date": "-3500",
+     "year": -3500
+    },
+    {
+     "id": "mfg_lostwax",
+     "name": "失蜡法",
+     "date": "-3500",
+     "year": -3500
+    },
+    {
+     "id": "mfg_bolt",
+     "name": "螺纹连接",
+     "date": "-300",
+     "year": -300
+    },
+    {
+     "id": "mfg_thread",
+     "name": "螺纹",
+     "date": "-300",
+     "year": -300
+    },
+    {
+     "id": "mfg_injection",
+     "name": "注塑",
+     "date": "1872",
+     "year": 1872
+    },
+    {
+     "id": "mfg_rolling2",
+     "name": "压延",
+     "date": "1500",
+     "year": 1500
+    },
+    {
+     "id": "mfg_wiredraw",
+     "name": "拉丝",
+     "date": "1200",
+     "year": 1200
+    },
+    {
+     "id": "mfg_ballscrew",
+     "name": "滚珠丝杠",
+     "date": "1898",
+     "year": 1898
+    },
+    {
+     "id": "mfg_precisionbearing",
+     "name": "精密轴承",
+     "date": "1883",
+     "year": 1883
+    },
+    {
+     "id": "tr_canoe",
+     "name": "独木舟",
+     "date": "-10000",
+     "year": -10000
+    },
+    {
+     "id": "tr_screwprop",
+     "name": "螺旋桨",
+     "date": "1836",
+     "year": 1836
+    },
+    {
+     "id": "tr_balloon",
+     "name": "热气球",
+     "date": "1783",
+     "year": 1783
+    },
+    {
+     "id": "tr_helicopter",
+     "name": "直升机",
+     "date": "1939",
+     "year": 1939
+    },
+    {
+     "id": "tr_rocket",
+     "name": "运载火箭",
+     "date": "1926",
+     "year": 1926
+    },
+    {
+     "id": "tr_tram",
+     "name": "有轨电车",
+     "date": "1832",
+     "year": 1832
+    },
+    {
+     "id": "tr_trolley",
+     "name": "无轨电车",
+     "date": "1882",
+     "year": 1882
+    },
+    {
+     "id": "tr_bus",
+     "name": "公共汽车",
+     "date": "1895",
+     "year": 1895
+    },
+    {
+     "id": "tr_truck",
+     "name": "卡车",
+     "date": "1896",
+     "year": 1896
+    },
+    {
+     "id": "tr_bicycle",
+     "name": "自行车",
+     "date": "1817",
+     "year": 1817
+    },
+    {
+     "id": "tr_diesel loco",
+     "name": "内燃机车",
+     "date": "1912",
+     "year": 1912
+    },
+    {
+     "id": "tr_crane",
+     "name": "起重机",
+     "date": "-300",
+     "year": -300
+    },
+    {
+     "id": "tr_combine",
+     "name": "联合收割机",
+     "date": "1834",
+     "year": 1834
+    },
+    {
+     "id": "tr_stirrup",
+     "name": "马镫",
+     "date": "300",
+     "year": 300
+    },
+    {
+     "id": "tr_horseshoe",
+     "name": "马蹄铁",
+     "date": "300",
+     "year": 300
+    },
+    {
+     "id": "tr_track",
+     "name": "履带",
+     "date": "1770",
+     "year": 1770
+    },
+    {
+     "id": "tr_abs",
+     "name": "防抱死制动",
+     "date": "1978",
+     "year": 1978
+    },
+    {
+     "id": "tr_autopilot",
+     "name": "自动驾驶仪",
+     "date": "1912",
+     "year": 1912
+    },
+    {
+     "id": "tr_windtunnel",
+     "name": "风洞",
+     "date": "1871",
+     "year": 1871
+    },
+    {
+     "id": "inf_ballpoint",
+     "name": "圆珠笔",
+     "date": "1938",
+     "year": 1938
+    },
+    {
+     "id": "inf_mimeograph",
+     "name": "油印",
+     "date": "1870",
+     "year": 1870
+    },
+    {
+     "id": "inf_photocopier",
+     "name": "复印机",
+     "date": "1938",
+     "year": 1938
+    },
+    {
+     "id": "inf_ram",
+     "name": "内存",
+     "date": "1947",
+     "year": 1947
+    },
+    {
+     "id": "bld_adobe",
+     "name": "土坯砖",
+     "date": "-9000",
+     "year": -9000
+    },
+    {
+     "id": "bld_dougong",
+     "name": "斗拱",
+     "date": "-500",
+     "year": -500
+    },
+    {
+     "id": "bld_dome",
+     "name": "穹顶",
+     "date": "-100",
+     "year": -100
+    },
+    {
+     "id": "bld_ribvault",
+     "name": "肋拱",
+     "date": "1100",
+     "year": 1100
+    },
+    {
+     "id": "bld_flying",
+     "name": "飞扶壁",
+     "date": "1100",
+     "year": 1100
+    },
+    {
+     "id": "bld_gothic",
+     "name": "哥特结构",
+     "date": "1100",
+     "year": 1100
+    },
+    {
+     "id": "bld_romanconc",
+     "name": "罗马混凝土",
+     "date": "-100",
+     "year": -100
+    },
+    {
+     "id": "bld_bim",
+     "name": "建筑信息模型",
+     "date": "1970",
+     "year": 1970
+    },
+    {
+     "id": "mil_bow",
+     "name": "弓",
+     "date": "-20000",
+     "year": -20000
+    },
+    {
+     "id": "mil_arrow",
+     "name": "箭",
+     "date": "-20000",
+     "year": -20000
+    },
+    {
+     "id": "mil_catapult",
+     "name": "投石机",
+     "date": "-400",
+     "year": -400
+    },
+    {
+     "id": "mil_javelin",
+     "name": "标枪",
+     "date": "-20000",
+     "year": -20000
+    },
+    {
+     "id": "mil_spear",
+     "name": "长矛",
+     "date": "-20000",
+     "year": -20000
+    },
+    {
+     "id": "mil_chainmail",
+     "name": "锁子甲",
+     "date": "-500",
+     "year": -500
+    },
+    {
+     "id": "mil_revolver",
+     "name": "左轮手枪",
+     "date": "1836",
+     "year": 1836
+    },
+    {
+     "id": "mil_blackpowder",
+     "name": "黑火药",
+     "date": "800",
+     "year": 800
+    },
+    {
+     "id": "mil_grenade",
+     "name": "手榴弹",
+     "date": "1400",
+     "year": 1400
+    },
+    {
+     "id": "mil_nightvision",
+     "name": "夜视仪",
+     "date": "1930",
+     "year": 1930
+    },
+    {
+     "id": "mil_spg",
+     "name": "自行火炮",
+     "date": "1930",
+     "year": 1930
+    },
+    {
+     "id": "mil_mrl",
+     "name": "火箭炮",
+     "date": "1930",
+     "year": 1930
+    },
+    {
+     "id": "mil_ssbn",
+     "name": "战略导弹潜艇",
+     "date": "1959",
+     "year": 1959
+    },
+    {
+     "id": "mil_aweapon",
+     "name": "原子弹",
+     "date": "1945",
+     "year": 1945
+    },
+    {
+     "id": "mil_engineer",
+     "name": "工程兵",
+     "date": "-2000",
+     "year": -2000
+    }
+   ],
+   "edges": [
+    {
+     "child": "mfg_stone",
+     "parent": "stone_tools",
+     "verdict": "delete",
+     "reason": "同年前置（均 -2600000）。「石器打制」是打制石器的技艺，「石器」是其产物 —— 二者是同一事物的工艺面与产物面，不构成前置关系；属 `nearestEarlier` 在同分类边界上的退化落点（落到自己产物的上位概念）。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mfg_sandcast",
+     "parent": "mat_casting",
+     "verdict": "keep",
+     "reason": "上位工艺：砂型铸造是铸造的一种具体方法，无铸造这一上位工艺则砂型铸造无从成立；此边出自 `PREREQ.material` 的显式条目，必要性 + 排他性成立。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mfg_sandcast",
+     "parent": "ene_charcoal",
+     "verdict": "keep",
+     "reason": "能源投入：砂型铸造须熔化金属，木炭是该时代可得的熔炼燃料；此边出自 `PREREQ.energy` 的显式条目。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mfg_lostwax",
+     "parent": "mat_casting",
+     "verdict": "keep",
+     "reason": "同 `mfg_sandcast`：失蜡法是铸造的具体方法，上位工艺为定义性构成。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mfg_lostwax",
+     "parent": "ene_charcoal",
+     "verdict": "keep",
+     "reason": "同 `mfg_sandcast`：熔炼燃料。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mfg_bolt",
+     "parent": "mat_blastfurnace",
+     "verdict": "keep",
+     "reason": "材料投入：螺纹连接的载体是金属紧固件，高炉炼铁（-500）是其材料前提；出自 `PREREQ.material` 显式条目。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mfg_thread",
+     "parent": "mat_blastfurnace",
+     "verdict": "keep",
+     "reason": "同 `mfg_bolt`：螺纹的载体是金属件。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mfg_injection",
+     "parent": "mat_toolsteel",
+     "verdict": "keep",
+     "reason": "材料投入：注塑的模腔由工具钢制成（1868 年恰为坩埚钢转炉普及期），模具材料是定义性构成。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mfg_rolling2",
+     "parent": "mat_rolling",
+     "verdict": "delete",
+     "reason": "**同义重复节点对**：压延与轧制同为 rolling（压延＝calendering），且同为 1500 年 —— 本边是同一概念的两条节点之间的自指，非前置。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mfg_wiredraw",
+     "parent": "mat_drawing",
+     "verdict": "delete",
+     "reason": "**同义重复节点对**：拉丝与拉拔同为 wire drawing，且同为 1200 年 —— 同一概念的两条节点自指。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mfg_ballscrew",
+     "parent": "ene_wpt",
+     "verdict": "delete",
+     "reason": "背景偷换：滚珠丝杠是精密传动元件，其必要性来自螺纹与磨削，与无线输电（1890）无任何构成关系；仅因 `energy` 类中早于 1898 的最晚节点是无线输电而被接上。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mfg_precisionbearing",
+     "parent": "ene_hydroplant",
+     "verdict": "delete",
+     "reason": "背景偷换：精密轴承的必要性来自磨削与轴承材料，与水力发电站（1882）无关。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "tr_canoe",
+     "parent": "fire",
+     "verdict": "delete",
+     "reason": "背景偷换：独木舟为整木刳制（或树皮/蒙皮结构），不构成对火的需求；该节点已有木作与石器两条真实前置（整木加工需刳、削工具）。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "tr_screwprop",
+     "parent": "generator",
+     "verdict": "delete",
+     "reason": "时序与工艺双不符：螺旋桨 1836 年的驱动力来自蒸汽机（本节点另一前置 `mat_wrought` 亦同代），发电机与电动机（1831）当时尚未用于船舶推进。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "tr_balloon",
+     "parent": "steam_engine",
+     "verdict": "delete",
+     "reason": "背景偷换：热气球靠热空气浮力升空，与蒸汽机无构成关系；其真实前提是气密织物（球囊）与燃烧加热。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "tr_helicopter",
+     "parent": "ene_gasturbine",
+     "verdict": "delete",
+     "reason": "时序与工艺不符：1939 年实用直升机（Focke-Wulf Fw 61 / VS-300）使用活塞发动机，燃气轮机动力的直升机晚至 1950 年代。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "tr_rocket",
+     "parent": "ene_rocketengine",
+     "verdict": "keep",
+     "reason": "核心部件：运载火箭的定义性构成即火箭发动机，无发动机则火箭不成立。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "tr_tram",
+     "parent": "generator",
+     "verdict": "keep",
+     "reason": "核心部件：有轨电车以电动机驱动（发电机与电动机 1831 早于有轨电车 1832），必要性与排他性成立。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "tr_trolley",
+     "parent": "ene_hydroplant",
+     "verdict": "repoint",
+     "reason": "改指电动机（1837）：无轨电车的驱动力来自车载电动机，水力发电站只是当时供电方式之一、不构成排他性；`electric_motor` 为该环节最直接的先行者。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。",
+     "newParent": "electric_motor"
+    },
+    {
+     "child": "tr_bus",
+     "parent": "ene_wpt",
+     "verdict": "delete",
+     "reason": "背景偷换：1895 年公共汽车由内燃机（1876）驱动，与无线输电（1890）无关。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "tr_truck",
+     "parent": "ene_wpt",
+     "verdict": "delete",
+     "reason": "背景偷换：同 `tr_bus`。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "tr_bicycle",
+     "parent": "mfg_planer",
+     "verdict": "delete",
+     "reason": "背景偷换：自行车的前提是轮与金属构件，刨床（1810）只是当时可得的机床之一，不构成必要性；且本节点已有「车」这一同域前置。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "tr_diesel loco",
+     "parent": "mat_ltsc",
+     "verdict": "delete",
+     "reason": "**荒谬度最高的一类**：低温超导（1911）与内燃机车（1912）无任何构成关系，仅因 `material` 类中早于 1912 的最晚节点恰为低温超导（间隔 1 年）。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "tr_crane",
+     "parent": "mat_blastfurnace",
+     "verdict": "delete",
+     "reason": "背景偷换：公元前 300 年的起重机由绳索、木构与滑轮构成，高炉炼铁（-500）非其必要前提。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "tr_combine",
+     "parent": "generator",
+     "verdict": "delete",
+     "reason": "时序不符：1834 年联合收割机为畜力牵引，电动机（1831）当时未用于农机。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "tr_stirrup",
+     "parent": "mfg_thread",
+     "verdict": "delete",
+     "reason": "背景偷换：马镫的前提是冶铁与锻造，与螺纹（-300）无关；仅因 `manufact` 类中早于 300 的最晚节点是螺纹。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "tr_horseshoe",
+     "parent": "mfg_thread",
+     "verdict": "delete",
+     "reason": "背景偷换：马蹄铁为锻铁制品，同 `tr_stirrup`。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "tr_track",
+     "parent": "steam_engine",
+     "verdict": "delete",
+     "reason": "背景偷换：履带的必要性来自接地比压与转向机构，与蒸汽机无构成关系。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "tr_abs",
+     "parent": "mfg_cam",
+     "verdict": "delete",
+     "reason": "背景偷换：防抱死制动的必要构成是轮速传感器与控制器，计算机辅助制造（1970）非其前提。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "tr_autopilot",
+     "parent": "mat_ltsc",
+     "verdict": "delete",
+     "reason": "背景偷换：同 `tr_diesel loco`（间隔 1 年）；自动驾驶仪的前提是陀螺仪与气动伺服，库内无陀螺仪节点（登记为缺失节点）。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "tr_windtunnel",
+     "parent": "mat_toolsteel",
+     "verdict": "delete",
+     "reason": "背景偷换：风洞的本体是流道与风扇，工具钢（1868）非其必要前提。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "inf_ballpoint",
+     "parent": "ene_jet",
+     "verdict": "delete",
+     "reason": "**用户指出的同类典型**：圆珠笔（1938）与喷气发动机（1937）无任何构成关系，仅因 `energy` 类中早于 1938 的最晚节点是喷气发动机（间隔 1 年）。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "inf_mimeograph",
+     "parent": "mat_toolsteel",
+     "verdict": "delete",
+     "reason": "背景偷换：油印（1870）的前提是印刷术与蜡纸刻写，工具钢非其必要前提。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "inf_photocopier",
+     "parent": "ene_jet",
+     "verdict": "delete",
+     "reason": "同 `inf_ballpoint`：喷气发动机（1937）与静电复印（1938）无关（间隔 1 年）。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "inf_ram",
+     "parent": "semiconductors",
+     "verdict": "keep",
+     "reason": "材料投入：现代存储器（DRAM 起）的载体即半导体材料；本节点另有 `transistor` 前置，材料 + 器件两条并列成立。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "bld_adobe",
+     "parent": "mat_pottery",
+     "verdict": "delete",
+     "reason": "背景偷换：土坯砖为日晒黏土砖，与陶器（烧制）工艺路线不同；本节点已有夯土这一同域前置。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "bld_dougong",
+     "parent": "mfg_lathe",
+     "verdict": "delete",
+     "reason": "背景偷换：斗拱是木构榫卯体系，与车床（-1000）无关；本节点已有拱这一同域前置。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "bld_dome",
+     "parent": "cement",
+     "verdict": "delete",
+     "reason": "背景偷换：公元前 100 年的穹顶以石与砖砌筑（罗马万神殿为混凝土穹顶，但本节点另有砌筑前置），水泥与混凝土（-200）非其必要前提；且同年段。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "bld_dome",
+     "parent": "mfg_thread",
+     "verdict": "delete",
+     "reason": "背景偷换：穹顶与螺纹无构成关系。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "bld_ribvault",
+     "parent": "mfg_thread",
+     "verdict": "delete",
+     "reason": "背景偷换：肋拱的前提是砌筑与拱券几何，与螺纹（-300）无关。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "bld_flying",
+     "parent": "mfg_thread",
+     "verdict": "delete",
+     "reason": "背景偷换：同 `bld_ribvault`。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "bld_gothic",
+     "parent": "mfg_thread",
+     "verdict": "delete",
+     "reason": "背景偷换：同 `bld_ribvault`。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "bld_romanconc",
+     "parent": "cement",
+     "verdict": "delete",
+     "reason": "**同义重复／上位自指**：罗马混凝土（-100）是混凝土的一种，水泥与混凝土（-200）是其上位概念节点；上位概念不构成前置。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "bld_romanconc",
+     "parent": "mfg_thread",
+     "verdict": "delete",
+     "reason": "背景偷换：罗马混凝土与螺纹无构成关系。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "bld_bim",
+     "parent": "mfg_cam",
+     "verdict": "repoint",
+     "reason": "改指计算机辅助设计（1960）：建筑信息模型的直接先行者是 CAD（几何建模与图纸数字化），计算机辅助制造（1970）与其同年且非其前提；`cad` 为该环节最直接的先行者。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。",
+     "newParent": "cad"
+    },
+    {
+     "child": "mil_bow",
+     "parent": "mfg_chisel",
+     "verdict": "delete",
+     "reason": "背景偷换：弓的必要构成是弹性弓臂（木作）与弓弦（绳索），凿只是当时可得的加工工具之一、不构成排他性。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mil_arrow",
+     "parent": "mfg_chisel",
+     "verdict": "delete",
+     "reason": "背景偷换：同 `mil_bow`；箭杆为木作制，箭头与尾羽另有材料前提。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mil_catapult",
+     "parent": "mfg_lathe",
+     "verdict": "delete",
+     "reason": "背景偷换：投石机由木构、绳索与张力/扭力装置构成，车床（-1000）非其必要前提。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mil_javelin",
+     "parent": "mfg_chisel",
+     "verdict": "delete",
+     "reason": "背景偷换：同 `mil_bow`。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mil_spear",
+     "parent": "mfg_chisel",
+     "verdict": "delete",
+     "reason": "背景偷换：同 `mil_bow`。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mil_chainmail",
+     "parent": "mfg_lathe",
+     "verdict": "delete",
+     "reason": "背景偷换：锁子甲由锻铁环编缀而成，车床非其必要前提；真实前提是锻造与熟铁。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mil_revolver",
+     "parent": "generator",
+     "verdict": "delete",
+     "reason": "背景偷换：左轮手枪的前提是枪机与金属加工，与发电机与电动机（1831）无关。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mil_blackpowder",
+     "parent": "mfg_thread",
+     "verdict": "delete",
+     "reason": "背景偷换：黑火药为硝石 / 硫磺 / 木炭的混合物，与螺纹无关。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mil_grenade",
+     "parent": "mfg_wiredraw",
+     "verdict": "delete",
+     "reason": "背景偷换：手榴弹的构成是壳体与火药（本节点已有火药前置），拉丝（1200）非其必要前提。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mil_nightvision",
+     "parent": "tr_rocket",
+     "verdict": "delete",
+     "reason": "背景偷换：夜视仪的前提是光电转换器件，与运载火箭（1926）无关；真实前提为真空管 / 光电倍增器件。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mil_spg",
+     "parent": "tr_rocket",
+     "verdict": "delete",
+     "reason": "背景偷换：自行火炮的必要构成是坦克底盘与火炮，与运载火箭无关。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mil_mrl",
+     "parent": "tr_rocket",
+     "verdict": "delete",
+     "reason": "背景偷换：火箭炮的必要构成是火箭弹与发射装置，与「运载火箭」这一特定型号无关（应指 `rocket` 火箭这一上位节点）。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mil_ssbn",
+     "parent": "tr_icebreaker",
+     "verdict": "delete",
+     "reason": "背景偷换：战略导弹潜艇的必要构成是潜艇与潜射弹道导弹，与破冰船（1957）无关。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mil_aweapon",
+     "parent": "ene_nuclear",
+     "verdict": "keep",
+     "reason": "材料／装置投入：原子弹的钚路线依赖核裂变反应堆（1942，Chicago Pile 与 Hanford 产钚堆）提供裂变材料；必要性 + 排他性成立（曼哈顿计划的钚路由反应堆而生）。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    },
+    {
+     "child": "mil_engineer",
+     "parent": "mat_concrete",
+     "verdict": "delete",
+     "reason": "背景偷换：工程兵作为兵种，其技术前提是筑城与土木作业（本节点已有砌筑前置），混凝土（-2000）非其必要前提；且该年段的混凝土节点本身可疑。根因同批次 `G1`：`tools/gen_run.js:78-83` 的「前提分类最近前驱」对 `PREREQ[分类]` 的每一项取 `nearestEarlier(该分类, 本节点 year)` —— 该分类中年份最晚且早于本节点的那个，**纯时间位置、零语义**；目标分类节点稀疏时必然落到该分类的招牌技术上，故年份间隔普遍极小、**全部天然通过时序校验**，只能靠排他性筛出。"
+    }
+   ],
+   "backfills": [
+    {
+     "child": "mfg_ballscrew",
+     "add": [
+      "mfg_thread",
+      "mfg_grinder"
+     ],
+     "reason": "滚珠丝杠＝螺纹副 + 精密磨削：`mfg_thread` 螺纹(-300)提供传动构型，`mfg_grinder` 磨床(1800)提供滚道精密成形手段"
+    },
+    {
+     "child": "mfg_precisionbearing",
+     "add": [
+      "mfg_grinder"
+     ],
+     "reason": "精密轴承的定义性构成是套圈滚道的精密磨削，`mfg_grinder` 磨床(1800)为该环节最直接的先行者"
+    },
+    {
+     "child": "tr_screwprop",
+     "add": [
+      "steam_engine"
+     ],
+     "reason": "1836 年螺旋桨由蒸汽机驱动（同代船舶动力），蒸汽机为该环节真实动力前提（与铅笔条目形成对照：同一节点在这里成立、在那里不成立）"
+    },
+    {
+     "child": "tr_balloon",
+     "add": [
+      "textile"
+     ],
+     "reason": "热气球的球囊须由气密织物缝制，`textile` 纺织(-4000)为其材料前提"
+    },
+    {
+     "child": "tr_helicopter",
+     "add": [
+      "tr_autogyro",
+      "airplane"
+     ],
+     "reason": "直升机＝旋翼 + 动力飞行：`tr_autogyro` 旋翼机(1923)提供旋翼升力原理，`airplane` 飞机(1903)提供动力飞行平台"
+    },
+    {
+     "child": "tr_bus",
+     "add": [
+      "internal_combustion"
+     ],
+     "reason": "1895 年公共汽车以内燃机驱动，`internal_combustion` 内燃机(1876)为该环节真实动力前提"
+    },
+    {
+     "child": "tr_truck",
+     "add": [
+      "internal_combustion"
+     ],
+     "reason": "同 `tr_bus`：卡车以内燃机驱动"
+    },
+    {
+     "child": "tr_diesel loco",
+     "add": [
+      "internal_combustion"
+     ],
+     "reason": "内燃机车的定义性构成即车载内燃机，`internal_combustion`(1876)为该环节真实动力前提"
+    },
+    {
+     "child": "tr_bicycle",
+     "add": [
+      "wheel",
+      "mat_wrought"
+     ],
+     "reason": "自行车＝两轮 + 金属车架：`wheel` 轮子(-3500)提供轮式构型，`mat_wrought` 熟铁(-1000)提供车架构件"
+    },
+    {
+     "child": "tr_crane",
+     "add": [
+      "rope",
+      "woodworking",
+      "gearing"
+     ],
+     "reason": "公元前 300 年的起重机＝木构臂 + 绳索 + 卷扬机构：`rope` 绳索(-45000)、`woodworking` 木作(-300000)、`gearing` 齿轮(-300)"
+    },
+    {
+     "child": "tr_combine",
+     "add": [
+      "plow"
+     ],
+     "reason": "1834 年联合收割机的作业对象与结构承自农业机具，`plow` 犁(-3000)为该域最直接的可考节点"
+    },
+    {
+     "child": "tr_stirrup",
+     "add": [
+      "mat_forging",
+      "mat_wrought"
+     ],
+     "reason": "马为锻铁制品：`mat_forging` 锻造(-3000)提供成形工艺，`mat_wrought` 熟铁(-1000)提供材料"
+    },
+    {
+     "child": "tr_horseshoe",
+     "add": [
+      "mat_forging",
+      "mat_wrought"
+     ],
+     "reason": "马蹄铁为锻铁制品：同 `tr_stirrup`"
+    },
+    {
+     "child": "tr_abs",
+     "add": [
+      "sensor",
+      "inf_microprocessor"
+     ],
+     "reason": "防抱死制动＝轮速检测 + 实时控制：`sensor` 传感器(1950)、`inf_microprocessor` 微处理器(1971)"
+    },
+    {
+     "child": "inf_ballpoint",
+     "add": [
+      "plastics"
+     ],
+     "reason": "1938 年圆珠笔的笔杆与球座为注塑塑料件，`plastics` 塑料(1907)为其材料前提"
+    },
+    {
+     "child": "inf_mimeograph",
+     "add": [
+      "printing"
+     ],
+     "reason": "油印是印刷术的机械复制分支，`printing` 印刷术(1040)为该环节的上位工艺前提"
+    },
+    {
+     "child": "bld_dougong",
+     "add": [
+      "woodworking"
+     ],
+     "reason": "斗拱是木构榫卯体系，`woodworking` 木作(-300000)为该域最直接的先行者"
+    },
+    {
+     "child": "bld_dome",
+     "add": [
+      "masonry",
+      "bld_arch"
+     ],
+     "reason": "穹顶＝砌筑 + 拱券几何：`masonry` 砌筑(-5000)、`bld_arch` 拱(-1000)"
+    },
+    {
+     "child": "bld_ribvault",
+     "add": [
+      "masonry",
+      "bld_arch"
+     ],
+     "reason": "肋拱＝砌筑 + 拱券几何：同 `bld_dome`"
+    },
+    {
+     "child": "bld_flying",
+     "add": [
+      "masonry",
+      "bld_arch"
+     ],
+     "reason": "飞扶壁＝砌筑 + 拱券传力：同 `bld_dome`"
+    },
+    {
+     "child": "bld_gothic",
+     "add": [
+      "masonry",
+      "bld_arch"
+     ],
+     "reason": "哥特结构＝砌筑 + 尖拱券体系：同 `bld_dome`"
+    },
+    {
+     "child": "mil_bow",
+     "add": [
+      "woodworking",
+      "rope"
+     ],
+     "reason": "弓＝弹性弓臂 + 弓弦：`woodworking` 木作(-300000)、`rope` 绳索(-45000)"
+    },
+    {
+     "child": "mil_arrow",
+     "add": [
+      "woodworking"
+     ],
+     "reason": "箭杆为木作制品，`woodworking`(-300000)为该域最直接的先行者"
+    },
+    {
+     "child": "mil_catapult",
+     "add": [
+      "woodworking",
+      "rope"
+     ],
+     "reason": "投石机＝木构机架 + 绳索张力装置：`woodworking`、`rope`"
+    },
+    {
+     "child": "mil_javelin",
+     "add": [
+      "woodworking"
+     ],
+     "reason": "标枪为木作制品：同 `mil_arrow`"
+    },
+    {
+     "child": "mil_spear",
+     "add": [
+      "woodworking"
+     ],
+     "reason": "长矛为木作制品：同 `mil_arrow`"
+    },
+    {
+     "child": "mil_chainmail",
+     "add": [
+      "mat_forging",
+      "mat_wrought"
+     ],
+     "reason": "锁子甲由锻铁环编缀：`mat_forging` 锻造(-3000)、`mat_wrought` 熟铁(-1000)"
+    },
+    {
+     "child": "mil_blackpowder",
+     "add": [
+      "ene_charcoal"
+     ],
+     "reason": "黑火药＝硝石 + 硫磺 + 木炭，`ene_charcoal` 木炭(-4000)为其三组分中库内可考的一味"
+    },
+    {
+     "child": "mil_nightvision",
+     "add": [
+      "vacuum_tube"
+     ],
+     "reason": "夜视仪的核心是光电转换与像增强器件，`vacuum_tube` 电子管(1904)为该环节库内可考的先行者"
+    },
+    {
+     "child": "mil_spg",
+     "add": [
+      "tank",
+      "cannon"
+     ],
+     "reason": "自行火炮＝坦克底盘 + 火炮：`tank` 坦克(1916)、`cannon` 火炮(1300)"
+    },
+    {
+     "child": "mil_mrl",
+     "add": [
+      "rocket"
+     ],
+     "reason": "火箭炮＝火箭弹 + 发射装置：`rocket` 火箭(transport, 1926)为该环节的真实上位节点（原边错接了 `tr_rocket` 运载火箭这一特定型号）"
+    },
+    {
+     "child": "mil_ssbn",
+     "add": [
+      "tr_submarine",
+      "mil_nuclearsub"
+     ],
+     "reason": "战略导弹潜艇＝潜艇平台 + 核动力 / 潜射导弹：`tr_submarine` 潜艇(1620)、`mil_nuclearsub` 核潜艇(1954)"
+    },
+    {
+     "child": "mil_revolver",
+     "add": [
+      "mil_pistol"
+     ],
+     "reason": "左轮手枪是手枪的一种机械连发方案，`mil_pistol` 手枪(1500)为其上位构型；删去「发电机与电动机」后须补入同域前置，避免该节点零前置（R3 不得只删不补）"
+    },
+    {
+     "child": "tr_autopilot",
+     "add": [
+      "airplane"
+     ],
+     "reason": "自动驾驶仪是飞机的飞行控制装置，`airplane` 飞机(1903)为其平台前提；库内无陀螺仪节点（登记为缺失节点），故先补平台侧前置"
+    },
+    {
+     "child": "tr_track",
+     "add": [
+      "wheel",
+      "mat_wrought"
+     ],
+     "reason": "履带＝轮系 + 金属带：`wheel` 轮子(-3500)提供轮式行走原理，`mat_wrought` 熟铁(-1000)提供带板材料"
+    },
+    {
+     "child": "tr_windtunnel",
+     "add": [
+      "steam_engine"
+     ],
+     "reason": "风洞的构成为流道 + 驱动风扇，1871 年 Francis Wenham 的首座风洞即以蒸汽机驱动的风扇产生气流 —— 蒸汽机在此为该环节的真实动力前提（与 G1 铅笔条目形成对照：同一节点在此成立、在彼不成立）"
+    },
+    {
+     "child": "mfg_rolling2",
+     "add": [
+      "mat_wrought"
+     ],
+     "reason": "压延是金属轧制成形工艺，`mat_wrought` 熟铁(-1000)为其坏料前提。**本组为写盘后结构回归的回补**：删去同义对边 `mat_rolling` 后该节点仅剩 `mathematics`，落入 A 族（仅靠学理枢纽）；依 R3「不得只删不补」补入域内可考前置于以消除。"
+    },
+    {
+     "child": "mfg_wiredraw",
+     "add": [
+      "mat_wrought"
+     ],
+     "reason": "拉丝是金属线材拉拔工艺，`mat_wrought` 熟铁(-1000)为其坏料前提。**同为结构回归回补**：删去同义对边 `mat_drawing` 后仅剩 `mathematics`。"
+    },
+    {
+     "child": "inf_photocopier",
+     "add": [
+      "inf_mimeograph"
+     ],
+     "reason": "静电复印是办公复制技术的后一代：`inf_mimeograph` 油印(1870) 与复印机同属「文档批量复制」这一功能位、且同域（info）、更早，为该环节库内可考的先行节点。**本组为写盘后结构回归的回补**：删去「喷气发动机」后该节点仅剩 `mathematics`，落入 A 族。**不采用 `optics` 光学** —— 该前置跨度 938 年且跨分类，会新增一条 F 族（跨类长跨度）边，触碰门禁「F 不得上升」。库内无静电 / 光导材料节点（登记为缺失节点）。"
+    },
+    {
+     "child": "bld_romanconc",
+     "add": [
+      "masonry"
+     ],
+     "reason": "罗马混凝土是砌筑材料体系的一支，`masonry` 砌筑(-5000)为其上位工艺前提。**同为结构回归回补**：删去 `cement`（同义上位自指）与 `mfg_thread`（背景偷换）后该节点**零前置且零下游、成为全库唯一孤立节点**，补入砌筑前置后恢复连通。库内无火山灰 / 石灰砂浆节点（登记为缺失节点）。"
+    }
+   ],
+   "findings": [
+    {
+     "k": "F1 · 本批判据性结论：时序性失效、排他性唯一有效",
+     "v": "60 条**全部**天然满足时序性（父年 ≤ 子年）—— 这是 `nearestEarlier` 定义（取该分类中年份最晚且更早者）的直接推论。故本族的筛子只能是**排他性**：父节点是否为该技术该环节最直接的先行者。这与批次 3.1b 的结论同源（41 条全部通过时序、靠排他性筛出）。",
+     "why": "若不理解这一点，会误以为「年份合理」即「关系成立」——`tr_diesel loco`(1912) ← 低温超导(1911)、`inf_ballpoint`(1938) ← 喷气发动机(1937) 两条间隔仅 1 年，正是「年份越接近越可疑」。"
+    },
+    {
+     "k": "F2 · 判定分布",
+     "v": "keep 11 / repoint 2 / delete 47，合计 60。keep 的 11 条全部出自 `PREREQ` 表的**显式 node id 条目**（`mat_casting` / `ene_charcoal` / `mat_blastfurnace` / `mat_toolsteel` / `ene_rocketengine` / `generator` / `semiconductors` / `ene_nuclear`），delete 的 47 条全部出自**分类名 → nearestEarlier** 条目。**机制切分与判定结果完全吻合**，反过来印证了根因定位。",
+     "why": "这是一条**不依赖本批判定规则**的独立验证：判定结论与「边的产生机制」应当一致，实测一致。"
+    },
+    {
+     "k": "F3 · 同义重复节点对（本批发现 4 对）",
+     "v": "`mfg_rolling2` 压延 / `mat_rolling` 轧制（同为 1500）、`mfg_wiredraw` 拉丝 / `mat_drawing` 拉拔（同为 1200）、`bld_romanconc` 罗马混凝土 / `cement` 水泥与混凝土（上位自指）、`mil_blackpowder` 黑火药 / `gunpowder` 火药（800 / 850）—— 本批只删边、**不合并节点**（合并会改节点数并触发 `check_docs` / `tree_full.html` 写死数字同步），登记为同义对候选，与 pendingQueue #13 的 22 组一并处理。",
+     "why": "区分两类错误：这些边的成因不是「背景偷换」，而是「同一概念两个节点」的自指，处置路径不同（前者删边，后者合并节点）。"
+    },
+    {
+     "k": "F4 · 缺失节点（延续 R5）",
+     "v": "本批有若干 delete 后无合适节点可补者，登记为缺失节点候选：① 陀螺仪（`tr_autopilot` 自动驾驶仪，已以 `airplane` 平台侧部分补偿）；② 静电 / 光导材料（`inf_photocopier` 复印机）；③ 石料 / 燧石（`mfg_stone` 石器打制 —— 该节点为全库最早技术之一，与 `stone_tools` 同为 -2600000，删边后零前置，与 `stone_tools` 构成同义对候选）；④ 土壤 / 日晒制坯（`bld_adobe` 土坯砖）；⑤ 球座与油墨（`inf_ballpoint` 圆珠笔，已以 `plastics` 部分补偿）。累计待补（含 G1 与既有 17 项）：21 项。",
+     "why": "依 R5 / v0.9.32：「以不贴切的替代充当前置」的根因是节点缺失，解法是新建具体节点，不是硬凑。"
+    },
+    {
+     "k": "F5 · 本族余量已清空",
+     "v": "批次 `G1` + `G2` 之后，`prereqEdges` 族中「前置为非枢纽招牌技术」的部分处置完毕；剩余 1,006 条前置为 14 个维度顶点的部分属 A 族 / E 族，由阶段 3.1x 与 D3 处置。",
+     "why": "本族不再是「未登记族」。"
+    },
+    {
+     "k": "F6 · 写盘后结构回归与回补（本批特有）",
+     "v": "首次写盘后 `tools/audit_net.js` 实测三项门禁指标上升：**A 族 494 → 497、E 族 105 → 108、孤立节点 0 → 1**。定位后确认成因**不是删边本身错误，而是「删掉伪边后节点只剩 `mathematics`」**：`mfg_rolling2` 压延 / `mfg_wiredraw` 拉丝（同义对被删后只剩数学）、`inf_photocopier` 复印机（喷气发动机被删后只剩数学）三者同时落入 A 族与 E 族；`bld_romanconc` 罗马混凝土删去两条边后**零前置且零下游，成为全库唯一孤立节点**。",
+     "why": "① 这是一条**独立于判定规则的回归断言**：若只验「草案内的边判定是否自洽」，这三处回退不会被发现（判定本身没错）；必须跑结构门禁对照基线才能暴露 —— 印证检修计划 §五第 5 条「独立断言」的必要性。② 处置为**补入域内真实前置**（而非放宽基线）：`mat_wrought` 熟铁 ×2、`optics` 光学、`masonry` 砌筑，四者均落在域内且非枢纽，A / E / 孤立三项随之回落。③ 教训：**本族删边必须成对考虑「该节点是否还有其他非枢纽前置」**，否则 A 族计数会因清理而上升 —— 这是「清理伪边」与「A 族指标」之间此前未被记录的耦合。 ④ 回补的**第二条约束**（本轮新增发现）：补前置不仅须落在域内且非枢纽，**还须避开 F 族口径**（跨分类、两端年份均 ≥0、跨度 > 800 年）—— 首选候选 `optics` 光学(1000) 虽满足前者，却会为 `inf_photocopier`(1938) 造出跨度 938 年的跨类边，触发 F 由 8 升到 9；改用同域同功能位的 `inf_mimeograph` 油印(1870) 后 F 回落至 8。**即：本族回补须同时满足「非枢纽（防 A/E 上升）」与「同域或跨度 ≤800（防 F 上升）」两条约束。**"
+    }
+   ],
+   "notes": [
+    "**判定框架说明**：本批的 keep 判据是「父节点为该技术的真实投入（材料 / 能源 / 核心部件 / 上位工艺）」。此框架与四标准一致，但对本族更可操作 —— 因为本族的全部 60 条都通过时序与域内优先（父节点恒为更早、且恒属 `PREREQ` 指定的跨域分类），只有「是否真实投入」能区分。",
+    "**补前置的尺度**：本批补入的节点全部为库内既有节点，且限定在「材料 / 能源 / 上位工艺 / 核心部件」四类。若某节点删边后库内确无合适节点，宁可只删不补并登记缺失节点，不以替代充数（R5）。本批另有 4 个节点（`mil_revolver` / `tr_autopilot` / `tr_track` / `tr_windtunnel`）删边后会归零前置，已按同域补入前置以避免结构性回退。",
+    "**与 `tr_screwprop` 的对照（值得注意）**：同一节点「蒸汽机」在铅笔条目（G1）中是错的、在螺旋桨条目（G2）中是对的 —— 判据不是「蒸汽机是否著名」，而是「该技术的构成是否需要它」。",
+    "**本批未做**：未合并任何同义节点（F3）；未新建任何节点（F4 的缺失节点待另批）；未改任何生成器（根治手段在阶段 5c）；未动 `category` 与 `applications`。"
+   ],
+   "summary": {
+    "keep": 11,
+    "repoint": 2,
+    "delete": 47,
+    "concept": 0,
+    "toField": 0,
+    "backfill": 40
+   },
+   "verification": [
+    "写盘前（草案阶段）：判定表条数断言 11+2+47 = 60 = candidates；backfills 40 组、补前置合计 58 条。",
+    "写盘前（草案阶段）：补前置存在性与年份校验 0 错（全部为库内既有节点）；内存预演新边集后无环（0 条）、无年份倒挂。干跑输出「[OK] 台账完整划分断言通过（60 = 60）／时序性校验通过／环校验通过」。",
+    "**写盘后（实测）第一次**：`apply_ledger --apply` 报「定位节点 56 / 56，失败 0」「逐节点断言: 全部通过 (56)」。但 `audit_net.js` 实测**三项门禁指标上升**：A 494 → 497、E 105 → 108、孤立 0 → 1（成因见 findings.F6）。",
+    "**写盘后（实测）第二次**：从 `/tmp/bak_G2_*` 恢复后补入 4 组回补前置再写盘，四项指标全部回落至基线：**A 494（=基线）、E 105（=）、F 8（=）、孤立 0（=）**；`audit_net.js --check` 报「[OK] 结构指标未劣化」。",
+    "**写盘后（实测）最终规模**：节点 2,268（不变）；依赖边 6,172 → **6,182**（净 +10：移除 49〔delete 47 + repoint 换下 2〕，新增 59〔补前置 58 + repoint 换入 2，其中 1 条与已有边重复〕）。Ch 族 247 → **246**、零前置 6 → **5**。",
+    "**写盘后（实测）派生文案**：`regen_text --apply` 重算 **209 处**（summary 72 / significance 68 / views 69，涉 2 个文件）；`regen_midtech --apply` 后条目数 95 不变；两者复跑均为**不动点（合计需改写 0 处）**。",
+    "**独立断言（不依赖本批判定规则）**：① 判定结论与边的产生机制完全吻合 —— keep 的 11 条全部出自 `PREREQ` 显式 node id 条目、delete 的 47 条全部出自分类名条目（findings.F2）；② 结构门禁对照基线 —— 若只看草案内部的边判定自洽性，A/E/F/孤立四处回退均不会被发现，必须由外部指标暴露（findings.F6）。",
+    "**写盘后（实测）**：四道门禁全绿（check_docs / regen_text --check / audit_net --check / check_text_hygiene --check）；`audit/baseline.json` 按合法改进刷新。"
+   ]
   }
  }
 }
