@@ -694,6 +694,7 @@ main{max-width:var(--maxw);margin:0 auto;padding:30px 24px 70px}
 .cl-ttrack-tbl tbody tr:hover{background:rgba(139,105,20,.06)}
 .cl-ttrack-tbl tbody tr:last-child td{border-bottom:none}
 .cl-ttrack-tbl .tt-v{white-space:nowrap}
+.cl-ttrack-tbl .tt-m{white-space:nowrap;color:var(--ink-soft);font-size:12px}
 .cl-ttrack-tbl .tt-t{font-weight:600;min-width:170px}
 .cl-ttrack-tbl .tt-s{color:var(--ink-soft);min-width:200px}
 .cl-ttrack-tbl .tt-r{min-width:300px}

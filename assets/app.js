@@ -952,7 +952,7 @@ function renderChangelog() {
     html += `<section class="cl-ttrack">
       <div class="cl-ttrack-h">科技树变更原因 · 全程追踪<span class="cl-ttrack-tip">任何改变整张网络结构 / 规模 / 评分体系 / 推演框架的版本，在此写清原因</span></div>
       <div class="cl-ttrack-wrap"><table class="cl-ttrack-tbl">
-        <thead><tr><th class="tt-v">版本</th><th class="tt-d">日期</th><th class="tt-t">变更</th><th class="tt-s">影响范围</th><th class="tt-r">变更原因</th></tr></thead>
+        <thead><tr><th class="tt-v">版本</th><th class="tt-d">日期</th><th class="tt-m">维护者</th><th class="tt-t">变更</th><th class="tt-s">影响范围</th><th class="tt-r">变更原因</th></tr></thead>
         <tbody>`;
     treeEntries.forEach(e => {
       const tc = e.treeChange || {};
@@ -960,6 +960,7 @@ function renderChangelog() {
       html += `<tr class="cl-${tp}">
         <td class="tt-v"><span class="cl-version sm">${esc(e.version || "")}</span></td>
         <td class="tt-d">${esc(e.date || "")}</td>
+        <td class="tt-m" title="${esc(e.maintainerFull || M.maintainer || "")}">${esc(e.maintainer || "—")}</td>
         <td class="tt-t"><span class="cl-type cl-type-${tp} sm">${TYPE_LABEL[tp] || tp}</span><br>${esc(e.title || "")}</td>
         <td class="tt-s">${esc(tc.scope || "—")}</td>
         <td class="tt-r"><span class="tt-reason">${esc(tc.reason || "")}</span>${tc.detail ? `<span class="tt-detail">${esc(tc.detail)}</span>` : ""}</td>

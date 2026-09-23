@@ -8399,6 +8399,2862 @@
     "**独立断言（不依赖本批判定规则）**：① 判定结论与边的产生机制完全吻合 —— keep 的 11 条全部出自 `PREREQ` 显式 node id 条目、delete 的 47 条全部出自分类名条目（findings.F2）；② 结构门禁对照基线 —— 若只看草案内部的边判定自洽性，A/E/F/孤立四处回退均不会被发现，必须由外部指标暴露（findings.F6）。",
     "**写盘后（实测）**：四道门禁全绿（check_docs / regen_text --check / audit_net --check / check_text_hygiene --check）；`audit/baseline.json` 按合法改进刷新。"
    ]
+  },
+  "D2": {
+   "userRuling20260915": "用户 2026-09-15 裁定：**扩充维度顶点名单** —— D0 依「下游数 ≥ 80」挑出 14 个枢纽，但按同一口径复扫，另有 6 个同类节点（**砌筑 masonry 179 / 建筑学 architecture 162 / 电子学 electronics 159 / 燃烧 combustion 99 / 无菌外科 surgery 95 / 发酵 fermentation 84**）未被纳入，性质相同（均为**领域 / 学科 / 现象**节点，而入边实际表达的是「归属」而非「因果」，如建筑学的 162 条下游全为近现代建筑技术做法，年份 1800–2010）。处置：**将这 6 个一并标为维度顶点**，其入边（合计约 780 条）随 D2 统一逐条重判 delete / toField，与 14 个同一步调。另有 10 个下游 ≥ 60 的**真技术**节点（电子计算机 214 / 火箭 151 / 互联网 114 / 电池 98 / 内燃机 95 / 电力系统 94 / GNSS 92 / 汽车 81 / 钢铁 69 / 量子力学 60）**不纳入** —— 真技术被大量依赖是正常的，须逐条按四标准判定，不得按下游度一刀切。",
+   "scopeNote": " 【2026-09-15 扩充】维度顶点 14 → 20。",
+   "date": "待定",
+   "status": "草案待审（含 2026-09-15 用户裁定的名单扩充）"
+  },
+  "H": {
+   "date": "2026-09-15",
+   "family": "H-模板 cohort 前置（同一批节点共享完全相同的 dependsOn）",
+   "status": "draft-ready（草案；群清单已建立，逐群审核中，未写盘）",
+   "discovery": "用户 2026-09-15 要求「这些的下游也让我判断下」时发现：`电池`/`内燃机`/`汽车` 三个骨干节点的下游里，分别有 57 条（1990）、73 条（2005）、73 条（2005）**年份完全相同、前置完全相同的节点**。据此按「dependsOn 签名」全库扫描，发现**规模远超预期**。",
+   "measured": {
+    "groups": 42,
+    "nodes": 1440,
+    "edges": 4243,
+    "nodeShare": "63.5%",
+    "edgeShare": "68.6%",
+    "note": "「前置集合完全相同的节点群」口径：把每个节点的 `dependsOn`（仅实存边）排序后拼接成签名，取签名相同且成员 ≥4 的群。**这不是「相似」，是逐字符完全相同。**"
+   },
+   "why": "**这是预测能力的根本障碍。** ① 若 68.6% 的边来自批量赋值，则任何基于网络结构的计算（PageRank / 中介中心性 / 前提闭包 / 齐备律推演）主要是在**复现模板**，不是在发现规律 —— 这直接解释了 `phase3_linkpredict` 的 AUC 只有 0.5636（随机 0.5）。② 同一群内节点的「前置一样」，意味着网络无法区分它们的真实差异，闭包必然同质。③ 第 0 期量出的「22.4% 节点无真前置」只是表象；真实情况是**即使有前置的节点，三分之二也是模板**。",
+   "scope": "42 群 / 1440 节点 / 4243 边。其中 **15 群（≥15 节点）可确认为批量模板**（合计 1302 节点），**27 群（4–14 节点）可能是真实的共享前置**（如「刀具/凿/锯/钻 ← 手斧」确为同母体衍生），须逐群判断。",
+   "bigGroups": [
+    {
+     "no": 1,
+     "nodes": 159,
+     "edges": 477,
+     "prefix": "bd__156 bld__3",
+     "year": "2000×156",
+     "deps": [
+      "建筑学",
+      "工程学",
+      "砌筑"
+     ],
+     "sample": "保温隔热、模块化建筑、砌砖机器人、预制混凝土构件",
+     "allGeneric": false
+    },
+    {
+     "no": 2,
+     "nodes": 138,
+     "edges": 276,
+     "prefix": "mat__90 ene__45 (无)2",
+     "year": "1900×11",
+     "deps": [
+      "化学",
+      "经典力学"
+     ],
+     "sample": "可锻铸铁、不锈钢、锰钢、工具钢",
+     "allGeneric": true
+    },
+    {
+     "no": 3,
+     "nodes": 127,
+     "edges": 381,
+     "prefix": "ml__126 mil__1",
+     "year": "2000×126",
+     "deps": [
+      "算法理论",
+      "电子学",
+      "火箭"
+     ],
+     "sample": "智能弹药、可编程弹药、末敏弹、攻顶弹药",
+     "allGeneric": false
+    },
+    {
+     "no": 4,
+     "nodes": 102,
+     "edges": 408,
+     "prefix": "bx__102",
+     "year": "1950×102",
+     "deps": [
+      "数学",
+      "数值分析",
+      "最优化/线性规划",
+      "统计学"
+     ],
+     "sample": "有限元方法、小波分析、凸优化、随机优化",
+     "allGeneric": true
+    },
+    {
+     "no": 5,
+     "nodes": 97,
+     "edges": 97,
+     "prefix": "inf__91 bio__5 (无)1",
+     "year": "2000×10",
+     "deps": [
+      "数学"
+     ],
+     "sample": "打字机、复写纸、通信电缆、彩色电视",
+     "allGeneric": true
+    },
+    {
+     "no": 6,
+     "nodes": 93,
+     "edges": 372,
+     "prefix": "lf__93",
+     "year": "2005×93",
+     "deps": [
+      "电子计算机",
+      "互联网",
+      "分子生物学",
+      "无菌外科"
+     ],
+     "sample": "循环肿瘤 DNA、循环肿瘤细胞、外泌体检测、ctDNA 甲基化",
+     "allGeneric": false
+    },
+    {
+     "no": 7,
+     "nodes": 86,
+     "edges": 344,
+     "prefix": "it__85 inf__1",
+     "year": "1970×85",
+     "deps": [
+      "算法理论",
+      "电子计算机",
+      "数学",
+      "统计学"
+     ],
+     "sample": "协同过滤、快速傅里叶变换、离散余弦变换、小波变换",
+     "allGeneric": false
+    },
+    {
+     "no": 8,
+     "nodes": 77,
+     "edges": 231,
+     "prefix": "lf__77",
+     "year": "2000×77",
+     "deps": [
+      "发酵",
+      "遗传学",
+      "免疫学"
+     ],
+     "sample": "mRNA 疫苗平台应用、病毒载体疫苗、DNA 疫苗、重组蛋白疫苗",
+     "allGeneric": false
+    },
+    {
+     "no": 9,
+     "nodes": 74,
+     "edges": 148,
+     "prefix": "bio__73 (无)1",
+     "year": "2000×10",
+     "deps": [
+      "化学",
+      "数学"
+     ],
+     "sample": "麻醉、阿司匹林、青霉素、卡介苗",
+     "allGeneric": true
+    },
+    {
+     "no": 10,
+     "nodes": 74,
+     "edges": 296,
+     "prefix": "tp__73 tr__1",
+     "year": "2005×73",
+     "deps": [
+      "汽车",
+      "燃烧",
+      "全球卫星定位 GNSS",
+      "内燃机"
+     ],
+     "sample": "车路协同、增程式电动车、插电混动汽车、纯电动卡车",
+     "allGeneric": false
+    },
+    {
+     "no": 11,
+     "nodes": 68,
+     "edges": 136,
+     "prefix": "(无)31 math__2 scientific__1",
+     "year": "1970×2",
+     "deps": [
+      "数学",
+      "文字"
+     ],
+     "sample": "天文学、科学方法、电报、零的概念",
+     "allGeneric": true
+    },
+    {
+     "no": 12,
+     "nodes": 56,
+     "edges": 224,
+     "prefix": "bx__56",
+     "year": "1950×56",
+     "deps": [
+      "经典力学",
+      "量子力学",
+      "固体力学",
+      "统计力学"
+     ],
+     "sample": "超流性、超固态、自旋电子学、等离子体态",
+     "allGeneric": false
+    },
+    {
+     "no": 13,
+     "nodes": 56,
+     "edges": 224,
+     "prefix": "en__56",
+     "year": "1990×56",
+     "deps": [
+      "电池",
+      "化学",
+      "电力系统",
+      "铅酸电池"
+     ],
+     "sample": "钾离子电池、镁电池、锌离子电池、铝电池",
+     "allGeneric": false
+    },
+    {
+     "no": 14,
+     "nodes": 35,
+     "edges": 140,
+     "prefix": "mt__35",
+     "year": "1950×35",
+     "deps": [
+      "硬铝合金",
+      "材料科学",
+      "冶金",
+      "钢铁"
+     ],
+     "sample": "高熵合金应用、非晶合金应用、金属玻璃应用、形状记忆合金应用",
+     "allGeneric": false
+    },
+    {
+     "no": 15,
+     "nodes": 23,
+     "edges": 92,
+     "prefix": "en__23",
+     "year": "1970×23",
+     "deps": [
+      "电池",
+      "化学",
+      "燃烧",
+      "电力系统"
+     ],
+     "sample": "质子交换膜燃料电池、碱性燃料电池、磷酸燃料电池、熔融碳酸盐燃料电池",
+     "allGeneric": false
+    },
+    {
+     "no": 16,
+     "nodes": 22,
+     "edges": 44,
+     "prefix": "mt__22",
+     "year": "1950×22",
+     "deps": [
+      "窑",
+      "材料科学"
+     ],
+     "sample": "透明陶瓷、氮化硼陶瓷、碳化硅陶瓷应用、氧化铝陶瓷应用",
+     "allGeneric": false
+    },
+    {
+     "no": 17,
+     "nodes": 15,
+     "edges": 60,
+     "prefix": "mn__15",
+     "year": "1970×15",
+     "deps": [
+      "自动化",
+      "电子学",
+      "车床与精密加工",
+      "工业机器人"
+     ],
+     "sample": "单点金刚石车削、离子束抛光、磁流变抛光、化学机械抛光",
+     "allGeneric": false
+    }
+   ],
+   "smallGroups": [
+    {
+     "no": 18,
+     "nodes": 11,
+     "edges": 44,
+     "prefix": "tp__11",
+     "year": "2000×11",
+     "deps": [
+      "全球卫星定位 GNSS",
+      "互联网",
+      "铁路",
+      "传感器"
+     ],
+     "sample": "高速磁浮、中低速磁浮、跨座式单轨、悬挂式单轨"
+    },
+    {
+     "no": 19,
+     "nodes": 9,
+     "edges": 9,
+     "prefix": "(无)3 mat__1 tr__1",
+     "year": "1712×1",
+     "deps": [
+      "铸铁"
+     ],
+     "sample": "渗碳、管道运输、纽科门大气式蒸汽机、锅炉"
+    },
+    {
+     "no": 20,
+     "nodes": 9,
+     "edges": 27,
+     "prefix": "fut__9",
+     "year": "2030×3",
+     "deps": [
+      "人工智能",
+      "电子计算机",
+      "量子科技"
+     ],
+     "sample": "通用量子计算机、光子计算机、类脑超级计算机、脑机接口消费化"
+    },
+    {
+     "no": 21,
+     "nodes": 9,
+     "edges": 27,
+     "prefix": "fut__9",
+     "year": "2030×2",
+     "deps": [
+      "火箭",
+      "人造卫星",
+      "航天器"
+     ],
+     "sample": "自动驾驶全域覆盖、电动垂直起降网络、高超音速客运、可重复使用空间站"
+    },
+    {
+     "no": 22,
+     "nodes": 7,
+     "edges": 21,
+     "prefix": "ene__7",
+     "year": "1800×7",
+     "deps": [
+      "化学",
+      "经典力学",
+      "蒸汽机"
+     ],
+     "sample": "生物燃料、生物质气化、地热利用、直流电系统"
+    },
+    {
+     "no": 23,
+     "nodes": 7,
+     "edges": 7,
+     "prefix": "fut__7",
+     "year": "2040×2",
+     "deps": [
+      "太阳能光伏"
+     ],
+     "sample": "可控核聚变电站、聚变-海水制氢、空间太阳能电站、小行星采矿"
+    },
+    {
+     "no": 24,
+     "nodes": 6,
+     "edges": 18,
+     "prefix": "ene__6",
+     "year": "1980×6",
+     "deps": [
+      "化学",
+      "波浪能",
+      "经典力学"
+     ],
+     "sample": "聚光太阳能、风电场、光伏电站、热电池"
+    },
+    {
+     "no": 25,
+     "nodes": 6,
+     "edges": 6,
+     "prefix": "tr__6",
+     "year": "1800×2",
+     "deps": [
+      "蒸汽机"
+     ],
+     "sample": "螺旋桨、蒸汽机车、挖掘机、挖泥船"
+    },
+    {
+     "no": 26,
+     "nodes": 6,
+     "edges": 12,
+     "prefix": "fut__6",
+     "year": "2028×2",
+     "deps": [
+      "发酵",
+      "免疫学"
+     ],
+     "sample": "人工合成淀粉工厂、细胞培养肉量产、通用 mRNA 平台、AI 辅助药物发现"
+    },
+    {
+     "no": 27,
+     "nodes": 5,
+     "edges": 5,
+     "prefix": "mfg__5",
+     "year": "-5000×2",
+     "deps": [
+      "手斧"
+     ],
+     "sample": "刀具、凿、锯、钻"
+    },
+    {
+     "no": 28,
+     "nodes": 5,
+     "edges": 5,
+     "prefix": "tr__3 (无)1 aircraft__1",
+     "year": "1890×1",
+     "deps": [
+      "内燃机"
+     ],
+     "sample": "公共汽车、卡车、内燃机车、变速箱"
+    },
+    {
+     "no": 29,
+     "nodes": 5,
+     "edges": 5,
+     "prefix": "tr__5",
+     "year": "1910×1",
+     "deps": [
+      "飞机"
+     ],
+     "sample": "航空母舰、地效飞行器、自动驾驶仪、飞行记录器"
+    },
+    {
+     "no": 30,
+     "nodes": 5,
+     "edges": 15,
+     "prefix": "fut__5",
+     "year": "2030×2",
+     "deps": [
+      "气候科学",
+      "电子计算机",
+      "仿真"
+     ],
+     "sample": "AI 科学家、AI 数学家、数字孪生地球、气候工程部署"
+    },
+    {
+     "no": 31,
+     "nodes": 4,
+     "edges": 4,
+     "prefix": "(无)1 tr__1 mil__1",
+     "year": "-3500×1",
+     "deps": [
+      "木作"
+     ],
+     "sample": "轮子、木筏、标枪、围栏与圈养"
+    },
+    {
+     "no": 32,
+     "nodes": 4,
+     "edges": 4,
+     "prefix": "ene__2 horse__1 tr__1",
+     "year": "900×1",
+     "deps": [
+      "轮子"
+     ],
+     "sample": "马具与马车、水力利用、风车、转向系统"
+    },
+    {
+     "no": 33,
+     "nodes": 4,
+     "edges": 8,
+     "prefix": "vacuum__2 tr__1 mower__1",
+     "year": "1901×1",
+     "deps": [
+      "电池",
+      "电动机"
+     ],
+     "sample": "真空吸尘器、电动汽车、割草执行机构、吸尘执行机构"
+    },
+    {
+     "no": 34,
+     "nodes": 4,
+     "edges": 12,
+     "prefix": "(无)2 proof__1 polymer__1",
+     "year": "1900×4",
+     "deps": [
+      "生物化学",
+      "数学",
+      "文字"
+     ],
+     "sample": "证明论、高分子化学、可重复实验、生物物理学"
+    },
+    {
+     "no": 35,
+     "nodes": 4,
+     "edges": 8,
+     "prefix": "mat__3 bld__1",
+     "year": "-2000×2",
+     "deps": [
+      "窑",
+      "陶器"
+     ],
+     "sample": "汞冶炼、炻器、平板玻璃、瓦"
+    },
+    {
+     "no": 36,
+     "nodes": 4,
+     "edges": 12,
+     "prefix": "mat__4",
+     "year": "1940×4",
+     "deps": [
+      "化学",
+      "聚四氟乙烯",
+      "经典力学"
+     ],
+     "sample": "硅橡胶、多晶硅、蜂窝夹层、电渣重熔"
+    },
+    {
+     "no": 37,
+     "nodes": 4,
+     "edges": 4,
+     "prefix": "ene__1 bld__1 ground__1",
+     "year": "-1000×1",
+     "deps": [
+      "石器"
+     ],
+     "sample": "煤炭开采、夯土、磨制石器、绳索"
+    },
+    {
+     "no": 38,
+     "nodes": 4,
+     "edges": 12,
+     "prefix": "ene__4",
+     "year": "1970×4",
+     "deps": [
+      "化学",
+      "托卡马克",
+      "经典力学"
+     ],
+     "sample": "液流电池、储氢技术、干热岩、水热型地热"
+    },
+    {
+     "no": 39,
+     "nodes": 4,
+     "edges": 8,
+     "prefix": "mil__3 tr__1",
+     "year": "1920×2",
+     "deps": [
+      "航空发动机",
+      "飞机"
+     ],
+     "sample": "旋翼机、战略轰炸机、空中加油机、军用运输机"
+    },
+    {
+     "no": 40,
+     "nodes": 4,
+     "edges": 4,
+     "prefix": "tr__4",
+     "year": "1882×1",
+     "deps": [
+      "电动机"
+     ],
+     "sample": "无轨电车、平衡车、自主水下航行器、遥控潜水器"
+    },
+    {
+     "no": 41,
+     "nodes": 4,
+     "edges": 8,
+     "prefix": "(无)2 fire__1 bone__1",
+     "year": "-200000×1",
+     "deps": [
+      "用火",
+      "石器"
+     ],
+     "sample": "钻木取火、骨器、木作、采矿"
+    },
+    {
+     "no": 42,
+     "nodes": 4,
+     "edges": 8,
+     "prefix": "(无)2 particle__1 general__1",
+     "year": "1915×2",
+     "deps": [
+      "经典力学",
+      "相对论与量子力学"
+     ],
+     "sample": "量子科技、粒子物理、时空、广义相对论"
+    }
+   ],
+   "relation": {
+    "A": "**与 A / E 族的关系**：5 群（479 节点）的前置全部为学科顶点，属已跟踪的 A / E 族，由阶段 3 / D2 覆盖，本批不重复处置。",
+    "G": "**与 G 族（批次 G1/G2）的关系**：G 族是「单条边由 `nearestEarlier` 机械接线」，本批是「**整群节点共享同一组前置**」—— 不是同一条规则。G 族已处置完毕。",
+    "D2": "**与 D2 的关系**：本批群 #1（159 个 bd_ 建筑节点）的三个前置 `建筑学` / `工程学` / `砌筑` **全部**在 2026-09-15 被用户裁定纳入维度顶点（14 → 20），故这 477 条边在 D2 中应走 `toField`。**两批必须协调，不得重复处置。**",
+    "known": "**已登记部分**：`ml_uav_1..126`（群 #3，pendingQueue #6）与 `bx_*`（pendingQueue #10）此前已登记，本批补全其余 37 群。"
+   },
+   "method": "**群为单位审核**（用户 2026-09-15 裁定）—— 逐群进行：① 确认该群是否确为模板（看成员语义是否同质、年份是否被压平）；② 确定该群的真实前置（按子域分组给建议）；③ 处置：删伪边 + 补真实前置 / 走 toField（若前置为维度顶点）/ 确认为真则保留。42 群但可归并为十余类，工作量远小于 1,440 个节点逐条。",
+   "order": "建议审核顺序（按影响降序）：① 群 #1（159 节点，建筑）② 群 #6（93，癌症诊断）③ 群 #8（77，疫苗）④ 群 #10（74，汽车智能化）⑤ 群 #13（56，电池化学）⑥ 群 #7（86，算法）⑦ 群 #14/#16（57，材料）⑧ 群 #17（15，精密加工）… 余下小组逐群过。",
+   "notes": [
+    "**本批未写盘**：仅建立群清单与裁定框架，未改动任何 `dependsOn`。",
+    "**不得按群一刀切删除**：同群节点共享前置不等于每条前置都错（如群 #22「生物燃料/地热/直流电 ← 化学、经典力学、蒸汽机」中「蒸汽机」对「直流电系统」或有争议，但对「地热利用」则完全不成立）—— 仍须逐条按四标准判定，群只是**缩小审核范围**的单位。",
+    "**根治在生成器**：属性与 G4 同源（生成器语义硬约束）。在生成器不改的前提下，同类群会在重跑时再生。",
+    "**对预测的含义（须写进路线图）**：在第 1 期完成群清理之前，**不应基于网络结构做任何推演结论** —— 否则结论只是在复现模板。"
+   ],
+   "summary": {
+    "groups": 42,
+    "nodes": 1440,
+    "edges": 4243,
+    "big": 17,
+    "small": 25,
+    "reviewed": 130,
+    "parked": 29,
+    "cohort1Status": "9 子域已过（130 节点）+ 3 子域挂起（J 5 / K 7 / L 17 = 29 节点）"
+   },
+   "subGroups": {
+    "1-A": {
+     "cohort": "#1（159 个建筑节点，前置 = 建筑学+工程学+砌筑）",
+     "sub": "A · 装配式与模块化（7 个）",
+     "date": "2026-09-15",
+     "status": "用户已过（7 条全过）；**未写盘**",
+     "ruling": {
+      "toField": "三条伪前置（建筑学 / 工程学 / 砌筑）**全部为维度顶点**（建筑学与砌筑为 2026-09-15 新纳入，工程学原有），依 R7 / R8 一律走 **toField**：删伪边 + 把归属记入维度层 `field`。**用户 2026-09-15 确认此处置正确。**",
+      "scale": "逐条考证（用户 2026-09-15 裁定）：每节点单独定真实前置，不采用子域共用。"
+     },
+     "candidates": [
+      {
+       "id": "bld_modular",
+       "name": "模块化建筑",
+       "year": 1900,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "steel_frame",
+        "mat_concrete",
+        "tr_crane"
+       ],
+       "reason": "模块化建筑＝钢/混凝土模块体系 + 吊装。`steel_frame` 钢结构(1885)提供钢框架体系、`mat_concrete` 混凝土(-2000)提供混凝土模块、`tr_crane` 起重机(-300)提供吊装手段。"
+      },
+      {
+       "id": "bd_civ_1",
+       "name": "预制混凝土构件",
+       "year": 2000,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "mat_reconcrete",
+        "mfg_mold",
+        "tr_crane"
+       ],
+       "reason": "预制混凝土构件＝钢筋 + 模浇 + 吊装。`mat_reconcrete` 钢筋混凝土(1849)为材料本体、`mfg_mold` 模具(-3000)为成形手段、`tr_crane` 提供吊装。"
+      },
+      {
+       "id": "bd_civ_2",
+       "name": "预制钢结构",
+       "year": 2000,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "steel_frame",
+        "mfg_bolt",
+        "tr_crane"
+       ],
+       "reason": "预制钢结构＝型钢构件 + 栓接 + 吊装。`steel_frame` 钢结构(1885)、`mfg_bolt` 螺纹连接(-300)为构件连接方式、`tr_crane` 吊装。"
+      },
+      {
+       "id": "bd_civ_3",
+       "name": "预制木结构",
+       "year": 2000,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_timber",
+        "mfg_bolt"
+       ],
+       "reason": "预制木结构＝木构件 + 金属连接件。`bld_timber` 木构建筑(-5000)为木构体系本体、`mfg_bolt` 螺纹连接(-300)为现代木构的金属连接件。"
+      },
+      {
+       "id": "bd_civ_5",
+       "name": "箱体模块化",
+       "year": 2000,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "steel_frame",
+        "bld_prefab"
+       ],
+       "reason": "箱体模块化＝钢框架箱体 + 装配工艺。`steel_frame` 钢结构(1885)为箱体骨架、`bld_prefab` 装配式建筑(1900)为上位装配体系。"
+      },
+      {
+       "id": "bd_civ_7",
+       "name": "混凝土模块化",
+       "year": 2000,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "mat_concrete",
+        "bld_prefab"
+       ],
+       "reason": "混凝土模块化＝混凝土模块 + 装配工艺。`mat_concrete` 混凝土(-2000)、`bld_prefab` 装配式建筑(1900)。"
+      },
+      {
+       "id": "bd_civ_8",
+       "name": "3D 打印建筑应用",
+       "year": 2000,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "mfg_3dp",
+        "mat_concrete"
+       ],
+       "reason": "3D 打印建筑＝增材制造设备 + 可打印混凝土。`mfg_3dp` 3D 打印(1984)为工艺本体、`mat_concrete` 混凝土(-2000)为打印材料。"
+      }
+     ],
+     "findings": [
+      "**库内已有正确前置节点**，无需新建 —— `steel_frame` / `mat_reconcrete` / `mfg_mold` / `tr_crane` / `bld_timber` / `mfg_bolt` / `mfg_3dp` / `bld_prefab` 均存在。这说明群 #1 的修复是**可执行的**，不是无解的。",
+      "**`装配式建筑`(bld_prefab) 与 `模块化建筑`(bld_modular) 本身也在群 #1 内**（其前置同为那三条伪边）—— 它们既是本子域的补前置来源，又须在本轮被修。须注意写盘次序，避免中间态自环。",
+      "**`预制构件`(bld_precast) 的前置是「模块化建筑」**（单前置）—— 与 `装配式建筑 ← 预制构件` 构成 `模块化建筑 → 预制构件 → 装配式建筑` 的纵向链，但 `模块化建筑` 又被 `箱体模块化 / 混凝土模块化` 引用为上位，须在写盘时做环预演。"
+     ],
+     "summary": {
+      "nodes": 7,
+      "drop": 21,
+      "add": 19,
+      "toField": 21
+     }
+    },
+    "1-B": {
+     "cohort": "#1",
+     "sub": "B · 施工机器人（6 个）",
+     "date": "2026-09-15",
+     "status": "用户已过（6 条全过）；未写盘",
+     "ruling": {
+      "toField": "三条伪前置（建筑学 / 工程学 / 砌筑）全为维度顶点，走 toField（删伪边 + 归属落维度层 field）。",
+      "year": "**本子域暴露新问题（群 #1 的第二个模板指纹）**：159 个节点中有 **156 个年份被压成「2000」**。用户裁定**同批逐条改正年份**。依据：① 假年份使补前置必然倒挂 —— `bd_civ_14` 巡检无人机建筑标 2000，而其唯一正确前置 `drone` 无人机为 2010（**前置晚于依赖者 10 年**）；② 年份是预测引擎「前提齐备律」的核心输入，假年份会让推演全错；③ 年份分布实测 `[2000×156, 1800×1, 1900×1, 2010×1]` 本身即批量赋值的指纹。**注意：年份压平不触发任何现有门禁**（`audit_net` 的年份倒挂检查只看边、不看「年份是否可信」），因此长期未被发现。"
+     },
+     "candidates": [
+      {
+       "id": "bld_robotbrick",
+       "name": "砌砖机器人",
+       "year": 2010,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "robot",
+        "brick"
+       ],
+       "reason": "砌砖机器人＝工业机器人 + 砌体对象。`robot` 工业机器人(1961)、`brick` 砖与砌筑(-7000)。年份 2010 与 `bld_robotbrick` 原标一致，无需改。"
+      },
+      {
+       "id": "bd_civ_9",
+       "name": "建筑机器人",
+       "year": 2000,
+       "newYear": 2015,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "robot",
+        "sensor"
+       ],
+       "reason": "建筑机器人＝工业机器人 + 环境感知。年份 2000 无据（工业机器人在建筑场景的应用晚至 2010s），改 2015。"
+      },
+      {
+       "id": "bd_civ_11",
+       "name": "抹灰机器人",
+       "year": 2000,
+       "newYear": 2015,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "robot",
+        "sensor"
+       ],
+       "reason": "同上，改 2015。"
+      },
+      {
+       "id": "bd_civ_12",
+       "name": "喷涂机器人",
+       "year": 2000,
+       "newYear": 2015,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "robot",
+        "sensor"
+       ],
+       "reason": "同上，改 2015。"
+      },
+      {
+       "id": "bd_civ_13",
+       "name": "测量机器人",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "robot",
+        "sensor"
+       ],
+       "reason": "测量机器人（自动全站仪 / 放样机器人）2010 前后商用，改 2010。"
+      },
+      {
+       "id": "bd_civ_14",
+       "name": "巡检无人机建筑",
+       "year": 2000,
+       "newYear": 2015,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "drone",
+        "sensor"
+       ],
+       "reason": "**时序倒挂的典型**：原标 2000，而其唯一正确前置 `drone` 无人机为 2010 —— 前置晚于依赖者 10 年。改 2015。"
+      }
+     ],
+     "findings": [
+      "群 #1 的年份压平（156/159 标 2000）是本批暴露的**第二个模板指纹** —— 与「前置完全相同」并列：同批生成的节点不仅前置相同，**年份也被压成同一个值**。",
+      "年份压平的后果比前置错误更隐蔽：它不触发任何门禁（`audit_net` 的年份倒挂检查只看边，不看「年份是否可信」），却直接污染时间轴视图与预测引擎的滞后分布。"
+     ]
+    },
+    "1-C": {
+     "cohort": "#1",
+     "sub": "C · 智慧工地与结构监测（13 个）",
+     "date": "2026-09-15",
+     "status": "用户已过（13 条全过，明细已复核）；未写盘",
+     "ruling": {
+      "toField": "三条伪前置全为维度顶点，走 toField。",
+      "year": "年份由压平的 2000 逐条改正为实际商用时间（2010–2020）。"
+     },
+     "candidates": [
+      {
+       "id": "bd_civ_15",
+       "name": "数字孪生城市",
+       "year": 2000,
+       "newYear": 2020,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "mfg_digitaltwin",
+        "iot",
+        "bld_bim"
+       ],
+       "reason": "数字孪生城市＝数字孪生 + 物联网 + 建筑信息模型（三者在库内均存在：数字孪生 2000 / 物联网 2010 / BIM 1970）。概念成形于 2010s 末，改 2020。"
+      },
+      {
+       "id": "bd_civ_16",
+       "name": "城市信息模型",
+       "year": 2000,
+       "newYear": 2018,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_bim",
+        "iot",
+        "big_data"
+       ],
+       "reason": "城市信息模型（CIM）＝BIM 的城市级扩展 + 物联网 + 大数据；中国 2018 年启动 CIM 试点，改 2018。"
+      },
+      {
+       "id": "bd_civ_17",
+       "name": "建筑信息模型深化",
+       "year": 2000,
+       "newYear": 2015,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_bim",
+        "iot"
+       ],
+       "reason": "BIM 的施工深化应用依赖联网协同，改 2015。"
+      },
+      {
+       "id": "bd_civ_18",
+       "name": "智慧工地",
+       "year": 2000,
+       "newYear": 2016,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "iot",
+        "sensor"
+       ],
+       "reason": "智慧工地＝物联网 + 传感采集；2010s 中期在中国推广，改 2016。"
+      },
+      {
+       "id": "bd_civ_19",
+       "name": "塔机安全监控",
+       "year": 2000,
+       "newYear": 2015,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "sensor",
+        "iot"
+       ],
+       "reason": "塔机安全监控＝传感监测 + 联网上传，改 2015。"
+      },
+      {
+       "id": "bd_civ_20",
+       "name": "高支模监测",
+       "year": 2000,
+       "newYear": 2012,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "sensor"
+       ],
+       "reason": "高支模变形监测以传感采集为定义性构成，改 2012。"
+      },
+      {
+       "id": "bd_civ_21",
+       "name": "深基坑监测",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "sensor"
+       ],
+       "reason": "同上，改 2010。"
+      },
+      {
+       "id": "bd_civ_22",
+       "name": "边坡监测",
+       "year": 2000,
+       "newYear": 2012,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "sensor",
+        "drone"
+       ],
+       "reason": "边坡监测＝传感 + 近年加入无人机巡检，改 2012。"
+      },
+      {
+       "id": "bd_civ_23",
+       "name": "结构健康监测",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "sensor"
+       ],
+       "reason": "结构健康监测（SHM）以传感器网络为定义性构成，改 2010。"
+      },
+      {
+       "id": "bd_civ_25",
+       "name": "隧道健康监测",
+       "year": 2000,
+       "newYear": 2012,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "sensor"
+       ],
+       "reason": "同上，改 2012。"
+      },
+      {
+       "id": "bd_civ_26",
+       "name": "建筑能耗监测",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "sensor",
+        "iot"
+       ],
+       "reason": "能耗监测＝分项计量传感 + 联网，改 2010。"
+      },
+      {
+       "id": "bd_civ_27",
+       "name": "室内环境监测",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "sensor"
+       ],
+       "reason": "以传感采集为定义性构成，改 2010。"
+      },
+      {
+       "id": "bd_civ_121",
+       "name": "水质监测建筑",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "sensor"
+       ],
+       "reason": "建筑侧水质监测以传感采集为定义性构成，改 2010。"
+      }
+     ],
+     "findings": [
+      "本子域的补前置**全部为库内既有节点**，无需新建。",
+      "13 个节点中有 12 个的正确前置含 `sensor`（传感器 1950）—— 这从另一面说明：它们此前的「建筑学」前置毫无信息量，而真实前置高度集中在同几个域内节点上。"
+     ]
+    },
+    "1-D": {
+     "cohort": "#1",
+     "sub": "D · 海绵城市与绿色建筑（10 个）",
+     "date": "2026-09-15",
+     "status": "用户已过（10 条全过，明细已复核）；未写盘",
+     "ruling": {
+      "toField": "同上。",
+      "year": "同上。"
+     },
+     "candidates": [
+      {
+       "id": "bd_civ_32",
+       "name": "海绵城市应用",
+       "year": 2000,
+       "newYear": 2015,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_plumbing",
+        "bd_civ_34",
+        "bd_civ_33"
+       ],
+       "reason": "海绵城市＝给排水体系 + 透水铺装 + 雨水花园；中国 2015 年启动试点，改 2015。**注意：`bd_civ_34` / `bd_civ_33` 同属本批处置对象，写盘须做环预演。**"
+      },
+      {
+       "id": "bd_civ_33",
+       "name": "雨水花园",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_plumbing",
+        "bld_verticalgreen"
+       ],
+       "reason": "雨水花园＝给排水调蓄 + 植物配置，改 2010。"
+      },
+      {
+       "id": "bd_civ_34",
+       "name": "透水铺装",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "mat_concrete",
+        "bld_plumbing"
+       ],
+       "reason": "透水铺装＝透水混凝土材料 + 排水设计，改 2010。"
+      },
+      {
+       "id": "bd_civ_35",
+       "name": "下沉绿地",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_plumbing",
+        "agriculture"
+       ],
+       "reason": "下沉绿地＝排水调蓄 + 绿地建造，改 2010。"
+      },
+      {
+       "id": "bd_civ_36",
+       "name": "生物滞留",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_plumbing"
+       ],
+       "reason": "生物滞留设施＝给排水 + 土壤-植物系统；库内无土壤节点，先补给排水侧。"
+      },
+      {
+       "id": "bd_civ_37",
+       "name": "调蓄池",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_plumbing",
+        "mat_concrete"
+       ],
+       "reason": "调蓄池＝给排水构筑物 + 混凝土池体，改 2010。"
+      },
+      {
+       "id": "bd_civ_38",
+       "name": "绿色屋顶",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_waterproof",
+        "bld_verticalgreen"
+       ],
+       "reason": "绿色屋顶＝屋面防水 + 绿化种植，改 2010。"
+      },
+      {
+       "id": "bd_civ_39",
+       "name": "垂直绿化建筑",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_verticalgreen"
+       ],
+       "reason": "垂直绿化的建筑应用；`bld_verticalgreen` 垂直绿化(1990) 为定义性构成，改 2010。"
+      },
+      {
+       "id": "bd_civ_40",
+       "name": "立体绿化",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_verticalgreen"
+       ],
+       "reason": "同 `bd_civ_39`。"
+      },
+      {
+       "id": "bd_civ_41",
+       "name": "屋顶农场",
+       "year": 2000,
+       "newYear": 2015,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_38",
+        "agriculture"
+       ],
+       "reason": "屋顶农场＝绿色屋顶 + 农业种植，改 2015。**注意 `bd_civ_38` 同属本批。**"
+      }
+     ],
+     "findings": [
+      "**同批内互相引用**：`bd_civ_32` 海绵城市应用引用了 `bd_civ_33` / `bd_civ_34`；`bd_civ_41` 屋顶农场引用了 `bd_civ_38` 绿色屋顶。写盘时须做环预演（三者同批改动）。"
+     ]
+    },
+    "1-E": {
+     "cohort": "#1",
+     "sub": "E · 低碳与产能建筑（13 个）",
+     "date": "2026-09-15",
+     "status": "用户已过（13 条全过）；未写盘",
+     "ruling": {
+      "toField": "三条伪前置全为维度顶点，走 toField。",
+      "year": "年份由压平的 2000 逐条改正。"
+     },
+     "candidates": [
+      {
+       "id": "bd_civ_42",
+       "name": "建筑光伏一体化应用",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "ene_bipv",
+        "bld_curtain"
+       ],
+       "reason": "BIPV＝光伏建筑一体化(2000) + 玻璃幕墙(1950)，两者库内均有。"
+      },
+      {
+       "id": "bd_civ_43",
+       "name": "光储直柔建筑",
+       "year": 2000,
+       "newYear": 2020,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "solar",
+        "ene_batteryev",
+        "iot"
+       ],
+       "reason": "光储直柔＝光伏 + 电池储能系统(1990) + 物联网；概念 2020 年前后成形。"
+      },
+      {
+       "id": "bd_civ_44",
+       "name": "近零能耗建筑",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_passive",
+        "bld_insulation2"
+       ],
+       "reason": "近零能耗＝被动房(1990) + 保温隔热(1800)。"
+      },
+      {
+       "id": "bd_civ_45",
+       "name": "零碳建筑",
+       "year": 2000,
+       "newYear": 2015,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_44",
+        "solar"
+       ],
+       "reason": "零碳建筑＝近零能耗 + 光伏抵消。**同批引用 `bd_civ_44`，须环预演。**"
+      },
+      {
+       "id": "bd_civ_47",
+       "name": "主动房",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_passive",
+        "iot"
+       ],
+       "reason": "主动房＝被动房 + 主动控制/联网。"
+      },
+      {
+       "id": "bd_civ_48",
+       "name": "产能建筑",
+       "year": 2000,
+       "newYear": 2015,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "solar",
+        "bd_civ_45"
+       ],
+       "reason": "产能建筑＝光伏 + 零碳建筑（发电量大于耗量）。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_49",
+       "name": "健康建筑",
+       "year": 2000,
+       "newYear": 2015,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_27",
+        "sensor"
+       ],
+       "reason": "健康建筑＝室内环境监测 + 传感。**同批引用（C 子域）。**"
+      },
+      {
+       "id": "bd_civ_50",
+       "name": "无障碍建筑",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [],
+       "reason": "**库内无「无障碍设计」节点 → 只删不补**，登记为缺失节点候选。"
+      },
+      {
+       "id": "bd_civ_51",
+       "name": "适老化建筑",
+       "year": 2000,
+       "newYear": 2015,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_50"
+       ],
+       "reason": "适老化＝无障碍 + 老年适配。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_52",
+       "name": "儿童友好建筑",
+       "year": 2000,
+       "newYear": 2015,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_50"
+       ],
+       "reason": "儿童友好＝无障碍 + 儿童尺度。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_53",
+       "name": "韧性城市",
+       "year": 2000,
+       "newYear": 2015,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_seismic",
+        "bd_civ_32"
+       ],
+       "reason": "韧性城市＝抗震设计(1900) + 海绵城市应用。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_54",
+       "name": "城市生命线",
+       "year": 2000,
+       "newYear": 2015,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_55",
+        "bld_plumbing"
+       ],
+       "reason": "城市生命线＝市政物联网 + 给排水。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_55",
+       "name": "市政物联网",
+       "year": 2000,
+       "newYear": 2012,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "iot",
+        "sensor"
+       ],
+       "reason": "市政物联网＝物联网(2010) + 传感采集。"
+      }
+     ],
+     "findings": [
+      "**同批内引用密集**：13 个节点中有 8 个引用了同批其他节点（`bd_civ_44`→45→48 链、`bd_civ_50`→51/52、`bd_civ_32`→53、`bd_civ_55`→54、`bd_civ_27`→49）—— 写盘必须做环预演。",
+      "`bd_civ_50` 无障碍建筑是群 #1 中**第一个「只删不补」**的节点（库内确无对应前置节点），登记为缺失节点候选。"
+     ]
+    },
+    "1-F": {
+     "cohort": "#1",
+     "sub": "F · 桥梁（15 个）",
+     "date": "2026-09-15",
+     "status": "用户已过（15 条全过）；未写盘",
+     "ruling": {
+      "toField": "同上。",
+      "year": "同上；浮桥因系古代技术，年份由 2000 前推至 **-500**。"
+     },
+     "candidates": [
+      {
+       "id": "bd_civ_24",
+       "name": "桥梁健康监测",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "sensor",
+        "bridge"
+       ],
+       "reason": "桥梁健康监测＝传感采集 + 桥梁本体。"
+      },
+      {
+       "id": "bd_civ_60",
+       "name": "悬索桥应用",
+       "year": 2000,
+       "newYear": 1900,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_suspension"
+       ],
+       "reason": "库内已有 `bld_suspension` 悬索桥(1800)。"
+      },
+      {
+       "id": "bd_civ_61",
+       "name": "斜拉桥应用",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_cablestay"
+       ],
+       "reason": "库内已有 `bld_cablestay` 斜拉桥(1955)；斜拉桥现代复兴在 1950s 后。"
+      },
+      {
+       "id": "bd_civ_62",
+       "name": "拱桥应用",
+       "year": 2000,
+       "newYear": 1900,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bridge",
+        "mat_concrete"
+       ],
+       "reason": "＝桥梁本体 + 混凝土。"
+      },
+      {
+       "id": "bd_civ_63",
+       "name": "钢混组合桥",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_steelbridge",
+        "mat_reconcrete"
+       ],
+       "reason": "＝钢桥(1800) + 钢筋混凝土(1849)。"
+      },
+      {
+       "id": "bd_civ_64",
+       "name": "波形钢腹板桥",
+       "year": 2000,
+       "newYear": 1990,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_steelbridge",
+        "mfg_welding"
+       ],
+       "reason": "＝钢桥 + 焊接工艺（波形钢腹板依赖焊接）。"
+      },
+      {
+       "id": "bd_civ_65",
+       "name": "自锚式悬索桥",
+       "year": 2000,
+       "newYear": 1950,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_suspension",
+        "bld_steelbridge"
+       ],
+       "reason": "＝悬索桥 + 钢桥（主缆锚固于加劲梁）。"
+      },
+      {
+       "id": "bd_civ_66",
+       "name": "矮塔斜拉桥",
+       "year": 2000,
+       "newYear": 1980,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_cablestay",
+        "mat_prestress"
+       ],
+       "reason": "＝斜拉桥 + 预应力混凝土(1886)。"
+      },
+      {
+       "id": "bd_civ_67",
+       "name": "开启桥",
+       "year": 2000,
+       "newYear": 1900,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_steelbridge",
+        "gearing"
+       ],
+       "reason": "＝钢桥 + 齿轮（机械启闭）。"
+      },
+      {
+       "id": "bd_civ_68",
+       "name": "可移动桥",
+       "year": 2000,
+       "newYear": 1900,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_steelbridge",
+        "gearing"
+       ],
+       "reason": "同上。"
+      },
+      {
+       "id": "bd_civ_69",
+       "name": "浮桥",
+       "year": 2000,
+       "newYear": -500,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bridge",
+        "tr_raft"
+       ],
+       "reason": "**浮桥系古代技术**（周代已有），原标 2000 完全错误，前推至 -500。＝桥梁 + 木筏(舟船浮体)。"
+      },
+      {
+       "id": "bd_civ_70",
+       "name": "应急桥",
+       "year": 2000,
+       "newYear": 1900,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "mil_assaultbridge"
+       ],
+       "reason": "库内已有 `mil_assaultbridge` 舟桥(1800)。"
+      },
+      {
+       "id": "bd_civ_71",
+       "name": "拼装桥",
+       "year": 2000,
+       "newYear": 1950,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_steelbridge",
+        "mfg_bolt"
+       ],
+       "reason": "＝钢桥 + 螺纹连接(栓接拼装)。"
+      },
+      {
+       "id": "bd_civ_72",
+       "name": "模块化桥",
+       "year": 2000,
+       "newYear": 1960,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_73",
+        "bld_steelbridge"
+       ],
+       "reason": "＝装配式桥 + 钢桥。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_73",
+       "name": "装配式桥",
+       "year": 2000,
+       "newYear": 1950,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_prefab",
+        "bld_steelbridge"
+       ],
+       "reason": "＝装配式建筑(1900) + 钢桥。"
+      }
+     ],
+     "findings": [
+      "库内已有桥梁节点（`bridge` -1000 / `bld_suspension` 1800 / `bld_cablestay` 1955 / `bld_steelbridge` 1800 / `mil_assaultbridge` 1800），补前置全部为既有点。",
+      "**浮桥年份是本批迄今最大的单点偏差**（2000 → -500，差 2500 年）—— 年份压平不仅使年份错，还会让「古代技术」在时间轴上被排到现代。"
+     ]
+    },
+    "1-G": {
+     "cohort": "#1",
+     "sub": "G · 大跨与空间结构（10 个）",
+     "date": "2026-09-15",
+     "status": "用户已过（10 条全过）；未写盘",
+     "ruling": {
+      "toField": "三条伪前置全为维度顶点，走 toField。",
+      "year": "年份由 2000 逐条改正。"
+     },
+     "candidates": [
+      {
+       "id": "bd_civ_74",
+       "name": "大跨空间结构",
+       "year": 2000,
+       "newYear": 1950,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "steel_frame",
+        "rope"
+       ],
+       "reason": "大跨空间结构＝钢结构 + 索。1950s 后大跨屋盖兴起。"
+      },
+      {
+       "id": "bd_civ_75",
+       "name": "张弦结构",
+       "year": 2000,
+       "newYear": 1980,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "steel_frame",
+        "rope"
+       ],
+       "reason": "张弦＝刚性与柔性索组合。"
+      },
+      {
+       "id": "bd_civ_76",
+       "name": "索穹顶",
+       "year": 2000,
+       "newYear": 1980,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "rope",
+        "bd_civ_78"
+       ],
+       "reason": "索穹顶＝索网 + 膜面。**同批引用 `bd_civ_78`。**"
+      },
+      {
+       "id": "bd_civ_77",
+       "name": "网壳结构",
+       "year": 2000,
+       "newYear": 1950,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "steel_frame"
+       ],
+       "reason": "网壳＝钢网格壳体。"
+      },
+      {
+       "id": "bd_civ_78",
+       "name": "膜结构",
+       "year": 2000,
+       "newYear": 1950,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "textile",
+        "steel_frame"
+       ],
+       "reason": "膜结构＝织物膜材 + 钢结构支撑。"
+      },
+      {
+       "id": "bd_civ_79",
+       "name": "充气结构",
+       "year": 2000,
+       "newYear": 1940,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_78"
+       ],
+       "reason": "充气结构＝膜结构 + 内压。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_80",
+       "name": "折叠结构",
+       "year": 2000,
+       "newYear": 1960,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "steel_frame",
+        "gearing"
+       ],
+       "reason": "折叠结构＝钢构件 + 铰接机构。"
+      },
+      {
+       "id": "bd_civ_81",
+       "name": "可展开结构",
+       "year": 2000,
+       "newYear": 1960,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_80"
+       ],
+       "reason": "可展开＝折叠结构 + 驱动。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_82",
+       "name": "自适应结构",
+       "year": 2000,
+       "newYear": 1990,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "sensor",
+        "control_theory",
+        "steel_frame"
+       ],
+       "reason": "自适应结构＝传感 + 控制论 + 结构本体。"
+      },
+      {
+       "id": "bd_civ_83",
+       "name": "智能支座",
+       "year": 2000,
+       "newYear": 1990,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "sensor",
+        "control_theory"
+       ],
+       "reason": "智能支座＝传感 + 控制（与 H 子域同源）。"
+      }
+     ]
+    },
+    "1-H": {
+     "cohort": "#1",
+     "sub": "H · 减隔震与控制（11 个）",
+     "date": "2026-09-15",
+     "status": "用户已过（11 条全过）；未写盘",
+     "ruling": {
+      "toField": "同上。",
+      "year": "同上。"
+     },
+     "candidates": [
+      {
+       "id": "bd_civ_84",
+       "name": "阻尼器应用",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_isolation",
+        "steel_frame"
+       ],
+       "reason": "库内已有 `bld_isolation` 隔震(1970)。阻尼器＝隔震技术 + 结构本体。"
+      },
+      {
+       "id": "bd_civ_85",
+       "name": "调谐质量阻尼器",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_84",
+        "control_theory"
+       ],
+       "reason": "TMD＝阻尼器 + 调谐控制。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_86",
+       "name": "粘滞阻尼器",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_84",
+        "mat_rubber"
+       ],
+       "reason": "粘滞阻尼器＝阻尼器 + 流体/橡胶介质。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_87",
+       "name": "屈曲约束支撑",
+       "year": 2000,
+       "newYear": 1980,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "steel_frame",
+        "bd_civ_84"
+       ],
+       "reason": "BRB＝钢芯 + 约束套管（耗能）。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_88",
+       "name": "隔震支座应用",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_isolation",
+        "mat_rubber"
+       ],
+       "reason": "隔震支座＝隔震技术 + 叠层橡胶。"
+      },
+      {
+       "id": "bd_civ_89",
+       "name": "基础隔震",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_isolation"
+       ],
+       "reason": "基础隔震＝隔震技术在基础层的应用。"
+      },
+      {
+       "id": "bd_civ_90",
+       "name": "消能减震",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_84"
+       ],
+       "reason": "消能减震＝阻尼耗能。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_91",
+       "name": "被动控制",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_isolation"
+       ],
+       "reason": "被动控制＝无需外部能源的隔震/耗能。"
+      },
+      {
+       "id": "bd_civ_92",
+       "name": "主动控制",
+       "year": 2000,
+       "newYear": 1980,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "control_theory",
+        "sensor"
+       ],
+       "reason": "主动控制＝控制论 + 实时传感 + 作动。"
+      },
+      {
+       "id": "bd_civ_93",
+       "name": "半主动控制",
+       "year": 2000,
+       "newYear": 1980,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "control_theory",
+        "sensor"
+       ],
+       "reason": "半主动＝控制论 + 变阻尼/变刚度器件。"
+      },
+      {
+       "id": "bd_civ_94",
+       "name": "振动控制",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_isolation",
+        "control_theory"
+       ],
+       "reason": "振动控制＝隔震 + 控制论（本子域的上位概念）。"
+      }
+     ]
+    },
+    "1-I": {
+     "cohort": "#1",
+     "sub": "I · 试验与评价（8 个）",
+     "date": "2026-09-15",
+     "status": "用户已过（8 条全过）；未写盘",
+     "ruling": {
+      "toField": "同上。",
+      "year": "同上。"
+     },
+     "candidates": [
+      {
+       "id": "bd_civ_95",
+       "name": "风洞试验建筑",
+       "year": 2000,
+       "newYear": 1960,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "tr_windtunnel",
+        "bd_civ_96"
+       ],
+       "reason": "库内已有 `tr_windtunnel` 风洞(1871)。风洞试验建筑＝风洞 + 缩尺试验。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_96",
+       "name": "缩尺试验",
+       "year": 2000,
+       "newYear": 1900,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_98"
+       ],
+       "reason": "缩尺试验＝结构试验的相似比方法。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_97",
+       "name": "足尺试验",
+       "year": 2000,
+       "newYear": 1950,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_98"
+       ],
+       "reason": "足尺试验＝结构试验的全尺寸验证。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_98",
+       "name": "结构试验",
+       "year": 2000,
+       "newYear": 1900,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "solid_mech"
+       ],
+       "reason": "库内已有 `solid_mech` 固体力学(1700)（非维度顶点）。结构试验＝固体力学的实证检验。"
+      },
+      {
+       "id": "bd_civ_99",
+       "name": "抗震试验",
+       "year": 2000,
+       "newYear": 1900,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_98",
+        "bld_seismic"
+       ],
+       "reason": "抗震试验＝结构试验 + 抗震设计(1900)。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_100",
+       "name": "抗火试验",
+       "year": 2000,
+       "newYear": 1900,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_98"
+       ],
+       "reason": "抗火试验＝结构试验的火工况。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_101",
+       "name": "抗爆试验",
+       "year": 2000,
+       "newYear": 1950,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_98"
+       ],
+       "reason": "抗爆试验＝结构试验的爆炸工况。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_103",
+       "name": "舒适性评价",
+       "year": 2000,
+       "newYear": 1990,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_94",
+        "sensor"
+       ],
+       "reason": "舒适性评价＝振动控制 + 传感实测（人致振动/风振舒适度）。**同批引用（H 子域）。**"
+      }
+     ]
+    },
+    "1-J": {
+     "cohort": "#1",
+     "sub": "J · 声环境（5 个）",
+     "date": "2026-09-15",
+     "status": "**用户裁定挂起**（未过、未写盘）",
+     "ruling": {
+      "park": "用户 2026-09-15：「『声学设计 / 建筑光学』这类散节点先挂起」。理由：它们更像**学科分支 / 设计领域**而非技术物（与 E 子域的「健康建筑 / 适老化建筑」、E 的「无障碍建筑」同类问题），须先裁定「它们该不该作为技术节点存在」，再谈前置。",
+      "pending": "待议项：`bd_civ_104` 声学设计 / `bd_civ_105` 建筑声学 / `bd_civ_106` 噪声控制 / `bd_civ_107` 隔声 / `bd_civ_108` 吸声 —— 是「技术物」还是「领域标签」？若判为领域标签，应走 `toField` 且节点本身应退役。",
+      "note": "确有技术物性质的是 **隔声 / 吸声**（材料与构造技术）、**噪声控制**（工程措施）；**声学设计 / 建筑声学**更偏领域。"
+     },
+     "candidates": []
+    },
+    "1-K": {
+     "cohort": "#1",
+     "sub": "K · 光环境与照明（7 个）",
+     "date": "2026-09-15",
+     "status": "**用户裁定挂起**（未过、未写盘）",
+     "ruling": {
+      "park": "同 J 子域。",
+      "pending": "待议项：`bd_civ_109` 建筑光学 / `bd_civ_110` 天然采光 / `bd_civ_111` 采光优化 / `bd_civ_112` 眩光控制 / `bd_civ_113` 照明节能 / `bd_civ_114` 智能照明 / `bd_civ_127` 应急照明。",
+      "finding": "**附带发现（与挂起无关，须保留）**：`bd_civ_110` 天然采光(2000) 与库内既有 `bld_daylight` 自然采光(1800) 系**同一概念** —— 属同义重复节点对，应并入既有 26 组重复节点的处理批次。此项独立于挂起裁定。"
+     },
+     "candidates": []
+    },
+    "1-M": {
+     "cohort": "#1",
+     "sub": "M · 消防与防排烟（7 个）",
+     "date": "2026-09-15",
+     "status": "用户已过（7 条全过）；未写盘",
+     "ruling": {
+      "toField": "同上。",
+      "year": "同上。"
+     },
+     "candidates": [
+      {
+       "id": "bd_civ_122",
+       "name": "消防物联网",
+       "year": 2000,
+       "newYear": 2012,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "iot",
+        "sensor"
+       ],
+       "reason": "消防物联网＝物联网(2010) + 传感采集。"
+      },
+      {
+       "id": "bd_civ_123",
+       "name": "电气火灾监控",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "sensor",
+        "iot",
+        "electricity"
+       ],
+       "reason": "电气火灾监控＝传感 + 联网 + 电力系统(1879)。"
+      },
+      {
+       "id": "bd_civ_124",
+       "name": "智慧消防",
+       "year": 2000,
+       "newYear": 2015,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "iot",
+        "sensor"
+       ],
+       "reason": "智慧消防＝物联网 + 传感。"
+      },
+      {
+       "id": "bd_civ_125",
+       "name": "疏散仿真",
+       "year": 2000,
+       "newYear": 1990,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "computer",
+        "mfg_digitaltwin"
+       ],
+       "reason": "疏散仿真＝电子计算机 + 仿真建模（库内 `mfg_digitaltwin` 数字孪生 2000 可作仿真侧代表，取更早者 `computer` 1946 为主）。"
+      },
+      {
+       "id": "bd_civ_126",
+       "name": "人员疏散",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_125"
+       ],
+       "reason": "人员疏散的工程化以仿真为方法。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_159",
+       "name": "排烟",
+       "year": 2000,
+       "newYear": 1900,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_vent"
+       ],
+       "reason": "排烟＝通风系统的火灾工况。库内已有 `bld_vent` 通风系统(1800)。"
+      },
+      {
+       "id": "bd_civ_160",
+       "name": "加压送风",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_vent"
+       ],
+       "reason": "加压送风＝通风 + 风机（防烟楼梯间）。"
+      }
+     ]
+    },
+    "1-N": {
+     "cohort": "#1",
+     "sub": "N · 加固与修缮（8 个）",
+     "date": "2026-09-15",
+     "status": "用户已过（8 条全过）；未写盘",
+     "ruling": {
+      "toField": "同上。",
+      "year": "同上。"
+     },
+     "candidates": [
+      {
+       "id": "bd_civ_128",
+       "name": "抗震加固",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_seismic",
+        "bd_civ_129"
+       ],
+       "reason": "抗震加固＝抗震设计(1900) + 结构加固。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_129",
+       "name": "结构加固",
+       "year": 2000,
+       "newYear": 1950,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "steel_frame",
+        "mat_concrete"
+       ],
+       "reason": "结构加固＝钢结构 + 混凝土（补强材料）。"
+      },
+      {
+       "id": "bd_civ_130",
+       "name": "碳纤维加固",
+       "year": 2000,
+       "newYear": 1990,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "mat_cfrp",
+        "bd_civ_129"
+       ],
+       "reason": "碳纤维加固＝碳纤维复合材料 + 结构加固。**同批引用**；`mat_cfrp` 库内已有。"
+      },
+      {
+       "id": "bd_civ_131",
+       "name": "外包钢加固",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "steel_frame",
+        "bd_civ_129"
+       ],
+       "reason": "外包钢＝型钢 + 结构加固。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_132",
+       "name": "植筋",
+       "year": 2000,
+       "newYear": 1980,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "mat_concrete",
+        "mat_adhesive"
+       ],
+       "reason": "植筋＝混凝土 + 结构胶（`mat_adhesive` 胶接 -2000 库内已有）。"
+      },
+      {
+       "id": "bd_civ_133",
+       "name": "锚栓",
+       "year": 2000,
+       "newYear": 1900,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "mfg_bolt",
+        "mat_concrete"
+       ],
+       "reason": "锚栓＝螺纹连接 + 混凝土基材。"
+      },
+      {
+       "id": "bd_civ_134",
+       "name": "裂缝修补",
+       "year": 2000,
+       "newYear": 1950,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "mat_cement",
+        "mat_adhesive"
+       ],
+       "reason": "裂缝修补＝水泥基材料 + 结构胶。"
+      },
+      {
+       "id": "bd_civ_135",
+       "name": "防水修缮",
+       "year": 2000,
+       "newYear": 1950,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_waterproof"
+       ],
+       "reason": "防水修缮＝防水体系(1800)。库内已有 `bld_waterproof`。"
+      }
+     ]
+    },
+    "1-L": {
+     "cohort": "#1",
+     "sub": "L · 暖通空调与室内环境（17 个）",
+     "date": "2026-09-15",
+     "status": "**用户裁定挂起**（未过、未写盘）",
+     "ruling": {
+      "park": "用户 2026-09-15：「暖通类先挂起」。理由：17 个里多数是「某送风 / 蓄热方式的建筑应用」，与 J / K 同病 —— 更像**做法 / 构造措施**而非独立技术物，须先裁定节点存废。",
+      "pending": "待议项：`bd_civ_117` 暖通空调优化 / `bd_civ_118` 新风系统 / `bd_civ_119` 空气净化 / `bd_civ_120` 室内空气质量 / `bd_civ_146` 相变蓄热墙体 / `bd_civ_147` 蓄热墙体 / `bd_civ_148` 蓄冷吊顶 / `bd_civ_149` 辐射空调 / `bd_civ_150` 毛细管网 / `bd_civ_151` 地暖应用 / `bd_civ_152` 置换通风 / `bd_civ_153` 个性化送风 / `bd_civ_154` 工位送风 / `bd_civ_155` 洁净室 / `bd_civ_156` 实验室通风 / `bd_civ_157` 厨房通风 / `bd_civ_158` 卫生间通风。",
+      "note": "确有技术物性质者：**洁净室 / 空气净化**（有明确工艺与设备）、**相变蓄热墙体 / 毛细管网 / 辐射空调**（有明确材料或构造）。偏「做法」者：**置换通风 / 个性化送风 / 工位送风 / 厨房通风 / 卫生间通风**。"
+     },
+     "candidates": []
+    },
+    "1-O": {
+     "cohort": "#1",
+     "sub": "O · 围护与热工（10 个）",
+     "date": "2026-09-15",
+     "status": "用户已过（10 条全过）；未写盘",
+     "ruling": {
+      "toField": "同上。",
+      "year": "同上。保温隔热由 1800 改为 1930（现代保温材料以玻璃纤维等为起点）。"
+     },
+     "candidates": [
+      {
+       "id": "bld_insulation2",
+       "name": "保温隔热",
+       "year": 1800,
+       "newYear": 1930,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "mat_glassfiber"
+       ],
+       "reason": "现代保温隔热以玻璃纤维(1930)等材料为起点；原标 1800 早于材料出现。"
+      },
+      {
+       "id": "bd_civ_136",
+       "name": "建筑幕墙",
+       "year": 2000,
+       "newYear": 1950,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "steel_frame",
+        "mat_glass"
+       ],
+       "reason": "建筑幕墙＝钢/铝框架 + 玻璃面板；1950s 起。**注：库内 `bld_curtain` 玻璃幕墙(1950) 与本节点语义接近，登记为待查同义对。**"
+      },
+      {
+       "id": "bd_civ_137",
+       "name": "双层呼吸幕墙",
+       "year": 2000,
+       "newYear": 1990,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_136",
+        "bld_vent"
+       ],
+       "reason": "双层幕墙＝幕墙 + 空腔通风。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_138",
+       "name": "光伏幕墙",
+       "year": 2000,
+       "newYear": 2000,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_136",
+        "ene_pv"
+       ],
+       "reason": "光伏幕墙＝幕墙 + 光伏电池(1954)。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_139",
+       "name": "智能门窗",
+       "year": 2000,
+       "newYear": 2010,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "sensor"
+       ],
+       "reason": "智能门窗＝传感驱动。库内无「门窗」节点（登记缺失）。"
+      },
+      {
+       "id": "bd_civ_140",
+       "name": "气密性",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [],
+       "reason": "**库内无对应前置节点 → 只删不补**，登记缺失节点（门窗 / 围护构造）。"
+      },
+      {
+       "id": "bd_civ_141",
+       "name": "建筑气密性",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [],
+       "reason": "同 `bd_civ_140`。"
+      },
+      {
+       "id": "bd_civ_142",
+       "name": "热桥处理",
+       "year": 2000,
+       "newYear": 1980,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_insulation2"
+       ],
+       "reason": "热桥处理＝保温隔热的细部处理。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_143",
+       "name": "断热桥",
+       "year": 2000,
+       "newYear": 1980,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_insulation2"
+       ],
+       "reason": "同 `bd_civ_142`。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_145",
+       "name": "隔热反射",
+       "year": 2000,
+       "newYear": 1980,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bld_insulation2"
+       ],
+       "reason": "隔热反射＝辐射型保温材料。**同批引用。**"
+      }
+     ]
+    },
+    "1-P": {
+     "cohort": "#1",
+     "sub": "P · 地下与隧道（6 个）",
+     "date": "2026-09-15",
+     "status": "用户已过（6 条全过）；未写盘",
+     "ruling": {
+      "toField": "同上。",
+      "year": "同上。"
+     },
+     "candidates": [
+      {
+       "id": "bd_civ_30",
+       "name": "综合管廊",
+       "year": 2000,
+       "newYear": 1990,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "tunnel",
+        "bld_plumbing"
+       ],
+       "reason": "综合管廊＝隧道 + 管线（给排水等）。库内已有 `tunnel` 隧道与地下工程(1843)。"
+      },
+      {
+       "id": "bd_civ_31",
+       "name": "地下综合管廊",
+       "year": 2000,
+       "newYear": 1990,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [],
+       "reason": "**与 `bd_civ_30` 综合管廊系同一概念 → 登记为同义重复节点对**，本批只删伪边、不补前置、不合并节点（与既有 26 组一并处理）。"
+      },
+      {
+       "id": "bd_civ_56",
+       "name": "地下空间开发",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "tunnel"
+       ],
+       "reason": "地下空间开发＝隧道工程技术。"
+      },
+      {
+       "id": "bd_civ_57",
+       "name": "TBM 应用",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "shield_tbm"
+       ],
+       "reason": "库内已有 `shield_tbm` 盾构机(1843)；TBM 系其全断面型号。"
+      },
+      {
+       "id": "bd_civ_58",
+       "name": "盾构应用",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "shield_tbm"
+       ],
+       "reason": "同 `bd_civ_57`。"
+      },
+      {
+       "id": "bd_civ_59",
+       "name": "沉管隧道应用",
+       "year": 2000,
+       "newYear": 1950,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "tunnel"
+       ],
+       "reason": "沉管＝隧道工法之一（1910s 起）。"
+      }
+     ]
+    },
+    "1-Z": {
+     "cohort": "#1",
+     "sub": "Z · 未分类（6 个）",
+     "date": "2026-09-15",
+     "status": "用户已过（6 条全过）；未写盘",
+     "ruling": {
+      "toField": "同上。",
+      "year": "同上。"
+     },
+     "candidates": [
+      {
+       "id": "bd_civ_6",
+       "name": "钢结构模块",
+       "year": 2000,
+       "newYear": 2000,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "steel_frame",
+        "bld_prefab"
+       ],
+       "reason": "钢结构模块＝钢框架 + 装配体系。"
+      },
+      {
+       "id": "bd_civ_28",
+       "name": "智慧灯杆",
+       "year": 2000,
+       "newYear": 2015,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "iot",
+        "sensor",
+        "electricity"
+       ],
+       "reason": "智慧灯杆＝物联网 + 传感 + 供电（多杆合一的载体）。"
+      },
+      {
+       "id": "bd_civ_29",
+       "name": "多杆合一",
+       "year": 2000,
+       "newYear": 2015,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_28"
+       ],
+       "reason": "多杆合一＝智慧灯杆的集成形态。**同批引用。**"
+      },
+      {
+       "id": "bd_civ_102",
+       "name": "风振控制",
+       "year": 2000,
+       "newYear": 1970,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "bd_civ_94",
+        "bd_civ_85"
+       ],
+       "reason": "风振控制＝振动控制 + 调谐质量阻尼器。**同批引用（H 子域）。**"
+      },
+      {
+       "id": "bd_civ_115",
+       "name": "建筑自动化",
+       "year": 2000,
+       "newYear": 1980,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [
+        "control_theory",
+        "mfg_plc"
+       ],
+       "reason": "建筑自动化（BAS）＝控制论 + 可编程逻辑控制器(1968)。"
+      },
+      {
+       "id": "bd_civ_116",
+       "name": "楼宇自控",
+       "year": 2000,
+       "newYear": 1980,
+       "drop": [
+        "architecture",
+        "engineering",
+        "masonry"
+       ],
+       "add": [],
+       "reason": "**与 `bd_civ_115` 建筑自动化系同一概念（BAS/BMS）→ 登记为同义重复节点对**，本批只删伪边、不补前置、不合并节点。"
+      }
+     ]
+    }
+   }
   }
  }
 }

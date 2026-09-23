@@ -19,10 +19,10 @@ window.CHANGELOG = {
     subtitle: "Version Changelog · 项目逐日变更档案",
     note: "本页记录「人类技术演化网络 · 规律挖掘与未来涌现推演」项目每次版本迭代所完成的工作。早期版本日期依据项目文件时间戳与开发记录重建；自 2026-09-06 建立本页起，每次变更逐条如实登记，便于回溯与协作。注：2026-09-08 校正了项目目的——从『科幻可行性评测』改为『拆解真实技术＋找规律＋推演未来涌现』。",
     maintainer: "Cherry Studio Agent · Claude 框架（模型：阿里云百炼 DashScope · DeepSeek V4.1 Flash 极致）",
-    maintainerNote: "维护主体变更须逐次登记（用户 2026-09-15 指定）。每次主体或所用模型变更时，在 maintainerHistory 追加一条并同步「版本迭代日志.md」头部；运行环境信息一并记录，便于回溯「某次改动是谁、用什么做的」。",
+    maintainerNote: "维护主体变更须逐次登记（用户 2026-09-15 指定）。**每条 entry 须带 maintainer（短名，表格列用）与 maintainerFull（全称，悬停提示用）**，取值由 maintainerHistory 的边界决定，两处必须一致。每次主体或所用模型变更时，在 maintainerHistory 追加一条并同步「版本迭代日志.md」头部；运行环境信息一并记录，便于回溯「某次改动是谁、用什么做的」。",
     maintainerHistory: [
-      { from: "2026-08-26", to: "2026-09-15", agent: "WorkBuddy（自主构建 Agent）", note: "自主构建 Agent，覆盖 v0.1.0–v0.9.35 期间的全部批次（建网、阶段 0–5、维度层 D0 / D1、多学科页 P1）。" },
-      { from: "2026-09-15", to: null, agent: "Cherry Studio Agent · Claude 框架（模型：阿里云百炼 DashScope · DeepSeek V4.1 Flash 极致）", note: "**当前维护主体**。**切换时点经用户 2026-09-15 确认**：自 v0.9.36 起（本主体产出的首个批次为 G1 + G2「以时代招牌技术充当前置」）。。运行形态：Cherry Studio 内的 Agent，采用 Claude 框架（Claude Code / Claude Agent SDK），底层模型为阿里云百炼 DashScope · DeepSeek V4.1 Flash 极致版。" }
+      { from: "2026-08-26", to: "2026-09-15", short: "WorkBuddy", agent: "WorkBuddy（自主构建 Agent）", note: "自主构建 Agent，覆盖 v0.1.0–v0.9.35 期间的全部批次（建网、阶段 0–5、维度层 D0 / D1、多学科页 P1）。" },
+      { from: "2026-09-15", to: null, short: "Cherry Studio Agent", agent: "Cherry Studio Agent · Claude 框架（模型：阿里云百炼 DashScope · DeepSeek V4.1 Flash 极致）", note: "**当前维护主体**。**切换时点经用户 2026-09-15 确认**：自 v0.9.36 起（本主体产出的首个批次为 G1 + G2「以时代招牌技术充当前置」）。。运行形态：Cherry Studio 内的 Agent，采用 Claude 框架（Claude Code / Claude Agent SDK），底层模型为阿里云百炼 DashScope · DeepSeek V4.1 Flash 极致版。" }
     ],
     roadmap: [
       "Phase 3 · 链接预测：✅ 已完成（v0.9.9 方向修正后）——补全 25 条高可信近因前提边；v0.9.8 初版 2883 条因依赖边方向读反已回滚（详见 v0.9.9）。",
@@ -34,6 +34,10 @@ window.CHANGELOG = {
     {
       date: "2026-08-26",
       version: "v0.1.0",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       type: "milestone",
       title: "静态站点骨架 v1.0",
       summary: "搭建「技术演化数据库」静态多页站点（MPA）骨架，确立档案/蓝图卷宗视觉体系。",
@@ -53,6 +57,10 @@ window.CHANGELOG = {
     {
       date: "2026-08-28",
       version: "v0.2.0",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       type: "feature",
       title: "全页面体系与关系网分析页",
       summary: "补全 12 个站点页面，建立统一导航、全局搜索与详情弹窗，上线关系网分析。",
@@ -68,6 +76,10 @@ window.CHANGELOG = {
     {
       date: "2026-09-02",
       version: "v0.3.0",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       type: "data",
       title: "88 任务域骨架与子分类生成流水线",
       summary: "采用 88 任务域骨架，建立「任务域 → 子分类」生成流水线与统一标签体系。",
@@ -87,6 +99,10 @@ window.CHANGELOG = {
     {
       date: "2026-09-04",
       version: "v0.8.0",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       type: "milestone",
       title: "分析引擎 Phase 1/2：图算法 + 第一性原理评分",
       summary: "引入确定性 Python 分析引擎，完成依赖图门禁、图算法度量与第一性原理五维评分。",
@@ -107,6 +123,10 @@ window.CHANGELOG = {
     {
       date: "2026-09-06",
       version: "v0.9.0",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       type: "feature",
       title: "新增「版本迭代」变更日志页（本页）",
       summary: "建立项目逐日 / 逐次变更档案，集成至全站导航，并持续记录后续所有迭代。",
@@ -122,6 +142,10 @@ window.CHANGELOG = {
     {
       date: "2026-09-06",
       version: "v0.9.1",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       type: "docs",
       title: "补入历史相关研究并审计文档缺口",
       summary: "在《构建研究思路与全程纪要》新增 §3 历史相关研究（文献溯源 + 实证结论），并补 §12 文档缺口审计。",
@@ -136,6 +160,10 @@ window.CHANGELOG = {
     {
       date: "2026-09-06",
       version: "v0.9.2",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       type: "feature",
       title: "Phase 4 · 全量科技树站点集成（数据层 + 可视化）",
       summary: "打通分析引擎到站点的数据管道，新增「全量科技树」页，可视化 13392 节点与第一性原理五维评分。",
@@ -155,6 +183,10 @@ window.CHANGELOG = {
     },
     {
       version: "v0.9.3",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-08",
       type: "refactor",
       title: "项目目的校正：从『科幻可行性』转向『真实技术拆解 + 规律 + 未来涌现推演』",
@@ -175,6 +207,10 @@ window.CHANGELOG = {
     },
     {
       version: "v0.9.4",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-08",
       type: "feature",
       title: "Phase 5 · 未来涌现推演引擎（项目真正核心落地）",
@@ -194,6 +230,10 @@ window.CHANGELOG = {
     },
     {
       version: "v0.9.5",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-08",
       type: "docs",
       title: "奠基方法论对话完整存档（§3.0 扩充）",
@@ -208,6 +248,10 @@ window.CHANGELOG = {
     },
     {
       version: "v0.9.6",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-08",
       type: "feature",
       title: "新增独立「文献谱系」页（历史相关研究，不进入技术网络）",
@@ -222,6 +266,10 @@ window.CHANGELOG = {
     },
     {
       version: "v0.9.7",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-08",
       type: "feature",
       title: "新增「科技树变更原因」独立栏目",
@@ -237,6 +285,10 @@ window.CHANGELOG = {
     },
     {
       version: "v0.9.8",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-08",
       type: "feature",
       title: "Phase 3 · 链接预测补全隐含技术前置关系",
@@ -256,6 +308,10 @@ window.CHANGELOG = {
     },
     {
       version: "v0.9.9",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-08",
       type: "fix",
       title: "Phase 3 修正 · 实证发现依赖边方向读反，全量回滚并按权威方向重写回",
@@ -279,6 +335,10 @@ window.CHANGELOG = {
     },
     {
       version: "v0.9.10",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-09",
       type: "fix",
       title: "依赖关系纠错：修正「无人机测绘」前因并新增「纠错总结」页",
@@ -300,6 +360,10 @@ window.CHANGELOG = {
     },
     {
       version: "v0.9.11",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-09",
       type: "fix",
       title: "依赖关系纠错（续）：清理枢纽节点误接下游与悬空边",
@@ -320,6 +384,10 @@ window.CHANGELOG = {
     {
       date: "2026-09-09",
       version: "v0.9.12",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       type: "docs",
       title: "数据口径澄清：Tier B 1915 gap 与预览工具注入属性",
       summary: "澄清 Tier B 1915 gap 的真实含义（候选而非必填），并记录「预览工具向 HTML 注入 data-page-node-id 属工具噪声、非数据问题」。",
@@ -333,6 +401,10 @@ window.CHANGELOG = {
     },
     {
       version: "v0.9.13",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-09",
       type: "feature",
       title: "新增「技术演化的数学模型」页（5 构想 + 十种进阶模型 + 验证硬化）",
@@ -349,6 +421,10 @@ window.CHANGELOG = {
     },
     {
       version: "v0.9.14",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-09",
       type: "fix",
       title: "主管线网络审计修正 + 模型页 Phase3 待硬件暂存",
@@ -369,6 +445,10 @@ window.CHANGELOG = {
     },
     {
       version: "v0.9.15",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-09",
       type: "fix",
       title: "网络年份/概念关系修正 + 二阶枢纽逐节点核验结案 + 量子两项研判",
@@ -390,6 +470,10 @@ window.CHANGELOG = {
     },
     {
       version: "v0.9.16",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-10",
       type: "fix",
       title: "全量管线镜像同步 + 无人机测绘主库漏修 + 史前/上古 12 处负年倒挂考古修正",
@@ -412,6 +496,10 @@ window.CHANGELOG = {
     },
     {
       version: "v0.9.17",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-12",
       type: "fix",
       title: "enables 语义错误批量修正：95 个「灰色概念」占位清零（主库 + 全量镜像）+ 正式甄别表落档",
@@ -437,6 +525,10 @@ window.CHANGELOG = {
 ,
     {
       version: "v0.9.18",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-12",
       type: "fix",
       title: "构想 B 口径修正：前提齐备是「必要条件」而非「充分条件」",
@@ -457,6 +549,10 @@ window.CHANGELOG = {
 ,
     {
       version: "v0.9.19",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-12",
       type: "feature",
       title: "理论与解释：新增「技术先行、理论后至」覆盖层标注",
@@ -480,6 +576,10 @@ window.CHANGELOG = {
 ,
     {
       version: "v0.9.20",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-13",
       type: "fix",
       title: "依赖网全量重建：生成器「位置式模板伪边」三变体清零（处置 1,142 条 / 删 1,015 条）",
@@ -507,6 +607,10 @@ window.CHANGELOG = {
 ,
     {
       version: "v0.9.21",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-13",
       type: "fix",
       title: "生成器槽位边收口：「同分类最近前驱」伪边按生成器复现逐条判定（处置 719 / 删 549 / 补 95 节点真实前置）",
@@ -533,6 +637,10 @@ window.CHANGELOG = {
 ,
     {
       version: "v0.9.22",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-13",
       type: "fix",
       title: "结构体检与分步检修（一）：四类结构问题基线量化 + 阶段 0/1 执行（F 族 27→8、同名重复 23→0、零前置 8→4）",
@@ -560,6 +668,10 @@ window.CHANGELOG = {
 ,
     {
       version: "v0.9.23",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       date: "2026-09-13",
       type: "fix",
       title: "阶段 2 重新裁定：原「96 条中间技术入网」前提核查后撤销（96/96 已在主管线）＋ 修复中间技术库重复条目与生成器护栏",
@@ -583,6 +695,10 @@ window.CHANGELOG = {
     },
     {
       "version": "v0.9.24",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       "date": "2026-09-13",
       "type": "fix",
       "title": "阶段 5.1 派生数据同步：节点文案 3,313 处、中间技术库 84 + 69 条、全量管线 576 条伪边与主管线对齐",
@@ -644,6 +760,10 @@ window.CHANGELOG = {
     },
     {
       "version": "v0.9.25",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       "date": "2026-09-13",
       "type": "fix",
       "title": "阶段 5.2 派生文案补齐：修复模板识别器盲区（槽位通配误排空白字符）+ 覆盖另两族生成器文案，三族合计 531 处 / 461 节点",
@@ -687,6 +807,10 @@ window.CHANGELOG = {
     },
     {
       "version": "v0.9.26",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       "date": "2026-09-14",
       "type": "fix",
       "title": "全量管线权威关系裁定：共有节点以主管线为权威，处置定为「按主管线单向重建」并入阶段 5e；独占节点单列、29 条年份倒挂降级为概念影响",
@@ -722,6 +846,10 @@ window.CHANGELOG = {
     },
     {
       "version": "v0.9.27",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       "date": "2026-09-14",
       "type": "data",
       "title": "补建材料类缺失节点「玄武岩纤维」(mat_basaltfiber)：主管线 2,265 → 2,266 节点 / 6,091 → 6,094 条依赖边",
@@ -757,6 +885,10 @@ window.CHANGELOG = {
     },
     {
       "version": "v0.9.28",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       "date": "2026-09-14",
       "type": "data",
       "title": "批次 3.1a 写盘：E 族 manufact 首批 27 条「mathematics 单前置」判定落地，依赖边 6,094 → 6,126 条",
@@ -794,6 +926,10 @@ window.CHANGELOG = {
     },
     {
       "version": "v0.9.29",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       "date": "2026-09-14",
       "type": "fix",
       "title": "「来龙去脉」页默认展示改为「恒星发动机」+ 修正该页硬编码的无人机专用说明句 + 全站缓存版本串统一升为 20260914a",
@@ -839,6 +975,10 @@ window.CHANGELOG = {
     },
     {
       "version": "v0.9.30",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       "date": "2026-09-14",
       "type": "data",
       "title": "批次 3.1b 写盘：E 族 manufact 余 41 条前置由「mathematics 单前置」逐条判定（保留 0 / 改前置 3 / 删边 38 / 补前置 41），依赖边 6,126 → 6,167",
@@ -876,6 +1016,10 @@ window.CHANGELOG = {
     },
     {
         "version": "v0.9.31",
+
+        "maintainer": "WorkBuddy",
+
+        "maintainerFull": "WorkBuddy（自主构建 Agent）",
         "date": "2026-09-15",
         "type": "docs",
         "title": "登记 · 阶段 3 草案入台账并同步纠错页与版本日志：E 族 info 前置逐条判定 3.1c（18 条）+ 3.1d（16 条），均待审核未写盘",
@@ -907,6 +1051,10 @@ window.CHANGELOG = {
     },
     {
         "version": "v0.9.32",
+
+        "maintainer": "WorkBuddy",
+
+        "maintainerFull": "WorkBuddy（自主构建 Agent）",
         "date": "2026-09-15",
         "type": "data",
         "title": "补建缺失节点「面向对象方法」(`inf_oop`)：主管线 2,266 → 2,267 节点 / 6,167 → 6,169 条依赖边；并总结「以不贴切的替代充当前置」一类错误",
@@ -941,6 +1089,10 @@ window.CHANGELOG = {
     },
     {
         "version": "v0.9.33",
+
+        "maintainer": "WorkBuddy",
+
+        "maintainerFull": "WorkBuddy（自主构建 Agent）",
         "date": "2026-09-15",
         "type": "refactor",
         "title": "架构改造 · 新增「维度层」：把「归属」与「因果」分离 —— 批次 D0 骨架落地 + 全库机械打标（零数据改动）；处置档位由四档改五档",
@@ -980,6 +1132,10 @@ window.CHANGELOG = {
     },
     {
       "version": "v0.9.34",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       "date": "2026-09-15",
       "type": "docs",
       "title": "登记 · 批次 D1「维度层例外表」草案入台账（未写盘）：拟 overrides 50 条修正 `basic` 类学理节点的门类落空；澄清 `eng` 37.8% 非打标错误；给出 2 个零命中任务域的可达性结论",
@@ -1008,6 +1164,10 @@ window.CHANGELOG = {
     },
     {
       "version": "v0.9.35",
+
+      "maintainer": "WorkBuddy",
+
+      "maintainerFull": "WorkBuddy（自主构建 Agent）",
       "date": "2026-09-15",
       "type": "feature",
       "title": "功能 · 新增「多学科技术」页（批次 P1 落地）：44 项 / 7 分组，按维度层门类拆解组成技术；新增 4 个文件 + 导航加一项，零数据改动",
@@ -1043,6 +1203,10 @@ window.CHANGELOG = {
     },
     {
       "version": "v0.9.36",
+
+      "maintainer": "Cherry Studio Agent",
+
+      "maintainerFull": "Cherry Studio Agent · Claude 框架（模型：阿里云百炼 DashScope · DeepSeek V4.1 Flash 极致）",
       "date": "2026-09-15",
       "type": "data",
       "title": "数据 · 批次 `G1` + `G2`「以时代招牌技术充当前置」：补建石墨节点并改写铅笔 + 通篇清理同族 60 条（keep 11 / repoint 2 / delete 47 + 补前置 58 条）",
@@ -1081,6 +1245,10 @@ window.CHANGELOG = {
     },
     {
       "version": "v0.9.37",
+
+      "maintainer": "Cherry Studio Agent",
+
+      "maintainerFull": "Cherry Studio Agent · Claude 框架（模型：阿里云百炼 DashScope · DeepSeek V4.1 Flash 极致）",
       "date": "2026-09-15",
       "type": "docs",
       "title": "登记 · 维护主体变更：WorkBuddy（自主构建 Agent）→ Cherry Studio Agent · Claude 框架（模型：阿里云百炼 DashScope · DeepSeek V4.1 Flash 极致）",
@@ -1092,7 +1260,8 @@ window.CHANGELOG = {
         "④ **切换时点经用户 2026-09-15 确认：自 v0.9.36 起。** 当前主体的首个落档批次为 v0.9.36 的 `G1` + `G2`；v0.9.35（批次 `P1` 多学科技术页）及更早的落档均在 WorkBuddy 名下，`maintainerHistory` 的 `from` 时点即以此为准（原草案曾标「待考」，同日经用户确认后改为确定表述）。",
         "⑤ **《版本迭代日志.md》头部同步**：新增 `> **维护沿革**` 行，写明 WorkBuddy 覆盖 v0.1.0–v0.9.35、当前主体自 v0.9.36 起，并加一句硬约定「此后每次维护主体或所用模型变更，均须在此处与『版本迭代』条目中同步登记」。",
         "⑥ **登记口径（此后沿用）**：凡涉及维护主体的变更，一律按本条格式登记 —— 记明**主体名 / 框架 / 具体模型 / 生效时点**四项，并在 `maintainerHistory` 与该文件头部两处同步；不写「某 AI」这类不可回溯的泛称。",
-        "⑦ **本批未做**：未改动任何数据（节点 / 边 / 基线均未动）；未改动历史条目中的署名（v0.1.0–v0.9.35 的条目仍属 WorkBuddy，**不作追溯改写**，以保证档案的当时的真实性）。"
+  "⑦ **维护者写入表格（用户 2026-09-15 补充要求：「不要只在最上面体现」）**：**每条 entry 新增 `maintainer`（短名，表格列用）与 `maintainerFull`（全称，悬停提示用）两个字段**，全部 42 条已回填（WorkBuddy 40 条 / Cherry Studio Agent 2 条，边界与 `maintainerHistory` 一致）。版本迭代页的「科技树变更原因」表格新增**维护者**列（`app.js` 的 `renderChangelog` + `style.css` 的 `.tt-m`），单元格显示短名、悬停显示全称；《版本迭代日志.md》同表同步加列。**此后新增 entry 必须带这两个字段**（已写入 `maintainerNote` 作为约定）。",
+        "⑧ **本批未做**：未改动任何数据（节点 / 边 / 基线均未动）；未改动历史条目中的署名（v0.1.0–v0.9.35 的条目仍属 WorkBuddy，**不作追溯改写**，以保证档案的当时的真实性）。"
       ],
       "files": [
         "assets/pages/changelog_data.js（meta.maintainer 更新；新增 meta.maintainerNote 与 meta.maintainerHistory；本条目 entries 41 → 42）",
