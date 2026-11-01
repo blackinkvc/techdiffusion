@@ -17,5 +17,8 @@ tools/backup_*/
 # 打包快照（发布时不需要）
 *.zip
 
+# 数据快照（本地保护，不入库）
+backups/
+
 # 本地记忆 / Agent 状态（非源码，不应入库）
 .workbuddy/
