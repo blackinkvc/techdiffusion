@@ -14,16 +14,18 @@
  *   这是与「整体重生成」的关键区别。
  *
  * 用法：
- *   node tools/regen_text.js            # 干跑，只出报告（并写 /tmp/regen_changes.json）
+ *   node tools/regen_text.js            # 干跑，只出报告（写入系统临时目录）
  *   node tools/regen_text.js --check    # 干跑；若存在需改写则退出码 1（回归门禁用）
- *   node tools/regen_text.js --apply    # 写盘（写前自动备份到 /tmp）
+ *   node tools/regen_text.js --apply    # 写盘（写前自动备份到系统临时目录）
  */
 const fs = require("fs");
 const vm = require("vm");
 const path = require("path");
+const os = require("os");
 const R = require("./derived_text_rules");
 
 const ROOT = path.resolve(__dirname, "..");
+const TMP = os.tmpdir();
 const APPLY = process.argv.includes("--apply");
 const CHECK = process.argv.includes("--check");
 
@@ -138,8 +140,9 @@ for (const fam of ["A", "B", "C"]) {
   });
 }
 
-fs.writeFileSync("/tmp/regen_changes.json", JSON.stringify(changes, null, 1));
-console.log("\n明细写入 /tmp/regen_changes.json（" + changes.length + " 条）");
+const changesPath = path.join(TMP, "regen_changes.json");
+fs.writeFileSync(changesPath, JSON.stringify(changes, null, 1));
+console.log("\n明细写入 " + changesPath + "（" + changes.length + " 条）");
 
 if (CHECK && total > 0) { console.log("\n[check] 存在需改写的派生文案 → 退出码 1"); process.exit(1); }
 if (!APPLY) { console.log("\n[干跑] 未写盘。加 --apply 执行。"); process.exit(0); }
@@ -164,7 +167,7 @@ for (const file of TARGETS) {
   const abs = path.join(ROOT, file);
   let src = fs.readFileSync(abs, "utf8");
   const before = Buffer.byteLength(src, "utf8");
-  const bak = "/tmp/regen_text_bak_" + stamp + "_" + path.basename(file);
+  const bak = path.join(TMP, "regen_text_bak_" + stamp + "_" + path.basename(file));
   fs.writeFileSync(bak, src);
   console.log("\n[备份] " + bak);
 

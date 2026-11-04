@@ -4516,7 +4516,7 @@ const EXTRA_TECHS = [
     "people": "",
     "place": "",
     "summary": "锻造在 公元前 3000 年 前后成形，依托 青铜、木炭、用火 把 工具制造、结构件 落到实处，并成为 材料体系 中承上启下的一环，直接支撑了 模锻、电弧焊、马镫 等后续技术。",
-    "dependsOn": ["bronze","ene_charcoal","fire","bellows"],
+    "dependsOn": ["bronze","ene_charcoal","fire"],
     "enables": [],
     "applications": [
       "工具制造",

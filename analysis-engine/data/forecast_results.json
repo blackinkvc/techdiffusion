@@ -1,223 +1,335 @@
 {
-  "generatedAt": "2026-09-08",
-  "method": "前提闭包 + 滞后分布（§13.3）确定性推导，禁用手工年份；L3 由 L2 跨域组合级联生成",
-  "lagStats": {
-    "n": 6684,
-    "min": 0,
-    "max": 1950,
-    "mean": 68.8,
-    "p10": 4,
-    "p25": 10,
-    "p50": 26,
-    "p75": 61,
-    "p90": 147
+  "generatedAt": "2026-11-04",
+  "method": "主管线前提闭包 + 历史滞后分布（§13.3）；组合候选仅在 --synthetic 下生成",
+  "input": {
+    "pipeline": "mainline",
+    "nodes": 2268,
+    "dependencyEdges": 6181,
+    "asOf": 2026,
+    "until": null,
+    "sourceDigest": "daed300b0c6ea7e3c26942d95722986ca842bcaf26c981da64a212af8ff6a628",
+    "relationKnowledge": "current-curated",
+    "validationStatus": "current"
   },
-  "totalCandidates": 175,
+  "lagStats": {
+    "n": 1566,
+    "min": 0,
+    "max": 1700,
+    "mean": 73.7,
+    "p10": 0,
+    "p25": 10,
+    "p50": 36,
+    "p75": 96,
+    "p90": 222
+  },
+  "totalCandidates": 115,
+  "syntheticCandidates": 0,
   "derivedDistribution": {
-    "L2": 105,
-    "L5": 10,
-    "L3": 60
+    "L2": 87,
+    "L5": 11,
+    "L3": 17
   },
   "L2_top": [
     {
-      "name": "通用人工智能",
-      "cat": "info",
-      "early": 2036,
-      "median": 2052
-    },
-    {
-      "name": "神经形态计算",
-      "cat": "info",
-      "early": 2036,
-      "median": 2052
-    },
-    {
       "name": "量子计算机",
       "cat": "info",
-      "early": 2036,
-      "median": 2052
+      "status": "projected",
+      "waitingYears": 36,
+      "early": 2026,
+      "median": 2026
     },
     {
-      "name": "量子加密",
+      "name": "通用人工智能",
       "cat": "info",
-      "early": 2036,
-      "median": 2052
-    },
-    {
-      "name": "全息显示",
-      "cat": "info",
-      "early": 2036,
-      "median": 2052
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 2026,
+      "median": 2041
     },
     {
       "name": "自动驾驶",
       "cat": "transport",
-      "early": 2036,
-      "median": 2052
-    },
-    {
-      "name": "人形机器人",
-      "cat": "manufact",
-      "early": 2036,
-      "median": 2052
-    },
-    {
-      "name": "软体机器人",
-      "cat": "manufact",
-      "early": 2036,
-      "median": 2052
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 2026,
+      "median": 2041
     },
     {
       "name": "集群机器人",
       "cat": "manufact",
-      "early": 2036,
-      "median": 2052
-    },
-    {
-      "name": "动力外骨骼",
-      "cat": "manufact",
-      "early": 2036,
-      "median": 2052
+      "status": "projected",
+      "waitingYears": 16,
+      "early": 2026,
+      "median": 2046
     },
     {
       "name": "无人工厂",
       "cat": "manufact",
+      "status": "projected",
+      "waitingYears": 16,
+      "early": 2026,
+      "median": 2046
+    },
+    {
+      "name": "高超声速武器",
+      "cat": "military",
+      "status": "projected",
+      "waitingYears": 16,
+      "early": 2026,
+      "median": 2046
+    },
+    {
+      "name": "自主武器",
+      "cat": "military",
+      "status": "projected",
+      "waitingYears": 16,
+      "early": 2026,
+      "median": 2046
+    },
+    {
+      "name": "巨型火箭",
+      "cat": "transport",
+      "status": "projected",
+      "waitingYears": 1,
+      "early": 2035,
+      "median": 2061
+    },
+    {
+      "name": "月球基地",
+      "cat": "transport",
+      "status": "projected",
+      "waitingYears": 1,
+      "early": 2035,
+      "median": 2061
+    },
+    {
+      "name": "基因电路",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 1,
+      "early": 2035,
+      "median": 2061
+    },
+    {
+      "name": "建筑机器人集群",
+      "cat": "build",
+      "status": "projected",
+      "waitingYears": 0,
       "early": 2036,
-      "median": 2052
+      "median": 2062
+    },
+    {
+      "name": "神经形态计算",
+      "cat": "info",
+      "status": "waiting",
+      "waitingYears": 68,
+      "early": null,
+      "median": null
+    },
+    {
+      "name": "量子加密",
+      "cat": "info",
+      "status": "waiting",
+      "waitingYears": 57,
+      "early": null,
+      "median": null
+    },
+    {
+      "name": "全息显示",
+      "cat": "info",
+      "status": "waiting",
+      "waitingYears": 66,
+      "early": null,
+      "median": null
+    },
+    {
+      "name": "人形机器人",
+      "cat": "manufact",
+      "status": "waiting",
+      "waitingYears": 65,
+      "early": null,
+      "median": null
+    },
+    {
+      "name": "软体机器人",
+      "cat": "manufact",
+      "status": "waiting",
+      "waitingYears": 65,
+      "early": null,
+      "median": null
+    },
+    {
+      "name": "动力外骨骼",
+      "cat": "manufact",
+      "status": "waiting",
+      "waitingYears": 65,
+      "early": null,
+      "median": null
     },
     {
       "name": "干细胞治疗",
       "cat": "life",
-      "early": 2036,
-      "median": 2052
+      "status": "waiting",
+      "waitingYears": 46,
+      "early": null,
+      "median": null
     },
     {
       "name": "聚变发电",
       "cat": "energy",
-      "early": 2036,
-      "median": 2052
+      "status": "waiting",
+      "waitingYears": 74,
+      "early": null,
+      "median": null
     },
     {
       "name": "超导磁体",
       "cat": "energy",
-      "early": 2036,
-      "median": 2052
-    },
-    {
-      "name": "电网级储能",
-      "cat": "energy",
-      "early": 2036,
-      "median": 2052
-    },
-    {
-      "name": "石墨烯量产",
-      "cat": "material",
-      "early": 2036,
-      "median": 2052
-    },
-    {
-      "name": "碳纳米管",
-      "cat": "material",
-      "early": 2036,
-      "median": 2052
-    },
-    {
-      "name": "超材料",
-      "cat": "material",
-      "early": 2036,
-      "median": 2052
-    },
-    {
-      "name": "室温超导",
-      "cat": "material",
-      "early": 2036,
-      "median": 2052
-    },
-    {
-      "name": "高熵合金",
-      "cat": "material",
-      "early": 2036,
-      "median": 2052
+      "status": "waiting",
+      "waitingYears": 115,
+      "early": null,
+      "median": null
     }
   ],
   "L3_top": [
     {
-      "name": "（推演）通用人工智能 × 自动驾驶 融合系统",
-      "early": 2062,
-      "median": 2078
+      "name": "火星殖民",
+      "cat": "transport",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2040,
+      "median": 2066
     },
     {
-      "name": "（推演）通用人工智能 × 人形机器人 融合系统",
-      "early": 2062,
-      "median": 2078
+      "name": "飞行汽车",
+      "cat": "transport",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2040,
+      "median": 2066
     },
     {
-      "name": "（推演）通用人工智能 × 软体机器人 融合系统",
-      "early": 2062,
-      "median": 2078
+      "name": "可编程物质",
+      "cat": "material",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2040,
+      "median": 2066
     },
     {
-      "name": "（推演）通用人工智能 × 集群机器人 融合系统",
-      "early": 2062,
-      "median": 2078
+      "name": "轨道打击",
+      "cat": "military",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2040,
+      "median": 2066
     },
     {
-      "name": "（推演）通用人工智能 × 动力外骨骼 融合系统",
-      "early": 2062,
-      "median": 2078
+      "name": "太空电梯",
+      "cat": "transport",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2045,
+      "median": 2071
     },
     {
-      "name": "（推演）通用人工智能 × 无人工厂 融合系统",
-      "early": 2062,
-      "median": 2078
+      "name": "太空居住",
+      "cat": "build",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2050,
+      "median": 2076
     },
     {
-      "name": "（推演）通用人工智能 × 干细胞治疗 融合系统",
-      "early": 2062,
-      "median": 2078
+      "name": "寿命延长",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2055,
+      "median": 2081
     },
     {
-      "name": "（推演）通用人工智能 × 聚变发电 融合系统",
-      "early": 2062,
-      "median": 2078
+      "name": "纳米机器人",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2060,
+      "median": 2086
     },
     {
-      "name": "（推演）通用人工智能 × 超导磁体 融合系统",
-      "early": 2062,
-      "median": 2078
+      "name": "聚变火箭",
+      "cat": "transport",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2060,
+      "median": 2086
     },
     {
-      "name": "（推演）通用人工智能 × 电网级储能 融合系统",
-      "early": 2062,
-      "median": 2078
+      "name": "戴森球",
+      "cat": "energy",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2065,
+      "median": 2091
     },
     {
-      "name": "（推演）通用人工智能 × 石墨烯量产 融合系统",
-      "early": 2062,
-      "median": 2078
+      "name": "轨道环",
+      "cat": "transport",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2080,
+      "median": 2106
     },
     {
-      "name": "（推演）通用人工智能 × 碳纳米管 融合系统",
-      "early": 2062,
-      "median": 2078
+      "name": "意识上传",
+      "cat": "info",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2090,
+      "median": 2116
     },
     {
-      "name": "（推演）通用人工智能 × 超材料 融合系统",
-      "early": 2062,
-      "median": 2078
+      "name": "分子装配",
+      "cat": "manufact",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2090,
+      "median": 2116
     },
     {
-      "name": "（推演）通用人工智能 × 室温超导 融合系统",
-      "early": 2062,
-      "median": 2078
+      "name": "冯·诺依曼探测器",
+      "cat": "transport",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2090,
+      "median": 2116
     },
     {
-      "name": "（推演）通用人工智能 × 高熵合金 融合系统",
-      "early": 2062,
-      "median": 2078
+      "name": "记忆提取",
+      "cat": "info",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2090,
+      "median": 2116
     }
   ],
   "L5_examples": [
+    {
+      "name": "量子隐形传态",
+      "basis": "依赖违反已知物理定律的前提"
+    },
+    {
+      "name": "黑洞计算",
+      "basis": "依赖违反已知物理定律的前提"
+    },
+    {
+      "name": "物质传送",
+      "basis": "依赖违反已知物理定律的前提"
+    },
+    {
+      "name": "虫洞",
+      "basis": "依赖违反已知物理定律的前提"
+    },
     {
       "name": "奇异物质",
       "basis": "依赖违反已知物理定律的前提"
@@ -227,19 +339,7 @@
       "basis": "依赖违反已知物理定律的前提"
     },
     {
-      "name": "虫洞",
-      "basis": "依赖违反已知物理定律的前提"
-    },
-    {
       "name": "超光速通讯",
-      "basis": "依赖违反已知物理定律的前提"
-    },
-    {
-      "name": "物质传送",
-      "basis": "依赖违反已知物理定律的前提"
-    },
-    {
-      "name": "黑洞计算",
       "basis": "依赖违反已知物理定律的前提"
     },
     {

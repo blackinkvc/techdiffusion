@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-11-04",
+  "sourceDigest": "daed300b0c6ea7e3c26942d95722986ca842bcaf26c981da64a212af8ff6a628",
+  "input": {
+    "asOf": 1990,
+    "until": 2020,
+    "trainingNodes": 1023,
+    "evaluationNodes": 449,
+    "relationKnowledge": "current-curated",
+    "postOriginNodesExcludedFromTraining": true,
+    "postOriginEndpointsExcludedFromTraining": true,
+    "futureTiersExcluded": true,
+    "futureYearsExcludedFromTraining": true
+  },
+  "validationStatus": "exploratory",
+  "temporalLeakageControlled": false,
+  "limitations": [
+    "依赖关系没有独立的 knownSince/validFrom 入库时间；节点年份只能限制端点，不能证明关系在 as-of 时已为人知。",
+    "结果只比较已实现技术的滞后预测误差，不评估新技术发现、top-K 命中率或 AUC。",
+    "失败、搁置和长期未实现方向不在评价集中，存在成功样本选择偏差。",
+    "未做显著性检验，模型间指标差异不能直接解释为统计显著改进。"
+  ],
+  "models": {
+    "global_median": {
+      "mae": 42.16,
+      "rmse": 56.645,
+      "medianAbsoluteError": 32
+    },
+    "category_median": {
+      "mae": 47.056,
+      "rmse": 60.346,
+      "medianAbsoluteError": 57
+    },
+    "dependency_bucket": {
+      "mae": 48.901,
+      "rmse": 60.76,
+      "medianAbsoluteError": 57.5
+    }
+  }
+}

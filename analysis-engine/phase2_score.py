@@ -1,7 +1,7 @@
 #!/usr/bin/env python3.11
 """Phase 2 — 第一性原理可行性评分卡 (L1-L5)。
-对全库每个技术节点，从图谱+元数据派生 5 个第一性原理维度，
-合成 0-100 成熟度分并映射分层。全部确定性计算（不依赖 LLM）。
+按 --scope full / mainline 对指定范围节点，从图谱+元数据派生 5 个维度，
+合成 0-100 成熟度分并映射分层。主管线评分不受候选语料影响。
 
 维度（各 0-1）：
   D1 物理/科学可行性  —— 真实存在技术=1.0（已通过存在性验证）；若带 L2-L5 标记则按标记下调
@@ -16,7 +16,7 @@
   否则                     → L1 已实现
   成熟度 = D1*0.25 + D2*0.20 + D4*0.35 + D5*0.20
 """
-import json, os, time
+import argparse, json, os, time
 import networkx as nx
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -30,17 +30,19 @@ CATS = ["basic", "material", "energy", "manufact", "transport",
 W = {"D1": 0.25, "D2": 0.20, "D4": 0.35, "D5": 0.20}
 YEAR_MIN, YEAR_MAX = -3000, 2026
 
-def build_graph():
-    g = json.load(open(f"{ROOT}/graph.json"))
-    nodes = {n["id"]: n for n in g["nodes"]}
-    edges = [(e["source"], e["target"]) for e in g["edges"]
+def build_graph(scope="full"):
+    g = json.load(open(f"{ROOT}/graph.json", encoding="utf-8"))
+    nodes = {n["id"]: n for n in g["nodes"] if scope == "full" or n.get("kind") == "tech"}
+    # 内部方向统一为 依赖者 → 前置；graph.json 外部方向相反。
+    edges = [(e["target"], e["source"]) for e in g["edges"]
              if e.get("type") in ("dependsOn", "dependency")]
-    nt = json.load(open(f"{ROOT}/subcat/new_techs.json"))
-    for x in nt:
-        nodes[x["id"]] = x
-        for t in x.get("dependsOn", []):
-            if t in nodes:
-                edges.append((x["id"], t))
+    if scope == "full":
+        nt = json.load(open(f"{ROOT}/subcat/new_techs.json", encoding="utf-8"))
+        for x in nt:
+            nodes[x["id"]] = x
+            for t in x.get("dependsOn", []):
+                if t in nodes:
+                    edges.append((x["id"], t))
     G = nx.DiGraph(); G.add_nodes_from(nodes.keys()); G.add_edges_from(edges)
     return G, nodes
 
@@ -48,10 +50,16 @@ def clamp(x, lo=0.0, hi=1.0):
     return max(lo, min(hi, x))
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--scope", choices=("full", "mainline"), default="full")
+    args = parser.parse_args()
+    score_path = f"{ROOT}/phase2_scores.json" if args.scope == "full" else f"{ROOT}/phase2_scores_mainline.json"
+    report_path = f"{ROOT}/phase2_report.md" if args.scope == "full" else f"{ROOT}/phase2_report_mainline.md"
+
     t0 = time.time()
-    G, nodes = build_graph()
+    G, nodes = build_graph(args.scope)
     n = G.number_of_nodes()
-    print(f"图规模: {n} 节点 / {G.number_of_edges()} 边")
+    print(f"评分范围: {args.scope} | 图规模: {n} 节点 / {G.number_of_edges()} 边")
 
     # 拓扑层级
     layer = {}
@@ -109,7 +117,7 @@ def main():
             "name": nd.get("name") or i,
         }
 
-    json.dump(scores, open(f"{ROOT}/phase2_scores.json", "w"), ensure_ascii=False)
+    json.dump(scores, open(score_path, "w", encoding="utf-8"), ensure_ascii=False)
 
     # ---- 报告 ----
     tier_dist = Counter(s["tier"] for s in scores.values())
@@ -152,10 +160,10 @@ def main():
     L.append("|---|------|------|----|--------|")
     for i, (k, s) in enumerate(frontier, 1):
         L.append(f"| {i} | {s['name']} | {s['category']} | {s['year']} | {s['D3']} |")
-    open(f"{ROOT}/phase2_report.md", "w").write("\n".join(L))
+    open(report_path, "w", encoding="utf-8").write("\n".join(L))
     print(f"✅ Phase 2 完成，用时 {time.time()-t0:.1f}s")
     print("分层分布:", dict(tier_dist))
-    print("报告写入 phase2_report.md / phase2_scores.json")
+    print(f"报告写入 {report_path} / {score_path}")
 
 if __name__ == "__main__":
     main()

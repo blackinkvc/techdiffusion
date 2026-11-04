@@ -12,10 +12,14 @@
     "L2": "L2·目前技术可实现", "L3": "L3·未来可能实现",
     "L4": "L4·未来较难实现", "L5": "L5·仅在该世界观", "NA": "未评分"
   };
+  const SOURCE_LABEL = {
+    "mainline-derived": "主管线", "new_techs": "未校订候选语料", "score-only": "仅评分记录"
+  };
+  const NETWORK_LABEL = { connected: "已连接", root: "无前置根节点", isolated: "孤立节点" };
 
   let techMapFull = null;
   let treeFull = null;
-  const fullState = { cat: "all", tier: "all", colorMode: "tier", search: "", limit: true };
+  const fullState = { cat: "all", tier: "all", source: "all", colorMode: "tier", search: "", limit: true, showIsolated: false };
   let edgesFull = [];
 
   function buildIndex() {
@@ -58,19 +62,26 @@
     ["L1", "L1-基石", "L1-前沿", "L2", "L3", "L4", "L5"].forEach(tk =>
       html += `<button class="fbtn ${fullState.tier === tk ? "active" : ""}" data-tier="${tk}" style="border-left:3px solid ${TIER_COLORS[tk]}">${TIER_LABEL[tk]}</button>`);
     html += `<button class="fbtn ${fullState.tier === "all" ? "active" : ""}" data-tier="all">全部</button>`;
+    html += `<span class="tb-sep"></span><span class="fg-label">来源</span>`;
+    html += `<button class="fbtn ${fullState.source === "all" ? "active" : ""}" data-source="all">全部</button>`;
+    Object.keys(SOURCE_LABEL).forEach(source =>
+      html += `<button class="fbtn ${fullState.source === source ? "active" : ""}" data-source="${source}">${SOURCE_LABEL[source]}</button>`);
     html += `<span class="tb-sep"></span><span class="fg-label">着色</span>`;
     html += `<button class="fbtn ${fullState.colorMode === "tier" ? "active" : ""}" data-cm="tier">成熟度</button>`;
     html += `<button class="fbtn ${fullState.colorMode === "category" ? "active" : ""}" data-cm="category">分类</button>`;
     html += `<button class="fbtn ${fullState.colorMode === "score" ? "active" : ""}" data-cm="score">综合分</button>`;
     html += `<span class="tb-sep"></span><button class="fbtn ${fullState.limit ? "active" : ""}" data-limit>核心层(高连接)</button>`;
+    html += `<button class="fbtn ${fullState.showIsolated ? "active" : ""}" data-isolated>显示孤立节点</button>`;
     html += `<button class="fbtn" id="tf-reset">重置视图</button>`;
     $("#tf-toolbar").innerHTML = html;
     $$('#tf-toolbar [data-cat]').forEach(b => b.addEventListener("click", () => { fullState.cat = b.dataset.cat; renderTreeFull(); }));
     $$('#tf-toolbar [data-tier]').forEach(b => b.addEventListener("click", () => { fullState.tier = b.dataset.tier; renderTreeFull(); }));
+    $$('#tf-toolbar [data-source]').forEach(b => b.addEventListener("click", () => { fullState.source = b.dataset.source; renderTreeFull(); }));
     $$('#tf-toolbar [data-cm]').forEach(b => b.addEventListener("click", () => { fullState.colorMode = b.dataset.cm; if (treeFull) treeFull.node.select("circle").attr("fill", d => nodeColor(d)); }));
     $$('#tf-toolbar [data-limit]').forEach(b => b.addEventListener("click", () => { fullState.limit = !fullState.limit; renderTreeFull(); }));
+    $$('#tf-toolbar [data-isolated]').forEach(b => b.addEventListener("click", () => { fullState.showIsolated = !fullState.showIsolated; renderTreeFull(); }));
     $("#tf-reset").addEventListener("click", () => {
-      fullState.cat = "all"; fullState.tier = "all"; fullState.colorMode = "tier"; fullState.search = "";
+      fullState.cat = "all"; fullState.tier = "all"; fullState.source = "all"; fullState.colorMode = "tier"; fullState.search = ""; fullState.showIsolated = false;
       const gs = document.querySelector("#globalSearch"); if (gs) gs.value = "";
       renderToolbar(); renderTreeFull();
     });
@@ -96,8 +107,11 @@
   function sidePlaceholder() {
     const meta = window.SCORE_META || {};
     const td = meta.tierDist || {};
+    const pd = meta.provenanceDist || {};
+    const nd = meta.networkStatusDist || {};
     const dist = ["L1-基石", "L1", "L1-前沿", "L2", "L3", "L4", "L5"].map(k => `${k}:${td[k] || 0}`).join(" · ");
-    return `<h3>全量技术演化网络</h3><p style="font-size:13px;color:var(--ink-soft)">共 <b>${meta.totalNodes || 0}</b> 项技术、<b>${meta.totalEdges || 0}</b> 条依赖/赋能边。点击任一节点查看其<b>前置技术（上游）</b>、<b>催生的后续技术（下游）</b>与第一性原理五维评分（D1–D5）。</p><div class="tf-dist">${dist}</div><p style="font-size:12.5px;color:var(--ink-soft);margin-top:8px">拖动可重排，滚轮可缩放。</p>`;
+    const sources = Object.keys(SOURCE_LABEL).map(k => `${SOURCE_LABEL[k]}:${pd[k] || 0}`).join(" · ");
+    return `<h3>全量技术演化网络</h3><p style="font-size:13px;color:var(--ink-soft)">共 <b>${meta.totalNodes || 0}</b> 个节点、<b>${meta.totalEdges || 0}</b> 条依赖/赋能边。主管线评分独立计算；未校订候选语料不等同于已验证技术。</p><div class="tf-dist">${dist}</div><p style="font-size:12.5px;color:var(--ink-soft);margin-top:8px">${sources}<br>无前置根节点:${nd.root || 0} · 孤立节点:${nd.isolated || 0}（默认隐藏）</p><p style="font-size:12.5px;color:var(--ink-soft);margin-top:8px">拖动可重排，滚轮可缩放。</p>`;
   }
 
   function renderTreeFull() {
@@ -111,7 +125,9 @@
 
     let nodes = (window.TECHS_FULL || []).filter(t =>
       (fullState.cat === "all" || t.category === fullState.cat) &&
-      (fullState.tier === "all" || t.tier === fullState.tier));
+      (fullState.tier === "all" || t.tier === fullState.tier) &&
+      (fullState.source === "all" || t.provenance === fullState.source) &&
+      (fullState.showIsolated || t.networkStatus !== "isolated"));
     if (fullState.limit && nodes.length > 3000) {
       nodes = nodes.slice().sort((a, b) => b._deg - a._deg).slice(0, 2200);
     }
@@ -175,7 +191,7 @@
   function renderSideFull(t) {
     let html = `<h3 style="border-left:4px solid ${catColor(t.category)};padding-left:8px">${esc(t.name)}</h3>`;
     const tb = TIER_COLORS[t.tier] ? `<span style="display:inline-block;margin-left:8px;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:600;color:#fff;background:${TIER_COLORS[t.tier]}">${TIER_LABEL[t.tier]}</span>` : "";
-    html += `<div style="font-size:12.5px;color:var(--ink-soft);margin-bottom:8px">${esc(t.date || "")} · ${esc(eraName(t.era))} · ${esc(catName(t.category))}${tb}${t.score != null ? ` · 综合分 <b>${t.score.toFixed(1)}</b>` : ""}</div>`;
+    html += `<div style="font-size:12.5px;color:var(--ink-soft);margin-bottom:8px">${SOURCE_LABEL[t.provenance] || "来源未标"} · ${NETWORK_LABEL[t.networkStatus] || "网络状态未标"} · ${esc(t.date || "")} · ${esc(eraName(t.era))} · ${esc(catName(t.category))}${tb}${t.score != null ? ` · ${t.scoreScope === "mainline" ? "主管线" : "全量"}综合分 <b>${t.score.toFixed(1)}</b>` : ""}</div>`;
     if (t._up.length) {
       html += `<div class="m-label" style="margin-top:10px">↑ 前置技术（上游 ${t._up.length}）</div><div>`;
       t._up.forEach(u => { const n = techMapFull[u]; if (n) html += `<span class="node-link" data-id="${u}">${esc(n.name)}</span>`; });
@@ -213,9 +229,10 @@
       <h2>${esc(t.name)} <span class="m-en">${esc(t.en || "")}</span></h2>
       <div class="m-badges">
         <span class="badge" style="background:${catColor(t.category)}22;color:${catColor(t.category)};font-size:12px;padding:3px 10px;border-radius:12px">${esc(catName(t.category))}</span>
+        <span class="badge" style="font-size:12px;padding:3px 10px;border-radius:12px;background:var(--accent-bg);color:var(--ink-soft)">${SOURCE_LABEL[t.provenance] || "来源未标"} · ${NETWORK_LABEL[t.networkStatus] || "网络状态未标"}</span>
         <span class="badge era" style="font-size:12px;padding:3px 10px;border-radius:12px;background:#fff3e0;color:#b15a00">${esc(eraName(t.era))}</span>
         <span class="badge" style="font-size:12px;padding:3px 10px;border-radius:12px;color:#fff;background:${tcol}">${TIER_LABEL[t.tier] || "未评分"}</span>
-        ${t.score != null ? `<span class="badge" style="font-size:12px;padding:3px 10px;border-radius:12px;background:${scoreColor(t.score)};color:#fff">综合分 ${t.score.toFixed(1)}</span>` : ""}
+        ${t.score != null ? `<span class="badge" style="font-size:12px;padding:3px 10px;border-radius:12px;background:${scoreColor(t.score)};color:#fff">${t.scoreScope === "mainline" ? "主管线" : "全量"}综合分 ${t.score.toFixed(1)}</span>` : ""}
         <span class="badge" style="font-size:12px;padding:3px 10px;border-radius:12px;background:var(--accent-bg);color:var(--ink-soft)">${esc(t.date || "")}</span>
         ${t.place ? `<span class="badge" style="font-size:12px;padding:3px 10px;border-radius:12px;background:var(--accent-bg);color:var(--ink-soft)">${esc(t.place)}</span>` : ""}
       </div>

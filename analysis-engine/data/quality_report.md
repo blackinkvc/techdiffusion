@@ -1,14 +1,14 @@
 # 阶段0 · 数据质量报告
 
-导出时间：2026-09-12T13:18:36.874Z
+导出时间：2026-11-04T16:58:08.278Z
 
 ## 总览
 
 | 指标 | 数值 |
 |---|---|
-| 技术节点总数 | 2289 |
-| 显式关系边总数 | 7546 |
-| dependsOn 引用 | 7340（断链 0） |
+| 技术节点总数 | 2268 |
+| 显式关系边总数 | 6387 |
+| dependsOn 引用 | 6181（断链 0） |
 | enables 引用 | 206（断链 12） |
 | 重复 id | 0 |
 
@@ -16,37 +16,37 @@
 
 | 分类 | 数量 |
 |---|---|
-| life | 338 |
-| basic | 304 |
-| info | 283 |
-| transport | 249 |
-| material | 246 |
-| build | 244 |
-| military | 237 |
-| energy | 225 |
-| manufact | 163 |
+| life | 331 |
+| basic | 303 |
+| info | 277 |
+| transport | 248 |
+| material | 247 |
+| build | 243 |
+| military | 236 |
+| energy | 221 |
+| manufact | 162 |
 
 ## 时代分布
 
 | 时代 | 数量 |
 |---|---|
-| info | 744 |
-| intelligent | 686 |
+| info | 745 |
+| intelligent | 685 |
 | industrial | 262 |
-| electrical | 213 |
-| future | 132 |
-| ancient | 94 |
-| prehistoric | 53 |
-| earlymodern | 46 |
-| classical | 30 |
+| electrical | 211 |
+| future | 117 |
+| ancient | 92 |
+| prehistoric | 52 |
+| earlymodern | 47 |
 | medieval | 29 |
+| classical | 28 |
 
 ## 五档分级分布（仅科幻层条目）
 
 | 档位 | 数量 |
 |---|---|
-| L2 | 73 |
-| L3 | 28 |
+| L2 | 59 |
+| L3 | 27 |
 | L4 | 19 |
 | L5 | 12 |
 
@@ -54,7 +54,7 @@
 
 | 字段 | 缺失条数 |
 |---|---|
-| enables | 1147 |
+| enables | 1124 |
 
 ## 断链明细（前 30 条）
 

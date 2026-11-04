@@ -20,11 +20,12 @@ from pathlib import Path
 ROOT = os.environ.get("TECHDIFFUSION_DATA") or str(Path(__file__).resolve().parent / "data")
 
 def build_graph():
-    g = json.load(open(f"{ROOT}/graph.json"))
+    g = json.load(open(f"{ROOT}/graph.json", encoding="utf-8"))
     nodes = {n["id"]: n for n in g["nodes"]}
-    edges = [(e["source"], e["target"]) for e in g["edges"]
+    # 内部方向统一为 依赖者 → 前置；graph.json 外部方向相反。
+    edges = [(e["target"], e["source"]) for e in g["edges"]
              if e.get("type") in ("dependsOn", "dependency")]
-    nt = json.load(open(f"{ROOT}/subcat/new_techs.json"))
+    nt = json.load(open(f"{ROOT}/subcat/new_techs.json", encoding="utf-8"))
     for x in nt:
         nodes[x["id"]] = x
         for t in x.get("dependsOn", []):
@@ -135,7 +136,7 @@ def main():
         ],
         "longest_chain": [{"id": c, "name": name(c)} for c in chain],
     }
-    json.dump(results, open(f"{ROOT}/phase1_results.json", "w"),
+    json.dump(results, open(f"{ROOT}/phase1_results.json", "w", encoding="utf-8"),
               ensure_ascii=False, indent=1)
 
     # ---- 文本报告 ----
@@ -167,7 +168,7 @@ def main():
         L.append(f"| {i} | {r['name']} | {r['category']} | {r['degree']} |")
     L.append("\n## 5. 最长技术演化链（关键路径）\n")
     L.append(" → ".join(results["longest_chain"][i]["name"] for i in range(min(20, len(chain)))))
-    open(f"{ROOT}/phase1_report.md", "w").write("\n".join(L))
+    open(f"{ROOT}/phase1_report.md", "w", encoding="utf-8").write("\n".join(L))
     print(f"\n✅ Phase 1 完成，用时 {time.time()-t0:.1f}s，结果写入 phase1_results.json / phase1_report.md")
 
 if __name__ == "__main__":

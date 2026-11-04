@@ -1,0 +1,316 @@
+{
+  "generatedAt": "2026-11-04",
+  "method": "主管线前提闭包 + 历史滞后分布（§13.3）；组合候选仅在 --synthetic 下生成",
+  "input": {
+    "pipeline": "mainline",
+    "nodes": 2268,
+    "dependencyEdges": 6181,
+    "asOf": 1990,
+    "until": 2020,
+    "sourceDigest": "daed300b0c6ea7e3c26942d95722986ca842bcaf26c981da64a212af8ff6a628",
+    "relationKnowledge": "current-curated",
+    "validationStatus": "exploratory"
+  },
+  "lagStats": {
+    "n": 1062,
+    "min": 0,
+    "max": 1700,
+    "mean": 75.1,
+    "p10": 0,
+    "p25": 6,
+    "p50": 25,
+    "p75": 111,
+    "p90": 242
+  },
+  "totalCandidates": 706,
+  "syntheticCandidates": 0,
+  "derivedDistribution": {
+    "L2": 654,
+    "L3": 52
+  },
+  "L2_top": [
+    {
+      "name": "Transformer 架构",
+      "cat": "info",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    },
+    {
+      "name": "大数据",
+      "cat": "info",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    },
+    {
+      "name": "循环肿瘤 DNA",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    },
+    {
+      "name": "循环肿瘤细胞",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    },
+    {
+      "name": "外泌体检测",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    },
+    {
+      "name": "ctDNA 甲基化",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    },
+    {
+      "name": "多组学整合",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    },
+    {
+      "name": "蛋白质组学诊断",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    },
+    {
+      "name": "代谢组学诊断",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    },
+    {
+      "name": "影像组学",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    },
+    {
+      "name": "放射组学",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    },
+    {
+      "name": "病理组学",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    },
+    {
+      "name": "数字病理",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    },
+    {
+      "name": "AI 辅助诊断",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    },
+    {
+      "name": "临床决策支持",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    },
+    {
+      "name": "风险分层",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    },
+    {
+      "name": "早筛早诊",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    },
+    {
+      "name": "筛查队列",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    },
+    {
+      "name": "伴随诊断",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    },
+    {
+      "name": "患者分层",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 21,
+      "early": 1990,
+      "median": 1994
+    }
+  ],
+  "L3_top": [
+    {
+      "name": "万维网",
+      "cat": "info",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 1997,
+      "median": 2016
+    },
+    {
+      "name": "锂聚合物电池",
+      "cat": "energy",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 1997,
+      "median": 2016
+    },
+    {
+      "name": "充电站",
+      "cat": "transport",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 1997,
+      "median": 2016
+    },
+    {
+      "name": "万维网服务器",
+      "cat": "info",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 1997,
+      "median": 2016
+    },
+    {
+      "name": "激光雷达",
+      "cat": "transport",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2006,
+      "median": 2025
+    },
+    {
+      "name": "钠离子电池",
+      "cat": "energy",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2006,
+      "median": 2025
+    },
+    {
+      "name": "微电网",
+      "cat": "energy",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2006,
+      "median": 2025
+    },
+    {
+      "name": "车网互动",
+      "cat": "energy",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2006,
+      "median": 2025
+    },
+    {
+      "name": "集装箱储能",
+      "cat": "energy",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2006,
+      "median": 2025
+    },
+    {
+      "name": "液态空气储能",
+      "cat": "energy",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2006,
+      "median": 2025
+    },
+    {
+      "name": "应用程序接口",
+      "cat": "info",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2006,
+      "median": 2025
+    },
+    {
+      "name": "康复机器人",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2006,
+      "median": 2025
+    },
+    {
+      "name": "外骨骼",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2006,
+      "median": 2025
+    },
+    {
+      "name": "脂质纳米粒",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2006,
+      "median": 2025
+    },
+    {
+      "name": "疫苗平台",
+      "cat": "life",
+      "status": "projected",
+      "waitingYears": 0,
+      "early": 2006,
+      "median": 2025
+    }
+  ],
+  "L5_examples": []
+}

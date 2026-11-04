@@ -64,7 +64,7 @@ function computeCanonical() {
 function scanFiles() {
   const out = [];
   const rootEntries = fs.readdirSync(ROOT);
-  const EXCLUDE_LOG = new Set(['版本迭代日志.md', 'changelog.html']); // 日志/变更页：历史日期属正常
+  const EXCLUDE_LOG = new Set(['版本迭代日志.md', 'changelog.html', '项目体检报告_20260915.md']); // 历史日志/报告：保留当时计数
   for (const e of rootEntries) {
     if (!/^.*\.(html|md)$/.test(e)) continue;
     if (EXCLUDE_LOG.has(e)) continue;

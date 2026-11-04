@@ -1,5 +1,5 @@
 #!/bin/sh
-# 一致性自检门禁（四道，均为 ERROR 级，任一不过即阻断提交）
+# 一致性自检门禁（六道，均为 ERROR 级，任一不过即阻断提交）
 #   1) 文档/数据一致性（tools/check_docs.js）：正文写死的语料总数须与真实数据一致
 #   2) 派生文案不动点（tools/regen_text.js --check）：节点文案须与当前依赖网络一致
 #      —— 文案是「生成时刻」dependsOn 与反图的快照，网络改动后必须同步重算
@@ -11,6 +11,10 @@
 #      —— 前三道全部走「识别器 + 重写」的同源自洽链，模板里的固有缺陷会被忠实
 #         复制且门禁全绿（v0.9.36 的 collective 即此类）。第 4 道**不 import 任何
 #         生成器规则**，是检修计划 §五 第 5 条要求的「不依赖该规则的独立断言」。
+#   5) 分析数据一致性（tools/check_analysis_consistency.js）：来源指纹、节点/边集合、
+#      元数据、字段与边表、预测输入与年份约束。
+#   6) 分析引擎质量（check_graph_direction.py + validate_final.py）：图方向、断边、
+#      年份序与 DAG。
 # 作用：让「文档没及时更新」「文案与网络脱节」「结构劣化」「文本卫生劣化」在提交时
 #       即被发现，而不是靠人工复查。确需跳过时： git commit --no-verify
 ROOT="$(git rev-parse --show-toplevel)"
@@ -44,6 +48,27 @@ node "$ROOT/tools/check_text_hygiene.js" --check || {
   echo "  执行 node tools/check_text_hygiene.js 查看明细。"
   echo "  修正数据后重跑 --snapshot；若确属合法专名/术语，加进工具内 TERM_WHITELIST。"
   echo "  若确认无误需跳过本门禁，可执行： git commit --no-verify"
+  exit 1
+}
+
+node "$ROOT/tools/check_analysis_consistency.js" || {
+  echo ""
+  echo "✗ 分析数据一致性自检未通过。请按上述提示重建过期派生数据。"
+  exit 1
+}
+
+PYTHON="${PYTHON:-python3}"
+export PYTHONIOENCODING=utf-8
+export PYTHONUTF8=1
+"$PYTHON" "$ROOT/analysis-engine/check_graph_direction.py" || {
+  echo ""
+  echo "✗ Python 图方向不一致。请统一为内部「依赖者 → 前置」。"
+  exit 1
+}
+
+"$PYTHON" "$ROOT/analysis-engine/validate_final.py" || {
+  echo ""
+  echo "✗ 最终数据质量门禁未通过。"
   exit 1
 }
 

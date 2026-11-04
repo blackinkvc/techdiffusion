@@ -1,6 +1,6 @@
 /* build_full_dataset.js — Phase 4 数据管道 v2
- * 用 graph.json 原库富字段节点(2362) + new_techs(11031) 作富字段源，
- * 叠加 phase2_scores(13392) 评分，重建依赖/赋能边，输出站点可加载全量数据集。
+ * 用 graph.json 原库富字段节点 + new_techs 作富字段源并标记 provenance，
+ * 分别叠加主管线与全量评分，重建依赖/赋能边和网络状态。
  * 输出：assets/data_full.js -> window.TECHS_FULL / EDGES_FULL / SCORE_META
  */
 const fs = require('fs');
@@ -10,6 +10,7 @@ const ROOT = path.resolve(__dirname, '..');
 const gj = JSON.parse(fs.readFileSync(path.join(ROOT, 'analysis-engine/data/graph.json'), 'utf8'));
 const newt = JSON.parse(fs.readFileSync(path.join(ROOT, 'analysis-engine/data/subcat/new_techs.json'), 'utf8'));
 const scores = JSON.parse(fs.readFileSync(path.join(ROOT, 'analysis-engine/data/phase2_scores.json'), 'utf8'));
+const mainlineScores = JSON.parse(fs.readFileSync(path.join(ROOT, 'analysis-engine/data/phase2_scores_mainline.json'), 'utf8'));
 
 // 1) 原库富字段节点（graph.json.nodes 已含 name/en/category/era/date/year/people/place/summary）
 const byId = new Map();
@@ -24,7 +25,7 @@ const isConcept = n => n && (n.kind === 'concept' || n.category === '(concept)')
 let skippedConcepts = 0;
 gj.nodes.forEach(n => {
   if (isConcept(n)) { skippedConcepts++; return; }
-  set(n.id, Object.assign({ subcategory: n.category || '', dependsOn: [], enables: [], views: [], applications: [], significance: '' }, n));
+  set(n.id, Object.assign({ provenance: 'mainline-derived', subcategory: n.category || '', dependsOn: [], enables: [], views: [], applications: [], significance: '' }, n));
 });
 
 // 2) 新条目富字段（new_techs，含 subcategory/dependsOn/enables/views/significance/summary）
@@ -34,19 +35,22 @@ newt.forEach(t => {
     const c = byId.get(t.id);
     for (const k in t) if (t[k] !== '' && t[k] != null && (c[k] == null || c[k] === '' || (Array.isArray(c[k]) && c[k].length === 0))) c[k] = t[k];
   } else {
-    byId.set(t.id, Object.assign({}, t));
+    byId.set(t.id, Object.assign({}, t, { provenance: 'new_techs' }));
   }
 });
 
-// 3) 附加评分卡
+// 3) 按数据来源附加评分卡，主管线指标不受候选语料影响。
 const tierDist = {};
 let scoredNodes = 0;
 for (const [id, node] of byId) {
-  const sc = scores[id];
+  const mainline = node.provenance === 'mainline-derived';
+  const sc = mainline ? mainlineScores[id] : scores[id];
+  if (mainline && !sc) throw new Error(`主管线评分缺失: ${id}，请重跑 phase2_score.py --scope mainline`);
   if (sc) {
     node.score = sc.score; node.tier = sc.tier;
     node.D1 = sc.D1; node.D2 = sc.D2; node.D3 = sc.D3; node.D4 = sc.D4; node.D5 = sc.D5;
     node.layer = sc.layer;
+    node.scoreScope = mainline ? 'mainline' : 'full';
     scoredNodes++;
   }
   if (!node.category && sc && sc.category !== '(concept)') node.category = sc.category;
@@ -57,13 +61,13 @@ for (const [id, node] of byId) {
   tierDist[tier] = (tierDist[tier] || 0) + 1;
 }
 
-// 4) scores 独有节点纳入（仅评分，用评分字段填充），确保全量 13392
+// 4) scores 独有节点纳入（仅评分，用评分字段填充），避免评分节点丢失
 for (const id in scores) {
   if (!byId.has(id)) {
     const sc = scores[id];
     if (isConcept(sc)) { skippedConcepts++; continue; } // 陈旧概念占位评分条目，剔除
     byId.set(id, {
-      id, name: sc.name, category: sc.category, year: sc.year,
+      id, name: sc.name, category: sc.category, year: sc.year, provenance: 'score-only', scoreScope: 'full',
       score: sc.score, tier: sc.tier, D1: sc.D1, D2: sc.D2, D3: sc.D3, D4: sc.D4, D5: sc.D5, layer: sc.layer,
       subcategory: sc.category || '', summary: '', dependsOn: [], enables: [], views: [], applications: [], significance: ''
     });
@@ -94,13 +98,38 @@ for (const [id, node] of byId) {
   (node.enables || []).forEach(e => addEdge(id, e, 'enables'));
 }
 
+// 节点字段与统一边表保持同一份事实，避免读取方得到两套依赖关系。
+for (const node of byId.values()) {
+  node.dependsOn = [];
+  node.enables = [];
+}
+for (const e of edges) {
+  const field = e.type === 'dependency' ? 'dependsOn' : 'enables';
+  byId.get(e.source)[field].push(e.target);
+}
+
+const connectedIds = new Set();
+edges.forEach(e => { connectedIds.add(e.source); connectedIds.add(e.target); });
 const nodes = Array.from(byId.values());
+const provenanceDist = {};
+const networkStatusDist = {};
+nodes.forEach(n => {
+  n.networkStatus = !connectedIds.has(n.id) ? 'isolated' : (n.dependsOn.length ? 'connected' : 'root');
+  provenanceDist[n.provenance] = (provenanceDist[n.provenance] || 0) + 1;
+  networkStatusDist[n.networkStatus] = (networkStatusDist[n.networkStatus] || 0) + 1;
+});
 const meta = {
   generatedAt: new Date().toISOString(),
+  sourceDigest: gj.meta.sourceDigest || null,
+  mainlineNodes: gj.meta.totalTechs,
+  mainlineDependencyEdges: gj.meta.depEdges,
   totalNodes: nodes.length,
   totalEdges: edges.length,
   scoredNodes,
   tierDist,
+  provenanceDist,
+  networkStatusDist,
+  scoreScopes: { 'mainline-derived': 'mainline', new_techs: 'full', 'score-only': 'full' },
   weights: { D1: 0.25, D2: 0.20, D4: 0.35, D5: 0.20 },
   note: 'Phase 4 全量数据集 v2：原库富字段(graph.json) + 新条目(new_techs) + 五维评分(phase2_scores) + 依赖/赋能边'
 };

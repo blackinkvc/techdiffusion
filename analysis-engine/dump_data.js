@@ -11,6 +11,7 @@
 const fs = require("fs");
 const path = require("path");
 const vm = require("vm");
+const { sourceDigest } = require("../tools/mainline");
 
 const ASSETS = path.join(__dirname, "..", "assets");
 const OUT = path.join(__dirname, "data");
@@ -136,6 +137,7 @@ const concepts = [...conceptIds].map(cid => ({
 const graph = {
   meta: {
     exportedAt: new Date().toISOString(),
+    sourceDigest: sourceDigest(TECHS),
     totalTechs: TECHS.length,
     totalConceptNodes: concepts.length,
     totalNodes: TECHS.length + concepts.length,

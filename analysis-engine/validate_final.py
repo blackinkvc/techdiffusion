@@ -12,11 +12,11 @@ from pathlib import Path
 ROOT = os.environ.get("TECHDIFFUSION_DATA") or str(Path(__file__).resolve().parent / "data")
 
 def load():
-    g = json.load(open(f"{ROOT}/graph.json"))
+    g = json.load(open(f"{ROOT}/graph.json", encoding="utf-8"))
     orig_nodes = {n["id"]: n for n in g["nodes"]}
-    # 原库 dependsOn 边
-    orig_dep = [(e["source"], e["target"]) for e in g["edges"] if e.get("type") in ("dependsOn", "dependency")]
-    nt = json.load(open(f"{ROOT}/subcat/new_techs.json"))
+    # 内部方向统一为 (依赖者, 前置)。
+    orig_dep = [(e["target"], e["source"]) for e in g["edges"] if e.get("type") in ("dependsOn", "dependency")]
+    nt = json.load(open(f"{ROOT}/subcat/new_techs.json", encoding="utf-8"))
     return orig_nodes, orig_dep, nt
 
 def main():
@@ -55,9 +55,13 @@ def main():
     year_viol = []       # 年份序违规（子.year < 父.year）
     edges = 0
     for (s, t) in orig_dep:
-        if t not in all_nodes:
+        if s not in all_nodes or t not in all_nodes:
             broken.append((s, t)); continue
         G.add_edge(s, t); edges += 1
+        sy = all_nodes[s].get("year", 0) or 0
+        ty = all_nodes[t].get("year", 0) or 0
+        if sy < ty:
+            year_viol.append((s, sy, t, ty))
     for x in nt:
         s = x["id"]; sy = x.get("year", 0) or 0
         for t in x.get("dependsOn", []):

@@ -1,201 +1,201 @@
 #	依赖者	依赖者名	分类	年	前置	前置名	分类	年	跨度	同域	枢纽	机器初判	依据	你的判定(y/n/u)	备注
-1	biochem	生物化学	basic	1890	writing	文字	info	-3200	5090	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-2	bx_math_103	因子图	basic	1950	numerical	数值分析	basic	1950	0	同	是	疑	同年前置；前置为 14 个维度顶点（A/E 族问题区）		
-3	bx_math_18	代数几何	basic	1950	numerical	数值分析	basic	1950	0	同	是	疑	同年前置；前置为 14 个维度顶点（A/E 族问题区）		
-4	bx_math_3	凸优化	basic	1950	statistics	统计学	basic	1809	141	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-5	bx_math_32	李代数	basic	1950	mathematics	数学	basic	-3000	4950	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-6	bx_math_33	李群	basic	1950	statistics	统计学	basic	1809	141	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-7	bx_math_40	类型论	basic	1950	numerical	数值分析	basic	1950	0	同	是	疑	同年前置；前置为 14 个维度顶点（A/E 族问题区）		
-8	bx_math_42	参数化复杂性	basic	1950	statistics	统计学	basic	1809	141	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-9	bx_math_44	泛函分析	basic	1950	numerical	数值分析	basic	1950	0	同	是	疑	同年前置；前置为 14 个维度顶点（A/E 族问题区）		
-10	bx_math_51	布朗运动	basic	1950	numerical	数值分析	basic	1950	0	同	是	疑	同年前置；前置为 14 个维度顶点（A/E 族问题区）		
-11	bx_math_53	随机微分方程	basic	1950	statistics	统计学	basic	1809	141	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-12	bx_math_56	可靠性理论	basic	1950	optimization	最优化/线性规划	basic	1947	3	同	是	疑	年份仅隔 3 年；前置为 14 个维度顶点（A/E 族问题区）		
-13	bx_math_57	生存分析	basic	1950	statistics	统计学	basic	1809	141	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-14	bx_math_70	蒙特卡洛方法	basic	1950	numerical	数值分析	basic	1950	0	同	是	疑	同年前置；前置为 14 个维度顶点（A/E 族问题区）		
-15	bx_math_86	字典学习	basic	1950	optimization	最优化/线性规划	basic	1947	3	同	是	疑	年份仅隔 3 年；前置为 14 个维度顶点（A/E 族问题区）		
-16	bx_math_93	核方法	basic	1950	optimization	最优化/线性规划	basic	1947	3	同	是	疑	年份仅隔 3 年；前置为 14 个维度顶点（A/E 族问题区）		
-17	bx_phys_11	拓扑光子学	basic	1950	solid_mech	固体力学	basic	1700	250	同		较可信	无机械可疑信号（≠ 语义正确）		
-18	bx_phys_15	冷原子物理	basic	1950	stat_mech	统计力学	basic	1872	78	同		较可信	无机械可疑信号（≠ 语义正确）		
-19	bx_phys_17	费米气体	basic	1950	physics	经典力学	basic	1687	263	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-20	bx_phys_24	格点规范理论	basic	1950	solid_mech	固体力学	basic	1700	250	同		较可信	无机械可疑信号（≠ 语义正确）		
-21	bx_phys_24	格点规范理论	basic	1950	stat_mech	统计力学	basic	1872	78	同		较可信	无机械可疑信号（≠ 语义正确）		
-22	bx_phys_25	弦论	basic	1950	physics	经典力学	basic	1687	263	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-23	bx_phys_28	AdS/CFT 对偶	basic	1950	stat_mech	统计力学	basic	1872	78	同		较可信	无机械可疑信号（≠ 语义正确）		
-24	bx_phys_33	涨落定理	basic	1950	solid_mech	固体力学	basic	1700	250	同		较可信	无机械可疑信号（≠ 语义正确）		
-25	bx_phys_35	福克-普朗克方程	basic	1950	solid_mech	固体力学	basic	1700	250	同		较可信	无机械可疑信号（≠ 语义正确）		
-26	bx_phys_41	非牛顿流体	basic	1950	quantum_mech	量子力学	basic	1925	25	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-27	bx_phys_42	湍流理论	basic	1950	solid_mech	固体力学	basic	1700	250	同		较可信	无机械可疑信号（≠ 语义正确）		
-28	bx_phys_45	等离子体约束	basic	1950	physics	经典力学	basic	1687	263	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-29	bx_phys_52	拓扑序	basic	1950	quantum_mech	量子力学	basic	1925	25	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-30	bx_phys_9	磁子学	basic	1950	solid_mech	固体力学	basic	1700	250	同		较可信	无机械可疑信号（≠ 语义正确）		
-31	molecular_theory	分子学说	basic	1811	writing	文字	info	-3200	5011	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-32	neuroscience	神经科学	basic	1890	writing	文字	info	-3200	5090	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-33	numerical	数值分析	basic	1950	optimization	最优化/线性规划	basic	1947	3	同	是	疑	年份仅隔 3 年；前置为 14 个维度顶点（A/E 族问题区）		
-34	particle_physics	粒子物理	basic	1930	relativity_qm	相对论与量子力学	basic	1905	25	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-35	positional	位值制计数法	basic	600	zero_concept	零的概念	basic	500	100	同		较可信	无机械可疑信号（≠ 语义正确）		
-36	proof_theory	证明论	basic	1900	mathematics	数学	basic	-3000	4900	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-37	wave_optics	波动光学	basic	1678	writing	文字	info	-3200	4878	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-38	bd_civ_110	天然采光	build	2000	architecture	建筑学	build	-3000	5000	同		较可信	无机械可疑信号（≠ 语义正确）		
-39	bd_civ_130	碳纤维加固	build	2000	masonry	砌筑	build	-5000	7000	同		较可信	无机械可疑信号（≠ 语义正确）		
-40	bd_civ_131	外包钢加固	build	2000	architecture	建筑学	build	-3000	5000	同		较可信	无机械可疑信号（≠ 语义正确）		
-41	bd_civ_134	裂缝修补	build	2000	masonry	砌筑	build	-5000	7000	同		较可信	无机械可疑信号（≠ 语义正确）		
-42	bd_civ_137	双层呼吸幕墙	build	2000	masonry	砌筑	build	-5000	7000	同		较可信	无机械可疑信号（≠ 语义正确）		
-43	bd_civ_146	相变蓄热墙体	build	2000	masonry	砌筑	build	-5000	7000	同		较可信	无机械可疑信号（≠ 语义正确）		
-44	bd_civ_15	数字孪生城市	build	2000	masonry	砌筑	build	-5000	7000	同		较可信	无机械可疑信号（≠ 语义正确）		
-45	bd_civ_160	加压送风	build	2000	engineering	工程学	basic	-3000	5000	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-46	bd_civ_21	深基坑监测	build	2000	masonry	砌筑	build	-5000	7000	同		较可信	无机械可疑信号（≠ 语义正确）		
-47	bd_civ_22	边坡监测	build	2000	masonry	砌筑	build	-5000	7000	同		较可信	无机械可疑信号（≠ 语义正确）		
-48	bd_civ_33	雨水花园	build	2000	engineering	工程学	basic	-3000	5000	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-49	bd_civ_37	调蓄池	build	2000	engineering	工程学	basic	-3000	5000	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-50	bd_civ_41	屋顶农场	build	2000	masonry	砌筑	build	-5000	7000	同		较可信	无机械可疑信号（≠ 语义正确）		
-51	bd_civ_72	模块化桥	build	2000	engineering	工程学	basic	-3000	5000	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-52	bd_civ_91	被动控制	build	2000	engineering	工程学	basic	-3000	5000	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-53	bld_dougong	斗拱	build	-500	woodworking	木作	manufact	-300000	299500	跨		较可信	无机械可疑信号（≠ 语义正确）		
-54	bld_geothermal2	地源热泵建筑	build	1980	ene_heatpump	热泵	energy	1852	128	跨		较可信	无机械可疑信号（≠ 语义正确）		
-55	bld_tube	筒体结构	build	1960	steel_frame	钢结构	build	1885	75	同		较可信	无机械可疑信号（≠ 语义正确）		
-56	steel_frame	钢结构	build	1885	steel	钢铁	material	-1000	2885	跨		较可信	无机械可疑信号（≠ 语义正确）		
-57	dyson_sphere	戴森球	energy	2100	solar	太阳能光伏	energy	1954	146	同		较可信	无机械可疑信号（≠ 语义正确）		
-58	en_bat_12	镍铁电池	energy	1990	ene_leadacid	铅酸电池	energy	1859	131	同		较可信	无机械可疑信号（≠ 语义正确）		
-59	en_bat_15	全固态电池应用	energy	1990	chemistry	化学	basic	1661	329	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-60	en_bat_15	全固态电池应用	energy	1990	ene_leadacid	铅酸电池	energy	1859	131	同		较可信	无机械可疑信号（≠ 语义正确）		
-61	en_bat_19	可拉伸电池	energy	1990	electricity	电力系统	energy	1879	111	同		较可信	无机械可疑信号（≠ 语义正确）		
-62	en_bat_25	软包电池	energy	1990	chemistry	化学	basic	1661	329	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-63	en_bat_29	硅氧负极	energy	1990	ene_leadacid	铅酸电池	energy	1859	131	同		较可信	无机械可疑信号（≠ 语义正确）		
-64	en_bat_57	无钴电池	energy	1990	battery	电池	energy	1800	190	同		较可信	无机械可疑信号（≠ 语义正确）		
-65	en_h2_0	质子交换膜燃料电池	energy	1970	combustion	燃烧	energy	1800	170	同		较可信	无机械可疑信号（≠ 语义正确）		
-66	ene_fastbreeder	快中子增殖堆	energy	1951	physics	经典力学	basic	1687	264	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-67	ene_hotdry	干热岩	energy	1970	physics	经典力学	basic	1687	283	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-68	ene_pv	光伏电池	energy	1954	chemistry	化学	basic	1661	293	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-69	ene_solidstate	固态电池	energy	2010	chemistry	化学	basic	1661	349	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-70	ene_solidstate	固态电池	energy	2010	physics	经典力学	basic	1687	323	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-71	ene_thermalbattery	热电池	energy	1980	physics	经典力学	basic	1687	293	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-72	fut_singularity_engine	奇点发动机	energy	2160	solar	太阳能光伏	energy	1954	206	同		较可信	无机械可疑信号（≠ 语义正确）		
-73	power_plant	发电厂	energy	1882	boiler	锅炉	energy	1765	117	同		较可信	无机械可疑信号（≠ 语义正确）		
-74	camera	数码相机 / 图像传感器	info	1975	battery	电池	energy	1800	175	跨		较可信	无机械可疑信号（≠ 语义正确）		
-75	eniac	电子管计算机	info	1946	vacuum_tube	电子管	info	1904	42	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-76	fut_teleportation_net	物质传送网	info	2150	computer	电子计算机	info	1946	204	同		较可信	无机械可疑信号（≠ 语义正确）		
-77	http	超文本传输协议	info	1991	tcpip	TCP/IP协议	info	1981	10	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-78	inf_homomorphic	同态加密	info	2009	mathematics	数学	basic	-3000	5009	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-79	inf_mimeograph	油印	info	1870	mathematics	数学	basic	-3000	4870	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-80	inf_recommend2	协同过滤	info	1992	algorithm	算法理论	basic	825	1167	跨	是	疑	前置为 14 个维度顶点（A/E 族问题区）；跨分类且跨度 > 800 年（F 族口径）		
-81	it_alg_10	字典树	info	1970	computer	电子计算机	info	1946	24	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-82	it_alg_12	红黑树	info	1970	mathematics	数学	basic	-3000	4970	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-83	it_alg_17	位图索引	info	1970	algorithm	算法理论	basic	825	1145	跨	是	疑	前置为 14 个维度顶点（A/E 族问题区）；跨分类且跨度 > 800 年（F 族口径）		
-84	it_alg_18	列存索引	info	1970	mathematics	数学	basic	-3000	4970	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-85	it_alg_41	联邦学习	info	1970	mathematics	数学	basic	-3000	4970	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-86	it_alg_43	领域自适应	info	1970	computer	电子计算机	info	1946	24	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-87	it_alg_53	依存句法	info	1970	computer	电子计算机	info	1946	24	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-88	it_alg_67	自动机器学习	info	1970	computer	电子计算机	info	1946	24	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-89	it_alg_73	对抗训练	info	1970	mathematics	数学	basic	-3000	4970	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-90	it_alg_84	可验证计算	info	1970	mathematics	数学	basic	-3000	4970	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-91	it_alg_9	后缀数组	info	1970	computer	电子计算机	info	1946	24	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-92	optic_fiber	光纤	info	1970	mat_glass	玻璃	material	-2500	4470	跨		较可信	无机械可疑信号（≠ 语义正确）		
-93	bio_denture	义齿	life	-500	mathematics	数学	basic	-3000	2500	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-94	bio_exoskeleton	外骨骼	life	2000	bio_reharobot	康复机器人	life	2000	0	同		疑	同年前置；同分类且年份很近（疑似同义/同类节点自指）		
-95	bio_fermentation	发酵工程	life	1900	chemistry	化学	basic	1661	239	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-96	bio_liquidbiopsy	液体活检	life	2010	computer	电子计算机	info	1946	64	跨		较可信	无机械可疑信号（≠ 语义正确）		
-97	bio_monoclonal	单克隆抗体	life	1975	mathematics	数学	basic	-3000	4975	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-98	bio_organonchip	器官芯片	life	2010	chemistry	化学	basic	1661	349	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-99	bio_precisionmed	精准医疗	life	2010	genetics	遗传学	basic	1865	145	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-100	bio_radiotherapy	放射治疗	life	1900	chemistry	化学	basic	1661	239	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-101	bio_synbio	合成生物学	life	2000	dna	遗传学 / DNA	life	1953	47	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-102	bio_universalvax	通用疫苗	life	2020	chemistry	化学	basic	1661	359	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-103	gene_circuit	基因电路	life	2050	bio_synbio	合成生物学	life	2000	50	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-104	genetic_engineering	基因工程	life	1973	biotech	生物技术	life	1910	63	同		较可信	无机械可疑信号（≠ 语义正确）		
-105	lf_bio_24	纳米抗体	life	2000	fermentation	发酵	life	-7000	9000	同		较可信	无机械可疑信号（≠ 语义正确）		
-106	lf_bio_28	抗体工程	life	2000	immunology	免疫学	basic	1798	202	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-107	lf_bio_44	洗涤酶	life	2000	immunology	免疫学	basic	1798	202	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-108	lf_bio_50	固态发酵	life	2000	immunology	免疫学	basic	1798	202	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-109	lf_bio_52	厌氧发酵	life	2000	fermentation	发酵	life	-7000	9000	同		较可信	无机械可疑信号（≠ 语义正确）		
-110	lf_bio_54	补料分批发酵	life	2000	fermentation	发酵	life	-7000	9000	同		较可信	无机械可疑信号（≠ 语义正确）		
-111	lf_bio_55	连续发酵	life	2000	genetics	遗传学	basic	1865	135	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-112	lf_bio_61	密码子优化	life	2000	fermentation	发酵	life	-7000	9000	同		较可信	无机械可疑信号（≠ 语义正确）		
-113	lf_bio_71	类器官培养	life	2000	immunology	免疫学	basic	1798	202	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-114	lf_bio_72	器官芯片灌流	life	2000	immunology	免疫学	basic	1798	202	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-115	lf_bio_74	生物墨水	life	2000	immunology	免疫学	basic	1798	202	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-116	lf_bio_76	脱细胞基质	life	2000	immunology	免疫学	basic	1798	202	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-117	lf_dx_1	循环肿瘤 DNA	life	2005	surgery	无菌外科	life	1867	138	同		较可信	无机械可疑信号（≠ 语义正确）		
-118	lf_dx_17	伴随诊断	life	2005	molecular_bio	分子生物学	basic	1953	52	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-119	lf_dx_28	卫生技术评估	life	2005	internet	互联网	info	1969	36	跨		较可信	无机械可疑信号（≠ 语义正确）		
-120	lf_dx_34	在线问诊	life	2005	internet	互联网	info	1969	36	跨		较可信	无机械可疑信号（≠ 语义正确）		
-121	lf_dx_38	生物制品追溯	life	2005	molecular_bio	分子生物学	basic	1953	52	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-122	lf_dx_47	日间手术	life	2005	molecular_bio	分子生物学	basic	1953	52	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-123	lf_dx_64	神经康复	life	2005	molecular_bio	分子生物学	basic	1953	52	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-124	lf_dx_74	缓和医疗	life	2005	molecular_bio	分子生物学	basic	1953	52	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-125	lf_dx_76	智慧养老	life	2005	internet	互联网	info	1969	36	跨		较可信	无机械可疑信号（≠ 语义正确）		
-126	lf_dx_85	情绪监测	life	2005	surgery	无菌外科	life	1867	138	同		较可信	无机械可疑信号（≠ 语义正确）		
-127	lf_dx_9	放射组学	life	2005	molecular_bio	分子生物学	basic	1953	52	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-128	smart_mower	智能割草机器人	life	2015	lidar	激光雷达	transport	2005	10	跨		较可信	无机械可疑信号（≠ 语义正确）		
-129	fut_nano_assembly_plant	纳米装配工厂	manufact	2050	automation	自动化	manufact	1950	100	同		较可信	无机械可疑信号（≠ 语义正确）		
-130	mfg_cnc	数控机床	manufact	1949	mfg_servo	伺服系统	manufact	1940	9	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-131	mfg_drawing2	拉伸成形	manufact	1800	mfg_stamping	冲压	manufact	1800	0	同		疑	同年前置；同分类且年份很近（疑似同义/同类节点自指）		
-132	mfg_ecm	电解加工	manufact	1950	electricity	电力系统	energy	1879	71	跨		较可信	无机械可疑信号（≠ 语义正确）		
-133	mfg_edm	电火花加工	manufact	1943	electricity	电力系统	energy	1879	64	跨		较可信	无机械可疑信号（≠ 语义正确）		
-134	mfg_fsw	搅拌摩擦焊	manufact	1991	mfg_mill	铣床	manufact	1818	173	同		较可信	无机械可疑信号（≠ 语义正确）		
-135	mfg_resistweld	电阻焊	manufact	1877	generator	发电机与电动机	energy	1831	46	跨		较可信	无机械可疑信号（≠ 语义正确）		
-136	mfg_shotblast	喷丸	manufact	1930	mfg_abrasive	磨料	manufact	-5000	6930	同		较可信	无机械可疑信号（≠ 语义正确）		
-137	mfg_sixsigma	六西格玛	manufact	1986	mfg_spcc	统计过程控制	manufact	1924	62	同		较可信	无机械可疑信号（≠ 语义正确）		
-138	mfg_ultraprecise	超精密加工	manufact	1960	lathe	车床与精密加工	manufact	1751	209	同		较可信	无机械可疑信号（≠ 语义正确）		
-139	mn_proc_10	激光加工应用	manufact	1970	lathe	车床与精密加工	manufact	1751	219	同		较可信	无机械可疑信号（≠ 语义正确）		
-140	mn_proc_2	离子束抛光	manufact	1970	electronics	电子学	info	1883	87	跨		较可信	无机械可疑信号（≠ 语义正确）		
-141	mn_proc_8	水射流加工应用	manufact	1970	automation	自动化	manufact	1950	20	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-142	robot_factory	无人工厂	manufact	2030	ai	人工智能	info	1956	74	跨		较可信	无机械可疑信号（≠ 语义正确）		
-143	high_entropy_alloy	高熵合金	material	2030	metallurgy	冶金	material	-5000	7030	同		较可信	无机械可疑信号（≠ 语义正确）		
-144	mat_continuouscast	连续铸造	material	1840	chemistry	化学	basic	1661	179	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-145	mat_cupola	冲天炉	material	1800	physics	经典力学	basic	1687	113	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-146	mat_forging	锻造	material	-3000	fire	用火	energy	-1000000	997000	跨		较可信	无机械可疑信号（≠ 语义正确）		
-147	mat_galv	热浸镀锌	material	1742	chemistry	化学	basic	1661	81	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-148	mat_pa	聚酰胺	material	1938	chemistry	化学	basic	1661	277	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-149	mat_ptfe	聚四氟乙烯	material	1938	chemistry	化学	basic	1661	277	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-150	mat_quench	淬火	material	-1000	iron	铁器	material	-1200	200	同		较可信	无机械可疑信号（≠ 语义正确）		
-151	mat_sbr	丁苯橡胶	material	1929	chemistry	化学	basic	1661	268	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-152	mat_sicsemi	碳化硅半导体	material	1980	chemistry	化学	basic	1661	319	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-153	mat_tialloy	钛合金	material	1950	chemistry	化学	basic	1661	289	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-154	mat_zirconium	锆	material	1789	chemistry	化学	basic	1661	128	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-155	mt_alloy_25	金属间化合物	material	1950	materials	材料科学	basic	1900	50	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-156	mt_alloy_34	硼钢	material	1950	metallurgy	冶金	material	-5000	6950	同		较可信	无机械可疑信号（≠ 语义正确）		
-157	mt_alloy_7	梯度功能材料	material	1950	materials	材料科学	basic	1900	50	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-158	mt_cer_0	透明陶瓷	material	1950	kiln	窑	manufact	-6000	7950	跨		较可信	无机械可疑信号（≠ 语义正确）		
-159	breech_loading	后膛装填	military	1850	rifling	线膛	military	1490	360	同		较可信	无机械可疑信号（≠ 语义正确）		
-160	mil_aewc	预警机	military	1970	radio	无线电	info	1895	75	跨		较可信	无机械可疑信号（≠ 语义正确）		
-161	mil_airborne	空降兵	military	1940	mil_transportac	军用运输机	military	1920	20	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-162	mil_cyber	网络战	military	1990	internet	互联网	info	1969	21	跨		较可信	无机械可疑信号（≠ 语义正确）		
-163	mil_guidance	制导技术	military	1940	tr_radar2	雷达	transport	1935	5	跨		较可信	无机械可疑信号（≠ 语义正确）		
-164	mil_jamming	干扰	military	1900	radio	无线电	info	1895	5	跨		较可信	无机械可疑信号（≠ 语义正确）		
-165	mil_machinegun	机枪	military	1884	mfg_mill	铣床	manufact	1818	66	跨		较可信	无机械可疑信号（≠ 语义正确）		
-166	mil_neutron	中子弹	military	1960	mil_hweapon	氢弹	military	1952	8	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-167	mil_transportac	军用运输机	military	1920	aircraft_engine	航空发动机	energy	1903	17	跨		较可信	无机械可疑信号（≠ 语义正确）		
-168	ml_uav_103	边境雷达	military	2000	rocket	火箭	transport	1926	74	跨		较可信	无机械可疑信号（≠ 语义正确）		
-169	ml_uav_111	数据链应用	military	2000	algorithm	算法理论	basic	825	1175	跨	是	疑	前置为 14 个维度顶点（A/E 族问题区）；跨分类且跨度 > 800 年（F 族口径）		
-170	ml_uav_123	动中通	military	2000	rocket	火箭	transport	1926	74	跨		较可信	无机械可疑信号（≠ 语义正确）		
-171	ml_uav_16	温压弹	military	2000	electronics	电子学	info	1883	117	跨		较可信	无机械可疑信号（≠ 语义正确）		
-172	ml_uav_31	反蛙人声纳	military	2000	electronics	电子学	info	1883	117	跨		较可信	无机械可疑信号（≠ 语义正确）		
-173	ml_uav_37	自主水下机器人	military	2000	algorithm	算法理论	basic	825	1175	跨	是	疑	前置为 14 个维度顶点（A/E 族问题区）；跨分类且跨度 > 800 年（F 族口径）		
-174	ml_uav_42	机器狗军	military	2000	algorithm	算法理论	basic	825	1175	跨	是	疑	前置为 14 个维度顶点（A/E 族问题区）；跨分类且跨度 > 800 年（F 族口径）		
-175	ml_uav_48	伴随保障机器人	military	2000	electronics	电子学	info	1883	117	跨		较可信	无机械可疑信号（≠ 语义正确）		
-176	ml_uav_49	班组机器人	military	2000	electronics	电子学	info	1883	117	跨		较可信	无机械可疑信号（≠ 语义正确）		
-177	ml_uav_50	无人破障	military	2000	rocket	火箭	transport	1926	74	跨		较可信	无机械可疑信号（≠ 语义正确）		
-178	ml_uav_51	无人架桥	military	2000	algorithm	算法理论	basic	825	1175	跨	是	疑	前置为 14 个维度顶点（A/E 族问题区）；跨分类且跨度 > 800 年（F 族口径）		
-179	ml_uav_56	忠诚僚机军	military	2000	electronics	电子学	info	1883	117	跨		较可信	无机械可疑信号（≠ 语义正确）		
-180	ml_uav_79	分布式雷达	military	2000	rocket	火箭	transport	1926	74	跨		较可信	无机械可疑信号（≠ 语义正确）		
-181	airplane	飞机	transport	1903	landing_gear	起落架	transport	1903	0	同		疑	同年前置；同分类且年份很近（疑似同义/同类节点自指）		
-182	autonomous_driving	自动驾驶 / 汽车智能	transport	2009	lidar	激光雷达	transport	2005	4	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-183	flying_car	飞行汽车	transport	2045	automation	自动化	manufact	1950	95	跨		较可信	无机械可疑信号（≠ 语义正确）		
-184	fut_vn_fleet	冯·诺依曼自复制舰队	transport	2090	spacecraft	航天器	transport	1957	133	同		较可信	无机械可疑信号（≠ 语义正确）		
-185	lidar	激光雷达	transport	2005	ic	集成电路	info	1958	47	跨		较可信	无机械可疑信号（≠ 语义正确）		
-186	sail	帆船	transport	-3500	woodworking	木作	manufact	-300000	296500	跨		较可信	无机械可疑信号（≠ 语义正确）		
-187	space_elevator	太空电梯	transport	2070	spacecraft	航天器	transport	1957	113	同		较可信	无机械可疑信号（≠ 语义正确）		
-188	spacecraft	航天器	transport	1957	rocket	火箭	transport	1926	31	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-189	tp_road_18	电池底盘一体化	transport	2005	gps	全球卫星定位 GNSS	transport	1990	15	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-190	tp_road_59	盲区监测	transport	2005	combustion	燃烧	energy	1800	205	跨		较可信	无机械可疑信号（≠ 语义正确）		
-191	tp_road_74	情感交互	transport	2005	internal_combustion	内燃机	energy	1876	129	跨		较可信	无机械可疑信号（≠ 语义正确）		
-192	tp_urban_7	市郊铁路	transport	2000	gps	全球卫星定位 GNSS	transport	1990	10	同		待查	同分类且年份很近（疑似同义/同类节点自指）		
-193	tr_autogyro	旋翼机	transport	1923	aircraft_engine	航空发动机	energy	1903	20	跨		较可信	无机械可疑信号（≠ 语义正确）		
-194	tr_bus	公共汽车	transport	1895	internal_combustion	内燃机	energy	1876	19	跨		较可信	无机械可疑信号（≠ 语义正确）		
-195	tr_cruiser	巡洋舰	transport	1800	steel	钢铁	material	-1000	2800	跨		较可信	无机械可疑信号（≠ 语义正确）		
-196	tr_metro	地铁	transport	1863	tr_tunnel2	交通隧道	transport	1700	163	同		较可信	无机械可疑信号（≠ 语义正确）		
-197	tr_pneumatictire	充气轮胎	transport	1845	chemistry	化学	basic	1661	184	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）		
-198	tr_rocket	运载火箭	transport	1926	ene_rocketengine	火箭发动机	energy	1926	0	跨		待查	同年前置		
-199	tr_supersonic	超音速客机	transport	1969	ene_jet	喷气发动机	energy	1937	32	跨		较可信	无机械可疑信号（≠ 语义正确）		
-200	tr_windtunnel	风洞	transport	1871	steam_engine	蒸汽机	energy	1769	102	跨		较可信	无机械可疑信号（≠ 语义正确）		
+1	biochem	生物化学	basic	1890	writing	文字	info	-3200	5090	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	文字是记录工具，不是生物化学成立的必要前置
+2	bx_math_103	因子图	basic	1950	numerical	数值分析	basic	1950	0	同	是	疑	同年前置；前置为 14 个维度顶点（A/E 族问题区）	n	因子图核心为概率图模型，数值分析不是定义性前置
+3	bx_math_18	代数几何	basic	1950	numerical	数值分析	basic	1950	0	同	是	疑	同年前置；前置为 14 个维度顶点（A/E 族问题区）	n	代数几何不以求解数值问题为前提
+4	bx_math_3	凸优化	basic	1950	statistics	统计学	basic	1809	141	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	凸优化属于优化理论，统计学不是必要前置
+5	bx_math_32	李代数	basic	1950	mathematics	数学	basic	-3000	4950	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+6	bx_math_33	李群	basic	1950	statistics	统计学	basic	1809	141	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	李群属于代数与几何，统计学不是必要前置
+7	bx_math_40	类型论	basic	1950	numerical	数值分析	basic	1950	0	同	是	疑	同年前置；前置为 14 个维度顶点（A/E 族问题区）	n	类型论源于逻辑与计算理论，不依赖数值分析
+8	bx_math_42	参数化复杂性	basic	1950	statistics	统计学	basic	1809	141	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	参数化复杂性属于计算复杂性，不依赖统计学
+9	bx_math_44	泛函分析	basic	1950	numerical	数值分析	basic	1950	0	同	是	疑	同年前置；前置为 14 个维度顶点（A/E 族问题区）	n	数值分析是应用领域，不是泛函分析的前置
+10	bx_math_51	布朗运动	basic	1950	numerical	数值分析	basic	1950	0	同	是	疑	同年前置；前置为 14 个维度顶点（A/E 族问题区）	n	布朗运动核心为概率论与随机过程
+11	bx_math_53	随机微分方程	basic	1950	statistics	统计学	basic	1809	141	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+12	bx_math_56	可靠性理论	basic	1950	optimization	最优化/线性规划	basic	1947	3	同	是	疑	年份仅隔 3 年；前置为 14 个维度顶点（A/E 族问题区）	n	可靠性理论主要依赖概率统计，优化不是必要前置
+13	bx_math_57	生存分析	basic	1950	statistics	统计学	basic	1809	141	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+14	bx_math_70	蒙特卡洛方法	basic	1950	numerical	数值分析	basic	1950	0	同	是	疑	同年前置；前置为 14 个维度顶点（A/E 族问题区）	y
+15	bx_math_86	字典学习	basic	1950	optimization	最优化/线性规划	basic	1947	3	同	是	疑	年份仅隔 3 年；前置为 14 个维度顶点（A/E 族问题区）	y
+16	bx_math_93	核方法	basic	1950	optimization	最优化/线性规划	basic	1947	3	同	是	疑	年份仅隔 3 年；前置为 14 个维度顶点（A/E 族问题区）	y
+17	bx_phys_11	拓扑光子学	basic	1950	solid_mech	固体力学	basic	1700	250	同		较可信	无机械可疑信号（≠ 语义正确）	n	拓扑光子学依赖电磁学与凝聚态理论，不是固体力学
+18	bx_phys_15	冷原子物理	basic	1950	stat_mech	统计力学	basic	1872	78	同		较可信	无机械可疑信号（≠ 语义正确）	y
+19	bx_phys_17	费米气体	basic	1950	physics	经典力学	basic	1687	263	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	费米气体以量子统计为基础，不是经典力学
+20	bx_phys_24	格点规范理论	basic	1950	solid_mech	固体力学	basic	1700	250	同		较可信	无机械可疑信号（≠ 语义正确）	n	格点规范理论属于量子场论，不依赖固体力学
+21	bx_phys_24	格点规范理论	basic	1950	stat_mech	统计力学	basic	1872	78	同		较可信	无机械可疑信号（≠ 语义正确）	y
+22	bx_phys_25	弦论	basic	1950	physics	经典力学	basic	1687	263	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	弦论直接基础是量子场论与相对论，不是经典力学
+23	bx_phys_28	AdS/CFT 对偶	basic	1950	stat_mech	统计力学	basic	1872	78	同		较可信	无机械可疑信号（≠ 语义正确）	u	与热力学和黑洞熵相关，但作为必要前置的证据不足
+24	bx_phys_33	涨落定理	basic	1950	solid_mech	固体力学	basic	1700	250	同		较可信	无机械可疑信号（≠ 语义正确）	n	涨落定理属于非平衡统计力学，不依赖固体力学
+25	bx_phys_35	福克-普朗克方程	basic	1950	solid_mech	固体力学	basic	1700	250	同		较可信	无机械可疑信号（≠ 语义正确）	n	该方程属于随机过程与统计力学，不是固体力学应用
+26	bx_phys_41	非牛顿流体	basic	1950	quantum_mech	量子力学	basic	1925	25	同		待查	同分类且年份很近（疑似同义/同类节点自指）	n	非牛顿流体用连续介质力学描述，不以量子力学为前置
+27	bx_phys_42	湍流理论	basic	1950	solid_mech	固体力学	basic	1700	250	同		较可信	无机械可疑信号（≠ 语义正确）	n	湍流属于流体力学，固体力学不是正确前置
+28	bx_phys_45	等离子体约束	basic	1950	physics	经典力学	basic	1687	263	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	等离子体约束主要依赖电磁学与等离子体物理
+29	bx_phys_52	拓扑序	basic	1950	quantum_mech	量子力学	basic	1925	25	同		待查	同分类且年份很近（疑似同义/同类节点自指）	y
+30	bx_phys_9	磁子学	basic	1950	solid_mech	固体力学	basic	1700	250	同		较可信	无机械可疑信号（≠ 语义正确）	n	磁子学依赖磁学与量子凝聚态，不是固体力学
+31	molecular_theory	分子学说	basic	1811	writing	文字	info	-3200	5011	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	文字不是分子学说成立的科学前置
+32	neuroscience	神经科学	basic	1890	writing	文字	info	-3200	5090	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	文字不是神经科学的必要前置
+33	numerical	数值分析	basic	1950	optimization	最优化/线性规划	basic	1947	3	同	是	疑	年份仅隔 3 年；前置为 14 个维度顶点（A/E 族问题区）	n	优化是数值分析的分支应用，线性规划并非其前置
+34	particle_physics	粒子物理	basic	1930	relativity_qm	相对论与量子力学	basic	1905	25	同		待查	同分类且年份很近（疑似同义/同类节点自指）	y
+35	positional	位值制计数法	basic	600	zero_concept	零的概念	basic	500	100	同		较可信	无机械可疑信号（≠ 语义正确）	y
+36	proof_theory	证明论	basic	1900	mathematics	数学	basic	-3000	4900	同	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+37	wave_optics	波动光学	basic	1678	writing	文字	info	-3200	4878	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	文字不是波动光学成立的必要前置
+38	bd_civ_110	天然采光	build	2000	architecture	建筑学	build	-3000	5000	同		较可信	无机械可疑信号（≠ 语义正确）	y
+39	bd_civ_130	碳纤维加固	build	2000	masonry	砌筑	build	-5000	7000	同		较可信	无机械可疑信号（≠ 语义正确）	n	碳纤维加固依赖结构工程与复合材料，不是砌筑
+40	bd_civ_131	外包钢加固	build	2000	architecture	建筑学	build	-3000	5000	同		较可信	无机械可疑信号（≠ 语义正确）	n	需要具体结构加固与钢结构技术，泛建筑学不构成正确前置
+41	bd_civ_134	裂缝修补	build	2000	masonry	砌筑	build	-5000	7000	同		较可信	无机械可疑信号（≠ 语义正确）	n	裂缝修补不必然依赖砌筑，需按材料和结构判断
+42	bd_civ_137	双层呼吸幕墙	build	2000	masonry	砌筑	build	-5000	7000	同		较可信	无机械可疑信号（≠ 语义正确）	n	双层幕墙依赖幕墙、玻璃与通风技术，不是砌筑
+43	bd_civ_146	相变蓄热墙体	build	2000	masonry	砌筑	build	-5000	7000	同		较可信	无机械可疑信号（≠ 语义正确）	n	相变蓄热墙体不必然采用砌筑，核心为相变材料与墙体构造
+44	bd_civ_15	数字孪生城市	build	2000	masonry	砌筑	build	-5000	7000	同		较可信	无机械可疑信号（≠ 语义正确）	n	数字孪生城市依赖建模、传感和数据平台，与砌筑无直接关系
+45	bd_civ_160	加压送风	build	2000	engineering	工程学	basic	-3000	5000	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+46	bd_civ_21	深基坑监测	build	2000	masonry	砌筑	build	-5000	7000	同		较可信	无机械可疑信号（≠ 语义正确）	n	深基坑监测依赖岩土工程与测量传感，不是砌筑
+47	bd_civ_22	边坡监测	build	2000	masonry	砌筑	build	-5000	7000	同		较可信	无机械可疑信号（≠ 语义正确）	n	边坡监测依赖岩土工程与测量传感，不是砌筑
+48	bd_civ_33	雨水花园	build	2000	engineering	工程学	basic	-3000	5000	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+49	bd_civ_37	调蓄池	build	2000	engineering	工程学	basic	-3000	5000	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+50	bd_civ_41	屋顶农场	build	2000	masonry	砌筑	build	-5000	7000	同		较可信	无机械可疑信号（≠ 语义正确）	n	屋顶农场核心是种植、防水与荷载设计，砌筑不是必要前置
+51	bd_civ_72	模块化桥	build	2000	engineering	工程学	basic	-3000	5000	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+52	bd_civ_91	被动控制	build	2000	engineering	工程学	basic	-3000	5000	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+53	bld_dougong	斗拱	build	-500	woodworking	木作	manufact	-300000	299500	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+54	bld_geothermal2	地源热泵建筑	build	1980	ene_heatpump	热泵	energy	1852	128	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+55	bld_tube	筒体结构	build	1960	steel_frame	钢结构	build	1885	75	同		较可信	无机械可疑信号（≠ 语义正确）	n	筒体结构也可采用混凝土，钢结构不是必要前置
+56	steel_frame	钢结构	build	1885	steel	钢铁	material	-1000	2885	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+57	dyson_sphere	戴森球	energy	2100	solar	太阳能光伏	energy	1954	146	同		较可信	无机械可疑信号（≠ 语义正确）	n	戴森球收集恒星辐射，不要求以地面光伏技术为前置
+58	en_bat_12	镍铁电池	energy	1990	ene_leadacid	铅酸电池	energy	1859	131	同		较可信	无机械可疑信号（≠ 语义正确）	y
+59	en_bat_15	全固态电池应用	energy	1990	chemistry	化学	basic	1661	329	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+60	en_bat_15	全固态电池应用	energy	1990	ene_leadacid	铅酸电池	energy	1859	131	同		较可信	无机械可疑信号（≠ 语义正确）	n	全固态电池并非铅酸电池的直接后续，电解质体系不同
+61	en_bat_19	可拉伸电池	energy	1990	electricity	电力系统	energy	1879	111	同		较可信	无机械可疑信号（≠ 语义正确）	y
+62	en_bat_25	软包电池	energy	1990	chemistry	化学	basic	1661	329	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+63	en_bat_29	硅氧负极	energy	1990	ene_leadacid	铅酸电池	energy	1859	131	同		较可信	无机械可疑信号（≠ 语义正确）	n	硅氧负极属于锂电材料体系，与铅酸电池无直接前置关系
+64	en_bat_57	无钴电池	energy	1990	battery	电池	energy	1800	190	同		较可信	无机械可疑信号（≠ 语义正确）	y
+65	en_h2_0	质子交换膜燃料电池	energy	1970	combustion	燃烧	energy	1800	170	同		较可信	无机械可疑信号（≠ 语义正确）	n	燃料电池通过电化学反应发电，不依赖燃烧
+66	ene_fastbreeder	快中子增殖堆	energy	1951	physics	经典力学	basic	1687	264	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	快中子增殖堆的直接基础是核物理与反应堆工程
+67	ene_hotdry	干热岩	energy	1970	physics	经典力学	basic	1687	283	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	干热岩开发依赖地质、钻井与热工程，经典力学不是直接前置
+68	ene_pv	光伏电池	energy	1954	chemistry	化学	basic	1661	293	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+69	ene_solidstate	固态电池	energy	2010	chemistry	化学	basic	1661	349	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+70	ene_solidstate	固态电池	energy	2010	physics	经典力学	basic	1687	323	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	固态电池主要依赖电化学与固体材料，不是经典力学
+71	ene_thermalbattery	热电池	energy	1980	physics	经典力学	basic	1687	293	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	热电池直接相关的是热力学与电化学，不是经典力学
+72	fut_singularity_engine	奇点发动机	energy	2160	solar	太阳能光伏	energy	1954	206	同		较可信	无机械可疑信号（≠ 语义正确）	n	奇点发动机与太阳能光伏没有明确必要依赖
+73	power_plant	发电厂	energy	1882	boiler	锅炉	energy	1765	117	同		较可信	无机械可疑信号（≠ 语义正确）	u	早期火力电站成立，但发电厂概念也包含水电等，需明确节点口径
+74	camera	数码相机 / 图像传感器	info	1975	battery	电池	energy	1800	175	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+75	eniac	电子管计算机	info	1946	vacuum_tube	电子管	info	1904	42	同		待查	同分类且年份很近（疑似同义/同类节点自指）	y
+76	fut_teleportation_net	物质传送网	info	2150	computer	电子计算机	info	1946	204	同		较可信	无机械可疑信号（≠ 语义正确）	n	计算机不能构成物质传送的充分或必要物理前提
+77	http	超文本传输协议	info	1991	tcpip	TCP/IP协议	info	1981	10	同		待查	同分类且年份很近（疑似同义/同类节点自指）	y
+78	inf_homomorphic	同态加密	info	2009	mathematics	数学	basic	-3000	5009	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+79	inf_mimeograph	油印	info	1870	mathematics	数学	basic	-3000	4870	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	油印依赖印刷材料与机械，不是数学
+80	inf_recommend2	协同过滤	info	1992	algorithm	算法理论	basic	825	1167	跨	是	疑	前置为 14 个维度顶点（A/E 族问题区）；跨分类且跨度 > 800 年（F 族口径）	y
+81	it_alg_10	字典树	info	1970	computer	电子计算机	info	1946	24	同		待查	同分类且年份很近（疑似同义/同类节点自指）	y
+82	it_alg_12	红黑树	info	1970	mathematics	数学	basic	-3000	4970	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+83	it_alg_17	位图索引	info	1970	algorithm	算法理论	basic	825	1145	跨	是	疑	前置为 14 个维度顶点（A/E 族问题区）；跨分类且跨度 > 800 年（F 族口径）	y
+84	it_alg_18	列存索引	info	1970	mathematics	数学	basic	-3000	4970	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	列存索引是数据存储结构，泛数学不是直接前置
+85	it_alg_41	联邦学习	info	1970	mathematics	数学	basic	-3000	4970	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	联邦学习直接依赖机器学习与分布式系统，泛数学不构成具体前置
+86	it_alg_43	领域自适应	info	1970	computer	电子计算机	info	1946	24	同		待查	同分类且年份很近（疑似同义/同类节点自指）	y
+87	it_alg_53	依存句法	info	1970	computer	电子计算机	info	1946	24	同		待查	同分类且年份很近（疑似同义/同类节点自指）	y
+88	it_alg_67	自动机器学习	info	1970	computer	电子计算机	info	1946	24	同		待查	同分类且年份很近（疑似同义/同类节点自指）	y
+89	it_alg_73	对抗训练	info	1970	mathematics	数学	basic	-3000	4970	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+90	it_alg_84	可验证计算	info	1970	mathematics	数学	basic	-3000	4970	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+91	it_alg_9	后缀数组	info	1970	computer	电子计算机	info	1946	24	同		待查	同分类且年份很近（疑似同义/同类节点自指）	y
+92	optic_fiber	光纤	info	1970	mat_glass	玻璃	material	-2500	4470	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+93	bio_denture	义齿	life	-500	mathematics	数学	basic	-3000	2500	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	义齿依赖牙科与材料工艺，不是数学
+94	bio_exoskeleton	外骨骼	life	2000	bio_reharobot	康复机器人	life	2000	0	同		疑	同年前置；同分类且年份很近（疑似同义/同类节点自指）	n	康复机器人是外骨骼的应用方向之一，不是其必要前置
+95	bio_fermentation	发酵工程	life	1900	chemistry	化学	basic	1661	239	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+96	bio_liquidbiopsy	液体活检	life	2010	computer	电子计算机	info	1946	64	跨		较可信	无机械可疑信号（≠ 语义正确）	n	液体活检依赖分子检测，电子计算机不是必要前置
+97	bio_monoclonal	单克隆抗体	life	1975	mathematics	数学	basic	-3000	4975	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	单克隆抗体依赖免疫学与细胞融合技术，不是数学
+98	bio_organonchip	器官芯片	life	2010	chemistry	化学	basic	1661	349	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+99	bio_precisionmed	精准医疗	life	2010	genetics	遗传学	basic	1865	145	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+100	bio_radiotherapy	放射治疗	life	1900	chemistry	化学	basic	1661	239	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	放射治疗直接依赖放射物理与辐射设备，不是化学
+101	bio_synbio	合成生物学	life	2000	dna	遗传学 / DNA	life	1953	47	同		待查	同分类且年份很近（疑似同义/同类节点自指）	y
+102	bio_universalvax	通用疫苗	life	2020	chemistry	化学	basic	1661	359	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+103	gene_circuit	基因电路	life	2050	bio_synbio	合成生物学	life	2000	50	同		待查	同分类且年份很近（疑似同义/同类节点自指）	y
+104	genetic_engineering	基因工程	life	1973	biotech	生物技术	life	1910	63	同		较可信	无机械可疑信号（≠ 语义正确）	y
+105	lf_bio_24	纳米抗体	life	2000	fermentation	发酵	life	-7000	9000	同		较可信	无机械可疑信号（≠ 语义正确）	n	纳米抗体依赖抗体工程与筛选表达，发酵不是必要前置
+106	lf_bio_28	抗体工程	life	2000	immunology	免疫学	basic	1798	202	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+107	lf_bio_44	洗涤酶	life	2000	immunology	免疫学	basic	1798	202	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	洗涤酶属于酶工程与洗涤剂配方，不依赖免疫学
+108	lf_bio_50	固态发酵	life	2000	immunology	免疫学	basic	1798	202	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	固态发酵是微生物工艺，不依赖免疫学
+109	lf_bio_52	厌氧发酵	life	2000	fermentation	发酵	life	-7000	9000	同		较可信	无机械可疑信号（≠ 语义正确）	y
+110	lf_bio_54	补料分批发酵	life	2000	fermentation	发酵	life	-7000	9000	同		较可信	无机械可疑信号（≠ 语义正确）	y
+111	lf_bio_55	连续发酵	life	2000	genetics	遗传学	basic	1865	135	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	连续发酵是工艺运行方式，遗传学不是必要前置
+112	lf_bio_61	密码子优化	life	2000	fermentation	发酵	life	-7000	9000	同		较可信	无机械可疑信号（≠ 语义正确）	n	密码子优化属于基因设计，不依赖发酵
+113	lf_bio_71	类器官培养	life	2000	immunology	免疫学	basic	1798	202	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	类器官培养主要依赖干细胞与组织培养，不是免疫学
+114	lf_bio_72	器官芯片灌流	life	2000	immunology	免疫学	basic	1798	202	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	器官芯片灌流依赖微流控与组织培养，不是免疫学
+115	lf_bio_74	生物墨水	life	2000	immunology	免疫学	basic	1798	202	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	生物墨水依赖生物材料与细胞技术，不是免疫学
+116	lf_bio_76	脱细胞基质	life	2000	immunology	免疫学	basic	1798	202	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	脱细胞基质属于组织工程材料，不是免疫学前置
+117	lf_dx_1	循环肿瘤 DNA	life	2005	surgery	无菌外科	life	1867	138	同		较可信	无机械可疑信号（≠ 语义正确）	n	循环肿瘤 DNA 依赖分子生物学与核酸检测，不是外科
+118	lf_dx_17	伴随诊断	life	2005	molecular_bio	分子生物学	basic	1953	52	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+119	lf_dx_28	卫生技术评估	life	2005	internet	互联网	info	1969	36	跨		较可信	无机械可疑信号（≠ 语义正确）	n	卫生技术评估依赖临床、流行病学与经济学，不依赖互联网
+120	lf_dx_34	在线问诊	life	2005	internet	互联网	info	1969	36	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+121	lf_dx_38	生物制品追溯	life	2005	molecular_bio	分子生物学	basic	1953	52	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	追溯系统是供应链与信息管理，不是分子生物学
+122	lf_dx_47	日间手术	life	2005	molecular_bio	分子生物学	basic	1953	52	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	日间手术依赖外科、麻醉与流程管理，不是分子生物学
+123	lf_dx_64	神经康复	life	2005	molecular_bio	分子生物学	basic	1953	52	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	神经康复直接依赖神经科学与康复医学，分子生物学过于泛化
+124	lf_dx_74	缓和医疗	life	2005	molecular_bio	分子生物学	basic	1953	52	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	缓和医疗是临床照护体系，不依赖分子生物学
+125	lf_dx_76	智慧养老	life	2005	internet	互联网	info	1969	36	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+126	lf_dx_85	情绪监测	life	2005	surgery	无菌外科	life	1867	138	同		较可信	无机械可疑信号（≠ 语义正确）	n	情绪监测依赖心理测量、传感与算法，不是外科
+127	lf_dx_9	放射组学	life	2005	molecular_bio	分子生物学	basic	1953	52	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	放射组学依赖医学影像与数据挖掘，不是分子生物学
+128	smart_mower	智能割草机器人	life	2015	lidar	激光雷达	transport	2005	10	跨		较可信	无机械可疑信号（≠ 语义正确）	n	激光雷达是可选导航传感器，并非所有智能割草机器人的必要前置
+129	fut_nano_assembly_plant	纳米装配工厂	manufact	2050	automation	自动化	manufact	1950	100	同		较可信	无机械可疑信号（≠ 语义正确）	y
+130	mfg_cnc	数控机床	manufact	1949	mfg_servo	伺服系统	manufact	1940	9	同		待查	同分类且年份很近（疑似同义/同类节点自指）	y
+131	mfg_drawing2	拉伸成形	manufact	1800	mfg_stamping	冲压	manufact	1800	0	同		疑	同年前置；同分类且年份很近（疑似同义/同类节点自指）	y
+132	mfg_ecm	电解加工	manufact	1950	electricity	电力系统	energy	1879	71	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+133	mfg_edm	电火花加工	manufact	1943	electricity	电力系统	energy	1879	64	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+134	mfg_fsw	搅拌摩擦焊	manufact	1991	mfg_mill	铣床	manufact	1818	173	同		较可信	无机械可疑信号（≠ 语义正确）	y
+135	mfg_resistweld	电阻焊	manufact	1877	generator	发电机与电动机	energy	1831	46	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+136	mfg_shotblast	喷丸	manufact	1930	mfg_abrasive	磨料	manufact	-5000	6930	同		较可信	无机械可疑信号（≠ 语义正确）	y
+137	mfg_sixsigma	六西格玛	manufact	1986	mfg_spcc	统计过程控制	manufact	1924	62	同		较可信	无机械可疑信号（≠ 语义正确）	y
+138	mfg_ultraprecise	超精密加工	manufact	1960	lathe	车床与精密加工	manufact	1751	209	同		较可信	无机械可疑信号（≠ 语义正确）	y
+139	mn_proc_10	激光加工应用	manufact	1970	lathe	车床与精密加工	manufact	1751	219	同		较可信	无机械可疑信号（≠ 语义正确）	n	激光加工不要求以车床为前置，核心为激光器与加工装备
+140	mn_proc_2	离子束抛光	manufact	1970	electronics	电子学	info	1883	87	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+141	mn_proc_8	水射流加工应用	manufact	1970	automation	自动化	manufact	1950	20	同		待查	同分类且年份很近（疑似同义/同类节点自指）	n	水射流加工可由高压泵与机械装置实现，不必然依赖自动化
+142	robot_factory	无人工厂	manufact	2030	ai	人工智能	info	1956	74	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+143	high_entropy_alloy	高熵合金	material	2030	metallurgy	冶金	material	-5000	7030	同		较可信	无机械可疑信号（≠ 语义正确）	y
+144	mat_continuouscast	连续铸造	material	1840	chemistry	化学	basic	1661	179	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	连续铸造直接依赖冶金与铸造装备，泛化学不是具体前置
+145	mat_cupola	冲天炉	material	1800	physics	经典力学	basic	1687	113	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	n	冲天炉依赖冶金炉与耐高温材料，不是经典力学
+146	mat_forging	锻造	material	-3000	fire	用火	energy	-1000000	997000	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+147	mat_galv	热浸镀锌	material	1742	chemistry	化学	basic	1661	81	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+148	mat_pa	聚酰胺	material	1938	chemistry	化学	basic	1661	277	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+149	mat_ptfe	聚四氟乙烯	material	1938	chemistry	化学	basic	1661	277	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+150	mat_quench	淬火	material	-1000	iron	铁器	material	-1200	200	同		较可信	无机械可疑信号（≠ 语义正确）	y
+151	mat_sbr	丁苯橡胶	material	1929	chemistry	化学	basic	1661	268	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+152	mat_sicsemi	碳化硅半导体	material	1980	chemistry	化学	basic	1661	319	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+153	mat_tialloy	钛合金	material	1950	chemistry	化学	basic	1661	289	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+154	mat_zirconium	锆	material	1789	chemistry	化学	basic	1661	128	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+155	mt_alloy_25	金属间化合物	material	1950	materials	材料科学	basic	1900	50	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+156	mt_alloy_34	硼钢	material	1950	metallurgy	冶金	material	-5000	6950	同		较可信	无机械可疑信号（≠ 语义正确）	y
+157	mt_alloy_7	梯度功能材料	material	1950	materials	材料科学	basic	1900	50	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+158	mt_cer_0	透明陶瓷	material	1950	kiln	窑	manufact	-6000	7950	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+159	breech_loading	后膛装填	military	1850	rifling	线膛	military	1490	360	同		较可信	无机械可疑信号（≠ 语义正确）	n	后膛装填与线膛是相互独立的枪械结构改进，线膛不是必要前置
+160	mil_aewc	预警机	military	1970	radio	无线电	info	1895	75	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+161	mil_airborne	空降兵	military	1940	mil_transportac	军用运输机	military	1920	20	同		待查	同分类且年份很近（疑似同义/同类节点自指）	y
+162	mil_cyber	网络战	military	1990	internet	互联网	info	1969	21	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+163	mil_guidance	制导技术	military	1940	tr_radar2	雷达	transport	1935	5	跨		较可信	无机械可疑信号（≠ 语义正确）	n	制导可采用惯性、光学、卫星等方式，雷达不是必要前置
+164	mil_jamming	干扰	military	1900	radio	无线电	info	1895	5	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+165	mil_machinegun	机枪	military	1884	mfg_mill	铣床	manufact	1818	66	跨		较可信	无机械可疑信号（≠ 语义正确）	u	精密加工有支撑作用，但作为机枪必要前置的历史证据不足
+166	mil_neutron	中子弹	military	1960	mil_hweapon	氢弹	military	1952	8	同		待查	同分类且年份很近（疑似同义/同类节点自指）	y
+167	mil_transportac	军用运输机	military	1920	aircraft_engine	航空发动机	energy	1903	17	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+168	ml_uav_103	边境雷达	military	2000	rocket	火箭	transport	1926	74	跨		较可信	无机械可疑信号（≠ 语义正确）	n	边境雷达依赖雷达、通信与供电，与火箭无直接关系
+169	ml_uav_111	数据链应用	military	2000	algorithm	算法理论	basic	825	1175	跨	是	疑	前置为 14 个维度顶点（A/E 族问题区）；跨分类且跨度 > 800 年（F 族口径）	y
+170	ml_uav_123	动中通	military	2000	rocket	火箭	transport	1926	74	跨		较可信	无机械可疑信号（≠ 语义正确）	n	动中通依赖卫星通信、天线与跟踪控制，不是火箭
+171	ml_uav_16	温压弹	military	2000	electronics	电子学	info	1883	117	跨		较可信	无机械可疑信号（≠ 语义正确）	n	温压弹主要依赖含能材料与爆轰，电子学不是必要前置
+172	ml_uav_31	反蛙人声纳	military	2000	electronics	电子学	info	1883	117	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+173	ml_uav_37	自主水下机器人	military	2000	algorithm	算法理论	basic	825	1175	跨	是	疑	前置为 14 个维度顶点（A/E 族问题区）；跨分类且跨度 > 800 年（F 族口径）	y
+174	ml_uav_42	机器狗军	military	2000	algorithm	算法理论	basic	825	1175	跨	是	疑	前置为 14 个维度顶点（A/E 族问题区）；跨分类且跨度 > 800 年（F 族口径）	y
+175	ml_uav_48	伴随保障机器人	military	2000	electronics	电子学	info	1883	117	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+176	ml_uav_49	班组机器人	military	2000	electronics	电子学	info	1883	117	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+177	ml_uav_50	无人破障	military	2000	rocket	火箭	transport	1926	74	跨		较可信	无机械可疑信号（≠ 语义正确）	n	无人破障依赖工程车辆、机械臂与排爆，不是火箭
+178	ml_uav_51	无人架桥	military	2000	algorithm	算法理论	basic	825	1175	跨	是	疑	前置为 14 个维度顶点（A/E 族问题区）；跨分类且跨度 > 800 年（F 族口径）	u	自动化架桥可用算法，但也可遥控实施，必要性与具体实现需证据
+179	ml_uav_56	忠诚僚机军	military	2000	electronics	电子学	info	1883	117	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+180	ml_uav_79	分布式雷达	military	2000	rocket	火箭	transport	1926	74	跨		较可信	无机械可疑信号（≠ 语义正确）	n	分布式雷达依赖天线、同步与信号处理，与火箭无直接关系
+181	airplane	飞机	transport	1903	landing_gear	起落架	transport	1903	0	同		疑	同年前置；同分类且年份很近（疑似同义/同类节点自指）	n	起落架是组成部件而非独立前置，且并非所有飞机形式必需
+182	autonomous_driving	自动驾驶 / 汽车智能	transport	2009	lidar	激光雷达	transport	2005	4	同		待查	同分类且年份很近（疑似同义/同类节点自指）	n	自动驾驶可使用视觉、毫米波雷达等方案，激光雷达不是必要前置
+183	flying_car	飞行汽车	transport	2045	automation	自动化	manufact	1950	95	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+184	fut_vn_fleet	冯·诺依曼自复制舰队	transport	2090	spacecraft	航天器	transport	1957	133	同		较可信	无机械可疑信号（≠ 语义正确）	y
+185	lidar	激光雷达	transport	2005	ic	集成电路	info	1958	47	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+186	sail	帆船	transport	-3500	woodworking	木作	manufact	-300000	296500	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+187	space_elevator	太空电梯	transport	2070	spacecraft	航天器	transport	1957	113	同		较可信	无机械可疑信号（≠ 语义正确）	n	太空电梯核心为超高强度材料与连续建造，航天器不是直接前置
+188	spacecraft	航天器	transport	1957	rocket	火箭	transport	1926	31	同		待查	同分类且年份很近（疑似同义/同类节点自指）	y
+189	tp_road_18	电池底盘一体化	transport	2005	gps	全球卫星定位 GNSS	transport	1990	15	同		待查	同分类且年份很近（疑似同义/同类节点自指）	n	电池底盘一体化属于车身与电池结构，与 GPS 无关
+190	tp_road_59	盲区监测	transport	2005	combustion	燃烧	energy	1800	205	跨		较可信	无机械可疑信号（≠ 语义正确）	n	盲区监测依赖传感器与预警算法，与燃烧无关
+191	tp_road_74	情感交互	transport	2005	internal_combustion	内燃机	energy	1876	129	跨		较可信	无机械可疑信号（≠ 语义正确）	n	情感交互依赖人机交互与人工智能，与内燃机无关
+192	tp_urban_7	市郊铁路	transport	2000	gps	全球卫星定位 GNSS	transport	1990	10	同		待查	同分类且年份很近（疑似同义/同类节点自指）	n	市郊铁路可依靠既有轨道与信号系统运行，GPS 不是必要前置
+193	tr_autogyro	旋翼机	transport	1923	aircraft_engine	航空发动机	energy	1903	20	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+194	tr_bus	公共汽车	transport	1895	internal_combustion	内燃机	energy	1876	19	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+195	tr_cruiser	巡洋舰	transport	1800	steel	钢铁	material	-1000	2800	跨		较可信	无机械可疑信号（≠ 语义正确）	n	1800 年巡洋舰仍为木壳帆船，钢铁与该年份节点不符
+196	tr_metro	地铁	transport	1863	tr_tunnel2	交通隧道	transport	1700	163	同		较可信	无机械可疑信号（≠ 语义正确）	y
+197	tr_pneumatictire	充气轮胎	transport	1845	chemistry	化学	basic	1661	184	跨	是	待查	前置为 14 个维度顶点（A/E 族问题区）	y
+198	tr_rocket	运载火箭	transport	1926	ene_rocketengine	火箭发动机	energy	1926	0	跨		待查	同年前置	y
+199	tr_supersonic	超音速客机	transport	1969	ene_jet	喷气发动机	energy	1937	32	跨		较可信	无机械可疑信号（≠ 语义正确）	y
+200	tr_windtunnel	风洞	transport	1871	steam_engine	蒸汽机	energy	1769	102	跨		较可信	无机械可疑信号（≠ 语义正确）	u	早期风洞可用蒸汽动力风扇，但作为必要前置的证据不足

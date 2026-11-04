@@ -1,51 +1,51 @@
-#	节点	节点名	分类	年	下游数	现有前置(逗号分隔)	真实还有哪些前置(你补,逗号分隔)	现有里记错的(逗号分隔)	备注
-1	molecular_bio	分子生物学	basic	1953	94	numerical,writing,mathematics,dna_struct			
-2	steam_engine	蒸汽机	energy	1769	23	coal_mining,iron,steel,newcomen_engine,watt_engine,boiler			
-3	battery	电池	energy	1800	98	chemistry			
-4	steel	钢铁	material	-1000	69	iron			
-5	electronics	电子学	info	1883	159	electromagnetism			
-6	airplane	飞机	transport	1903	15	internal_combustion,aerodynamics,steel,aircraft_engine,landing_gear			
-7	automobile	汽车	transport	1886	81	internal_combustion,steel,chassis			
-8	physics	经典力学	basic	1687	290	mathematics,scientific_method,writing			
-9	optimization	最优化/线性规划	basic	1947	106	writing,mathematics			
-10	nanotech	纳米技术	material	1980	10	materials,chemistry,physics			
-11	immunology	免疫学	basic	1798	86	writing,mathematics			
-12	quantum	量子科技	basic	1980	10	relativity_qm,physics			
-13	semiconductors	半导体材料	material	1947	10	chemistry,relativity_qm			
-14	spacecraft	航天器	transport	1957	13	rocket,satellite			
-15	iron	铁器	material	-1200	17	mat_refractory,bronze			
-16	lathe	车床与精密加工	manufact	1751	22	steel			
-17	engineering	工程学	basic	-3000	170	mathematics			
-18	ic	集成电路	info	1958	15	transistor,semiconductors,semiconductor,electronics			
-19	fire	用火	energy	-1000000	13				
-20	electric_motor	电动机	energy	1837	17	battery,steel			
-21	solid_mech	固体力学	basic	1700	58	diff_eq,writing,mathematics			
-22	architecture	建筑学	build	-3000	162	masonry,engineering			
-23	internal_combustion	内燃机	energy	1876	95	petroleum,thermodynamics,steel,otto_cycle			
-24	mat_concrete	混凝土	material	-2000	10	lime			
-25	robot	工业机器人	manufact	1961	35	computer,assembly_line,electric_motor			
-26	bx_math_89	矩阵补全	basic	1950	0	mathematics,numerical,statistics,optimization			
-27	bld_geothermal2	地源热泵建筑	build	1980	1	ene_heatpump,bld_hvac			
-28	inf_zeroknowledge	零知识证明	info	1985	0	mathematics			
-29	en_bat_19	可拉伸电池	energy	1990	0	battery,ene_leadacid,chemistry,electricity			
-30	bx_math_50	马尔可夫过程	basic	1950	0	mathematics,numerical,statistics,optimization			
-31	fut_evtol_network	电动垂直起降网络	transport	2032	0	spacecraft,rocket,satellite			
-32	paper	造纸	material	105	1	writing			
-33	mat_piezo	压电材料	material	1880	0	chemistry,physics			
-34	mn_proc_8	水射流加工应用	manufact	1970	0	lathe,robot,electronics,automation			
-35	en_bat_4	铝电池	energy	1990	0	battery,ene_leadacid,chemistry,electricity			
-36	bd_civ_147	蓄热墙体	build	2000	0	masonry,architecture,engineering			
-37	fut_mind_upload_net	意识上传网络	info	2080	0	ai,quantum,computer			
-38	cnc	数控加工	manufact	1952	1	computer,lathe			
-39	mat_polyester	聚酯	material	1930	1	chemistry,physics			
-40	biophysics	生物物理学	basic	1900	0	biochem,writing,mathematics			
-41	mt_alloy_34	硼钢	material	1950	0	materials,metallurgy,steel,mat_alalloy			
-42	bld_gothic	哥特结构	build	1100	0	bld_flying,masonry,bld_arch			
-43	mat_honeycomb	蜂窝夹层	material	1940	0	chemistry,physics,mat_ptfe			
-44	mat_zinc	锌冶炼	material	-500	0	mat_lead			
-45	spacetime	时空	basic	1915	3	relativity_qm,physics			
-46	surveying	测量学	basic	-2000	2	language,writing,mathematics,cartography			
-47	sla	光固化成型	manufact	1986	0	lasers			
-48	it_alg_74	成员推断	info	1970	0	mathematics,computer,statistics,algorithm			
-49	mat_foamceramic	泡沫陶瓷	material	1970	1	chemistry,physics			
-50	data_science	数据科学	basic	2000	0	writing,mathematics			
+#	节点	节点名	分类	年	下游数	抽样层	现有前置(逗号分隔)	已复核(y)	真实还有哪些前置(你补,逗号分隔)	现有里记错的(逗号分隔)	备注
+1	mat_pottery	陶器	material	-10000	11	high	open_firing,ground_stone	y	fire		陶器烧成需要火，补充直接前置
+2	chemistry	化学	basic	1661	433	high	scientific_method	y	metallurgy,mat_glass,fermentation		补充冶金、玻璃与发酵等工艺化学基础
+3	masonry	砌筑	build	-5000	179	high	stone_tools,brick	y	lime		补充石灰砂浆相关前置
+4	ic	集成电路	info	1958	15	high	transistor,semiconductors,semiconductor,electronics	y			现有覆盖晶体管、半导体与电子学；光刻节点尚缺，未填不存在 ID
+5	surgery	无菌外科	life	1867	95	high	anesthesia,microbiology	y	germ_theory		无菌外科直接建立在微生物致病说之上
+6	quantum_mech	量子力学	basic	1925	60	high	writing,mathematics	y	physics,electromagnetism,thermodynamics		补充经典物理、电磁学与热力学基础
+7	stat_mech	统计力学	basic	1872	56	high	writing,mathematics	y	physics,thermodynamics,probability		补充物理、热力学与概率论基础
+8	rocket	火箭	transport	1926	151	high	internal_combustion,physics,gunpowder,liquid_rocket	y	thermodynamics,ene_rocketengine	internal_combustion	火箭自带氧化剂，不依赖内燃机；补热力学与火箭发动机
+9	radio	无线电	info	1895	12	high	electromagnetism,telegraph	y			电磁学与电报已覆盖早期无线电核心前置
+10	numerical	数值分析	basic	1950	105	high	writing,mathematics,statistics,optimization	y	calculus,algebra,diff_eq	statistics,optimization	统计学与线性规划是应用而非必要前置；补微积分、代数与微分方程
+11	mat_castiron	铸铁	material	-500	19	high	mat_iron	y	mat_blastfurnace,ene_charcoal		补充高炉与木炭燃料
+12	nanotech	纳米技术	material	1980	10	high	materials,chemistry,physics	y	quantum_mech		补充纳米尺度所需的量子力学基础
+13	lathe	车床与精密加工	manufact	1751	22	high	steel	y	woodworking,mfg_thread		补充早期木作车床与螺纹加工
+14	writing	文字	info	-3200	114	high	language	y			语言已覆盖文字的直接前置
+15	electricity	电力系统	energy	1879	94	high	generator,battery	y	electromagnetism,electric_motor		补充电磁学与电能转换；未引入更晚的电网节点
+16	fermentation	发酵	life	-7000	84	high	agriculture,mat_pottery	y			农业原料与陶制容器已覆盖早期发酵前置
+17	genetics	遗传学	basic	1865	86	high	writing,mathematics	y	evolution,agriculture		补充演化思想与动植物育种实践
+18	robot	工业机器人	manufact	1961	35	high	computer,assembly_line,electric_motor	y	mfg_servo,automation,sensor		补充伺服、自动化与传感
+19	ai	人工智能	info	1956	32	high	computer	y	mathematics,algorithm		补充数学与算法基础
+20	automobile	汽车	transport	1886	81	high	internal_combustion,steel,chassis	y	tr_pneumatictire,petroleum,gearing		补充充气轮胎、石油燃料与齿轮传动
+21	physics	经典力学	basic	1687	290	high	mathematics,scientific_method,writing	y	astronomy,geometry_euclid		补充天文观测与几何学基础
+22	architecture	建筑学	build	-3000	162	high	masonry,engineering	y	geometry_euclid		补充建筑设计所需几何学
+23	immunology	免疫学	basic	1798	86	high	writing,mathematics	y	microbiology,vaccination		补充微生物学与疫苗实践；未倒填更晚的致病说
+24	kiln	窑	manufact	-6000	37	high	fire,mat_pottery	y	masonry,mat_refractory		补充窑体砌筑与耐火材料
+25	solid_mech	固体力学	basic	1700	58	high	diff_eq,writing,mathematics	y	physics,geometry_euclid		补充经典力学与几何学基础
+26	lf_bio_2	DNA 疫苗	life	2000	0	other	genetics,immunology,fermentation	y	biotech,genetic_engineering,bio_drugdelivery	fermentation	发酵不是 DNA 疫苗必要前置；补基因工程与递送
+27	mat_pp	聚丙烯	material	1954	0	other	chemistry,physics	y	polymer_chem		补充高分子化学
+28	tr_tram	有轨电车	transport	1832	0	other	generator	y	electricity,electric_motor,tr_train		补充供电、电动机与轨道车辆
+29	bx_math_44	泛函分析	basic	1950	0	other	mathematics,numerical,statistics,optimization	y	calculus,algebra	numerical,statistics,optimization	数值分析、统计与优化是应用而非必要前置；补微积分与代数
+30	mfg_drillpress	钻床	manufact	1800	0	other	mfg_drill,mfg_lathe	y	gearing,steel		补充齿轮传动与机床材料
+31	lf_dx_71	精神康复	life	2005	0	other	computer,molecular_bio,surgery,internet	y	neuroscience,bio_physiology	computer,molecular_bio,surgery,internet	精神康复不必然依赖计算机、分子生物、外科或互联网；补神经科学与生理学
+32	tp_road_18	电池底盘一体化	transport	2005	0	other	automobile,internal_combustion,gps,combustion	y	battery,chassis	internal_combustion,gps,combustion	电池底盘不依赖内燃机、燃烧或 GPS；补电池与底盘
+33	mil_aagun	高射炮	military	1900	0	other	cannon,steel	y	gunpowder,rifling		补充发射药与身管线膛
+34	hafting	复合工具	manufact	-200000	3	other	stone_tools,woodworking	y	rope		补充绑扎固定所需绳索
+35	tr_radar2	雷达	transport	1935	9	other	radio,electromagnetism	y	electronics,vacuum_tube		补充电子线路与电子管
+36	mat_htsc	高温超导	material	1986	1	other	chemistry,physics,mat_sicsemi	y	mat_ltsc,quantum_mech	mat_sicsemi	高温超导不依赖碳化硅半导体；补低温超导与量子力学
+37	ml_uav_48	伴随保障机器人	military	2000	0	other	rocket,algorithm,electronics	y	mfg_servo,sensor,automation	rocket	伴随保障机器人与火箭无关；补伺服、传感与自动化
+38	lf_dx_58	术中病理	life	2005	0	other	computer,molecular_bio,surgery,internet	y	microscope,bio_anatomy	computer,internet	术中病理不必然依赖计算机或互联网；补显微镜与解剖学
+39	bld_framing	框架结构	build	1800	2	other	steel,mfg_rolling2	y	woodworking,engineering		补充木框架与结构工程
+40	inf_sensor_net	无线传感网	info	1980	0	other	mathematics	y	sensor,radio,electronics,computer		补充传感、无线通信、电子线路与计算
+41	lf_dx_21	治疗药物监测	life	2005	0	other	computer,molecular_bio,surgery,internet	y	bio_pharmacology,chemistry	computer,surgery,internet	药物监测不必然依赖计算机、外科或互联网；补药理学与分析化学
+42	bio_physiology	生理学	life	-300	0	other	mathematics,bio_anatomy	y	chemistry		补充生命过程的化学基础
+43	it_alg_7	并查集	info	1970	0	other	mathematics,computer,statistics,algorithm	y		statistics	并查集不依赖统计学，其余前置保留
+44	ene_synfuel	合成燃料	energy	1920	0	other	physics,chemistry	y	physical_chem,coal_mining		补充物理化学与煤制燃料原料
+45	tr_destroyer	驱逐舰	transport	1890	0	other	steam_ship,mil_torpedo	y	steam_engine,steel		补充蒸汽动力与钢制船体
+46	rifling	线膛	military	1490	1	other	gunpowder	y	mfg_drill,mat_iron		补充枪管钻削与铁制枪管；未引入更晚镗床
+47	nuclear_fission	核裂变	energy	1942	3	other	relativity_qm,chemistry	y	particle_physics		补充粒子与中子物理基础
+48	bio_artskin	人工皮肤	life	1980	0	other	chemistry,mathematics,bio_tissueeng	y	mat_biomat,stem_cells	mathematics	人工皮肤不依赖数学；补生物材料与干细胞
+49	bd_civ_109	建筑光学	build	2000	0	other	masonry,architecture,engineering	y	optics,mat_glass		补充光学与采光玻璃
+50	lf_bio_8	鼻喷疫苗	life	2000	0	other	genetics,immunology,fermentation	y	vaccination,bio_drugdelivery	fermentation	鼻喷疫苗不依赖发酵；补疫苗与黏膜递送
