@@ -1188,6 +1188,29 @@ window.CORRECTIONS = {
         "后续处理（v0.9.15）：4 处年倒挂降级为概念影响并修正年份/纪元 → CR-2026-0909-yearinv；二阶枢纽 ~24 节点逐节点核验并删除 590 条污染边 → CR-2026-0909-hub2nd 已结案。主管线边最终 7938→7341，yearInv=0。"
       ],
       files: ["assets/techs_extra.js", "assets/techs_more.js", "assets/data.js"]
+    },
+    {
+      id: "CR-2026-11005-analysis-pipeline",
+      date: "2026-11-05",
+      node: "(分析引擎与全量管线)",
+      nodeName: "图方向、预测输入与派生数据同步纠错",
+      category: "meta",
+      severity: "高",
+      status: "已修正（工程管线；语义复核持续）",
+      problem: "graph_engine、phase2_score 与 validate_final 将原库「前置→依赖者」和新增数据「依赖者→前置」混用；forecast_engine 虽读取 EDGES_FULL，却只使用 dependsOn 字段，导致 2,247 个节点的边表前置被忽略，大量未来方向统一输出 2036/2052。主管线已删除的同名节点也仍存在于陈旧派生数据中；另有锻造（公元前 3000 年）误挂风箱（公元前 1500 年）的年份倒置。",
+      rootCause: "多套分析管线缺少统一方向约定，节点字段与边表重复保存依赖而没有单一事实来源；派生文件没有来源版本标记，主管线变更后不会自动暴露陈旧副本。Windows 默认编码与写死临时目录又使部分校验无法运行，问题因此长期未被门禁发现。",
+      fix: "统一内部方向为「依赖者→前置」，预测改从主管线读取真实依赖，空前置不再视为前提齐备，过去年份改标为等待状态，自动组合默认关闭。从主管线重建图、评分与全量数据，删除锻造对风箱的倒置依赖；新增来源指纹和六道 pre-commit 门禁，分离主管线/候选语料评分，标记并默认隐藏孤立节点，加入 as-of 回溯框架和 GitHub Actions。首轮逐条审计只记录判断，不自动回写主管线。",
+      badUpstream: ["bellows 风箱（晚于锻造）"],
+      goodUpstream: ["bronze 青铜", "ene_charcoal 木炭", "fire 用火"],
+      changes: [
+        "图方向统一后，graph_engine / phase2_score 与 Phase 3 的 16,040 条依赖边一致。",
+        "预测输入改为主管线 2,268 节点 / 6,181 条依赖边；统一 2036/2052 和过去年份输出已消除。",
+        "全量重建为 13,299 节点 / 16,235 条边；真实 ID 冲突、断边、年份倒置均为 0，DAG 无环。",
+        "新增来源指纹、独立主管线评分和 provenance；2,621 个孤立节点已标记并默认隐藏。",
+        "首审 200 条边：195 条明确判定、5 条不确定，准确率 54.4%（95% CI 47.4%～61.2%）；50 节点总体前置完备率 47.6%。",
+        "新增质量 CI 与 skylan Pages 预览；历史回溯仍标为探索性，边时间证据待补。"
+      ],
+      files: ["analysis-engine/graph_engine.py", "analysis-engine/phase2_score.py", "analysis-engine/validate_final.py", "analysis-engine/forecast_engine.js", "analysis-engine/build_full_dataset.js", "assets/data_full.js", "audit/edge_sample_20260915.tsv", "audit/recall_sample_20260915.tsv", ".github/workflows/quality.yml", ".github/workflows/pages.yml"]
     }
   ]
 };
